@@ -1,0 +1,377 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, June 25, 2009 10:49:26}
+%TCIDATA{LastRevised=Wednesday, July 08, 2009 08:57:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Operator Valued Distributions}
+
+The local field operator $\Phi\left(  \mathbf{r}\right)  $ is defined by
+\begin{equation}
+\Phi\left(  \mathbf{r}\right)  =\sum_{1\leq j\leq\infty}\varphi_{j}\left(
+\mathbf{r}\right)  a_{j}=\sum_{1\leq j\leq\infty}\varphi_{j}\left(
+\mathbf{r}\right)  \Phi\left(  \varphi_{j}\right)  ,
+\end{equation}
+where the functions $\left\{  \left.  \varphi_{j}\right\vert 1\leq j\leq
+\infty\right\}  $ form a basis and $\in C^{1}$ in that one define the current
+density $\mathbf{j}\left(  \mathbf{r}\right)  $.
+
+\subsection{Nuclear Space}
+
+A nuclear space is a topological vector space with many of the properties of
+finite-dimensional vector spaces. The topology on them can be defined by a
+family of seminorms whose unit balls decrease rapidly in size. Vector spaces
+whose elements are "smooth" in some sense tend to be nuclear spaces; a typical
+example of a nuclear space is the set of smooth functions on a compact manifold.
+
+\begin{itemize}
+\item Definition 1: A nuclear space is a locally convex topological vector
+space such that for any seminorm $p$ we can find a larger seminorm $q$ so that
+the natural map from $V_{q}$ to $V_{p}$ is nuclear.
+
+Informally, this means that whenever we are given the unit ball of some
+seminorm, we can find a "much smaller" unit ball of another seminorm inside
+it, or that any neighborhood of 0 contains a "much smaller" neighborhood. It
+is not necessary to check this condition for all seminorms $p$; it is
+sufficient to check it for a set of seminorms that generate the topology, in
+other words, a set of seminorms that are a subbase for the topology.
+
+\qquad Instead of using arbitrary Banach spaces and nuclear operators, we can
+give a definition in terms of Hilbert spaces and trace class operators, which
+are easier to understand. (On Hilbert spaces nuclear operators are often
+called trace class operators.) We will say that a seminorm $p$ is a Hilbert
+seminorm if $V_{p}$ is a Hilbert space, or equivalently if $p$ comes from a
+sesquilinear positive semidefinite form on V.
+
+\item Definition 2: A nuclear space is a topological vector space with a
+topology defined by a family of Hilbert seminorms, such that for any Hilbert
+seminorm $p$ we can find a larger Hilbert seminorm $q$ so that the natural map
+from $V_{q}$ to $V_{p}$ is trace class.
+
+Some authors prefer to use Hilbert-Schmidt operators rather than trace class
+operators. This makes little difference, because any trace class operator is
+Hilbert-Schmidt, and the product of two Hilbert-Schmidt operators is of trace class.
+
+\item Definition 3: A nuclear space is a topological vector space with a
+topology defined by a family of Hilbert seminorms, such that for any Hilbert
+seminorm $p$ we can find a larger Hilbert seminorm $q$ so that the natural map
+from $V_{q}$ to $V_{p}$ is Hilbert-Schmidt. 
+
+\begin{itemize}
+\item If we are willing to use the concept of a nuclear operator from an
+arbitrary locally convex topological vector space to a Banach space, we can
+give shorter definitions as follows:
+\end{itemize}
+
+\item Definition 4: A nuclear space is a locally convex topological vector
+space such that for any seminorm $p$ the natural map from $V$ to $V_{p}$ is nuclear.
+
+\item Definition 5: A nuclear space is a locally convex topological vector
+space such that any continuous linear map to a Banach space is nuclear.
+
+\item Definition 6: A nuclear space is a locally convex topological vector
+space $A$ such that for any locally convex topological vector space $B$ the
+natural map from the projective to the injective tensor product of $A$ and $B$
+is an isomorphism.
+\end{itemize}
+
+\subsubsection{Examples}
+
+* The space of smooth functions on any compact manifold is nuclear.
+
+
+
+* The Schwartz space of smooth functions on $\mathbb{R}^{n}$ for which the
+derivatives of all orders are \qquad\qquad\ rapidly decreasing is a nuclear space.
+
+
+
+* The space of entire holomorphic functions on the complex plane is nuclear.
+
+
+
+* The inductive limit of a sequence of nuclear spaces is nuclear.
+
+
+
+* The strong dual of a nuclear Frechet space is nuclear.
+
+
+
+* The product of a family of nuclear spaces is nuclear.
+
+
+
+* The completion of a nuclear space is nuclear (and in fact a space is nuclear
+if and only if its completion is nuclear).
+
+Another example: nuclear space $\Omega$ made up of functions $\varphi\left(
+x\right)  \in C^{\infty}$ that vanish more rapidly than any inverse power of
+$x$ in the limit $\left\vert x\right\vert $ $\rightarrow$ $\infty$ which
+satisfy the infinite set of conditions,%
+\[
+\int_{-\infty}^{\infty}\left(  1+\left\vert x\right\vert ^{m}\right)
+\left\vert \varphi\left(  x\right)  \right\vert ^{2}dx<\infty;m=0,1,2,\ldots
+\]
+
+
+The functions $\varphi\left(  x\right)  $, which make up $\Omega,$along with
+all of  their derivatives vanish more rapidly than any inverse power of $x$ in
+the limit $\left\vert x\right\vert $ $\rightarrow$ $\infty$. The extended
+space $\Omega^{d}$, which is conjugate to $%
+%TCIMACRO{\U{3a9} }%
+%BeginExpansion
+\Omega
+%EndExpansion
+$, consists of those functions $\U{3c7} (x)$ for which%
+\[
+\left(  \U{3c7} ,\varphi\right)  =\int_{-\infty}^{\infty}\overline{\chi\left(
+x\right)  }\varphi\left(  x\right)  dx<\infty\forall\varphi\in\Omega
+\]
+In addition to the functions of finite norm, which also lie in $\mathcal{H}$,
+$\Omega^{d}$ will contain functions that are unbounded at infinity provided
+the divergence is no worse than a power of $x$. Hence $\Omega^{d}$ contains
+$e^{ikx}$, which is an eigenfunction of the operator $D=i\frac{d}{dx}$. It
+also contains the Dirac delta function, $\U{3b4} (x-\U{3bb} )$ which is an
+eigenfunction of the operator Q, defined by $Q\U{3c8} (x)=x\U{3c8} (x)$.
+
+\subsection{Frechet Space}
+
+Fr\'{e}chet spaces, named after Maurice Fr\'{e}chet, are special topological
+vector spaces. They are generalizations of Banach spaces (normed vector spaces
+which are complete with respect to the metric induced by the norm).
+Fr\'{e}chet spaces, in contrast, are locally convex spaces which are complete
+with respect to a translation invariant metric.
+
+A topological vector space X is a Fr\'{e}chet space if and only if it
+satisfies the following three properties:
+
+* it is complete as a uniform space
+
+* it is locally convex
+
+* its topology can be induced by a translation invariant metric, i.e. a metric
+$d:X\times X\rightarrow\mathbb{R}$ such that $d(x,y)=d(x+a,y+a)$for all
+$a,x,y$ in $X$. This means that a subset $U$ of $X$ is open if and only if for
+every $u$ in $U$ there exists an $\U{3b5} >0$ such that $\{v:d(u,v)<\U{3b5}
+\}$ is a subset of $U$.
+
+Note that there is no natural notion of distance between two points of a
+Fr\'{e}chet space: many different translation-invariant metrics may induce the
+same topology.
+
+The alternative and somewhat more practical definition is the following: a
+topological vector space $X$ is a Fr\'{e}chet space if and only if it
+satisfies the following three properties:
+
+* it is complete as a uniform space
+
+* it is a Hausdorff space
+
+* its topology may be induced by a countable family of semi-norms
+$||.||k,k=0,1,2,...$ This means that a subset $U$ of $X$ is open if and only
+if for every $u$ in $U$ there exists $K\geq0$ and $\U{3b5} >0$ such that
+$\{v:||u-v||_{k}<\U{3b5} \forall k\leq K\}$ is a subset of $U$.
+
+A sequence $\left\{  x_{n}\right\}  $ in $X$ converges to $x$ in the
+Fr\'{e}chet space defined by a family of semi-norms if and only if it
+converges to $x$ with respect to each of the given semi-norms.
+
+\subsection{Gelfand Triple}
+
+Let $\mathcal{L}$ be a TVS and $\mathcal{H}$ a Hilbert space such that
+$\mathcal{L}$ is a dense subspace of $\mathcal{H}$ wrt the Hilbert space norm.
+The topology on $\mathcal{L}$ is chosen such that it is finer than the Hilbert
+space topology and the injection $\iota:\mathcal{L\rightarrow H}$ is
+continuous. For
+\begin{equation}
+\lambda\in\mathcal{L\subset H};\varphi\in\mathcal{H}%
+\end{equation}
+one has
+\begin{equation}
+\left\langle \left.  \varphi\right\vert \bullet\right\rangle
+:\mathcal{L\longrightarrow}\mathbb{C};\varphi\in\mathcal{H},
+\end{equation}
+thus $\left\langle \varphi\right\vert $ $\in\mathcal{L}^{d}$, (the functional
+$\left\langle \varphi\right\vert $ is continuous in the Hilbert space topology
+thus is continuous in any finer topology on $\mathcal{L}$ thus belongs to
+$\mathcal{L}^{d}$ )$.$ The dual $\mathcal{L}^{d}\supset\mathcal{H}^{d}$ ,
+$\mathcal{H}^{d}$ is the set of bounded linear functionals ($\equiv$ to the
+set of continuous functionals defined on $\mathcal{H)}$ and can be identified
+with $\left\{  \left.  \left\langle \varphi\right\vert \right\vert \varphi
+\in\mathcal{H}\right\}  ,$ thus $\mathcal{H=H}^{d}$ and can be regarded as a
+dense subspace of $\mathcal{L}^{d}$. In this case $\left\{  \mathcal{L}%
+,\mathcal{H},\mathcal{L}^{d}\right\}  $ is called a Gelfand triple $\equiv$
+rigged Hilbert space and
+\[
+\mathcal{L}\subset\mathcal{H}\subset\mathcal{L}^{d}.
+\]
+
+
+
+
+\subsection{Generalized Basis}
+
+In a seperable Hilbert space there exists a self adjoint Hilbert-Schmidt
+operator
+\[
+K:\mathcal{H\longrightarrow H},
+\]
+such that
+\[
+\ker\left\{  K\right\}  =0,
+\]
+i.e. $K$ is injective $\Longleftrightarrow0\notin\sigma\left(  K\right)  $,
+however it cannot be invertible (thus not surjective). Generalized bases are
+associated with operators (bounded and unbounded) that act on $\mathcal{H}$. A
+set of vectors $\left\{  \left\vert \zeta\right\rangle \right\}  $ is a
+generalized basis for $\mathcal{H}$ if
+
+\subsection{Unbounded Operator Adjoint}
+
+The adjoint operator $a^{\dagger}$ of an unbounded operator $a$ having dense
+domain $D\left(  a\right)  $ in $\mathcal{H}$ is defined on the domain
+\[
+D\left(  a^{\dagger}\right)  =\left\{  \varphi\left\vert \varphi\in
+\mathcal{H};\sup_{\psi\in D\left(  a\right)  }\left\Vert a\right\Vert
+<\theta\right.  \right\}
+\]
+by the formula%
+\[
+\left\langle \left.  a^{\dagger}\varphi\right\vert \psi\right\rangle
+=\left\langle \left.  \varphi\right\vert a\psi\right\rangle \forall\psi\in
+D\left(  a\right)  ,\varphi\in D\left(  a^{\dagger}\right)  .
+\]
+
+
+If $a=a^{\dagger}$ then it is said to be self adjoint, if $a^{\dagger
+}=a^{\dagger\dagger}$ then it is said to be essentially self adjoint, if
+$a^{\dagger}\supset a$ then it is hermitian $\equiv$ symmetric.
+
+\subsection{Quadratic Form}
+
+A quadratic form $q$ is a mapping
+\begin{align*}
+q  & :Q\left(  q\right)  \times Q\left(  q\right)  \rightarrow\mathbb{C}\\
+q\left(  \varphi,\psi\right)    & =\left\langle \left.  \varphi\right\vert
+\hat{q}\psi\right\rangle ;\varphi,\psi\in Q\left(  q\right)
+\end{align*}
+where $\hat{q}$ is an operator (not in general bounded) and $Q\left(
+q\right)  $ is a dense subspace of $\mathcal{H}$ known as the form domain,
+such that $\left\langle \left.  \varphi\right\vert \hat{q}\psi\right\rangle $
+is linear in $\psi$ and conjugate linear in $\varphi.$ The domain of the form
+$Q\left(  q\right)  $ can be different from the domain $Q\left(  \hat
+{q}\right)  $ of the operator $\hat{q}$. If $\left\langle \left.
+\varphi\right\vert \hat{q}\psi\right\rangle =\left\langle \left.
+\psi\right\vert \hat{q}\varphi\right\rangle ^{\ast}$ then $q$ is said to
+hermitian, and if $\left\langle \left.  \varphi\right\vert \hat{q}%
+\varphi\right\rangle \geq0$ it is said to be positive. A positive form is said
+to be closed iff $Q\left(  q\right)  $ is complete in the form norm%
+\[
+\left\Vert \varphi\right\Vert _{q}^{2}=\left\langle \left.  \varphi\right\vert
+\hat{q}\varphi\right\rangle +\left\Vert \varphi\right\Vert ^{2}.
+\]
+The form $q$ (and the operator $\hat{q}$) is semibounded if
+\[
+\left\langle \left.  \varphi\right\vert \hat{q}\varphi\right\rangle
+\geq-M\left\Vert \varphi\right\Vert ^{2}%
+\]
+and
+\[
+\sup_{\varphi\in\mathcal{H}}\left\{  \frac{\left\langle \left.  \varphi
+\right\vert \hat{q}\varphi\right\rangle }{\left\Vert \varphi\right\Vert ^{2}%
+}\right\}  =\infty,
+\]
+which is equivalent to%
+
+\[
+\left\langle \left.  \varphi\right\vert \hat{q}_{1}\psi\right\rangle
+=\left\langle \left.  \varphi\right\vert \hat{q}\psi\right\rangle
++M\left\langle \left.  \varphi\right\vert \psi\right\rangle
+\]
+being positive. 
+
+Hermitian forms, in contradistinction to Hermitian operators, need not be
+closable. However if they are closeable then they are always the quadratic
+form of self-adjoint operator.
+
+\begin{theorem}
+If the form $q$ is positive and closed, then it is the form of a unique
+self-adjoint, positive operator, the extension $\tilde{q}$ of $\hat{q}.$
+\end{theorem}
+
+\begin{corollary}
+Every semibounded operator (that defines a closed Hermitian form) has a
+self-adjoint extension known as the Freidichs extension.
+\end{corollary}
+
+
+\end{document}

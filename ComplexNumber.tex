@@ -1,0 +1,235 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Wednesday, May 03, 2006 09:17:41}
+%TCIDATA{LastRevised=Monday, December 22, 2014 11:07:47}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{align*}
+z  &  =re^{i\theta}=x+iy=r\left(  \cos\theta+i\sin\theta\right) \\
+x  &  =r\cos\theta\\
+y  &  =r\sin\theta
+\end{align*}%
+\begin{align*}
+r  &  =\left\vert z\right\vert =+\sqrt{x^{2}+y^{2}}\\
+\theta &  =\tan^{-1}\left\{  \frac{y}{x}\right\}
+\end{align*}
+%
+
+\begin{align*}
+x  &  \geq0\text{ and }y\geq0\Rightarrow0\leq\theta\leq\frac{\pi}{2}\\
+x  &  \geq0\text{ and }y\leq0\Rightarrow\frac{3\pi}{2}\leq\theta\leq2\pi\\
+x  &  \leq0\text{ and }y\geq0\Rightarrow\frac{\pi}{2}\leq\theta\leq\pi\\
+x  &  \leq0\text{ and }y\leq0\Rightarrow\pi\leq\theta\leq\frac{3\pi}{2}%
+\end{align*}%
+\begin{align}
+\frac{\partial x}{\partial r}  &  =\cos\theta;\quad\frac{\partial x}%
+{\partial\theta}=-\sin\theta\\
+\frac{\partial y}{\partial r}  &  =\sin\theta;\quad\frac{\partial y}%
+{\partial\theta}=\cos\theta
+\end{align}%
+\begin{equation}
+J_{c\rightarrow p}=\left(
+\begin{array}
+[c]{cc}%
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+\frac{\partial f\left(  z\right)  }{\partial r}\\
+\frac{\partial f\left(  z\right)  }{\partial\theta}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\partial f\left(  z\right)  }{\partial x}\\
+\frac{\partial f\left(  z\right)  }{\partial y}%
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+n  &  =\left(  \epsilon\mu\right)  ^{\frac{1}{2}}=\left(  r_{\epsilon}r_{\mu
+}\right)  ^{\frac{1}{2}}e^{\left(  \frac{i}{2}\left\{  \theta_{\epsilon
+}+\theta_{\mu}\right\}  +ik\pi\right)  }=\left(  r_{\epsilon}r_{\mu}\right)
+^{\frac{1}{2}}e^{ik\pi}e^{\frac{i}{2}\left\{  \theta_{\epsilon}+\theta_{\mu
+}\right\}  }\nonumber\\
+\operatorname{Re}n  &  =\left(  r_{\epsilon}r_{\mu}\right)  ^{\frac{1}{2}%
+}e^{ik\pi}\cos\left\{  \frac{\theta_{\epsilon}+\theta_{\mu}}{2}\right\} \\
+\operatorname{Im}n  &  =\left(  r_{\epsilon}r_{\mu}\right)  ^{\frac{1}{2}%
+}e^{ik\pi}\sin\left\{  \frac{\theta_{\epsilon}+\theta_{\mu}}{2}\right\}
+\nonumber
+\end{align}
+%
+
+\begin{align*}
+f\left(  z\right)   &  =z^{2}=r^{2}e^{2i\theta+2ik\pi}\quad
+f:\mathbb{C\rightarrow C}\\
+f^{-1}\left(  z\right)   &  =r^{\frac{1}{2}}e^{\frac{i\theta}{2}+ik\pi}%
+\end{align*}%
+\[
+\cos\theta\leq0\Leftrightarrow\frac{\pi}{2}\leq\theta\leq\frac{3\pi}{2}%
+\]
+%
+
+\[
+\operatorname{Re}n\leq0\Leftrightarrow-\frac{\pi}{2}+2m\pi\leq\frac
+{\theta_{\epsilon}+\theta_{\mu}}{2}\leq\frac{\pi}{2}+2m\pi
+\]%
+\begin{align}
+f\left(  z+\delta z\right)   &  =f\left(  z\right)  +\left(  \frac{\partial
+f\left(  z\right)  }{\partial x},\frac{\partial f\left(  z\right)  }{\partial
+y}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  +\cdots\\
+&  =f\left(  z\right)  +\left(  \frac{\partial f\left(  z\right)  }{\partial
+r},\frac{\partial f\left(  z\right)  }{\partial\theta}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta r\\
+\delta\theta
+\end{array}
+\right)  +\cdots
+\end{align}
+Consider
+\begin{equation}
+z^{\frac{1}{2}}=\left\{  x+iy\right\}  ^{\frac{1}{2}}%
+\end{equation}
+then%
+\begin{align}
+\left\{  z+\delta z\right\}  ^{\frac{1}{2}} &  =z+\frac{1}{2}\left(
+\frac{\partial f\left(  z\right)  }{\partial x},\frac{\partial f\left(
+z\right)  }{\partial y}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  +\cdots\\
+&  =z+\frac{1}{2}\left(  \left\{  x+iy\right\}  ^{-\frac{1}{2}},i\left\{
+x+iy\right\}  ^{-\frac{1}{2}}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  +\cdots
+\end{align}
+and
+\begin{equation}
+\left\{  1+\delta z\right\}  ^{\frac{1}{2}}=1+\frac{1}{2}\left\{  \delta
+x+i\delta y\right\}  +\cdots=1+\frac{1}{2}\delta z+\cdots
+\end{equation}%
+\begin{equation}
+z^{\frac{1}{2}}=\left\{
+\begin{array}
+[c]{c}%
+r^{\frac{1}{2}}e^{i\frac{\theta}{2}}\text{\quad or\quad}r^{\frac{1}{2}%
+}e^{i\frac{\theta}{2}}e^{i\pi}\text{ if }\pi<\theta<2\pi\Rightarrow\frac{\pi
+}{2}<\frac{\theta}{2}<\pi\text{ and }\frac{3\pi}{2}<\frac{\theta}{2}+\pi
+<2\pi\\
+r^{\frac{1}{2}}e^{i\frac{\theta}{2}}\text{\quad or\quad}r^{\frac{1}{2}%
+}e^{i\frac{\theta}{2}}e^{i\pi}\quad0\leq\theta\leq\pi\Rightarrow0\leq
+\frac{\theta}{2}\leq\frac{\pi}{2}\text{and }\pi\leq\frac{\theta}{2}+\pi
+\leq\frac{3\pi}{2}%
+\end{array}
+\right.
+\end{equation}%
+\begin{align}
+z^{\frac{1}{2}} &  :\left[  0,\infty\right]  \times\left[  0,2\pi\right)
+\longrightarrow\left[  0,\infty\right]  \times\left[  0,\pi\right)  \\
+z^{\frac{1}{2}} &  :\left[  0,\infty\right]  \times\left[  \pi,2\pi\right)
+\longrightarrow\left[  0,\infty\right]  \times\left[  \pi,2\pi\right)
+\end{align}
+As functions must be single valued one constructs Reimann sheets
+\begin{equation}
+z^{\frac{1}{2}}:\overset{\text{sheet 1}}{\overbrace{\left[  0,\infty\right]
+\times\left[  0,\pi\right)  }}\cup\overset{\text{sheet 2}}{\overbrace{\left[
+0,\infty\right]  \times\left[  \pi,2\pi\right)  }}\longrightarrow\left[
+0,\infty\right]  \times\left[  0,2\pi\right)
+\end{equation}
+
+
+
+\end{document}

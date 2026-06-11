@@ -1,0 +1,137 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{harvard}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Sunday, March 24, 2002 09:08:29}
+%TCIDATA{LastRevised=Sunday, March 24, 2002 09:09:03}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\Standard LaTeX Article (Harvard)">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{The Title of a Standard LaTeX Article}
+\author{A. U. Thor \\
+%EndAName
+The University of Stewart Island}
+\maketitle
+
+\begin{abstract}
+We study the effects of warm water on the local penguin population. The
+major finding is that it is extremely difficult to induce penguins to drink
+warm water. The success factor is approximately $-e^{-i\pi }-1$.
+\end{abstract}
+
+\section{The Harvard Bibliography System}
+
+\subsection{About This Shell}
+
+This shell document provides a sample layout of a Standard LaTeX Article.
+The Typeset Bibliography Choice has been set to BibTeX and the Harvard
+package has been added. The documentation for this package is \qExtProgCall{%
+DVI Previewer}{harvard.dvi}{TeX Documentation}{%
+latex/contrib/supported/harvard/harvard.dvi}{}{} (Ctrl-Click the preceding
+link to view the documentation).
+
+Changes to the typeset format of this shell and its associated \LaTeX{}
+formatting files (\texttt{article.cls }and \texttt{harvard.sty}) are not
+supported by MacKichan Software, Inc. If you wish to make such changes,
+please consult the \LaTeX{} manuals or a local \LaTeX{} expert.
+
+If you modify this document and save it as ``Standard LaTeX Article
+(Harvard).shl'' in the \texttt{Shells\TEXTsymbol{\backslash}Articles%
+\TEXTsymbol{\backslash}SW} directory, it will become your new Standard LaTeX
+Article (Harvard) shell.
+
+\subsection{Compiling a Bibliography}
+
+\begin{enumerate}
+\item Save this document using a name of your choosing.
+
+\item Choose \textsf{Typeset, Compile.}
+
+\item Check \textsf{Generate a Bibliography.}
+
+\item Choose \textsf{OK.}
+
+\item Choose \textsf{Typeset, Preview.}
+\end{enumerate}
+
+\subsection{Citations and the Bibliography}
+
+The standard citation mechanism that is supported by the SW \textsf{Insert,
+Field, Citation} mechanism is the parenthetical citation form, using the
+LaTeX macro \verb|\cite| and is as follows:
+
+As \cite{agsm} and \cite[Annex~B]{latex:guide} describe . . .
+
+\subsubsection{\texttt{\TEXTsymbol{\backslash}citeasnout}}
+
+The Harvard package also supports using a citation as a noun using the LaTeX
+macro \verb|\citeasnoun|. These mechanisms are not supported directly
+through the SW interface. They are entered as TeX fields. Here are some
+examples that you can copy and modify.
+
+As \citeasnoun{agsm} and \citeasnoun[Annex~B]{latex} describe . . .
+
+\subsubsection{\texttt{\TEXTsymbol{\backslash}possessivecite}}
+
+You can use the citation as a possessive noun phrase with the LaTeX macro 
+\verb|\possessivecite|. Multiple citations are not permitted.
+
+\possessivecite{latex} description of this feature is . . .
+
+\subsubsection{\texttt{\TEXTsymbol{\backslash}citeaffixed}}
+
+You can use the LaTeX macro \verb|\citeaffixed| command to allow text to be
+affixed inside the beginning of the parenthesis of a parenthetical citation.
+
+BibTeX manuals \citeaffixed{latex,agsm}{e.g.} describe . . .
+
+\subsubsection{Changing the default citation command}
+
+As previously mentioned, the standard citation mechanism supported by SW
+used the LaTeX macro \verb|\cite|. If you prefer to use the citation as a
+noun or the citation as a possessive noun phrase throughout your \emph{entire%
+} document, you can change the default SW behavior. \ This is done by adding
+an appropriate macro to the preamble of your document. \ For example, if you
+wish to use citation as a noun throughout your document, select \textsf{%
+Typeset, Preamble }and add a line containing \verb|\let\cite=\citeasnoun|.
+Be careful when editing the preamble (see the warning in the LaTeX Preamble
+dialog box). Use \verb|\let\cite=\possessivecite| in the document preamble
+if you want all citations to appear as a possessive noun phrase. With one of
+the macros in the document preamble, simply use the normal SW citation
+mechanism and the citations will appear as nouns or possessive noun phrases
+when you compile your document and generate a bibliography.
+
+\bibliographystyle{kluwer}
+\bibliography{harvard}
+
+\end{document}

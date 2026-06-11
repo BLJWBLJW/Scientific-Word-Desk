@@ -1,0 +1,45 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amssymb}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Friday, April 18, 2025 06:59:24}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\input{tcilatex}
+\begin{document}
+
+
+The fermionic operator $a_{i}^{\dagger }a_{j}^{\dagger }a_{k}a_{l}$ expands
+in terms of Majorana operators as
+
+\begin{align*}
+a_{i}^{\dagger }a_{j}^{\dagger }a_{k}a_{l}& =\frac{1}{16}\left\{ \gamma
+_{j}\gamma _{k}\gamma _{l}\gamma _{m}+i\gamma _{j}\gamma _{k}\gamma
+_{l}\gamma _{m+r}-i\gamma _{j}\gamma _{k}\gamma _{l+r}\gamma _{m}+\gamma
+_{j}\gamma _{k}\gamma _{l+r}\gamma _{m+r}\right.  \\
++i& \gamma _{j}\gamma _{k+r}\gamma _{l}\gamma _{m}-\gamma _{j}\gamma
+_{k+r}\gamma _{l}\gamma _{m+r}+\gamma _{j}\gamma _{k+r}\gamma _{l+r}\gamma
+_{m}+i\gamma _{j}\gamma _{k+r}\gamma _{l+r}\gamma _{m+r} \\
+-i& \gamma _{j+r}\gamma _{k}\gamma _{l}\gamma _{m}+\gamma _{j+r}\gamma
+_{k}\gamma _{l}\gamma _{m+r}-\gamma _{j+r}\gamma _{k}\gamma _{l+r}\gamma
+_{m}-i\gamma _{j+r}\gamma _{k}\gamma _{l+r}\gamma _{m+r} \\
+& +\left. \gamma _{j+r}\gamma _{k+r}\gamma _{l}\gamma _{m}+i\gamma
+_{j+r}\gamma _{k+r}\gamma _{l}\gamma _{m+r}-i\gamma _{j+r}\gamma
+_{k+r}\gamma _{l+r}\gamma _{m}+\gamma _{j+r}\gamma _{k+r}\gamma _{l+r}\gamma
+_{m+r}\right\} 
+\end{align*}
+
+where $\gamma _{\mu }$ are Majorana operators satisfying $\{\gamma _{\mu
+},\gamma _{\nu }\}=2\delta _{\mu \nu }$, with the fermionic mapping 
+\begin{align*}
+a_{j}& =\tfrac{1}{2}(\gamma _{j}+i\gamma _{j+r}) \\
+a_{j}^{\dagger }& =\tfrac{1}{2}(\gamma _{j}-i\gamma _{j+r})
+\end{align*}
+
+\end{document}

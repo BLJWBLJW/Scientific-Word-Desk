@@ -1,0 +1,203 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, December 29, 2006 11:17:19}
+%TCIDATA{LastRevised=Thursday, February 01, 2007 09:19:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title{Approximate First Order Mie Coefficients}
+\author{Brian Weiner}
+\affiliation{Dept of Physics, Penn State Univ.}
+\startpage{1}
+
+\section{Approximate First Order Mie Coefficients}
+
+The following is extracted from Mehboob Alam \& Yehia Massoud, "A Closed-Form
+Analytical Model for Single Nanoshells", IEEE Trans. on NanoTechnology, Vol 5,
+No. 3, May 2006.
+
+The permeabilities are set as $\mu_{1}=\mu_{2}=\mu_{3}=1.$ The arguments of
+the Bessel functions are%
+\begin{align}
+y  &  =\frac{b\omega}{c}=k_{0}b;\\
+x  &  =\frac{a\omega}{c}=k_{0}a.
+\end{align}
+The relative indices of refraction are given by%
+\begin{equation}
+n_{1}^{2}=\frac{\varepsilon_{1}}{\varepsilon_{3}};n_{2}^{2}=\frac
+{\varepsilon_{2}\left(  \omega\right)  }{\varepsilon_{3}},
+\end{equation}
+where $\varepsilon_{3}$ is the permittivity of the medium; $\varepsilon_{2}$
+the permittivity of the shell and $\varepsilon_{1}$ is the permittivity of the
+core. The first order (dipole) electrical Mie coefficient is
+\begin{equation}
+a_{1}=\frac{\frac{4y^{3}}{5}a_{1a}\left(  x\right)  a_{1ay}\left(
+y,n_{2}\right)  +a_{1b}\left(  x\right)  a_{1by}\left(  y,n_{2}\right)
+}{a_{1a}\left(  x\right)  a_{1cy}\left(  y,n_{2}\right)  -4a_{1b}\left(
+x\right)  a_{1dy}\left(  y,n_{2}\right)  },
+\end{equation}
+where $a_{1a}\left(  x\right)  $ is given by
+\begin{align}
+a_{1a}\left(  x\right)   &  =80\left(  n_{1}^{2}+2n_{2}^{2}\right)  -8\left(
+n_{1}^{2}-n_{2}^{2}\right)  \left(  n_{1}^{2}+10n_{2}^{2}\right)
+x^{2}\nonumber\\
+&  +2n_{2}^{2}\left(  2n_{1}^{4}+7n_{1}^{2}n_{2}^{2}-10n_{2}^{4}\right)
+x^{4}-n_{1}^{2}n_{2}^{2}\left(  3n_{1}^{2}-4n_{2}^{2}\right)  x^{6}\nonumber\\
+&  \simeq a_{1a0}+a_{1a2}x^{2}+a_{1a4}x^{4}%
+\end{align}
+$a_{1b}\left(  x\right)  $ is given by%
+\begin{align}
+a_{1b}\left(  x\right)   &  =\left(  n_{1}^{2}-n_{2}^{2}\right)  \left(
+n_{1}^{2}n_{2}^{2}x^{7}-5\left(  n_{1}^{2}+n_{2}^{2}\right)  x^{5}%
++50x^{3}\right) \nonumber\\
+&  =a_{1b3}x^{3}+a_{1b5}x^{5}+a_{1b7}x^{7}\simeq a_{1b3}x^{3}+a_{1b5}x^{5}%
+\end{align}
+$a_{1ay}\left(  y,n_{2}\right)  $ is given by%
+\begin{align}
+a_{1ay}\left(  y,n_{2}\right)   &  =\left(  n_{2}^{2}-1\right)  n_{2}^{2}%
+y^{7}-\left(  n_{2}^{2}-1\right)  \left(  5\left(  n_{2}^{2}+1\right)
++50\right)  y^{3}\nonumber\\
+&  =a_{1ay3}y^{3}+a_{1ay7}y^{7}\simeq a_{1ay3}y^{3}%
+\end{align}
+$a_{1by}\left(  y,n_{2}\right)  $ is given by%
+\begin{align}
+&  a_{1by}\left(  y,n_{2}\right)  =80\left(  1+n_{2}^{2}\right)  +8\left(
+n_{2}^{2}-1\right)  \left(  10n_{2}^{2}+1\right)  y^{2}\nonumber\\
+&  \qquad\qquad\qquad\qquad-2n_{2}^{2}\left(  10n_{2}^{4}-7n_{2}^{2}-2\right)
+y^{4}+n_{2}^{4}\left(  4n_{2}^{2}-3\right)  y^{6}\nonumber\\
+&  =a_{1by0}+a_{1by2}y^{2}+a_{1by4}y^{4}+a_{1by6}y^{6}\simeq a_{1by0}%
++a_{1by2}y^{2}+a_{1by4}y^{4}%
+\end{align}
+$a_{1cy}\left(  y,n_{2}\right)  $ is given by%
+\begin{align}
+&  a_{1cy}\left(  y,n_{2}\right)  =-60i\left(  n_{2}^{2}+2\right)
++\nonumber\\
+&  \qquad\qquad\left(  n_{2}^{2}-1\right)  \left(  6i\left(  10+n_{2}%
+^{2}\right)  y^{2}-40y^{3}\right)  -n_{2}^{2}\left(  3i\left(  n_{2}%
+^{2}-4\right)  y^{4}-4\left(  n_{2}^{2}-2\right)  y^{5}\right) \nonumber\\
+&  \left.  \qquad\qquad\right.  =a_{1cy0}+a_{1cy2}y^{2}+a_{1cy3}y^{3}%
++a_{1cy4}y^{4}+a_{1cy5}y^{5}%
+\end{align}
+and $a_{1dy}\left(  y,n_{2}\right)  $ is given by%
+\begin{align}
+&  a_{1dy}\left(  y,n_{2}\right)  =48i\left(  n_{2}^{2}-1\right)  +24i\left(
+n_{2}^{2}-1\right)  \left(  1+n_{2}^{2}\right)  y^{2}\nonumber\\
+&  +16\left(  2n_{2}^{2}+1\right)  y^{3}-6in_{2}^{4}\left(  n_{2}^{4}%
++5n_{2}^{2}-2\right)  y^{4}+8n_{2}^{2}\left(  2n_{2}^{2}-1\right)
+y^{5}+3in_{2}^{4}\left(  n_{2}^{2}-3\right)  y^{6}\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad-2n_{2}^{4}\left(  2n_{2}^{2}-3\right)  y^{7}\nonumber\\
+&  =a_{1dy0}+a_{1dy2}y^{2}+a_{1dy3}y^{3}+a_{1dy4}y^{4}+a_{1dy5}y^{5}%
++a_{1dy6}y^{6}+a_{1dy7}y^{7}\nonumber\\
+&  \simeq a_{1dy0}+a_{1dy2}y^{2}+a_{1dy3}y^{3}+a_{1dy4}y^{4}+a_{1dy5}y^{5}.
+\end{align}
+Expanding the products that occur in the Mie coefficients up to order 5 gives
+\begin{equation}
+\frac{4y^{3}}{5}a_{1a}\left(  x\right)  a_{1ay}\left(  y,n_{2}\right)
+\simeq0\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\end{equation}%
+\begin{align}
+&  a_{1b}\left(  x\right)  a_{1by}\left(  y,n_{2}\right)  \simeq\left\{
+a_{1b3}x^{3}+a_{1b5}x^{5}\right\}  \times\left\{  a_{1by0}+a_{1by2}%
+y^{2}+a_{1by4}y^{4}\right\} \nonumber\\
+&  \left.  \qquad\qquad\qquad\right.  \simeq\left\{  a_{1b3}x^{3}+a_{1b5}%
+x^{5}\right\}  a_{1by0}+a_{1b3}a_{1by2}x^{3}y^{2}%
+\end{align}%
+\begin{align}
+&  a_{1a}\left(  x\right)  a_{1cy}\left(  y,n_{2}\right)  =\nonumber\\
+&  \left\{  a_{1a0}+a_{1a2}x^{2}+a_{1a4}x^{4}\right\}  \left\{  a_{1cy0}%
++a_{1cy2}y^{2}+a_{1cy3}y^{3}+a_{1cy4}y^{4}+a_{1cy5}y^{5}\right\} \nonumber\\
+&  \simeq a_{1a0}\left\{  a_{1cy0}+a_{1cy2}y^{2}+a_{1cy3}y^{3}+a_{1cy4}%
+y^{4}+a_{1cy5}y^{5}\right\} \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad+a_{1a2}x^{2}\left\{  a_{1cy2}%
+y^{2}+a_{1cy3}y^{3}\right\}  +a_{1a4}a_{1cy0}x^{4}%
+\end{align}%
+\begin{align}
+&  a_{1b}\left(  x\right)  a_{1dy}\left(  y,n_{2}\right)  =\left\{
+a_{1b3}x^{3}+a_{1b5}x^{5}+a_{1b7}x^{7}\right\}  \times\nonumber\\
+&  \left\{  a_{1dy0}+a_{1dy2}y^{2}+a_{1dy3}y^{3}+a_{1dy4}y^{4}+a_{1dy5}%
+y^{5}+a_{1dy6}y^{6}+a_{1dy7}y^{7}\right\} \nonumber\\
+&  \left.  \qquad\qquad\qquad\right.  \simeq a_{1b3}x^{3}\left\{
+a_{1dy0}+a_{1dy2}y^{2}\right\}  +a_{1dy0}a_{1b5}x^{5}.
+\end{align}
+This gives (in terms of the power series expansion coefficients) an
+approximate first order electrical Mie coefficient
+\begin{align}
+a_{1}  &  \simeq\left\{  \left\{  a_{1b3}x^{3}+a_{1b5}x^{5}\right\}
+a_{1by0}+a_{1b3}a_{1by2}x^{3}y^{2}\right\}  \left\{  a_{1a0}a_{1cy0}%
++a_{1a0}a_{1cy2}y^{2}\right\}  ^{-1}\nonumber\\
+&  =\frac{1}{a_{1a0}a_{1cy0}}\left\{  \left\{  a_{1b3}x^{3}+a_{1b5}%
+x^{5}\right\}  a_{1by0}+a_{1b3}a_{1by2}x^{3}y^{2}\right\}  \left\{
+1-\frac{a_{1cy2}}{a_{1cy0}}y^{2}\right\} \nonumber\\
+&  =\frac{1}{a_{1a0}a_{1cy0}}\left\{  \left\{  a_{1b3}x^{3}+a_{1b5}%
+x^{5}\right\}  a_{1by0}+a_{1b3}a_{1by2}x^{3}y^{2}\right\}  -\frac{a_{1cy2}%
+}{a_{1cy0}^{2}a_{1a0}}x^{3}y^{2}\nonumber\\
+&  =\frac{a_{1by0}}{a_{1a0}a_{1cy0}}\left\{  a_{1b3}x^{3}+a_{1b5}%
+x^{5}\right\}  +\left\{  \frac{a_{1b3}a_{1by2}}{a_{1a0}a_{1cy0}}%
+-\frac{a_{1cy2}}{a_{1cy0}^{2}a_{1a0}}\right\}  x^{3}y^{2}.
+\end{align}
+Expanding this coefficient in terms of the indices of refraction we obtain the
+approximate first order electric Mie coefficient
+\begin{align}
+&  \frac{a_{1by0}}{a_{1a0}a_{1cy0}}\left\{  a_{1b3}x^{3}+a_{1b5}x^{5}\right\}
++\left\{  \frac{a_{1b3}a_{1by2}}{a_{1a0}a_{1cy0}}-\frac{a_{1cy2}}{a_{1cy0}%
+^{2}a_{1a0}}\right\}  x^{3}y^{2}\nonumber\\
+&  =i\frac{\left(  1+n_{2}^{2}\right)  \left(  n_{1}^{2}-n_{2}^{2}\right)
+}{\left(  n_{1}^{2}+2n_{2}^{2}\right)  60\left(  n_{2}^{2}+2\right)  }\left\{
+50x^{3}-5\left(  n_{1}^{2}+n_{2}^{2}\right)  x^{5}\right\} \nonumber\\
+&  -\left\{  \frac{50\left(  n_{1}^{2}-n_{2}^{2}\right)  8\left(  n_{2}%
+^{2}-1\right)  \left(  10n_{2}^{2}+1\right)  }{80\left(  n_{1}^{2}+2n_{2}%
+^{2}\right)  60i\left(  n_{2}^{2}+2\right)  }+\frac{\left(  n_{2}%
+^{2}-1\right)  6i\left(  10+n_{2}^{2}\right)  }{\left[  -60i\left(  n_{2}%
+^{2}+2\right)  \right]  ^{2}80\left(  n_{1}^{2}+2n_{2}^{2}\right)  }\right\}
+x^{3}y^{2}\nonumber\\
+&  =i\frac{\left(  1+n_{2}^{2}\right)  \left(  n_{1}^{2}-n_{2}^{2}\right)
+}{\left(  n_{1}^{2}+2n_{2}^{2}\right)  60\left(  n_{2}^{2}+2\right)  }\left\{
+50x^{3}-5\left(  n_{1}^{2}+n_{2}^{2}\right)  x^{5}\right\} \nonumber\\
+&  -\left\{  \frac{\left(  n_{1}^{2}-n_{2}^{2}\right)  \left(  n_{2}%
+^{2}-1\right)  \left(  10n_{2}^{2}+1\right)  }{\left(  n_{1}^{2}+2n_{2}%
+^{2}\right)  12i\left(  n_{2}^{2}+2\right)  }+\frac{\left(  n_{2}%
+^{2}-1\right)  \left(  10+n_{2}^{2}\right)  }{\left[  10\left(  n_{2}%
+^{2}+2\right)  \right]  ^{2}80\left(  n_{1}^{2}+2n_{2}^{2}\right)  }\right\}
+x^{3}y^{2}.
+\end{align}
+The approximate first order magnetic Mie coefficient is given as
+\begin{equation}
+b_{1}=\frac{i}{45}\left\{  \left(  1-n_{2}^{2}\right)  y^{5}-3n_{1}%
+\frac{\left(  n_{1}^{2}-n_{2}^{2}\right)  }{\left(  1+2n_{1}\right)  }%
+x^{5}\right\}  .
+\end{equation}
+
+
+
+\end{document}

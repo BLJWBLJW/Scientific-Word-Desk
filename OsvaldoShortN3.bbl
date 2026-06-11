@@ -1,0 +1,282 @@
+\begin{thebibliography}{38}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Goscinski et~al.}(1973)\citenamefont{Goscinski, Pickup,
+  and Purvis}}]{Goscinski73}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Pickup}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Purvis}},
+  \bibinfo{journal}{Chemical Physics Letters} \textbf{\bibinfo{volume}{22}},
+  \bibinfo{pages}{167} (\bibinfo{year}{1973}).
+
+\bibitem[{\citenamefont{Pickup and Goscinski}(1973)}]{Pickup73}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Pickup}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{Molecular Physics} \textbf{\bibinfo{volume}{26}},
+  \bibinfo{pages}{1013} (\bibinfo{year}{1973}).
+
+\bibitem[{\citenamefont{Goscinski and Brandas}(1969)}]{Goscinski69}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Brandas}},
+  \bibinfo{journal}{Physical Review} \textbf{\bibinfo{volume}{182}},
+  \bibinfo{pages}{43} (\bibinfo{year}{1969}).
+
+\bibitem[{\citenamefont{Goscinski and Lukman}(1970)}]{Goscinski70}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Lukman}},
+  \bibinfo{journal}{Chemical Physics Letters} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{573} (\bibinfo{year}{1970}).
+
+\bibitem[{\citenamefont{Weiner and Goscinski}(1980{\natexlab{a}})}]{Weiner80a}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{Int. J. Quantum Chem.} \textbf{\bibinfo{volume}{18}},
+  \bibinfo{pages}{1109} (\bibinfo{year}{1980}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Goscinski and Weiner}(1980)}]{Goscinski80}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}},
+  \bibinfo{journal}{Phys. Scr.} \textbf{\bibinfo{volume}{21}},
+  \bibinfo{pages}{385} (\bibinfo{year}{1980}), \bibinfo{note}{from conference:
+  Many-body Theory of Atomic Systems. Proceedings of the Nobel Symposium 46,
+  11-16 June 1979}.
+
+\bibitem[{\citenamefont{Howat et~al.}(1977)\citenamefont{Howat, Trsic, and
+  Goscinski}}]{Howat77a}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Howat}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Trsic}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{International Journal of Quantum Chemistry}
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{283} (\bibinfo{year}{1977}).
+
+\bibitem[{\citenamefont{Weiner and Goscinski}(1980{\natexlab{b}})}]{Weiner80}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{22}},
+  \bibinfo{pages}{2374} (\bibinfo{year}{1980}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Linderberg and Ohrn}(1977)}]{Linderberg77}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Linderberg}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Ohrn}},
+  \bibinfo{journal}{International Journal of Quantum Chemistry}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{161} (\bibinfo{year}{1977}).
+
+\bibitem[{\citenamefont{Ohrn and Linderberg}(1979)}]{Ohrn79}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Ohrn}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Linderberg}},
+  \bibinfo{journal}{International Journal of Quantum Chemistry}
+  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{343} (\bibinfo{year}{1979}).
+
+\bibitem[{\citenamefont{Coleman}(1963)}]{Coleman63}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Coleman}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{pages}{668} (\bibinfo{year}{1963}).
+
+\bibitem[{\citenamefont{Coleman}(1965)}]{Coleman65}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Coleman}},
+  \bibinfo{journal}{J. Math. Phys.} \textbf{\bibinfo{volume}{6}},
+  \bibinfo{pages}{1425} (\bibinfo{year}{1965}).
+
+\bibitem[{\citenamefont{Sangfelt and Goscinski}(1985)}]{Sangfelt85}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Sangfelt}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{Journal of Chemical Physics} \textbf{\bibinfo{volume}{82}},
+  \bibinfo{pages}{4187} (\bibinfo{year}{1985}).
+
+\bibitem[{\citenamefont{Sangfelt et~al.}(1984)\citenamefont{Sangfelt, Kurtz,
+  Elander, and Goscinski}}]{Sangfelt84}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Sangfelt}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Kurtz}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Elander}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{Journal of Chemical Physics} \textbf{\bibinfo{volume}{81}},
+  \bibinfo{pages}{3976} (\bibinfo{year}{1984}).
+
+\bibitem[{\citenamefont{Elander et~al.}(1983)\citenamefont{Elander, Sangfelt,
+  Kurtz, and Goscinski}}]{Elander83}
+\bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Elander}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Sangfelt}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Kurtz}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{International Journal of Quantum Chemistry}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{1047} (\bibinfo{year}{1983}),
+  \bibinfo{note}{from conference: Proceedings of the Fourth International
+  Congress in Quantum Chemistry, 13-20 June 1982}.
+
+\bibitem[{\citenamefont{Goscinski et~al.}(1982)\citenamefont{Goscinski, Weiner,
+  and Elander}}]{Goscinski82}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Elander}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{2445} (\bibinfo{year}{1982}).
+
+\bibitem[{\citenamefont{Weiner}(1983)}]{Weiner83}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}}, \bibinfo{journal}{J.
+  Math. Phys.} \textbf{\bibinfo{volume}{24}}, \bibinfo{pages}{1791}
+  (\bibinfo{year}{1983}).
+
+\bibitem[{\citenamefont{Sangfelt et~al.}(1981)\citenamefont{Sangfelt,
+  Goscinski, Elander, and Kurtz}}]{Sangfelt81}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Sangfelt}},
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Elander}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Kurtz}},
+  \bibinfo{journal}{International Journal of Quantum Chemistry, Quantum
+  Chemistry Symposia} pp. \bibinfo{pages}{133--41} (\bibinfo{year}{1981}),
+  \bibinfo{note}{from conference: Proceedings of the International Symposium on
+  Atomic, Molecular, and Solid-State Theory, Collision Phenomena, and
+  Computational Quantum Chemistry, 8-14 March 1981}.
+
+\bibitem[{\citenamefont{Weiner and {\"O}hrn}(1987)}]{Weiner87}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{J. Phys. Chem.} \textbf{\bibinfo{volume}{91}},
+  \bibinfo{pages}{563} (\bibinfo{year}{1987}).
+
+\bibitem[{\citenamefont{Sangfelt et~al.}(1987)\citenamefont{Sangfelt,
+  Chowdhury, Weiner, and {\"O}hrn}}]{Sangfelt87}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Sangfelt}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Chowdhury}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{86}},
+  \bibinfo{pages}{4523} (\bibinfo{year}{1987}).
+
+\bibitem[{\citenamefont{Ohrn}(1985)}]{Ohrn85}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Ohrn}},
+  \bibinfo{journal}{International Journal of Quantum Chemistry, Quantum
+  Chemistry Symposia} pp. \bibinfo{pages}{39--50} (\bibinfo{year}{1985}),
+  \bibinfo{note}{from conference: Proceedings of the International Symposium on
+  Atomic, Molecular and Solid-State Theory, Scattering Problems, Many Body
+  Phenomena, and Computational Quantum Chemistry, 18-23 March 1985}.
+
+\bibitem[{\citenamefont{Weiner and {\"O}hrn}(1985)}]{Weiner85}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{83}},
+  \bibinfo{pages}{2965} (\bibinfo{year}{1985}).
+
+\bibitem[{\citenamefont{Weiner et~al.}(1984)\citenamefont{Weiner, Jensen, and
+  {\"O}hrn}}]{Weiner84a}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}},
+  \bibinfo{author}{\bibfnamefont{H.~J.~A.} \bibnamefont{Jensen}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{2009} (\bibinfo{year}{1984}).
+
+\bibitem[{\citenamefont{Jensen et~al.}(1982)\citenamefont{Jensen, Weiner,
+  Ortiz, and {\"O}hrn}}]{Jensen82}
+\bibinfo{author}{\bibfnamefont{H.~J.~A.} \bibnamefont{Jensen}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}},
+  \bibinfo{author}{\bibfnamefont{J.~V.} \bibnamefont{Ortiz}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{Int. J. Quantum Chem., Quantum Chemistry Symposia} pp.
+  \bibinfo{pages}{615--31} (\bibinfo{year}{1982}), \bibinfo{note}{from
+  conference: Proceedings of the International Symposium on Quantum Chemistry,
+  Theory of Condensed Matter, and Propagator Methods in the Quantum Theory of
+  Matter, 1-13 March 1982}.
+
+\bibitem[{\citenamefont{Jensen et~al.}(1983)\citenamefont{Jensen, Weiner, and
+  {\"O}hrn}}]{Jorgen83}
+\bibinfo{author}{\bibfnamefont{H.~J.~A.} \bibnamefont{Jensen}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{Int. J. Quantum Chem.} \textbf{\bibinfo{volume}{23}},
+  \bibinfo{pages}{65} (\bibinfo{year}{1983}), \bibinfo{note}{from conference:
+  Proceedings of the Fourth International Congress in Quantum Chemistry, 13-20
+  June 1982}.
+
+\bibitem[{\citenamefont{Perelomov}(1986)}]{Perelomov_book}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Perelomov}},
+  \emph{\bibinfo{title}{Generalized Coherent States}}
+  (\bibinfo{publisher}{Springer-Verlag}, \bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{J.~Klauder}(1985)}]{Klauder}
+\bibinfo{author}{\bibfnamefont{B.-S.~S.} \bibnamefont{J.~Klauder}},
+  \emph{\bibinfo{title}{Coherent States}} (\bibinfo{publisher}{World
+  Scientific}, \bibinfo{year}{1985}).
+
+\bibitem[{\citenamefont{Gilmore}(1974)}]{Gilmore_book}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Gilmore}},
+  \emph{\bibinfo{title}{Lie Groups, Lie Algebras, and Some of their
+  Applications.}} (\bibinfo{publisher}{John Wiley and Sons},
+  \bibinfo{year}{1974}).
+
+\bibitem[{\citenamefont{Ito}(1993)}]{Encyclo}
+\bibinfo{editor}{\bibfnamefont{K.}~\bibnamefont{Ito}}, ed.,
+  \emph{\bibinfo{title}{Encyclopedia of Mathematics}}, vol.~\bibinfo{volume}{2}
+  (\bibinfo{publisher}{MIT press}, \bibinfo{address}{Cambridge, Massachusetts;
+  London, England}, \bibinfo{year}{1993}), \bibinfo{edition}{second edition}
+  ed.
+
+\bibitem[{\citenamefont{Kramer and Saraceno}(1981)}]{Kramer81}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Kramer}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Saraceno}},
+  \emph{\bibinfo{title}{Geometry of the Time-Dependent Variational Principle in
+  Quantum Mechanics.}} (\bibinfo{publisher}{Springer-Verlag},
+  \bibinfo{year}{1981}).
+
+\bibitem[{\citenamefont{Schulman}(1981)}]{Schulman81}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Schulman}},
+  \emph{\bibinfo{title}{Techniques and Applications of Path Integration}}
+  (\bibinfo{publisher}{John Wiley and Sons}, \bibinfo{year}{1981}).
+
+\bibitem[{\citenamefont{Helgason}(1978)}]{Helgason78}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Helgason}},
+  \emph{\bibinfo{title}{Differential Geometry, Lie Groups, and Symmetric
+  Spaces}} (\bibinfo{publisher}{Academic Press}, \bibinfo{year}{1978}).
+
+\bibitem[{\citenamefont{Thouless}(1960)}]{Thouless60}
+\bibinfo{author}{\bibfnamefont{D.~J.} \bibnamefont{Thouless}},
+  \bibinfo{journal}{Nucl. Phys.} \textbf{\bibinfo{volume}{21}},
+  \bibinfo{pages}{225} (\bibinfo{year}{1960}).
+
+\bibitem[{\citenamefont{Goscinski and Weiner}(1982)}]{Goscinski82a}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{25}},
+  \bibinfo{pages}{650} (\bibinfo{year}{1982}).
+
+\bibitem[{\citenamefont{Deumens et~al.}(1987)\citenamefont{Deumens, Weiner, and
+  {\"O}hrn}}]{Deumens87}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Deumens}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{Nuc. Phys. A} \textbf{\bibinfo{volume}{A466}},
+  \bibinfo{pages}{85} (\bibinfo{year}{1987}).
+
+\bibitem[{\citenamefont{Weiner et~al.}(1994)\citenamefont{Weiner, Deumens, and
+  {\"O}hrn}}]{Weiner94}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Deumens}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{\"O}hrn}},
+  \bibinfo{journal}{J. Math. Phys.} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{pages}{1139} (\bibinfo{year}{1994}).
+
+\bibitem[{\citenamefont{Zhang et~al.}(1990)\citenamefont{Zhang, Feng, and
+  Gilmore}}]{Zhang90}
+\bibinfo{author}{\bibfnamefont{W.-M.} \bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{D.~H.} \bibnamefont{Feng}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Gilmore}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{62}},
+  \bibinfo{pages}{.867} (\bibinfo{year}{1990}).
+
+\bibitem[{\citenamefont{Coleman and Yukalov}(2000)}]{Yukalov00}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Coleman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{V.~I.} \bibnamefont{Yukalov}},
+  \emph{\bibinfo{title}{Reduced Density Matrices}}
+  (\bibinfo{publisher}{Springer}, \bibinfo{year}{2000}).
+
+\end{thebibliography}

@@ -1,0 +1,2842 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, August 29, 2003 10:08:38}
+%TCIDATA{LastRevised=Saturday, July 24, 2004 09:27:28}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title{Correlated One Particle Wave Functions}
+\author{B. Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+\author{J. V. Ortiz}
+\affiliation{Department of Chemistry, Kansas State University, Manhattan, KS 66506-3701}
+\pacs{}
+
+\begin{abstract}
+
+
+\end{abstract}
+\date{06/29/2004}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{ Introduction \label{intro}}
+
+Independent Particle States (IPS's) have proved a mainstay of molecular
+multi-particle quantum mechanics both in physical modelling and numerical
+applications for many decades. The major attraction of these states lies in
+the conceptually concrete and chemically understandable pictures of molecular
+structure and properties that they provide. Apart from an initial choice of
+$s$ atomic orbitals and possibly a decision about the molecular point group
+and spin symmetry, one can obtain an unbiased description of the electronic
+states of a molecule by finding an IPS\ that minimizes the energy via the Self
+Consistent Field (SCF)\ equations. These equations provide a set of one
+electron states $\left\{  \left.  \left\vert \varphi_{j}\right\rangle
+\right\vert 1\leq j\leq2s\right\}  $, that are eigenstates of a self
+consistent Fock operator corresponding to the eigenvalues $\left\{  \left.
+\varepsilon_{j}\right\vert 1\leq j\leq2s\right\}  $ and are unique up to
+unitary transformations that mix degenerate eigenstates. If the IPS\ describes
+$M$ electrons then in general it is determined by the one-electron eigenstates
+corresponding to the $M$ lowest eigenvalues $\left\{  \left.  \varepsilon
+_{j}\right\vert 1\leq j\leq M\right\}  $. The wave functions of each of these
+one electron states can then be analyzed in terms of a basis of atomic
+orbitals, producing the familiar picture of one electron Probability
+Distributions (PD's) labelled by one electron energies, that has been
+invaluable in the understanding of chemical processes. The physical meaning of
+the energies $\left\{  \left.  \varepsilon_{j}\right\vert 1\leq j\leq
+M\right\}  $ can be deduced by considering the electron propagator
+\cite{ortiz}, which shows that they correspond to ionization potentials.
+
+It is often the case, however, that the IPS\ model is not sufficiently
+accurate to predict or explain the finer details of chemical reaction
+mechanisms or spectroscopic observations. In order to achieve this one must
+take into account electron-electron correlation. Traditionally this is
+accomplished by perturbational or configurational interaction methods that
+increase numerical accuracy at the cost of a clear, tangible, chemical model
+of the molecular system. The clarity is lost as pictorial models need be based
+on one particle properties, but in general one particle properties do not
+determine correlated multi-electron states. In particular one cannot use
+chemical intuition to rearrange the positions of atoms and bonds and be
+certain that the new conformation actually corresponds to a multi-electron
+state in contrast to the case of states determined by one particle properties.
+
+However, we have described \cite{Weiner & Ortiz 2003} a class of correlated
+states that generalize the IPS model, explicitly contain a description of
+correlation effects, and are the \emph{most general} states that produce a
+\emph{one particle} theory of electrons i.e. multi-particle states determined
+by one particle properties. These are the Antisymmetrized Geminal Power (AGP)
+states for an even number, $2N$, of electrons and the Generalized
+Antisymmetrized Geminal Power (GAGP) ones for an odd number, $2N+1$. In the
+IPS\ case the $2N$-electron state is completely determined by the occupation
+numbers of the First Order Reduced Density Operator (FORDO) and a set of one
+particle \emph{Natural }General Spin Orbitals (NGSOs). The occupation numbers
+in this case are equal to one or zero. In the AGP\ case the $2N$-electron
+state is completely determined by a set of one particle \emph{Canonical
+}General Spin Orbitals (CGSOs) and occupation numbers of the FORDO, but now
+the occupation numbers can be any value in the range $\left[  0,1\right]  ,$
+though they must be at least doubly degenerate. This theory \emph{explicitly
+contains} correlation and generalizes the one-particle theory based on
+uncorrelated Independent Particle States (IPS), which it contains as a special
+case. The AGP\ model produces a simple pictorial interpretation in terms of
+occupation numbers and orbitals, which totally \emph{determine} the
+$2N$-electron state, and thus can be used as an effective and rigorous
+chemical modelling tool.
+
+In contrast to IPS's when using AGP's it is important to note the distinction between
+
+\begin{itemize}
+\item AGP-NGSO's, which together with a set of doubly degenerate occupation
+numbers, determine an AGP-FORDO, that correspond to a \emph{set }of
+AGP\ states and
+
+\item AGP-CGSO's, which together with a set of doubly degenerate occupation
+numbers, determine a \emph{unique} AGP state.
+\end{itemize}
+
+The CGSO's are the NGSO's of the FORDO of a given AGP state, but the NGSO's of
+the FORDO\ of this AGP state are \emph{not }in general the CSGO's of this AGP\ state.
+
+In this article we describe how the manifold of $2N$-electron AGP states can
+be partitioned into equivalence classes, $\left[  D^{1}\right]  _{2N}$,
+indexed by FORDO's $D^{1}$ that are at least doubly degenerate, and how the
+elements of each class can be parameterized by a vector of angles
+\begin{equation}
+\mathbf{\theta\,}=\left(  0,\theta_{2},\cdots,\theta_{s}\right)
+,\quad0<\theta_{j}\leq2\pi;\quad2\leq j\leq s,
+\end{equation}
+and a representative FORDO $D_{0}^{1}.$ As the occupation numbers $\left\{
+N_{j}\quad1\leq j\leq s\right\}  $ of the $2N$-AGP\ state $\left\vert
+g^{N}\right\rangle $ are in $1-1$ correspondence \cite{Colemann} with the
+occupation numbers $\left\{  n_{j}\quad1\leq j\leq s\right\}  $ of the
+$2$-electron geminal state $\left\vert g\right\rangle $ each representative
+$D_{0}^{1}$ can, in turn, be parameterized by a vector of geminal occupation
+numbers%
+\begin{equation}
+\mathbf{n}=\left(  n_{1},\cdots,n_{s}\right)  ,\quad0\leq n_{j}\leq
+1;\quad1\leq j\leq s;\quad%
+%TCIMACRO{\tsum \limits_{1\leq j\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq s}}
+%EndExpansion
+n_{j}=1
+\end{equation}
+and a representative set of NGSO's $\left\vert \mathbf{\varphi}\right\rangle
+=\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}  $. The energy functional $\mathcal{E}\left(  g^{N}\right)  $
+over the manifold of AGP\ states can thus be formulated as a functional
+$\mathcal{E}\left(  \mathbf{n},\mathbf{\theta,}\left\vert \mathbf{\varphi
+}\right\rangle \right)  $.
+
+We show that the necessary conditions for the minimization of the energy wrt
+$\left\vert \mathbf{\varphi}\right\rangle $, subject to the \emph{normality}
+constraints of the GSO's $\left\{  \left.  \left\vert \varphi_{j}\right\rangle
+\right\vert 1\leq j\leq2s\right\}  $, for fixed $\left(  \mathbf{n}%
+,\mathbf{\theta}\right)  $ can be formulated in terms of a generalized Fock
+operator $F\left(  \mathbf{n},\mathbf{\theta}\right)  $ (we display that is
+sufficient to hold the normality constraint in order to obtain
+orthonormality). By expressing the total energy in terms of the eigenvalues of
+$F\left(  \mathbf{n},\mathbf{\theta}\right)  $ we deduce the same aufbau
+principle as in the IPS\ case, i.e. in general the GSO's that are eigenvectors
+of $F\left(  \mathbf{n},\mathbf{\theta}\right)  $ with with the lowest
+eigenvalues should be associated with the largest occupation numbers. If the
+occupation numbers are more than doubly degenerate or if the eigenvalues of
+$F\left(  \mathbf{n},\mathbf{\theta}\right)  $ are degenerate than multiple
+assignments may have to be examined. After all the variables have been
+optimized one can utilize the Fock operator $F\left(  \mathbf{n}%
+,\mathbf{\theta}\right)  $ as a first order approximation to the Hamiltonian
+in the one-electron propagator and again associate the eigenvalues $\left\{
+\left.  \varepsilon_{j}\right\vert 1\leq j\leq2s\right\}  $ with ionization potentials.
+
+Unlike the IPS\ case the phases of the eigenvectors of $F\left(
+\mathbf{n},\mathbf{\theta}\right)  $ \emph{are }important as they effect the
+total energy and an optimal value of $\mathbf{\theta}$ must be found. These
+phases are not determined by the diagonalization of $F\left(  \mathbf{n}%
+,\mathbf{\theta}\right)  $ and have to be evaluated by an independent
+variational equation. This leads to a Density Matrix Functional (DMF),
+$\mathcal{F}$, defined on the set of equivalence classes $\left\{  \left[
+D^{1}\right]  \right\}  $ by\
+\begin{equation}
+\mathcal{F}\left(  D^{1}\right)  =\min_{\mathbf{\theta}}\left\{
+\mathcal{E}\left(  \mathbf{n},\mathbf{\theta,}\left\vert \mathbf{\varphi
+}\right\rangle \right)  \right\}  ,
+\end{equation}
+which can also be utilized in Density Matrix Functional Theory (DMFT) as an
+explicitly known example of a DMF.
+
+The geminal occupation numbers $\left\{  n_{j}\quad1\leq j\leq s\right\}  $
+are optimized using an iterative matrix procedure that was introduced
+\cite{weiner,ortiz,ohrn,jensen} many years ago, which we show automatically
+enforces the normalization and positivity conditions.
+
+The variational procedure can be schematically displayed as
+\begin{align}
+&  \left(  \mathbf{n}_{i},\mathbf{\theta}_{i}\mathbf{,}\left\vert
+\mathbf{\varphi}_{i}\right\rangle \right)  \overset{\text{ }}{\qquad
+\qquad\qquad\underrightarrow{\text{iterate on the Fock Operator}}\qquad\left(
+\mathbf{n}_{i},\mathbf{\theta}_{i}\mathbf{,}\left\vert \mathbf{\varphi}%
+_{i+1}\left(  \mathbf{n}_{i},\mathbf{\theta}_{i}\right)  \right\rangle
+\right)  }\nonumber\\
+&  \qquad\left\uparrow
+\begin{array}
+[c]{c}%
+\\
+i\rightarrow i+1\\
+\end{array}
+\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\left\downarrow
+\begin{array}
+[c]{c}%
+\\
+\text{minimize wrt }\mathbf{\theta}\\
+\end{array}
+\right. \nonumber\\
+&  \left(  \mathbf{n}_{i+1},\mathbf{\theta}_{i+1}\mathbf{,}\left\vert
+\mathbf{\varphi}_{i+1}\left(  \mathbf{n}_{i},\mathbf{\theta}_{i+1}\right)
+\right\rangle \right)  \underleftarrow{\qquad\text{minimize wrt }%
+\mathbf{n}\qquad\qquad}\left(  \mathbf{n}_{i},\mathbf{\theta}_{i+1}%
+\mathbf{,}\left\vert \mathbf{\varphi}_{i+1}\left(  \mathbf{n}_{i}%
+,\mathbf{\theta}_{i+1}\right)  \right\rangle \right)  .
+\end{align}
+The GSO's and $\mathbf{\theta}$ that are self consistent solutions to the
+above scheme determine the CGSO's and together with the self consistent
+occupation numbers $\mathbf{n}$ determine the optimal geminal and
+$2N$-electron AGP state.
+
+The one electron model that we obtain describes molecules by weighted PD's,
+each determined by an occupation number and a phase optimized GSO associated
+with an one particle energy, in an analogous fashion to the IPS case, but also
+contains correlation effects. Pictorial manipulations of these PD's (taking
+into account relaxation of the one particle energies and optimal phases)
+allows one to analyze chemical processes and structures in a rigorously
+meaningful fashion, as one is assured that the picture produced corresponds to
+multi electron states.
+
+The structure of this article is as follows: in section \ref{AGPstate} we
+describe the canonical form of a geminal, and the AGP\ state, in terms of
+geminal occupation numbers $\left\{  \left.  n_{j}\right\vert 1\leq j\leq
+s\right\}  $ and CGSOs $\left\{  \left.  \left\vert \psi_{j}\right\rangle
+\right\vert 1\leq j\leq2s\right\}  .$ Together with the AGP-FORDO occupation
+numbers $\left\{  \left.  N_{j}\right\vert 1\leq j\leq s\right\}  ,$ which are
+in $1-1$ correspondence with the geminal occupation numbers, these CGSOs
+determine both the AGP\ state and the AGP-FORDO. In section \ref{transform} we
+examine the $1-1$ transformations between the AGP $\left\{  \left.
+N_{j}\right\vert 1\leq j\leq s\right\}  $ and geminal $\left\{  \left.
+n_{j}\right\vert 1\leq j\leq s\right\}  $ occupation numbers. In section
+\ref{Energy} we discuss the energy expressions in terms of the occupation
+numbers $\left\{  \left.  n_{j}\right\vert 1\leq j\leq s\right\}  $, CGSOs
+$\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}  $ and phases $\left\{  \left.  \theta_{j}\right\vert 1\leq
+j\leq s\right\}  .$ In section \ref{Evariation} we describe the necessary
+conditions needed to minimize the energy over a manifold of AGP\ states. In
+section \ref{Fock} we derive a generalized Fock operator that produces the
+derivative of the energy functional with respect to NGSO's for fixed FORDO
+occupation numbers and phases. In section \ref{aufbau} We analyze the total
+energy in terms of the eigenvalues of this Fock operator and show that an
+aufbau principle similar to the IPS\ case is effective in constructing
+multiparticle states from the eigenvectors of the Fock operator. In section
+\ref{theta} we solve the equations that produces the optimal phases
+$\mathbf{\theta.}$ In section \ref{gemocc} we describe the iterative procedure
+that determines the optimal geminal occupation numbers $\mathbf{n}$. In
+\ref{procedure} we form a combined procedure that produces an energy optimized
+AGP state and we conclude in section \ref{Discussion} with a review of the
+material presented and a discussion of its implications.
+
+\section{The $2N$-electron AGP state\label{AGPstate}}
+
+In this section we review the canonical form of a geminal and AGP state and
+their associated FORDO's. We also characterize equivalence classes of AGP
+states that have the same FORDO.
+
+\subsection{Canonical Form}
+
+The $2N$-electron AGP state, $\left\vert g^{N}\right\rangle $, is the $N^{th}$
+antisymmetric power of the $2$-electron state described by the geminal
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert
+\psi_{j}\psi_{j+s}\right\rangle , \label{geminal}%
+\end{equation}
+where $\left\{  \left.  n_{j}^{\frac{1}{2}}\right\vert 1\leq j\leq s\right\}
+$ are the positive square roots of $\left\{  \left.  n_{j}\right\vert 1\leq
+j\leq s\right\}  ,$ and is given by \cite{weiner&ortiz2004}
+\begin{equation}
+\left\vert g^{N}\right\rangle =\left(  S_{N}\right)  ^{-\frac{1}{2}}%
+\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}n_{j_{1}}^{\frac{1}{2}}\cdots n_{j_{s}%
+}^{\frac{1}{2}}\left\vert \psi_{j_{1}}\psi_{j_{1}+s}\cdots\psi_{j_{N}}%
+\psi_{j_{N}+s}\right\rangle . \label{agp}%
+\end{equation}
+The normalization factor, $\left(  S_{N}\right)  ^{-\frac{1}{2}}$, is given in
+terms of the elementary symmetric function
+\begin{equation}
+S_{N}=\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}n_{j_{1}}\cdots n_{j_{N}},
+\end{equation}
+and the geminals $\left\vert g\right\rangle $ represent normalized two
+electron states so that
+\begin{equation}
+\sum_{1\leq j\leq s}n_{j}=1.
+\end{equation}
+It is evident from the expansion eq. $\left(  \ref{geminal}\right)  $ that the
+geminal and geminal power state are at the least invariant to the group
+\begin{equation}
+SU\left(  2\right)  ^{s}=\overset{s\text{-factors}}{\overbrace{\,SU\left(
+2\right)  \times\cdots\times SU\left(  2\right)  }},
+\end{equation}
+that is formed by $2\times2$ \emph{special} unitary transformations of the
+paired CGSO's $\left\{  \left.  \left\vert \psi_{j}\right\rangle ,\left\vert
+\psi_{j+s}\right\rangle \right\vert 1\leq j\leq s\right\}  ,$ while if
+degeneracies exist amongst the $\left\{  \left.  n_{j}\right\vert 1\leq j\leq
+s\right\}  $ this invariance group is larger \cite{Weiner2004}. Hence the
+canonical CSGO's are unique up to transformations belonging this invariance group.
+
+The CGSO's $\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert
+1\leq j\leq2s\right\}  $ can be expanded in terms of a spin orbitals basis
+$\left\{  \left.  \left\vert \varphi_{j\alpha}\right\rangle ,\left\vert
+\varphi_{j\beta}\right\rangle \right\vert 1\leq j\leq s\right\}  $ of one
+electron state space $\mathcal{H}^{1}$ as
+\begin{equation}
+\left\vert \psi_{j}\right\rangle =\sum_{1\leq j\leq s}\left\{  a_{j}\left\vert
+\varphi_{j\alpha}\right\rangle +b_{j}\left\vert \varphi_{j\beta}\right\rangle
+\right\}  ,
+\end{equation}
+leading to one electron GSO wavefunctions defined on the spectrum of position
+and spin operators $\left(  \text{see Appendix \ref{basis}}\right)  $ as
+\begin{equation}
+\psi_{j}\left(  \mathbf{r,}\zeta\right)  =\left\langle \left.  \mathbf{r,}%
+\zeta\right\vert \psi_{j}\right\rangle .
+\end{equation}
+It should be noted that if expansion eq. $\left(  \ref{geminal}\right)  $ is
+used to define the canonical expansion it is usually \emph{not possible} to
+find a set of CSGO's such that
+\begin{equation}
+\psi_{j+s}\left(  \mathbf{r,}\zeta\right)  =\psi_{j}\left(  \mathbf{r,}%
+\zeta\right)  ^{\ast}.
+\end{equation}
+
+
+\subsection{First Order Reduced Density Operators}
+
+The states $\left\vert g\right\rangle $ and $\left\vert g^{N}\right\rangle $
+define FORDO's given by \cite{Coleman}
+\begin{equation}
+D^{1}\left(  g\right)  =\sum_{1\leq j\leq s}n_{j}\left\{  \left\vert \psi
+_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}  \label{d1g}%
+\end{equation}
+and
+\begin{equation}
+D^{1}\left(  g^{N}\right)  =\sum_{1\leq j\leq s}N_{j}\left\{  \left\vert
+\psi_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}  \label{dng}%
+\end{equation}
+respectively. It is clear from the expansions eqs. $\left(  \ref{d1g}\right)
+$ and $\left(  \ref{dng}\right)  $ that the CGSO's $\left\{  \left.
+\left\vert \psi_{j}\right\rangle \right\vert 1\leq j\leq r\right\}  $ are
+simultaneously the Natural General Spin Orbitals (NGSO's) of $D^{1}\left(
+g\right)  $ and $D^{1}\left(  g^{N}\right)  $. However it is very important to
+note that the NGSO's of $D^{1}\left(  g\right)  $ and $D^{1}\left(
+g^{N}\right)  $ \emph{are not }in general the CGSO's of $\left\vert
+g\right\rangle $. This is a ramification of
+
+\begin{enumerate}
+\item the general invariance of FORDO's to the multiplication of their NGSO's
+by complex phase factors
+\begin{equation}
+D^{1}=\sum_{1\leq j\leq r}\nu_{j}\left\{  \left\vert \phi_{j}\right\rangle
+\left\langle \phi_{j}\right\vert \right\}  =\sum_{1\leq j\leq r}\nu
+_{j}\left\{  e^{i\theta_{j}}\left\vert \phi_{j}\right\rangle \left\langle
+\phi_{j}\right\vert e^{-i\theta_{j}}\right\}  ,
+\end{equation}
+where $\left\{  \left.  \nu_{j}\right\vert 1\leq j\leq s\right\}  $ are
+occupation numbers and
+
+\item the observation that geminals \emph{are not }invariant to such phase
+changes of their CGSO's.
+\end{enumerate}
+
+One can form equivalence classes $\left[  D^{1}\left(  g\left(  \mathbf{0}%
+\right)  \right)  \right]  $ of geminals $\left\{  \left\vert g\left(
+\mathbf{\theta}\right)  \right\rangle \right\}  $ that have the same FORDO
+$D^{1}\left(  g\left(  \mathbf{0}\right)  \right)  $ and equivalence classes
+$\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)  \right)  \right]  $ of
+$2N$-electron AGP states $\left\{  \left\vert g^{N}\left(  \mathbf{\theta
+}\right)  \right\rangle \right\}  $, that have the same FORDO $D^{1}\left(
+g^{N}\left(  \mathbf{0}\right)  \right)  $. For a fixed $N$ these classes
+correspond to each other in a bijective manner \cite{coleman} and can be
+parameterized by the angles $\mathbf{\theta}$, where
+\begin{align}
+\left\vert g\left(  \mathbf{\theta}\right)  \right\rangle  &  =\sum_{1\leq
+j\leq s}n_{j}^{\frac{1}{2}}e^{i\theta_{j}}\left\vert \psi_{j}\psi
+_{j+s}\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert
+e^{i\varphi_{j}}\psi_{j}e^{i\varphi_{j+s}}\psi_{j+s}\right\rangle ;\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\theta_{1}=0,0<\theta_{j}\leq
+2\pi,2\leq j\leq s,
+\end{align}
+where $\mathbf{\theta=}\left(  0,\theta_{2},\cdots,\theta_{s}\right)  $ and
+$\varphi_{j}+\varphi_{j+s}=\theta_{j}$. Choosing $\theta_{1}=0$ eliminates the
+overall phase factor indeterminacy of $\left\vert g\left(  \mathbf{\theta
+}\right)  \right\rangle $. The individual phase factors $\left\{  \left.
+\varphi_{j}\right\vert 1\leq j\leq s\right\}  $ are not unique, though their
+sums $\left\{  \left.  \theta_{j}\right\vert 1\leq j\leq s\right\}  $ are,
+allowing one to obtain a unique representative set $\left\{  \left.
+\varphi_{j}\right\vert 1\leq j\leq s\right\}  $ by defining
+\begin{equation}
+\varphi_{j}=\frac{\theta_{j}}{2},\varphi_{j+s}=\frac{\theta_{j}}{2};\quad1\leq
+j\leq s.
+\end{equation}
+Thus one has the correspondence
+\begin{equation}
+\left\{  \left\vert g\left(  \mathbf{\theta}\right)  \right\rangle
+\longleftrightarrow\left\vert g^{N}\left(  \mathbf{\theta}\right)
+\right\rangle ;\quad\theta_{1}=0;\,0<\theta_{j}\leq2\pi,2\leq j\leq s\right\}
+\longleftrightarrow\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)
+\right)  \right]  .
+\end{equation}
+The elements of the class $\left[  D^{2}\left(  g^{N}\left(  \mathbf{0}%
+\right)  \right)  \right]  $ can also be expressed in canonical form as
+\begin{equation}
+\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert \chi_{j}\chi_{j+s}%
+\right\rangle ,
+\end{equation}
+where $\left\vert \chi_{j}\right\rangle =\left\vert e^{i\varphi_{j}}\psi
+_{j}\right\rangle $. The AGP\ states $\left\vert g^{N}\left(  \mathbf{\theta
+}\right)  \right\rangle $ are clearly distinct as they have different Second
+Order Reduced Density Operators (SORDO's), $D^{2}\left(  g^{N}\left(
+\mathbf{\theta}\right)  \right)  $, given by \cite{Coleman}
+\begin{align}
+&  D^{2}\left(  g^{N}\left(  \mathbf{\theta}\right)  \right)  =\frac{1}{S_{N}%
+}\left\{  \sum_{1\leq j\leq s}n_{j}\left\vert \psi_{j}\psi_{j+s}\right\rangle
+\left\langle \psi_{j}\psi_{j+s}\right\vert \right.  +\nonumber\\
+&  \left.  \sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}%
+}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)
+\left\vert \psi_{j}\psi_{j+s}\right\rangle \left\langle \psi_{k}\psi
+_{k+s}\right\vert +\sum_{1\leq j<k\leq s}n_{j}n_{k}S_{N-2}\left(  \jmath
+k\right)  \left\vert \psi_{j}\psi_{k}\right\rangle \left\langle \psi_{j}%
+\psi_{k}\right\vert \right\}  , \label{D2}%
+\end{align}
+where
+\begin{equation}
+S_{N-1}\left(  \jmath k\right)  =\sum_{\substack{1\leq j_{1}<\cdots
+<j_{N-1}\leq s\\j,k\notin\left\{  j_{1},\cdots,j_{N-1}\right\}  }}n_{j_{1}%
+}\cdots n_{j_{N-1}}%
+\end{equation}
+and
+\begin{equation}
+S_{N-2}\left(  \jmath k\right)  =\sum_{\substack{1\leq j_{1}<\cdots
+<j_{N-2}\leq s\\j,k\notin\left\{  j_{1},\cdots,j_{N-2}\right\}  }}n_{j_{1}%
+}\cdots n_{j_{N-2}}.
+\end{equation}
+Note that $S_{N-1}\left(  \jmath\jmath\right)  =S_{N-2}\left(  \jmath
+\jmath\right)  =0.$ The SORDO eq. $\left(  \ref{D2}\right)  $ can be expanded
+in terms of $\mathbf{\theta}$ dependent CGSO's $\left\{  \left.  \left\vert
+e^{i\varphi_{j}}\chi_{j}\right\rangle ,\left\vert e^{i\varphi_{j+s}}\chi
+_{j+s}\right\rangle \right\vert 1\leq j\leq s\right\}  ,$ where $\left\{
+\left.  \varphi_{j}+\varphi_{j+s}=\theta_{j}\right\vert 1\leq j\leq s\right\}
+$ as
+\begin{align}
+&  D^{2}\left(  g^{N}\left(  \mathbf{\theta}\right)  \right)  =\frac{1}{S_{N}%
+}\left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\vert
+e^{i\varphi_{j}}\chi_{j}e^{i\varphi_{j+s}}\chi_{j+s}\right\rangle \left\langle
+e^{i\varphi_{j}}\chi_{j}e^{i\varphi_{j+s}}\chi_{j+s}\right\vert \right.
+\nonumber\\
+&  \qquad\qquad\qquad\qquad+\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}%
+n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)  \left\vert e^{i\varphi_{j}%
+}\chi_{j}e^{i\varphi_{j+s}}\chi_{j+s}\right\rangle \left\langle e^{i\varphi
+_{k}}\chi_{k}e^{i\varphi_{k+s}}\chi_{k+s}\right\vert \nonumber\\
+&  \qquad\qquad\qquad\qquad\left.  +\sum_{1\leq j<k\leq s}n_{j}n_{k}%
+S_{N-2}\left(  \jmath k\right)  \left\vert e^{i\varphi_{j}}\chi_{j}%
+e^{i\varphi_{k+s}}\chi_{k+s}\right\rangle \left\langle e^{i\varphi_{j}}%
+\chi_{j}e^{i\varphi_{k+s}}\chi_{k+s}\right\vert \right\}  , \label{en2}%
+\end{align}
+giving the explicitly phase dependent expression
+\begin{align}
+&  D^{2}\left(  g^{N}\left(  \mathbf{\theta}\right)  \right)  =\frac{1}{S_{N}%
+}\left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\vert
+\chi_{j}\chi_{j+s}\right\rangle \left\langle \chi_{j}\chi_{j+s}\right\vert
++\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\jmath k\right)  e^{i\left(  \theta_{j}-\theta_{k}\right)  }\left\vert
+\chi_{j}\chi_{j+s}\right\rangle \left\langle \chi_{k}\chi_{k+s}\right\vert
+\right. \nonumber\\
+&  \left.  +\sum_{1\leq j<k\leq s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)
+\left\{  \left\vert \chi_{j}\chi_{k}\right\rangle \left\langle \chi_{j}%
+\chi_{k}\right\vert +\left\vert \chi_{j+s}\chi_{k}\right\rangle \left\langle
+\chi_{j}\chi_{k+s}\right\vert +\left\vert \chi_{j}\chi_{k+s}\right\rangle
+\left\langle \chi_{j}\chi_{k+s}\right\vert +\left\vert \chi_{j+s}\chi
+_{k+s}\right\rangle \left\langle \chi_{j+s}\chi_{k+s}\right\vert \right\}
+\right\}  .
+\end{align}
+
+
+\section{The correspondence between AGP and Geminal Occupation
+Numbers\label{transform}}
+
+Any set of $s$ positive numbers $\left\{  \left.  N_{j}\right\vert 1\leq j\leq
+s\right\}  $ that have values between $0$ and $1$ and add up to $N,$ can be
+interpreted as the occupation numbers of a FORDO that is at least doubly
+degenerate and can be associated with an AGP\ state. These numbers are in
+$1-1$ correspondence with another set of positive numbers $\left\{  \left.
+n_{j}\right\vert 1\leq j\leq s\right\}  ,$ that add up to $1$, which can be
+interpreted as the occupation numbers of a FORDO\ of a geminal. The geminal
+occupation numbers $\left\{  \left.  n_{j}\right\vert 1\leq j\leq s\right\}  $
+together with an arbitrary set of $2s$ orthonormal one electron Canonical
+General Spin Orbitals (CGSO's) then \emph{uniquely }determine a $2N$ electron
+AGP state. Any state that has a FORDO that has at least doubly degenerate
+occupation numbers is covered by a set of AGP\ states i.e. there exists
+AGP\ states that have the same FORDO. In most applications e.g. expectation
+values of observables, it is sufficient to know the $2N$ electron state
+occupation numbers in terms of the geminal occupation numbers, which serve as
+a parameterization of the state occupation numbers, and we review this
+relationship first. The inverse function i.e. geminal occupation numbers in
+terms of state occupation numbers are significant in designing possible
+AGP\ states and we present a numerical construction of this function.
+
+\subsection{Transformation of Geminal to AGP Occupation Numbers}
+
+The vector of occupation numbers $\mathbf{N}=\left(  N_{1},\cdots
+,N_{s}\right)  $ of an AGP\ state $\left\vert g^{N}\right\rangle $ can be
+expressed as a bijective function, $\mathcal{N}\left(  \mathbf{n}\right)  $,
+of the geminal occupation numbers $\mathbf{n}=\left(  n_{1},\cdots
+,n_{s}\right)  ,$ where
+\begin{equation}
+\mathcal{N}:\mathfrak{D}_{N}\subset\mathbb{R}^{s}\rightarrow\mathfrak{D}%
+_{n}\subset\mathbb{R}^{s}.
+\end{equation}
+The domain $\mathfrak{D}_{N}$ and range $\mathfrak{D}_{n}$ are given by%
+\begin{align}
+\mathfrak{D}_{N}  &  =\left(  N_{1},\cdots,N_{s}\right)  ;\quad0\leq N_{j}%
+\leq1,\quad1\leq j\leq s\nonumber\\
+\sum_{1\leq j\leq s}N_{j}  &  =N
+\end{align}
+and
+\begin{align}
+\mathfrak{D}_{n}  &  =\left(  n_{1},\cdots,n_{s}\right)  ;\quad n_{j}%
+\geq0,\quad1\leq j\leq s\nonumber\\
+\sum_{1\leq j\leq s}n_{j}  &  =1,
+\end{align}
+where
+\begin{equation}
+N_{j}=\mathcal{N}_{j}\left(  \mathbf{n}\right)  =n_{j}\frac{S_{N-1}\left(
+\jmath\right)  }{S_{N}};\quad1\leq j\leq s
+\end{equation}
+and
+\begin{equation}
+S_{N-1}\left(  \jmath\right)  =\sum_{\substack{1\leq j_{1}<\cdots<j_{N-1}\leq
+s\\j\notin\left\{  j_{1},\cdots,j_{N-1}\right\}  }}n_{j_{1}}\cdots n_{j_{N-1}%
+}.
+\end{equation}
+
+
+\subsection{Transformation of AGP to Geminal Occupation Numbers}
+
+The inverse function $\mathcal{N}^{-1}\left(  \mathbf{N}\right)  $ is not
+explicitly known, but one can obtain a linear approximation that suffices in
+practical applications to numerical determine values of $\mathbf{n}$ from
+known values of $\mathbf{N}$, i.e. the determination of $\mathbf{n}_{0}%
++\delta\mathbf{n}$ from $\mathbf{N}_{0}+\delta\mathbf{N}$, when $\mathbf{N}%
+_{0}$ is a known initial vector of occupation numbers of the $2N$-electron AGP
+state, e.g. an IPS,\ where
+\begin{equation}
+\mathbf{N}_{0}=\left(  \overset{N}{\overbrace{1,\cdots,1}},\overset
+{s-N}{\overbrace{0,\cdots,0}}\right)
+\end{equation}
+and
+\begin{equation}
+\mathbf{n}_{0}=\left(  \overset{N}{\overbrace{\frac{1}{N},\cdots,\frac{1}{N}}%
+},\overset{s-N}{\overbrace{0,\cdots,0}}\right)  .
+\end{equation}
+The Taylor series expansion about $\mathbf{N}_{0}$ of $\mathcal{N}^{-1}$ is
+given by%
+\begin{equation}
+\mathcal{N}^{-1}\left(  \mathbf{N}_{0}+\delta\mathbf{N}\right)  =\mathcal{N}%
+^{-1}\left(  \mathbf{N}_{0}\right)  +d^{1}\mathcal{N}^{-1}\left(
+\mathbf{N}_{0}\right)  \left(  \delta\mathbf{n}\right)  +\cdots,
+\end{equation}
+where
+\begin{equation}
+d^{1}\mathcal{N}^{-1}\left(  \mathbf{N}_{0}\right)  =\left[  d^{1}%
+\mathcal{N}\left(  \mathbf{n}_{0}\right)  \right]  ^{-1}%
+\end{equation}
+and the Jacobian, $d^{1}\mathcal{N}\left(  \mathbf{n}_{0}\right)  $, of the
+transformation $\mathcal{N}$ at the point $\mathbf{n}_{0}$ is given by the
+matrix elements
+\begin{align}
+\left[  d^{1}\mathcal{N}\left(  \mathbf{n}_{0}\right)  \right]  _{jk}  &
+=\frac{\partial\mathcal{N}_{j}\left(  \mathbf{n}_{0}\right)  }{\partial n_{k}%
+}=\frac{\partial}{\partial n_{k}}\left\{  n_{j}\frac{S_{N-1}\left(
+\jmath\right)  }{S_{N}}\right\} \nonumber\\
+&  =\frac{1}{S_{N}}\left(  \delta_{jk}S_{N-1}\left(  \jmath\right)
++n_{j}\frac{\partial S_{N-1}\left(  \jmath\right)  }{\partial n_{k}}%
+-n_{j}\frac{S_{N-1}\left(  \jmath\right)  }{S_{N}}\frac{\partial S_{N}%
+}{\partial n_{k}}\right) \nonumber\\
+&  =\frac{1}{S_{N}}\left(  \delta_{jk}S_{N-1}\left(  \jmath\right)
++n_{j}S_{N-2}\left(  \jmath k\right)  -n_{j}\frac{1}{S_{N}}S_{N-1}\left(
+\jmath\right)  S_{N-1}\left(  k\right)  \right)  .
+\end{align}
+The Jacobian of the inverse transformation $\mathcal{N}^{-1}\left(
+\mathbf{N}_{0}\right)  $ at the point $\mathbf{N}_{0}$ is given by the inverse
+of the matrix $\left\{  \left.  \left[  d^{1}\mathcal{N}\left(  \mathbf{n}%
+_{0}\right)  \right]  _{jk}\right\vert 1\leq j,k\leq s\right\}  $ i.e.
+\begin{equation}
+d^{1}\mathcal{N}^{-1}\left(  \mathbf{N}_{0}\right)  =\left[  d^{1}%
+\mathcal{N}\left(  \mathbf{n}_{0}\right)  \right]  ^{-1}%
+\end{equation}
+and the incremental change, $\delta\mathbf{n}$, of $\mathbf{n}_{0}$ is
+\begin{equation}
+d^{1}\mathcal{N}^{-1}\left(  \mathbf{N}_{0}\right)  \left(  \delta
+\mathbf{N}\right)  _{j}=\sum_{1\leq k\leq s}\left[  d^{1}\mathcal{N}\left(
+\mathbf{n}_{0}\right)  \right]  _{jk}^{-1}\left(  \delta\mathbf{N}\right)
+_{k}.
+\end{equation}
+We can then construct a piecewise linear fit to $\mathcal{N}^{-1}$ as%
+\begin{equation}
+\mathbf{n}\simeq\mathbf{\tilde{n}}_{m}=\mathcal{N}^{-1}\left(  \mathbf{N}%
+\right)  =\mathbf{n}_{0}+\sum_{1\leq k\leq m}\left[  d^{1}\mathcal{N}\left(
+\mathbf{n}_{0}+\sum_{1\leq j\leq k-1}\left[  d^{1}\mathcal{N}\left(
+\mathbf{n}_{0}\right)  \right]  ^{-1}\left(  \delta\mathbf{N}_{j}\right)
+\right)  \right]  ^{-1}\left(  \delta\mathbf{N}_{k}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathbf{N=N}_{0}+\sum_{1\leq j\leq k-1}\delta\mathbf{N}_{j}%
+\end{equation}
+and
+\begin{equation}
+\sum_{1\leq k\leq s}\delta\mathbf{N}_{jk}=0.
+\end{equation}
+See Appendix \label{linfit} for an example. The accuracy of the fit can be
+checked by evaluating
+\begin{equation}
+\mathbf{\Delta}_{m}=\mathcal{N}\left(  \mathbf{\tilde{n}}_{m}\right)
+-\mathbf{N}_{m}%
+\end{equation}
+and noting if
+\begin{equation}
+\left\vert \mathbf{\Delta}_{mj}\right\vert \leq\varkappa_{j};\quad1\leq j\leq
+s \label{con}%
+\end{equation}
+If the error $\left(  \left\vert \mathbf{\Delta}_{m1}\right\vert
+,\cdots,\left\vert \mathbf{\Delta}_{ms}\right\vert \right)  $, i.e. is too big
+i.e. eq. $\left(  \ref{con}\right)  $ is not satisfied one can then decrease
+the size of $\delta\mathbf{N}_{m},$ etc.
+
+\section{Energy Functionals \label{Energy}}
+
+In this section we describe the energy of a $2N$-electron AGP state in three
+different ways in terms of
+
+\begin{description}
+\item
+\begin{enumerate}
+\item CGSO's and geminal occupation numbers: 
+
+\item A density matrix functional $\mathcal{F}\left(  D^{1}\right)  $ defined
+on the equivalence classes $\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}%
+\right)  \right)  \right]  .$ The functional $\mathcal{F}\left(  D^{1}\right)
+$ is significant in two aspects, it can serve as a rigorous explicitly known
+model functional in Density Matrix Functional Theory (DMFT) \cite{DMFT} and it
+clealry demostrtaes the difference between CGSO's and NGSO's.
+
+\item Group parameters introduced in \cite{weiner2004} that describe the
+manifold of agp\ states.
+\end{enumerate}
+\end{description}
+
+\subsection{Energy in terms of Geminal Occupation Numbers and CGSO's}
+
+The energy, $\mathcal{E}\left(  \mathbf{n,\psi}\right)  ,$ of a $2N$-electron
+AGP\ state for a molecule at a fixed nuclear configuration $\left(
+\mathbf{R}_{1},\cdots,\mathbf{R}_{N_{nuc}}\right)  $ in terms of the CGSO's
+amplitudes $\left\{  \left.  \left\langle \left.  \mathbf{r,\xi}\right\vert
+\psi_{j}\right\rangle \right\vert 1\leq j\leq r\right\}  $ and geminal
+occupation numbers $\mathbf{n}$ is
+\begin{align}
+\mathcal{E}\left(  \mathbf{n,\psi}\right)   &  =\frac{\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }\nonumber\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left\langle \psi_{j}\left\vert
+h_{1}\psi_{j}\right.  \right\rangle +\left\langle \psi_{j+s}\left\vert
+h_{1}\psi_{j+s}\right.  \right\rangle +\left\langle \psi_{j}\psi_{j+s}%
+||\psi_{j}\psi_{j+s}\right\rangle \right\}  \right. \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\jmath k\right)  \left\langle \psi_{j}\psi_{j+s}||\psi_{k}\psi_{k+s}%
+\right\rangle \left.  +\sum_{1\leq j<k\leq s}n_{i}n_{j}S_{N-2}\left(  \jmath
+k\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle
+\right\}  . \label{energy}%
+\end{align}
+$\lceil$Note: Mathematically the energy functional should really be denoted as
+$\mathcal{E}\left(  \mathbf{n,\psi}^{\ast}\mathbf{,\psi}\right)  $ as
+$\mathbf{\psi}^{\ast}$ and $\mathbf{\psi}$ are treated as independent
+variables even though $\mathbf{\psi}$ determines $\mathbf{\psi}^{\ast}%
+$.$\rfloor$ The one-electron matrix elements $\left\{  \left\langle \psi
+_{j}\left\vert h_{1}\psi_{k}\right.  \right\rangle \right\}  $ wrt the CGSO's
+are
+\begin{equation}
+\left\langle \psi_{j}\left\vert h_{1}\psi_{k}\right.  \right\rangle =-\int
+\psi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  \left\{  \sum_{_{1\leq l\leq
+N_{nuc}}}\frac{Z_{l}}{\left\Vert \mathbf{R}_{l}-\mathbf{r}\right\Vert }%
++\nabla_{\mathbf{r}}^{2}\right\}  \psi_{k}\left(  \mathbf{r,\xi}\right)
+d\mathbf{r}d\xi;\quad1\leq j,k\leq2s, \label{h1}%
+\end{equation}
+the antisymmetric two-electron matrix elements $\left\{  \left\langle
+jk||lm\right\rangle \right\}  $
+\begin{align}
+\left\langle jk||lm\right\rangle  &  =\int\left\{  \psi_{j}^{\ast}\left(
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \psi_{k}^{\ast}\left(  \mathbf{r}%
+_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}%
+-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(  \mathbf{r}_{1}\mathbf{,\xi}%
+_{1}\right)  \psi_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \right.
+\nonumber\\
+&  -\left.  \psi_{j}^{\ast}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)
+\psi_{k}^{\ast}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(
+\mathbf{r}_{2}\mathbf{,\xi}_{1}\right)  \psi_{m}\left(  \mathbf{r}%
+_{1}\mathbf{,\xi}_{2}\right)  \right\}  d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi
+_{1}d\xi_{2}\nonumber\\
+&  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad1\leq j,k\leq2s;1\leq l,m\leq2s \label{h2}%
+\end{align}
+and $\left\{  \left\langle jk|||jk\right\rangle \right\}  $
+\begin{align}
+\left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle  &
+=\left\langle jk||jk\right\rangle +\left\langle j\,k+s||j\,k+s\right\rangle
++\left\langle j+s\,k||j+s\,k\right\rangle +\left\langle
+j+s\,k+s||j+s\,k+s\right\rangle \nonumber\\
+&  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad\qquad\qquad\qquad1\leq j,k\leq s.
+\end{align}
+
+
+\subsection{Energy in terms of CGSO's Phases and FORDO's}
+
+In terms of $\theta$ dependent CGSO's $\left\{  \left\vert e^{i\varphi_{j}%
+}\psi_{j}\right\rangle ;1\leq j\leq2s\right\}  $ defined in eq. $\left(
+\ref{en2}\right)  $ we obtain an energy expression factored through the
+equivalence classes $\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)
+\right)  \right]  $
+\begin{align}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)   &
+=\frac{\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+}{S_{N}\left(  \mathbf{n}\right)  }=\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{
+\overset{}{\left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle
++\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle
+}\right.  \right.  \nonumber\\
+&  \left.  +\overset{}{\,\left\langle \psi_{j}\psi_{j+s}|h_{2}|\psi_{j}%
+\psi_{j+s}\right\rangle }\right\}  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}%
+}n_{k}^{\frac{1}{2}}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(
+\jmath k\right)  \left\langle \psi_{j}\psi_{j+s}|h_{2}|\psi_{k}\psi
+_{k+s}\right\rangle \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  +\sum_{1\leq j<k\leq s}n_{i}%
+n_{j}S_{N-2}\left(  \jmath k\right)  \left\langle \psi_{j}\psi_{k}|||\psi
+_{j}\psi_{k}\right\rangle \right\}  ,\label{thetaen}%
+\end{align}
+where $\left\vert \mathbf{\psi}\right\rangle $ is a representative set of
+CGSO's for the class $\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)
+\right)  \right]  $. As $\left(  \mathbf{n},\mathbf{\psi}\right)  $ uniquely
+defines a $2N$-electron AGP-FORDO\ the expression eq. $\left(  \ref{thetaen}%
+\right)  $ can be used to define a density matrix energy functional
+\begin{equation}
+\mathcal{F}\left(  D^{1}\right)  =\min_{\mathbf{\theta\in}\Theta}%
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+\end{equation}
+over the manifold of AGP\ states, where
+\begin{equation}
+\Theta=\left\{  \left.  \theta_{j}\right\vert \theta_{1}=0,\,0<\theta_{j}%
+\leq2\pi,2\leq j\leq s\right\}  .
+\end{equation}
+Noting that each class is determined by $\left(  \mathbf{n},\mathbf{\psi
+}\right)  $ this functional can then be minimized to give
+\begin{equation}
+\min_{D^{1}\in\mathcal{S}_{1}}\mathcal{F}\left(  D^{1}\right)  =\min
+_{\mathbf{n\in}\mathcal{D}_{n},\left\vert \mathbf{\psi}\right\rangle
+\in\mathcal{C}}\mathcal{F}\left(  D^{1}\left(  \mathbf{n},\mathbf{\psi
+}\right)  \right)  =\min_{\left\vert g\right\rangle \in\mathcal{H}^{2}%
+}\mathcal{E}\left(  \left\vert g^{N}\right\rangle \right)  ,\label{MinDMF}%
+\end{equation}
+where the domains $\mathcal{D}_{n}$, $\mathcal{C}$ and $\mathcal{S}_{1}$ are
+given as%
+\begin{align}
+\mathcal{D}_{n} &  =\left\{  \left.  n_{j}\right\vert ;\sum_{1\leq j\leq
+s}n_{j}=1,n_{j}\geq0,\quad1\leq j\leq s\right\}  ,\\
+\mathcal{C} &  =\left\{  \left.  \left\vert \mathbf{\psi}\right\rangle
+\right\vert ;\left\vert \mathbf{\psi}\right\rangle \neq e^{i\mathbf{\theta}%
+}\left\vert \mathbf{\psi}^{\prime}\right\rangle ,\text{ when }\left\vert
+\mathbf{\psi}^{\prime}\right\rangle \in\mathcal{C}\right\}
+\end{align}
+and
+\begin{equation}
+\mathcal{S}_{1}=\left\{  \left.  D^{1}\right\vert ;Tr\left\{  D^{1}\right\}
+=2N,D^{1}\geq0,D^{1}\text{ at least doubly degenerate}\right\}  .
+\end{equation}
+The solution to eq. $\left(  \ref{MinDMF}\right)  $ characterizes the
+$2N$-electron AGP state that minimizes the total energy.
+
+\subsection{Energy Functional in Terms of Group Parameters}
+
+The manifold of AGP\ states can be parameterized 
+
+\section{Necessary Conditions for the Minimization of the Energy
+\label{Evariation}}
+
+\subsection{Variational Problem}
+
+The solution to the constrained optimization problem
+\begin{equation}
+\min_{\left(  \mathbf{n,\psi,\theta}\right)  }\mathcal{E}\left(
+\mathbf{n,\psi,\theta}\right)  \label{min}%
+\end{equation}
+subject to the phase constraints%
+\begin{equation}
+\theta_{1}=0;\,0<\theta_{j}\leq2\pi,2\leq j\leq s, \label{thetacon}%
+\end{equation}
+the orthonormality constraints%
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =\delta
+_{jk};\quad1\leq j,k\leq2s, \label{orthonorm}%
+\end{equation}
+phase inequivalent constraint
+\begin{equation}
+\left\vert \mathbf{\psi}\right\rangle \mathbf{\in\,}\mathcal{C} \label{rep}%
+\end{equation}
+and the positivity and normalization geminal occupation constraint
+\begin{subequations}
+\begin{align}
+n_{j}  &  \geq0;\quad1\leq j\leq s,\label{pos1}\\
+\sum_{1\leq j\leq s}n_{j}  &  =1 \label{gemnorm}%
+\end{align}
+characterize an optimal $2N$-electron AGP\ state.
+
+Some comments on the minimization problem eq. $\left(  \ref{min}\right)  $:
+\end{subequations}
+\begin{enumerate}
+\item The number of electrons being described is implicit in the definition of
+$\mathcal{E}\left(  \mathbf{n,\psi,\theta}\right)  $ and one could show this
+dependency explicitly as
+\begin{equation}
+\mathcal{E}=\mathcal{E}\left(  2N,\mathbf{n,\psi,\theta}\right)  .
+\end{equation}
+This is useful if one needs to consider an explicit form for the chemical
+potential $\frac{\partial\mathcal{E}}{\partial N}.$
+
+\item The constraint eq. $\left(  \ref{thetacon}\right)  $ is always satisfied
+as $\mathcal{E}$ is a periodic function of $\left\{  \left.  \theta
+_{j}\right\vert 2\leq j\leq s\right\}  $ with period $2\pi$ in each variable.
+
+\item We show in section \ref{Fock} that the normalization constraints
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{j}\right\rangle =1;\quad1\leq
+j\leq2s \label{norm}%
+\end{equation}
+imply the orthonormality constraints
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =\delta
+_{jk};\quad1\leq j,k\leq2s.
+\end{equation}
+
+
+\item In the optimization procedure we describe we allow the constraint eq.
+$\left(  \ref{rep}\right)  $ to relax, however we show that this does effect
+the final solution.
+\end{enumerate}
+
+In section \ref{DMF} we obtain an optimal value, $\mathbf{\theta}_{\#}%
+\in\Theta$ , of $\mathbf{\theta}$ for fixed values of $\left(  \mathbf{n,\psi
+}\right)  $ by numerically solving the stationarity equation for
+$\mathbf{\theta}$ and in section \ref{gemocc} we utilize and describe an
+iterative eigenvector procedure to determine an optimal value $\mathbf{n}%
+_{\#}$, subject to the constraints eqs. $\left(  \ref{pos1}\right)  $ and
+$\left(  \ref{gemnorm}\right)  $ for fixed values of $\left(  \mathbf{\psi
+,\theta}\right)  $. In section \ref{Fock} the we utilize the method of
+Lagrange multipliers based on the Lagrangian
+\begin{equation}
+\mathcal{\tilde{E}}\left(  \mathbf{n,\psi,\theta}\right)  =\mathcal{E}\left(
+\mathbf{n,\psi,\theta}\right)  -\sum_{1\leq j\leq2s}\varepsilon_{j}\left(
+\left\langle \left.  \psi_{j}\right\vert \psi_{j}\right\rangle -1\right)
+\label{larE}%
+\end{equation}
+to obtain an optimal set $\left\{  \left.  \psi_{\#j}\right\vert 1\leq
+j\leq2s\right\}  $ of orthonormal CGSO's for fixed values of $\left(
+\mathbf{\psi,\theta}\right)  $.
+
+\subsection{Stationarity Conditions}
+
+A necessary condition for $\left(  \mathbf{n}_{\#}\mathbf{,\psi}%
+_{\#}\mathbf{,\theta}_{\#}\right)  $ to be a solution of eq. $\left(
+\ref{min}\right)  $ is that there exists Lagrange multipliers $\left\{
+\left.  \varepsilon_{j}\right\vert 1\leq j\leq2s\right\}  $ such that
+\begin{equation}
+\partial^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}_{\#}\mathbf{,\psi}%
+_{\#}\mathbf{,\theta}_{\#}\right)  =\mathbf{0,}%
+\end{equation}
+where
+\begin{align}
+&  \left.  \partial^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}_{\#}%
+\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  \right.  =\nonumber\\
+&  \left(  \partial_{\mathbf{n}}^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}%
+_{\#}\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  ,\partial_{\mathbf{\psi
+}}^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}_{\#}\mathbf{,\psi}_{\#}%
+\mathbf{,\theta}_{\#}\right)  ,\partial_{\mathbf{\theta}}^{1}\mathcal{\tilde
+{E}}\left(  \mathbf{n}_{\#}\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)
+\right)  ,
+\end{align}
+and
+\begin{align}
+\partial_{\mathbf{n}}^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}_{\#}%
+\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  _{j}  &  =\frac
+{\partial\mathcal{\tilde{E}}\left(  \mathbf{n}_{\#}\mathbf{,\psi}%
+_{\#}\mathbf{,\theta}_{\#}\right)  }{\partial n_{j}};\quad1\leq j\leq
+s\nonumber\\
+\partial_{\mathbf{\psi}}^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}%
+_{\#}\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  _{j}  &  =\frac
+{\delta\mathcal{\tilde{E}}\left(  \mathbf{n}_{\#}\mathbf{,\psi}_{\#}%
+\mathbf{,\theta}_{\#}\right)  }{\delta\psi_{j}^{\ast}};\quad1\leq j\leq
+s\nonumber\\
+\partial_{\mathbf{\psi}}^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}%
+_{\#}\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  _{j+s}  &  =\frac
+{\delta\mathcal{\tilde{E}}\left(  \mathbf{n}_{\#}\mathbf{,\psi}_{\#}%
+\mathbf{,\theta}_{\#}\right)  }{\delta\psi_{j}};\quad1\leq j\leq s\nonumber\\
+\partial_{\mathbf{\theta}}^{1}\mathcal{\tilde{E}}\left(  \mathbf{n}%
+_{\#}\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  _{j}  &  =\frac
+{\partial\mathcal{\tilde{E}}\left(  \mathbf{n}\left(  \mathbf{\alpha}%
+_{\#}\right)  \mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  }%
+{\partial\theta_{j}};\quad2\leq j\leq s
+\end{align}
+and that $\left(  \mathbf{n}_{\#}\mathbf{,\psi}_{\#}\mathbf{,\theta}%
+_{\#}\right)  $ satisfy the constraints eqs. $\left(  \ref{thetacon}\right)
+,\left(  \ref{pos1}\right)  ,\left(  \ref{gemnorm}\right)  $ and $\left(
+\ref{orthonorm}\right)  $.
+
+As is well known this condition only characterizes constrained stationary
+points of $\mathcal{E}$ and the Hessian matrix of second derivatives has to be
+examined in order to determine if the point $\left(  \mathbf{n}_{\#}%
+\mathbf{,\psi}_{\#}\mathbf{,\theta}_{\#}\right)  $ does in fact minimize
+$\mathcal{E}.$
+
+\section{Generalized Fock Operator \label{Fock} for the Variation wrt
+$\mathbf{\psi}$}
+
+\subsection{Functional Derivatives}
+
+The energy expression eq. $\left(  \ref{energy}\right)  $ can be
+differentiated wrt $\mathbf{\psi}^{\ast},$ $\mathbf{\psi}$ to produce the
+functional derivatives (Appendix )
+\begin{equation}
+\left\{  \frac{\delta\mathcal{E}\left(  \mathbf{n,\psi,\theta}\right)
+}{\delta\psi_{j}^{\ast}},\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi,\theta
+}\right)  }{\delta\psi_{j}};\quad1\leq j\leq s\right\}  ,
+\end{equation}
+which can be expressed as%
+\begin{align}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi,\theta}\right)  }{\delta\psi
+_{j}^{\ast}}  &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\frac
+{\delta\mathcal{H}\left(  \mathbf{n,\psi,\theta}\right)  }{\delta\psi
+_{j}^{\ast}}\\
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi,\theta}\right)  }{\delta\psi
+_{j}}  &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\frac{\delta
+\mathcal{H}\left(  \mathbf{n,\psi,\theta}\right)  }{\delta\psi_{j}}%
+\end{align}
+in terms of the derivatives of the unnormalized energy $\mathcal{H}\left(
+\mathbf{n,\psi,\theta}\right)  ,$ as $S_{N}\left(  \mathbf{n}\right)  $ does
+not depend on $\left(  \mathbf{\psi,\theta}\right)  $ when $\left\{  \left.
+\left\vert \psi_{j}\right\rangle \right\vert \quad1\leq j\leq2s\right\}  $ are
+orthonormal. It is easy to show that
+\begin{equation}
+\frac{\delta\mathcal{H}\left(  \mathbf{n,\psi,\theta}\right)  }{\delta\psi
+_{j}^{\ast}}=\left(  \frac{\delta\mathcal{H}\left(  \mathbf{n,\psi,\theta
+}\right)  }{\delta\psi_{j}}\right)  ^{\ast}%
+\end{equation}
+so we only need consider $\left\{  \frac{\delta\mathcal{H}\left(
+\mathbf{n,\psi,\theta}\right)  }{\delta\psi_{j}^{\ast}}\right\}  .$ These
+derivatives can be expressed $\left(  \text{see Appendix \ref{variational}%
+}\right)  $ in terms of a generalized self adjoint Fock operator $F\left(
+\mathbf{n,\psi,\theta}\right)  $ as
+\begin{equation}
+\frac{\delta\mathcal{H}\left(  \mathbf{n,\psi,\theta}\right)  }{\delta\psi
+_{j}^{\ast}}=F\left(  \mathbf{n,\psi,\theta}\right)  \left\vert \psi
+_{j}\right\rangle ,\quad1\leq j\leq2s,
+\end{equation}
+that depends on the occupation numbers $\mathbf{n,}$ representative CGSO's
+$\mathbf{\psi,}$ of the class $\left[  D_{2N}^{1}\right]  $ and the internal
+phases $\mathbf{\theta}$ and is given by
+\begin{equation}
+F\left(  \mathbf{n,\psi,\theta}\right)  =\sum_{1\leq j,m\leq2s}\left\{
+n_{j}S_{N-1}\left(  \jmath\right)  h_{1mj}+A_{mj}-B_{mj}+\left\{
+C_{mj}-D_{mj}\right\}  +2\overset{}{\left\{  E_{mj}-F_{mj}\right\}  }\right\}
+\left\vert \psi_{m}\right\rangle \left\langle \psi_{j}\right\vert .
+\label{genfock}%
+\end{equation}
+The matrices $\left\{  \mathbb{A},\mathbb{B},\mathbb{C},\mathbb{D}%
+,\mathbb{E},\mathbb{F}\right\}  $ are given in terms of the matrix elements
+$\left\{  \left.  T_{jklm}\right\vert 1\leq j,k,l,m\leq2s\right\}  ,$ which
+are defined as
+\begin{equation}
+T_{jklm}=\left(  \left.  \psi_{j}\psi_{k}\right\vert h_{2}\psi_{l}\psi
+_{m}\right)  =\int\psi_{l}^{\ast}\left(  \mathbf{x}_{1}\right)  \psi_{j}%
+^{\ast}\left(  \mathbf{x}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}%
+_{1}-\mathbf{r}_{2}\right\Vert }\psi_{m}\left(  \mathbf{x}_{1}\right)
+\psi_{k}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}.
+\end{equation}
+The matrix elements of $\left\{  \mathbb{A},\mathbb{B},\mathbb{C}%
+,\mathbb{D},\mathbb{E},\mathbb{F}\right\}  $ for $1\leq m\leq2s$ are given by
+\begin{equation}
+A_{mj}=\left\{
+\begin{array}
+[c]{c}%
+n_{j}S_{N-1}\left(  \jmath\right)  T_{mj+sjj+s};\,1\leq j\leq s\\
+n_{j}S_{N-1}\left(  \jmath\right)  T_{mj-sjj-s};\,s+1\leq j\leq2s
+\end{array}
+\right.  , \label{a1}%
+\end{equation}%
+\begin{equation}
+B_{mj}=\left\{
+\begin{array}
+[c]{c}%
+n_{j}S_{N-1}\left(  \jmath\right)  T_{mj+sj+sj};\,1\leq j\leq s\\
+n_{j}S_{N-1}\left(  \jmath\right)  T_{mj-sj-sj};\,s+1\leq j\leq2s
+\end{array}
+\right.  , \label{b1}%
+\end{equation}
+noting that $n_{j+s}=n_{j}$ and $\theta_{j+s}=\theta_{j}$ for $1\leq j\leq s$
+we have the phase dependent $2$-electron terms
+\begin{equation}
+C_{mj}=\left\{
+\begin{array}
+[c]{c}%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }T_{mj+skk+s};\,1\leq j\leq s\\%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }T_{mj-sk+sk};\,s+1\leq j\leq2s
+\end{array}
+\right.  , \label{c1}%
+\end{equation}%
+\begin{equation}
+D_{mj}=\left\{
+\begin{array}
+[c]{c}%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }T_{mj+sk+sk};\,1\leq j\leq s\\%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }T_{mj-skk+s};\,s+1\leq j\leq2s
+\end{array}
+\right.  , \label{d1}%
+\end{equation}
+the phase independent $2$-electron terms
+\begin{equation}
+F_{mj}=\sum_{1\leq k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)
+T_{mkkj};\,1\leq j\leq2s, \label{f1}%
+\end{equation}
+and%
+\begin{equation}
+E_{mj}=\sum_{1\leq k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)
+T_{mkjk};\,1\leq j\leq2s. \label{e1}%
+\end{equation}
+
+
+\subsection{Orthonormality Constraints}
+
+A necessary condition for $\mathbf{\psi}_{\#}$ $=\mathbf{\psi}_{\#}\left(
+\mathbf{n,\theta}\right)  $ to be a orthonormally constrained stationary point
+of $\mathcal{E}\left(  \mathbf{n,\psi,\theta}\right)  $ for a fixed value of
+$\left(  \mathbf{n,\theta}\right)  $ is given by
+\begin{subequations}
+\begin{align}
+\partial_{\mathbf{\psi}}^{1}\mathcal{\tilde{H}}\left(  \mathbf{n,\mathbf{\psi
+}_{\#},\theta}\right)   &  =\mathbf{0}\label{nec1}\\
+\left\langle \left.  \psi_{\#j}\right\vert \psi_{\#k}\right\rangle  &
+=\delta_{jk};1\leq j,k\leq2s,
+\end{align}
+where the Lagrangian $\mathcal{\tilde{H}}\left(  \mathbf{n,\mathbf{\psi
+},\theta}\right)  $ is defined as
+\end{subequations}
+\begin{equation}
+\mathcal{\tilde{H}}\left(  \mathbf{n,\mathbf{\psi},\theta}\right)
+=\mathcal{H}\left(  \mathbf{n,\mathbf{\psi},\theta}\right)  -\sum_{1\leq
+j\leq2s}\varepsilon_{j}\left\{  \left\langle \left.  \psi_{j}\right\vert
+\psi_{j}\right\rangle -1\right\}  , \label{lagH}%
+\end{equation}
+as
+\begin{equation}
+\partial_{\mathbf{\psi}}^{1}\mathcal{\tilde{H}}\left(  \mathbf{n,\mathbf{\psi
+},\theta}\right)  =\partial_{\mathbf{\psi}}^{1}\mathcal{\tilde{E}}\left(
+\mathbf{n,\mathbf{\psi},\theta}\right)
+\end{equation}
+for orthonormally constrained $\mathbf{\mathbf{\psi.}}$ The condition eq.
+$\left(  \ref{nec1}\right)  $ can be expressed in terms of the generalized
+Fock operator as
+\begin{equation}
+F\left(  \mathbf{n,\mathbf{\psi},\theta}\right)  \left\vert \psi
+_{j}\right\rangle =\varepsilon_{j}\left\vert \psi_{j}\right\rangle ;1\leq
+j\leq2s. \label{eig}%
+\end{equation}
+As $F\left(  \mathbf{\psi,n}\right)  =F\left(  \mathbf{\psi,n}\right)
+^{\dagger}$ this implies that one can find solutions $\left\{  \left.
+\left\vert \psi_{m}\right\rangle \right\vert 1\leq m\leq2s\right\}  $ for
+$\left\{  \left.  \varepsilon_{m}\right\vert 1\leq m\leq2s\right\}  $ such
+that
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =\delta
+_{jk},;\quad1\leq j,k\leq2s.
+\end{equation}
+Thus one can always find stationary points that satisfy the \emph{normality}
+constraints
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{j}\right\rangle =1;\quad1\leq
+j\leq2s
+\end{equation}
+that also satisfy the orthonormality constraints eq. $\left(  \ref{norm}%
+\right)  .$ This conclusion is also consistent with the observation that the
+orthogonality constraints are \emph{not }active for $\left\{  \left.
+\left\vert \psi_{j}\right\rangle \right\vert \right\}  $ that satisfy eq.
+$\left(  \ref{eig}\right)  $ as "off diagonal" Lagrange multipliers,$\left\{
+\left.  \varepsilon_{jk}\right\vert j\neq k\right\}  $ that could have been
+associated with such constraints would have the value zero.
+
+The Lagrangian eq. $\left(  \ref{lagH}\right)  $ can also be used in the
+IPS\ case to produce the standard Hartree-Fock equations for $2N$-electrons
+instead of the traditional Lagrangian
+\begin{equation}
+\mathcal{\breve{H}}\left(  \mathbf{n}_{IP}\mathbf{,\mathbf{\psi},0}\right)
+=\mathcal{H}\left(  \mathbf{n}_{IP}\mathbf{,\mathbf{\psi},0}\right)
+-\sum_{1\leq j,k\leq2N}\varepsilon_{jk}\left\{  \left\langle \left.  \psi
+_{j}\right\vert \psi_{k}\right\rangle -\delta_{jk}\right\}  , \label{tradlag}%
+\end{equation}
+that explicitly holds the orthonormality constraints between occupied
+orbitals. \emph{However }using a Lagrangian that explicitly holds the
+orthonormality constraints in the AGP\ case \emph{does not} lead to equations
+that impose conditions on $\mathbf{\mathbf{\psi}}$.
+
+\section{Density Matrix Functional\label{DMF}}
+
+The AGP states that have the same FORDO are parameterized by a vector
+$\mathbf{\theta}$ and have energies given by
+\begin{equation}
+\tilde{f}\left(  \mathbf{\theta}\right)  =K\left(  \mathbf{n},\mathbf{\psi
+}\right)  +\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\sum_{1\leq j,k\leq
+s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(  \theta_{j}-\theta
+_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \left\langle \psi_{j}\psi
+_{j+s}|h_{2}\psi_{k}\psi_{k+s}\right\rangle ,
+\end{equation}
+where the constant $K$ is given by eq. $\left(  \ref{thetaen}\right)  $ and
+\begin{equation}
+\mathbf{\theta}=\left(  0,\theta_{2},\cdots,\theta_{s}\right)  ;\quad
+0<\theta_{j}\leq2\pi,\quad2\leq j\leq s.
+\end{equation}
+As $K\left(  \mathbf{n},\mathbf{\psi}\right)  $ is constant for fixed $\left(
+\mathbf{n},\mathbf{\psi}\right)  $ we are interested in the minimum of
+\begin{align}
+f\left(  \mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \left\langle
+\psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{k}\psi_{k+s}\right\rangle
+\nonumber\\
+&  =\sum_{1\leq j,k\leq s}e^{-i\theta_{k}}M_{kj}e^{i\theta_{j}}=\left(
+e^{i\mathbf{\theta}}\right)  ^{\dagger}\mathbb{M}e^{i\mathbf{\theta}},
+\end{align}
+where $e^{i\mathbf{\theta}}$ is the vector
+\begin{align}
+\left(  e^{i\mathbf{\theta}}\right)  _{j}  &  =e^{i\theta_{j}};\quad2\leq
+j\leq s\nonumber\\
+\left(  e^{i\mathbf{\theta}}\right)  _{1}  &  =1
+\end{align}
+and $\mathbb{M}$ the positive matrix given by
+\begin{equation}
+M_{kj}=\frac{1}{S_{N}\left(  \mathbf{n}\right)  }n_{j}^{\frac{1}{2}}%
+n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)  \left\langle \psi_{j}%
+\psi_{j+s}\right\vert \left\vert \psi_{k}\psi_{k+s}\right\rangle .
+\end{equation}
+We can expand $f$ in a Taylors series about $\mathbf{\theta}_{0}$ to obtain
+\begin{equation}
+f\left(  \mathbf{\theta}_{0}+\delta\mathbf{\theta}\right)  =f\left(
+\mathbf{\theta}_{0}\right)  +\partial_{\mathbf{\theta}}f\left(  \mathbf{\theta
+}_{0}\right)  ^{t}\delta\mathbf{\theta}+\frac{1}{2}\delta\mathbf{\theta}%
+^{t}\partial_{\mathbf{\theta}}^{2}f\left(  \mathbf{\theta}_{0}\right)
+\delta\mathbf{\theta+\cdots,}%
+\end{equation}
+where
+\begin{equation}
+\partial_{\mathbf{\theta}}f\left(  \mathbf{\theta}_{0}\right)  _{l}%
+=\frac{\partial f\left(  \mathbf{\theta}_{0}\right)  }{\partial\theta_{l}%
+}=i\sum_{1\leq j\leq s}\left\{  e^{-i\theta_{0j}}M_{jl}e^{i\theta_{0l}%
+}-e^{-i\theta_{0l}}M_{lj}e^{i\theta_{0j}}\right\}  =-2\sum_{1\leq j\leq
+s}\operatorname{Im}\left\{  e^{-i\theta_{0j}}M_{jl}e^{i\theta_{0l}}\right\}
+\end{equation}
+and
+\begin{align}
+\partial_{\mathbf{\theta}}^{2}f\left(  \mathbf{\theta}_{0}\right)  _{lm}  &
+=\frac{\partial^{2}f\left(  \mathbf{\theta}_{0}\right)  }{\partial\theta
+_{l}\partial\theta_{m}}\nonumber\\
+&  =2\left\{  \operatorname{Im}\left\{  \sum_{1\leq j\leq s}e^{-i\theta_{0j}%
+}M_{jl}e^{i\theta_{0l}}\right\}  \delta_{lm}-\operatorname{Im}\left\{
+e^{-i\theta_{0l}}M_{lm}e^{i\theta_{0m}}\right\}  \right\}  .
+\end{align}
+The stationary points $\mathbf{\theta}_{\#}$ of $f$ are given by
+\begin{equation}
+\partial_{\mathbf{\theta}}f\left(  \mathbf{\theta}_{\#}\right)  =\mathbf{0}
+\label{gradf}%
+\end{equation}
+and these are local minimum if
+\begin{equation}
+\partial_{\mathbf{\theta}}^{2}f\left(  \mathbf{\theta}_{\#}\right)
+\geq\mathbf{0.}%
+\end{equation}
+The eq. $\left(  \ref{gradf}\right)  $ can be solved numerically by any
+standard optimization technique, though it would be more convenient if an
+analytic solution to eq. $\left(  \ref{gradf}\right)  $ could be found.
+
+\section{Variation of the Occupation Numbers\label{OccVar}}
+
+In this section we show how by optimizing wrt geminal coefficients $\left\{
+c_{j}\right\}  $ for a fixed value of $\left(  \mathbf{\mathbf{\psi},\theta
+}\right)  $ one can determine an optimal value of $\mathbf{n}$ that satisfies
+the positivity and normalization constraints.
+
+The $2N$-electron, unnormalized, AGP state, $\left\vert g^{N}\right\rangle $,
+can be expressed as
+\begin{equation}
+\left\vert g^{N}\right\rangle =\left(  G^{\dagger}\right)  ^{N}\left\vert
+\phi\right\rangle ,
+\end{equation}
+where
+\begin{equation}
+G^{\dagger}=\sum_{1\leq j\leq s}c_{j}b_{j}^{\dagger}b_{j+s}^{\dagger},
+\label{gcreat}%
+\end{equation}
+and the electron creation operators $\left\{  \left.  b_{j}^{\dagger
+}\right\vert 1\leq j\leq2s\right\}  $ produce the CGSO's $\left\{  \left.
+\left\vert \psi_{j}\right\rangle \right\vert 1\leq j\leq2s\right\}  $ by
+acting on the zero particle vacuum vector i.e.
+\begin{equation}
+\left\vert \psi_{j}\right\rangle =b_{j}^{\dagger}\left\vert \phi\right\rangle
+;\quad1\leq j\leq2s.
+\end{equation}
+For fixed $\left(  \mathbf{\mathbf{\psi},\theta}\right)  $ the geminal creator
+in eq. $\left(  \ref{gcreat}\right)  $ is a function of the canonical
+coefficients $\left\{  \left.  c_{j}\right\vert 1\leq j\leq s\right\}  ,$
+which can be differentiated to give%
+\begin{equation}
+\frac{\partial G\left(  \mathbf{c}\right)  ^{\dagger N}}{\partial c_{j}%
+}=Nb_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1},
+\end{equation}
+which leads to
+\begin{equation}
+G\left(  \mathbf{c}\right)  ^{\dagger N}=\frac{1}{N}\sum_{1\leq j\leq s}%
+c_{j}\frac{\partial G\left(  \mathbf{c}\right)  ^{\dagger N}}{\partial c_{j}}.
+\label{euler}%
+\end{equation}
+The energy expression
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}\right)  =\frac{\mathcal{H}\left(  \mathbf{c}%
+\right)  }{S_{N}\left(  \mathbf{c}\right)  }=\frac{\left\langle G\left(
+\mathbf{c}\right)  ^{\dagger N}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger
+N}\phi\right\rangle }{\left\langle G\left(  \mathbf{c}\right)  ^{\dagger
+N}\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle }%
+\end{equation}
+produces the derivative
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  =\frac{1}%
+{S_{N}\left(  \mathbf{c}\right)  }\left\{  \partial_{\mathbf{c}}%
+^{1}\mathcal{H}\left(  \mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}%
+\right)  \partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}\right)  \right\}  ,
+\end{equation}
+where
+\begin{equation}
+\partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)  =N\left\{
+\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle
++\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|Hb_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle
+\right\}
+\end{equation}
+and
+\begin{equation}
+\partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)  =N\left\{  \left\langle
+b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}%
+\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle +\left\langle
+G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle \right\}  .
+\end{equation}
+Using eq. $\left(  \ref{euler}\right)  $ one obtains
+\begin{equation}
+\frac{1}{2N}\sum_{1\leq j\leq s}c_{j}\frac{\partial\mathcal{E}\left(
+\mathbf{c}\right)  }{\partial c_{j}}=\mathbf{c}^{t}\partial_{\mathbf{c}}%
+^{1}\mathcal{E}\left(  \mathbf{c}\right)  =\frac{1}{2NS_{N}\left(
+\mathbf{c}\right)  }\left\{  \mathcal{H}\left(  \mathbf{c}\right)
+-\mathcal{E}\left(  \mathbf{c}\right)  S_{N}\left(  \mathbf{c}\right)
+\right\}  =0,
+\end{equation}
+i.e. the vector $\mathbf{c}$ is always perpendicular to the vector
+$\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  $.
+
+The second derivatives $\left\{  \partial_{c_{j}c_{k}}^{2}\mathcal{E}\left(
+\mathbf{c}\right)  \right\}  $ are given by
+\begin{equation}
+\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}\right)  =\frac{1}%
+{S_{N}\left(  \mathbf{c}\right)  }\left\{  \partial_{\mathbf{c}}%
+^{2}\mathcal{H}\left(  \mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}%
+\right)  \partial_{\mathbf{c}}^{2}S_{N}\left(  \mathbf{c}\right)
+-\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  \otimes
+\partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}\right)  -\partial
+_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}\right)  \otimes\partial_{\mathbf{c}%
+}^{1}\mathcal{E}\left(  \mathbf{c}\right)  \right\}  , \label{Hess}%
+\end{equation}
+where
+\begin{align}
+\partial_{c_{j}c_{k}}^{2}\mathcal{H}\left(  \mathbf{c}\right)   &
+=N^{2}\left\{  \left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(
+\mathbf{c}\right)  ^{\dagger N-1}\phi|Hb_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle +\left\langle
+b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}%
+\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger
+N-1}\right\rangle \right\} \nonumber\\
+&  +N\left(  N-1\right)  \left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
+\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  +\left\langle
+b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(
+\mathbf{c}\right)  ^{\dagger N-2}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger
+}\phi\right\rangle \right\}
+\end{align}
+and
+\begin{align}
+\partial_{c_{j}c_{k}}^{2}S_{N}\left(  \mathbf{c}\right)   &  =N^{2}\left\{
+\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\right\rangle +\left\langle b_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi|b_{j}^{\dagger}b_{j+s}%
+^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle \right\}
+\nonumber\\
+&  +N\left(  N-1\right)  \left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
+\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  +\left\langle
+b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(
+\mathbf{c}\right)  ^{\dagger N-2}\phi|G\left(  \mathbf{c}\right)  ^{\dagger
+}\phi\right\rangle \right\}  .
+\end{align}
+Observing
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle b_{j}^{\dagger}b_{j+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi|Hb_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
++\left\langle b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}%
+\right)  ^{\dagger N-1}\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger N}\right\rangle
++\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|Hb_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)  ,
+\end{align}
+and
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi|HG\left(  \mathbf{c}\right)
+^{\dagger}\phi\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|Hb_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)
+\end{align}
+one obtains
+\begin{equation}
+\sum_{1\leq k\leq s}\partial_{c_{j}c_{k}}^{2}\mathcal{H}\left(  \mathbf{c}%
+\right)  c_{k}=\left(  2N-1\right)  \partial_{c_{j}}^{1}\mathcal{H}\left(
+\mathbf{c}\right)  .
+\end{equation}
+The normalization term similarly gives
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle b_{j}^{\dagger}b_{j+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi|b_{k}^{\dagger}b_{k+s}%
+^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
++\left\langle b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\right\rangle
++\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|b_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)  ,
+\end{align}
+and
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi|G\left(  \mathbf{c}\right)
+^{\dagger}\phi\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|b_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)  .
+\end{align}
+producing
+\begin{equation}
+\sum_{1\leq k\leq s}\partial_{c_{j}c_{k}}^{2}S_{N}\left(  \mathbf{c}\right)
+c_{k}=\left(  2N-1\right)  \partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)
+.
+\end{equation}
+Thus
+\begin{equation}
+\sum_{1\leq k\leq s}\left\{  \partial_{c_{j}c_{k}}^{2}\mathcal{H}\left(
+\mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}\right)  \partial_{c_{j}%
+c_{k}}^{2}S_{N}\left(  \mathbf{c}\right)  \right\}  c_{k}=\left(  2N-1\right)
+\left\{  \partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)
+-\mathcal{E}\left(  \mathbf{c}\right)  \partial_{c_{j}}^{1}S_{N}\left(
+\mathbf{c}\right)  \right\}  ,
+\end{equation}
+which can be written in matrix notation as
+\begin{equation}
+L\left(  \mathbf{c}\right)  \mathbf{c}\equiv\left[  \partial_{\mathbf{c}}%
+^{2}\mathcal{H}\left(  \mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}%
+\right)  \partial_{\mathbf{c}}^{2}S_{N}\left(  \mathbf{c}\right)  \right]
+\mathbf{c=}\left(  2N-1\right)  \partial_{\mathbf{c}}^{1}\mathcal{E}\left(
+\mathbf{c}\right)  , \label{gradrel}%
+\end{equation}
+which clearly shows that
+\begin{equation}
+\mathbf{c}^{t}L\left(  \mathbf{c}\right)  \mathbf{c=\mathbf{c}}^{t}%
+\mathbf{\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}\right)
+\mathbf{c}}=\mathbf{0.} \label{cd2c}%
+\end{equation}
+
+
+At stationary points, $\mathbf{c}_{\#}$, one can observe from eq. $\left(
+\ref{Hess}\right)  $ that
+\begin{equation}
+\mathbf{\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+=}\frac{1}{S_{N}\left(  \mathbf{c}_{\#}\right)  }L\left(  \mathbf{c}%
+_{\#}\right)
+\end{equation}
+and if $\mathbf{c}_{\#}$ is a local minimum then
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \geq\mathbf{0.}%
+\end{equation}
+Hence at a local minimum eq. $\left(  \ref{cd2c}\right)  $ shows that
+$\mathbf{c}_{\#}$ is an eigenvector corresponding to the lowest eigenvalue of
+$L\left(  \mathbf{c}_{\#}\right)  $ i.e.%
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \mathbf{c}_{\#}=0. \label{loweig}%
+\end{equation}
+
+
+If $\mathbf{c}_{\#}$ is the lowest eigenvalue of $L\left(  \mathbf{c}%
+_{\#}\right)  $ and $L\left(  \mathbf{c}_{\#}\right)  \geq0$ then as
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  =S_{N}\left(  \mathbf{c}_{\#}\right)
+\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
++\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\otimes\partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}_{\#}\right)
++\partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}_{\#}\right)  \otimes
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\end{equation}
+one has
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \mathbf{c}_{\#}=S_{N}\left(  \mathbf{c}%
+_{\#}\right)  \partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}%
+_{\#}\right)  \mathbf{c}_{\#}+2NS_{N}\left(  \mathbf{c}_{\#}\right)
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)  =0,
+\end{equation}
+which implies
+\begin{equation}
+\frac{1}{2N}\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}%
+_{\#}\right)  \mathbf{c}_{\#}+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  =0. \label{stat1}%
+\end{equation}
+If the second order approximation $\mathcal{E}_{2}$
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}_{\#}+\mathbf{\delta}\right)  \simeq
+\mathcal{E}_{2}\left(  \mathbf{\delta}\right)  =\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  +\partial_{\mathbf{c}}^{1}\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  ^{t}\mathbf{\delta+}\frac{1}{2}\mathbf{\delta}%
+^{t}\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\mathbf{\delta}%
+\end{equation}
+to $\mathcal{E}$ about the point $\mathbf{c}_{\#}$ is stationary at the point
+$\mathbf{\delta}_{\#}$ then
+\begin{equation}
+\partial_{\mathbf{\delta}}\mathcal{E}_{2}\left(  \mathbf{\delta}_{\#}\right)
+=\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+^{t}+\mathbf{\delta}^{t}\partial_{\mathbf{c}}^{2}\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  =0
+\end{equation}
+and hence
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
++\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\mathbf{\delta}=0 \label{stat2}%
+\end{equation}
+Thus
+\begin{equation}
+\mathbf{\delta}_{\#}=\frac{1}{2N}\mathbf{c}_{\#}%
+\end{equation}
+is a solution to eq. $\left(  \ref{stat2}\right)  $ by observing eq. $\left(
+\ref{stat1}\right)  .$ However as $\mathcal{E}$ is a homogenous function of
+degree $0$
+\begin{equation}
+\mathcal{E}\left(  \lambda\mathbf{c}\right)  =\mathcal{E}\left(
+\mathbf{c}\right)  \quad\forall\lambda\in\mathbb{R}%
+\end{equation}
+and
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}_{\#}+\mathbf{\delta}_{\#}\right)  =\mathcal{E}%
+\left(  \mathbf{c}_{\#}+\frac{1}{2N}\mathbf{c}_{\#}\right)  =\mathcal{E}%
+\left(  \mathbf{c}_{\#}\right)  .
+\end{equation}
+This means $\mathbf{\delta}_{\#}=\mathbf{0}$ also is also a stationary point
+of $\mathcal{E}_{2}\left(  \mathbf{\delta}_{\#}\right)  $ and hence eq.
+$\left(  \ref{stat2}\right)  $ shows that
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+=\mathbf{0,}%
+\end{equation}
+i.e. $\mathbf{c}_{\#}$ is stationary point of $\mathcal{E}.$ At stationary
+points of $\mathcal{E}$
+\begin{equation}
+\mathbf{\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+=}\frac{1}{S_{N}\left(  \mathbf{c}_{\#}\right)  }L\left(  \mathbf{c}%
+_{\#}\right)
+\end{equation}
+and by assumption $L\left(  \mathbf{c}_{\#}\right)  \geq0$ thus one can
+conclude that $\mathbf{c}_{\#}$ is a local minimum. We can summarize the
+preceding by the theorem
+
+\begin{theorem}
+$\mathbf{c}_{\#}$ is a local minimum of $\mathcal{E}$ if and only if
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \geq0\qquad\&\qquad L\left(  \mathbf{c}%
+_{\#}\right)  \mathbf{c}_{\#}=0.
+\end{equation}
+
+\end{theorem}
+
+An iterative minimization scheme can be based on this theorem by considering
+the first order approximation
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}+\mathbf{\delta}\right)  \simeq\mathcal{E}%
+_{1}\left(  \mathbf{\delta}\right)  =\mathcal{E}\left(  \mathbf{c}\right)
++\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  ^{t}%
+\mathbf{\delta} \label{o1}%
+\end{equation}
+and the eigenvalue equation
+\begin{equation}
+L\left(  \mathbf{c}\right)  \mathbf{x}_{j}=\lambda_{j}\mathbf{x}_{j}\mathbf{,}
+\label{Lc}%
+\end{equation}
+where $\left\{  \left.  \mathbf{x}_{j}\right\vert 1\leq j\leq s\right\}  $ are
+orthonormal eigenvectors. By taking the scalar product with $\mathbf{c}$ eq.
+$\left(  \ref{Lc}\right)  $ becomes by noting eq. $\left(  \ref{gradrel}%
+\right)  $
+\begin{equation}
+\mathbf{c}^{t}L\left(  \mathbf{c}\right)  \mathbf{x}_{j}=\left(  2N-1\right)
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  ^{t}%
+\mathbf{x}_{j}=\lambda_{j}\mathbf{c}^{t}\mathbf{x}_{j}%
+\end{equation}
+As $\mathbf{c}$ is always perpendicular to $\partial_{\mathbf{c}}%
+^{1}\mathcal{E}\left(  \mathbf{c}\right)  $ we obtain
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  ^{t}\left(
+\mathbf{x}_{j}-\mathbf{c}\right)  =\frac{1}{\left(  2N-1\right)  }\lambda
+_{j}\mathbf{c}^{t}\mathbf{x}_{j}%
+\end{equation}
+We can always choose an overall phase for $\mathbf{x}_{j}$ so that
+$\mathbf{c}^{t}\mathbf{x}_{j}>0.$ If $\lambda_{L}<0$ we can then set
+\begin{equation}
+\mathbf{\delta}=\alpha\left(  \mathbf{x}_{L}-\mathbf{c}\right)
+\end{equation}
+in eq. $\left(  \ref{o1}\right)  $, where $\lambda_{L}$ is the lowest
+eigenvalue of $L\left(  \mathbf{c}\right)  $ and find a small enough
+$\alpha>0$ that decreases the energy around the point $\mathbf{c.}$ Then we
+can compute a new point
+\begin{equation}
+\mathbf{c}_{new}=\alpha\left(  \mathbf{x}_{L}-\mathbf{c}\right)
+\end{equation}
+and continue iterating until the lowest eigenvalue is equal to zero.
+
+After the optimal $\mathbf{c}_{\#}$ has been found we can then define an
+optimal $\mathbf{n}_{\#}$ by
+\begin{equation}
+n_{\#j}=c_{\#j}^{2}\qquad1\leq j\leq s.
+\end{equation}
+As the values $\left\{  c_{\#j}\right\}  $ are optimal
+\begin{equation}
+\frac{\partial\mathbf{\mathcal{E}\left(  \mathbf{c}_{\#}\right)  }}{\partial
+c_{j}}=\frac{\partial\mathbf{\mathcal{E}\left(  \mathbf{n}_{\#}\right)  }%
+}{\partial n_{j}}\frac{\partial n_{j}}{\partial c_{j}}=2\frac{\partial
+\mathbf{\mathcal{E}\left(  \mathbf{n}_{\#}\right)  }}{\partial n_{j}}%
+=0\qquad1\leq j\leq s,
+\end{equation}
+showing that $\left\{  n_{\#j}\right\}  $ are also optimal and satisfy the
+positivity and normalization constraints. The phase information contained in
+the signs of $\left\{  c_{\#j}\right\}  ,$ although important in finding a
+$\mathbf{c}_{\#}$, is not important for our overall optimization procedure as
+it is recovered in the optimization of $\mathbf{\theta}$ and $\mathbf{\psi}$.
+
+\section{Energy Variation Procedure \label{procedure}}
+
+\section{Reduction to the IPS \label{IPS}}
+
+The standard basic model in chemistry is the IPS description, as we have noted
+in the preceding this is a special case of the AGP state model which relaxes
+to the IPS\ for integer occupation numbers i.e.
+\begin{align}
+N_{j}  &  =N_{j+s}=1,\quad1\leq j\leq N\nonumber\\
+N_{j}  &  =N_{j+s}=0,\quad N+1\leq j\leq s
+\end{align}
+and%
+\begin{align}
+n_{j}  &  =n_{j+s}=1,\quad1\leq j\leq N\nonumber\\
+n_{j}  &  =n_{j+s}=0,\quad N+1\leq j\leq s.
+\end{align}
+The IPS\ is invariant to the phases $\mathbf{\theta,}$ which can be set at
+$\mathbf{\theta=0}$ and thus the only free variables are the GSO's $\left\{
+\mathbf{\psi}\right\}  ,$ leading to the energy expression
+\begin{align}
+\mathcal{E}\left(  \mathbf{\psi}\right)   &  =\mathcal{H}\left(  \mathbf{\psi
+}\right)  =\sum_{1\leq j\leq2s}n_{j}\left\langle \psi_{j}\right\vert
+h_{1}\left.  \psi_{j}\right\rangle +\frac{1}{2}\sum_{1\leq j,k\leq2s}%
+n_{j}n_{k}\left\{  \left(  \left.  \psi_{j}\psi_{k}\right\vert h_{2}\psi
+_{j}\psi_{k}\right)  -\left(  \left.  \psi_{j}\psi_{k}\right\vert h_{2}%
+\psi_{k}\psi_{j}\right)  \right\} \nonumber\\
+&  =Tr\left\{  \sum_{1\leq j\leq2s}n_{j}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{j}\right\vert h_{1jj}\right. \nonumber\\
+&  +\left.  \frac{1}{2}\sum_{1\leq j,k\leq2s}n_{j}n_{k}\left\{  \left\vert
+\psi_{j}\right\rangle \otimes\left\vert \psi_{k}\right\rangle \left\langle
+\psi_{j}\right\vert \otimes\left\langle \psi_{k}\right\vert -\left\vert
+\psi_{j}\right\rangle \otimes\left\vert \psi_{k}\right\rangle \left\langle
+\psi_{k}\right\vert \otimes\left\langle \psi_{j}\right\vert \right\}  \left\{
+h_{2jkjk}-h_{2jkkj}\right\}  \right\}  .
+\end{align}
+This can be recast as
+\begin{align}
+&  \mathcal{H}\left(  \mathbf{\psi}\right)  =Tr\left\{  \sum_{1\leq j,k\leq
+2s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{k}\right\vert h_{1jk}\right. \nonumber\\
+&  \qquad\qquad+\frac{1}{2}\sum_{1\leq j,k,l,m\leq2s}n_{j}^{\frac{1}{2}}%
+n_{k}^{\frac{1}{2}}n_{l}^{\frac{1}{2}}n_{m}^{\frac{1}{2}}\left\{  \left\vert
+\psi_{j}\right\rangle \otimes\left\vert \psi_{k}\right\rangle -\left\vert
+\psi_{k}\right\rangle \otimes\left\vert \psi_{j}\right\rangle \right\}
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  \overset{}{\left\{
+\left\langle \psi_{l}\right\vert \otimes\left\langle \psi_{m}\right\vert
+-\left\langle \psi_{l}\right\vert \otimes\left\langle \psi_{m}\right\vert
+\right\}  \left\{  h_{2jklm}-h_{2jkml}\right\}  }\right\} \nonumber\\
+&  \equiv Tr\left\{  \sum_{1\leq j,k\leq2s}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{k}\right\vert K_{1jk}\right. \nonumber\\
+&  +\left.  \frac{1}{2}\sum_{1\leq j,k,l,m\leq2s}\left\{  \left\vert \psi
+_{j}\right\rangle \otimes\left\vert \psi_{k}\right\rangle \left\langle
+\psi_{l}\right\vert \otimes\left\langle \psi_{m}\right\vert -\left\vert
+\psi_{j}\right\rangle \otimes\left\vert \psi_{k}\right\rangle \left\langle
+\psi_{m}\right\vert \otimes\left\langle \psi_{l}\right\vert \right\}
+K_{2jklm}\right\}  ,
+\end{align}
+where
+\begin{equation}
+K_{1jk}=n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}h_{1jk}%
+\end{equation}
+and
+\begin{equation}
+K_{2jklm}=n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}n_{l}^{\frac{1}{2}}%
+n_{m}^{\frac{1}{2}}\left\{  h_{2jklm}-h_{2jkml}\right\}  . \label{defk2}%
+\end{equation}
+One should note that $K_{2jklm}$ is hermitian
+\begin{equation}
+K_{2jkml}=K_{2mljk}^{\ast}%
+\end{equation}
+and antisymmetric wrt interchange of the subscripts $j$ $\leftrightarrow$ $k$
+and $l$ $\leftrightarrow$ $m$ i.e.
+\begin{equation}
+K_{2jkml}=-K_{2jklm},K_{2kjlm}=-K_{2kjlm}\quad\text{and }K_{2kjml}=K_{2jklm}.
+\end{equation}
+This can be seen from definition eq. $\left(  \ref{defk2}\right)  $,
+\begin{align}
+h_{2abcd}  &  =\int\psi_{a}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi
+_{b}\left(  \mathbf{x}_{2}\right)  ^{\ast}\frac{1}{\left\Vert \mathbf{r}%
+_{1}\mathbf{-r}_{2}\right\Vert }\psi_{c}\left(  \mathbf{x}_{1}\right)
+\psi_{d}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}%
+_{2}\nonumber\\
+&  =\left[  \int\psi_{b}\left(  \mathbf{x}_{1}\right)  \psi_{a}\left(
+\mathbf{x}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}\mathbf{-r}%
+_{2}\right\Vert }\psi_{d}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi_{c}\left(
+\mathbf{x}_{2}\right)  ^{\ast}d\mathbf{x}_{1}d\mathbf{x}_{2}\right]  ^{\ast
+}=h_{2dcba}^{\ast}%
+\end{align}
+and
+\begin{align}
+h_{2abcd}  &  =\int\psi_{a}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi
+_{b}\left(  \mathbf{x}_{2}\right)  ^{\ast}\frac{1}{\left\Vert \mathbf{r}%
+_{1}\mathbf{-r}_{2}\right\Vert }\psi_{c}\left(  \mathbf{x}_{1}\right)
+\psi_{d}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}%
+_{2}\nonumber\\
+&  =\int\psi_{b}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi_{a}\left(
+\mathbf{x}_{2}\right)  ^{\ast}\frac{1}{\left\Vert \mathbf{r}_{1}%
+\mathbf{-r}_{2}\right\Vert }\psi_{d}\left(  \mathbf{x}_{1}\right)  \psi
+_{c}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}=h_{2badc}.
+\end{align}
+
+
+The functional derivatives wrt $\left\{  \psi_{\mu}^{\ast};1\leq\mu
+\leq2s\right\}  $ are given by%
+\begin{align}
+\frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu
+}^{\ast}}  &  =\sum_{1\leq j\leq2s}\left\vert \psi_{j}\right\rangle K_{1j\mu
+}+Tr\left\{  \frac{1}{2}\sum_{1\leq j,k,l\leq2s}\left\{  \left\vert \psi
+_{j}\right\rangle \left\{  \left\vert \psi_{k}\right\rangle \left\langle
+\psi_{l}\right\vert \right\}  K_{2kjjl\mu}+\left\vert \psi_{j}\right\rangle
+\left\vert \psi_{k}\right\rangle \left\langle \psi_{l}\right\vert K_{2jk\mu
+l}\right\}  \right\} \nonumber\\
+&  =\sum_{1\leq j\leq2s}\left\vert \psi_{j}\right\rangle K_{1j\mu}+Tr\left\{
+\sum_{1\leq j,k,l\leq2s}\left\vert \psi_{j}\right\rangle \left\{  \left\vert
+\psi_{k}\right\rangle \left\langle \psi_{l}\right\vert \right\}  K_{2jk\mu
+l}\right\}  \equiv\sum_{1\leq j\leq2s}\left\vert \psi_{j}\right\rangle
+F\left(  \mathbf{\psi}\right)  _{j\mu},
+\end{align}
+where
+\begin{equation}
+F\left(  \mathbf{\psi}\right)  _{j\mu}=K_{1j\mu}+Tr\left\{  \sum_{1\leq
+k,l\leq2s}\left\vert \psi_{k}\right\rangle \left\langle \psi_{l}\right\vert
+K_{2jk\mu l}\right\}  =K_{1j\mu}+\sum_{1\leq k\leq2s}K_{2jk\mu k}.
+\end{equation}
+This defines a Fock operator by
+\begin{equation}
+F\left(  \mathbf{\psi}\right)  \left(  \left\vert \psi_{1}\right\rangle
+,\cdots,\left\vert \psi_{2s}\right\rangle \right)  =\left(  \left\vert
+\psi_{1}\right\rangle ,\cdots,\left\vert \psi_{2s}\right\rangle \right)
+\mathbb{F}\left(  \mathbf{\psi}\right)  ,
+\end{equation}
+where $\mathbb{F}\left(  \mathbf{\psi}\right)  $ has matrix elements $\left\{
+F\left(  \mathbf{\psi}\right)  _{j\mu}\right\}  $ wrt the basis $\left\{
+\left\vert \psi_{j}\right\rangle ;1\leq j\leq2s\right\}  .$
+
+The functional derivatives wrt $\left\{  \psi_{\mu};1\leq\mu\leq2s\right\}  $
+are given by%
+\begin{equation}
+r\left\{  \sum_{1\leq j,k\leq2s}\left\vert \psi_{j}\right\rangle \left\langle
+\psi_{k}\right\vert K_{1jk}+\frac{1}{2}\sum_{1\leq j,k,l,m\leq2s}\left[
+\left\vert \psi_{j}\right\rangle \otimes\left\vert \psi_{k}\right\rangle
+\right]  \left[  \left\langle \psi_{l}\right\vert \otimes\left\langle \psi
+_{m}\right\vert \right]  K_{2jklm}\right\}
+\end{equation}
+\begin{align}
+\frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu}}  &
+=\sum_{1\leq j\leq2s}K_{1\mu j}\left\langle \psi_{\mu}\right\vert +Tr\left\{
+\frac{1}{2}\sum_{1\leq j,l,m\leq2s}\left\vert \psi_{j}\right\rangle \left[
+\left\langle \psi_{l}\right\vert \otimes\left\langle \psi_{m}\right\vert
+\right]  K_{2\mu jlm}\right\} \nonumber\\
+&  \sum_{1\leq j,l,m\leq2s}\left[  \left\langle \psi_{l}\right\vert
+\otimes\left[  \left\vert \psi_{j}\right\rangle \right]  \left\langle \psi
+_{m}\right\vert \right]  K_{2j\mu lm}\\
+&  =\left\{  K_{1\mu\mu}+Tr\left\{  \sum_{1\leq k\leq2s}K_{2\mu k\mu
+k}\right\}  \right\}  \left\langle \psi_{\mu}\right\vert \equiv\left\langle
+\psi_{\mu}\right\vert F\left(  \mathbf{\psi}\right)  _{\mu\mu}.
+\end{align}
+
+
+\section{Discussion\label{Discussion}}
+
+We have extended the IPS one particle model of molecular quantum mechanics
+described by single determinantal wavefunctions to a more accurate correlated
+one particle model described by AGP\ wavefunctions for an even number of
+electrons and GAGP wavefunctions for an odd number. All of these wavefunctions
+are determined by a set of one particle occupation numbers and a set of GSO's.
+In the determinantal case the occupation numbers are one or zero, while in the
+AGP case they must be at least doubly degenerate and for the GAGP case there
+must be at most one non degenerate integer occupation number and the rest at
+least doubly degenerate.
+
+The occupation numbers and GSO's totally determine the many electron state, a
+necessary criterion for a one particle model. In the AGP\ case the GSO's
+produce weighted Probability Distributions (PD's)\ that produce pictorial
+models of a molecules that generalize the standard ones used in chemistry in
+that they contain the effects of correlation. It is true that multi
+configurational wavefunctions also produce weighted Probability Distributions
+(PD's) but they are not determined by them in contrast to the AGP\ case.
+
+Another important aspect of the IPS model is the role of energies of the one
+particle orbitals, which are given by the eigenvalues of the Fock operator.
+When these are combined with the shape of PD's one obtains a description of
+chemical properties i.e. reactivity and reaction mechanisms. Physically these
+energies, are the poles of a first order approximation to the electron
+propagator and correspond to the ionization potentials of the electrons from
+the occupied orbitals. Mathematically they reflect the effect of the
+orthonormality constraints in the IP-SCF\ procedure i.e. they give the rate of
+change of the total energy with respect to changes in the normalization of the
+corresponding orbitals. The aufbau principle is also based on these
+eigenvalues i.e. the optimized IPS\ is in general composed of the orbitals
+corresponding to most negative ionization potentials.
+
+These properties are also generalized by the self consistent AGP-Fock
+operator. However there some important differences, the IPS is invariant to
+phase changes of the eigenvectors of the SCF-Fock operator, while the AGP-Fock
+operator and the total energy are \emph{not }invariant to such changes. Hence
+one must perform an independent optimization of these phases in order to
+determine the best AGP approximation to the true many electron ground state.
+This phase dependence is a reflection of the fact the AGP FORDO does not
+determine a unique AGP\ state, but only an equivalence class of states. By
+optimizing over the phase for fixed reference FORDO one obtains an explicit
+Density Matrix Function (DMF)\ that can be used as a model functional for
+DMFT. We have also shown, by analyzing the total energy in terms of the
+eigenvalues of the AGP-Fock operator, that a generalized aufbau principle
+holds i.e. the lowest AGP-Fock operator eigenvalues are associated with the
+most highly occupied orbitals.
+
+The AGP-Fock operator eigenvalues again reflect the effect of the
+orthonormality constraints, which we show are sufficient to enforce
+orthogonality between the orbitals in \emph{both }the IP and AGP state cases.
+This unconventional approach to the derivation of the IP-SCF equations is a
+necessity in the SCF AGP\ equations as the standard arguments used in the
+IPS\ case do not in this case lead to an eigenvalue equation.
+
+The final variables that need to be optimized in the AGP\ case are the
+occupation numbers of the FORDO, which we can express in terms of the
+occupation numbers of the geminal using the monotonic $1-1$ correspondence
+shown by \cite{Coleman} and subsequent angular functions in order to maintain
+the normalization and positivity constraints. The relaxation of the occupation
+numbers from integer values and the determination of optimal phases reflect
+the correlation effects.
+
+We have not examined the relationship of the AGP-Fock operator to the poles of
+the one electron propagator in any rigorous fashion, nor have we considered
+the explicit form of the derivatives of the total energy $\left\{
+\frac{\partial\mathcal{E}}{\partial N_{j}};1\leq j\leq s\right\}  $ with
+respect to the occupation numbers of the FORDO in order to study Janaks
+Theorem \cite{Janak}.
+
+\section{Acknowledgements}
+
+\appendix
+
+\section{One Electron Basis\label{basis}}
+
+\section{Example of Linear Fit\label{LinfitEX}}
+
+consider%
+\begin{equation}
+\mathbf{N}_{1}=\left(
+\begin{array}
+[c]{c}%
+1\\
+.9\\
+.8\\
+.1\\
+.2\\
+0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+1\\
+1\\
+1\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)  =\mathbf{N}_{0}+\delta\mathbf{N}_{1}%
+\end{equation}%
+\begin{equation}
+\mathbf{n}_{1}=\mathcal{N}^{-1}\left(
+\begin{array}
+[c]{c}%
+1\\
+.9\\
+.8\\
+0\\
+.2\\
+.1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left[  d\mathcal{N}\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)
+\end{equation}%
+\[
+\mathbf{n}_{2}=\mathcal{N}^{-1}\left(
+\begin{array}
+[c]{c}%
+.9\\
+.8\\
+.8\\
+.1\\
+.2\\
+.2
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left[  d\mathcal{N}\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)
+\]%
+\begin{equation}
++\left[  d\mathcal{N}\left(  \left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left[  d\mathcal{N}\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)  \right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+-.1\\
+-.1\\
+0\\
+.1\\
+0\\
+.1
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\equiv\mathbf{n}_{0}+\left[  d\mathcal{N}\left(  \mathbf{n}_{0}\right)
+\right]  ^{-1}\left(  \delta\mathbf{N}_{1}\right)  +\left[  d\mathcal{N}%
+\left(  \mathbf{n}_{0}+\left[  d\mathcal{N}\left(  \mathbf{n}_{0}\right)
+\right]  ^{-1}\left(  \delta\mathbf{N}_{1}\right)  \right)  \right]
+^{-1}\left(  \left(  \delta\mathbf{N}_{2}\right)  \right)
+\end{equation}
+
+
+\section{Variational Equations\label{variational}}
+
+\subsection{Derivatives}
+
+The $2N$-AGP\ energy functional in terms of the CGSO's $\left\{  \left.
+\psi_{j}\right\vert 1\leq j\leq2s\right\}  $, the geminal occupation numbers
+$\left\{  \left.  n_{j}\right\vert 1\leq j\leq s\right\}  $ and the phases
+$\left\{  \left.  \theta_{j}\right\vert 1\leq j\leq s\right\}  $ can be
+expressed as the quotient%
+\begin{align}
+&  \mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\frac{\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+}{S_{N}\left(  \mathbf{n}\right)  }\nonumber\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}\left\{  \left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.
+\right\rangle +\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.
+\right\rangle +\psi_{j}\psi_{j+s}|\left\vert \psi_{j}\psi_{j+s}\right\rangle
+\right\}  \right. \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \psi_{j}%
+\psi_{j+s}|\left\vert \psi_{k}\psi_{k+s}\right\rangle \left.  +\frac{1}{2}%
+\sum_{1\leq j,k\leq s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)  \left\langle
+\psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle \right\}  .
+\end{align}
+The first order variation $\delta^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  $ of the energy is
+\begin{equation}
+\delta^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\left(
+\begin{array}
+[c]{cccc}%
+\partial_{\mathbf{n}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  & \partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{E}%
+\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  & \partial
+_{\mathbf{\psi}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  & \partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{n}\\
+\delta\mathbf{\psi}^{\ast}\\
+\delta\mathbf{\psi}\\
+\delta\mathbf{\theta}%
+\end{array}
+\right)  ,
+\end{equation}
+where
+\begin{subequations}
+\begin{align}
+\partial_{\mathbf{n}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\left\{  \partial_{\mathbf{n}}^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  -\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  \partial_{\mathbf{n}}^{1}S_{N}\left(  \mathbf{n}%
+\right)  \right\} \\
+\partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\left\{  \partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{H}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  -\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  \partial_{\mathbf{\psi}^{\ast}}%
+^{1}S_{N}\left(  \mathbf{n}\right)  \right\}  =\left[  \partial_{\mathbf{\psi
+}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+\right]  ^{\ast}\\
+\partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\left\{  \partial_{\mathbf{\theta}}^{1}\mathcal{H}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  -\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  \partial_{\mathbf{\theta}}^{1}%
+S_{N}\left(  \mathbf{n}\right)  \right\}
+\end{align}
+and
+\end{subequations}
+\begin{subequations}
+\begin{align}
+\partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  \cdot\delta\mathbf{\psi}^{\ast}  &  =\sum_{1\leq
+j\leq2s}\partial_{\psi_{j}^{\ast}}^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  \left(  \delta\psi_{j}^{\ast}\right)
+=\sum_{1\leq j\leq2s}\int\frac{\delta\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  }{\delta\psi_{j}^{\ast}\left(
+\mathbf{r,}\zeta\right)  }\delta\psi_{j}^{\ast}\left(  \mathbf{r,}%
+\zeta\right)  d\mathbf{r}d\zeta\label{funcder}\\
+\partial_{\mathbf{n}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  \cdot\delta\mathbf{n}  &  =\sum_{1\leq j\leq s}%
+\frac{\partial\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  }{\partial n_{j}}\delta n_{j}\\
+\partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  \cdot\delta\mathbf{\theta}  &  =\sum_{1\leq j\leq
+s}\frac{\partial\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  }{\partial\theta_{j}}\delta\theta_{j}.
+\end{align}
+If the variations $\left\{  \delta\mathbf{\psi}^{\ast},\delta\mathbf{\psi
+}\right\}  $ maintain the orthonormality of the CGSO's i.e.
+\end{subequations}
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =\delta_{jk}%
+\end{equation}
+then
+\begin{align}
+\partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{H}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right) \\
+\partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\partial_{\mathbf{\theta}}^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)
+\end{align}
+as $\partial_{\mathbf{\psi}^{\ast}}^{1}S_{N}\left(  \mathbf{n}\right)
+=\partial_{\mathbf{\psi}}^{1}S_{N}\left(  \mathbf{n}\right)  =\partial
+_{\mathbf{\theta}}^{1}S_{N}\left(  \mathbf{n}\right)  =\mathbf{0}$.
+
+\subsection{Derivation of the Variational Equations for the Geminal Occupation
+Numbers}
+
+\subsection{Derivation of the Fock Operator}
+
+In order to obtain derivative of terms in the energy expression it helpful to
+utilize matrix elements wrt non antisymmetric states
+\begin{equation}
+\left\vert \psi_{j}\psi_{k}\right)  =\left\vert \psi_{j}\right)
+\otimes\left\vert \psi_{k}\right)  ,
+\end{equation}
+whose amplitudes are
+\begin{equation}
+\left(  \left.  \mathbf{r}_{1}\mathbf{,\xi}_{1}\mathbf{r}_{2}\mathbf{,\xi}%
+_{2}\right\vert \psi_{j}\psi_{k}\right)  =\psi_{j}\left(  \mathbf{r}%
+_{1}\mathbf{,\xi}_{1}\right)  \psi_{k}\left(  \mathbf{r}_{2}\mathbf{,\xi}%
+_{2}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\psi_{j}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  =\left(  \left.
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right\vert \psi_{j}\right)  =\left\langle
+\left.  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right\vert \psi_{j}\right\rangle .
+\end{equation}
+In terms of these states the unnormalized $2N$-electron AGP\ energy becomes
+\begin{align}
+&  \mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
++\mathcal{H}_{2}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\nonumber\\
+&  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left(
+\left.  \psi_{j}\right\vert h_{1}\psi_{j}\right)  +\left(  \left.  \psi
+_{j+s}\right\vert h_{1}\psi_{j+s}\right)  +\left(  \left.  \psi_{j}\psi
+_{j+s}\right\vert h_{2}\psi_{j}\psi_{j+s}\right)  -\left(  \left.  \psi
+_{j}\psi_{j+s}\right\vert h_{2}\psi_{j+s}\psi_{j}\right)  \right\} \nonumber\\
+&  \qquad+\sum_{1\leq j,k\leq s}\left\{  n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}%
+{2}}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)
+\left\{  \left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{k}\psi
+_{k+s}\right)  -\left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi
+_{k+s}\psi_{k}\right)  \right\}  \right. \nonumber\\
+&  \qquad\qquad+\frac{1}{2}\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(
+\jmath k\right)  \overset{}{\left\{  \left(  \left.  \psi_{j}\psi
+_{k}\right\vert h_{2}\psi_{j}\psi_{k}\right)  -\left(  \left.  \psi_{j}%
+\psi_{k}\right\vert h_{2}\psi_{k}\psi_{j}\right)  \right\}  }, \label{unnormE}%
+\end{align}
+where
+\begin{equation}
+\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\sum_{1\leq j\leq2s}n_{j}S_{N-1}\left(  \jmath\right)  \left\langle \left.
+\psi_{j}\right\vert h_{1}\psi_{j}\right\rangle
+\end{equation}
+and
+\begin{align}
+&  \mathcal{H}_{2}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\sum_{1\leq j\leq2s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left(
+\left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{j}\psi_{j+s}\right)  -\left(
+\left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{j+s}\psi_{j}\right)  \right\}
+\nonumber\\
+&  \qquad+\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}%
+}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)
+\left\{  \left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{k}\psi
+_{k+s}\right)  -\left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi
+_{k+s}\psi_{k}\right)  \right\} \nonumber\\
+&  \qquad\qquad\qquad+\frac{1}{2}\sum_{1\leq j,k\leq2s}n_{j}n_{k}%
+S_{N-2}\left(  \jmath k\right)  \overset{}{\left\{  \left(  \left.  \psi
+_{j}\psi_{k}\right\vert h_{2}\psi_{j}\psi_{k}\right)  -\left(  \left.
+\psi_{j}\psi_{k}\right\vert h_{2}\psi_{k}\psi_{j}\right)  \right\}  }.
+\end{align}
+The form of $h_{1}$ and $h_{2}$ can be seen from eqs. $\left(  \ref{h1}%
+\right)  $ and $\left(  \ref{h2}\right)  .$ The two particle integrals
+$\left\{  h_{2abcd}\right\}  $ have the properties
+\begin{align}
+h_{2abcd}  &  =\int\psi_{a}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi
+_{b}\left(  \mathbf{x}_{2}\right)  ^{\ast}\frac{1}{\left\Vert \mathbf{r}%
+_{1}\mathbf{-r}_{2}\right\Vert }\psi_{c}\left(  \mathbf{x}_{1}\right)
+\psi_{d}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}%
+_{2}\nonumber\\
+&  =\left[  \int\psi_{b}\left(  \mathbf{x}_{1}\right)  \psi_{a}\left(
+\mathbf{x}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}\mathbf{-r}%
+_{2}\right\Vert }\psi_{d}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi_{c}\left(
+\mathbf{x}_{2}\right)  ^{\ast}d\mathbf{x}_{1}d\mathbf{x}_{2}\right]  ^{\ast
+}=h_{2cdab}^{\ast}%
+\end{align}
+and
+\begin{align}
+h_{2abcd}  &  =\int\psi_{a}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi
+_{b}\left(  \mathbf{x}_{2}\right)  ^{\ast}\frac{1}{\left\Vert \mathbf{r}%
+_{1}\mathbf{-r}_{2}\right\Vert }\psi_{c}\left(  \mathbf{x}_{1}\right)
+\psi_{d}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}%
+_{2}\nonumber\\
+&  =\int\psi_{b}\left(  \mathbf{x}_{1}\right)  ^{\ast}\psi_{a}\left(
+\mathbf{x}_{2}\right)  ^{\ast}\frac{1}{\left\Vert \mathbf{r}_{1}%
+\mathbf{-r}_{2}\right\Vert }\psi_{d}\left(  \mathbf{x}_{1}\right)  \psi
+_{c}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}=h_{2badc}.
+\end{align}
+The first order change in the energy due to changes $\left\{  \delta
+\mathbf{\psi}^{\ast},\delta\mathbf{\psi}\right\}  $in the GSO's is given by
+the Taylors series as
+\begin{align}
+\delta^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+&  =\left(  \partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{H}\left(
+\mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  ,\partial_{\mathbf{\psi}}%
+^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\psi}^{\ast}\\
+\delta\mathbf{\psi}%
+\end{array}
+\right) \nonumber\\
+&  =\left(  \partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{H}\left(
+\mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  ,\partial_{\mathbf{\psi
+}^{\ast}}^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  ^{\ast}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\psi}^{\ast}\\
+\delta\mathbf{\psi}%
+\end{array}
+\right) \nonumber\\
+&  =2\operatorname{Re}\left\{  \partial_{\mathbf{\psi}^{\ast}}^{1}%
+\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  ^{\dagger
+}\delta\mathbf{\psi}^{\ast}\right\}  ,
+\end{align}
+where
+\begin{equation}
+\partial_{\psi_{\mu}^{\ast}}^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  =\frac{\delta\mathcal{H}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  }{\delta\psi_{\mu}^{\ast}}.
+\end{equation}
+It is clear that
+\begin{equation}
+\partial_{\psi_{\mu}^{\ast}}^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  =\left[  \partial_{\psi_{\mu}}^{1}\mathcal{H}\left(
+\mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  \right]  ^{\ast}%
+\end{equation}
+as $\delta^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  $ must be real valued for all $\left(  \delta\mathbf{\psi}^{\ast
+},\delta\mathbf{\psi}\right)  $. In order to find the explicit expressions for
+the derivatives of eq. $\left(  \ref{unnormE}\right)  $ one observes that the
+one electron functional derivatives are given by
+\begin{equation}
+\frac{\delta}{\delta\psi_{\mu}^{\ast}}\left\langle \left.  \psi_{a}\right\vert
+h_{1}\psi_{b}\right\rangle =h_{1}\left\vert \psi_{b}\right\rangle \delta
+_{a\mu}=\left\{  h_{1}\left\vert \psi_{b}\right\rangle \left\langle \psi
+_{a}\right\vert \right\}  \left\vert \psi_{\mu}\right\rangle .
+\label{1partfuncder_o}%
+\end{equation}
+After noting that
+\begin{equation}
+h_{1}\left\vert \psi_{b}\right\rangle \left\langle \psi_{a}\right\vert
+=\sum_{1\leq j,k\leq2s}h_{1jk}\left\vert \psi_{j}\right\rangle \left\langle
+\left.  \psi_{k}\right\vert \psi_{b}\right\rangle \left\langle \psi
+_{a}\right\vert =\sum_{1\leq j\leq2s}h_{1jb}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{a}\right\vert
+\end{equation}
+eq. $\left(  \ref{1partfuncder_o}\right)  $ can be expanded as
+\begin{equation}
+\frac{\delta}{\delta\psi_{\mu}^{\ast}}\left\langle \left.  \psi_{a}\right\vert
+h_{1}\psi_{b}\right\rangle =\left\{  \sum_{1\leq j,k\leq2s}h_{1jb}\delta
+_{ak}\left\vert \psi_{j}\right\rangle \left\langle \psi_{k}\right\vert
+\right\}  \left\vert \psi_{\mu}\right\rangle . \label{1partfuncder_ex}%
+\end{equation}
+Thus
+\begin{align}
+\frac{\delta}{\delta\psi_{\mu}^{\ast}}\mathcal{H}_{1}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)   &  =\sum_{1\leq a\leq2s}n_{a}%
+S_{N-1}\left(  a\right)  \frac{\delta}{\delta\psi_{\mu}^{\ast}}\left\langle
+\left.  \psi_{a}\right\vert h_{1}\psi_{a}\right\rangle \\
+&  =\left\{  \sum_{1\leq a\leq2s}\sum_{1\leq j,k\leq2s}h_{1ja}n_{a}%
+S_{N-1}\left(  a\right)  \delta_{ak}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{k}\right\vert \right\}  \left\vert \psi_{\mu}\right\rangle
+\end{align}%
+\begin{align}
+\frac{\delta}{\delta\psi_{\mu}^{\ast}}\mathcal{H}_{1}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)   &  =\left\{  h_{1}\sum_{1\leq a\leq
+2s}n_{a}S_{N-1}\left(  a\right)  \left\vert \psi_{a}\right\rangle \left\langle
+\psi_{a}\right\vert \right\}  \left\vert \psi_{\mu}\right\rangle \\
+\frac{\delta}{\delta\psi_{\mu}^{\ast}}\mathcal{H}_{1}\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)   &  =\sum_{1\leq a\leq2s}n_{a}%
+S_{N-1}\left(  a\right)  h_{1}\left\vert \psi_{a}\right\rangle \delta_{a\mu
+}=n_{\mu}S_{N-1}\left(  \mu\right)  h_{1}\left\vert \psi_{\mu}\right\rangle
+\end{align}%
+\begin{equation}
+\frac{\delta\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  }{\delta\psi_{\mu}^{\ast}}=n_{\mu}S_{N-1}\left(  \mu\right)
+h_{1}\left\vert \psi_{\mu}\right\rangle .
+\end{equation}
+The two electron functional derivatives are
+\begin{subequations}
+\begin{align}
+&  \frac{\delta}{\delta\psi_{\mu}^{\ast}}\left(  \left.  \psi_{a}\psi
+_{b}\right\vert h_{2}\psi_{c}\psi_{d}\right)  =\left(  \left.  \psi
+_{b}\right\vert h_{2}\psi_{d}\right)  \left\vert \psi_{c}\right\rangle
+\delta_{a\mu}+\left(  \left.  \psi_{a}\right\vert h_{2}\psi_{c}\right)
+\left\vert \psi_{d}\right\rangle \delta_{b\mu}\nonumber\\
+&  =\left\{  \overset{}{\left(  \left.  \psi_{b}\right\vert h_{2}\psi
+_{d}\right)  \left\vert \psi_{c}\right\rangle \left\langle \psi_{a}\right\vert
++\left(  \left.  \psi_{a}\right\vert h_{2}\psi_{c}\right)  \left\vert \psi
+_{d}\right\rangle \left\langle \psi_{b}\right\vert }\right\}  \left\vert
+\psi_{\mu}\right\rangle . \label{2partfuncder_o}%
+\end{align}
+Noting that
+\end{subequations}
+\begin{equation}
+\left(  \left.  \psi_{b}\right\vert h_{2}\psi_{d}\right)  _{kl}\equiv
+h_{2kbld}=\int\psi_{k}^{\ast}\left(  \mathbf{x}_{1}\right)  \psi_{b}^{\ast
+}\left(  \mathbf{x}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}%
+-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(  \mathbf{x}_{1}\right)  \psi
+_{d}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2},
+\end{equation}
+we obtain%
+\begin{equation}
+\left(  \left.  \psi_{b}\right\vert h_{2}\psi_{d}\right)  =\sum_{1\leq
+k,l\leq2s}h_{2kbld}\left\vert \psi_{k}\right\rangle \left\langle \psi
+_{l}\right\vert =\sum_{1\leq k,l\leq2s}h_{2bkdl}\left\vert \psi_{k}%
+\right\rangle \left\langle \psi_{l}\right\vert =\sum_{1\leq k,l\leq
+2s}h_{2ldkb}^{\ast}\left\vert \psi_{k}\right\rangle \left\langle \psi
+_{l}\right\vert .
+\end{equation}
+The partial derivatives of $\left\{  \left(  \left.  \psi_{b}\right\vert
+h_{2}\psi_{d}\right)  \right\}  $ wrt $\left\{  \psi_{\mu}^{\ast}\right\}  $
+are
+\begin{align}
+&  \frac{\delta}{\delta\psi_{\mu}^{\ast}}\left(  \left.  \psi_{b}\right\vert
+h_{2}\psi_{d}\right)  \left.  =\right.  \sum_{1\leq k,l\leq2s}\left\{
+h_{2lbmd}\left\vert \psi_{k}\right\rangle \left\langle \left.  \psi
+_{l}\right\vert \psi_{c}\right\rangle \left\langle \psi_{a}\right\vert
++h_{2lamc}\left\vert \psi_{k}\right\rangle \left\langle \left.  \psi
+_{l}\right\vert \psi_{d}\right\rangle \left\langle \psi_{b}\right\vert
+\right\} \nonumber\\
+&  \left.  =\right.  \sum_{1\leq k\leq2s}\left\{  h_{2kbcd}\left\vert \psi
+_{k}\right\rangle \left\langle \psi_{a}\right\vert +h_{2kadc}\left\vert
+\psi_{k}\right\rangle \left\langle \psi_{b}\right\vert \right\}  =\sum_{1\leq
+k,l\leq2s}\left\{  h_{2kbcd}\delta_{al}+h_{2kadc}\delta_{bl}\right\}
+\left\vert \psi_{k}\right\rangle \left\langle \psi_{l}\right\vert .
+\label{2partfuncder_ex}%
+\end{align}
+The partial functional derivatives of $\mathcal{H}_{2}\left(  \mathbf{\psi
+,n}\right)  $ wrt CGSO's $\mathbf{\psi}^{\ast}$ is then given by for $1\leq
+\mu\leq s$%
+\begin{align}
+&  \frac{\delta\mathcal{H}_{2}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  }{\delta\psi_{\mu}^{\ast}}=n_{\mu}S_{N-1}\left(  \mu\right)
+\left\{  \left(  \left.  \psi_{\mu+s}\right\vert h_{2}\psi_{\mu+s}\right)
+\left\vert \psi_{\mu}\right\rangle -\left(  \left.  \psi_{\mu+s}\right\vert
+h_{2}\psi_{\mu}\right)  \left\vert \psi_{\mu+s}\right\rangle \right\}
+\nonumber\\
+&  +\sum_{1\leq k\leq s}n_{\mu}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{\mu}-\theta_{k}\right)  }S_{N-1}\left(  \mu k\right)  \left\{  \left(
+\left.  \psi_{\mu+s}\right\vert h_{2}\psi_{k+s}\right)  \left\vert \psi
+_{k}\right\rangle -\left(  \left.  \psi_{\mu+s}\right\vert h_{2}\psi
+_{k}\right)  \left\vert \psi_{k+s}\right\rangle \right\} \nonumber\\
+&  +\sum_{1\leq k\leq2s}n_{\mu}n_{k}S_{N-2}\left(  \mu k\right)  \left\{
+\overset{}{\left(  \left.  \psi_{k}\right\vert h_{2}\psi_{k}\right)
+\left\vert \psi_{\mu}\right\rangle }-\left(  \left.  \psi_{k}\right\vert
+h_{2}\psi_{\mu}\right)  \left\vert \psi_{k}\right\rangle \right\}  .
+\end{align}%
+\begin{align}
+&  n_{\mu}S_{N-1}\left(  \mu\right)  \left\{  \left(  \left.  \psi_{\mu
++s}\right\vert h_{2}\psi_{\mu+s}\right)  \left\vert \psi_{\mu}\right\rangle
+-\left(  \left.  \psi_{\mu+s}\right\vert h_{2}\psi_{\mu}\right)  \left\vert
+\psi_{\mu+s}\right\rangle \right\} \\
+&  =
+\end{align}
+for $s+1\leq\mu\leq2s$%
+\begin{align}
+&  \frac{\delta\mathcal{H}_{2}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta
+}\right)  }{\delta\psi_{\mu}^{\ast}}=n_{\mu}S_{N-1}\left(  \mu\right)
+\left\{  \left(  \left.  \psi_{\mu-s}\right\vert h_{2}\psi_{\mu-s}\right)
+\left\vert \psi_{\mu}\right\rangle -\left(  \left.  \psi_{\mu-s}\right\vert
+h_{2}\psi_{\mu}\right)  \left\vert \psi_{\mu-s}\right\rangle \right\}
+\nonumber\\
+&  +\sum_{1\leq k\leq s}n_{\mu}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{\mu}-\theta_{k}\right)  }S_{N-1}\left(  \mu k\right)  \left\{  \left(
+\left.  \psi_{\mu-s}\right\vert h_{2}\psi_{k}\right)  \left\vert \psi
+_{k+s}\right\rangle -\left(  \left.  \psi_{\mu-s}\right\vert h_{2}\psi
+_{k+s}\right)  \left\vert \psi_{k}\right\rangle \right\} \nonumber\\
+&  +\sum_{1\leq k\leq2s}n_{\mu}n_{k}S_{N-2}\left(  \mu k\right)  \left\{
+\overset{}{\left(  \left.  \psi_{k}\right\vert h_{2}\psi_{k}\right)
+\left\vert \psi_{\mu}\right\rangle }-\left(  \left.  \psi_{k}\right\vert
+h_{2}\psi_{\mu}\right)  \left\vert \psi_{k}\right\rangle \right\}  .
+\end{align}
+
+
+We can then define a generalized Fock operator
+\begin{align}
+&  F\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  =\sum
+_{\substack{1\leq j\leq s\\1\leq m\leq2s}}n_{j}S_{N-1}\left(  \jmath\right)
+\left\{  \left\vert \psi_{m}\right\rangle \left\langle \psi_{j}\right\vert
+h_{1mj}+\left\vert \psi_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert
+h_{1mj+s}+\left\vert \psi_{m}\right\rangle \left\langle \psi_{j}\right\vert
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j+s}\right)  _{mj}\right.
+\nonumber\\
+&  \qquad\left.  +\,\left\vert \psi_{m}\right\rangle \left\langle \psi
+_{j+s}\right\vert \left(  \left.  \psi_{j}\right\vert h_{2}\psi_{j}\right)
+_{mj+s}-\left\vert \psi_{m}\right\rangle \left\langle \psi_{j}\right\vert
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j}\right)  _{mj+s}-\left\vert
+\psi_{m}\right\rangle \left\langle \psi_{j+s}\right\vert \left(  \left.
+\psi_{j}\right\vert h_{2}\psi_{j+s}\right)  _{mj}\right\} \nonumber\\
+&  \qquad+\sum_{\substack{1\leq j,k\leq s\\1\leq m\leq2s}}n_{j}^{\frac{1}{2}%
+}n_{k}^{\frac{1}{2}}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(
+\jmath k\right)  \left\{  \left\vert \psi_{m}\right\rangle \left\langle
+\psi_{j}\right\vert \left(  \left.  \psi_{j+s}\right\vert h_{2}\psi
+_{k+s}\right)  _{mk}+\left\vert \psi_{m}\right\rangle \left\langle \psi
+_{j+s}\right\vert \left(  \left.  \psi_{j}\right\vert h_{2}\psi_{k}\right)
+_{mk+s}\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  -\left\vert \psi_{m}%
+\right\rangle \left\langle \psi_{j}\right\vert \left(  \left.  \psi
+_{j+s}\right\vert h_{2}\psi_{k}\right)  _{mk+s}-\left\vert \psi_{m}%
+\right\rangle \left\langle \psi_{j+s}\right\vert \left(  \left.  \psi
+_{j}\right\vert h_{2}\psi_{k+s}\right)  _{mk}\right\} \nonumber\\
+&  \qquad+\sum_{\substack{1\leq j,k\leq2s\\1\leq m\leq2s}}n_{j}n_{k}%
+S_{N-2}\left(  \jmath k\right)  \left\{  \left\vert \psi_{m}\right\rangle
+\left\langle \psi_{j}\right\vert \left(  \left.  \psi_{k}\right\vert h_{2}%
+\psi_{k}\right)  _{mj}-\left\vert \psi_{m}\right\rangle \left\langle \psi
+_{j}\right\vert \left(  \left.  \psi_{k}\right\vert h_{2}\psi_{j}\right)
+_{mk}\right\}  ,
+\end{align}
+giving%
+\begin{equation}
+F\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  =\sum_{1\leq
+j,m\leq2s}\left\{  n_{j}S_{N-1}\left(  \jmath\right)  \left\{  h_{1mj}%
++A_{mj}-B_{mj}\right\}  +\left\{  C_{mj}-D_{mj}\right\}  +\overset{}{\left\{
+E_{mj}-F_{mj}\right\}  \left\vert \psi_{m}\right\rangle \left\langle \psi
+_{j}\right\vert }\right\}  .
+\end{equation}
+The matrix elements of $\left\{  \mathbb{A},\mathbb{B},\mathbb{C}%
+,\mathbb{D},\mathbb{E},\mathbb{F}\right\}  $ for $1\leq m\leq2s$ are given by
+\begin{equation}
+A_{mj}=\left\{
+\begin{array}
+[c]{c}%
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j+s}\right)  _{mj};1\leq
+j\leq s\\
+\left(  \left.  \psi_{j-s}\right\vert h_{2}\psi_{j-s}\right)  _{mj};s+1\leq
+j\leq s
+\end{array}
+\right.  ,
+\end{equation}%
+\begin{equation}
+B_{mj}=\left\{
+\begin{array}
+[c]{c}%
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j}\right)  _{mj+s};1\leq
+j\leq s\\
+\left(  \left.  \psi_{j-s}\right\vert h_{2}\psi_{j}\right)  _{mj-s};s+1\leq
+j\leq s
+\end{array}
+\right.  ,
+\end{equation}
+noting that $n_{j+s}=n_{j}$ and $\theta_{j+s}=\theta_{j}$ for $1\leq j\leq s$
+we have the phase dependent $2$-electron terms
+\begin{equation}
+C_{mj}=\left\{
+\begin{array}
+[c]{c}%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }\left(  \left.  \psi_{j+s}%
+\right\vert h_{2}\psi_{k+s}\right)  _{mk};1\leq j\leq s\\%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }\left(  \left.  \psi_{j-s}%
+\right\vert h_{2}\psi_{k}\right)  _{mk+s};s+1\leq j\leq2s
+\end{array}
+\right.  ,
+\end{equation}%
+\begin{equation}
+D_{mj}=\left\{
+\begin{array}
+[c]{c}%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }\left(  \left.  \psi_{j+s}%
+\right\vert h_{2}\psi_{k}\right)  _{mk+s};1\leq j\leq s\\%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)
+e^{i\left(  \theta_{j}-\theta_{k}\right)  }\left(  \left.  \psi_{j-s}%
+\right\vert h_{2}\psi_{k-s}\right)  _{mk};s+1\leq j\leq2s
+\end{array}
+\right.  ,
+\end{equation}
+the phase independent $2$-electron terms
+\begin{equation}
+F_{mj}=\sum_{1\leq k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)  \left(
+\left.  \psi_{k}\right\vert h_{2}\psi_{j}\right)  _{mk};1\leq j\leq2s,
+\end{equation}
+and%
+\begin{equation}
+E_{mj}=\sum_{1\leq k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)  \left(
+\left.  \psi_{k}\right\vert h_{2}\psi_{k}\right)  _{mj};1\leq j\leq2s.
+\end{equation}
+
+
+The Fock operator $F\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  $
+can be seen to be self adjoint by considering $\left\langle \psi_{a}\left\vert
+F\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)  \psi_{b}\right.
+\right\rangle $ and $\left\langle \psi_{a}\left\vert F\left(  \mathbf{n}%
+,\mathbf{\psi},\mathbf{\theta}\right)  ^{\dagger}\psi_{b}\right.
+\right\rangle $ for $1\leq a,b\leq2s,$ where
+\begin{align}
+&  \left\langle \psi_{a}\left\vert F\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  \psi_{b}\right.  \right\rangle =\left\langle
+\overset{\overset{}{}}{\psi_{a}}\right\vert \left\{  \sum_{1\leq j\leq s}%
+n_{j}S_{N-1}\left(  \jmath\right)  \left\{  h_{1}\left\{  \left\vert \psi
+_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}  +\left(
+\left.  \psi_{j+s}\right\vert h_{2}\psi_{j+s}\right)  \left\vert \psi
+_{j}\right\rangle \left\langle \psi_{j}\right\vert \right.  \right.
+\nonumber\\
+&  \left.  +\,\left(  \left.  \psi_{j}\right\vert h_{2}\psi_{j}\right)
+\left\vert \psi_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert -\left(
+\left.  \psi_{j+s}\right\vert h_{2}\psi_{j}\right)  \left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j}\right\vert -\left(  \left.  \psi
+_{j}\right\vert h_{2}\psi_{j+s}\right)  \left\vert \psi_{j}\right\rangle
+\left\langle \psi_{j+s}\right\vert \right\} \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \left\{
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{k+s}\right)  \left\vert
+\psi_{k}\right\rangle \left\langle \psi_{j}\right\vert +\left(  \left.
+\psi_{j}\right\vert h_{2}\psi_{k}\right)  \left\vert \psi_{k+s}\right\rangle
+\left\langle \psi_{j+s}\right\vert \right. \nonumber\\
+&  \left.  -\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{k}\right)
+\left\vert \psi_{k+s}\right\rangle \left\langle \psi_{j}\right\vert -\left(
+\left.  \psi_{j}\right\vert h_{2}\psi_{k+s}\right)  \left\vert \psi
+_{k}\right\rangle \left\langle \psi_{j+s}\right\vert \right\} \nonumber\\
+&  \left.  \left.  +\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath
+k\right)  \overset{}{\left\{  \left(  \left.  \psi_{k}\right\vert h_{2}%
+\psi_{k}\right)  \left\vert \psi_{j}\right\rangle \left\langle \psi
+_{j}\right\vert -\left(  \left.  \psi_{k}\right\vert h_{2}\psi_{j}\right)
+\left\vert \psi_{k}\right\rangle \left\langle \psi_{j}\right\vert \right\}
+}\right\}  \psi_{b}\right\rangle \label{adj1}%
+\end{align}
+and
+\begin{align}
+&  \left\langle \psi_{a}\left\vert F\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  ^{\dagger}\psi_{b}\right.  \right\rangle
+=\left\langle \overset{\overset{}{}}{\psi_{a}}\right\vert \left\{  \sum_{1\leq
+j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left\{  \left\vert
+\psi_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}
+h_{1}+\left\vert \psi_{j}\right\rangle \left\langle \psi_{j}\right\vert
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j+s}\right)  \right.  \right.
+\nonumber\\
+&  \left.  +\left\vert \psi_{j+s}\right\rangle \left\langle \psi
+_{j+s}\right\vert \left(  \left.  \psi_{j}\right\vert h_{2}\psi_{j}\right)
+-\left\vert \psi_{j}\right\rangle \left\langle \psi_{j+s}\right\vert \left(
+\left.  \psi_{j}\right\vert h_{2}\psi_{j+s}\right)  -\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j}\right\vert \left(  \left.
+\psi_{j+s}\right\vert h_{2}\psi_{j}\right)  \right\} \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{k}-\theta_{j}\right)  }S_{N-1}\left(  \jmath k\right)  \left\{
+\left\vert \psi_{j}\right\rangle \left\langle \psi_{k}\right\vert \left(
+\left.  \psi_{k+s}\right\vert h_{2}\psi_{j+s}\right)  +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{k+s}\right\vert \left(  \left.
+\psi_{k}\right\vert h_{2}\psi_{j}\right)  \right. \nonumber\\
+&  \left.  -\left\vert \psi_{j}\right\rangle \left\langle \psi_{k+s}%
+\right\vert \left(  \left.  \psi_{k}\right\vert h_{2}\psi_{j+s}\right)
+-\left\vert \psi_{j+s}\right\rangle \left\langle \psi_{k}\right\vert \left(
+\left.  \psi_{k+s}\right\vert h_{2}\psi_{j}\right)  \right\} \nonumber\\
+&  \left.  \left.  +\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath
+k\right)  \overset{}{\left\{  \left\vert \psi_{j}\right\rangle \left\langle
+\psi_{j}\right\vert \left(  \left.  \psi_{k}\right\vert h_{2}\psi_{k}\right)
+-\left\vert \psi_{j}\right\rangle \left\langle \psi_{k}\right\vert \left(
+\left.  \psi_{j}\right\vert h_{2}\psi_{k}\right)  \right\}  }\right\}
+\psi_{b}\right\rangle . \label{adj2}%
+\end{align}
+Eq. $\left(  \ref{adj1}\right)  $ gives for $1\leq a\leq2s,1\leq b\leq s$
+\begin{align}
+&  \left\langle \psi_{a}\left\vert F\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  \psi_{b}\right.  \right\rangle =n_{b}S_{N-1}\left(
+b\right)  \left\{  h_{1ab}+T_{ab+sbb+s}-T_{ab+sb+sb}\right\} \nonumber\\
+&  +\sum_{1\leq k\leq s}n_{b}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{b}-\theta_{k}\right)  }S_{N-1}\left(  bk\right)  \left\{
+T_{ab+skk+s}-T_{ab+sk+sk}\right\}  +\sum_{1\leq k\leq2s}n_{b}n_{k}%
+S_{N-2}\left(  \jmath k\right)  \left\{  T_{akbk}-T_{akkb}\right\}
+\end{align}
+and for $1\leq a\leq2s,s+1\leq b\leq2s$%
+\begin{align}
+&  \left\langle \psi_{a}\left\vert F\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  \psi_{b}\right.  \right\rangle =n_{b}S_{N-1}\left(
+b\right)  \left\{  h_{1ab}+\,T_{ab-sbb-s}-T_{ab-sb-sb}\right\} \nonumber\\
+&  +\sum_{1\leq k\leq s}n_{b}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{b}-\theta_{k}\right)  }S_{N-1}\left(  bk\right)  \left\{
+T_{ab-sk+sk}-T_{ab-skk+s}\right\}  +\sum_{1\leq k\leq2s}n_{b}n_{k}%
+S_{N-2}\left(  bk\right)  \overset{}{\left\{  T_{akbk}-T_{akkb}\right\}  }.
+\end{align}
+Eq. $\left(  \ref{adj2}\right)  $ gives for $1\leq a\leq2s,1\leq b\leq s$%
+\begin{align}
+&  \left\langle \psi_{a}\left\vert F\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  ^{\dagger}\psi_{b}\right.  \right\rangle
+=n_{j}S_{N-1}\left(  \jmath\right)  \left\{  h_{1ab}+T_{aa+sba+s}%
+-T_{a+saba+s}\right\} \nonumber\\
+&  +\sum_{1\leq k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{k}-\theta_{j}\right)  }S_{N-1}\left(  \jmath k\right)  \left\{
+T_{kk+sba+s}-T_{k+skba+s}\right\}  +\sum_{1\leq k\leq2s}n_{j}n_{k}%
+S_{N-2}\left(  \jmath k\right)  \left\{  T_{akbk}-T_{kabk}\right\}
+\end{align}
+and for $1\leq a\leq2s,s+1\leq b\leq2s$%
+\begin{align}
+&  \left\langle \psi_{a}\left\vert F\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  ^{\dagger}\psi_{b}\right.  \right\rangle
+=n_{j}S_{N-1}\left(  \jmath\right)  \left\{  h_{1ab}+T_{aa-sba}-T_{aa-sba}%
+\right\} \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{k}-\theta_{j}\right)  }S_{N-1}\left(  \jmath k\right)  \left\{
+T_{k+ska-sb}-T_{kk+sba-s}\right\}  +\sum_{1\leq k\leq2s}n_{j}n_{k}%
+S_{N-2}\left(  \jmath k\right)  \left\{  T_{akbk}-T_{kabk}\right\}
+\end{align}
+
+
+The derivatives eqs. $\left(  \ref{der1}\right)  $ and eqs. $\left(
+\ref{der2}\right)  $ can be expressed as
+\begin{align}
+\frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu
+}^{\ast}}  &  =F\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+\left\vert \psi_{\mu}\right\rangle \\
+\frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu}}  &
+=\left\langle \psi_{\mu}\right\vert F\left(  \mathbf{n},\mathbf{\psi
+},\mathbf{\theta}\right)  .
+\end{align}
+
+
+\section{Fock Operator and Energy}
+
+Polynomial functions can be expanded as a sum of homogeneous mononomial
+functions as%
+
+\begin{equation}
+f\left(  \mathbf{x}\right)  =f_{0}+f_{1}\left(  \mathbf{x}\right)
++\cdots+f_{n}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+f_{m}\left(  \mathbf{x}\right)  ,
+\end{equation}
+where
+\begin{equation}
+f_{m}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m}\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m}\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m}}.
+\end{equation}
+Consider
+\begin{align}
+\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)   &  =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{l}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m-1}}\nonumber\\
+x_{l}\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)   &  =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{l}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m-1}}x_{l}\nonumber\\%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)   &
+=mf_{m}\left(  \mathbf{x}\right)
+\end{align}
+hence%
+\begin{align}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial f}{\partial x_{l}}\left(  \mathbf{x}\right)   &  =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial}{\partial x_{l}}\left\{
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+f_{m}\left(  \mathbf{x}\right)  \right\}  =%
+%TCIMACRO{\tsum \limits_{\substack{1\leq l\leq r\\0\leq m\leq n}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\substack{1\leq l\leq r\\0\leq m\leq n}}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}\left(  \mathbf{x}\right)  }{\partial x_{l}%
+}\nonumber\\
+&  =%
+%TCIMACRO{\tsum \limits_{\substack{0\leq m\leq n\\1\leq l\leq r}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\substack{0\leq m\leq n\\1\leq l\leq r}}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}\left(  \mathbf{x}\right)  }{\partial x_{l}}=%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+mf_{m}\left(  \mathbf{x}\right) \nonumber\\
+&  =f_{1}\left(  \mathbf{x}\right)  +2f_{2}\left(  \mathbf{x}\right)
++\cdots+nf_{n}\left(  \mathbf{x}\right)  .
+\end{align}
+Thus
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+\left\langle \left.  \psi_{l}\right\vert F\left(  \mathbf{\psi,n}\right)
+\psi_{l}\right\rangle =Tr\left\{  F\left(  \mathbf{\psi,n}\right)  \right\}
+=\mathcal{H}_{1}\left(  \mathbf{\psi,n}\right)  +2\mathcal{H}_{2}\left(
+\mathbf{\psi,n}\right)
+\end{equation}
+showing that
+\begin{equation}
+Tr\left\{  F\left(  \mathbf{\psi,n}\right)  \right\}  -\mathcal{H}\left(
+\mathbf{\psi,n}\right)  =\mathcal{H}_{2}\left(  \mathbf{\psi,n}\right)
+\end{equation}
+and
+\begin{equation}
+2\mathcal{H}\left(  \mathbf{\psi,n}\right)  =Tr\left\{  F\left(
+\mathbf{\psi,n}\right)  \right\}  +\mathcal{H}_{1}\left(  \mathbf{\psi
+,n}\right)
+\end{equation}
+which gives
+\begin{equation}
+\mathcal{H}\left(  \mathbf{\psi,n}\right)  =Tr\left\{  F\left(  \mathbf{\psi
+,n}\right)  \right\}  -\mathcal{H}_{2}\left(  \mathbf{\psi,n}\right)
+\end{equation}
+and
+\begin{equation}
+\mathcal{H}\left(  \mathbf{\psi,n}\right)  =\frac{1}{2}\left\{  Tr\left\{
+F\left(  \mathbf{\psi,n}\right)  \right\}  +\mathcal{H}_{1}\left(
+\mathbf{\psi,n}\right)  \right\}  .
+\end{equation}
+Noting that
+\begin{equation}
+Tr\left\{  F\left(  \mathbf{\psi,n}\right)  \right\}  =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+\varepsilon_{l}\left(  \mathbf{\psi,n}\right)
+\end{equation}
+and
+\begin{equation}
+\mathcal{H}_{1}\left(  \mathbf{\psi,n}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+N_{l}\left(  \left.  \psi_{l}\right\vert h_{1}\psi_{l}\right)
+\end{equation}
+and
+\begin{equation}
+\left(  \left.  \psi_{l}\right\vert h_{1}\psi_{l}\right)  \leq0,
+\end{equation}
+it seems that the CGSO's should be occupied by an aufbau principle based on
+$\left\{  \left(  \left.  \psi_{l}\right\vert h_{1}\psi_{l}\right)  \right\}
+,$ i.e.
+\begin{equation}
+N_{1}\geq N_{2}\geq\cdots\geq N_{s},
+\end{equation}
+corresponding to
+\begin{equation}
+\left(  \left.  \psi_{1}\right\vert h_{1}\psi_{1}\right)  \leq\left(  \left.
+\psi_{1+s}\right\vert h_{1}\psi_{1+s}\right)  \leq\left(  \left.  \psi
+_{2}\right\vert h_{1}\psi_{2}\right)  \leq\left(  \left.  \psi_{2+s}%
+\right\vert h_{1}\psi_{2+s}\right)  \leq\cdots\leq\left(  \left.  \psi
+_{s}\right\vert h_{1}\psi_{s}\right)  \leq\left(  \left.  \psi_{2s}\right\vert
+h_{1}\psi_{2s}\right)  .
+\end{equation}
+
+
+
+\end{document}

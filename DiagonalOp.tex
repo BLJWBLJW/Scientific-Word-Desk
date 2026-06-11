@@ -1,0 +1,319 @@
+%% This document created by Scientific Word (R) Version 3.5
+
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, April 30, 2002 08:45:12}
+%TCIDATA{LastRevised=Friday, May 03, 2002 17:24:12}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX {} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received{date}
+
+\revised{date}
+
+\accepted{date}
+
+\published{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Properties of Diagonal Operators}
+
+\bigskip As
+\begin{equation}
+\left\langle \mathsf{x}^{N}|\mathsf{y}^{N}\right\rangle =\delta\left(
+\mathsf{x}^{N}-\mathsf{y}^{N}\right)  \label{on}%
+\end{equation}
+one can deduce that
+\begin{equation}
+e^{\breve{\varsigma}_{N}}=e^{\int\varsigma\left(  \mathsf{z}^{N}\right)
+\left|  \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right|
+d\mathsf{z}^{N}}=\int e^{\varsigma\left(  \mathsf{z}^{N}\right)  }\left|
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right|  d\mathsf{z}%
+^{N}%
+\end{equation}
+We can decompose $\varsigma\left(  \mathsf{z}^{N}\right)  $ into irreducible
+(pure) parts as
+\begin{equation}
+\varsigma\left(  \mathsf{z}^{N}\right)  =\sum_{1\leq k\leq N}\varsigma
+_{k}\left(  \mathsf{z}^{N}\right)
+\end{equation}
+where
+\begin{equation}
+\varsigma_{k}\left(  \mathsf{z}^{N}\right)  =\sum_{1\leq i_{1}<i_{2}%
+\cdots<i_{k}\leq N}\varsigma_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}%
+}\cdots\mathsf{z}_{i_{k}}\right)
+\end{equation}
+$\lceil\varsigma_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}%
+\cdots\mathsf{z}_{i_{k}}\right)  $ are all symmetric functions$\rfloor$ so
+that
+\begin{align}
+\int\varsigma\left(  \mathsf{z}^{N}\right)  \left|  \mathsf{z}^{N}%
+\right\rangle \left\langle \mathsf{z}^{N}\right|  d\mathsf{z}^{N}  &
+=\int\sum_{1\leq k\leq N}\varsigma_{k}\left(  \mathsf{z}^{N}\right)  \left|
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right|  d\mathsf{z}%
+^{N}\nonumber\\
+&  =\int\sum_{1\leq k\leq N}\sum_{1\leq i_{1}<i_{2}\cdots<i_{k}\leq
+N}\varsigma_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\cdots
+\mathsf{z}_{i_{k}}\right)  \left|  \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{N}\right|  d\mathsf{z}^{N}\nonumber\\
+&  =\sum_{1\leq k\leq N}\sum_{1\leq i_{1}<i_{2}\cdots<i_{k}\leq N}%
+\int\varsigma_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\cdots
+\mathsf{z}_{i_{k}}\right)  \left|  \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{N}\right|  d\mathsf{z}^{N}%
+\end{align}
+$\lceil$If the orthonormalization condition \ eq. $\left(  \ref{on}\right)  $
+is not satisfied e.g. when the overcomplete basis is formed by proper vectors
+we have
+\begin{equation}
+\left\langle \mathsf{x}^{N}|\mathsf{y}^{N}\right\rangle =K\left(
+\mathsf{x}^{N},\mathsf{y}^{N}\right)
+\end{equation}
+and
+\begin{align}
+e^{\breve{\varsigma}_{N}}  &  =e^{\int\varsigma\left(  \mathsf{z}^{N}\right)
+\left|  \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right|
+d\mathsf{z}^{N}}=1+\int\varsigma\left(  \mathsf{z}^{N}\right)  \left|
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right|  d\mathsf{z}%
+^{N}\nonumber\\
+&  \qquad\qquad\qquad\qquad+\frac{1}{2}\int\varsigma\left(  \mathsf{z}_{1}%
+^{N}\right)  K\left(  \mathsf{z}_{1}^{N},\mathsf{z}_{2}^{N}\right)
+\varsigma\left(  \mathsf{z}_{2}^{N}\right)  \left|  \mathsf{z}_{1}%
+^{N}\right\rangle \left\langle \mathsf{z}_{2}^{N}\right|  d\mathsf{z}_{1}%
+^{N}d\mathsf{z}_{2}^{N}+\cdots
+\end{align}
+$\rfloor$
+
+The operator
+\begin{equation}
+\breve{\varsigma}_{N}=\int\varsigma\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}%
+\end{equation}
+is the restriction of the second quantized operator%
+\begin{equation}
+\breve{\varsigma}=\int\varsigma\left(  \mathsf{z}^{N}\right)  \Phi\left(
+\mathsf{z}^{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}^{N}\right)
+d\mathsf{z}^{N}%
+\end{equation}
+to $\mathcal{H}^{N}$, where
+\begin{equation}
+\Phi\left(  \mathsf{z}^{N}\right)  =\Phi\left(  \mathsf{z}_{N}\right)
+\cdots\Phi\left(  \mathsf{z}_{1}\right)
+\end{equation}
+and
+\begin{equation}
+\Phi\left(  \mathsf{z}\right)  ^{\dagger}\left\vert \phi\right\rangle
+=\left\vert \mathsf{z}\right\rangle
+\end{equation}
+First quantized operators can always be thought of as projections of number
+preserving second quantized operators i.e.
+\begin{align}
+P_{N}\mathfrak{A}P_{N} &  =P_{N}\int A\left(  \mathsf{x}^{N},\mathsf{y}%
+^{N}\right)  \Phi\left(  \mathsf{x}^{N}\right)  ^{\dagger}\Phi\left(
+\mathsf{y}^{N}\right)  d\mathsf{x}^{N}d\mathsf{y}^{N}P_{N}\nonumber\\
+&  =\int A\left(  \mathsf{x}^{N},\mathsf{y}^{N}\right)  \left\vert
+\mathsf{x}^{N}\right\rangle \left\langle \mathsf{y}^{N}\right\vert
+d\mathsf{x}^{N}d\mathsf{y}^{N}%
+\end{align}
+so that
+\begin{equation}
+\mathfrak{A=}\sum_{N=0}^{\infty}P_{N}\mathfrak{A}P_{N}%
+\end{equation}
+The question one can then ask is whether
+\begin{equation}
+F\left(  P_{N}\mathfrak{A}P_{N}\right)  =P_{N}F\left(  \mathfrak{A}\right)
+P_{N}%
+\end{equation}
+in particular for the exponential function. The answer is obtained by
+considering the following
+\begin{align}
+e^{\sum_{N=0}^{\infty}P_{N}\mathfrak{A}P_{N}} &  =e^{\mathfrak{A}}\nonumber\\
+&  =\sum_{M=0}^{\infty}P_{M}+\sum_{M=0}^{\infty}P_{M}\mathfrak{A}P_{M}%
++\frac{1}{2}\sum_{M,M^{\prime}=0}^{\infty}P_{M}\mathfrak{A}P_{M}P_{M^{\prime}%
+}\mathfrak{A}P_{M^{\prime}}+\cdots\nonumber\\
+&  =\sum_{M=0}^{\infty}P_{M}+\sum_{M=0}^{\infty}P_{M}\mathfrak{A}P_{M}%
++\frac{1}{2}\sum_{M=0}^{\infty}P_{M}\mathfrak{A}^{2}P_{M}+\cdots
+\end{align}
+Hence
+\begin{align}
+P_{N}e^{\mathfrak{A}}P_{N} &  =P_{N}+P_{N}\mathfrak{A}P_{N}+\frac{1}{2}%
+\sum_{N=0}^{\infty}P_{N}\mathfrak{A}^{2}P_{N}+\cdots\nonumber\\
+&  =P_{N}e^{P_{N}\mathfrak{A}P_{N}}%
+\end{align}
+Thus
+\begin{align}
+P_{N}e^{\mathfrak{A}}P_{N} &  =P_{N}e^{\int\varsigma\left(  \mathsf{z}%
+^{N}\right)  P_{N}\Phi\left(  \mathsf{z}^{N}\right)  ^{\dagger}\Phi\left(
+\mathsf{z}^{N}\right)  P_{N}d\mathsf{z}^{N}}\nonumber\\
+&  =P_{N}e^{\int\varsigma\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}}%
+\end{align}
+When $\mathsf{z}_{i}\neq\mathsf{z}_{j},\quad1\leq i<j\leq N$ the product of
+field operators can always be rearranged as
+\begin{align}
+\Phi\left(  \mathsf{z}^{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+^{N}\right)   &  =\Phi\left(  \mathsf{z}_{1}\right)  ^{\dagger}\cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  \cdots\Phi\left(  \mathsf{z}_{1}\right)  \nonumber\\
+&  =\Phi\left(  \mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{1}\right)  \cdots\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(
+\mathsf{z}_{N}\right)
+\end{align}
+and%
+\begin{align}
+\breve{\varsigma} &  =\int\varsigma\left(  \mathsf{z}^{N}\right)  \prod_{1\leq
+i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  \Phi\left(
+\mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{1}\right)  \cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  d\mathsf{z}^{N}\nonumber\\
+&  =\int\sum_{k=0}^{N}\varsigma_{k}\left(  \mathsf{z}^{N}\right)  \prod_{1\leq
+i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  \Phi\left(
+\mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{1}\right)  \cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  d\mathsf{z}^{N}%
+\end{align}
+where $\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  =1-\delta
+\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  $ and
+\begin{equation}
+\varsigma_{k}\left(  \mathsf{z}^{N}\right)  =\sum_{1\leq i_{1}<i_{2}%
+\cdots<i_{k}\leq N}\varsigma_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}%
+}\cdots\mathsf{z}_{i_{k}}\right)
+\end{equation}
+$\lceil$This gives for example
+\begin{equation}
+\varsigma_{3}\left(  \mathsf{z}^{N}\right)  =\sum_{1\leq i_{1}<i_{2}<i_{3}\leq
+N}\varsigma_{3}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\mathsf{z}_{i_{3}%
+}\right)
+\end{equation}
+and
+\begin{align}
+\breve{\varsigma}_{3} &  =\int\varsigma_{3}\left(  \mathsf{z}^{N}\right)
+\prod_{1\leq i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)
+\Phi\left(  \mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{1}\right)  \cdots\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(
+\mathsf{z}_{N}\right)  d\mathsf{z}^{N}\nonumber\\
+&  =\int\sum_{1\leq i_{1}<i_{2}<i_{3}\leq N}\varsigma_{3}\left(
+\mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\mathsf{z}_{i_{3}}\right)  \prod_{1\leq
+i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  \Phi\left(
+\mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{1}\right)  \cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  d\mathsf{z}^{N}\nonumber\\
+&  =\int\sum_{1\leq i_{1}<i_{2}<i_{3}\leq N}\varsigma_{3}\left(
+\mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\mathsf{z}_{i_{3}}\right)  \prod_{1\leq
+i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  \Phi\left(
+\mathsf{z}_{i_{1}}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{i_{1}}\right)
+\Phi\left(  \mathsf{z}_{i_{2}}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{i_{2}}\right)  \Phi\left(  \mathsf{z}_{i_{3}}\right)  ^{\dagger}\Phi\left(
+\mathsf{z}_{i_{3}}\right)  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\times\Phi\left(  \mathsf{z}_{i_{4}}\right)  ^{\dagger}\Phi\left(
+\mathsf{z}_{i_{4}}\right)  \cdots\Phi\left(  \mathsf{z}_{i_{N}}\right)
+^{\dagger}\Phi\left(  \mathsf{z}_{i_{N}}\right)  d\mathsf{z}^{N}%
+\end{align}
+$\rfloor$
+
+Thus we have the following
+\begin{align}
+e^{\breve{\varsigma}_{N}} &  =e^{\int\varsigma\left(  \mathsf{z}^{N}\right)
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}}\nonumber\\
+&  =P_{N}e^{\int\varsigma\left(  \mathsf{z}^{N}\right)  \prod_{1\leq i<j\leq
+N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  P_{N}\Phi\left(
+\mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{1}\right)  \cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  P_{N}d\mathsf{z}^{N}}\nonumber\\
+&  =\int e^{\varsigma\left(  \mathsf{z}^{N}\right)  }\left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}%
+^{N}\nonumber\\
+&  =\int e^{\varsigma\left(  \mathsf{z}^{N}\right)  }\prod_{1\leq i<j\leq
+N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  P_{N}\Phi\left(
+\mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{1}\right)  \cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  P_{N}d\mathsf{z}^{N}\nonumber\\
+&  =\int\left\{  1+\varsigma\left(  \mathsf{z}^{N}\right)  +\varsigma\left(
+\mathsf{z}^{N}\right)  ^{2}+\cdots\right\}  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}%
+^{N}\nonumber\\
+&  =\int\left\{  1+\sum_{k=0}^{N}\sum_{1\leq i_{1}<i_{2}\cdots<i_{k}\leq
+N}\varsigma_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\cdots
+\mathsf{z}_{i_{k}}\right)  +\varsigma\left(  \mathsf{z}^{N}\right)
+^{2}\right.  \nonumber\\
+&  \qquad\qquad\left.  +\left\{  \sum_{k=0}^{N}\sum_{1\leq i_{1}<i_{2}%
+\cdots<i_{k}\leq N}\varsigma_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}%
+}\cdots\mathsf{z}_{i_{k}}\right)  \right\}  ^{2}+\cdots\right\}  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}%
+\end{align}
+
+
+For example we can consider the case of $N=2$
+\begin{align}
+e^{\breve{\varsigma}_{N}}  & =\int\left\{  1+\alpha+\sum_{1\leq i_{1}%
+<i_{2}<\leq N}\left\{  \varsigma_{1}\left(  \mathsf{z}_{i_{1}}\right)
++\varsigma_{1}\left(  \mathsf{z}_{i_{2}}\right)  +\varsigma_{2}\left(
+\mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\right)  \right\}  \right.  \nonumber\\
+& \left.  +\frac{1}{2}\left\{  \alpha+\sum_{1\leq i_{1}<i_{2}<\leq N}\left\{
+\varsigma_{1}\left(  \mathsf{z}_{i_{1}}\right)  +\varsigma_{1}\left(
+\mathsf{z}_{i_{2}}\right)  +\varsigma_{2}\left(  \mathsf{z}_{i_{1}}%
+\mathsf{z}_{i_{2}}\right)  \right\}  \right\}  ^{2}+\cdots\right\}  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}%
+\end{align}
+
+
+
+\end{document}

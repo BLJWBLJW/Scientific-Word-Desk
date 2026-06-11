@@ -1,0 +1,747 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, June 17, 2003 17:08:15}
+%TCIDATA{LastRevised=Tuesday, June 17, 2003 17:15:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Canonical Form]{Canonical Form of Complex Antisymmetric Matrices}
+\author{Brian Weiner}
+\affiliation{PSU}
+
+\begin{abstract}
+
+
+\end{abstract}
+\date{06/17/2003}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Antisymmetric Operators}
+
+\subsection{Real Antisymmetric Matrices}
+
+Let $\mathcal{A}$ be a \emph{real} compact antisymmetric operator
+$\in\mathcal{B}_{0}\left(  V\right)  $, where $V$ is a Hilbert space then it
+has the canonical expansion
+\begin{equation}
+\mathcal{A=}\sum_{1\leq j\leq s}\alpha_{j}\left\{  \left\vert s_{j}%
+\right\rangle \left\langle s_{j+s}\right\vert -\left\vert s_{_{j+s}%
+}\right\rangle \left\langle s_{j}\right\vert \right\} \label{anti}%
+\end{equation}
+As the operator is real $\mathcal{A=A}^{\ast}$, (see Appendix \ref{star} for
+the definition of complex conjugation *), it can be converted into a compact
+self adjoint purely imaginary operator, $\mathcal{H}$, with the properties
+\begin{align}
+\mathcal{H}  & =i\mathcal{A}\nonumber\\
+\mathcal{H}^{\dagger}  & =-i\mathcal{A}^{t}=i\mathcal{A=H}\nonumber\\
+\mathcal{H}^{\ast}  & =-i\mathcal{A}=i\mathcal{A}^{t}\,\mathcal{=H}^{t}%
+\end{align}
+and
+\begin{equation}
+\mathcal{H}=i\mathcal{A=}\sum_{1\leq j\leq s}\alpha_{j}\left\{  \left\vert
+v_{j}\right\rangle \left\langle v_{j}\right\vert -\left\vert v_{j}^{\ast
+}\right\rangle \left\langle v_{j}^{\ast}\right\vert \right\}  ;\qquad
+\alpha_{j}\in\mathbb{R}\label{sa}%
+\end{equation}
+where $\left\{  \left\vert v_{j}\right\rangle ,\left\vert v_{j}^{\ast
+}\right\rangle ;1\leq j\leq\infty\right\}  $ is a conb for $\mathcal{H}$. Eq.
+$\left(  \ref{sa}\right)  $ is seen by observing that
+\begin{equation}
+\mathcal{H}\left\vert v\right\rangle =\alpha\left\vert v\right\rangle
+\Rightarrow\mathcal{H}^{\ast}\left\vert v^{\ast}\right\rangle =\alpha
+\left\vert v^{\ast}\right\rangle \Rightarrow\mathcal{H}^{t}\left\vert v^{\ast
+}\right\rangle =\alpha\left\vert v^{\ast}\right\rangle \Rightarrow
+\mathcal{H}\left\vert v^{\ast}\right\rangle =-\alpha\left\vert v^{\ast
+}\right\rangle
+\end{equation}
+It is important to note that the orthonormal eigenvectors of $\mathcal{H}$ are
+only defined up to an overall phase factors $e^{i\varphi_{j}}$ which \emph{do
+not} preserve the complex conjugate relationship between eigenvectors
+associated with paired eigenvalues of opposite sign. These different bases are
+related to each other by
+\begin{equation}
+\left(  \left\vert v_{1}^{\prime}\right\rangle \cdots\left\vert v_{2s}%
+^{\prime}\right\rangle \right)  =\left(  \left\vert v_{1}\right\rangle
+\cdots\left\vert v_{2s}\right\rangle \right)  \left(
+\begin{array}
+[c]{ccc}%
+e^{i\varphi_{1}} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & e^{i\varphi_{2s}}%
+\end{array}
+\right)
+\end{equation}
+Using a basis with complex conjugate symmetry we obtain
+\begin{equation}
+\mathcal{A=-}\sum_{1\leq j\leq s}i\alpha_{j}\left\{  \left\vert v_{j}%
+\right\rangle \left\langle v_{j}\right\vert -\left\vert v_{j}^{\ast
+}\right\rangle \left\langle v_{j}^{\ast}\right\vert \right\}  ;\qquad
+\alpha_{i}\in\mathbb{R}%
+\end{equation}
+We can then define a \emph{real} conb $\left\{  \left\vert s_{j}\right\rangle
+;1\leq j\leq\infty\right\}  $ i.e. $\left\vert s_{j}\right\rangle =\left\vert
+s_{j}^{\ast}\right\rangle $ as
+\begin{align}
+\left\vert s_{j}\right\rangle  & =\frac{1}{\sqrt{2}}\left(  \left\vert
+v_{j}\right\rangle +\left\vert v_{j}^{\ast}\right\rangle \right)  =\sqrt
+{2}\operatorname{Re}\left\vert v_{j}\right\rangle \nonumber\\
+\left\vert s_{j+s}\right\rangle  & =\frac{-i}{\sqrt{2}}\left(  \left(
+\left\vert v_{j}\right\rangle -\left\vert v_{j}^{\ast}\right\rangle \right)
+\right)  =\sqrt{2}\operatorname{Im}\left\vert v_{j}\right\rangle
+\end{align}
+so that
+\begin{align}
+\mathcal{A}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert v_{j}\right\rangle
++\left\vert v_{j}^{\ast}\right\rangle \right)  \right\}   & =-i\alpha_{j}%
+\frac{1}{\sqrt{2}}\left(  \left\vert v_{j}\right\rangle -\left\vert
+v_{j}^{\ast}\right\rangle \right) \nonumber\\
+& =\alpha_{j}\left\{  \frac{-i}{\sqrt{2}}\left(  \left(  \left\vert
+v_{j}\right\rangle -\left\vert v_{j}^{\ast}\right\rangle \right)  \right)
+\right\}
+\end{align}
+and
+\begin{align}
+\mathcal{A}\left\{  \frac{-i}{\sqrt{2}}\left(  \left(  \left\vert
+v_{j}\right\rangle -\left\vert v_{j}^{\ast}\right\rangle \right)  \right)
+\right\}   & =\frac{-\alpha_{j}}{\sqrt{2}}\left\vert v_{j}\right\rangle
+-\frac{\alpha_{j}}{\sqrt{2}}\left\vert v_{j}^{\ast}\right\rangle \nonumber\\
+& =-\alpha_{j}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert v_{j}\right\rangle
++\left\vert v_{j}^{\ast}\right\rangle \right)  \right\}
+\end{align}
+thus
+\begin{equation}
+\mathcal{A=}\sum_{1\leq j\leq s}\alpha_{j}\left\{  \left\vert s_{j}%
+\right\rangle \left\langle s_{j+s}\right\vert -\left\vert s_{_{j+s}%
+}\right\rangle \left\langle s_{j}\right\vert \right\}
+\end{equation}
+which justifies the expansion in eq. $\left(  \ref{anti}\right)  $. Using the
+bases $\left\{  \left\vert s_{j}\right\rangle ;1\leq j\leq\infty\right\}  $ we
+can produce the canonical matrix representation of $\mathcal{A}$
+\begin{equation}
+\mathcal{A}\left(  \left\vert \mathbf{s}\right\rangle \right)  =\left\vert
+\mathbf{s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{\alpha}\\
+-\mathbf{\alpha} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+where
+\begin{equation}
+\mathbf{\alpha=}\left(
+\begin{array}
+[c]{ccc}%
+\alpha_{1} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \ddots & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \alpha_{s}%
+\end{array}
+\right)
+\end{equation}
+One can reorder this basis to obtain
+\begin{equation}
+\mathcal{A}\left(  \left\vert s_{1}\right\rangle \left\vert s_{1+s}%
+\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert s_{s+s}%
+\right\rangle \right)  =\left(  \left\vert s_{1}\right\rangle \left\vert
+s_{1+s}\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert
+s_{s+s}\right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+0 & \alpha_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+-\alpha_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & \alpha_{s}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -\alpha_{s} & 0
+\end{array}
+\right)
+\end{equation}
+and the expansion
+\begin{equation}
+\mathcal{A}=\left(  \left\vert s_{1}\right\rangle \left\vert s_{1+s}%
+\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert s_{s+s}%
+\right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+0 & \alpha_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+-\alpha_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & \alpha_{s}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -\alpha_{s} & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\vert s_{1}\right\rangle \\
+\left\vert s_{1+s}\right\rangle \\
+\vdots\\
+\left\vert s_{s}\right\rangle \\
+\left\vert s_{s+s}\right\rangle
+\end{array}
+\right) \label{reex}%
+\end{equation}
+The row vector of basis vectors, $\left(  \left\vert s_{1}\right\rangle
+\left\vert s_{1+s}\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert
+s_{s+s}\right\rangle \right)  $, can be viewed as a real orthogonal matrix
+whose columns are the real basis vectors $\left\{  \cdots,\left\vert
+s_{j}\right\rangle ,\left\vert s_{s+j}\right\rangle ,\cdots\right\}  $.
+
+The complex basis $\left\{  \left\vert v_{j}\right\rangle ,\left\vert
+v_{j}^{\ast}\right\rangle ;1\leq j\leq\infty\right\}  $ diagonalizes
+$\mathcal{A}$ to give
+\begin{equation}
+\mathcal{A}\left(  \left\vert \mathbf{v}\right\rangle ,\left\vert
+\mathbf{v}^{\ast}\right\rangle \right)  =\left(  \left\vert \mathbf{v}%
+\right\rangle ,\left\vert \mathbf{v}^{\ast}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+-i\mathbf{\alpha} & \mathbb{O}\\
+\mathbb{O} & i\mathbf{\alpha}%
+\end{array}
+\right)
+\end{equation}
+this basis can also be reordered to produce
+\begin{equation}
+\mathcal{A}\left(  \left\vert \left\vert v_{1}\right\rangle \left\vert
+v_{1}^{\ast}\right\rangle \cdots\left\vert v_{s}\right\rangle \left\vert
+v_{s}^{\ast}\right\rangle \right\rangle \right)  =\left(  \left\vert
+v_{1}\right\rangle \left\vert v_{1}^{\ast}\right\rangle \cdots\left\vert
+v_{s}\right\rangle \left\vert v_{s}^{\ast}\right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+-i\alpha_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+0 & i\alpha_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -i\alpha_{s} & 0\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & i\alpha_{s}%
+\end{array}
+\right)
+\end{equation}
+and the expansion%
+\begin{equation}
+\mathcal{A}=\left(  \left\vert v_{1}\right\rangle \left\vert v_{1}^{\ast
+}\right\rangle \cdots\left\vert v_{s}\right\rangle \left\vert v_{s}^{\ast
+}\right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+-i\alpha_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+0 & i\alpha_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -i\alpha_{s} & 0\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & i\alpha_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\vert v_{1}\right\rangle \\
+\left\vert v_{1}^{\ast}\right\rangle \\
+\vdots\\
+\left\vert v_{s}\right\rangle \\
+\left\vert v_{s}^{\ast}\right\rangle
+\end{array}
+\right) \label{ccex}%
+\end{equation}
+The row vector of basis vectors, $\left(  \left\vert v_{1}\right\rangle
+\left\vert v_{1}^{\ast}\right\rangle \cdots\left\vert v_{s}\right\rangle
+\left\vert v_{s}^{\ast}\right\rangle \right)  $, can be viewed as an unitary
+matrix whose columns are the basis vectors $\left\{  \cdots,\left\vert
+v_{j}\right\rangle ,\left\vert v_{j}^{\ast}\right\rangle ,\cdots\right\}  $.
+Note that the expansions of eqs $\left(  \ref{reex}\right)  $ and $\left(
+\ref{ccex}\right)  $ both give $\mathcal{A}$ thus in eq $\left(
+\ref{reex}\right)  $ all the imaginary terms cancel.
+
+\subsection{Complex Antisymmetric Matrices}
+
+If the \emph{self adjoint} real and complex parts of a complex matrix commute,
+(note that these parts \emph{need not }be real), then the matrix defines a
+representation of a normal operator. If such a matrix is antisymmetric it can
+be brought to complex canonical form by a \emph{real orthogonal}
+transformation as above.
+
+This can be seen from the following: Let
+\begin{equation}
+\left[  \mathcal{A},\mathcal{A}^{\dagger}\right]  =0
+\end{equation}
+then the \emph{self adjoint }real and imaginary parts of $\mathcal{A}$ are
+defined as
+\begin{subequations}
+\begin{align}
+\operatorname{Re}\mathcal{A}  & =\frac{1}{2}\left(  \mathcal{A}+\mathcal{A}%
+^{\dagger}\right) \\
+\operatorname{Im}\mathcal{A}  & =\frac{-i}{2}\left(  \mathcal{A}%
+-\mathcal{A}^{\dagger}\right) \\
+\mathcal{A}  & =\operatorname{Re}\mathcal{A}+i\operatorname{Im}\mathcal{A}%
+\end{align}
+which commute i.e.
+\end{subequations}
+\begin{equation}
+\left[  \operatorname{Re}\mathcal{A},\operatorname{Im}\mathcal{A}\right]  =0
+\end{equation}
+If $\mathcal{A}$ is antisymmetric
+\begin{equation}
+\mathcal{A}=-\mathcal{A}^{t}\label{at}%
+\end{equation}
+(the transpose operation is defined in terms of the adjoint and complex
+conjugation operations see Appendix \ref{star})\ then
+\begin{align}
+\operatorname{Re}\mathcal{A\,}  & =-\operatorname{Re}\mathcal{A}%
+^{t}\nonumber\\
+\operatorname{Im}\mathcal{A\,}  & =-\operatorname{Im}\mathcal{A}^{t}.
+\end{align}
+and
+\begin{align}
+\operatorname{Re}\mathcal{A}  & =\operatorname{Re}\mathcal{A}^{\dagger
+}=\operatorname{Re}\mathcal{A}^{t\ast}=-\left(  \operatorname{Re}%
+\mathcal{A}\right)  ^{\ast}\nonumber\\
+\operatorname{Im}\mathcal{A}  & =\operatorname{Im}\mathcal{A}^{\dagger
+}=\operatorname{Im}\mathcal{A}^{t\ast}=-\left(  \operatorname{Im}%
+\mathcal{A}\right)  ^{\ast}%
+\end{align}
+Hence $\operatorname{Re}\mathcal{A}$ and $\operatorname{Im}\mathcal{A}$ are
+purely imaginary i.e. products of $i$ and real antisymmetric matrices i.e.
+\begin{align}
+\operatorname{Re}\mathcal{A}  & =i\mathcal{M}\nonumber\\
+\operatorname{Im}\mathcal{A}  & =-i\mathcal{N}%
+\end{align}
+where
+\begin{align}
+\mathcal{M}  & =-\mathcal{M}^{t}=\mathcal{M}^{\ast}\nonumber\\
+\mathcal{N}  & =-\mathcal{N}^{t}=\mathcal{N}^{\ast}%
+\end{align}
+so that
+\begin{equation}
+\mathcal{A}=i\mathcal{M}+\mathcal{N}=\mathcal{N}+i\mathcal{M}%
+\end{equation}
+and
+\begin{align}
+\mathcal{N}  & =\frac{1}{2}\left(  \mathcal{A}-\mathcal{A}^{\dagger}\right)
+=\frac{1}{2}\left(  \mathcal{A}+\mathcal{A}^{\ast}\right)  =-\mathcal{N}%
+^{\dagger}=\mathcal{N}^{\ast}\nonumber\\
+\mathcal{M}  & =\frac{-i}{2}\left(  \mathcal{A}+\mathcal{A}^{\dagger}\right)
+=\frac{-i}{2}\left(  \mathcal{A}-\mathcal{A}^{\ast}\right)  =-\mathcal{M}%
+^{\dagger}=\mathcal{M}^{\ast}%
+\end{align}
+confirming that $\mathcal{M}$ and $\mathcal{N}$ are real. (Note that the real
+part $\mathcal{N}$ of $\mathcal{A}$ is related to self adjoint
+\emph{imaginary} part of $\mathcal{A}$ while the imaginary part $\mathcal{M}$
+of $\mathcal{A}$ is related to self adjoint \emph{real} part of $\mathcal{A}%
+$!). The matrices $\mathcal{M}$ and $\mathcal{N}$ commute i.e
+\begin{equation}
+\left[  \mathcal{M},\mathcal{N}\right]  =0
+\end{equation}
+as do the self adjoint real and complex parts of $\mathcal{A}.$ $\lceil$The
+above shows that As $\mathcal{A=-A}^{t}$ it it follows that $\left[
+\mathcal{A},\mathcal{A}^{\ast}\right]  =0$ which then implies that
+$\mathcal{A}$ is normal$\rfloor.$
+
+$\operatorname{Re}\mathcal{A}$ and $\operatorname{Im}\mathcal{A}$ can be
+simultaneously diagonalized to give
+\begin{align}
+\operatorname{Re}\mathcal{A}  & =i\mathcal{M}=\sum_{1\leq j\leq s}\mu
+_{j}\left\{  \left\vert v_{j}\right\rangle \left\langle v_{j}\right\vert
+-\left\vert v_{j}^{\ast}\right\rangle \left\langle v_{j}^{\ast}\right\vert
+\right\}  ;\qquad\mu_{j}\in\mathbb{R}\nonumber\\
+& \Rightarrow\mathcal{M}=\mathcal{-}\sum_{1\leq j\leq s}i\mu_{j}\left\{
+\left\vert v_{j}\right\rangle \left\langle v_{j}\right\vert -\left\vert
+v_{j}^{\ast}\right\rangle \left\langle v_{j}^{\ast}\right\vert \right\}
+\end{align}
+and
+\begin{align}
+\operatorname{Im}\mathcal{A}  & =-i\mathcal{N}=\sum_{1\leq j\leq s}%
+\upsilon_{j}\left\{  \left\vert v_{j}\right\rangle \left\langle v_{j}%
+\right\vert -\left\vert v_{j}^{\ast}\right\rangle \left\langle v_{j}^{\ast
+}\right\vert \right\}  ;\qquad\upsilon_{j}\in\mathbb{R}\nonumber\\
+& \Rightarrow\mathcal{N}=\sum_{1\leq j\leq s}i\upsilon_{j}\left\{  \left\vert
+v_{j}\right\rangle \left\langle v_{j}\right\vert -\left\vert v_{j}^{\ast
+}\right\rangle \left\langle v_{j}^{\ast}\right\vert \right\}
+\end{align}
+Then we can use the theory for real antisymmetric matrices to obtain
+\begin{equation}
+\mathcal{M}=\sum_{1\leq j\leq s}\mu_{j}\left\{  \left\vert s_{j}\right\rangle
+\left\langle s_{j+s}\right\vert -\left\vert s_{j}\right\rangle \left\langle
+s_{j+s}\right\vert \right\}
+\end{equation}
+and
+\begin{equation}
+\mathcal{N}=\sum_{1\leq j\leq s}\left(  -\upsilon_{j}\right)  \left\{
+\left\vert s_{j}\right\rangle \left\langle s_{j+s}\right\vert -\left\vert
+s_{_{j+s}}\right\rangle \left\langle s_{j}\right\vert \right\}
+\end{equation}
+which gives using
+\begin{equation}
+\mathcal{A}=\operatorname{Re}\mathcal{A}+i\operatorname{Im}\mathcal{A}%
+=\mathcal{N}+i\mathcal{M}%
+\end{equation}
+that
+\begin{align}
+\mathcal{A}  & =\sum_{1\leq j\leq s}\left(  -\upsilon_{j}+i\mu_{j}\right)
+\left\{  \left\vert s_{j}\right\rangle \left\langle s_{j+s}\right\vert
+-\left\vert s_{_{j+s}}\right\rangle \left\langle s_{j}\right\vert \right\}
+\nonumber\\
+& \equiv\sum_{1\leq j\leq s}\eta_{j}\left\{  \left\vert s_{j}\right\rangle
+\left\langle s_{j+s}\right\vert -\left\vert s_{_{j+s}}\right\rangle
+\left\langle s_{j}\right\vert \right\}
+\end{align}
+where $\eta_{j}=-\upsilon_{j}+i\mu_{j}$. This gives the matrix representation
+\begin{equation}
+\mathcal{A}\left(  \left\vert s_{1}\right\rangle \left\vert s_{1+s}%
+\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert s_{s+s}%
+\right\rangle \right)  =\left(  \left\vert s_{1}\right\rangle \left\vert
+s_{1+s}\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert
+s_{s+s}\right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+0 & \eta_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+-\eta_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & \eta_{s}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -\eta_{s} & 0
+\end{array}
+\right)
+\end{equation}
+and the expansion
+\begin{equation}
+\mathcal{A}=\left(  \left\vert s_{1}\right\rangle \left\vert s_{1+s}%
+\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert s_{s+s}%
+\right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+0 & \eta_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+-\eta_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & \eta_{s}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -\eta_{s} & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\vert s_{1}\right\rangle \\
+\left\vert s_{1+s}\right\rangle \\
+\vdots\\
+\left\vert s_{s}\right\rangle \\
+\left\vert s_{s+s}\right\rangle
+\end{array}
+\right)
+\end{equation}
+We can also observe that
+\begin{equation}
+\mathcal{A}=-i\sum_{1\leq j\leq s}\eta_{j}\left\{  \left\vert v_{j}%
+\right\rangle \left\langle v_{j}\right\vert -\left\vert v_{j}^{\ast
+}\right\rangle \left\langle v_{j}^{\ast}\right\vert \right\}
+\end{equation}
+This gives the matrix representation
+\begin{equation}
+\mathcal{A}\left(  \left\vert \left\vert v_{1}\right\rangle \left\vert
+v_{1}^{\ast}\right\rangle \cdots\left\vert v_{s}\right\rangle \left\vert
+v_{s}^{\ast}\right\rangle \right\rangle \right)  =\left(  \left\vert
+\left\vert v_{1}\right\rangle \left\vert v_{1}^{\ast}\right\rangle
+\cdots\left\vert v_{s}\right\rangle \left\vert v_{s}^{\ast}\right\rangle
+\right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+-i\eta_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+0 & i\eta_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -i\eta_{s} & 0\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & i\eta_{s}%
+\end{array}
+\right)
+\end{equation}
+and the expansion%
+\begin{equation}
+\mathcal{A}=\left(  \left\vert \left\vert v_{1}\right\rangle \left\vert
+v_{1}^{\ast}\right\rangle \cdots\left\vert v_{s}\right\rangle \left\vert
+v_{s}^{\ast}\right\rangle \right\rangle \right)  \left(
+\begin{array}
+[c]{ccccc}%
+-i\eta_{1} & 0 & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+0 & i\eta_{1} & \mathbb{O} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \ddots & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & -i\eta_{s} & 0\\
+\mathbb{O} & \mathbb{O} & \mathbb{O} & 0 & i\eta_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\vert v_{1}^{\ast}\right\rangle \\
+\left\vert v_{1}\right\rangle \\
+\vdots\\
+\left\vert v_{s}^{\ast}\right\rangle \\
+\left\vert v_{s}\right\rangle
+\end{array}
+\right)
+\end{equation}
+
+
+The bases $\left(  \left\vert v_{1}\right\rangle \left\vert v_{1}^{\ast
+}\right\rangle \cdots\left\vert v_{s}\right\rangle \left\vert v_{s}^{\ast
+}\right\rangle \right)  $ and $\left(  \left\vert s_{1}\right\rangle
+\left\vert s_{1+s}\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert
+s_{s+s}\right\rangle \right)  $ can be viewed as transformations of a fixed
+\emph{real }starting basis $\left(  \left\vert e_{1}\right\rangle
+\cdots\left\vert e_{2s}\right\rangle \right)  $ i.e.%
+\begin{align}
+\left(  \left\vert s_{1}\right\rangle \left\vert s_{1+s}\right\rangle
+\cdots\left\vert s_{s}\right\rangle \left\vert s_{s+s}\right\rangle \right)
+& =\left(  \left\vert e_{1}\right\rangle \cdots\left\vert e_{2s}\right\rangle
+\right)  \mathbb{S}\nonumber\\
+\left(  \left\vert v_{1}\right\rangle \left\vert v_{1}^{\ast}\right\rangle
+\cdots\left\vert v_{s}\right\rangle \left\vert v_{s}^{\ast}\right\rangle
+\right)   & =\left(  \left\vert e_{1}\right\rangle \cdots\left\vert
+e_{2s}\right\rangle \right)  \mathbb{V}%
+\end{align}
+where $\mathbb{S}$ is a real orthogonal matrix and $\mathbb{V}$ is unitary
+matrix. If we are solely working with matrices we can set
+\begin{equation}
+\left\vert e_{j}\right\rangle =\left(
+\begin{array}
+[c]{c}%
+0\\
+\vdots\\
+0\\
+1\\
+0\\
+\vdots\\
+0
+\end{array}
+\right)  \leftarrow\text{j'th position}%
+\end{equation}
+and $\mathbb{S}=\left(  \left\vert s_{1}\right\rangle \left\vert
+s_{1+s}\right\rangle \cdots\left\vert s_{s}\right\rangle \left\vert
+s_{s+s}\right\rangle \right)  $ and $\mathbb{V}=$ $\left(  \left\vert
+v_{1}\right\rangle \left\vert v_{1}^{\ast}\right\rangle \cdots\left\vert
+v_{s}\right\rangle \left\vert v_{s}^{\ast}\right\rangle \right)  $ where
+$\left\vert s_{j}\right\rangle $ and $\left\vert v_{j}\right\rangle $ are
+numerical column vectors, while if we are considering abstract operators we
+can consider $\left\{  \left\vert e_{j}\right\rangle \right\}  $ to be a fixed
+real given basis of $\mathcal{H}$.
+
+\section{Symmetry}
+
+There is a 1-1 correspondence between antisymmetric operators acting on a
+Hilbert space $\mathcal{H}$ (i.e. mixed contra and covariant tensors of rank
+$\left(  1,1\right)  $) and contravariant tensors of rank $\left(  0,2\right)
+$ and also covariant tensors of rank $\left(  2,0\right)  $. The first
+correspondence is given by
+\begin{equation}
+\mathcal{A}=\sum_{1\leq j\leq s}\eta_{j}\left\{  \left\vert s_{j}\right\rangle
+\left\langle s_{j+s}\right\vert -\left\vert s_{_{j+s}}\right\rangle
+\left\langle s_{j}\right\vert \right\}  \leftrightarrow2\sum_{1\leq j\leq
+s}\eta_{j}\left\vert s_{j}s_{j+s}\right\rangle \label{contra}%
+\end{equation}
+where $\left\vert s_{j}s_{j+s}\right\rangle $ is the normalized antisymmetric
+tensor product of the \emph{real }basis elements $\left\{  \left\vert
+s_{j}\right\rangle ,\left\vert s_{_{j+s}}\right\rangle \right\}  $ and
+$\eta_{j}=\eta_{jj+s}$. The expansions of $\mathcal{A}$ are not unique and we
+have from the preceeding that%
+\begin{align}
+\mathcal{A}  & =\sum_{\substack{1\leq j\leq s \\1\leq j^{\prime}\leq2s \\1\leq
+j^{\prime\prime}\leq2s }}\eta_{j}\left\{  \left\vert e_{j^{\prime}%
+}S_{j^{\prime}2j-1}\right\rangle \left\langle e_{j^{\prime\prime}}%
+S_{j^{\prime\prime}2j}\right\vert -\left\vert e_{j^{\prime}}S_{j^{\prime}%
+2j}\right\rangle \left\langle e_{j^{\prime\prime}}S_{j^{\prime\prime}%
+2j-1}\right\vert \right\} \nonumber\\
+& =\sum_{\substack{1\leq j\leq s \\1\leq j^{\prime}\leq2s \\1\leq
+j^{\prime\prime}\leq2s }}\left\{  \eta_{j}\left\vert e_{j^{\prime}%
+}S_{j^{\prime}2j-1}\right\rangle \left\langle e_{j^{\prime\prime}}%
+S_{j^{\prime\prime}2j}\right\vert +\eta_{j+s}\left\vert e_{j^{\prime}%
+}S_{j^{\prime}2j}\right\rangle \left\langle e_{j^{\prime\prime}}%
+S_{j^{\prime\prime}2j-1}\right\vert \right\} \nonumber\\
+& =\sum_{\substack{1\leq j\leq2s \\1\leq j^{\prime}\leq2s \\1\leq
+j^{\prime\prime}\leq2s }}S_{j^{\prime}j}\eta_{j}S_{j^{\prime\prime}%
+j}\left\vert e_{j^{\prime}}\right\rangle \left\langle e_{j^{\prime\prime}%
+}\right\vert \nonumber\\
+& =\sum_{\substack{1\leq j^{\prime}\leq2s \\1\leq j^{\prime\prime}\leq2s
+}}\left(  \mathbb{S}\mathbf{\eta}\mathbb{S}^{t}\right)  _{_{j^{\prime
+}j^{\prime\prime}}}\left\vert e_{j^{\prime}}\right\rangle \left\langle
+e_{j^{\prime\prime}}\right\vert
+\end{align}
+and
+\begin{align}
+\mathcal{A}  & =2\sum_{1\leq j\leq s}\eta_{j}\left\vert s_{j}s_{j+s}%
+\right\rangle =\sum_{1\leq j\leq s}\left\{  \eta_{jj+s}\left\vert s_{j}%
+s_{j+s}\right\rangle +\eta_{j+sj}\left\vert s_{j+s}s_{j}\right\rangle \right\}
+\nonumber\\
+& =\sum_{\substack{1\leq j^{\prime}\leq2s \\1\leq j^{\prime\prime}\leq2s
+}}\left(  \mathbb{S}\mathbf{\eta}\mathbb{S}^{t}\right)  _{_{j^{\prime
+}j^{\prime\prime}}}\left\vert e_{j^{\prime}}e_{j^{\prime\prime}}\right\rangle
+=\sum_{\substack{1\leq j^{\prime}\leq2s \\1\leq j^{\prime\prime}\leq2s
+}}\mathbb{A}_{_{j^{\prime}j^{\prime\prime}}}\left\vert e_{j^{\prime}%
+}e_{j^{\prime\prime}}\right\rangle
+\end{align}
+Eq. $\left(  \ref{contra}\right)  $ shows that
+\begin{equation}
+\mathcal{A}=2\sum_{1\leq j\leq s}\eta_{j}\left\vert Os_{j}Os_{j+s}%
+\right\rangle =2\sum_{1\leq j\leq s}\eta_{j}\left\vert s_{j}s_{j+s}%
+\right\rangle
+\end{equation}
+if
+\begin{equation}
+O\left(  \left\vert s_{j}\right\rangle ,\left\vert s_{j+s}\right\rangle
+\right)  =\left(  \left\vert s_{j}\right\rangle ,\left\vert s_{j+s}%
+\right\rangle \right)  \mathbb{O}_{\left(  j\right)  }%
+\end{equation}
+and
+\begin{equation}
+\det\mathbb{O}_{\left(  j\right)  }=1
+\end{equation}
+i.e. $O\in SO(2,\mathbb{R)}$ and $O\mathcal{A}O^{t}=\mathcal{A}.$ If we have
+some degeneracies i.e. $\eta_{j_{1}}=\cdots=\eta_{j_{d}}$ then $O\in
+SO(2d,\mathbb{R)}$ and $O\mathcal{A}O^{t}=\mathcal{A}$ also produce different
+but equivalent expansions of $\mathcal{A}$ in terms of a real basis.
+
+We can also observe that
+\begin{equation}
+\mathcal{A}=2\sum_{1\leq j\leq s}\eta_{j}\left\vert Us_{j}Us_{j+s}%
+\right\rangle =2\sum_{1\leq j\leq s}\eta_{j}\left\vert s_{j}s_{j+s}%
+\right\rangle
+\end{equation}
+if
+\begin{equation}
+U\left(  \left\vert s_{j}\right\rangle ,\left\vert s_{j+s}\right\rangle
+\right)  =\left(  \left\vert s_{j}\right\rangle ,\left\vert s_{j+s}%
+\right\rangle \right)  \mathbb{U}_{\left(  j\right)  }%
+\end{equation}
+and
+\begin{equation}
+\det\mathbb{U}_{\left(  j\right)  }=1
+\end{equation}
+i.e. $U\in SU(2,\mathbb{C)}$ and $U\mathcal{A}U^{t}=\mathcal{A}.$ If we have
+some degeneracies i.e. $\eta_{j_{1}}=\cdots=\eta_{j_{d}}$ then $U\in
+SU(2d,\mathbb{C)}$ and $U\mathcal{A}U^{t}=\mathcal{A}$ also produce different
+but equivalent expansions of $\mathcal{A}$ in terms of a complex basis.
+
+We can further observe more generally that
+\begin{equation}
+\mathcal{A}=2\sum_{1\leq j\leq s}\eta_{j}\left(  \det\mathbb{U}_{\left(
+j\right)  }\right)  ^{-1}\left\vert Us_{j}Us_{j+s}\right\rangle =2\sum_{1\leq
+j\leq s}\eta_{j}\left\vert s_{j}s_{j+s}\right\rangle
+\end{equation}
+if
+\begin{equation}
+U\left(  \left\vert s_{j}\right\rangle ,\left\vert s_{j+s}\right\rangle
+\right)  =\left(  \left\vert s_{j}\right\rangle ,\left\vert s_{j+s}%
+\right\rangle \right)  \mathbb{U}_{\left(  j\right)  }%
+\end{equation}
+and
+\begin{equation}
+\det\mathbb{U}_{\left(  j\right)  }=e^{i\sigma}%
+\end{equation}
+A special case of this is
+\begin{equation}
+\mathcal{A}=2\sum_{1\leq j\leq s}\eta_{j}\left(  \det\mathbb{U}_{\left(
+j\right)  }\right)  ^{-1}\left\vert Us_{j}Us_{j+s}\right\rangle =2\sum_{1\leq
+j\leq s}\left\vert \eta_{j}\right\vert \left\vert Us_{j}Us_{j+s}\right\rangle
+\end{equation}
+where
+\begin{equation}
+\eta_{j}=\left\vert \eta_{j}\right\vert e^{i\sigma}%
+\end{equation}
+Thus one can conclude that the expansion of $\mathcal{A}$ in terms of a
+canonical complex basis \emph{does not }lead to \emph{unique }canonical
+coefficients!! In this case canonical coefficients are only uniquely defined
+up to a complex phase factor and the value of the canonical coefficients
+depends on the canonical basis used.
+
+Expansions in terms of canonical real bases as $\det\mathbb{O}_{\left(
+j\right)  }=-1$ (the only other possible value for $\det\mathbb{O}_{\left(
+j\right)  })$ leads to%
+\begin{equation}
+\mathcal{A}=2\sum_{1\leq j\leq s}\eta_{j}\left(  -1\right)  \left\vert
+Os_{j}Os_{j+s}\right\rangle =2\sum_{1\leq j\leq s}\eta_{j}\left\vert
+Os_{j+s}Os_{j}\right\rangle
+\end{equation}
+which corresponds to $\eta_{j}\rightarrow-\eta_{j}$. Thus canonical
+coefficients in this case are uniquely defined up to sign. The eigenvalues of
+$\mathcal{A}$ are however \emph{uniquely} defined as $\left\{  \pm i\eta
+_{j};1\leq j\leq s\right\}  $.
+
+\section{Complex Conjugation\label{star}}
+
+A complex conjugation map, $K$, is determined by any representative,$\left\{
+\left\vert e_{j}\right\rangle \right\}  $, of an equivalence class of bases
+$\left\{  \left\vert \mathbf{e}_{k}\right\rangle \right\}  $ of $\mathcal{H}$
+by
+\begin{equation}
+K\left\vert v\right\rangle =%
+%TCIMACRO{\dsum }%
+%BeginExpansion
+{\displaystyle\sum}
+%EndExpansion
+\left(  x_{j}-iy_{j}\right)  \left\vert e_{j}\right\rangle =%
+%TCIMACRO{\dsum }%
+%BeginExpansion
+{\displaystyle\sum}
+%EndExpansion
+\eta_{j}^{\ast}\left\vert e_{j}\right\rangle
+\end{equation}
+where
+\begin{equation}
+\left\vert v\right\rangle =%
+%TCIMACRO{\dsum }%
+%BeginExpansion
+{\displaystyle\sum}
+%EndExpansion
+\eta_{j}\left\vert e_{j}\right\rangle
+\end{equation}
+Any vector that satisfies
+\begin{equation}
+K\left\vert w\right\rangle =\left\vert w\right\rangle
+\end{equation}
+is called real wrt $K$, in particular the basis elements $\left\{  \left\vert
+e_{j}\right\rangle \right\}  $ are real vectors.
+
+The complex conjugate of an operator $\mathcal{B}$ is defined by
+\begin{equation}
+\mathcal{B}^{\ast}=K\mathcal{B}K
+\end{equation}
+leading to
+\begin{equation}
+\mathcal{B}^{\ast}=K\mathcal{B}K\left(  \left\vert \mathbf{e}\right\rangle
+\right)  =K\mathcal{B}\left(  \left\vert \mathbf{e}\right\rangle \right)
+=K\left(  \left\vert \mathbf{e}\right\rangle \right)  \mathbb{B}=\left(
+\left\vert \mathbf{e}\right\rangle \right)  \mathbb{B}^{\ast}%
+\end{equation}
+
+
+The transpose $\mathcal{B}^{t}$ can then be defined in terms of $K$ and the
+adjoint operation as
+\begin{equation}
+\mathcal{B}^{t}=\left(  \mathcal{B}^{\dagger}\right)  ^{\ast}=K\mathcal{B}%
+^{\dagger}K
+\end{equation}
+
+
+
+\end{document}

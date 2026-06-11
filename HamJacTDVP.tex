@@ -1,0 +1,88 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, June 24, 2002 09:35:27}
+%TCIDATA{LastRevised=Thursday, September 11, 2003 11:27:57}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[TDVP-HJ ]{Hamilton - Jacobi Theory and the Time Dependent Variational Principle }
+\author{Brian Weiner}
+\affiliation{Pennsylvania State University}
+\date{06/24/02}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+
+The Time Dependent Variational Principle has been a cornerstone in the
+development of exact, i.e. the Time Dependent Schr\"{o}dinger Equation (TDSE),
+and approximate quantum equations of motion derived from an action principle.
+First introduced by Dirac \cite{dirac}, it was further developed by McLachlan
+and Ball \cite{mac&ball} and then by Kramer and Saraceno \cite{kram&sar}. Two
+basic approaches have been utilized in the derivation; one can either consider
+pure states to be described in terms of unnormalized vectors which leads to an
+unconstrained variational problem or in terms of normalized vectors which
+leads to a constrained variational problem. Kramer and Saraceno used the
+unconstrained approach and after the implementation of the boundary conditions
+of fixed end points, i.e. the initial and final state vectors of the quantum
+evolution are held fixed, obtained an equation for the time dependent state
+vector that is a stationary point of the action. However, even in the case
+when there are no restrictions on the state vectors, this equation is not the
+TDSE and solutions to it are not solutions to the TDSE! In order to obtain
+solutions of the TDSE they multiply solutions of this equation by a specific
+time dependent factor, a complex phase factor, which can in fact be obtained
+as a solution of an independent equation. Unfortunately the introduction of
+this phase factor produces a state vector path that does not have fixed
+endpoints in contradiction to the assumptions invoked to obtain equations for
+the path where the action is stationary.
+
+In this presentation I show what action principle and associated boundary
+conditions actually do give the TDSE and at the same time take into account
+the often ignored fact that a physical pure quantum state is not described by
+a single vector in a Hilbert space but a line in that space.
+
+The proper description of the action principle that generates the TDSE is
+crucial in the
+
+\begin{itemize}
+\item examination of alternative forms of this equation such as in Time
+Dependent Density Functional Theory
+
+\item construction of approximations to the TDSE equation
+
+\item discussions of causality
+\end{itemize}
+
+
+\end{document}

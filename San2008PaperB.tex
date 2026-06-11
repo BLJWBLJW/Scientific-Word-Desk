@@ -1,0 +1,984 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{bm}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, March 20, 2008 15:20:09}
+%TCIDATA{LastRevised=Wednesday, March 26, 2008 16:35:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title{Some Simple Explicit Examples of Correlated One Electron Theory and Density
+Matrix Functionals }
+\author{B. Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+
+\pacs{}
+
+\begin{abstract}
+Some examples are presented displaying how General Spin Orbitals (GSO's) and
+their coccupation numbers uniquely determine N-electron Antisymmetrized
+Geminaql Power states. This provides a corellated one electron model that
+generalizes the independent particle model that is universally used in
+pictuting chemical behaviour. These examples also demonstrate that one
+electron models, involving GSO's and occupation numbers, and ones based on a
+first order density matrix are not equivalent.  This difference is shown by
+displaying sets of different GSO's that have the same occupation numbers that
+correspond to the same density matrix but different N-electron states. This
+observation also leads to the explicit construction of a density matrix functional.
+
+\end{abstract}
+\date{March 25, 2008}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction\label{Intro}}
+
+The utility and power of pictorial models in the understanding and
+manipulation of complex physical phenomena is clearly evident in all areas of
+human scientific endeavour. Perhaps one of the most ubiquitous examples of
+this is the use of molecular orbitals in understanding structure, properties
+and reactivity in chemistry and material science. This efficacy is due to the
+approximate validity of the Independent Particle State (IPS) model, where
+
+\begin{itemize}
+\item the properties of individual electrons and their effective interactions
+\emph{determine uniquely} the many electron state and its properties
+
+\item electrons can be identified with orbitals in a one to one fashion and
+hence observable quantities associated with these orbitals (e.g. energy,
+ionization potential, electron affinity etc..)
+
+\item orbitals provide a geometric representation of electrons and thus multi
+electron states.
+\end{itemize}
+
+The IPS model, however, can predict incorrect properties, reactions and
+structures due to the absence of electron-electron correlation effects. In
+order to overcome this defect more accurate methods such as Configuration
+Interaction, Coupled Cluster, Perturbation Theory and many others have been
+utilized that contain an explicit description of these interactions. Although
+the resulting improved multi electron states still determine sets of orbitals,
+now greater than the number of electrons and weighted with occupation numbers,
+through the First Order Reduced Density Operator (FORDO), these orbitals and
+their occupation numbers \emph{do not }, in general, determine a unique multi
+electron state. Thus one looses the concrete pictorial aspects of a one
+electron theory, as the multi electron state \emph{cannot} be described solely
+in terms of single electron quantities and geometric forms.
+
+Maintaining a one electron picture while including electron correlation
+effects, i.e. constructing a correlated one electron picture, is a central
+driving force in Kohn-Sham Density Functional Theory (KSDFT), Density Matrix
+Functional Theory (DMFT) and various quasi particle approaches. A common
+drawback in all of these methods is that it is not known how to express the
+multi electron state as an explicit functional of orbitals and occupation
+numbers. However, there is a class of correlated multi electron states and
+hence their energies that can be expressed exactly as known functionals of
+orbitals and occupation numbers, they are the Antisymmetyrized Geminal Power
+(AGP) States \cite{OrtizWeiner2006}.
+
+The analysis of AGP states also clearly shows that a model based on orbitals
+and occupation numbers is not equivalent to one based on FORDO's, as many sets
+of orbitals determine the same FORDO while determining different N-electron
+states. This observation allows one to explicitly construct examples of DMF's
+whose domain is restricted to AGP's.
+
+In this paper we review the definition of a correlated one particle theory
+(section 2), the structure and parameterization of AGP\ states, their
+N-electron energy functional and the expression of their energy in terms of
+one electron quantities (section 3). In section 4 we define the AGP\ DMF and
+in section 5 we describe simple examples of how (i) AGP states are determined
+by orbitals and occupation numbers and (ii) AGP DMF's.
+
+\section{One Electron Theory\label{OET}}
+
+In order to be unambiguous we introduce the following definition: a One
+Electron Theory (OET) is one in which the
+
+\begin{itemize}
+\item N-electron state is \emph{totally determined} \ by a set of orthonormal
+Generalized Spin Orbitals (GSO's) $\left\{  \left\vert \psi_{j}\right\rangle
+;1\leq j\leq r\right\}  $ spanning one particle space and a set of occupation
+numbers $\left\{  N_{j};1\leq j\leq r\right\}  $ of these GSO's
+
+and
+
+\item N-electron state energy can be expressed in terms of one electron
+observables e.g. GSO kinetic energies, ionization potentials etc...
+\end{itemize}
+
+A OET is \emph{distinct} from ones based on FORDO's, as different sets of
+GSO's (with the same occupation numbers) can produce the \emph{same} FORDO
+while forming different N-electron states, with different energies. This
+difference is due to the fact that the FORDO is invariant to the action of the
+unitary group $U(1)$ on one electron state space, while in general the
+N-electron state density operator is not. The $U(1)$ invariance can be
+observed by considering the natural expansion
+\begin{equation}
+D^{1}=\sum_{1\leq j\leq r}N_{j}\left\vert \psi_{j}\right\rangle \left\langle
+\psi_{j}\right\vert ,
+\end{equation}
+which is invariant to the action of the unitary group $U(1)$ on the GSO's i.e.%
+\begin{align}
+U(1)\left(  \left\vert \psi_{1}\right\rangle ,\cdots,\left\vert \psi
+_{r}\right\rangle \right)   &  =\left(  \left\vert \psi_{1}\right\rangle
+,\cdots,\left\vert \psi_{r}\right\rangle \right)  \left(
+\begin{array}
+[c]{ccc}%
+e^{i\theta_{1}} & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & e^{i\theta_{r}}%
+\end{array}
+\right) \nonumber\\
+&  =\left(  e^{i\theta_{1}}\left\vert \psi_{1}\right\rangle ,\cdots
+,e^{i\theta_{r}}\left\vert \psi_{r}\right\rangle \right)  ,
+\end{align}
+as%
+\begin{equation}
+D^{1}=\sum_{1\leq j\leq r}N_{j}e^{i\theta_{j}}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{j}\right\vert e^{-i\theta_{j}}=\sum_{1\leq j\leq r}%
+N_{j}\left\vert \psi_{j}\right\rangle \left\langle \psi_{j}\right\vert .
+\end{equation}
+The non invariance of the N-electron state density operator will be shown by
+simple examples in the proceeding, where we show explicitly that Second Order
+Reduced Density Operator's (SORDO's) of AGP\ states (thus any higher order
+density operators) are not in general invariant to such transformations.
+
+The observation that many sets of GSO's map into the same FORDO while
+producing different N-electron states allows one to construct concrete
+examples of DMF's (which are functionals of matrix representations of FORDO's)
+through a Levy-Lieb\cite{Levy1979}, \cite{Lieb1983} \ type of construction.
+Simple examples of such functionals will be displayed in the proceeding.
+
+\section{Antisymmetrized Geminal Power States\label{AGP States}}
+
+The most general form of an AGP state is produced by forming an
+antisymmetrized power of a single geminal composed of General Spin Orbitals
+(GSO's). Geminals can be expanded uniquely in parametric form as
+\begin{equation}
+\left\vert g\left(  \mathbf{c},\bm{\psi,\theta}\right)  \right\rangle
+=\sum_{1\leq j\leq s}c_{j}e^{i\theta_{j}}\left\vert \psi_{j}\psi
+_{j+s}\right\rangle , \label{gem}%
+\end{equation}
+where $\left\{  \left\vert \psi_{j}\right\rangle ;1\leq j\leq r=2s\right\}  $
+is a complete orthonormal basis (conb) of GSO's, the canonical coefficients
+$\bm{c}$ lie on the positive portion of the hypersphere
+\begin{equation}
+\sum\limits_{1\leq j\leq s}c_{j}^{2}=1;\,c_{j}\geq0;1\leq j\leq s,
+\end{equation}
+the angles $\bm{\theta}=\left(  \theta_{2},\cdots,\theta_{s}\right)  $ satisfy%
+
+\begin{equation}
+0\leq\theta_{2},\cdots,\theta_{s}<2\pi;\theta_{1}=0 \label{Phases}%
+\end{equation}
+and the GSO's $\left\{  \psi_{j},\psi_{j+s}\right\}  $ belong to a set of non
+equivalent pairs, $\mathcal{P},$ (see Appendix \ref{GSOpairs}).
+
+\subsection{Density Operators\label{DenOp}}
+
+The FORDO\ of an AGP\ is always at least doubly degenerate i.e.
+\begin{equation}
+D^{1}\left(  \bm{c},\bm{\psi}\right)  =\sum_{1\leq j\leq s}N_{j}\left(
+\bm{c}\right)  \left\{  \left\vert \psi_{j}\right\rangle \left\langle \psi
+_{j}\right\vert +\left\vert \psi_{j+s}\right\rangle \left\langle \psi
+_{j+s}\right\vert \right\}  , \label{D1}%
+\end{equation}
+and it is uniquely parameterized by $\left\{  \bm{c},\bm{\psi
+}\right\}  ,$ where $\bm{\psi\in}\mathcal{P}$ are representatives of the
+equivalence classes, $\left[  \bm{\psi}\right]  $, of paired normalized GSO's,
+which for non degenerate AGP's are defined by
+\begin{equation}
+\left\{  \psi_{a},\psi_{b}\right\}  \sim\left\{  \psi_{c},\psi_{d}\right\}
+\Longleftrightarrow\left\vert \psi_{a}\psi_{b}\right\rangle \left\langle
+\psi_{a}\psi_{b}\right\vert =\left\vert \psi_{c}\psi_{d}\right\rangle
+\left\langle \psi_{c}\psi_{d}\right\vert , \label{Equival}%
+\end{equation}
+for degenerate AGP's the equivalence is more involved and is discussed in
+Appendix \ref{GSOpairs}. The occupation numbers $\left\{  N_{j}\left(
+\bm{c}\right)  ;1\leq j\leq s\right\}  $ are given in terms of $\left\{
+n_{j};1\leq j\leq s\right\}  $ in a one-one fashion \cite{Yukalov00} by
+\begin{equation}
+N_{j}\left(  \bm{c}\right)  =n_{j}S_{\frac{N}{2}-1}\left(  \hat{\jmath
+}\right)  \left(  S_{\frac{N}{2}}\right)  ^{-1}, \label{OccNum}%
+\end{equation}
+where $n_{j}=c_{j}^{2}$
+\begin{equation}
+S_{_{\frac{N}{2}}}\equiv S_{_{\frac{N}{2}}}\left(  \bm{n}\right)  =\sum_{1\leq
+j_{1}<\cdots<j_{\frac{N}{2}}\leq s}n_{j_{1}}\cdots n_{j_{_{\frac{N}{2}}}},
+\end{equation}
+and
+\begin{equation}
+S_{\frac{N}{2}-1}\left(  \hat{\jmath}\right)  =\sum_{\substack{1\leq
+j_{1}<\cdots<j_{\frac{N}{2}-1}\leq s\\j_{1},\cdots,j_{\frac{N}{2}-1}\neq
+j}}n_{j_{1}}\cdots n_{j_{_{\frac{N}{2}-1}}}.
+\end{equation}
+The SORDO\ is given by
+\begin{align}
+&  D^{2}\left(  \bm{c},\bm{\psi,\theta}\right)  =\left(  S_{\frac{N}{2}%
+}\right)  ^{-1}\left\{  \sum_{1\leq j\leq s}n_{j}S_{\frac{N}{2}-1}\left(
+\hat{\jmath}\right)  \left\vert \psi_{j}\psi_{j+s}\right\rangle \left\langle
+\psi_{j}\psi_{j+s}\right\vert +\right. \nonumber\\
+&  \sum_{1\leq j\neq k\leq s}c_{j}c_{k}e^{i\left(  \theta_{j}-\theta
+_{k}\right)  }S_{\frac{N}{2}-1}\left(  \hat{\jmath}\hat{k}\right)  \left\vert
+\psi_{j}\psi_{j+s}\right\rangle \left\langle \psi_{k}\psi_{k+s}\right\vert
+\left.  +\sum_{\substack{1\leq j<k\leq r\\k\neq j+s}}n_{j}n_{k}S_{\frac{N}%
+{2}-2}\left(  \hat{\jmath}\hat{k}\right)  \left\vert \psi_{j}\psi
+_{k}\right\rangle \left\langle \psi_{j}\psi_{k}\right\vert \right\}  ,
+\end{align}
+where
+\begin{align}
+S_{\frac{N}{2}-1}\left(  \hat{\jmath}\hat{k}\right)   &  =\sum
+_{\substack{1\leq j_{1}<\cdots<j_{\frac{N}{2}-1}\leq s\\j_{1},\cdots
+,j_{\frac{N}{2}-1}\neq j,k}}n_{j_{1}}\cdots n_{j_{_{\frac{N}{2}-1}}},\\
+S_{\frac{N}{2}-2}\left(  \hat{\jmath}\hat{k}\right)   &  =\sum
+_{\substack{1\leq j_{1}<\cdots<j_{\frac{N}{2}-2}\leq s\\j_{1},\cdots
+,j_{\frac{N}{2}-1}\neq j,k}}n_{j_{1}}\cdots n_{j_{_{\frac{N}{2}-2}}},\\
+S_{0}\left(  \hat{\jmath}_{1}\cdots\hat{\jmath}_{p}\right)   &  =1;\quad
+S_{m}\left(  \hat{\jmath}_{1}\cdots\hat{\jmath}_{p}\right)  =0,\,\quad
+m<0;\quad0\leq p\leq s.
+\end{align}
+
+
+\subsection{State Vector\label{StateVec}}
+
+The $N-$electron state vector has the CI form
+\begin{equation}
+\left\vert g\left(  \bm{c,\psi,\theta}\right)  ^{\frac{N}{2}}\right\rangle
+=\sum_{1\leq j_{1}<\cdots<j_{\frac{N}{2}}\leq s}c_{j_{1}}\cdots c_{j_{\frac
+{N}{2}}}\exp\left\{  i\sum\limits_{1\leq\kappa\leq\frac{N}{2}}\theta
+_{j_{\kappa}}\right\}  \left\vert \psi_{j_{1}}\psi_{j_{1}+s}\cdots
+\psi_{j_{\frac{N}{2}}}\psi_{_{j_{\frac{N}{2}}}+s}\right\rangle ,
+\end{equation}
+which explicitly displays the dependence of AGP states on the phases $\left\{
+\left.  \theta_{j_{\kappa}}\right\vert 1\leq\kappa\leq s\right\}  $.
+
+\subsection{Energy Functional\label{AGPFunc}}
+
+The energy of an AGP\ state is given by
+\begin{align}
+&  \mathcal{E}\left(  \bm{c},\bm{\psi,\theta}\right)  =\frac{\mathcal{H}%
+\left(  \bm{c},\bm{\psi,\theta}\right)  }{S_{\frac{N}{2}}\left(
+\bm{n}\right)  }=\nonumber\\
+&  \left\{  \sum_{1\leq j\leq s}n_{j}S_{\frac{N}{2}-1}\left(  \hat{\jmath
+}\right)  \left\{  \overset{}{\left\langle \psi_{j}\left\vert h_{1}\psi
+_{j}\right.  \right\rangle +\left\langle \psi_{j+s}\left\vert h_{1}\psi
+_{j+s}\right.  \right\rangle }+\,\left\langle \psi_{j}\psi_{j+s}\right\vert
+\left\vert \psi_{j}\psi_{j+s}\right\rangle \right\}  \right. \nonumber\\
+&  \qquad\qquad\qquad\qquad+\sum_{1\leq j\neq k\leq s}\left\{  c_{j}%
+c_{k}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{\frac{N}{2}-1}\left(
+\hat{\jmath}\hat{k}\right)  \left\langle \psi_{j}\psi_{j+s}\right\vert
+\left\vert \psi_{k}\psi_{k+s}\right\rangle \right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\left.  \left.  \left.  +\frac{1}{2}\overset
+{}{n_{j}n_{k}S_{\frac{N}{2}-2}\left(  \hat{\jmath}\hat{k}\right)  \left\langle
+\psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle }\right\}  \right\}  \right/
+S_{\frac{N}{2}}\left(  \bm{n}\right)  . \label{EnFunc}%
+\end{align}
+where the terms involving the coulomb interaction are defined as
+\begin{align}
+\left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle  &
+=\left\langle \psi_{j}\psi_{k}||\psi_{j}\psi_{k}\right\rangle +\left\langle
+\psi_{j}\psi_{k+s}||\psi_{j}\psi_{k+s}\right\rangle \nonumber\\
+&  +\left\langle \psi_{j+s}\psi_{k}||\psi_{j+s}\psi_{k}\right\rangle
++\left\langle \psi_{j+s}\psi_{k+s}||\psi_{j+s}\psi_{k+s}\right\rangle
+\end{align}
+and one can express the one and two electron values in terms of of space-spin
+wave functions with coordinates $\left(  \bm{r,\xi}\right)  $ in atomic units
+as
+\begin{equation}
+\left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle =\int
+\psi_{j}^{\ast}\left(  \bm{r,\xi}\right)  \left\{  V_{\text{ext}}\left(
+\bm{r}\right)  -\nabla_{\bm{r}}^{2}\right\}  \psi_{l}\left(
+\bm{r,\xi}\right)  d\bm{r}d\xi
+\end{equation}
+and
+\begin{align}
+&  \left\langle \psi_{j}\psi_{k}||\psi_{l}\psi_{m}\right\rangle =\int\left\{
+\psi_{j}^{\ast}\left(  \bm{r}_{1}\bm{,\xi}_{1}\right)  \psi_{k}^{\ast}\left(
+\bm{r}_{2}\bm{,\xi}_{2}\right)  \frac{1}{\left\Vert \bm{r}_{1}-\bm{r}_{2}%
+\right\Vert }\psi_{l}\left(  \bm{r}_{1}\bm{,\xi}_{1}\right)  \psi_{m}\left(
+\bm{r}_{2}\bm{,\xi}_{2}\right)  \right. \nonumber\\
+&  -\left.  \psi_{j}^{\ast}\left(  \bm{r}_{1}\bm{,\xi}_{1}\right)  \psi
+_{k}^{\ast}\left(  \bm{r}_{2}\bm{,\xi}_{2}\right)  \frac{1}{\left\Vert
+\bm{r}_{1}-\bm{r}_{2}\right\Vert }\psi_{l}\left(  \bm{r}_{2}\bm{,\xi}_{2}%
+\right)  \psi_{m}\left(  \bm{r}_{1}\bm{,\xi}_{1}\right)  \right\}
+d\bm{r}_{1}d\bm{r}_{2}d\xi_{1}d\xi_{2}%
+\end{align}
+respectively.
+
+\subsection{One Electron Picture\label{OneElecPic}}
+
+One can canonically absorb the phase factors in eq.$\left(  \ref{gem}\right)
+$ into the GSO's by setting
+\begin{equation}
+\left\vert g\left(  \bm{c},\bm{\psi,\theta}\right)  \right\rangle =\sum_{1\leq
+j\leq s}c_{j}e^{i\theta_{j}}\left\vert \psi_{j}\psi_{j+s}\right\rangle
+=\sum_{1\leq j\leq s}c_{j}\left\vert \tilde{\psi}_{j}\tilde{\psi}%
+_{j+s}\right\rangle ,
+\end{equation}
+where
+\begin{align}
+\left\vert \tilde{\psi}_{j}\right\rangle  &  =e^{i\theta_{j}/2}\left\vert
+\psi_{j}\right\rangle \nonumber\\
+\left\vert \tilde{\psi}_{j+s}\right\rangle  &  =e^{i\theta_{j}/2}\left\vert
+\psi_{j+s}\right\rangle
+\end{align}
+showing that the geminal is \emph{uniquely defined} by the GSO's $\left\{
+\left.  \left\vert \tilde{\psi}_{j}\right\rangle \right\vert 1\leq j\leq
+r\right\}  $ and the occupation numbers $\left\{  \left.  N_{j}\right\vert
+1\leq j\leq r\right\}  $ (through the inverse of the function defined by eq.
+$\left(  \ref{OccNum}\right)  ).$
+
+\subsection{One Electron Quantities\label{OEP}}
+
+In \cite{OrtizWeiner2006} it was shown that for AGP's states, $\left\vert
+g\left(  \bm{c}_{\#},\bm{\tilde{\psi}}_{\#}\right)  ^{\frac{N}{2}%
+}\right\rangle $ that optimize the energy functional eq. $\left(
+\ref{EnFunc}\right)  $ i.e.
+\begin{equation}
+\mathcal{E}\left(  \bm{c}_{\#},\bm{\tilde{\psi}}_{\#}\right)  =\min
+_{\bm{c},\bm{\tilde{\psi}}}\mathcal{E}\left(  \bm{c},\bm{\tilde{\psi}}\right)
+\end{equation}
+one can express the total N-electron energy in terms of the occupation numbers
+$\left\{  \left.  N_{j}\left(  \bm{c}_{\#}\right)  \right\vert 1\leq j\leq
+r\right\}  $, Ionization Potentials (IP), external potentials and kinetic
+energies $\left\{  \left.  I\left(  \tilde{\psi}_{\#j}\right)  ,h_{1}\left(
+\tilde{\psi}_{\#j}\right)  \right\vert 1\leq j\leq r\right\}  $ associated
+with the optimized GSO's $\left\{  \left.  \left\vert \tilde{\psi}%
+_{\#j}\right\rangle \right\vert 1\leq j\leq r\right\}  $. The tilde signifies
+that the phase factor dependence has been absorbed into the GSO as shown
+subsection \ref{OneElecPic}. The IP, $I\left(  \tilde{\psi}_{\#j}\right)  ,$
+is the difference between the optimized $N$-electron state energy and the
+$N-1$ electron state energy formed by the same GSO's as the $N$-electron one
+but with the j$^{\text{th}}$ GSO\ removed
+\begin{equation}
+I\left(  \tilde{\psi}_{\#j}\right)  =\mathcal{E}\left(  \bm{c}_{\#}%
+,\bm{\tilde{\psi}}_{\#}\right)  -\mathcal{E}_{N\,-1}\left(  \bm{c}_{\#}%
+,\bm{\tilde{\psi}}_{\#}\bm{,}\tilde{\psi}_{\#j}\right)
+\end{equation}
+i.e. the frozen IP\ potential of the GSO $\left\vert \tilde{\psi}%
+_{\#j}\right\rangle $. The one electron expectation value $h_{1}\left(
+\tilde{\psi}_{\#j}\right)  $ is the sum of the kinetic and external
+interaction energies and is given as
+\begin{equation}
+h_{1}\left(  \tilde{\psi}_{\#j}\right)  =\left\langle \left.  \tilde{\psi
+}_{\#j}\right\vert h\tilde{\psi}_{\#j}\right\rangle =\left\langle \left.
+\tilde{\psi}_{\#j}\right\vert \left(  K+V_{\text{ext}}\right)  \tilde{\psi
+}_{\#j}\right\rangle .
+\end{equation}
+The expression for the total energy is
+\begin{equation}
+\mathcal{E}\left(  \bm{c}_{\#},\bm{\tilde{\psi}}_{\#}\right)  =\frac{1}{2}%
+\sum_{1\leq j\leq2s}N_{j}\left(  \bm{c}_{\#}\right)  \kappa\left(  \tilde
+{\psi}_{\#j}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\kappa\left(  \tilde{\psi}_{\#j}\right)  =I\left(  \tilde{\psi}_{\#j}\right)
++h_{1}\left(  \tilde{\psi}_{\#j}\right)
+\end{equation}
+and $N_{j}\left(  \bm{c}_{\#}\right)  $ is the optimized occupation number of
+the GSO\ $\left\vert \tilde{\psi}_{\#j}\right\rangle .$
+
+\section{Density Matrix Functional\label{DenMatFun}}
+
+In this section we return to the non redundant parameterization of eq.
+$\left(  \ref{gem}\right)  ,$which explicitly involves the phase. As the FORDO
+is left invariant by the change of phase, while the $N$-electron state and
+energy are not, one can define an AGP DMF (a functional defined over the
+domain of AGP states) by%
+\begin{equation}
+\mathcal{F}\left(  D^{1}\left(  \bm{c},\bm{\psi}\right)  \right)
+=\min_{\bm{\theta}}\mathcal{E}\left(  \bm{\theta}\right)
+\end{equation}
+where for fixed $\bm{c}$ and $\bm{\psi}$ the energy is just a function of the
+phases $\left\{  \left.  \theta_{j}\right\vert 1\leq j<k\leq s\right\}  $
+given in eq. $\left(  \ref{Phases}\right)  $, by
+\begin{align}
+&  \mathcal{E}\left(  \bm{\theta}\right)  =\frac{\mathcal{H}\left(
+\theta\right)  }{S_{\frac{N}{2}}}=S_{\frac{N}{2}}{}^{-1}\left\{  \sum_{1\leq
+j\leq s}n_{j}S_{\frac{N}{2}-1}\left(  \hat{\jmath}\right)  \left\{  \overset
+{}{\left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle
++\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle
+}+\,\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{j}\psi
+_{j+s}\right\rangle \right\}  \right. \nonumber\\
+&  +\sum_{1\leq j\neq k\leq s}\left\{  c_{j}c_{k}e^{i\left(  \theta_{j}%
+-\theta_{k}\right)  }S_{\frac{N}{2}-1}\left(  \hat{\jmath}\hat{k}\right)
+\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{k}\psi
+_{k+s}\right\rangle +\frac{1}{2}n_{j}n_{k}S_{\frac{N}{2}-2}\left(  \hat
+{\jmath}\hat{k}\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi
+_{k}\right\rangle \,\overset{}{}\right\}  .
+\end{align}
+
+
+\section{Simple Examples}
+
+In order to make the preceding discussion more tangible one can introduce very
+simple examples that involve only two electrons. These demonstrate
+
+\begin{itemize}
+\item how one electron orbitals and occupation numbers determine correlated
+multi electron (in this case two electron) states and
+
+\item the difference between an OET and a FORDO one, which consequently leads
+to the construction of an explicit form for a DMF.
+\end{itemize}
+
+These subtle differences can even be observed when one restricts attention to
+spin orbitals or even orbitals and two electron systems. Thus we restrict
+attention to geminals that are low spin eigen functions of $\ $the spin
+operator $\mathcal{S}_{0}$ (see Appendix \ref{Spin}) i.e.
+\begin{equation}
+\mathcal{S}_{0}\left\vert g\right\rangle =0
+\end{equation}
+formed by spin orbitals $\left\{  \left\vert \varphi_{1}\alpha\right\rangle
+,\cdots,\left\vert \varphi_{s}\alpha\right\rangle ,\left\vert \varphi
+_{s+1}\beta\right\rangle ,\cdots,\left\vert \varphi_{2s}\beta\right\rangle
+\right\}  $ and set $N=2$. The most general AGP of this type is in fact a
+geminal of the form%
+\begin{equation}
+\left\vert g\left(  \bm{c},\bm{\varphi,\theta}\right)  \right\rangle
+=\sum_{1\leq j\leq s}c_{j}e^{i\theta_{j}}\left\vert \varphi_{j}\alpha
+\varphi_{j+s}\beta\right\rangle , \label{spinorbgem}%
+\end{equation}
+which describes correlated two electron states if $s\geq2$.
+
+\subsection{Unrestricted Orbital Example}
+
+The simplest example of \emph{different} states that have the \emph{same}
+FORDO that are determined by spin orbitals and occupation numbers is given
+when we set (i)
+\begin{equation}
+s=2;c_{1}=\frac{1}{\sqrt{2}};c_{2}=\frac{1}{\sqrt{2}};\theta=0
+\end{equation}
+producing%
+\begin{equation}
+\left\vert g_{+}\right\rangle =\frac{1}{\sqrt{2}}\left\{  \left\vert
+\varphi_{1}\alpha\varphi_{3}\beta\right\rangle +\left\vert \varphi_{2}%
+\alpha\varphi_{4}\beta\right\rangle \right\}  \equiv\frac{1}{\sqrt{2}}\left\{
+\left\vert 1\alpha3\beta\right\rangle +\left\vert 2\alpha4\beta\right\rangle
+\right\}  \label{ex1}%
+\end{equation}
+and set (ii)
+\begin{equation}
+s=2;c_{1}=\frac{1}{\sqrt{2}};c_{2}=\frac{1}{\sqrt{2}};\theta=\pi
+\end{equation}
+producing
+\begin{equation}
+\left\vert g_{-}\right\rangle =\frac{1}{\sqrt{2}}\left\{  \left\vert
+1\alpha3\beta\right\rangle -\left\vert 2\alpha4\beta\right\rangle \right\}  ,
+\label{ex2}%
+\end{equation}
+where the succinct notation
+\begin{equation}
+j\equiv\varphi_{j};1\leq j\leq2s
+\end{equation}
+has been introduced. The common FORDO\ is
+\begin{equation}
+D^{1}=\frac{1}{4}\left\{  \left\vert 1\alpha\right\rangle \left\langle
+1\alpha\right\vert +\left\vert 2\alpha\right\rangle \left\langle
+2\alpha\right\vert +\left\vert 3\beta\right\rangle \left\langle 3\beta
+\right\vert +\left\vert 4\beta\right\rangle \left\langle 4\beta\right\vert
+\right\}  \label{D1+-}%
+\end{equation}
+while the SORDO's are
+\begin{equation}
+D^{2}\left(  g_{+}\right)  =\frac{1}{2}\left\{  \left\vert 1\alpha
+3\beta\right\rangle \left\langle 1\alpha3\beta\right\vert +\left\vert
+1\alpha3\beta\right\rangle \left\langle 2\alpha4\beta\right\vert +\left\vert
+2\alpha4\beta\right\rangle \left\langle 1\alpha3\beta\right\vert +\left\vert
+2\alpha4\beta\right\rangle \left\langle 2\alpha4\beta\right\vert \right\}
+\label{D2+}%
+\end{equation}
+and
+\begin{equation}
+D^{2}\left(  g_{-}\right)  =\frac{1}{2}\left\{  \left\vert 1\alpha
+3\beta\right\rangle \left\langle 1\alpha3\beta\right\vert -\left\vert
+1\alpha3\beta\right\rangle \left\langle 2\alpha4\beta\right\vert -\left\vert
+2\alpha4\beta\right\rangle \left\langle 1\alpha3\beta\right\vert +\left\vert
+2\alpha4\beta\right\rangle \left\langle 2\alpha4\beta\right\vert \right\}  .
+\label{D2-}%
+\end{equation}
+The relationship between the SORDO's eqs. $\left(  \ref{D2+},\ref{D2-}\right)
+$ and the general form of the SORDO is shown in Appendix \ref{SORDO}.
+
+In the context of OET (section \ref{OET}) the states $\left\vert
+g_{+}\right\rangle $ and $\left\vert g_{-}\right\rangle $ are determined
+by\ the representative spin orbitals and occupation numbers
+\begin{equation}
+\left\{  \varphi_{1}\alpha,\varphi_{2}\alpha,\varphi_{3}\beta,\varphi_{4}%
+\beta\right\}  ;\left\{  \frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}%
+{2}\right\}
+\end{equation}
+and%
+\begin{equation}
+\left\{  \varphi_{1}\alpha,-\varphi_{2}\alpha,\varphi_{3}\beta,\varphi
+_{4}\beta\right\}  ;\left\{  \frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}%
+{2}\right\}
+\end{equation}
+respectively. One should note that different representative sets of spin
+orbitals could be chosen from the equivalence classes $\left[
+\bm{\psi }\right]  $, but the phase dependence (in these cases the phases
+$\theta=0$ and $\theta=\pi)$ \emph{have to be included} in the description of
+the spin orbital.
+
+These states have different energies which are given by
+\begin{align}
+&  \mathcal{E}\left(  g_{+}\right)  =\frac{1}{2}\left\{  \overset
+{}{\left\langle 1\alpha\left\vert h_{1}1\alpha\right.  \right\rangle
++\left\langle 2\alpha\left\vert h_{1}2\alpha\right.  \right\rangle
++\left\langle 3\beta\left\vert h_{1}3\beta\right.  \right\rangle +\left\langle
+4\beta\left\vert h_{1}4\beta\right.  \right\rangle }\right. \nonumber\\
+&  \left.  \,+\left\langle 1\alpha3\beta\right\vert \left\vert 1\alpha
+3\beta\right\rangle +\left\langle 2\alpha4\beta\right\vert \left\vert
+2\alpha4\beta\right\rangle +\left\langle 1\alpha3\beta\right\vert \left\vert
+2\alpha4\beta\right\rangle +\left\langle 1\alpha3\beta\right\vert \left\vert
+2\alpha4\beta\right\rangle \overset{}{}\right\}  \label{E+}%
+\end{align}
+and
+\begin{align}
+&  \mathcal{E}\left(  g_{-}\right)  =\frac{1}{2}\left\{  \overset
+{}{\left\langle 1\alpha\left\vert h_{1}1\alpha\right.  \right\rangle
++\left\langle 2\alpha\left\vert h_{1}2\alpha\right.  \right\rangle
++\left\langle 3\beta\left\vert h_{1}3\beta\right.  \right\rangle +\left\langle
+4\beta\left\vert h_{1}4\beta\right.  \right\rangle }\right. \nonumber\\
+&  \left.  \,+\left\langle 1\alpha3\beta\right\vert \left\vert 1\alpha
+3\beta\right\rangle +\left\langle 2\alpha4\beta\right\vert \left\vert
+2\alpha4\beta\right\rangle -\left\langle 1\alpha3\beta\right\vert \left\vert
+2\alpha4\beta\right\rangle -\left\langle 1\alpha3\beta\right\vert \left\vert
+2\alpha4\beta\right\rangle \overset{}{}\right\}  . \label{E-}%
+\end{align}
+
+
+\subsection{Restricted Orbital Example}
+
+The preceding example can be made even simpler by considering restricted spin
+orbitals
+\begin{align}
+\left\vert \varphi_{1}\right\rangle  &  =\left\vert \varphi_{3}\right\rangle
+\nonumber\\
+\left\vert \varphi_{2}\right\rangle  &  =\left\vert \varphi_{4}\right\rangle
+\end{align}
+leading to
+\begin{align}
+\left\vert g_{\text{res}+}\right\rangle  &  =\left(  \sqrt{2}\right)
+^{-1}\left\{  \left\vert 1\alpha1\beta\right\rangle +\left\vert 2\alpha
+2\beta\right\rangle \right\} \nonumber\\
+\left\vert g_{\text{res}-}\right\rangle  &  =\left(  \sqrt{2}\right)
+^{-1}\left\{  \left\vert 1\alpha1\beta\right\rangle -\left\vert 2\alpha
+2\beta\right\rangle \right\}  . \label{gres}%
+\end{align}
+The FORDO, SORDO's and energies can be obtained from eqs. $\left(
+\ref{D1+-}-\ref{E-}\right)  $ by replacing "3" with "1" and "4" with "2". The
+restricted geminals eq. $\left(  \ref{gres}\right)  $ are now pure spin
+singlet states and can be factored into a product of a space part and spin
+part (see Appendix \ref{Spin}).
+
+Representative spin orbitals and occupation numbers determining the states
+$\left\vert g_{\text{res}+}\right\rangle $ and $\left\vert g_{\text{res}%
+-}\right\rangle $ are
+\begin{align}
+&  \left\{  \varphi_{1}\alpha,\varphi_{2}\alpha,\varphi_{1}\beta,\varphi
+_{2}\beta\right\}  ;\quad\left\{  \frac{1}{2},\frac{1}{2},\frac{1}{2},\frac
+{1}{2}\right\}  ,\\
+&  \left\{  \varphi_{1}\alpha,i\varphi_{2}\alpha,\varphi_{1}\beta,i\varphi
+_{3}\beta\right\}  ;\quad\left\{  \frac{1}{2},\frac{1}{2},\frac{1}{2},\frac
+{1}{2}\right\}
+\end{align}
+respectively.
+
+\subsection{Density Matrix Functionals\label{DMFEx}}
+
+Consider the manifold of geminals of the form
+\begin{equation}
+\left\vert g\left(  \bm{c,\psi,}\theta\right)  \right\rangle =c_{1}\left\vert
+1\alpha3\beta\right\rangle +c_{2}e^{i\theta}\left\vert 2\alpha4\beta
+\right\rangle ,
+\end{equation}
+where
+\begin{align}
+&  c_{1}^{2}+c_{2}^{2}=1\nonumber\\
+&  0\leq\theta<2\pi.
+\end{align}
+The constraint on the canonical coefficients leads to the parameterization
+\begin{align}
+c_{1}  &  =\cos\chi\nonumber\\
+c_{2}  &  =\sin\chi\nonumber\\
+0  &  \leq\chi\leq\frac{\pi}{2}%
+\end{align}
+and hence%
+
+\begin{equation}
+\left\vert g\left(  \chi\bm{,\psi,}\theta\right)  \right\rangle =\cos
+\chi\left\vert 1\alpha3\beta\right\rangle +e^{i\theta}\sin\chi\left\vert
+2\alpha4\beta\right\rangle .
+\end{equation}
+All the states with a fixed $\left\{  \chi\bm{,\psi}\right\}  $, where
+$\bm{\psi\in}\left[  \bm{\psi}\right]  $, have a fixed FORDO
+\[
+D^{1}\left(  \chi,\bm{\psi}\right)  =\cos^{2}\chi\left\{  \left\vert
+1\alpha\right\rangle \left\langle 1\alpha\right\vert +\left\vert
+3\beta\right\rangle \left\langle 3\beta\right\vert \right\}  +\sin^{2}%
+\chi\left\{  \left\vert 2\alpha\right\rangle \left\langle 2\alpha\right\vert
++\left\vert 4\beta\right\rangle \left\langle 4\beta\right\vert \right\}
+\]
+but different SORDO's%
+\begin{align}
+D^{2}\left(  \chi,\bm{\psi}\right)   &  =\cos^{2}\chi\left\vert 1\alpha
+3\beta\right\rangle \left\langle 1\alpha3\beta\right\vert +\sin^{2}%
+\chi\left\vert 2\alpha4\beta\right\rangle \left\langle 2\alpha4\beta
+\right\vert +\nonumber\\
+&  \frac{1}{2}\left\{  e^{-i\theta}\left\vert 1\alpha3\beta\right\rangle
+\left\langle 2\alpha4\beta\right\vert +e^{i\theta}\left\vert 2\alpha
+4\beta\right\rangle \left\langle 1\alpha3\beta\right\vert \right\}  \sin2\chi.
+\end{align}
+These states have different energies which are given by%
+\begin{align}
+&  \mathcal{E}\left(  \theta\right)  =\left\{  \left\langle 1\alpha\left\vert
+h_{1}1\alpha\right.  \right\rangle +\left\langle 3\beta\left\vert h_{1}%
+3\beta\right.  \right\rangle \right\}  \cos^{2}\chi+\left\{  \left\langle
+2\alpha\left\vert h_{1}2\alpha\right.  \right\rangle +\left\langle
+4\beta\left\vert h_{1}4\beta\right.  \right\rangle \right\}  \sin^{2}%
+\chi\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad+\left\langle 1\alpha3\beta\right\vert
+\left\vert 1\alpha3\beta\right\rangle \cos^{2}\chi+\left\langle 2\alpha
+4\beta\right\vert \left\vert 2\alpha4\beta\right\rangle \sin^{2}%
+\chi\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad+\frac{1}{2}\left\{  e^{i\theta
+}\left\langle 1\alpha3\beta\right\vert \left\vert 2\alpha4\beta\right\rangle
++e^{-i\theta}\left\langle 2\alpha4\beta\right\vert \left\vert 1\alpha
+3\beta\right\rangle \right\}  \sin2\chi,
+\end{align}
+which after spin integration gives
+\begin{align}
+\mathcal{E}\left(  \theta\right)   &  =\left\{  \left(  1\left\vert
+h_{1}1\right.  \right)  +\left(  3\left\vert h_{1}3\right.  \right)  \right\}
+\cos^{2}\chi+\left\{  \left(  2\left\vert h_{1}2\right.  \right)  +\left(
+4\left\vert h_{1}4\right.  \right)  \right\}  \sin^{2}\chi\nonumber\\
+&  \qquad\qquad\,+\left(  \left.  13\right\vert 13\right)  \cos^{2}%
+\chi+\left(  \left.  24\right\vert 24\right)  \sin^{2}\chi+\operatorname{Re}%
+\left\{  e^{i\theta}\left(  \left.  13\right\vert 24\right)  \sin2\chi\right\}
+\nonumber\\
+&  \equiv k\left(  \chi,\bm{\psi}\right)  +f\left(  \chi
+,\bm{\psi ,\theta}\right)  ,
+\end{align}
+where
+\begin{equation}
+\left(  \left.  jk\right\vert lm\right)  =\int\varphi_{j}^{\ast}\left(
+\bm{r}_{1}\right)  \varphi_{k}^{\ast}\left(  \bm{r}_{2}\right)  \frac
+{1}{\left\Vert \bm{r}_{1}-\bm{r}_{2}\right\Vert }\varphi_{l}\left(
+\bm{r}_{1}\right)  \varphi_{m}\left(  \bm{r}_{2}\right)  d\bm{r}_{1}%
+d\bm{r}_{2},
+\end{equation}
+%
+
+\begin{equation}
+\left(  j\left\vert h_{1}j\right.  \right)  =\int\varphi_{j}^{\ast}\left(
+\bm{r}\right)  \left\{  V_{\text{ext}}\left(  \bm{r}\right)  -\nabla
+_{\bm{r}}^{2}\right\}  \varphi_{j}\left(  \bm{r}\right)  d\bm{r,}
+\end{equation}%
+\begin{align}
+k\left(  \chi,\bm{\psi}\right)   &  =\left\{  \left(  1\left\vert
+h_{1}1\right.  \right)  +\left(  3\left\vert h_{1}3\right.  \right)  \right\}
+\cos^{2}\chi+\left\{  \left(  2\left\vert h_{1}2\right.  \right)  +\left(
+4\left\vert h_{1}4\right.  \right)  \right\}  \sin^{2}\chi\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\quad+\left(  \left.  13\right\vert
+13\right)  \cos^{2}\chi+\left(  \left.  24\right\vert 24\right)  \sin^{2}\chi,
+\end{align}
+and
+\begin{equation}
+f\left(  \chi,\bm{\psi,\theta}\right)  =\operatorname{Re}\left\{  e^{i\theta
+}\left(  \left.  13\right\vert 24\right)  \sin2\chi\right\}  .
+\end{equation}
+Over the domain of such geminals one can define a DMF as
+\begin{equation}
+\mathcal{F}\left(  \chi,\bm{\psi}\right)  =\mathcal{F}\left(  D^{1}\left(
+\chi,\bm{\psi}\right)  \right)  =\min_{\bm{\theta}}\mathcal{E}\left(
+\bm{\theta}\right)  .
+\end{equation}
+The only part of the functional $\mathcal{E}$ that depends on $\theta$ is
+$f\left(  \chi,\bm{\psi,}\theta\right)  ,$ which one can express as
+\begin{equation}
+f\left(  \chi,\bm{\psi,}\theta\right)  =\operatorname{Re}\left\{  e^{i\theta
+}\left(  \left.  13\right\vert 24\right)  \right\}  =\operatorname{Re}\left\{
+e^{i\theta}ae^{i\alpha}\right\}  =\operatorname{Re}\left\{  e^{i\left(
+\theta+\alpha\right)  }a\right\}  =a\cos\left(  \theta+\alpha\right)  ,
+\end{equation}
+where
+\begin{align}
+a  &  =\left\vert \left(  \left.  13\right\vert 24\right)  \right\vert \\
+\alpha &  =\arg\left\{  \left(  \left.  13\right\vert 24\right)  \right\}  .
+\end{align}
+The minimum of this function can be easily evaluated giving
+\begin{align}
+f\left(  \chi,\bm{\psi,}\theta_{\min}\right)   &  =\min_{\theta}\left\{
+a\cos\left(  \theta+\alpha\right)  \right\}  =-a\\
+\theta_{\min}  &  =\pi-\alpha.
+\end{align}
+Hence the value of the DMF, $\mathcal{F},$ at the point $D^{1}\left(
+\chi,\bm{\psi}\right)  $ is%
+\begin{equation}
+\mathcal{F}\left(  \chi,\bm{\psi}\right)  =k\left(  \chi,\bm{\psi }\right)
+-2\left\vert \left(  \left.  13\right\vert 24\right)  \right\vert \sin2\chi
+\end{equation}
+and the minimum of the AGP energy functional $\mathcal{E}\left(  \bm{c}\left(
+\bm{\chi}\right)  ,\bm{\psi,\theta}\right)  $ determines the AGP\ ground state
+is given by
+\begin{equation}
+\mathcal{E}\left(  \left\vert g_{GS}\right\rangle \right)  =\min
+_{\bm{\chi,\psi}}\mathcal{F}\left(  \chi,\bm{\psi}\right)  .
+\end{equation}
+
+
+\section{Discussion}
+
+We have shown how the universally used orbital picture of electrons, that is
+only valid for uncorrelated systems, can be extended to a description of
+correlated ones. This allows one to maintain the single electron description
+of a mutlielectron system.
+
+\section{Acknowledgements}
+
+I\ would like to thank Dr. Vince Ortiz for valuable discussions on this topic.
+
+\appendix
+
+
+\section{Representative GSO Pairs\label{GSOpairs}}
+
+One can expand a geminal in a form that displays explictly degeneraces as
+\begin{equation}
+\left\vert g\left(  \bm{c},\bm{\psi,\theta}\right)  \right\rangle =\sum_{1\leq
+k\leq d}c_{j_{k}}\sum_{s_{k}+1\leq j_{k}\leq s_{k}+d_{k}}e^{i\theta_{j_{k}}%
+}\left\vert \psi_{j_{k}}\psi_{j_{k}+s}\right\rangle ,
+\end{equation}
+where $\left\{  d_{1},\cdots,d_{d}\right\}  $ are the degree of degeneracies
+of the canonical coefficients $\left\{  c_{1},\cdots,c_{d}\right\}  ,$
+$s_{k}=\sum\limits_{1\leq k\leq p\leq d}d_{k}$ and $\sum\limits_{1\leq k\leq
+d}d_{k}=s_{d}=s.$ The simplest example of a degenerate geminal can be realized
+by setting $s=3,d=2,\left\{  d_{1},d_{2}\right\}  =\left\{  2,1\right\}  ,$
+i.e.
+\begin{equation}
+\left\vert g\left(  \bm{c},\bm{\psi,\theta}\right)  \right\rangle
+=c_{1}\left\{  e^{i\theta_{1}}\left\vert \psi_{1}\psi_{4}\right\rangle
++e^{i\theta_{1}}\left\vert \psi_{2}\psi_{5}\right\rangle \right\}
++c_{2}e^{i\theta_{3}}\left\vert \psi_{3}\psi_{6}\right\rangle .
+\end{equation}
+Following \cite{AGPCoherent} and \cite{OrtizWeiner2006} one can define sets of
+operators associated with the degenerate canonical coefficient $c_{1}$%
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+u_{1}\\
+u_{2}\\
+u_{3}\\
+u_{4}\\
+v_{1}\\
+v_{2}\\
+v_{3}\\
+v_{4}%
+\end{array}
+\right)  =c_{1}\left(
+\begin{array}
+[c]{cccccccc}%
+1 & 0 & \cdots & \cdots & \cdots & \cdots & 0 & 1\\
+0 & 1 & 0 & \cdots & \cdots & 0 & -1 & 0\\
+\vdots & 0 & 1 & 0 & 0 & -1 & 0 & \vdots\\
+\vdots & \vdots & 0 & 1 & 1 & 0 & \vdots & \vdots\\
+\vdots & \vdots & 0 & -1 & 1 & 0 & \vdots & \vdots\\
+\vdots & 0 & 1 & 0 & 0 & 1 & 0 & \vdots\\
+0 & 1 & 0 & \cdots & \cdots & 0 & 1 & 0\\
+-1 & 0 & \cdots & \cdots & \cdots & \cdots & 0 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+a_{1}^{\dagger}a_{2}\\
+a_{1}^{\dagger}a_{5}\\
+a_{4}^{\dagger}a_{2}\\
+a_{4}^{\dagger}a_{5}\\
+a_{2}^{\dagger}a_{1}\\
+a_{2}^{\dagger}a_{4}\\
+a_{5}^{\dagger}a_{1}\\
+a_{5}^{\dagger}a_{4}%
+\end{array}
+\right)
+\end{equation}
+The set $\bm{u}=\left\{  u_{1},u_{2},u_{3},u_{4}\right\}  $ is a
+representation of the lie algebra $u\left(  2\right)  $ that produces a
+representation of the group $U\left(  2\right)  $ over the subspace generated
+by $\left\{  \psi_{1},\psi_{2},\psi_{4},\psi_{5}\right\}  $ that changes
+$\left\vert g\right\rangle ,$ while the set $\bm{v}=\left\{  v_{1},v_{2}%
+,v_{3},v_{4}\right\}  $ is a representation of the lie algebra $su\left(
+2\right)  $ that produce a representation of the group $SU\left(  2\right)  $
+that leaves $\left\vert g\right\rangle $ invariant, as the operators $\left\{
+\bm{u,v}\right\}  $ have the properties
+\begin{equation}
+v\left\vert g\right\rangle =0,\quad u\left\vert g\right\rangle \neq0;\quad
+u\in\bm{u},v\in\bm{v.}
+\end{equation}
+Thus any GSO produced by the action of $\bm{v}$ produces the same geminal thus
+all GSO's $\bm{v}\left\vert \bm{\psi}\right\rangle $ belong to the same
+equivalence class $\left[  \bm{\psi}\right]  .$ This generalizes the
+equivalence realtionship given eq. $\left(  \ref{Equival}\right)  .$
+
+\section{Spin\label{Spin}}
+
+The spin squared operator, $\mathcal{S}^{2}$, is given by
+\begin{equation}
+\mathcal{S}^{2}=\mathcal{S}_{-}\mathcal{S}_{+}+\mathcal{S}_{0}^{2}%
++\mathcal{S}_{0},
+\end{equation}
+where
+\begin{align}
+\mathcal{S}_{+}  &  =\sum_{1\leq j\leq s}a_{j\alpha}^{\dagger}a_{j\beta},\\
+\mathcal{S}_{-}  &  =\sum_{1\leq j\leq s}a_{j\beta}^{\dagger}a_{j\alpha}%
+=S_{+}^{\dagger},\\
+\mathcal{S}_{0}  &  =\sum_{1\leq j\leq s}a_{j\alpha}^{\dagger}a_{j\alpha}%
+-\sum_{1\leq j\leq s}a_{j\beta}^{\dagger}a_{j\beta}.
+\end{align}
+and the fermion second quantized operators $\left\{  \left.  a_{j\sigma
+}^{\dagger}\right\vert 1\leq j\leq s;\sigma=\alpha,\beta\right\}  $ are
+defined by%
+\begin{align}
+a_{j\sigma}^{\dagger}\left\vert \phi\right\rangle  &  =\left\vert \varphi
+_{j}\sigma\right\rangle \nonumber\\
+\left[  a_{j\sigma}^{\dagger},a_{k\nu}\right]  _{+}  &  =a_{j\sigma}^{\dagger
+}a_{k\nu}+a_{k\nu}a_{j\sigma}^{\dagger}=\delta_{jk}\delta_{\sigma\nu}.
+\end{align}
+The action of $\mathcal{S}^{2}$ on $\left\vert g_{\pm}\right\rangle $ is given
+by
+\begin{align}
+\mathcal{S}^{2}\left\vert g_{\pm}\right\rangle =  &  \mathcal{S}^{2}\left(
+\sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}\alpha\varphi_{3}%
+\beta\right\rangle \pm\left\vert \varphi_{2}\alpha\varphi_{4}\beta
+\right\rangle \right\}  =\mathcal{S}_{-}\mathcal{S}_{+}\left(  \sqrt
+{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}\alpha\varphi_{3}%
+\beta\right\rangle \pm\left\vert \varphi_{2}\alpha\varphi_{4}\beta
+\right\rangle \right\} \nonumber\\
+&  =\mathcal{S}_{-}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert
+\varphi_{1}\alpha\varphi_{3}\alpha\right\rangle \pm\left\vert \varphi
+_{2}\alpha\varphi_{4}\alpha\right\rangle \right\} \nonumber\\
+&  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}\beta
+\varphi_{3}\alpha\right\rangle +\left\vert \varphi_{1}\alpha\varphi_{3}%
+\beta\right\rangle \pm\left\vert \varphi_{2}\beta\varphi_{4}\alpha
+\right\rangle \pm\left\vert \varphi_{2}\alpha\varphi_{4}\beta\right\rangle
+\right\}  ,
+\end{align}
+which displays that $\left\vert g_{\pm}\right\rangle $ are not in general
+eigen states of $\mathcal{S}^{2}$. However if one sets $\varphi_{3}%
+=\varphi_{1}$ and $\varphi_{4}=\varphi_{2}$ to form restricted geminals one
+obtains
+\begin{equation}
+\mathcal{S}^{2}\left\vert g_{\text{res},\pm}\right\rangle =0,
+\end{equation}
+showing that $\left\vert g_{\pm}\right\rangle $ are low spin singlet eigen
+states of $\mathcal{S}^{2}$ that factor into a product of space and spin parts
+i.e.
+\begin{equation}
+\left\vert g_{\text{res},\pm}\right\rangle =\frac{1}{\sqrt{2}}\left\{
+\left\{  \varphi_{1}\left(  1\right)  \otimes\varphi_{1}\left(  2\right)
+\pm\varphi_{2}\left(  1\right)  \otimes\varphi_{2}\left(  2\right)  \right\}
+\left\{  \alpha\left(  1\right)  \otimes\beta\left(  2\right)  -\beta\left(
+1\right)  \otimes\alpha\left(  2\right)  \right\}  \right\}  .
+\end{equation}
+
+
+\section{SORDO\label{SORDO}}
+
+Consider the SORDO of the geminal $\left\vert g_{-}\right\rangle $
+\begin{equation}
+D^{2}\left(  g_{-}\right)  =\frac{1}{2}\left\{  \left\vert 1\alpha
+3\beta\right\rangle \left\langle 1\alpha3\beta\right\vert -\left\vert
+1\alpha3\beta\right\rangle \left\langle 2\alpha4\beta\right\vert -\left\vert
+2\alpha4\beta\right\rangle \left\langle 1\alpha3\beta\right\vert +\left\vert
+2\alpha4\beta\right\rangle \left\langle 2\alpha4\beta\right\vert \right\}  ,
+\label{Dirgm}%
+\end{equation}
+where
+\begin{align}
+m  &  =\frac{N}{2}=\frac{2}{2}=1,\\
+s  &  =2,\\
+n_{1}  &  =n_{2}=\frac{1}{2},\\
+c_{1}  &  =c_{2}=\frac{1}{\sqrt{2}},\\
+\theta_{1}  &  =0,\quad\theta_{2}=\pi.
+\end{align}
+Substituting for $m,s$ and $r$ in the general form for the SORDO results in
+\begin{align}
+&  D^{2}\left(  g_{-}\right)  =\left(  S_{1}\right)  ^{-1}\left\{  \sum_{1\leq
+j\leq2}n_{j}S_{0}\left(  \hat{\jmath}\right)  \left\vert \psi_{j}\psi
+_{j+s}\right\rangle \left\langle \psi_{j}\psi_{j+s}\right\vert \right.
+\nonumber\\
+&  +\sum_{1\leq j\neq k\leq2}c_{j}c_{k}e^{i\left(  \theta_{j}-\theta
+_{k}\right)  }S_{0}\left(  \hat{\jmath}\hat{k}\right)  \left\vert \psi_{j}%
+\psi_{j+s}\right\rangle \left\langle \psi_{k}\psi_{k+s}\right\vert \left.
++\sum_{\substack{1\leq j<k\leq4\\k\neq j+2}}n_{j}n_{k}S_{-1}\left(
+\hat{\jmath}\hat{k}\right)  \left\vert \psi_{j}\psi_{k}\right\rangle
+\left\langle \psi_{j}\psi_{k}\right\vert \right\}  .
+\end{align}
+Noting that the symmetric functions are given by
+\begin{align}
+S_{1}  &  =n_{1}+n_{2}=1\\
+S_{0}\left(  \hat{1}\hat{2}\right)   &  =1\\
+S_{0}\left(  \hat{1}\right)   &  =S_{0}\left(  \hat{2}\right)  =1\\
+S_{-1}\left(  \hat{1}\hat{2}\right)   &  =0.
+\end{align}
+and substituting for $\bm{c,n}$ and $\bm{\theta}$ one obtains
+\begin{align}
+&  D^{2}\left(  g_{-}\right)  =\frac{1}{2}\left\{  \left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+\right\} \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad+\frac{1}{2}\left\{  \left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+e^{-i\pi}+\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}%
+\psi_{3}\right\vert e^{i\pi}\right\} \\
+&  =\frac{1}{2}\left\{  \left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{3}\right\vert -\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{4}\right\vert -\left\vert \psi_{2}\psi
+_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+\right\}
+\end{align}
+and finally substituting for $\bm{\psi}$ one gets eq. $\left(  \ref{Dirgm}%
+\right)  .$
+
+\bibliographystyle{apsrev}
+\bibliography{agpopt,bw,novel,San2008,coleman}
+
+\end{document}

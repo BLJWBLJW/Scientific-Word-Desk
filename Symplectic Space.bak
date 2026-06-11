@@ -1,0 +1,387 @@
+
+\documentclass{conm-p-l}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Wednesday, November 18, 2020 08:23:23}
+%TCIDATA{LastRevised=Thursday, November 19, 2020 11:48:12}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Author Packages for AMS\Contemporary Mathematics (Proceedings)">}
+%TCIDATA{CSTFile=conm-p-l.cst}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\theoremstyle{plain}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{exercise}{Exercise}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\copyrightinfo{2001}{enter name of copyright holder}
+
+\input{tcilatex}
+
+\begin{document}
+\title[Short Title]{Contemporary Mathematics (Proceedings)}
+\author{Author One}
+\address[A. One and A. Two]{Author OneTwo address line 1\\
+Author OneTwo address line 2}
+\email[A. One]{aone@aoneinst.edu}
+\urladdr{http://www.authorone.oneuniv.edu}
+\thanks{Thanks for Author One.}
+\author{Author Two}
+\curraddr[A. Two]{Author Two current address line 1\\
+Author Two current address line 2}
+\email[A.~Two]{atwo@atwoinst.edu}
+\urladdr{http://www.authortwo.twouniv.edu}
+\thanks{Thanks for Author Two.}
+\author{Author Three}
+\address[A. Three]{Author Three address line 1\\
+Author Three address line 2}
+\urladdr{http://www.authorthree.threeuniv.edu}
+\thanks{This paper is in final form and no version of it will be submitted
+for publication elsewhere.}
+\subjclass[2000]{Primary 05C38, 15A15; Secondary 05A15, 15A18}
+\date{July 27, 2001}
+\keywords{Keyword one, keyword two, keyword three}
+\dedicatory{Dedicated to the memory of S. Bach.}
+
+\begin{abstract}
+Replace this text with your own abstract.
+\end{abstract}
+
+\maketitle
+
+\section{Symplectic vector space}
+
+In mathematics, a symplectic vector space is a vector space $V$ over a field 
+$\mathbb{F}$ (for example the real numbers $\mathbb{R}$) equipped with a
+symplectic bilinear form.
+
+A \emph{symplectic bilinear form} is a mapping 
+\begin{equation}
+\U{3c9} :V\times \ V\rightarrow F
+\end{equation}
+that is
+
+\begin{itemize}
+\item bilinear: linear in each argument separately,
+
+\item alternating: $\U{3c9} (v,v)=0$ holds for all $v\in V$, and
+
+\item nondegenerate: $\U{3c9} (u,v)=0$ for all $v\in V$ implies that $u$ is
+zero.
+\end{itemize}
+
+If the underlying field has characteristic not $2$, alternation is
+equivalent to skew-symmetry. If the characteristic is $2$, the skew-symmetry
+is implied by, but does not imply alternation. In this case every symplectic
+form is a symmetric form, but not vice versa. Working in a fixed basis, $%
+\U{3c9} $ can be represented by a matrix. The conditions above say that this
+matrix must be skew-symmetric, nonsingular, and hollow (all diagonal
+elements are zero). This is not the same thing as a symplectic matrix, which
+represents a symplectic transformation of the space. If $V$ is
+finite-dimensional, then its dimension must necessarily be even since every
+skew-symmetric, hollow matrix of odd size has determinant zero. Notice the
+condition that the matrix be hollow is not redundant if the characteristic
+of the field is $2$. A symplectic form behaves quite differently from a
+symmetric form, for example, the scalar product on Euclidean vector spaces.
+
+\subsection{Contents}
+
+\begin{enumerate}
+\item Standard symplectic space
+
+\item Analogy with complex structures
+
+\item Volume form
+
+\item Symplectic map
+
+\item Symplectic group
+
+\item Subspaces
+
+\item Heisenberg group
+
+\item See also
+
+\item References
+\end{enumerate}
+
+\subsection{Standard symplectic space}
+
+The standard symplectic space is $\mathbb{R}^{2n}$ with the symplectic form
+given by a nonsingular, skew-symmetric matrix. Typically $\U{3c9} $ is
+chosen to be the block matrix%
+\begin{equation}
+\omega =\left( 
+\begin{array}{cc}
+\mathbb{O} & -\mathbb{I}_{n} \\ 
+\mathbb{I}_{n} & \mathbb{O}%
+\end{array}%
+\right) 
+\end{equation}
+
+where $\mathbb{I}_{n}$ is the $n\times n$ identity matrix. In terms of basis
+vectors $\left\{ x_{1},...,x_{n},y_{1},...,y_{n}\right\} $%
+\begin{eqnarray}
+\omega \left( x_{j},y_{k}\right)  &=&-\omega \left( y_{k},x_{j}\right)
+=\delta _{jk} \\
+\omega \left( x_{j},x_{k}\right)  &=&\omega \left( y_{j},y_{k}\right) =0 \\
+1 &\leq &j,k\leq n
+\end{eqnarray}
+
+A modified version of the Gram--Schmidt process shows that any
+finite-dimensional symplectic vector space has a basis such that $\U{3c9} $
+takes this form, often called a Darboux basis, or symplectic basis.
+
+There is another way to interpret this standard symplectic form. Since the
+model space $\mathbb{R}^{2n}$ used above carries much canonical structure
+which might easily lead to misinterpretation, we will use "anonymous" vector
+spaces instead. Let $V$ be a real vector space of dimension $n$ and $V^{d}$
+its dual space. Now consider the direct sum $W=V\oplus V^{d}$ of these
+spaces equipped with the following form:%
+\begin{equation}
+\omega \left( x+u,y+z\right) =z\left( x\right) -y\left( u\right) ;\quad
+x,u\in V,\quad y,z\in V^{d}
+\end{equation}%
+a\TEXTsymbol{\vert}nd consider its dual basis $\left\{ v_{1}^{d},\cdots
+,v_{n}^{d}\right\} .$ We can interpret the basis vectors as lying in $W$ if
+we write $x_{j}$ $=(v_{j},0)$ and $y_{j}$ $=$ $(0,v_{j}^{d})$. Taken
+together, these form a complete basis of $W$, $\left\{
+x_{1},...,x_{n},y_{1},...,y_{n}\right\} $.
+
+The form $\U{3c9} $ defined here can be shown to have the same properties as
+in the beginning of this section. On the other hand, every symplectic
+structure is isomorphic to one of the form $V\oplus V^{d}$. The subspace $V$
+is not unique, and a choice of subspace $V$ is called a \emph{polarization}.
+The subspaces that give such an isomorphism are called \emph{Lagrangian
+subspaces} or simply \emph{Lagrangians}.
+
+Explicitly, given a Lagrangian subspace (as defined below), then a choice of
+basis $\left\{ x_{1},...,x_{n}\right\} $ defines a dual basis for a
+complement, by%
+\begin{equation}
+\U{3c9} (x_{j},y_{k})=\U{3b4} _{jk}.
+\end{equation}
+
+\subsection{Analogy with complex structures}
+
+Just as every \emph{symplectic structure} is isomorphic to one of the form $%
+V\oplus V^{d}$, every \emph{complex structure} on a vector space is
+isomorphic to one of the form $V\oplus V$. Using these structures, the \emph{%
+tangent bundle} of an $n$-manifold, considered as a $2n$-manifold, has an
+almost complex structure, and the \emph{cotangent bundle} of an $n$%
+-manifold, considered as a $2n$-manifold, has a symplectic structure: 
+\begin{equation}
+T_{\ast }(T^{\ast }M)_{p}=T_{p}(M)\oplus (T_{p}(M))^{d}.
+\end{equation}
+
+The \emph{complex analog to a Lagrangian subspace is a real subspace }$V$, a
+subspace whose complexification is the whole space:%
+\begin{equation}
+W=V\oplus J_{V}V.
+\end{equation}
+As can be seen from the standard symplectic form above, every symplectic
+form on $\mathbb{R}^{2n}$ is isomorphic to the imaginary part of the
+standard complex (Hermitian) inner product on $\mathbb{C}^{n}$ (with the
+convention of the first argument being anti-linear).
+
+\subsection{Volume form}
+
+Let $\U{3c9} $ be an alternating bilinear form on an $n$-dimensional real
+vector space $V,\U{3c9} \in \wedge ^{2}V$. Then $\U{3c9} $ is non-degenerate
+if and only if $n$ is even and 
+\begin{equation}
+\U{3c9} ^{n/2}=\U{3c9} \wedge ...\wedge \U{3c9} 
+\end{equation}
+is a volume form. A volume form on a $n$-dimensional vector space $V$ is a
+non-zero multiple of the $n$-form $e_{1}^{d}\wedge ...\wedge e_{n}^{d}$
+where $\left\{ e_{1},...,e_{n}\right\} $ is a basis of $V$.
+
+For the standard basis defined in the previous section, we have%
+\begin{equation}
+\U{3c9} ^{n}=(-1)^{n/2}x_{1}^{d}\wedge \ldots \ \wedge x_{n}^{d}\wedge
+y_{1}^{d}\wedge \ldots \ \wedge y_{n}^{d},
+\end{equation}%
+which by reodering becomes 
+\begin{equation}
+\U{3c9} ^{n}=(-1)^{n/2}x_{1}^{d}\wedge y_{1}^{d}\wedge \ldots \ \wedge
+x_{n}^{d}\wedge \wedge y_{n}^{d}\ .
+\end{equation}
+
+Authors variously define $\U{3c9} ^{n}$ or $(-1)^{n/2}\U{3c9} ^{n}$ as the
+standard volume form. An occasional factor of $n!$ may also appear,
+depending on whether the definition of the alternating product contains a
+factor of $n!$ or not. The volume form defines an \emph{orientation on the
+symplectic vector space} $\left\{ V,\U{3c9} \right\} .$
+
+\subsection{Symplectic map}
+
+Suppose that $\left\{ V,\U{3c9} \right\} $ and $\left\{ W,\U{3c1} \right\} $
+are \emph{symplectic vector spaces.} Then a linear map 
+\begin{equation}
+f:V\rightarrow W
+\end{equation}
+is called a symplectic map if the pullback preserves the symplectic form,
+i.e. $f^{d}\left( \U{3c1} \right) =\U{3c9} $, where the pullback form is
+defined by 
+\begin{equation}
+f^{d}\U{3c1} (u,v)=\U{3c1} (f(u),f(v)).
+\end{equation}
+\emph{Symplectic maps are volume- and orientation-preserving}.
+
+\subsection{Symplectic group}
+
+If $V=W$, then a symplectic map $f$ is called a linear \emph{symplectic
+transformation} of $V$. In particular, in this case one has that 
+\begin{equation}
+\U{3c9} (f(u),f(v))=\U{3c9} (u,v),
+\end{equation}
+and so the linear transformation $f$ preserves the symplectic form. The set
+of all symplectic transformations forms a group and in particular a Lie
+group, called the symplectic group and denoted by $Sp(V)$ or sometimes $Sp(V,%
+\U{3c9} )$. In matrix form symplectic transformations are given by
+symplectic matrices.
+
+\subsection{Subspaces}
+
+Let $W$ be a linear subspace of $V$. Define the \emph{symplectic complement}
+of $W$ to be the subspace%
+\begin{equation}
+W^{\bot }=\{v\in V\mid \U{3c9} (v,w)=0\,\forall w\in W\}
+\end{equation}
+
+The symplectic complement satisfies:
+
+\begin{itemize}
+\item 
+\begin{equation}
+\left( W^{\bot }\right) ^{\bot }=W
+\end{equation}
+
+\item 
+\begin{equation}
+\dim \left\{ W\right\} +\dim \left\{ W^{\bot }\right\} =\dim \left\{
+V\right\} 
+\end{equation}
+\end{itemize}
+
+However, unlike orthogonal complements, $W^{\bot }\cap W$ need not be $\{0\}$%
+. We distinguish four cases:
+
+\begin{enumerate}
+\item $W$ is \emph{symplectic} if $W^{\bot }\cap W=\{0\}$. This is true if
+and only if $\U{3c9} $ restricts to a nondegenerate form on $W$. A
+symplectic subspace with the restricted form is a symplectic vector space in
+its own right.
+
+\item $W$ is \emph{isotropic} if $W\subseteq W^{\bot }$. This is true if and
+only if $\U{3c9} $ restricts to $0$ on $W$. Any one-dimensional subspace is
+isotropic.
+
+\item $W$ is \emph{coisotropic} if $W^{\bot }\subseteq W$. $W$ is
+coisotropic if and only if $\U{3c9} $ descends to a nondegenerate form on
+the quotient space $W/W^{\bot }$. Equivalently $W$ is coisotropic if and
+only if $W^{\bot }$ is isotropic. Any codimension-one subspace is
+coisotropic.
+
+\item $W$ is \emph{Lagrangian} if $W=W^{\bot }$. A subspace is Lagrangian if
+and only if it is both isotropic and coisotropic. In a finite-dimensional
+vector space, a Lagrangian subspace is an isotropic one whose dimension is
+half that of $V$. Every isotropic subspace can be extended to a Lagrangian
+one.
+\end{enumerate}
+
+Referring to the canonical vector space $\mathbb{R}^{2}$ above,
+
+\begin{itemize}
+\item the subspace spanned by $\{x_{1},y_{1}\}$ is symplectic
+
+\item the subspace spanned by $\{x_{1},x_{2}\}$ is isotropic
+
+\item the subspace spanned by $\left\{ x_{1},...,x_{n},y_{1}\right\} $ is
+coisotropic
+
+\item the subspace spanned by $\left\{ x_{1},...,x_{n}\right\} $ is
+Lagrangian.
+\end{itemize}
+
+\subsection{Heisenberg group}
+
+A \emph{Heisenberg }group can be defined for any symplectic vector space,
+and this is the typical way that Heisenberg groups arise.
+
+A vector space can be thought of as a commutative Lie group (under
+addition), or equivalently as a commutative Lie algebra, with trivial Lie
+bracket. The Heisenberg group is a \emph{central extension} of such a
+commutative Lie group/algebra: the symplectic form defines the commutation,
+analogously to the \emph{canonical commutation relations (CCR)}, and a \emph{%
+Darboux basis} corresponds to canonical coordinates -- in physics terms, to
+momentum operators and position operators.
+
+Indeed, \emph{by} the \emph{Stone--von Neumann} theorem, every
+representation satisfying the CCR (every representation of the Heisenberg
+group) is of this form, or more properly unitarily conjugate to the standard
+one.
+
+Further, the group algebra of (the dual to) a vector space is the \emph{%
+symmetric algebra}, and the group algebra of the Heisenberg group (of the
+dual) is the \emph{Weyl algebra}: one can think of the \emph{central
+extension} as corresponding to \emph{quantization or deformation}.
+
+Formally, the symmetric algebra of $V$ is the group algebra of the dual, 
+\begin{equation}
+\func{Sym}\left\{ V\right\} =\vee \left( V\right) \equiv K[V^{d}]
+\end{equation}%
+and the Weyl algebra is the group algebra of the (dual) Heisenberg group 
+\begin{equation}
+\func{Weyl}\left\{ V\right\} =K[H(V^{d})]
+\end{equation}%
+Since passing to group algebras is a \emph{contravariant functor}, the
+central extension map 
+\begin{equation}
+H(V)\rightarrow V
+\end{equation}
+becomes an inclusion%
+\begin{equation}
+\func{Sym}\left\{ V\right\} \hookrightarrow W(V).
+\end{equation}
+
+\subsection{See also}
+
+\begin{itemize}
+\item  A symplectic manifold is a smooth manifold with a smoothly-varying
+closed symplectic form on each tangent space
+
+\item  Maslov index
+
+\item A symplectic representation is a group representation where each group
+element acts as a symplectic transformation.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,2252 @@
+% Converted from Microsoft Word to LaTeX
+% by Chikrii Softlab Word2TeX converter (version 3.0)
+% Copyright (C) 1999-2003 Chikrii Softlab. All rights reserved.
+% http://www.chikrii.com
+% mailto: info@chikrii.com
+% License: CSL#00004F
+
+\documentclass{amsart}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{center}
+\textbf{Two Body Propagator Approximation}
+\end{center}
+
+\begin{center}
+\textbf{Using a Coherent States Approach}
+\end{center}
+
+\underline {\textbf{Introduction}}
+
+Isolated quantum systems do not interact with their environment and are thus
+unobservable. In order to determine their properties they must interact with
+external probes such as electromagnetic fields of various frequencies. The
+radiation field and the system under study, which we will consider to be a
+molecular system, can be considered as a joint system that evolves under a
+Hamiltonian that describes the behavior of both radiation and molecules.
+
+The effect of the radiation on the molecular subsystem can be monitored by
+changes in its associated density matrix and reduced density matrices. The
+interaction of the electromagnetic field with molecules can be approximated
+semi classically in a standard fashion by averaging over the photonic
+degrees of freedom and only considering terms of first order in the electric
+and magnetic fields. This leads to a reduced Hamiltonian for the molecular
+subsystem that includes effective time dependent one body potentials
+describing the interaction with the radiation field.
+
+The behavior of a physical system, i.e. changes in its density matrices, is
+fully described quantum mechanically by its associated propagator. A
+powerful method that is often used to evaluate the full quantum propagator
+between an initial and a final state is the path integral construction. Path
+integrals can be formulated in terms of complex valued paths in spaces of
+generalized coherent states. These spaces are complex differentiable
+manifolds, that are also coset spaces of groups. The family of coherent
+states chosen determines the specific geometric structure of the space of
+the complex valued paths, \textbf{z}($t)$, via a metric function $C\left( {{\rm
+{\bf z}},{\rm {\bf {\bar {z}}'}}} \right)$ . The time development of the
+paths is described by a \textit{classical Hamiltonian }function $E\left( {{\rm {\bf \bar {z}}},{\rm {\bf
+z}}} \right)$. The form and degree of these functions is determined by the
+family of coherent states, and thus the group/coset pair. If the Lagrangian
+associated with the Hamiltonian function is quadratic then the path integral
+can be evaluated exactly, if this is not the case approximations must be
+invoked.
+
+If the external radiation fields are of low intensity and the molecular
+system is in a stationary state, it is sufficient to consider the linear
+response of the molecular state to the applied fields. This can be
+characterized by a linear response function that can be calculated by using
+first order perturbation theory. Noting that changes in the expectation
+values of one particle observables are determined by changes in the one
+particle reduced density matrix, one can describe the effects of the
+radiation field, (approximated as an effective one particle interaction), on
+the expectation values of any one particle observable in terms of retarded
+two particle propagators.
+
+Two particle propagators based on a given molecular initial state can be
+expressed as a second order functional derivative of the propagator, that
+contains interaction with arbitrary one particle external fields, with
+respect to variations of these fields evaluated at an initial and a final
+time. These times are chosen to bracket the time during which the molecular
+system is actually interacting, before the initial time and after the final
+time there is no interaction and the system is evolving "freely".
+
+The quantum propagator of a N particle molecular system characterizes the
+linear response of the system to external probes constituted of fields that
+interact through M -body forces, where M $\leqslant $ N, as these are all
+described by changes in the N - particle density matrix. Thus if one has
+explicit analytic expressions for the full propagator of the molecular
+system between arbitrary initial and final states one can deduce explicit
+expressions for all \textit{reduced }propagators. If one is interested only to the response
+of the system to one body external fields it is sufficient to consider two
+particle propagators. This is true for both exact and approximate
+propagators. As is well known exact solutions for quantum evolution
+operators have only been determined for simple model systems, and are not
+known for multi electron molecular systems that involve coulombic
+interactions between electrons. Thus for practical applications the goal is
+to develop systematic, cost effective, theoretically well founded and
+nonarbitary approximation schemes, that lead to accurate enough results to
+benefit experimentalists.
+
+One way to obtain approximations to propagators is to approximate the path
+integral by using the Stationary Phase Approximation (SPA) based on a
+specific family of coherent states. This is equivalent to using the Time
+Dependent Variation Principle (TDVP) based on the same family of states.
+Approximate stationary states of the molecular system then correspond to the
+special stationary phase "paths" that are critical points of the
+corresponding \textit{classical }Hamiltonian. The linear response of these approximate
+stationary states to external perturbing fields would then involve the full
+\textit{classical }Hamiltonian, which again, however, usually makes the problem numerically
+intractable.
+
+In order to obtain computational feasible solutions one makes a first order
+approximation to the linear response by considering a second order
+approximation of the \textit{classical }Hamiltonian around a critical point. This construction
+is analogous to including first order corrections to the SPA of the path
+integral by expanding the \textit{classical }Hamiltonian in the Lagrangian to second order
+around the classical path
+
+The second order approximation to the \textit{classical }Hamiltonian clearly depends on the
+coordinate system used, and hence on the family of coherent states being
+utilized. If one is interested in the response to external fields that
+interact through one body forces then these forces need to be expressible in
+terms of the Lie algebra generators of the group associated with the
+coherent states. For systems in which the number of particles is a good
+quantum number and is conserved, i.e. a molecular system, the family of
+coherent states should thus be based on the group SU(r), where r = 2s is the
+size of the finite dimensional subspace one is approximating the full
+Hilbert space by.
+
+The Lie algebra of the group SU(r) has three Cartan decomposition into
+\[
+\begin{array}{l}
+ su(2s)=so(2s,R)\oplus so(2s,R)^\bot \\
+ su(2s)=su(N)\oplus su(2s-N)^\bot \\
+ su(2s)=usp(2s)\oplus usp(2s)^\bot \\
+ \end{array}
+\]
+\begin{center}
+(1)
+\end{center}
+
+where the orthogonality is with respect to the killing form of \textit{su(2s)}. These
+decomposition define three distinct coset decompositions of SU(r)
+\[
+\begin{array}{l}
+ \raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}} {\mbox{SU(N)}\otimes
+\mbox{SU(r-N)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{SU(N)}\otimes
+\mbox{SU(r-N)}}$}\mbox{ } \\
+ \raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}
+\\
+ \raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{SO(r)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{SO(r)}}$}
+\\
+ \end{array}
+\]
+\begin{center}
+(2)
+\end{center}
+
+and thus three families of coherent states. The
+$\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}} {\mbox{SU(N)}\otimes
+\mbox{SU(r-N)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{SU(N)}\otimes
+\mbox{SU(r-N)}}$}\mbox{ }$- coherent states give the well known Thouless
+parameterization of Independent Particle (IP) States and lead to the
+standard Random Phase Approximation (RPA) for the linear response function.
+The $\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$-
+coherent states can be shown to be a parameterization of Antisymmetrized
+Geminal Power (AGP) states and produce a generalized RPA for the linear
+response function. At the present time the form of
+$\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{SO(r)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{SO(r)}}$}$-
+coherent states are not known.
+
+Coset decompositions of Lie groups when used in conjunction with Parabolic
+Induction is a powerful method in the construction and characterization of
+irreducible group representations. Representations are induced from the
+action of the group on the coset space to the action of the group on
+functions defined on the coset space. Points of the coset space corresponds
+to coherent states, thus the induced representations act on functions of
+coherent states. Hilbert spaces of these functions produce a holomorphic
+representation of quantum states and thus of quantum mechanics. Due to the
+coset structure and Lie group properties of the coherent state manifold,
+quantum mechanical observables can be represented as differential operators
+acting on functions defined on this manifold. By using such differential
+operator representations one can obtain expressions for matrix elements of
+observables in a coherent state \textit{overcomplete }basis and thus for expectation values for
+observables with respect to any state. These expressions are of great
+importance in practical applications.
+
+The coset spaces are Homogeneous spaces that have the structure of Symmetric
+spaces. The method of Parabolic Induction is a fundamental and powerful tool
+used in the study of Noncommutative Harmonic Analysis on Symmetric spaces
+and in the classification and properties of various classes of differential
+operators that act on these spaces. The exact and approximate time evolution
+and response of quantum states to external probes can be formulated within
+these mathematical structures. Thus one has a complimentary between the
+abstract classification, analysis and properties of these mathematical
+structures on one hand and the quantitative description of concrete physical
+processes on the other. The mathematical framework leads one to develop well
+founded, rigorously expressed and improved approximation schemes, while the
+physical constraints and properties imposed by real world applications
+illuminates and focuses attention on specific relationships in the
+mathematical structure that would not otherwise be apparent.
+
+\underline {\textbf{Background}}
+
+During the 1980's we developed approximation methods for two particle
+propagators based on the properties of Antisymmtrized Geminal Power (AGP)
+states. These properties were based on:
+
+(a) Excited states, $\left\{ {\left| {\Psi _n } \right\rangle } \right\}$,
+of the molecular system being well described by single particle excitations
+$\left\{ {Q_n^\dag } \right\}$ from an energy optimized AGP state i.e.
+\[
+\left| {\Psi _n } \right\rangle =Q_n^\dag \left| {AGP} \right\rangle
+=\sum\limits_{ij} {Q_{nij} a_i^\dag a_j^ \left| {AGP} \right\rangle }
+\]
+(b) a vacuum condition being satisfied
+\[
+Q_n^ \left| {AGP} \right\rangle =0
+\]
+(c) the off diagonal blocks of the energy Hessian at stationary points being
+small in norm i.e.
+\[
+\begin{array}{c}
+ E\left( {\zeta ,\bar {\zeta }} \right)=\frac{\left\langle {AGP\left( \zeta
+\right)} \mathrel{\left| {\vphantom {{AGP\left( \zeta \right)} {H\mbox{
+}AGP\left( \zeta \right)}}} \right. \kern-\nulldelimiterspace} {H\mbox{
+}AGP\left( \zeta \right)} \right\rangle }{\left\langle {AGP\left( \zeta
+\right)} \mathrel{\left| {\vphantom {{AGP\left( \zeta \right)} {\mbox{
+}AGP\left( \zeta \right)}}} \right. \kern-\nulldelimiterspace} {\mbox{
+}AGP\left( \zeta \right)} \right\rangle } \\
+ {\rm {\bf D}}E\left( {\zeta _0 ,\bar {\zeta }_0 } \right)={\rm {\bf
+0}}\mbox{; }{\rm {\bf D}}^{\rm {\bf 2}}E\left( {\zeta _0 ,\bar {\zeta }_0 }
+\right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial ^2E\left( {\zeta _0 ,\bar {\zeta }_0 } \right)}{\partial
+\zeta \partial \bar {\zeta }}} \hfill & {\frac{\partial ^2E\left( {\zeta _0
+,\bar {\zeta }_0 } \right)}{\partial \zeta \partial \zeta }} \hfill \\
+ {\frac{\partial ^2E\left( {\zeta _0 ,\bar {\zeta }_0 } \right)}{\partial
+\bar {\zeta }\partial \bar {\zeta }}} \hfill & {\frac{\partial ^2E\left(
+{\zeta _0 ,\bar {\zeta }_0 } \right)}{\partial \bar {\zeta }\partial \zeta
+}} \hfill \\
+\end{array} }} \right) \\
+ \left\| {\frac{\partial ^2E\left( {\zeta _0 ,\bar {\zeta }_0 }
+\right)}{\partial \zeta \partial \zeta }} \right\|<\varepsilon ;\mbox{
+}\left\| {\frac{\partial ^2E\left( {\zeta _0 ,\bar {\zeta }_0 }
+\right)}{\partial \bar {\zeta }\partial \bar {\zeta }}} \right\|<\varepsilon
+\\
+ \end{array}
+\]
+It was found that the approximation was improved by the inclusion of some
+special many particle excitation operators that were associated with the
+number operators $\left\{ {a_i^\dag a_i^ } \right\}$\underline {\textbf{,}}
+however, the justification of including such operators was not well
+understood. In the case of the exact propagator, for which $\left\{
+{Q_n^\dag } \right\}$ are in general multiparticle operators, all of the
+properties (a), (b) and (c) are satisfied with the off diagonal Hessian
+block being identically zero i.e. ' =0.
+
+The numerical results obtained from the application of this approximation
+scheme agreed well with experiment, but many questions about the theoretical
+basis of the approximation remained. Recently, however, this approximation
+has been placed within the context of coherent states and the group
+structure of many particle fermion state space. Within this context the
+original approximation (including the modifications to improve it) can be
+rigorously derived, and its relation to many other mathematical and physical
+properties fully displayed. This new formulation also produces more
+efficient and flexible numerical implementations.
+
+\underline {\textbf{Proposed Work}}
+
+We propose to:
+
+1. Develop numerical procedures to find critical points of the generalized
+classical equations of motion on the nonlinear phase space constituted by
+$\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$-
+coherent states. This corresponds to finding energy optimized AGP's. These
+numerical procedures will be based on the theoretical work published in
+"Coherent State Approach to Electron nuclear Dynamics with an
+Antisymmetrized Geminal Power State". Which describes iterative schemes
+based on nonorthogonal atomic orbital bases anchored to nuclear positions.
+These schemes are similar to but more general than iterative Hartree-Fock
+self-consistent field methods. The $\raise0.7ex\hbox{${\mbox{SU(r)}}$}
+\!\mathord{\left/ {\vphantom {{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$-
+coherent states depend on nuclear positions through their atomic orbital
+dependence, thus allowing the critical point search to simultaneously
+directly find electronic energy and geometry optimized AGP states, as well
+as transition states.
+
+2. Analyze the foliation structure of the
+$\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$-
+coherent state manifold, and its implications for finding critical points.
+This involves a study of the analytic properties of the metric function
+$C\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}} \right)$.
+
+3. Apply the method that is developed to practical problems of importance in
+material science, physics and chemistry, in the study of the properties of
+new materials and the clarification and understanding of experimental
+spectra, characterizing new molecular products.
+
+This will be accomplished by using energy optimized AGP states as
+approximate stationary states in generalized RPA approximations to the
+linear response function=retarded propagator and its Fourier-Laplace
+transform. As the poles of the retarded propagator correspond to excitation
+energies/frequencies, and the residues to oscillator strengths, approximate
+UV, Visible, Infrared and microwave spectra can be constructed.
+
+4. Study the representations of SL(r) and SU(r) induced by parabolic
+induction based on the coset $\raise0.7ex\hbox{${\mbox{SU(r)}}$}
+\!\mathord{\left/ {\vphantom {{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$-
+space and the physical meaning of the invariant differential operators that
+act on holomorphic functions defined on this space.
+
+In the following we will describe the technical details pertinent to this
+proposal. Their presentation will be organized in the proceeding manner:
+
+1. Definitions.
+
+2. Path Integrals.
+
+1. Coherent State Formulation.
+
+2. Stationary Phase Approximation.
+
+3. Coherent States.
+
+1. Definitions and Construction.
+
+2. Group Factorization.
+
+3. Differential Structure of Coset Space.
+
+4. Linear Response.
+
+1. Exact Linear Response.
+
+2. Linear Response in a Coherent State Setting.
+
+3. Exact Linear Response in Coherent State Setting.
+
+4. Linear Response Described by $\raise0.7ex\hbox{${\mbox{SU}\left( r
+\right)}$} \!\mathord{\left/ {\vphantom {{\mbox{SU}\left( r \right)}
+{\mbox{USp}\left( r
+\right)}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp}\left(
+r \right)}$}$-Coherent States\underline {\textbf{.}}
+
+5. Functions defined on the Coset Space.
+
+1. Space of Holomorphic Quantum Wave Functions.
+
+2. Representation of Observables as Differential Operators.
+
+3. Induced Representations.
+
+\newpage
+\underline {\textbf{1. 0 Definitions.}}
+
+We will base all expressions on the standard second quantized formulation
+electronic quantum mechanics, i.e.
+\[
+\begin{array}{c}
+ H_\mbox{F} =\mbox{ }\mathop \oplus \limits_{N=0}^{N=r} H^N\mbox{:
+Fermi-Fock Space} \\
+ H^N=\mbox{ }\Lambda H^1\mbox{ : N-fold Antisymmetric Tensor Product} \\
+ H^1=\mbox{ linear span }\left\{ {\varphi _\mbox{i} ;1\leqslant i\leqslant
+r} \right\};\mbox{ }\varphi _\mbox{i} \mbox{ are one particle functions of
+position and spin} \\
+ B(H_\mbox{F} )\mbox{ }=\mbox{ Bounded Operators acting in }H_\mbox{F} \\
+ \left\{ {a\left( \varphi \right)^\dag ,a\left( \psi \right)}
+\right\}=\left\langle {\varphi ,\psi } \right\rangle {\rm {\bf I}}\mbox{
+Anticommutation Relationships} \\
+ B\left( {H_\mbox{F} } \right)=\mbox{ linear Span }\left\{ {a_{i_1 }^{^\dag
+} \cdots a_{i_p }^{^\dag } a_{i_1 }^ \cdots a_{i_q }^{^} } \right\};\mbox{
+}1\leqslant i_1 <\cdots <i_p \leqslant r;\mbox{ }1\leqslant i_1 <\cdots <i_q
+\leqslant r;\mbox{ 1}\leqslant p,q\leqslant r \\
+ a_i^\dag =a\left( {\varphi _i } \right)^{^\dag };\mbox{ }\left\langle
+{\varphi _i ,\varphi _j } \right\rangle =\delta _{ij} \\
+ \end{array}
+\]
+\[
+\begin{array}{l}
+ \mbox{ The generators }\left\{ {a_i^\dag ,a_i^ ,a_i^\dag a_j
+-\frac{1}{2}\delta _{ij} I,a_i^\dag a_j^\dag ,a_i a_j ;1\leqslant
+i,j\leqslant r} \right\}\mbox{ satisfy the commutation } \\
+ \mbox{relationships of the lie algebra }so\mbox{(2r+1), and generate a
+representation } \\
+ \mbox{of the universal enveloping algebra of }so\mbox{(2r+1) in
+}B\mbox{(}H_F \mbox{), which is in fact all } \\
+ \mbox{of }B\mbox{(}H_F \mbox{). The subset of generators }\left\{ {a_i^\dag
+a_j -\frac{1}{2}\delta _{ij} I,a_i^\dag a_j^\dag ,a_i a_j ;1\leqslant
+i,j\leqslant r} \right\}\mbox{ satisfy the } \\
+ \mbox{commutation relationships of the lie algebra }so\mbox{(2r), and
+generate a } \\
+ \mbox{representation the universal enveloping of }so\mbox{(2r) in
+}B\mbox{(}H_F \mbox{). The generators } \\
+ \left\{ {a_i^\dag a_j -\frac{1}{2}\delta _{ij} I;1\leqslant i,j\leqslant r}
+\right\}\mbox{ satisfy the commutation relationships of the lie algebra } \\
+ su\mbox{(r), and generate a representation the universal enveloping of
+}su\mbox{(r) in }B\mbox{(}H_F \mbox{). } \\
+ \mbox{ The representation of }so\mbox{(2r+1) is irreducible, while the
+representations of } \\
+ so\mbox{(2r) and }su\mbox{(r) are reducible. Irreducible representations of
+}so\mbox{(2r) are } \\
+ \mbox{obtained by restricting to the subspaces of even or odd states in
+}H_F \mbox{, while} \\
+ \mbox{irreducible representations of }su\mbox{(r) are obtained by
+restricting to the } \\
+ \mbox{subspaces of states of fixed integer particle number. } \\
+ \end{array}
+\]
+\newpage
+\underline {\textbf{2. Path Integrals}}
+
+\underline {\textbf{2.1. Coherent State Formulation .}}
+\[
+\begin{array}{c}
+ \mbox{ Solutions of TDSE are of the form }\left| {\Psi \left( t \right)}
+\right\rangle =e^{-\frac{i}{\hbar }Ht}\left| {\Psi \left( 0 \right)}
+\right\rangle \mbox{. Introducing the resolution of} \\
+ \mbox{ the identity }I=\int {\left| {\rm {\bf z}} \right\rangle
+\left\langle {\rm {\bf z}} \right|} \mbox{ }d\mu \left( {\rm {\bf z}}
+\right)\mbox{ the evolution operator matrix elements }\equiv
+\mbox{propagator } \\
+ \mbox{ kernel in this representation are } \\
+ \mbox{ }P({\rm {\bf {z}'}},{\rm {\bf z}};t)=\left\langle {{\rm {\bf {z}'}}}
+\mathrel{\left| {\vphantom {{{\rm {\bf {z}'}}} {e^{-\frac{i}{\hbar }Ht}{\rm
+{\bf z}}}}} \right. \kern-\nulldelimiterspace} {e^{-\frac{i}{\hbar }Ht}{\rm
+{\bf z}}} \right\rangle \mbox{ and }\left| {\Psi \left( t \right)}
+\right\rangle =\int {\left| {{\rm {\bf {z}'}}} \right\rangle P({\rm {\bf
+{z}'}},{\rm {\bf z}};t)\left\langle {\rm {\bf z}} \right|d\mu \left( {{\rm
+{\bf {z}'}}} \right)} d\mu \left( {\rm {\bf z}} \right)\mbox{ }\left| {\Psi
+\left( 0 \right)} \right\rangle \\
+ \end{array}
+\]
+\[
+\begin{array}{l}
+ \mbox{Using} \mbox{the} \mbox{coherent state construction} \mbox{the}
+\mbox{Propagator} \mbox{kernel} becomes \mbox{an } \\
+ \mbox{integral} \mbox{over} \mbox{paths with} \mbox{fixed} \mbox{end}
+\mbox{points }{\rm {\bf z}}\left( 0 \right)= {\rm {\bf z}}_i \mbox{ and
+}{\rm {\bf z}}\left( t \right)= {\rm {\bf z}}_f \\
+ P \left( {{\rm {\bf z}}_f ,{\rm {\bf z}}_i ,t} \right)\approx \int_{{\rm
+{\bf z}}_i }^{{\rm {\bf z}}_f } {e^{\left\{ {\frac{i}{\hbar }\int_0^t
+{\left\{ {\left. {\frac{i\hbar }{2}\ln \left\langle {{\rm {\bf z}}\left(
+{{{t}'}'} \right)} \mathrel{\left| {\vphantom {{{\rm {\bf z}}\left(
+{{{t}'}'} \right)}
+{\overset{\lower0.5em\hbox{$\smash{\scriptscriptstyle\leftrightarrow}$}}\to
+{{\partial }} _t {\rm {\bf z}}\left( {{t}'} \right)}}} \right.
+\kern-\nulldelimiterspace}
+{\overset{\lower0.5em\hbox{$\smash{\scriptscriptstyle\leftrightarrow}$}}\to
+{{\partial }} _t {\rm {\bf z}}\left( {{t}'} \right)} \right\rangle }
+\right|_{{{t}'}'={t}'} -E\left( {{\rm {\bf z}}\left( {{t}'} \right)}
+\right)} \right\}d\mbox{ }{t}'} } \right\}}d\mu ({\rm {\bf z}})} \mbox{, }
+\\
+ \mbox{where }E\left( {{\rm {\bf z}}\left( {{t}'} \right)}
+\right)=\frac{\left\langle {{\rm {\bf z}}\left( {{t}'} \right)}
+\mathrel{\left| {\vphantom {{{\rm {\bf z}}\left( {{t}'} \right)} {H{\rm {\bf
+z}}\left( {{t}'} \right)}}} \right. \kern-\nulldelimiterspace} {H{\rm {\bf
+z}}\left( {{t}'} \right)} \right\rangle }{\left\langle {{\rm {\bf z}}\left(
+{{t}'} \right)} \mathrel{\left| {\vphantom {{{\rm {\bf z}}\left( {{t}'}
+\right)} {{\rm {\bf z}}\left( {{t}'} \right)}}} \right.
+\kern-\nulldelimiterspace} {{\rm {\bf z}}\left( {{t}'} \right)}
+\right\rangle } \\
+ \end{array}
+\]
+The path integral Action and Largrangian are defined as
+\[
+\begin{array}{c}
+ P\left( {{\rm {\bf z}}_f ,{\rm {\bf z}}_i ,t} \right)=\int_{{\rm {\bf z}}_i
+}^{{\rm {\bf z}}_f } {e^{\frac{i}{\hbar }A\left( {{\rm {\bf z}}(t)}
+\right)}d\mu ({\rm {\bf z}})} \mbox{ } \\
+ A\left( {{\rm {\bf z}}(t)} \right)=\int_0^t {L\left( {{\rm {\bf z}},{\rm
+{\bf \dot {z}}},{t}'} \right)d{t}'} \\
+ L\left( {{\rm {\bf z}},{\rm {\bf \dot {z}}},{t}'} \right)=\left.
+{\frac{i\hbar }{2}\ln \left\langle {{\rm {\bf z}}\left( {{{t}'}'} \right)}
+\mathrel{\left| {\vphantom {{{\rm {\bf z}}\left( {{{t}'}'} \right)}
+{\overset{\lower0.5em\hbox{$\smash{\scriptscriptstyle\leftrightarrow}$}}\to
+{{\partial }} _t {\rm {\bf z}}\left( {{t}'} \right)}}} \right.
+\kern-\nulldelimiterspace}
+{\overset{\lower0.5em\hbox{$\smash{\scriptscriptstyle\leftrightarrow}$}}\to
+{{\partial }} _t {\rm {\bf z}}\left( {{t}'} \right)} \right\rangle }
+\right|_{{{t}'}'={t}'} -E\left( {{\rm {\bf z}}\left( {{t}'} \right)} \right)
+\\
+ \end{array}
+\]
+\underline {\textbf{2.2 Stationary Phase Approximation}}
+\[
+\begin{array}{l}
+ \mbox{The stationary phase approximation }\delta A\left( {{\rm {\bf z}}_c }
+\right)=0;\mbox{ with fixed end points }{\rm {\bf z}}_c (t)={\rm {\bf z}}_f
+; \\
+ \mbox{ }{\rm {\bf z}}_c (0)={\rm {\bf z}}_i \mbox{ produces the generalized
+classical equations } \\
+ \mbox{ }i\hbar \sum {C_{ij} \frac{dz_j }{dt}} =\frac{\partial E}{\partial
+\bar {z}_i };\mbox{ -}i\hbar \sum {\bar {C}_{ij} \frac{d\bar {z}_j }{dt}}
+=\frac{\partial E}{\partial z_i } \\
+ \mbox{over the phase space formed by the manifold of states }\left\{
+{\left| {\rm {\bf z}} \right\rangle } \right\}\mbox{. } \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{Applying the Stationary Phase Approximation one obtains } \\
+ \int_{{\rm {\bf z}}_i }^{{\rm {\bf z}}_f } {e^{\frac{i}{\hbar }A\left(
+{{\rm {\bf z}}(t)} \right)}d\mu ({\rm {\bf z}})} \approx \sum\limits_c {K_c
+\left| {\det \left( {\frac{i}{2\pi \hbar }\frac{\partial ^2A\left( {{\rm
+{\bf z}}_c } \right)}{\partial {\rm {\bf x}}\partial {\rm {\bf x}}}}
+\right)} \right|^{-\frac{1}{2}}e^{\frac{i}{\hbar }A\left( {{\rm {\bf z}}_c
+(t)} \right)}} \\
+ \mbox{where }{\rm {\bf x}}\mbox{=}{\rm {\bf z}}\mbox{ or }{\rm {\bf \bar
+{z}}},\mbox{ with the conditions }\delta A\left( {\rm {\bf z}}
+\right)=0\Leftrightarrow \delta L\left( {\rm {\bf z}} \right)=0;\mbox{ }{\rm
+{\bf z}}_c (t)={\rm {\bf z}}_f ;\mbox{ }{\rm {\bf z}}_c (0)={\rm {\bf z}}_i
+\\
+ \mbox{and the paths }{\rm {\bf z}}_c \left( t \right)\mbox{ are solutions
+to generalized classical equations of motion. } \\
+ \end{array}
+\begin{array}{c}
+ \mbox{ If the Lagragian is Quadratic the "classical paths" }\left\{ {{\rm
+{\bf z}}_c (t)} \right\}\mbox{ produce an } \\
+ \mbox{exact propagator given by } \\
+ P\left( {{\rm {\bf z}}_f ,{\rm {\bf z}}_i ,t} \right)=\sum\limits_c {\sqrt
+{\det \left\{ {\frac{i}{h}\frac{\partial ^2A({\rm {\bf z}}_c (t))}{\partial
+{\rm {\bf z}}_f \partial {\rm {\bf z}}_i }} \right\}} } e^{\frac{i}{\hbar
+}A\left( {{\rm {\bf z}}_{\rm {\bf c}} \left( t \right)} \right)} \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{So for stationary phase approximation or quadratic Lagragians} \\
+ \left\langle {{\rm {\bf {z}'}}} \mathrel{\left| {\vphantom {{{\rm {\bf
+{z}'}}} {\Psi \left( t \right)}}} \right. \kern-\nulldelimiterspace} {\Psi
+\left( t \right)} \right\rangle \approx \int {\sum\limits_c {\Omega \left(
+{{\rm {\bf z}}_c \left( t \right)} \right)e^{\frac{i}{\hbar }A_{{\rm {\bf
+{z}'z}}} \left( {{\rm {\bf z}}_c (t)} \right)}} } \left\langle {{\rm {\bf
+z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}} {\Psi \left( 0 \right)}}}
+\right. \kern-\nulldelimiterspace} {\Psi \left( 0 \right)} \right\rangle
+\mbox{ }d\mu \left( {\rm {\bf z}} \right) \\
+ \Updownarrow \\
+ \left\langle {{\rm {\bf z}}\left( t \right)} \mathrel{\left| {\vphantom
+{{{\rm {\bf z}}\left( t \right)} \Psi }} \right. \kern-\nulldelimiterspace}
+{\Psi } \right\rangle =\int {\sum\limits_c {\Omega \left( {{\rm {\bf z}}_c
+\left( t \right)} \right)e^{\frac{i}{\hbar }A_{{\rm {\bf {z}'z}}} \left(
+{{\rm {\bf z}}_c (t)} \right)}} } \left\langle {{\rm {\bf z}}\left( 0
+\right)} \mathrel{\left| {\vphantom {{{\rm {\bf z}}\left( 0 \right)} \Psi }}
+\right. \kern-\nulldelimiterspace} {\Psi } \right\rangle \mbox{ }d\mu \left(
+{\rm {\bf z}} \right) \\
+ \Updownarrow \\
+ \Psi \left( {{\rm {\bf z}}\left( t \right)} \right)=\int {\sum\limits_c
+{\Omega \left( {{\rm {\bf z}}_c \left( t \right)} \right)e^{\frac{i}{\hbar
+}A_{{\rm {\bf {z}'z}}} \left( {{\rm {\bf z}}_c (t)} \right)}} } \Psi \left(
+{{\rm {\bf z}}\left( t \right)} \right)\mbox{ }d\mu \left( {\rm {\bf z}}
+\right) \\
+ \end{array}
+\]
+The SPA approximation can be improved by using a quadratic approximation to
+the classical Hamiltonian around stationary paths, produced by truncating
+the Taylor series expansion about such points at second order.
+
+\underline {\textbf{3. Coherent States}}
+
+\underline {\textbf{3.1 Definition and Construction}}
+
+In a quantum mechanical context the following prescription is the one
+essentially followed in the construction of group coherent states.
+\[
+\begin{array}{l}
+ \mbox{ The coherent state construction is based on finding a subspace of
+the hilbert space of } \\
+ \mbox{states }H, \mbox{that carries a unitary irrep, G}_H \mbox{, of a
+compact group G. The subspace can be } \\
+ \mbox{all of }H.\mbox{ } \\
+ \mbox{ The groups we will be considering are SU}\left( {H^\mbox{N}\mbox{ }}
+\right)\equiv \mbox{SU}\left( {\left( {{\begin{array}{*{20}c}
+ \mbox{r} \hfill \\
+ \mbox{N} \hfill \\
+\end{array} }} \right)\mbox{ }} \right)\mbox{ and SU}\left( {H^1\mbox{ }}
+\right)\equiv \mbox{SU}\left( \mbox{r} \right),\mbox{ } \\
+ \mbox{the groups associated with N-electron state space and 1-electron
+state space respectively. } \\
+ \mbox{The irreducibel representations of SU}\left( {H^\mbox{N}\mbox{ }}
+\right)\mbox{ and SU}\left( {H^1\mbox{ }} \right)\mbox{ are those carried by
+}H^\mbox{N}\mbox{. } \\
+ \mbox{ A reference} \mbox{state, }\Phi \in H, \mbox{determines a maximally
+compact "isotropy" group, } \\
+ \mbox{H}_\Phi \mbox{ of }\Phi \mbox{ that is contained in G}_H \subseteq
+\mbox{SU}\left( {H\mbox{ }} \right)\mbox{, where H}_\Phi \mbox{=}\left\{
+{\mbox{g}\in \mbox{G}_H \mbox{; g :}\Phi \to \Phi } \right\}\mbox{. G}_H
+\mbox{ is then } \\
+ \mbox{factored through the left coset so that G}_H =\left( {{\mbox{G}_H }
+\mathord{\left/ {\vphantom {{\mbox{G}_H } {\mbox{H}_V }}} \right.
+\kern-\nulldelimiterspace} {\mbox{H}_V }} \right)\mbox{H}_V .\mbox{ } \\
+ \mbox{ The reference state we will be focusing on in the proposed work is
+an } \\
+ \mbox{Antisymmetrized Geminal Power (AGP) state }\left|
+{g^{\frac{\mbox{N}}{\mbox{2}}}} \right\rangle \in H^\mbox{N}\mbox{ given by
+} \\
+ \mbox{ }g^{\frac{\mbox{N}}{\mbox{2}}}=\underbrace {\mbox{g}\Lambda
+\mbox{g}\cdots \mbox{g}\Lambda
+\mbox{g}}_{\frac{\mbox{N}}{\mbox{2}}-\mbox{factors}};\mbox{ where
+g=}\sum\limits_{1\leqslant i\leqslant s=\raise0.7ex\hbox{$r$}
+\!\mathord{\left/ {\vphantom {r
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$}} {\xi _\mbox{i}
+} \left| {\psi _i \psi _{-i} } \right\rangle ;\mbox{ }\xi _\mbox{i} \in {\rm
+{\bf R}}\mbox{ and }\left\{ {\psi _i ;\mbox{ -}\raise0.7ex\hbox{$r$}
+\!\mathord{\left/ {\vphantom {r
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$}\leqslant
+i\leqslant \raise0.7ex\hbox{$r$} \!\mathord{\left/ {\vphantom {r
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$}} \right\}\mbox{
+is a conb for }H^\mbox{1} \\
+ \mbox{and are the cannonical general spin orbitals of }g\mbox{ i.e. those
+that bring it to cannonical } \\
+ \mbox{form. This state can also be expressed as } \\
+ \mbox{ }\left| {g^{\frac{\mbox{N}}{\mbox{2}}}} \right\rangle =P_\mbox{N}
+e^{\sum\limits_{1\leqslant i\leqslant s=\raise0.7ex\hbox{$r$}
+\!\mathord{\left/ {\vphantom {r
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$}} {\xi _\mbox{i}
+\mbox{b}_i^\dag \mbox{b}_{-i}^\dag } }\left| \phi \right\rangle \mbox{=
+}P_\mbox{N} e^{\sum\limits_{1\leqslant i\leqslant s=\raise0.7ex\hbox{$r$}
+\!\mathord{\left/ {\vphantom {r
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$}} {g_{ij}
+\mbox{a}_i^\dag \mbox{a}_j^\dag } }\left| \phi \right\rangle ;\mbox{
+b}_i^\dag =\mbox{a}\left( {\psi _i } \right)_^\dag \\
+ \mbox{where }P_\mbox{N} \mbox{ is the orthogonal projector onto
+}H^\mbox{N}\mbox{ and }\left| \phi \right\rangle \mbox{ is the zero particle
+vacuum state in }H_F .\mbox{ } \\
+ \mbox{ } \\
+ \end{array}
+\]
+\underline {\textbf{2.2. Group Factorization}}
+
+The isotropy group for an AGP reference state is $\mbox{USp(}H^1\mbox{)}$
+which is a maximally compact subgroup of $\mbox{ SU}\left( {H^1\mbox{ }}
+\right)$ hence producing the coset
+$\raise0.7ex\hbox{${\mbox{SU(}H^1\mbox{)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(}H^1\mbox{)}}
+{\mbox{USp(}H^1\mbox{)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(}H^1\mbox{)}}$}$.
+One can express coset representatives in factored form as
+$\mbox{G}_{\mbox{+1}} \mbox{G}_\mbox{0} \mbox{G}_{\mbox{-1}} $ , where
+$\left\{ {\mbox{G}_{\mbox{+1}} \mbox{,G}_\mbox{0} \mbox{,G}_{\mbox{-1}} }
+\right\}$ are subgroups of $\mbox{ SL}\left( {H^1\mbox{ }} \right)$ and
+$\mbox{G}_{\mbox{-1}} $ leaves the reference state invariant. Restricting
+attention to the connected components of these subgroups, that contain
+identity elements, one can express this factorization in terms of Lie
+algebras as
+\[
+\mbox{exp}\left\{ {N_{+1} } \right\}\mbox{exp}\left\{ {N_0 }
+\right\}\mbox{exp}\left\{ {N_{-1} } \right\}
+\]
+where $\left\{ {N_{+1} ,N_0 ,N_{-1} } \right\}$ are Lie subalgebras of
+$sl\left( {H^1\mbox{ }} \right)$. Introducing coordinate systems $\left\{
+{{\rm {\bf z}}_+ ,\lambda ,{\rm {\bf z}}_- ,\eta } \right\}$ with respect to
+fixed bases of $\left\{ {N_{+1} ,N_0 ,N_{-1} ,h} \right\}$, where $\left\{ h
+\right\}$ is the isotropy subalgebra, one can parameterize group elements
+$g\in \mbox{SU}\left( {H^1\mbox{ }} \right)$ as
+\[
+\mbox{g}\left( {{\rm {\bf z}},\eta } \right)\mbox{=c}\left( {\rm {\bf z}}
+\right)\mbox{h}\left( \eta \right)\mbox{=c}_\mbox{+} \left( {{\rm {\bf z}}_+
+} \right)\mbox{c}_\mbox{0} \left( \lambda \right)\mbox{ c}_{\mbox{-1}}
+\left( {{\rm {\bf z}}_- } \right)\mbox{h}\left( \eta \right)
+\]
+the non redundant coordinates $\left\{ {{\rm {\bf z}}\equiv ({\rm {\bf z}}_+
+,\lambda )} \right\}$ describe a configuration space that parameterize the
+set of $\left\{ {\left| {\rm {\bf z}} \right\rangle } \right\}\mbox{ of
+}{\mbox{SU}\left( {H^1} \right)} \mathord{\left/ {\vphantom
+{{\mbox{SU}\left( {H^1} \right)} {\mbox{USp}\left( {H^1} \right)}}} \right.
+\kern-\nulldelimiterspace} {\mbox{USp}\left( {H^1} \right)}$ coherent states
+and at the same time elements of the coset ${\mbox{SU}\left( {H^1} \right)}
+\mathord{\left/ {\vphantom {{\mbox{SU}\left( {H^1} \right)}
+{\mbox{USp}\left( {H^1} \right)}}} \right. \kern-\nulldelimiterspace}
+{\mbox{USp}\left( {H^1} \right)}$by
+\[
+\mbox{g}\left| {g^{\tfrac{\mbox{N}}{\mbox{2}}}} \right\rangle
+\mbox{=c}_\mbox{+} \left( {{\rm {\bf z}}_+ } \right)\mbox{c}_\mbox{0} \left(
+\lambda \right)\mbox{c}_{\mbox{-1}} \left( {{\rm {\bf z}}_- }
+\right)\mbox{h}\left( \eta \right)\left| {g^{\tfrac{\mbox{N}}{\mbox{2}}}}
+\right\rangle =\mbox{c}_\mbox{+} \left( {{\rm {\bf z}}_+ }
+\right)\mbox{c}_\mbox{0} \left( \lambda \right)\left|
+{g^{\tfrac{\mbox{N}}{\mbox{2}}}} \right\rangle
+\]
+$\mbox{The set }\left\{ {\left| {\rm {\bf z}} \right\rangle
+\mbox{=c}_\mbox{+} \left( {{\rm {\bf z}}_+ } \right)\mbox{c}_\mbox{0} \left(
+\lambda \right)\left| {g^{\tfrac{\mbox{N}}{\mbox{2}}}} \right\rangle }
+\right\}\mbox{ of }$coherent states forms a manifold $M$ (in general
+nonlinear) in $H^{\left( {{\begin{array}{*{20}c}
+ \mbox{r} \hfill \\
+ \mbox{N} \hfill \\
+\end{array} }} \right)} \quad \mbox{with a coordinate system }{\rm {\bf z}}$ .
+This manifold is a representation of the coset space ${\mbox{SU}\left( {H^1}
+\right)} \mathord{\left/ {\vphantom {{\mbox{SU}\left( {H^1} \right)}
+{\mbox{USp}\left( {H^1} \right)}}} \right. \kern-\nulldelimiterspace}
+{\mbox{USp}\left( {H^1} \right)}$
+
+The bases one chooses are
+\[
+\begin{array}{c}
+ N_{+1} =\left\{ {\xi _i a_j^\dag a_i +\sigma \left( i \right)\sigma \left(
+j \right)\xi _j a_{-i}^\dag a_{-j} \mbox{; }-s\leqslant i<j\leqslant
+s;\left| i \right|\ne \left| j \right|\mbox{; }\sigma \left( i
+\right)=\mbox{sign}(i)} \right\} \\
+ N_0 =\left\{ {a_i^\dag a_j -\frac{1}{2}\delta _{ij} I;\mbox{-}s\leqslant
+i\leqslant s\mbox{; }\left| i \right|=\left| j \right|} \right\} \\
+ N_{-1} =\left\{ {\xi _i a_i^\dag a_j -\sigma \left( i \right)\sigma \left(
+j \right)\xi _j a_{-j}^\dag a_{-i} ;\mbox{ }-s\leqslant i<j\leqslant
+s;\left| i \right|\ne \left| j \right|\mbox{ }} \right\} \\
+ \eta =\left\{ {a_i^\dag a_j -\frac{1}{2}\delta _{ij} I;\mbox{-}s\leqslant
+i\leqslant s\mbox{; }\left| i \right|=\left| j \right|} \right\} \\
+ \end{array}
+\]
+and the factors in the group decomposition are
+\[
+\begin{array}{c}
+ \mbox{c}_\mbox{+} \left( {{\rm {\bf z}}_+ }
+\right)\mbox{=exp}\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_\mbox{+} _{ij} \left( {\xi _i a_j^\dag a_i +\sigma
+\left( i \right)\sigma \left( j \right)\xi _j a_{-i}^\dag a_{-j} }
+\right)=\mbox{exp}\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_\mbox{+} _{ij} q_{ij}^\dag } } \\
+ \mbox{c}_{\mbox{-1}} \left( {{\rm {\bf z}}_{-1} }
+\right)=\mbox{exp}-\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_{\mbox{-1}} _{ij} \left( {\xi _i a_i^\dag a_j
+-\sigma \left( i \right)\sigma \left( j \right)\xi _j a_{-j}^\dag a_{-i} }
+\right)} =\mbox{exp}\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_\mbox{-} _{ij} q_{ij}^ } \\
+ \mbox{ } \\
+ \mbox{c}_\mbox{0} \left( \lambda
+\right)=\mbox{exp}\sum\limits_{\begin{array}{l}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\lambda _{ij} \left( {a_i^\dag a_j
+-\frac{1}{2}\delta _{ij} I} \right)}
+\right\}=\mbox{exp}\sum\limits_{\begin{array}{l}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\lambda _{ij} u_{ij}^ } \right\}} } ;\mbox{ }\lambda
+_{ij} =\bar {\lambda }_{ji} \\
+ \mbox{h}\left( \eta \right)=\mbox{exp}\sum\limits_{\begin{array}{c}
+ -s\leqslant i,j\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\eta _{ij} \left( {a_i^\dag a_j -\frac{1}{2}\delta
+_{ij} I} \right)} \right\}=\mbox{exp}\sum\limits_{\begin{array}{l}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\eta _{ij} u_{ij}^ } \right\}} ;\mbox{ }} \eta _{ij}
+=-\bar {\eta }_{ji} \\
+ \end{array}
+\]
+Normalized coherent states are produced by the action of $\mbox{G}_H $ on
+normalized reference states and thus by the action of the coset
+representatives. Often however it is convenient to consider \textit{unnormalized }coherent states
+by either dropping or modifying the coset representative $\mbox{c}_\mbox{0}
+\left( \lambda \right)$ and explicitly considering the norm of the state.
+
+\underline {\textbf{2.3. Differential Structure of the Coset Space}}
+
+The phase space associated with the coset space $\mbox{G}_H \mbox{/H}_H
+$inherits a coordinate system $\left\{ {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right\}$ from the coset space and is a Kaehlerian manifold with a closed
+symplectic form defined as
+\[
+\begin{array}{c}
+ \omega \mbox{=-}\frac{i\hbar }{2}\sum {\left. {\left\{ {\frac{\partial
+\mbox{ }^2F}{\partial \mbox{\bar {{z}'}}_\mbox{i} \partial \mbox{z}_\mbox{j}
+}} \right\}} \right|} _{{\rm {\bf z}}={\rm {\bf {z}'}}} \mbox{d}{\rm {\bf
+z}}\Lambda \mbox{d}{\rm {\bf \bar {z}}};\mbox{ } \\
+ \mbox{which acts on tangent vectors }\left\{ X \right\}\mbox{ of this
+manifold by: }\omega \left( {X_i ,X_j } \right)=-\omega \left( {X_j ,X_i }
+\right)\mbox{. It is induced by } \\
+ \mbox{the Kaehler potential }F\left( {{\rm {\bf {z}'}},{\rm {\bf z}}}
+\right)\mbox{=}\ln \mbox{ }\left\langle {{\rm {\bf {z}'}}} \mathrel{\left|
+{\vphantom {{{\rm {\bf {z}'}}} {\rm {\bf z}}}} \right.
+\kern-\nulldelimiterspace} {{\rm {\bf z}}} \right\rangle ,\mbox{ and defines
+a generalized Poisson Bracket by } \\
+ \left\{ {f,g} \right\}=\omega \left( {X_f ,X_g } \right);\mbox{ where }X_f
+=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial f}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial f}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{ } \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{The generalized classical equations of motion defined on this phase
+space can be } \\
+ \mbox{then expressed as } \\
+ \frac{i}{\hbar }{\rm {\bf \dot {z}}}_i =\left\{ {{\rm {\bf z}}_i ,E}
+\right\}\mbox{ }\And \mbox{ -}\frac{i}{\hbar }{\rm {\bf \dot {\bar {z}}}}_i
+=\left\{ {{\rm {\bf \bar {z}}}_i ,E} \right\} \\
+ \mbox{which can be written in matrix form as } \\
+ \left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf \bar {C}}}^{-{\rm {\bf
+1}}}} \hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf C}}^{-{\rm {\bf 1}}}} \hfill & {\rm {\bf 0}}
+\hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\frac{\partial E}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial E}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right). \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{The metric matrix }{\rm {\bf C}}=\left. {\frac{\partial ^2\ln
+\left\langle {{\rm {\bf {z}'}}} \mathrel{\left| {\vphantom {{{\rm {\bf
+{z}'}}} {\rm {\bf z}}}} \right. \kern-\nulldelimiterspace} {{\rm {\bf z}}}
+\right\rangle }{\partial {\rm {\bf {\bar {z}}'}}\partial {\rm {\bf z}}}}
+\right|_{{z}'=z} \mbox{ is given by } \\
+ {\rm {\bf C}}=\frac{1}{S}\left\{ {\left. {\frac{\partial ^2\left\langle
+{{\rm {\bf {z}'}}} \mathrel{\left| {\vphantom {{{\rm {\bf {z}'}}} {\rm {\bf
+z}}}} \right. \kern-\nulldelimiterspace} {{\rm {\bf z}}} \right\rangle
+}{\partial {\rm {\bf {\bar {z}}'}}\partial {\rm {\bf z}}}} \right|_{{z}'=z}
+-\frac{1}{S}\left. {\frac{\partial \left\langle {{\rm {\bf {z}'}}}
+\mathrel{\left| {\vphantom {{{\rm {\bf {z}'}}} {\rm {\bf z}}}} \right.
+\kern-\nulldelimiterspace} {{\rm {\bf z}}} \right\rangle }{\partial {\rm
+{\bf {\bar {z}}'}}}} \right|_{{z}'=z} \left. {\frac{\partial \left\langle
+{{\rm {\bf {z}'}}} \mathrel{\left| {\vphantom {{{\rm {\bf {z}'}}} {\rm {\bf
+z}}}} \right. \kern-\nulldelimiterspace} {{\rm {\bf z}}} \right\rangle
+}{\partial {\rm {\bf z}}}} \right|_{{z}'=z} } \right\}\equiv
+\frac{1}{S}\left\{ {\left. {\frac{\partial ^2S\left( {{\rm {\bf z\bar
+{{z}'}}}} \right)}{\partial {\rm {\bf {\bar {z}}'}}\partial {\rm {\bf z}}}}
+\right|_{{z}'=z} -\frac{1}{S}\left. {\frac{\partial S\left( {{\rm {\bf z\bar
+{{z}'}}}} \right)}{\partial {\rm {\bf {\bar {z}}'}}}} \right|_{{z}'=z}
+\left. {\frac{\partial S\left( {{\rm {\bf z\bar {{z}'}}}} \right)}{\partial
+{\rm {\bf z}}}} \right|_{{z}'=z} } \right\} \\
+ \mbox{while the gradient of the energy function }E\left( {{\rm {\bf
+z}},{\rm {\bf \bar {z}}}} \right)\mbox{ has the form } \\
+ {\rm {\bf D}}E\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)=\frac{\partial E\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)}{\partial {\rm {\bf x}}}=\frac{1}{S}\left\{ {\frac{\partial H\left(
+{{\rm {\bf z}},{\rm {\bf \bar {z}}}} \right)}{\partial {\rm {\bf
+x}}}-E\frac{\partial S\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)}{\partial {\rm {\bf x}}}} \right\};\mbox{ where }{\rm {\bf
+x}}=\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}} \right) \\
+ \mbox{at critical points }\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)\mbox{ of }E\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}} \right)\mbox{
+} \\
+ \frac{\partial E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf x}}}=\frac{1}{S}\left\{ {\frac{\partial H\left(
+{{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)}{\partial {\rm {\bf
+x}}}-E\frac{\partial S\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf x}}}} \right\}={\rm {\bf 0}}\Rightarrow
+\frac{\partial H\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf x}}}=E\frac{\partial S\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 } \right)}{\partial {\rm {\bf x}}}. \\
+ \mbox{The Hessian of the energy function }E\left( {{\rm {\bf z}},{\rm {\bf
+\bar {z}}}} \right)\mbox{ at critical points then becomes } \\
+ {\rm {\bf D}}^2E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)=\frac{\partial ^2}{\partial {\rm {\bf x}}\partial {\rm {\bf
+y}}}E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)=\frac{1}{S}\left( {\frac{\partial ^2H\left( {{\rm {\bf z}}_0 ,{\rm
+{\bf \bar {z}}}_0 } \right)}{\partial {\rm {\bf x}}\partial {\rm {\bf
+y}}}-E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)\frac{\partial ^2S\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf x}}\partial {\rm {\bf y}}}} \right)\mbox{; } \\
+ \mbox{where }{\rm {\bf x}}=\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)\mbox{ and }{\rm {\bf y}}=\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)\mbox{. } \\
+ \end{array}
+\]
+\underline {\textbf{4. Linear Response.}}
+
+\underline {\textbf{4.1. Exact Linear Response.}}
+
+Exact linear response functions are defined as
+\[
+\begin{array}{c}
+ R_{FA} \left( t \right)=-\frac{i}{\hbar }\theta _+ \left( t
+\right)\left\langle {\Psi _0 } \mathrel{\left| {\vphantom {{\Psi _0 }
+{\left[ {F\left( t \right),A\left( 0 \right)} \right]\Psi _0 }}} \right.
+\kern-\nulldelimiterspace} {\left[ {F\left( t \right),A\left( 0 \right)}
+\right]\Psi _0 } \right\rangle \\
+ \mbox{ } \\
+ \mbox{where }\left| {\Psi _0 } \right\rangle \mbox{ is an exact stationary
+state, and the time dependence of observable }A\mbox{ } \\
+ \mbox{ is given by }A\left( t \right)=e^{-iH_0 t}Ae^{iH_0 t}\mbox{, where
+}H_0 \mbox{ is the unperturbed hamiltonian. } \\
+ \end{array}
+\]
+If $A$ and $F $are one particle operators these functions describe the response of
+expectation value of the observable $A$ to the perturbation $F$. This can be
+formulated in terms of the first order reduced density matrix elements
+response to external time dependent perturbing fields, $F(t) , $that interact with
+the system through one body forces, according to the following:
+\[
+\begin{array}{c}
+ F\left( t \right)=\sum\limits_{ij} {f_{kl} \left( t \right)\mbox{ }}
+\mbox{a}_k^\dag \mbox{a}_l \\
+ \rho _{ij} \left( t \right)=\rho _{ij} \left( 0 \right)+\frac{i}{\hbar
+}\int_0^t {\left\langle {\Psi _0 } \mathrel{\left| {\vphantom {{\Psi _0 }
+{\left[ {F\left( \tau \right)\mbox{ ,a}_i^\dag \mbox{a}_j } \right]\Psi _0
+}}} \right. \kern-\nulldelimiterspace} {\left[ {F\left( \tau \right)\mbox{
+,a}_i^\dag \mbox{a}_j } \right]\Psi _0 } \right\rangle } d\tau \\
+ \rho _{ij} \left( t \right)=\rho _{ij} \left( 0 \right)+\delta \rho \left(
+t \right) \\
+ \delta \rho _{ij} \left( t \right)=\sum\limits_{kl} {\int_{-\infty
+}^{+\infty } {R_{ijkl} \left( {t-\tau } \right)f_{kl} \left( \tau
+\right)d\tau } } \\
+ R_{ijkl} \left( t \right)=-\frac{i}{\hbar }\left\langle {\Psi _0 }
+\mathrel{\left| {\vphantom {{\Psi _0 } {\left[ {\mbox{a}_j^\dag \left( t
+\right)\mbox{a}_i \left( t \right)\mbox{ ,a}_k^\dag \mbox{a}_l } \right]\Psi
+_0 }}} \right. \kern-\nulldelimiterspace} {\left[ {\mbox{a}_j^\dag \left( t
+\right)\mbox{a}_i \left( t \right)\mbox{ ,a}_k^\dag \mbox{a}_l } \right]\Psi
+_0 } \right\rangle \\
+ \mbox{where }\rho _{ij} \mbox{ are one particle reduced density matrix
+elements and }R_{ijkl} \left( t \right)\mbox{ are } \\
+ \mbox{the one particle linear response functions } \\
+ \end{array}
+\]
+The response function may then be written as
+\[
+\begin{array}{c}
+ R_{ijkl} \left( t \right)=-\frac{i}{\hbar }\theta _+ \left( t
+\right)\left\{ {\left\langle {\Psi _0 } \mathrel{\left| {\vphantom {{\Psi _0
+} {\mbox{a}_j^\dag \mbox{a}_i \mbox{ }e^{-i\left( {H_0 -E_0 }
+\right)\raise0.5ex\hbox{$\scriptstyle {t\mbox{
+}}$}\kern-0.1em/\kern-0.15em\lower0.25ex\hbox{$\scriptstyle \hbar
+$}}\mbox{a}_k^\dag \mbox{a}_l \Psi _0 }}} \right. \kern-\nulldelimiterspace}
+{\mbox{a}_j^\dag \mbox{a}_i \mbox{ }e^{-i\left( {H_0 -E_0 }
+\right)\raise0.5ex\hbox{$\scriptstyle {t\mbox{
+}}$}\kern-0.1em/\kern-0.15em\lower0.25ex\hbox{$\scriptstyle \hbar
+$}}\mbox{a}_k^\dag \mbox{a}_l \Psi _0 } \right\rangle -\left\langle {\Psi _0
+} \mathrel{\left| {\vphantom {{\Psi _0 } {\mbox{a}_k^\dag \mbox{a}_l \mbox{
+}e^{-i\left( {H_0 -E_0 } \right)\raise0.5ex\hbox{$\scriptstyle {t\mbox{
+}}$}\kern-0.1em/\kern-0.15em\lower0.25ex\hbox{$\scriptstyle \hbar
+$}}\mbox{a}_j^\dag \mbox{a}_i \Psi _0 }}} \right. \kern-\nulldelimiterspace}
+{\mbox{a}_k^\dag \mbox{a}_l \mbox{ }e^{-i\left( {H_0 -E_0 }
+\right)\raise0.5ex\hbox{$\scriptstyle {t\mbox{
+}}$}\kern-0.1em/\kern-0.15em\lower0.25ex\hbox{$\scriptstyle \hbar
+$}}\mbox{a}_j^\dag \mbox{a}_i \Psi _0 } \right\rangle } \right\} \\
+ \mbox{where }E_0 \mbox{ is the energy of the stationary state }\left| {\Psi
+_0 } \right\rangle \mbox{. Taking the Laplace transform } \\
+ \mbox{of }R_{ijkl} \left( t \right)\mbox{ we obtain } \\
+ R_{ijkl} \left( z \right)=\sum\limits_{n\ne 0} {\left\{ {\frac{\left\langle
+{\Psi _0 } \mathrel{\left| {\vphantom {{\Psi _0 } {\mbox{a}_j^\dag
+\mbox{a}_i \Psi _n }}} \right. \kern-\nulldelimiterspace} {\mbox{a}_j^\dag
+\mbox{a}_i \Psi _n } \right\rangle \left\langle {\Psi _n } \mathrel{\left|
+{\vphantom {{\Psi _n } {\mbox{a}_k^\dag \mbox{a}_l \Psi _0 }}} \right.
+\kern-\nulldelimiterspace} {\mbox{a}_k^\dag \mbox{a}_l \Psi _0 }
+\right\rangle }{z-\left( {E_n -E_0 } \right)}-\frac{\left\langle {\Psi _0 }
+\mathrel{\left| {\vphantom {{\Psi _0 } {\mbox{a}_k^\dag \mbox{a}_l \Psi _n
+}}} \right. \kern-\nulldelimiterspace} {\mbox{a}_k^\dag \mbox{a}_l \Psi _n }
+\right\rangle \left\langle {\Psi _n } \mathrel{\left| {\vphantom {{\Psi _n }
+{\mbox{a}_j^\dag \mbox{a}_i \Psi _0 }}} \right. \kern-\nulldelimiterspace}
+{\mbox{a}_j^\dag \mbox{a}_i \Psi _0 } \right\rangle }{z+\left( {E_n -E_0 }
+\right)}} \right\}} \\
+ \mbox{The response functions }R_{ijkl} \left( z \right)\mbox{ form a
+hermitian matrix for real }z,\mbox{ thus } \\
+ \mbox{can be diagonalized to give } \\
+ \tilde {R}_{KL} \left( z \right)=g_K \left( z \right)\delta _{KL}
+=\sum\limits_{n\ne 0} {\left\{ {\frac{\left\langle {\Psi _0 }
+\mathrel{\left| {\vphantom {{\Psi _0 } {T_K \Psi _n }}} \right.
+\kern-\nulldelimiterspace} {T_K \Psi _n } \right\rangle \left\langle {\Psi
+_n } \mathrel{\left| {\vphantom {{\Psi _n } {T_K^\dag \Psi _0 }}} \right.
+\kern-\nulldelimiterspace} {T_K^\dag \Psi _0 } \right\rangle }{z-\left( {E_n
+-E_0 } \right)}-\frac{\left\langle {\Psi _0 } \mathrel{\left| {\vphantom
+{{\Psi _0 } {T_K \Psi _n }}} \right. \kern-\nulldelimiterspace} {T_K \Psi _n
+} \right\rangle \left\langle {\Psi _n } \mathrel{\left| {\vphantom {{\Psi _n
+} {T_K^\dag \Psi _0 }}} \right. \kern-\nulldelimiterspace} {T_K^\dag \Psi _0
+} \right\rangle }{z+\left( {E_n -E_0 } \right)}} \right\}} \\
+ \mbox{where }T_K^\dag =\sum\limits_{ij} {\mbox{T}_{Kij} \mbox{a}_i^\dag
+\mbox{a}_j } \mbox{ } \\
+ \end{array}
+\]
+The poles of the Laplace transform occur at $\pm \left( {E_n -E_0 } \right)$
+and the residues $\left| {\left\langle {\Psi _n } \mathrel{\left| {\vphantom
+{{\Psi _n } {T_K^\dag \Psi _0 }}} \right. \kern-\nulldelimiterspace}
+{T_K^\dag \Psi _0 } \right\rangle } \right|^2$ are transition probabilities
+that the operator $T_K^\dag $ will cause a transition from the stationary
+state $\left| {\Psi _0 } \right\rangle $ to the stationary state $\left|
+{\Psi _n } \right\rangle $.
+
+In general the excited states are of the form
+\[
+\left| {\Psi _n } \right\rangle =\sum\limits_{m=0}^{m=N} {\sum\limits_{K_1
+K_2 \cdots K_m } {c_{K_1 K_2 \cdots K_m }^n _ T_{K_1 }^\dag T_{K_2 }^\dag
+\cdots T_{K_m }^\dag } } \left| {\Psi _0 } \right\rangle
+\]
+In this study we focus on excited states that are produced from the
+reference state by single photon processes, i.e. low intensity
+electromagnetic radiation, which is consistent with the hypotheses of linear
+response. Thus we desire that the excited states be well approximated by
+\[
+\left| {\Psi _n } \right\rangle \approx T_n^\dag \left| {\Psi _0 }
+\right\rangle
+\]
+\underline {\textbf{4.2. Linear Response in a Coherent State Setting}}
+
+The classical Hamiltonian corresponding to the Hamiltonian containing the
+time dependent perturbation is
+\[
+E\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}},t} \right)=\frac{\left\langle
+{{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}} {\left( {H_0
++F\left( t \right)} \right){\rm {\bf z}}}}} \right.
+\kern-\nulldelimiterspace} {\left( {H_0 +F\left( t \right)} \right){\rm {\bf
+z}}} \right\rangle }{\left\langle {{\rm {\bf z}}} \mathrel{\left| {\vphantom
+{{\rm {\bf z}} {\rm {\bf z}}}} \right. \kern-\nulldelimiterspace} {{\rm {\bf
+z}}} \right\rangle }=E_0 \left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)+\frac{\left\langle {{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm
+{\bf z}} {F\left( t \right){\rm {\bf z}}}}} \right.
+\kern-\nulldelimiterspace} {F\left( t \right){\rm {\bf z}}} \right\rangle
+}{\left\langle {{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}}
+{\rm {\bf z}}}} \right. \kern-\nulldelimiterspace} {{\rm {\bf z}}}
+\right\rangle }
+\]
+One can form a quadratic approximation to this function around a point
+$\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)\mbox{ }$ by
+expanding up to second order
+\[
+\begin{array}{c}
+ E\left( {{\rm {\bf z}}_{\rm {\bf 0}} +\delta {\rm {\bf z}},{\rm {\bf \bar
+{z}}}_{\rm {\bf 0}} +\delta {\rm {\bf \bar {z}}},t} \right)\approx E_2
+\left( {{\rm {\bf z}}_{\rm {\bf 0}} ,{\rm {\bf \bar {z}}}_{\rm {\bf 0}} ,t}
+\right)=E\left( {{\rm {\bf z}}_{\rm {\bf 0}} ,{\rm {\bf \bar {z}}}_{\rm {\bf
+0}} ,t} \right)+\delta ^1E\left( {{\rm {\bf z}}_{\rm {\bf 0}} ,{\rm {\bf
+\bar {z}}}_{\rm {\bf 0}} ,t} \right)+\delta ^2E\left( {{\rm {\bf z}}_{\rm
+{\bf 0}} ,{\rm {\bf \bar {z}}}_{\rm {\bf 0}} ,t} \right) \\
+ \mbox{where }\delta ^1E\left( {{\rm {\bf z}}_{\rm {\bf 0}} ,{\rm {\bf \bar
+{z}}}_{\rm {\bf 0}} ,t} \right)=\left( {\delta {\rm {\bf z}},\delta {\rm
+{\bf \bar {z}}}} \right){\rm {\bf D}}^1E\left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 ,t} \right)\mbox{ and }\delta ^2E\left( {{\rm {\bf z}}_{\rm
+{\bf 0}} ,{\rm {\bf \bar {z}}}_{\rm {\bf 0}} ,t} \right)=\frac{1}{2}\left(
+{\delta {\rm {\bf \bar {z}}},\delta {\rm {\bf z}}} \right){\rm {\bf
+D}}^2E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t} \right)\left(
+{{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right)\mbox{ } \\
+ \end{array}
+\]
+The approximate classical Hamiltonian associated with linear response about
+the point $\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)$ is
+then constructed by only including the time dependent perturbation in terms
+up to first order in $\left( {\delta {\rm {\bf z}},\delta {\rm {\bf \bar
+{z}}}} \right)$\underline { }
+\[
+\tilde {E}\left( {{\rm {\bf z}}_0 +\delta {\rm {\bf z}},{\rm {\bf \bar
+{z}}}_0 +\delta {\rm {\bf \bar {z}}}} \right)=E\left( {{\rm {\bf z}}_0 ,{\rm
+{\bf \bar {z}}}_0 } \right)+\left( {{\begin{array}{*{20}c}
+ {\frac{\partial E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t}
+\right)}{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial E\left(
+{{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t} \right)}{\partial {\rm {\bf
+z}}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right)+\frac{1}{2}\left( {{\begin{array}{*{20}c}
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf \bar {z}}}}} \hfill
+& {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf z}}}} \hfill \\
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf \bar {z}}}}} \hfill &
+{\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)
+\]
+\[
+\begin{array}{c}
+ \mbox{Using the linear response approximation one obtains an approximate
+gradient for } \\
+ \mbox{local variations } \\
+ \left( {{\begin{array}{*{20}c}
+ {\frac{\partial \tilde {E}_2 }{\partial \delta {\rm {\bf \bar {z}}}}}
+\hfill \\
+ {\frac{\partial \tilde {E}_2 }{\partial \delta {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)={\rm {\bf D}}^1E\left( {{\rm {\bf \bar {z}}}_0 ,{\rm
+{\bf z}}_0 ,t} \right)+{\rm {\bf D}}^2E_0 \left( {{\rm {\bf \bar {z}}}_0
+,{\rm {\bf z}}_0 } \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{which can be used to obtain a linearized EOM in the tangent space at
+the point }\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right) \\
+ \left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf C}}} \hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {\delta {\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)={\rm {\bf D}}^1E\left( {{\rm {\bf \bar {z}}}_0 ,{\rm
+{\bf z}}_0 ,t} \right)+{\rm {\bf D}}^2E_0 \left( {{\rm {\bf \bar {z}}}_0
+,{\rm {\bf z}}_0 } \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{ } \\
+ \end{array}
+\]
+If the point $\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)$ is
+a critical point of the unperturbed energy $E_0 \left( {{\rm {\bf z}},{\rm
+{\bf \bar {z}}}} \right)$ then
+\[
+\begin{array}{c}
+ \frac{\partial E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t}
+\right)}{\partial {\rm {\bf x}}}=\frac{1}{S}\left\{ {\frac{\partial F\left(
+{{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t} \right)}{\partial {\rm {\bf
+x}}}-\frac{\left\langle {{\rm {\bf z}}_{\rm {\bf 0}} } \mathrel{\left|
+{\vphantom {{{\rm {\bf z}}_{\rm {\bf 0}} } {F\left( 0 \right){\rm {\bf
+z}}_{\rm {\bf 0}} }}} \right. \kern-\nulldelimiterspace} {F\left( 0
+\right){\rm {\bf z}}_{\rm {\bf 0}} } \right\rangle }{\left\langle {{\rm {\bf
+z}}_{\rm {\bf 0}} } \mathrel{\left| {\vphantom {{{\rm {\bf z}}_{\rm {\bf 0}}
+} {{\rm {\bf z}}_{\rm {\bf 0}} }}} \right. \kern-\nulldelimiterspace} {{\rm
+{\bf z}}_{\rm {\bf 0}} } \right\rangle }\frac{\partial S\left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t} \right)}{\partial {\rm {\bf x}}}}
+\right\}=\frac{1}{S}\frac{\partial F\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 ,t} \right)}{\partial {\rm {\bf x}}} \\
+ \mbox{as }{\rm {\bf z}}_0 ={\rm {\bf z}}\left( 0 \right)\mbox{ and at
+}t\mbox{=}0\mbox{ the external perturbation }F=F\left( 0 \right)=0\mbox{ .
+The Hessian at this point } \\
+ \frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t}
+\right)}{\partial {\rm {\bf x}}\partial {\rm {\bf y}}}=\frac{1}{S}\left\{
+{\frac{\partial ^2H_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t}
+\right)}{\partial {\rm {\bf x}}\partial {\rm {\bf y}}}-E\left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)\frac{\partial ^2S\left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 ,t} \right)}{\partial {\rm {\bf x}}\partial
+{\rm {\bf y}}}} \right\} \\
+ \mbox{where }{\rm {\bf x}},{\rm {\bf y}}={\rm {\bf z}},{\rm {\bf \bar
+{z}}}\mbox{ } \\
+ \end{array}
+\]
+The linear response $\left( {\delta {\rm {\bf \bar {z}}},\delta {\rm {\bf
+z}}} \right)$  of the state around a critical point is then determined by the
+equation
+\[
+\begin{array}{c}
+ \left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf C}}} \hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {\delta {\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \tilde {E}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial \delta {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial \tilde {E}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial \delta {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)={\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 ,t} \right)+{\rm {\bf D}}^2E_0 \left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right) \\
+ \Rightarrow \left( {\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf C}}\frac{{\rm {\bf
+d}}}{{\rm {\bf dt}}}} \hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf \bar {C}}}\frac{{\rm {\bf d}}}{{\rm {\bf
+dt}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)-{\rm {\bf D}}^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right)={\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 ,t} \right) \\
+ \Rightarrow \left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right)\left( t \right)=\int\limits_{-\infty }^\infty
+{R\left( {t-\tau } \right){\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 ,\tau } \right)} d\tau \\
+ \mbox{where the response function is defined as } \\
+ R\left( t \right)=\theta _+ \left( t \right)\mbox{ }\left( {\left(
+{{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf C}}\frac{{\rm {\bf
+d}}}{{\rm {\bf dt}}}} \hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf \bar {C}}}\frac{{\rm {\bf d}}}{{\rm {\bf
+dt}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)-{\rm {\bf D}}^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)} \right)^{-1}\left( t \right)\mbox{ } \\
+ \mbox{Taking the Laplace transform we obtain } \\
+ \left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right)\left( z \right)=R\left( z \right){\rm {\bf D}}^{\rm
+{\bf 1}}F\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,z} \right)\mbox{,
+where }R\left( z \right)\mbox{= }\left( {\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-z{\rm {\bf C}}} \hfill \\
+ {z{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)-{\rm {\bf D}}^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)} \right)^{-1}\mbox{ } \\
+ \end{array}
+\]
+The preceding response function $R\left( t \right)$ describes the response
+of observables of a system described by $H_0 $ to external perturbations
+$F\left( t \right)$ that interact through 1,2,....,N body forces. The
+response of the observables are described by the response of the density and
+reduced density matrices $\left\{ {\rho ^\mbox{N}\left( {{\rm {\bf z}}_0
+,{\rm {\bf z}}_0 } \right),\cdots ,\rho ^\mbox{1}\left( {{\rm {\bf z}}_0
+,{\rm {\bf z}}_0 } \right)} \right\}$. The linear response of the matrix
+elements $\rho ^\mbox{N}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{KL} $ of the N-particle density operator $\left| {{\rm {\bf z}}_0 }
+\right\rangle \left\langle {{\rm {\bf z}}_0 } \right|$ of the coherent state
+$\left| {{\rm {\bf z}}_0 } \right\rangle $ to the external perturbation are
+given by
+\[
+\delta ^1\left\{ {\left\langle {\Phi _K } \mathrel{\left| {\vphantom {{\Phi
+_K } {{\rm {\bf z}}_0 }}} \right. \kern-\nulldelimiterspace} {{\rm {\bf
+z}}_0 } \right\rangle \left\langle {{\rm {\bf z}}_0 } \mathrel{\left|
+{\vphantom {{{\rm {\bf z}}_0 } {\Phi _L }}} \right.
+\kern-\nulldelimiterspace} {\Phi _L } \right\rangle } \right\}\left( t
+\right)=\delta ^1\left\{ {\left\langle {{\rm {\bf z}}_0 } \mathrel{\left|
+{\vphantom {{{\rm {\bf z}}_0 } {\Phi _L }}} \right.
+\kern-\nulldelimiterspace} {\Phi _L } \right\rangle \left\langle {\Phi _K }
+\mathrel{\left| {\vphantom {{\Phi _K } {{\rm {\bf z}}_0 }}} \right.
+\kern-\nulldelimiterspace} {{\rm {\bf z}}_0 } \right\rangle }
+\right\}=\delta ^1\Phi _{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \Phi _{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)}{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial \Phi
+_{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)}{\partial
+{\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right)
+\]
+which have Laplace transforms
+\[
+\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \Phi _{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)}{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial \Phi
+_{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)}{\partial
+{\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\left( {\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-z{\rm {\bf C}}} \hfill \\
+ {z{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)-{\rm {\bf D}}^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)} \right)^{-1}{\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm
+{\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,z} \right).
+\]
+The matrix elements and the linear response of the 1-particle reduced
+density operator can be constructed in the following manner:
+\[
+\begin{array}{c}
+ \rho ^\mbox{N}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)=\sum\limits_{K,L} {\Phi _{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)\left| {\Phi _L } \right\rangle \left\langle {\Phi _K
+} \right|} \Rightarrow \rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 } \right)_{ij} =Tr\left\{ {\rho ^\mbox{N}\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 } \right)\mbox{a}_j^\dag \mbox{a}_i } \right\} \\
+ \therefore \delta ^1\rho ^\mbox{N}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 } \right)=\sum\limits_{K,L} {\delta ^1\Phi _{KL} \left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)\left| {\Phi _L } \right\rangle
+\left\langle {\Phi _K } \right|} \Rightarrow \delta ^1\rho ^1\left( {{\rm
+{\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)_{ij} =Tr\left\{ {\delta ^1\rho
+^\mbox{N}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)\mbox{a}_j^\dag \mbox{a}_i } \right\} \\
+ \Rightarrow \delta ^1\rho ^\mbox{1}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 } \right)=Tr\left\{ {\delta ^1\rho ^\mbox{N}\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 } \right)\mbox{a}_j^\dag \mbox{a}_i }
+\right\}=Tr\left\{ {\sum\limits_{K,L} {\delta ^1\Phi _{KL} \left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)\left| {\Phi _L } \right\rangle
+\left\langle {\Phi _K } \right|} \mbox{a}_j^\dag \mbox{a}_i } \right\} \\
+ =Tr\left\{ {\sum\limits_{K,L} {\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \Phi _{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)}{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial \Phi
+_{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)}{\partial
+{\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right)\left| {\Phi _L } \right\rangle \left\langle {\Phi _K
+} \right|} \mbox{a}_j^\dag \mbox{a}_i } \right\} \\
+ =\left( {{\begin{array}{*{20}c}
+ {\frac{\partial Tr\left\{ {\sum\limits_{K,L} {\Phi _{KL} \left( {{\rm {\bf
+z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)\left| {\Phi _L } \right\rangle
+\left\langle {\Phi _K } \right|\mbox{a}_j^\dag \mbox{a}_i } }
+\right\}}{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial Tr\left\{
+{\sum\limits_{K,L} {\Phi _{KL} \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 } \right)\left| {\Phi _L } \right\rangle \left\langle {\Phi _K }
+\right|\mbox{a}_j^\dag \mbox{a}_i } } \right\}}{\partial {\rm {\bf z}}}}
+\hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right) \\
+ =\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} }{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial \rho
+^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)_{ij} }{\partial
+{\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+ {\delta {\rm {\bf z}}} \hfill \\
+\end{array} }} \right) \\
+ \end{array}
+\]
+The Laplace transform of this response is then
+\[
+\delta ^1\rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} \left( z \right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} }{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial \rho
+^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)_{ij} }{\partial
+{\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\left( {\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-z{\rm {\bf C}}} \hfill \\
+ {z{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)-{\rm {\bf D}}^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)} \right)^{-1}{\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm
+{\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,z} \right)
+\]
+\underline {\textbf{4.3 Exact Linear Response in Coherent State Setting}}
+
+In order to facilitate a direct comparison of approximations to exact linear
+response functions it is useful to derive the exact linear response function
+in terms of coherent states based on the coset
+$\raise0.7ex\hbox{${\mbox{SU}\left( {H^\mbox{N}\mbox{ }} \right)}$}
+\!\mathord{\left/ {\vphantom {{\mbox{SU}\left( {H^\mbox{N}\mbox{ }} \right)}
+{\mbox{U}\left( \mbox{1}
+\right)}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{U}\left(
+\mbox{1} \right)}$}$. The classical equations of motion defined on this
+coherent state manifold are equivalent to the full time dependent
+Schroedinger equation. The configuration space formed by these coherent
+sates is constituted by all of the states $\left\{ {\left| {\rm {\bf z}}
+\right\rangle } \right\}\mbox{ in }H^\mbox{N} $. The group
+$\mbox{G=SU}\left( {H^\mbox{N}} \right)$ and the subgroup H is defined by
+\[
+\begin{array}{c}
+ \mbox{H=}\left\{ {\mbox{g}\in \mbox{G}\mathrel\backepsilon \mbox{g}\left|
+{\Phi _1 } \right\rangle =\left| {\Phi _1 } \right\rangle }
+\right\}=e^{\begin{array}{l}
+ i\lambda \left| {\Phi _1 } \right\rangle \left\langle {\Phi _1 } \right| \\
+ \\
+ \end{array}}e^{i\sum\limits_{ij\ne 1} {\lambda _{ij} \left| {\Phi _i }
+\right\rangle \left\langle {\Phi _j } \right|} } \\
+ \mbox{to produce coset representatives } \\
+ \mbox{G/H=}e^{\sum\limits_{i>1} {\eta _i \left| {\Phi _i } \right\rangle
+\left\langle {\Phi _1 } \right|} }\mbox{ }e^{\begin{array}{l}
+ \eta _1 \left| {\Phi _1 } \right\rangle \left\langle {\Phi _1 } \right| \\
+ \\
+ \end{array}}\mbox{ }e^{-\sum\limits_{i>1} {\bar {\eta }_i \left| {\Phi _1 }
+\right\rangle \left\langle {\Phi _i } \right|} } \\
+ \mbox{where }\left\{ {\Phi _i ;1\leqslant i\leqslant \left(
+{{\begin{array}{*{20}c}
+ r \hfill \\
+ N \hfill \\
+\end{array} }} \right)} \right\}\mbox{is a complete orthonormal basis for
+}H^\mbox{N}.\mbox{ } \\
+ \mbox{The family of coherent states associated with this coset is defined
+as } \\
+ \left| \eta \right\rangle \mbox{ =}e^{\sum\limits_{i>1} {\eta _i \left|
+{\Phi _i } \right\rangle \left\langle {\Phi _1 } \right|} }\mbox{
+}e^{\begin{array}{l}
+ \eta _1 \left| {\Phi _1 } \right\rangle \left\langle {\Phi _1 } \right| \\
+ \\
+ \end{array}}\left| {\Phi _1 } \right\rangle \\
+ \mbox{For convenience we introduce a new cooridnate system}\left\{ {\rm
+{\bf z}} \right\}\mbox{ by setting } \\
+ \mbox{ }\eta _1 \mbox{=ln}\left( {z_1 } \right)\mbox{ and }\left\{ {\eta _i
+=\frac{z_i }{z_1 };\mbox{ }2\leqslant i\leqslant \left(
+{{\begin{array}{*{20}c}
+ r \hfill \\
+ N \hfill \\
+\end{array} }} \right)} \right\},\mbox{ } \\
+ \mbox{which leads to the following form for the coherent states } \\
+ \left| {\rm {\bf z}} \right\rangle =\sum\limits_{1\leqslant K\leqslant
+\left( {{\begin{array}{*{20}c}
+ r \hfill \\
+ N \hfill \\
+\end{array} }} \right)} {z_K \left| {\Phi _K } \right\rangle } \mbox{ } \\
+ \end{array}
+\]
+The overlap kernel, classical Hamiltonian and Kaehler metric for this coset
+manifold are then defined for an arbitrary quantum Hamiltonian $H$ as:
+\[
+\begin{array}{c}
+ S=S\left( {{\rm {\bf z}},{\rm {\bf z}}} \right)=\left\langle {{\rm {\bf
+z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}} {\rm {\bf z}}}} \right.
+\kern-\nulldelimiterspace} {{\rm {\bf z}}} \right\rangle
+=\sum\limits_{1\leqslant i\leqslant \left( {{\begin{array}{*{20}c}
+ r \hfill \\
+ N \hfill \\
+\end{array} }} \right)} {\left| {z_i } \right|} ^2 \\
+ E\left( {{\rm {\bf z}},{\rm {\bf z}}} \right)=\frac{\left\langle {{\rm {\bf
+z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}} {H{\rm {\bf z}}}}} \right.
+\kern-\nulldelimiterspace} {H{\rm {\bf z}}} \right\rangle }{\left\langle
+{{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}} {\rm {\bf z}}}}
+\right. \kern-\nulldelimiterspace} {{\rm {\bf z}}} \right\rangle
+}=\frac{\sum\limits_{1\leqslant i,j\leqslant \left( {{\begin{array}{*{20}c}
+ r \hfill \\
+ N \hfill \\
+\end{array} }} \right)} {\bar {z}_i z_j \left\langle {\Phi _i }
+\mathrel{\left| {\vphantom {{\Phi _i } {H\Phi _j }}} \right.
+\kern-\nulldelimiterspace} {H\Phi _j } \right\rangle }
+}{\sum\limits_{1\leqslant i\leqslant \left( {{\begin{array}{*{20}c}
+ r \hfill \\
+ N \hfill \\
+\end{array} }} \right)} {\left| {z_i } \right|^2} }\mbox{; } \\
+ \\
+ C_{ij} =\left. {\frac{\partial ^2\ln S}{\partial \bar {{z}'}_i \partial z_j
+}} \right|_{{z}'=z} =\left. {\frac{1}{S}\left\{ {\frac{\partial
+^2S}{\partial \bar {{z}'}_i \partial z_j }-\frac{1}{S}\frac{\partial
+S}{\partial \bar {{z}'}_i }\frac{\partial S}{\partial z_j }} \right\}}
+\right|_{{z}'=z} =\frac{1}{S}\left\{ {\delta _{ij} -\frac{1}{S}z_i \bar
+{z}_j } \right\} \\
+ \Rightarrow {\rm {\bf C}}=\frac{1}{S}\left\{ {{\rm {\bf I}}-{\rm {\bf
+P}}_{\rm {\bf z}} } \right\}=\frac{1}{S}{\rm {\bf P}}_{\rm {\bf z}}^\bot
+,\mbox{ } \\
+ \mbox{where }{\rm {\bf P}}_{\rm {\bf z}} \mbox{ is the orthogonal projector
+onto the vector }{\rm {\bf z}}\in C^{\left( {{\begin{array}{*{20}c}
+ \mbox{r} \hfill \\
+ \mbox{N} \hfill \\
+\end{array} }} \right)} \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{noting that }\left( {{\begin{array}{*{20}c}
+ {\frac{\partial E}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial E}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {\frac{\partial H}{\partial {\rm {\bf z}}}-E\frac{\partial S}{\partial {\rm
+{\bf z}}}} \hfill \\
+ {\frac{\partial H}{\partial {\rm {\bf \bar {z}}}}-E\frac{\partial
+S}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf H}}\bullet {\rm {\bf z}}-E{\rm {\bf z}}} \hfill \\
+ {{\rm {\bf \bar {H}}}\bullet {\rm {\bf \bar {z}}}-E{\rm {\bf \bar {z}}}}
+\hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{the classical equations of motion }{\rm {\bf \dot {x}}}=\left\{ {{\rm
+{\bf x}},E} \right\}\mbox{, }{\rm {\bf x}}={\rm {\bf z}},{\rm {\bf \bar
+{z}}}\mbox{ }\mbox{give } \\
+ \left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf C}}} \hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {{\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial E}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial E}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right) \\
+ \Rightarrow \left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf P}}_{\rm {\bf z}}^\bot }
+\hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf P}}_{{\rm {\bf \bar {z}}}}^\bot } \hfill &
+{\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {{\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{as }\left( {{\rm {\bf H}}-E{\rm {\bf I}}} \right){\rm {\bf z}}\mbox{
+is also }\bot \mbox{ }{\rm {\bf z}}\mbox{ this } \\
+ \Rightarrow \left( {{\begin{array}{*{20}c}
+ {-\tfrac{i}{\hbar }{\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {\tfrac{i}{\hbar }{\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\rm {\bf I}} \hfill \\
+ {-{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right);\mbox{ } \\
+ \mbox{The critical points of }E\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)\mbox{ correspond to the stationary states of }H\mbox{ as} \\
+ \left( {{\begin{array}{*{20}c}
+ {\frac{\partial E}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial E}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right)\Rightarrow \left| {\rm {\bf z}} \right\rangle \mbox{
+are eigenstates of }H\mbox{ } \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{noting that }\left( {{\begin{array}{*{20}c}
+ {\frac{\partial E}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial E}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {\frac{\partial H}{\partial {\rm {\bf z}}}-E\frac{\partial S}{\partial {\rm
+{\bf z}}}} \hfill \\
+ {\frac{\partial H}{\partial {\rm {\bf \bar {z}}}}-E\frac{\partial
+S}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf H}}\bullet {\rm {\bf z}}-E{\rm {\bf z}}} \hfill \\
+ {{\rm {\bf \bar {H}}}\bullet {\rm {\bf \bar {z}}}-E{\rm {\bf \bar {z}}}}
+\hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right)\mbox{ } \\
+ \mbox{the classical equations of motion }{\rm {\bf \dot {x}}}=\left\{ {{\rm
+{\bf x}},E} \right\}\mbox{, }{\rm {\bf x}}={\rm {\bf z}},{\rm {\bf \bar
+{z}}}\mbox{ }\mbox{give } \\
+ \left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf C}}} \hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {{\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial E}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial E}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\Rightarrow \left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\tfrac{i}{\hbar }{\rm {\bf P}}_{\rm {\bf z}}^\bot }
+\hfill \\
+ {-\tfrac{i}{\hbar }{\rm {\bf P}}_{{\rm {\bf \bar {z}}}}^\bot } \hfill &
+{\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {{\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{as }\left( {{\rm {\bf H}}-E{\rm {\bf I}}} \right){\rm {\bf z}}\mbox{
+is also }\bot \mbox{ }{\rm {\bf z}}\mbox{ this } \\
+ \Rightarrow \left( {{\begin{array}{*{20}c}
+ {-\tfrac{i}{\hbar }{\rm {\bf \dot {\bar {z}}}}} \hfill \\
+ {\tfrac{i}{\hbar }{\rm {\bf \dot {z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\rm {\bf I}} \hfill \\
+ {-{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right);\mbox{ } \\
+ \mbox{The critical points of }E\left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}}
+\right)\mbox{ correspond to the stationary states of }H\mbox{ as } \\
+ \left( {{\begin{array}{*{20}c}
+ {\frac{\partial E}{\partial {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial E}{\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {{\rm {\bf H}}-E{\rm {\bf I}}} \hfill \\
+ {{\rm {\bf \bar {H}}}-E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}} \hfill \\
+ {\rm {\bf z}} \hfill \\
+\end{array} }} \right)\mbox{ which}\Rightarrow \left| {\rm {\bf z}}
+\right\rangle \mbox{ are eigenstates of }H\mbox{ } \\
+ \mbox{ } \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{We now consider the hamiltonian of the molecular system interacting
+with the radiation } \\
+ \mbox{field. If the point }\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)\mbox{ is a critical point of the molecular system, i.e }\left(
+{{\rm {\bf H}}_{\rm {\bf 0}} -E{\rm {\bf I}}} \right)\bullet {\rm {\bf z}}_0
+={\rm {\bf 0}}\mbox{ } \\
+ \mbox{the Laplace transform of the linear response function becomes } \\
+ R\left( z \right)=\left( {\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-z{\rm {\bf C}}} \hfill \\
+ {z{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)-{\rm {\bf D}}^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)} \right)^{-1}=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-\left( {z{\rm {\bf I}}+\left( {{\rm {\bf \bar
+{H}}}_{\rm {\bf 0}} -E{\rm {\bf I}}} \right)} \right)^{-1}} \hfill \\
+ {z{\rm {\bf I}}-\left( {{\rm {\bf H}}_{\rm {\bf 0}} -E{\rm {\bf I}}}
+\right)^{-1}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{where it }{\rm {\bf should}}\mbox{ }{\rm {\bf be}}\mbox{ }{\rm {\bf
+observed}}\mbox{ that in this case the Hessian matrix is now block skew
+diagonal } \\
+ {\rm {\bf D}}^{\rm {\bf 2}}E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf \bar {z}}}}} \hfill
+& {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf z}}}} \hfill \\
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf \bar {z}}}}} \hfill &
+{\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm
+{\bf \bar {z}}}_0 } \right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf
+z}}}} \hfill \\
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf \bar {z}}}}} \hfill & {\rm
+{\bf 0}} \hfill \\
+\end{array} }} \right). \\
+ \mbox{The linear response of the 1-particle reduced density matrix in this
+case is thus } \\
+ \delta ^1\rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} \left( z \right)=\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} }{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial \rho
+^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)_{ij} }{\partial
+{\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-\left( {z{\rm {\bf I}}+\left( {{\rm {\bf \bar
+{H}}}_{\rm {\bf 0}} -E{\rm {\bf I}}} \right)} \right)^{-1}} \hfill \\
+ {z{\rm {\bf I}}-\left( {{\rm {\bf H}}_{\rm {\bf 0}} -E{\rm {\bf I}}}
+\right)^{-1}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right){\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 ,z} \right) \\
+ \mbox{where }{\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 ,z} \right)=\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf F}}\left( z \right){\rm {\bf z}}_0 } \hfill \\
+ {{\rm {\bf \bar {F}}}\left( z \right){\rm {\bf \bar {z}}}_0 } \hfill \\
+\end{array} }} \right)=\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf F}}\left( z \right)} \hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {{\rm {\bf \bar {F}}}\left( z \right)} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf z}}_0 } \hfill \\
+ {{\rm {\bf \bar {z}}}_0 } \hfill \\
+\end{array} }} \right)\mbox{; } \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ \mbox{The hamiltonian of the molecular system plus perturbation is }H=H_0
++F\left( t \right)\mbox{ } \\
+ \mbox{has the matrix representation wrt to the complete orthormal basis
+}\left\{ {\Phi _\mbox{i} } \right\}\equiv \underline{\Phi }\mbox{ } \\
+ {\rm {\bf H}}=\left\langle {\underline{\Phi }} \mathrel{\left| {\vphantom
+{{\underline{\Phi }} {H\underline{\Phi }}}} \right.
+\kern-\nulldelimiterspace} {H\underline{\Phi }} \right\rangle ={\rm {\bf
+H}}_{\rm {\bf 0}} +{\rm {\bf F}}\left( t \right).\mbox{ The derrivatives of
+the energy can be expressed in terms } \\
+ \mbox{of these matrices as } \\
+ \frac{\partial E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}}=\frac{1}{S}\left\langle {{\rm {\bf z}}_0 }
+\mathrel{\left| {\vphantom {{{\rm {\bf z}}_0 } {\left( {H_0 -EI+F\left( t
+\right)} \right)\underline{\Phi }}}} \right. \kern-\nulldelimiterspace}
+{\left( {H_0 -EI+F\left( t \right)} \right)\underline{\Phi }} \right\rangle
+=\frac{1}{S}\left\{ {\left\langle {{\rm {\bf z}}_0 } \mathrel{\left|
+{\vphantom {{{\rm {\bf z}}_0 } {\left( {H_0 -EI} \right)\underline{\Phi }}}}
+\right. \kern-\nulldelimiterspace} {\left( {H_0 -EI} \right)\underline{\Phi
+}} \right\rangle +\sum\limits_{ij} {f_{kl} \left( t \right)\mbox{ }}
+\left\langle {{\rm {\bf z}}_0 } \mathrel{\left| {\vphantom {{{\rm {\bf z}}_0
+} {\mbox{a}_k^\dag \left( t \right)\mbox{a}_l \left( t
+\right)\underline{\Phi }}}} \right. \kern-\nulldelimiterspace}
+{\mbox{a}_k^\dag \left( t \right)\mbox{a}_l \left( t \right)\underline{\Phi
+}} \right\rangle } \right\} \\
+ =\frac{1}{S}\left( {{\rm {\bf \bar {H}}}_{\rm {\bf 0}} -E{\rm {\bf I}}+{\rm
+{\bf \bar {F}}}\left( t \right)} \right)\bullet {\rm {\bf \bar {z}}}_0 \\
+ \frac{\partial ^2E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf
+z}}}=\frac{1}{S}\left\langle {\underline{\Phi }} \mathrel{\left| {\vphantom
+{{\underline{\Phi }} {\left( {H_0 -EI+F\left( t \right)}
+\right)\underline{\Phi }}}} \right. \kern-\nulldelimiterspace} {\left( {H_0
+-EI+F\left( t \right)} \right)\underline{\Phi }} \right\rangle
+=\frac{1}{S}\left\{ {\left\langle {\underline{\Phi }} \mathrel{\left|
+{\vphantom {{\underline{\Phi }} {\left( {H_0 -EI} \right)\underline{\Phi
+}}}} \right. \kern-\nulldelimiterspace} {\left( {H_0 -EI}
+\right)\underline{\Phi }} \right\rangle +\sum\limits_{ij} {f_{kl} \left( t
+\right)\mbox{ }} \left\langle {\underline{\Phi }} \mathrel{\left| {\vphantom
+{{\underline{\Phi }} {\mbox{a}_k^\dag \left( t \right)\mbox{a}_l \left( t
+\right)\underline{\Phi }}}} \right. \kern-\nulldelimiterspace}
+{\mbox{a}_k^\dag \left( t \right)\mbox{a}_l \left( t \right)\underline{\Phi
+}} \right\rangle } \right\} \\
+ =\frac{1}{S}\left( {{\rm {\bf \bar {H}}}_{\rm {\bf 0}} -E{\rm {\bf I}}+{\rm
+{\bf \bar {F}}}\left( t \right)} \right) \\
+ \mbox{Where }E=E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)\mbox{. Expanding the energy about the point }\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 } \right)\mbox{ gives the } \\
+ exact\mbox{ expression } \\
+ E\left( {{\rm {\bf z}}_0 +\delta {\rm {\bf z}},{\rm {\bf \bar {z}}}_0
++\delta {\rm {\bf \bar {z}}}} \right)=E\left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)+\delta {\rm {\bf z}}^\dag \bullet \frac{\partial
+E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)}{\partial {\rm
+{\bf \bar {z}}}}+\frac{\partial E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 } \right)}{\partial {\rm {\bf z}}}\bullet \delta {\rm {\bf z}} \\
+ +\frac{1}{2}\left\{ {\delta {\rm {\bf z}}^\dag \bullet \frac{\partial
+^2E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)}{\partial {\rm
+{\bf \bar {z}}}\partial {\rm {\bf z}}}\bullet \delta {\rm {\bf z}}+\delta
+{\rm {\bf \bar {z}}}^\dag \bullet \frac{\partial ^2E\left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 } \right)}{\partial {\rm {\bf z}}\partial {\rm {\bf
+\bar {z}}}}\bullet \delta {\rm {\bf \bar {z}}}} \right\} \\
+ \mbox{ Linear response to the external perturbation is obtain by
+approximating the } \\
+ \mbox{energy function around the point }\left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)\mbox{ by only retaining terms up to first order } \\
+ \mbox{in the perturbation } \\
+ E\left( {{\rm {\bf z}}_0 +\delta {\rm {\bf z}},{\rm {\bf \bar {z}}}_0
++\delta {\rm {\bf \bar {z}}}} \right)\approx \tilde {E}\left( {{\rm {\bf
+z}}_0 +\delta {\rm {\bf z}},{\rm {\bf \bar {z}}}_0 +\delta {\rm {\bf \bar
+{z}}}} \right)=E\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)+\delta {\rm {\bf z}}^\dag \bullet \left\langle {\underline{\Phi }}
+\mathrel{\left| {\vphantom {{\underline{\Phi }} {\left( {H_0 +F\left( t
+\right)} \right){\rm {\bf z}}_0 }}} \right. \kern-\nulldelimiterspace}
+{\left( {H_0 +F\left( t \right)} \right){\rm {\bf z}}_0 } \right\rangle \\
+ +\left\langle {{\rm {\bf z}}_0 } \mathrel{\left| {\vphantom {{{\rm {\bf
+z}}_0 } {\left( {H_0 +F\left( t \right)} \right)\underline{\Phi }}}} \right.
+\kern-\nulldelimiterspace} {\left( {H_0 +F\left( t \right)}
+\right)\underline{\Phi }} \right\rangle \bullet \delta {\rm {\bf z}}+\delta
+{\rm {\bf z}}^\dag \bullet \left\langle {\underline{\Phi }} \mathrel{\left|
+{\vphantom {{\underline{\Phi }} {H_0 \underline{\Phi }}}} \right.
+\kern-\nulldelimiterspace} {H_0 \underline{\Phi }} \right\rangle \bullet
+\delta {\rm {\bf z}} \\
+ \mbox{to give the local linear response energy gradient } \\
+ \left( {{\begin{array}{*{20}c}
+ {\frac{\partial \tilde {E}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial \delta {\rm {\bf \bar {z}}}}} \hfill \\
+ {\frac{\partial \tilde {E}\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial \delta {\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)=\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf H}}_{\rm {\bf 0}} -E{\rm {\bf I}}+{\rm {\bf F}}\left( t \right)}
+\hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {{\rm {\bf \bar {H}}}_{\rm {\bf 0}} -E{\rm {\bf
+I}}+{\rm {\bf \bar {F}}}\left( t \right)} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf z}}_0 } \hfill \\
+ {{\rm {\bf \bar {z}}}_0 } \hfill \\
+\end{array} }} \right) \\
+ +\frac{1}{S}\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf H}}_{\rm {\bf 0}} -E{\rm {\bf I}}} \hfill & {\rm {\bf 0}} \hfill
+\\
+ {\rm {\bf 0}} \hfill & {{\rm {\bf \bar {H}}}_{\rm {\bf 0}} -E{\rm {\bf I}}}
+\hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\delta {\rm {\bf z}}} \hfill \\
+ {\delta {\rm {\bf \bar {z}}}} \hfill \\
+\end{array} }} \right) \\
+ \mbox{ } \\
+ \end{array}
+\begin{array}{c}
+ \Rightarrow \delta ^1\rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)_{ij} \left( z \right)=\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf \bar {z}}}_0^\dag \bullet \overline {\left\langle
+{\underline{\Phi }} \mathrel{\left| {\vphantom {{\underline{\Phi }}
+{\mbox{a}_j^\dag \mbox{a}_i \underline{\Phi }}}} \right.
+\kern-\nulldelimiterspace} {\mbox{a}_j^\dag \mbox{a}_i \underline{\Phi }}
+\right\rangle } } \hfill & {{\rm {\bf z}}_0^\dag \bullet \left\langle
+{\underline{\Phi }} \mathrel{\left| {\vphantom {{\underline{\Phi }}
+{\mbox{a}_j^\dag \mbox{a}_i \underline{\Phi }}}} \right.
+\kern-\nulldelimiterspace} {\mbox{a}_j^\dag \mbox{a}_i \underline{\Phi }}
+\right\rangle } \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\rm {\bf 1}} \hfill \\
+ {\rm {\bf 1}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\rm {\bf 1}} \hfill \\
+ {\rm {\bf 1}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\times \mbox{ } \\
+ \mbox{ }\times \left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-\left( {z{\rm {\bf I}}+\left( {{\rm {\bf \bar
+{H}}}_{\rm {\bf 0}} -E{\rm {\bf I}}} \right)} \right)^{-1}} \hfill \\
+ {z{\rm {\bf I}}-\left( {{\rm {\bf H}}_{\rm {\bf 0}} -E{\rm {\bf I}}}
+\right)^{-1}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf F}}\left( z \right)} \hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {{\rm {\bf \bar {F}}}\left( z \right)} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {{\rm {\bf z}}_0 } \hfill \\
+ {{\rm {\bf \bar {z}}}_0 } \hfill \\
+\end{array} }} \right) \\
+ \\
+ \end{array}
+\]
+\[
+\begin{array}{c}
+ =\left( {{\begin{array}{*{20}c}
+ {\left\langle {\underline{{\rm {\bf z}}_0 }} \mathrel{\left| {\vphantom
+{{\underline{{\rm {\bf z}}_0 }} {\mbox{a}_j^\dag \mbox{a}_i \underline{\Phi
+}}}} \right. \kern-\nulldelimiterspace} {\mbox{a}_j^\dag \mbox{a}_i
+\underline{\Phi }} \right\rangle } \hfill & {\overline {\left\langle
+{\underline{{\rm {\bf z}}_0 }} \mathrel{\left| {\vphantom {{\underline{{\rm
+{\bf z}}_0 }} {\mbox{a}_j^\dag \mbox{a}_i \underline{\Phi }}}} \right.
+\kern-\nulldelimiterspace} {\mbox{a}_j^\dag \mbox{a}_i \underline{\Phi }}
+\right\rangle } } \hfill \\
+\end{array} }} \right)\times \mbox{ } \\
+ \times \left( {{\begin{array}{*{20}c}
+ {\left\langle {\underline{\Phi }} \mathrel{\left| {\vphantom
+{{\underline{\Phi }} {\left\{ {zI-\left( {H_0 -EI} \right)^{-1}}
+\right\}\underline{\Phi }}}} \right. \kern-\nulldelimiterspace} {\left\{
+{zI-\left( {H_0 -EI} \right)^{-1}} \right\}\underline{\Phi }} \right\rangle
+} \hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {-\overline {\left\langle {\underline{\Phi }}
+\mathrel{\left| {\vphantom {{\underline{\Phi }} {\left\{ {\left( {\bar
+{z}I+\left( {H_0 -EI} \right)} \right)^{-1}} \right\}\underline{\Phi }}}}
+\right. \kern-\nulldelimiterspace} {\left\{ {\left( {\bar {z}I+\left( {H_0
+-EI} \right)} \right)^{-1}} \right\}\underline{\Phi }} \right\rangle } }
+\hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\left\langle {\underline{\Phi }} \mathrel{\left| {\vphantom
+{{\underline{\Phi }} {\left( {{\rm {\bf a}}^{\rm {\bf \dag }}{\rm {\bf a}}}
+\right)\underline{{\rm {\bf z}}_0 }}}} \right. \kern-\nulldelimiterspace}
+{\left( {{\rm {\bf a}}^{\rm {\bf \dag }}{\rm {\bf a}}}
+\right)\underline{{\rm {\bf z}}_0 }} \right\rangle } \hfill \\
+ {\overline {\left\langle {\underline{\Phi }} \mathrel{\left| {\vphantom
+{{\underline{\Phi }} {\left( {{\rm {\bf a}}^{\rm {\bf \dag }}{\rm {\bf a}}}
+\right)\underline{{\rm {\bf z}}_0 }}}} \right. \kern-\nulldelimiterspace}
+{\left( {{\rm {\bf a}}^{\rm {\bf \dag }}{\rm {\bf a}}}
+\right)\underline{{\rm {\bf z}}_0 }} \right\rangle } } \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\begin{array}{l}
+ {\rm {\bf f}}\left( z \right) \\
+ \\
+ \end{array}} \hfill \\
+ {\overline {{\rm {\bf f}}\left( z \right)} } \hfill \\
+\end{array} }} \right)= \\
+ \mbox{ } \\
+ \sum\limits_{1\leqslant k,l\leqslant r} {\left\langle {{\rm {\bf z}}_0 }
+\mathrel{\left| {\vphantom {{{\rm {\bf z}}_0 } {\left( {\mbox{a}_j^\dag
+\mbox{a}_i \left\{ {zI-\left( {H_0 -EI} \right)^{-1}}
+\right\}\mbox{a}_k^\dag \mbox{a}_l } \right){\rm {\bf z}}_0 }}} \right.
+\kern-\nulldelimiterspace} {\left( {\mbox{a}_j^\dag \mbox{a}_i \left\{
+{zI-\left( {H_0 -EI} \right)^{-1}} \right\}\mbox{a}_k^\dag \mbox{a}_l }
+\right){\rm {\bf z}}_0 } \right\rangle f_{kl} \left( z \right)-\left\langle
+{{\rm {\bf z}}_0 } \mathrel{\left| {\vphantom {{{\rm {\bf z}}_0 } {\left(
+{\mbox{a}_k^\dag \mbox{a}_l \left\{ {zI+\left( {H_0 -EI} \right)^{-1}}
+\right\}\mbox{a}_j^\dag \mbox{a}_i } \right){\rm {\bf z}}_0 }}} \right.
+\kern-\nulldelimiterspace} {\left( {\mbox{a}_k^\dag \mbox{a}_l \left\{
+{zI+\left( {H_0 -EI} \right)^{-1}} \right\}\mbox{a}_j^\dag \mbox{a}_i }
+\right){\rm {\bf z}}_0 } \right\rangle \overline {f_{lk} \left( z \right)} }
+\\
+ =\sum\limits_{kl} {R_{ijkl} \left( z \right)f_{kl} \left( z \right)} \\
+ \mbox{ } \\
+ \end{array}
+\]
+Where $R_{ijkl} \left( z \right)$ are precisely the exact linear response
+functions obtained previously.
+
+\underline {\textbf{4.4 Linear Response Described by
+}}$\raise0.7ex\hbox{${\mbox{SU}\left( r \right)}$} \!\mathord{\left/
+{\vphantom {{\mbox{SU}\left( r \right)} {\mbox{USp}\left( r
+\right)}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp}\left(
+r \right)}$}$\underline {\textbf{-Coherent States .}}
+
+We now use the manifold of AGP coherent states in which to perform the
+stationary phase approximation and to consider approximate linear response
+functions. Within the context of the classical equations of motion in the
+associated phase the linear response of the first order reduced density
+matrix produced by the radiation field is then given by
+\[
+\begin{array}{l}
+ \delta ^1\rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} \left( z \right)= \\
+ \left( {{\begin{array}{*{20}c}
+ {\frac{\partial \rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} }{\partial {\rm {\bf \bar {z}}}}} \hfill & {\frac{\partial \rho
+^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)_{ij} }{\partial
+{\rm {\bf z}}}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\rm {\bf 1}} \hfill \\
+ {\rm {\bf 1}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {\rm {\bf 1}} \hfill \\
+ {\rm {\bf 1}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)\left( {\left( {{\begin{array}{*{20}c}
+ {\rm {\bf 0}} \hfill & {-z{\rm {\bf C}}} \hfill \\
+ {z{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+\end{array} }} \right)-{\rm {\bf D}}^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf
+\bar {z}}}_0 } \right)} \right)^{-1}{\rm {\bf D}}^{\rm {\bf 1}}F\left( {{\rm
+{\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,z} \right) \\
+ =\left( {{\begin{array}{*{20}c}
+ {\frac{\partial \rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)_{ij} }{\partial {\rm {\bf z}}}} \hfill & {\frac{\partial \rho
+^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)_{ij} }{\partial
+{\rm {\bf \bar {z}}}}} \hfill \\
+\end{array} }} \right)\left( {\left( {{\begin{array}{*{20}c}
+ {z{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {-z{\rm {\bf C}}} \hfill \\
+\end{array} }} \right)-\left( {{\begin{array}{*{20}c}
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf \bar {z}}}}} \hfill &
+{\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf z}}}} \hfill \\
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf \bar {z}}}}} \hfill
+& {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf \bar {z}}}}} \hfill \\
+\end{array} }} \right)} \right)^{-1}\left( {{\begin{array}{*{20}c}
+ {\begin{array}{l}
+ \frac{\partial F\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,z}
+\right)}{\partial {\rm {\bf z}}} \\
+ \\
+ \end{array}} \hfill \\
+ {\overline {\frac{\partial F\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+,z} \right)}{\partial {\rm {\bf z}}}} } \hfill \\
+\end{array} }} \right) \\
+ \frac{\partial F\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 ,z}
+\right)}{\partial {\rm {\bf z}}}=\sum\limits_{kl} {\left. {\frac{\partial
+\left\langle {{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}}
+{\mbox{a}_k^\dag \mbox{a}_l {\rm {\bf z}}}}} \right.
+\kern-\nulldelimiterspace} {\mbox{a}_k^\dag \mbox{a}_l {\rm {\bf z}}}
+\right\rangle }{\partial {\rm {\bf z}}}} \right|} _{{\rm {\bf z}}={\rm {\bf
+z}}_{\rm {\bf 0}} } f_{kl} \left( z \right)\mbox{; and }\frac{\partial \rho
+^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)_{ij} }{\partial
+{\rm {\bf z}}}=\left. {\frac{\partial \left\langle {{\rm {\bf z}}}
+\mathrel{\left| {\vphantom {{\rm {\bf z}} {\mbox{a}_j^\dag \mbox{a}_i {\rm
+{\bf z}}}}} \right. \kern-\nulldelimiterspace} {\mbox{a}_j^\dag \mbox{a}_i
+{\rm {\bf z}}} \right\rangle }{\partial {\rm {\bf z}}}} \right|_{{\rm {\bf
+z}}={\rm {\bf z}}_{\rm {\bf 0}} } \\
+ \Rightarrow \delta ^1\rho ^1\left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0
+} \right)_{ij} \left( z \right)=\left( {{\begin{array}{*{20}c}
+ {\left. {\frac{\partial \left\langle {{\rm {\bf z}}} \mathrel{\left|
+{\vphantom {{\rm {\bf z}} {\mbox{a}_j^\dag \mbox{a}_i {\rm {\bf z}}}}}
+\right. \kern-\nulldelimiterspace} {\mbox{a}_j^\dag \mbox{a}_i {\rm {\bf
+z}}} \right\rangle }{\partial {\rm {\bf z}}}} \right|_{{\rm {\bf z}}={\rm
+{\bf z}}_{\rm {\bf 0}} } } \hfill & {\left. {\frac{\partial \left\langle
+{{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}} {\mbox{a}_j^\dag
+\mbox{a}_i {\rm {\bf z}}}}} \right. \kern-\nulldelimiterspace}
+{\mbox{a}_j^\dag \mbox{a}_i {\rm {\bf z}}} \right\rangle }{\partial {\rm
+{\bf \bar {z}}}}} \right|_{{\rm {\bf z}}={\rm {\bf z}}_{\rm {\bf 0}} } }
+\hfill \\
+\end{array} }} \right)\times \\
+ \times \left( {\left( {{\begin{array}{*{20}c}
+ {z{\rm {\bf \bar {C}}}} \hfill & {\rm {\bf 0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {-z{\rm {\bf C}}} \hfill \\
+\end{array} }} \right)-\left( {{\begin{array}{*{20}c}
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf \bar {z}}}}} \hfill &
+{\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf z}}}} \hfill \\
+ {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf \bar {z}}}\partial {\rm {\bf \bar {z}}}}} \hfill
+& {\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}\partial {\rm {\bf \bar {z}}}}} \hfill \\
+\end{array} }} \right)} \right)^{-1}\left( {{\begin{array}{*{20}c}
+ {\left. {\left. {\frac{\partial \left\langle {{\rm {\bf z}}}
+\mathrel{\left| {\vphantom {{\rm {\bf z}} {\left( {{\rm {\bf a}}^{\rm {\bf
+\dag }}{\rm {\bf a}}} \right){\rm {\bf z}}}}} \right.
+\kern-\nulldelimiterspace} {\left( {{\rm {\bf a}}^{\rm {\bf \dag }}{\rm {\bf
+a}}} \right){\rm {\bf z}}} \right\rangle }{\partial {\rm {\bf z}}}} \right|}
+\right|_{{\rm {\bf z}}={\rm {\bf z}}_{\rm {\bf 0}} } } \hfill & {\rm {\bf
+0}} \hfill \\
+ {\rm {\bf 0}} \hfill & {\overline {\left. {\left. {\frac{\partial
+\left\langle {{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}}
+{\left( {{\rm {\bf a}}^{\rm {\bf \dag }}{\rm {\bf a}}} \right){\rm {\bf
+z}}}}} \right. \kern-\nulldelimiterspace} {\left( {{\rm {\bf a}}^{\rm {\bf
+\dag }}{\rm {\bf a}}} \right){\rm {\bf z}}} \right\rangle }{\partial {\rm
+{\bf z}}}} \right|} \right|_{{\rm {\bf z}}={\rm {\bf z}}_{\rm {\bf 0}} } } }
+\hfill \\
+\end{array} }} \right)\left( {{\begin{array}{*{20}c}
+ {\begin{array}{l}
+ {\rm {\bf f}}\left( z \right) \\
+ \\
+ \end{array}} \hfill \\
+ {\overline {{\rm {\bf f}}\left( z \right)} } \hfill \\
+\end{array} }} \right) \\
+ \end{array}
+\]
+In general the off diagonal blocks $\left\{ {\frac{\partial ^2E_0 \left(
+{{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 } \right)}{\partial {\rm {\bf
+z}}\partial {\rm {\bf z}}},\frac{\partial ^2E_0 \left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 } \right)}{\partial {\rm {\bf \bar {z}}}\partial
+{\rm {\bf \bar {z}}}}} \right\}$\underline { } are not zero
+\[
+\begin{array}{c}
+ H_0 \left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}} \right)=\left\langle
+{\mbox{exp}\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_\mbox{+} _{ij} q_{ij}^\dag } \mbox{
+exp}\sum\limits_{\begin{array}{l}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\lambda _{ij} u_{ij}^ } \right\}}
+g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} } \mathrel{\left| {\vphantom
+{{\mbox{exp}\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_\mbox{+} _{ij} q_{ij}^\dag } \mbox{
+exp}\sum\limits_{\begin{array}{l}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\lambda _{ij} u_{ij}^ } \right\}}
+g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} } {H_0
+\mbox{exp}\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_\mbox{+} _{ij} q_{ij}^\dag } \mbox{
+exp}\sum\limits_{\begin{array}{l}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\lambda _{ij} u_{ij}^ } \right\}}
+g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} }}} \right.
+\kern-\nulldelimiterspace} {H_0 \mbox{exp}\sum\limits_{\begin{array}{l}
+ -s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {\mbox{z}_\mbox{+} _{ij} q_{ij}^\dag } \mbox{
+exp}\sum\limits_{\begin{array}{l}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {\left\{ {\lambda _{ij} u_{ij}^ } \right\}}
+g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} } \right\rangle \\
+ \mbox{one can see that } \\
+ \frac{\partial ^2H_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar {z}}}_0 }
+\right)}{\partial {\rm {\bf z}}_{+1} \partial {\rm {\bf z}}_{+1}
+}=0\Rightarrow \left\langle {g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} \left(
+{{\rm {\bf z}}_0 } \right)} \mathrel{\left| {\vphantom
+{{g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} \left( {{\rm {\bf z}}_0 } \right)}
+{H_0 q_{i_1 j_1 }^\dag \cdots q_{i_m j_m }^\dag
+g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} \left( {{\rm {\bf z}}_0 } \right)}}}
+\right. \kern-\nulldelimiterspace} {H_0 q_{i_1 j_1 }^\dag \cdots q_{i_m j_m
+}^\dag g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} \left( {{\rm {\bf z}}_0 }
+\right)} \right\rangle =0\mbox{ }\forall m\geqslant 2 \\
+ \Rightarrow H_0 \left( {{\rm {\bf z}},{\rm {\bf \bar {z}}}} \right)\mbox{
+is first order in }{\rm {\bf z}}\mbox{ and that }H_0 \mbox{ can be expressed
+first order in }q_{ij}^\dag \mbox{ } \\
+ \mbox{From }\frac{\partial ^2H_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 } \right)}{\partial {\rm {\bf \bar {z}}}_{+1} \partial {\rm {\bf
+\bar {z}}}_{+1} }=0,\mbox{ }\frac{\partial ^2H_0 \left( {{\rm {\bf z}}_0
+,{\rm {\bf \bar {z}}}_0 } \right)}{\partial \lambda \partial \lambda
+}=0,\mbox{ }\frac{\partial ^2H_0 \left( {{\rm {\bf z}}_0 ,{\rm {\bf \bar
+{z}}}_0 } \right)}{\partial \bar {\lambda }\partial \bar {\lambda }}=0\mbox{
+one reaches the same } \\
+ \mbox{conclusion about the operators }q_{ij}^ \mbox{ }\And \mbox{ }u_{ij}^
+.\mbox{ If this were true then } \\
+ H_0 \mbox{ =}E_0 \left| {g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} }
+\right\rangle \left\langle {g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} }
+\right|+\sum\limits_n {\left( {E_n -E_0 } \right)Q_n^\dag \left|
+{g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} } \right\rangle \left\langle
+{g_\mbox{0}^{\tfrac{\mbox{N}}{\mbox{2}}} } \right|Q_n^ } \\
+ \mbox{where }Q_n^\dag =\sum\limits_{\begin{array}{c}
+ i-s\leqslant i<j\leqslant s \\
+ \left| i \right|\ne \left| j \right| \\
+ \end{array}} {Q_{nij}^ q_{ij}^\dag } +\sum\limits_{\begin{array}{c}
+ \mbox{-}s\leqslant i\leqslant s \\
+ \left| i \right|=\left| j \right| \\
+ \end{array}} {U_{nij}^ u_{ij}^ } \mbox{ . } \\
+ \end{array}
+\]
+Thus if the excited states were single excitations out of the reference
+state were exact, the off diagonal blocks would be identically zero and the
+Hamiltonian could be written as a bilinear form in the above excitation
+operators. In this case the quadratic expansion would be exact and Taylor
+series quadratic error would be zero. (Note that diagonalizing the Hessian
+does not accomplish this unless the off diagonal blocks are actually zero,
+as the eigen excitation operators would then be linear combinations of the
+excitation operators and their adjoints.) The slower the convergence of the
+Taylor series, i.e. the greater the quadratic error term, the poorer the
+approximation of excited states by single particle excitations out of the
+reference is.
+
+Once the coherent state manifold is defined one is free to use any well
+defined coordinate system in which to find the critical points of the energy
+function i.e. classical Hamiltonian, for that manifold. We have published a
+procedure based on the coordinates based on the following parameterization
+of AGP states:
+\[
+\left| {g^{\frac{\mbox{N}}{\mbox{2}}}} \right\rangle =P_\mbox{N}
+e^{\sum\limits_{1\leqslant i\leqslant s=\raise0.7ex\hbox{$r$}
+\!\mathord{\left/ {\vphantom {r
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$}} {g_{ij}
+\mbox{a}_i^\dag \mbox{a}_j^\dag } }\left| \phi \right\rangle \mbox{ }
+\]
+This procedure will be compared to ones based on coordinate system
+{\{}\textbf{z}{\}}.
+
+\underline {\textbf{5. Functions defined on the Coset Space. }}
+
+\underline {\textbf{5.1 Space of Holomorphic Quantum Wavefunctions}}
+
+Due to the irreducibility of the group G on the space $H$ this set of states
+forms an overcomplete basis in $H$, thus one has the resolution of the
+identity
+\[
+{\rm {\bf I}}=\int {\left| {\rm {\bf z}} \right\rangle \left\langle {\rm
+{\bf z}} \right|} d\mu \left( {\rm {\bf z}} \right)
+\]
+for a suitably chosen measure $\mu \left( {\rm {\bf z}} \right)$. Using this
+resolution we obtain
+\[
+\mbox{ }\left| \Psi \right\rangle =\int {\left| {\rm {\bf z}} \right\rangle
+} \left\langle {{\rm {\bf z}}} \mathrel{\left| {\vphantom {{\rm {\bf z}}
+\Psi }} \right. \kern-\nulldelimiterspace} {\Psi } \right\rangle d\mu \left(
+{\rm {\bf z}} \right)=\int {\mbox{ }\left| {\rm {\bf z}} \right\rangle }
+\Psi \left( {\rm {\bf z}} \right)d\mu \left( {\rm {\bf z}} \right)
+\]
+where the amplitudes $\Psi \left( {\rm {\bf z}} \right)$ are holomorphic and
+are in 1-1 correspondence with the states $\left| \Psi \right\rangle $. The
+space, $H\left( M \right)$, of all such amplitudes is a Hilbert space that
+is isomorphic to $H$. Thus all quantum mechanical operators that act in $H$
+have integral kernel representations in the space of holomorphic amplitudes
+given by
+\[
+\left\langle {\Psi _1 } \mathrel{\left| {\vphantom {{\Psi _1 } {\mbox{H}\Psi
+_2 }}} \right. \kern-\nulldelimiterspace} {\mbox{H}\Psi _2 } \right\rangle
+=\int {\mbox{ }\bar {\Psi }_1 \left( {{\rm {\bf {z}'}}} \right)}
+\mbox{H}\left( {{\rm {\bf {z}'}},{\rm {\bf z}}} \right)\Psi _2 \left( {\rm
+{\bf z}} \right)d\mu \left( {{\rm {\bf {z}'}}} \right)d\mu \left( {\rm {\bf
+z}} \right)
+\]
+\[
+\mbox{H}\left( {{\rm {\bf {z}'}},{\rm {\bf z}}} \right)=\left\langle {{\rm
+{\bf {z}'}}} \mathrel{\left| {\vphantom {{{\rm {\bf {z}'}}} {\mbox{H}{\rm
+{\bf z}}}}} \right. \kern-\nulldelimiterspace} {\mbox{H}{\rm {\bf z}}}
+\right\rangle \mbox{ }
+\]
+$\mbox{H}\left( {{\rm {\bf {z}'}},{\rm {\bf z}}} \right)\mbox{ can be
+constructed as the analytic extension of}
+\mbox{H}\left( {{\rm {\bf z}},{\rm {\bf z}}} \right),$ which is the
+unnormalized energy functional used in the classical equations of motion.
+
+\underline {\textbf{5.2 Representation of Observables as Differential
+Operators. }}
+
+Elements of the universal enveloping algebra of $sl\left( {H\mbox{ }}
+\right)$ act as differential operators on functions defined on $M$. As
+quantum mechanical observables formally belong to the enveloping algebra,
+they too can be expressed as differential operators, and their expectation
+values as the value of the action of these operators at points in $M$. In
+particular
+\[
+\left\langle {g^{\frac{\mbox{N}}{\mbox{2}}}\left( {\rm {\bf z}} \right)}
+\mathrel{\left| {\vphantom {{g^{\frac{\mbox{N}}{\mbox{2}}}\left( {\rm {\bf
+z}} \right)} {\mbox{a}_i^\dag \mbox{a}_j g^{\frac{\mbox{N}}{\mbox{2}}}\left(
+{\rm {\bf z}} \right)}}} \right. \kern-\nulldelimiterspace} {\mbox{a}_i^\dag
+\mbox{a}_j g^{\frac{\mbox{N}}{\mbox{2}}}\left( {\rm {\bf z}} \right)}
+\right\rangle =P_{ij} \left( {\frac{\partial }{\partial {\rm {\bf
+z}}},\frac{\partial }{\partial {\rm {\bf \bar {z}}}}} \right)\left\langle
+{g^{\frac{\mbox{N}}{\mbox{2}}}\left( {\rm {\bf z}} \right)} \mathrel{\left|
+{\vphantom {{g^{\frac{\mbox{N}}{\mbox{2}}}\left( {\rm {\bf z}} \right)}
+{g^{\frac{\mbox{N}}{\mbox{2}}}\left( {\rm {\bf z}} \right)}}} \right.
+\kern-\nulldelimiterspace} {g^{\frac{\mbox{N}}{\mbox{2}}}\left( {\rm {\bf
+z}} \right)} \right\rangle
+\]
+$\mbox{where }P_{ij} \left( {\frac{\partial }{\partial {\rm {\bf
+z}}},\frac{\partial }{\partial {\rm {\bf \bar {z}}}}} \right)\mbox{ is a
+polynomial in }\left\{ {\frac{\partial }{\partial {\rm {\bf
+z}}},\frac{\partial }{\partial {\rm {\bf \bar {z}}}}} \right\}.$ Such
+relationships are important in constructing efficient expressions for
+expectation values, as well as for the various terms appearing the in
+generalized classical equations of motion on the coherent state manifold and
+the associated linear response functions.
+
+Thus on the space $H\left( M \right)$ they can be represented both by
+integral kernels as well as differential operators. There is and has been an
+active research effort in classifying and analyzing the properties of
+differential operators on coset manifolds in an abstract setting. We propose
+to apply this work to the study of quantum mechanical observables involved
+in response functions obtained from 2 particle propagators.
+
+\underline {\textbf{5.3 Induced Representations}}
+
+Elements of G act on the coset space mapping it to itself, thus give rise to
+a, in general \textit{nonlinear, }representation of G. Thus
+\[
+\begin{array}{c}
+ G:\mbox{ }\raise0.7ex\hbox{$G$} \!\mathord{\left/ {\vphantom {G
+H}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$H$}\to
+\raise0.7ex\hbox{$G$} \!\mathord{\left/ {\vphantom {G
+H}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$H$}\mbox{
+}\Rightarrow \mbox{ }\sigma \left( g \right):M\to M\mbox{ i.e. }\sigma
+\left( g \right){\rm {\bf z}}={\rm {\bf {z}'}} \\
+ \sigma \left( h \right),\mbox{ }h\in H\mbox{ leaves each point in }M\mbox{
+invariant} \\
+ \mbox{Thus a new representation of G is induced on }H\left( M \right)\mbox{
+by} \\
+ \Pi \left( \mbox{g} \right)\Psi \left( {\rm {\bf z}} \right)=\Psi \left(
+{\sigma \left( g \right){\rm {\bf z}}} \right) \\
+ \end{array}
+\]
+The induced representation depends on the original representation
+$\mbox{G}_H $ and the isotropy subgroup $\mbox{H}_V $ , which itself
+corresponds to the form of the coherent state. All but two of the classical
+Riemannian symmetric coset spaces can be expressed as exponential of off
+diagonal matrices, for these cases the action of the group on the coset
+space is represented as fractional linear transformations
+\[
+\sigma \left( g \right)\mbox{ }{\rm {\bf z}}=\left( {{\rm {\bf Az}}+{\rm
+{\bf B}}} \right)\left( {{\rm {\bf Cz}}+{\rm {\bf D}}} \right)^{-1}={\rm
+{\bf {z}'}}
+\]
+where $\left( {{\begin{array}{*{20}c}
+ A \hfill & B \hfill \\
+ C \hfill & D \hfill \\
+\end{array} }} \right)$ is the defining representation of $g\mbox{ }\in G$.
+However for the other two cosets $\raise0.7ex\hbox{${\mbox{SU(r)}}$}
+\!\mathord{\left/ {\vphantom {{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$
+and $\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{SO(r)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{SO(r)}}$}$
+this is not the case. The coset $\raise0.7ex\hbox{${\mbox{SU(r)}}$}
+\!\mathord{\left/ {\vphantom {{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$
+is the primary focus of this study, which will investigate the details of
+the action of $\mbox{SU(r) on }\raise0.7ex\hbox{${\mbox{SU(r)}}$}
+\!\mathord{\left/ {\vphantom {{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}\mbox{
+and SL(r) on its complexification }\raise0.7ex\hbox{${\mbox{SL(r)}}$}
+\!\mathord{\left/ {\vphantom {{\mbox{SL(r)}}
+{\mbox{Sp(2s,C)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{Sp(2s,C)}}$}$.
+The action of the group $\mbox{SU(r)}$ on the coset
+$\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$
+is important in the study of physical symmetries, such as spin and angular
+momentum. We have shown how one can produce pure symmetry coherent states in
+the case of $\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/ {\vphantom
+{{\mbox{SU(r)}} {\mbox{U(N)}\otimes
+\mbox{U(r-N)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{U(N)}\otimes
+\mbox{U(r-N)}}$}$ coherent states and in this work will extend such a
+construction to $\raise0.7ex\hbox{${\mbox{SU(r)}}$} \!\mathord{\left/
+{\vphantom {{\mbox{SU(r)}}
+{\mbox{USp(2s)}}}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{${\mbox{USp(2s)}}$}$
+ones.
+
+\end{document}

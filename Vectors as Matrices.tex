@@ -1,0 +1,285 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, April 14, 2016 08:59:48}
+%TCIDATA{LastRevised=Thursday, April 14, 2016 11:03:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Vectors as Matrices}%
+
+\begin{equation}
+\mathbf{v}=\left(
+\begin{array}
+[c]{c}%
+v_{1}\\
+v_{2}%
+\end{array}
+\right)  \in\mathbb{C}^{2}\hookrightarrow\left(
+\begin{array}
+[c]{cc}%
+v_{1} & 0\\
+v_{2} & 0
+\end{array}
+\right)  =\mathbb{V}_{v}\in\mathcal{B}\left(  \mathbb{C}^{2}\right)
+\end{equation}%
+\begin{equation}
+\mathbb{A}\mathbf{v}=\mathbb{A}\left(
+\begin{array}
+[c]{c}%
+v_{1}\\
+v_{2}%
+\end{array}
+\right)  \in\mathbb{C}^{2}\hookrightarrow\mathbb{A}\left(
+\begin{array}
+[c]{cc}%
+v_{1} & 0\\
+v_{2} & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A}\mathbf{v} & 0
+\end{array}
+\right)  =\mathbb{AV}_{v}\in\mathcal{B}\left(  \mathbb{C}^{2}\right)
+\end{equation}%
+\begin{equation}
+\mathbb{V}_{v}\mathbb{A=}\left(
+\begin{array}
+[c]{cc}%
+v_{1} & 0\\
+v_{2} & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+a_{11} & a_{12}\\
+a_{21} & a_{21}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+v_{1}a_{11} & v_{1}a_{12}\\
+v_{2}a_{11} & v_{2}a_{12}%
+\end{array}
+\right)  \notin\mathcal{B}\left(  \mathbb{C}^{2}\right)
+\end{equation}%
+\begin{equation}
+\mathbb{V}_{v}\mathbb{A}^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+v_{1} & 0\\
+v_{2} & 0
+\end{array}
+\right)  \overline{\left(
+\begin{array}
+[c]{cc}%
+a_{11} & a_{21}\\
+a_{12} & a_{22}%
+\end{array}
+\right)  }=\left(
+\begin{array}
+[c]{cc}%
+v_{1}\overline{a_{11}} & v_{1}\overline{a_{21}}\\
+v_{2}\overline{a_{11}} & v_{2}\overline{a_{21}}%
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\mathbb{V}_{v}^{\dagger}\mathbb{A}^{\dagger}=\overline{\left(
+\begin{array}
+[c]{cc}%
+v_{1} & v_{2}\\
+0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+a_{11} & a_{21}\\
+a_{12} & a_{22}%
+\end{array}
+\right)  }=\left(
+\begin{array}
+[c]{cc}%
+\overline{v_{1}a_{11}+v_{2}a_{12}} & \overline{v_{1}a_{21}+v_{2}a_{22}}\\
+0 & 0
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\mathbb{U}\left(  t\right)  \mathbb{V}_{v}\mathbb{V}_{v}^{\dagger}%
+\mathbb{U}\left(  t\right)  ^{\dagger}=\mathbb{U}\left(  t\right)
+\mathbb{V}_{v}\left(  \mathbb{U}\left(  t\right)  \mathbb{V}_{v}\right)
+^{\dagger}=\mathbb{U}\left(  t\right)  \mathbb{V}_{v}\mathbb{U}\left(
+t\right)  ^{\dagger}\mathbb{U}\left(  t\right)  \mathbb{V}_{v}^{\dagger
+}\mathbb{U}\left(  t\right)  ^{\dagger}%
+\end{equation}%
+\begin{equation}
+\mathbb{U}\left(  t\right)  \mathbb{V}_{v}=\exp\left\{  -i\mathbb{H}t\right\}
+\mathbb{V}_{v}=e^{-Et}\mathbb{V}_{v}%
+\end{equation}%
+\begin{equation}
+\left(  \mathbb{U}\left(  t\right)  \mathbb{V}_{v}\right)  ^{\dagger}=\left(
+\exp\left\{  -i\mathbb{H}t\right\}  \mathbb{V}_{v}\right)  ^{\dagger}%
+=e^{Et}\mathbb{V}_{v}^{\dagger}%
+\end{equation}%
+\begin{equation}
+\mathbb{U}\left(  t\right)  \mathbb{V}_{v}\mathbb{V}_{v}^{\dagger}%
+\mathbb{U}\left(  t\right)  ^{\dagger}=\mathbb{U}\left(  t\right)
+\mathbb{V}_{v}\left(  \mathbb{U}\left(  t\right)  \mathbb{V}_{v}\right)
+^{\dagger}=\mathbb{V}_{v}\mathbb{V}_{v}^{\dagger}%
+\end{equation}%
+\begin{equation}
+-i\frac{d}{dt}\left\{  \left(  \mathbb{V}_{v}\mathbb{V}_{v}^{\dagger}\right)
+\left(  t\right)  \right\}  =\left[  \mathbb{H},\left(  \mathbb{V}%
+_{v}\mathbb{V}_{v}^{\dagger}\right)  \left(  t\right)  \right]
+\end{equation}
+compare
+\begin{equation}
+\mathbb{U}\left(  t\right)  \mathbb{V}_{v}=\left\{  I-i\mathbb{H}t-\frac{1}%
+{2}\mathbb{H}^{2}t^{2}+\cdots\right\}  \mathbb{V}_{v}\in\mathcal{B}\left(
+\mathbb{C}^{2}\right)
+\end{equation}
+with
+\begin{equation}
+\mathbb{U}\left(  t\right)  \mathbb{V}_{v}\mathbb{U}\left(  t\right)
+^{\dagger}=\left\{  I-i\mathbb{H}t-\frac{1}{2}\mathbb{H}^{2}t^{2}%
++\cdots\right\}  \mathbb{V}_{v}\left\{  I+i\mathbb{H}t-\frac{1}{2}%
+\mathbb{H}^{2}t^{2}+\cdots\right\}  \notin\mathcal{B}\left(  \mathbb{C}%
+^{2}\right)
+\end{equation}
+%
+
+\begin{equation}
+-i\frac{d}{dt}\left\{  \mathbb{V}_{v}\left(  t\right)  \right\}  =\left[
+\mathbb{H},\mathbb{V}_{v}\left(  t\right)  \right]  \notin\mathcal{B}\left(
+\mathbb{C}^{2}\right)
+\end{equation}%
+\begin{equation}
+\mathbf{v}_{1}^{\dagger}\mathbf{v}_{2\hookrightarrow}\operatorname{Tr}\left\{
+\mathbb{V}_{v1}^{\dagger}\mathbb{V}_{v2}\right\}  =\operatorname{Tr}\left\{
+\left(
+\begin{array}
+[c]{cc}%
+\mathbf{v}_{1}^{\dagger}\mathbf{v}_{2} & 0\\
+0 & 0
+\end{array}
+\right)  \right\}
+\end{equation}%
+\begin{equation}
+\mathbb{V}_{v1}\mathbb{V}_{v2}=\left(
+\begin{array}
+[c]{cc}%
+v_{11} & 0\\
+v_{12} & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+v_{21} & 0\\
+v_{22} & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+v_{11}v_{21} & 0\\
+v_{12}v_{21} & 0
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+\mathbb{V}_{v}\mathbb{V}_{v}^{\dagger}  & =\left(
+\begin{array}
+[c]{cc}%
+v_{1} & 0\\
+v_{2} & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\overline{v_{1}} & \overline{v_{2}}\\
+0 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+v_{1}\overline{v_{1}} & v_{1}\overline{v_{2}}\\
+v_{2}\overline{v_{1}} & v_{2}\overline{v_{2}}%
+\end{array}
+\right)  \\
+\mathbb{V}_{v}^{\dagger}\mathbb{V}_{v}  & =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{v}_{1}^{\dagger}\mathbf{v}_{2} & 0\\
+0 & 0
+\end{array}
+\right)
+\end{align}
+
+\end{document}

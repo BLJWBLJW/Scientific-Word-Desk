@@ -1,0 +1,238 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, October 10, 2017 07:53:55}
+%TCIDATA{LastRevised=Wednesday, October 11, 2017 08:57:50}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{2D Harmonic Oscillator}
+
+The two dimensional Harmonic Oscillator has Hamiltonian
+\begin{equation}
+H=\frac{1}{2m}\left(  \widehat{p}_{x}^{2}+\widehat{p}_{y}^{2}\right)
++\frac{1}{2}m\omega^{2}\left(  \widehat{x}^{2}+\widehat{y}^{2}\right)
+=\hbar\omega\left(  a_{x}^{\dagger}a_{x}+a_{y}^{\dagger}a_{y}+\frac{d}%
+{2}I\right)  ,
+\end{equation}
+where%
+\begin{align}
+a_{x} &  =\sqrt{\frac{m\omega}{2\hbar}}\widehat{x}+i\frac{1}{\sqrt
+{2m\hbar\omega}}\widehat{p}_{x}\\
+a_{y} &  =\sqrt{\frac{m\omega}{2\hbar}}\widehat{y}+i\frac{1}{\sqrt
+{2m\hbar\omega}}\widehat{p}_{y}%
+\end{align}
+are the boson annihilation operators associated with vibrational states of
+this oscillator. The energies of the various stationary states are given by (
+$d$ is the dimension of the space in this case $2$)%
+\begin{align}
+E_{n_{x}n_{y}} &  =\hbar\omega\left(  n_{x}+n_{y}+\frac{d}{2}\right)  \\
+E_{00} &  =\hbar\omega\left(  0+0+\frac{2}{2}\right)  =1\hbar\omega\\
+E_{10} &  =\hbar\omega\left(  1+0+\frac{2}{2}\right)  =2\hbar\omega\\
+E_{01} &  =\hbar\omega\left(  0+1+\frac{2}{2}\right)  =2\hbar\omega\\
+E_{11} &  =\hbar\omega\left(  1+1+\frac{2}{2}\right)  =3\hbar\omega\\
+E_{20} &  =\hbar\omega\left(  2+0+\frac{2}{2}\right)  =3\hbar\omega\\
+E_{02} &  =\hbar\omega\left(  0+2+\frac{2}{2}\right)  =3\hbar\omega.
+\end{align}
+One can define the vibrational quanta grade $N$ by
+\begin{equation}
+N=n_{x}+n_{y},
+\end{equation}
+which allows one to express the energy degeneracy as
+\begin{equation}
+\deg=N+1.
+\end{equation}
+The coordinate representation of the enery stationary states are given by
+\begin{equation}
+\varphi_{n_{x}n_{y}}\left(  x,y\right)  =\varphi_{n_{x}}\left(  x\right)
+\varphi_{n_{y}}\left(  y\right)  ,
+\end{equation}
+where
+\begin{align}
+\varphi_{n_{x}}\left(  x\right)   &  =\left(  \frac{m\omega}{\pi\hbar}\right)
+^{\frac{1}{4}}\left(  2^{n}n!\right)  ^{-\frac{1}{2}}H_{n}\left(  \xi
+_{x}\right)  e^{-\frac{\xi_{x}^{2}}{2}}\\
+\varphi_{n_{y}}\left(  x\right)   &  =\left(  \frac{m\omega}{\pi\hbar}\right)
+^{\frac{1}{4}}\left(  2^{n}n!\right)  ^{-\frac{1}{2}}H_{n}\left(  \xi
+_{y}\right)  e^{-\frac{\xi_{y}^{2}}{2}}\\
+\xi_{x} &  =\sqrt{\frac{m\omega}{\hbar}}x;\xi_{y}=\sqrt{\frac{m\omega}{\hbar}%
+}y\\
+H_{n}\left(  \xi_{x}\right)   &  =\left(  -1\right)  ^{n}e^{\xi_{x}^{2}}%
+\frac{d^{n}}{d\xi_{y}^{n}}e^{-\xi_{x}^{2}};H_{n}\left(  \xi_{y}\right)
+=\left(  -1\right)  ^{n}e^{\xi_{y}^{2}}\frac{d^{n}}{d\xi_{y}^{n}}e^{-\xi
+_{y}^{2}}\\
+\varphi_{0_{x}}\left(  x\right)   &  =\varphi_{0}\left(  x\right)  =\left(
+\frac{m\omega}{\pi\hbar}\right)  ^{\frac{1}{4}}e^{-\frac{\xi_{x}^{2}}{2}%
+};\varphi_{0_{y}}\left(  y\right)  =\varphi_{0}\left(  y\right)  =\left(
+\frac{m\omega}{\pi\hbar}\right)  ^{\frac{1}{4}}e^{-\frac{\xi_{y}^{2}}{2}}.
+\end{align}
+The ground state (vacuum for the creation and annihilation operators) is given
+by
+\begin{align}
+\left\langle \left.  xy\right\vert \varphi_{\mathbf{0}}\right\rangle  &
+=\varphi_{\mathbf{0}}\left(  x,y\right)  =\varphi_{0_{x}0_{y}}\left(
+x,y\right)  =\varphi_{0_{x}}\left(  x\right)  \varphi_{0_{y}}\left(  y\right)
+=\varphi_{0}\left(  x\right)  \varphi_{0}\left(  y\right)  =\left(
+\varphi_{0}\otimes\varphi_{0}\right)  \left(  x,y\right)  =\left(  \varphi
+_{0}\vee\varphi_{0}\right)  \left(  x,y\right)  \\
+& =\left(  \frac{m\omega}{\pi\hbar}\right)  ^{\frac{1}{4}}e^{-\frac{\xi
+_{x}^{2}}{2}}\left(  \frac{m\omega}{\pi\hbar}\right)  ^{\frac{1}{4}}%
+e^{-\frac{\xi_{y}^{2}}{2}}=\left(  \frac{m\omega}{\pi\hbar}\right)  ^{\frac
+{1}{2}}e^{-\frac{\left\Vert \xi\right\Vert ^{2}}{2}}.
+\end{align}
+In particular
+\begin{equation}
+\varphi_{0_{x}}\left(  x\right)  \varphi_{0_{x}}\left(  x^{\prime}\right)
+=\left(  \frac{m\omega}{\pi\hbar}\right)  ^{\frac{1}{4}}e^{-\frac{\xi_{x}^{2}%
+}{2}}\left(  \frac{m\omega}{\pi\hbar}\right)  ^{\frac{1}{4}}e^{-\frac
+{\xi_{x^{\prime}}^{2}}{2}}=\left(  \frac{m\omega}{\pi\hbar}\right)  ^{\frac
+{1}{2}}e^{-\frac{\xi_{x}^{2}+\xi_{x^{\prime}}^{2}}{2}}.
+\end{equation}
+
+
+One should observe that the product of a 2D vacuum vector with itself is
+\begin{align}
+\left\langle \left.  x_{1}x_{2}x_{3}x_{4}\right\vert \varphi_{\mathbf{0}}%
+\vee\varphi_{\mathbf{0}}\right\rangle  & =\frac{1}{2}\left(  \varphi
+_{\mathbf{0}}\left(  x_{1},x_{2}\right)  \varphi_{\mathbf{0}}\left(
+x_{3},x_{4}^{\prime}\right)  +\varphi_{\mathbf{0}}\left(  x_{3},x_{4}^{\prime
+}\right)  \varphi_{\mathbf{0}}\left(  x_{1},x_{2}\right)  \right)
+=\varphi_{\mathbf{0}}\left(  x_{1},x_{2}\right)  \varphi_{\mathbf{0}}\left(
+x_{3},x_{4}\right)  \\
+& =\left(  \varphi_{0}\otimes\varphi_{0}\otimes\varphi_{0}\otimes\varphi
+_{0}\right)  \left(  x_{1},x_{2},x_{3},x_{4}\right)
+\end{align}
+producing a 4D vacuum vector.
+\begin{align}
+\xi_{x}^{2}+\xi_{x^{\prime}}^{2} &  =\frac{m\omega}{\hbar}\left(
+x^{2}+x^{\prime2}\right)  \\
+y &  =\sqrt{\left(  x^{2}+x^{\prime2}\right)  }%
+\end{align}
+
+
+The graded symmetric tensor algebra for the \emph{single }two dimensional
+oscillator is given by
+\begin{equation}
+\mathcal{H}_{osc}=\bigoplus\limits_{0\leq N\leq\infty}\bigvee\nolimits^{N}%
+\left(  \mathcal{H}_{osc}^{1}\right)  =\bigoplus\limits_{0\leq N\leq\infty
+}\mathcal{H}_{osc}^{N},
+\end{equation}
+where%
+\begin{equation}
+\mathcal{H}_{osc}^{1}=\operatorname*{linspan}\left\{  \varphi_{1_{x}0}%
+,\varphi_{01_{y}}\right\}  =\operatorname*{linspan}\left\{  \varphi_{1_{x}%
+}\varphi_{0_{y}},\varphi_{0_{x}}\varphi_{1_{y}}\right\}  .
+\end{equation}
+In particular
+\begin{align}
+\dim\left(  \mathcal{H}_{osc}^{1}\right)   &  =2\\
+\dim\left(  \mathcal{H}_{osc}^{2}\right)   &  =\frac{N}{2}\left(  N+1\right)
+=\frac{2}{2}\left(  2+1\right)  =3.
+\end{align}
+The action of the creation operators is given by
+\begin{align}
+a_{x}^{\dagger}\left\vert \varphi_{n_{x}}\varphi_{n_{y}}\right\rangle  &
+=\left\vert \varphi_{n_{x}+1}\varphi_{n_{y}}\right\rangle \\
+a_{y}^{\dagger}\left\vert \varphi_{n_{x}}\varphi_{n_{y}}\right\rangle  &
+=\left\vert \varphi_{n_{x}y}\varphi_{n_{y}+1}\right\rangle
+\end{align}
+and can be used to construct the various harmonic oscillator states as
+\begin{equation}
+\left\vert \varphi_{n_{x}n_{y}}\right\rangle =\left(  a_{x}^{\dagger}\right)
+^{n_{x}}\left(  a_{y}^{\dagger}\right)  ^{n_{y}}\left\vert \varphi
+_{\mathbf{0}}\right\rangle .
+\end{equation}
+
+
+\section{Many Harmonic Oscillators}
+
+Many harmonic oscillator states are elements of the graded symmetric tensor
+algebra
+\begin{equation}
+\mathcal{H}_{many\,osc}=\bigoplus\limits_{0\leq N\leq\infty}\bigvee
+\nolimits^{N}\left(  \mathcal{H}_{osc}\right)  =\bigoplus\limits_{0\leq
+N\leq\infty}\mathcal{H}_{many\,osc}^{N},
+\end{equation}%
+\begin{equation}
+\mathcal{H}_{many\,osc}^{N}=\bigvee\nolimits^{N}\left(  \mathcal{H}%
+_{osc}\right)  .
+\end{equation}%
+\begin{equation}
+\left\vert \varphi_{n_{1x}n_{1y}\cdots n_{px}n_{py}}\right\rangle =\left(
+a_{1x}^{\dagger}\right)  ^{n_{1x}}\left(  a_{1y}^{\dagger}\right)  ^{n_{1y}%
+}\cdots\left(  a_{px}^{\dagger}\right)  ^{n_{px}}\left(  a_{py}^{\dagger
+}\right)  ^{n_{py}}\left\vert \varphi_{1\mathbf{0}}\vee\cdots\vee
+\varphi_{p\mathbf{0}}\right\rangle .
+\end{equation}%
+\begin{equation}
+\end{equation}
+
+
+
+\end{document}

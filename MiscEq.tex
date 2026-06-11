@@ -1,0 +1,1100 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{Created=Sunday, February 03, 2002 11:33:45}
+%TCIDATA{LastRevised=Thursday, July 29, 2004 15:18:59}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title
+page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+\end{abstract}
+
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+\revised[Revised text]{date}
+\accepted[Accepted text]{date}
+\published[Published text]{date}
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+If one considers subgroups $\left\{ \left. SU\left( N_{1}\right) ,\cdots
+,SU\left( N_{m}\right) \right\vert \tsum_{1\leq j\leq m}N_{j}=N\right\} $ of 
+$SU\left( N\right) $ and $\left\{ \left. SU\left( \nu _{1}\right) ,\cdots
+,SU\left( \nu _{m^{\prime }}\right) \right\vert \tsum_{1\leq j\leq m^{\prime
+}}\nu _{j}=2s-N\right\} $%
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\mathcal{L}\left(
+\Psi ,\dot{\Psi},t\right) dt
+\end{equation}%
+\begin{equation}
+\delta \mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\delta 
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right) dt
+\end{equation}%
+\begin{eqnarray}
+\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) &=&\int \left\{ \frac{%
+\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta \Psi \left( 
+\mathsf{z}\right) }\delta \Psi \left( \mathsf{z}\right) +\frac{\delta 
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta \dot{\Psi}\left( 
+\mathsf{z}\right) }\delta \dot{\Psi}\left( \mathsf{z}\right) \right. \\
+&&\left. +\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta
+\Psi ^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast }\left( \mathsf{z}%
+\right) +\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta 
+\dot{\Psi}^{\ast }\left( \mathsf{z}\right) }\delta \dot{\Psi}^{\ast }\left( 
+\mathsf{z}\right) \right\} d\mathsf{z}
+\end{eqnarray}%
+\begin{eqnarray}
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right) &\equiv &\mathcal{L}\left( \Psi
+\left( t\right) \right) \\
+&\equiv &\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right)
+\right) \equiv \mathcal{L}\left( \Psi ,\dot{\Psi}\right)
+\end{eqnarray}%
+\begin{equation}
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right) =\frac{\left\langle \Psi \left(
+t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right)
+\right\rangle }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }
+\end{equation}
+
+\begin{eqnarray}
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) &=&\frac{1}{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\left\{ \left\langle \delta \Psi \left( t\right) |\left( i\frac{\partial }{%
+\partial t}-H\right) \Psi \left( t\right) \right\rangle +\left\langle \Psi
+\left( t\right) |\left( i\frac{\partial }{\partial t}-H\right) \delta \Psi
+\left( t\right) \right\rangle \right.  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. -\mathcal{L}\left( \Psi
+\left( t\right) \right) \left\{ \left\langle \delta \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle +\left\langle \Psi \left( t\right)
+|\delta \Psi \left( t\right) \right\rangle \right\} \right\}
+\end{eqnarray}
+
+\begin{equation}
+\tau =\left[ t_{i},t_{f}\right]
+\end{equation}
+
+\begin{equation}
+\delta \Psi \left( t_{f}\right) =\delta \Psi \left( t_{i}\right) =0
+\end{equation}
+
+\begin{equation}
+\delta \Psi \left( t_{f}\right) =\delta \Psi \left( t_{i}\right) =0
+\end{equation}
+
+\begin{equation}
+\tau =\left[ t_{i},t_{f}\right]
+\end{equation}
+
+\begin{equation}
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{%
+\Psi}^{\ast }\left( \mathsf{z}\right) }=0
+\end{equation}%
+\begin{equation}
+\delta _{\Psi }\mathcal{A}\left( \Psi ,\tau \right) =0
+\end{equation}%
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \left| \Psi \left( t\right)
+\right\rangle =\left( \mathcal{L}\left( \Psi \left( t\right) \right) -i\frac{%
+d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle \right) ^{\ast }\left| \Psi \left( t\right) \right\rangle
+\end{equation}%
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \left| \Psi \left( t\right)
+\right\rangle =\mathcal{L}\left( \Psi \left( t\right) \right) \left| \Psi
+\left( t\right) \right\rangle
+\end{equation}%
+\begin{eqnarray}
+\left\langle \left[ i\frac{\partial }{\partial t}\right] ^{\dagger }\varphi
+_{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle &=&i\frac{d}{%
+dt}\left\langle \varphi _{1}\left( t\right) |\varphi _{2}\left( t\right)
+\right\rangle +\left\langle i\frac{\partial }{\partial t}\varphi _{1}\left(
+t\right) |\varphi _{2}\left( t\right) \right\rangle \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \quad \forall \varphi
+_{1},\varphi _{2},t
+\end{eqnarray}%
+\begin{equation}
+i\delta \Psi \left( t\right)
+\end{equation}%
+\begin{equation}
+\delta \Psi \left( t\right) \qquad \qquad \delta \Psi ^{\ast }\left( t\right)
+\end{equation}%
+\begin{equation}
+\Phi \left( \mathsf{z,}t\right) =\Psi \left( \mathsf{z,}t\right)
+e^{i\int_{t_{i}}^{t}\mathcal{L}\left( \Psi ,\dot{\Psi},t^{\prime }\right)
+dt^{\prime }}=\Psi \left( \mathsf{z,}t\right) e^{i\mathcal{A}\left( \Psi ,%
+\left[ t_{i},t\right] \right) }
+\end{equation}%
+\begin{equation}
+\dot{\Phi}\left( \mathsf{z,}t\right) =\dot{\Psi}\left( \mathsf{z,}t\right)
+e^{i\int_{t_{i}}^{t}\mathcal{L}\left( \Psi ,\dot{\Psi},t^{\prime }\right)
+dt^{\prime }}+i\Psi \left( \mathsf{z,}t\right) \mathcal{L}\left( \Psi ,\dot{%
+\Psi},t\right) e^{i\int_{t_{i}}^{t}\mathcal{L}\left( \Psi ,\dot{\Psi}%
+,t^{\prime }\right) dt^{\prime }}
+\end{equation}%
+\begin{eqnarray}
+&=&\dot{\Psi}\left( \mathsf{z,}t\right) e^{i\int_{t_{i}}^{t}\mathcal{L}%
+\left( \Psi ,\dot{\Psi},t^{\prime }\right) dt^{\prime }}  \notag \\
+&&+i\left\{ i\frac{\partial \Psi \left( \mathsf{z,}t\right) }{\partial t}%
+-\int H\left( \mathsf{z,z}^{\prime }\right) \Psi \left( \mathsf{z}^{\prime }%
+\mathsf{,}t\right) d\mathsf{z}^{\prime }\right\} e^{i\int_{t_{i}}^{t}%
+\mathcal{L}\left( \Psi ,\dot{\Psi},t^{\prime }\right) dt^{\prime }}  \notag
+\end{eqnarray}%
+\begin{equation}
+=-i\left[ H\Psi \right] \left( \mathsf{z,}t\right) e^{-i\int_{t_{i}}^{t}%
+\mathcal{L}\left( \Psi ,\dot{\Psi},t^{\prime }\right) dt^{\prime }}
+\end{equation}%
+\begin{equation}
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right)
+\end{equation}%
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\mathcal{L}\left(
+\Psi ,\dot{\Psi},t\right) dt
+\end{equation}%
+\begin{equation}
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right) =\frac{\left\langle \Psi \left(
+t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right)
+\right\rangle }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }  \notag
+\end{equation}%
+\begin{eqnarray}
+&\Rightarrow &\dot{\Phi}\left( \mathsf{z,}t\right) =-iH\Phi \left( \mathsf{z,%
+}t\right) \equiv i\frac{\partial \Phi \left( \mathsf{z,}t\right) }{\partial t%
+}=H\Phi \left( \mathsf{z,}t\right) \equiv \left( i\frac{\partial \Phi \left( 
+\mathsf{z,}t\right) }{\partial t}-H\Phi \left( \mathsf{z,}t\right) \right) =0
+\notag \\
+&\equiv &\left\{ i\frac{\partial }{\partial t}-H\right\} \left| \Phi \left(
+t\right) \right\rangle =0  \label{SE}
+\end{eqnarray}%
+\begin{equation}
+\mathcal{L}\left( \Phi ,\dot{\Phi},t\right) =0\text{ }
+\end{equation}%
+\begin{equation}
+\int \Phi ^{\ast }\left( \mathsf{z,}t\right) \Phi \left( \mathsf{z,}t\right)
+d\mathsf{z}=\left\langle \Psi \left( t_{i}\right) |\Psi \left( t_{i}\right)
+\right\rangle
+\end{equation}%
+\begin{equation}
+\left| \Phi \left( t_{f}\right) \right\rangle \neq \left| \Psi \left(
+t_{f}\right) \right\rangle
+\end{equation}%
+\begin{equation}
+\left| \Phi \left( t_{i}\right) \right\rangle =\left| \Psi \left(
+t_{i}\right) \right\rangle
+\end{equation}%
+\begin{equation}
+\left. \equiv \right. \left| \Phi \left( t_{f}\right) \right\rangle =\left|
+\Psi \left( t_{f}\right) \right\rangle e^{i\mathcal{A}\left( \Psi ,\tau
+\right) }=\left( \frac{\left\langle \Psi \left( t_{i}\right) |\Psi \left(
+t_{i}\right) \right\rangle }{\left\langle \Psi \left( t_{f}\right) |\Psi
+\left( t_{f}\right) \right\rangle }\right) ^{\frac{1}{2}}\left| \Psi \left(
+t_{f}\right) \right\rangle e^{i\func{Re}\mathcal{A}\left( \Psi ,\tau \right)
+}
+\end{equation}%
+\begin{equation}
+\Phi \left( \mathsf{z,}t_{f}\right) =\left( \frac{\left\langle \Psi \left(
+t_{i}\right) |\Psi \left( t_{i}\right) \right\rangle }{\left\langle \Psi
+\left( t_{f}\right) |\Psi \left( t_{f}\right) \right\rangle }\right) ^{\frac{%
+1}{2}}\Psi \left( \mathsf{z,}t_{f}\right) e^{i\func{Re}\mathcal{A}\left(
+\Psi ,\tau \right) }  \label{phi}
+\end{equation}%
+and in general 
+\begin{equation}
+\func{Re}\mathcal{A}\left( \Psi ,\tau \right) \neq 0
+\end{equation}%
+We can see from eq. $\left( \ref{phi}\right) $ that the norm of the final
+state is fixed by the choice of initial ''state'' but the phase is not. The
+equation that determines the final phase is 
+\begin{equation}
+\frac{d\sigma }{dt}=-i\left\{ \frac{\func{Im}\left\langle \Psi \left(
+t\right) |\dot{\Psi}\left( t\right) \right\rangle }{\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle }+\frac{\left\langle \Psi
+\left( t\right) |H\Psi \left( t\right) \right\rangle }{\left\langle \Psi
+\left( t\right) |\Psi \left( t\right) \right\rangle }\right\} =\func{Re}%
+\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right)
+;\sigma \left( t_{i}\right) =0  \label{phase}
+\end{equation}%
+where $\left| \Psi \left( t\right) \right\rangle $ is a solution of eq. $%
+\left( \ref{preSE}\right) $ and the solution of eq. $\left( \ref{phase}%
+\right) $ is 
+\begin{equation}
+\sigma \left( t\right) =\func{Re}\mathcal{A}\left( \Psi ,\left[ t_{i},t%
+\right] \right)
+\end{equation}%
+\begin{equation}
+\frac{1}{2}\frac{d\ln \left\langle \Psi |\Psi \right\rangle }{dt}=\frac{1}{2}%
+\frac{1}{\left\langle \Psi |\Psi \right\rangle }\left\{ \left\langle \dot{%
+\Psi}|\Psi \right\rangle +\left\langle \Psi |\dot{\Psi}\right\rangle \right\}
+\end{equation}%
+\begin{eqnarray}
+&&\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\mathcal{S}_{0}\left(
+t_{f}\right) =\left\{ \left| \delta \Psi \left( t\right) \right\rangle
+\right\} ;\quad \left| \delta \Psi \left( t\right) \right\rangle =0,\quad
+\kappa =i,f;\quad t\in \left[ t_{i},t_{f}\right] \left( t\right) \right) =%
+\frac{i\left\langle \Psi |\dot{\Psi}\rangle -\left\langle \Psi \right| H\Psi
+\right\rangle }{\left\langle \Psi |\Psi \right\rangle } \\
+&&\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right)
+^{\ast }=\frac{-i\left\langle \dot{\Psi}|\Psi \rangle -\left\langle \Psi
+\right| H\Psi \right\rangle }{\left\langle \Psi |\Psi \right\rangle } \\
+&&\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) -%
+\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right)
+^{\ast }=\frac{i\left\{ \langle \Psi |\dot{\Psi}\rangle +\langle \dot{\Psi}%
+|\Psi \rangle \right\} }{\left\langle \Psi |\Psi \right\rangle }=2i\func{Im}%
+\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) \\
+&&\frac{1}{2}\frac{d\ln \left\langle \Psi |\Psi \right\rangle }{dt}=\func{Im}%
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right)
+\end{eqnarray}%
+\begin{equation}
+\left| \eta \left( t\right) \Psi \left( t\right) \right\rangle
+\rightsquigarrow D_{\Psi }^{N}\left( t\right) \qquad \forall \eta \left(
+t\right)
+\end{equation}%
+\begin{equation}
+\left| \Psi \left( \eta ,t_{\kappa }\right) \right\rangle =\eta \left(
+t_{\kappa }\right) \left| \Lambda _{\kappa }\right\rangle ;\qquad \kappa
+=i,f;\quad \eta \left( t_{\kappa }\right) \in \mathbb{C}
+\end{equation}%
+\begin{equation}
+\delta \mathcal{A}\left( \Psi ,\tau \right) =\delta _{\Psi }^{{}}\mathcal{A}%
+\left( \Psi ,\tau \right) +\delta _{\tau }\mathcal{A}\left( \Psi ,\tau
+\right) =0
+\end{equation}%
+\begin{eqnarray}
+\mathcal{S}_{1}\left( t_{f}\right) &=&\left\{ \left| \delta \Psi \left(
+t\right) \right\rangle \right\} ;\quad \left| \delta \Psi \left( t_{\kappa
+}\right) \right\rangle =\tilde{\eta}\left( t_{\kappa }\right) \left| \Lambda
+_{\kappa }\right\rangle \\
+\eta \left( t\right) &\in &\mathbb{C},\,\kappa =i,f;\quad t\in \left[
+t_{i},t_{f}\right]
+\end{eqnarray}%
+\begin{equation}
+\mathcal{S}_{0}\left( t_{f}\right) =\left\{ \left| \delta \Psi \left(
+t\right) \right\rangle \right\} ;\quad \left| \delta \Psi \left( t\right)
+\right\rangle =0,\quad \kappa =i,f;\quad t\in \left[ t_{i},t_{f}\right]
+\end{equation}%
+\begin{equation}
+\text{such that }\eta \left( t_{\kappa }\right) =\eta _{\kappa };\quad
+\kappa =i,f
+\end{equation}%
+For $t\in \left( t_{i},t_{f}\right) $ there are no constraints on the state
+vectors
+
+Consider scalar trajectories $\eta \left( t\right) \in \mathbb{C}$ that are
+arbitrary
+
+twice differentiable complex valued functions $\forall t\in \left[
+t_{i},t_{f}\right] $%
+\begin{equation}
+\text{Define }\Psi \left( \eta ,t\right) =\eta \left( t\right) \Psi \left(
+t\right) \qquad \forall t\in \left[ t_{i},t_{f}\right]
+\end{equation}%
+for $t\in \left( t_{i},t_{f}\right) $ this does nothing as any variation is
+allowed
+
+We can replace the state vector variables $\Psi \left( t\right) $ by $\eta
+\left( t\right) \Psi \left( t\right) $ in the Action%
+\begin{equation}
+\text{for }t=t_{i},t_{f}\text{ this describes the constraints }
+\end{equation}
+
+\begin{equation}
+\mathcal{S}_{1}\left( t_{f}\right) =\left\{ \left| \delta \Psi \left(
+t\right) \right\rangle \right\} ;\quad \left| \delta \Psi \left( t_{\kappa
+}\right) \right\rangle =\tilde{\eta}\left( t_{\kappa }\right) \left| \Lambda
+_{\kappa }\right\rangle ,\,\tilde{\eta}\left( t\right) \in \mathbb{C}%
+,\,\kappa =i,f;\quad t\in \left[ t_{i},t_{f}\right]
+\end{equation}%
+\begin{equation}
+\mathcal{S}_{1}\left( t_{f}\right) \supset \mathcal{S}_{0}\left(
+t_{f}\right) \text{ as }\tilde{\eta}\left( t_{\kappa }\right) =0\text{ is
+always a possible}
+\end{equation}%
+\begin{equation}
+\mathcal{L}\left( \Psi \left( \eta ,t\right) ,\dot{\Psi}\left( \eta
+,t\right) \right) =\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left(
+t\right) \right) +i\frac{d\ln \eta \left( t\right) }{dt}
+\end{equation}
+
+Noting that the change of action induced by complex scaling
+
+of the initial and final point is a function of the relative scaling
+
+of these two points one can regard the action for the general
+
+problem as a function of the final position, $\eta \left( t_{f}\right)
+\left| \Lambda _{f}\right\rangle $, the
+
+time interval, $\tau $, a \emph{fixed} initial point, $\Lambda _{\kappa }$,
+and of stationary
+
+trajectories that are solutions of the fixed end point problem.
+
+\bigskip
+
+The general equations are obtained by first observing that
+
+the first order variation $\delta _{\Psi }^{\left( 1\right) }\mathcal{A}$ of
+the action wrt changes
+
+in stationary fixed point end point trajectories is%
+\begin{equation}
+\frac{\delta \mathcal{L}}{\delta \Psi }=\frac{d}{dt}\frac{\delta \mathcal{L}%
+}{\delta \dot{\Psi}}
+\end{equation}
+
+\bigskip
+
+\bigskip
+
+When we fix the end point of the motion $\left| \Lambda _{f}\right\rangle $
+
+but change the arrival time $t_{f}$ to $t_{f}+\delta t_{f}$, we need
+
+to change $\left| \Psi \left( t_{f}\right) \right\rangle $ to $\left| \Psi
+\left( t_{f}\right) \right\rangle -\left| \dot{\Psi}\left( t_{f}\right)
+\right\rangle \delta t$
+
+so that it arrives at $\left| \Lambda _{f}\right\rangle $ at time $%
+t_{f}+\delta t_{f}$ i.e.
+
+\begin{equation}
+\left| \eta \left( t\right) \Psi \left( t\right) \right\rangle
+\end{equation}
+
+which must be added to the direct change
+
+induced by the change of length of process
+
+Adding these two together we obtain
+
+that the first order variation of the action
+
+wrt time durations $\tau $ is
+
+The total first order change in the
+
+generalized stationary expression
+
+is then given by%
+\begin{equation}
+\frac{\delta \mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi }%
+,t\right) }{\delta \Psi \left( \mathsf{z}\right) }-\frac{d}{dt}\left\{ \frac{%
+\delta \mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t\right) }{%
+\delta \dot{\Psi}\left( \mathsf{z}\right) }\right\} =0
+\end{equation}%
+\begin{equation}
+\frac{\delta \mathcal{L}\left( \Psi ,\overset{\cdot }{\Psi },t\right) }{%
+\delta \Psi \left( \mathsf{z}\right) }-\frac{d}{dt}\left\{ \frac{\delta 
+\mathcal{L}\left( \Psi ,\overset{\cdot }{\Psi },t\right) }{\delta \dot{\Psi}%
+\left( \mathsf{z}\right) }\right\} =0
+\end{equation}%
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\left\{ \left\langle \left. \left[ \frac{\delta \mathcal{%
+L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t\right) }{\delta \Psi }%
+\right] ^{\ast }\right\vert \delta \Psi \left( t\right) \right\rangle
++\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,%
+\overset{\cdot }{\eta \Psi },t\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \delta \dot{\Psi}\left( t\right) \right\rangle \right\} dt
+\end{equation}%
+\begin{eqnarray}
+&&\left. =\right. \int_{t_{i}}^{t_{f}}\left\{ \left\langle \left. \left[ 
+\frac{d}{dt}\left\{ \frac{\delta \mathcal{L}\left( \eta \Psi ,\overset{\cdot 
+}{\eta \Psi },t\right) }{\delta \dot{\Psi}}\right\} \right] ^{\ast
+}\right\vert \delta \Psi \left( t\right) \right\rangle \right.  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad +\left.
+\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,\overset%
+{\cdot }{\eta \Psi },t\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \delta \dot{\Psi}\left( t\right) \right\rangle dt\right\}
+\end{eqnarray}%
+as the trajectories $\left\vert \eta \Psi \left( t\right) \right\rangle $
+satisfy the Euler-Lagrange equation%
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\left\langle \left. \left[ \frac{\delta \mathcal{L}%
+\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t\right) }{\delta \dot{\Psi}}%
+\right] ^{\ast }\right\vert \delta \dot{\Psi}\left( t\right) \right\rangle
+dt=\int_{t_{i}}^{t_{f}}\left\langle \left. \left[ \frac{\delta \mathcal{L}%
+\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t\right) }{\delta \dot{\Psi}}%
+\right] ^{\ast }\right\vert \frac{d\delta \Psi \left( t\right) }{dt}%
+\right\rangle dt  \notag \\
+&=&\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,%
+\overset{\cdot }{\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \delta \Psi \left( t_{f}\right) \right\rangle
+-\int_{t_{i}}^{t_{f}}\left\langle \left. \frac{d}{dt}\left\{ \frac{\delta 
+\mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t\right) }{\delta 
+\dot{\Psi}}\right\} ^{\ast }\right\vert \delta \Psi \left( t\right)
+\right\rangle dt
+\end{eqnarray}%
+\begin{equation}
+\delta _{\Psi }^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right)
+=\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,%
+\overset{\cdot }{\eta \Psi },t\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \delta \Psi \left( t_{f}\right) \right\rangle
+\end{equation}%
+\begin{equation}
+-\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,%
+\overset{\cdot }{\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \dot{\Psi}\left( t_{f}\right) \delta t\right\rangle
+\end{equation}%
+\begin{equation}
+\mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t_{f}\right)
+\delta t
+\end{equation}%
+\begin{equation}
+\delta _{\tau }^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right) =%
+\mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t_{f}\right)
+\delta t-\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi
+,\overset{\cdot }{\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right]
+^{\ast }\right\vert \dot{\Psi}\left( t_{f}\right) \delta t\right\rangle
+\end{equation}%
+\begin{eqnarray}
+\delta ^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right)
+&=&\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,%
+\overset{\cdot }{\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \delta \Psi \left( t_{f}\right) \right\rangle +\mathcal{L}%
+\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t_{f}\right) \delta t  \notag
+\\
+&&\qquad \qquad \qquad \qquad \qquad \qquad -\left\langle \left. \left[ 
+\frac{\delta \mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi }%
+,t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast }\right\vert \dot{\Psi}%
+\left( t_{f}\right) \delta t\right\rangle  \notag \\
+\delta ^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right)
+&=&\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,%
+\overset{\cdot }{\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \delta \Psi \left( t_{f}\right) \right\rangle -\left\langle
+\left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,\overset{\cdot }{%
+\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast }\right\vert 
+\frac{d\Psi \left( t_{f}\right) }{dt}\delta t\right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad +\mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi }%
+,t_{f}\right) \delta t  \notag \\
+&=&\left\langle \left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,%
+\overset{\cdot }{\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast
+}\right\vert \delta \Psi \left( t_{f}\right) \right\rangle -\left\langle
+\left. \left[ \frac{\delta \mathcal{L}\left( \eta \Psi ,\overset{\cdot }{%
+\eta \Psi },t_{f}\right) }{\delta \dot{\Psi}}\right] ^{\ast }\right\vert
+\delta \Psi \left( t_{f}\right) \right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad +\mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi }%
+,t_{f}\right) \delta t
+\end{eqnarray}%
+\begin{equation}
+\delta ^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right) =\mathcal{L}%
+\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t_{f}\right) \delta t
+\end{equation}%
+\begin{equation}
+\delta ^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right) =\mathcal{L}%
+\left( \eta \left( t_{f}\right) \left\vert \Lambda _{f}\right\rangle ,\left.
+\left\vert \dot{\Psi}\left( t_{f}\right) \right\rangle \right\vert
+_{\left\vert \Psi \left( t_{f}\right) \right\rangle =\eta \left(
+t_{f}\right) \left\vert \Lambda _{f}\right\rangle }\right) +i\frac{d\ln \eta
+\left( t_{\kappa }\right) }{dt}
+\end{equation}%
+\begin{equation}
+\frame{$\mathcal{L}\left( \left\vert \Lambda _{f}\right\rangle ,\left.
+\left\vert \dot{\Psi}\left( t_{f}\right) \right\rangle \right\vert
+_{\left\vert \Psi \left( t_{f}\right) \right\rangle =\left\vert \Lambda
+_{f}\right\rangle }\right) +i\frac{d\ln \eta \left( t_{\kappa }\right) }{dt}$%
+=0}
+\end{equation}%
+\begin{equation}
+\mathcal{L}\left( \eta \Psi ,\overset{\cdot }{\eta \Psi },t_{f}\right) =%
+\mathcal{L}\left( \Psi ,\overset{\cdot }{\Psi },t_{f}\right) +i\frac{d\ln
+\eta \left( t_{f}\right) }{dt}
+\end{equation}%
+\begin{equation}
+i\frac{d\ln \eta \left( t_{f}\right) }{dt}=-\mathcal{L}\left( \Psi ,\overset{%
+\cdot }{\Psi },t_{f}\right)
+\end{equation}%
+\begin{equation}
+\eta \left( t\right) =e^{i\mathcal{A}\left( \Psi ,\left[ t_{i},t\right]
+\right) }
+\end{equation}%
+\begin{equation}
+\delta ^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right)
+=0\Longrightarrow
+\end{equation}%
+\begin{eqnarray}
+&&\text{ \ \ \ \ \ \ \ by considering } \\
+&&1.\int_{t_{u}}^{t_{f}}\left\{ \left\langle \delta \Psi \left( t\right)
+\left\vert \left( i\frac{\partial }{\partial t}-H\right) \Psi \left(
+t\right) \right. \right\rangle \right. \\
+&&\qquad \left. {}\right. \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \left. -%
+\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle \delta \Psi
+\left( t\right) \left\vert \Psi \left( t\right) \right. \right\rangle
+\right\} dt=0\quad \forall \delta \Psi \left( t\right) \\
+\qquad &&\text{that satisfy the fixed end point boundary conditions and } \\
+&&2.\text{ }\left\langle \Psi \left( t\right) \left\vert \left( i\frac{%
+\partial }{\partial t}-H\right) \mathsf{z}\right. \right\rangle \text{ that
+are continuous functions of time }
+\end{eqnarray}%
+\begin{eqnarray}
+&&1.\int_{t_{u}}^{t_{f}}\left\{ \left\langle \Psi \left( t\right) \left\vert
+\left( i\frac{\partial }{\partial t}-H\right) \delta \Psi \left( t\right)
+\right. \right\rangle \right. \\
+&&\qquad \left. {}\right. \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \left. -%
+\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle \Psi \left(
+t\right) \left\vert \delta \Psi \left( t\right) \right. \right\rangle
+\right\} dt=0\quad \forall \delta \Psi \left( t\right)
+\end{eqnarray}%
+\begin{equation}
+\left\langle \Phi \left( t\right) |\Phi \left( t\right) \right\rangle =
+\end{equation}%
+\begin{equation}
+\eta \left( t\right)
+\end{equation}%
+\begin{equation}
+\bullet
+\end{equation}%
+The four centre integral terms can be term can be further developed to give 
+\begin{eqnarray}
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\mathcal{D}%
+_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}
+&=&\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\sum_{1\leq a,b\leq s}\mathcal{D}%
+_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\mathcal{R}_{j_{1}j_{2}ab}^{\dagger }%
+\mathcal{S}_{abj_{4}j_{3}} \\
+&=&\sum_{1\leq a,b\leq s}\mathcal{X}_{i_{1}i_{2}ab}\mathcal{Y}_{ab}
+\end{eqnarray}%
+where 
+\begin{equation}
+\mathcal{X}_{i_{1}i_{2}abj_{3}j_{4}}=\sum_{j_{1,}j_{2,}=1}^{r}\mathcal{D}%
+_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\mathcal{R}_{j_{1}j_{2}ab}^{\dagger }
+\end{equation}%
+and 
+\begin{equation}
+\mathcal{Y}_{abj_{3}j_{4}}=\sum_{j_{3,}j_{4}=1}^{r}\mathcal{D}%
+_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\mathcal{S}_{j_{4}j_{4}ab}
+\end{equation}%
+In matrix form over the decomposition $\ker L_{N}^{1}\oplus \mathcal{V}_{%
+\tilde{\Gamma}}$ with the super vector $\left\vert \tilde{\Gamma}\left( 
+\mathfrak{d}_{1}\right) \right) $ being part of the basis of $\mathcal{V}_{%
+\tilde{\Gamma}}$ these transformations have the schematic appearence%
+\begin{eqnarray}
+&&\hat{T}\left( 
+\begin{array}{cc}
+\left\vert \mathfrak{d}_{ref}\right) ,\left\vert k_{2}\right) ,\ldots
+,\left\vert k_{r_{1}}\right) & \left\vert \tilde{\Gamma}\left( \mathfrak{d}%
+_{1}\right) \right) \mathfrak{,}\left\vert \mathfrak{x}_{2}\right) ,\ldots
+,\left\vert \mathfrak{x}_{r_{2}}\right)%
+\end{array}%
+\right) =  \notag \\
+&&\qquad \qquad \left( 
+\begin{array}{cc}
+\left\vert \mathfrak{d}_{ref}\right) ,\left\vert k_{2}\right) ,\ldots
+,\left\vert k_{r_{1}}\right) & \left\vert \tilde{\Gamma}\left( \mathfrak{d}%
+_{1}\right) \right) \mathfrak{,}\left\vert \mathfrak{x}_{2}\right) ,\ldots
+,\left\vert \mathfrak{x}_{r_{2}}\right)%
+\end{array}%
+\right)  \notag \\
+&&\times \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left( 
+\begin{array}{cc}
+\mathbb{T} & \left[ \qquad \ast \qquad \right] \\ 
+\mathbb{O} & \left[ 
+\begin{array}{cccc}
+1 & \mathbb{O} & \mathbf{\cdots } & \mathbb{O} \\ 
+\mathbb{O} & \mathbb{O} & \cdots & \mathbb{O} \\ 
+\mathbb{O} & \mathbb{O} & \mathbb{O} & \mathbb{O}%
+\end{array}%
+\right]%
+\end{array}%
+\right)
+\end{eqnarray}%
+where $\mathbb{T\in }\left[ \mathcal{R}_{\ker L_{N}^{1}}\left( \mathfrak{A}%
+_{\ker }\right) \right] $ and $\ast $ arbitrary submatrices.
+
+with the super vector $\left\vert \tilde{\Gamma}\left( \mathfrak{d}%
+_{1}\right) \right) $ being part of the basis of $\mathcal{V}_{\tilde{\Gamma}%
+}$ these transformations have the schematic appearence%
+\begin{eqnarray}
+&&\hat{T}\left( 
+\begin{array}{cc}
+\left\vert \mathfrak{d}_{ref}\right) ,\left\vert k_{2}\right) ,\ldots
+,\left\vert k_{r_{1}}\right) & \left\vert \tilde{\Gamma}\left( \mathfrak{d}%
+_{1}\right) \right) \mathfrak{,}\left\vert \mathfrak{x}_{2}\right) ,\ldots
+,\left\vert \mathfrak{x}_{r_{2}}\right)%
+\end{array}%
+\right) =  \notag \\
+&&\qquad \qquad \left( 
+\begin{array}{cc}
+\left\vert \mathfrak{d}_{ref}\right) ,\left\vert k_{2}\right) ,\ldots
+,\left\vert k_{r_{1}}\right) & \left\vert \tilde{\Gamma}\left( \mathfrak{d}%
+_{1}\right) \right) \mathfrak{,}\left\vert \mathfrak{x}_{2}\right) ,\ldots
+,\left\vert \mathfrak{x}_{r_{2}}\right)%
+\end{array}%
+\right)  \notag \\
+&&\times \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left( 
+\begin{array}{cc}
+\mathbb{T} & \left[ \qquad \ast \qquad \right] \\ 
+\mathbb{O} & \left[ 
+\begin{array}{cccc}
+1 & \mathbb{O} & \mathbf{\cdots } & \mathbb{O} \\ 
+\mathbb{O} & \mathbb{O} & \cdots & \mathbb{O} \\ 
+\mathbb{O} & \mathbb{O} & \mathbb{O} & \mathbb{O}%
+\end{array}%
+\right]%
+\end{array}%
+\right)
+\end{eqnarray}%
+where $\mathbb{T\in }\left[ \mathcal{R}_{\ker L_{N}^{1}}\left( \mathfrak{A}%
+_{\ker }\right) \right] $ and $\ast $ arbitrary submatrices.
+
+Noting that changes in the expectation values of one particle observables
+are determined by changes in the one particle reduced density matrix, one
+can describe the effects of the radiation field, (approximated as an
+effective one particle interaction), on the expectation values of any one
+particle observable in terms of retarded two particle propagators.
+
+\bigskip
+
+If the evolution starts at $t=0$ then 
+\begin{equation}
+D^{1}\mathcal{E}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right) =\frac{1%
+}{\mathcal{S}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) }\left( \frac{%
+\partial \mathcal{F}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right) }{%
+\partial \mathbf{z}},\frac{\partial \mathcal{F}\left( \mathbf{z}_{0},\mathbf{%
+\bar{z}}_{0},0\right) }{\partial \mathbf{\bar{z}}}\right)
+\end{equation}%
+and 
+\begin{align}
+& D^{2}\mathcal{E}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right) \equiv
+\left\{ \frac{1}{\mathcal{S}\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0}\right) }\left\{ \frac{\partial ^{2}\mathcal{H}_{0}\left( \mathbf{z}_{0},%
+\mathbf{\bar{z}}_{0}\right) }{\partial \mathbf{x}\partial \mathbf{y}}-%
+\mathcal{E}_{0}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) \frac{%
+\partial ^{2}\mathcal{S}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) }{%
+\partial \mathbf{x}\partial \mathbf{y}}\right. \right.  \notag \\
+& \qquad \qquad \qquad \qquad \qquad \qquad \qquad +\frac{\partial ^{2}%
+\mathcal{F}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right) }{\partial 
+\mathbf{x}\partial \mathbf{y}}-\frac{\partial \mathcal{F}\left( \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},t\right) }{\partial \mathbf{x}}\frac{\partial 
+\mathcal{S}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) }{\partial 
+\mathbf{y}}  \notag \\
+& \qquad \qquad \qquad \qquad \qquad \left. -\frac{\partial \mathcal{S}%
+\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) }{\partial \mathbf{x}}%
+\frac{\partial \mathcal{F}\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},0\right) }{\partial \mathbf{y}}-\mathcal{F}\left( \mathbf{z}_{0},%
+\mathbf{\bar{z}}_{0},0\right) \frac{\partial ^{2}\mathcal{S}\left( \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0}\right) }{\partial \mathbf{x}\partial \mathbf{y}}%
+\right\}
+\end{align}%
+As%
+\begin{equation}
+\mathcal{F}\left( \mathbf{\bar{z}},\mathbf{z},t\right) =\frac{\left\langle
+\left. \mathbf{z}\left( t\right) \right\vert F\left( t\right) \mathbf{z}%
+\left( t\right) \right\rangle }{\left\langle \left. \mathbf{z}\left(
+t\right) \right\vert \mathbf{z}\left( t\right) \right\rangle }
+\end{equation}%
+the short time expansion about the critical point and $t=0$ gives 
+\begin{align}
+\mathcal{F}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},\delta t\right) &
+\approx \mathcal{F}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right) +%
+\frac{1}{\mathcal{S}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) }%
+\left\{ \left( \frac{\partial \left\langle \left. \mathbf{z}_{0}\right\vert
+F\left( 0\right) \mathbf{z}_{0}\right\rangle }{\partial \mathbf{z}}\overset{%
+\cdot }{\delta \mathbf{z}}+\frac{\partial \left\langle \left. \mathbf{z}%
+_{0}\right\vert F\left( 0\right) \mathbf{z}_{0}\right\rangle }{\partial 
+\mathbf{\bar{z}}}\overset{\cdot }{\delta \mathbf{\bar{z}}}\right) \delta
+t\right.  \notag \\
+& \left. +\,\left\langle \left. \mathbf{z}_{0}\right\vert \dot{F}\left(
+0\right) \mathbf{z}_{0}\right\rangle \delta t-\mathcal{F}\left( \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},0\right) \left( \frac{\partial \mathcal{S}\left( 
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) }{\partial \mathbf{z}}\overset{%
+\cdot }{\delta \mathbf{z}}+\frac{\partial \mathcal{S}\left( \mathbf{z}_{0},%
+\mathbf{\bar{z}}_{0}\right) }{\partial \mathbf{\bar{z}}}\overset{\cdot }{%
+\delta \mathbf{\bar{z}}}\right) \delta t\right\}
+\end{align}
+
+and 
+\begin{equation}
+\left( 
+\begin{array}{c}
+\delta \mathbf{\bar{z}}\left( t\right) \\ 
+\delta \mathbf{z}\left( t\right)%
+\end{array}%
+\right) =\int_{-\infty }^{+\infty }R\left( t-\tau \right) D^{1}\mathcal{F}%
+\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right) d\tau
+\end{equation}%
+where the response function is defined as 
+\begin{equation}
+\mathcal{R}\left( t\right) =\theta _{+}\left( t\right) \left\{ \left( 
+\begin{array}{cc}
+\mathbf{0} & \frac{i}{\hslash }\mathbf{C}\left( \mathbf{z}_{0},\mathbf{\bar{z%
+}}_{0},0\right) \frac{d}{dt} \\ 
+-\frac{i}{\hslash }\mathbf{\bar{C}}\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},0\right) \frac{d}{dt} & \mathbf{0}%
+\end{array}%
+\right) -D^{2}\mathcal{E}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+\right\} ^{-1}
+\end{equation}%
+Taking the Laplace transform of $R\left( t\right) $ we obtain 
+\begin{equation}
+\left( 
+\begin{array}{c}
+\delta \mathbf{\bar{z}}\left( \xi \right) \\ 
+\delta \mathbf{z}\left( \xi \right)%
+\end{array}%
+\right) =R\left( \xi \right) D^{1}F\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},\xi \right)
+\end{equation}%
+where 
+\begin{equation}
+R\left( \xi \right) =\left\{ \left( 
+\begin{array}{cc}
+\mathbf{0} & -\xi \mathbf{C}\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},0\right) \\ 
+\bar{\xi}\mathbf{\bar{C}}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right)
+& \mathbf{0}%
+\end{array}%
+\right) -D^{2}\mathcal{E}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right)
+\right\} ^{-1}
+\end{equation}%
+The linear response of the 1-particle reduced density matrix has the Laplace
+transform 
+\begin{align}
+& \delta ^{1}\mathbf{\rho }\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)
+_{ij}\left( \xi \right) =\left( 
+\begin{array}{cc}
+\frac{\partial \rho \left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right) _{ij}}{%
+\partial \mathbf{\bar{z}}} & \frac{\partial \rho \left( \mathbf{z}_{0},%
+\mathbf{\bar{z}}_{0}\right) _{ij}}{\partial \mathbf{z}}%
+\end{array}%
+\right) \times  \notag \\
+& \qquad \qquad \qquad \qquad \left\{ \left( 
+\begin{array}{cc}
+\mathbf{0} & -\xi \mathbf{C}\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right) \\ 
+\bar{\xi}\mathbf{\bar{C}}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+& \mathbf{0}%
+\end{array}%
+\right) -D^{2}\mathcal{E}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+\right\} ^{-1}D^{1}\mathcal{F}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},\xi
+\right)
+\end{align}%
+\begin{equation}
+\left\{ \left( 
+\begin{array}{cc}
+\mathbf{0} & \frac{i}{\hslash }\mathbf{C}\left( \mathbf{z}_{0},\mathbf{\bar{z%
+}}_{0},0\right) \frac{d}{dt} \\ 
+-\frac{i}{\hslash }\mathbf{\bar{C}}\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},0\right) \frac{d}{dt} & \mathbf{0}%
+\end{array}%
+\right) -D^{2}\mathcal{E}_{0}\left( \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},0\right) \right\} \left( 
+\begin{array}{c}
+\delta \mathbf{\bar{z}}\left( t\right) \\ 
+\delta \mathbf{z}\left( t\right)%
+\end{array}%
+\right) =D^{1}\mathcal{F}\left( \mathbf{z}_{0},\mathbf{\bar{z}}_{0},0\right)
+\end{equation}
+
+As an illustration of the preceding forms of the cosets of $U\left( \mathcal{%
+H}^{1}\right) $ we can consider their action on an AGP\ state $\left\vert g^{%
+\frac{N}{2}}\right\rangle $ determined by a geminal 
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}c_{j_{1}}\left\vert \eta
+_{j}\eta _{j+s}\right\rangle
+\end{equation}%
+given by 
+\begin{equation}
+c_{+1}\left( \mathbf{z}_{+}\right) c_{0}\left( \mathbf{\lambda }\right)
+c_{+1}\left( \mathbf{z}_{\sigma +}\right) v_{0}\left( \mathbf{\lambda }_{\xi
+}\right) \tprod_{1\leq j\leq \rho }\left\{ u_{+1j}\left( \mathbf{z}%
+_{+j}\right) u_{0j}\left( \mathbf{\lambda }_{j}\right) \right\} c_{0}\left( 
+\mathbf{\lambda }_{\sigma }\right) \left\vert g^{\frac{N}{2}}\right\rangle
+\end{equation}%
+$\sigma =$ number of non zero, non equal $\left\{ c_{j}\right\} $'s
+
+\begin{description}
+\item[$\bullet $] $\omega _{j}=$ number of equal coefficients in the $j^{th}$
+set
+
+\item[$\bullet $] $\rho =$ number of sets of equal $\left\{ c_{j}\right\} $'s
+
+\item[$\bullet $] $\xi =$ number of zero coefficients.
+\end{description}
+
+The integral kernels of the operators $h_{1}$ and $h_{2}$ are 
+\begin{align}
+& h_{1}\left( \mathbf{r}_{1}\mathbf{,\xi }_{1};\mathbf{r}_{1}^{\prime }%
+\mathbf{,\xi }_{1}^{\prime }\right) =\left\langle \mathbf{r}_{1}\mathbf{,\xi 
+}_{1}\left\vert \left( h_{1}\right) \mathbf{r}_{1}^{\prime }\mathbf{,\xi }%
+_{1}^{\prime }\right. \right\rangle   \notag \\
+& \qquad \qquad \qquad \qquad \left. =\right. \sum_{_{1\leq l\leq N_{nuc}}}%
+\frac{Z_{l}}{\left\Vert \mathbf{R}_{l}-\mathbf{r}_{1}\right\Vert }\delta
+\left( \mathbf{r}_{1}-\mathbf{r}_{1}^{\prime }\right) \delta \left( \mathbf{%
+\xi }_{1}-\mathbf{\xi }_{1}^{\prime }\right) +\nabla _{\mathbf{r}%
+_{1}}^{2}\delta \left( \mathbf{r}_{1}-\mathbf{r}_{1}^{\prime }\right)  
+\notag \\
+& h_{2}\left( \mathbf{r}_{1}\mathbf{,\xi }_{1},\mathbf{r}_{2}\mathbf{,\xi }%
+_{2};\mathbf{r}_{1}^{\prime }\mathbf{,\xi }_{1}^{\prime },\mathbf{r}%
+_{2}^{\prime }\mathbf{,\xi }_{2}^{\prime }\right) =\left\langle \mathbf{r}%
+_{1}\mathbf{,\xi }_{1},\mathbf{r}_{2}\mathbf{,\xi }_{2}\left. \left(
+h_{2}\right) \mathbf{r}_{1}^{\prime }\mathbf{,\xi }_{1}^{\prime },\mathbf{r}%
+_{2}^{\prime }\mathbf{,\xi }_{2}^{\prime }\right\vert \right\rangle   \notag
+\\
+& \qquad \qquad \qquad \qquad \left. =\right. \frac{1}{\left\Vert \mathbf{r}%
+_{1}-\mathbf{r}_{2}\right\Vert }\left\{ \delta \left( \mathbf{r}_{1}-\mathbf{%
+r}_{1}^{\prime }\right) \delta \left( \mathbf{r}_{2}-\mathbf{r}_{2}^{\prime
+}\right) \delta \left( \mathbf{\xi }_{1}-\mathbf{\xi }_{1}^{\prime }\right)
+\delta \left( \mathbf{\xi }_{2}-\mathbf{\xi }_{2}^{\prime }\right) \right.  
+\notag \\
+& \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad -\left. \delta
+\left( \mathbf{r}_{1}-\mathbf{r}_{2}^{\prime }\right) \delta \left( \mathbf{r%
+}_{2}-\mathbf{r}_{1}^{\prime }\right) \delta \left( \mathbf{\xi }_{1}-%
+\mathbf{\xi }_{2}^{\prime }\right) \delta \left( \mathbf{\xi }_{2}-\mathbf{%
+\xi }_{1}^{\prime }\right) \right\} 
+\end{align}%
+Noting 
+\begin{equation}
+L_{2}^{1}\left( \mathbb{A}^{\dagger }\right) =L_{2}^{1}\left( \mathbb{A}%
+\right) ^{\dagger }
+\end{equation}%
+we obtain 
+\begin{equation}
+F\left( \mathbf{\psi }\right) ^{\dagger }=\frac{1}{2}\sum_{1\leq m,n\leq
+2s}\left\{ \frac{1}{\left( 2N-1\right) }\left( L_{2}^{1}\left( \mathbb{D}%
+^{2}\left\{ \left( \mathbb{H}_{1}\otimes \mathbb{I}_{1}\right) +\mathbb{H}%
+_{2}\right\} \right) \right) _{mn}\right\} \left\vert \psi _{m}\right\rangle
+\left\langle \psi _{n}\right\vert ,
+\end{equation}%
+which shows that eq. $\left( \ref{enderiv}\right) $ can be written as 
+\begin{equation}
+\frac{\delta \mathcal{E}\left( \mathbf{\psi }\right) }{\delta \psi _{\mu
+}^{\ast }}=\left\{ F\left( \mathbf{\psi }\right) -F\left( \mathbf{\psi }%
+\right) ^{\dagger }\right\} \left\vert \psi _{\mu }\right\rangle 
+\end{equation}%
+The energy using the direct product reduced Hamiltonian is given by 
+\begin{equation}
+\mathcal{E}\left( D^{2},\mathbf{\psi }\right) =\sum_{1\leq i,j,k,l\leq
+2s}\left\{ \frac{1}{\left( 2N-1\right) }\left\langle \left. \psi
+_{i}\right\vert h_{1}\psi _{k}\right\rangle \delta _{jl}+\left( \left. \psi
+_{i}\psi _{j}\right\vert h_{2}\psi _{k}\psi _{l}\right) \right\} D_{klij}^{2}
+\end{equation}%
+leading to%
+\begin{align}
+& \left\{ \sum_{1\leq m,n\leq 2s}\left\{ h_{2mjkl}\delta
+_{in}+h_{2milk}\delta _{jn}\right\} \left\vert \psi _{m}\right\rangle
+\left\langle \psi _{n}\right\vert \right\} \left\vert \psi _{\mu
+}\right\rangle  \\
+& \left\{ \sum_{1\leq m,n\leq 2s}h_{1mk}\delta _{in}\left\vert \psi
+_{m}\right\rangle \left\langle \psi _{n}\right\vert \right\} \left\vert \psi
+_{\mu }\right\rangle 
+\end{align}%
+\begin{align}
+& \frac{\delta \mathcal{E}\left( \mathbf{\psi }\right) }{\delta \psi _{\mu
+}^{\ast }} \\
+& =\sum_{1\leq m,n\leq 2s}\sum_{1\leq i,j,k,l\leq 2s}\left\{ \left\{ \frac{1%
+}{\left( 2N-1\right) }h_{1mk}\delta _{in}\delta _{jl}+\left\{
+h_{2mjkl}\delta _{in}+h_{2milk}\delta _{jn}\right\} \right\}
+D_{klij}^{2}\left\vert \psi _{m}\right\rangle \left\langle \psi
+_{n}\right\vert \left\vert \psi _{\mu }\right\rangle \right\}  \\
+& =\sum_{1\leq m,n\leq 2s}\left\{ \left\{ L_{2}^{1}\left( \left\{ \frac{1}{%
+\left( 2N-1\right) }\mathbb{H}_{1}\otimes \mathbb{I}_{1}+2\mathbb{H}%
+_{2}\right\} \mathbb{D}^{2}\right) _{mn}\right\} \left\vert \psi
+_{m}\right\rangle \left\langle \psi _{n}\right\vert \right\} \left\vert \psi
+_{\mu }\right\rangle 
+\end{align}
+
+\begin{align}
+& \mathcal{E}\left( \mathbb{D}^{2},\mathbf{\psi }\right) =\func{Tr}\left\{
+\left\{ \sum_{1\leq i,k\leq 2s}h_{1ik}a_{i}^{\dagger }a_{k}+\frac{1}{4}%
+\sum_{1\leq i,j,k,l\leq 2s}\left\langle ij||kl\right\rangle a_{i}^{\dagger
+}a_{j}^{\dagger }a_{l}a_{k}\right\} D^{2N}\right\}  \\
+& =\func{Tr}\left\{ \sum_{1\leq i,j,k,l\leq 2s}\frac{1}{4}\left\{ \left\{ 
+\frac{1}{\left( 2N-1\right) }\left\{ h_{1ik}\delta _{jl}+h_{1jl}\delta
+_{ik}-h_{1il}\delta _{jk}-h_{1jk}\delta _{il}\right\} \right\} +\left\langle
+ij||kl\right\rangle \right\} a_{i}^{\dagger }a_{j}^{\dagger
+}a_{l}a_{k}D^{2N}\right\}   \notag \\
+& =\frac{1}{4}\sum_{1\leq i,j,k,l\leq 2s}\left\{ \frac{1}{\left( 2N-1\right) 
+}\left\{ h_{1ik}\delta _{jl}+h_{1jl}\delta _{ik}-h_{1il}\delta
+_{jk}-h_{1jk}\delta _{il}\right\} +\left\langle ij||kl\right\rangle \right\} 
+\func{Tr}\left\{ a_{i}^{\dagger }a_{j}^{\dagger }a_{l}a_{k}D^{2N}\right\} ,
+\end{align}%
+where the antisymmetric reduced Hamiltonian matrix elements are 
+\begin{subequations}
+\begin{align}
+K_{ijkl}& =\frac{1}{\left( 2N-1\right) }\left\{ h_{1ik}\delta
+_{jl}+h_{1jl}\delta _{ik}-h_{1il}\delta _{jk}-h_{1jk}\delta _{il}\right\}
++\left\langle ij||kl\right\rangle   \notag \\
+& =\frac{2}{\left( 2N-1\right) }\left\{ h_{1ik}\delta _{jl}-h_{1il}\delta
+_{jk}\right\} +h_{2ijkl}-h_{2ijlk},
+\end{align}%
+in terms of the matrix elements of the coloumb operator in the direct
+product basis 
+\end{subequations}
+\begin{equation}
+h_{2ijkl}=\left( \left. \psi _{i}\psi _{j}\right\vert h_{2}\psi _{k}\psi
+_{l}\right) 
+\end{equation}%
+\begin{equation}
+D_{klij}^{2}=\func{Tr}\left\{ a_{i}^{\dagger }a_{j}^{\dagger
+}a_{l}a_{k}D^{2N}\right\} .
+\end{equation}%
+The reduced Hamiltonian matrix $\mathbb{K}\left( \mathbf{\psi }\right) $ can
+easily seen to be hermitian as 
+\begin{align}
+K_{klij}^{\ast }& =\frac{2}{\left( 2N-1\right) }\left\{ h_{1ki}^{\ast
+}\delta _{lj}-h_{1li}^{\ast }\delta _{kj}\right\} +h_{2klij}^{\ast
+}-h_{2lkij}^{\ast }  \notag \\
+& =\frac{2}{\left( 2N-1\right) }\left\{ h_{1ik}\delta _{jl}-h_{1il}\delta
+_{jk}\right\} +h_{2ijkl}-h_{2ijlk}=K_{ijkl}.
+\end{align}%
+We can rearrange terms in the energy expression eq. $\left( \ref{RDO_en}%
+\right) $ to obtain 
+\begin{align}
+\mathcal{E}\left( D^{2},\mathbf{\psi }\right) & =\frac{1}{4}\sum_{1\leq
+i,j,k,l\leq 2s}\left\{ \frac{2}{\left( 2N-1\right) }\left\{ h_{1ik}\delta
+_{jl}D_{klij}^{2}-h_{1il}\delta _{jk}D_{klij}^{2}\right\}
++h_{2ijkl}D_{klij}^{2}-h_{2ijlk}D_{klij}^{2}\right\}   \notag \\
+& =\frac{1}{2}\sum_{1\leq i,j,k,l\leq 2s}\left\{ \frac{2}{\left( 2N-1\right) 
+}h_{1ik}\delta _{jl}+h_{2ijkl}\right\} D_{klij}^{2}  \notag \\
+& =\frac{1}{2}\sum_{1\leq i,j,k,l\leq 2s}\left\{ \frac{1}{\left( 2N-1\right) 
+}\left( h_{1ik}\delta _{jl}+h_{1jl}\delta _{ik}\right) +h_{2ijkl}\right\}
+D_{klij}^{2}.
+\end{align}%
+which shows that 
+\begin{subequations}
+\label{Rham_1elec}
+\begin{align}
+\mathcal{E}\left( D^{2},\mathbf{\psi }\right) & =\frac{1}{2}\func{Tr}\left\{
+\left\{ \frac{1}{\left( 2N-1\right) }\left( \mathbb{H}_{1}\otimes \mathbb{I}%
+_{1}+\mathbb{I}_{1}\otimes \mathbb{H}_{1}\right) +\mathbb{H}_{2}\right\} 
+\mathbb{D}^{2}\right\}   \label{Rham_1eleca} \\
+& =\frac{1}{2}\func{Tr}\left\{ \left\{ \frac{2}{\left( 2N-1\right) }\mathbb{H%
+}_{1}\otimes \mathbb{I}_{1}+\mathbb{H}_{2}\right\} \mathbb{D}^{2}\right\} 
+\label{Rham_1elecb}
+\end{align}%
+This displays that wrt the direct product basis we can introduce the non
+antisymmetric Reduced Hamiltonian matrix with an explicitly symmetric one
+electron part 
+\end{subequations}
+\begin{equation}
+\mathbb{K}_{d}\left( \mathbf{\psi }\right) =\frac{1}{\left( 2N-1\right) }%
+\left( \mathbb{H}_{1}\otimes \mathbb{I}_{1}+\mathbb{I}_{1}\otimes \mathbb{H}%
+_{1}\right) +\mathbb{H}_{2},
+\end{equation}%
+or in a more compact non symmetric form 
+\begin{equation}
+\mathbb{K}_{d}\left( \mathbf{\psi }\right) =\frac{2}{\left( 2N-1\right) }%
+\mathbb{H}_{1}\otimes \mathbb{I}_{1}+\mathbb{H}_{2},
+\end{equation}%
+where FORDM%
+\begin{align}
+\mathbb{H}_{1}& \leftrightarrow \left\{ \left. h_{1ik}\right\vert 1\leq
+i,k\leq 2s\right\}   \notag \\
+\mathbb{H}_{2}& \leftrightarrow \left\{ \left. h_{2ijkl}\right\vert 1\leq
+i,j,k,l\leq 2s\right\} 
+\end{align}%
+and express the energy functional as 
+\begin{equation}
+\mathcal{E}\left( D^{2},\mathbf{\psi }\right) =\frac{1}{2}\func{Tr}\left\{ 
+\mathbb{K}_{d}\left( \mathbf{\psi }\right) \mathbb{D}^{2}\right\} .
+\label{RDO_en1}
+\end{equation}%
+where%
+\begin{equation}
+\mathbb{K}_{d}\left( \mathbf{\psi }\right) =\frac{2}{\left( 2N-1\right) }%
+\mathbb{H}_{1}\otimes \mathbb{I}_{1}+\mathbb{H}_{2}  \label{e2}
+\end{equation}%
+and 
+\begin{equation}
+K_{dijkl}=\frac{2}{\left( 2N-1\right) }\left\langle \left. \psi
+_{i}\right\vert h_{1}\psi _{k}\right\rangle \delta _{jl}+\left( \left. \psi
+_{i}\psi _{j}\right\vert h_{2}\psi _{k}\psi _{l}\right) -\left( \left. \psi
+_{i}\psi _{j}\right\vert h_{2}\psi _{l}\psi _{k}\right) .  \label{e3}
+\end{equation}%
+The partial derivatives $\left\{ \frac{\delta \mathcal{E}\left( \mathbf{\psi 
+}\right) }{\delta \psi _{\mu }^{\ast }}\right\} $ are obtained by using eqs. 
+$\left( \ref{e1}\right) -\left( \ref{e3}\right) $, $\left( \ref%
+{1partfuncder_ex}\right) $ and $\left( \ref{2partfuncder_ex}\right) $
+producing 
+\begin{align}
+& \frac{\delta \mathcal{E}\left( \mathbf{\psi }\right) }{\delta \psi _{\mu
+}^{\ast }}  \notag \\
+& \left. =\right. \sum_{1\leq m,n\leq 2s}\sum_{1\leq i,j,k,l\leq 2s}\left\{
+\left\{ \frac{1}{2N-1}h_{1mk}\delta _{in}\delta _{jl}+h_{2mjkl}\delta
+_{in}\right\} \overset{}{D_{klij}^{2}\left\vert \psi _{m}\right\rangle
+\left\langle \psi _{n}\right\vert }\right\} \left\vert \psi _{\mu
+}\right\rangle .
+\end{align}%
+This allows us to define the generalized Fock operator
+\begin{subequations}
+\begin{align}
+F\left( \mathbf{\psi }\right) & =\sum_{1\leq m,n\leq 2s}\left\{ \sum_{1\leq
+i,j,k,l\leq 2s}\left\{ \frac{1}{\left( 2N-1\right) }h_{1mk}\delta
+_{in}\delta _{jl}+h_{2mjkl}\delta _{in}\right\} D_{klij}^{2}\right\}
+\left\vert \psi _{m}\right\rangle \left\langle \psi _{n}\right\vert  \\
+& =\sum_{1\leq m,n\leq 2s}\left\{ \left( L_{2}^{1}\left( \left\{ \frac{1}{%
+\left( 2N-1\right) }\mathbb{H}_{1}\otimes \mathbb{I}_{1}+\mathbb{H}%
+_{2}\right\} \mathbb{D}^{2}\right) \right) _{mn}\right\} \left\vert \psi
+_{m}\right\rangle \left\langle \psi _{n}\right\vert .
+\end{align}%
+\end{subequations}
+\begin{equation}
+\mathbb{F}_{2}\left( \mathbf{\psi }\right) =\frac{1}{\left( 2N-1\right) }%
+\mathbb{H}_{1}\otimes \mathbb{I}_{1}+\mathbb{H}_{2}
+\end{equation}%
+\begin{equation}
+\mathbb{F}\left( \mathbf{\psi }\right) =L_{2}^{1}\left( \mathbb{F}_{2}\left( 
+\mathbf{\psi }\right) \mathbb{D}^{2}\right) 
+\end{equation}%
+In case (b) the energy is given by 
+
+\begin{equation}
+\mathcal{E}\left( D^{2},\mathbf{\psi }\right) =\func{Tr}\left\{ \mathbb{H}%
+_{1}\mathbb{D}^{1}\right\} +\frac{1}{4}\func{Tr}\left\{ \mathbb{V}_{2}%
+\mathbb{D}^{2}\right\} 
+\end{equation}
+
+\end{document}

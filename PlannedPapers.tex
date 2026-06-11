@@ -1,0 +1,961 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{Created=Friday, April 05, 2002 10:30:19}
+%TCIDATA{LastRevised=Tuesday, July 09, 2002 12:07:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\preprint{}
+\title[Planned]{Long title that appears on the title page}
+\author{Brian Weiner}
+\affiliation{Physics, PSU}
+\author{}
+\author{}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+\end{abstract}
+
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+\revised[Revised text]{date}
+\accepted[Accepted text]{date}
+\published[Published text]{date}
+\startpage{1}
+\endpage{}
+\maketitle
+\tableofcontents
+
+\section{Outline of Coherent State}
+
+\subsection{Resolutions of the Identity}
+
+\subsubsection{Coherent States}
+
+Resolutions of the identity can be based on families of Coherent States (CS)
+as 
+\begin{equation}
+I_{N}=\int \left\vert \eta \right\rangle \left\langle \eta \right\vert d\mu
+\left( \eta \right) ;\quad \left\vert \eta \right\rangle \in \mathcal{H}^{N}
+\label{res_id}
+\end{equation}%
+where $\left\{ \left\vert \eta \right\rangle \right\} $ is an overcomplete
+basis of $\mathcal{H}^{N}$ 
+\begin{equation}
+\eta :\mathrm{X\rightarrow }\mathbb{C}
+\end{equation}%
+$\mathrm{X}$ is the index set of the label space $\left\{ \eta \right\} $,
+e.g. 
+\begin{equation}
+\mathrm{X}=\mathbb{N}
+\end{equation}%
+and 
+\begin{equation}
+\eta \equiv \left\{ \eta _{i}|1\leq i\leq r\right\} \equiv \left( \eta
+_{1}\cdots \eta _{r}\right) \equiv \mathbf{\eta \in }\mathbb{C}^{r}
+\end{equation}%
+or $\mathrm{X}$ could be a more general measure space and $\left\{ \eta
+\right\} $ some space of functions defined on $\mathrm{X}$. With each family
+of CS's one can associate the Reproducing Kernel function (in Quantum
+Chemistry called the overlap matrix) as 
+\begin{equation}
+\mathcal{K}\left( \eta ,\eta ^{\prime }\right) =\left\langle \eta |\eta
+^{\prime }\right\rangle .
+\end{equation}%
+One special case of this 
+\begin{equation}
+\mathrm{X}=\mathbb{R}^{3N}
+\end{equation}%
+and 
+\begin{equation}
+\eta \left( \mathbf{x}_{1}\cdots \mathbf{x}_{N}\right) \equiv \eta \left( 
+\mathsf{X}^{N}\right) =\left\langle \mathsf{X}^{N}|\eta \right\rangle ,\quad
+\left\vert \eta \right\rangle \in \mathcal{H}^{N},\quad \eta \left( \mathbf{x%
+}_{1}\cdots \mathbf{x}_{N}\right) \in L_{2}\left( \mathbb{R}^{3N}\right)
+\end{equation}%
+Another special case is possibly 
+\begin{equation}
+\mathrm{X}=\mathbb{R}^{3}
+\end{equation}%
+with 
+\begin{equation}
+\left\{ \eta \right\} \equiv L_{1+}\left( \mathbb{R}^{3}\right) ;\quad \int
+\eta \left( \mathbf{x}_{1}\right) d\mathbf{x}_{1}=N
+\end{equation}%
+By Harrimans theorem every density corresponds to an IPS\ state, but not
+uniquely i.e. a given density can be associated with a class of IPS's, so
+the question to be decided is whether an integral over class representatives
+is sufficient to produce a resolution of the identity.
+
+If the CS's are group CS's then 
+\begin{equation}
+I_{N}=\int \mathcal{R}\left( g\left( \eta \right) \right) \left\vert \eta
+_{ref}\right\rangle \left\langle \eta _{ref}\right\vert \mathcal{R}\left(
+g\left( \eta \right) \right) ^{\dagger }d\mu \left( \eta \right)
+\label{groupres}
+\end{equation}%
+where $\mathcal{R}$ is a representation of a group $\mathfrak{G}$ acting in $%
+\left\{ \mathcal{H}^{N}\right\} $, where the group elements are
+parameterized by $\eta $. If $\mathcal{R}$ is irreducible then eq. $\left( %
+\ref{res_id}\right) $ follows. While if $\mathcal{R}$ is reducible the
+integral does not in general produce the identity operator, but rather the
+operator 
+\begin{equation}
+J=\sum_{1\leq \kappa \leq m}\alpha \left( \kappa \right) P_{\kappa }
+\end{equation}%
+where $m$ is the number of irreps (not counting degeneracy) and $P_{\kappa }$
+is a projector onto invariant subspaces that carry irreps. In the $\infty $
+dimensional case there may not be any finite dimensional invariant subspaces
+even if $\mathcal{R}$ is reducible, and even if $\mathfrak{G}$ is abelian,
+so eq. $\left( \ref{groupres}\right) $ could then be 
+\begin{equation}
+J=\sum_{1\leq \kappa \leq m}\alpha \left( \kappa \right) P_{\kappa }
+\end{equation}%
+where $\left\{ P_{\kappa }\right\} $ are all projectors onto invariant $%
+\infty $ dimensional subspaces.
+
+\subsubsection{Generalized States}
+
+Another set of resolutions of the identity can be based on \emph{generalized 
+}states as 
+\begin{equation}
+I_{N}=\int \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{N}\right\vert d\mathsf{z}^{N}
+\end{equation}%
+where $\left\vert \mathsf{z}^{N}\right\rangle \notin \mathcal{H}^{N}$, $%
+\mathsf{z}^{N}\in \mathrm{X}$ a linear atomic measure space, and form an
+overcomplete orthonormal basis of $\mathcal{H}^{N}$ i.e. 
+\begin{equation}
+\left\langle \mathsf{z}^{N}|\mathsf{z}^{\prime N}\right\rangle =\delta
+\left( \mathsf{z}^{N}-\mathsf{z}^{\prime N}\right)
+\end{equation}%
+which also defines the amplitudes, $\delta _{\mathsf{z}^{\prime N}}\left( 
+\mathsf{z}^{N}\right) \equiv \delta \left( \mathsf{z}^{N}-\mathsf{z}^{\prime
+N}\right) $, of these basis functions. One could express this resolution of
+the identity in "group" CS\ fashion as 
+\begin{equation}
+I_{N}=\int \breve{T}\left( \mathsf{z}^{N}\right) \left\vert \mathsf{z}%
+_{ref}^{N}\right\rangle \left\langle \mathsf{z}_{ref}^{N}\right\vert \breve{T%
+}\left( \mathsf{z}^{N}\right) ^{\dagger }d\mathsf{z}^{N}
+\end{equation}%
+where $\left\vert \mathsf{x}^{N}\right\rangle =\breve{T}\left( \mathsf{x}%
+^{N}\right) \left\vert \mathsf{z}_{ref}^{N}\right\rangle $ i.e. 
+\begin{eqnarray}
+\delta _{\mathsf{x}^{N}} &=&\delta _{\breve{T}\left( \mathsf{x}^{N}\right) 
+\mathsf{z}_{ref}^{N}}  \notag \\
+\delta \left( \mathsf{x}^{N}-\mathsf{z}^{N}\right) &=&\delta \left( T\left( 
+\mathsf{x}^{N}\right) \mathsf{z}_{ref}^{N}-\mathsf{z}^{N}\right)
+\end{eqnarray}%
+so that $\breve{T}\left( \mathsf{z}^{N}\right) $ is a representation of the
+translational group of $\mathsf{Z}^{N}$.
+
+The big difference between the generalized and CS resolution of the
+identities is that the constraint of orthonormality for an overcomplete
+basis cannot be fulfilled if the basis elements belong to the Hilbert space.
+
+\subsection{ Coherent States based on Generalized States}
+
+\subsection{Generation of States by Diagonal Operators}
+
+If we consider the coordinate representation, all states (unnormalized) in $%
+\mathcal{H}^{N}$ can be produced in the following manner from a reference
+state, $\left\vert \Psi _{ref}\right\rangle $, that is nonzero $a.e.$ 
+\begin{equation}
+\left\vert \Psi \left( \nu ,\omega \right) \right\rangle =\breve{T}\left(
+\nu ,\omega \right) \left\vert \Psi _{ref}\right\rangle =\breve{\nu}_{N}e^{i%
+\breve{\omega}_{N}}\left\vert \Psi _{ref}\right\rangle
+\end{equation}%
+where 
+\begin{eqnarray}
+\left\langle \mathsf{z}^{N}|\Psi _{ref}\right\rangle &=&\varrho \left( 
+\mathsf{z}^{N}\right) e^{iS\left( \mathsf{z}^{N}\right) }  \notag \\
+\breve{\nu}_{N} &=&\int \nu \left( \mathsf{z}^{N}\right) \left\vert \mathsf{z%
+}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}\in 
+\mathcal{B}\left( \mathcal{H}^{N}\right) \\
+\breve{\omega}_{N} &=&\int \omega \left( \mathsf{z}^{N}\right) \left\vert 
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z%
+}^{N}\in \mathcal{B}\left( \mathcal{H}^{N}\right)
+\end{eqnarray}%
+and 
+\begin{equation}
+\left\vert \mathsf{z}^{N}\right\rangle =\left\vert \mathsf{z}_{1}\cdots 
+\mathsf{z}_{N}\right\rangle ;\quad \mathsf{z}_{i}\neq \mathsf{z}_{j},\quad
+1\leq i<j\leq N
+\end{equation}%
+$\lceil $In this formulation it does not matter if the coordinates are equal
+or not as for any $N$-particle operator $\breve{\varsigma}_{N}$ 
+\begin{equation}
+\breve{\varsigma}_{N}=\int \varsigma \left( \mathsf{z}^{N}\right)
+\prod_{1\leq i<j\leq N}\delta ^{C}\left( \mathsf{z}_{i}-\mathsf{z}%
+_{j}\right) \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{N}\right\vert d\mathsf{z}^{N}=\int \varsigma \left( \mathsf{z}^{N}\right)
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{N}\right\vert d\mathsf{z}^{N}
+\end{equation}%
+where $\delta ^{C}\left( \mathsf{z}_{i}-\mathsf{z}_{j}\right) =1-\delta
+\left( \mathsf{z}_{i}-\mathsf{z}_{j}\right) $, as $\left\vert \mathsf{z}%
+_{1}\cdots \mathsf{z}_{N}\right\rangle =0$ if $\mathsf{z}_{i}\neq \mathsf{z}%
+_{j}$ for any $i\neq j$.$\rfloor $ Then clearly 
+\begin{equation}
+I_{N}=\int \left\vert \Psi \left( \nu ,\omega \right) \right\rangle
+\left\langle \Psi \left( \nu ,\omega \right) \right\vert d\mu \left( \nu
+,\omega \right) =\int \breve{T}\left( \nu ,\omega \right) \left\vert \Psi
+_{ref}\right\rangle \left\langle \Psi _{ref}\right\vert \breve{T}\left( \nu
+,\omega \right) ^{^{\dagger }}d\mu \left( \nu ,\omega \right)
+\end{equation}%
+where 
+\begin{equation}
+d\mu \left( \nu ,\omega \right) =\frac{1}{\left\langle \Psi \left( \nu
+,\omega \right) |\Psi \left( \nu ,\omega \right) \right\rangle }d\mu
+_{r}\left( \nu \right) d\mu _{i}\left( \omega \right)
+\end{equation}%
+\qquad \qquad
+
+The strong closure of the space of diagonal integral operators that map $%
+\mathcal{H}^{N}\rightarrow \mathcal{H}^{N}$ is the space of integral
+operators with symmetric integral kernels $T\left( \mathsf{z}^{N}\right) $ $%
+\in L_{\infty }\left( \mathsf{Z}^{N}\right) $ /Walter Thirring, \textit{%
+Quantum Mechanics of Atoms and Molecules -A course in Mathematical Physics
+3, pp 50-51; }Springer Verlag , New York 1981/. The space $L_{\infty }\left( 
+\mathsf{Z}^{N}\right) $ is a $w^{\ast }$-algebra. The following extract from
+Thirring should be noted:
+
+\begin{quotation}
+$L_{\infty }\left( \mathsf{Z}^{N}\right) ,$\textit{considered as
+multiplication operators on} $L_{2}\left( \mathsf{Z}^{N}\right) $ \textit{is
+maximally abelian. }\emph{Every function in }$L_{2}\left( \mathsf{Z}%
+^{N}\right) $\emph{\ that is nonzero }$a.e.$\emph{\ is a cyclic vector}%
+\textit{. Functions that vanish on some set} $\left[ \Omega ^{N}\right] ^{C}=%
+\mathsf{Z}^{N}-\Omega ^{N}\subset \mathsf{Z}^{N}$ \textit{form invariant
+subspaces. Thus} $L_{\infty }\left( \mathsf{Z}^{N}\right) $ \textit{is
+reducible and not a factor.}\emph{\ }
+\end{quotation}
+
+One can see that $T\left( \nu ,\omega \right) $ (the integral kernel of $%
+\breve{T}\left( \nu ,\omega \right) )$ is a parameterization of a
+representation of an abelian $w^{\ast }$-algebra, $\mathfrak{A}$, on $%
+L_{2}\left( \mathsf{Z}^{N}\right) $ by $L_{\infty }\left( \mathsf{Z}%
+^{N}\right) $. This representation is reducible as $L_{2}\left( \mathsf{Z}%
+^{N}\right) $ contains the following invariant subspaces 
+\begin{equation}
+L_{2}\left( \Omega ^{N}\right) =\left\{ \Psi |\Psi \left( \mathsf{z}%
+^{N}\right) =0\,\text{if \thinspace }\mathsf{z}^{N}\notin \Omega ^{N}\,\text{%
+,\thinspace }\int_{\Omega ^{N}}d\mathsf{z}^{N}\neq 0\,\text{and\thinspace }%
+\Omega ^{N}\subset \mathsf{Z}^{N}\right\}
+\end{equation}%
+The operator $\breve{T}\left( \nu ,\omega \right) $ produces elements that
+have amplitudes that belong to $L_{2}\left( \Omega ^{N}\right) $ when Support%
+$\left( \nu \right) =$ $\Omega ^{N}$.
+
+The set of invertible diagonal operators in $\mathfrak{A}$ form a group, $%
+\mathfrak{G}_{pos}$, that also has a reducible representation on $L_{\infty
+}\left( \mathsf{Z}^{N}\right) $, as clearly $L_{2}\left( \Omega ^{N}\right) $
+are also invariant subspaces of $\mathfrak{G}_{pos}$. However \emph{it is
+not true} that every function in $L_{2}\left( \mathsf{Z}^{N}\right) $\ that
+is nonzero $a.e.$\ is a cyclic vector for $\mathfrak{G}_{pos}$.
+
+$\lceil $This observation also holds in the discrete case, consider the
+abelian algebra generated by $\left\{ \tsum\limits_{1\leq i\leq \infty
+}\lambda _{i}\left\vert e_{i}\right\rangle \left\langle e_{i}\right\vert
+\right\} $ acting on a vector $a=\tsum\limits_{1\leq i\leq \infty }\alpha
+_{i}\left\vert e_{i}\right\rangle $ that such that $\alpha _{i}\neq 0\forall
+i\rfloor $
+
+From the preceding we have that $L_{\infty }\left( \mathsf{Z}^{N}\right) $
+acting on an $a.e.$ nonzero amplitude produces all (unnormalized) vector
+states, the question thus arrises on whether $L_{\infty }\left( \mathsf{Z}%
+^{N}\right) $ can produce all unnormalized states by acting on an a $a.e.$%
+nonzero positive kernel $D_{ref}\left( \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right) $ of an operator $\in \mathcal{B}_{1+}\left( \mathcal{H}%
+^{N}\right) $ in the following manner%
+\begin{equation}
+D\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right) =T\left( \mathsf{z}%
+^{N}\right) D_{ref}\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+T\left( \mathsf{z}^{\prime N}\right) ^{\ast }
+\end{equation}%
+One can start by examining the diagonal elements to obtain 
+\begin{eqnarray}
+D\left( \mathsf{z}^{N},\mathsf{z}^{N}\right) &=&\left\vert T\left( \mathsf{z}%
+^{N}\right) \right\vert ^{2}D_{ref}\left( \mathsf{z}^{N},\mathsf{z}%
+^{N}\right)  \notag \\
+&\Rightarrow &\left\vert T\left( \mathsf{z}^{N}\right) \right\vert =\left\{ 
+\begin{array}{c}
+\left( \frac{D\left( \mathsf{z}^{N},\mathsf{z}^{N}\right) }{D_{ref}\left( 
+\mathsf{z}^{N},\mathsf{z}^{N}\right) }\right) ^{\frac{1}{2}};\quad
+D_{ref}\left( \mathsf{z}^{N},\mathsf{z}^{N}\right) \neq 0 \\ 
+0;\qquad \qquad \qquad \quad \quad D_{ref}\left( \mathsf{z}^{N},\mathsf{z}%
+^{N}\right) =0\text{ }%
+\end{array}%
+\right. \text{ }
+\end{eqnarray}%
+which is well defined $a.e.$ The off diagonal elements will "determine" the
+phase of the transformation $T\left( \mathsf{z}^{N}\right) $ $=\left\vert
+T\left( \mathsf{z}^{N}\right) \right\vert e^{i\theta \left( \mathsf{z}%
+^{N}\right) }$ by 
+\begin{eqnarray}
+D\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right) &=&\left\vert T\left( 
+\mathsf{z}^{N}\right) T\left( \mathsf{z}^{\prime N}\right) \right\vert
+e^{i\left( \theta \left( \mathsf{z}^{N}\right) -\theta \left( \mathsf{z}%
+^{\prime N}\right) \right) }D_{ref}\left( \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right)  \notag \\
+&\Rightarrow &e^{i\left( \theta \left( \mathsf{z}^{N}\right) -\theta \left( 
+\mathsf{z}^{\prime N}\right) \right) }=\frac{D\left( \mathsf{z}^{N},\mathsf{z%
+}^{\prime N}\right) }{D_{ref}\left( \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right) \left\vert T\left( \mathsf{z}^{N}\right) T\left( \mathsf{z}%
+^{\prime N}\right) \right\vert }
+\end{eqnarray}%
+which is well defined as long as 
+\begin{equation}
+\left\vert T\left( \mathsf{z}^{N}\right) T\left( \mathsf{z}^{\prime
+N}\right) \right\vert =0\Longleftrightarrow D\left( \mathsf{z}^{N},\mathsf{z}%
+^{\prime N}\right) =0
+\end{equation}%
+which means that 
+\begin{equation}
+D\left( \mathsf{z}^{\prime N},\mathsf{z}^{\prime N}\right) =0\text{ or }%
+D\left( \mathsf{z}^{N},\mathsf{z}^{N}\right) =0\Longrightarrow D\left( 
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right) =0
+\end{equation}%
+when $D\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right) \geq 0$. First we
+see if is true for proper vectors, in that case 
+\begin{eqnarray}
+D\left( \mathsf{v}^{N},\mathsf{v}^{N}\right) &=&\left\langle \mathsf{v}^{N}|%
+\breve{D}\mathsf{v}^{N}\right\rangle =\left\langle \mathsf{v}^{N}|\breve{Q}%
+^{\dagger }\breve{Q}\mathsf{v}^{N}\right\rangle =0  \notag \\
+&\Rightarrow &\breve{Q}\left\vert \mathsf{v}^{N}\right\rangle =0  \label{c1}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+D\left( \mathsf{v}^{\prime N},\mathsf{v}^{\prime N}\right) &=&\left\langle 
+\mathsf{v}^{\prime N}|\breve{D}\mathsf{v}^{\prime N}\right\rangle
+=\left\langle \mathsf{v}^{\prime N}|\breve{Q}^{\dagger }\breve{Q}\mathsf{v}%
+^{\prime N}\right\rangle =0  \notag \\
+&\Rightarrow &\breve{Q}\left\vert \mathsf{v}^{\prime N}\right\rangle =0
+\label{c2}
+\end{eqnarray}%
+so either condition eq. $\left( \ref{c1}\right) $ or eq. $\left( \ref{c2}%
+\right) $ clearly implies that 
+\begin{equation}
+\left\langle \mathsf{v}^{N}|\breve{Q}^{\dagger }\breve{Q}\mathsf{v}^{\prime
+N}\right\rangle =D\left( \mathsf{v}^{N},\mathsf{v}^{\prime N}\right) =0
+\end{equation}%
+To see if this true for the generalized basis we must see if 
+\begin{equation}
+\left\langle \mathsf{z}^{N}|\breve{Q}^{\dagger }\breve{Q}\mathsf{z}%
+^{N}\right\rangle =0\Rightarrow \breve{Q}\left\vert \mathsf{z}%
+^{N}\right\rangle =0
+\end{equation}%
+is true in a rigged Hilbert space. $\lceil \mathcal{V}_{L}\supset \mathcal{%
+H\supset }\mathcal{V}_{S};$ $\mathcal{V}_{L}$ and $\mathcal{V}_{S}$ are
+Banach spaces and $\mathcal{V}_{S}$ is dense in $\mathcal{H}$; $\breve{Q}$
+acting on $\mathcal{V}_{L}$ is defined by 
+\begin{equation}
+\left( \breve{Q}^{\ddagger }\mathsf{z}|\varphi \right) =\left( \mathsf{z}|%
+\breve{Q}\varphi \right) \forall \left\vert \varphi \right\rangle \in 
+\mathcal{V}_{S}
+\end{equation}%
+and $\breve{Q}^{\ddagger }$ is an unique extension of $\breve{Q}$. Note that 
+$\breve{Q}\left\vert \mathsf{z}^{N}\right\rangle =0$ means 
+\begin{equation}
+\left( \mathsf{z}|\breve{Q}\varphi \right) =0\forall \left\vert \varphi
+\right\rangle \in \mathcal{V}_{S}
+\end{equation}%
+which implies that $\breve{Q}^{\ddagger }\left\vert \mathsf{z}%
+^{N}\right\rangle $ is the zero vector in $\mathcal{V}_{L}$.$\rfloor $ Thus $%
+\left\langle \mathsf{z}^{N}|\breve{Q}^{\dagger }\breve{Q}\mathsf{z}%
+^{N}\right\rangle =0$ or $\left\langle \mathsf{z}^{\prime N}|\breve{Q}%
+^{\dagger }\breve{Q}\mathsf{z}^{\prime N}\right\rangle =0\Rightarrow
+\left\langle \mathsf{z}^{\prime N}|\breve{Q}^{\dagger }\breve{Q}\mathsf{z}%
+^{N}\right\rangle =0$. Thus we have that 
+\begin{equation}
+\left\vert T\left( \mathsf{z}^{N}\right) T\left( \mathsf{z}^{\prime
+N}\right) \right\vert =0\Longleftrightarrow D\left( \mathsf{z}^{N},\mathsf{z}%
+^{\prime N}\right) =0
+\end{equation}%
+and we can define phase differences as 
+\begin{equation}
+e^{i\left( \theta \left( \mathsf{z}^{N}\right) -\theta \left( \mathsf{z}%
+^{\prime N}\right) \right) }=\left\{ 
+\begin{array}{c}
+\frac{D\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right) }{D_{ref}\left( 
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right) \left\vert T\left( \mathsf{z}%
+^{N}\right) T\left( \mathsf{z}^{\prime N}\right) \right\vert };\left\vert
+T\left( \mathsf{z}^{N}\right) T\left( \mathsf{z}^{\prime N}\right)
+\right\vert \neq 0,D_{ref}\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+\neq 0 \\ 
+\text{\qquad \qquad }0\qquad \text{\qquad \qquad \qquad otherwise\qquad
+\qquad \qquad \qquad \qquad }%
+\end{array}%
+\right.
+\end{equation}%
+which is sufficient to define the transformation $D_{ref}\rightarrow D$ 
+\emph{for any }$D$ as long as $D_{ref}\neq 0\,a.e.$
+
+The transformations $\hat{T}$ can either decrease or leave invariant the
+rank of $\breve{D}^{N}$, thus only if $\breve{D}_{ref}$ has maximal rank
+will all density operators be generated by such transformations ($D_{ref}$
+need not be a density operator kernel associated with a fixed number of
+particles, all that is needed is that $D_{ref}$ $\in \mathcal{B}_{1+}\left( 
+\mathcal{H}^{N}\right) $ with $rank\left( D_{ref}\right) =\infty $ and thus
+could be the kernel of any density operator, including ones describing
+indeterminate number of particles.)
+
+\subsection{Second Quantized form of Diagonal Operators}
+
+The operator 
+\begin{equation}
+\breve{T}_{N}=\int T\left( \mathsf{z}^{N}\right) \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}
+\end{equation}%
+is the restriction of the second quantized operator%
+\begin{equation}
+\breve{T}=\int T\left( \mathsf{z}^{N}\right) \Phi \left( \mathsf{z}%
+^{N}\right) ^{\dagger }\Phi \left( \mathsf{z}^{N}\right) d\mathsf{z}^{N}
+\end{equation}%
+to $\mathcal{H}^{N}$, where 
+\begin{equation}
+\Phi \left( \mathsf{z}^{N}\right) =\Phi \left( \mathsf{z}_{N}\right) \cdots
+\Phi \left( \mathsf{z}_{1}\right)
+\end{equation}%
+and 
+\begin{equation}
+\Phi \left( \mathsf{z}\right) ^{\dagger }\left\vert \phi \right\rangle
+=\left\vert \mathsf{z}\right\rangle
+\end{equation}%
+As%
+\begin{eqnarray}
+\Phi \left( \mathsf{z}^{N}\right) ^{\dagger }\Phi \left( \mathsf{z}%
+^{N}\right) &=&\Phi \left( \mathsf{z}_{1}\right) ^{\dagger }\cdots \Phi
+\left( \mathsf{z}_{N}\right) ^{\dagger }\Phi \left( \mathsf{z}_{N}\right)
+\cdots \Phi \left( \mathsf{z}_{1}\right)  \notag \\
+&=&\prod_{1\leq i<j\leq N}\delta ^{C}\left( \mathsf{z}_{i}-\mathsf{z}%
+_{j}\right) \Phi \left( \mathsf{z}_{1}\right) ^{\dagger }\Phi \left( \mathsf{%
+z}_{1}\right) \cdots \Phi \left( \mathsf{z}_{N}\right) ^{\dagger }\Phi
+\left( \mathsf{z}_{N}\right)
+\end{eqnarray}%
+we have that%
+\begin{eqnarray}
+\breve{T} &=&\int T\left( \mathsf{z}^{N}\right) \prod_{1\leq i<j\leq
+N}\delta ^{C}\left( \mathsf{z}_{i}-\mathsf{z}_{j}\right) \Phi \left( \mathsf{%
+z}_{1}\right) ^{\dagger }\Phi \left( \mathsf{z}_{1}\right) \cdots \Phi
+\left( \mathsf{z}_{N}\right) ^{\dagger }\Phi \left( \mathsf{z}_{N}\right) d%
+\mathsf{z}^{N}  \notag \\
+&=&\int \sum_{k=0}^{N}\left\{ T_{k}\left( \mathsf{z}^{N}\right) \right\}
+\prod_{1\leq i<j\leq N}\delta ^{C}\left( \mathsf{z}_{i}-\mathsf{z}%
+_{j}\right) \Phi \left( \mathsf{z}_{1}\right) ^{\dagger }\Phi \left( \mathsf{%
+z}_{1}\right) \cdots \Phi \left( \mathsf{z}_{N}\right) ^{\dagger }\Phi
+\left( \mathsf{z}_{N}\right) d\mathsf{z}^{N}
+\end{eqnarray}%
+where 
+\begin{equation}
+T_{k}\left( \mathsf{z}^{N}\right) =\sum_{1\leq i_{1}<i_{2}\cdots <i_{k}\leq
+N}T_{k}\left( \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\cdots \mathsf{z}%
+_{i_{k}}\right)
+\end{equation}%
+and all the functions are symmetric.
+
+\section{Outline of Invariance Groups and Subgroups of Kernels of
+Contraction Maps}
+
+\subsection{General Description}
+
+A locally compact abelian semi group $\mathfrak{S}$ that sends normalized
+states into normalized states can be defined as 
+\begin{equation}
+\mathfrak{S}=\left\{ \mathcal{T}|\mathcal{T}\left( \breve{X}\right) =\frac{%
+\breve{T}\breve{X}\breve{T}^{\dagger }}{Tr\left\{ \breve{T}\breve{X}\breve{T}%
+^{\dagger }\right\} };\quad \in \breve{X},\breve{T}\in \mathcal{B}\left( 
+\mathcal{H}^{N}\right) \right\}  \label{gd}
+\end{equation}%
+where 
+\begin{equation}
+\breve{T}=\breve{\nu}_{N}e^{\breve{\omega}_{N}}=\int \nu \left( \mathsf{z}%
+^{N}\right) e^{i\omega \left( \mathsf{z}^{N}\right) }\left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}%
+^{N}=\int T\left( \mathsf{z}^{N}\right) \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}
+\end{equation}%
+The overcomplete complete basis of generalized vectors $\left\{ \left\vert 
+\mathsf{z}^{N}\right\rangle \right\} $ $\equiv \left\{ \left\vert \mathsf{z}%
+_{1}\cdots \mathsf{z}_{N}\right\rangle \right\} $ is arbitrary and different
+bases give different isomorphic representations of $\mathfrak{S}$. Note that
+eq. $\left( \ref{gd}\right) $ \emph{is not linear }i.e. the representation
+is not a linear representation of $\mathfrak{S}$. This sub semigroup maps
+the convex set of normalized states, $\mathcal{S}_{N}$, to itself, however
+it is not defined on the kernel of the contraction maps, which are defined
+later.
+
+One can define another semigroup $\mathfrak{S}_{pos}$, which is also an
+abelian $w^{\ast }$-algebra, by 
+\begin{equation}
+\mathfrak{S}_{pos}=\left\{ \hat{T}|\hat{T}\left( \breve{X}\right) =\breve{T}%
+\breve{X}\breve{T}^{\dagger };\quad \breve{T}\in \mathcal{B}\left( \mathcal{H%
+}^{N}\right) \right\}  \label{pos}
+\end{equation}%
+This maps the cone of positive operators $\mathcal{B}\left( \mathcal{H}%
+^{N}\right) _{+}$ to itself, it also maps the cone of positive trace class
+operators to itself. The maps defined in eq. $\left( \ref{pos}\right) $ are
+linear maps, but they do \emph{not }map $\mathcal{S}_{N}$ to itself as 
+\begin{equation}
+Tr\left\{ \breve{T}\breve{D}^{N}\breve{T}^{\dagger }\right\} \neq 1\text{ }%
+\forall \breve{D}^{N}\text{ unless }\breve{T}^{\dagger }\breve{T}=I
+\end{equation}%
+This semigroup is defined on the kernels of the contraction maps, but does
+not leave them invariant, it is the sub semigroups (which are also sub $%
+w^{\ast }$-algebras) $\mathfrak{S}_{\Xi }$, $\mathfrak{S}_{L_{N}^{1}}$ and $%
+\mathfrak{S}_{L_{N}^{2}}$ of $\mathfrak{S}_{pos}$ that have this property.
+Clearly 
+\begin{equation}
+\mathfrak{S}_{\Xi }\supset \mathfrak{S}_{L_{N}^{1}}\supset \mathfrak{S}%
+_{L_{N}^{2}}
+\end{equation}
+
+\begin{lemma}
+\label{lemma1}$\breve{X}_{1}=\breve{X}_{2}$ when $\breve{X}_{1},\breve{X}%
+_{2}\in \mathcal{B}\left( \mathcal{H}^{N}\right) $ iff $X_{1}\left( \mathsf{z%
+}^{N},\mathsf{z}^{\prime N}\right) \overset{a.e.}{=}X_{2}\left( \mathsf{z}%
+^{N},\mathsf{z}^{\prime N}\right) $
+
+\begin{proof}
+See "Bounded Integral Operators on $L^{2}$ Spaces" by Halmos and Sunder.
+\end{proof}
+\end{lemma}
+
+\begin{lemma}
+Let $\breve{T}_{1}$ and $\breve{T}_{2}\in \mathfrak{S}_{pos}$ then $\breve{T}%
+_{1}=\breve{T}_{2}$ iff $T_{1}\left( \mathsf{z}^{N}\right) =T_{2}\left( 
+\mathsf{z}^{N}\right) $ a.e. with respect to the measure $d\mathsf{z}^{N}$
+\end{lemma}
+
+\begin{proof}
+One can use \ref{lemma1} or consider the operator equality is defined by 
+\begin{equation}
+\left\Vert \left( \breve{T}_{1}-\breve{T}_{2}\right) \right\Vert
+=\sup_{\left\Vert v\right\Vert =1}\left\Vert \left( \breve{T}_{1}-\breve{T}%
+_{2}\right) v\right\Vert =0;\qquad v\in \mathcal{H}^{N}
+\end{equation}%
+i.e. 
+\begin{equation}
+\int \left\vert T_{1}\left( \mathsf{z}^{N}\right) -T_{2}\left( \mathsf{z}%
+^{N}\right) \right\vert ^{2}\left\vert v\left( \mathsf{z}^{N}\right)
+\right\vert ^{2}d\mathsf{z}^{N}=0\qquad \forall v\in \mathcal{H}^{N}
+\end{equation}%
+this implies that 
+\begin{equation}
+\left\vert T_{1}\left( \mathsf{z}^{N}\right) -T_{2}\left( \mathsf{z}%
+^{N}\right) \right\vert ^{2}\overset{a.e.}{=}0
+\end{equation}%
+which implies that 
+\begin{equation}
+T_{1}\left( \mathsf{z}^{N}\right) -T_{2}\left( \mathsf{z}^{N}\right) \overset%
+{a.e.}{=}0
+\end{equation}
+\end{proof}
+
+This Lemma allows us to uniquely define the diagonal operator component, $%
+\breve{X}_{d}$ , of the trace class operator $\breve{X}$ as 
+\begin{equation}
+\breve{X}_{d}=\int X\left( \mathsf{z}^{N}\right) \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}
+\end{equation}%
+where 
+\begin{eqnarray}
+X\left( \mathsf{z}^{N}\right) &=&X\left( \mathsf{z}^{N},\mathsf{z}^{N}\right)
+\notag \\
+\breve{X} &=&\int X\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right) d%
+\mathsf{z}^{N}d\mathsf{z}^{\prime N}
+\end{eqnarray}%
+and we have identified operator kernels that are equal almost everywhere.
+Clearly $\breve{X}_{d}\in \mathcal{B}_{1}\left( \mathcal{H}^{N}\right) $ if $%
+\breve{X}$ $\in \mathcal{B}_{1}\left( \mathcal{H}^{N}\right) $ as 
+\begin{equation}
+Tr\left\{ \left\{ \breve{X}^{\dagger }\breve{X}\right\} ^{\frac{1}{2}%
+}\right\} =Tr\left\{ \left\{ U\breve{x}^{\dagger }\breve{x}U^{\dagger
+}\right\} ^{\frac{1}{2}}\right\} =Tr\left\{ \left\{ \breve{x}^{\dagger }%
+\breve{x}\right\} ^{\frac{1}{2}}\right\} =\int \left\vert x\left( \mathsf{%
+\eta }^{N}\right) \right\vert d\mathsf{\eta }^{N}
+\end{equation}%
+and 
+\begin{equation}
+Tr\left\{ \left\{ \breve{X}_{d}^{\dagger }\breve{X}_{d}\right\} ^{\frac{1}{2}%
+}\right\} =\int \left\vert X_{d}\left( \mathsf{z}^{N}\right) \right\vert d%
+\mathsf{z}^{N}
+\end{equation}%
+Which gives that 
+\begin{equation}
+Tr\left\{ \left\{ \breve{X}^{\dagger }\breve{X}\right\} ^{\frac{1}{2}%
+}\right\} \geq Tr\left\{ \left\{ \breve{X}_{d}^{\dagger }\breve{X}%
+_{d}\right\} ^{\frac{1}{2}}\right\}
+\end{equation}%
+Thus $\breve{X}_{od}\in \mathcal{B}_{1}\left( \mathcal{H}^{N}\right) $ and
+is uniquely defined by 
+\begin{equation}
+\breve{X}_{od}=\breve{X}-\breve{X}_{d}
+\end{equation}%
+as $\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) $ is a linear space and 
+\begin{equation}
+\breve{X}_{od}=\int X_{od}\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert \delta ^{C}\left( \mathsf{z}^{N}-\mathsf{z}^{\prime N}\right) d%
+\mathsf{z}^{N}d\mathsf{z}^{\prime N}
+\end{equation}
+
+Note that $\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) \subseteq \mathcal{B}%
+_{2}\left( \mathcal{H}^{N}\right) $ and in fact $\mathcal{B}_{2}\left( 
+\mathcal{H}^{N}\right) =\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) ^{2}$,
+it is clear that 
+\begin{equation}
+Tr\left\{ \breve{X}^{\dagger }\breve{X}\right\} \geq Tr\left\{ \breve{X}%
+_{d}^{\dagger }\breve{X}_{d}\right\}
+\end{equation}%
+so that $\breve{X}\in \mathcal{B}_{2}\left( \mathcal{H}^{N}\right)
+\Rightarrow \breve{X}_{d}\in \mathcal{B}_{2}\left( \mathcal{H}^{N}\right) $.
+Further $\breve{X}_{d}\bot \breve{Y}_{od}$ $\forall \breve{Y}_{od}\in 
+\mathcal{B}_{2}\left( \mathcal{H}^{N}\right) $, thus it is also true for
+those parts belonging to $\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) $.
+
+\begin{theorem}
+If $\breve{T}_{1}\breve{X}\breve{T}_{1}^{\dagger }=\breve{T}_{2}\breve{X}%
+\breve{T}_{2}^{\dagger }$ then $T_{1}\left( \mathsf{z}^{N}\right)
+T_{1}\left( \mathsf{z}^{\prime N}\right) ^{\ast }\overset{a.e.\left(
+X\right) }{=}T_{2}\left( \mathsf{z}^{N}\right) T_{2}\left( \mathsf{z}%
+^{\prime N}\right) ^{\ast }$
+
+\begin{proof}
+$T_{1}\left( \mathsf{z}^{N}\right) T_{1}\left( \mathsf{z}^{\prime N}\right)
+^{\ast }X\left( \mathsf{z}^{N},\mathsf{z}^{\prime N}\right) d\mathsf{z}^{N}d%
+\mathsf{z}^{\prime N}\overset{a.e.}{=}T_{2}\left( \mathsf{z}^{N}\right)
+T_{2}\left( \mathsf{z}^{\prime N}\right) ^{\ast }X\left( \mathsf{z}^{N},%
+\mathsf{z}^{\prime N}\right) d\mathsf{z}^{N}d\mathsf{z}^{\prime N}$
+\end{proof}
+\end{theorem}
+
+\begin{corollary}
+$\breve{T}_{1}\breve{X}\breve{T}_{1}^{\dagger }\neq \breve{T}_{2}\breve{X}%
+\breve{T}_{2}^{\dagger }$ when $\breve{T}_{1}\neq \breve{T}_{2}$ unless $%
+T_{1}\left( \mathsf{z}^{N}\right) \overset{a.e.\left( X\right) }{=}%
+T_{2}\left( \mathsf{z}^{N}\right) $
+\end{corollary}
+
+One can define the following linear contraction maps
+
+\begin{description}
+\item 
+\begin{itemize}
+\item The density contraction%
+\begin{eqnarray}
+\Xi &:&\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) \rightarrow L_{1}\left( 
+\mathsf{Z}_{1}\right)  \notag \\
+\Xi \left( \breve{X}\right) \left( \mathsf{z}_{1}\right) &=&Tr\left\{ \breve{%
+X}\Phi \left( \mathsf{z}_{1}\right) ^{\dagger }\Phi \left( \mathsf{z}%
+_{1}\right) \right\}  \label{d0}
+\end{eqnarray}%
+giving 
+\begin{eqnarray}
+\Xi \left( \breve{X}\right) &=&\int \Xi \left( \breve{X}\right) \left( 
+\mathsf{z}_{1}\right) \left\vert \mathsf{z}_{1}\right\rangle \left\langle 
+\mathsf{z}_{1}\right\vert d\mathsf{z}_{1}  \notag \\
+&=&\int X\left( \mathsf{z}_{1}\mathsf{z}_{2}\cdots \mathsf{z}_{N},\mathsf{z}%
+_{1}\mathsf{z}_{2}\cdots \mathsf{z}_{N}\right) \left\vert \mathsf{z}%
+_{1}\right\rangle \left\langle \mathsf{z}_{1}^{\prime }\right\vert d\mathsf{z%
+}_{1}d\mathsf{z}_{2}\cdots d\mathsf{z}_{N}
+\end{eqnarray}%
+where we have used embedding of $L_{1}\left( \mathsf{Z}_{1}\right) $ in $%
+\mathcal{B}_{1}\left( \mathcal{H}^{1}\right) $. The map $\Xi $ \emph{basis
+dependent }so should really be denoted as $\Xi _{\mathsf{Z}}$. If $\mathsf{%
+Z\neq Z}^{\prime }$ then $\Xi _{\mathsf{Z}}\left( \breve{X}\right) \neq \Xi
+_{\mathsf{Z}^{\prime }}\left( \breve{X}\right) $ and 
+\begin{equation}
+\Xi _{\mathsf{Z}}\left( U_{N}\breve{X}U_{N}^{\dagger }\right) \neq U_{1}\Xi
+_{\mathsf{Z}}\left( \breve{X}\right) U_{1}^{\dagger }
+\end{equation}
+
+\item The one density contraction 
+\begin{eqnarray}
+&&L_{N}^{1}:\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) \rightarrow 
+\mathcal{B}_{1}\left( \mathcal{H}^{1}\right)  \notag \\
+&&\Xi \left( \breve{X}\right) \left( \mathsf{z}_{1},\mathsf{z}_{1}^{\prime
+}\right) =Tr\left\{ \breve{X}\Phi \left( \mathsf{z}_{1}^{\prime }\right)
+^{\dagger }\Phi \left( \mathsf{z}_{1}\right) \right\}
+\end{eqnarray}%
+giving 
+\begin{eqnarray}
+L_{N}^{1}\left( \breve{X}\right) &=&\int \Xi \left( \breve{X}\right) \left( 
+\mathsf{z}_{1},\mathsf{z}_{1}^{\prime }\right) \left\vert \mathsf{z}%
+_{1}\right\rangle \left\langle \mathsf{z}_{1}^{\prime }\right\vert d\mathsf{z%
+}_{1}d\mathsf{z}_{1}^{\prime }  \notag \\
+\left. {}\right. \qquad &=&\int X\left( \mathsf{z}_{1}\mathsf{z}_{2}\cdots 
+\mathsf{z}_{N},\mathsf{z}_{1}^{\prime }\mathsf{z}_{2}\cdots \mathsf{z}%
+_{N}\right) \left\vert \mathsf{z}_{1}\right\rangle \left\langle \mathsf{z}%
+_{1}^{\prime }\right\vert d\mathsf{z}_{1}d\mathsf{z}_{1}^{\prime }d\mathsf{z}%
+_{2}\cdots d\mathsf{z}_{N}
+\end{eqnarray}
+
+\item The two density contraction%
+\begin{eqnarray}
+L_{N}^{2} &:&\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) \rightarrow 
+\mathcal{B}_{1}\left( \mathcal{H}^{2}\right)  \notag \\
+\Xi \left( \breve{X}\right) \left( \mathsf{z}_{1},\mathsf{z}_{2},\mathsf{z}%
+_{1}^{\prime },\mathsf{z}_{2}^{\prime }\right) &=&Tr\left\{ \breve{X}\Phi
+\left( \mathsf{z}_{1}^{\prime }\right) ^{\dagger }\Phi \left( \mathsf{z}%
+_{2}^{\prime }\right) ^{\dagger }\Phi \left( \mathsf{z}_{2}\right) \Phi
+\left( \mathsf{z}_{1}\right) \right\}  \label{d2}
+\end{eqnarray}%
+giving 
+\begin{eqnarray}
+&&L_{N}^{2}\left( \breve{X}\right) =\int \Xi \left( \breve{X}\right) \left( 
+\mathsf{z}_{1},\mathsf{z}_{2},\mathsf{z}_{1}^{\prime },\mathsf{z}%
+_{2}^{\prime }\right) \left\vert \mathsf{z}_{1}\mathsf{z}_{2}\right\rangle
+\left\langle \mathsf{z}_{1}^{\prime }\mathsf{z}_{2}^{\prime }\right\vert d%
+\mathsf{z}_{1}d\mathsf{z}_{2}d\mathsf{z}_{1}^{\prime }d\mathsf{z}%
+_{2}^{\prime }  \notag \\
+&=&\int X\left( \mathsf{z}_{1}\mathsf{z}_{2}\mathsf{z}_{3}\cdots \mathsf{z}%
+_{N},\mathsf{z}_{1}^{\prime }\mathsf{z}_{2}^{\prime }\mathsf{z}_{3}\cdots 
+\mathsf{z}_{N}\right) \left\vert \mathsf{z}_{1}\mathsf{z}_{2}\right\rangle
+\left\langle \mathsf{z}_{1}^{\prime }\mathsf{z}_{2}^{\prime }\right\vert d%
+\mathsf{z}_{1}d\mathsf{z}_{2}d\mathsf{z}_{1}^{\prime }d\mathsf{z}%
+_{2}^{\prime }d\mathsf{z}_{3}\cdots d\mathsf{z}_{N}
+\end{eqnarray}
+\end{itemize}
+
+\item \qquad These maps could be defined in the same wrt to any overcomplete
+(orthonormal) basis. However only $L_{N}^{1}$ and $L_{N}^{2}$ are bases
+independent.
+\end{description}
+
+These overcomplete (orthonormal) bases are connected to each other by
+unitary transformations 
+\begin{equation}
+\left\vert \mathsf{z}_{1}\right\rangle =\int U_{1}\left( \mathsf{z}_{1}%
+\mathsf{,y}_{1}\right) \left\vert \mathsf{y}_{1}\right\rangle d\mathsf{y}_{1}
+\end{equation}%
+and we have the intertwining property 
+\begin{equation}
+L_{N}^{p}\left( U_{N}XU_{N}^{\dagger }\right) =U_{P}L_{N}^{p}\left( X\right)
+U_{P}^{\dagger }
+\end{equation}%
+where 
+\begin{equation}
+U_{K}=\wedge ^{K}U
+\end{equation}%
+However as mentioned before 
+\begin{equation}
+\Xi \left( U_{N}\breve{X}U_{N}^{\dagger }\right) \neq U_{1}\Xi \left( \breve{%
+X}\right) U_{1}^{\dagger }
+\end{equation}
+
+\qquad We can decompose $\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) $ into
+a direct sum of subspaces 
+\begin{eqnarray}
+\mathcal{B}_{1}\left( \mathcal{H}^{N}\right)  &=&\bigoplus_{i=0}^{N}\mathcal{%
+B}_{i}^{N}  \notag \\
+&=&Ker\Xi \oplus \left[ Ker\Xi \right] ^{C}  \notag \\
+&=&Ker\Xi _{OD}\oplus Ker\Xi _{D}\oplus \left[ Ker\Xi \right] ^{C}
+\end{eqnarray}%
+where%
+\begin{eqnarray}
+\mathcal{B}_{i}^{N} &=&KerL_{N}^{i-1}\circleddash KerL_{N}^{i};\qquad 1\leq
+i\leq N  \notag \\
+\mathcal{B}_{0}^{N} &=&\left[ KerL_{N}^{0}\right] ^{C}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+Ker\Xi _{OD} &=&\left\{ \breve{Y}|\breve{Y}=\int Y\left( \mathsf{z}^{N},%
+\mathsf{z}^{N\prime }\right) \delta ^{C}\left( \mathsf{z}^{N}-\mathsf{z}%
+^{N\prime }\right) \left\vert \mathsf{z}^{N}\right\rangle \left\langle 
+\mathsf{z}^{N\prime }\right\vert d\mathsf{z}^{N}d\mathsf{z}^{N\prime
+}\right\}   \notag \\
+Ker\Xi _{D} &=&\left\{ \breve{Y}|\breve{Y}=\int Y\left( \mathsf{z}%
+^{N}\right) \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{N}\right\vert d\mathsf{z}^{N};\quad \int Y\left( \mathsf{z}^{N}\right) d%
+\mathsf{z}^{N}=0\right\} 
+\end{eqnarray}%
+Observe that 
+\begin{equation}
+KerL_{N}^{0}\circleddash Ker\Xi 
+\end{equation}%
+contains all trace class operators that produce non zero functions that
+integrate to zero. The subspaces have the following property 
+\begin{equation}
+KerL_{N}^{0}\supset Ker\Xi \supset KerL_{N}^{1}\supset KerL_{N}^{2}\supset
+\cdots \supset KerL_{N}^{N-1}\supset KerL_{N}^{N}
+\end{equation}%
+$\lceil $Note that $L_{N}^{N}=I\rfloor .$ The canonical compliment, $Ker\Xi
+^{C}$ of $Ker\Xi $ in $\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) $ is
+isomorphic to $L_{1}\left( \mathsf{Z}_{1}\right) $ i.e.%
+\begin{equation}
+\left[ Ker\Xi \right] ^{C}\cong L_{1}\left( \mathsf{Z}_{1}\right) 
+\end{equation}%
+\begin{equation}
+\left[ KerL_{N}^{0}\right] ^{C}\subset \left[ Ker\Xi \right] ^{C}
+\end{equation}%
+The subspace $\left[ KerL_{N}^{0}\right] ^{C}$ contains trace operators that
+have non zero trace, while $\left[ Ker\Xi \right] ^{C}$ can contain
+operators that have zero trace. An important theorem for our treatment is
+
+\begin{theorem}
+If $\Theta \left( X\right) =\Theta \left( X^{\prime }\right) $ then $%
+Tr\left\{ X\right\} =Tr\left\{ X^{\prime }\right\} $
+
+\begin{proof}
+The trace of parts of an operator belonging to $Ker\Xi $ are zero and if $%
+\Theta \left( X\right) =\Theta \left( X^{\prime }\right) $ the operators
+have identical components in $\left[ Ker\Xi \right] ^{C}$ thus their trace
+must be identical.
+
+\begin{corollary}
+If $\Theta \left( X\right) =\Theta \left( X^{\prime }\right) $ then $\Theta
+\left( \frac{X}{Tr\left\{ X\right\} }\right) =\Theta \left( \frac{X^{\prime }%
+}{Tr\left\{ X^{\prime }\right\} }\right) $
+\end{corollary}
+\end{proof}
+\end{theorem}
+
+Note that $\Theta \left( \frac{X}{Tr\left\{ X\right\} }\right) =\Theta
+\left( \frac{X^{\prime }}{Tr\left\{ X^{\prime }\right\} }\right) $ $%
+\not\Rightarrow $ $\Theta \left( X\right) =\Theta \left( X^{\prime }\right) $%
+, so if two states contract to the same density it does not mean that
+unnormalized states that are scalar multiples of these states also contract
+to the same density.
+
+In the finite dimensional case $\left[ KerL_{N}^{0}\right] ^{C}=\left\{
+\alpha I|\alpha \in \mathbb{C}\right\} $ as%
+\begin{equation}
+\mathcal{B}\left( \mathcal{H}^{N}\right) =\mathcal{B}_{0}\left( \mathcal{H}%
+^{N}\right) =\mathcal{B}_{1}\left( \mathcal{H}^{N}\right) =\mathcal{B}%
+_{2}\left( \mathcal{H}^{N}\right)
+\end{equation}%
+and 
+\begin{equation}
+\left[ KerL_{N}^{0}\right] ^{C}=\left[ KerL_{N}^{0}\right] ^{\bot _{HS}}
+\end{equation}%
+and 
+\begin{eqnarray}
+\left[ KerL_{N}^{0}\right] ^{\bot _{HS}} &=&\left\{ X|\left( X|Y\right)
+_{HS};\forall Y\in KerL_{N}^{0}\equiv \forall Y\backepsilon TrY=0\right\} 
+\notag \\
+&\Rightarrow &X=\alpha I
+\end{eqnarray}%
+This together with the fact that for any operator $A$ 
+\begin{equation}
+A=\left( A-\left( TrA\right) I\right) +\left( TrA\right) I
+\end{equation}%
+proves the assertion. In the infinite dimensional case $I\notin \mathcal{B}%
+_{2}\left( \mathcal{H}^{N}\right) ,$so we have instead 
+\begin{equation}
+\left[ KerL_{N}^{0}\right] ^{\bot _{HS}}=\left\{ X|\left( X|Y\right)
+_{HS};\forall Y\in KerL_{N}^{0}\equiv \forall Y\backepsilon TrY=0\right\}
+\end{equation}%
+and the question remains whether $\exists X$ with this property and whether
+if there $\exists $ any $X$ they belong to $\mathcal{B}_{2}\left( \mathcal{H}%
+^{N}\right) $.
+
+\subsection{Explicit Descriptions of the Invariance Subalgebras}
+
+\begin{itemize}
+\item The density contraction
+\end{itemize}
+
+In order that $Ker\Xi \rightarrow Ker\Xi $ by $\mathfrak{S}_{\Xi }$ we must
+have that 
+\begin{equation}
+\int X\left( \mathsf{z}^{N}\right) \left\vert T\left( \mathsf{z}^{N}\right)
+\right\vert ^{2}d\mathsf{z}_{2}\cdots d\mathsf{z}_{N}\overset{a.e.}{=}%
+0\qquad \forall \breve{X}\in Ker\Xi
+\end{equation}%
+i.e. 
+\begin{equation}
+\hat{T}:Ker\Xi _{D}\rightarrow Ker\Xi _{D}
+\end{equation}%
+$\lceil $Note that $\hat{T}:Ker\Xi _{OD}\rightarrow Ker\Xi _{OD}$
+automatically so this is not a constraint$\rfloor $
+
+\begin{itemize}
+\item The one density contraction
+\end{itemize}
+
+In order that $KerL_{N}^{1}\rightarrow KerL_{N}^{1}$ by $\mathfrak{S}%
+_{L_{N}^{1}}$ we must have that%
+\begin{equation}
+\int X\left( \mathsf{z}_{1}\mathsf{z}^{N-1}\mathsf{,z}_{1}^{\prime }\mathsf{z%
+}^{N-1}\right) T\left( \mathsf{z}_{1}\mathsf{z}^{N-1}\right) T\left( \mathsf{%
+z}_{1}^{\prime }\mathsf{z}^{N-1}\right) ^{\ast }d\mathsf{z}^{N-1}\overset{%
+a.e.}{=}0\qquad \forall \breve{X}\in KerL_{N}^{1}
+\end{equation}
+
+\begin{itemize}
+\item The two density contraction
+\end{itemize}
+
+In order that $KerL_{N}^{2}\rightarrow KerL_{N}^{2}$ by $\mathfrak{S}%
+_{L_{N}^{2}}$ we must have that%
+\begin{equation}
+\int X\left( \mathsf{z}_{1}\mathsf{z}_{2}\mathsf{z}^{N-2}\mathsf{,z}%
+_{1}^{\prime }\mathsf{z}_{2}^{\prime }\mathsf{z}^{N-2}\right) T\left( 
+\mathsf{z}_{1}\mathsf{z}_{2}\mathsf{z}^{N-2}\right) T\left( \mathsf{z}%
+_{1}^{\prime }\mathsf{z}_{2}^{\prime }\mathsf{z}^{N-2}\right) ^{\ast }d%
+\mathsf{z}^{N-2}\overset{a.e.}{=}0\qquad \forall \breve{X}\in KerL_{N}^{2}
+\end{equation}
+
+The semi groups $\mathfrak{S}_{\Xi }$, $\mathfrak{S}_{L_{N}^{1}}$ and $%
+\mathfrak{S}_{L_{N}^{2}}$ are not algebras (they are not vector spaces).
+
+\section{Approximation Theory}
+
+\section{Outline of Constructive Approach to Functionals I: DFT}
+
+\bigskip
+
+\bigskip
+
+\section{Outline of Constructive Approach to Functionals II: DMFT (FORDO\
+Functionals)}
+
+\bigskip
+
+\bigskip
+
+\section{\protect\bigskip Outline of Constructive Approach to Functionals
+III: N-Representability Problem (SORDO\ Functionals)}
+
+\end{document}

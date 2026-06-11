@@ -1,0 +1,417 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, October 21, 2018 07:48:13}
+%TCIDATA{LastRevised=Monday, October 22, 2018 09:46:33}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Operator Systems}
+
+Kadison proved in [5] that every ordered real vector space with an Archimedean
+order unit can be represented as a vector subspace of the space of continuous
+real-valued functions on a compact Hausdorff space via an order-preserving map
+that carries the order unit to the constant function $1$. Such subspaces are
+generally referred to as \emph{function systems}, and Kadison's result
+therefore provides a representation theorem for real function systems.
+Kadison's representation theorem motivated Choi and Effros [2] to obtain an
+analogous representation theorem for self-adjoint subspaces of unital
+$c^{\ast}$- algebras that contain the unit. Such subspaces, together with a
+natural matrix order, are called \emph{operator systems}. Operator systems are
+complex vector spaces with a $\ast$-operation, and we refer to these as $\ast
+$-vector spaces.
+
+\begin{enumerate}
+\item[a] In any vector space $V$ , the self-adjoint elements $V_{h}$ form a
+real subspace and one may define an ordering on $V$ by specifying a
+\emph{cone} of positive elements $V_{+}\subset V_{h}$. When $\left\{
+V,V_{+}\right\}  $ is an ordered vector space, then $\left\{  V_{h}%
+,V_{+}\right\}  $ is an ordered real vector space. In addition, an element
+$e\in V$ is an \emph{order unit} (respectively, an \emph{Archimedean order}
+unit) for $\left\{  V,V_{+}\right\}  $ if it is an order unit (respectively,
+an Archimedean order unit) for $\left\{  V_{h},V_{+}\right\}  $. The axioms
+for an operator system require, among other things, that it is an ordered
+$\ast$-vector space with Archimedean order unit $e$ and that for each
+$n\in\mathbb{N}$ the $\ast$-vector space $M_{n}(V)$ is ordered with
+Archimedean order unit
+\begin{equation}
+e_{n}=\left(
+\begin{array}
+[c]{cccc}%
+e & 0 & \cdots & 0\\
+0 & \ddots &  & 0\\
+\vdots &  & \ddots & \vdots\\
+0 & 0 &  & 0
+\end{array}
+\right)
+\end{equation}
+
+\end{enumerate}
+
+\subsection{Cones}
+
+\begin{definition}
+If V is a real vector space, a cone in V is a nonempty subset $C\subseteq V$
+with the following two properties:
+\end{definition}
+
+\begin{enumerate}
+\item $\alpha v$ $\in\mathcal{C}$ whenever $\alpha\in\lbrack0,\infty)$ and $v$
+$\in\mathcal{C}$
+
+\item $v+w\in\mathcal{C}$ whenever $v,w\in\mathcal{C}$.
+
+\emph{An ordered vector space} $\left\{  V,V_{+}\right\}  $ is a pair
+consisting of a real vector space $V$ and a cone $V_{+}\subseteq V$ satisfying
+
+\item  $V_{+}\cap\left(  -V_{+}\right)  $ $=\{0\}$.
+\end{enumerate}
+
+In any ordered vector space we may define a \emph{partial ordering} (i.e.,
+\emph{a reflexive, antisymmetric, and transitive relation}) on $V$ by defining
+$v\geq w$ if and only if $v-w\in V_{+}$. Note that this partial ordering is
+$\emph{translation}$ $\emph{invariant}$ (i.e., $v\geq w$ implies $v+x\geq
+w+x$) and invariant under multiplication by non-negative reals (i.e., $v\geq
+w$ and $\alpha\in[0,\infty)$ implies $\alpha v\geq\alpha w$). Also note that
+$v\in V_{+}$ if and only if $v\geq0$; for this reason $V_{+}$ is sometimes
+called the cone of positive elements of $V$ .
+
+\begin{remark}
+Although we have used the set $V_{+}$ to define a partial ordering, we could
+just as easily have gone the other direction: If is a partial ordering on $V$
+that is translation invariant and invariant under multiplication by
+non-negative reals, then the set $V_{+}$ $:=v\in V_{+}:v\geq0$ is a set
+satisfying $(1),(2)$ and $(3)$ above, and consequently $\left\{
+V,V_{+}\right\}  $ is an ordered vector space. 
+\end{remark}
+
+\begin{remark}
+There is some disagreement in the literature about the use of the term
+\textquotedblleft\emph{cone}\textquotedblright. While there are authors that
+conform with the definitions as we have given them there are other authors who
+use the term \textquotedblleft\emph{cone}\textquotedblright\ to refer to a
+subset of V satisfying $(1),(2),$ and $(3)$ stated above, and use the term
+\textquotedblleft\emph{wedge}\textquotedblright\ for a subset satisfying only
+$(1)$ and $(2)$.
+\end{remark}
+
+\begin{definition}
+If $\left\{  V,V_{+}\right\}  $ is an ordered real vector space, an element
+$e\in V$ is called an \emph{order unit} for $V$ if for each $v\in V$ there
+exists a real number $r>0$ such that $re\geq v$.
+\end{definition}
+
+\begin{definition}
+If $\left\{  V,V_{+}\right\}  $ is an ordered real vector space, then we say that
+\end{definition}
+
+$V_{+}$ is \emph{full} (or that $V_{+}$ is a full cone) if $V=V_{+}-V_{+}$.
+
+\begin{lemma}
+If $\left\{  V,V_{+}\right\}  $ is an ordered real vector space with order
+unit $e$, then
+\end{lemma}
+
+\begin{enumerate}
+\item $e\in V_{+}$
+
+\item If $v\in V$ and a real number $r>0$ is chosen so that $re\geq v$, then
+$se\geq v$ for all $s\geq r$
+
+\item If $v_{1},...,v_{n}\in V$, then there exists $r>0$ such that $re\geq
+v_{i}$ for all $1\leq i\leq n$
+
+\item $V_{+}$ is a full cone of $V$ 
+
+\item If $v_{1},...,v_{n}\in V_{+}$ and $v_{1}+...+v_{n}=0$, then
+$v_{1}=...=v_{n}=0$ 
+
+\item Suppose $v_{1},...,v_{n}\in V_{+}$ and $\alpha_{1},...,\alpha_{n}$
+$\in\lbrack0,\infty)$. If $\alpha_{1}v_{1}+...+\alpha_{1}v_{n}=0$, then for
+each $1\leq i\leq n$ either $\alpha_{i}=0$ or $v_{i}=0$. 
+\end{enumerate}
+
+\begin{definition}
+If $\left\{  V,V_{+}\right\}  $ is an ordered real vector space with an order
+unit $e$, then we say that $e$ is an Archimedean order unit if whenever $v\in
+V$ with $re+v\geq0$ for all real $r>0$, then $v\in V_{+}$.
+\end{definition}
+
+\begin{lemma}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered real vector space with an
+Archimedean order unit $e$, and let $r_{0}\in\lbrack0,\infty)$. If $v\in V$
+and $re+v\geq0$ for all $r>r_{0}$, then $r_{0}e+v\geq0$.
+\end{lemma}
+
+\subsection{Positive $\mathbb{R}$-Linear Functionals and States on Real
+Spaces}
+
+\begin{definition}
+If $\left\{  V,V_{+}\right\}  $ is an ordered real vector space, an
+$\mathbb{R}$-linear functional $f:V\rightarrow R$ is called positive if
+$f(V_{+})$ $\subseteq\lbrack0,\infty)$.
+\end{definition}
+
+\begin{definition}
+If $\left\{  V,V_{+}\right\}  $ is an ordered real vector space and
+$S\subseteq V$ , we say that $S$ \emph{majorizes} $V_{+}$ if for each $v\in
+V_{+}$ there exists $w\in S$ such that $w\geq v$.
+\end{definition}
+
+\begin{remark}
+Note that if $S$ majorizes $V_{+}$ and $S\subseteq T$ , then $T$ majorizes
+$V_{+}$. In addition, if $e$ is an order unit for $\left\{  V,V_{+}\right\}
+$, and if $E$ \emph{is a subspace of} $V$ containing $e$, then $E$ majorizes
+$V_{+}$. This is due to the fact that if $v\in V$ , then there exists a real
+$r>0$ such that $re\geq v$, and since $E$ is a subspace we have that $re\in E$.
+\end{remark}
+
+The next theorem may be thought of \emph{as an analogue of the Hahn-Banach
+Theorem} since it gives conditions under which we may \emph{extend a positive
+}$\mathbb{R}$\emph{-linear functional} on a subspace of $V$ to \emph{a
+positive }$\mathbb{R}$\emph{-linear functional} on all of $V$ . 
+
+\begin{theorem}
+Suppose $\left\{  V,V_{+}\right\}  $ is an ordered real vector space and that
+$V_{+}$ is a full cone for $V$ . If $E$ is a subspace of $V$ that majorizes
+$V_{+},$ and if $f:E\rightarrow\mathbb{R}$ is a positive $\mathbb{R}$-linear
+functional on $E$, then there exists a positive $\mathbb{R}$-linear functional
+$g:V\rightarrow\mathbb{R}$ such that $\left.  g\right\vert _{E}=f$.
+\end{theorem}
+
+\subsection{Positive $\mathbb{C}$-Linear Functionals and States on Complex
+Spaces}
+
+In this section we will consider complex vector spaces with a $\ast
+$-operation, and describe what it means for these spaces to be ordered. We
+also develop analogues of the results in the last subsection for these ordered
+complex vector spaces.
+
+\begin{definition}
+A $\ast$-vector space consists of a complex vector space $V$ together with a
+map $\ast$ $:V\rightarrow V$ that is involutive (i.e.,$(v^{\ast})^{\ast}=v$
+for all $v\in V$) and conjugate linear (i.e., $(\U{3bb} v+w)^{\ast}=\U{3bb}
+v^{\ast}+w^{\ast}$ for all $\U{3bb} \in\mathbb{C}$ and $v,w$ $\in V$ ). If $V$
+is a $\ast$-vector space, then we let $V_{h}:=\{x\in V:x^{\ast}=x\}$ and we
+call the elements of $V_{h}$ the hermitian elements of $V$ .
+\end{definition}
+
+It is easy to see that $V_{h}$ is a real subspace of the complex vector space
+$V$ . Also note that any $v\in V$ may be written uniquely as $v=x+iy$ with
+$x,y\in$ $V_{h}$. In fact, $v=x+iy$ with $x,y\in V_{h}$ if and only if
+$x=(v+v^{\ast})/2$ and $y=(v-v^{\ast})/2i$. We call $x$ and $y$ the real part
+and imaginary part of $v$, respectively, and we write%
+\begin{align}
+\operatorname{Re}\left\{  v\right\}    & =(v+v^{\ast})/2\\
+\operatorname{Im}\left\{  v\right\}    & =(v-v^{\ast})/2i
+\end{align}
+
+
+
+
+Note that we also have
+\begin{equation}
+V\cong V_{h}\oplus iV_{h}%
+\end{equation}
+as real vector spaces.
+
+\begin{definition}
+If $V$ is a $\ast$-vector space, we say that $\left\{  V,V_{+}\right\}  $ is
+an ordered $\ast$-vector space if $V_{+}\subseteq V_{h}$ and the following two
+conditions hold:
+\end{definition}
+
+\begin{enumerate}
+\item $V_{+}$ is a cone of $V_{h}$ (i.e., $V_{+}+V_{+}\subseteq V_{+}$ and
+$aV_{+}\subseteq V_{+}$ for all $a\in\lbrack0,\infty))$.
+
+\item $V_{+}\cap-V_{+}=\{0\}$.
+
+In this case for $v,w\in V_{h}$ we write $v\geq w$ to mean that $v-w\in V_{+}$.
+\end{enumerate}
+
+\begin{definition}
+If $\left\{  V,V_{+}\right\}  $ is an ordered $\ast$-vector space, then an
+element $e\in$ $V_{h}$ is an order unit if for all $x\in V_{h}$ there exists a
+real number $r>0$ such that $re\geq x$. If $e$ is an order unit, we say that
+$e$ is Archimedean if whenever $x\in V_{h}$ and $re+x\geq0$ for all
+$r\in(0,\infty)$, then $x\geq0$.
+\end{definition}
+
+\begin{remark}
+. Note that $\left\{  V,V_{+}\right\}  $ is an ordered -vector space if and
+only if $\left\{  V_{h},V_{+}\right\}  $ is an ordered real vector space.
+Similarly, $e$ is an order unit for the ordered vector space $\left\{
+V,V_{+}\right\}  $ if and only if $e$ is an order unit for the ordered real
+vector space $\left\{  V_{h},V_{+}\right\}  $; and $e$ is Archimedean for
+$\left\{  V,V_{+}\right\}  $ if and only if $e$ is Archimedean for $\left\{
+V_{h},V_{+}\right\}  .$  
+\end{remark}
+
+We now turn our attention to positive maps, positive $\mathbb{C}$-linear
+functionals, and states on ordered $\ast$-vector spaces. Many of the results
+here may be viewed as analogues of the previous section.
+
+\begin{definition}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered -vector space with order unit
+$e$. A $\mathbb{C}$-linear functional $f:V\rightarrow\mathbb{C}$ is positive
+if $f(V_{+})\subset\lbrack0,)$ and a state if it is positive and $f(e)=1$.
+\end{definition}
+
+\begin{definition}
+. Let $\left\{  V,V_{+}\right\}  $ be an ordered $\ast$-vector space with
+order unit $e$, and let $\left\{  W,W_{+}\right\}  $ be an ordered $\ast
+$-vector space with order unit $e\prime$. A linear map $\U{3c6} :V\rightarrow
+W$ is positive if $v\in V_{+}\Rightarrow\U{3c6} (v)\in W_{+}$, and unital if
+$\U{3c6} (e)=e\prime$. A linear map $\U{3c6} :V\rightarrow W$ is an order
+isomorphism if $\U{3c6} $ is bijective and $v\in V_{+}$ if and only if
+$\U{3c6} (v)\in W_{+}.$
+\end{definition}
+
+\begin{proposition}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered $\ast$-vector space with an
+order unit, and let $\left\{  W,W_{+}\right\}  $ be an ordered $\ast$-vector
+space. If $\U{3c6} :V\rightarrow W$ is a positive linear map, then $\U{3c6}
+(v^{\ast})=\U{3c6} (v)^{\ast}$for all $v\in V$ .
+\end{proposition}
+
+\begin{corollary}
+If $\left\{  V,V_{+}\right\}  $ is an ordered $\ast$-vector space with an
+order unit and $f:V\rightarrow\mathbb{C}$ is a positive linear functional,
+then $f(v^{\ast})=f(v)^{\ast}$ for all $v\in V$ .
+\end{corollary}
+
+\begin{definition}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered $\ast$-vector space. If
+$f:V_{h}\rightarrow\mathbb{R}$, then we define $\widetilde{f}:V\rightarrow
+\mathbb{C}$ by
+\end{definition}
+
+$\widetilde{f}(v):=f(\operatorname{Re}(v))+if(\operatorname{Im}(v))$.
+
+\begin{proposition}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered $\ast$-vector space. If
+$f:V_{h}\rightarrow\mathbb{R}$ is R-linear, then $\widetilde{f}:V\rightarrow
+\mathbb{C}$ is $\mathbb{C}$-linear. In addition, $\widetilde{f}$ is positive
+if and only if $f$ is positive, and $\widetilde{f}$ is a state if and only if
+$f$ is a state.
+\end{proposition}
+
+The following proposition allows us to characterize the positive linear
+functionals on ordered $\ast$-vector spaces with an Archimedean unit.
+
+\begin{proposition}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered $\ast$-vector space with order
+unit $e$. If $f:V\rightarrow\mathbb{C}$ is a $\mathbb{C}$-linear functional,
+then $f$ is positive if and only if $f=g$ for some positive $\mathbb{R}%
+$-linear functional $g:V_{h}\rightarrow\mathbb{R}$. 
+\end{proposition}
+
+\begin{proposition}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered -vector space with Archimedean
+order unit $e$. If $v\in V$ and $f(v)=0$ for every state $f:V\rightarrow
+\mathbb{C}$, then $v=0$.
+\end{proposition}
+
+\begin{proposition}
+Let $\left\{  V,V_{+}\right\}  $ be an ordered $\ast$-vector space with
+Archimedean order unit $e$. If $v\in V$ and $f(v)\geq0$ for every state
+$f:V\rightarrow\mathbb{C}$, then $v\in V_{+}$.
+\end{proposition}
+
+\begin{remark}
+Note that when $V$ is a $\ast$-vector space, we have $V=V_{h}\oplus iV_{h}$.
+In fact, $V$ is the complexification of the real vector space $V_{h}$, and
+alternatively we may describe $V$ as the complex vector space $V_{h}%
+\otimes_{\mathbb{R}}\mathbb{C}$. Likewise, if $f:V_{h}\rightarrow\mathbb{R}$
+is $\mathbb{R}$-linear, the $\mathbb{C}$-linear map $\widetilde{f}%
+:V\rightarrow\mathbb{C}$ is the complexification of $f$ . The complexification
+is an (additive) \emph{functor} from the \emph{category of real vector spaces
+to the category of complex vector spaces}.
+\end{remark}
+
+\begin{theorem}
+Suppose $\left\{  V,V_{+}\right\}  $ is an ordered $\ast$-vector space and
+that $V_{+}$ is a full cone for $V$ . If $E$ is a subspace of $V$ that
+majorizes $V_{+},$ and if $f:E\rightarrow\mathbb{C}$ is a positive
+$\mathbb{C}$-linear functional on $E$, then there exists a positive
+$\mathbb{C}$-linear functional $g:V\rightarrow\mathbb{C}$ such that $\left.
+g\right\vert _{E}=f$.
+\end{theorem}
+
+Examples of $\ast$-vector spaces with Archimedean order unit $e$ is are unital
+$c^{\ast}$-algebras. Let $\mathcal{A}\subseteq\mathcal{B}(\mathcal{H})$ be a
+unital $c^{\ast}$-algebras with unit $e=I_{\mathcal{H}}$, so that
+$\mathcal{A}$ is also an Archimedean ordered $\ast$-vector space with
+$\mathcal{A}_{+}$ equal to the usual cone of positive elements. 
+
+
+
+
+\end{document}

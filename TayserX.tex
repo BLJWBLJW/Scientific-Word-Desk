@@ -1,0 +1,1090 @@
+
+\documentstyle[amstex,amssymb,preprint,tighten,aps]{revtex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Wednesday, May 16, 2001 14:30:46}
+%TCIDATA{LastRevised=Friday, November 23, 2001 17:33:12}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX - APS and AIP Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtxtci.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+%End_Editable_Preamble
+\setcounter{chapter}{0}
+\setcounter{page}{1}
+
+\begin{document}
+
+\section{ Taylor Series Expansion for Functionals}
+
+\subsection{Functionals, Function Spaces and Change of Basis}
+
+We are considering nonlinear (in general) functionals ${\cal F}%
+:F\longrightarrow {\Bbb C}$, where $F$ is a seperable linear space of
+functions $\left\{ \varkappa \right\} $ that has a basis (thus has a
+countable basis $\left\{ \left| {\bf \varkappa }_{j}\right\rangle ;1\leq
+j\leq n\right\} $). Each function can then be expanded as 
+\begin{equation}
+\left| \varkappa \right\rangle =\sum_{1\leq j\leq n}\varkappa _{j}\left| 
+{\bf \varkappa }_{j}\right\rangle \equiv \sum_{1\leq j\leq n}\left| {\bf %
+\varkappa }_{j}\right\rangle \left\langle {\bf \varkappa }_{j}^{d}|\varkappa
+\right\rangle \equiv \sum_{1\leq j\leq n}\left\langle {\bf \varkappa }%
+_{j}^{d}|\varkappa \right\rangle \left| {\bf \varkappa }_{j}\right\rangle
+\equiv \sum_{1\leq j\leq n}\varkappa \left( {\bf \varkappa }_{j}^{d}\right)
+\left| {\bf \varkappa }_{j}\right\rangle
+\end{equation}%
+Note that the function $\varkappa \left( {\bf \varkappa }_{j}^{d}\right) $
+is {\em not linear in ''j''}, i.e. $\varkappa \left( {\bf \varkappa }%
+_{j_{1}}^{d}+{\bf \varkappa }_{j_{2}}^{d}\right) \neq ${\em \ }$\varkappa
+\left( {\bf \varkappa }_{j_{1}}^{d}\right) +\varkappa \left( {\bf \varkappa }%
+_{j_{2}}^{d}\right) $, though it is linear wrt to dual vectors belonging to $%
+F^{d}$. We also assume we have a continuous decomposition in terms of an
+overcomplete coordinate basis $\left\{ \left| {\sf z}\right\rangle \right\} $
+\begin{equation}
+\left| \varkappa \right\rangle =\int \varkappa \left( {\sf z}\right) \left| 
+{\sf z}\right\rangle d{\sf z}\equiv \int \left| {\sf z}\right\rangle
+\left\langle {\sf z}|\varkappa \right\rangle d{\sf z}\equiv \int
+\left\langle {\sf z}|\varkappa \right\rangle \left| {\sf z}\right\rangle d%
+{\sf z}\equiv \int \varkappa \left( {\sf z}\right) \left| {\sf z}%
+\right\rangle d{\sf z.}
+\end{equation}%
+again we note that $\varkappa \left( {\sf z}\right) $ is not linear in the
+continuum of index labels ''${\sf z}$''. $\lceil $The functions $\left\{
+\left| {\sf z}\right\rangle \right\} $ and the
+functions/distributions/hyperfunctions $\left\{ \left\langle {\sf z}\right|
+\right\} $ can be quite different it is just their labelling sets that are
+the same$\rfloor $. From the preceding two expansions we have the change of
+basis formulae 
+\begin{eqnarray}
+\left| {\bf \varkappa }_{j}\right\rangle &=&\int \left| {\sf z}\right\rangle
+\left\langle {\sf z}|{\bf \varkappa }_{j}\right\rangle d{\sf z}\equiv \int
+\left| {\sf z}\right\rangle \varkappa _{j}\left( {\sf z}\right) d{\sf z} 
+\nonumber \\
+&\Rightarrow &\frac{\partial }{\partial \varkappa _{j}}=\int \varkappa
+_{j}\left( {\sf z}\right) \frac{\delta }{\delta \varkappa \left( {\sf z}%
+\right) }d{\sf z\equiv }\int \frac{\partial \varkappa \left( {\sf z}\right) 
+}{\partial \varkappa _{j}}\frac{\delta }{\delta \varkappa \left( {\sf z}%
+\right) }d{\sf z}  \label{change1}
+\end{eqnarray}%
+and%
+\begin{eqnarray}
+\left| {\sf z}\right\rangle &=&\sum_{1\leq j\leq n}\left| {\bf \varkappa }%
+_{j}\right\rangle \left\langle {\bf \varkappa }_{j}^{d}|{\sf z}\right\rangle
+\equiv \sum_{1\leq j\leq n}\left| {\bf \varkappa }_{j}\right\rangle
+\varkappa _{j}^{d}\left( {\sf z}\right)  \nonumber \\
+&\Rightarrow &\frac{\delta }{\delta \varkappa \left( {\sf z}\right) }%
+=\sum_{1\leq j\leq n}\varkappa _{j}^{d}\left( {\sf z}\right) \frac{\partial 
+}{\partial \varkappa _{j}}\equiv \sum_{1\leq j\leq n}\frac{\delta \varkappa
+_{j}}{\delta \varkappa \left( {\sf z}\right) }\frac{\partial }{\partial
+\varkappa _{j}}  \label{change2}
+\end{eqnarray}%
+Note in eq. $\left( \ref{change1}\right) \frac{\partial \varkappa \left( 
+{\sf z}\right) }{\partial \varkappa _{j}}$ {\bf is defined }to be equal to $%
+\varkappa _{j}\left( {\sf z}\right) =\left\langle {\sf z}|{\bf \varkappa }%
+_{j}\right\rangle $ and are the ''matrix elements'' of the Jacobian matrix
+of the transformation from the $\left\{ \left| {\sf z}\right\rangle \right\} 
+$ to the $\left\{ \left| {\bf \varkappa }_{j}\right\rangle \right\} $
+coordinate system. The Jacobian matrix elements of the transformation from
+the $\left\{ \left| {\bf \varkappa }_{j}\right\rangle \right\} $ to the $%
+\left\{ \left| {\sf z}\right\rangle \right\} $ coordinate system are $%
+\varkappa _{j}^{d}\left( {\sf z}\right) =\left\langle {\bf \varkappa }%
+_{j}^{d}|{\sf z}\right\rangle $.
+
+Functionals can be expanded in either basis around the point $\varkappa _{0}$
+as 
+\begin{eqnarray}
+{\cal F}\left( \varkappa \right) &=&{\cal F}\left( \varkappa _{0}\right)
++\sum_{1\leq j\leq n}{\cal F}_{1j}\left( \varkappa _{j}-\varkappa
+_{0j}\right) +\sum_{1\leq j_{1},j_{2}\leq n}{\cal F}_{2j_{1}j_{2}}\left(
+\varkappa _{j_{1}}-\varkappa _{0j_{1}}\right) \left( \varkappa
+_{j_{2}}-\varkappa _{0j_{2}}\right) +\cdots  \nonumber \\
+{\cal F}\left( \varkappa \right) &=&{\cal F}\left( \varkappa _{0}\right)
++\int {\cal F}_{1}\left( {\sf z}\right) \left( \varkappa \left( {\sf z}%
+\right) -\varkappa _{0}\left( {\sf z}\right) \right) d{\sf z}  \nonumber \\
+&&\qquad \quad +\int {\cal F}_{2}\left( {\sf z}_{1},{\sf z}_{2}\right)
+\left( \varkappa \left( {\sf z}_{1}\right) -\varkappa _{0}\left( {\sf z}%
+_{1}\right) \right) \left( \varkappa \left( {\sf z}_{2}\right) -\varkappa
+_{0}\left( {\sf z}_{2}\right) \right) d{\sf z}_{1}d{\sf z}_{2}+\cdots
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+{\cal F}_{1j} &=&\frac{\partial {\cal F}\left( \varkappa _{0}\right) }{%
+\partial \varkappa _{j}},{\cal F}_{2j_{1}j_{2}}=\frac{1}{2}\frac{\partial
+^{2}{\cal F}\left( \varkappa _{0}\right) }{\partial \varkappa
+_{j_{1}}\partial \varkappa _{j_{2}}},\cdots ,{\cal F}_{rj_{1}\ldots j_{r}}=%
+\frac{1}{r!}\frac{\partial ^{r}{\cal F}\left( \varkappa _{0}\right) }{%
+\partial \varkappa _{j_{1}}\cdots \partial \varkappa _{j_{r}}}  \nonumber \\
+{\cal F}_{1}\left( {\sf z}\right) &=&\frac{\delta {\cal F}\left( \varkappa
+_{0}\right) }{\delta \varkappa \left( {\sf z}\right) },{\cal F}_{2}\left( 
+{\sf z}_{1},{\sf z}_{2}\right) =\frac{1}{2}\frac{\delta ^{2}{\cal F}\left(
+\varkappa _{0}\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \delta
+\varkappa \left( {\sf z}_{2}\right) },\cdots ,{\cal F}_{r}\left( {\sf z}%
+_{1},\ldots ,{\sf z}_{r}\right) =\frac{1}{r!}\frac{\delta ^{r}{\cal F}\left(
+\varkappa _{0}\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \cdots
+\delta \varkappa \left( {\sf z}_{r}\right) }
+\end{eqnarray}%
+From eq. $\left( \ref{change1}\right) $%
+\begin{equation}
+\frac{\partial {\cal F}\left( \varkappa _{0}\right) }{\partial \varkappa _{j}%
+}=\int \varkappa _{j}\left( {\sf z}\right) \frac{\delta {\cal F}\left(
+\varkappa _{0}\right) }{\delta \varkappa \left( {\sf z}\right) }d{\sf z}%
+\equiv \int \frac{\partial \varkappa \left( {\sf z}\right) }{\partial
+\varkappa _{j}}\frac{\delta {\cal F}\left( \varkappa _{0}\right) }{\delta
+\varkappa \left( {\sf z}\right) }d{\sf z}
+\end{equation}%
+and from eq. $\left( \ref{change2}\right) $%
+\begin{equation}
+\frac{\delta {\cal F}\left( \varkappa _{0}\right) }{\delta \varkappa \left( 
+{\sf z}\right) }=\sum_{1\leq j\leq n}\varkappa _{j}^{d}\left( {\sf z}\right) 
+\frac{\partial {\cal F}\left( \varkappa _{0}\right) }{\partial \varkappa _{j}%
+}\equiv \sum_{1\leq j\leq n}\frac{\delta \varkappa _{j}}{\delta \varkappa
+\left( {\sf z}\right) }\frac{\partial {\cal F}\left( \varkappa _{0}\right) }{%
+\partial \varkappa _{j}}
+\end{equation}%
+$\lceil $Note that in these expressions $\frac{\delta }{\delta \varkappa
+\left( {\sf z}\right) }$signifies partial derrivative operation in the $%
+\left| {\sf z}\right\rangle $ direction$\rfloor $.
+
+Time dependence can be introduced by 
+\begin{eqnarray}
+\left| {\bf \varkappa }\left( t\right) \right\rangle &=&\sum_{1\leq j\leq
+n}\varkappa _{j}\left( t\right) \left| {\bf \varkappa }_{j}\right\rangle
+\Rightarrow \\
+\varkappa \left( {\sf z},t\right) &\equiv &\left\langle {\sf z}|{\bf %
+\varkappa }\left( t\right) \right\rangle =\sum_{1\leq j\leq n}\varkappa
+_{j}\left( t\right) \left\langle {\sf z}|{\bf \varkappa }_{j}\right\rangle \\
+&=&\sum_{1\leq j\leq n}\varkappa _{j}\left\langle {\sf z}|{\bf \varkappa }%
+_{j}\left( t\right) \right\rangle =\sum_{1\leq j\leq n}\varkappa
+_{j}\left\langle {\sf z}\left( t\right) |{\bf \varkappa }_{j}\right\rangle
+\end{eqnarray}%
+If we introduce a time evolution operator ${\cal T}\left( t_{2},t_{1}\right) 
+$ then%
+\begin{equation}
+\left| {\bf \varkappa }\left( t_{2}\right) \right\rangle ={\cal T}\left(
+t_{2},t_{1}\right) \left| {\bf \varkappa }\left( t_{1}\right) \right\rangle
+=Te^{\int_{t_{1}}^{t_{2}}\Gamma \left( t\right) dt}\left| {\bf \varkappa }%
+\left( t_{1}\right) \right\rangle
+\end{equation}%
+and 
+\begin{equation}
+\left| {\bf \varkappa }_{\lambda }\left( t\right) \right\rangle
+=Te^{\int_{0}^{t}\Gamma \left( t^{\prime }\right) dt^{\prime }}\left| {\bf %
+\varkappa }_{\lambda }\right\rangle \equiv {\cal T}\left( t\right) \left| 
+{\bf \varkappa }_{\lambda }\right\rangle ={\cal T}\left( t\right) {\cal V}%
+_{\lambda }\left| {\bf \varkappa }_{0}\right\rangle \equiv {\cal T}_{\lambda
+}\left( t\right) \left| {\bf \varkappa }_{0}\right\rangle
+\end{equation}%
+where ${\cal V}_{\lambda }$ is a transformation from the reference function $%
+{\bf \varkappa }_{0}$ to the function ${\bf \varkappa }_{\lambda }$ giving 
+\begin{equation}
+\varkappa _{\lambda }\left( {\sf z},t\right) =\left\langle {\sf z}|{\bf %
+\varkappa }_{\lambda }\left( t\right) \right\rangle =\left\langle {\sf z}|%
+{\cal T}_{\lambda }\left( t\right) {\bf \varkappa }_{0}\right\rangle
+=\left\langle {\cal T}_{\lambda }\left( t\right) ^{\dagger }{\sf z}|{\bf %
+\varkappa }_{0}\right\rangle \equiv \left\langle {\sf z}_{\lambda }\left(
+t\right) |{\bf \varkappa }_{0}\right\rangle =\varkappa \left( {\sf z}%
+_{\lambda }\left( t\right) \right)
+\end{equation}%
+Thus as one varies over all {\sf ''}${\sf z"}$ all possible coordinate paths 
+$\left\{ {\sf z}_{\lambda }\left( t\right) \right\} $ are produced. These
+paths are in general discontinuous wrt time variation. The time dependence
+of the functions $\left\{ \varkappa \right\} $ can thus be described in
+terms of ${\bf \varkappa }\left( t\right) \left( {\sf z}\right) \equiv
+\varkappa \left( {\sf z},t\right) $ for any $\left\{ {\sf z},t\right\} $ or $%
+\varkappa \left( {\sf z}_{\lambda }\left( t\right) \right) $ for any
+coordinate path ${\sf z}_{\lambda }\left( t\right) $. In the following we
+usually use the form $\varkappa \left( {\sf z},t\right) $.
+
+\subsection{Action Functionals}
+
+In particular we consider the action functional 
+\begin{equation}
+{\cal A}={\cal A}\left( \varkappa \right) ={\cal A}\left( \varkappa ,\tau
+\right) ={\cal A}\left( {\cal V},\omega ,\tau \right) ={\cal A}\left( {\cal V%
+}_{fib},\omega _{fib},{\cal V}_{den},\omega _{den},\tau \right)
+\end{equation}%
+given in terms of the Lagrangian by 
+\[
+{\cal A}\left( \varkappa \right) =\int_{t_{i}}^{t_{f}}{\cal L}\left(
+\varkappa ,\dot{\varkappa},t\right) dt=\int_{t_{i}}^{t_{f}}\frac{d{\cal A}%
+\left( \varkappa \left( t\right) \right) }{dt}dt=\int_{t_{i}}^{t_{f}}{\cal 
+\dot{A}}\left( \varkappa \left( t\right) \right) dt 
+\]%
+The action is defined over the closed time interval $\tau \equiv \left[
+t_{i},t_{f}\right] $. Clearly the variables $\left\{ \dot{\varkappa}\right\} 
+$ are dependent on $\left\{ \varkappa \right\} $ over the open time interval 
+$\left( t_{i},t_{f}\right) $ and if the fixed endpoint conditions on $%
+\left\{ \varkappa \right\} $ are invoked $\lceil \varkappa \left( {\sf z}%
+,t_{i}\right) =\varkappa _{i}\left( {\sf z}\right) $ and $\varkappa \left( 
+{\sf z},t_{f}\right) =\varkappa _{f}\left( {\sf z}\right) \rfloor $ the
+action will only depend on the {\em independent }variables $\left\{
+\varkappa \right\} $. On the other hand the Lagrangian is local in time and
+at each instant $\varkappa =$ $\varkappa \left( {\sf z},t\right) $ and $\dot{%
+\varkappa}=$ $\dot{\varkappa}\left( {\sf z},t\right) $ can be thought of as
+independent functions of ${\sf z}$ and thus as independent variables $\lceil 
+$this relates to the distinction between $\varkappa \left( {\sf z},t\right) $
+and $\varkappa \left( {\sf z}_{\lambda }\left( t\right) \right) \rfloor $.
+Small variations of the trajectories $\varkappa $ produce changes in the
+action and Lagrangian expressed as 
+\begin{eqnarray}
+{\cal A}\left( \varkappa +\delta \varkappa \right) &=&\int_{t_{i}}^{t_{f}}%
+{\cal \dot{A}}\left( \varkappa \left( t\right) +\delta \varkappa \left(
+t\right) \right) dt=\int_{t_{i}}^{t_{f}}{\cal L}\left( \varkappa +\delta
+\varkappa ,\dot{\varkappa}+\delta \dot{\varkappa},t\right) dt \\
+{\cal A}\left( \varkappa +\delta \varkappa \right) &=&\sum_{0\leq m\leq
+\infty }\delta ^{\left( m\right) }{\cal A}\left( \varkappa \right) \\
+\delta ^{\left( m\right) }{\cal A}\left( \varkappa \right)
+&=&\int_{t_{i}}^{t_{f}}\delta ^{\left( m\right) }{\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) dt=\int_{t_{i}}^{t_{f}}\delta ^{\left( m\right) }%
+{\cal \dot{A}}\left( \varkappa \left( t\right) \right) dt \\
+{\cal L}\left( \varkappa +\delta \varkappa ,\dot{\varkappa}+\delta \dot{%
+\varkappa},t\right) &=&\sum_{0\leq i\leq \infty }\delta ^{\left( m\right) }%
+{\cal L}\left( \varkappa ,\dot{\varkappa},t\right)
+\end{eqnarray}%
+where $\delta ^{\left( 0\right) }{\cal A}\left( \varkappa \right) \equiv 
+{\cal A}\left( \varkappa \right) $ and $\delta ^{\left( 1\right) }{\cal A}%
+\left( \varkappa \right) \equiv \delta {\cal A}\left( \varkappa \right) $
+and similarly for ${\cal L}$. Each order of variation can be computed in
+terms of functional derivatives as 
+\begin{eqnarray}
+&&\delta ^{\left( m\right) }{\cal L}\left( \varkappa +\delta \varkappa ,\dot{%
+\varkappa}+\delta \dot{\varkappa},t\right) =\sum\Sb m_{1}+m_{2}=m  \\ 0\leq
+m_{1}\leq m;0\leq m_{2}\leq m  \endSb \frac{1}{m_{1}!m_{2}!}D^{m_{1}+m_{2}}%
+{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) \left( \otimes
+^{m_{1}}\delta \varkappa \otimes ^{m_{2}}\delta \dot{\varkappa}\right) 
+\nonumber \\
+&&D^{m_{1}+m_{2}}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) \left(
+\otimes ^{m_{1}}\delta \varkappa \otimes ^{m_{2}}\delta \dot{\varkappa}%
+\right) =  \nonumber \\
+&&\int \left\{ \frac{\delta ^{m_{1}+m_{2}}{\cal L}\left( \varkappa ,\dot{%
+\varkappa},t\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \cdots
+\delta \varkappa \left( {\sf z}_{m_{1}}\right) \cdots \delta \dot{\varkappa}%
+\left( {\sf z}_{m_{1}+1}\right) \cdots \delta \dot{\varkappa}\left( {\sf z}%
+_{m_{2}}\right) }\delta \varkappa \left( {\sf z}_{1},t\right) \cdots \delta
+\varkappa \left( {\sf z}_{m_{1}},t\right) \delta \dot{\varkappa}\left( {\sf z%
+}_{m_{1}+1},t\right) \cdots \delta \dot{\varkappa}\left( {\sf z}%
+_{m_{2}},t\right) \right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \times d{\sf z}%
+_{1}\cdots d{\sf z}_{m}
+\end{eqnarray}%
+and 
+\begin{equation}
+{\cal A}\left( \varkappa +\delta \varkappa \right) =\sum_{0\leq m\leq \infty
+}\delta ^{\left( m\right) }{\cal A}\left( \varkappa \right) =\sum_{0\leq
+m\leq \infty }
+\end{equation}%
+In particular the first order variation is given as 
+\begin{eqnarray}
+\delta ^{\left( 1\right) }{\cal A}\left( \varkappa \right)
+&=&\int_{t_{i}}^{t_{f}}\delta ^{\left( 1\right) }{\cal \dot{A}}\left(
+\varkappa \left( t\right) \right) dt=\int_{t_{i}}^{t_{f}}\frac{\delta {\cal 
+\dot{A}}\left( \varkappa \left( t\right) \right) }{\delta \varkappa \left( 
+{\sf z}\right) }\delta \varkappa \left( {\sf z}\right) d{\sf z}dt  \label{A1}
+\\
+&=&\int_{t_{i}}^{t_{f}}\delta ^{\left( 1\right) }{\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) dt=\int_{t_{i}}^{t_{f}}\left\{ \frac{\delta {\cal L}%
+\left( \varkappa ,\dot{\varkappa},t\right) }{\delta \varkappa \left( {\sf z}%
+\right) }\delta \varkappa \left( {\sf z}\right) +\frac{\delta {\cal L}\left(
+\varkappa ,\dot{\varkappa},t\right) }{\delta \dot{\varkappa}\left( {\sf z}%
+\right) }\delta \dot{\varkappa}\left( {\sf z}\right) \right\} d{\sf z}dt
+\label{L1}
+\end{eqnarray}%
+The dependence of $\dot{\varkappa}$ on $\varkappa $ over the time interval $%
+\left( t_{i},t_{f}\right) $ plus the fixed end point conditions can be
+displayed by using integration by parts wrt time on the $\dot{\varkappa}$
+term in eq. $\left( \ref{L1}\right) $ to give 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta \dot{\varkappa}\left( {\sf z}\right) }\delta \dot{%
+\varkappa}\left( {\sf z},t\right) d{\sf z}dt=\int \left\{ \left. \delta
+\varkappa \left( {\sf z},t\right) \frac{\delta {\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) }{\delta \dot{\varkappa}\left( {\sf z}\right) }%
+\right| _{t_{i}}^{t_{f}}\right\} d{\sf z}-\int_{t_{i}}^{t_{f}}\frac{d}{dt}%
+\left\{ \frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}%
+,t\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) }\right\}
+\delta \varkappa \left( {\sf z},t\right) d{\sf z}dt
+\end{equation}%
+which when we constrain the end points of the trajectories to be fixed
+becomes 
+\begin{equation}
+=-\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{\delta {\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta {\cal \dot{\varkappa}}%
+\left( {\sf z}\right) }\right\} d{\sf z}\delta \varkappa \left( {\sf z}%
+,t\right) dt;\qquad \text{ }\delta \varkappa \left( t_{f}\right) =\delta
+\varkappa \left( t_{i}\right) =0
+\end{equation}%
+producing 
+\begin{eqnarray}
+\delta ^{\left( 1\right) }{\cal A}\left( \varkappa \right)
+&=&\int_{t_{i}}^{t_{f}}\delta ^{\left( 1\right) }{\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) dt=\int_{t_{i}}^{t_{f}}\left\{ \frac{\delta {\cal L}%
+\left( {\cal \varkappa },{\cal \dot{\varkappa}},t\right) }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{\delta {\cal L}%
+\left( {\cal \varkappa },{\cal \dot{\varkappa}},t\right) }{\delta {\cal \dot{%
+\varkappa}}\left( {\sf z}\right) }\right\} \right\} \delta \varkappa \left( 
+{\sf z},t\right) d{\sf z}dt  \nonumber \\
+&=&\int_{t_{i}}^{t_{f}}\delta ^{\left( 1\right) }{\cal \dot{A}}\left(
+\varkappa \left( t\right) \right) dt=\int_{t_{i}}^{t_{f}}\frac{\delta {\cal 
+\dot{A}}\left( \varkappa \left( t\right) \right) }{\delta \varkappa \left( 
+{\sf z}\right) }\delta \varkappa \left( {\sf z}\right) d{\sf z}dt
+\end{eqnarray}%
+and we can make the identifications 
+\begin{eqnarray}
+\delta ^{\left( 1\right) }{\cal \dot{A}}\left( \varkappa \left( t\right)
+\right) &\equiv &\int \left\{ \frac{\delta {\cal L}\left( {\cal \varkappa },%
+{\cal \dot{\varkappa}},t\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+\right) }-\frac{d}{dt}\left\{ \frac{\delta {\cal L}\left( {\cal \varkappa },%
+{\cal \dot{\varkappa}},t\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}%
+\right) }\right\} \right\} \delta \varkappa \left( {\sf z},t\right) d{\sf z}
+\nonumber \\
+\frac{\delta {\cal \dot{A}}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}\right) } &\equiv &\frac{\delta {\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }-\frac{d}{dt}\left\{ \frac{\delta {\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta {\cal \dot{\varkappa}}%
+\left( {\sf z}\right) }\right\}
+\end{eqnarray}%
+The second order variation of the action is 
+\begin{eqnarray}
+&&\delta ^{\left( 2\right) }{\cal A}\left( \varkappa \right) =\frac{1}{2}%
+\int_{t_{i}}^{t_{f}}\frac{\delta ^{2}{\cal \dot{A}}\left( \varkappa \left(
+t\right) \right) }{\delta \varkappa \left( {\sf z}_{1}\right) \delta
+\varkappa \left( {\sf z}_{2}\right) }\delta \varkappa \left( {\sf z}%
+_{1},t\right) \delta \varkappa \left( {\sf z}_{2},t\right) d{\sf z}_{1}d{\sf %
+z}_{2}dt  \nonumber \\
+&&\left. {}\right. \quad \quad \,=\frac{1}{2}\int_{t_{i}}^{t_{f}}\left\{ 
+\frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}%
+,t\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \delta \varkappa
+\left( {\sf z}_{2}\right) }\delta \varkappa \left( {\sf z}_{1},t\right)
+\delta \varkappa \left( {\sf z}_{2},t\right) +2\frac{\delta ^{2}{\cal L}%
+\left( {\cal \varkappa },{\cal \dot{\varkappa}},t\right) }{\delta \varkappa
+\left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }%
+\delta \varkappa \left( {\sf z}_{1},t\right) \delta \dot{\varkappa}\left( 
+{\sf z}_{2},t\right) \right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad +\left. 
+\frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}%
+,t\right) }{\delta \dot{\varkappa}\left( {\sf z}_{1}\right) \delta \dot{%
+\varkappa}\left( {\sf z}_{2}\right) }\delta \dot{\varkappa}\left( {\sf z}%
+_{1},t\right) \delta \dot{\varkappa}\left( {\sf z}_{2},t\right) \right\} d%
+{\sf z}_{1}d{\sf z}_{2}dt  \label{Avar2}
+\end{eqnarray}%
+Using integration by parts on the second term of the Lagrangian we obtain 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },%
+{\cal \dot{\varkappa}},t\right) }{\delta \varkappa \left( {\sf z}_{1}\right)
+\delta \dot{\varkappa}\left( {\sf z}_{2}\right) }\delta \varkappa \left( 
+{\sf z}_{1},t\right) \delta \dot{\varkappa}\left( {\sf z}_{2},t\right) d{\sf %
+z}_{1}d{\sf z}_{2}dt=  \nonumber \\
+&&\int \left\{ \left. \left\{ \delta \varkappa \left( {\sf z}_{1},t\right)
+\delta \dot{\varkappa}\left( {\sf z}_{2},t\right) \frac{\delta ^{2}{\cal L}%
+\left( \varkappa ,\dot{\varkappa},t\right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }\right\}
+\right| _{t_{i}}^{t_{f}}\right\} d{\sf z}_{1}d{\sf z}_{2}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad -\int_{t_{i}}^{t_{f}}\frac{d}{dt}%
+\left\{ \frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) 
+}{\delta \varkappa \left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( 
+{\sf z}_{2}\right) }\right\} \delta \varkappa \left( {\sf z}_{1},t\right)
+\delta \varkappa \left( {\sf z}_{2},t\right) d{\sf z}_{1}d{\sf z}_{2}dt 
+\nonumber \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \quad
+=-\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{\delta ^{2}{\cal L}\left(
+\varkappa ,\dot{\varkappa},t\right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }\right\} \delta
+\varkappa \left( {\sf z}_{1},t\right) \delta \varkappa \left( {\sf z}%
+_{2},t\right) d{\sf z}_{1}d{\sf z}_{2}dt
+\end{eqnarray}%
+so that eq. $\left( \ref{Avar2}\right) $ becomes 
+\begin{eqnarray}
+\delta ^{\left( 2\right) }{\cal A}\left( \varkappa \right) &=&\frac{1}{2}%
+\int_{t_{i}}^{t_{f}}\left\{ \left\{ \frac{\delta ^{2}{\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) \delta \varkappa \left( {\sf z}_{2}\right) }-\frac{d}{dt}\left\{ 
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{2}\right) }\right\} \right\} \delta \varkappa \left( {\sf z}_{1},t\right)
+\delta \varkappa \left( {\sf z}_{2},t\right) \right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad +\left. \frac{\delta ^{2}{\cal L}\left( 
+{\cal \varkappa },{\cal \dot{\varkappa}},t\right) }{\delta \dot{\varkappa}%
+\left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }%
+\delta \dot{\varkappa}\left( {\sf z}_{1},t\right) \delta \dot{\varkappa}%
+\left( {\sf z}_{2},t\right) \right\} d{\sf z}_{1}d{\sf z}_{2}dt
+\label{Avar2a}
+\end{eqnarray}%
+$\lceil $It should be possible to remove the explicit dependence on $\delta 
+\dot{\varkappa}$ in the second order variation of the action as we argued
+that the value of $\dot{\varkappa}$ is determined by $\varkappa $ over the
+interval $\left( t_{i},t_{f}\right) $ To this end one can use integration by
+parts on the third term of the Lagrangian to obtain 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },%
+{\cal \dot{\varkappa}},t\right) }{\delta \dot{\varkappa}\left( {\sf z}%
+_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }\delta \dot{%
+\varkappa}\left( {\sf z}_{1},t\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{2},t\right) d{\sf z}_{1}d{\sf z}_{2}dt=  \nonumber \\
+&&\int \left\{ \left. \delta \dot{\varkappa}\left( {\sf z}_{1},t\right)
+\delta \dot{\varkappa}\left( {\sf z}_{2},t\right) \frac{\delta ^{2}{\cal L}%
+\left( {\cal \varkappa },{\cal \dot{\varkappa}},t\right) }{\delta \dot{%
+\varkappa}\left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{2}\right) }\right| _{t_{i}}^{t_{f}}\right\} d{\sf z}_{1}d{\sf z}_{2} 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad -\int_{t_{i}}^{t_{f}}\frac{d}{dt}%
+\left\{ \frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) 
+}{\delta \dot{\varkappa}\left( {\sf z}_{1}\right) \delta \dot{\varkappa}%
+\left( {\sf z}_{2}\right) }\right\} \delta \varkappa \left( {\sf z}%
+_{1},t\right) \delta \dot{\varkappa}\left( {\sf z}_{2},t\right) d{\sf z}_{1}d%
+{\sf z}_{2}dt  \nonumber \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+=-\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{\delta ^{2}{\cal L}\left(
+\varkappa ,\dot{\varkappa},t\right) }{\delta \dot{\varkappa}\left( {\sf z}%
+_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }\right\} \delta
+\varkappa \left( {\sf z}_{1},t\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{2},t\right) d{\sf z}_{1}d{\sf z}_{2}dt
+\end{eqnarray}%
+Then it should be possible to obtain from this an expression that does not
+contain $\delta \dot{\varkappa}$. However in the case we are dealing with
+viz Lagrangians linear in the velocity eq. $\left( \ref{Avar2a}\right) $
+does not contain any $\delta \dot{\varkappa}$ dependence as $\left\{ \frac{%
+\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta \dot{%
+\varkappa}\left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{2}\right) }\right\} =0\forall {\sf z}_{1},{\sf z}_{2}$ and thus 
+\begin{equation}
+\delta ^{\left( 2\right) }{\cal A}\left( \varkappa \right) =\frac{1}{2}%
+\int_{t_{i}}^{t_{f}}\left\{ \left\{ \frac{\delta ^{2}{\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) \delta \varkappa \left( {\sf z}_{2}\right) }-\frac{d}{dt}\left\{ 
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{2}\right) }\right\} \right\} \delta \varkappa \left( {\sf z}_{1},t\right)
+\delta \varkappa \left( {\sf z}_{2},t\right) \right\} d{\sf z}_{1}d{\sf z}%
+_{2}dt
+\end{equation}%
+and 
+\begin{equation}
+\frac{\delta ^{2}{\cal \dot{A}}\left( \varkappa \left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{1}\right) \delta \varkappa \left( {\sf z}%
+_{2}\right) }=\frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{%
+\varkappa}},t\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \delta
+\varkappa \left( {\sf z}_{2}\right) }-\frac{d}{dt}\left\{ \frac{\delta ^{2}%
+{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta \varkappa \left( 
+{\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }\right\}
+\end{equation}%
+$\rfloor $
+
+\subsection{Stationary Action}
+
+The Action is stationary if 
+\begin{equation}
+\delta {\cal A}\left( \varkappa \right) =\int_{t_{i}}^{t_{f}}\delta ^{\left(
+1\right) }{\cal L}\left( \varkappa ,\dot{\varkappa},t\right)
+dt=\int_{t_{i}}^{t_{f}}\delta ^{\left( 1\right) }{\cal \dot{A}}\left(
+\varkappa \left( t\right) \right) dt=0\,\text{ }
+\end{equation}%
+which implies that 
+\begin{eqnarray}
+\delta {\cal A}\left( \varkappa \right) &=&\int_{t_{i}}^{t_{f}}\left\{ \frac{%
+\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}},t\right) }{%
+\delta {\cal \varkappa }\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{%
+\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}},t\right) }{%
+\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) }\right\} \right\} \delta
+\varkappa \left( {\sf z},t\right) dt=0\quad \forall \delta \varkappa
+\label{vara1} \\
+&\equiv &\int_{t_{i}}^{t_{f}}\frac{\delta {\cal \dot{A}}\left( \varkappa
+\left( t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }%
+\delta \varkappa \left( {\sf z},t\right) dt=0\quad \forall \delta \varkappa
+\label{vara2}
+\end{eqnarray}%
+By the fundamental lemma of the calculus of variations the eqs. $\left( \ref%
+{vara1}\right) $ and $\left( \ref{vara2}\right) $gives the Euler-Lagrange
+equation%
+\begin{equation}
+\frac{\delta {\cal \dot{A}}\left( \varkappa \left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}\right) }=\frac{\delta {\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }-\frac{d}{dt}\left\{ \frac{\delta {\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta {\cal \dot{\varkappa}}%
+\left( {\sf z}\right) }\right\} =0
+\end{equation}%
+which gives necessary and sufficient conditions for stationary action.
+
+$\lceil ${\bf A note on notation: }The explicit display of $``t"$ in ${\cal L%
+}\left( {\cal \varkappa },{\cal \dot{\varkappa}},t\right) $ indicates that
+not all of the time dependence of ${\cal L}$ is due to the time dependent
+functions $\left\{ {\cal \varkappa },{\cal \dot{\varkappa}}\right\} $. This
+will occur if the Hamiltonian is time dependent e.g. depends on time
+dependent external potentials i.e. describes an open system. In most cases
+however we consider only closed systems as we describe all sources of fields
+to be part of the system. The parameter functions, ${\cal \varkappa }$, are
+functions of the spatial and spin coordinates ${\sf z}$ and time coordinate $%
+t$ as described above$\rfloor $
+
+\subsection{Minimum Condition}
+
+The condition for a local minimum is 
+\begin{eqnarray}
+&&\delta ^{\left( 2\right) }{\cal A}\left( \varkappa \right)
+=\int_{t_{i}}^{t_{f}}\delta ^{\left( 2\right) }{\cal \dot{A}}\left(
+\varkappa \left( t\right) \right) dt=\int_{t_{i}}^{t_{f}}\delta ^{\left(
+2\right) }{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) dt=  \nonumber
+\\
+&&\frac{1}{2}\int_{t_{i}}^{t_{f}}\left\{ \left( 
+\begin{array}{cc}
+\delta \varkappa \left( {\sf z}_{1}\right)  & \delta \dot{\varkappa}\left( 
+{\sf z}_{2}\right) 
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) \delta \varkappa \left( {\sf z}%
+_{2}\right) } & \frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \delta \dot{\varkappa}%
+\left( {\sf z}_{2}\right) } \\ 
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta 
+\dot{\varkappa}\left( {\sf z}_{1}\right) \delta \varkappa \left( {\sf z}%
+_{2}\right) } & \frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta \dot{\varkappa}\left( {\sf z}_{1}\right) \delta \dot{%
+\varkappa}\left( {\sf z}_{2}\right) }%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\delta \varkappa \left( {\sf z}_{1}\right)  \\ 
+\delta \dot{\varkappa}\left( {\sf z}_{2}\right) 
+\end{array}%
+\right) \right\} d{\sf z}_{1}d{\sf z}_{2}dt\geq 0\forall \delta \varkappa 
+\end{eqnarray}%
+which is the condition for a positive semi definite integral kernel. In
+order case this condition becomes 
+\begin{equation}
+\left\{ \frac{\delta ^{2}{\cal \dot{A}}\left( \varkappa \left( t\right)
+\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \delta \varkappa \left( 
+{\sf z}_{2}\right) }\right\} =\left\{ \frac{\delta ^{2}{\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}},t\right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) \delta \varkappa \left( {\sf z}_{2}\right) }-\frac{d}{dt}\left\{ 
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{2}\right) }\right\} \right\} \geq 0  \label{ActHess}
+\end{equation}%
+as an operator on the space of functions $\left\{ \delta \varkappa \left( 
+{\sf z},t\right) \right\} $. Our Lagrangian is 
+\begin{equation}
+{\cal L}\left( {\cal \varkappa }\left( t\right) ,{\cal \dot{\varkappa}}%
+\left( t\right) \right) =\int {\cal \dot{\varkappa}}\left( {\sf z},t\right) 
+{\cal Z}\left( {\sf z},t\right) d{\sf z}-{\cal E}\left( {\cal \varkappa }%
+\left( t\right) \right) 
+\end{equation}%
+where 
+\begin{eqnarray}
+{\cal Z}\left( {\sf z},t\right)  &=&\frac{i}{2}\left\langle \Psi \left( 
+{\cal \varkappa }\left( t\right) \right) |\Psi \left( {\cal \varkappa }%
+\left( t\right) \right) \right\rangle ^{-1}\left\{ \left\langle \Psi \left( 
+{\cal \varkappa }\left( t\right) \right) \left| \frac{\delta \Psi \left( 
+{\cal \varkappa }\left( t\right) \right) }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }\right. \right\rangle -\left\langle \left. \frac{\delta \Psi
+\left( {\cal \varkappa }\left( t\right) \right) }{\delta {\cal \varkappa }%
+\left( {\sf z}\right) }\right| \Psi \left( {\cal \varkappa }\left( t\right)
+\right) \right\rangle \right\}  \\
+{\cal E}\left( {\cal \varkappa }\left( t\right) \right)  &=&\frac{%
+\left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right) |H\Psi
+\left( {\cal \varkappa }\left( t\right) \right) \right\rangle }{\left\langle
+\Psi \left( {\cal \varkappa }\left( t\right) \right) |\Psi \left( {\cal %
+\varkappa }\left( t\right) \right) \right\rangle }
+\end{eqnarray}%
+The first derrivative is given by: 
+\begin{eqnarray}
+\frac{\delta {\cal \dot{A}}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) } &=&\int {\cal \dot{\varkappa}}\left( 
+{\sf z},t\right) \left\{ \frac{\delta {\cal Z}\left( {\sf z},t\right) }{%
+\delta \varkappa \left( {\sf z}_{1}\right) }-\frac{\delta {\cal Z}\left( 
+{\sf z}_{1},t\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }%
+\right\} d{\sf z}-\frac{\delta {\cal E}\left( {\cal \varkappa }\left(
+t\right) \right) }{\delta \varkappa \left( {\sf z}_{1}\right) } \\
+&\equiv &\int \eta \left( {\sf z}_{1},{\sf z},t\right) {\cal \dot{\varkappa}}%
+\left( {\sf z},t\right) d{\sf z}-\frac{\delta {\cal E}\left( {\cal \varkappa 
+}\left( t\right) \right) }{\delta \varkappa \left( {\sf z}_{1}\right) }
+\end{eqnarray}%
+$\lceil $after making the substitution 
+\begin{equation}
+\frac{d{\cal Z}\left( {\sf z}_{1},t\right) }{dt}=\int {\cal \dot{\varkappa}}%
+\left( {\sf z},t\right) \frac{\delta {\cal Z}\left( {\sf z}_{1},t\right) }{%
+\delta {\cal \varkappa }\left( {\sf z}\right) }d{\sf z}
+\end{equation}%
+$\rfloor $ where 
+\begin{equation}
+\frac{\delta {\cal Z}\left( {\sf z},t\right) }{\delta \varkappa \left( {\sf z%
+}_{1}\right) }=\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right)
+\right) }\left\{ \frac{\delta {\cal T}\left( \varkappa \left( t\right)
+\right) }{\delta \varkappa \left( {\sf z}_{1}\right) }-{\cal Z}\left( {\sf z}%
+,t\right) \frac{\delta {\cal N}\left( \varkappa \left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{1}\right) }\right\} 
+\end{equation}%
+where 
+\begin{eqnarray}
+\frac{\delta {\cal T}\left( \varkappa \left( {\sf z},t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{1}\right) } &=&\frac{i}{2}\left\{
+\left\langle \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right)
+\right) }{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\left| \frac{%
+\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }\right. \right\rangle -\left\langle \left. 
+\frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}\right) }\right| \frac{\delta \Psi \left( 
+{\cal \varkappa }\left( t\right) \right) }{\delta {\cal \varkappa }\left( 
+{\sf z}_{1}\right) }\right\rangle \right.  \\
+&&+\left. \left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right)
+\left| \frac{\delta ^{2}\Psi \left( {\cal \varkappa }\left( t\right) \right) 
+}{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) \delta {\cal \varkappa }%
+\left( {\sf z}\right) }\right. \right\rangle -\left\langle \left. \frac{%
+\delta ^{2}\Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}_{1}\right) \delta {\cal \varkappa }\left( 
+{\sf z}\right) }\right| \Psi \left( {\cal \varkappa }\left( t\right) \right)
+\right\rangle \right\}  \\
+\frac{\delta {\cal N}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) } &=&\left\langle \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) \left| \frac{\delta \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}%
+_{1}\right) }\right. \right\rangle +\left\langle \left. \frac{\delta \Psi
+\left( {\cal \varkappa }\left( t\right) \right) }{\delta {\cal \varkappa }%
+\left( {\sf z}_{1}\right) }\right| \Psi \left( {\cal \varkappa }\left(
+t\right) \right) \right\rangle 
+\end{eqnarray}%
+and thus%
+\begin{eqnarray}
+&&\frac{\delta {\cal T}\left( \varkappa \left( {\sf z},t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{1}\right) }-\frac{\delta {\cal T}\left(
+\varkappa \left( {\sf z}_{1},t\right) \right) }{\delta \varkappa \left( {\sf %
+z}\right) }=  \nonumber \\
+&&\left. {}\right. \qquad \qquad \qquad i\left\{ \left\langle \frac{\delta
+\Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta {\cal %
+\varkappa }\left( {\sf z}_{1}\right) }\left| \frac{\delta \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}%
+\right) }\right. \right\rangle -\left\langle \left. \frac{\delta \Psi \left( 
+{\cal \varkappa }\left( t\right) \right) }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }\right| \frac{\delta \Psi \left( {\cal \varkappa }\left(
+t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }%
+\right\rangle \right\}   \nonumber \\
+&&\left. {}\right. \qquad \qquad \qquad =-2%
+%TCIMACRO{\func{Im}}%
+%BeginExpansion
+\mathop{\rm Im}%
+%EndExpansion
+\left\langle \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right)
+\right) }{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\left| \frac{%
+\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }\right. \right\rangle 
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&{\cal Z}\left( {\sf z},t\right) \frac{\delta {\cal N}\left( \varkappa
+\left( t\right) \right) }{\delta \varkappa \left( {\sf z}_{1}\right) }-{\cal %
+Z}\left( {\sf z}_{1},t\right) \frac{\delta {\cal N}\left( \varkappa \left(
+t\right) \right) }{\delta \varkappa \left( {\sf z}\right) }=\frac{i}{2}%
+\left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right) |\Psi
+\left( {\cal \varkappa }\left( t\right) \right) \right\rangle ^{-1}\times  
+\nonumber \\
+&&\left\{ \left\{ \left\langle \Psi \left( {\cal \varkappa }\left( t\right)
+\right) \left| \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right)
+\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }\right.
+\right\rangle -\left\langle \left. \frac{\delta \Psi \left( {\cal \varkappa }%
+\left( t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }%
+\right| \Psi \left( {\cal \varkappa }\left( t\right) \right) \right\rangle
+\right\} \times \right.   \nonumber \\
+&&\times \left\{ \left\langle \Psi \left( {\cal \varkappa }\left( t\right)
+\right) \left| \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right)
+\right) }{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\right.
+\right\rangle +\left\langle \left. \frac{\delta \Psi \left( {\cal \varkappa }%
+\left( t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }%
+\right| \Psi \left( {\cal \varkappa }\left( t\right) \right) \right\rangle
+\right\} -  \nonumber \\
+&&\left\{ \left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right)
+\left| \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\right. \right\rangle
+-\left\langle \left. \frac{\delta \Psi \left( {\cal \varkappa }\left(
+t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }%
+\right| \Psi \left( {\cal \varkappa }\left( t\right) \right) \right\rangle
+\right\} \times   \nonumber \\
+&&\left. \times \left\{ \left\langle \Psi \left( {\cal \varkappa }\left(
+t\right) \right) \left| \frac{\delta \Psi \left( {\cal \varkappa }\left(
+t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }\right.
+\right\rangle +\left\langle \left. \frac{\delta \Psi \left( {\cal \varkappa }%
+\left( t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }%
+\right| \Psi \left( {\cal \varkappa }\left( t\right) \right) \right\rangle
+\right\} \right\}   \nonumber \\
+&=&i\left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right) |\Psi
+\left( {\cal \varkappa }\left( t\right) \right) \right\rangle ^{-1}\left\{
+\left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right) \left| 
+\frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}\right) }\right. \right\rangle \left\langle
+\left. \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\right| \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) \right\rangle \right.   \nonumber \\
+&&-\left. \left\langle \left. \frac{\delta \Psi \left( {\cal \varkappa }%
+\left( t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }%
+\right| \Psi \left( {\cal \varkappa }\left( t\right) \right) \right\rangle
+\left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right) \left| 
+\frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}_{1}\right) }\right. \right\rangle \right\}  
+\nonumber \\
+&=&\frac{-2}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }%
+%TCIMACRO{\func{Im}}%
+%BeginExpansion
+\mathop{\rm Im}%
+%EndExpansion
+\left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right) \left| 
+\frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}\right) }\right. \right\rangle \left\langle
+\left. \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\right| \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) \right\rangle 
+\end{eqnarray}%
+giving 
+\begin{eqnarray}
+\eta \left( {\sf z}_{1},{\sf z},t\right)  &=&\frac{-2}{{\cal N}\left( {\cal %
+\varkappa }\left( t\right) \right) }%
+%TCIMACRO{\func{Im}}%
+%BeginExpansion
+\mathop{\rm Im}%
+%EndExpansion
+\left\{ \left\langle \frac{\delta \Psi \left( {\cal \varkappa }\left(
+t\right) \right) }{\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\left| 
+\frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}\right) }\right. \right\rangle \right.  
+\nonumber \\
+&&\left. \frac{-1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }%
+\left\langle \Psi \left( {\cal \varkappa }\left( t\right) \right) \left| 
+\frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{\delta 
+{\cal \varkappa }\left( {\sf z}\right) }\right. \right\rangle \left\langle
+\left. \frac{\delta \Psi \left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta {\cal \varkappa }\left( {\sf z}_{1}\right) }\right| \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) \right\rangle \right\} 
+\end{eqnarray}%
+and 
+\begin{equation}
+\frac{\delta {\cal E}\left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{1}\right) }=\frac{1}{{\cal N}\left( {\cal %
+\varkappa }\left( t\right) \right) }\left\{ \frac{\delta {\cal H}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }-{\cal E}\left( {\cal \varkappa }\left( t\right) \right) \frac{%
+\delta {\cal N}\left( \varkappa \left( t\right) \right) }{\delta \varkappa
+\left( {\sf z}_{1}\right) }\right\} 
+\end{equation}%
+where 
+\begin{equation}
+\frac{\delta {\cal H}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) }=\left\langle \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) \left| H\frac{\delta \Psi \left( {\cal %
+\varkappa }\left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }\right. \right\rangle +\left\langle \left. \frac{\delta \Psi
+\left( {\cal \varkappa }\left( t\right) \right) }{\delta \varkappa \left( 
+{\sf z}_{1}\right) }\right| H\Psi \left( {\cal \varkappa }\left( t\right)
+\right) \right\rangle 
+\end{equation}%
+The second derrivative is given by: 
+\begin{eqnarray}
+\frac{\delta ^{2}{\cal \dot{A}}\left( \varkappa \left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}%
+_{1}\right) } &=&\int \frac{\delta \eta \left( {\sf z}_{1},{\sf z},t\right) 
+}{\delta \varkappa \left( {\sf z}_{2}\right) }{\cal \dot{\varkappa}}\left( 
+{\sf z},t\right) d{\sf z}-\frac{\delta ^{2}{\cal E}\left( {\cal \varkappa }%
+\left( t\right) \right) }{\delta \varkappa \left( {\sf z}_{2}\right) \delta
+\varkappa \left( {\sf z}_{1}\right) }  \label{ha} \\
+&=&\frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}%
+,t\right) }{\delta \varkappa \left( {\sf z}_{1}\right) \delta \varkappa
+\left( {\sf z}_{2}\right) }-\frac{d}{dt}\left\{ \frac{\delta ^{2}{\cal L}%
+\left( \varkappa ,\dot{\varkappa},t\right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) \delta \dot{\varkappa}\left( {\sf z}_{2}\right) }\right\} 
+\label{hb}
+\end{eqnarray}
+
+we will first consider eq. $\left( \ref{ha}\right) :$%
+\begin{eqnarray}
+\frac{\delta \eta \left( {\sf z}_{1},{\sf z},t\right) }{\delta \varkappa
+\left( {\sf z}_{2}\right) } &=&\frac{\delta }{\delta \varkappa \left( {\sf z}%
+_{2}\right) }\left\{ \frac{\delta {\cal Z}\left( {\sf z},t\right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) }-\frac{\delta {\cal Z}\left( {\sf z}%
+_{1},t\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }\right\}  \\
+&=&\frac{\delta ^{2}{\cal Z}\left( {\sf z},t\right) }{\delta \varkappa
+\left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}_{1}\right) }-\frac{%
+\delta ^{2}{\cal Z}\left( {\sf z}_{1},t\right) }{\delta \varkappa \left( 
+{\sf z}_{2}\right) \delta \varkappa \left( {\sf z}\right) }
+\end{eqnarray}%
+\begin{eqnarray}
+&&\frac{\delta ^{2}{\cal Z}\left( {\sf z},t\right) }{\delta \varkappa \left( 
+{\sf z}_{2}\right) \delta \varkappa \left( {\sf z}_{1}\right) }=\frac{\delta 
+}{\delta \varkappa \left( {\sf z}_{2}\right) }\frac{1}{{\cal N}\left( {\cal %
+\varkappa }\left( t\right) \right) }\left\{ \frac{\delta {\cal T}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }-{\cal Z}\left( {\sf z},t\right) \frac{\delta {\cal N}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }\right\} = \\
+&&\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\left\{ 
+\frac{\delta ^{2}{\cal T}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}%
+_{1}\right) }-\frac{\delta {\cal Z}\left( {\sf z},t\right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) }\frac{\delta {\cal N}\left( \varkappa
+\left( t\right) \right) }{\delta \varkappa \left( {\sf z}_{1}\right) }-{\cal %
+Z}\left( {\sf z},t\right) \frac{\delta ^{2}{\cal N}\left( \varkappa \left(
+t\right) \right) }{\delta \varkappa \left( {\sf z}_{2}\right) \delta
+\varkappa \left( {\sf z}_{1}\right) }\right.  \\
+&&\qquad \qquad \qquad \qquad \left. -\frac{1}{{\cal N}\left( {\cal %
+\varkappa }\left( t\right) \right) }\left\{ \frac{\delta {\cal T}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }-{\cal Z}\left( {\sf z},t\right) \frac{\delta {\cal N}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }\right\} \frac{\delta {\cal N}\left( {\cal \varkappa }\left(
+t\right) \right) }{\delta \varkappa \left( {\sf z}_{2}\right) }\right\}  \\
+&=&\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\left\{ 
+\frac{\delta ^{2}{\cal T}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}%
+_{1}\right) }-\frac{\delta {\cal Z}\left( {\sf z},t\right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) }\frac{\delta {\cal N}\left( \varkappa
+\left( t\right) \right) }{\delta \varkappa \left( {\sf z}_{1}\right) }-{\cal %
+Z}\left( {\sf z},t\right) \frac{\delta ^{2}{\cal N}\left( \varkappa \left(
+t\right) \right) }{\delta \varkappa \left( {\sf z}_{2}\right) \delta
+\varkappa \left( {\sf z}_{1}\right) }\right.  \\
+&&-\left. \frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }%
+\frac{\delta {\cal Z}\left( {\sf z},t\right) }{\delta \varkappa \left( {\sf z%
+}_{1}\right) }\frac{\delta {\cal N}\left( {\cal \varkappa }\left( t\right)
+\right) }{\delta \varkappa \left( {\sf z}_{2}\right) }\right\}  \\
+&\equiv &\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }%
+\left\{ {\frak K}\left( {\sf z}_{1},{\sf z}_{2}\right) -\frac{1}{{\cal N}%
+\left( {\cal \varkappa }\left( t\right) \right) }\frac{\delta {\cal Z}\left( 
+{\sf z},t\right) }{\delta \varkappa \left( {\sf z}_{1}\right) }\frac{\delta 
+{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }{\delta \varkappa
+\left( {\sf z}_{2}\right) }\right\}  \\
+&\Rightarrow &\frac{\delta ^{2}{\cal Z}\left( {\sf z},t\right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}%
+_{1}\right) }-\frac{\delta ^{2}{\cal Z}\left( {\sf z}_{1},t\right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}\right) }
+\\
+&=&\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\left\{ 
+{\frak K}\left( {\sf z}_{1},{\sf z}_{2}\right) -{\frak K}\left( {\sf z},{\sf %
+z}_{2}\right) -\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right)
+\right) }\frac{\delta {\cal Z}\left( {\sf z},t\right) }{\delta \varkappa
+\left( {\sf z}_{1}\right) }\frac{\delta {\cal N}\left( {\cal \varkappa }%
+\left( t\right) \right) }{\delta \varkappa \left( {\sf z}_{2}\right) }%
+\right\} 
+\end{eqnarray}%
+\begin{eqnarray}
+&&\frac{\delta ^{2}{\cal E}\left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}%
+_{1}\right) }=\frac{\delta }{\delta \varkappa \left( {\sf z}_{2}\right) }%
+\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\left\{ 
+\frac{\delta {\cal H}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) }-{\cal E}\left( {\cal \varkappa }\left(
+t\right) \right) \frac{\delta {\cal N}\left( \varkappa \left( t\right)
+\right) }{\delta \varkappa \left( {\sf z}_{1}\right) }\right\}  \\
+&=&\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\left\{ 
+\frac{\delta ^{2}{\cal H}\left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}%
+_{1}\right) }-\frac{\delta {\cal E}\left( \varkappa \left( t\right) \right) 
+}{\delta \varkappa \left( {\sf z}_{2}\right) }\frac{\delta {\cal N}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }-{\cal E}\left( {\cal \varkappa }\left( t\right) \right) \frac{%
+\delta ^{2}{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) \delta \varkappa \left( {\sf z}%
+_{1}\right) }\right.  \\
+&&\left. -\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }%
+\frac{\delta {\cal E}\left( \varkappa \left( t\right) \right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) }\frac{\delta {\cal N}\left( \varkappa
+\left( t\right) \right) }{\delta \varkappa \left( {\sf z}_{2}\right) }%
+\right\}  \\
+&\equiv &\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }%
+\left\{ {\frak E}\left( {\sf z}_{1},{\sf z}_{2}\right) -\frac{1}{{\cal N}%
+\left( {\cal \varkappa }\left( t\right) \right) }\frac{\delta {\cal E}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }\frac{\delta {\cal N}\left( \varkappa \left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{2}\right) }\right\} 
+\end{eqnarray}%
+hence 
+\begin{eqnarray}
+&&\int \frac{\delta \eta \left( {\sf z}_{1},{\sf z},t\right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) }{\cal \dot{\varkappa}}\left( {\sf z}%
+,t\right) d{\sf z}-\frac{\delta ^{2}{\cal E}\left( {\cal \varkappa }\left(
+t\right) \right) }{\delta \varkappa \left( {\sf z}_{2}\right) \delta
+\varkappa \left( {\sf z}_{1}\right) } \\
+&=&\int \frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }%
+\left\{ {\frak K}\left( {\sf z}_{1},{\sf z}_{2}\right) -{\frak K}\left( {\sf %
+z},{\sf z}_{2}\right) -\frac{1}{{\cal N}\left( {\cal \varkappa }\left(
+t\right) \right) }\frac{\delta {\cal Z}\left( {\sf z},t\right) }{\delta
+\varkappa \left( {\sf z}_{1}\right) }\frac{\delta {\cal N}\left( {\cal %
+\varkappa }\left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{2}\right) }\right\} {\cal \dot{\varkappa}}\left( {\sf z},t\right) d{\sf z}
+\\
+&&-\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\left\{ 
+{\frak E}\left( {\sf z}_{1},{\sf z}_{2}\right) -\frac{1}{{\cal N}\left( 
+{\cal \varkappa }\left( t\right) \right) }\frac{\delta {\cal E}\left(
+\varkappa \left( t\right) \right) }{\delta \varkappa \left( {\sf z}%
+_{1}\right) }\frac{\delta {\cal N}\left( \varkappa \left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{2}\right) }\right\}  \\
+&=&\frac{1}{{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\left\{
+\int \left\{ {\frak K}\left( {\sf z}_{1},{\sf z}_{2}\right) -{\frak K}\left( 
+{\sf z},{\sf z}_{2}\right) \right\} {\cal \dot{\varkappa}}\left( {\sf z}%
+,t\right) d{\sf z-}{\frak E}\left( {\sf z}_{1},{\sf z}_{2}\right) -\frac{1}{%
+{\cal N}\left( {\cal \varkappa }\left( t\right) \right) }\frac{\delta {\cal 
+\dot{A}}\left( {\sf z},t\right) }{\delta \varkappa \left( {\sf z}_{1}\right) 
+}\frac{\delta {\cal N}\left( {\cal \varkappa }\left( t\right) \right) }{%
+\delta \varkappa \left( {\sf z}_{2}\right) }\right\} 
+\end{eqnarray}%
+\begin{equation}
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) \delta \dot{\varkappa}\left( {\sf z}%
+_{1}\right) }=\frac{\delta {\cal Z}\left( {\sf z}_{1},t\right) }{\delta
+\varkappa \left( {\sf z}_{2}\right) }
+\end{equation}
+
+\subsection{Many Variables}
+
+In terms of the variables ${\cal V}_{fib},\omega _{fib},\omega _{den},{\cal V%
+}_{den}$ the first order variation of the Lagrangian about the functions $%
+{\cal V}_{fib},\omega _{fib},\omega _{den},{\cal V}_{den}$ is 
+\begin{eqnarray}
+\delta ^{\left( 1\right) }{\cal L}\left( {\cal V}_{fib},\omega _{fib},\omega
+_{den},{\cal V}_{den}\right) &{\cal =}&  \nonumber \\
+&&\int \left\{ \frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta {\cal V}_{fib}\left( {\sf z}\right) }\delta {\cal V}%
+_{fib}\left( {\sf z}\right) +\frac{\delta {\cal L}\left( \varkappa ,\dot{%
+\varkappa},t\right) }{\delta {\cal \dot{V}}_{fib}\left( {\sf z}\right) }%
+\delta {\cal \dot{V}}_{fib}\left( {\sf z}\right) \right\} d{\sf z}  \nonumber
+\\
+&&+\int \left\{ \frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta {\cal \omega }_{fib}\left( {\sf z}\right) }\delta {\cal %
+\omega }_{fib}\left( {\sf z}\right) +\frac{\delta {\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) }{\delta {\cal \dot{\omega}}_{fib}\left( {\sf z}%
+\right) }\delta {\cal \dot{\omega}}_{fib}\left( {\sf z}\right) \right\} d%
+{\sf z}  \nonumber \\
+&&+\int \left\{ \frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta {\cal \omega }_{den}\left( {\sf z}\right) }\delta {\cal %
+\omega }_{den}\left( {\sf z}\right) +\frac{\delta {\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) }{\delta {\cal \dot{\omega}}_{den}\left( {\sf z}%
+\right) }\delta {\cal \dot{\omega}}_{den}\left( {\sf z}\right) \right\} d%
+{\sf z}  \nonumber \\
+&&+\int \left\{ \frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta {\cal V}_{den}\left( {\sf z}\right) }\delta {\cal V}%
+_{den}\left( {\sf z}\right) +\frac{\delta {\cal L}\left( \varkappa ,\dot{%
+\varkappa},t\right) }{\delta {\cal \dot{V}}_{den}\left( {\sf z}\right) }%
+\delta {\cal \dot{V}}_{den}\left( {\sf z}\right) \right\} d{\sf z}
+\end{eqnarray}%
+and the stationarity condition becomes
+
+\begin{eqnarray}
+&&\delta _{{\cal V}_{fib}}{\cal A}=\int \left\{ \frac{\delta {\cal L}\left(
+\varkappa ,\dot{\varkappa},t\right) }{\delta {\cal V}_{fib}\left( {\sf z}%
+\right) }\delta {\cal V}_{fib}\left( {\sf z}\right) +\frac{\delta {\cal L}%
+\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal \dot{V}}%
+_{fib}\left( {\sf z}\right) }\delta {\cal \dot{V}}_{fib}\left( {\sf z}%
+\right) \right\} =0  \nonumber \\
+&&\delta _{{\cal \omega }_{fib}}{\cal A}=\int \left\{ \frac{\delta {\cal L}%
+\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal \omega }%
+_{fib}\left( {\sf z}\right) }\delta {\cal \omega }_{fib}\left( {\sf z}%
+\right) +\frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{%
+\delta {\cal \dot{\omega}}_{fib}\left( {\sf z}\right) }\delta {\cal \dot{%
+\omega}}_{fib}\left( {\sf z}\right) \right\} =0  \nonumber \\
+&&\delta _{{\cal \omega }_{den}}{\cal A}=\int \left\{ \frac{\delta {\cal L}%
+\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal \omega }%
+_{den}\left( {\sf z}\right) }\delta {\cal \omega }_{den}\left( {\sf z}%
+\right) +\frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{%
+\delta {\cal \dot{\omega}}_{den}\left( {\sf z}\right) }\delta {\cal \dot{%
+\omega}}_{den}\left( {\sf z}\right) \right\} =0  \nonumber \\
+&&\delta _{{\cal V}_{den}}{\cal A}=\int \left\{ \frac{\delta {\cal L}\left(
+\varkappa ,\dot{\varkappa},t\right) }{\delta {\cal V}_{den}\left( {\sf z}%
+\right) }\delta {\cal V}_{den}\left( {\sf z}\right) +\frac{\delta {\cal L}%
+\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal \dot{V}}%
+_{den}\left( {\sf z}\right) }\delta {\cal \dot{V}}_{den}\left( {\sf z}%
+\right) \right\} =0
+\end{eqnarray}%
+which are equivalent to the Euler-Lagrange equations 
+\begin{eqnarray}
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta {\cal V}_{fib}\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{%
+\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{%
+\delta {\cal \dot{V}}_{fib}\left( {\sf z}\right) }\right\} &=&0  \nonumber \\
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta \omega _{fib}\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{%
+\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{%
+\delta \dot{\omega}_{fib}\left( {\sf z}\right) }\right\} &=&0  \nonumber \\
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta \omega _{den}\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{%
+\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{%
+\delta \dot{\omega}_{den}\left( {\sf z}\right) }\right\} &=&0  \nonumber \\
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta {\cal V}_{den}\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{%
+\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{%
+\delta {\cal \dot{V}}_{den}\left( {\sf z}\right) }\right\} &=&0
+\end{eqnarray}%
+Note that each ${\cal V}_{fib}\left( {\sf z}\right) ,\omega _{fib}\left( 
+{\sf z}\right) ,\omega _{den}\left( {\sf z}\right) ,{\cal V}_{den}\left( 
+{\sf z}\right) $ acts like an independent variable. The condition for a
+minimum is then 
+\begin{equation}
+\left( 
+\begin{array}{cccccccc}
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta 
+{\cal V}_{fib}\delta {\cal V}_{fib}} & \cdots & \cdots & \frac{\delta ^{2}%
+{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal V}%
+_{fib}\delta {\cal V}_{den}} & \cdots & \cdots & \cdots & \cdots \\ 
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta 
+{\cal \omega }_{fib}\delta {\cal V}_{fib}} & \cdots & \cdots & \frac{\delta
+^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal \omega 
+}_{fib}\delta {\cal V}_{den}} &  &  &  &  \\ 
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta 
+{\cal \omega }_{den}\delta {\cal V}_{fib}} & \cdots & \cdots & \frac{\delta
+^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal \omega 
+}_{den}\delta {\cal V}_{den}} &  &  &  &  \\ 
+\frac{\delta ^{2}{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta 
+{\cal V}_{den}\delta {\cal V}_{fib}} & \vdots & \vdots & \frac{\delta ^{2}%
+{\cal L}\left( \varkappa ,\dot{\varkappa},t\right) }{\delta {\cal V}%
+_{den}\delta {\cal V}_{den}} & \vdots & \vdots & \vdots & \vdots \\ 
+&  &  &  &  &  &  &  \\ 
+\vdots &  &  & \vdots &  &  &  & \vdots \\ 
+&  &  &  &  &  &  &  \\ 
+\cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots%
+\end{array}%
+\right) \geq 0
+\end{equation}%
+in a pointwise fashion. If we consider the variations $\delta \varkappa
+=\left( \delta {\cal V}_{fib},\delta {\cal \omega }_{fib},\delta {\cal %
+\omega }_{den},0\right) $ and find trajectories where 
+\begin{eqnarray}
+&&\int \left\{ \frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta {\cal V}_{fib}\left( {\sf z}\right) }\delta {\cal V}%
+_{fib}\left( {\sf z}\right) +\frac{\delta {\cal L}\left( \varkappa ,\dot{%
+\varkappa},t\right) }{\delta {\cal \dot{V}}_{fib}\left( {\sf z}\right) }%
+\delta {\cal \dot{V}}_{fib}\left( {\sf z}\right) \right\} =0\quad \forall
+\delta {\cal V}_{fib}  \nonumber \\
+&&\int \left\{ \frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta {\cal \omega }_{fib}\left( {\sf z}\right) }\delta {\cal %
+\omega }_{fib}\left( {\sf z}\right) +\frac{\delta {\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) }{\delta {\cal \dot{\omega}}_{fib}\left( {\sf z}%
+\right) }\delta {\cal \dot{\omega}}_{fib}\left( {\sf z}\right) \right\}
+=0\quad \forall \delta {\cal \omega }_{fib}  \nonumber \\
+&&\int \left\{ \frac{\delta {\cal L}\left( \varkappa ,\dot{\varkappa}%
+,t\right) }{\delta {\cal \omega }_{den}\left( {\sf z}\right) }\delta {\cal %
+\omega }_{den}\left( {\sf z}\right) +\frac{\delta {\cal L}\left( \varkappa ,%
+\dot{\varkappa},t\right) }{\delta {\cal \dot{\omega}}_{den}\left( {\sf z}%
+\right) }\delta {\cal \dot{\omega}}_{den}\left( {\sf z}\right) \right\}
+=0\quad \forall \delta {\cal \omega }_{den}
+\end{eqnarray}%
+and the $6\times 6$ Hessian is positive definite almost everywhere then the
+action is a local minimum along those directions for that fixed value of $%
+{\cal V}_{den}$.
+
+\end{document}

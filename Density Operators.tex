@@ -1,0 +1,395 @@
+
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mitpress}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Tuesday, November 24, 2009 13:15:29}
+%TCIDATA{LastRevised=Wednesday, November 25, 2009 14:32:25}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\A Simple MIT Press Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newdimen\dummy
+\dummy=\oddsidemargin
+\addtolength{\dummy}{72pt}
+\marginparwidth=.5\dummy
+\marginparsep=.1\dummy
+\input{tcilatex}
+\begin{document}
+
+\title{A Simple MIT Press Style Article}
+\author{A. U. Thor \\
+%EndAName
+At this Address}
+\maketitle
+
+\begin{abstract}
+Replace this text with the text of your own abstract.
+\end{abstract}
+
+\section{Kernel of $\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }$}
+
+The kernel of $\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }\subset 
+\mathcal{H}_{F}$ is given by 
+\begin{equation}
+K\left( \Delta \right) \equiv \ker \left\{ \left. \Phi ^{\dagger }\Phi
+\right\vert _{\Delta }\right\} =\left\{ \left. \overset{}{\left\vert \Psi
+\right\rangle }\right\vert \Phi \left( \boldsymbol{r}\right) ^{\dagger }\Phi
+\left( \boldsymbol{r}\right) \left\vert \Psi \right\rangle =0\forall 
+\boldsymbol{r}\in \Delta \right\} ,
+\end{equation}%
+which could also be described as 
+\begin{equation}
+K\left( \Delta \right) =\dbigcap\limits_{\boldsymbol{r}\in \Delta }\ker
+\left\{ \Phi \left( \boldsymbol{r}\right) ^{\dagger }\Phi \left( \boldsymbol{%
+r}\right) \right\} .
+\end{equation}%
+The subspace $\ker \left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta
+}\right\} $ can be expanded as 
+\begin{equation}
+K\left( \Delta \right) =\ker \left\{ \left. \Phi ^{\dagger }\Phi \right\vert
+_{\Delta }\right\} =\dbigoplus\limits_{0\leq N\leq \infty }K_{N}\left(
+\Delta \right) ,
+\end{equation}%
+where 
+\begin{equation}
+K_{N}\left( \Delta \right) =P_{N}\ker \left\{ \left. \Phi ^{\dagger }\Phi
+\right\vert _{\Delta }\right\} \subset \mathcal{H}^{N},0\leq N\leq \infty 
+\end{equation}%
+and $P_{N}$ is the orthogonal projector onto $\mathcal{H}^{N}.$ As $\left.
+\Phi ^{\dagger }\Phi \right\vert _{\Delta }$ is a particle conserving
+operator it can be expanded as 
+\begin{equation}
+\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }=\sum_{0\leq N\leq \infty
+}\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta N},
+\end{equation}%
+where 
+\begin{equation}
+\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta N}=P_{N}\left. \Phi
+^{\dagger }\Phi \right\vert _{\Delta }P_{N},0\leq N\leq \infty .
+\end{equation}
+
+If $\left\vert \Psi \right\rangle \in K_{N}\left( \Delta \right) $ then 
+\begin{eqnarray}
+\left\vert \Psi \right\rangle  &=&\int \left\vert \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right\rangle \left\langle \left. \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right\vert \Psi \right\rangle d\boldsymbol{r}_{1}\cdots d%
+\boldsymbol{r}_{N}  \notag \\
+&=&\int \left\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right\rangle
+\Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right) d\boldsymbol{r%
+}_{1}\cdots d\boldsymbol{r}_{N}
+\end{eqnarray}%
+where 
+\begin{equation}
+\Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right) =0\forall 
+\boldsymbol{r}_{j}\in \Delta ,1\leq j\leq N.
+\end{equation}%
+Further 
+\begin{equation}
+\Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right) =0\forall 
+\boldsymbol{r}_{j}\in \Delta ,1\leq j\leq N
+\end{equation}%
+implies $\left\vert \Psi \right\rangle \in K_{N}\left( \Delta \right) $ thus
+the two conditions are equivalent and thus  
+\begin{equation}
+\left\vert \Psi \right\rangle \in K_{N}\left( \Delta \right) \Leftrightarrow
+\left\vert \Psi \right\rangle =\int_{\left( \Delta ^{c}\right)
+^{N}}\left\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right\rangle
+\Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right) d\boldsymbol{r%
+}_{1}\cdots d\boldsymbol{r}_{N}.
+\end{equation}%
+As $\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta N}:\mathcal{H}%
+^{N}\rightarrow $ $\mathcal{H}^{N}$ one has%
+\begin{eqnarray}
+&&\limfunc{range}\left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta
+N}\right\} =\ker \left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta
+N}\right\} ^{\bot }  \notag \\
+&\equiv &K_{N}\left( \Delta \right) ^{\bot }=\left\{ \left\vert \Psi
+\right\rangle \left\vert \int_{\Delta ^{N}}\left\vert \boldsymbol{r}%
+_{1}\cdots \boldsymbol{r}_{N}\right\rangle \Psi \left( \boldsymbol{r}%
+_{1}\cdots \boldsymbol{r}_{N}\right) d\boldsymbol{r}_{1}\cdots d\boldsymbol{r%
+}_{N}\right. \right.   \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. \Psi \left( \boldsymbol{r}%
+_{1}\cdots \boldsymbol{r}_{N}\right) \neq 0\forall \boldsymbol{r}_{j}\in
+\Delta \right\} .
+\end{eqnarray}%
+$\lceil $The operator $\left\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right\rangle \left\langle \boldsymbol{r}_{1}^{\prime }\cdots 
+\boldsymbol{r}_{N}^{\prime }\right\vert $ is defined by 
+\begin{equation}
+\left\langle \left. \Psi _{1}\right\vert \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right\rangle \left\langle \left. \boldsymbol{r}%
+_{1}^{\prime }\cdots \boldsymbol{r}_{N}^{\prime }\right\vert \Psi
+_{2}\right\rangle =\overline{\left\langle \left. \boldsymbol{r}_{1}^{\prime
+}\cdots \boldsymbol{r}_{N}^{\prime }\right\vert \Psi _{1}\right\rangle }%
+\left\langle \left. \boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}%
+_{N}^{\prime }\right\vert \Psi _{2}\right\rangle \,\forall \Psi _{1},\Psi
+_{2}\in \mathcal{S}\left( \mathbb{R}^{n}\right) ,
+\end{equation}%
+where $\mathcal{S}\left( \mathbb{R}^{n}\right) $ the space of rapidly
+decreasing antisymmetric test functions on $\mathbb{R}^{n}$ and 
+\begin{equation}
+\left\langle \left. \boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}%
+_{N}^{\prime }\right\vert \Psi \right\rangle \equiv \left\langle \left.
+\delta _{\boldsymbol{r}_{1}^{\prime }}\mathbf{\wedge \cdots \wedge }\delta _{%
+\boldsymbol{r}_{N}^{\prime }}\right\vert \Psi \right\rangle ,\Psi \in 
+\mathcal{S}\left( \mathbb{R}^{n}\right) 
+\end{equation}%
+the "inner" product of the dirac distributions is defined by 
+\begin{equation}
+\left\langle \left. \boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}%
+_{N}^{\prime }\right\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right\rangle =\frac{1}{N!}\sum_{\sigma \in S_{N}}\left( -1\right) ^{\pi
+\left( \sigma \right) }\delta \left( \boldsymbol{r}_{1}^{\prime }-%
+\boldsymbol{r}_{\sigma \left( 1\right) }\right) \cdots \delta \left( 
+\boldsymbol{r}_{1}^{\prime }-\boldsymbol{r}_{\sigma \left( N\right) }\right) 
+\end{equation}%
+and 
+\begin{eqnarray}
+&&\int \left\langle \left. \boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}%
+_{N}^{\prime }\right\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right\rangle \Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right) d\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}  \notag \\
+&=&\int \left\langle \left. \boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}%
+_{N}^{\prime }\right\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right\rangle \left\langle \left. \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right\vert \Psi \right\rangle d\boldsymbol{r}_{1}\cdots d\boldsymbol{r}%
+_{N};\Psi \in \mathcal{S}\left( \mathbb{R}^{n}\right) .
+\end{eqnarray}%
+$\rfloor $
+
+Consider the operators 
+\begin{equation}
+\left. \mathfrak{f}\right\vert _{\Delta }=\int_{\Delta }f\left( \boldsymbol{r%
+}\right) \Phi \left( \boldsymbol{r}\right) ^{\dagger }\Phi \left( 
+\boldsymbol{r}\right) d\boldsymbol{r=}\sum_{0\leq N\leq \infty }\left. 
+\mathfrak{f}\right\vert _{\Delta N},
+\end{equation}%
+where 
+\begin{equation}
+\left. \mathfrak{f}\right\vert _{\Delta N}=P_{N}\left. \mathfrak{f}%
+\right\vert _{\Delta }P_{N}
+\end{equation}%
+then  
+\begin{eqnarray}
+\ker \left\{ \left. \mathfrak{f}\right\vert _{\Delta }\right\}  &\supseteq
+&\ker \left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }\right\}  
+\notag \\
+\ker \left\{ \left. \mathfrak{f}\right\vert _{\Delta N}\right\}  &\supseteq
+&\ker \left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta N}\right\} .
+\end{eqnarray}%
+Can $\left. \mathfrak{f}\right\vert _{\Delta }$ be zero on $\ker \left\{
+\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }\right\} ^{\bot }=\limfunc{%
+range}\left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }\right\} $
+when $\left. \mathfrak{f}\right\vert _{\Delta }\neq 0?$ Let 
+\begin{equation}
+\int_{\Delta ^{N}}f\left( \boldsymbol{r}\right) \Phi \left( \boldsymbol{r}%
+\right) ^{\dagger }\Phi \left( \boldsymbol{r}\right) d\boldsymbol{r}%
+\int_{\Delta ^{N}}\left\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right\rangle \Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right) d\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}=0
+\end{equation}%
+then 
+\begin{equation}
+\int_{\Delta ^{N+1}}f\left( \boldsymbol{r}\right) \Phi \left( \boldsymbol{r}%
+\right) ^{\dagger }\Phi \left( \boldsymbol{r}\right) \left\vert \boldsymbol{r%
+}_{1}\cdots \boldsymbol{r}_{N}\right\rangle \Psi \left( \boldsymbol{r}%
+_{1}\cdots \boldsymbol{r}_{N}\right) d\boldsymbol{r}d\boldsymbol{r}%
+_{1}\cdots d\boldsymbol{r}_{N}=0
+\end{equation}%
+and%
+\begin{equation}
+\int_{\Delta ^{N}}\left\{ f\left( \boldsymbol{r}_{1}\right) +\cdots +f\left( 
+\boldsymbol{r}_{N}\right) \right\} \left\vert \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right\rangle \Psi \left( \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right) d\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}=0,
+\end{equation}%
+which is impossible unless 
+\begin{equation}
+f\left( \boldsymbol{r}_{1}\right) +\cdots +f\left( \boldsymbol{r}_{N}\right)
+=0\forall \boldsymbol{r}_{j}\in \Delta ,1\leq j\leq N\text{ as\thinspace }%
+\Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right) \neq 0\forall 
+\boldsymbol{r}_{j}\in \Delta ,1\leq j\leq N,\text{ }
+\end{equation}%
+which would imply 
+\begin{equation}
+\left. \mathfrak{f}\right\vert _{\Delta }=0,
+\end{equation}%
+which is a contradiction thus  
+\begin{equation}
+\ker \left\{ \left. \mathfrak{f}\right\vert _{\Delta }\right\} =\ker \left\{
+\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }\right\} .
+\end{equation}
+
+If $\left\vert \Psi _{j}\right\rangle $ and $\left\vert \Psi
+_{k}\right\rangle $ both belong to $\ker \left\{ \left. \Phi ^{\dagger }\Phi
+\right\vert _{\Delta }\right\} $ then $\Phi \left( \boldsymbol{r}\right)
+^{\dagger }\Phi \left( \boldsymbol{r}\right) \forall \boldsymbol{r}\in
+\Delta $ commutes with the following ket-bras and%
+\begin{eqnarray}
+\Phi \left( \boldsymbol{r}\right) ^{\dagger }\Phi \left( \boldsymbol{r}%
+\right) \left\vert \Psi _{j}\right\rangle \left\langle \Psi _{k}\right\vert 
+&=&0  \notag \\
+\Phi \left( \boldsymbol{r}\right) ^{\dagger }\Phi \left( \boldsymbol{r}%
+\right) \left\vert \Psi _{k}\right\rangle \left\langle \Psi _{j}\right\vert 
+&=&0  \notag \\
+\forall \boldsymbol{r} &\in &\Delta 
+\end{eqnarray}%
+\begin{equation}
+\Updownarrow 
+\end{equation}
+\begin{eqnarray}
+\Phi \left( \boldsymbol{r}\right) ^{\dagger }\Phi \left( \boldsymbol{r}%
+\right) \left\{ \left\vert \Psi _{j}\right\rangle \left\langle \Psi
+_{k}\right\vert +\left\vert \Psi _{k}\right\rangle \left\langle \Psi
+_{j}\right\vert \right\}  &=&0  \notag \\
+\Phi \left( \boldsymbol{r}\right) ^{\dagger }\Phi \left( \boldsymbol{r}%
+\right) i\left\{ \left\vert \Psi _{j}\right\rangle \left\langle \Psi
+_{k}\right\vert -\left\vert \Psi _{k}\right\rangle \left\langle \Psi
+_{j}\right\vert \right\}  &=&0  \notag \\
+\forall \boldsymbol{r} &\in &\Delta .
+\end{eqnarray}
+
+One can then define the operator kernel, $\mathcal{K}\left( \Delta \right) ,$
+of $\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }$ $\subset \mathcal{B}%
+_{0}\left( \mathcal{H}^{N}\right) $ as 
+\begin{equation}
+\mathcal{K}\left( \Delta \right) =\left\{ \left. \overset{\left. {}\right. }{%
+\left\vert \Psi _{k}\right\rangle \left\langle \Psi _{j}\right\vert }%
+\right\vert \left\vert \Psi _{j}\right\rangle ,\left\vert \Psi
+_{k}\right\rangle \in \ker \left\{ \left. \Phi ^{\dagger }\Phi \right\vert
+_{\Delta }\right\} \right\} ,
+\end{equation}%
+which is actually 
+\begin{equation}
+\ker \left\{ \widehat{\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }}%
+\right\} \subset \mathcal{B}_{0}\left( \mathcal{H}^{N}\right) 
+\end{equation}%
+that can easily be extended to the space of self adjoint operators. The
+ket-bras $\left\{ \left. \left\vert \Psi _{j}\right\rangle \left\langle \Psi
+_{k}\right\vert \right\vert 1\leq j,k\leq \infty \right\} $ and their self
+adjoint combinations form bases for the various operator spaces if $\left\{
+\left. \left\vert \Psi _{j}\right\rangle \right\vert 1\leq j\leq \infty
+\right\} $ is a conb for $\mathcal{H}_{F}$ and then 
+\begin{equation}
+\mathcal{K}\left( \Delta \right) =\limfunc{linspan}\left\{ \left. \overset{%
+\left. {}\right. }{\left\vert \Psi _{k}\right\rangle \left\langle \Psi
+_{j}\right\vert }\right\vert \left\vert \Psi _{j}\right\rangle ,\left\vert
+\Psi _{k}\right\rangle \in \ker \left\{ \left. \Phi ^{\dagger }\Phi
+\right\vert _{\Delta N}\right\} =K_{N}\left( \Delta \right) \right\} .
+\end{equation}%
+As $\left. \Phi ^{\dagger }\Phi \right\vert _{\Delta }$ is a particle
+conserving operator one can note that 
+\begin{equation}
+\mathcal{K}\left( \Delta \right) =\dbigoplus\limits_{0\leq N\leq \infty }%
+\mathcal{K}_{N}\left( \Delta \right) ,
+\end{equation}%
+where 
+\begin{equation}
+\mathcal{K}_{N}\left( \Delta \right) =P_{N}\mathcal{K}\left( \Delta \right)
+P_{N},0\leq N\leq \infty .
+\end{equation}
+
+Hence%
+\begin{eqnarray}
+\left\vert \Psi \right\rangle \left\langle \Psi ^{\prime }\right\vert  &\in &%
+\mathcal{K}_{N}\left( \Delta \right) \subset \mathcal{B}_{0}\left( \mathcal{H%
+}^{N}\right) \Leftrightarrow   \notag \\
+\left\vert \Psi \right\rangle \left\langle \Psi ^{\prime }\right\vert 
+&=&\int_{\left( \Delta ^{c}\right) ^{2N}}\left\vert \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right\rangle \left\langle \boldsymbol{r}_{1}^{\prime
+}\cdots \boldsymbol{r}_{N}^{\prime }\right\vert \Psi \left( \boldsymbol{r}%
+_{1}\cdots \boldsymbol{r}_{N}\right) \overline{\Psi ^{\prime }\left( 
+\boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}_{N}^{\prime }\right) }d%
+\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}d\boldsymbol{r}_{1}^{\prime
+}\cdots d\boldsymbol{r}_{N}^{\prime }.
+\end{eqnarray}%
+and thus 
+\begin{eqnarray}
+&&\mathcal{B}_{0}\left( \mathcal{H}^{N}\right) \supset \limfunc{range}%
+\left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta N}\right\} =%
+\mathcal{K}_{N}\left( \Delta \right) ^{\bot }  \notag \\
+&=&\left\{ \left\vert \Psi \right\rangle \left\langle \Psi ^{\prime
+}\right\vert =\int_{\Delta ^{2N}}\left\vert \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right\rangle \left\langle \boldsymbol{r}_{1}^{\prime
+}\cdots \boldsymbol{r}_{N}^{\prime }\right\vert \Psi \left( \boldsymbol{r}%
+_{1}\cdots \boldsymbol{r}_{N}\right) \overline{\Psi ^{\prime }\left( 
+\boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}_{N}^{\prime }\right) }d%
+\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}d\boldsymbol{r}_{1}^{\prime
+}\cdots d\boldsymbol{r}_{N}^{\prime }\right\} ,  \notag \\
+&&\Psi \left( \boldsymbol{r}_{1}\cdots \boldsymbol{r}_{N}\right) \neq 0,\Psi
+^{\prime }\left( \boldsymbol{r}_{1}^{\prime }\cdots \boldsymbol{r}%
+_{N}^{\prime }\right) \neq 0\forall \boldsymbol{r}_{j},\boldsymbol{r}%
+_{j}^{\prime }\in \Delta .
+\end{eqnarray}
+
+As $\left\vert \Psi _{j}\right\rangle ,\left\vert \Psi _{k}\right\rangle \in
+\ker \left\{ \left. \Phi ^{\dagger }\Phi \right\vert _{\Delta N}\right\} $
+when $\left\vert \Psi _{k}\right\rangle \left\langle \Psi _{j}\right\vert
+\in \mathcal{K}_{N}\left( \Delta \right) $ one can deduce that for $X$ and $%
+Y\in \mathcal{B}_{0}\left( \mathcal{H}^{N}\right) $  
+\begin{equation}
+Y_{N}=\int_{\left( \Delta ^{c}\right) ^{2N}}Y\left( \boldsymbol{r}%
+_{1}^{\prime },\cdots ,\boldsymbol{r}_{N}^{\prime },\boldsymbol{r}%
+_{1},\cdots ,\boldsymbol{r}_{N}\right) \left\vert \boldsymbol{r}_{1}\cdots 
+\boldsymbol{r}_{N}\right\rangle \left\langle \boldsymbol{r}_{1}^{\prime
+}\cdots \boldsymbol{r}_{N}^{\prime }\right\vert d\boldsymbol{r}_{1}\cdots d%
+\boldsymbol{r}_{N}d\boldsymbol{r}_{1}^{\prime }\cdots d\boldsymbol{r}%
+_{N}^{\prime }\in \mathcal{K}_{N}\left( \Delta \right) 
+\end{equation}
+\begin{equation}
+X_{N}=\int_{\Delta ^{2N}}X\left( \boldsymbol{r}_{1}^{\prime },\cdots ,%
+\boldsymbol{r}_{N}^{\prime },\boldsymbol{r}_{1},\cdots ,\boldsymbol{r}%
+_{N}\right) \left\vert \boldsymbol{r}_{1}\cdots \boldsymbol{r}%
+_{N}\right\rangle \left\langle \boldsymbol{r}_{1}^{\prime }\cdots 
+\boldsymbol{r}_{N}^{\prime }\right\vert d\boldsymbol{r}_{1}\cdots d%
+\boldsymbol{r}_{N}d\boldsymbol{r}_{1}^{\prime }\cdots d\boldsymbol{r}%
+_{N}^{\prime }\in \mathcal{K}_{N}\left( \Delta \right) ^{\bot }
+\end{equation}%
+and%
+\begin{equation}
+\mathcal{K}_{N}\left( \Delta \right) ^{\bot }=\limfunc{range}\left\{ 
+\widehat{X}\right\} .
+\end{equation}%
+One can see that $\widehat{\left. \mathfrak{f}\right\vert _{\Delta N}}$ are
+special cases of these operators and that 
+\begin{equation}
+\mathcal{K}\left( \widehat{\left. \mathfrak{f}\right\vert _{\Delta N}}%
+\right) =\mathcal{K}_{N}\left( \Delta \right) 
+\end{equation}%
+leading to     
+\begin{equation}
+\mathcal{K}\left( \widehat{\left. \mathfrak{f}\right\vert _{\Delta }}\right)
+=\mathcal{K}\left( \Delta \right) .
+\end{equation}
+
+\end{document}

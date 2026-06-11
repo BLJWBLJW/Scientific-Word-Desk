@@ -1,0 +1,579 @@
+%TCIDATA{LaTeXparent=0,0,EOMN.tex}
+                      
+
+\subsection{General Form of Partitioning}
+
+Consider the matrix equation 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+{\Bbb A}_{11} & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)  \label{ME1}
+\end{equation}%
+that is equivalent to the coupled equations 
+\begin{eqnarray}
+{\Bbb A}_{11}{\bf x}_{1}+{\Bbb A}_{12}{\bf x}_{2} &=&{\bf y}_{1}  \nonumber
+\\
+{\Bbb A}_{21}{\bf x}_{1}+{\Bbb A}_{22}{\bf x}_{2} &=&{\bf y}_{2}
+\end{eqnarray}%
+we can solve for ${\bf x}_{1}$ from the top equation to obtain a ''fixed'' $%
+{\bf x}_{1}$ 
+\begin{equation}
+{\bf x}_{1}={\Bbb A}_{11}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}%
+_{2}\right)  \label{x1eq}
+\end{equation}%
+and then substitute in the bottom equation to obtain a solution for ${\bf x}%
+_{2}$ 
+\begin{equation}
+{\bf x}_{2}=\left( {\Bbb A}_{22}+{\Bbb A}_{21}{\Bbb A}_{11}^{-1}{\Bbb A}%
+_{12}\right) ^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\Bbb A}_{11}^{-1}{\bf y}%
+_{1}\right)  \label{x2sol}
+\end{equation}%
+which then determines ${\bf x}_{1}$ by eq. $\left( \ref{x1eq}\right) $. The
+choice of which variables to call ${\bf x}_{1}$ and ${\bf x}_{2}$ in any
+problem is of course quite arbitrary. One should also observe that the ${\bf %
+x}_{2}$ obtained from eq. $\left( \ref{x2sol}\right) $ can also be expressed
+as 
+\begin{equation}
+{\bf x}_{2}={\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1}\right)  \label{x2leq}
+\end{equation}%
+where ${\bf x}_{1}$ is given by eq. $\left( \ref{x1eq}\right) $. If neither $%
+{\Bbb A}$ nor ${\bf y}$ depend on ${\bf x}$ and all the inverses exist then
+a fixed solution for ${\bf x}_{1}$ and ${\bf x}_{2}$ is obtained in one
+iteration.
+
+The equations we deal with are, however, in general nonlinear i.e. 
+\begin{eqnarray}
+{\Bbb A}_{ij} &=&{\Bbb A}_{ij}\left( {\bf x}_{1},{\bf x}_{2}\right) ;\quad
+1\leq i,j\leq 2  \nonumber \\
+{\bf y}_{i} &=&{\bf y}_{i}\left( {\bf x}_{1},{\bf x}_{2}\right) ;\quad 1\leq
+i\leq 2
+\end{eqnarray}%
+and we have to iterate to obtain a solution by fixing a value for ${\bf x}%
+_{1}$ and solving for ${\bf x}_{2\text{ }}$to obtain 
+\begin{equation}
+{\bf x}_{2}=\left( {\Bbb A}_{22}+{\Bbb A}_{21}{\Bbb A}_{11}^{-1}{\Bbb A}%
+_{12}\right) ^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\Bbb A}_{11}^{-1}{\bf y}%
+_{1}\right) ={\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1}\right)  \label{x2parteq}
+\end{equation}%
+until one reaches self consistency or fixing a value for ${\bf x}_{2}$ and
+solving for ${\bf x}_{1\text{ }}$to obtain%
+\begin{equation}
+{\bf x}_{1}={\Bbb A}_{11}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}%
+_{2}\right)  \label{x1parteq}
+\end{equation}%
+until one reaches self consistency. When we have a partial self consistent
+solution for ${\bf x}_{1}$ and use a fixed ${\bf x}_{2}$ we can substitute
+back into the equations to obtain 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{cc}
+{\Bbb A}_{11} & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\Bbb A}_{11}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}_{2}\right) \\ 
+{\bf x}_{2}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+{\Bbb A}_{11}{\Bbb A}_{11}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}%
+_{2}\right) +{\Bbb A}_{12}{\bf x}_{2} \\ 
+{\Bbb A}_{21}{\Bbb A}_{11}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}%
+_{2}\right) +{\Bbb A}_{22}{\bf x}_{2}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}_{2}\right) +{\Bbb A}_{12}{\bf x}_{2}
+\\ 
+{\Bbb A}_{21}{\Bbb A}_{11}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}%
+_{2}\right) +{\Bbb A}_{22}{\bf x}_{2}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+{\bf 0} \\ 
+{\Bbb A}_{21}{\Bbb A}_{11}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\bf x}%
+_{2}\right) +{\Bbb A}_{22}{\bf x}_{2}-{\bf y}_{2}%
+\end{array}%
+\right)  \label{baksub1}
+\end{eqnarray}%
+While when we have a partial self consistent solution for ${\bf x}_{2}$ and
+use a fixed ${\bf x}_{1}$ we can substitute back into the equations to
+obtain 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{cc}
+{\Bbb A}_{11} & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+\left( {\Bbb A}_{22}+{\Bbb A}_{21}{\Bbb A}_{11}^{-1}{\Bbb A}_{12}\right)
+^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\Bbb A}_{11}^{-1}{\bf y}_{1}\right)%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+{\Bbb A}_{11}{\bf x}_{1}+{\Bbb A}_{12}\left( {\Bbb A}_{22}+{\Bbb A}_{21}%
+{\Bbb A}_{11}^{-1}{\Bbb A}_{12}\right) ^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}%
+{\Bbb A}_{11}^{-1}{\bf y}_{1}\right) \\ 
+{\Bbb A}_{21}{\bf x}_{1}+{\Bbb A}_{22}\left( {\Bbb A}_{22}+{\Bbb A}_{21}%
+{\Bbb A}_{11}^{-1}{\Bbb A}_{12}\right) ^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}%
+{\Bbb A}_{11}^{-1}{\bf y}_{1}\right)%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+{\Bbb A}_{11}{\bf x}_{1}+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left\{ {\bf y}_{2}-%
+{\Bbb A}_{21}{\bf x}_{1}\right\} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+{\Bbb A}_{11}{\bf x}_{1}+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left\{ {\bf y}_{2}-%
+{\Bbb A}_{21}{\bf x}_{1}\right\} -{\bf y}_{1} \\ 
+{\bf 0}%
+\end{array}%
+\right)  \label{baksub2}
+\end{eqnarray}%
+The partitioning displayed above obviously only works when the various
+inverses exist.
+
+We can obtain equivalent equations by multiplying both sides of eq. $\left( %
+\ref{ME1}\right) $ by an invertible matrix e.g. 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+{\Bbb B}_{11} & {\Bbb B}_{12} \\ 
+{\Bbb B}_{21} & {\Bbb B}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+{\Bbb A}_{11} & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+{\Bbb B}_{11} & {\Bbb B}_{12} \\ 
+{\Bbb B}_{21} & {\Bbb B}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+{\bf z}_{1} \\ 
+{\bf z}_{2}%
+\end{array}%
+\right)  \label{pre}
+\end{equation}%
+and then partitioning in the same manner. If ${\Bbb A}_{12}={\Bbb A}_{21}=0$
+then the equations are uncoupled if they are linear, but are still coupled
+if they are nonlinear. If ${\Bbb A}_{11}={\Bbb A}_{22}=0$ then one can
+premultiply eq. $\left( \ref{pre}\right) $ by $\left( 
+\begin{array}{cc}
+{\Bbb O} & {\Bbb I} \\ 
+{\Bbb I} & {\Bbb O}%
+\end{array}%
+\right) $ and then solve, but then the partial solutions do not give the
+same back substituted properties displayed in eqs. $\left( \ref{baksub1}%
+\right) $ and $\left( \ref{baksub2}\right) $ i.e. the residual vectors of
+the original problem generally have zero components in different positions
+or no zero components at all.
+
+\subsection{Zero ${\Bbb A}_{22}$ Block}
+
+The {\em nonlinear }equation eq. $\left( \ref{ME1}\right) $ for ${\bf x}_{1}$
+and ${\bf x}_{2}$ 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+{\Bbb A}_{11} & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) =0
+\end{equation}%
+does not have be solved in the preceding manner, in fact when one of the
+diagonal blocks is zero it may become impossible. In particular consider 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+0 & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) =0\Longleftrightarrow \left. 
+\begin{array}{c}
+\qquad \qquad {\Bbb A}_{12}{\bf x}_{2}-{\bf y}_{1}=0 \\ 
+{\Bbb A}_{21}{\bf x}_{1}+{\Bbb A}_{22}{\bf x}_{2}-{\bf y}_{2}=0%
+\end{array}%
+\right\}
+\end{equation}%
+which gives for fixed ${\bf x}_{1}$ the equation 
+\begin{equation}
+{\Bbb A}_{22}{\bf x}_{2}={\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1}  \label{x2le}
+\end{equation}%
+for ${\bf x}_{2}$. A self consistent solution, ${\bf x}_{2\#}\left( {\bf x}%
+_{1\left( k\right) }\right) $, is obtained by iterating ${\bf x}_{2}$ in eq. 
+$\left( \ref{x2le}\right) $ at the fixed value ${\bf x}_{1}={\bf x}_{1\left(
+k\right) }$ 
+\begin{equation}
+{\bf x}_{2\#}\left( {\bf x}_{1\left( k\right) }\right) ={\Bbb A}%
+_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1\left( k\right) }\right)
+\label{x2}
+\end{equation}%
+If one substitutes back this partial solution, noting that all quantities, $%
+{\Bbb A}_{12},{\Bbb A}_{21},{\Bbb A}_{22},{\bf y}_{1}$ and ${\bf y}_{2}$ are
+evaluated at $\left( {\bf x}_{1\left( k\right) },{\bf x}_{2\#}\left( {\bf x}%
+_{1\left( k\right) }\right) \right) $, we obtain 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{cc}
+0 & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1\left( k\right) } \\ 
+{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1\left( k\right)
+}\right)%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) =  \nonumber \\
+&&\qquad \left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1\left( k\right) }\right) -{\bf y}_{1} \\ 
+{\Bbb A}_{21}{\bf x}_{1\left( k\right) }+{\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1\left( k\right) }-{\bf y}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1\left( k\right) }\right) -{\bf y}_{1} \\ 
+{\bf 0}%
+\end{array}%
+\right)  \label{baksub}
+\end{eqnarray}%
+The self consistent solution, ${\bf x}_{1\#\left( k+1\right) }$, for ${\bf x}%
+_{1}$ at ${\bf x}_{2\#}\left( {\bf x}_{1\left( k\right) }\right) $ is then
+obtained by iterating ${\bf x}_{1\left( k+1\right) }$ in%
+\begin{equation}
+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1\left( k+1\right) }\right) -{\bf y}_{1}=0
+\end{equation}%
+or in the formal relationship 
+\begin{equation}
+{\bf x}_{1\left( k+1\right) }={\Bbb A}_{12}^{-1}{\Bbb A}_{22}{\Bbb A}%
+_{21}^{-1}\left( {\bf y}_{1}-{\Bbb A}_{12}{\Bbb A}_{22}^{-1}{\bf y}%
+_{2}\right)  \label{x1kplus1}
+\end{equation}%
+where all quantities are evaluated at $\left( {\bf x}_{1\left( k+1\right) },%
+{\bf x}_{2\#}\left( {\bf x}_{1\left( k\right) }\right) \right) $ and left
+inverses are used for ${\Bbb A}_{12}$ and ${\Bbb A}_{21}$. These two coupled
+iterative sequences can then be repeated until self consistency is reached
+for both ${\bf x}_{1}$ and ${\bf x}_{2}$ to obtain a solution of the full
+non linear problem.
+
+If ${\Bbb A}_{22}$ is singular then eq. $\left( \ref{x2}\right) $ becomes%
+\begin{equation}
+{\bf x}_{2\#}\left( {\bf x}_{1\left( k\right) },{\bf k}\right) ={\Bbb A}%
+_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1\left( k\right) }\right)
++{\bf k}  \label{x2eq}
+\end{equation}%
+where we use the generalized inverse ${\Bbb A}_{22}^{-1}$ of ${\Bbb A}_{22}$%
+, ${\bf k}\in \ker {\Bbb A}_{22}$ and the subsidiary condition 
+\begin{equation}
+P_{\ker {\Bbb A}_{22}}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1\left(
+k\right) }\right) =0  \label{x2cond}
+\end{equation}%
+must be satisfied, with all terms evaluated at $\left( {\bf x}_{1\left(
+k\right) },{\bf x}_{2\#}\left( {\bf x}_{1\left( k\right) },{\bf k}\right)
+\right) $. Then the back substitution eq. $\left( \ref{baksub}\right) $
+becomes 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{cc}
+0 & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1\left( k\right) } \\ 
+{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1\left( k\right)
+}\right) +{\bf k}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) =  \nonumber \\
+&&\qquad \left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1\left( k\right) }\right) +{\Bbb A}_{12}{\bf k}-{\bf y}_{1} \\ 
+P_{\ker {\Bbb A}_{22}}^{c}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1\left(
+k\right) }\right) +{\Bbb A}_{21}{\bf x}_{1\left( k\right) }-{\bf y}_{2}%
+\end{array}%
+\right) =  \nonumber \\
+&&\qquad \qquad \qquad \qquad \left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf x}%
+_{1\left( k\right) }\right) +{\Bbb A}_{12}{\bf k}-{\bf y}_{1} \\ 
+{\bf 0}%
+\end{array}%
+\right)  \label{subbak}
+\end{eqnarray}%
+for any ${\bf k}$. The equation for a self consistent value, ${\bf x}%
+_{1\#\left( k+1\right) }\left( {\bf x}_{2\#}\left( {\bf x}_{1\left( k\right)
+},{\bf k}\right) \right) $, for ${\bf x}_{1}$ at ${\bf x}_{2}={\bf x}%
+_{2\#}\left( {\bf x}_{1\left( k\right) },{\bf k}\right) $ obtained from eq. $%
+\left( \ref{subbak}\right) $ is%
+\begin{equation}
+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}{\Bbb A}_{21}{\bf x}_{1\#\left( k+1\right) }=%
+{\Bbb A}_{12}{\Bbb A}_{22}^{-1}{\bf y}_{2}-{\bf y}_{1}+{\Bbb A}_{12}{\bf k}
+\label{scx1}
+\end{equation}%
+which can be formally solved as 
+\begin{equation}
+{\bf x}_{1\#\left( k+1\right) }\left( {\bf x}_{1\left( k\right) },{\bf k}%
+\right) ={\Bbb A}_{21}^{-1}{\Bbb A}_{22}{\Bbb A}_{12}^{-1}\left( {\Bbb A}%
+_{12}{\Bbb A}_{22}^{-1}{\bf y}_{2}-{\bf y}_{1}\right) ={\Bbb A}_{21}^{-1}%
+{\bf y}_{2}-{\Bbb A}_{21}^{-1}{\Bbb A}_{22}{\Bbb A}_{12}^{-1}{\bf y}_{1}
+\end{equation}%
+where ${\Bbb A}_{12},{\Bbb A}_{21},{\Bbb A}_{22},{\bf y}_{1},$ and ${\bf y}%
+_{2}$ are evaluated at $\left( {\bf x}_{1\#\left( k+1\right) },{\bf x}%
+_{2\#}\left( {\bf x}_{1\left( k\right) },{\bf k}\right) \right) $. This
+value can then be substituted back into the equation for ${\bf x}_{2}$,
+which can then be iterated to self consistency once more, the new self
+consistent value of ${\bf x}_{2}$ can then be used to obtain a new self
+consistent value of ${\bf x}_{1}$ and so on.
+
+Instead\ of iterating to self consistency for a new\ ${\bf x}_{1\#\left(
+k+1\right) }$ and then substituting back into the equation for ${\bf x}_{2}$%
+, which would be the most efficient way to solve the total coupled problem,
+one could find paths of self consistent solutions, ${\bf x}_{2\#}\left( {\bf %
+x}_{1},{\bf k}\right) $, for all possible ${\bf x}_{1}$'s producing paths, $%
+{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right) $, of ${\bf x}_{2}$'s that
+satisfy 
+\begin{equation}
+{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right) ={\Bbb A}_{22}^{-1}\left( 
+{\bf y}_{2}-{\Bbb A}_{21}{\bf x}_{1}\right) +{\bf k}
+\end{equation}%
+where 
+\begin{eqnarray}
+{\Bbb A}_{22} &=&{\Bbb A}_{22}\left( {\bf x}_{1},{\bf x}_{2\#}\left( {\bf x}%
+_{1},{\bf k}\right) \right)  \nonumber \\
+{\bf y}_{2} &=&{\bf y}_{2}\left( {\bf x}_{1},{\bf x}_{2\#}\left( {\bf x}_{1},%
+{\bf k}\right) \right)  \nonumber \\
+{\Bbb A}_{21} &=&{\Bbb A}_{21}\left( {\bf x}_{1},{\bf x}_{2\#}\left( {\bf x}%
+_{1},{\bf k}\right) \right)  \nonumber \\
+{\bf k} &=&{\bf k}\left( {\bf x}_{1}\right)
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+\left( 
+\begin{array}{cc}
+0 & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right)%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right) -{\bf y}_{1} \\ 
+{\Bbb A}_{21}{\bf x}_{1}+{\Bbb A}_{22}{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}%
+\right) -{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right) -{\bf y}_{1} \\ 
+0%
+\end{array}%
+\right)
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+{\Bbb A}_{12} &=&{\Bbb A}_{12}\left( {\bf x}_{1},{\bf x}_{2\#}\left( {\bf x}%
+_{1},{\bf k}\right) \right)  \nonumber \\
+{\bf y}_{1} &=&{\bf y}_{1}\left( {\bf x}_{1},{\bf x}_{2\#}\left( {\bf x}_{1},%
+{\bf k}\right) \right)
+\end{eqnarray}%
+Then solve the nonlinear equation for ${\bf x}_{1}$ 
+\begin{eqnarray}
+&&{\Bbb A}_{12}{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right) -{\bf y}_{1}=0
+\nonumber \\
+&\equiv &{\Bbb A}_{12}{\Bbb A}_{22}^{-1}\left( {\bf y}_{2}-{\Bbb A}_{21}{\bf %
+x}_{1}\right) +{\Bbb A}_{12}{\bf k}-{\bf y}_{1}=0  \label{X1eq}
+\end{eqnarray}%
+with formal solution 
+\[
+{\bf x}_{1\#}={\Bbb A}_{21}^{-1}{\bf y}_{2}-{\Bbb A}_{21}^{-1}{\Bbb A}_{22}%
+{\Bbb A}_{12}^{-1}{\bf y}_{1}={\Bbb A}_{21}^{-1}\left( {\bf y}_{2}-{\Bbb A}%
+_{22}{\Bbb A}_{12}^{-1}{\bf y}_{1}\right) 
+\]%
+(which corresponds to the equation we identified for ${\cal V}_{den}$ in eq. 
+$\left( \ref{gammaeq}\right) $) to determine the exact ${\bf x}_{1}$, where
+everything in eq. $\left( \ref{X1eq}\right) $ is evaluated along the paths $%
+\left( {\bf x}_{1},{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right) \right) $.
+The different paths of solutions ${\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}%
+\right) $ are labelled by ${\bf k}$ i.e. 
+\begin{equation}
+{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right) \neq {\bf x}_{2\#}\left( {\bf %
+x}_{1},{\bf k}^{\prime }\right) \text{ for }{\bf k}\left( {\bf x}_{1}\right)
+\neq {\bf k}^{\prime }\left( {\bf x}_{1}\right)
+\end{equation}%
+and an extra criterion must be used to determine unique paths. As ${\bf x}%
+_{2\#}\left( {\bf x}_{1},{\bf k}\right) $ is always a self consistent
+solution for ${\bf x}_{2}$ in eq. $\left( \ref{x2eq}\right) $ one can
+observe that for any ${\bf x}_{1}$ we have 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{cc}
+0 & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}\right)%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\bf x}_{2\#}\left( {\bf x}_{1}\right) -{\bf y}_{1} \\ 
+{\Bbb A}_{21}{\bf x}_{1}+{\Bbb A}_{22}{\bf x}_{2\#}\left( {\bf x}_{1},{\bf k}%
+\right) -{\bf y}_{2}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\bf x}_{2\#}\left( {\bf x}_{1}\right) -{\bf y}_{1} \\ 
+{\Bbb A}_{21}{\bf x}_{1}+{\Bbb A}_{22}\left( {\Bbb A}_{22}^{-1}\left( {\bf y}%
+_{2}-{\Bbb A}_{21}{\bf x}_{1}\right) +{\bf k}\right) -{\bf y}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\bf x}_{2\#}\left( {\bf x}_{1}\right) -{\bf y}_{1} \\ 
+{\bf 0}%
+\end{array}%
+\right)
+\end{eqnarray}%
+i.e.%
+\begin{equation}
+\left( 
+\begin{array}{cc}
+0 & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2\#}\left( {\bf x}_{1}\right)%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+{\Bbb A}_{12}{\bf x}_{2\#}\left( {\bf x}_{1}\right) -{\bf y}_{1} \\ 
+0%
+\end{array}%
+\right)
+\end{equation}

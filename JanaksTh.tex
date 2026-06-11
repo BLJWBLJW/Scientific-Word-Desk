@@ -1,0 +1,235 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, September 20, 2004 09:58:21}
+%TCIDATA{LastRevised=Saturday, November 20, 2004 09:34:41}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+
+The total energy can be expressed as
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2}\left(  \bm{\upsilon}\right)
+,\bm{\upsilon}\right)  =\mathcal{E}\left(  \mathbb{D}^{2}\left(
+\bm{\varphi}\right)  ,\bm{\varphi}\right)  =\frac{1}{2}\sum_{1\leq p\leq
+2s}N_{p}\left\{  I\left(  \upsilon_{p}\right)  +\left\langle \left.
+\upsilon_{p}\right\vert h_{1}\upsilon_{p}\right\rangle \right\}  =\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+N_{p}\kappa\left(  \upsilon_{p}\right)
+\end{equation}
+where
+\begin{equation}
+\kappa\left(  \upsilon_{p}\right)  =I\left(  \upsilon_{p}\right)
++\left\langle \left.  \upsilon_{p}\right\vert h_{1}\upsilon_{p}\right\rangle
+\end{equation}%
+\begin{equation}
+h_{1}=\sum_{1\leq j,k\leq2s}h_{1jk}\left(  \upsilon\right)  \left\vert
+\upsilon_{j}\right\rangle \left\langle \upsilon_{k}\right\vert
+\end{equation}
+and
+\begin{equation}
+h_{1jk}\left(  \upsilon\right)  =\left\langle \upsilon_{j}\left\vert h\right.
+\upsilon_{k}\right\rangle =-\int\upsilon_{j}^{\ast}\left(  \bm{r,\xi}\right)
+\left\{  \sum_{_{1\leq l\leq N_{nuc}}}\frac{Z_{l}}{\left\Vert \bm{R}_{l}%
+-\bm{r}\right\Vert }+\nabla_{\bm{r}}^{2}\right\}  \upsilon_{k}\left(
+\bm{r,\xi}\right)  d\bm{r}d\xi;\quad1\leq j,k\leq2s,\label{h1}%
+\end{equation}
+Using the Fock operator
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\bm{\varphi}\right)  =\frac{1}{2}\left\{
+\overset{}{\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2}%
+,\bm{\varphi}\right)  \right\}  +\mathcal{E}_{1}\left(  \mathbb{D}%
+^{2},\bm{\varphi}\right)  }\right\}  .
+\end{equation}%
+\begin{align}
+\mathcal{E}\left(  \mathbf{n,\psi}\right)   &  =\frac{\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }\nonumber\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left\langle \psi_{j}\left\vert
+h_{1}\psi_{j}\right.  \right\rangle +\left\langle \psi_{j+s}\left\vert
+h_{1}\psi_{j+s}\right.  \right\rangle +\left\langle \psi_{j}\psi_{j+s}%
+||\psi_{j}\psi_{j+s}\right\rangle \right\}  \right.  \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\jmath k\right)  \left\langle \psi_{j}\psi_{j+s}||\psi_{k}\psi_{k+s}%
+\right\rangle \left.  +\sum_{1\leq j<k\leq s}n_{i}n_{j}S_{N-2}\left(  \jmath
+k\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle
+\right\}  .\label{energy}%
+\end{align}%
+\begin{equation}
+\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda}\right)  =\frac
+{\mathcal{H}\left(  \mathbf{\eta},\mathbf{\lambda}\right)  }{S_{N}\left(
+\mathbf{\eta}\right)  }=\frac{\left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda}\right)  ^{N}\right\vert Hg\left(  \mathbf{\eta
+},\mathbf{\lambda}\right)  ^{N}\right\rangle }{S_{N}\left(  \mathbf{\eta
+}\right)  },\label{gp_funct}%
+\end{equation}%
+\begin{equation}
+S_{N}\left(  \mathbf{\eta}\right)  =\left\langle \left.  k\left(
+\mathbf{\eta}\right)  g_{0}^{N}\right\vert k\left(  \mathbf{\eta}\right)
+g_{0}^{N}\right\rangle =\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}e^{\eta_{j_{1}%
+}+\cdots+\eta_{j_{N}}}n_{j_{1}}\cdots n_{j_{N}}.
+\end{equation}%
+\begin{align}
+\mathcal{L}\left(  \mathbf{n,\psi}\right)   &  =\mathcal{E}\left(
+\mathbf{n,\psi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon_{kj}\left(
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle -\delta
+_{jk}\right)  \label{larE}\\
+\frac{\partial\mathcal{L}\left(  \mathbf{n,\psi}\right)  }{\partial n_{j}} &
+=\frac{\partial\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\partial n_{j}}.
+\end{align}%
+\begin{align}
+\mathcal{L}\left(  \mathbf{\psi,s}\right)   &  =\mathcal{E}\left(
+\mathbf{n}_{0}\mathbf{,\psi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon
+_{kj}\left(  \left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle
+-s_{j}\delta_{jk}\right)  \\
+\frac{\partial\mathcal{L}\left(  \mathbf{\psi,s}\right)  }{\partial s_{j}} &
+=\varepsilon_{jj}.
+\end{align}%
+\begin{equation}
+\mathcal{L}\left(  \mathbf{n\left(  \mathbf{\eta}\right)  ,\psi}\right)
+=\mathcal{L}\left(  \mathbf{\psi,s}\left(  \mathbf{\eta}\right)  \right)
+\end{equation}
+The occupation numbers of the AGP\ state are
+\begin{equation}
+N_{j}=\mathcal{N}_{j}\left(  \mathbf{n}\right)  =n_{j}\frac{S_{N-1}\left(
+\jmath\right)  }{S_{N}}=n_{j}\frac{\partial\ln S_{N}}{\partial n_{j}}%
+;\quad1\leq j\leq s.
+\end{equation}
+The phase variation \emph{unitary} subgroup $U_{phase}$ is given by%
+\begin{equation}
+U_{phase}=\left\{  \left.  p\left(  \bm{\theta}\right)  =\exp\left\{
+i\sum_{1\leq j\leq s}\theta_{j}\Omega_{j}\right\}  \right\vert 0\leq\theta
+_{j}<2\pi\right\}  ,\label{phase}%
+\end{equation}
+where
+\begin{equation}
+\Omega_{j}=\left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)
+;\quad1\leq j\leq s
+\end{equation}
+and occupation number variation nonunitary subgroup $G_{num}$ by
+\begin{equation}
+G_{num}=\left\{  \left.  k\left(  \bm{\eta}\right)  =\exp\left\{  \sum_{1\leq
+j\leq s}\eta_{j}\Omega_{j}\right\}  \right\vert \eta_{j}\in\mathbb{R}\right\}
+.\label{occup}%
+\end{equation}
+The manifold of $2N$-electron AGP\ states $\mathcal{M}$ can then be expressed
+as
+\begin{align}
+\mathcal{M} &  \mathcal{=}\left\{  \left.  \overset{}{k\left(
+\bm{\eta}\right)  p\left(  \bm{\theta}\right)  u\left(  \bm{\alpha}\right)
+}\left\vert g_{0}^{N}\right\rangle \right\vert \quad0\leq\theta_{j}%
+<2\pi;\,\eta_{j}\in\mathbb{R};\right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  \bm{\alpha}=\bm{\alpha }^{\dagger
+},\operatorname{Tr}\bm{\alpha}=0,1\leq j\neq k\pm s\leq2s\in\mathbb{C}%
+\right\}
+\end{align}
+Explicitly the action on the reference geminal is given by
+\begin{equation}
+\left\vert g\left(  \bm{\eta},\bm{\alpha},\bm{\theta}\right)  \right\rangle
+=k\left(  \bm{\eta}\right)  p\left(  \bm{\theta}\right)  u\left(
+\bm{\alpha}\right)  \left\vert g_{0}\right\rangle =\sum_{1\leq l\leq s}%
+e^{\eta_{l}}e^{i\theta_{l}}c_{0l}\left\vert \varphi_{l}\left(
+\bm{\alpha}\right)  \varphi_{l+s}\left(  \bm{\alpha}\right)  \right\rangle ,
+\end{equation}
+where
+\begin{equation}
+\left\vert \varphi_{l}\left(  \bm{\alpha}\right)  \right\rangle =\exp\left\{
+i\sum_{1\leq j\neq k\pm s\leq2s}\alpha_{jk}a_{j}^{\dagger}a_{k}\right\}
+\left\vert \varphi_{0l}\right\rangle .
+\end{equation}
+One can define a normalized geminal by
+\begin{equation}
+\end{equation}
+The normalization condition
+\begin{equation}
+\left\langle \left.  g\left(  \bm{\eta},\bm{\alpha},\bm{\theta}\right)
+\right\vert g\left(  \bm{\eta},\bm{\alpha},\bm{\theta}\right)  \right\rangle
+=1
+\end{equation}
+gives
+\begin{equation}
+\sum_{1\leq l\leq s}e^{2\eta_{l}}n_{l}%
+\end{equation}
+when We can define%
+\begin{equation}
+\left\vert \varphi_{l}\left(  \bm{\eta,\theta,\alpha}\right)  \right\rangle
+=\exp\frac{\eta_{l}}{2}\exp i\frac{\theta_{l}}{2}\exp\left\{  i\sum_{1\leq
+j\neq k\pm s\leq2s}\alpha_{jk}a_{j}^{\dagger}a_{k}\right\}  \left\vert
+\varphi_{0l}\right\rangle ,
+\end{equation}
+so that
+\begin{equation}
+\left\langle \left.  \varphi_{l}\left(  \bm{\eta,\theta,\alpha}\right)
+\right\vert \varphi_{l}\left(  \bm{\eta,\theta,\alpha}\right)  \right\rangle
+=e^{\eta_{l}}\left\langle \left.  \varphi_{0l}\right\vert \varphi
+_{0l}\right\rangle .
+\end{equation}
+
+
+
+\end{document}

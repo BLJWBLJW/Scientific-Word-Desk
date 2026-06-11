@@ -1,0 +1,956 @@
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{LaTeXparent=0,0,EOMN.tex}
+                      
+%TCIDATA{ChildDefaults=chapter:1,page:1}
+
+
+\section{Mappings between pairs of Dual Spaces}
+
+Consider a {\em compact} map 
+\begin{equation}
+A:V\longrightarrow W
+\end{equation}%
+and its adjoint  
+\begin{equation}
+A^{\dagger }:W^{d}\longrightarrow V^{d}
+\end{equation}%
+where $\left\langle V^{d},V\right\rangle $ and $\left\langle
+W^{d},W\right\rangle $ are dual space pairs and 
+\begin{equation}
+\left\langle A^{\dagger }{\bf w}^{d}|{\bf v}\right\rangle =\left\langle {\bf %
+w}^{d}|A{\bf v}\right\rangle \quad \forall {\bf v\in }V
+\end{equation}%
+We then have the following diagram 
+\begin{equation}
+\frame{$%
+\begin{array}{ccc}
+V & \stackrel{A}{%
+%TCIMACRO{\underset{A^{-1}}{{\LARGE \rightleftarrows }}}%
+%BeginExpansion
+\mathrel{\mathop{{\LARGE \rightleftarrows }}\limits_{A^{-1}}}%
+%EndExpansion
+} & W \\ 
+&  &  \\ 
+V^{d} & \stackrel{A^{\dagger }}{%
+%TCIMACRO{\underset{A^{-1\dagger }}{{\LARGE \rightleftarrows }}}%
+%BeginExpansion
+\mathrel{\mathop{{\LARGE \rightleftarrows }}\limits_{A^{-1\dagger }}}%
+%EndExpansion
+} & W^{d}%
+\end{array}%
+$}
+\end{equation}%
+As the maps are compact their domain and range are closed subspaces and we
+can {\it wlog }take 
+\begin{eqnarray}
+V &=&%
+%TCIMACRO{\func{domain}}%
+%BeginExpansion
+\mathop{\rm domain}%
+%EndExpansion
+\left\{ A\right\}   \nonumber \\
+W^{d} &=&%
+%TCIMACRO{\func{domain}}%
+%BeginExpansion
+\mathop{\rm domain}%
+%EndExpansion
+\left\{ A^{\dagger }\right\} 
+\end{eqnarray}%
+Further we can embed $V\hookrightarrow $ $V^{dd}$ by ${\bf v\rightarrow \hat{%
+v}}$ 
+\begin{equation}
+\left\langle {\bf \hat{v}}|{\bf v}^{d}\right\rangle =\left\langle {\bf v}%
+^{d}|{\bf v}\right\rangle \quad \forall {\bf v}^{d}\in V^{d}\text{ }
+\end{equation}%
+so that $V^{dd}\supseteq V$ with equality always occurring for finite
+dimensional spaces. The same holds true for the $W$ spaces.
+
+Let
+
+\begin{itemize}
+\item $\left\{ \left| k_{j}\right\rangle ;1\leq j\leq m_{1}\right\} $ be a
+basis for $\ker A$ and $\left\{ \left\langle k_{j}^{d}\right| ;1\leq j\leq
+m_{1}\right\} $ be a biothorgonal dual basis of $\left\{ \ker A\right\} ^{d}$
+
+\item $\left\{ \left| s_{j}\right\rangle ;1\leq j\leq m_{2}\right\} $ be a
+basis for $\left\{ \ker A\right\} ^{c}$ and $\left\{ \left\langle
+s_{j}^{d}\right| ;1\leq j\leq m_{2}\right\} $ be a biothorgonal dual basis
+of $\left\{ \ker A\right\} ^{cd}$
+
+\item $\left\{ \left| \tilde{s}_{j}\right\rangle ;1\leq j\leq m_{2}\right\} $
+be a basis for the $%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A$ and $\left\{ \left\langle \tilde{s}_{j}^{d}\right| ;1\leq j\leq
+m_{2}\right\} $ be a biothorgonal dual basis of $\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{d}$
+
+\item $\left\{ \left| l_{j}\right\rangle ;1\leq j\leq m_{3}\right\} $ be a
+basis for $\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}$ and $\left\{ \left\langle l_{j}^{d}\right| ;1\leq j\leq
+m_{3}\right\} $ be a biothorgonal dual basis of $\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{cd}$.
+\end{itemize}
+
+Note that 
+\begin{eqnarray}
+V &=&\ker A\oplus \left\{ \ker A\right\} ^{c}  \nonumber \\
+V^{d} &=&\left\{ \ker A\right\} ^{d}\oplus \left\{ \ker A\right\} ^{cd}
+\end{eqnarray}
+
+and 
+\begin{eqnarray}
+W &=&%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\oplus \left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}  \nonumber \\
+W^{d} &=&\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{d}\oplus \left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{cd}
+\end{eqnarray}%
+Thus 
+\begin{eqnarray}
+\dim V &=&m_{1}+m_{2}  \nonumber \\
+\dim W &=&m_{2}+m_{3}  \nonumber \\
+\dim V-\dim W &=&m_{1}-m_{3}
+\end{eqnarray}%
+One can observe that $\dim \left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} =\dim \left\{ \ker A\right\} ^{c}=m_{2}$. Associated with these
+spaces are the projectors 
+\begin{eqnarray}
+P_{\ker A} &=&\sum_{1\leq j\leq m_{1}}\left| k_{j}\right\rangle \left\langle
+k_{j}^{d}\right|  \nonumber \\
+P_{\left\{ \ker A\right\} ^{c}} &=&\sum_{1\leq j\leq m_{2}}\left|
+s_{j}\right\rangle \left\langle s_{j}^{d}\right|
+\end{eqnarray}%
+which have the properties%
+\begin{eqnarray}
+P_{\ker A}^{2} &=&P_{\ker A}  \nonumber \\
+P_{\left\{ \ker A\right\} ^{c}}^{2} &=&P_{\left\{ \ker A\right\} ^{c}} 
+\nonumber \\
+P_{\left\{ \ker A\right\} ^{c}}P_{\ker A} &=&P_{\ker A}P_{\left\{ \ker
+A\right\} ^{c}}=0  \nonumber \\
+I_{V} &=&P_{\ker A}+P_{\left\{ \ker A\right\} ^{c}}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A} &=&\sum_{1\leq j\leq m_{2}}\left| \tilde{s}_{j}\right\rangle \left\langle 
+\tilde{s}_{j}^{d}\right|  \nonumber \\
+P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}} &=&\sum_{1\leq j\leq m_{3}}\left| l_{j}\right\rangle
+\left\langle l_{j}^{d}\right|
+\end{eqnarray}%
+which have the properties%
+\begin{eqnarray}
+P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}^{2} &=&P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}  \nonumber \\
+P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}}^{2} &=&P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}}  \nonumber \\
+P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}}P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A} &=&P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}}=0  \nonumber \\
+I_{W} &=&P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}+P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}}
+\end{eqnarray}
+
+If $A$ is compact and these bases are canonical for $A$ we obtain the
+following expansions for $A$ 
+\begin{equation}
+A=\sum_{1\leq j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}_{j}\right\rangle
+\left\langle s_{j}^{d}\right\vert ;\quad \alpha _{j}>0
+\end{equation}%
+It is easy to see that $A$ has the properties 
+\begin{eqnarray}
+AP_{\left\{ \ker A\right\} ^{c}} &=&A  \nonumber \\
+P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}A &=&A  \nonumber \\
+P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}AP_{\left\{ \ker A\right\} ^{c}} &=&A
+\end{eqnarray}%
+By utilizing the canonical expansions of $A$ we can define a unique two
+sided generalized inverse 
+\begin{equation}
+A^{-1}=\sum_{1\leq j\leq m_{2}}\alpha _{j}^{-1}\left\vert s_{j}\right\rangle
+\left\langle \tilde{s}_{j}^{d}\right\vert  \label{Ainv}
+\end{equation}%
+which has the property 
+\begin{equation}
+AA^{-1}=\sum_{1\leq j\leq m_{2}}\left\vert \tilde{s}_{j}\right\rangle
+\left\langle \tilde{s}_{j}^{d}\right\vert =P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}
+\end{equation}%
+and 
+\begin{equation}
+A^{-1}A=\sum_{1\leq j\leq m_{2}}\left\vert s_{j}\right\rangle \left\langle
+s_{j}^{d}\right\vert =P_{\left\{ \ker A\right\} ^{c}}
+\end{equation}%
+and\ 
+\begin{eqnarray}
+A^{-1}P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A} &=&A^{-1}  \nonumber \\
+P_{\left\{ \ker A\right\} ^{c}}A^{-1} &=&A^{-1}  \nonumber \\
+P_{\left\{ \ker A\right\} ^{c}}A^{-1}P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A} &=&A^{-1}
+\end{eqnarray}%
+The definition in eq. $\left( \ref{Ainv}\right) $ can be used as a {\em core}
+for left and right inverses of $A$ as is shown in the following. Let 
+\begin{eqnarray}
+R &:&\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}\longrightarrow \ker A  \nonumber \\
+R &=&\sum R_{ij}\left\vert k_{i}\right\rangle \left\langle
+l_{j}^{d}\right\vert
+\end{eqnarray}%
+and define 
+\begin{equation}
+A_{R}^{-1}=A^{-1}+R
+\end{equation}%
+then 
+\begin{equation}
+AA_{R}^{-1}=\sum_{1\leq j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}%
+_{j}\right\rangle \left\langle s_{j}^{d}\right\vert \left( \sum_{1\leq j\leq
+m_{2}}\alpha _{j}^{-1}\left\vert s_{j}\right\rangle \left\langle \tilde{s}%
+_{j}^{d}\right\vert +\sum_{\Sb 1\leq i\leq m_{1}  \\ 1\leq j\leq m_{3} 
+\endSb }R_{ij}\left\vert k_{i}\right\rangle \left\langle
+l_{j}^{d}\right\vert \right) =P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}
+\end{equation}%
+and 
+\begin{eqnarray}
+L &:&\ker A\longrightarrow \left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}  \nonumber \\
+L &=&\sum\Sb 1\leq i\leq m_{3}  \\ 1\leq j\leq m_{1}  \endSb %
+L_{ij}\left\vert k_{i}\right\rangle \left\langle l_{j}^{d}\right\vert
+\end{eqnarray}%
+and define 
+\begin{equation}
+A_{L}^{-1}=A^{-1}+L
+\end{equation}%
+then 
+\begin{equation}
+A_{L}^{-1}A=\left( \sum_{1\leq j\leq m_{2}}\alpha _{j}^{-1}\left\vert
+s_{j}\right\rangle \left\langle \tilde{s}_{j}^{d}\right\vert +\sum\Sb 1\leq
+i\leq m_{3}  \\ 1\leq j\leq m_{1}  \endSb L_{ij}\left\vert
+k_{i}\right\rangle \left\langle l_{j}^{d}\right\vert \right) \sum_{1\leq
+j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}_{j}\right\rangle \left\langle
+s_{j}^{d}\right\vert =P_{\left\{ \ker A\right\} ^{c}}
+\end{equation}%
+The preceding relationships are an abstract way of defining left and right
+inverses of $A$, based on a {\em unique} core generalized inverse.
+
+The adjoint $A^{\dagger }$ of $A$ can be expanded as 
+\begin{equation}
+A^{\dagger }=\sum_{1\leq j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}%
+_{j}^{d}\right\rangle \left\langle \tilde{s}_{j}\right\vert ;\quad \alpha
+_{j}>0
+\end{equation}%
+We define the orthogonal compliment of a subspace $U\subseteq V$ as a
+subspace $U^{\bot }$ contained in the dual space $V^{d}$ as 
+\begin{equation}
+U^{\bot }=\left\{ {\bf u}^{d};\backepsilon \left\langle {\bf u}^{d}|{\bf u}%
+\right\rangle =0\quad \forall {\bf u\in }U\right\}
+\end{equation}%
+and note that 
+\begin{equation}
+U^{\bot \bot }\supseteq U
+\end{equation}%
+Further one has 
+\begin{equation}
+U^{cd}=U^{\bot }
+\end{equation}%
+Finally we note a relationship between $\ker A$ and $%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A^{\dagger }$. If ${\bf v}\in \ker A$ then%
+\begin{equation}
+\left\langle {\bf w}^{d}|A{\bf v}\right\rangle =0\,\forall {\bf w}%
+^{d}\Rightarrow \left\langle A^{\dagger }{\bf w}^{d}|{\bf v}\right\rangle
+=0\,\forall {\bf w}^{d}\Rightarrow {\bf v}\in \left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A^{\dagger }\right\} ^{\bot }\supseteq \ker A
+\end{equation}%
+Similarly 
+\begin{equation}
+\left\langle A^{\dagger }{\bf w}^{d}|{\bf v}\right\rangle =0\,\forall {\bf v}%
+\Rightarrow \left\langle {\bf w}^{d}|A{\bf v}\right\rangle =0\,\forall {\bf v%
+}\Rightarrow {\bf w}^{d}\in \left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{\bot }\supseteq \ker A^{\dagger }
+\end{equation}%
+$\lceil $Recall $\left\langle A^{\dagger }{\bf w}^{d}|{\bf v}\right\rangle
+=\left\langle {\bf w}^{d}|A{\bf v}\right\rangle \quad \forall {\bf v\rfloor }%
+\ \ $
+
+In many applications we have the situation that $%
+%TCIMACRO{\func{domain}}%
+%BeginExpansion
+\mathop{\rm domain}%
+%EndExpansion
+\left\{ A\right\} \supseteq 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ A\right\} $ (equality occurs if $A$ is $1-1$) so that 
+\begin{eqnarray}
+%TCIMACRO{\func{domain}}%
+%BeginExpansion
+\mathop{\rm domain}%
+%EndExpansion
+\left\{ A\right\} &=&\ker \left\{ A\right\} \oplus \ker \left\{ A\right\}
+^{c}  \nonumber \\
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ A\right\} &\cong &\ker \left\{ A\right\} ^{c}
+\end{eqnarray}%
+thus 
+\begin{equation}
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ A\right\} ^{c}\cong \ker \left\{ A\right\}
+\end{equation}%
+and 
+\begin{equation}
+%TCIMACRO{\func{domain}}%
+%BeginExpansion
+\mathop{\rm domain}%
+%EndExpansion
+\left\{ A\right\} =%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ A\right\} ^{c}\oplus 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ A\right\}
+\end{equation}%
+but note that $\ker \left\{ A\right\} \neq 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ A\right\} ^{c}$ unless $\ker \left\{ A\right\} ^{c}$ is an invariant
+subspace of $A$, which it is if $A$ is self adjoint.
+
+Another common simplification occurs when $V$ \ and $W$ are self dual i.e. $%
+V=V^{d}$ and $W=W^{d}$ and are thus Hilbert spaces. When both of the
+preceding simplifications occur the projectors become orthogonal projectors
+and all the vectors belong to the same space. Though note that the dual
+basis and the normal basis are still in general distinct, unless $A$ is self
+adjoint.
+
+\subsection{Trace}
+
+\begin{equation}
+A=\sum_{1\leq j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}_{j}\right\rangle
+\left\langle s_{j}^{d}\right\vert ;\quad \alpha _{j}>0
+\end{equation}%
+\begin{equation}
+A^{\dagger }=\sum_{1\leq j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}%
+_{j}^{d}\right\rangle \left\langle \tilde{s}_{j}\right\vert ;\quad \alpha
+_{j}>0
+\end{equation}%
+\begin{eqnarray*}
+AA^{\dagger } &=&\sum_{1\leq j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}%
+_{j}\right\rangle \left\langle s_{j}^{d}\right\vert \sum_{1\leq j\leq
+m_{2}}\alpha _{j}\left\vert \tilde{s}_{j}^{d}\right\rangle \left\langle 
+\tilde{s}_{j}\right\vert = \\
+A^{\dagger }A &=&\sum_{1\leq j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}%
+_{j}^{d}\right\rangle \left\langle \tilde{s}_{j}\right\vert \sum_{1\leq
+j\leq m_{2}}\alpha _{j}\left\vert \tilde{s}_{j}\right\rangle \left\langle
+s_{j}^{d}\right\vert =
+\end{eqnarray*}
+
+\subsection{Linear Equations}
+
+We can now reexamine the linear equation 
+\begin{equation}
+A\left| {\bf v}\right\rangle =\left| {\bf w}\right\rangle {\bf ;\quad \left|
+v\right\rangle \in V}^{s},\,\left| {\bf w}\right\rangle {\bf \in W}%
+^{r};\quad r=m_{2}+m_{3};\quad s=m_{2}+m_{1}  \label{lineq}
+\end{equation}%
+This equation can be written as%
+\begin{eqnarray}
+&&\sum_{1\leq j\leq m_{2}}\alpha _{j}\left| \tilde{s}_{j}\right\rangle
+\left\langle s_{j}^{d}\right| {\bf v}\rangle =\left| {\bf w}\right\rangle
+\,\,{\bf \Rightarrow \,}P_{\left\{ \ker A\right\} ^{c}}{\bf \,}\left| {\bf v}%
+\right\rangle =A_{L}^{-1}\left| {\bf w}\right\rangle  \nonumber \\
+&\equiv &\left( \sum_{1\leq j\leq m_{2}}\alpha _{j}^{-1}\left|
+s_{j}\right\rangle \left\langle \tilde{s}_{j}^{d}\right| +\sum\Sb 1\leq
+i\leq m_{3}  \\ 1\leq j\leq m_{1}  \endSb L_{ij}\left| k_{i}\right\rangle
+\left\langle l_{j}^{d}\right| \right) \sum_{1\leq j\leq m_{2}}\alpha
+_{j}\left| \tilde{s}_{j}\right\rangle \left\langle s_{j}^{d}\right| {\bf v}%
+\rangle =P_{\left\{ \ker A\right\} ^{c}}\left| {\bf v}\right\rangle 
+\nonumber \\
+&{\bf =}&\left( \sum_{1\leq j\leq m_{2}}\alpha _{j}^{-1}\left|
+s_{j}\right\rangle \left\langle \tilde{s}_{j}^{d}\right| +\sum\Sb 1\leq
+i\leq m_{3}  \\ 1\leq j\leq m_{1}  \endSb L_{ij}\left| k_{i}\right\rangle
+\left\langle l_{j}^{d}\right| \right) \left| {\bf w}\right\rangle
+\end{eqnarray}%
+i.e. 
+\begin{equation}
+P_{\left\{ \ker A\right\} ^{c}}\left| {\bf v}\right\rangle =\sum_{1\leq
+j\leq m_{2}}\alpha _{j}^{-1}\left| s_{j}\right\rangle \left\langle \tilde{s}%
+_{j}^{d}\right| {\bf w\rangle +}\sum\Sb 1\leq i\leq m_{3}  \\ 1\leq j\leq
+m_{1}  \endSb L_{ij}\left| k_{i}\right\rangle \left\langle l_{j}^{d}\right| 
+{\bf w\rangle }
+\end{equation}%
+which can only be true if the consistency constraint 
+\begin{equation}
+\left\langle l_{j}^{d}\right| {\bf w}\rangle =0;\quad 1\leq i\leq
+m_{3}\Longleftrightarrow P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}}\left| {\bf w}\right\rangle =0
+\end{equation}%
+holds. The remaining part of the vector $\left| {\bf v}\right\rangle $, i.e. 
+$P_{\left\{ \ker A\right\} }\left| {\bf v}\right\rangle $ is arbitrary
+unless some further conditions are invoked. Thus the solution to eq. $\left( %
+\ref{lineq}\right) $ is 
+\begin{equation}
+\left| {\bf v}\right\rangle =A^{-1}\left| {\bf w}\right\rangle +\left| {\bf k%
+}\right\rangle ;\,\,\left| {\bf k}\right\rangle \in \ker A
+\end{equation}%
+as long as the condition 
+\begin{equation}
+P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A\right\} ^{c}}\left| {\bf w}\right\rangle =0
+\end{equation}%
+is satisfied.
+
+\subsection{Matrix Representations}
+
+Using the preceding biorthogonal basis we obtain 
+\begin{eqnarray}
+&&A\left| \left( {\bf s,k}\right) \right\rangle =\left| \left( {\bf \tilde{s}%
+,l}\right) \right\rangle \left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) ;\quad \text{ }\left( m_{1}+m_{3}\right) \times \left(
+m_{1}+m_{2}\right) \text{ matrix}  \nonumber \\
+&{\Bbb \Rightarrow }&\left\langle \left( {\bf \tilde{s}}^{d},{\bf l}%
+^{d}\right) |A\left( {\bf s,k}\right) \right\rangle =\left\langle \left( 
+{\bf \tilde{s}}^{d},{\bf l}^{d}\right) |\left( {\bf s,k}\right)
+\right\rangle \left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) =  \nonumber \\
+&&\qquad \qquad \qquad \qquad \quad {\Bbb I}_{\left( m_{1}+m_{3}\right)
+}\left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right)
+\end{eqnarray}%
+and 
+\begin{equation}
+A^{-1}\left( \left| {\bf \tilde{s}}\right\rangle {\bf ,}\left| {\bf l}%
+\right\rangle \right) =\left( \left| {\bf s}\right\rangle {\bf ,}\left| {\bf %
+k}\right\rangle \right) \left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1}^{-1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}^{-1}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) ;\quad \text{ }\left( m_{1}+m_{2}\right) \times \left(
+m_{1}+m_{3}\right) \text{ matrix}
+\end{equation}%
+Hence 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1}^{-1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}^{-1}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+1 &  &  \\ 
+& \ddots &  \\ 
+&  & 1%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) ={\Bbb P}_{\left\{ \ker A\right\} ^{c}}
+\end{equation}%
+which is $\left( m_{1}+m_{2}\right) \times \left( m_{1}+m_{2}\right) $
+matrix, and 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1}^{-1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}^{-1}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+1 &  &  \\ 
+& \ddots &  \\ 
+&  & 1%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) ={\Bbb P}_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}
+\end{equation}%
+which is $\left( m_{1}+m_{3}\right) \times \left( m_{1}+m_{3}\right) $
+matrix.
+
+If we choose other bases related to the canonical basis of $A$ by 
+\begin{eqnarray}
+&&\qquad \quad \left| \left( {\bf s}^{\prime }{\bf ,k}^{\prime }\right)
+\right\rangle =S\left| \left( {\bf s,k}\right) \right\rangle =\left| \left( 
+{\bf s,k}\right) \right\rangle {\Bbb S}  \nonumber \\
+{\Bbb S\,} &{\Bbb =}&\left( 
+\begin{array}{cc}
+{\Bbb S}_{11} & {\Bbb S}_{12} \\ 
+{\Bbb S}_{21} & {\Bbb S}_{22}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\left\langle {\bf s}^{d}|S{\bf s}\right\rangle & \left\langle {\bf s}^{d}|S%
+{\bf k}\right\rangle \\ 
+\left\langle {\bf k}^{d}|S{\bf s}\right\rangle & \left\langle {\bf k}^{d}|S%
+{\bf k}\right\rangle%
+\end{array}%
+\right)  \nonumber \\
+&&\qquad \quad \,\left| \left( {\bf \tilde{s}}^{\prime }{\bf ,l}^{\prime
+}\right) \right\rangle =T\left| \left( {\bf \tilde{s},l}\right)
+\right\rangle =\left| \left( {\bf \tilde{s},l}\right) \right\rangle {\Bbb T}
+\nonumber \\
+{\Bbb T}{\Bbb \,} &{\Bbb =}&\left( 
+\begin{array}{cc}
+{\Bbb T}_{11} & {\Bbb T}_{12} \\ 
+{\Bbb T}_{21} & {\Bbb T}_{22}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\left\langle {\bf \tilde{s}}^{d}|T{\bf \tilde{s}}\right\rangle & 
+\left\langle {\bf \tilde{s}}^{d}|T{\bf l}\right\rangle \\ 
+\left\langle {\bf l}^{d}|T{\bf \tilde{s}}\right\rangle & \left\langle {\bf l}%
+^{d}|T{\bf l}\right\rangle%
+\end{array}%
+\right)  \nonumber \\
+&&\qquad \quad \Rightarrow \left| \left( {\bf \tilde{s},l}\right)
+\right\rangle =\left| \left( {\bf \tilde{s}}^{\prime }{\bf ,l}^{\prime
+}\right) \right\rangle {\Bbb T}^{-1}
+\end{eqnarray}%
+we obtain%
+\begin{equation}
+A\left| \left( {\bf s}^{\prime }{\bf ,k}^{\prime }\right) \right\rangle
+=\left| \left( {\bf \tilde{s}}^{\prime }{\bf ,l}^{\prime }\right)
+\right\rangle {\Bbb A}
+\end{equation}%
+where ${\Bbb A}$ is given by 
+\begin{equation}
+A\left| \left( {\bf s}^{\prime }{\bf ,k}^{\prime }\right) \right\rangle
+=A\left| \left( {\bf s,k}\right) \right\rangle {\Bbb S=\,}\left| \left( {\bf 
+\tilde{s},l}\right) \right\rangle {\Bbb \alpha S=\,}\left| \left( {\bf 
+\tilde{s}}^{\prime }{\bf ,l}^{\prime }\right) \right\rangle {\Bbb T}^{-1}%
+{\Bbb \alpha S}
+\end{equation}
+\begin{eqnarray}
+A\left| \left( {\bf s}^{\prime }{\bf ,k}^{\prime }\right) \right\rangle
+&=&\left| \left( {\bf \tilde{s}}^{\prime }{\bf ,l}^{\prime }\right)
+\right\rangle \left( 
+\begin{array}{cc}
+\left( {\Bbb T}^{-1}\right) _{11} & \left( {\Bbb T}^{-1}\right) _{12} \\ 
+\left( {\Bbb T}^{-1}\right) _{21} & \left( {\Bbb T}^{-1}\right) _{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\begin{array}{ccc}
+\alpha _{1} &  &  \\ 
+& \ddots &  \\ 
+&  & \alpha _{s}%
+\end{array}
+& 0 \\ 
+0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+{\Bbb S}_{11} & {\Bbb S}_{12} \\ 
+{\Bbb S}_{21} & {\Bbb S}_{22}%
+\end{array}%
+\right)  \nonumber \\
+&=&\left| \left( {\bf \tilde{s}}^{\prime }{\bf ,l}^{\prime }\right)
+\right\rangle \left( 
+\begin{array}{cc}
+\left( {\Bbb T}^{-1}\right) _{11} & \left( {\Bbb T}^{-1}\right) _{12} \\ 
+\left( {\Bbb T}^{-1}\right) _{21} & \left( {\Bbb T}^{-1}\right) _{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\alpha {\Bbb S}_{11} & \alpha {\Bbb S}_{12} \\ 
+0 & 0%
+\end{array}%
+\right)  \nonumber \\
+&=&\left| \left( {\bf \tilde{s}}^{\prime }{\bf ,l}^{\prime }\right)
+\right\rangle \left( 
+\begin{array}{cc}
+\left( {\Bbb T}^{-1}\right) _{11}\alpha {\Bbb S}_{11} & \left( {\Bbb T}%
+^{-1}\right) _{11}\alpha {\Bbb S}_{12} \\ 
+\left( {\Bbb T}^{-1}\right) _{21}\alpha {\Bbb S}_{11} & \left( {\Bbb T}%
+^{-1}\right) _{21}\alpha {\Bbb S}_{12}%
+\end{array}%
+\right) =\left| \left( {\bf \tilde{s}}^{\prime }{\bf ,l}^{\prime }\right)
+\right\rangle {\Bbb A}
+\end{eqnarray}%
+matrix
+
+Let ${\Bbb A}$ be a $r\times s$ matrix then its left and right inverses have
+the property
+
+\begin{eqnarray}
+{\Bbb A}_{L}^{-1}{\Bbb A} &=&{\Bbb P}_{\left\{ \ker A\right\} ^{c}}\leq 
+{\Bbb I}_{s}  \nonumber \\
+{\Bbb AA}_{R}^{-1} &=&{\Bbb P}_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+A}\leq {\Bbb I}_{r}
+\end{eqnarray}%
+and can be defined as matrix representations of the abstract operators
+defined previously using the core generalized inverse.
+
+\section{Solution of Nonlinear Singular Equations.}
+
+Consider the following equation for $x$ 
+\begin{equation}
+{\cal A}\left( x\right) \left| b\left( x\right) \right\rangle =\left|
+c\left( x\right) \right\rangle ;\quad \left| b\left( x\right) \right\rangle
+\in V;\,\left| c\left( x\right) \right\rangle \in W  \label{nl}
+\end{equation}%
+where ${\cal A}\left( x\right) $ is a compact linear operator and $\left|
+b\left( x\right) \right\rangle $ and $\left| c\left( x\right) \right\rangle $
+are vectors that depends on $x.$ Let ${\cal A}\left( x\right) $ be singular
+with a kernel, $\ker {\cal A}\left( x\right) $, and have the expansion 
+\begin{equation}
+{\cal A}\left( x\right) =\sum_{1\leq j\leq m_{2}}\alpha _{j}\left| \tilde{s}%
+_{j}\right\rangle \left\langle s_{j}^{d}\right| ;\quad \alpha _{j}>0
+\end{equation}%
+The equation $\left( \ref{nl}\right) $ only has solution if $\left| c\left(
+x\right) \right\rangle $ is in the range of ${\cal A}\left( x\right) $,
+which gives the condition 
+\begin{equation}
+P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+{\cal A}\left( x\right) \right\} ^{c}}\left| c\left( x\right) \right\rangle
+=0
+\end{equation}%
+If this condition is enforced one can form the special solution 
+\begin{equation}
+{\frak s}\left( x\right) =\sum_{1\leq j\leq m_{2}}\alpha _{j}^{-1}\left|
+s_{j}\right\rangle \left\langle \tilde{s}_{j}^{d}\right| \left. c\left(
+x\right) \right\rangle
+\end{equation}%
+by using the generalized inverse ${\cal A}\left( x\right) ^{-1}$ of ${\cal A}%
+\left( x\right) $ defined as 
+\begin{equation}
+{\cal A}\left( x\right) ^{-1}=\sum_{1\leq j\leq m_{2}}\alpha _{j}^{-1}\left|
+s_{j}\right\rangle \left\langle \tilde{s}_{j}^{d}\right|
+\end{equation}%
+If ${\frak s}\left( x\right) $ is such a solution then the general solution
+is given by 
+\begin{equation}
+{\frak g}\left( x\right) ={\frak s}\left( x\right) +\sum_{1\leq i\leq
+m_{1}}\lambda _{i}\left| k_{i}\right\rangle
+\end{equation}%
+as 
+\begin{equation}
+\sum_{1\leq j\leq m_{2}}\alpha _{j^{\prime }}\left| \tilde{s}_{j^{\prime
+}}\right\rangle \left\langle s_{j^{\prime }}^{d}\right| \left\{ \sum_{1\leq
+j\leq m_{2}}\alpha _{j}^{-1}\left| s_{j}\right\rangle \left\langle \tilde{s}%
+_{j}^{d}\right| \left. c\left( x\right) \right\rangle +\sum_{1\leq i\leq
+m_{1}}\lambda _{i}\left| k_{i}\right\rangle \right\} =\left| c\left(
+x\right) \right\rangle
+\end{equation}%
+Thus to summarize the solutions of eq. $\left( \ref{nl}\right) $ are $x\ni $ 
+\begin{eqnarray}
+&&b\left( x\right) ={\frak s}\left( x\right) +\sum_{1\leq i\leq
+m_{1}}\lambda _{i}\left( x\right) \left| k_{i}\left( x\right) \right\rangle 
+\nonumber \\
+&&{\frak s}\left( x\right) =\sum_{1\leq j\leq m_{2}}\alpha _{j}^{-1}\left(
+x\right) \left| s_{j}\left( x\right) \right\rangle \left\langle \tilde{s}%
+_{j}^{d}\left( x\right) \right| \left. c\left( x\right) \right\rangle ={\cal %
+A}\left( x\right) ^{-1}\left| c\left( x\right) \right\rangle  \nonumber \\
+&&P_{\left\{ 
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+{\cal A}\left( x\right) \right\} ^{c}}\left| c\left( x\right) \right\rangle
+=0
+\end{eqnarray}
+
+\section{Antisymmetric Operators}
+
+If the operator Let ${\cal A}$ be a compact antisymmetric operator $\in 
+{\cal B}_{0}\left( V\right) $, where $V$ is a Hilbert space then it has the
+canonical expansion 
+\begin{equation}
+{\cal A}=\sum_{1\leq i\leq s}\alpha _{i}\left\{ \left| s_{i}\right\rangle
+\left\langle s_{i+s}^{d}\right| -\left| s_{i+s}\right\rangle \left\langle
+s_{i}^{d}\right| \right\}  \label{antiexp}
+\end{equation}%
+If such an operator is also real, ${\cal A}={\cal A}^{\ast }$, it can be
+converted into a compact hermitian one, ${\cal H}$, with the properties 
+\begin{eqnarray}
+{\cal H} &=&i{\cal A}  \nonumber \\
+{\cal H}^{\dagger } &=&-i{\cal A}^{t}=i{\cal A}={\cal H}  \nonumber \\
+{\cal H}^{\ast } &=&-i{\cal A}=i{\cal A}^{t}={\cal H}^{t}
+\end{eqnarray}%
+and 
+\begin{equation}
+{\cal H}=i{\cal A}=\sum_{1\leq i\leq s}\alpha _{i}\left\{ \left|
+v_{i}\right\rangle \left\langle v_{i}\right| -\left| v_{i}^{\ast
+}\right\rangle \left\langle v_{i}^{\ast }\right| \right\} ;\quad \alpha
+_{i}\in {\Bbb R}
+\end{equation}%
+which is seen by observing that 
+\begin{equation}
+{\cal H}v=\alpha v\Rightarrow {\cal H}^{\ast }v^{\ast }=\alpha v^{\ast
+}\Rightarrow {\cal H}^{t}v^{\ast }=\alpha v^{\ast }\Rightarrow {\cal H}%
+v^{\ast }=-\alpha v^{\ast }
+\end{equation}%
+Thus 
+\begin{equation}
+{\cal A}=-\sum_{1\leq j\leq s}i\alpha _{j}\left\{ \left| v_{j}\right\rangle
+\left\langle v_{j}\right| -\left| v_{j}^{\ast }\right\rangle \left\langle
+v_{j}^{\ast }\right| \right\} ;\quad \alpha _{j}\in {\Bbb R}
+\end{equation}%
+We can define 
+\begin{eqnarray}
+\left| s_{i}\right\rangle &=&\left| v_{j}+v_{j}^{\ast }\right\rangle 
+\nonumber \\
+\left| s_{i+s}\right\rangle &=&i\left| v_{j}-v_{j}^{\ast }\right\rangle
+\end{eqnarray}%
+then 
+\begin{eqnarray}
+{\cal A}\left| v_{j}+v_{j}^{\ast }\right\rangle &=&-i\alpha _{j}\left|
+v_{j}\right\rangle +i\alpha \left| v_{j}^{\ast }\right\rangle =-\alpha
+i\left| v_{j}-v_{j}^{\ast }\right\rangle  \nonumber \\
+{\cal A}i\left| v_{j}-v_{j}^{\ast }\right\rangle &=&\alpha _{j}\left|
+v_{j}\right\rangle +\alpha _{j}\left| v_{j}^{\ast }\right\rangle =\alpha
+_{j}\left| v_{j}+v_{j}^{\ast }\right\rangle
+\end{eqnarray}%
+thus 
+\begin{equation}
+{\cal A=}\sum_{1\leq i\leq s}\alpha _{i}\left\{ \left| s_{i}\right\rangle
+\left\langle s_{i+s}^{d}\right| -\left| s_{i+s}\right\rangle \left\langle
+s_{i}^{d}\right| \right\}
+\end{equation}%
+which justifies the expansion in eq. $\left( \ref{antiexp}\right) $.

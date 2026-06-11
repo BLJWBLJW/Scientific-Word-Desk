@@ -1,0 +1,3647 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, August 29, 2003 10:08:38}
+%TCIDATA{LastRevised=Thursday, August 19, 2004 08:49:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title{Correlated One Particle Wave Functions}
+\author{B. Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+\author{J. V. Ortiz}
+\affiliation{Department of Chemistry, Kansas State University, Manhattan, KS 66506-3701}
+\pacs{}
+
+\begin{abstract}
+
+
+\end{abstract}
+\date{08/11/2004}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction \label{intro}}
+
+Independent Particle States (IPS's) have proved a mainstay of molecular
+multi-particle quantum mechanics both in physical modelling and numerical
+applications for many decades. The major attraction of these states lies in
+the conceptually concrete and chemically understandable pictures of molecular
+structure and properties that they provide. Apart from an initial choice of
+$s$ atomic orbitals and possibly a decision about the molecular point group
+and spin symmetry, one can obtain an unbiased description of the electronic
+states of a molecule by finding an IPS\ that minimizes the energy via the Self
+Consistent Field (SCF)\ equations. These equations provide a set of one
+electron states $\left\{  \left.  \left\vert \varphi_{j}\right\rangle
+\right\vert 1\leq j\leq2s\right\}  $, that are eigenstates of a self
+consistent Fock operator corresponding to the eigenvalues $\left\{  \left.
+\varepsilon_{j}\right\vert 1\leq j\leq2s\right\}  $ and are unique up to
+unitary transformations that mix degenerate eigenstates. If the IPS\ describes
+$M$ electrons then in general it is determined by the one-electron eigenstates
+corresponding to the $M$ lowest eigenvalues $\left\{  \left.  \varepsilon
+_{j}\right\vert 1\leq j\leq M\right\}  $. The wave functions of each of these
+one electron states can then be analyzed in terms of a basis of atomic
+orbitals, producing the familiar picture of one electron Probability
+Distributions (PD's) labelled by one electron energies, that has been
+invaluable in the understanding of chemical processes. The physical meaning of
+the energies $\left\{  \left.  \varepsilon_{j}\right\vert 1\leq j\leq
+M\right\}  $ can be deduced by considering the electron propagator
+\cite{ortiz}, or by directly examining the form of the Fock operator matrix
+elements, which show that they correspond to ionization potentials.
+
+It is often the case, however, that the IPS\ model is not sufficiently
+accurate to predict or explain the finer details of chemical reaction
+mechanisms or spectroscopic observations. In order to achieve this one must
+take into account electron-electron correlation. Traditionally this is
+accomplished by perturbational or configurational interaction methods that
+increase numerical accuracy at the cost of a clear, tangible, chemical model
+of the molecular system. The clarity is lost as pictorial models need be based
+on one particle properties, but in general one particle properties do not
+determine correlated multi-electron states. In particular one cannot use
+chemical intuition to rearrange the positions of atoms and bonds and be
+certain that the new conformation actually corresponds to a multi-electron
+state in contrast to the case of states determined by one particle properties.
+
+However, we have described \cite{Weiner & Ortiz 2003} a class of correlated
+states that generalize the IPS model, explicitly contain a description of
+correlation effects, and are the \emph{most general} states that produce a
+\emph{one particle} theory of electrons i.e. multi-particle states determined
+by one particle properties. These are the Antisymmetrized Geminal Power (AGP)
+states for an even number, $2N$, of electrons and the Generalized
+Antisymmetrized Geminal Power (GAGP) ones for an odd number, $2N+1$. In the
+IPS\ case the $2N$-electron state is completely determined by the occupation
+numbers of the First Order Reduced Density Operator (FORDO) and a set of one
+particle \emph{Natural }General Spin Orbitals (NGSOs). The occupation numbers
+in this case are equal to one or zero. In the AGP\ case the $2N$-electron
+state is completely determined by a set of one particle \emph{Canonical
+}General Spin Orbitals (CGSOs) and occupation numbers of the FORDO, but now
+the occupation numbers can be any value in the range $\left[  0,1\right]  ,$
+though they must be at least doubly degenerate. This theory \emph{explicitly
+contains} correlation and generalizes the one-particle theory based on
+uncorrelated Independent Particle States (IPS), which it contains as a special
+case. In this paper we further show that one can associate an ionization
+potential with each CGSO and the orbitals with the largest occupation have the
+largest ionization potential. The AGP\ model produces a simple pictorial
+interpretation in terms of occupation numbers, orbitals and ionization
+potentials, which totally \emph{determine} the $2N$-electron state, and thus
+can be used as an effective and rigorous chemical modelling tool.
+
+In contrast to IPS's when using AGP's it is important to note the distinction between
+
+\begin{itemize}
+\item AGP-NGSO's, which together with a set of doubly degenerate occupation
+numbers, determine an AGP-FORDO, that correspond to a \emph{set }of
+AGP\ states and
+
+\item AGP-CGSO's, which together with a set of doubly degenerate occupation
+numbers, determine a \emph{unique} AGP state.
+\end{itemize}
+
+The CGSO's are the NGSO's of the FORDO of a given AGP state, but the NGSO's of
+the FORDO\ of this AGP state are \emph{not }in general the CSGO's of this
+AGP\ state. In this paper when we are explicitly referring to CGSO's we will
+use the symbol $\mathbf{\psi}$ and when we refer to NGSO's we will use the
+symbol $\mathbf{\varphi.}$
+
+The difference between NGSO's and CGSO's allows us to partition the manifold
+of $2N$-electron AGP states into equivalence classes, $\left[  D^{1}\right]
+_{2N}$, indexed by FORDO's $D^{1}$ that are at least doubly degenerate, where
+each element of a class can be parameterized by a vector of angles
+\begin{equation}
+\mathbf{\theta\,}=\left(  0,\theta_{2},\cdots,\theta_{s}\right)
+,\quad0<\theta_{j}\leq2\pi;\quad2\leq j\leq s,
+\end{equation}
+and a representative FORDO $D^{1}.$ As the occupation numbers $\left\{
+\left.  N_{j}\right\vert \quad1\leq j\leq s\right\}  $ of the $2N$-AGP\ state
+$\left\vert g^{N}\right\rangle $ are in $1-1$ correspondence \cite{Colemann}
+with the occupation numbers $\left\{  n_{j}\quad1\leq j\leq s\right\}  $ of
+the $2$-electron geminal state $\left\vert g\right\rangle $ each
+representative $D^{1}$ can, in turn, be parameterized by a vector of geminal
+occupation numbers%
+\begin{equation}
+\mathbf{n}=\left(  n_{1},\cdots,n_{s}\right)  ,\quad0\leq n_{j}\leq
+1;\quad1\leq j\leq s;\quad%
+%TCIMACRO{\tsum \limits_{1\leq j\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq s}}
+%EndExpansion
+n_{j}=1
+\end{equation}
+and a representative set of NGSO's $\left\vert \mathbf{\varphi}\right\rangle
+=\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}  $.
+
+The energy functional $\mathcal{E}\left(  g^{N}\right)  $ over the manifold of
+AGP\ states can thus be formulated as a functional $\mathcal{E}\left(
+\mathbf{n},\mathbf{\theta,\varphi}\right)  $ specifically describing the phase
+and FORDO $D^{1}\left(  \mathbf{n},\mathbf{\varphi}\right)  $ dependency. This
+leads to a Density Matrix Functional (DMF), $\mathcal{F}$, defined on the set
+of equivalence classes $\left\{  \left[  D^{1}\right]  \right\}  $ by\
+\begin{equation}
+\mathcal{F}\left(  D^{1}\right)  =\min_{\mathbf{\theta}}\left\{
+\mathcal{E}\left(  \mathbf{n},\mathbf{\theta,\varphi}\right)  \right\}  ,
+\end{equation}
+which can be utilized in Density Matrix Functional Theory (DMFT) as a concrete
+example of a DMF.
+
+If we concentrate on the occupation and CGSO dependency of the energy we
+denote the functional by $\mathcal{E}\left(  \mathbf{n},\mathbf{\psi}\right)
+$, where the geminal occupation numbers $\mathbf{n}$ must satisfy the
+constraints
+\begin{subequations}
+\begin{align}
+n_{j}  &  \geq0;\quad1\leq j\leq s,\\
+\sum_{1\leq j\leq s}n_{j}  &  =1,
+\end{align}
+and the CGSO's the orthonormality constraints%
+\end{subequations}
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =\delta
+_{jk};\quad1\leq j,k\leq2s.
+\end{equation}
+Variation of the energy with respect to (wrt) orbital changes described by a
+Taylors series expansion involve functional derivatives of $\mathcal{E}\left(
+\mathbf{n},\mathbf{\psi}\right)  $ with respect to $\left\{  \left.  \psi
+_{j}\right\vert 1\leq j\leq2s\right\}  .$ We show that these derivatives can
+be expressed in terms of a generalized Fock operator $F\left(  \mathbf{n}%
+,\mathbf{\psi}\right)  $, which is \emph{only self adjoint} at stationary
+points $\mathbf{\psi}_{s}$ of the orbital variation. Further if $\mathbf{n}%
+_{s}$ is a stationary point of the occupation number variation then the
+diagonal elements of the matrix of $F\left(  \mathbf{n}_{s},\mathbf{\psi}%
+_{s}\right)  $ in the CGSO basis $\left\{  \left\vert \left\vert \psi
+_{j}\right\rangle \right\vert 1\leq j\leq2s\right\}  $ are ionization
+potentials associated with these orbitals weighted by their occupation numbers
+$\left\{  N_{j}\right\}  $.
+
+Unlike the IPS case the Fock operator is in general \emph{not} diagonal in the
+basis $\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}  $. It is, however, possible to diagonalize $F\left(
+\mathbf{n}_{s},\mathbf{\psi}_{s}\right)  $ in terms of eigenvectors $\left\{
+\left.  \left\vert \chi_{j}\right\rangle \right\vert 1\leq j\leq2s\right\}  $
+and eigenvalues $\left\{  \left.  \varepsilon_{j}\right\vert 1\leq
+j\leq2s\right\}  $ such that $\left\{  \varepsilon_{j}\right\}  $ are
+ionization potentials associated with the orbitals $\left\{  \left\vert
+\chi_{j}\right\rangle \right\}  $, but the geminal $\left\vert g\left(
+\mathbf{n}_{s},\mathbf{\psi}_{s}\right)  \right\rangle ,$ that determines the
+energy optimized AGP\ $\left\vert g\left(  \mathbf{n}_{s},\mathbf{\psi}%
+_{s}\right)  ^{N}\right\rangle ,$ will \emph{not }be in a canonical form when
+expressed in terms of the basis $\left\{  \left.  \left\vert \chi
+_{j}\right\rangle \right\vert 1\leq j\leq2s\right\}  .$
+
+One can avoid the use of constrained domains for the energy functional by
+utilizing the unitary group of one electron Hilbert space $\mathcal{H}^{1},$
+parameterized by $\left(  \mathbf{\lambda},\mathbf{\theta}\right)  ,$ to vary
+the orbitals and a commutative non unitary group of positive transformations,
+parameterized by $\mathbf{\eta},$ to vary the occupation numbers. This allows
+us to express the energy as a function $\mathcal{E}\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  $ where there are no constraints on
+$\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  .$ Moreover
+the unitary transformations produce NGSO's $\mathbf{\varphi=}$
+$\mathbf{\varphi}\left(  \mathbf{\lambda}\right)  $ that belong to different
+equivalence classes $\left[  D^{1}\right]  _{2N}$ and $\mathbf{\theta}$
+produces transformations within an equivalence class by altering the phases of
+$\mathbf{\varphi.}$
+
+The one electron model that we obtain describes molecules by weighted PD's,
+each determined by an occupation number and a phase optimized GSO associated
+with an ionization potential, in an analogous fashion to the IPS case, but
+also contains correlation effects. Pictorial manipulations of these PD's
+(taking into account relaxation of the ionization energies and optimal phases)
+allows one to analyze chemical processes and structures in a rigorously
+meaningful fashion, as one is assured that the pictures produced corresponds
+to multi electron states.
+
+The structure of this article is as follows: in section \ref{AGPstate} we
+describe the canonical form of a geminal, and the AGP\ state, in terms of
+geminal occupation numbers $\left\{  \left.  n_{j}\right\vert 1\leq j\leq
+s\right\}  $ and CGSOs $\left\{  \left.  \left\vert \psi_{j}\right\rangle
+\right\vert 1\leq j\leq2s\right\}  .$ Together with the AGP-FORDO occupation
+numbers $\left\{  \left.  N_{j}\right\vert 1\leq j\leq s\right\}  ,$ which are
+in $1-1$ correspondence with the geminal occupation numbers, these CGSOs
+determine both the AGP\ state and the AGP-FORDO. In section \ref{transform} we
+examine the $1-1$ transformations between the AGP $\left\{  \left.
+N_{j}\right\vert 1\leq j\leq s\right\}  $ and geminal $\left\{  \left.
+n_{j}\right\vert 1\leq j\leq s\right\}  $ occupation numbers. In section
+\ref{Energy} we discuss the energy expressions in terms of the occupation
+numbers $\left\{  \left.  n_{j}\right\vert 1\leq j\leq s\right\}  $, CGSOs
+$\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}  $,NGSOs $\left\{  \left.  \left\vert \varphi_{j}\right\rangle
+\right\vert 1\leq j\leq2s\right\}  $ and phases $\left\{  \left.  \theta
+_{j}\right\vert 1\leq j\leq s\right\}  .$ In section \ref{Evariation} we
+describe the necessary conditions needed to minimize the energy over a
+manifold of AGP\ states. In section \ref{Fock} we derive a generalized Fock
+operator that produces the derivative of the energy functional with respect to
+NGSO's for fixed FORDO occupation numbers. In section \ref{aufbau} we analyze
+the total energy in terms of the eigenvalues of this Fock operator and show
+that an aufbau principle similar to the IPS\ case is effective in constructing
+multiparticle states. In \ref{procedure} we form a combined procedure that
+produces an energy optimized AGP state and we conclude in section
+\ref{Discussion} with a review of the material presented and a discussion of
+its implications.
+
+\section{The $2N$-electron AGP state\label{AGPstate}}
+
+In this section we review the canonical form of a geminal and AGP state and
+their associated first and second order reduced density operators. We also
+characterize equivalence classes of AGP states that have the same FORDO.
+
+\subsection{Canonical Form}
+
+The $2N$-electron AGP state, $\left\vert g^{N}\right\rangle $, is the $N^{th}$
+antisymmetric power of the $2$-electron state described by the geminal
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert
+\psi_{j}\psi_{j+s}\right\rangle , \label{geminal}%
+\end{equation}
+where $\left\{  \left.  n_{j}^{\frac{1}{2}}\right\vert 1\leq j\leq s\right\}
+$ are the positive square roots of $\left\{  \left.  n_{j}\right\vert 1\leq
+j\leq s\right\}  ,$ and is given by \cite{weiner&ortiz2004}
+\begin{equation}
+\left\vert g^{N}\right\rangle =\left(  S_{N}\right)  ^{-\frac{1}{2}}%
+\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}n_{j_{1}}^{\frac{1}{2}}\cdots n_{j_{s}%
+}^{\frac{1}{2}}\left\vert \psi_{j_{1}}\psi_{j_{1}+s}\cdots\psi_{j_{N}}%
+\psi_{j_{N}+s}\right\rangle . \label{agp}%
+\end{equation}
+The normalization factor, $\left(  S_{N}\right)  ^{-\frac{1}{2}}$, is given in
+terms of the elementary symmetric function
+\begin{equation}
+S_{N}=\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}n_{j_{1}}\cdots n_{j_{N}},
+\end{equation}
+and the geminals $\left\vert g\right\rangle $ represent normalized two
+electron states so that
+\begin{equation}
+\sum_{1\leq j\leq s}n_{j}=1.
+\end{equation}
+It is evident from the expansion eq. $\left(  \ref{geminal}\right)  $ that the
+geminal and geminal power state are at the least invariant to the group
+\begin{equation}
+SU\left(  2\right)  ^{s}=\overset{s\text{-factors}}{\overbrace{\,SU\left(
+2\right)  \times\cdots\times SU\left(  2\right)  }},
+\end{equation}
+that is formed by $2\times2$ \emph{special} unitary transformations of the
+paired CGSO's $\left\{  \left.  \left\vert \psi_{j}\right\rangle ,\left\vert
+\psi_{j+s}\right\rangle \right\vert 1\leq j\leq s\right\}  ,$ while if
+degeneracies exist amongst the $\left\{  \left.  n_{j}\right\vert 1\leq j\leq
+s\right\}  $ this invariance group is larger \cite{Weiner2004}. The canonical
+CSGO's are unique up to transformations belonging this invariance group.
+
+The CGSO's $\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert
+1\leq j\leq2s\right\}  $ can be expanded in terms of a spin orbitals basis
+$\left\{  \left.  \left\vert \varsigma_{j\alpha}\right\rangle ,\left\vert
+\varsigma_{j\beta}\right\rangle \right\vert 1\leq j\leq s\right\}  $ of one
+electron state space $\mathcal{H}^{1}$ as
+\begin{equation}
+\left\vert \psi_{j}\right\rangle =\sum_{1\leq j\leq s}\left\{  a_{j}\left\vert
+\varsigma_{j\alpha}\right\rangle +b_{j}\left\vert \varsigma_{j\beta
+}\right\rangle \right\}  ,
+\end{equation}
+leading to one electron GSO wavefunctions defined on the spectrum of position
+and spin operators as
+\begin{equation}
+\psi_{j}\left(  \mathbf{r,}\zeta\right)  =\left\langle \left.  \mathbf{r,}%
+\zeta\right\vert \psi_{j}\right\rangle .
+\end{equation}
+It should be noted that if expansion eq. $\left(  \ref{geminal}\right)  $ is
+used to define the canonical expansion it is usually \emph{not possible} to
+find a set of CSGO's such that
+\begin{equation}
+\psi_{j+s}\left(  \mathbf{r,}\zeta\right)  =\psi_{j}\left(  \mathbf{r,}%
+\zeta\right)  ^{\ast}.
+\end{equation}
+
+
+\subsection{First Order Reduced Density Operators\label{FORDO}}
+
+The states $\left\vert g\right\rangle $ and $\left\vert g^{N}\right\rangle $
+define FORDO's given by \cite{Coleman}
+\begin{equation}
+D^{1}\left(  g\right)  =\sum_{1\leq j\leq s}n_{j}\left\{  \left\vert \psi
+_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}  \label{d1g}%
+\end{equation}
+and
+\begin{equation}
+D^{1}\left(  g^{N}\right)  =\sum_{1\leq j\leq s}N_{j}\left\{  \left\vert
+\psi_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}  \label{dng}%
+\end{equation}
+respectively. It is clear from the expansions eqs. $\left(  \ref{d1g}\right)
+$ and $\left(  \ref{dng}\right)  $ that the CGSO's $\left\{  \left.
+\left\vert \psi_{j}\right\rangle \right\vert 1\leq j\leq r\right\}  $ are
+simultaneously the Natural General Spin Orbitals (NGSO's) of $D^{1}\left(
+g\right)  $ and $D^{1}\left(  g^{N}\right)  $. However it is very important to
+note that the NGSO's of $D^{1}\left(  g\right)  $ and $D^{1}\left(
+g^{N}\right)  $ \emph{are not }in general the CGSO's of $\left\vert
+g\right\rangle $. This is a ramification of
+
+\begin{enumerate}
+\item the general invariance of FORDO's to the multiplication of their NGSO's
+by complex phase factors
+\begin{equation}
+D^{1}=\sum_{1\leq j\leq r}\nu_{j}\left\{  \left\vert \chi_{j}\right\rangle
+\left\langle \chi_{j}\right\vert \right\}  =\sum_{1\leq j\leq r}\nu
+_{j}\left\{  e^{i\theta_{j}}\left\vert \chi_{j}\right\rangle \left\langle
+\chi_{j}\right\vert e^{-i\theta_{j}}\right\}  ,
+\end{equation}
+where $\left\{  \left.  \nu_{j}\right\vert 1\leq j\leq s\right\}  $ are
+occupation numbers and
+
+\item the observation that geminals \emph{are not }invariant to such phase
+changes of their CGSO's.
+\end{enumerate}
+
+One can form equivalence classes $\left[  D^{1}\left(  g\left(  \mathbf{0}%
+\right)  \right)  \right]  $ of geminals $\left\{  \left\vert g\left(
+\mathbf{\theta}\right)  \right\rangle \right\}  $ that have the same FORDO
+$D^{1}\left(  g\left(  \mathbf{0}\right)  \right)  $ and equivalence classes
+$\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)  \right)  \right]  $ of
+$2N$-electron AGP states $\left\{  \left\vert g^{N}\left(  \mathbf{\theta
+}\right)  \right\rangle \right\}  $, that have the same FORDO $D^{1}\left(
+g^{N}\left(  \mathbf{0}\right)  \right)  $. For a fixed $N$ these classes
+correspond to each other in a bijective manner \cite{coleman} and can be
+parameterized by the angles $\mathbf{\theta}$, where
+\begin{align}
+\left\vert g\left(  \mathbf{\theta}\right)  \right\rangle  &  =\sum_{1\leq
+j\leq s}n_{j}^{\frac{1}{2}}e^{i\theta_{j}}\left\vert \varphi_{j}\varphi
+_{j+s}\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert
+e^{i\alpha_{j}}\varphi_{j}e^{i\alpha_{j+s}}\varphi_{j+s}\right\rangle
+;\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\theta_{1}=0,\,0<\theta_{j}%
+\leq2\pi,\,2\leq j\leq s,
+\end{align}
+where $\mathbf{\theta=}\left(  0,\theta_{2},\cdots,\theta_{s}\right)  $ and
+$\alpha_{j}+\alpha_{j+s}=\theta_{j}$. Choosing $\theta_{1}=0$ eliminates the
+overall phase factor indeterminacy of $\left\vert g\left(  \mathbf{\theta
+}\right)  \right\rangle $. The individual phase factors $\left\{  \left.
+\alpha_{j}\right\vert 1\leq j\leq s\right\}  $ are not unique, though their
+sums $\left\{  \left.  \theta_{j}\right\vert 1\leq j\leq s\right\}  $ are,
+allowing one to obtain a unique representative set $\left\{  \left.
+\alpha_{j}\right\vert 1\leq j\leq s\right\}  $ by defining
+\begin{equation}
+\alpha_{j}=\frac{\theta_{j}}{2},\alpha_{j+s}=\frac{\theta_{j}}{2};\quad1\leq
+j\leq s.
+\end{equation}
+Thus one has the correspondence
+\begin{equation}
+\left\{  \left\vert g\left(  \mathbf{\theta}\right)  \right\rangle
+\longleftrightarrow\left\vert g^{N}\left(  \mathbf{\theta}\right)
+\right\rangle ;\quad\theta_{1}=0;\,0<\theta_{j}\leq2\pi,2\leq j\leq s\right\}
+\longleftrightarrow\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)
+\right)  \right]  .
+\end{equation}
+Each of the elements of the class $\left[  D^{1}\left(  g^{N}\left(
+\mathbf{0}\right)  \right)  \right]  $ can also be expressed in canonical form
+as
+\begin{equation}
+\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert \chi_{j}\chi_{j+s}%
+\right\rangle ,
+\end{equation}
+where $\left\vert \chi_{j}\right\rangle =\left\vert e^{i\varphi_{j}}%
+\varphi_{j}\right\rangle $.
+
+\subsection{Second Order Reduced Density Operators\label{SORDO}}
+
+The AGP\ states $\left\vert g^{N}\left(  \mathbf{\theta}\right)  \right\rangle
+$ are clearly distinct as they have different Second Order Reduced Density
+Operators (SORDO's), $D^{2}\left(  g^{N}\left(  \mathbf{\theta}\right)
+\right)  $, given by \cite{Coleman}
+\begin{align}
+&  D^{2}\left(  g^{N}\left(  \mathbf{\theta}\right)  \right)  =\frac{1}{S_{N}%
+}\left\{  \sum_{1\leq j\leq s}n_{j}\left\vert \varphi_{j}\varphi
+_{j+s}\right\rangle \left\langle \varphi_{j}\varphi_{j+s}\right\vert \right.
++\nonumber\\
+&  \left.  \sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}%
+}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)
+\left\vert \varphi_{j}\varphi_{j+s}\right\rangle \left\langle \varphi
+_{k}\varphi_{k+s}\right\vert +\sum_{1\leq j<k\leq2s}n_{j}n_{k}S_{N-2}\left(
+\jmath k\right)  \left\vert \varphi_{j}\varphi_{k}\right\rangle \left\langle
+\varphi_{j}\varphi_{k}\right\vert \right\}  , \label{D2}%
+\end{align}
+where
+\begin{equation}
+S_{N-1}\left(  \jmath k\right)  =\sum_{\substack{1\leq j_{1}<\cdots
+<j_{N-1}\leq s\\j,k\notin\left\{  j_{1},\cdots,j_{N-1}\right\}  }}n_{j_{1}%
+}\cdots n_{j_{N-1}}%
+\end{equation}
+and
+\begin{equation}
+S_{N-2}\left(  \jmath k\right)  =\sum_{\substack{1\leq j_{1}<\cdots
+<j_{N-2}\leq s\\j,k\notin\left\{  j_{1},\cdots,j_{N-2}\right\}  }}n_{j_{1}%
+}\cdots n_{j_{N-2}}.
+\end{equation}
+Note that we define
+\begin{align}
+S_{N-1}\left(  \jmath k+s\right)   &  =S_{N-1}\left(  \jmath+sk\right)
+=S_{N-1}\left(  \jmath+sk+s\right)  =S_{N-1}\left(  kj\right)  =S_{N-1}\left(
+\jmath k\right) \nonumber\\
+S_{N-2}\left(  \jmath k+s\right)   &  =S_{N-2}\left(  \jmath+sk\right)
+=S_{N-2}\left(  \jmath+sk+s\right)  =S_{N-2}\left(  kj\right)  =S_{N-2}\left(
+\jmath k\right) \nonumber\\
+S_{N-1}\left(  \jmath\jmath\right)   &  =S_{N-2}\left(  \jmath\jmath\right)
+=0.
+\end{align}
+The SORDO eq. $\left(  \ref{D2}\right)  $ can be expanded in terms of
+$\mathbf{\theta}$ dependent NGSO's $\left\{  \left.  \left\vert e^{i\alpha
+_{j}}\varphi_{j}\right\rangle ,\left\vert e^{i\alpha_{j+s}}\varphi
+_{j+s}\right\rangle \right\vert 1\leq j\leq s\right\}  ,$ where $\left\{
+\left.  \alpha_{j}+\alpha_{j+s}=\theta_{j}\right\vert 1\leq j\leq s\right\}  $
+giving the explicitly orbital phase dependent expression
+\begin{align}
+&  D^{2}\left(  g^{N}\left(  \mathbf{\theta}\right)  \right)  =\frac{1}{S_{N}%
+}\left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\vert
+e^{i\alpha_{j}}\varphi_{j}e^{i\alpha_{j+s}}\varphi_{j+s}\right\rangle
+\left\langle e^{i\alpha_{j}}\varphi_{j}e^{i\alpha_{j+s}}\varphi_{j+s}%
+\right\vert \right. \nonumber\\
+&  \qquad\qquad\qquad\qquad+\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}%
+n_{k}^{\frac{1}{2}}S_{N-1}\left(  \jmath k\right)  \left\vert e^{i\alpha_{j}%
+}\varphi_{j}e^{i\alpha_{j+s}}\varphi_{j+s}\right\rangle \left\langle
+e^{i\alpha_{k}}\varphi_{k}e^{i\alpha_{k+s}}\varphi_{k+s}\right\vert
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\left.  +\sum_{1\leq j<k\leq2s}n_{j}n_{k}%
+S_{N-2}\left(  \jmath k\right)  \left\vert e^{i\alpha_{j}}\varphi
+_{j}e^{i\alpha_{k}}\varphi_{k}\right\rangle \left\langle e^{i\alpha_{j}%
+}\varphi_{j}e^{i\alpha_{k}}\varphi_{k}\right\vert \right\}  . \label{en2}%
+\end{align}
+In terms of CGSO's $\left\{  \psi_{j}\right\}  $ the SORDO can be expressed in
+phase free form as
+\begin{align}
+&  D^{2}\left(  g^{N}\right)  =\frac{1}{S_{N}}\left\{  \sum_{1\leq j\leq
+s}n_{j}\left\vert \psi_{j}\psi_{j+s}\right\rangle \left\langle \psi_{j}%
+\psi_{j+s}\right\vert \right.  +\nonumber\\
+&  \left.  \sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}%
+S_{N-1}\left(  \jmath k\right)  \left\vert \psi_{j}\psi_{j+s}\right\rangle
+\left\langle \psi_{k}\psi_{k+s}\right\vert +\sum_{1\leq j<k\leq2s}n_{j}%
+n_{k}S_{N-2}\left(  \jmath k\right)  \left\vert \psi_{j}\psi_{k}\right\rangle
+\left\langle \psi_{j}\psi_{k}\right\vert \right\}  . \label{D2C}%
+\end{align}
+
+
+\section{The correspondence between AGP and Geminal Occupation
+Numbers\label{transform}}
+
+Any set of $s$ positive numbers $\left\{  \left.  N_{j}\right\vert 1\leq j\leq
+s\right\}  $ that have values between $0$ and $1$ and add up to $N,$ can be
+interpreted as the occupation numbers of a FORDO that is at least doubly
+degenerate and can be associated with an AGP\ state. These numbers are in
+$1-1$ correspondence with another set of positive numbers $\left\{  \left.
+n_{j}\right\vert 1\leq j\leq s\right\}  ,$ that add up to $1$, which can be
+interpreted as the occupation numbers of a FORDO\ of a geminal. The geminal
+occupation numbers $\left\{  \left.  n_{j}\right\vert 1\leq j\leq s\right\}  $
+together with an arbitrary set of $2s$ orthonormal one electron Canonical
+General Spin Orbitals (CGSO's) then \emph{uniquely }determine a $2N$ electron
+AGP state. Any state that has a FORDO that has at least doubly degenerate
+occupation numbers is covered by a set of AGP\ states i.e. there exists
+AGP\ states that have the same FORDO. In most applications e.g. expectation
+values of observables, it is sufficient to know the $2N$ electron state
+occupation numbers in terms of the geminal occupation numbers, which serve as
+a parameterization of the state occupation numbers, and we review this
+relationship first. The inverse function i.e. geminal occupation numbers in
+terms of state occupation numbers are significant in designing possible
+AGP\ states and we present a numerical construction of this function.
+
+\subsection{Transformation of Geminal to AGP Occupation Numbers}
+
+The vector of occupation numbers $\mathbf{N}=\left(  N_{1},\cdots
+,N_{s}\right)  $ of an AGP\ state $\left\vert g^{N}\right\rangle $ can be
+expressed as a bijective function, $\mathcal{N}\left(  \mathbf{n}\right)  $,
+of the geminal occupation numbers $\mathbf{n}=\left(  n_{1},\cdots
+,n_{s}\right)  ,$ where
+\begin{equation}
+\mathcal{N}:\mathfrak{D}_{N}\subset\mathbb{R}^{s}\rightarrow\mathfrak{D}%
+_{n}\subset\mathbb{R}^{s}.
+\end{equation}
+The domain $\mathfrak{D}_{N}$ and range $\mathfrak{D}_{n}$ are given by%
+\begin{align}
+\mathfrak{D}_{N}  &  =\left(  N_{1},\cdots,N_{s}\right)  ;\quad0\leq N_{j}%
+\leq1,\quad1\leq j\leq s\nonumber\\
+\sum_{1\leq j\leq s}N_{j}  &  =N
+\end{align}
+and
+\begin{align}
+\mathfrak{D}_{n}  &  =\left(  n_{1},\cdots,n_{s}\right)  ;\quad n_{j}%
+\geq0,\quad1\leq j\leq s\nonumber\\
+\sum_{1\leq j\leq s}n_{j}  &  =1,
+\end{align}
+where
+\begin{equation}
+N_{j}=\mathcal{N}_{j}\left(  \mathbf{n}\right)  =n_{j}\frac{S_{N-1}\left(
+\jmath\right)  }{S_{N}};\quad1\leq j\leq s
+\end{equation}
+and
+\begin{equation}
+S_{N-1}\left(  \jmath\right)  =\sum_{\substack{1\leq j_{1}<\cdots<j_{N-1}\leq
+s\\j\notin\left\{  j_{1},\cdots,j_{N-1}\right\}  }}n_{j_{1}}\cdots n_{j_{N-1}%
+}.
+\end{equation}
+
+
+\subsection{Transformation of AGP to Geminal Occupation
+Numbers\label{AGPoccGemocc}}
+
+The inverse function $\mathcal{N}^{-1}\left(  \mathbf{N}\right)  $ is not
+explicitly known, but one can obtain a linear approximation that suffices in
+practical applications to numerical determine values of $\mathbf{n}$ from
+known values of $\mathbf{N}$, i.e. the determination of $\mathbf{n}_{0}%
++\delta\mathbf{n}$ from $\mathbf{N}_{0}+\delta\mathbf{N}$, when $\mathbf{N}%
+_{0}$ is a known initial vector of occupation numbers of the $2N$-electron AGP
+state, e.g. an IPS,\ where
+\begin{equation}
+\mathbf{N}_{0}=\left(  \overset{N}{\overbrace{1,\cdots,1}},\overset
+{s-N}{\overbrace{0,\cdots,0}}\right)
+\end{equation}
+and
+\begin{equation}
+\mathbf{n}_{0}=\left(  \overset{N}{\overbrace{\frac{1}{N},\cdots,\frac{1}{N}}%
+},\overset{s-N}{\overbrace{0,\cdots,0}}\right)  .
+\end{equation}
+The Taylor series expansion about $\mathbf{N}_{0}$ of $\mathcal{N}^{-1}$ is
+given by%
+\begin{equation}
+\mathcal{N}^{-1}\left(  \mathbf{N}_{0}+\delta\mathbf{N}\right)  =\mathcal{N}%
+^{-1}\left(  \mathbf{N}_{0}\right)  +d^{1}\mathcal{N}^{-1}\left(
+\mathbf{N}_{0}\right)  \left(  \delta\mathbf{n}\right)  +\cdots,
+\end{equation}
+where
+\begin{equation}
+d^{1}\mathcal{N}^{-1}\left(  \mathbf{N}_{0}\right)  =\left[  d^{1}%
+\mathcal{N}\left(  \mathbf{n}_{0}\right)  \right]  ^{-1}%
+\end{equation}
+and the Jacobian, $d^{1}\mathcal{N}\left(  \mathbf{n}_{0}\right)  $, of the
+transformation $\mathcal{N}$ at the point $\mathbf{n}_{0}$ is given by the
+matrix elements
+\begin{align}
+\left[  d^{1}\mathcal{N}\left(  \mathbf{n}_{0}\right)  \right]  _{jk}  &
+=\frac{\partial\mathcal{N}_{j}\left(  \mathbf{n}_{0}\right)  }{\partial n_{k}%
+}=\frac{\partial}{\partial n_{k}}\left\{  n_{j}\frac{S_{N-1}\left(
+\jmath\right)  }{S_{N}}\right\} \nonumber\\
+&  =\frac{1}{S_{N}}\left(  \delta_{jk}S_{N-1}\left(  \jmath\right)
++n_{j}\frac{\partial S_{N-1}\left(  \jmath\right)  }{\partial n_{k}}%
+-n_{j}\frac{S_{N-1}\left(  \jmath\right)  }{S_{N}}\frac{\partial S_{N}%
+}{\partial n_{k}}\right) \nonumber\\
+&  =\frac{1}{S_{N}}\left(  \delta_{jk}S_{N-1}\left(  \jmath\right)
++n_{j}S_{N-2}\left(  \jmath k\right)  -n_{j}\frac{1}{S_{N}}S_{N-1}\left(
+\jmath\right)  S_{N-1}\left(  k\right)  \right)  .
+\end{align}
+The Jacobian of the inverse transformation $\mathcal{N}^{-1}\left(
+\mathbf{N}_{0}\right)  $ at the point $\mathbf{N}_{0}$ is given by the inverse
+of the matrix $\left\{  \left.  \left[  d^{1}\mathcal{N}\left(  \mathbf{n}%
+_{0}\right)  \right]  _{jk}\right\vert 1\leq j,k\leq s\right\}  $ i.e.
+\begin{equation}
+d^{1}\mathcal{N}^{-1}\left(  \mathbf{N}_{0}\right)  =\left[  d^{1}%
+\mathcal{N}\left(  \mathbf{n}_{0}\right)  \right]  ^{-1}%
+\end{equation}
+and the incremental change, $\delta\mathbf{n}$, of $\mathbf{n}_{0}$ is
+\begin{equation}
+d^{1}\mathcal{N}^{-1}\left(  \mathbf{N}_{0}\right)  \left(  \delta
+\mathbf{N}\right)  _{j}=\sum_{1\leq k\leq s}\left[  d^{1}\mathcal{N}\left(
+\mathbf{n}_{0}\right)  \right]  _{jk}^{-1}\left(  \delta\mathbf{N}\right)
+_{k}.
+\end{equation}
+We can then construct a piecewise linear fit to $\mathcal{N}^{-1}$ as%
+\begin{equation}
+\mathbf{n}\simeq\mathbf{\tilde{n}}_{m}=\mathcal{N}^{-1}\left(  \mathbf{N}%
+\right)  =\mathbf{n}_{0}+\sum_{1\leq k\leq m}\left[  d^{1}\mathcal{N}\left(
+\mathbf{n}_{0}+\sum_{1\leq j\leq k-1}\left[  d^{1}\mathcal{N}\left(
+\mathbf{n}_{0}\right)  \right]  ^{-1}\left(  \delta\mathbf{N}_{j}\right)
+\right)  \right]  ^{-1}\left(  \delta\mathbf{N}_{k}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathbf{N=N}_{0}+\sum_{1\leq j\leq k-1}\delta\mathbf{N}_{j}%
+\end{equation}
+and
+\begin{equation}
+\sum_{1\leq k\leq s}\delta\mathbf{N}_{jk}=0.
+\end{equation}
+See Appendix \label{linfit} for an example. The accuracy of the fit can be
+checked by evaluating
+\begin{equation}
+\mathbf{\Delta}_{m}=\mathcal{N}\left(  \mathbf{\tilde{n}}_{m}\right)
+-\mathbf{N}_{m}%
+\end{equation}
+and noting if
+\begin{equation}
+\left\vert \mathbf{\Delta}_{mj}\right\vert \leq\varkappa_{j};\quad1\leq j\leq
+s \label{con}%
+\end{equation}
+If the error $\left(  \left\vert \mathbf{\Delta}_{m1}\right\vert
+,\cdots,\left\vert \mathbf{\Delta}_{ms}\right\vert \right)  $, i.e. is too big
+i.e. eq. $\left(  \ref{con}\right)  $ is not satisfied one can then decrease
+the size of $\delta\mathbf{N}_{m},$ etc.
+
+\section{Energy Functionals \label{Energy}}
+
+In this section we describe the energy of a $2N$-electron AGP state in three
+different ways in terms of:
+
+\begin{description}
+\item
+\begin{enumerate}
+\item CGSO's and geminal occupation numbers.
+
+\item A density matrix functional $\mathcal{F}\left(  D^{1}\right)  $ defined
+on the equivalence classes $\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}%
+\right)  \right)  \right]  .$ The functional $\mathcal{F}\left(  D^{1}\right)
+$ is significant in two aspects, it can serve as a rigorous explicitly known
+model functional in Density Matrix Functional Theory (DMFT) \cite{DMFT} and it
+clearly demonstrates the difference between CGSO's and NGSO's.
+
+\item Group parameters discussed in \cite{weiner2004} that describe the
+manifold of AGP\ states. This parameterization allows one to constructively
+separate the variation of the phases $\left\{  \theta_{j}\right\}  $, NGSO's
+$\left\{  \left\vert \varphi_{j}\right\rangle \right\}  $ and occupation
+numbers $\left\{  n_{j}\right\}  $, which is necessary in order to construct
+the functionals $\mathcal{F}\left(  D^{1}\right)  $. It is also important in
+the analysis of the properties of the generalized Fock operator associated
+with optimized AGP\ states and the derivation of a generalized Brillouin condition.
+\end{enumerate}
+\end{description}
+
+The supporting details are in Appendix \ref{En_Funcs}.
+
+\subsection{Energy in terms of Geminal Occupation Numbers and
+CGSO's\label{EnON_CGSO}}
+
+The energy, $\mathcal{E}\left(  \mathbf{n,\psi}\right)  ,$ of a $2N$-electron
+AGP\ state for a molecule at a fixed nuclear configuration $\left(
+\mathbf{R}_{1},\cdots,\mathbf{R}_{N_{nuc}}\right)  $ in terms of the CGSO's
+amplitudes $\left\{  \left.  \left\langle \left.  \mathbf{r,\xi}\right\vert
+\psi_{j}\right\rangle \right\vert 1\leq j\leq r\right\}  $ and geminal
+occupation numbers $\mathbf{n}$ is
+\begin{align}
+\mathcal{E}\left(  \mathbf{n,\psi}\right)   &  =\frac{\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }\nonumber\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left\langle \psi_{j}\left\vert
+h_{1}\psi_{j}\right.  \right\rangle +\left\langle \psi_{j+s}\left\vert
+h_{1}\psi_{j+s}\right.  \right\rangle +\left\langle \psi_{j}\psi_{j+s}%
+||\psi_{j}\psi_{j+s}\right\rangle \right\}  \right. \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\jmath k\right)  \left\langle \psi_{j}\psi_{j+s}||\psi_{k}\psi_{k+s}%
+\right\rangle \left.  +\sum_{1\leq j<k\leq s}n_{i}n_{j}S_{N-2}\left(  \jmath
+k\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle
+\right\}  . \label{energy}%
+\end{align}
+$\lceil$Note: Mathematically the energy functional should really be denoted as
+$\mathcal{E}\left(  \mathbf{n,\psi}^{\ast}\mathbf{,\psi}\right)  $ as
+$\mathbf{\psi}^{\ast}$ and $\mathbf{\psi}$ are treated as independent
+variables even though $\mathbf{\psi}$ determines $\mathbf{\psi}^{\ast}%
+$.$\rfloor$ The one-electron matrix elements $\left\{  \left\langle \psi
+_{j}\left\vert h_{1}\psi_{k}\right.  \right\rangle \right\}  $ wrt the CGSO's
+are
+\begin{equation}
+\left\langle \psi_{j}\left\vert h_{1}\psi_{k}\right.  \right\rangle =-\int
+\psi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  \left\{  \sum_{_{1\leq l\leq
+N_{nuc}}}\frac{Z_{l}}{\left\Vert \mathbf{R}_{l}-\mathbf{r}\right\Vert }%
++\nabla_{\mathbf{r}}^{2}\right\}  \psi_{k}\left(  \mathbf{r,\xi}\right)
+d\mathbf{r}d\xi;\quad1\leq j,k\leq2s, \label{h1}%
+\end{equation}
+the antisymmetric two-electron matrix elements $\left\{  \left\langle
+jk||lm\right\rangle \right\}  $
+\begin{align}
+\left\langle jk||lm\right\rangle  &  =\int\left\{  \psi_{j}^{\ast}\left(
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \psi_{k}^{\ast}\left(  \mathbf{r}%
+_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}%
+-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(  \mathbf{r}_{1}\mathbf{,\xi}%
+_{1}\right)  \psi_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \right.
+\nonumber\\
+&  -\left.  \psi_{j}^{\ast}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)
+\psi_{k}^{\ast}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(
+\mathbf{r}_{2}\mathbf{,\xi}_{1}\right)  \psi_{m}\left(  \mathbf{r}%
+_{1}\mathbf{,\xi}_{2}\right)  \right\}  d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi
+_{1}d\xi_{2}\nonumber\\
+&  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad1\leq j,k\leq2s;1\leq l,m\leq2s \label{h2}%
+\end{align}
+and $\left\{  \left\langle jk|||jk\right\rangle \right\}  $
+\begin{align}
+\left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle  &
+=\left\langle jk||jk\right\rangle +\left\langle j\,k+s||j\,k+s\right\rangle
++\left\langle j+s\,k||j+s\,k\right\rangle +\left\langle
+j+s\,k+s||j+s\,k+s\right\rangle \nonumber\\
+&  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad\qquad\qquad\qquad1\leq j,k\leq s.
+\end{align}
+We shall often express $\left\langle jk||lm\right\rangle $ in terms of non
+antisymmetric matrix elements $\left\{  \left(  \left.  jk\right\vert
+h_{2}lm\right)  \right\}  $ as
+\begin{equation}
+\left\langle jk||lm\right\rangle =\left(  \left.  jk\right\vert h_{2}%
+lm\right)  -\left(  \left.  jk\right\vert h_{2}ml\right)  ,
+\end{equation}
+where
+\begin{equation}
+\left(  \left.  jk\right\vert h_{2}lm\right)  =\int\psi_{j}^{\ast}\left(
+\mathbf{x}_{1}\right)  \psi_{k}^{\ast}\left(  \mathbf{x}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(
+\mathbf{x}_{1}\right)  \psi_{m}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}%
+_{1}d\mathbf{x}_{2}%
+\end{equation}
+and use the notation
+\begin{align}
+V_{2jklm}  &  =\left\langle jk||lm\right\rangle \nonumber\\
+h_{2jklm}  &  =\left(  \left.  jk\right\vert h_{2}lm\right)  .
+\end{align}
+
+
+\subsection{Energy in terms of NGSO's, Phases and FORDO's\label{EnON_NGSO}}
+
+In terms of $\theta$ dependent NGSO's $\left\{  \left\vert e^{i\alpha_{j}%
+}\varphi_{j}\right\rangle ;1\leq j\leq2s\right\}  $ defined in eq. $\left(
+\ref{en2}\right)  $ we obtain an energy expression factored through the
+equivalence classes $\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)
+\right)  \right]  $
+\begin{align}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)   &
+=\frac{\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+}{S_{N}\left(  \mathbf{n}\right)  }=\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{
+\overset{}{\left\langle \varphi_{j}\left\vert h_{1}\varphi_{j}\right.
+\right\rangle +\left\langle \varphi_{j+s}\left\vert h_{1}\varphi_{j+s}\right.
+\right\rangle }\right.  \right. \nonumber\\
+&  \left.  +\overset{}{\,\left\langle \varphi_{j}\varphi_{j+s}|h_{2}%
+\varphi_{j}\varphi_{j+s}\right\rangle }\right\}  +\sum_{1\leq j,k\leq s}%
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(  \theta_{j}-\theta
+_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \left\langle \varphi_{j}%
+\varphi_{j+s}|h_{2}\varphi_{k}\varphi_{k+s}\right\rangle \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  +\sum_{1\leq j<k\leq s}n_{i}%
+n_{j}S_{N-2}\left(  \jmath k\right)  \left\langle \varphi_{j}\varphi
+_{k}|||\varphi_{j}\varphi_{k}\right\rangle \right\}  , \label{thetaen}%
+\end{align}
+where $\left\vert \mathbf{\varphi}\right\rangle $ is a representative set of
+NGSO's for the class $\left[  D^{1}\left(  g^{N}\left(  \mathbf{0}\right)
+\right)  \right]  $. As $\left(  \mathbf{n},\mathbf{\psi,\theta}\right)  $
+uniquely defines a $2N$-electron AGP-FORDO\ the expression eq. $\left(
+\ref{thetaen}\right)  $ can be used to define a density matrix energy
+functional
+\begin{equation}
+\mathcal{F}\left(  D^{1}\right)  =\min_{\mathbf{\theta\in}\Theta}%
+\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)
+\end{equation}
+over the manifold of AGP\ states, where
+\begin{equation}
+\Theta=\left\{  \left.  \theta_{j}\right\vert \theta_{1}=0,\,0<\theta_{j}%
+\leq2\pi,2\leq j\leq s\right\}  .
+\end{equation}
+Noting that each class is determined by $\left(  \mathbf{n},\mathbf{\varphi
+}\right)  $ this functional can then be minimized to give
+\begin{equation}
+\mathcal{F}\left(  D_{\#}^{1}\right)  =\min_{D^{1}\in\mathcal{S}_{1}%
+}\mathcal{F}\left(  D^{1}\right)  =\min_{\mathbf{n\in}\mathcal{D}%
+_{n},\left\vert \mathbf{\varphi}\right\rangle \in\mathcal{C}}\mathcal{F}%
+\left(  D^{1}\left(  \mathbf{n},\mathbf{\varphi}\right)  \right)
+=\min_{\left\vert g\right\rangle \in\mathcal{H}^{2}}\mathcal{E}\left(
+\left\vert g^{N}\right\rangle \right)  , \label{MinDMF}%
+\end{equation}
+where the domains $\mathcal{D}_{n}$, $\mathcal{C}$ and $\mathcal{S}_{1}$ are
+given as%
+\begin{align}
+\mathcal{D}_{n}  &  =\left\{  \left.  n_{j}\right\vert ;\sum_{1\leq j\leq
+s}n_{j}=1,n_{j}\geq0,\quad1\leq j\leq s\right\}  ,\\
+\mathcal{C}  &  =\left\{  \left.  \left\vert \mathbf{\varphi}\right\rangle
+\right\vert ;\left\vert \mathbf{\varphi}\right\rangle \neq e^{i\mathbf{\theta
+}}\left\vert \mathbf{\varphi}^{\prime}\right\rangle ,\text{ when }\left\vert
+\mathbf{\varphi}^{\prime}\right\rangle \in\mathcal{C}\right\}
+\end{align}
+and
+\begin{equation}
+\mathcal{S}_{1}=\left\{  \left.  D^{1}\right\vert ;Tr\left\{  D^{1}\right\}
+=2N,D^{1}\geq0,D^{1}\text{ at least doubly degenerate}\right\}  .
+\end{equation}
+The solution to eq. $\left(  \ref{MinDMF}\right)  $ characterizes the
+$2N$-electron AGP state that minimizes the total energy.
+
+\subsection{Energy Functional in Terms of Group Parameters\label{Group_Param}}
+
+The manifold of $2N$-electron AGP\ states can be parameterized in terms of a
+non degenerate ($c_{j}\neq c_{k}$ for $j\neq k$ ) reference geminal state
+$\left\vert g_{0}\right\rangle $ and the subgroups, $U_{orb},$ $U_{phase}$ and
+$G_{num}$ of the general linear group $GL\left(  \mathcal{H}^{1}\right)  $ of
+one particle Hilbert space $\mathcal{H}^{1}$. The orbital variation special
+unitary subgroup $U_{orb}$ is defined as
+\begin{equation}
+U_{orb}=\left\{  \left.  u\left(  \mathbf{\alpha}\right)  =\exp\left\{
+i\sum_{1\leq j\neq k\pm s\leq2s}\alpha_{jk}a_{k}^{\dagger}a_{j}\right\}
+\right\vert \alpha_{jk}=\alpha_{kj}^{\ast}\right\}  , \label{orb}%
+\end{equation}
+where the second quantization operators $\left\{  a_{j}^{\dagger}\right\}  $
+are defined by their action on the vacuum state $\left\vert \phi\right\rangle
+$ by
+\begin{equation}
+a_{j}^{\dagger}\left\vert \phi\right\rangle =\left\vert \varphi_{j}%
+\right\rangle ;\quad1\leq j\leq2s.
+\end{equation}
+The phase variation unitary subgroup $U_{phase}$ by%
+\begin{equation}
+U_{phase}=\left\{  \left.  p\left(  \mathbf{\theta}\right)  =\exp\left\{
+\sum_{1\leq j\leq s}\theta_{j}\Omega_{j}\right\}  \right\vert 0\leq\theta
+_{j}<2\pi\right\}  , \label{phase}%
+\end{equation}
+where
+\begin{equation}
+\Omega_{j}=i\left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)
+;\quad1\leq j\leq s.
+\end{equation}
+The occupation variation non unitary subgroup $G_{num}$
+\begin{equation}
+G_{num}=\left\{  \left.  k\left(  \mathbf{\eta}\right)  =\exp\left\{
+\sum_{1\leq j\leq s}\eta_{j}\Upsilon_{j}\right\}  \right\vert \eta_{j}%
+\in\mathbb{R}\right\}  , \label{occup}%
+\end{equation}
+where
+\begin{equation}
+\Upsilon_{j}=a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s};\quad1\leq j\leq s.
+\end{equation}
+The manifold of $2N$-electron AGP\ states $\mathcal{M}$ can then be expressed
+as
+\begin{equation}
+\mathcal{M=}\left\{  \left.  k\left(  \mathbf{\eta}\right)  p\left(
+\mathbf{\theta}\right)  u\left(  \mathbf{\alpha}\right)  \left\vert g_{0}%
+^{N}\right\rangle \right\vert \quad0\leq\theta_{j}<2\pi;\,\eta_{j}%
+\in\mathbb{R};\,\alpha_{jk}=\alpha_{kj}^{\ast},1\leq j\neq k\pm s\leq
+2s\in\mathbb{C}\right\}
+\end{equation}
+Explicitly the action on the reference geminal is given by
+\begin{equation}
+\left\vert g\left(  \mathbf{\eta},\mathbf{\alpha},\mathbf{\theta}\right)
+\right\rangle =k\left(  \mathbf{\eta}\right)  p\left(  \mathbf{\theta}\right)
+u\left(  \mathbf{\alpha}\right)  \left\vert g_{0}\right\rangle =\sum_{1\leq
+l\leq s}e^{\eta_{l}}e^{i\theta_{l}}c_{0l}\left\vert \varphi_{l}\left(
+\mathbf{\alpha}\right)  \varphi_{l+s}\left(  \mathbf{\alpha}\right)
+\right\rangle ,
+\end{equation}
+where
+\begin{equation}
+\left\vert \varphi_{l}\left(  \mathbf{\alpha}\right)  \right\rangle
+=\exp\left\{  i\sum_{1\leq j\neq k\pm s\leq2s}\alpha_{jk}a_{j}^{\dagger}%
+a_{k}\right\}  \left\vert \varphi_{0l}\right\rangle .
+\end{equation}
+It should be noted that the special unitary group
+\begin{equation}
+U_{2s}=\left\{  \left.  \exp i\left(  \sum_{1\leq j\leq s}\kappa_{jj}\left(
+a_{j}^{\dagger}a_{j}-a_{j+s}^{\dagger}a_{j+s}\right)  +\kappa_{jj+s}%
+a_{j}^{\dagger}a_{j+s}+\kappa_{jj+s}^{\ast}a_{j+s}^{\dagger}a_{j}\right)
+\right\vert \kappa_{jj}\in\mathbb{R},\kappa_{jj+s}\in\mathbb{C}\right\}
+\label{iso}%
+\end{equation}
+leaves the geminal $\left\vert g_{0}\right\rangle $ and AGP $\left\vert
+g_{0}^{N}\right\rangle $ invariant as
+\begin{equation}
+\left(  a_{j}^{\dagger}a_{j}-a_{j+s}^{\dagger}a_{j+s}\right)  \left\vert
+g_{0}\right\rangle =a_{j}^{\dagger}a_{j+s}\left\vert g_{0}\right\rangle
+=a_{j+s}^{\dagger}a_{j}\left\vert g_{0}\right\rangle =0;\,1\leq j\leq s.
+\label{iso1}%
+\end{equation}
+
+
+In terms of all these group parameters the energy functional can be expressed
+as
+\begin{equation}
+\mathcal{E}\left(  \mathbf{\eta},\mathbf{\alpha},\mathbf{\theta}\right)
+=\frac{\mathcal{H}\left(  \mathbf{\eta},\mathbf{\alpha},\mathbf{\theta
+}\right)  }{S_{N}\left(  \mathbf{\eta}\right)  }=\frac{\left\langle \left.
+g\left(  \mathbf{\eta},\mathbf{\alpha},\mathbf{\theta}\right)  ^{N}\right\vert
+Hg\left(  \mathbf{\eta},\mathbf{\alpha},\mathbf{\theta}\right)  ^{N}%
+\right\rangle }{S_{N}\left(  \mathbf{\eta}\right)  }, \label{gp_funct}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{H}\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)
+=\left\langle \left.  k\left(  \mathbf{\eta}\right)  p\left(  \mathbf{\theta
+}\right)  u\left(  \mathbf{\alpha}\right)  g_{0}^{N}\right\vert Hk\left(
+\mathbf{\eta}\right)  p\left(  \mathbf{\theta}\right)  u\left(  \mathbf{\alpha
+}\right)  g_{0}^{N}\right\rangle
+\end{equation}
+and
+\begin{equation}
+S_{N}\left(  \mathbf{\eta}\right)  =\left\langle \left.  k\left(
+\mathbf{\eta}\right)  g_{0}^{N}\right\vert k\left(  \mathbf{\eta}\right)
+g_{0}^{N}\right\rangle =\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}e^{\eta_{j_{1}%
+}+\cdots+\eta_{j_{N}}}n_{j_{1}}\cdots n_{j_{N}}.
+\end{equation}
+The parameters $\left(  \mathbf{\eta,\alpha}\right)  $ uniquely characterize
+the FORDO $D^{1}\left(  g^{N}\left(  \mathbf{\eta},\mathbf{\alpha}\right)
+\right)  $ i.e.
+\begin{equation}
+D^{1}\left(  \mathbf{\eta},\mathbf{\alpha}\right)  =D^{1}\left(
+\mathbf{n}\left(  \mathbf{\eta}\right)  ,\mathbf{\varphi}\left(
+\mathbf{\alpha}\right)  \right)
+\end{equation}
+so that a DMF can be unambiguously expressed as
+\begin{equation}
+\mathcal{F}\left(  \left(  \mathbf{\eta},\mathbf{\alpha}\right)  \right)
+=\mathcal{F}\left(  D^{1}\left(  \mathbf{\eta},\mathbf{\alpha}\right)
+\right)  =\min_{\mathbf{\theta\in}\Theta}\mathcal{E}\left(  \mathbf{\eta
+},\mathbf{\alpha},\mathbf{\theta}\right)
+\end{equation}
+and $\mathcal{F}\left(  \left(  \mathbf{\eta},\mathbf{\alpha}\right)  \right)
+$ can be minimized in an unconstrained fashion to give the optimized AGP
+energy
+\begin{equation}
+\mathcal{F}\left(  D_{\min}^{1}\right)  =\mathcal{F}\left(  \left(
+\mathbf{\eta}_{\min},\mathbf{\alpha}_{\min}\right)  \right)  =\min
+_{\mathbf{\eta},\mathbf{\alpha}}\mathcal{F}\left(  \left(  \mathbf{\eta
+},\mathbf{\alpha}\right)  \right)  .
+\end{equation}
+
+
+\section{Necessary Conditions for the Minimization of the Energy
+\label{Evariation}}
+
+We first consider the energy functional in terms of $\left(  \mathbf{n,\psi
+}\right)  ,$ which produces a constrained optimization problem, then in terms
+of the unconstrained variables $\left(  \mathbf{\eta},\mathbf{\alpha
+},\mathbf{\theta}\right)  $. The first approach introduces a generalized Fock
+operator, while the second approach shows that the Fock operator $F\left(
+\mathbf{n,\psi}\right)  $ must be self adjoint when based on an optimized state.
+
+\subsection{Constrained Variational Problem\label{CVP}}
+
+The solution to the constrained optimization problem
+\begin{equation}
+\min_{\left(  \mathbf{n,\psi}\right)  }\mathcal{E}\left(  \mathbf{n,\psi
+}\right)  \label{min}%
+\end{equation}
+subject to the orthonormality constraints%
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =\delta
+_{jk};\quad1\leq j,k\leq2s \label{orthonorm}%
+\end{equation}
+and the constraints of positivity and normalization on the geminal occupation
+numbers
+\begin{subequations}
+\begin{align}
+n_{j}  &  \geq0;\quad1\leq j\leq s,\label{pos1}\\
+\sum_{1\leq j\leq s}n_{j}  &  =1 \label{gemnorm}%
+\end{align}
+characterize an optimal $2N$-electron AGP\ state.
+
+The occupation number constraints eqs. $\left(  \ref{pos1}\right)  $, $\left(
+\ref{gemnorm}\right)  $ and the orthonormality constraints can be enforced by
+the method of Lagrange multipliers and the introduction of a Lagrangian
+\end{subequations}
+\begin{equation}
+\mathcal{L}_{T}\left(  \mathbf{n,\psi,\varepsilon,\xi,}\eta\right)
+=\mathcal{E}\left(  \mathbf{n,\psi}\right)  -\sum_{1\leq j,k\leq2s}%
+\varepsilon_{jk}\left(  \left\langle \left.  \psi_{j}\right\vert \psi
+_{k}\right\rangle -\delta_{jk}\right)  -\eta\left(  \sum_{1\leq j\leq s}%
+n_{j}-1\right)  +\sum_{1\leq j\leq s}\xi_{j}n_{j}. \label{Lar}%
+\end{equation}
+However the occupation number constraints are most effectively invoked by
+expressing the geminal occupation numbers as unconstrained functions of group
+parameters introduced in section (\ref{Group_Param}). The orbital constraint
+part
+\begin{equation}
+\mathcal{L}\left(  \mathbf{n,\psi}\right)  =\mathcal{E}\left(  \mathbf{n,\psi
+}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon_{kj}\left(  \left\langle \left.
+\psi_{j}\right\vert \psi_{k}\right\rangle -\delta_{jk}\right)  . \label{larE}%
+\end{equation}
+of the Lagrangian eq. $\left(  \ref{Lar}\right)  $ reveals some properties of
+a generalized Fock operator $F\left(  \mathbf{n,\psi}\right)  $ (see section
+\ref{Fock}). The stationarity conditions
+\begin{equation}
+\frac{\delta\mathcal{L}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast
+}}=0;\quad1\leq j\leq2s,
+\end{equation}
+which involve the derivatives
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast
+}}=\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \frac{\delta
+\mathcal{H}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast}%
+}-\mathcal{E}\left(  \mathbf{n,\psi}\right)  \frac{\delta S_{N}\left(
+\mathbf{n}\right)  }{\delta\psi_{j}^{\ast}}\right\}  =\frac{1}{S_{N}\left(
+\mathbf{n}\right)  }\frac{\delta\mathcal{H}\left(  \mathbf{n,\psi}\right)
+}{\delta\psi_{j}^{\ast}}%
+\end{equation}
+produce
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast
+}}=\sum_{1\leq j,k\leq2s}\left\vert \psi_{k}\right\rangle \varepsilon_{jk}.
+\label{statcon}%
+\end{equation}
+We show in section \ref{Fock} that
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast
+}}=F\left(  \mathbf{n,\psi}\right)  \left\vert \psi_{j}\right\rangle
+\end{equation}
+so eq. $\left(  \ref{statcon}\right)  $ becomes
+\begin{equation}
+F\left(  \mathbf{n,\psi}\right)  \left\vert \psi_{j}\right\rangle =\sum_{1\leq
+j,k\leq2s}\left\vert \psi_{k}\right\rangle \varepsilon_{jk}. \label{Fockeq}%
+\end{equation}
+As (see section \ref{Fock})%
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}%
+}=\left(  \frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta
+\psi_{j}^{\ast}}\right)  ^{\ast}%
+\end{equation}
+it is sufficient to consider derivatives wrt $\left\{  \psi_{j}^{\ast
+}\right\}  $.
+
+In \emph{contrast} to the IPS\ case, but in \emph{common} with Multi
+Configurational Self Consistent Field (MCSCF)\ procedures, eq. $\left(
+\ref{Fockeq}\right)  $ is not an eigenvalue equation. However by considering
+the stationarity conditions from the unitary group parameterization one can
+observe that a stationary point of the orbital variation $F\left(
+\mathbf{n,\psi}\right)  $ becomes self adjoint and hence
+\begin{equation}
+\varepsilon_{jk}=\varepsilon_{kj}^{\ast}%
+\end{equation}
+and the matrix $\mathbf{\varepsilon}$ of Lagrange parameters is hermitian.
+
+\subsection{Unconstrained Variational Problem\label{UCVP}}
+
+In this case we consider the problem
+\begin{equation}
+\min_{\left(  \mathbf{\eta,\alpha,\theta}\right)  }\mathcal{E}\left(
+\mathbf{\eta,\alpha,\theta}\right)  ,
+\end{equation}
+where the energy functional is given in eq. $\left(  \ref{gp_funct}\right)  $
+in terms of the groups eqs. $\left(  \ref{orb}\right)  ,\left(  \ref{phase}%
+\right)  $ and $\left(  \ref{occup}\right)  $ parametrized by $\left(
+\mathbf{\eta,\alpha,\theta}\right)  $. Setting
+\begin{equation}
+g_{0}\equiv g\left(  \mathbf{0,0,0}\right)
+\end{equation}
+this leads to (see Appendix \ref{Group_Param}) the orbital variation
+derivatives
+\begin{equation}
+\partial_{\mathbf{\lambda}_{jk}}^{1}\mathcal{E}\left(  g_{0}^{N}\right)
+=\frac{i}{S_{N}\left(  \mathbf{0}\right)  }\left\langle \left.  g_{0}%
+^{N}\right\vert \left[  H,a_{j}^{\dagger}a_{k}\right]  g_{0}^{N}\right\rangle
+;\quad1\leq j\neq k\pm s\leq2s,
+\end{equation}
+the phase variation derivatives
+\begin{equation}
+\partial_{\mathbf{\theta}_{j}}^{1}\mathcal{E}\left(  g_{0}^{N}\right)
+=\frac{i}{S_{N}\left(  \mathbf{0}\right)  }\left\langle \left.  g_{0}%
+^{N}\right\vert \left[  H,\left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger
+}a_{j+s}\right)  \right]  g_{0}^{N}\right\rangle ;\quad1\leq j\leq s,
+\end{equation}
+and the occupation number variations derivatives
+\begin{align}
+\partial_{\mathbf{\eta}_{j}}^{1}\mathcal{E}\left(  g_{0}^{N}\right)   &
+=\frac{1}{S_{N}\left(  \mathbf{0}\right)  }\left\{  \left\langle \left.
+g_{0}^{N}\right\vert \left[  H,\left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger
+}a_{j+s}\right)  \right]  _{+}^{N}g_{0}\right\rangle \right. \nonumber\\
+&  -\left.  2\mathcal{E}\left(  g_{0}^{N}\right)  \left\langle \left.
+g_{0}^{N}\right\vert \left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}%
+a_{j+s}\right)  g_{0}^{N}\right\rangle \right\}  ;\quad1\leq j\leq s.
+\end{align}
+All the derivatives can be evaluated at $\left(  \mathbf{0},\mathbf{0}%
+,\mathbf{0}\right)  $ by updating the reference geminal $\left\vert
+g_{0}\right\rangle \equiv\left\vert g_{old}\right\rangle $ by a
+transformation
+\begin{equation}
+\left\vert g_{new}\right\rangle =k\left(  \mathbf{\eta}\right)  p\left(
+\mathbf{\theta}\right)  u\left(  \mathbf{\alpha}\right)  \left\vert
+g_{old}\right\rangle
+\end{equation}
+to produce a new reference $\left\vert g_{0}\right\rangle \equiv\left\vert
+g_{new}\right\rangle .$ The stationarity conditions for orbital variation
+gives
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert \left[  H,a_{j}^{\dagger}%
+a_{k}\right]  g_{0}^{N}\right\rangle =0;\quad1\leq j\neq k\pm s\leq2s,
+\label{ostat}%
+\end{equation}
+while phase stationarity gives%
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert \left[  H,\left(  a_{j}^{\dagger
+}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  g_{0}^{N}\right\rangle
+=0;\quad1\leq j\leq s,
+\end{equation}
+which is equivalent to
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert \left[  H,a_{j}^{\dagger}%
+a_{j}\right]  g_{0}^{N}\right\rangle =0;\quad1\leq j\leq2s. \label{phasestat}%
+\end{equation}
+Eqs. $\left(  \ref{ostat}\right)  $ and $\left(  \ref{phasestat}\right)  $
+together with the invariance group relationships eq. $\left(  \ref{iso1}%
+\right)  $ give
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert \left[  H,a_{j}^{\dagger}%
+a_{k}\right]  g_{0}^{N}\right\rangle =0;\quad1\leq j,k\leq2s. \label{orbstat}%
+\end{equation}
+
+
+The preceding commutator relationships are the same as are produced by
+stationary states, $\left\vert \Psi\right\rangle ,$ in general MCSCF
+procedures, i.e.
+\begin{equation}
+\left\langle \left.  \Psi\right\vert \left[  H,a_{j}^{\dagger}a_{k}\right]
+\Psi\right\rangle =0;\quad1\leq j,k\leq2s.
+\end{equation}
+Optimized AGP states are also stationary to occupation number variations
+giving
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert \left[  H,\left(  a_{j}^{\dagger
+}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  _{+}g_{0}^{N}\right\rangle
+-2\mathcal{E}\left(  g_{0}^{N}\right)  \left\langle \left.  g_{0}%
+^{N}\right\vert \left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)
+g_{0}^{N}\right\rangle =0;\quad1\leq j\leq s,
+\end{equation}
+which leads to the new relationship
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert Ha_{j}^{\dagger}a_{j}g_{0}%
+^{N}\right\rangle =\mathcal{E}\left(  g_{0}^{N}\right)  \left\langle \left.
+g_{0}^{N}\right\vert a_{j}^{\dagger}a_{j}g_{0}^{N}\right\rangle ;\quad1\leq
+j\leq2s,
+\end{equation}
+which can be recast as
+\begin{equation}
+\frac{1}{S_{N}\left(  \mathbf{0}\right)  }\left\langle \left.  g_{0}%
+^{N}\right\vert Ha_{j}^{\dagger}a_{j}g_{0}^{N}\right\rangle =\mathcal{E}%
+\left(  g_{0}^{N}\right)  N_{j};\quad1\leq j\leq2s. \label{occnumstat}%
+\end{equation}
+In the context of general multi configurational states the generators
+$\left\{  a_{j}^{\dagger}a_{j}\right\}  $ produce CI\ coefficients variations,
+hence even those cases
+\begin{equation}
+\frac{1}{\left\langle \left.  \Psi\right\vert \Psi\right\rangle }\left\langle
+\left.  \Psi\right\vert Ha_{j}^{\dagger}a_{j}\Psi\right\rangle =\mathcal{E}%
+\left(  \Psi\right)  N_{j};\quad1\leq j\leq2s.
+\end{equation}
+
+
+\subsection{Generalized Brillouin Condition for Optimized AGP
+States.\label{Brillouin}}
+
+If an AGP\ has non degenerate canonical coefficients i.e. $c_{j}\neq c_{k}$
+for $1\leq j\neq k\leq s$ one can \cite{weiner2004}\cite{Goscinski80}%
+\cite{Kurtz82}\cite{Ohrn82} always construct operators (see Appendix
+\ref{q_op}) $\left\{  \left.  q_{jk}^{\dagger}\right\vert \quad1\leq j\neq
+k\pm s\leq2s\right\}  $ that have the property
+\begin{equation}
+q_{jk}^{\dagger}\left\vert g_{0}^{N}\right\rangle \neq0,\quad q_{jk}\left\vert
+g_{0}^{N}\right\rangle =0;\quad1\leq j\neq k\pm s\leq2s,
+\end{equation}
+such that the orbital transformation group $U_{orb}$ can also be expressed as
+\begin{equation}
+U_{orb}=\left\{  u\left(  \mathbf{\beta}\right)  =\exp\left\{  i\sum
+_{1\leq\left\vert j\right\vert <\left\vert k\right\vert \leq s}\left\{
+\beta_{jk}q_{jk}^{\dagger}+\beta_{jk}^{\ast}q_{jk}\right\}  \right\}
+\right\}  ,
+\end{equation}
+where
+\begin{equation}
+\left\vert j\right\vert =\left\{
+\begin{array}
+[c]{c}%
+j;\qquad1\leq j\leq s\\
+j-s;\qquad s+1\leq j\leq2s
+\end{array}
+\right.  .
+\end{equation}
+This parameterization of $U_{orb}$ leads to the stationarity conditions
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert \left[  H,q_{jk}^{\dagger}\right]
+g_{0}^{N}\right\rangle =\left\langle \left.  g_{0}^{N}\right\vert \left[
+H,q_{jk}\right]  g_{0}^{N}\right\rangle =0;\quad1\leq\left\vert j\right\vert
+<\left\vert k\right\vert \leq s,
+\end{equation}
+that give the "Brillouin Conditions"
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert Hq_{jk}^{\dagger}g_{0}%
+^{N}\right\rangle =\left\langle \left.  g_{0}^{N}\right\vert q_{jk}Hg_{0}%
+^{N}\right\rangle =0;\quad1\leq\left\vert j\right\vert <\left\vert
+k\right\vert \leq s. \label{BC}%
+\end{equation}
+The $\left\{  q_{jk}^{\dagger},q_{jk}\right\}  $ basis can be transformed into
+the $\left\{  a_{j}^{\dagger}a_{k}\right\}  $ basis of the Lie algebra of
+$U_{orb}$ by a block diagonal non singular transformation, $\mathbb{T},$ such
+that the blocks $\mathbb{T}\left(  jk\right)  $ have the effect
+\begin{align}
+&  \left(  q_{jk}^{\dagger},q_{j+sk}^{\dagger},q_{jk+s}^{\dagger}%
+,q_{j+sk+s}^{\dagger},q_{jk},q_{j+sk},q_{jk+s},q_{j+sk+s}\right)
+\mathbb{T}\left(  jk\right) \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  =\right.  \left(  a_{j}^{\dagger
+}a_{k},a_{j}^{\dagger}a_{k+s},a_{j+s}^{\dagger}a_{k},a_{j+s}^{\dagger}%
+a_{k+s},a_{k}^{\dagger}a_{j},a_{k}^{\dagger}a_{j+s},a_{k+s}^{\dagger}%
+a_{j},a_{k+s}^{\dagger}a_{j+s}\right)
+\end{align}
+giving
+\begin{equation}
+a_{l}^{\dagger}a_{m}=\sum_{p,q=0,s}\left\{  q_{j+pk+q}^{\dagger}\sigma\left(
+jk\right)  _{pqlm}+q_{j+pk+q}\tau\left(  jk\right)  _{pqlm}\right\}  .
+\label{Trans}%
+\end{equation}
+The Brillouin Conditions eq. $\left(  \ref{BC}\right)  $ combined with eq.
+$\left(  \ref{Trans}\right)  $ results in the generalized Brillouin
+Conditions
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert Ha_{l}^{\dagger}a_{m}g_{0}%
+^{N}\right\rangle =0;\quad1\leq l\neq m\pm s\leq2s, \label{GBC}%
+\end{equation}
+as%
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert H\sum_{p,q=0,s}q_{j+pk+q}^{\dagger
+}\sigma\left(  jk\right)  _{pqlm}-\sum_{p,q=0,s}q_{j+pk+q}\tau\left(
+jk\right)  _{pqlm}Hg_{0}^{N}\right\rangle =0;\quad1\leq l\neq m\pm s\leq2s.
+\end{equation}
+The remaining off diagonal particle-hole operators $\left\{  \left.
+a_{l}^{\dagger}a_{m}\right\vert 1\leq l=m\pm s\leq2s\right\}  $ automatically
+satisfy a generalized Brillouin condition
+\begin{equation}
+\left\langle \left.  g_{0}^{N}\right\vert Ha_{l}^{\dagger}a_{m}g_{0}%
+^{N}\right\rangle =0;\quad1\leq l=m\pm s\leq2s
+\end{equation}
+by the invariance group relationships eq. $\left(  \ref{iso1}\right)  .$
+
+If there are degeneracies of the canonical coefficients i.e. $c_{j}=c_{k}$ for
+some $1\leq j\neq k\leq s,$ then the $\left\{  q_{jk}^{\dagger}\right\}  $ and
+$\left\{  q_{jk}\right\}  $ associated with those coefficients can be replaced
+\cite{weiner2004}\cite{Goscinski82} with a sets of self adjoint operators
+$\left\{  u_{jk}\right\}  $ and $\left\{  v_{ij}\right\}  $ respectively,
+where
+\begin{equation}
+u_{jk}\left\vert g_{0}^{N}\right\rangle \neq0,\quad v_{jk}\left\vert g_{0}%
+^{N}\right\rangle =0.
+\end{equation}
+and one can deduce that a generalized Brillouin condition of the form eq.
+$\left(  \ref{GBC}\right)  $ \emph{does not} hold for $\left\{  a_{j}%
+^{\dagger}a_{k}\right\}  $ associated with those indices.
+
+\section{Generalized Fock Operator \label{Fock} for the Variation wrt
+$\mathbf{\psi}$}
+
+\subsection{Functional Derivatives\label{FD}}
+
+The energy expression eq. $\left(  \ref{energy}\right)  $ can be
+differentiated wrt $\mathbf{\psi}^{\ast},$ $\mathbf{\psi}$ to produce the
+functional derivatives (Appendix \ref{variational})
+\begin{equation}
+\left\{  \frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta
+\psi_{j}^{\ast}},\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)
+}{\delta\psi_{j}};\quad1\leq j\leq s\right\}  ,
+\end{equation}
+which can be expressed as%
+\begin{align}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast
+}}  &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\frac{\delta\mathcal{H}%
+\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast}}\\
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}}  &
+=\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\frac{\delta\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{\delta\psi_{j}}%
+\end{align}
+in terms of the derivatives of the unnormalized energy $\mathcal{H}\left(
+\mathbf{n,\psi}\right)  ,$ as $S_{N}\left(  \mathbf{n}\right)  $ does not
+depend on $\mathbf{\psi}$ when $\left\{  \left.  \left\vert \psi
+_{j}\right\rangle \right\vert \quad1\leq j\leq2s\right\}  $ are orthonormal.
+It is easy to see that
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast
+}}=\left(  \frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta
+\psi_{j}}\right)  ^{\ast}%
+\end{equation}
+so we only need consider $\left\{  \frac{\delta\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast}}\right\}  .$ These derivatives
+can be expressed $\left(  \text{see Appendix \ref{variational}}\right)  $ in
+terms of a generalized Fock operator $F\left(  \mathbf{n,\psi}\right)  $ as
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbf{n,\psi}\right)  }{\delta\psi_{j}^{\ast
+}}=F\left(  \mathbf{n,\psi}\right)  \left\vert \psi_{j}\right\rangle
+,\quad1\leq j\leq2s, \label{H_deriv}%
+\end{equation}
+that depends on the occupation numbers $\mathbf{n,}$ and the GSO's
+$\mathbf{\psi}$ and is given by
+\begin{equation}
+F\left(  \mathbf{n,\psi}\right)  =\sum_{1\leq m,n\leq2s}\left\{  \left(
+\mathbb{H}_{1}\left(  \mathbf{\psi}\right)  \mathbb{D}^{1}\left(
+\mathbf{n}\right)  \right)  _{mn}+\frac{1}{2}\left(  L_{2}^{1}\left(
+\mathbb{V}_{2}\left(  \mathbf{\psi}\right)  \mathbb{D}^{2}\left(
+\mathbf{n}\right)  \right)  \right)  _{mn}\right\}  \left\vert \psi
+_{m}\right\rangle \left\langle \psi_{n}\right\vert . \label{genfock}%
+\end{equation}
+The contraction operator $L_{2}^{1}$ is defined as
+\begin{equation}
+L_{2}^{1}\left(  \mathbb{A}\right)  _{jk}=\sum_{1\leq l\leq2s}A_{jlkl},
+\end{equation}
+$\mathbb{H}_{1}\left(  \mathbf{\psi}\right)  $ is the matrix of the one
+particle Hamiltonian $h_{1}$, $\mathbb{V}_{2}\left(  \mathbf{\psi}\right)  $
+is the matrix of the two particle Hamiltonian $h_{2}$, $\mathbb{D}^{1}\left(
+\mathbf{n}\right)  $ the FORDM and $\mathbb{D}^{2}\left(  \mathbf{n}\right)  $
+the SORDM of the $2N$-elecron AGP\ state (see in eq. $\left(  \ref{D2C}%
+\right)  ),$ wrt the basis $\left\{  \left\vert \psi_{j}\right\rangle ;1\leq
+j\leq2s\right\}  .$ One should recall that in L\"{o}wdin normalization and
+using an unordered basis of two electron space
+\begin{equation}
+\mathbb{D}^{1}\left(  \mathbf{n}\right)  =\left(  2N-1\right)  ^{-1}L_{2}%
+^{1}\left(  \mathbb{D}^{2}\left(  \mathbf{n}\right)  \right)  .
+\end{equation}
+The expression eq. $\left(  \ref{genfock}\right)  $ is in fact valid for all
+$N$-representable. SORDM $\mathbb{D}^{2}$ and its associated FORDM
+$\mathbb{D}^{1}$ and defines a generalized Fock operator for \emph{any }MCSCF
+state and always produces the orbital functional derivatives eq. $\left(
+\ref{H_deriv}\right)  .$ In general this generalized Fock operator is
+\emph{not }self adjoint\emph{ }unless the state that it is based on fully
+optimizes the energy functional.
+
+\subsection{Properties of a Stationary Point Fock Operator\label{Stat_Fock}}
+
+We show in Appendix \ref{VarGroupPar} that the derivatives wrt the group
+parameters controlling the GSO variations are
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=i\left(  \left[  \mathbb{D}^{1},\mathbb{H}_{1}\left(
+\mathbf{\varphi}\left(  \mathbf{0}\right)  \right)  \right]  +\frac{1}{2}%
+L_{2}^{1}\left(  \left[  \mathbb{D}^{2},\mathbb{V}_{2}\left(  \mathbf{\varphi
+}\left(  \mathbf{0}\right)  \right)  \right]  \right)  \right)  _{qp}%
+\end{equation}
+and in Appendix \ref{Deriv_Fock} that the generalized Fock operator matrix
+elements are
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  _{qp}=\operatorname{Tr}%
+\left\{  \left(  \mathbb{H}_{1}\left(  \mathbf{\varphi}\right)  \mathbb{D}%
+^{1}\right)  _{qp}+\frac{1}{2}\left(  L_{2}^{1}\left(  \mathbb{V}_{2}\left(
+\mathbf{\varphi}\right)  \mathbb{D}^{2}\right)  \right)  _{qp}\right\}
+\end{equation}
+for \emph{any} state described by a SORDM $\mathbb{D}^{2}$. These two
+equations give that
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=i\left(  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\left(
+\mathbf{0}\right)  \right)  ^{\dagger}-F\left(  \mathbb{D}^{2},\mathbf{\varphi
+}\left(  \mathbf{0}\right)  \right)  \right)  _{qp},
+\end{equation}
+which show if the state is stationary wrt orbital transformations then the
+generalized Fock operator is self adjoint as
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=0=i\left(  F\left(  \mathbb{D}^{2},\mathbf{\varphi
+}\left(  \mathbf{0}\right)  \right)  ^{\dagger}-F\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\left(  \mathbf{0}\right)  \right)  \right)  _{qp}%
+;\quad1\leq p,q\leq2s.
+\end{equation}
+
+
+\subsection{Properties of an Optimized AGP\ Fock Operator\label{AGP_Fock}}
+
+The generalized Fock operator associated with an optimized AGP\ state has
+further significant properties, in addition to being self adjoint, originating from
+
+\begin{enumerate}
+\item the stationarity wrt occupation number variations shown in eq. $\left(
+\ref{occnumstat}\right)  $ as
+\begin{equation}
+\frac{1}{S_{N}\left(  g^{N}\right)  }\left\langle \left.  g^{N}\right\vert
+Ha_{p}^{\dagger}a_{p}g^{N}\right\rangle =\mathcal{E}\left(  g^{N}\right)
+N_{p};\quad1\leq p\leq2s,
+\end{equation}
+and
+
+\item the expression for the generalized Fock operator matrix elements
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  _{qp}=\frac{1}%
+{\operatorname{Tr}\left\{  D^{2N}\right\}  }\operatorname{Tr}\left\{
+a_{p}^{\dagger}\left[  a_{q},H\right]  D^{2N}\right\}
+\end{equation}
+obtained in Appendix \ref{SQ_Fock}, which are valid for any state described by
+the positive operator $D^{2N}$. For AGP\ states this becomes
+\begin{equation}
+F\left(  \mathbf{n},\mathbf{\psi}\right)  _{qp}=\frac{1}{S_{N}\left(
+g^{N}\right)  }\left\langle \left.  g^{N}\right\vert a_{p}^{\dagger}%
+a_{q}H-a_{p}^{\dagger}Ha_{q}g^{N}\right\rangle .
+\end{equation}
+
+\end{enumerate}
+
+Combining items $\left(  1\right)  $ and $\left(  2\right)  $ together shows
+that the diagonal elements of the optimized AGP\ Fock operator are given by
+\begin{equation}
+F\left(  \mathbf{n},\mathbf{\psi}\right)  _{pp}=\frac{1}{S_{N}\left(
+g^{N}\right)  }\left\langle \left.  g^{N}\right\vert a_{p}^{\dagger}%
+a_{p}H-a_{p}^{\dagger}Ha_{p}g^{N}\right\rangle =\mathcal{E}\left(
+g^{N}\right)  N_{p}-\frac{1}{S_{N}\left(  g^{N}\right)  }\left\langle \left.
+a_{p}g^{N}\right\vert Ha_{p}g^{N}\right\rangle ,
+\end{equation}
+which can be developed to give
+\begin{equation}
+F\left(  \mathbf{n},\mathbf{\psi}\right)  _{pp}=N_{p}\left\{  \mathcal{E}%
+\left(  g^{N}\right)  -\frac{\left\langle \left.  a_{p}g^{N}\right\vert
+Ha_{p}g^{N}\right\rangle }{\left\langle \left.  a_{p}g^{N}\right\vert
+a_{p}g^{N}\right\rangle }\right\}  =N_{p}\left\{  \mathcal{E}\left(
+g^{N}\right)  -\mathcal{E}_{2N-1}\left(  \psi_{p}\right)  \right\}  ,
+\end{equation}
+where $\mathcal{E}_{2N-1}\left(  \psi_{p}\right)  $ is the energy of the
+normalized $2N-1$ electron state produced from the state $\frac{1}%
+{S_{N}\left(  g^{N}\right)  }\left\vert g^{N}\right\rangle $ by removing an
+electron described by the CGSO\ $\left\vert \psi_{p}\right\rangle $. One can
+observe from the form of $F\left(  \mathbf{n},\mathbf{\psi}\right)  _{pp}$
+that
+\begin{equation}
+F\left(  \mathbf{n},\mathbf{\psi}\right)  _{pp}=F\left(  \mathbf{n}%
+,\mathbf{\psi}\right)  _{p+sp+s}\Rightarrow I\left(  \psi_{p}\right)
+=I\left(  \psi_{p+s}\right)  ;\quad1\leq p\leq s.
+\end{equation}
+In Appendix \ref{Fock&Energy} we show that the total energy can be expressed
+in terms of the Fock operator $F\left(  \mathbf{n},\mathbf{\psi}\right)
+\ $as
+\begin{equation}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi}\right)  =\frac{1}{2}\left\{
+\overset{}{\operatorname{Tr}\left\{  F\left(  \mathbf{n},\mathbf{\psi}\right)
+\right\}  +\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi}\right)  }\right\}
+,
+\end{equation}
+where the expectation value of the one electron part of the Hamiltonian
+$\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi}\right)  $ is given by
+\begin{equation}
+\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi}\right)  =\sum_{1\leq p\leq
+2s}N_{p}\left(  \left.  \psi_{p}\right\vert h_{1}\psi_{p}\right)  ,
+\end{equation}
+as the FORDM $\mathbb{D}^{1}\left(  \mathbf{n},\mathbf{\psi}\right)  $ is
+diagonal in the CGSO's $\left\{  \left\vert \psi_{p}\right\rangle \right\}  .$
+The energy $\mathcal{E}\left(  \mathbf{n},\mathbf{\psi}\right)  $ can be
+expressed as
+\begin{align}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi}\right)   &  =\sum_{1\leq p\leq
+2s}\left\{  N_{p}I\left(  \psi_{p}\right)  +N_{p}\left(  \left.  \psi
+_{p}\right\vert h_{1}\psi_{p}\right)  \right\}  \\
+&  =\sum_{1\leq p\leq2s}\left\{  N_{p}I\left(  \psi_{p}\right)  +N_{p}\left(
+\left.  \psi_{p}\right\vert h_{1}\psi_{p}\right)  \right\}  \equiv\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+N_{l}\varsigma\left(  \psi_{l}\right)  ,
+\end{align}
+where we have introduced the new quantity,
+\begin{equation}
+\varsigma\left(  \psi_{l}\right)  =I\left(  \psi_{l}\right)  +\left(  \left.
+\psi_{l}\right\vert h_{1}\psi_{l}\right)  ,
+\end{equation}
+which is the sum of the ionization potential, the kinetic energy, the electron
+- nuclear potential energy of attraction and potential energy of interaction
+due to any other external forces of an electron described by a
+GSO\ $\left\vert \psi_{l}\right\rangle $. 
+
+Although the AGP\ Fock operator is self adjoint its matrix, which is
+hermitian, in the CGSO basis is in general non diagonal. If the canonical
+coefficients of the optimized AGP\ are non degenerate then the generalized
+Brillouin conditions eq. $\left(  \ref{GBC}\right)  $ hold and
+\begin{equation}
+F\left(  \mathbf{n},\mathbf{\psi}\right)  _{qp}=\frac{1}{S_{N}\left(
+g^{N}\right)  }\left\{  \left\langle \left.  g^{N}\right\vert a_{p}^{\dagger
+}a_{p}Hg^{N}\right\rangle \delta_{qp}-\left\langle \left.  a_{p}%
+g^{N}\right\vert Ha_{q}g^{N}\right\rangle \right\}  .
+\end{equation}
+The matrix $\left\{  F\left(  \mathbf{n},\mathbf{\psi}\right)  _{qp}\right\}
+$ can be diagonalized by a unitary transformation $u$ of the CGSO basis to
+produce
+\begin{equation}
+\tilde{F}\left(  \mathbf{n},\mathbf{\psi}\right)  _{qp}=\frac{1}{S_{N}\left(
+g^{N}\right)  }\left\{  \left\langle \left.  g^{N}\right\vert b_{p}^{\dagger
+}b_{p}Hg^{N}\right\rangle -\left\langle \left.  b_{p}g^{N}\right\vert
+Hb_{p}g^{N}\right\rangle \right\}  \delta_{qp},
+\end{equation}
+where
+\begin{equation}
+b_{p}^{\dagger}=ua_{p}^{\dagger}u^{\dagger}=\sum_{1\leq j\leq2s}a_{j}%
+^{\dagger}u_{jp}%
+\end{equation}
+and
+\begin{equation}
+\left\vert \varsigma_{p}\right\rangle =\sum_{1\leq j\leq2s}\left\vert \psi
+_{j}\right\rangle u_{jp}.
+\end{equation}
+The eigenvalues
+\begin{align}
+\varepsilon_{p}  &  =\tilde{F}\left(  \mathbf{n},\mathbf{\psi}\right)
+_{pp}=\frac{1}{S_{N}\left(  g^{N}\right)  }\left\{  \left\langle \left.
+g^{N}\right\vert b_{p}^{\dagger}b_{p}Hg^{N}\right\rangle -\left\langle \left.
+b_{p}g^{N}\right\vert Hb_{p}g^{N}\right\rangle \right\} \nonumber\\
+&  =\frac{1}{S_{N}\left(  g^{N}\right)  }\mathcal{N}_{p}\left\{
+\mathcal{E}\left(  g^{N}\right)  -\frac{\left\langle \left.  b_{p}%
+g^{N}\right\vert Hb_{p}g^{N}\right\rangle }{\left\langle \left.  b_{p}%
+g^{N}\right\vert b_{p}g^{N}\right\rangle }\right\}  ,
+\end{align}
+where
+\begin{equation}
+\mathcal{N}_{p}=\left\langle \left.  \varsigma_{p}\right\vert D^{1}\left(
+\mathbf{n},\mathbf{\psi}\right)  \varsigma_{p}\right\rangle .
+\end{equation}
+Hence
+\begin{equation}
+\varepsilon_{p}=\frac{\mathcal{N}_{p}I\left(  \varsigma_{p}\right)  }%
+{S_{N}\left(  g^{N}\right)  },
+\end{equation}
+where $\left\{  I\left(  \varsigma_{p}\right)  \right\}  $ are the ionization
+potentials associated with the GSO's $\left\{  \left\vert \varsigma
+_{p}\right\rangle \right\}  .$ The optimized geminal\ \emph{is not} in general
+in canonical form wrt the basis $\left\{  \left\vert \varsigma_{p}%
+\right\rangle \right\}  $ , nor is $D^{1}\left(  \mathbf{n},\mathbf{\psi
+}\right)  $ diagonal so $\mathcal{N}_{p}$ are \emph{not} occupation numbers.
+
+\section{Reduction to the IPS \label{IPS}}
+
+The standard basic model in chemistry is the IPS description, as we have noted
+in the preceding, this is a special case of the AGP state model which relaxes
+to the IPS\ for integer occupation numbers i.e.
+\begin{align}
+N_{j}  &  =N_{j+s}=1,\quad1\leq j\leq N\nonumber\\
+N_{j}  &  =N_{j+s}=0,\quad N+1\leq j\leq s
+\end{align}
+and%
+\begin{align}
+n_{j}  &  =n_{j+s}=1,\quad1\leq j\leq N\nonumber\\
+n_{j}  &  =n_{j+s}=0,\quad N+1\leq j\leq s,
+\end{align}
+where the FORDM\ is given by
+\begin{equation}
+D_{jk}^{1}=N_{j}\delta_{jk};\quad1\leq j,k\leq2s
+\end{equation}
+The SORDM for an IPS is given by
+\begin{equation}
+\mathbb{D}^{2}=\mathbb{D}^{1}\wedge\mathbb{D}^{1},
+\end{equation}
+where
+\begin{equation}
+\left(  \mathbb{D}^{1}\wedge\mathbb{D}^{1}\right)  _{ijkl}=D_{ik}^{1}%
+D_{jl}^{1}-D_{il}^{1}D_{jk}^{1}.
+\end{equation}
+The generalized Fock operator that we have introduced in this paper
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\sum_{1\leq m,n\leq
+2s}\left\{  \left(  \mathbb{H}_{1}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{1}\right)  _{mn}+\left(  L_{2}^{1}\left(  \mathbb{H}_{2}\left(
+\mathbf{\varphi}\right)  \mathbb{D}^{2}\right)  \right)  _{mn}\right\}
+\left\vert \varphi_{m}\right\rangle \left\langle \varphi_{n}\right\vert ,
+\label{F1}%
+\end{equation}
+can then be simplified by noting
+\begin{align}
+&  \left(  L_{2}^{1}\left(  \mathbb{H}_{2}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{2}\right)  \right)  _{mn}=\sum_{1\leq k\leq2s}\left(
+\mathbb{H}_{2}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{2}\right)
+_{mknk}=\sum_{1\leq p,q,k\leq2s}h_{2mkpq}\left(  \mathbf{\varphi}\right)
+D_{pqnk}^{2}\nonumber\\
+&  =\sum_{1\leq p,q,k\leq2s}h_{2mkpq}\left(  \mathbf{\varphi}\right)  \left(
+D_{pn}^{1}D_{qk}^{1}-D_{pk}^{1}D_{qn}^{1}\right)  =\sum_{1\leq p,q,k\leq
+2s}\left(  h_{2mkpq}\left(  \mathbf{\varphi}\right)  D_{qk}^{1}-h_{2mkqp}%
+\left(  \mathbf{\varphi}\right)  D_{qk}^{1}\right)  D_{pn}^{1}%
+\end{align}
+and defining the coulomb matrix
+\begin{equation}
+J_{mp}\left(  \mathbf{\varphi}\right)  =\sum_{1\leq q,k\leq2s}h_{2mkpq}\left(
+\mathbf{\varphi}\right)  D_{qk}^{1}%
+\end{equation}
+and exchange matrix
+\begin{equation}
+K_{mp}\left(  \mathbf{\varphi}\right)  =\sum_{1\leq q,k\leq2s}h_{2mkqp}\left(
+\mathbf{\varphi}\right)  D_{qk}^{1}%
+\end{equation}
+leading to
+\begin{equation}
+\left(  L_{2}^{1}\left(  \mathbb{H}_{2}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{2}\right)  \right)  _{mn}=\sum_{1\leq p\leq2s}\left\{
+J_{mp}\left(  \mathbf{\varphi}\right)  -K_{mp}\left(  \mathbf{\varphi}\right)
+\right\}  D_{pn}^{1}.
+\end{equation}
+The generalized Fock operator eq. $\left(  \ref{F1}\right)  $ can then be
+expressed as
+\begin{align}
+F\left(  \mathbf{\varphi}\right)   &  =\sum_{1\leq m,n\leq2s}\left\{
+\sum_{1\leq q\leq2s}\left\{  \left(  h_{1mq}\left(  \mathbf{\varphi}\right)
+\right)  +J_{mq}\left(  \mathbf{\varphi}\right)  -K_{mq}\left(
+\mathbf{\varphi}\right)  \right\}  D_{qn}^{1}\right\}  \left\vert \varphi
+_{m}\right\rangle \left\langle \varphi_{n}\right\vert \nonumber\\
+&  =\sum_{1\leq m,n\leq2s}\left(  \mathbf{f}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{1}\right)  _{mn}\left\vert \varphi_{m}\right\rangle \left\langle
+\varphi_{n}\right\vert ,
+\end{align}
+where we have introduced the standard Fock matrix $\mathbf{f}\left(
+\mathbb{D}^{1},\mathbf{\varphi}\right)  $ with matrix elements
+\begin{equation}
+f\left(  \mathbf{\varphi}\right)  _{mq}=\left(  h_{1mq}\left(  \mathbf{\varphi
+}\right)  \right)  +J_{mq}\left(  \mathbf{\varphi}\right)  -K_{mq}\left(
+\mathbf{\varphi}\right)
+\end{equation}
+corresponding to the Fock operator
+\begin{equation}
+\mathfrak{f}\left(  \mathbf{\varphi}\right)  =\sum_{1\leq m,n\leq2s}f\left(
+\mathbf{\varphi}\right)  _{mn}\left\vert \varphi_{m}\right\rangle \left\langle
+\varphi_{n}\right\vert =\mathfrak{f}\left(  \mathbf{\varphi}\right)
+^{\dagger},
+\end{equation}
+which is always self adjoint. In the IPS case the generalized Fock operator
+thus corresponds to the product of the conventional Fock operator and the
+FORDO i.e.
+\begin{equation}
+F\left(  \mathbf{\varphi}\right)  =\mathfrak{f}\left(  \mathbf{\varphi
+}\right)  D^{1}.
+\end{equation}
+
+
+\section{Discussion\label{Discussion}}
+
+We have extended the IPS one particle model of molecular quantum mechanics
+described by IPS's to a more accurate correlated one particle model described
+by AGP\ states for an even number of electrons and GAGP states for an odd
+number. All of these states are determined by a set of one particle occupation
+numbers and a set of CGSO's. In the IPS case the occupation numbers are one or
+zero, while in the AGP case they must be at least doubly degenerate and for
+the GAGP case there must be at most one non degenerate integer occupation
+number and the rest at least doubly degenerate.
+
+The occupation numbers and CGSO's totally determine the many electron state, a
+necessary criterion for a one particle model. In the AGP\ case the GSO's
+produce weighted Probability Distributions (PD's)\ that produce pictorial
+models of a molecules that generalize the standard ones used in chemistry in
+that they contain the effects of correlation. It is true that multi
+configurational states also produce weighted Probability Distributions (PD's)
+but they are not determined by them, in contrast to the AGP\ case.
+
+Another important aspect of the IPS model is the role of energies of the one
+particle orbitals, which are given by the eigenvalues of the Fock operator.
+When these are combined with the shape of PD's one obtains a description of
+chemical properties i.e. reactivity and reaction mechanisms. Physically these
+energies, are the poles of a first order approximation to the electron
+propagator and correspond to the ionization potentials of the electrons from
+the occupied orbitals. Mathematically they reflect the effect of the
+orthonormality constraints in the IP-SCF\ procedure i.e. they give the rate of
+change of the total energy with respect to changes in the normalization of the
+corresponding orbitals. The aufbau principle is also based on these
+eigenvalues i.e. the optimized IPS\ is in general composed of the orbitals
+corresponding to most negative ionization potentials.
+
+These properties are generalized by the optimized AGP-Fock operator with two
+important differences. The generalized Fock operator is not diagonal in the
+basis of CGSO's and the diagonal elements give weighted ionization potentials.
+This is a reflection of our contention that the proper entity to generalize to
+correlated states in order to obtain orbital derivatives is the product
+$\mathfrak{f}\left(  \mathbf{\varphi}\right)  D^{1}$. In the IPS\ case the
+diagonal elements of $\mathfrak{f}\left(  \mathbf{\varphi}\right)  D^{1}$ and
+$\mathfrak{f}\left(  \mathbf{\varphi}\right)  $ in the basis $\left\{
+\left\vert \varphi_{j}\right\rangle \right\}  $, referring to the occupied
+GSO's, are identical but this is not the case for AGP and MCSCF\ states.
+Moreover the Fock operator $\mathfrak{f}\left(  \mathbf{\varphi}\right)  $ is
+always self adjoint and both $\mathfrak{f}\left(  \mathbf{\varphi}\right)
+D^{1}$ and $\mathfrak{f}\left(  \mathbf{\varphi}\right)  $ are diagonal in
+this basis, thus the diagonal elements are the eigenvalues of these operators.
+In the AGP and MCSCF cases the generalized Fock operator $F\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  $ is only self adjoint at stationary
+points of the GSO variation and not diagonal.
+
+Another aspect of the IPS theory that is generalized by optimized AGP's is the
+Brillouin Condition
+\begin{equation}
+\left\langle \left.  g^{N}\right\vert Ha_{j}^{\dagger}a_{k}g^{N}\right\rangle
+=0 \label{GBCD}%
+\end{equation}
+for $j=k\pm s$ and for all $j\neq k$ such that $c_{j}\neq c_{k}$. For non
+degenerate AGP's i.e. where all the canonical coefficients $\left\{
+c_{j}\right\}  $ are distinct the condition eq. $\left(  \ref{GBCD}\right)  $
+holds for all $j\neq k$. In terms of CGSO's $\mathbf{\psi}$ the AGP-SORDM can
+be expressed solely in terms of the geminal occupation numbers i.e.
+$\mathbb{D}^{2}=\mathbb{D}^{2}\left(  \mathbf{n}\right)  $ and if these
+occupation numbers are also optimized and non degenerate the Fock operator
+$F\left(  \mathbf{n},\mathbf{\psi}\right)  $ can be diagonalized to obtain
+eigenvalues that are again weighted ionization potentials associated with
+eigenvectors $\left\{  \left\vert \varsigma_{p}\right\rangle \right\}  $, but
+these eigenvectors are not NGSO's nor CGSO's of the optimized AGP state.
+
+By using subgroups of the general linear group of one electron Hilbert space
+we have shown how to separate the variation over AGP states into occupation
+number, phase and NGSO variations. The phase dependence is a reflection of the
+fact the AGP FORDO (determined by the occupation numbers NGSO's) does not
+determine a unique AGP\ state, but only an equivalence class of states. By
+optimizing over the phase for fixed reference FORDO's one obtains an explicit
+Density Matrix Function (DMF)\ that can be used as a model functional for DMFT.
+
+\section{Acknowledgements}
+
+\appendix
+
+\section{Example of Linear Fit\label{LinfitEX}}
+
+As an illustration of the numerical procedure described in section
+\ref{AGPoccGemocc} consider the change of AGP occupation numbers from
+$\mathbf{N}_{0}$ to $\mathbf{N}_{0}+\delta\mathbf{N}_{1}+\delta\mathbf{N}%
+_{2}$
+\begin{equation}
+\mathbf{n}_{2}=\mathbf{n}_{0}+\left[  d\mathcal{N}\left(  \mathbf{n}%
+_{0}\right)  \right]  ^{-1}\left(  \delta\mathbf{N}_{1}\right)  +\left[
+d\mathcal{N}\left(  \mathbf{n}_{0}+\left[  d\mathcal{N}\left(  \mathbf{n}%
+_{0}\right)  \right]  ^{-1}\left(  \delta\mathbf{N}_{1}\right)  \right)
+\right]  ^{-1}\left(  \left(  \delta\mathbf{N}_{2}\right)  \right)
+\end{equation}
+producing the change of geminal occupation numbers $\mathbf{n}_{2}%
+-\mathbf{n}_{0},$ where
+\begin{equation}
+\mathbf{N}_{1}=\left(
+\begin{array}
+[c]{c}%
+1\\
+.9\\
+.8\\
+.1\\
+.2\\
+0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+1\\
+1\\
+1\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)  =\mathbf{N}_{0}+\delta\mathbf{N}_{1}%
+\end{equation}
+giving the first order changes in the geminal occupation numbers
+\begin{equation}
+\mathbf{n}_{1}=\mathcal{N}^{-1}\left(
+\begin{array}
+[c]{c}%
+1\\
+.9\\
+.8\\
+0\\
+.2\\
+.1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left[  d\mathcal{N}\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)  .
+\end{equation}
+The next incremental change of the AGP occupation numbers, $\delta
+\mathbf{N}_{2}$, added to $\delta\mathbf{N}_{1}$ gives
+\[
+\mathbf{n}_{2}=\mathcal{N}^{-1}\left(
+\begin{array}
+[c]{c}%
+.9\\
+.8\\
+.8\\
+.1\\
+.2\\
+.2
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left[  d\mathcal{N}\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)
+\]%
+\begin{equation}
++\left[  d\mathcal{N}\left(  \left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  +\left[  d\mathcal{N}\left(
+\begin{array}
+[c]{c}%
+\frac{1}{3}\\
+\frac{1}{3}\\
+\frac{1}{3}\\
+0\\
+0\\
+0
+\end{array}
+\right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+0\\
+-.1\\
+-.2\\
+.1\\
+.2\\
+0
+\end{array}
+\right)  \right)  \right]  ^{-1}\left(
+\begin{array}
+[c]{c}%
+-.1\\
+-.1\\
+0\\
+.1\\
+0\\
+.1
+\end{array}
+\right)  .
+\end{equation}
+At each step one can calculate $\mathbf{N}$ from $\mathbf{n}$ to check whether
+the increment $\delta\mathbf{N}$ was small enough.
+
+\section{Energy Functionals\label{En_Funcs}}
+
+The energy of a $2N$-electron state, represented by the multi electron
+positive operator, $D^{2N}$, is given by
+\begin{equation}
+\mathcal{E}\left(  D^{2N}\right)  =\frac{1}{\operatorname{Tr}\left\{
+D^{2N}\right\}  }\operatorname{Tr}\left\{  \left\{  \sum_{1\leq i,k\leq
+2s}h_{1ik}a_{i}^{\dagger}a_{k}+\frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}%
+V_{2ijkl}a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k}\right\}  D^{2N}\right\}  ,
+\label{en1}%
+\end{equation}
+where
+\begin{align}
+h_{1ik}  &  =\left\langle \varphi_{i}\left\vert h_{1}\varphi_{k}\right.
+\right\rangle \nonumber\\
+V_{2ijkl}  &  =\left\langle ij||kl\right\rangle =\left\langle \varphi
+_{i}\varphi_{j}\left\vert h_{2}\varphi_{k}\varphi_{l}\right.  \right\rangle
+\end{align}
+and the second quantized operators $\left\{  \left.  a_{j}^{\dagger
+}\right\vert 1\leq j\leq2s\right\}  $ refer to the orthonormal reference basis
+$\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}  $. For pure states
+\begin{equation}
+D^{2N}=\frac{\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+}{\left\langle \Psi\left\vert \Psi\right.  \right\rangle }\equiv
+\frac{\left\vert \Psi\right\rangle \left\langle \Psi\right\vert }%
+{\mathcal{S}\left(  \Psi\right)  },
+\end{equation}
+where $\left\vert \Psi\right\rangle $ is in general an \emph{unnormalized
+}vector\emph{ }state belonging to the $2N$-electron Hilbert space
+$\mathcal{H}^{2N}.$ The expression eq. $\left(  \ref{en1}\right)  $ can be
+reformulated as
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2}\right)  =\operatorname{Tr}\left\{
+\mathbb{H}_{1}\mathbb{D}^{1}\right\}  +\frac{1}{4}\operatorname{Tr}\left\{
+\mathbb{V}_{2}\mathbb{D}^{2}\right\}
+\end{equation}
+in terms of the first and second order reduced density matrices $\mathbb{D}%
+^{1}$ and $\mathbb{D}^{2}$ defined by
+\begin{equation}
+D_{klij}^{2}=\frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }%
+\operatorname{Tr}\left\{  a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k}%
+D^{2N}\right\}  ;\quad1\leq i,j,k,l\leq2s
+\end{equation}
+and
+\begin{equation}
+\mathbb{D}^{1}=\left(  2N-1\right)  ^{-1}L_{2}^{1}\left(  \mathbb{D}%
+^{2}\right)  .
+\end{equation}
+The matrices $\mathbb{H}_{1}$ and $\mathbb{V}_{2}$ have the matrix elements
+$\left\{  h_{1ik}\right\}  $ and $\left\{  \left\langle ij||kl\right\rangle
+\right\}  $ respectively. The energy expression eq. $\left(  \ref{en1}\right)
+$ can be used to define a functional, $\mathcal{E}\left(  \mathbf{\alpha
+}\right)  $, of orthonormal GSO's by considering a fixed reference state
+$D_{0}^{2N}$ and one electron unitary transformations $U\left(  \mathbf{\alpha
+}\right)  $ by setting%
+\begin{equation}
+\mathcal{E}\left(  \mathbf{\alpha}\right)  =\frac{1}{\operatorname{Tr}\left\{
+D_{0}^{2N}\right\}  }\operatorname{Tr}\left\{  \left\{  \sum_{1\leq i,k\leq
+2s}h_{1ik}a_{i}^{\dagger}a_{k}+\frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}%
+V_{2ijkl}a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k}\right\}  U\left(
+\mathbf{\alpha}\right)  ^{\dagger}D_{0}^{2N}U\left(  \mathbf{\alpha}\right)
+\right\}  ,
+\end{equation}
+where
+\begin{equation}
+U\left(  \mathbf{\alpha}\right)  =\exp\left\{  i\sum_{1\leq p,q\leq2s}%
+\alpha_{pq}a_{p}^{\dagger}a_{q}\right\}  ;\qquad\alpha_{pq}=\alpha_{qp}^{\ast
+}\quad1\leq p,q\leq2s.
+\end{equation}
+This leads to
+\begin{align}
+\mathcal{E}\left(  \mathbf{\alpha}\right)   &  =\frac{1}{\operatorname{Tr}%
+\left\{  D_{0}^{2N}\right\}  }\operatorname{Tr}\left\{  \left\{  \sum_{1\leq
+i,k\leq2s}h_{1ik}U\left(  \mathbf{\alpha}\right)  a_{i}^{\dagger}U\left(
+\mathbf{\alpha}\right)  ^{\dagger}U\left(  \mathbf{\alpha}\right)
+a_{k}U\left(  \mathbf{\alpha}\right)  ^{\dagger}\right.  \right. \nonumber\\
+&  +\left.  \left.  \frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}V_{2ijkl}U\left(
+\mathbf{\alpha}\right)  a_{i}^{\dagger}U\left(  \mathbf{\alpha}\right)
+^{\dagger}U\left(  \mathbf{\alpha}\right)  a_{j}^{\dagger}U\left(
+\mathbf{\alpha}\right)  ^{\dagger}U\left(  \mathbf{\alpha}\right)
+a_{l}U\left(  \mathbf{\alpha}\right)  ^{\dagger}U\left(  \mathbf{\alpha
+}\right)  a_{k}U\left(  \mathbf{\alpha}\right)  ^{\dagger}D_{0}^{2N}\right\}
+\right\}  ,
+\end{align}
+which can be rearranged to give
+\begin{align}
+\mathcal{E}\left(  \mathbf{\alpha}\right)   &  =\frac{1}{\operatorname{Tr}%
+\left\{  D_{0}^{2N}\right\}  }\operatorname{Tr}\left\{  \left\{  \sum_{1\leq
+i,k\leq2s}\left\langle \left.  \varphi_{i}\left(  \mathbf{\alpha}\right)
+\right\vert h_{1}\varphi_{k}\left(  \mathbf{\alpha}\right)  \right\rangle
+a_{i}^{\dagger}a_{k}\right.  \right. \nonumber\\
+&  \qquad\qquad\qquad+\left.  \left.  \frac{1}{4}\sum_{1\leq i,j,k,l\leq
+2s}\left\langle \left.  \varphi_{i}\left(  \mathbf{\alpha}\right)  \varphi
+_{j}\left(  \mathbf{\alpha}\right)  \right\vert h_{2}\varphi_{k}\left(
+\mathbf{\alpha}\right)  \varphi_{l}\left(  \mathbf{\alpha}\right)
+\right\rangle a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k}\right\}  D_{0}%
+^{2N}\right\}
+\end{align}
+and
+\begin{equation}
+\mathcal{E}\left(  \mathbf{\alpha}\right)  =\operatorname{Tr}\left\{
+\mathbb{H}_{1}\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)
+\mathbb{D}_{0}^{1}\right\}  +\frac{1}{4}\operatorname{Tr}\left\{
+\mathbb{V}_{2}\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)
+\mathbb{D}_{0}^{2}\right\}  , \label{enmat}%
+\end{equation}
+where
+\begin{equation}
+\left\vert \varphi_{i}\left(  \mathbf{\alpha}\right)  \right\rangle =U\left(
+\mathbf{\alpha}\right)  \left\vert \varphi_{i}\right\rangle .
+\end{equation}
+The expression eq. $\left(  \ref{enmat}\right)  $ utilizes the GSO dependent
+matrices $\mathbb{H}_{1}\left(  \mathbf{\varphi}\left(  \mathbf{\alpha
+}\right)  \right)  $ and $\mathbb{V}_{2}\left(  \mathbf{\varphi}\left(
+\mathbf{\alpha}\right)  \right)  $ whose matrix elements are
+\begin{subequations}
+\begin{align}
+\mathbb{H}_{1}\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)
+&  \leftrightarrow\left\{  \left\langle \left.  \varphi_{i}\left(
+\mathbf{\alpha}\right)  \right\vert h_{1}\varphi_{k}\left(  \mathbf{\alpha
+}\right)  \right\rangle \right\} \\
+\mathbb{V}_{2}\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)
+&  \leftrightarrow\left\{  \left\langle \left.  \varphi_{i}\left(
+\mathbf{\alpha}\right)  \varphi_{j}\left(  \mathbf{\alpha}\right)  \right\vert
+h_{2}\varphi_{k}\left(  \mathbf{\alpha}\right)  \varphi_{l}\left(
+\mathbf{\alpha}\right)  \right\rangle \right\}  .
+\end{align}
+Each new non zero value of $\mathbf{\alpha}$ determines a new state
+$D^{2N}\left(  \mathbf{\alpha}\right)  =U\left(  \mathbf{\alpha}\right)
+^{\dagger}D_{0}^{2N}U\left(  \mathbf{\alpha}\right)  $ and new first and
+second order reduced density matrices given by
+\end{subequations}
+\begin{align}
+D^{2}\left(  \mathbf{\alpha}\right)  _{klij}  &  =\frac{1}{\operatorname{Tr}%
+\left\{  D_{0}^{2N}\right\}  }\operatorname{Tr}\left\{  U\left(
+\mathbf{\alpha}\right)  a_{i}^{\dagger}U\left(  \mathbf{\alpha}\right)
+^{\dagger}U\left(  \mathbf{\alpha}\right)  a_{j}^{\dagger}U\left(
+\mathbf{\alpha}\right)  ^{\dagger}U\left(  \mathbf{\alpha}\right)
+a_{l}U\left(  \mathbf{\alpha}\right)  ^{\dagger}U\left(  \mathbf{\alpha
+}\right)  a_{k}U\left(  \mathbf{\alpha}\right)  ^{\dagger}D_{0}^{2N}\right\}
+\nonumber\\
+&  =\frac{1}{\operatorname{Tr}\left\{  D_{0}^{2N}\right\}  }\operatorname{Tr}%
+\left\{  a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k}U\left(  \mathbf{\alpha
+}\right)  ^{\dagger}D_{0}^{2N}U\left(  \mathbf{\alpha}\right)  \right\}
+;\quad1\leq i,j,k,l\leq2s
+\end{align}
+and
+\begin{align}
+D^{1}\left(  \mathbf{\alpha}\right)  _{ji}  &  =\frac{1}{\operatorname{Tr}%
+\left\{  D_{0}^{2N}\right\}  }\operatorname{Tr}\left\{  U\left(
+\mathbf{\alpha}\right)  a_{i}^{\dagger}U\left(  \mathbf{\alpha}\right)
+^{\dagger}U\left(  \mathbf{\alpha}\right)  a_{j}U\left(  \mathbf{\alpha
+}\right)  ^{\dagger}D_{0}^{2N}\right\} \nonumber\\
+&  =\frac{1}{\operatorname{Tr}\left\{  D_{0}^{2N}\right\}  }\operatorname{Tr}%
+\left\{  a_{i}^{\dagger}a_{j}U\left(  \mathbf{\alpha}\right)  ^{\dagger}%
+D_{0}^{2N}U\left(  \mathbf{\alpha}\right)  \right\}  .
+\end{align}
+
+
+The energy functional eq. $\left(  \ref{enmat}\right)  $ could be extended to
+a full non redundent energy functional by varying the reference
+SORDM\ $\mathbb{D}_{0}^{2}$ in such a way as not to duplicate GSO changes.
+However as the $N$-representability problem is still unsolved so the domain of
+variation of $\mathbb{D}_{0}^{2}$ is in general unknown, except in the AGP
+state case, which we study in this paper, where $N$-representable SORDM's can
+be explicitly parameterized in terms of the occupation numbers $\left\{
+\left.  n_{j}\right\vert 1\leq j\leq s\right\}  $. The energy functionals eqs.
+$\left(  \ref{RDO_en}\right)  $ and $\left(  \ref{RDO_en1}\right)  $ are of
+course also valid for SORDM's explicitly constructed from multi
+configurational states, i.e. in terms of CI\ coefficients.
+
+\section{Orbital Derivatives and Derivation of the Fock Operator}
+
+\subsection{Direct Variation of GSO's}
+
+In order to obtain derivative of terms in the energy expression it helpful to
+utilize matrix elements wrt non antisymmetric states
+\begin{equation}
+\left\vert \varphi_{j}\varphi_{k}\right)  =\left\vert \varphi_{j}\right)
+\otimes\left\vert \varphi_{k}\right)  ,
+\end{equation}
+whose amplitudes are
+\begin{equation}
+\left(  \left.  \mathbf{r}_{1}\mathbf{,\xi}_{1}\mathbf{r}_{2}\mathbf{,\xi}%
+_{2}\right\vert \varphi_{j}\varphi_{k}\right)  =\varphi_{j}\left(
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \varphi_{k}\left(  \mathbf{r}%
+_{2}\mathbf{,\xi}_{2}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\varphi_{j}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  =\left(  \left.
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right\vert \varphi_{j}\right)  =\left\langle
+\left.  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right\vert \varphi_{j}\right\rangle .
+\end{equation}
+We will consider the energy in terms of the SORDM\ $\mathbb{D}^{2}$ eq.
+$\left(  \ref{sqe3}\right)  $ and GSO's $\mathbf{\varphi}$ given by
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\operatorname{Tr}%
+\left\{  \mathbb{H}_{1}\left(  \mathbf{\varphi}\right)  \mathbb{D}%
+^{1}\right\}  +\frac{1}{4}\operatorname{Tr}\left\{  \mathbb{V}_{2}\left(
+\mathbf{\varphi}\right)  \mathbb{D}^{2}\right\}  , \label{e1}%
+\end{equation}
+and we will concentrate on the direct variation of the GSO's. The first order
+change in the energy due to changes $\left\{  \delta\mathbf{\varphi}^{\ast
+},\delta\mathbf{\varphi}\right\}  $ in the GSO's is given by the Taylors
+series as
+\begin{align}
+\delta^{1}\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)   &
+=\left(  \partial_{\mathbf{\varphi}^{\ast}}^{1}\mathcal{E}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  ,\partial_{\mathbf{\varphi}}%
+^{1}\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \right)
+\left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\varphi}^{\ast}\\
+\delta\mathbf{\varphi}%
+\end{array}
+\right) \nonumber\\
+&  =\left(  \partial_{\mathbf{\varphi}^{\ast}}^{1}\mathcal{E}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  ,\partial_{\mathbf{\varphi}^{\ast}%
+}^{1}\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  ^{\ast
+}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\varphi}^{\ast}\\
+\delta\mathbf{\varphi}%
+\end{array}
+\right) \nonumber\\
+&  =2\operatorname{Re}\left\{  \partial_{\mathbf{\varphi}^{\ast}}%
+^{1}\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  ^{\dagger
+}\delta\mathbf{\varphi}^{\ast}\right\}  ,
+\end{align}
+where
+\begin{equation}
+\partial_{\varphi_{\mu}^{\ast}}^{1}\mathcal{E}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  =\frac{\delta\mathcal{E}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  }{\delta\varphi_{\mu}^{\ast}}.
+\end{equation}
+It is clear that
+\begin{equation}
+\partial_{\varphi_{\mu}^{\ast}}^{1}\mathcal{E}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  =\left[  \partial_{\varphi_{\mu}}^{1}%
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \right]  ^{\ast}%
+\end{equation}
+as $\delta^{1}\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  $
+must be real valued for all $\left(  \delta\mathbf{\varphi}^{\ast}%
+,\delta\mathbf{\varphi}\right)  $. In order to find the explicit expressions
+for the derivatives of the energy one observes that:
+
+\begin{enumerate}
+\item The one electron functional derivatives are given by
+\begin{equation}
+\frac{\delta}{\delta\varphi_{\mu}^{\ast}}\left\langle \left.  \varphi
+_{a}\right\vert h_{1}\varphi_{b}\right\rangle =h_{1}\left\vert \varphi
+_{b}\right\rangle \delta_{a\mu}=\left\{  h_{1}\left\vert \varphi
+_{b}\right\rangle \left\langle \varphi_{a}\right\vert \right\}  \left\vert
+\varphi_{\mu}\right\rangle . \label{1partfuncder_o}%
+\end{equation}
+After noting that
+\begin{equation}
+h_{1}\left\vert \varphi_{b}\right\rangle \left\langle \varphi_{a}\right\vert
+=\sum_{1\leq j,k\leq2s}h_{1jk}\left\vert \varphi_{j}\right\rangle \left\langle
+\left.  \varphi_{k}\right\vert \varphi_{b}\right\rangle \left\langle
+\varphi_{a}\right\vert =\sum_{1\leq j\leq2s}h_{1jb}\left\vert \varphi
+_{j}\right\rangle \left\langle \varphi_{a}\right\vert
+\end{equation}
+eq. $\left(  \ref{1partfuncder_o}\right)  $ can be expanded as
+\begin{equation}
+\frac{\delta}{\delta\varphi_{\mu}^{\ast}}\left\langle \left.  \varphi
+_{a}\right\vert h_{1}\varphi_{b}\right\rangle =\left\{  \sum_{1\leq m,n\leq
+2s}h_{1mb}\delta_{an}\left\vert \varphi_{m}\right\rangle \left\langle
+\varphi_{n}\right\vert \right\}  \left\vert \varphi_{\mu}\right\rangle .
+\label{1partfuncder_ex}%
+\end{equation}
+
+
+\item The two electron functional derivatives are
+\begin{align}
+&  \frac{\delta}{\delta\varphi_{\mu}^{\ast}}\left(  \left.  \varphi_{a}%
+\varphi_{b}\right\vert h_{2}\varphi_{c}\varphi_{d}\right)  =\left(  \left.
+\varphi_{b}\right\vert h_{2}\varphi_{d}\right)  \left\vert \varphi
+_{c}\right\rangle \delta_{a\mu}+\left(  \left.  \varphi_{a}\right\vert
+h_{2}\varphi_{c}\right)  \left\vert \varphi_{d}\right\rangle \delta_{b\mu
+}\nonumber\\
+&  \qquad\qquad\qquad\left.  =\right.  \left\{  \left(  \left.  \varphi
+_{b}\right\vert h_{2}\varphi_{d}\right)  \left\vert \varphi_{c}\right\rangle
+\left\langle \varphi_{a}\right\vert +\left(  \left.  \varphi_{a}\right\vert
+h_{2}\varphi_{c}\right)  \left\vert \varphi_{d}\right\rangle \left\langle
+\varphi_{b}\right\vert \right\}  \left\vert \varphi_{\mu}\right\rangle ,
+\label{2partfuncder_o}%
+\end{align}
+where the operators $\left\{  \left(  \left.  \varphi_{b}\right\vert
+h_{2}\varphi_{d}\right)  ;1\leq b,d\leq2s\right\}  $ are defined by
+\begin{equation}
+\left(  \left.  \varphi_{b}\right\vert h_{2}\varphi_{d}\right)  =\sum_{1\leq
+m,n\leq2s}\left(  \left.  \varphi_{m}\varphi_{b}\right\vert h_{2}\varphi
+_{n}\varphi_{d}\right)  \left\vert \varphi_{m}\right\rangle \left\langle
+\varphi_{n}\right\vert .
+\end{equation}
+
+\end{enumerate}
+
+Eq. $\left(  \ref{1partfuncder_ex}\right)  $ can be further expanded to give
+\begin{align}
+\frac{\delta}{\delta\varphi_{\mu}^{\ast}}\left(  \left.  \varphi_{a}%
+\varphi_{b}\right\vert h_{2}\varphi_{c}\varphi_{d}\right)   &  =\left\{
+\sum_{1\leq k\leq2s}\left\{  h_{2kbcd}\left\vert \varphi_{k}\right\rangle
+\left\langle \varphi_{a}\right\vert +h_{2kadc}\left\vert \varphi
+_{k}\right\rangle \left\langle \varphi_{b}\right\vert \right\}  \right\}
+\left\vert \varphi_{\mu}\right\rangle \nonumber\\
+&  =\left\{  \sum_{1\leq m,n\leq2s}\left\{  h_{2mbcd}\delta_{an}%
++h_{2madc}\delta_{bn}\right\}  \left\vert \varphi_{m}\right\rangle
+\left\langle \varphi_{n}\right\vert \right\}  \left\vert \varphi_{\mu
+}\right\rangle . \label{2partfuncder_ex}%
+\end{align}
+
+
+The derivatives $\left\{  \frac{\delta\mathcal{E}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  }{\delta\varphi_{\mu}^{\ast}}\right\}  $ can be
+evaluated by using eqs. $\left(  \ref{1partfuncder_ex}\right)  $ and $\left(
+\ref{2partfuncder_ex}\right)  $ to give
+\begin{align}
+&  \frac{\delta}{\delta\varphi_{\mu}^{\ast}}\left\{  \sum_{1\leq i,k\leq
+2s}\left\langle \left.  \varphi_{i}\right\vert h_{1}\varphi_{k}\right\rangle
+D_{ki}^{1}+\frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}\left\{  \left(  \left.
+\varphi_{i}\varphi_{j}\right\vert h_{2}\varphi_{k}\varphi_{l}\right)  -\left(
+\left.  \varphi_{i}\varphi_{j}\right\vert h_{2}\varphi_{l}\varphi_{k}\right)
+\right\}  D_{klij}^{2}\right\} \nonumber\\
+&  =\sum_{1\leq m,n\leq2s}\left\{  \left\{  \sum_{1\leq k\leq2s}h_{1mk}%
+D_{kn}^{1}\left\vert \varphi_{m}\right\rangle \left\langle \varphi
+_{n}\right\vert \right.  \right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad+\left.  \left.  \frac{1}{2}\sum_{1\leq
+j,k,l\leq2s}\left\{  h_{2mjkl}D_{klnj}^{2}-h_{2mjlk}D_{klnj}^{2}\right\}
+\right\}  \left\vert \varphi_{m}\right\rangle \left\langle \varphi
+_{n}\right\vert \right\}  \left\vert \varphi_{\mu}\right\rangle ,
+\end{align}
+which can be written as
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\delta\varphi_{\mu}^{\ast}}=\left\{  \sum_{1\leq m,n\leq2s}\left\{  \left(
+\mathbb{H}_{1}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{1}\right)
+_{mn}+\left(  L_{2}^{1}\left(  \mathbb{H}_{2}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{2}\right)  \right)  _{mn}\right\}  \left\vert \varphi
+_{m}\right\rangle \left\langle \varphi_{n}\right\vert \right\}  \left\vert
+\varphi_{\mu}\right\rangle ,
+\end{equation}
+where $\mathbb{H}_{2}\left(  \mathbf{\varphi}\right)  $ is the \emph{non
+}antisymmetric matrix
+\begin{equation}
+\mathbb{H}_{2}\left(  \mathbf{\varphi}\right)  \leftrightarrow\left\{
+h_{2ijkl}\right\}
+\end{equation}
+and
+\begin{equation}
+V_{2ijkl}\left(  \mathbf{\varphi}\right)  =\left(  h_{2ijkl}\left(
+\mathbf{\varphi}\right)  -h_{2ijlk}\left(  \mathbf{\varphi}\right)  \right)  .
+\end{equation}
+This allows us to define a generalized Fock operator
+\begin{subequations}
+\label{Fock_Op}%
+\begin{align}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)   &  =\sum_{1\leq m,n\leq
+2s}\left\{  \left(  \mathbb{H}_{1}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{1}\right)  _{mn}+\frac{1}{2}\left(  L_{2}^{1}\left(
+\mathbb{V}_{2}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{2}\right)  \right)
+_{mn}\right\}  \left\vert \varphi_{m}\right\rangle \left\langle \varphi
+_{n}\right\vert \label{Fock_Op_a}\\
+&  =\sum_{1\leq m,n\leq2s}\left\{  \left(  \mathbb{H}_{1}\left(
+\mathbf{\varphi}\right)  \mathbb{D}^{1}\right)  _{mn}+\left(  L_{2}^{1}\left(
+\mathbb{H}_{2}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{2}\right)  \right)
+_{mn}\right\}  \left\vert \varphi_{m}\right\rangle \left\langle \varphi
+_{n}\right\vert , \label{Fock_Op_b}%
+\end{align}
+that produces the functional derivatives
+\end{subequations}
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\delta\varphi_{\mu}^{\ast}}=F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\left\vert \varphi_{\mu}\right\rangle ;\quad1\leq\mu\leq2s.
+\label{FuncDerFock}%
+\end{equation}
+As
+\begin{equation}
+L_{2}^{1}\left(  \mathbb{A}^{\dagger}\right)  =L_{2}^{1}\left(  \mathbb{A}%
+\right)  ^{\dagger}.
+\end{equation}
+the adjoint of the Fock operator eq. $\left(  \ref{Fock_Op}\right)  $ is given
+by
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  ^{\dagger}=\sum_{1\leq
+m,n\leq2s}\left\{  \left(  \mathbb{D}^{1}\mathbb{H}_{1}\left(  \mathbf{\varphi
+}\right)  \right)  _{mn}+\left(  L_{2}^{1}\left(  \mathbb{D}^{2}\mathbb{H}%
+_{2}\left(  \mathbf{\varphi}\right)  \right)  \right)  _{mn}\right\}
+\left\vert \varphi_{m}\right\rangle \left\langle \varphi_{n}\right\vert .
+\label{Fock_Op_adj}%
+\end{equation}
+In general the generalized Fock operator is not self adjoint i.e.
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  ^{\dagger}\neq F\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  .
+\end{equation}
+
+
+\subsection{Matrix Elements of $F\left(  \mathbf{\varphi}\right)  $ in Terms
+of Second Quantized Operators\label{SQ_Fock}}
+
+In order to obtain an expression for the matrix elements $\left\{  \left.
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  _{jk}\right\vert 1\leq
+j,k\leq2s\right\}  $ in terms of the second quantized operators $\left\{
+\left.  a_{j}^{\dagger}\right\vert 1\leq j,k\leq2s\right\}  ,$ that refer to
+the GSO's $\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert
+1\leq j,k\leq2s\right\}  $, we consider the expectation value of the
+commutators $\left\{  \left.  a_{p}^{\dagger}\left[  a_{q},H\right]
+\right\vert 1\leq j,k\leq2s\right\}  ,$ where
+\begin{equation}
+H=h_{1}+\frac{1}{4}V_{2}=\sum_{1\leq i,k\leq2s}h_{1ik}a_{i}^{\dagger}%
+a_{k}+\frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}V_{2ijkl}a_{i}^{\dagger}%
+a_{j}^{\dagger}a_{l}a_{k},
+\end{equation}%
+\begin{equation}
+h_{1}=\sum_{1\leq i,k\leq2s}h_{1ik}a_{i}^{\dagger}a_{k}%
+\end{equation}
+and
+\begin{equation}
+V_{2}=\sum_{1\leq i,j,k,l\leq2s}V_{2ijkl}a_{i}^{\dagger}a_{j}^{\dagger}%
+a_{l}a_{k}.
+\end{equation}
+The one electron part of $H$ gives
+\begin{equation}
+a_{p}^{\dagger}\sum_{1\leq i,k\leq2s}h_{1ik}\left[  a_{q},a_{i}^{\dagger}%
+a_{k}\right]  =\sum_{1\leq k\leq2s}h_{1qk}a_{p}^{\dagger}a_{k},
+\end{equation}
+while the two electron interaction part gives
+\begin{equation}
+a_{p}^{\dagger}\sum_{1\leq i,j,k,l\leq2s}V_{2ijkl}\left[  a_{q},a_{i}%
+^{\dagger}a_{j}^{\dagger}a_{l}a_{k}\right]  =2\sum_{1\leq j,k,l\leq
+2s}V_{2qjkl}a_{p}^{\dagger}a_{j}^{\dagger}a_{l}a_{k}.
+\end{equation}
+The expectation values of the commutators can be expanded as
+\begin{align}
+&  \frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }\operatorname{Tr}%
+\left\{  a_{p}^{\dagger}\left[  a_{q},H\right]  D^{2N}\right\}  =\nonumber\\
+&  \qquad\qquad\qquad\frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}
+}\operatorname{Tr}\left\{  \left\{  \sum_{1\leq k\leq2s}h_{1qk}a_{p}^{\dagger
+}a_{k}+\frac{1}{2}\sum_{1\leq j,k,l\leq2s}V_{2qjkl}a_{p}^{\dagger}%
+a_{j}^{\dagger}a_{l}a_{k}\right\}  D^{2N}\right\}  ,
+\end{align}
+showing that
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  _{qp}=\frac{1}%
+{\operatorname{Tr}\left\{  D^{2N}\right\}  }\operatorname{Tr}\left\{
+a_{p}^{\dagger}\left[  a_{q},H\right]  D^{2N}\right\}  =\operatorname{Tr}%
+\left\{  \left(  \mathbb{H}_{1}\left(  \mathbf{\varphi}\right)  \mathbb{D}%
+^{1}\right)  _{qp}+\frac{1}{2}\left(  L_{2}^{1}\left(  \mathbb{V}_{2}\left(
+\mathbf{\varphi}\right)  \mathbb{D}^{2}\right)  \right)  _{qp}\right\}  .
+\label{Fockelem}%
+\end{equation}
+
+
+\section{Variation of Group Parameters\label{VarGroupPar}}
+
+The energy of a general $2N$-electron state can be expressed (see eqs.
+$\left(  \ref{Rham_1elec}\right)  $ and $\left(  \ref{RDO_en}\right)  $) as
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\alpha}\right)  =\operatorname{Tr}%
+\left\{  \left\{  \sum_{1\leq i,j\leq2s}h_{1ij}a_{i}^{\dagger}a_{j}+\frac
+{1}{4}\sum_{1\leq i,j,k,l\leq2s}V_{2ijkl}a_{i}^{\dagger}a_{j}^{\dagger}%
+a_{l}a_{k}\right\}  U\left(  \mathbf{\alpha}\right)  ^{\dagger}D^{2N}U\left(
+\mathbf{\alpha}\right)  \right\}  ,
+\end{equation}
+where
+\begin{equation}
+U\left(  \mathbf{\alpha}\right)  =\exp\left\{  i\sum_{1\leq p,q\leq2s}%
+\alpha_{pq}a_{p}^{\dagger}a_{q}\right\}  ;\qquad\alpha_{pq}=\alpha_{qp}^{\ast
+}\quad1\leq p,q\leq2s.
+\end{equation}
+in terms of the unitary group $U\left(  \mathcal{H}^{1}\right)  $ of
+transformations $\left\{  U\left(  \mathbf{\alpha}\right)  \right\}  $ of the
+Hilbert space of one electron states $\mathcal{H}^{1}$ and SORDM's
+$\mathbb{D}^{2}$. The Taylor series expansion gives
+\begin{align}
+&  \mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\alpha}\right)  \simeq
+\operatorname{Tr}\left\{  \sum_{1\leq i,j\leq2s}h_{1ij}a_{i}^{\dagger}%
+a_{j}+\frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}V_{2ijkl}\operatorname{Tr}%
+a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k}\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  \left\{  1-i\sum_{1\leq p,q\leq
+2s}\alpha_{pq}a_{p}^{\dagger}a_{q}\right\}  D^{2N}\left\{  1+i\sum_{1\leq
+p,q\leq2s}\alpha_{pq}a_{p}^{\dagger}a_{q}\right\}  \right\} \nonumber\\
+&  \simeq\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  -i\sum_{1\leq
+p,q\leq2s}\operatorname{Tr}\left\{  \left\{  \sum_{1\leq i,j\leq2s}%
+h_{1ij}\left[  a_{i}^{\dagger}a_{j},a_{p}^{\dagger}a_{q}\right]  \right.
+\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  \left.  +\frac{1}{4}\sum_{1\leq
+i,j,k,l\leq2s}V_{2ijkl}\left[  a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k,}%
+a_{p}^{\dagger}a_{q}\right]  \right\}  D^{2N}\right\}  \alpha_{pq}.
+\end{align}
+Thus showing that the first order change of the energy functional wrt
+\textbf{$\alpha$} evaluated around \textbf{$\alpha$ }$=\mathbf{0}$ is
+\begin{align}
+\delta^{1}\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)   &
+=-i\sum_{1\leq p,q\leq2s}\operatorname{Tr}\left\{  \left\{  \sum_{1\leq
+i,j\leq2s}h_{1ij}\left[  a_{i}^{\dagger}a_{j},a_{p}^{\dagger}a_{q}\right]
+\right.  \right. \nonumber\\
+&  \qquad\qquad+\left.  \left.  \frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}%
+V_{2ijkl}\left[  a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k,}a_{p}^{\dagger}%
+a_{q}\right]  \right\}  \left.  D^{2N}\right\}  \right\}  \alpha_{pq},
+\end{align}
+showing that the derivatives wrt $\left\{  \left.  \alpha_{pq}\right\vert
+1\leq p,q\leq2s\right\}  $ are
+\begin{align}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}  &  =-i\operatorname{Tr}\left\{  \left\{  \sum_{1\leq
+i,j\leq2s}h_{1ij}\left[  a_{i}^{\dagger}a_{j},a_{p}^{\dagger}a_{q}\right]
+\right.  \right. \nonumber\\
+&  \qquad\qquad+\left.  \left.  \frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}%
+V_{2ijkl}\left[  a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k},a_{p}^{\dagger}%
+a_{q}\right]  \right\}  D^{2N}\right\}  .
+\end{align}
+The commutators give
+\begin{subequations}
+\begin{align}
+\left[  a_{i}^{\dagger}a_{j},a_{p}^{\dagger}a_{q}\right]   &  =a_{i}^{\dagger
+}a_{q}\delta_{pj}-a_{p}^{\dagger}a_{j}\delta_{pj}\\
+\left[  a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{k},a_{p}^{\dagger}a_{q}\right]
+&  =a_{i}^{\dagger}a_{j}^{\dagger}a_{q}a_{k}\delta_{pl}-a_{p}^{\dagger}%
+a_{j}^{\dagger}a_{l}a_{k}\delta_{iq}-a_{i}^{\dagger}a_{p}^{\dagger}a_{l}%
+a_{k}\delta_{jq}+a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{q}\delta_{pk}%
+\end{align}
+leading to
+\end{subequations}
+\begin{align}
+&  \frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)
+}{\partial\alpha_{pq}}=-i\operatorname{Tr}\left\{  \left\{  \sum_{1\leq
+i,j\leq2s}h_{1ij}\left(  a_{i}^{\dagger}a_{q}\delta_{pj}-a_{p}^{\dagger}%
+a_{j}\delta_{iq}\right)  \right.  \right.  +\nonumber\\
+&  \left.  \left.  \frac{1}{4}\sum_{1\leq i,j,k,l\leq2s}V_{2ijkl}\left(
+a_{i}^{\dagger}a_{j}^{\dagger}a_{q}a_{k}\delta_{pl}-a_{p}^{\dagger}%
+a_{j}^{\dagger}a_{l}a_{k}\delta_{iq}-a_{i}^{\dagger}a_{p}^{\dagger}a_{l}%
+a_{k}\delta_{jq}+a_{i}^{\dagger}a_{j}^{\dagger}a_{l}a_{q}\delta_{pk}\right)
+\right\}  D^{2N}\right\}  .
+\end{align}
+This produces%
+\begin{align}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=-  &  i\operatorname{Tr}\left\{  \sum_{1\leq j\leq
+2s}\left\{  \left\{  h_{1jp}a_{j}^{\dagger}a_{q}-h_{1qj}a_{p}^{\dagger}%
+a_{j}\right\}  \right.  \right. \nonumber\\
+&  +\left.  \left.  \frac{1}{2}\sum_{1\leq j,k,l\leq2s}\left\{  V_{2ijkl}%
+a_{l}^{\dagger}a_{j}^{\dagger}a_{q}a_{k}-V_{2ijkl}a_{p}^{\dagger}%
+a_{j}^{\dagger}a_{l}a_{k}\right\}  \right\}  D^{2N}\right\}  ,
+\end{align}
+giving%
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=-i\left\{  \sum_{1\leq j\leq2s}\left\{  D_{qj}%
+^{1}h_{1jp}-h_{1qj}D_{jp}^{1}\right\}  +\frac{1}{2}\sum_{1\leq i,j,k\leq
+2s}\left\{  D_{kqlj}^{2}V_{2ijkl}-V_{2ijkl}D_{klpj}^{2}\right\}  \right\}
+\end{equation}
+and finally
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=-i\left(  \left[  \mathbb{D}^{1},\mathbb{H}_{1}\left(
+\mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)  \right]  +\frac{1}%
+{2}L_{2}^{1}\left(  \left[  \mathbb{D}^{2},\mathbb{V}_{2}\left(
+\mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)  \right]  \right)
+\right)  _{qp}. \label{derpq}%
+\end{equation}
+The derivatives $\left\{  \frac{\partial\mathcal{E}\left(  \mathbb{D}%
+^{2},\mathbf{0}\right)  }{\partial\alpha_{pq}}\right\}  $ can also be
+expressed in terms of the non antisymmetric matrix $\mathbb{H}_{2}\left(
+\mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)  $ as
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=-i\left(  \left[  \mathbb{D}^{1},\mathbb{H}_{1}\left(
+\mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)  \right]  +L_{2}%
+^{1}\left(  \left[  \mathbb{D}^{2},\mathbb{H}_{2}\left(  \mathbf{\varphi
+}\left(  \mathbf{\alpha}\right)  \right)  \right]  \right)  \right)  _{qp}.
+\label{derpq1}%
+\end{equation}
+If we compare eq. $\left(  \ref{derpq}\right)  $ with eqs. $\left(
+\ref{Fock_Op}\right)  $ and $\left(  \ref{Fock_Op_adj}\right)  $ one observes
+the important result that
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{0}\right)  }%
+{\partial\alpha_{pq}}=i\left(  F\left(  \mathbf{\varphi}\left(  \mathbf{\alpha
+}\right)  \right)  -F\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)
+\right)  ^{\dagger}\right)  _{qp},
+\end{equation}
+where
+\begin{equation}
+\left\vert \varphi_{j}\left(  \mathbf{\alpha}\right)  \right\rangle =U\left(
+\mathbf{\alpha}\right)  \left\vert \varphi_{j}\right\rangle ;\quad1\leq
+j\leq2s.
+\end{equation}
+
+
+\section{Stationarity Conditions\label{StatCon}}
+
+At a stationary point wrt unitary group parameters $\mathbf{\alpha}$ the
+derivatives eq. $\left(  \ref{derpq}\right)  $ must equal zero hence
+\begin{equation}
+\left(  F\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)
+-F\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)  ^{\dagger
+}\right)  _{qp}=0\quad1\leq p,q\leq2s
+\end{equation}
+and the generalized Fock operator is self adjoint i.e.
+\begin{equation}
+F\left(  \mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)  =F\left(
+\mathbf{\varphi}\left(  \mathbf{\alpha}\right)  \right)  ^{\dagger}.
+\label{adjcon}%
+\end{equation}
+In order to constrain the GSO's to be orthonormal in a direct non unitary
+group variational procedure one considers the Lagrangian
+\begin{equation}
+\mathcal{L}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\mathcal{E}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon
+_{kj}\left\{  \left\langle \left.  \varphi_{j}\right\vert \varphi
+_{k}\right\rangle -\delta_{jk}\right\}  ,
+\end{equation}
+where $\left\{  \left.  \varepsilon_{jk}\right\vert 1\leq j,k\leq2s\right\}  $
+are Lagrange multipliers, which produces the constrained stationarity
+condition
+\begin{equation}
+\frac{\delta\mathcal{L}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\delta\varphi_{j}^{\ast}}=\frac{\delta\mathcal{E}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  }{\delta\varphi_{j}^{\ast}}-\sum_{1\leq k\leq
+2s}\left\vert \varphi_{k}\right\rangle \varepsilon_{kj}=0;\quad1\leq j\leq2s.
+\label{Lagran}%
+\end{equation}
+Using eq. $\left(  \ref{FuncDerFock}\right)  $ eq. $\left(  \ref{Lagran}%
+\right)  $ can be expressed as
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \left\vert \varphi
+_{j}\right\rangle =\sum_{1\leq k\leq2s}\left\vert \varphi_{k}\right\rangle
+\varepsilon_{kj};\quad1\leq j\leq2s,
+\end{equation}
+which in combination with eq. $\left(  \ref{adjcon}\right)  $ shows that the
+matrix of Lagrange multipliers is hermitian when $\mathbf{\varphi}$ is a
+constrained stationary point.
+
+\section{Derivatives of the AGP\ Energy Functional\label{variational}}
+
+The $2N$-AGP\ energy functional in terms of the NGSO's $\left\{  \left.
+\varphi_{j}\right\vert 1\leq j\leq2s\right\}  $, the geminal occupation
+numbers $\left\{  \left.  n_{j}\right\vert 1\leq j\leq s\right\}  $ and the
+phases $\left\{  \left.  \theta_{j}\right\vert 1\leq j\leq s\right\}  $ can be
+expressed as the quotient%
+\begin{align}
+&  \mathcal{E}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)
+=\frac{\mathcal{H}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)
+}{S_{N}\left(  \mathbf{n}\right)  }\nonumber\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}\left\{  \left\langle \varphi_{j}\left\vert h_{1}\varphi_{j}\right.
+\right\rangle +\left\langle \varphi_{j+s}\left\vert h_{1}\varphi_{j+s}\right.
+\right\rangle +\left\langle \varphi_{j}\varphi_{j+s}\left\Vert \varphi
+_{j}\varphi_{j+s}\right.  \right\rangle \right\}  \right. \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \varphi
+_{j}\varphi_{j+s}|\left\vert \varphi_{k}\varphi_{k+s}\right\rangle \left.
++\frac{1}{2}\sum_{1\leq j,k\leq s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)
+\left\langle \varphi_{j}\varphi_{k}|||\varphi_{j}\varphi_{k}\right\rangle
+\right\}  .
+\end{align}
+The first order variation $\delta^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)  $ of the energy is
+\begin{equation}
+\delta^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta
+}\right)  =\left(
+\begin{array}
+[c]{cccc}%
+\partial_{\mathbf{n}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)  & \partial_{\mathbf{\varphi}^{\ast}}^{1}%
+\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)  &
+\partial_{\mathbf{\varphi}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)  & \partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(
+\mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{n}\\
+\delta\mathbf{\varphi}^{\ast}\\
+\delta\mathbf{\varphi}\\
+\delta\mathbf{\theta}%
+\end{array}
+\right)  ,
+\end{equation}
+where
+\begin{subequations}
+\label{Fderiv}%
+\begin{align}
+\partial_{\mathbf{n}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\left\{  \partial_{\mathbf{n}}^{1}\mathcal{H}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)  -\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)  \partial_{\mathbf{n}}^{1}%
+S_{N}\left(  \mathbf{n}\right)  \right\} \\
+\partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(
+\mathbf{n}\right)  }\left\{  \partial_{\mathbf{\psi}^{\ast}}^{1}%
+\mathcal{H}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)
+-\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)
+\partial_{\mathbf{\psi}^{\ast}}^{1}S_{N}\left(  \mathbf{n}\right)  \right\}
+=\left[  \partial_{\mathbf{\psi}}^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)  \right]  ^{\ast}\\
+\partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\left\{  \partial_{\mathbf{\theta}}^{1}\mathcal{H}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)  -\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)  \partial_{\mathbf{\theta}}^{1}%
+S_{N}\left(  \mathbf{n}\right)  \right\}
+\end{align}
+and
+\end{subequations}
+\begin{subequations}
+\begin{align}
+\partial_{\mathbf{\varphi}^{\ast}}^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)  \cdot\delta\mathbf{\varphi}^{\ast}
+&  =\sum_{1\leq j\leq2s}\partial_{\varphi_{j}^{\ast}}^{1}\mathcal{E}\left(
+\mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)  \left(  \delta\varphi
+_{j}^{\ast}\right)  =\sum_{1\leq j\leq2s}\int\frac{\delta\mathcal{E}\left(
+\mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right)  }{\delta\varphi_{j}^{\ast
+}\left(  \mathbf{r,}\zeta\right)  }\delta\varphi_{j}^{\ast}\left(
+\mathbf{r,}\zeta\right)  d\mathbf{r}d\zeta\label{funcder}\\
+\partial_{\mathbf{n}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)  \cdot\delta\mathbf{n}  &  =\sum_{1\leq j\leq s}%
+\frac{\partial\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta
+}\right)  }{\partial n_{j}}\delta n_{j}\\
+\partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)  \cdot\delta\mathbf{\theta}  &  =\sum_{1\leq j\leq
+s}\frac{\partial\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi},\mathbf{\theta
+}\right)  }{\partial\theta_{j}}\delta\theta_{j}.
+\end{align}
+If the variations $\left\{  \delta\mathbf{\varphi}^{\ast},\delta
+\mathbf{\varphi}\right\}  $ maintain the orthonormality of the NGSO's i.e.
+\end{subequations}
+\begin{equation}
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=\delta_{jk}%
+\end{equation}
+then
+\begin{subequations}
+\label{fderiv2}%
+\begin{align}
+\partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{E}\left(  \mathbf{n}%
+,\mathbf{\varphi},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(
+\mathbf{n}\right)  }\partial_{\mathbf{\psi}^{\ast}}^{1}\mathcal{H}\left(
+\mathbf{n},\mathbf{\varphi},\mathbf{\theta}\right) \\
+\partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{n}\right)
+}\partial_{\mathbf{\theta}}^{1}\mathcal{H}\left(  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right)
+\end{align}
+as $\partial_{\mathbf{\varphi}^{\ast}}^{1}S_{N}\left(  \mathbf{n}\right)
+=\partial_{\mathbf{\varphi}}^{1}S_{N}\left(  \mathbf{n}\right)  =\partial
+_{\mathbf{\theta}}^{1}S_{N}\left(  \mathbf{n}\right)  =\mathbf{0}$.
+
+Variation in terms of the variables $\left\{  \mathbf{n},\mathbf{\varphi
+},\mathbf{\theta}\right\}  $ leads to a constrained variational problem, which
+can be avoided if one uses the group parameters $\left\{  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right\}  $ and the energy functional
+\end{subequations}
+\begin{equation}
+\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)
+=\frac{\mathcal{H}\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  }{S_{N}\left(  \mathbf{\eta}\right)  }=\frac{\left\langle \left.
+g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}%
+\right\vert Hg\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)
+^{N}\right\rangle }{S_{N}\left(  \mathbf{\eta}\right)  }%
+\end{equation}
+and considers the derivatives
+\begin{subequations}
+\label{GFderiv}%
+\begin{align}
+\partial_{\mathbf{\eta}}^{1}\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{\eta}\right)
+}\left\{  \partial_{\mathbf{\eta}}^{1}\mathcal{H}\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  -\mathcal{E}\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  \partial_{\mathbf{\eta}}^{1}%
+S_{N}\left(  \mathbf{\eta}\right)  \right\} \\
+\partial_{\mathbf{\lambda}}^{1}\mathcal{E}\left(  \mathbf{\eta}%
+,\mathbf{\lambda},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(
+\mathbf{\eta}\right)  }\partial_{\mathbf{\lambda}}^{1}\mathcal{H}\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right) \\
+\partial_{\mathbf{\theta}}^{1}\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(  \mathbf{\eta}\right)
+}\partial_{\mathbf{\theta}}^{1}\mathcal{H}\left(  \mathbf{\eta}%
+,\mathbf{\lambda},\mathbf{\theta}\right)  .
+\end{align}
+The generators of the GSO and the phase variations produce
+\end{subequations}
+\begin{equation}
+\partial_{\mathbf{\lambda}_{jk}}^{1}\mathcal{E}\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  =\frac{i}{S_{N}\left(
+\mathbf{\eta}\right)  }\left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert \left[
+H,a_{j}^{\dagger}a_{k}\right]  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle ;\quad1\leq j\neq k\pm s\leq2s
+\label{Dlamda}%
+\end{equation}
+and
+\begin{equation}
+\partial_{\mathbf{\theta}_{j}}^{1}\mathcal{E}\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  =\frac{i}{S_{N}\left(
+\mathbf{\eta}\right)  }\left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert \left[  H,\left(
+a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+;\quad1\leq j\leq s, \label{Dtheta}%
+\end{equation}
+while the generators of the occupation number variations give the derivatives
+\begin{align}
+\partial_{\mathbf{\eta}_{j}}^{1}\mathcal{E}\left(  \mathbf{\eta}%
+,\mathbf{\lambda},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(
+\mathbf{\eta}\right)  }\left\{  \left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert \left[  H,\left(
+a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  _{+}g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+\right. \nonumber\\
+&  -\left.  2\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  \left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\vert \left(  a_{j}^{\dagger}a_{j}%
++a_{j+s}^{\dagger}a_{j+s}\right)  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle \right\}  ;\quad1\leq j\leq s.
+\label{Deta}%
+\end{align}
+
+
+\section{Stationarity Conditions for an Optimized AGP\label{StatAGPCond}}
+
+At a stationary point of the unconstrained variation wrt $\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  $
+\begin{equation}
+\partial_{\mathbf{\theta}_{j}}^{1}\mathcal{E}\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  =\frac{i}{S_{N}\left(
+\mathbf{\eta}\right)  }\left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert \left[  H,\left(
+a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+=0;\quad1\leq j\leq s, \label{s1}%
+\end{equation}
+and%
+\begin{equation}
+\partial_{\mathbf{\lambda}_{jk}}^{1}\mathcal{E}\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  =\frac{i}{S_{N}\left(
+\mathbf{\eta}\right)  }\left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert \left[
+H,a_{j}^{\dagger}a_{k}\right]  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle =0;\quad1\leq j\neq k\pm s\leq2s.
+\label{s2}%
+\end{equation}
+Eqs. $\left(  \ref{s1}\right)  $ and $\left(  \ref{s2}\right)  $ combined with
+the commutator relationships deduced from the invariance group (see eq.
+$\left(  \ref{iso}\right)  $) i.e.
+\begin{align}
+\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  ^{N}\right\vert \left[  H,\left(  a_{j}^{\dagger}a_{j}%
+-a_{j+s}^{\dagger}a_{j+s}\right)  \right]  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle  &  =\nonumber\\
+\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  ^{N}\right\vert \left[  H,a_{j}^{\dagger}a_{j+s}\right]  g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle  &
+=\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  ^{N}\right\vert \left[  H,a_{j+s}^{\dagger}a_{j}\right]  g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle =0
+\end{align}
+give
+\begin{equation}
+\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  ^{N}\right\vert \left[  H,a_{j}^{\dagger}a_{k}\right]  g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+=0;\quad1\leq j,k\leq2s. \label{s3}%
+\end{equation}
+The stationarity of the occupation number variations gives
+\begin{align}
+\partial_{\mathbf{\eta}_{j}}^{1}\mathcal{E}\left(  \mathbf{\eta}%
+,\mathbf{\lambda},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(
+\mathbf{\eta}\right)  }\left\{  \left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert \left[  H,\left(
+a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  _{+}g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+\right. \nonumber\\
+&  -\left.  2\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  \left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\vert \left(  a_{j}^{\dagger}a_{j}%
++a_{j+s}^{\dagger}a_{j+s}\right)  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle \right\}  =0;\quad1\leq j\leq s,
+\end{align}
+which combined with eq. $\left(  \ref{s3}\right)  $ and noting that
+\begin{equation}
+\left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \left\vert
+g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}%
+\right\rangle =2a_{j}^{\dagger}a_{j}\left\vert g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+\end{equation}
+leads to
+\begin{equation}
+\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  ^{N}\right\vert Ha_{j}^{\dagger}a_{j}g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle =\mathcal{E}%
+\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  \left\langle
+\left.  g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)
+^{N}\right\vert a_{j}^{\dagger}a_{j}g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle ;\quad1\leq j\leq2s,
+\end{equation}
+which can be written as
+\begin{equation}
+\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  ^{N}\right\vert Ha_{j}^{\dagger}a_{j}g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle =\mathcal{E}%
+\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  N_{j}.
+\end{equation}
+
+
+\section{Stationary AGP Fock Operator\label{AGPFock}}
+
+The matrix elements $\left\{  \left.  F\left(  g\left(  \mathbf{\eta
+},\mathbf{\psi}\right)  ^{N}\right)  _{qp}\right\vert 1\leq p,q\leq2s\right\}
+$ of the generalized Fock operator are
+\begin{align}
+F\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right)  _{qp} &
+=\frac{1}{S_{N}\left(  \mathbf{\eta}\right)  }\left\langle \left.  g\left(
+\mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\vert a_{p}^{\dagger}\left[
+a_{q},H\right]  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\rangle
+\nonumber\\
+&  =\frac{1}{S_{N}\left(  \mathbf{\eta}\right)  }\left\langle \left.  g\left(
+\mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\vert \left\{  a_{p}^{\dagger
+}a_{q}H-a_{p}^{\dagger}Ha_{q}\right\}  g\left(  \mathbf{\eta},\mathbf{\psi
+}\right)  ^{N}\right\rangle .
+\end{align}
+The diagonal elements of $F\left(  g\left(  \mathbf{\eta},\mathbf{\psi
+}\right)  ^{N}\right)  $ for an optimized AGP\ have the form
+\begin{align}
+F\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right)  _{qq} &
+=\frac{N_{q}}{S_{N}\left(  \mathbf{\eta}\right)  }\left\{  \mathcal{E}\left(
+g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right)  -\frac{\left\langle
+\left.  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\vert
+a_{q}^{\dagger}Ha_{q}g\left(  \mathbf{\eta},\mathbf{\psi}\right)
+^{N}\right\rangle }{\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\psi
+}\right)  ^{N}\right\vert a_{q}^{\dagger}a_{q}g\left(  \mathbf{\eta
+},\mathbf{\psi}\right)  ^{N}\right\rangle }\right\}  \nonumber\\
+&  =\frac{N_{q}}{S_{N}\left(  \mathbf{\eta}\right)  }\left\{  \mathcal{E}%
+\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right)
+-\mathcal{E}_{q}\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)
+^{N}\right)  \right\}  ,
+\end{align}
+where $\mathcal{E}_{q}\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)
+^{N}\right)  $ is the energy of the normalized $2N-1$ electron state formed by
+removing an electron described by a CGSO $\left\vert \psi_{q}\right\rangle $
+\begin{equation}
+\mathcal{E}_{q}\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)
+^{N}\right)  =\frac{\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\psi
+}\right)  ^{N}\right\vert a_{q}^{\dagger}Ha_{q}g\left(  \mathbf{\eta
+},\mathbf{\psi}\right)  ^{N}\right\rangle }{\left\langle \left.  a_{q}g\left(
+\mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\vert a_{q}g\left(
+\mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\rangle }.
+\end{equation}
+It is easy to observe that
+\begin{equation}
+\mathcal{E}_{q+s}\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)
+^{N}\right)  =\mathcal{E}_{q}\left(  g\left(  \mathbf{\eta},\mathbf{\psi
+}\right)  ^{N}\right)
+\end{equation}
+and
+\begin{equation}
+F\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right)
+_{qq}=F\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right)
+_{q+sq+s};\quad1\leq q\leq s.
+\end{equation}
+The off diagonal elements are given by
+\begin{equation}
+F\left(  g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right)  _{qp}%
+=\frac{1}{S_{N}\left(  \mathbf{\eta}\right)  }\left\langle \left.  g\left(
+\mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\vert a_{p}^{\dagger}%
+Ha_{q}g\left(  \mathbf{\eta},\mathbf{\psi}\right)  ^{N}\right\rangle ,
+\end{equation}
+which are \emph{not }in general zero in the CGSO basis.  
+
+\section{AGP Excitation Operators\label{q_op}}
+
+One can define operators $\left\{  \left.  q_{kj}^{\dagger}\right\vert 1\leq
+j\neq k\pm s\leq2s\right\}  $ by
+\begin{equation}
+q_{jk}^{\dagger}\left(  \mathbf{\eta,\psi}\right)  =c_{k}\left(  \mathbf{\eta
+}\right)  a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)  \sigma\left(  k\right)
+c_{j}\left(  \mathbf{\eta}\right)  a_{\left\vert k\right\vert }^{\dagger
+}a_{\left\vert j\right\vert }\text{ for }n_{j}\neq n_{k},
+\end{equation}
+where%
+\begin{equation}
+\left\vert j\right\vert =\left\{
+\begin{array}
+[c]{c}%
+j;\qquad1\leq j\leq s\\
+j-s;\qquad s+1\leq j\leq2s
+\end{array}
+\right.
+\end{equation}
+and
+\begin{equation}
+\sigma\left(  j\right)  =\left\{
+\begin{array}
+[c]{c}%
+-1;\qquad1\leq j\leq s\quad\quad\\
+\quad1;\qquad s+1\leq j\leq2s
+\end{array}
+\right.  .
+\end{equation}
+the operators $\left\{  a_{j}^{\dagger}\right\}  $ refer to basis formed by
+the optimal CGSO's $\left\{  \left\vert \psi_{j}\right\rangle \right\}  $. The
+importance of these operators lies in the observation that their adjoints
+$\left\{  \left.  q_{kj}\right\vert 1\leq j\neq k\pm s\leq2s\right\}  $ have
+the special annihilation property%
+\begin{equation}
+q_{jk}\left\vert g\left(  \mathbf{\eta},\mathbf{\varphi}\right)
+^{N}\right\rangle =0;\quad1\leq j\neq k\pm s\leq2s.
+\end{equation}
+One can show \cite{Weiner&Goscinski83} that
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+q_{jk}^{\dagger}\\
+q_{j+sk}^{\dagger}\\
+q_{jk+s}^{\dagger}\\
+q_{j+sk+s}^{\dagger}\\
+q_{jk}\\
+q_{j+sk}\\
+q_{jk+s}\\
+q_{j+sk+s}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cccccccc}%
+c_{k} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & -c_{j}\\
+0 & c_{k} & 0 & \cdots & \cdots & 0 & c_{j} & 0\\
+\vdots & 0 & c_{k} & 0 & 0 & c_{j} & 0 & \vdots\\
+\vdots & \vdots & 0 & c_{k} & -c_{j} & 0 & \vdots & \vdots\\
+\vdots & \vdots & 0 & -c_{j} & c_{k} & 0 & \vdots & \vdots\\
+\vdots & 0 & c_{j} & 0 & 0 & c_{k} & 0 & \vdots\\
+0 & c_{j} & 0 & \cdots & \cdots & 0 & c_{k} & 0\\
+-c_{j} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & c_{k}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+a_{j}^{\dagger}a_{k}\\
+a_{j}^{\dagger}a_{k+s}\\
+a_{j+s}^{\dagger}a_{k}\\
+a_{j+s}^{\dagger}a_{k+s}\\
+a_{k}^{\dagger}a_{j}\\
+a_{k}^{\dagger}a_{j+s}\\
+a_{k+s}^{\dagger}a_{j}\\
+a_{k+s}^{\dagger}a_{j+s}%
+\end{array}
+\right)  ,
+\end{equation}
+leading to the transpose relationship
+\begin{align}
+&  \left(  q_{jk}^{\dagger},q_{j+sk}^{\dagger},q_{jk+s}^{\dagger}%
+,q_{j+sk+s}^{\dagger},q_{jk},q_{j+sk},q_{jk+s},q_{j+sk+s}\right) \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  =\right.  \left(  a_{j}^{\dagger
+}a_{k},a_{j}^{\dagger}a_{k+s},a_{j+s}^{\dagger}a_{k},a_{j+s}^{\dagger}%
+a_{k+s},a_{k}^{\dagger}a_{j},a_{k}^{\dagger}a_{j+s},a_{k+s}^{\dagger}%
+a_{j},a_{k+s}^{\dagger}a_{j+s}\right)  \mathbb{S}\left(  jk\right)
+\end{align}
+and that the transformation matrix $\mathbb{S}\left(  jk\right)  $ is non singular.
+
+\section{Fock Operator and the Total Energy\label{Fock&Energy}}
+
+\subsection{Homogeneous Functions\label{HomFunc}}
+
+Polynomial functions can be expanded as a sum of homogeneous mononomial
+functions as%
+
+\begin{equation}
+f\left(  \mathbf{x}\right)  =f_{0}+f_{1}\left(  \mathbf{x}\right)
++\cdots+f_{n}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+f_{m}\left(  \mathbf{x}\right)  ,
+\end{equation}
+where
+\begin{equation}
+f_{m}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m}\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m}\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m}}.
+\end{equation}
+The variables $\mathbf{x}$ can be complex and in particular $\mathbf{x=}%
+\left(  \mathbf{z}^{\ast}\mathbf{,z}\right)  $, where we consider
+$\mathbf{z}^{\ast}\mathbf{,z}$ as independent variables. Consider
+\begin{equation}
+\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{l}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m-1}}%
+\end{equation}
+then
+\begin{equation}
+x_{l}\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{l}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m-1}}x_{l},
+\end{equation}
+which gives
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)
+=mf_{m}\left(  \mathbf{x}\right)  .
+\end{equation}
+Hence%
+\begin{align}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial f}{\partial x_{l}}\left(  \mathbf{x}\right)   &  =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial}{\partial x_{l}}\left\{
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+f_{m}\left(  \mathbf{x}\right)  \right\}  =%
+%TCIMACRO{\tsum \limits_{\substack{1\leq l\leq r\\0\leq m\leq n}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\substack{1\leq l\leq r\\0\leq m\leq n}}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}\left(  \mathbf{x}\right)  }{\partial x_{l}%
+}\nonumber\\
+&  =%
+%TCIMACRO{\tsum \limits_{\substack{0\leq m\leq n\\1\leq l\leq r}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\substack{0\leq m\leq n\\1\leq l\leq r}}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}\left(  \mathbf{x}\right)  }{\partial x_{l}}=%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+mf_{m}\left(  \mathbf{x}\right)  =f_{1}\left(  \mathbf{x}\right)
++2f_{2}\left(  \mathbf{x}\right)  +\cdots+nf_{n}\left(  \mathbf{x}\right)  .
+\label{homex}%
+\end{align}
+
+
+\subsection{Fock Operator and Energy\label{Fock&En}}
+
+The energy of \emph{any} $2N$-electron state is given by
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\operatorname{Tr}%
+\left\{  \mathbb{H}_{1}\left(  \mathbf{\varphi}\right)  \mathbb{D}%
+^{1}\right\}  +\frac{1}{4}\operatorname{Tr}\left\{  \mathbb{V}_{2}\left(
+\mathbf{\varphi}\right)  \mathbb{D}^{2}\right\}  \equiv\frac{1}%
+{\operatorname{Tr}\left\{  D^{2N}\right\}  }\left\{  \mathcal{H}_{1}\left(
+\mathbb{D}^{1},\mathbf{\varphi}\right)  +\mathcal{H}_{2}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  \right\}  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{H}_{1}\left(  \mathbb{D}^{1},\mathbf{\varphi}\right)
+=\operatorname{Tr}\left\{  \mathbb{H}_{1}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{1}\right\}
+\end{equation}
+and
+\begin{equation}
+\mathcal{H}_{2}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{1}%
+{4}\operatorname{Tr}\left\{  \mathbb{V}_{2}\left(  \mathbf{\varphi}\right)
+\mathbb{D}^{2}\right\}  .
+\end{equation}
+As
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\delta\varphi_{j}^{\ast}}=F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\left\vert \varphi_{j}\right\rangle
+\end{equation}
+one obtains
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq j\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq2s}}
+%EndExpansion
+\int\varphi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  \frac{\delta
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  }{\delta\varphi
+_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  }d\mathbf{r}d\mathbf{\xi=}%
+%TCIMACRO{\tsum \limits_{1\leq j\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq2s}}
+%EndExpansion
+\left\langle \left.  \varphi_{j}\right\vert F\left(  \mathbb{D}^{2}%
+,\mathbf{\varphi}\right)  \varphi_{j}\right\rangle =\operatorname{Tr}\left\{
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \right\}  .
+\end{equation}
+The normalization $\operatorname{Tr}\left\{  D^{2N}\right\}  $ does not depend
+on $\left\{  \varphi_{j}\right\}  $ as they are constrained to be orthonormal
+thus%
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\delta\varphi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  }=\frac
+{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }\frac{\delta\mathcal{H}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  }{\delta\varphi_{j}^{\ast}\left(
+\mathbf{r,\xi}\right)  }%
+\end{equation}
+giving%
+\begin{align}
+\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\right\}   &  =\frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }%
+%TCIMACRO{\tsum \limits_{1\leq j\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq2s}}
+%EndExpansion
+\int\varphi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  \frac{\delta
+\mathcal{H}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  }{\delta\varphi
+_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  }d\mathbf{r}d\mathbf{\xi}\\
+&  \mathbf{=}\frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }%
+%TCIMACRO{\tsum \limits_{1\leq j\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq2s}}
+%EndExpansion
+\int\varphi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  \left\{  \frac
+{\delta\mathcal{H}_{1}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  }%
+{\delta\varphi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  }+\frac{\delta
+\mathcal{H}_{2}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  }{\delta
+\varphi_{j}^{\ast}\left(  \mathbf{r,\xi}\right)  }\right\}  d\mathbf{r}%
+d\mathbf{\xi,}%
+\end{align}
+which by eq. $\left(  \ref{homex}\right)  $ produces
+\begin{equation}
+\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\right\}  =\frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }\left\{
+\mathcal{H}_{1}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  +2\mathcal{H}%
+_{2}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \right\}  .
+\end{equation}
+Noting that
+\begin{equation}
+\mathcal{H}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\mathcal{H}%
+_{1}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  +\mathcal{H}_{2}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)
+\end{equation}
+and
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac
+{\mathcal{H}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  }%
+{\operatorname{Tr}\left\{  D^{2N}\right\}  }%
+\end{equation}
+one obtains
+\begin{equation}
+\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\right\}  =\frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }\left\{
+\mathcal{H}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  +\mathcal{H}%
+_{2}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \right\}  =\frac
+{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }\left\{  2\mathcal{H}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  -\mathcal{H}_{1}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  \right\}  .
+\end{equation}
+Hence the important relationships
+\begin{subequations}
+\label{FE}%
+\begin{align}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)   &
+=\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\right\}  -\mathcal{H}_{2}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\label{FEa}\\
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)   &  =\frac{1}%
+{2}\left\{  \overset{}{\operatorname{Tr}\left\{  F\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  \right\}  +\mathcal{H}_{1}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  }\right\}  . \label{FEb}%
+\end{align}
+
+
+Recalling eq. $\left(  \ref{Fockelem}\right)  $
+\end{subequations}
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  _{qp}=\frac{1}%
+{\operatorname{Tr}\left\{  D^{2N}\right\}  }\operatorname{Tr}\left\{
+\overset{}{\left\{  a_{p}^{\dagger}a_{q}H-a_{q}Ha_{p}^{\dagger}\right\}
+}D^{2N}\right\}
+\end{equation}
+one observes that for \emph{any }state $D^{2N}$
+\begin{align}
+\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\right\}   &  =\sum_{1\leq p\leq2s}\frac{1}{\operatorname{Tr}\left\{
+D^{2N}\right\}  }\operatorname{Tr}\left\{  \overset{}{\left\{  a_{p}^{\dagger
+}a_{p}H-a_{p}Ha_{p}^{\dagger}\right\}  }D^{2N}\right\} \nonumber\\
+&  =\frac{1}{\operatorname{Tr}\left\{  D^{2N}\right\}  }\operatorname{Tr}%
+\left\{  \mathfrak{N}HD^{2N}\right\}  -\sum_{1\leq p\leq2s}N_{p}\left(
+\mathbf{\varphi}\right)  \frac{\operatorname{Tr}\left\{  a_{p}Ha_{p}^{\dagger
+}D^{2N}\right\}  }{\operatorname{Tr}\left\{  a_{p}^{\dagger}a_{p}%
+D^{2N}\right\}  }, \label{TrF1}%
+\end{align}
+where
+\begin{equation}
+\mathfrak{N=}\sum_{1\leq p\leq2s}a_{p}^{\dagger}a_{p}%
+\end{equation}
+is the number operator and
+\begin{equation}
+N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{\operatorname{Tr}%
+\left\{  a_{p}^{\dagger}a_{p}D^{2N}\right\}  }{\operatorname{Tr}\left\{
+D^{2N}\right\}  }%
+\end{equation}
+is the diagonal element of the FORDM of $D^{2N}$ in basis $\left\{  \left.
+\varphi_{j}\right\vert 1\leq j\leq2s\right\}  $ i.e. the occupation of the GSO
+$\left\vert \varphi_{p}\right\rangle .$ Eq. $\left(  \ref{TrF1}\right)  $ can
+be further developed to give
+\begin{equation}
+\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\right\}  =2N\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+-\sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\mathcal{E}_{p}\left(  D^{2N},\mathbf{\varphi}\right)  ,
+\end{equation}
+where the energy of the $2N$ electron state $D^{2N}$ is
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac
+{\operatorname{Tr}\left\{  HD^{2N}\right\}  }{\operatorname{Tr}\left\{
+D^{2N}\right\}  }%
+\end{equation}
+and the energy of the $2N-1$ electron state $a_{p}^{\dagger}D^{2N}a_{p}$ is
+\begin{equation}
+\mathcal{E}_{p}\left(  D^{2N},\mathbf{\varphi}\right)  =\frac
+{\operatorname{Tr}\left\{  a_{p}Ha_{p}^{\dagger}D^{2N}\right\}  }%
+{\operatorname{Tr}\left\{  a_{p}^{\dagger}a_{p}D^{2N}\right\}  }.
+\end{equation}
+This gives
+\begin{equation}
+\operatorname{Tr}\left\{  F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\right\}  =\sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi
+}\right)  \left\{  \mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+-\mathcal{E}_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \right\}
+=\sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+I\left(  \mathbb{D}^{2},\varphi_{p}\right)  , \label{TrF}%
+\end{equation}
+where the ionization potential associated with the GSO\ $\left\vert
+\varphi_{p}\right\rangle $ from the state $D^{2N}$ is
+\begin{equation}
+I\left(  \mathbb{D}^{2},\varphi_{p}\right)  =\mathcal{E}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  -\mathcal{E}_{p}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  .
+\end{equation}
+Eqs. $\left(  \ref{FE}\right)  $ then give
+\begin{subequations}
+\begin{align}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)   &  =\sum_{1\leq
+p\leq2s}N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  I\left(
+\mathbb{D}^{2},\varphi_{p}\right)  -\mathcal{H}_{2}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right) \label{FE1a}\\
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)   &  =\frac{1}%
+{2}\left\{  \sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi
+}\right)  I\left(  \mathbb{D}^{2},\varphi_{p}\right)  +\mathcal{H}_{1}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  \right\}  . \label{FE1b}%
+\end{align}
+
+
+If $\left\{  \left\vert \varphi_{p}\right\rangle \right\}  $ are the NGSO's of
+the state $D^{2N}$ then the one electron energy $\mathcal{H}_{1}\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  $ can be expressed as
+\end{subequations}
+\begin{equation}
+\mathcal{H}_{1}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \left\langle \left.
+\varphi_{p}\right\vert h_{1}\varphi_{p}\right\rangle
+\end{equation}
+and we obtain
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \left\{  I\left(
+\mathbb{D}^{2},\varphi_{p}\right)  +\left\langle \left.  \varphi
+_{p}\right\vert h_{1}\varphi_{p}\right\rangle \right\}  \equiv\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \varsigma\left(
+\mathbb{D}^{2},\varphi_{p}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\varsigma\left(  \mathbb{D}^{2},\varphi_{p}\right)  =I\left(  \mathbb{D}%
+^{2},\varphi_{p}\right)  +\left\langle \left.  \varphi_{p}\right\vert
+h_{1}\varphi_{p}\right\rangle .
+\end{equation}
+
+
+One should observe that \emph{only} in the case of an optimized AGP\ state are
+the diagonal elements $F\left(  \mathbf{n},\mathbf{\psi}\right)  _{pp}$ of the
+Fock operator $F\left(  \mathbf{n},\mathbf{\psi}\right)  $ equal to weighted
+ionization potentials $N_{p}\left(  \mathbf{\psi}\right)  I\left(  \psi
+_{p}\right)  $ even though the trace of the Fock operator $F\left(
+\mathbb{D}^{2},\mathbf{\varphi}\right)  $ for any state can \emph{always }be
+expressed as the sum of weighted ionization potentials $N_{p}\left(
+\mathbf{\psi}\right)  I\left(  \psi_{p}\right)  $ as displayed in eq. $\left(
+\ref{TrF}\right)  $.
+
+\subsection{Fock Identities\label{FockID}}
+
+Using eq. $\left(  \ref{FE1b}\right)  $ we obtain
+\begin{subequations}
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =N\mathcal{E}%
+\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  -\frac{1}{2}\left\{
+\sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\mathcal{E}_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  -\mathcal{H}%
+_{1}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  \right\}  ,
+\end{equation}
+which leads to
+\end{subequations}
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{1}{2\left(
+N-1\right)  }\left\{  \sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  \mathcal{E}_{p}\left(  \mathbb{D}^{2}%
+,\mathbf{\varphi}\right)  -\mathcal{H}_{1}\left(  \mathbb{D}^{2}%
+,\mathbf{\varphi}\right)  \right\}  . \label{EnFunc}%
+\end{equation}
+Eq. $\left(  \ref{EnFunc}\right)  $ can also be expressed as
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{1}{2\left(
+N-1\right)  }\left\{  \sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  \left\{  \mathcal{E}_{p}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  -\left\langle \left.  \varphi_{p}\right\vert
+h_{1}\varphi_{p}\right\rangle \right\}  \right\}  ,
+\end{equation}
+leading to
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{1}{2\left(
+N-1\right)  }\sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi
+}\right)  \kappa_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\kappa_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\mathcal{E}%
+_{p}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  -\left\langle \left.
+\varphi_{p}\right\vert h_{1}\varphi_{p}\right\rangle .
+\end{equation}%
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2}\left(  \eta\right)  ,\mathbf{\varphi
+}\right)  =\frac{1}{2\left(  N-1\right)  }\left\{  \sum_{1\leq p\leq2s}%
+\frac{\operatorname{Tr}\left\{  a_{p}^{\dagger}a_{p}k\left(  \eta\right)
+D^{2N}k\left(  \eta\right)  \right\}  }{\operatorname{Tr}\left\{  k\left(
+\eta\right)  D^{2N}k\left(  \eta\right)  \right\}  }\left\{  \frac
+{\operatorname{Tr}\left\{  a_{p}^{\dagger}Ha_{p}k\left(  \eta\right)
+D^{2N}k\left(  \eta\right)  \right\}  }{\operatorname{Tr}\left\{
+a_{p}^{\dagger}a_{p}k\left(  \eta\right)  D^{2N}k\left(  \eta\right)
+\right\}  }-\left\langle \left.  \varphi_{p}\right\vert h_{1}\varphi
+_{p}\right\rangle \right\}  \right\}
+\end{equation}%
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{1}{2\left(
+N-1\right)  }\left\{  \sum_{1\leq p\leq2s}N_{p}\left(  \mathbb{D}%
+^{2},\mathbf{\varphi}\right)  \left\{  \frac{\operatorname{Tr}\left\{
+a_{p}^{\dagger}Ha_{p}D^{2N}\right\}  }{\operatorname{Tr}\left\{
+a_{p}^{\dagger}a_{p}D^{2N}\right\}  }-\left\langle \left.  \varphi
+_{p}\right\vert h_{1}\varphi_{p}\right\rangle \right\}  \right\}
+\end{equation}
+
+
+If $D^{2N}$ is an optimized state then in particular we obtain
+\begin{equation}
+\frac{\delta\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\delta\varphi_{j}^{\ast}}=F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+\left\vert \varphi_{j}\right\rangle =\sum_{1\leq k\leq2s}\left\vert
+\varphi_{k}\right\rangle \varepsilon_{kj}=h_{1}\left\vert \varphi
+_{j}\right\rangle +\sum_{1\leq p\leq2s}N_{p}\frac{\delta\mathcal{E}_{p}\left(
+D^{2N},\mathbf{\varphi}\right)  }{\delta\varphi_{j}^{\ast}};\quad1\leq
+j\leq2s,
+\end{equation}
+where
+\begin{equation}
+\varepsilon_{kj}=\varepsilon_{jk}^{\ast}.
+\end{equation}
+We can express the derivatives of $2N-1$ electron states $\left\{  a_{p}%
+D^{2N}a_{p}^{\dagger}\right\}  $ in terms of a generalized Fock operator%
+\begin{equation}
+\frac{\delta\mathcal{E}_{p}\left(  D^{2N},\mathbf{\varphi}\right)  }%
+{\delta\varphi_{j}^{\ast}}=F\left(  \mathbb{D}^{2}\left(  p\right)
+,\mathbf{\varphi}\right)  \left\vert \varphi_{j}\right\rangle ,
+\end{equation}
+where
+\begin{equation}
+D^{2}\left(  p\right)  =\frac{1}{\operatorname{Tr}\left\{  a_{p}^{\dagger
+}a_{p}D^{2N}\right\}  }L_{N}^{2}\left(  a_{p}D^{2N}a_{p}^{\dagger}\right)  .
+\end{equation}
+The derivatives wrt occupation number formally give
+\begin{equation}
+\frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\partial N_{j}}=\frac{1}{2\left(  N-1\right)  }\left\{  \left\{
+\mathcal{E}_{p}\left(  D^{2N},\mathbf{\varphi}\right)  +\left\langle \left.
+\varphi_{p}\right\vert h_{1}\varphi_{p}\right\rangle \right\}  +\frac
+{\partial\mathcal{E}_{p}\left(  D^{2N},\mathbf{\varphi}\right)  }{\partial
+N_{j}}\right\}  =0.
+\end{equation}
+In the case of AGP states occupation number variations can be implemented by
+the group $U_{occnum}$ giving
+\begin{align}
+&  \frac{\partial\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)
+}{\partial\eta_{j}}=\frac{1}{2\left(  N-1\right)  }\sum_{1\leq p\leq
+2s}\left\{  \frac{\partial N_{p}\left(  \mathbf{\eta}\right)  }{\partial
+\eta_{j}}\left\{  \mathcal{E}_{p}\left(  k\left(  \mathbf{\eta}\right)
+D^{2N}k\left(  \mathbf{\eta}\right)  ,\mathbf{\varphi}\right)  +\left\langle
+\left.  \varphi_{p}\right\vert h_{1}\varphi_{p}\right\rangle \right\}  \right.
+\\
+&  \left.  +\right.  \left.  N_{p}\left(  \mathbf{\eta}\right)  \frac
+{\partial\mathcal{E}_{p}\left(  k\left(  \mathbf{\eta}\right)  D^{2N}k\left(
+\mathbf{\eta}\right)  ,\mathbf{\varphi}\right)  }{\partial\eta_{j}}\right\}
+=0
+\end{align}%
+\begin{align}
+\partial_{\mathbf{\eta}_{j}}^{1}\mathcal{E}\left(  \mathbf{\eta}%
+,\mathbf{\lambda},\mathbf{\theta}\right)   &  =\frac{1}{S_{N}\left(
+\mathbf{\eta}\right)  }\left\{  \left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert \left[  H,\left(
+a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  _{+}g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+\right. \nonumber\\
+&  -\left.  2\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta
+}\right)  \left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\vert \left(  a_{j}^{\dagger}a_{j}%
++a_{j+s}^{\dagger}a_{j+s}\right)  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle \right\}  =0;\quad1\leq j\leq s,
+\end{align}%
+\begin{align}
+&  \frac{\partial N_{p}\left(  \mathbf{\eta}\right)  }{\partial\eta_{j}}%
+=\frac{\partial}{\partial\eta_{j}}\left\{  \frac{1}{S_{N}\left(  \mathbf{\eta
+}\right)  }\left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\vert a_{p}^{\dagger}a_{p}g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\rangle
+\right\} \\
+&  =\frac{1}{S_{N}\left(  \mathbf{\eta}\right)  }\left\{  \left\langle \left.
+g\left(  \mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}%
+\right\vert \left\{  a_{j}^{\dagger}a_{j}a_{p}^{\dagger}a_{p}+a_{p}^{\dagger
+}a_{p}a_{j}^{\dagger}a_{j}\right\}  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle \right. \\
+&  \left.  -2N_{p}\left(  \mathbf{\eta}\right)  \left\langle \left.  g\left(
+\mathbf{\eta},\mathbf{\lambda},\mathbf{\theta}\right)  ^{N}\right\vert
+\left\{  a_{j}^{\dagger}a_{j}\right\}  g\left(  \mathbf{\eta},\mathbf{\lambda
+},\mathbf{\theta}\right)  ^{N}\right\rangle \right\}
+\end{align}%
+\begin{align}
+\frac{\partial\mathcal{E}_{p}\left(  k\left(  \mathbf{0}\right)
+D^{2N}k\left(  \mathbf{0}\right)  ,\mathbf{\varphi}\right)  }{\partial\eta
+_{j}}  &  =\frac{1}{N_{p}}\left\{  \left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\varphi}\right)  ^{N}\right\vert \left[  a_{p}^{\dagger}%
+Ha_{p},\left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]
+_{+}g\left(  \mathbf{\eta},\mathbf{\varphi}\right)  ^{N}\right\rangle \right.
+\\
+&  -\mathcal{E}_{p}\left(  \left(  \mathbf{\eta},\mathbf{\varphi}\right)
+\right)  \left\langle \left.  g\left(  \mathbf{\eta},\mathbf{\varphi}\right)
+^{N}\right\vert \left[  a_{p}^{\dagger}a_{p},\left(  a_{j}^{\dagger}%
+a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)  \right]  _{+}g\left(  \mathbf{\eta
+},\mathbf{\varphi}\right)  ^{N}\right\rangle
+\end{align}
+
+
+\section{Aufbau Principle\label{aufbau}}
+
+The energy of any AGP state can be expressed in terms of weighted ionization
+potentials $\left\{  N_{p}\left(  \mathbf{\psi}\right)  I\left(  \psi
+_{p}\right)  \right\}  $ and the one electron energy $\mathcal{H}_{1}\left(
+\mathbf{n},\mathbf{\psi}\right)  $ as
+\begin{equation}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi}\right)  =\frac{1}{2}\left\{
+\sum_{1\leq p\leq2s}N_{p}\left(  \mathbf{\psi}\right)  I\left(  \psi
+_{p}\right)  +\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi}\right)
+\right\}  .
+\end{equation}
+Let $\left\vert g^{N}\left(  \mathbf{n},\mathbf{\psi}\right)  \right\rangle $
+be a \emph{globally minimized }AGP state such that \emph{\ }
+\begin{equation}
+I\left(  \psi_{a}\right)  <I\left(  \psi_{b}\right)
+\end{equation}
+and
+\begin{equation}
+N_{b}>N_{a}.
+\end{equation}
+We will compare the energy $\mathcal{E}\left(  \mathbf{n},\mathbf{\psi
+}\right)  $ with the energy $\mathcal{E}\left(  \mathbf{n}_{ba},\mathbf{\psi
+}\right)  $ produced when the occupation numbers $n_{a}$ and $n_{b}$ are
+interchanged, but everything else is left constant. Interchanging $n_{a}$ with
+$n_{b}$ interchanges $N_{a}$ and $N_{b}$ as $\mathbf{n}$ is monotonically in
+$1-1$ correspondence with $N$. Changing the occupations numbers
+\begin{equation}
+\left(  n_{a}\leftrightarrow n_{b}\Leftrightarrow N_{a}\leftrightarrow
+N_{b}\right)
+\end{equation}
+is equivalent to changing the CGSO's
+\begin{equation}
+\psi_{a}\leftrightarrow\psi_{b}\text{ and }\psi_{a+s}\leftrightarrow\psi_{b+s}%
+\end{equation}
+and can be produced by either a GSO\ or an occupation number transformation
+\begin{equation}
+\left\vert g^{N}\left(  \mathbf{n},\mathbf{\psi}_{ba}\right)  \right\rangle
+=\left\vert g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  \right\rangle
+=u\left(  \mathbf{\alpha}_{ba}\right)  \left\vert g^{N}\left(  \mathbf{n}%
+,\mathbf{\psi}\right)  \right\rangle =k\left(  \mathbf{\eta}_{ba}\right)
+\left\vert g^{N}\left(  \mathbf{n},\mathbf{\psi}\right)  \right\rangle .
+\end{equation}
+to produce the new energy
+\begin{equation}
+\mathcal{E}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  =\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+\left\{  \frac{1}{S_{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)
+}\left\langle \left.  g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)
+\right\vert \left\{  a_{p}^{\dagger}a_{p}H-a_{p}^{\dagger}Ha_{p}\right\}
+g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  \right\rangle
++N_{p}\left\langle \left.  \psi_{p}\right\vert h_{1}\psi_{p}\right\rangle
+\right\}  . \label{enba}%
+\end{equation}
+If $\left\vert g^{N}\left(  \mathbf{n},\mathbf{\psi}_{ba}\right)
+\right\rangle $ is also a stationary state then eq. $\left(  \ref{enba}%
+\right)  $ becomes
+\begin{equation}
+\mathcal{E}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  =\frac{1}{2}%
+\sum_{1\leq p\leq2s}N_{p}I_{ba}\left(  \psi_{p}\right)  +\mathcal{H}%
+_{1}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  =\frac{1}{2}\sum_{1\leq
+p\leq2s}N_{p}I_{ba}\left(  \psi_{p}\right)  +\mathcal{H}_{1}\left(
+\mathbf{n},\mathbf{\psi}\right)
+\end{equation}
+and
+\begin{align}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi}\right)  -\mathcal{E}\left(
+\mathbf{n}_{ba},\mathbf{\psi}\right)   &  =N_{a}I\left(  \psi_{a}\right)
++N_{b}I\left(  \psi_{b}\right)  -N_{b}I\left(  \psi_{a}\right)  -N_{a}I\left(
+\psi_{b}\right) \nonumber\\
+&  =\left(  N_{a}-N_{b}\right)  \left\{  I\left(  \psi_{a}\right)  -I\left(
+\psi_{b}\right)  \right\}  >0.
+\end{align}
+Thus one concludes that
+\begin{equation}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\psi}\right)  <\mathcal{E}\left(
+\mathbf{n}_{ba},\mathbf{\psi}\right)
+\end{equation}
+which is a contradiction, hence
+\begin{equation}
+N_{a}>N_{b}.
+\end{equation}%
+\begin{align}
+&  \mathcal{E}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right) \nonumber\\
+&  =\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+\left\{  \frac{1}{S_{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)
+}\left\langle \left.  g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)
+\right\vert \left\{  a_{p}^{\dagger}a_{p}H-a_{p}^{\dagger}Ha_{p}\right\}
+g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  \right\rangle \right. \\
+&  +\left.  N_{p}\left\langle \left.  \psi_{p}\right\vert h_{1}\psi
+_{p}\right\rangle \right\} \\
+&  =\frac{1}{2}\left\{
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+\frac{1}{S_{N}\left(  \mathbf{n},\mathbf{\psi}\right)  }\left\langle \left.
+g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  \right\vert \left\{
+a_{p}^{\dagger}a_{p}H-a_{p}^{\dagger}Ha_{p}\right\}  g^{N}\left(
+\mathbf{n}_{ba},\mathbf{\psi}\right)  \right\rangle +N_{p}\left\langle \left.
+\psi_{p}\right\vert h_{1}\psi_{p}\right\rangle \right\}
+\end{align}%
+\begin{align}
+\mathcal{E}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)   &  =\frac{1}%
+{2}\left\{  \frac{2N}{S_{N}\left(  \mathbf{n},\mathbf{\psi}\right)
+}\left\langle \left.  g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)
+\right\vert Hg^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)  \right\rangle
+-%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+\left\langle \left.  g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi}\right)
+\right\vert a_{p}^{\dagger}Ha_{p}g^{N}\left(  \mathbf{n}_{ba},\mathbf{\psi
+}\right)  \right\rangle \right\} \\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad+\frac{1}{2}\mathcal{H}_{1}\left(  \mathbf{n},\mathbf{\psi
+}\right)
+\end{align}%
+\begin{equation}
+F\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  _{pp}=\frac{1}%
+{\operatorname{Tr}\left\{  D^{2N}\right\}  }\operatorname{Tr}\left\{
+\overset{}{\left\{  u^{\dagger}a_{p}^{\dagger}uu^{\dagger}a_{p}uu^{\dagger
+}Hu-u^{\dagger}a_{p}uu^{\dagger}Huu^{\dagger}a_{p}^{\dagger}u\right\}  }%
+D^{2N}\right\}
+\end{equation}%
+\begin{equation}
+\operatorname{Tr}\left\{  \left(  \mathbb{H}_{1}\left(  \mathbf{\varphi
+}\right)  \mathbb{D}^{1}\right)  _{pp}+\frac{1}{2}\left(  L_{2}^{1}\left(
+\mathbb{V}_{2}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{2}\right)  \right)
+_{pp}\right\}
+\end{equation}
+
+
+
+\end{document}

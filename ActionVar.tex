@@ -1,0 +1,1073 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{Created=Sunday, February 03, 2002 17:11:04}
+%TCIDATA{LastRevised=Wednesday, October 29, 2003 18:56:58}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title[QuantAct]{EOM\ based Stationary Action in Quantum Mechanics}
+\author{Brian Weiner}
+\affiliation{PSU}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+\end{abstract}
+
+\date[Date text]{02/10/20}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+\section{Variation of the Action}
+
+\subsection{Hilbert Space Approach I}
+
+The action is defined as%
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\mathcal{L}\left(
+\Psi \left( t\right) \right) dt
+\end{equation}%
+where 
+\begin{equation}
+\mathcal{L}\left( \Psi \left( t\right) \right) =\frac{\left\langle \Psi
+\left( t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi \left(
+t\right) \right\rangle }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }
+\end{equation}%
+the first order variation of the Lagrangian is then%
+\begin{eqnarray}
+\delta \mathcal{L}\left( \Psi \left( t\right) \right)  &=&\frac{1}{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\left\{ \left\langle \delta \Psi \left( t\right) |\left( i\frac{\partial }{%
+\partial t}-H\right) \Psi \left( t\right) \right\rangle +\left\langle \Psi
+\left( t\right) |\left( i\frac{\partial }{\partial t}-H\right) \delta \Psi
+\left( t\right) \right\rangle \right.   \notag \\
+&&\qquad \qquad \qquad \qquad \left. -\mathcal{L}\left( \Psi \left( t\right)
+\right) \left\{ \left\langle \delta \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle +\left\langle \Psi \left( t\right) |\delta \Psi
+\left( t\right) \right\rangle \right\} \overset{}{\left. {}\right. }\right\} 
+\end{eqnarray}%
+leading to the first order change in the action wrt to changes in the paths $%
+\Psi \left( t\right) $ 
+\begin{eqnarray}
+\delta \mathcal{A}\left( \Psi ,\tau \right)  &=&\int_{t_{i}}^{t_{f}}\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right) dt  \notag \\
+&=&\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\left\{ \left\langle \delta \Psi \left(
+t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right)
+\right\rangle -\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle
+\delta \Psi \left( t\right) |\Psi \left( t\right) \right\rangle \right.  
+\notag \\
+&&\qquad \qquad +\left. \left\langle \Psi \left( t\right) |\left( i\frac{%
+\partial }{\partial t}-H\right) \delta \Psi \left( t\right) \right\rangle -%
+\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle \Psi \left(
+t\right) |\delta \Psi \left( t\right) \right\rangle \right\} dt
+\end{eqnarray}%
+In order for the action to be stationary for \emph{arbitrary }changes $%
+\left\vert \delta \Psi \left( t\right) \right\rangle $ in the paths $%
+\left\vert \Psi \left( t\right) \right\rangle $ it must be stationary for
+both the paths $\left\vert \delta \Psi \left( t\right) \right\rangle $ and $%
+\left\vert i\delta \Psi \left( t\right) \right\rangle $ giving 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\left\{ \left\langle \delta \Psi \left(
+t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right)
+\right\rangle -\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle
+\delta \Psi \left( t\right) |\Psi \left( t\right) \right\rangle \right.  
+\notag \\
+&&+\left. \left\langle \Psi \left( t\right) |\left( i\frac{\partial }{%
+\partial t}-H\right) \delta \Psi \left( t\right) \right\rangle -\mathcal{L}%
+\left( \Psi \left( t\right) \right) \left\langle \Psi \left( t\right)
+|\delta \Psi \left( t\right) \right\rangle \right\} dt=0
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\left\{ -\left\langle \delta \Psi \left(
+t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right)
+\right\rangle +\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle
+\delta \Psi \left( t\right) |\Psi \left( t\right) \right\rangle \right.  
+\notag \\
+&&+\left. \left\langle \Psi \left( t\right) |\left( i\frac{\partial }{%
+\partial t}-H\right) \delta \Psi \left( t\right) \right\rangle -\mathcal{L}%
+\left( \Psi \left( t\right) \right) \left\langle \Psi \left( t\right)
+|\delta \Psi \left( t\right) \right\rangle \right\} dt=0
+\end{eqnarray}%
+Adding and subtracting these two equations we obtain 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\left\{ \left\langle \Psi \left( t\right) |\left( i%
+\frac{\partial }{\partial t}-H\right) \delta \Psi \left( t\right)
+\right\rangle -\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle
+\Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle \right\} dt=0
+\label{a1}
+\end{equation}%
+and 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\left\{ \left\langle \delta \Psi \left( t\right)
+|\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right)
+\right\rangle -\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle
+\delta \Psi \left( t\right) |\Psi \left( t\right) \right\rangle \right\} dt=0
+\label{a2}
+\end{equation}%
+for all \emph{arbitrary }changes of path $\left\vert \delta \Psi \left(
+t\right) \right\rangle $ $\lceil $Note that these equations \emph{are not }%
+complex conjugate as $\mathcal{L}\left( \Psi \left( t\right) \right) \in 
+\mathbb{C}$ in general$\rfloor $. The equation Eq. $\left( \ref{a1}\right) $
+can be further developed to give 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\left\{ \left\langle \left[ i\frac{\partial }{%
+\partial t}\right] ^{\dagger }\Psi \left( t\right) |\delta \Psi \left(
+t\right) \right\rangle -\left\langle \Psi \left( t\right) |H\delta \Psi
+\left( t\right) \right\rangle -\mathcal{L}\left( \Psi \left( t\right)
+\right) \left\langle \Psi \left( t\right) |\delta \Psi \left( t\right)
+\right\rangle \right\} dt=0
+\end{equation}%
+which, using appendices $\left( \ref{Appendix A}\right) $ and $\left( \ref%
+{Appendix B}\right) $, gives 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\left\{ i\frac{d}{dt}\left\{ \frac{\left\langle \Psi
+\left( t\right) |\delta \Psi \left( t\right) \right\rangle }{\left\langle
+\Psi \left( t\right) |\Psi \left( t\right) \right\rangle }\right\} +\frac{1}{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\left\{ \left\langle i\frac{\partial }{\partial t}\Psi \left( t\right)
+|\delta \Psi \left( t\right) \right\rangle \right. \right.   \notag \\
+&&\left. -\left\langle \Psi \left( t\right) |H\delta \Psi \left( t\right)
+\right\rangle -\mathcal{L}\left( \Psi \left( t\right) \right) \left\langle
+\Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle +\frac{%
+\left\langle \Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle 
+}{\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }i%
+\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle \overset{}{}\right\} dt=0
+\end{eqnarray}%
+leading to 
+\begin{eqnarray}
+&&i\left\{ \left\{ \frac{\left\langle \Psi \left( t_{f}\right) |\delta \Psi
+\left( t_{f}\right) \right\rangle }{\left\langle \Psi \left( t_{f}\right)
+|\Psi \left( t_{f}\right) \right\rangle }\right\} -\left\{ \frac{%
+\left\langle \Psi \left( t_{i}\right) |\delta \Psi \left( t_{i}\right)
+\right\rangle }{\left\langle \Psi \left( t_{i}\right) |\Psi \left(
+t_{i}\right) \right\rangle }\right\} \right\} +  \notag \\
+&&\qquad \int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle }\left\{ \left\langle \left( i\frac{%
+\partial }{\partial t}-H\right) \Psi \left( t\right) |\delta \Psi \left(
+t\right) \right\rangle \right. -  \notag \\
+&&\qquad \qquad \qquad \left. \left( \mathcal{L}\left( \Psi \left( t\right)
+\right) -i\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle \right) \left\langle \Psi \left( t\right) |\delta
+\Psi \left( t\right) \right\rangle \right\} dt=0  \label{a1d}
+\end{eqnarray}%
+which gives if the paths have fixed endpoints and are continuous in time 
+\begin{equation}
+\left\langle \left( i\frac{\partial }{\partial t}-H\right) \Psi \left(
+t\right) \right\vert =\left\langle \left( \mathcal{L}\left( \Psi \left(
+t\right) \right) -i\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle \right) ^{\ast }\Psi \left( t\right)
+\right\vert \qquad \forall t\in \tau 
+\end{equation}%
+which is equivalent to 
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \left\vert \Psi \left(
+t\right) \right\rangle =\left( \mathcal{L}\left( \Psi \left( t\right)
+\right) -i\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle \right) ^{\ast }\left\vert \Psi \left( t\right)
+\right\rangle \qquad \forall t\in \tau 
+\end{equation}%
+If the paths are continuous in time equation eq. $\left( \ref{a2}\right) $
+gives 
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \left\vert \Psi \left(
+t\right) \right\rangle =\mathcal{L}\left( \Psi \left( t\right) \right)
+\left\vert \Psi \left( t\right) \right\rangle \qquad \forall t\in \tau 
+\end{equation}%
+which implies that $\mathcal{L}\left( \Psi \left( t\right) \right) \in 
+\mathbb{R}$ \emph{when} $\left\vert \Psi \left( t\right) \right\rangle $ is
+a simultaneous solution to \emph{both }equations.
+
+\subsection{Hilbert Space Approach II}
+
+Again the action is defined as%
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\mathcal{L}\left(
+\Psi \left( t\right) \right) dt
+\end{equation}%
+but now 
+\begin{equation}
+\mathcal{L}\left( \Psi \left( t\right) \right) =\left\langle \Psi \left(
+t\right) \left\vert \left( i\frac{\partial }{\partial t}-H\right) \right.
+\Psi \left( t\right) \right\rangle
+\end{equation}%
+the first order variation of the Lagrangian is then%
+\begin{equation}
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) =\left\langle \delta
+\Psi \left( t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi
+\left( t\right) \right\rangle +\left\langle \Psi \left( t\right) |\left( i%
+\frac{\partial }{\partial t}-H\right) \delta \Psi \left( t\right)
+\right\rangle
+\end{equation}%
+In order for the action to be stationary for \emph{arbitrary }changes $%
+\left\vert \delta \Psi \left( t\right) \right\rangle $ in the paths $%
+\left\vert \Psi \left( t\right) \right\rangle $ it must be stationary for
+both the paths $\left\vert \delta \Psi \left( t\right) \right\rangle $ and $%
+\left\vert i\delta \Psi \left( t\right) \right\rangle $ giving 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\left\{ \left\langle \delta \Psi \left( t\right) |\left(
+i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right) \right\rangle
++\left\langle \Psi \left( t\right) |\left( i\frac{\partial }{\partial t}%
+-H\right) \delta \Psi \left( t\right) \right\rangle \right\} dt=0
+\end{equation}%
+and 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\left\{ \left\langle \delta \Psi \left( t\right) |\left(
+i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right) \right\rangle
+-\left\langle \Psi \left( t\right) |\left( i\frac{\partial }{\partial t}%
+-H\right) \delta \Psi \left( t\right) \right\rangle \right\} dt=0
+\end{equation}%
+Thus for continuous time paths $\delta \Psi \left( t\right) \in \mathcal{H}%
+^{N}$%
+\begin{subequations}
+\begin{eqnarray}
+\left\langle \delta \Psi \left( t\right) |\left( i\frac{\partial }{\partial t%
+}-H\right) \Psi \left( t\right) \right\rangle &=&0 \\
+\left\langle \Psi \left( t\right) |\left( i\frac{\partial }{\partial t}%
+-H\right) \delta \Psi \left( t\right) \right\rangle &=&0
+\end{eqnarray}%
+leading to 
+\end{subequations}
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \left\vert \Psi \left(
+t\right) \right\rangle =0
+\end{equation}
+
+\subsection{State Functions}
+
+The physical states of a system are defined to be 
+\begin{equation}
+S=\left\{ D|D\in \mathcal{B}_{1}\left( \mathcal{H}\right) ;D\geq
+0;TrD=1\right\}
+\end{equation}%
+(of course $S$ is a mathematical representation of the possible physical
+states of a given system). A state function is a function defined on $S$ and
+associates a value with a physical state and corresponds to a possible
+observable of the system. Functions, $F$, defined on the cone $\mathcal{B}%
+_{1+}\left( \mathcal{H}\right) $ generated by $S$ are also state functions
+if 
+\begin{equation}
+F\left( \alpha D\right) =F\left( D\right) \quad \forall \alpha >0\text{ and }%
+\forall D\in S
+\end{equation}%
+One can see that the Action and Lagrangian defined in Hilbert Space Approach
+I are state functions while those defined in Hilbert Space Approach II are
+not.
+
+\subsection{Calculus of Variation Approach}
+
+Equation eq. $\left( \ref{a1}\right) $ can be rewritten as 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\left\{ i\left\langle \Psi \left( t\right) |\delta 
+\dot{\Psi}\left( t\right) \right\rangle -\left\langle \Psi \left( t\right)
+|H\delta \Psi \left( t\right) \right\rangle -\mathcal{L}\left( \Psi \left(
+t\right) \right) \left\langle \Psi \left( t\right) |\delta \Psi \left(
+t\right) \right\rangle \right\} dt=0  \label{b1}
+\end{equation}%
+The first term of eq. $\left( \ref{b1}\right) $ can be integrated by parts 
+\begin{eqnarray}
+\lceil \int_{a}^{b}u(x)dv(x) &=&\left. u(x)v(x)\right\vert
+_{a}^{b}-\int_{a}^{b}v(x)du(x)  \notag \\
+&\shortparallel &  \notag \\
+\int_{a}^{b}u(x)\frac{dv(x)}{dx}dx &=&\left. u(x)v(x)\right\vert
+_{a}^{b}-\int_{a}^{b}v(x)\frac{du(x)}{dx}dx\rfloor
+\end{eqnarray}%
+to give 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{i\left\langle \Psi \left( t\right) |\delta \dot{%
+\Psi}\left( t\right) \right\rangle }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }dt  \notag \\
+&=&\left. \left\{ \frac{i\left\langle \Psi \left( t\right) |\delta \Psi
+\left( t\right) \right\rangle }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\right\} \right\vert
+_{t_{i}}^{t_{f}}-\int_{t_{i}}^{t_{f}}\frac{i}{\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle }\left\{ \left\langle \dot{\Psi}%
+\left( t\right) |\delta \Psi \left( t\right) \right\rangle \right.  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. -\frac{%
+\left\langle \Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle 
+}{\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\left\{ \left\langle \Psi \left( t\right) |\dot{\Psi}\left( t\right)
+\right\rangle +\left\langle \dot{\Psi}\left( t\right) |\Psi \left( t\right)
+\right\rangle \right\} \right\} dt  \notag \\
+&=&\left. \left\{ \frac{i\left\langle \Psi \left( t\right) |\delta \Psi
+\left( t\right) \right\rangle }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\right\} \right\vert
+_{t_{i}}^{t_{f}}-\int_{t_{i}}^{t_{f}}\frac{i}{\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle }\left\{ \left\langle \dot{\Psi}%
+\left( t\right) |\delta \Psi \left( t\right) \right\rangle \right.  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left.
+-\left\langle \Psi \left( t\right) |\delta \Psi \left( t\right)
+\right\rangle \frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle \overset{}{}\right\} dt
+\end{eqnarray}%
+leading to eq $\left( \ref{b1}\right) $ being equal to%
+\begin{eqnarray}
+&&\left. \left\{ \frac{i\left\langle \Psi \left( t\right) |\delta \Psi
+\left( t\right) \right\rangle }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\right\} \right\vert _{t_{i}}^{t_{f}}  \notag
+\\
+&&\qquad \qquad +\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle }\left\{ \left\langle i\dot{\Psi%
+}\left( t\right) |\delta \Psi \left( t\right) \right\rangle +\left\langle
+\Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle i\frac{d}{dt}%
+\ln \left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle
+\right.  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad -\left. \left\langle \Psi
+\left( t\right) |H\delta \Psi \left( t\right) \right\rangle -\mathcal{L}%
+\left( \Psi \left( t\right) \right) \left\langle \Psi \left( t\right)
+|\delta \Psi \left( t\right) \right\rangle \right\} dt
+\end{eqnarray}%
+which can be written more succinctly as 
+\begin{eqnarray}
+&&\left. \left\{ \frac{i\left\langle \Psi \left( t\right) |\delta \Psi
+\left( t\right) \right\rangle }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\right\} \right\vert _{t_{i}}^{t_{f}}  \notag
+\\
+&&+\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\left\{ \left\langle i\dot{\Psi}\left(
+t\right) \right\vert -\left\langle \Psi \left( t\right) \right\vert
+H-\left\langle \Psi \left( t\right) \right\vert \left\{ \mathcal{L}\left(
+\Psi \left( t\right) \right) -i\frac{d}{dt}\ln \left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle \right\} \right.  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \left. \left\vert \delta \Psi \left( t\right)
+\right\rangle \overset{}{\left. {}\right. }\right\} dt=0
+\end{eqnarray}%
+If the end points are fixed this gives the stationarity condition 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }\left\{ \left\langle i\dot{\Psi}\left(
+t\right) \right\vert -\left\langle \Psi \left( t\right) \right\vert
+H-\left\langle \Psi \left( t\right) \right\vert \left\{ \mathcal{L}\left(
+\Psi \left( t\right) \right) -i\frac{d}{dt}\ln \left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle \right\} \right\} \left\vert
+\delta \Psi \left( t\right) \right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad =0
+\end{eqnarray}%
+which gives 
+\begin{equation}
+\left\langle \left( i\frac{\partial }{\partial t}-H\right) \Psi \left(
+t\right) \right\vert =\left( \mathcal{L}\left( \Psi \left( t\right) \right)
+-i\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle \right) \left\langle \Psi \left( t\right) \right\vert
+\label{c1}
+\end{equation}%
+which is equivalent to 
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \left\vert \Psi \left(
+t\right) \right\rangle =\left( \mathcal{L}\left( \Psi \left( t\right)
+\right) -i\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle \right) ^{\ast }\left\vert \Psi \left( t\right)
+\right\rangle
+\end{equation}
+
+Equation eq. $\left( \ref{a2}\right) $ can be cast as 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\left\{ \left\langle \left( \left[ i\frac{\partial }{%
+\partial t}\right] ^{\dagger }-H\right) \delta \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle -\mathcal{L}\left( \Psi \left( t\right)
+\right) \left\langle \delta \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle \right\} dt=0
+\end{equation}%
+which after using appendices $\left( \ref{Appendix A}\right) $ and $\left( %
+\ref{Appendix B}\right) $, has the form 
+\begin{eqnarray}
+&&i\left\{ \left\{ \frac{\left\langle \delta \Psi \left( t_{f}\right) |\Psi
+\left( t_{f}\right) \right\rangle }{\left\langle \Psi \left( t_{f}\right)
+|\Psi \left( t_{f}\right) \right\rangle }\right\} -\left\{ \frac{%
+\left\langle \delta \Psi \left( t_{i}\right) |\Psi \left( t_{i}\right)
+\right\rangle }{\left\langle \Psi \left( t_{i}\right) |\Psi \left(
+t_{i}\right) \right\rangle }\right\} \right\} +  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \int_{t_{i}}^{t_{f}}\frac{1}{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\left\{ \frac{\left\langle \delta \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }i\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle \right.  \notag \\
+&&\qquad \left. \left\langle i\delta \dot{\Psi}\left( t\right) |\Psi \left(
+t\right) \right\rangle -\left\langle \delta \Psi \left( t\right) |H\Psi
+\left( t\right) \right\rangle -\mathcal{L}\left( \Psi \left( t\right)
+\right) \left\langle \delta \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle \overset{}{\left. {}\right. }\right\} dt=0  \label{b2}
+\end{eqnarray}%
+and the $\delta \dot{\Psi}\left( t\right) $ of eq. $\left( \ref{b2}\right) $
+can be integrated by parts to give 
+\begin{eqnarray}
+\int_{t_{i}}^{t_{f}}\frac{\left\langle i\delta \dot{\Psi}\left( t\right)
+|\Psi \left( t\right) \right\rangle }{\left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle }dt &=&\left. \left\{ \frac{\left\langle
+i\delta \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\right\} \right\vert _{t_{i}}^{t_{f}}-\int_{t_{i}}^{t_{f}}\frac{1}{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\left\{ \left\langle i\delta \Psi \left( t\right) |\dot{\Psi}\left( t\right)
+\right\rangle \right.  \notag \\
+&&\left. -\left\langle i\delta \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle \frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle \right\} dt
+\end{eqnarray}%
+leading to 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\left\langle \delta \Psi \left( t\right) \right\vert
+\left\{ i\frac{\partial }{\partial t}-H-\mathcal{L}\left( \Psi \left(
+t\right) \right) \right\} \left. \Psi \left( t\right) \right\rangle dt=0
+\end{equation}%
+which if the end points are fixed gives stationarity equation 
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \left\vert \Psi \left(
+t\right) \right\rangle =\mathcal{L}\left( \Psi \left( t\right) \right)
+\left\vert \Psi \left( t\right) \right\rangle  \label{c2}
+\end{equation}
+
+\subsection{Equations in Terms of Derivatives of the Lagrangian}
+
+The first order of the variation can be expanded as 
+\begin{equation*}
+\delta \mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right)
+dt=\int_{t_{i}}^{t_{f}}\left\{ \left\langle \delta \Psi \left( t\right)
+\left| \frac{\partial \mathcal{L}\left( \Psi \left( t\right) \right) }{%
+\partial \Psi ^{\ast }}\right. \right\rangle +\left\langle \left. \frac{%
+\partial \mathcal{L}\left( \Psi \left( t\right) \right) }{\partial \Psi }%
+\right| \delta \Psi \left( t\right) \right\rangle \right\} dt
+\end{equation*}%
+where 
+\begin{eqnarray}
+\left\langle \delta \Psi \left( t\right) \left| \frac{\partial \mathcal{L}%
+\left( \Psi \left( t\right) \right) }{\partial \Psi ^{\ast }}\right.
+\right\rangle &=&\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\left\{ \left\langle \delta \Psi \left( t\right)
+\left| \left( i\frac{\partial }{\partial t}-H-\mathcal{L}\left( \Psi \left(
+t\right) \right) I\right) \right. \Psi \left( t\right) \right\rangle \right\}
+\notag \\
+\left\langle \left. \frac{\partial \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\partial \Psi }\right| \delta \Psi \left( t\right) \right\rangle
+&=&\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }\left\{ \left\langle \Psi \left( t\right) \left| \left( i%
+\frac{\partial }{\partial t}-H-\mathcal{L}\left( \Psi \left( t\right)
+\right) I\right) \right. \delta \Psi \left( t\right) \right\rangle \right\}
+\end{eqnarray}%
+and also 
+\begin{eqnarray}
+\left\langle \delta \Psi \left( t\right) \left| \frac{\partial \mathcal{L}%
+\left( \Psi \left( t\right) \right) }{\partial \Psi ^{\ast }}\right.
+\right\rangle &=&\int \delta \Psi \left( \mathsf{z,}t\right) ^{\ast }\frac{%
+\partial \mathcal{L}\left( \Psi \left( t\right) \right) }{\partial \Psi
+^{\ast }\left( \mathsf{z}\right) }d\mathsf{z} \\
+\left\langle \left. \frac{\partial \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\partial \Psi }\right| \delta \Psi \left( t\right) \right\rangle
+&=&\int \left( \frac{\partial \mathcal{L}\left( \Psi \left( t\right) \right) 
+}{\partial \Psi \left( \mathsf{z}\right) }\right) ^{\ast }\delta \Psi \left( 
+\mathsf{z,}t\right) d\mathsf{z}
+\end{eqnarray}%
+so that 
+\begin{eqnarray}
+\frac{\partial \mathcal{L}\left( \Psi \left( t\right) \right) }{\partial
+\Psi ^{\ast }\left( \mathsf{z}\right) } &=&\left\langle \mathsf{z}\left|
+\left( i\frac{\partial }{\partial t}-H-\mathcal{L}\left( \Psi \left(
+t\right) \right) I\right) \right. \Psi \left( t\right) \right\rangle \\
+\left( \frac{\partial \mathcal{L}\left( \Psi \left( t\right) \right) }{%
+\partial \Psi \left( \mathsf{z}\right) }\right) ^{\ast } &=&\left\langle
+\Psi \left( t\right) \left| \left( i\frac{\partial }{\partial t}-H-\mathcal{L%
+}\left( \Psi \left( t\right) \right) I\right) \right. \mathsf{z}\right\rangle
+\end{eqnarray}
+
+\subsection{Equations in Terms of Lagrangian Density}
+
+The Lagrangian is given in terms of its density is 
+\begin{eqnarray}
+\mathcal{L}\left( \Psi \left( t\right) \right) &=&\frac{1}{\left\langle \Psi
+\left( t\right) |\Psi \left( t\right) \right\rangle }\int \Psi \left( 
+\mathsf{z,}t\right) ^{\ast }\left\{ i\frac{\partial \Psi \left( \mathsf{z,}%
+t\right) }{\partial t}-\left[ H\Psi \right] \left( \mathsf{z,}t\right)
+\right\} d\mathsf{z} \\
+&\equiv &\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }\int \Psi \left( \mathsf{z,}t\right) ^{\ast }\left\{ i\dot{%
+\Psi}\left( \mathsf{z,}t\right) -\left[ H\Psi \right] \left( \mathsf{z,}%
+t\right) \right\} d\mathsf{z}
+\end{eqnarray}%
+where 
+\begin{equation}
+\left[ H\Psi \right] \left( \mathsf{z,}t\right) =\int H\left( \mathsf{z,z}%
+^{\prime }\right) \Psi \left( \mathsf{z}^{\prime }\mathsf{,}t\right) d%
+\mathsf{z}^{\prime }
+\end{equation}%
+The Lagrangian needs to be considered explicitly depending on $\dot{\Psi}$,
+i.e. $\mathcal{L=}$ $\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}%
+\left( t\right) \right) $, in order to obtain the correct expressions for
+the first order variation of the Action. This can be seen by observing that
+the first order portion of the full variation 
+\begin{equation}
+\frac{\int \left[ \Psi +\delta \Psi \right] ^{\ast }\left( \mathsf{z,}%
+t\right) \left\{ i\overset{\cdot }{\left[ \Psi +\delta \Psi \right] }\left( 
+\mathsf{z,}t\right) -\left[ H\left[ \Psi +\delta \Psi \right] \right] \left( 
+\mathsf{z,}t\right) \right\} d\mathsf{z}}{\left\langle \left[ \Psi +\delta
+\Psi \right] \left( t\right) |\left[ \Psi +\delta \Psi \right] \left(
+t\right) \right\rangle }
+\end{equation}%
+is given by 
+\begin{eqnarray}
+&&\delta \mathcal{L}\left( \Psi \left( t\right) \right) =  \notag \\
+&&\frac{\int \delta \Psi ^{\ast }\left( \mathsf{z,}t\right) \left\{ i\dot{%
+\Psi}\left( \mathsf{z,}t\right) -\left[ H\Psi \right] \left( \mathsf{z,}%
+t\right) \right\} d\mathsf{z}}{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }  \notag \\
+&&+\frac{\int \Psi ^{\ast }\left( \mathsf{z,}t\right) \left\{ i\delta \dot{%
+\Psi}\left( \mathsf{z,}t\right) \right\} d\mathsf{z}}{\left\langle \Psi
+\left( t\right) |\Psi \left( t\right) \right\rangle }-\frac{\int \Psi ^{\ast
+}\left( \mathsf{z,}t\right) \left\{ \left[ H\delta \Psi \right] \left( 
+\mathsf{z,}t\right) \right\} d\mathsf{z}}{\left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle }  \notag \\
+&&-\frac{\int \Psi ^{\ast }\left( \mathsf{z,}t\right) \left\{ i\dot{\Psi}%
+\left( \mathsf{z,}t\right) -\left[ H\Psi \right] \left( \mathsf{z,}t\right)
+\right\} d\mathsf{z}}{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle ^{2}}\int \left\{ \Psi ^{\ast }\left( \mathsf{z,}%
+t\right) \delta \Psi \left( \mathsf{z,}t\right) +\Psi \left( \mathsf{z,}%
+t\right) \delta \Psi ^{\ast }\left( \mathsf{z,}t\right) \right\} d\mathsf{z}
+\end{eqnarray}%
+which gives that 
+\begin{equation}
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) =\int \frac{\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi ^{\ast }\left( 
+\mathsf{z}\right) }\delta \Psi ^{\ast }\left( \mathsf{z,}t\right) d\mathsf{z}%
++\int \frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta 
+\dot{\Psi}\left( \mathsf{z}\right) }\delta \dot{\Psi}\left( \mathsf{z,}%
+t\right) d\mathsf{z}+\int \frac{\delta \mathcal{L}\left( \Psi \left(
+t\right) \right) }{\delta \Psi \left( \mathsf{z}\right) }\delta \Psi \left( 
+\mathsf{z,}t\right) d\mathsf{z}  \label{var1}
+\end{equation}%
+$\lceil $which corresponds to 
+\begin{eqnarray}
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) &=&\left\langle \delta
+\Psi \left( t\right) \left| \frac{\delta \mathcal{L}\left( \Psi \left(
+t\right) \right) }{\delta \Psi ^{\ast }}\right. \right\rangle  \notag \\
+&&+\left\langle \left. \frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \dot{\Psi}}\right| \delta \dot{\Psi}\left( t\right)
+\right\rangle +\left\langle \left. \frac{\delta \mathcal{L}\left( \Psi
+\left( t\right) \right) }{\delta \Psi }\right| \delta \Psi \left( t\right)
+\right\rangle
+\end{eqnarray}%
+$\rfloor $where 
+\begin{eqnarray}
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi
+^{\ast }\left( \mathsf{z}\right) } &=&\frac{\left\{ i\dot{\Psi}\left( 
+\mathsf{z,}t\right) -\left[ H\Psi \right] \left( \mathsf{z,}t\right) -%
+\mathcal{L}\left( \Psi \left( t\right) \right) \Psi \left( \mathsf{z,}%
+t\right) \right\} }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }  \notag \\
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{%
+\Psi}\left( \mathsf{z}\right) } &=&\frac{i\Psi ^{\ast }\left( \mathsf{z,}%
+t\right) }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }  \notag \\
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi
+\left( \mathsf{z}\right) } &=&-\frac{\left[ H\Psi \right] ^{\ast }\left( 
+\mathsf{z,}t\right) +\mathcal{L}\left( \Psi \left( t\right) \right) \Psi
+^{\ast }\left( \mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }  \label{der}
+\end{eqnarray}%
+$\lceil $Note that 
+\begin{equation}
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi
+^{\ast }\left( \mathsf{z}\right) }\neq \left( \frac{\delta \mathcal{L}\left(
+\Psi \left( t\right) \right) }{\delta \Psi \left( \mathsf{z}\right) }\right)
+^{\ast }
+\end{equation}%
+$\rfloor $.$\lceil $Eq.$\left( \ref{der}\right) $ corresponds to 
+\begin{eqnarray}
+\left| \frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta
+\Psi ^{\ast }}\right\rangle &=&\frac{1}{\left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle }\left\{ i\left| \dot{\Psi}\left(
+t\right) \right\rangle -\left\{ H+\mathcal{L}\left( \Psi \left( t\right)
+\right) I\right\} \left| \Psi \left( t\right) \right\rangle \right\}  \notag
+\\
+\left\langle \frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{%
+\delta \dot{\Psi}}\right| &=&i\frac{\left\langle \Psi \left( t\right)
+\right| }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }  \notag \\
+\left\langle \frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{%
+\delta \Psi }\right| &=&-\left\langle \Psi \left( t\right) \right| \frac{%
+\left\{ H+\mathcal{L}\left( \Psi \left( t\right) \right) I\right\} }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }
+\end{eqnarray}%
+$\rfloor $ \ The $\delta \dot{\Psi}$ term of the Action 
+\begin{equation}
+\int \frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta 
+\dot{\Psi}\left( \mathsf{z}\right) }\delta \dot{\Psi}\left( \mathsf{z,}%
+t\right) d\mathsf{z}dt\mathsf{=}\int \frac{i\Psi ^{\ast }\left( \mathsf{z,}%
+t\right) }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }\delta \dot{\Psi}\left( \mathsf{z,}t\right) d\mathsf{z}dt
+\end{equation}%
+produced by eq. $\left( \ref{var1}\right) $ can be integrated by parts to
+give 
+\begin{eqnarray}
+\int_{t_{i}}^{t_{f}}\frac{i\Psi ^{\ast }\left( \mathsf{z,}t\right) }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\delta \dot{\Psi}\left( \mathsf{z,}t\right) d\mathsf{z}dt &=&\int \left.
+\left\{ \frac{i\Psi ^{\ast }\left( \mathsf{z,}t\right) }{\left\langle \Psi
+\left( t\right) |\Psi \left( t\right) \right\rangle }\delta \Psi \left( 
+\mathsf{z,}t\right) \right\} \right| _{t_{i}}^{t_{f}}d\mathsf{z}  \notag \\
+&&\qquad \qquad -\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{i\Psi ^{\ast
+}\left( \mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\right\} \delta \Psi \left( \mathsf{z,}t\right) d%
+\mathsf{z}dt
+\end{eqnarray}%
+leading to the following expression for the first order change of the action 
+\begin{eqnarray}
+&&\delta \mathcal{A}\left( \Psi \left( t\right) \right) =\int_{t_{i}}^{t_{f}}%
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi
+^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast }\left( \mathsf{z,}%
+t\right) d\mathsf{z}dt+\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{L}\left(
+\Psi \left( t\right) \right) }{\delta \Psi \left( \mathsf{z}\right) }\delta
+\Psi \left( \mathsf{z,}t\right) d\mathsf{z}dt  \notag \\
+&&\qquad +\int \left. \left\{ \frac{i\Psi ^{\ast }\left( \mathsf{z,}t\right) 
+}{\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\delta \Psi \left( \mathsf{z,}t\right) \right\} \right| _{t_{i}}^{t_{f}}d%
+\mathsf{z}-\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{i\Psi ^{\ast
+}\left( \mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\right\} \delta \Psi \left( \mathsf{z,}t\right) d%
+\mathsf{z}dt
+\end{eqnarray}%
+If the action is stationary wrt to arbitrary changes of the path then in
+particular $\delta \mathcal{A}\left( \Psi \left( t\right) \right) =0$ for
+both $\delta \Psi \left( t\right) $ and $i\delta \Psi \left( t\right) $
+leading to the equations 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast
+}\left( \mathsf{z,}t\right) d\mathsf{z}dt+\int_{t_{i}}^{t_{f}}\frac{\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi \left( \mathsf{z%
+}\right) }\delta \Psi \left( \mathsf{z,}t\right) d\mathsf{z}dt\qquad \qquad
+\qquad \qquad \qquad \qquad  \notag \\
+&&+\int \left. \left\{ \frac{i\Psi ^{\ast }\left( \mathsf{z,}t\right) }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\delta \Psi \left( \mathsf{z,}t\right) \right\} \right| _{t_{i}}^{t_{f}}d%
+\mathsf{z}-\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{i\Psi ^{\ast
+}\left( \mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\right\} \delta \Psi \left( \mathsf{z,}t\right) d%
+\mathsf{z}dt=0
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&-\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast
+}\left( \mathsf{z,}t\right) d\mathsf{z}dt+\int_{t_{i}}^{t_{f}}\frac{\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi \left( \mathsf{z%
+}\right) }\delta \Psi \left( \mathsf{z,}t\right) d\mathsf{z}dt\qquad \qquad
+\qquad \qquad \qquad \qquad  \notag \\
+&&+\int \left. \left\{ \frac{i\Psi ^{\ast }\left( \mathsf{z,}t\right) }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\delta \Psi \left( \mathsf{z,}t\right) \right\} \right| _{t_{i}}^{t_{f}}d%
+\mathsf{z}-\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{i\Psi ^{\ast
+}\left( \mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\right\} \delta \Psi \left( \mathsf{z,}t\right) d%
+\mathsf{z}dt=0
+\end{eqnarray}%
+which can be added to give 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \Psi \left( \mathsf{z}\right) }\delta \Psi \left( \mathsf{z,%
+}t\right) d\mathsf{z}dt  \notag \\
+&&+\int \left. \left\{ \frac{i\Psi ^{\ast }\left( \mathsf{z,}t\right) }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\delta \Psi \left( \mathsf{z,}t\right) \right\} \right| _{t_{i}}^{t_{f}}d%
+\mathsf{z}-\int_{t_{i}}^{t_{f}}\frac{d}{dt}\left\{ \frac{i\Psi ^{\ast
+}\left( \mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\right\} \delta \Psi \left( \mathsf{z,}t\right) d%
+\mathsf{z}dt=0  \label{e1}
+\end{eqnarray}%
+and subtracted to give 
+\begin{equation}
+\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast
+}\left( \mathsf{z,}t\right) d\mathsf{z}dt=0  \label{e2}
+\end{equation}%
+If the paths have fixed end points eq. $\left( \ref{e1}\right) $ gives 
+\begin{equation}
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi
+\left( \mathsf{z}\right) }-\frac{d}{dt}\left\{ \frac{i\Psi ^{\ast }\left( 
+\mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\right\} =0
+\end{equation}%
+which expands to 
+\begin{eqnarray*}
+&-\frac{\left[ H\Psi \right] ^{\ast }\left( \mathsf{z,}t\right) +\mathcal{L}%
+\left( \Psi \left( t\right) \right) \Psi ^{\ast }\left( \mathsf{z,}t\right) 
+}{\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }-%
+\frac{i\dot{\Psi}^{\ast }\left( \mathsf{z,}t\right) }{\left\langle \Psi
+\left( t\right) |\Psi \left( t\right) \right\rangle }+\frac{i\Psi ^{\ast
+}\left( \mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }\frac{d}{dt}\ln \left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle =&0 \\
+&\Downarrow & \\
+&-\frac{\left[ H\Psi \right] ^{\ast }\left( \mathsf{z,}t\right) +\mathcal{L}%
+\left( \Psi \left( t\right) \right) \Psi ^{\ast }\left( \mathsf{z,}t\right) 
+}{\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }+%
+\frac{\left[ i\frac{\partial }{\partial t}\Psi \right] ^{\ast }\left( 
+\mathsf{z,}t\right) }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }+\frac{\Psi ^{\ast }\left( \mathsf{z,}t\right) }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }i%
+\frac{d}{dt}\ln \left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle =&0 \\
+&\Downarrow &
+\end{eqnarray*}
+
+\begin{eqnarray}
+\left[ \left( i\frac{\partial }{\partial t}-H\right) \Psi \right] ^{\ast
+}\left( \mathsf{z,}t\right) &=&\left[ \left( \mathcal{L}\left( \Psi \left(
+t\right) \right) ^{\ast }+i\frac{d}{dt}\ln \left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle \right) \Psi \right] ^{\ast }\left( 
+\mathsf{z,}t\right)  \notag \\
+&\Downarrow &  \notag \\
+\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( \mathsf{z,}%
+t\right) &=&\left( \mathcal{L}\left( \Psi \left( t\right) \right) -i\frac{d}{%
+dt}\ln \left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle
+\right) ^{\ast }\Psi \left( \mathsf{z,}t\right)
+\end{eqnarray}%
+Eq. $\left( \ref{e2}\right) $ gives 
+\begin{equation}
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi
+^{\ast }\left( \mathsf{z}\right) }=\frac{\left\{ i\dot{\Psi}\left( \mathsf{z,%
+}t\right) -\left[ H\Psi \right] \left( \mathsf{z,}t\right) -\mathcal{L}%
+\left( \Psi \left( t\right) \right) \Psi \left( \mathsf{z,}t\right) \right\} 
+}{\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }=0
+\end{equation}%
+leading to 
+\begin{equation}
+\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( \mathsf{z,}%
+t\right) =\mathcal{L}\left( \Psi \left( t\right) \right) \Psi \left( \mathsf{%
+z,}t\right)
+\end{equation}
+
+\subsection{General Formulation}
+
+The first order variation of the Action is 
+\begin{equation}
+\delta \mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\delta 
+\mathcal{L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) dt
+\end{equation}%
+where the right hand expression follows the calculus of variations and
+explicitly considers the dependence on $\dot{\Psi}$ though of course $\dot{%
+\Psi}$ is not independent of $\Psi $. The first order variation of the
+Lagrangian is then expressed as 
+\begin{eqnarray}
+\delta \mathcal{L}\left( \Psi ,\dot{\Psi}\right) &=&\int \left\{ \frac{%
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi \left( 
+\mathsf{z}\right) }\delta \Psi \left( \mathsf{z,}t\right) +\frac{\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{\Psi}\left( 
+\mathsf{z}\right) }\delta \dot{\Psi}\left( \mathsf{z,}t\right) \right. 
+\notag \\
+&&\qquad \qquad \qquad +\left. \frac{\delta \mathcal{L}\left( \Psi \left(
+t\right) \right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }\delta \Psi
+^{\ast }\left( \mathsf{z,}t\right) +\frac{\delta \mathcal{L}\left( \Psi
+\left( t\right) \right) }{\delta \dot{\Psi}^{\ast }\left( \mathsf{z}\right) }%
+\delta \dot{\Psi}^{\ast }\left( \mathsf{z,}t\right) \right\} d\mathsf{z}
+\end{eqnarray}%
+Integration by parts on the $\dot{\Psi}$ terms in $\delta \mathcal{A}\left(
+\Psi ,\tau \right) $ gives 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \dot{\Psi}\left( \mathsf{z}\right) }\frac{d}{dt}\delta \Psi
+\left( \mathsf{z,}t\right) d\mathsf{z}dt=  \notag \\
+&&\qquad \qquad \qquad \left. \left\{ \int \frac{\delta \mathcal{L}\left(
+\Psi \left( t\right) \right) }{\delta \dot{\Psi}\left( \mathsf{z}\right) }%
+\delta \Psi \left( \mathsf{z,}t\right) d\mathsf{z}\right\} \right\vert
+_{t_{i}}^{t_{f}}-\int_{t_{i}}^{t_{f}}\left\{ \frac{d}{dt}\frac{\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{\Psi}\left( 
+\mathsf{z}\right) }\delta \Psi \left( \mathsf{z,}t\right) \right\} d\mathsf{z%
+}dt
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \dot{\Psi}^{\ast }\left( \mathsf{z}\right) }\frac{d}{dt}%
+\delta \Psi ^{\ast }\left( \mathsf{z,}t\right) d\mathsf{z}dt=  \notag \\
+&&\qquad \qquad \qquad \left. \left\{ \int \frac{\delta \mathcal{L}\left(
+\Psi \left( t\right) \right) }{\delta \dot{\Psi}^{\ast }\left( \mathsf{z}%
+\right) }\delta \Psi ^{\ast }\left( \mathsf{z,}t\right) d\mathsf{z}\right\}
+\right\vert _{t_{i}}^{t_{f}}-\int_{t_{i}}^{t_{f}}\left\{ \frac{d}{dt}\frac{%
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{\Psi}%
+^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast }\left( \mathsf{z,}%
+t\right) \right\} d\mathsf{z}dt
+\end{eqnarray}%
+leading to 
+\begin{eqnarray}
+\delta \mathcal{A}\left( \Psi ,\tau \right) &=&\int_{t_{i}}^{t_{f}}\left\{ 
+\frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \Psi
+\left( \mathsf{z}\right) }-\frac{d}{dt}\left\{ \frac{\delta \mathcal{L}%
+\left( \Psi \left( t\right) \right) }{\delta \dot{\Psi}\left( \mathsf{z}%
+\right) }\right\} \delta \Psi \left( \mathsf{z,}t\right) \right\} d\mathsf{z}%
+dt  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad +\left. \left\{ \int \frac{%
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{\Psi}%
+\left( \mathsf{z}\right) }\delta \Psi \left( \mathsf{z,}t\right) d\mathsf{z}%
+\right\} \right\vert _{t_{i}}^{t_{f}}  \notag \\
+&&  \notag \\
+&&+\int_{t_{i}}^{t_{f}}\left\{ \frac{\delta \mathcal{L}\left( \Psi \left(
+t\right) \right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }-\frac{d}{dt%
+}\left\{ \frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{%
+\delta \dot{\Psi}^{\ast }\left( \mathsf{z}\right) }\right\} \delta \Psi
+^{\ast }\left( \mathsf{z,}t\right) \right\} d\mathsf{z}dt  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad +\left. \left\{ \int \frac{%
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{\Psi}%
+^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast }\left( \mathsf{z,}%
+t\right) d\mathsf{z}\right\} \right\vert _{t_{i}}^{t_{f}}
+\end{eqnarray}%
+which leads to the definition of the variational $\mathcal{\dot{A}}$
+derivative through 
+\begin{eqnarray}
+\delta \mathcal{A}\left( \Psi ,\tau \right) &=&\int_{t_{i}}^{t_{f}}\frac{%
+\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta \Psi
+\left( \mathsf{z}\right) }\delta \Psi \left( \mathsf{z,}t\right) d\mathsf{z}%
+dt+\left. \left\{ \int \frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \dot{\Psi}\left( \mathsf{z}\right) }\delta \Psi \left( 
+\mathsf{z,}t\right) d\mathsf{z}\right\} \right\vert _{t_{i}}^{t_{f}}  \notag
+\\
+&&+\int_{t_{i}}^{t_{f}}\frac{\delta \mathcal{\dot{A}}\left( \Psi \left(
+t\right) \right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }\delta \Psi
+^{\ast }\left( \mathsf{z,}t\right) d\mathsf{z}dt+\left. \left\{ \int \frac{%
+\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta \dot{\Psi}%
+^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast }\left( \mathsf{z,}%
+t\right) d\mathsf{z}\right\} \right\vert _{t_{i}}^{t_{f}}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi \left( \mathsf{z}\right) } &=&\frac{\delta \mathcal{L}\left( \Psi
+\left( t\right) \right) }{\delta \Psi \left( \mathsf{z}\right) }-\frac{d}{dt}%
+\left\{ \frac{\delta \mathcal{L}\left( \Psi \left( t\right) \right) }{\delta 
+\dot{\Psi}\left( \mathsf{z}\right) }\right\}  \notag \\
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi ^{\ast }\left( \mathsf{z}\right) } &=&\frac{\delta \mathcal{L}\left(
+\Psi \left( t\right) \right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }%
+-\frac{d}{dt}\left\{ \frac{\delta \mathcal{L}\left( \Psi \left( t\right)
+\right) }{\delta \dot{\Psi}^{\ast }\left( \mathsf{z}\right) }\right\}
+\end{eqnarray}%
+If the end points are fixed 
+\begin{equation}
+\delta \mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\left\{ 
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi \left( \mathsf{z}\right) }\delta \Psi \left( \mathsf{z,}t\right) +\frac{%
+\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta \Psi
+^{\ast }\left( \mathsf{z}\right) }\delta \Psi ^{\ast }\left( \mathsf{z,}%
+t\right) \right\} d\mathsf{z}dt
+\end{equation}%
+and 
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\mathcal{\dot{A}}%
+\left( \Psi \left( t\right) \right) dt
+\end{equation}%
+The stationary action condition then give 
+\begin{equation}
+\delta \mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\delta 
+\mathcal{L}\left( \Psi \left( t\right) \right) dt=0
+\end{equation}%
+for arbitrary variations that maintain fixed end points leading to the
+Equations of Motion 
+\begin{eqnarray}
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi \left( \mathsf{z}\right) } &=&0 \\
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi ^{\ast }\left( \mathsf{z}\right) } &=&0
+\end{eqnarray}%
+Note that in general $\frac{\delta \mathcal{\dot{A}}\left( \Psi \left(
+t\right) \right) }{\delta \Psi ^{\ast }\left( \mathsf{z}\right) }\neq \left( 
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi \left( \mathsf{z}\right) }\right) ^{\ast }$
+
+\appendix
+
+\section{Adjoint of Time Displacement Operator\label{Appendix A}}
+
+The adjoint of the time displacement operator can be expressed using 
+\begin{equation}
+i\frac{d}{dt}\left\langle \varphi _{1}\left( t\right) |\varphi _{2}\left(
+t\right) \right\rangle =\left\langle -i\frac{\partial }{\partial t}\varphi
+_{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle +\left\langle
+\varphi _{1}\left( t\right) |i\frac{\partial }{\partial t}\varphi _{2}\left(
+t\right) \right\rangle \quad \forall \varphi _{1},\varphi _{2}
+\end{equation}%
+so that 
+\begin{equation}
+\left\langle -i\frac{\partial }{\partial t}\varphi _{1}\left( t\right)
+|\varphi _{2}\left( t\right) \right\rangle =i\frac{d}{dt}\left\langle
+\varphi _{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle
+-\left\langle \varphi _{1}\left( t\right) |i\frac{\partial }{\partial t}%
+\varphi _{2}\left( t\right) \right\rangle \quad \forall \varphi _{1},\varphi
+_{2},t
+\end{equation}%
+Noting that 
+\begin{equation}
+\left\langle \left[ i\frac{\partial }{\partial t}\right] ^{\dagger }\varphi
+_{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle =\left\langle
+\varphi _{1}\left( t\right) |i\frac{\partial }{\partial t}\varphi _{2}\left(
+t\right) \right\rangle \quad \forall \varphi _{1},\varphi _{2},t
+\end{equation}%
+one can conclude that 
+\begin{equation}
+\left\langle -i\frac{\partial }{\partial t}\varphi _{1}\left( t\right)
+|\varphi _{2}\left( t\right) \right\rangle =i\frac{d}{dt}\left\langle
+\varphi _{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle
+-\left\langle \left[ i\frac{\partial }{\partial t}\right] ^{\dagger }\varphi
+_{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle \quad \forall
+\varphi _{1},\varphi _{2},t
+\end{equation}%
+giving 
+\begin{equation}
+\left\langle \left[ i\frac{\partial }{\partial t}\right] ^{\dagger }\varphi
+_{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle =i\frac{d}{dt}%
+\left\langle \varphi _{1}\left( t\right) |\varphi _{2}\left( t\right)
+\right\rangle +\left\langle i\frac{\partial }{\partial t}\varphi _{1}\left(
+t\right) |\varphi _{2}\left( t\right) \right\rangle \quad \forall \varphi
+_{1},\varphi _{2},t
+\end{equation}%
+This clearly shows that in general 
+\begin{equation}
+\left[ i\frac{\partial }{\partial t}\right] ^{\dagger }\neq i\frac{\partial 
+}{\partial t}
+\end{equation}%
+unless 
+\begin{equation}
+\frac{d}{dt}\left\langle \varphi _{1}\left( t\right) |\varphi _{2}\left(
+t\right) \right\rangle =0\quad \forall \varphi _{1},\varphi _{2},t
+\end{equation}%
+This clearly \emph{cannot} happen for arbitrary paths $\left\{ \varphi
+_{1}\left( t\right) ,\varphi _{2}\left( t\right) \right\} $, but it can
+occur along specific paths given by 
+\begin{eqnarray}
+\left| \varphi _{1}\left( t\right) \right\rangle &=&V_{1}\left( t\right)
+\left| \varphi _{10}\right\rangle \\
+\left| \varphi _{2}\left( t\right) \right\rangle &=&V_{2}\left( t\right)
+\left| \varphi _{20}\right\rangle
+\end{eqnarray}%
+when%
+\begin{equation}
+\left\langle V_{1}\left( t\right) \varphi _{10}|V_{2}\left( t\right) \varphi
+_{20}\right\rangle =\text{k}
+\end{equation}%
+where k is constant. This implies that 
+\begin{equation}
+\left\langle V_{1}\left( t\right) \varphi _{10}|V_{2}\left( t\right) \varphi
+_{20}\right\rangle =\left\langle \varphi _{10}|V_{1}\left( t\right)
+^{\dagger }V_{2}\left( t\right) \varphi _{20}\right\rangle =\left\langle
+\varphi _{10}|\varphi _{20}\right\rangle \quad \forall t
+\end{equation}%
+If we set 
+\begin{equation}
+V_{1}\left( 0\right) =V_{2}\left( 0\right) =I
+\end{equation}%
+If we want $\left\langle \varphi _{1}\left( t\right) |\varphi _{2}\left(
+t\right) \right\rangle $ to be constant for arbitrary initial states $%
+\left\{ \left| \varphi _{10}\right\rangle ,\left| \varphi _{20}\right\rangle
+\right\} $ then 
+\begin{equation}
+V_{1}\left( t\right) =V_{2}\left( t\right) =U\left( t\right)
+\end{equation}%
+where 
+\begin{equation}
+U\left( t\right) ^{\dagger }U\left( t\right) =U\left( t\right) U\left(
+t\right) ^{\dagger }=I
+\end{equation}%
+Note that even in this case $i\frac{\partial }{\partial t}$ is \emph{not }%
+self adjoint, it is only self adjoint when restricted to the paths $U\left(
+t\right) \left| \varphi \right\rangle $ for arbitrary, but fixed initial
+states $\left| \varphi _{10}\right\rangle ,\left| \varphi _{20}\right\rangle 
+$.
+
+We can also use this analysis to relate derivatives of the paths $\left\{
+\varphi _{1}\left( t\right) ,\varphi _{2}\left( t\right) \right\} $ as 
+\begin{equation}
+\left\langle \frac{\partial }{\partial t}\varphi _{1}\left( t\right)
+|\varphi _{2}\left( t\right) \right\rangle =\frac{d}{dt}\left\langle \varphi
+_{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle -\left\langle
+\varphi _{1}\left( t\right) |\frac{\partial }{\partial t}\varphi _{2}\left(
+t\right) \right\rangle \quad \forall \varphi _{1},\varphi _{2},t
+\end{equation}%
+giving 
+\begin{eqnarray}
+\left\langle \dot{\varphi}_{1}\left( t\right) |\varphi _{2}\left( t\right)
+\right\rangle &=&\frac{d}{dt}\left\langle \varphi _{1}\left( t\right)
+|\varphi _{2}\left( t\right) \right\rangle -\left\langle \varphi _{1}\left(
+t\right) |\dot{\varphi}_{2}\left( t\right) \right\rangle \\
+\left\langle \varphi _{1}\left( t\right) |\dot{\varphi}_{2}\left( t\right)
+\right\rangle &=&\frac{d}{dt}\left\langle \varphi _{1}\left( t\right)
+|\varphi _{2}\left( t\right) \right\rangle -\left\langle \dot{\varphi}%
+_{1}\left( t\right) |\varphi _{2}\left( t\right) \right\rangle
+\end{eqnarray}%
+so in particular 
+\begin{equation}
+\left\langle \delta \dot{\varphi}\left( t\right) |\varphi \left( t\right)
+\right\rangle =\frac{d}{dt}\left\langle \delta \varphi \left( t\right)
+|\varphi \left( t\right) \right\rangle -\left\langle \delta \varphi \left(
+t\right) |\dot{\varphi}\left( t\right) \right\rangle
+\end{equation}
+
+\section{Special Case of Adjoint\label{Appendix B}}
+
+In order to get expression involving total time derivatives we observe that 
+\begin{eqnarray}
+&&\frac{\left\langle \left[ i\frac{\partial }{\partial t}\right] ^{\dagger
+}\Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle }{%
+\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }=%
+\frac{1}{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }\left\{ i\frac{d}{dt}\left\langle \Psi \left( t\right)
+|\delta \Psi \left( t\right) \right\rangle +\left\langle i\frac{\partial }{%
+\partial t}\Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle
+\right\}  \notag \\
+&=&\frac{\left\langle i\frac{\partial }{\partial t}\Psi \left( t\right)
+|\delta \Psi \left( t\right) \right\rangle }{\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle }+i\frac{d}{dt}\left\{ \frac{%
+\left\langle \Psi \left( t\right) |\delta \Psi \left( t\right) \right\rangle 
+}{\left\langle \Psi \left( t\right) |\Psi \left( t\right) \right\rangle }%
+\right\} -\frac{\left\langle \Psi \left( t\right) |\delta \Psi \left(
+t\right) \right\rangle }{\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle }i\frac{d}{dt}\ln \left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle
+\end{eqnarray}
+
+\end{document}

@@ -1,0 +1,145 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, May 30, 2008 08:28:10}
+%TCIDATA{LastRevised=Friday, May 30, 2008 10:27:56}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+A OET is \emph{distinct} from ones based on FORDO's, as different sets of
+GSO's (with the same occupation numbers) can produce the \emph{same} FORDO
+while forming different $N$-electron states, with different energies.  This
+difference can be understood by considering the action of the subgroup
+$U\left(  \boldsymbol{\theta}\right)  $ of the unitary group $U\left(
+\mathcal{H}^{1}\right)  $ of unitary transformations of one electron space,
+$\mathcal{H}^{1}$, to itself, defined by
+\begin{align}
+u\left(  \boldsymbol{\theta}\right)  \left(  \left\vert \psi_{1}\right\rangle
+,\cdots,\left\vert \psi_{r}\right\rangle \right)   &  =\left(  \left\vert
+\psi_{1}\right\rangle ,\cdots,\left\vert \psi_{r}\right\rangle \right)
+\left(
+\begin{array}
+[c]{ccc}%
+e^{i\theta_{1}} & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & e^{i\theta_{r}}%
+\end{array}
+\right)  \nonumber\\
+&  =\left(  e^{i\theta_{1}}\left\vert \psi_{1}\right\rangle ,\cdots
+,e^{i\theta_{r}}\left\vert \psi_{r}\right\rangle \right)
+\end{align}
+first on the FORDO $D^{1}$
+\begin{equation}
+D^{1}=\sum_{1\leq j\leq r}N_{j}\left\vert \psi_{j}\right\rangle \left\langle
+\psi_{j}\right\vert ,
+\end{equation}
+then on the $N$-electron state density operator $D^{N}$
+\begin{equation}
+D^{N}=\sum_{\substack{1\leq j_{1}<\,\cdots<j_{N}\leq r\\1\leq k_{1}%
+<\,\cdots<k_{N}\leq r}}\bar{c}_{j_{1}\cdots j_{N}}c_{k_{1}\cdots k_{N}%
+}\left\vert \psi_{j_{1}}\cdots\psi_{j_{N}}\right\rangle \left\langle
+\psi_{k_{1}}\cdots\psi_{k_{N}}\right\vert .
+\end{equation}
+that contracts to $D^{1}$, noting that $D^{N}$ is not in general diagonal in
+the basis $\left\{  \left.  \left\vert \psi_{j_{1}}\cdots\psi_{j_{N}%
+}\right\rangle \right\vert 1\leq j_{1}<\,\cdots<j_{N}\leq r\right\}  $. The
+subgroup $U\left(  \boldsymbol{\theta}\right)  $ leaves $D^{1}$ invariant as
+\begin{equation}
+u\left(  \boldsymbol{\theta}\right)  D^{1}u\left(  \boldsymbol{\theta}\right)
+^{\dagger}=\sum_{1\leq j\leq r}N_{j}e^{i\theta_{j}}\left\vert \psi
+_{j}\right\rangle \left\langle \psi_{j}\right\vert e^{-i\theta_{j}}%
+=\sum_{1\leq j\leq r}N_{j}\left\vert \psi_{j}\right\rangle \left\langle
+\psi_{j}\right\vert ,
+\end{equation}
+but it does not leave the state $D^{N}$ invariant,
+\begin{align}
+u\left(  \boldsymbol{\theta}\right)  D^{N}u\left(  \boldsymbol{\theta}\right)
+^{\dagger}  & =\sum_{\substack{1\leq j_{1}<\,\cdots<j_{N}\leq r\\1\leq
+k_{1}<\,\cdots<k_{N}\leq r}}\bar{c}_{j_{1}\cdots j_{N}}c_{k_{1}\cdots k_{N}%
+}e^{i\left\{  \theta_{j_{1}}+\cdots+\theta_{j_{N}}\right\}  }e^{-i\left\{
+\theta_{k_{1}}+\cdots+\theta_{k_{N}}\right\}  }\left\vert \psi_{j_{1}}%
+\cdots\psi_{j_{N}}\right\rangle \left\langle \psi_{k_{1}}\cdots\psi_{k_{N}%
+}\right\vert \nonumber\\
+& \neq D^{N},
+\end{align}
+where $\left\{  \left.  c_{j_{1}\cdots j_{N}}\right\vert 1\leq j_{1}%
+<\,\cdots<j_{N}\leq r\right\}  $ are the CI coeffcients of the state vector
+forming $D^{N}.$ The non invariance of the $N$-electron state density operator
+will be shown by simple examples in the proceeding, where we show explicitly
+that Second Order Reduced Density Operator's (SORDO's) of AGP\ states (thus
+any higher order density operators) are not in general invariant to such transformations.
+
+The observation that many sets of GSO's map into the same FORDO while
+producing different $N$-electron states allows one to construct concrete
+examples of DMF's (which are functionals of matrix representations of FORDO's)
+through a Levy-Lieb \cite{Levy1979, Lieb1983}\ type of construction. Simple
+examples of such functionals will also be displayed in the proceeding.
+
+
+\end{document}

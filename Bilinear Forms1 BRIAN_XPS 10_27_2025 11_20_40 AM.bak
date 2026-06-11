@@ -1,0 +1,3771 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Monday, October 27, 2025 11:20:40}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+\title{The Algebraic Foundations of Quantum Mechanics: From Vector Spaces to
+Hilbert Spaces}
+\author{Assistant}
+\date{\today}
+
+\begin{abstract}
+This manuscript explores the fundamental mathematical structures underlying
+quantum mechanics, demonstrating how Hilbert space structures emerge
+naturally from complex vector spaces through tensor products with their
+conjugate spaces. We show that the inner product, observables, and quantum
+states can all be derived from purely algebraic constructions, suggesting
+that the traditional Hilbert space formulation may be emergent rather than
+fundamental.
+\end{abstract}
+
+\maketitle
+
+\section{Hilbert Space Inner Product as a Linear Functional}
+
+\subsection{The Riesz Representation Theorem}
+
+\begin{remark}
+The \textbf{Riesz Representation Theorem}, establishes that in a Hilbert
+space $\mathcal{H}$, every continuous linear functional $\varphi :\mathcal{H}%
+\rightarrow \mathbb{C}$ is uniquely represented by an inner product with a
+specific vector i.e. for every continuous \emph{linear }functional $\varphi
+\in \mathcal{H}^{d}$, there exists a unique vector $y_{\varphi }\in \mathcal{%
+H}$ such that: 
+\begin{equation}
+\varphi (x)=\left\langle \left. y_{\varphi }\right\vert x\right\rangle _{%
+\mathcal{H}}\quad \text{for all }x\in \mathcal{H}.
+\end{equation}
+\end{remark}
+
+\section{Complex Conjugate Vector Spaces}
+
+\subsection{Definition and Structure}
+
+For any complex vector space $V$, its \textbf{complex conjugate space} $%
+\overline{V}$ is defined as:
+
+\begin{enumerate}
+\item Same underlying set as $V$
+
+\item Same vector addition: 
+\begin{equation}
+u+_{\overline{V}}v=u+_{V}v
+\end{equation}
+
+\item \emph{Conjugate scalar multiplication: }%
+\begin{equation}
+\alpha \cdot _{\overline{V}}v=\overline{\alpha }\cdot _{V}v
+\end{equation}
+i.e. scalar multiplication is anti linear.
+\end{enumerate}
+
+\subsection{Tensor Product Construction of Hilbert Space Inner Product}
+
+The inner product map $\left\langle \left. \cdot \right\vert \cdot
+\right\rangle _{\mathcal{H}}:\mathcal{H}\times \mathcal{H}\rightarrow 
+\mathbb{C}$ is a sesquilinear map that can be expressed as a single linear
+functional by packaging the two input vectors into the tensor product $%
+\overline{\mathcal{H}}\otimes \mathcal{H}$, where $\overline{\mathcal{H}}$
+denotes the conjugate Hilbert space.
+
+Define a linear functional 
+\begin{equation}
+F:\overline{\mathcal{H}}\otimes \mathcal{H}\rightarrow \mathbb{C}
+\end{equation}%
+on simple tensors by: 
+\begin{equation}
+F(\overline{\overline{x}}\otimes y)=\left\langle \left. x\right\vert
+y\right\rangle _{\mathcal{H}},
+\end{equation}%
+extended linearly to all of $\overline{\mathcal{H}}\otimes \mathcal{H}$,
+where $\overline{\overline{x}}\in \overline{\mathcal{H}}$ and $\overline{%
+\overline{x}}_{e}=\sigma _{e}\left( x\right) $ for some basis $\left( 
+\boldsymbol{e}\right) $.
+
+\begin{remark}
+\begin{equation}
+\left\langle \left. x\right\vert y\right\rangle _{\mathcal{H}}=\sum_{1\leq
+j\leq r}\overline{\mathcal{R}_{e}\left( x\right) }\mathcal{R}_{e}\left(
+y\right) =\sum_{1\leq j\leq r}\mathcal{R}_{e}\left( \sigma _{e}\left(
+x\right) \right) \mathcal{R}_{e}\left( y\right) =\sum_{1\leq j\leq r}%
+\mathcal{R}_{f}\left( \sigma _{f}\left( x\right) \right) \mathcal{R}%
+_{f}\left( y\right) .
+\end{equation}
+\end{remark}
+
+\begin{remark}
+Conjugations from different equivalence classes produce different $\overline{%
+\overline{x}}_{e},$ but $\left\langle x\right\vert \equiv \left\langle
+\left. x\right\vert \cdot \right\rangle _{\mathcal{H}}=\digamma \left(
+\left\vert x\right\rangle \right) \in \mathcal{H}^{d},$ where%
+\begin{equation}
+\digamma :\mathcal{H\rightarrow H}^{d}
+\end{equation}%
+is unique.
+\end{remark}
+
+\begin{remark}
+This construction successfully expresses the inner product as: 
+\begin{equation}
+\left\langle \left. x\right\vert y\right\rangle _{\mathcal{H}}=F(\overline{%
+\overline{x}}\otimes y)=F(\sigma _{e}\left( x\right) \otimes y)=F(\digamma
+\left( x\right) \otimes y).
+\end{equation}
+\end{remark}
+
+\begin{remark}
+For \emph{every basis} $\left( \boldsymbol{e}\right) $%
+\begin{equation}
+\left\langle \left. x\right\vert y\right\rangle _{\mathcal{H}}=\left\langle
+\left. x\right\vert I_{\mathcal{H}}y\right\rangle _{\mathcal{H}%
+}=\left\langle \left. \overset{\overset{}{}}{x}\right\vert \sum_{1\leq k\leq
+r}\left\vert e_{k}\right\rangle \left\langle e_{k}\right\vert y\right\rangle
+_{\mathcal{H}}=\sum_{1\leq k\leq r}\left\langle \left. x\right\vert
+e_{k}\right\rangle _{\mathcal{H}}\left\langle \left. e_{k}\right\vert
+y\right\rangle _{\mathcal{H}}=\sum_{1\leq k\leq r}\overline{\left\langle
+\left. e_{k}\right\vert x\right\rangle }_{\mathcal{H}}\left\langle \left.
+e_{k}\right\vert y\right\rangle _{\mathcal{H}}=\sum_{1\leq k\leq r}\overline{%
+\mathcal{R}_{e}\left( x\right) _{k}}\mathcal{R}_{e}\left( y\right)
+_{k}=\sum_{1\leq k\leq r}\mathcal{R}_{e}\left( \sigma _{e}\left( x\right)
+\right) _{k}\mathcal{R}_{e}\left( y\right) _{k}=F(\sigma _{e}\left( x\right)
+\otimes y)
+\end{equation}%
+thus one can choose any $\sigma _{e}$ and thus $\overline{\overline{x}}%
+_{e}=\sigma _{e}\left( x\right) $ produces the same $\left\langle
+x\right\vert $ i.e. 
+\begin{equation}
+\sigma :\mathfrak{B}\left( \mathcal{H}\right) \times \mathcal{H}\rightarrow 
+\overline{\mathcal{H}}
+\end{equation}%
+and%
+\begin{equation}
+\sigma _{e}\left( x\right) =\sigma \left( \left( \overset{}{\boldsymbol{e}}%
+\right) ,\left\vert \overset{}{x}\right\rangle \right) =\sigma _{f}\left(
+x\right) =\sigma \left( \left( \overset{}{\boldsymbol{f}}\right) ,\left\vert 
+\overset{}{x}\right\rangle \right) =\left\langle x\right\vert
+\end{equation}%
+hence%
+\begin{equation}
+\ker \left\{ \sigma \right\} =\left\{ \sigma _{e}\left( x\right) -\sigma
+_{f}\left( x\right) \right\} \times \left\vert x\right\rangle ,\,\left( 
+\boldsymbol{e}\right) ,\left( \boldsymbol{f}\right) \in \mathfrak{B}\left( 
+\mathcal{H}\right) .
+\end{equation}
+\end{remark}
+
+\begin{remark}
+\begin{equation}
+\left\langle \left. x\right\vert y\right\rangle _{\mathcal{H}}=\left( \left.
+\sigma _{e}\left( x\right) \right\vert y\right) =\left( \left. y\right\vert
+\sigma _{e}\left( x\right) \right) .
+\end{equation}
+\end{remark}
+
+\subsection{Dirac Bra-Ket Notation}
+
+This mathematical structure is precisely formalized in Dirac's bra-ket
+notation:
+
+\begin{itemize}
+\item Vectors $y\in \mathcal{H}$ are%
+\begin{equation}
+\emph{\ kets:}|y\rangle
+\end{equation}
+
+\item Continuous linear functionals on $\mathcal{H}$ are 
+\begin{equation}
+\emph{bras}:\langle \varphi |
+\end{equation}
+
+\item The inner product is 
+\begin{equation}
+\langle x|y\rangle =\left\langle \left. x\right\vert y\right\rangle _{%
+\mathcal{H}}
+\end{equation}
+
+\item The operator $|x\rangle \langle y|$ corresponds to the tensor product 
+\begin{equation}
+\overline{x}\otimes \overline{y}\in \mathcal{H}\otimes \overline{\mathcal{H}}%
+,
+\end{equation}
+by 
+\begin{equation}
+\Xi _{\mathcal{H}\overline{\mathcal{H}}}:\mathcal{H\otimes \overline{%
+\mathcal{H}}\rightarrow L}\left( \mathcal{H}\right)
+\end{equation}
+
+\begin{equation}
+\Xi _{\mathcal{H}\overline{\mathcal{H}}}\left( \overline{x}\otimes \overline{%
+y}\right) =|x\rangle \langle y|.
+\end{equation}
+\end{itemize}
+
+\subsection{Key Mathematical Properties}
+
+While $V$ and $\overline{V}$ share the same dimension and are isomorphic as
+real vector spaces, they \emph{differ fundamentally} as complex vector
+spaces:
+
+\begin{itemize}
+\item The identity map $\text{id}:V\rightarrow \overline{V}$ is \emph{%
+conjugate-linear}, not $\mathbb{C}$-linear
+
+\item Natural conjugate-linear isomorphism: $V^{d}\cong V^{\sigma _{e}},$
+note that a complex conjugate space $V^{\sigma _{e}}$ \emph{is not} a
+complex vector space as
+
+\begin{itemize}
+\item $\left\{ \sigma _{e}\right\} $ are complex conjugations defined in $V$
+associated with bases $\left( \mathbf{e}\right) $ off $V,$ a complex
+cojugation of the vector space $V$ is given by 
+\begin{equation}
+V^{\sigma _{e}}=\sigma _{e}\left( V\right) .
+\end{equation}
+
+\item $V^{\sigma _{e}}$ is \emph{not} a complex cojugate space as it is
+complex linear.
+\end{itemize}
+
+\item Tensor product behavior: $\overline{V}\otimes W\cong \overline{%
+V\otimes \overline{W}}$
+
+\item Functorial properties make this an involutive functor on the category
+of complex vector spaces
+\end{itemize}
+
+\subsection{Isomorphism Conditions}
+
+$V\cong \overline{V}$ as complex vector spaces if and only if there exists a
+conjugate-linear automorphism $\mathcal{J}:V\rightarrow V$ with $\mathcal{J}%
+^{2}=\,$id. Important cases include:
+
+\begin{itemize}
+\item Real vector spaces (trivial complex structure)
+
+\item The Canonical Complexifications of real spaces: 
+\begin{equation}
+V_{\mathbb{C}}=W\otimes _{\mathbb{R}}\mathbb{C}=W\otimes _{\mathbb{R}%
+}\left\{ 1,i\right\} =W\oplus _{\mathbb{R}}iW.
+\end{equation}
+
+\item All Hilbert spaces (via Riesz representation)\thinspace .
+\end{itemize}
+
+\section{Dual Tensors $b\in V^{d}\otimes V^{d}$}
+
+\subsection{SVD and Dyadic Expansions of Operators}
+
+\begin{enumerate}
+\item The components of a general second rank dual tensor $b_{\rho \sigma }$
+is given by in terms of a biorthogonal bases $\left\{ \left( \boldsymbol{e}%
+_{b}\right) ,\left( \boldsymbol{e}\right) \right\} $ are
+
+\begin{enumerate}
+\item 
+\begin{equation}
+\rho _{bj}\otimes \sigma _{bj}=\sum_{1\leq k,l\leq r}e_{bk}\otimes e_{bl}%
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{k}\mathcal{R}_{e_{b}}\left(
+\sigma _{bj}\right) _{l}=\sum_{1\leq k,l\leq r}e_{bk}\otimes e_{bl}\mathcal{R%
+}_{e_{b}}\left( \rho _{bj}\otimes \sigma _{bj}\right) _{kl}=\sum_{1\leq
+k,l\leq r}e_{bk}\otimes e_{bl}\left( \overset{}{\mathcal{R}_{e_{b}}\left(
+\rho _{bj}\right) \otimes \mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) }%
+\right) _{kl},
+\end{equation}%
+where
+
+\item 
+\begin{eqnarray}
+\rho _{bj} &=&\sum_{1\leq k\leq r}e_{bk}\mathcal{R}_{e_{b}}\left( \rho
+_{bj}\right) _{kj} \\
+\sigma _{bj} &=&\sum_{1\leq l\leq r}e_{bl}\mathcal{R}_{e_{b}}\left( \sigma
+_{bj}\right) _{lj}
+\end{eqnarray}%
+they
+\end{enumerate}
+
+\item combine together to form a dual tensor $b_{\rho \sigma }\in
+V^{d}\otimes V^{d}$
+
+\begin{enumerate}
+\item $b_{\rho \sigma }$ can be expanded as 
+\begin{gather}
+b_{\rho \sigma }=\sum_{1\leq l\leq r}\rho _{bj}\otimes \sigma
+_{bj}=\sum_{1\leq j\leq p\leq r}\left( \sum_{1\leq k,l\leq r}e_{bk}\otimes
+e_{bl}\mathcal{R}_{e_{b}}\left( \rho _{bj}\otimes \sigma _{bj}\right)
+_{kl}\right) =\sum_{1\leq j\leq p\leq r}\left( \sum_{1\leq k,l\leq
+r}e_{bk}\otimes e_{bl}\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{k}%
+\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{l}\right) \\
+=\sum_{1\leq j\leq p\leq r}\left( \sum_{1\leq k,l\leq r}e_{bk}\otimes
+e_{bl}\left( \overset{}{\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) \otimes 
+\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) }\right) _{kl}\right)
+=\sum_{1\leq k,l\leq r}e_{bk}\otimes e_{bl}\mathcal{R}_{e_{b}}\left( b_{\rho
+\sigma }\right) _{kl}=\left( 
+\begin{array}{ccc}
+e_{b1}\otimes e_{b1} & \cdots & e_{br}\otimes e_{br}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathcal{R}_{e_{b}}\left( b_{\rho \sigma }\right) _{11} \\ 
+\vdots \\ 
+\mathcal{R}_{e_{b}}\left( b_{\rho \sigma }\right) _{rr}%
+\end{array}%
+\right) \\
+=\left( 
+\begin{array}{ccc}
+e_{b1}\otimes e_{b1} & \cdots & e_{br}\otimes e_{br}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\sum_{1\leq j\leq p\leq r}\mathcal{R}_{e_{b}}\left( \rho _{bj}\otimes \sigma
+_{bj}\right) _{11} \\ 
+\vdots \\ 
+\sum_{1\leq j\leq p\leq r}\mathcal{R}_{e_{b}}\left( \rho _{bj}\otimes \sigma
+_{bj}\right) _{rr}%
+\end{array}%
+\right) =\sum_{1\leq j\leq p\leq r}\left( \left( 
+\begin{array}{ccc}
+e_{b1} & \cdots & e_{br}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{1} \\ 
+\vdots \\ 
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{r}%
+\end{array}%
+\right) \right) \otimes \left( \left( 
+\begin{array}{ccc}
+e_{b1} & \cdots & e_{br}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{1} \\ 
+\vdots \\ 
+\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{r}%
+\end{array}%
+\right) \right)
+\end{gather}
+
+\item $b_{\rho \sigma }$ can also be expanded as%
+\begin{eqnarray}
+b_{\rho \sigma } &=&\sum_{1\leq l\leq r}\rho _{bj}\otimes \sigma
+_{bj}=\left( 
+\begin{array}{ccc}
+\rho _{b1} & \cdots & \rho _{br}%
+\end{array}%
+\right) \otimes \left( 
+\begin{array}{c}
+\sigma _{b1} \\ 
+\vdots \\ 
+\sigma _{br}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+\sum_{1\leq k\leq r}e_{bk}\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{1} & 
+\cdots & \sum_{1\leq k\leq r}e_{bk}\mathcal{R}_{e_{b}}\left( \rho
+_{bj}\right) _{r}%
+\end{array}%
+\right) \otimes \left( 
+\begin{array}{c}
+\sum_{1\leq l\leq r}e_{bl}\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{1}
+\\ 
+\vdots \\ 
+\sum_{1\leq l\leq r}e_{bl}\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{r}%
+\end{array}%
+\right) \\
+&=&\sum_{1\leq k,l\leq r}\left( 
+\begin{array}{ccc}
+e_{bk}\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{k1} & \cdots & e_{bk}%
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{kr}%
+\end{array}%
+\right) \otimes \left( 
+\begin{array}{c}
+e_{bl}\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{l1} \\ 
+\vdots \\ 
+e_{bl}\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{lr}%
+\end{array}%
+\right) \\
+&=&\sum_{1\leq k,l\leq r}\left( 
+\begin{array}{ccc}
+e_{b1} & \cdots & e_{br}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{11} & \cdots & \mathcal{R}%
+_{e_{b}}\left( \rho _{bj}\right) _{r1} \\ 
+\vdots & \ddots & \vdots \\ 
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{r1} & \cdots & \mathcal{R}%
+_{e_{b}}\left( \rho _{bj}\right) _{rr}%
+\end{array}%
+\right) \otimes \left( 
+\begin{array}{ccc}
+\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{11} & \cdots & \mathcal{R}%
+_{e_{b}}\left( \sigma _{bj}\right) _{l1} \\ 
+\vdots & \ddots & \vdots \\ 
+\mathcal{R}_{e_{b}}\left( \sigma _{bj}\right) _{lr} & \cdots & \mathcal{R}%
+_{e_{b}}\left( \sigma _{bj}\right) _{rr}%
+\end{array}%
+\right) ^{t}\left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{br}%
+\end{array}%
+\right) \\
+&=&\left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{br}%
+\end{array}%
+\right) \otimes \left( 
+\begin{array}{ccc}
+e_{b1} & \cdots & e_{br}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\otimes \sigma _{bj}\right) _{11} & 
+\cdots & \mathcal{R}_{e_{b}}\left( \rho _{bj}\otimes \sigma _{bj}\right)
+_{kl} \\ 
+\vdots & \ddots & \vdots \\ 
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\otimes \sigma _{bj}\right) _{kl} & 
+\cdots & \mathcal{R}_{e_{b}}\left( \rho _{bj}\otimes \sigma _{bj}\right)
+_{rr}%
+\end{array}%
+\right) \\
+&=&\left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{br}%
+\end{array}%
+\right) \otimes \left( 
+\begin{array}{ccc}
+e_{b1} & \cdots & e_{br}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{1}\otimes \mathcal{R}%
+_{e_{b}}\left( \sigma _{bj}\right) _{1} & \cdots & \mathcal{R}_{e_{b}}\left(
+\rho _{bj}\right) _{1}\otimes \mathcal{R}_{e_{b}}\left( \sigma _{bj}\right)
+_{r} \\ 
+\vdots & \ddots & \vdots \\ 
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{r}\otimes \mathcal{R}%
+_{e_{b}}\left( \sigma _{bj}\right) _{1} & \cdots & \mathcal{R}_{e_{b}}\left(
+\rho _{bj}\right) _{r}\otimes \mathcal{R}_{e_{b}}\left( \sigma _{bj}\right)
+_{r}%
+\end{array}%
+\right) .
+\end{eqnarray}
+\end{enumerate}
+
+\item $b_{\rho \sigma }$ can be mapped into an operator $\Xi _{VV^{d}}\left(
+b_{\rho \sigma }\right) \in \mathcal{L}\left( V\right) $ by 
+\begin{equation}
+\Xi _{VV^{d}}\left( b_{\rho \sigma }\right) =\Xi _{VV^{d}}\left( \sum_{1\leq
+k,l\leq r}e_{bk}\otimes e_{bl}\mathcal{R}_{e_{b}}\left( b_{\rho \sigma
+}\right) _{kl}\right) =\sum_{1\leq k,l\leq r}e_{k}\otimes \left[ e_{bl}%
+\right] \mathcal{R}_{e_{b}}\left( b_{\rho \sigma }\right) _{kl}=\sum_{1\leq
+k,l\leq r}e_{k}\otimes \left[ e_{bl}\right] \mathcal{R}_{e_{b}}\left(
+\sum_{1\leq j\leq p}\rho _{bj}\otimes \sigma _{bj}\right) _{kl},
+\end{equation}
+
+\item where 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( b_{\rho \sigma }\right) _{kl}=\sum_{1\leq j\leq p}%
+\mathcal{R}_{e_{b}}\left( \rho _{bj}\right) _{k}\mathcal{R}_{e_{b}}\left(
+\sigma _{bj}\right) _{l}=\sum_{1\leq j\leq p}\mathcal{R}_{e_{b}}\left( \rho
+_{bj}\otimes \sigma _{bj}\right) _{kl}.
+\end{equation}
+
+\item The operator $\Xi _{VV^{d}}\left( b_{\rho \sigma }\right) $ has the
+expansion 
+\begin{equation}
+\Xi _{VV^{d}}\left( b_{\rho \sigma }\right) =\left( \boldsymbol{e}%
+_{b}\right) ^{t}\mathcal{R}_{e_{b}}\left( b_{\rho \sigma }\right) \left[
+\left( \boldsymbol{e}\right) \right] .
+\end{equation}
+
+\item The matrix $\mathcal{R}_{e_{b}}\left( b_{\rho \sigma }\right) $ can
+always be brought to SVD form i.e 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( b_{\rho \sigma }\right) =\mathbb{U}_{\rho \sigma }%
+\U{3a3} _{\rho \sigma }\mathbb{V}_{\rho \sigma }^{\dagger },
+\end{equation}%
+where
+
+\begin{enumerate}
+\item $\mathbb{U}$ is an $m\times m$ unitary matrix, which can be enlarged
+by 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\mathbb{U} & \mathbb{O}_{m\left( n-m\right) } \\ 
+\mathbb{O}_{\left( n-m\right) m} & \mathbb{U}^{c}%
+\end{array}%
+\right) ,
+\end{equation}%
+where 
+\begin{equation}
+\mathbb{UU}^{\dagger }=\mathbb{I}_{m}
+\end{equation}%
+and 
+\begin{equation}
+\mathbb{U}^{c}\mathbb{U}^{c\dagger }=\mathbb{I}_{\left( n-m\right) },
+\end{equation}%
+where obviously $\mathbb{U}^{c}$ is non unique.
+
+\item $\U{3a3} $ is an $m\times n$ rectangular diagonal matrix with the
+singular values $\lambda _{i}\geq 0$ on its diagonal. $\U{3a3} $ can be
+enlarged to a $n\times n$ matrix by adding zero entries.
+
+\item $\mathbb{V}$ is an $n\times n$ unitary matrix.
+
+\item $n\geq m$ as $n=\dim \left\{ \limfunc{Dom}\left( \Xi _{VV^{d}}\left(
+b_{\rho \sigma }\right) \right) \right\} $ and $m=\dim \left\{ \limfunc{Ran}%
+\left( \Xi _{VV^{d}}\left( b_{\rho \sigma }\right) \right) \right\} .$
+\end{enumerate}
+
+\item Hence using the expanded matrices 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( \overset{}{\Xi _{VV^{d}}\left( b_{\rho \sigma
+}\right) }\right) =\mathcal{R}_{e_{b}}\left( \overset{}{\left( \boldsymbol{e}%
+\right) ^{t}\mathbb{U}_{\rho }\U{3a3} _{\rho \sigma }\mathbb{V}_{\sigma
+}^{\dagger }\left[ \left( \boldsymbol{e}_{b}\right) \right] }\right) =%
+\mathcal{R}_{e_{b}}\left( \overset{}{\left( \boldsymbol{u}_{\rho }\right)
+^{t}\U{3a3} _{\rho \sigma }\left[ \left( \boldsymbol{v}_{\sigma b}\right) %
+\right] }\right) =\mathcal{R}_{e_{b}}\left( \overset{}{\left( \rho \right)
+^{t}\left[ \left( \boldsymbol{\sigma }_{b}\right) \right] }\right) ,
+\end{equation}%
+one obtains the operator 
+\begin{equation}
+\Xi _{VV^{d}}\left( b_{\rho \sigma }\right) =\left( \boldsymbol{e}\right)
+^{t}\mathbb{U}_{\rho }\U{3a3} _{\rho \sigma }\mathbb{V}_{\sigma }^{\dagger }%
+\left[ \left( \boldsymbol{e}_{b}\right) \right] =\left( \boldsymbol{u}_{\rho
+}\right) ^{t}\U{3a3} _{\rho \sigma }\left[ \left( \boldsymbol{v}_{\sigma
+b}\right) \right] =\left( \rho \right) ^{t}\left[ \left( \boldsymbol{\sigma }%
+_{b}\right) \right] ,
+\end{equation}%
+where the unitary transformations define $\left( \boldsymbol{u}_{\rho
+}\right) $ and $\left( \boldsymbol{v}_{\sigma b}\right) $ by 
+\begin{equation}
+\left( \boldsymbol{u}_{\rho }\right) ^{t}=\left( \boldsymbol{e}\right) ^{t}%
+\mathbb{U}_{\rho }
+\end{equation}%
+and 
+\begin{equation}
+\left[ \left( \boldsymbol{v}_{\sigma b}\right) \right] =\mathbb{V}_{\sigma
+}^{\dagger }\left[ \left( \boldsymbol{e}_{b}\right) \right] .
+\end{equation}
+
+\begin{enumerate}
+\item 
+\begin{equation}
+\left( \boldsymbol{u}_{\rho }\right) ^{t}\left[ \left( \boldsymbol{v}%
+_{b}\right) \right] =\left( \boldsymbol{e}\right) ^{t}\mathbb{U}_{\rho }%
+\mathbb{V}_{\sigma }^{\dagger }\left[ \left( \boldsymbol{e}_{b}\right) %
+\right]
+\end{equation}%
+\begin{equation}
+\left[ \left( \boldsymbol{v}_{b}\right) \right] \left( \boldsymbol{u}_{\rho
+}\right) ^{t}=\mathbb{V}_{\sigma }^{\dagger }\left[ \left( \boldsymbol{e}%
+_{b}\right) \right] \left( \boldsymbol{e}\right) ^{t}\mathbb{U}_{\rho }
+\end{equation}
+
+\item 
+\begin{eqnarray}
+\left( \boldsymbol{u}_{\rho }\right) ^{t} &=&\left( \boldsymbol{e}\right)
+^{t}\mathbb{U}_{\rho }\Leftrightarrow \left( \boldsymbol{u}_{\rho }\right) =%
+\mathbb{U}_{\rho }^{t}\left( \boldsymbol{e}\right) \\
+\left( \boldsymbol{v}_{\sigma b}\right) &=&\mathbb{V}_{\sigma }^{\dagger
+}\left( \boldsymbol{e}_{b}\right) \Leftrightarrow \left( \boldsymbol{v}%
+_{\sigma b}\right) ^{t}=\left( \boldsymbol{e}_{b}\right) ^{t}\overline{%
+\mathbb{V}_{\sigma }}
+\end{eqnarray}
+
+\item $\left\{ \left( \boldsymbol{u}\right) ,\left( \boldsymbol{u}%
+_{b}\right) \right\} $ and $\left\{ \left( \boldsymbol{v}\right) ,\left( 
+\boldsymbol{v}_{b}\right) \right\} $ \emph{are biorthogonal bases} i.e. 
+\begin{eqnarray}
+\left( \boldsymbol{u}_{\rho }\right) ^{t}\left[ \left( \boldsymbol{u}_{\rho
+b}\right) \right] &=&\left( \boldsymbol{e}\right) ^{t}\mathbb{U}_{\rho }%
+\mathbb{U}_{\rho }^{\dagger }\left[ \left( \boldsymbol{e}_{b}\right) \right]
+=\left( \boldsymbol{e}\right) ^{t}\left[ \left( \boldsymbol{e}_{b}\right) %
+\right] =I_{n} \\
+\left( \boldsymbol{v}_{\sigma }\right) ^{t}\left[ \left( \boldsymbol{v}%
+_{\sigma b}\right) \right] &=&\left( \boldsymbol{e}\right) ^{t}\mathbb{V}%
+_{\sigma }\mathbb{V}_{\sigma }^{\dagger }\left[ \left( \boldsymbol{e}%
+_{b}\right) \right] =\left( \boldsymbol{e}\right) ^{t}\left[ \left( 
+\boldsymbol{e}_{b}\right) \right] =I_{n}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+\left[ \left( \boldsymbol{u}_{\rho b}\right) \right] \left( \boldsymbol{u}%
+_{\rho }\right) ^{t} &=&\left( \boldsymbol{e}\right) ^{t}\mathbb{U}_{\rho }%
+\mathbb{U}_{\rho }^{\dagger }\left[ \left( \boldsymbol{e}_{b}\right) \right]
+=\left( \boldsymbol{e}\right) ^{t}\left[ \left( \boldsymbol{e}_{b}\right) %
+\right] =\mathbb{I}_{n} \\
+\left[ \left( \boldsymbol{v}_{\sigma b}\right) \right] \left( \boldsymbol{v}%
+_{\sigma }\right) ^{t} &=&\mathbb{V}_{\sigma }^{\dagger }\left[ \left( 
+\boldsymbol{e}_{b}\right) \right] \left( \boldsymbol{e}\right) ^{t}\mathbb{V}%
+_{\sigma }=\left[ \left( \boldsymbol{e}_{b}\right) \right] \left( 
+\boldsymbol{e}\right) ^{t}=\mathbb{I}_{n}.
+\end{eqnarray}
+\end{enumerate}
+
+\item 
+\begin{equation}
+\Xi _{VV^{d}}\left( b_{\rho \sigma }\right) =U\lambda V=\left( \boldsymbol{e}%
+\right) ^{t}\mathcal{R}_{e}\left( U\right) \mathcal{R}_{e}\left( \lambda
+\right) \mathcal{R}_{e}\left( V\right) \left[ \left( \boldsymbol{e}%
+_{b}\right) \right] =\left( 
+\begin{array}{ccc}
+e_{1} & \cdots & e_{m}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\mathbb{U}_{\rho 11} & \cdots & \mathbb{U}_{\rho 1m} \\ 
+\vdots & \ddots & \vdots \\ 
+\mathbb{U}_{\rho m1} & \cdots & \mathbb{U}_{\rho mm}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\boldsymbol{\lambda }_{\left( m,m\right) } & \mathbb{O}_{m\left( n-m\right) }
+\\ 
+\mathbb{O}_{\left( n-m\right) n} & \mathbb{O}_{n-m},_{n-m}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\mathbb{V}_{\sigma 11} & \cdots & \mathbb{V}_{\sigma 1n} \\ 
+\vdots & \ddots & \vdots \\ 
+\mathbb{V}_{\sigma n1} & \cdots & \mathbb{V}_{\sigma nn}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{bn}%
+\end{array}%
+\right) ,
+\end{equation}%
+where 
+\begin{equation}
+\boldsymbol{\lambda }_{\left( m,m\right) }=\left( 
+\begin{array}{cccc}
+\lambda _{1} & 0 & \cdots & 0 \\ 
+0 & \ddots & \vdots & \vdots \\ 
+\vdots & \cdots & \cdots & 0 \\ 
+0 & \cdots & 0 & \lambda _{m}%
+\end{array}%
+\right) .
+\end{equation}
+
+\item This SVD expression can be extended to singular operators by 
+\begin{equation}
+\Xi _{VV^{d}}\left( b_{\rho \sigma }\right) =\left( 
+\begin{array}{ccc}
+u_{\rho 1} & \cdots & u_{\rho n}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\boldsymbol{\lambda }_{\left( m,m\right) } & \mathbb{O}_{m\left( n-m\right) }
+\\ 
+\mathbb{O}_{\left( n-m\right) n} & \mathbb{O}_{n-m},_{n-m}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+v_{\sigma b1} \\ 
+\vdots \\ 
+v_{\sigma bn}%
+\end{array}%
+\right) =\left( \boldsymbol{u}_{\rho }\right) ^{t}\mathcal{R}_{e}\left(
+\lambda \right) \left[ \left( \boldsymbol{v}_{\sigma b}\right) \right]
+=\left( \rho \right) ^{t}\left[ \left( \boldsymbol{\sigma }_{b}\right) %
+\right] ,
+\end{equation}%
+where we have enlarged the range space by appending the vectors $\left\{
+u_{\rho m+1,\cdots ,}u_{\rho n}\right\} .$
+\end{enumerate}
+
+\section{Transpose}
+
+Let $V$ be a complex $r$-dimensional vector space where 
+\begin{equation}
+\dim \left\{ V\right\} =r.
+\end{equation}
+
+\begin{remark}
+\label{10/26/2025}
+
+\begin{enumerate}
+\item The embeding (injection) $\mathfrak{i}_{V^{dd}V}$ of $V$ into $V^{dd}$
+through the basis $\left( \boldsymbol{e}\right) $ is given by 
+\begin{equation}
+e_{bbj}\left( y_{bk}\right) \overset{\Delta }{=}y_{bk}\left( e_{j}\right)
+,\quad 1\leq j,k\leq r.
+\end{equation}
+
+\item The embeding $\mathfrak{i}_{V^{ddd}V^{dd}}$ of $V^{d}$ into $V^{ddd}$
+through the basis $\left( \boldsymbol{e}\right) $ is given by 
+\begin{equation}
+e_{bbbj}\left( y_{bbk}\right) \overset{\Delta }{=}y_{bbk}\left(
+e_{bj}\right) ,\quad 1\leq j,k\leq r.
+\end{equation}
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+\begin{equation}
+e_{bj}\left( x_{k}\right) \overset{?}{=}x_{bk}\left( e_{j}\right)
+\end{equation}%
+\begin{equation}
+e_{bj}\left( \sum_{1\leq l\leq r}e_{bj}\left( e_{l}\right) \mathcal{R}%
+_{e}\left( x_{k}\right) _{l}\right) =\mathcal{R}_{e}\left( x_{k}\right)
+_{j}=e_{bj}\left( x_{k}\right)
+\end{equation}%
+\begin{equation}
+x_{bk}\left( e_{j}\right) =\left( \sum_{1\leq l\leq r}x_{bk}\left(
+e_{l}\right) \mathcal{R}_{e}\left( e_{j}\right) _{l}\right) =\left(
+\sum_{1\leq l\leq r}x_{bk}\left( e_{l}\right) e_{bl}\left( e_{j}\right)
+\right) =x_{bk}\left( e_{j}\right) =e_{bbj}\left( x_{bk}\right)
+\end{equation}
+\end{remark}
+
+\begin{remark}
+By Greubs theorem for $A\in \mathcal{L}\left( V\right) $ one obtains the
+dyadic expansion 
+\begin{equation}
+A=\sum_{1\leq j\leq 2r}x_{j}\left[ y_{bj}\right] =\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{br}%
+\end{array}%
+\right) \right] .
+\end{equation}
+\end{remark}
+
+\begin{definition}
+\textbf{of the} \textbf{Transpose} $A^{t}\in \mathcal{L}\left( V\right) $ of 
+$A\ $is 
+\begin{equation}
+A^{t}=\sum_{1\leq j\leq 2r}y_{j}\left[ x_{bj}\right] =\left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] .
+\end{equation}%
+The matrix representations of $A$ and $A^{t}$ are wrt a basis $\left( 
+\boldsymbol{e}\right) $ of $V$ are
+\end{definition}
+
+\begin{enumerate}
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) =\left[ \left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{br}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{br}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+e_{1} & \cdots & e_{r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( x_{1}\right) & \cdots & e_{br}\left( x_{r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{br}\left( e_{1}\right) & \cdots & y_{br}\left( e_{r}\right)%
+\end{array}%
+\right)
+\end{equation}%
+and
+
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A^{t}\right) =\left[ \left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{br}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+e_{1} & \cdots & e_{r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b1}\left( y_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( y_{1}\right) & \cdots & e_{br}\left( y_{r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b1}\left( e_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{br}\left( e_{1}\right) & \cdots & x_{br}\left( e_{r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\begin{enumerate}
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) ^{t}=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{br}\left( e_{1}\right) & \cdots & y_{br}\left( e_{r}\right)%
+\end{array}%
+\right) ^{t}\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( x_{1}\right) & \cdots & e_{br}\left( x_{r}\right)%
+\end{array}%
+\right) ^{t}=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{br}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{r}\right) & \cdots & y_{br}\left( e_{r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{br}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{r}\right) & \cdots & e_{br}\left( x_{r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\item This gives 
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b1}\left( y_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( y_{1}\right) & \cdots & e_{br}\left( y_{r}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{br}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{r}\right) & \cdots & y_{br}\left( e_{r}\right)%
+\end{array}%
+\right)
+\end{equation}%
+and 
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b1}\left( e_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{br}\left( e_{1}\right) & \cdots & x_{br}\left( e_{r}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( x_{1}\right) & \cdots & e_{br}\left( x_{r}\right)%
+\end{array}%
+\right)
+\end{equation}%
+giving
+
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) ^{t}=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{br}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{r}\right) & \cdots & y_{br}\left( e_{r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( x_{1}\right) & \cdots & e_{br}\left( x_{r}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b1}\left( y_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( y_{1}\right) & \cdots & e_{br}\left( y_{r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b1}\left( e_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{br}\left( e_{1}\right) & \cdots & x_{br}\left( e_{r}\right)%
+\end{array}%
+\right) =\mathcal{R}_{e}\left( A^{t}\right) ???
+\end{equation}
+\end{enumerate}
+
+\item 
+\begin{equation}
+A=\left( 
+\begin{array}{ccc}
+e_{1} & \cdots & e_{r}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{br}\left( x_{1}\right) & \cdots & e_{br}\left( x_{r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{br}\left( e_{1}\right) & \cdots & y_{br}\left( e_{r}\right)%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{br}%
+\end{array}%
+\right) \right] =\left( 
+\begin{array}{ccc}
+e_{1} & \cdots & e_{r}%
+\end{array}%
+\right) \mathcal{R}_{e}\left( A\right) \left[ \left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{br}%
+\end{array}%
+\right) \right]
+\end{equation}
+\end{enumerate}
+
+Let $W$ be a real even dimensional vector space where 
+\begin{equation}
+\dim \left\{ W\right\} =2r.
+\end{equation}%
+By Greubs theorem for $A\in \mathcal{L}\left( W\right) $ one obtains the
+dyadic expansion 
+\begin{equation}
+A=\sum_{1\leq j\leq 2r}x_{j}\left[ y_{bj}\right] =\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] .
+\end{equation}
+
+\begin{definition}
+\textbf{of the} \textbf{Transpose} $A^{t}\in \mathcal{L}\left( W\right) $ of 
+$A\ $is 
+\begin{equation}
+A^{t}=\sum_{1\leq j\leq 2r}y_{j}\left[ x_{bj}\right] =\left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] .
+\end{equation}
+\end{definition}
+
+\begin{remark}
+If $A\in \mathcal{L}\left( W_{2},W_{1}\right) $ then 
+\begin{equation}
+A=\sum_{1\leq j\leq 2r}x_{j}\left[ y_{bj}\right] =\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] ,
+\end{equation}%
+and $A^{t}\in \mathcal{L}\left( W_{1},W_{2}\right) $ 
+\begin{equation}
+A^{t}=\sum_{1\leq j\leq 2r}y_{j}\left[ x_{bj}\right] =\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] ,
+\end{equation}%
+where 
+\begin{equation}
+W_{1}=\mathbb{R}\text{-}\func{linspan}\left\{ \left. y_{j}\right\vert 1\leq
+j\leq 2r\right\}
+\end{equation}%
+and 
+\begin{equation}
+W_{2}=\mathbb{R}\text{-}\func{linspan}\left\{ \left. x_{j}\right\vert 1\leq
+j\leq 2r\right\} .
+\end{equation}
+\end{remark}
+
+\subsection{The dualizing map $d$}
+
+\begin{definition}
+\textbf{The dualizing map \label{The dualizing map} }$"d"\in \mathcal{L}%
+\left( \mathcal{L}\left( W^{d}\right) ,\mathcal{L}\left( W\right) \right) $ 
+\begin{equation}
+d:\mathcal{L}\left( W\right) \rightarrow \mathcal{L}\left( W^{d}\right)
+\end{equation}%
+produces the dual $d\left( T\right) $ of the transformation of $T\in 
+\mathcal{L}\left( W\right) $ \label{The dual transformation} $d\left(
+T\right) \in \mathcal{L}\left( W^{d}\right) $ by 
+\begin{equation}
+d\left( T\right) \rho \left( v\right) =\rho \left( Tv\right) \,\quad \forall
+v\in W,\forall \rho \in W^{d},\quad T\in \mathcal{L}\left( W\right)
+\end{equation}
+\end{definition}
+
+\begin{definition}
+Duals $v_{d\rho \sigma }=d_{\rho \sigma }\left( v\right) $ of vectors $v$ 
+\textbf{wrt the bilinear form} $b_{\rho \sigma }\in W^{d}\otimes W^{d}$ are
+defined by 
+\begin{equation}
+v_{d\rho \sigma }\left( w\right) =b_{\rho \sigma }\left( v,w\right) \quad
+\forall w\in W,\,v\in W
+\end{equation}
+
+\begin{remark}
+If $T\in \mathcal{L}\left( W_{2},W_{1}\right) $ i.e. 
+\begin{equation}
+T:W_{1}\rightarrow W_{2}
+\end{equation}%
+then 
+\begin{equation}
+d\left( T\right) :W_{2}^{d}\rightarrow W_{1}^{d}.
+\end{equation}
+\end{remark}
+\end{definition}
+
+\begin{remark}
+The dual mappings $d\left( A\right) $ and $d\left( A\right) ^{t}$ can be
+expanded as 
+\begin{equation}
+d\left( A\right) =\sum_{1\leq j\leq 2r}y_{bj}\left[ x_{bbj}\right]
+\rightarrow \sum_{1\leq j\leq 2r}y_{bj}\left[ x_{j}\right]
+\end{equation}%
+and 
+\begin{equation}
+d\left( A\right) ^{t}=\sum_{1\leq j\leq 2r}x_{bj}\left[ y_{bbj}\right]
+\rightarrow \sum_{1\leq j\leq 2r}x_{bj}\left[ y_{j}\right]
+\end{equation}%
+which should be compared to the expansions of $A$ and $A^{t}$%
+\begin{equation}
+A=\sum_{1\leq j\leq 2r}x_{j}\left[ y_{bj}\right]
+\end{equation}
+\end{remark}
+
+and 
+\begin{equation}
+A^{t}=\sum_{1\leq j\leq 2r}y_{j}\left[ x_{bj}\right] ,
+\end{equation}%
+which are general unequal.
+
+The matrix represenations $\mathcal{R}_{e}\left( A\right) $ and $\mathcal{R}%
+_{e}\left( A^{t}\right) $ of the operators $A$ and $A^{t}$ wrt a basis $%
+\left( \boldsymbol{e}\right) $ of $W$ are
+
+\begin{enumerate}
+\item $\mathcal{R}_{e}\left( A\right) $%
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) =\left[ \left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{b2r}%
+\end{array}%
+\right) \right] \left( \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \right) \left( 
+\begin{array}{ccc}
+e_{1} & \cdots & e_{2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right)
+\end{equation}%
+i.e. 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\item $\mathcal{R}_{e}\left( A^{t}\right) $%
+\begin{equation}
+\mathcal{R}_{e}\left( A^{t}\right) =\left[ \left( 
+\begin{array}{c}
+e_{b1} \\ 
+\vdots \\ 
+e_{b2r}%
+\end{array}%
+\right) \right] \left( \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \right) \left( 
+\begin{array}{ccc}
+e_{1} & \cdots & e_{2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b1}\left( y_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( y_{1}\right) & \cdots & e_{b2r}\left( y_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b2r}\left( e_{1}\right) & \cdots & x_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right)
+\end{equation}%
+i.e. 
+\begin{equation}
+\mathcal{R}_{e}\left( A^{t}\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b1}\left( y_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( y_{1}\right) & \cdots & e_{b2r}\left( y_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b2r}\left( e_{1}\right) & \cdots & x_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\item Compare to $\mathcal{R}_{e}\left( A\right) ^{t}$ 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) ^{t}=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) ^{t}\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{2r}\right)%
+\end{array}%
+\right) ^{t}=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{2r}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{2r}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) .
+\end{equation}%
+i.e. 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) ^{t}=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{2r}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{2r}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) .
+\end{equation}
+\end{enumerate}
+
+The matrix represenations $\mathcal{R}_{e}\left( d\left( A\right) \right) $
+and $\mathcal{R}_{e}\left( d\left( A\right) ^{t}\right) $ of the operators $%
+d\left( A\right) $ and $d\left( A\right) ^{t}$ wrt a basis $\left( 
+\boldsymbol{e}\right) $ of $W$ are
+
+\begin{enumerate}
+\item $\mathcal{R}_{e_{b}}\left( d\left( A\right) \right) $%
+\begin{gather}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) \right) =\left[ \left( 
+\begin{array}{c}
+e_{bb1} \\ 
+\vdots \\ 
+e_{bb2r}%
+\end{array}%
+\right) \right] \left( \left( 
+\begin{array}{ccc}
+y_{b1} & \cdots & y_{b2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{bb1} \\ 
+\vdots \\ 
+x_{bb2r}%
+\end{array}%
+\right) \right] \right) \left( 
+\begin{array}{ccc}
+e_{b1} & \cdots & e_{b2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{bb1}\left( y_{b1}\right) & \cdots & e_{bb1}\left( y_{b2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{bb2r}\left( y_{b1}\right) & \cdots & e_{bb2r}\left( y_{b2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+x_{bb1}\left( e_{b1}\right) & \cdots & x_{bb1}\left( e_{b2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{bb2r}\left( e_{b1}\right) & \cdots & x_{bb2r}\left( e_{b2r}\right)%
+\end{array}%
+\right) \\
+=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{2r}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{2r}\right) & \cdots & e_{b2r}\left( x_{2r}\right)%
+\end{array}%
+\right)
+\end{gather}%
+i.e. 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) \right) =\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{2r}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{2r}\right) & \cdots & e_{b2r}\left( x_{2r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\item $\mathcal{R}_{e_{b}}\left( d\left( A\right) ^{t}\right) $%
+\begin{gather}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) ^{t}\right) =\left[ \left( 
+\begin{array}{c}
+e_{bb1} \\ 
+\vdots \\ 
+e_{bb2r}%
+\end{array}%
+\right) \right] \left( \left( 
+\begin{array}{ccc}
+x_{b1} & \cdots & x_{b2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{bb1} \\ 
+\vdots \\ 
+y_{bb2r}%
+\end{array}%
+\right) \right] \right) \left( 
+\begin{array}{ccc}
+e_{b1} & \cdots & e_{b2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+e_{bb1}\left( x_{b1}\right) & \cdots & e_{bb1}\left( x_{b2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{bb2r}\left( x_{b1}\right) & \cdots & e_{bb2r}\left( x_{b2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{bb1}\left( e_{b1}\right) & \cdots & y_{bb1}\left( e_{b2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{bb2r}\left( e_{b1}\right) & \cdots & y_{bb2r}\left( e_{b2r}\right)%
+\end{array}%
+\right) \\
+=\left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b1}\left( e_{2r}\right) & \cdots & x_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b2r}\left( y_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( y_{2r}\right) & \cdots & e_{b2r}\left( y_{2r}\right)%
+\end{array}%
+\right)
+\end{gather}%
+i.e. 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) ^{t}\right) =\left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b1}\left( e_{2r}\right) & \cdots & x_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b2r}\left( y_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( y_{2r}\right) & \cdots & e_{b2r}\left( y_{2r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\item Compare to $\mathcal{R}_{e_{b}}\left( d\left( A\right) \right) ^{t}$ 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) \right) ^{t}=\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+\end{enumerate}
+
+\paragraph{\textbf{Comparing transpose and dual representations}}
+
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right)
+\end{equation}
+
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A^{t}\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b1}\left( y_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( y_{1}\right) & \cdots & e_{b2r}\left( y_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b2r}\left( e_{1}\right) & \cdots & x_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right)
+\end{equation}
+
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) ^{t}=\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{2r}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{2r}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right)
+\end{equation}
+\end{enumerate}
+
+\begin{enumerate}
+\item Dual mappings produce transposed matrices \label{Dual mappings produce
+transposed matrices} 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) \right) =\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{2r}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{2r}\right) & \cdots & e_{b2r}\left( x_{2r}\right)%
+\end{array}%
+\right) =\mathcal{R}_{e}\left( A\right) ^{t}
+\end{equation}
+
+\item 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) ^{t}\right) =\left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b1}\left( e_{2r}\right) & \cdots & x_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b2r}\left( y_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( y_{2r}\right) & \cdots & e_{b2r}\left( y_{2r}\right)%
+\end{array}%
+\right) =\mathcal{R}_{e}\left( A^{t}\right) ^{t}
+\end{equation}
+
+\item 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( d\left( A\right) \right) ^{t}=\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) =\mathcal{R}_{e}\left( A\right) .
+\end{equation}
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Bilinear forms $\left( \left. {}\right\vert \right) _{\protect%
+\rho \protect\sigma }$ on $W$}
+
+One can equip $W$ with a \emph{non degenerate} bilinear forms $\left( \left.
+{}\right\vert \right) _{\rho \sigma }\equiv \left( \left. {}\right\vert
+\right) \in W^{d}\otimes W^{d}$ for $\rho _{b}$,$\sigma _{b}\in W^{d}$ 
+\begin{equation}
+\left( \left. {}\right\vert \right) \equiv \left( \left. {}\right\vert
+\right) _{\rho \sigma }:W\times W\rightarrow \mathbb{R}
+\end{equation}%
+that in general \emph{do not} have any symmetry i.e. $\left( \left.
+v\right\vert w\right) $ is unrelated to $\left( \left. w\right\vert v\right)
+.$
+
+\begin{notation}
+\begin{equation}
+\left( \left. {}\right\vert \right) _{\rho \sigma }\equiv \left( \left.
+{}\right\vert \right) .
+\end{equation}
+\end{notation}
+
+\begin{definition}
+\textbf{\ }A form $\left( \left. {}\right\vert \right) _{\rho \sigma }$ is
+non degenerate if 
+\begin{equation}
+\left( \left. v\right\vert w\right) _{\rho \sigma }=0\quad \forall w\in
+W\Leftrightarrow v=0.
+\end{equation}
+\end{definition}
+
+\begin{theorem}
+A non degenrate bilinear form $\left( \left. {}\right\vert \right) _{\rho
+\sigma }\in W^{d}\otimes W^{d}$ can be expanded as 
+\begin{equation}
+\left( \left. {}\right\vert \right) =\left( \left. {}\right\vert \right)
+_{\rho \sigma }=\sum_{1\leq j\leq 2r}\rho _{bj}\otimes \sigma _{bj},
+\end{equation}%
+whose action is defined by 
+\begin{equation}
+\left( \left. v\right\vert w\right) =\left( \left. v\right\vert w\right)
+_{\rho \sigma }=\sum_{1\leq j\leq 2r}\left[ \overset{}{\rho _{bj}\otimes
+\sigma _{bj}}\right] \left( v\otimes w\right) =\sum_{1\leq j\leq 2r}\rho
+_{bj}\left( v\right) \sigma _{bj}\left( w\right) .
+\end{equation}
+\end{theorem}
+
+\begin{remark}
+\begin{equation}
+\sum_{1\leq j\leq 2r}\rho _{bj}\left( v\right) \sigma _{bj}\left( w\right)
+=\left( \left. \rho \right\vert v\right) _{\rho \sigma }\left( \left. \sigma
+\right\vert w\right) _{\rho \sigma }.
+\end{equation}
+\end{remark}
+
+\begin{remark}
+Note that $\left( \left. {}\right\vert \right) _{\rho \sigma }$ being non
+degenerate still allows in particular 
+\begin{equation}
+\left( \left. v\right\vert v\right) _{\rho \sigma }=0
+\end{equation}%
+and in general 
+\begin{equation}
+\left( \left. v\right\vert v\right) _{\rho \sigma }=\left\{ 
+\begin{array}{c}
+>0 \\ 
+=0 \\ 
+<0%
+\end{array}%
+\right. .
+\end{equation}
+\end{remark}
+
+\begin{lemma}
+Non degenerate bilineear forms define inner products in $W.$
+\end{lemma}
+
+\begin{definition}
+Dual vectors in terms of the inner product $\left( \left. {}\right\vert
+\right) _{\rho \sigma }$ 
+\begin{equation}
+v_{d}=\left( v\right\vert _{\rho \sigma }
+\end{equation}%
+by 
+\begin{equation}
+\left( v\right\vert _{\rho \sigma }\left( w\right) =v_{d}\left( w\right)
+=\left( \left. v\right\vert w\right) _{\rho \sigma },\quad \forall w\in W.
+\end{equation}
+\end{definition}
+
+\begin{definition}
+\textbf{\ }The orthogonal compliment to the vector $v$ is the subspace $%
+W_{\left( \left. {}\right\vert \right) }^{\bot _{v}}$ which is defined as 
+\begin{equation}
+W_{\left( \left. {}\right\vert \right) }^{\bot _{v}}=\left\{ \left. \overset{%
+}{w}\right\vert \left( \left. \overset{}{v}\right\vert w\right) _{\rho
+\sigma }=0,w\in W\right\} .
+\end{equation}
+\end{definition}
+
+\begin{remark}
+Direct sum decomposition of $W$ in terms of orthogonal subspaces to a vector 
+\begin{equation}
+W=W_{\left( \left. {}\right\vert \right) }^{\bot _{v}}\oplus \left\{
+v\right\}
+\end{equation}
+\end{remark}
+
+\begin{definition}
+The Invariance Group $G_{\rho \sigma }\subset $ $GL\left( W\right) $ of a
+form $\left( \left. {}\right\vert \right) _{\rho \sigma }$ is defined by 
+\begin{equation}
+G_{\rho \sigma }=\left\{ \left. \overset{}{T\in GL\left( W\right) }%
+\right\vert \left( \left. Tv\right\vert Tw\right) _{\rho \sigma }=\left(
+\left. v\right\vert w\right) _{\rho \sigma }\right\} .
+\end{equation}
+\end{definition}
+
+\begin{remark}
+\begin{eqnarray}
+\left( \left. Tv\right\vert Tw\right) _{\rho \sigma } &=&\sum_{1\leq j\leq
+2r}\rho _{bj}\left( Tv\right) \sigma _{bj}\left( Tw\right) =\sum_{1\leq
+j\leq 2r}d\left( T\right) \rho _{bj}\left( v\right) d\left( T\right) \sigma
+_{bj}\left( w\right) \\
+&=&\left( \overset{}{d\left( T\right) \otimes d\left( T\right) }\right)
+\left( \sum_{1\leq j\leq 2r}\rho _{bj}\left( v\right) \sigma _{bj}\left(
+w\right) \right) =\left( \left( \overset{}{d\left( T\right) \otimes d\left(
+T\right) }\right) \left( \sum_{1\leq j\leq 2r}\rho _{bj}\otimes \sigma
+_{bj}\right) \right) \left( v\otimes w\right) =\left( \left. v\right\vert
+w\right) _{\rho \sigma }
+\end{eqnarray}%
+i.e. 
+\begin{equation}
+\left( \overset{}{d\left( T\right) \otimes d\left( T\right) }\right) \left(
+\sum_{1\leq j\leq 2r}\rho _{bj}\otimes \sigma _{bj}\right) =\sum_{1\leq
+j\leq 2r}\rho _{bj}\otimes \sigma _{bj},
+\end{equation}%
+so $a_{2d}=\sum_{1\leq j\leq 2r}\rho _{bj}\otimes \sigma _{bj}$ is an
+eigenvector of $\left( \overset{}{d\left( T\right) \otimes d\left( T\right) }%
+\right) $ with eigenvalue $+1.$
+\end{remark}
+
+\begin{remark}
+General transformations $\mathfrak{T}_{AB}\in \mathcal{L}\left( W^{d}\otimes
+W^{d}\right) $ 
+\begin{equation}
+\mathfrak{T}_{AB}\mathfrak{:}W^{d}\otimes W^{d}\rightarrow W^{d}\otimes W^{d}
+\end{equation}%
+between dual tensors \label{transformation between dual tensors}%
+\begin{equation}
+b_{\mathbf{\rho \sigma }}=\mathbf{\rho }^{t}\mathbf{\sigma }=\left( 
+\begin{array}{ccc}
+\rho _{b1} & \cdots & \rho _{b2r}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\sigma _{b1} \\ 
+\vdots \\ 
+\sigma _{b2r}%
+\end{array}%
+\right)
+\end{equation}
+is given by 
+\begin{equation}
+T_{\widetilde{\mathbf{\rho \sigma }}}=\widetilde{b_{\mathbf{\rho \sigma }}}=%
+\mathfrak{T}_{AB}\left( b_{\mathbf{\rho \sigma }}\right) =\mathfrak{T}%
+_{AB}\left( \sum_{1\leq j\leq 2r}\rho _{bj}\otimes \sigma _{bj}\right)
+=\sum_{1\leq j\leq 2r}A_{j}\rho _{bj}\otimes B_{j}\sigma _{bj}=\sum_{1\leq
+j\leq 2r}\left( A_{j}\otimes B_{j}\right) \left( \rho _{bj}\otimes \sigma
+_{bj}\right) .
+\end{equation}
+\end{remark}
+
+\begin{remark}
+All tensors $a_{2d}\in W^{d}\times $ $W^{d}$ can be expressed as 
+\begin{equation}
+a_{2d}=\sum_{1\leq j\leq \limfunc{Rank}\left( A_{2d}\right) }\rho
+_{bj}\otimes \sigma _{bj}
+\end{equation}%
+for some $\left\{ \left. \rho _{bj},\sigma _{bj}\right\vert 1\leq j\leq 
+\limfunc{Rank}\left( a_{2d}\right) \leq 2r\right\} $
+\end{remark}
+
+\begin{lemma}
+If 
+\begin{equation}
+\limfunc{Rank}\left( a_{2d}\right) =2r
+\end{equation}%
+then $a_{2d}$ is \emph{non degenerate.}
+\end{lemma}
+
+\begin{remark}
+The transformation 
+\begin{equation}
+\left( \left. T\cdot \right\vert T\cdot \right) _{\rho \sigma }=\left( 
+\overset{}{d\left( T\right) \otimes d\left( T\right) }\right) \left(
+\sum_{1\leq j\leq 2r}\rho _{bj}\left( \cdot \right) \sigma _{bj}\left( \cdot
+\right) \right)
+\end{equation}%
+is a special case of the general transformation.
+\end{remark}
+
+\begin{remark}
+$\left( \left. {}\right\vert \right) _{\rho \sigma }$-normalized vectors $v$
+are given by 
+\begin{equation}
+\left( \left. v\right\vert v\right) _{\rho \sigma }=1,
+\end{equation}%
+where 
+\begin{equation}
+v=\frac{\left\vert \widetilde{v}\right) _{\rho \sigma }}{\sqrt{\left( \left. 
+\widetilde{v}\right\vert \widetilde{v}\right) _{\rho \sigma }}}.
+\end{equation}
+\end{remark}
+
+\begin{remark}
+$\left( \left. {}\right\vert \right) _{\rho \sigma }$-normalized $v_{b}$ are
+given by 
+\begin{equation}
+v_{b}=\frac{\left( \widetilde{v}\right\vert _{\rho \sigma }}{\sqrt{\left(
+\left. \widetilde{v}\right\vert \widetilde{v}\right) _{\rho \sigma }}}.
+\end{equation}
+\end{remark}
+
+\begin{lemma}
+Let $T\in \mathcal{L}\left( W\right) $ then 
+\begin{equation}
+\left( \left. \cdot \right\vert \cdot \right) _{d\left( T\right) \left( \rho
+\right) d\left( T\right) \left( \sigma \right) }=\left( \left. T\cdot
+\right\vert T\cdot \right) _{\rho \sigma }.
+\end{equation}
+
+\begin{proof}
+\begin{equation}
+\left( \left. T\cdot \right\vert T\cdot \right) _{\rho \sigma }=\left( 
+\overset{}{d\left( T\right) \otimes d\left( T\right) }\right) \left(
+\sum_{1\leq j\leq 2r}\rho _{bj}\left( \cdot \right) \sigma _{bj}\left( \cdot
+\right) \right) =\sum_{1\leq j\leq 2r}\left( \overset{}{d\left( T\right)
+\left( \rho _{bj}\right) }\right) \left( \cdot \right) \left( \overset{}{%
+d\left( T\right) \left( \sigma _{bj}\right) }\right) \left( \cdot \right)
+=\sum_{1\leq j\leq 2r}\rho _{bj}\left( T\cdot \right) \sigma _{bj}\left(
+T\cdot \right) .
+\end{equation}
+\end{proof}
+\end{lemma}
+
+\begin{definition}
+The equivalence class of inner products $\left[ \left( \left. \cdot
+\right\vert \cdot \right) _{\rho \sigma }\right] $ generated by the inner
+product $\left( \left. \cdot \right\vert \cdot \right) _{\rho \sigma }$ is
+defined by 
+\begin{equation}
+\left[ \left( \left. \cdot \right\vert \cdot \right) _{\rho \sigma }\right]
+=\left\{ \left. \left( \left. \cdot \right\vert \cdot \right) _{\rho \sigma
+}=\,\overset{}{\left( \left. T\cdot \right\vert T\cdot \right) _{\rho \sigma
+}}\right\vert T\in \mathcal{L}\left( W\right) \right\}
+\end{equation}%
+so that 
+\begin{equation}
+\left( \left. \cdot \right\vert \cdot \right) _{\rho _{1}\sigma
+_{1}}\thicksim \left( \left. \cdot \right\vert \cdot \right) _{\rho
+_{2}\sigma _{2}}
+\end{equation}%
+if $\exists T\in \mathcal{L}\left( W\right) $ such that 
+\begin{equation}
+\left( \left. \cdot \right\vert \cdot \right) _{\rho _{2}\sigma _{2}}=\left(
+\left. T\cdot \right\vert T\cdot \right) _{\rho _{2}\sigma _{2}}.
+\end{equation}
+\end{definition}
+
+\begin{theorem}
+All inner products on $W$ are given by 
+\begin{equation}
+\left( A\mathbf{\rho }\right) ^{t}\otimes \left( B\mathbf{\sigma }\right)
+\equiv \left( A\mathbf{\rho }\right) ^{t}\left( B\mathbf{\sigma }\right) =%
+\mathfrak{T}_{AB}\left( \sum_{1\leq j\leq 2r}\rho _{bj}\otimes \sigma
+_{bj}\right) =\sum_{1\leq j\leq 2r}A_{j}\rho _{bj}\otimes B_{j}\sigma
+_{bj}=\sum_{1\leq j\leq 2r}\left( A_{j}\otimes B_{j}\right) \left( \rho
+_{bj}\otimes \sigma _{bj}\right) =\sum_{1\leq j\leq 2r}A_{j}\rho
+_{bj}\otimes B_{j}\sigma _{bj}=\sum_{1\leq j\leq 2r}\left( A\rho \right)
+_{bj}\otimes \left( B\sigma \right) _{bj}=\left( \left. \cdot \right\vert
+\cdot \right) _{\left( A\rho \right) \left( B\sigma \right) },
+\end{equation}%
+where $A_{j},B_{j}\in \mathcal{L}\left( W^{d}\right) $
+\end{theorem}
+
+\begin{remark}
+In particular transformations generated by \emph{decomposable elements} of $%
+W^{d}\otimes W^{d}$ are given by 
+\begin{equation}
+\left( \left. S\cdot \right\vert T\cdot \right) _{\rho \sigma }=\left( 
+\overset{}{d\left( S\right) \otimes d\left( T\right) }\right) \left(
+\sum_{1\leq j\leq 2r}\rho _{bj}\left( \cdot \right) \sigma _{bj}\left( \cdot
+\right) \right) =\sum_{1\leq j\leq 2r}\rho _{bj}\left( S\cdot \right) \sigma
+_{bj}\left( T\cdot \right) .
+\end{equation}
+\end{remark}
+
+\subsection{Biorthogonal Bases}
+
+Let $\left\{ \left. e_{j}\right\vert 1\leq j\leq 2r\right\} $ be a basis of $%
+W$ then the overlap matrix $\mathbb{S}_{ee}$ of the overlap operator $S_{ee}$
+\begin{equation}
+S_{ee}=\left( 
+\begin{array}{ccc}
+\left\vert e_{1}\right) & \cdots & \left\vert e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right)
+\end{equation}%
+is 
+\begin{equation}
+\mathbb{S}_{ee}=\left( \left. \boldsymbol{e}\right\vert \boldsymbol{e}%
+\right) _{\rho \sigma }=\left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left\vert e_{1}\right) & \cdots & \left\vert e_{2r}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{1}\right\vert e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{2r}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\begin{remark}
+\begin{enumerate}
+\item Using an inner product $\left( \left. \boldsymbol{\cdot }\right\vert 
+\boldsymbol{\cdot }\right) $ the dual basis $\left( \boldsymbol{e}%
+_{d}\right) $ to $\left( \boldsymbol{e}\right) $ is given by 
+\begin{equation*}
+\left( d\left( \boldsymbol{e}\right) \right) ^{t}=\left( \boldsymbol{e}%
+\right\vert =\left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right) \in \mathfrak{B}\left( W^{d}\right) .
+\end{equation*}
+
+\item The biorthogonal dual basis $\left( \boldsymbol{e}_{b}\right) $ wrt $%
+\left( \left. \boldsymbol{\cdot }\right\vert \boldsymbol{\cdot }\right) $ is
+given by%
+\begin{equation*}
+\left( b\left( \boldsymbol{e}\right) \right) ^{t}=\left( b\left( \boldsymbol{%
+e}\right) \right\vert =\left( \left. \boldsymbol{e}\right\vert \boldsymbol{e}%
+\right) ^{-1}\left( \boldsymbol{e}\right\vert =\left( 
+\begin{array}{c}
+\left( b\left( e\right) _{1}\right\vert \\ 
+\vdots \\ 
+\left( b\left( e\right) _{2r}\right\vert%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{1}\right\vert e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{2r}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) ^{-1}\left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right) .
+\end{equation*}
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+\begin{equation*}
+\left\vert b\left( \boldsymbol{e}\right) \right) =\left\vert \boldsymbol{e}%
+\right) \left( \left. \boldsymbol{e}\right\vert \boldsymbol{e}\right)
+^{-t}=\left( 
+\begin{array}{ccc}
+\left\vert b\left( e\right) _{1}\right) & \cdots & \left\vert b\left(
+e\right) _{2r}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+\left\vert e_{1}\right) & \cdots & \left\vert e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{1}\right\vert e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{2r}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) ^{\boldsymbol{-}t}
+\end{equation*}
+\end{remark}
+
+\begin{remark}
+The bases $\left( \boldsymbol{e}_{b}\right) $ and $\left( \boldsymbol{e}%
+\right) $ are $\left( \left. \boldsymbol{\cdot }\right\vert \boldsymbol{%
+\cdot }\right) $-biorthogonal as
+
+\begin{enumerate}
+\item 
+\begin{equation}
+\mathbb{I}_{2r}=\left( \left. \boldsymbol{e}_{b}\right\vert \boldsymbol{e}%
+\right) =\left( \left. \boldsymbol{e}\right\vert \boldsymbol{e}\right)
+^{-1}\left( \left. \boldsymbol{e}\right\vert \boldsymbol{e}\right)
+\end{equation}%
+and
+
+\item 
+\begin{equation*}
+I_{2r}=\left\vert \boldsymbol{e}\right) \left( b\left( \boldsymbol{e}\right)
+\right\vert =\left\vert \boldsymbol{e}\right) \left( \left. \boldsymbol{e}%
+\right\vert \boldsymbol{e}\right) ^{-1}\left( \boldsymbol{e}\right\vert
+\left( \boldsymbol{e}\right\vert =\left( 
+\begin{array}{ccc}
+\left\vert e_{1}\right) & \cdots & \left\vert e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{1}\right\vert e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{2r}\right\vert e_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) ^{\boldsymbol{-}1}\left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right)
+\end{equation*}
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+\begin{equation}
+\mathcal{R}_{e}\left( S_{ee}\right) =\mathcal{R}_{e}\left( \sum_{1\leq j\leq
+2r}e_{j}\left[ d\left( e\right) _{j}\right] \right) =\left( \boldsymbol{e}%
+_{b}\right\vert \left( \left( 
+\begin{array}{ccc}
+\left\vert e_{1}\right) & \cdots & \left\vert e_{2r}\right)%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right) \right] \right) \left\vert \boldsymbol{e}\right) =\left( \left. 
+\boldsymbol{e}\right\vert \boldsymbol{e}\right) =\mathbb{S}_{ee}.
+\end{equation}
+\end{remark}
+
+Using the bilinear form $\left( \left. {}\right\vert \right) $ one obtains
+the following expansions for an operator $A\in \mathcal{L}\left( W\right) $
+
+\begin{enumerate}
+\item 
+\begin{eqnarray}
+A &=&\left\vert \boldsymbol{x}\right) \left( \boldsymbol{y}\right\vert
+=\sum_{1\leq j\leq 2r}\left\vert x_{j}\right) \left( y_{j}\right\vert
+=\left( 
+\begin{array}{ccc}
+\left\vert x_{1}\right) & \cdots & \left\vert x_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( y_{1}\right\vert \\ 
+\vdots \\ 
+\left( y_{2r}\right\vert%
+\end{array}%
+\right) \\
+\mathcal{R}_{e}\left( A\right) &=&\left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right) \left( \left( 
+\begin{array}{ccc}
+\left\vert x_{1}\right) & \cdots & \left\vert x_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( y_{1}\right\vert \\ 
+\vdots \\ 
+\left( y_{2r}\right\vert%
+\end{array}%
+\right) \right) \left( 
+\begin{array}{ccc}
+\left\vert e_{1}\right) & \cdots & \left\vert e_{2r}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{1}\right\vert x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{2r}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. y_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{1}\right\vert e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. y_{2r}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) \\
+\mathcal{R}_{e}\left( A\right) ^{t} &=&\left( 
+\begin{array}{ccc}
+\left( \left. y_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{1}\right\vert e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. y_{2r}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) ^{t}\left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{1}\right\vert x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{2r}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{2r}\right)%
+\end{array}%
+\right) ^{t}=\left( 
+\begin{array}{ccc}
+\left( \left. y_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. y_{1}\right\vert e_{2r}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{1}\right\vert x_{2r}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{2r}\right)%
+\end{array}%
+\right)
+\end{eqnarray}%
+and the transpose $A^{t}$
+
+\item 
+\begin{eqnarray}
+A^{t} &=&\left\vert \boldsymbol{y}\right) \left( \boldsymbol{x}\right\vert
+=\sum_{1\leq j\leq 2r}\left\vert y_{j}\right) \left( x_{j}\right\vert
+=\left( 
+\begin{array}{ccc}
+\left\vert y_{1}\right) & \cdots & \left\vert y_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( x_{1}\right\vert \\ 
+\vdots \\ 
+\left( x_{2r}\right\vert%
+\end{array}%
+\right) \\
+\mathcal{R}_{e}\left( A^{t}\right) &=&\left( 
+\begin{array}{c}
+\left( e_{1}\right\vert \\ 
+\vdots \\ 
+\left( e_{2r}\right\vert%
+\end{array}%
+\right) \left( \left( 
+\begin{array}{ccc}
+\left\vert y_{1}\right) & \cdots & \left\vert y_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( x_{1}\right\vert \\ 
+\vdots \\ 
+\left( x_{2r}\right\vert%
+\end{array}%
+\right) \right) \left( 
+\begin{array}{ccc}
+\left\vert e_{1}\right) & \cdots & \left\vert e_{2r}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+\left( \left. y_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. y_{1}\right\vert e_{2r}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{1}\right\vert x_{2r}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{2r}\right)%
+\end{array}%
+\right)
+\end{eqnarray}
+
+\item The representations are 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) =\left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right)
+\end{equation}
+
+\begin{eqnarray}
+\mathcal{R}_{e}\left( A^{t}\right) &=&\left( 
+\begin{array}{ccc}
+e_{b1}\left( y_{1}\right) & \cdots & e_{b1}\left( y_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b2r}\left( y_{1}\right) & \cdots & e_{b2r}\left( y_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+x_{b1}\left( e_{1}\right) & \cdots & x_{b1}\left( e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b2r}\left( e_{1}\right) & \cdots & x_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \\
+\mathcal{R}_{e}\left( A\right) ^{t} &=&\left( 
+\begin{array}{ccc}
+y_{b1}\left( e_{1}\right) & \cdots & y_{b2r}\left( e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b1}\left( e_{2r}\right) & \cdots & y_{b2r}\left( e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+e_{b1}\left( x_{1}\right) & \cdots & e_{b2r}\left( x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+e_{b1}\left( x_{2r}\right) & \cdots & e_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) ,
+\end{eqnarray}%
+which can be recast as
+
+\item 
+\begin{equation}
+\mathcal{R}_{e}\left( A\right) =\left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{1}\right\vert x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{2r}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. y_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{1}\right\vert e_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. y_{2r}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right)
+\end{equation}%
+\begin{eqnarray}
+\mathcal{R}_{e}\left( A^{t}\right) &=&\left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert y_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert y_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{1}\right\vert y_{2r}\right) & \cdots & \left( \left.
+e_{2r}\right\vert y_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. x_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+x_{2r}\right\vert e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. x_{1}\right\vert e_{2r}\right) & \cdots & \left( \left.
+x_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) \\
+\mathcal{R}_{e}\left( A\right) ^{t} &=&\left( 
+\begin{array}{ccc}
+\left( \left. y_{1}\right\vert e_{1}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. y_{1}\right\vert e_{2r}\right) & \cdots & \left( \left.
+y_{2r}\right\vert e_{2r}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \left. e_{1}\right\vert x_{1}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{1}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+\left( \left. e_{1}\right\vert x_{2r}\right) & \cdots & \left( \left.
+e_{2r}\right\vert x_{2r}\right)%
+\end{array}%
+\right) ,
+\end{eqnarray}
+
+\item \textbf{If the inner product is symmetric} then \textbf{\ }%
+\begin{equation}
+\mathbb{S}_{ee}=\mathbb{S}_{ee}^{t}
+\end{equation}%
+and \textbf{\ }%
+\begin{equation}
+\mathcal{R}_{e}\left( A^{t}\right) =\mathcal{R}_{e}\left( A\right) ^{t}
+\end{equation}
+
+\item \textbf{If the inner product is antisymmetric }then%
+\begin{equation}
+\mathbb{S}_{ee}=-\mathbb{S}_{ee}^{t}
+\end{equation}%
+\textbf{\ }
+\end{enumerate}
+
+\subsection{Symmetric and Antisymmetric Inner Products in $W$}
+
+\subsubsection{\textbf{Symmetric Inner Products}}
+
+\begin{theorem}
+\begin{equation*}
+s_{d}=\sum_{1\leq j,k\leq 2r}e_{bj}\otimes e_{bk}\mathcal{R}_{e_{b}}\left(
+s_{d}\right) _{jk}=\sum_{1\leq j\leq 2r}\sigma \left( s_{d}\right)
+_{j}b\left( u\right) _{j}\otimes b\left( u\right) _{j}=\sum_{1\leq j\leq
+2r}\sigma \left( s_{d}\right) _{j}\left( u_{j}\right\vert \otimes \left(
+u_{j}\right\vert ,
+\end{equation*}%
+where 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( s_{d}\right) _{jk}=\mathcal{R}_{e_{b}}\left(
+s_{d}\right) _{kj},\quad 1\leq j,k\leq 2r
+\end{equation}%
+and 
+\begin{equation}
+\sigma \left( s_{d}\right) _{j}\neq 0\in \mathbb{R},\quad 1\leq j\leq 2r.
+\end{equation}
+
+\begin{proof}
+This can be deduced as $\mathcal{R}_{e_{b}}\left( s_{d}\right) $ is a real
+symmetric which can be transformed to a diagonal matrix $\mathbb{\mathcal{R}}%
+_{\sigma \left( s_{d}\right) }\left( s_{d}\right) $ 
+\begin{equation}
+\mathbb{U}^{t}\mathcal{R}_{e_{b}}\left( s_{d}\right) \mathbb{U}\,\,\mathbb{=%
+\mathcal{R}}_{\sigma \left( s_{d}\right) }\left( s_{d}\right) =\left( 
+\begin{array}{cccc}
+\mathbb{\mathcal{R}}_{\sigma \left( s_{d}\right) }\left( s_{d}\right) _{11}
+& \cdots & 0 & 0 \\ 
+0 & \ddots & \vdots & \vdots \\ 
+\vdots & \cdots & \ddots & 0 \\ 
+0 & \cdots & 0 & \mathbb{\mathcal{R}}_{\sigma \left( s_{d}\right) }\left(
+s_{d}\right) _{2r2r}%
+\end{array}%
+\right) .
+\end{equation}
+\end{proof}
+\end{theorem}
+
+\begin{remark}
+\begin{enumerate}
+\item 
+\begin{equation}
+s_{d}\left( v,w\right) =\sum_{1\leq j\leq 2r}\sigma \left( s_{d}\right)
+_{j}b\left( u\right) _{j}\otimes b\left( u\right) _{j}\left( v\otimes
+w\right) =\sum_{1\leq j\leq 2r}\sigma \left( s_{d}\right) _{j}b\left(
+u\right) _{j}\left( v\right) \otimes b\left( u\right) _{j}\left( w\right)
+=\sum_{1\leq j\leq 2r}\sigma \left( s_{d}\right) _{j}\left( \left.
+u_{j}\right\vert v\right) \left( \left. u_{j}\right\vert w\right)
+\end{equation}
+
+\item 
+\begin{equation}
+s_{d}\left( w,v\right) =\sum_{1\leq j\leq 2r}\sigma \left( s_{d}\right)
+_{j}b\left( u\right) _{j}\otimes b\left( u\right) _{j}\left( w\otimes
+v\right) =\sum_{1\leq j\leq 2r}\sigma \left( s_{d}\right) _{j}b\left(
+u\right) _{j}\left( w\right) \otimes b\left( u\right) _{j}\left( v\right)
+=\sum_{1\leq j\leq 2r}\sigma \left( s_{d}\right) _{j}\left( \left.
+u_{j}\right\vert w\right) \left( \left. u_{j}\right\vert v\right) ,
+\end{equation}%
+which confirms $\left( \left. {}\right\vert \right) $ is symmetric i.e.%
+\begin{equation}
+s_{d}\left( v,w\right) =s_{d}\left( w,v\right) .
+\end{equation}
+\end{enumerate}
+\end{remark}
+
+\subsubsection{\textbf{Antisymmetric Inner Products}}
+
+\begin{theorem}
+\begin{eqnarray*}
+a_{d} &=&\sum_{1\leq j,k\leq 2r}e_{bj}\otimes e_{bk}\mathcal{R}%
+_{e_{b}}\left( a_{d}\right) _{jk}=\sum_{1\leq j\leq r}\sigma \left(
+a_{d}\right) _{j}b\left( v\right) _{j}\wedge b\left( v\right) _{j+r} \\
+&=&\sum_{1\leq j\leq r}\sigma \left( a_{d}\right) _{j}\frac{1}{\sqrt{2}}%
+\left\{ b\left( v\right) _{j}\otimes b\left( v\right) _{j+r}-b\left(
+v\right) _{j+r}\otimes b\left( v\right) _{j}\right\} =\sum_{1\leq j\leq
+r}\sigma \left( a_{d}\right) _{j}\frac{1}{\sqrt{2}}\left\{ \left(
+v_{j}\right\vert \otimes \left( v_{j+r}\right\vert -\left(
+v_{j+r}\right\vert \otimes \left( v_{j}\right\vert \right\} ,
+\end{eqnarray*}%
+where 
+\begin{equation}
+\mathcal{R}_{e_{b}}\left( a_{d}\right) _{jk}=-\mathcal{R}_{e_{b}}\left(
+a_{d}\right) _{kj};\quad 1\leq j,k\leq 2r
+\end{equation}%
+and 
+\begin{equation}
+\sigma \left( a_{d}\right) _{j}\neq 0\in \mathbb{R},\quad 1\leq j\leq r.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+This can be deduced as $\mathcal{R}_{e_{b}}\left( a_{d}\right) $ is an even
+dimensional real antisymmetric matrix which can be transformed to a
+canonical antisymmetric matrix $\mathbb{\mathcal{R}}_{\sigma \left(
+a_{d}\right) }\left( a_{d}\right) $ 
+\begin{equation}
+\mathbb{V}^{t}\mathcal{R}_{e_{b}}\left( a_{d}\right) \mathbb{V}\,\,\mathbb{=%
+\mathcal{R}}_{\sigma \left( a_{d}\right) }\left( a_{d}\right) =\left( 
+\begin{array}{cc}
+\mathbb{O} & \left( 
+\begin{array}{cccc}
+\mathbb{\mathcal{R}}_{\sigma \left( a_{d}\right) }\left( a_{d}\right) _{11}
+& 0 & \cdots & 0 \\ 
+0 & \ddots & \vdots & \vdots \\ 
+\vdots & \cdots & \ddots & 0 \\ 
+0 & \cdots & 0 & \mathbb{\mathcal{R}}_{\sigma \left( a_{d}\right) }\left(
+a_{d}\right) _{rr}%
+\end{array}%
+\right) \\ 
+\left( 
+\begin{array}{cccc}
+-\mathbb{\mathcal{R}}_{\sigma \left( a_{d}\right) }\left( a_{d}\right) _{11}
+& 0 & \cdots & 0 \\ 
+0 & \ddots & \vdots & \vdots \\ 
+\vdots & \cdots & \ddots & 0 \\ 
+0 & \cdots & 0 & -\mathbb{\mathcal{R}}_{\sigma \left( a_{d}\right) }\left(
+a_{d}\right) _{rr}%
+\end{array}%
+\right) & \mathbb{O}%
+\end{array}%
+\right)
+\end{equation}
+\end{proof}
+
+These dual bilinear forms define inner products in $W.$
+
+\begin{remark}
+\begin{enumerate}
+\item 
+\begin{eqnarray}
+a_{d}\left( v,w\right) &=&\sum_{1\leq j\leq r}\sigma \left( a_{d}\right) _{j}%
+\frac{1}{\sqrt{2}}\left\{ b\left( u\right) _{j}\otimes b\left( u\right)
+_{j+r}-b\left( u\right) _{j+r}\otimes b\left( u\right) _{j}\right\} \left(
+v\otimes w\right) \\
+&=&\sum_{1\leq j\leq r}\sigma \left( a_{d}\right) _{j}\frac{1}{\sqrt{2}}%
+\left\{ b\left( u\right) _{j}\left( v\right) b\left( u\right) _{j+r}\left(
+w\right) -b\left( u\right) _{j+r}\left( w\right) b\left( u\right) _{j}\left(
+v\right) \right\} =\sum_{1\leq j\leq r}\sigma \left( a_{d}\right) _{j}\frac{1%
+}{\sqrt{2}}\left\{ \left( \left. u_{j}\right\vert v\right) \left( \left.
+u_{j+r}\right\vert w\right) -\left( \left. u_{j+r}\right\vert v\right)
+\left( \left. u_{j}\right\vert w\right) \right\}
+\end{eqnarray}
+
+\item 
+\begin{eqnarray}
+a_{d}\left( w,v\right) &=&\sum_{1\leq j\leq r}\sigma \left( a_{d}\right) _{j}%
+\frac{1}{\sqrt{2}}\left\{ b\left( u\right) _{j}\otimes b\left( u\right)
+_{j+r}-b\left( u\right) _{j+r}\otimes b\left( u\right) _{j}\right\} \left(
+w\otimes v\right) \\
+&=&\sum_{1\leq j\leq r}\sigma \left( a_{d}\right) _{j}\frac{1}{\sqrt{2}}%
+\left\{ b\left( u\right) _{j}\left( w\right) b\left( u\right) _{j+r}\left(
+v\right) -b\left( u\right) _{j+r}\left( v\right) b\left( u\right) _{j}\left(
+w\right) \right\} =\sum_{1\leq j\leq r}\sigma \left( a_{d}\right) _{j}\frac{1%
+}{\sqrt{2}}\left\{ \left( \left. u_{j}\right\vert w\right) \left( \left.
+u_{j+r}\right\vert v\right) -\left( \left. u_{j+r}\right\vert w\right)
+\left( \left. u_{j}\right\vert v\right) \right\}
+\end{eqnarray}%
+which confirms $\left( \left. {}\right\vert \right) $ is antisymmetric i.e.%
+\begin{equation}
+a_{d}\left( v,w\right) =-a_{d}\left( w,v\right) .
+\end{equation}
+\end{enumerate}
+\end{remark}
+
+\subsubsection{\textbf{Inner products in} $W$}
+
+\begin{definition}
+Symmetric Inner Products 
+\begin{equation}
+\left( \left. v\right\vert w\right) _{s}=s_{d}\left( v\otimes w\right)
+=s_{d}\left( v,w\right)
+\end{equation}
+\end{definition}
+
+\begin{definition}
+Antisymmetric Inner Products 
+\begin{equation}
+\left\{ \left. v\right\vert w\right\} _{a}=a_{d}\left( v\otimes w\right)
+=a_{d}\left( v,w\right)
+\end{equation}
+\end{definition}
+
+\begin{definition}
+Positive Definite Inner Products 
+\begin{equation}
+\left( \left. v\right\vert v\right) _{p}=s_{d}\left( v\otimes v\right)
+=s_{d}\left( v,v\right) >0\,\forall v\in W
+\end{equation}
+\end{definition}
+
+\begin{theorem}
+$\left( \left. v\right\vert v\right) _{p}>0\,\forall v\in W$ $\Rightarrow
+\left( \left. v\right\vert w\right) _{p}\neq 0\,\forall ,w\in W,v\in W.$
+\end{theorem}
+
+\begin{theorem}
+Any inner product can be expressed as a sum of a symmetric and antisymmetric
+inner products i.e. 
+\begin{equation}
+\left( \left. {}\right\vert \right) =\left( \left. {}\right\vert \right)
+_{s}+\left( \left. {}\right\vert \right) _{a}.
+\end{equation}
+\end{theorem}
+
+\begin{theorem}
+An inner product $\left( \left. {}\right\vert \right) $ can have \textbf{no}
+symmetry but still be positive.
+
+\begin{proof}
+Any second rank tensor can be expressed as a unique sum of a symmetric and
+an antisymmetric tensor. thus 
+\begin{equation}
+\left( \left. {}\right\vert \right) =\left( \left. {}\right\vert \right)
+_{s}+\left( \left. {}\right\vert \right) _{a}.
+\end{equation}%
+and observe that 
+\begin{equation}
+\left( \left. v\right\vert v\right) =\left( \left. v\right\vert v\right)
+_{s}+\left( \left. v\right\vert v\right) _{a}=\left( \left. v\right\vert
+v\right) _{s}\geq 0.
+\end{equation}
+\end{proof}
+\end{theorem}
+
+\begin{remark}
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\mathbf{v} & \mathbf{v}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\mathbb{O}_{r} & \mathbb{I}_{r} \\ 
+-\mathbb{I}_{r} & \mathbb{O}_{r}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathbf{v} \\ 
+\mathbf{v}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+-\mathbf{v} & \mathbf{v}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathbf{v} \\ 
+\mathbf{v}%
+\end{array}%
+\right) =0
+\end{equation}
+\end{remark}
+
+\begin{remark}
+The symmetric and antisymmetric parts of the matrix $\left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right) $ are 
+\begin{eqnarray}
+\frac{1}{2}\left( \left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right) +\left( 
+\begin{array}{cc}
+1 & 0 \\ 
+2 & 1%
+\end{array}%
+\right) \right) &=&\left( 
+\begin{array}{cc}
+1 & 1 \\ 
+1 & 1%
+\end{array}%
+\right) \\
+\frac{1}{2}\left( \left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right) -\left( 
+\begin{array}{cc}
+1 & 0 \\ 
+2 & 1%
+\end{array}%
+\right) \right) &=&\left( 
+\begin{array}{cc}
+0 & 1 \\ 
+-1 & 0%
+\end{array}%
+\right) .
+\end{eqnarray}
+\end{remark}
+
+\begin{example}
+Consider the matrix 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right)
+\end{equation}%
+generated by the symmetric and antisymmetric parts 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+1 & 1 \\ 
+1 & 1%
+\end{array}%
+\right) +\left( 
+\begin{array}{cc}
+0 & 1 \\ 
+-1 & 0%
+\end{array}%
+\right) .
+\end{equation}%
+as%
+\begin{equation}
+\left( 
+\begin{array}{cc}
+v_{1} & v_{2}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+1 & 1 \\ 
+1 & 1%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+v_{1} \\ 
+v_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+v_{1}+v_{2} & v_{1}+v_{2}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+v_{1} \\ 
+v_{2}%
+\end{array}%
+\right) =\left( v_{1}+v_{2}\right) ^{2}.
+\end{equation}%
+and 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+v_{1} & v_{2}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+0 & 2 \\ 
+-2 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+v_{1} \\ 
+v_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+-2v_{2} & 2v_{1}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+v_{1} \\ 
+v_{2}%
+\end{array}%
+\right) =0
+\end{equation}%
+hence 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+v_{1} & v_{2}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+v_{1} \\ 
+v_{2}%
+\end{array}%
+\right) =\left( v_{1}+v_{2}\right) ^{2}.
+\end{equation}
+\end{example}
+
+\begin{example}
+Even though $\left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right) $ is\emph{\ positive definate} the determinant is negative!! i.e. 
+\begin{equation}
+\det \left\{ \left( 
+\begin{array}{cc}
+1 & 2 \\ 
+0 & 1%
+\end{array}%
+\right) \right\} =-1.
+\end{equation}
+\end{example}
+
+\begin{remark}
+~For a real symmetric $n\times n$ matrix $A$, the following are equivalent:
+
+\begin{enumerate}
+\item $A$ is positive semidefinite:%
+\begin{equation}
+x^{t}Ax\geq 0\forall x\in \mathbb{R}^{n}
+\end{equation}%
+.
+
+\item All eigenvalues of $A$ are $\geq 0$.
+
+\item All principal minors of $A$ are $\geq 0$.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+Sylvester's criterion does not apply to non-symmetric matrices. The
+criterion requires a matrix to be symmetric (or Hermitian) to determine if
+it is positive definite by checking that all of its leading principal minors
+are positive. For a non-symmetric matrix, the condition for positive
+definiteness is equivalent to its symmetric part 
+\begin{equation}
+A+A^{t}
+\end{equation}
+being positive definite, and this symmetric part can then be tested with
+Sylvester's criterion.~
+\end{remark}
+
+\begin{theorem}
+If $A$ is a real non symmetric matrix then $A$ is positive semidefinite $%
+\limfunc{Iff}$ all the principal minors of the symmetric part of the $A$ are
+positive.
+\end{theorem}
+
+\begin{theorem}
+If $A$ is a real symmetric matrix then $A$ is positive semidefinite $%
+\limfunc{Iff}$ the \textbf{leading }principal minors of $A$ are positive.
+\end{theorem}
+
+\subsection{Complex Units}
+
+\begin{conjecture}
+Any antisymmetric bilinear form $J_{d}\in W^{d}\otimes W^{d}$ thus belongs
+to $W^{d}\wedge W^{d}$ and defines a complex unit $J\in \mathcal{L}\left(
+W\right) $ by the mapping $W^{d}\otimes W^{d}\rightarrow W\otimes
+W^{d}\rightarrow \mathcal{L}\left( W\right) .$
+\end{conjecture}
+
+Let $W$ be a real even dimensional vector spaces such that 
+\begin{equation}
+\dim \left\{ V\right\} =2r
+\end{equation}%
+and let $J\in \mathcal{L}\left( W\right) $ such that 
+\begin{equation}
+J^{2}=-I_{W}
+\end{equation}%
+then $J$ is called an imaginary unit.
+
+Recall the resolutions of the identity 
+\begin{gather}
+I_{W}=\sum_{1\leq j\leq 2r}x_{j}\left[ x_{bj}\right] =\sum_{1\leq j\leq
+2r}y_{j}\left[ y_{bj}\right] \\
+\parallel \\
+\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] =\left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \\
+\parallel \\
+\left( \boldsymbol{x}\right) ^{t}\left( \left[ \boldsymbol{x}_{b}\right]
+\right) =\left( \boldsymbol{y}\right) ^{t}\left( \left[ \boldsymbol{y}_{b}%
+\right] \right) ,
+\end{gather}%
+where $\left\{ \left. x_{j}\right\vert 1\leq j\leq 2r\right\} $ and $\left\{
+\left. y_{j}\right\vert 1\leq j\leq 2r\right\} $ are linearly independent
+set of vectors belonging to $V$ and $\left\{ \left. x_{bj}\right\vert 1\leq
+j\leq 2r\right\} $ and $\left\{ \left. y_{bj}\right\vert 1\leq j\leq
+2r\right\} $ are linearly independent set of vectors belonging to $V^{d}.$
+
+\subsubsection{\textbf{Representations}}
+
+\begin{enumerate}
+\item The change of basis $\left( \boldsymbol{x}\right) \rightarrow \left( 
+\boldsymbol{y}\right) $ operator $S_{yx}$ is given by%
+\begin{equation}
+S_{yx}=\left( \boldsymbol{y}\right) ^{t}\left( \left[ \boldsymbol{x}_{b}%
+\right] \right) ,
+\end{equation}%
+which has a matrix representation $\mathcal{R}_{x}\left( S_{yx}\right) $ wrt
+the $\left( \boldsymbol{x}\right) $ basis given by 
+\begin{equation}
+\mathcal{R}_{x}\left( S_{yx}\right) =\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \left( \overset{}{\left( \boldsymbol{y}\right) ^{t}\left( %
+\left[ \boldsymbol{x}_{b}\right] \right) }\right) \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+x_{b1}\left( y_{1}\right) & \cdots & x_{b1}\left( y_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b2r}\left( y_{1}\right) & \cdots & x_{b2r}\left( y_{2e}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\item The change of basis $\left( \boldsymbol{y}\right) \rightarrow \left( 
+\boldsymbol{x}\right) $ operator $S_{xy}$ is given by%
+\begin{equation}
+S_{xy}=\left( \boldsymbol{x}\right) ^{t}\left( \left[ \boldsymbol{y}_{b}%
+\right] \right) ,
+\end{equation}%
+which has a matrix representation $\mathcal{R}_{y}\left( S_{xy}\right) $ wrt
+the $\left( \boldsymbol{y}\right) $ basis given by 
+\begin{equation}
+\mathcal{R}_{y}\left( S_{xy}\right) =\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( \overset{}{\left( \boldsymbol{x}\right) ^{t}\left( %
+\left[ \boldsymbol{y}_{b}\right] \right) }\right) \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+y_{b1}\left( x_{1}\right) & \cdots & y_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( x_{1}\right) & \cdots & y_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) .
+\end{equation}
+
+\item Note that 
+\begin{eqnarray}
+\mathcal{R}_{x}\left( S_{yx}\right) &=&\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \left( \overset{}{\left( \boldsymbol{y}\right) ^{t}\left( %
+\left[ \boldsymbol{x}_{b}\right] \right) }\right) \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+x_{b1}\left( y_{1}\right) & \cdots & x_{b1}\left( y_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b2r}\left( y_{1}\right) & \cdots & x_{b2r}\left( y_{2e}\right)%
+\end{array}%
+\right) \\
+\mathcal{R}_{y}\left( S_{yx}\right) &=&\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( \overset{}{\left( \boldsymbol{y}\right) ^{t}\left( %
+\left[ \boldsymbol{x}_{b}\right] \right) }\right) \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+x_{b1}\left( y_{1}\right) & \cdots & x_{b1}\left( y_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+x_{b2r}\left( y_{1}\right) & \cdots & x_{b2r}\left( y_{2e}\right)%
+\end{array}%
+\right)
+\end{eqnarray}
+
+i.e. the representations wrt the two bases are the same. 
+\begin{equation}
+\mathcal{R}_{x}\left( S_{yx}\right) =\mathcal{R}_{y}\left( S_{yx}\right) .
+\end{equation}
+
+\item These transformations are inverses of each other i.e. 
+\begin{equation}
+S_{yx}^{-1}=S_{xy}
+\end{equation}
+
+\item Recall 
+\begin{equation}
+S_{yx}\left( \boldsymbol{x}\right) ^{t}=\left( \boldsymbol{x}\right) ^{t}%
+\mathcal{R}_{x}\left( S_{yx}\right)
+\end{equation}%
+and 
+\begin{equation}
+S_{xy}\left( \boldsymbol{y}\right) ^{t}=\left( \boldsymbol{y}\right) ^{t}%
+\mathcal{R}_{y}\left( S_{xy}\right) .
+\end{equation}
+\end{enumerate}
+
+\subsection{\textbf{Properties of Complex Units}}
+
+\subsubsection{Negative Involutions Imply Antisymmetry}
+
+\begin{enumerate}
+\item By Greubs theorem $J$ can be expressed in Dyadic and SVD form as 
+\begin{gather}
+J=\left( \boldsymbol{x}\right) ^{t}\left[ \left( \boldsymbol{y}_{b}\right) %
+\right] =\sum_{1\leq j\leq 2r}x_{j}\left[ y_{bj}\right] =\left( \boldsymbol{u%
+}_{x}\right) ^{t}\mathcal{R}_{e}\left( \lambda _{xy}\right) \left[ \left( 
+\boldsymbol{v}_{yb}\right) \right] =\sum_{1\leq j\leq 2r}u_{j}\mathcal{R}%
+_{e}\left( \lambda _{xy}\right) _{j}\left[ v_{bj}\right] =\Xi
+_{VV^{d}}\left( b_{\rho \sigma }\right) =U\lambda V=\left( \boldsymbol{e}%
+\right) ^{t}\mathcal{R}_{e}\left( U_{x}\right) \mathcal{R}_{e}\left( \lambda
+_{xy}\right) \mathcal{R}_{e}\left( V_{y}\right) \left[ \left( \boldsymbol{e}%
+_{b}\right) \right] \\
+\parallel \\
+\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] =\left( 
+\begin{array}{ccc}
+u_{x1} & \cdots & u_{x2r}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\mathcal{R}_{e}\left( \lambda _{xy}\right) _{11} & \cdots & \mathbb{O} \\ 
+\vdots & \ddots & \vdots \\ 
+\mathbb{O} & \cdots & \mathcal{R}_{e}\left( \lambda _{xy}\right) _{2r2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+v_{yb1} \\ 
+\vdots \\ 
+v_{yb2r}%
+\end{array}%
+\right) \right]
+\end{gather}%
+and
+
+\item the representations of $J$ wrt the $\left( \boldsymbol{x}\right) $ and 
+$\left( \boldsymbol{y}\right) $ bases are equal 
+\begin{eqnarray}
+\mathcal{R}_{y}\left( J\right) &=&\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] J\left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \\
+\mathcal{R}_{x}\left( J\right) &=&\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] J\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) .
+\end{eqnarray}%
+This produces
+
+\item the square $\mathcal{R}_{x}\left( J\right) ^{2}$ of the representation 
+$\mathcal{R}_{x}\left( J\right) $ 
+\begin{equation}
+\mathcal{R}_{x}\left( J\right) ^{2}=\mathcal{R}_{y}\left( J\right) ^{2}=%
+\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) .
+\end{equation}%
+Thus
+
+\item the negative involution condition $\mathcal{R}\left( J\right) ^{2}=-%
+\mathbb{I}_{2r}$ can be expressed as 
+\begin{equation}
+\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =-\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) =-\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =-\mathbb{I}_{2r}
+\end{equation}%
+showing that
+
+\item 
+\begin{gather}
+\left( \overset{}{\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] }\right) \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) =-\mathbb{I}_{2r} \\
+\Downarrow \\
+\left( \overset{}{\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] }\right) =-\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right]
+\end{gather}
+
+\item Recall 
+\begin{equation}
+\mathcal{R}\left( J\right) =\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right)
+\end{equation}%
+producing the transpose representation $\mathcal{R}\left( J\right) ^{t}$ 
+\begin{gather}
+\mathcal{R}\left( J\right) ^{t}=\left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \\
+\parallel \\
+-\left( \overset{}{\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] }\right) \left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \\
+\parallel \\
+-\left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right)
+\end{gather}%
+showing that $\mathcal{R}\left( J\right) $ is antisymmetric i.e. 
+\begin{equation}
+\mathcal{R}\left( J\right) ^{t}=-\mathcal{R}\left( J\right) .
+\end{equation}
+\end{enumerate}
+
+This can be can be summerized in the following theorem
+
+\begin{enumerate}
+\item 
+\begin{theorem}
+If $\mathbb{J}\in \mathcal{M}\left( 2r,2r,\mathbb{R}\right) $ and 
+\begin{equation}
+\mathbb{J}^{2}=-\mathbb{I}_{2r}
+\end{equation}%
+then 
+\begin{equation}
+\mathbb{J}^{t}=-\mathbb{J}.
+\end{equation}
+
+\begin{proof}
+see the preceding.
+\end{proof}
+\end{theorem}
+\end{enumerate}
+
+\textbf{The operator form of this theorem is} \label{10/25/2025}
+
+\begin{theorem}
+If $J\in \mathcal{L}\left( W\right) $ and 
+\begin{equation}
+J^{2}=-I_{W}
+\end{equation}%
+then 
+\begin{equation}
+J^{t}=-J.
+\end{equation}
+\end{theorem}
+
+\begin{enumerate}
+\item 
+\begin{gather}
+J^{2} \\
+\parallel \\
+\sum_{1\leq j,k\leq 2r}\left( \overset{}{x_{j}\left[ y_{bj}\right] }\right)
+\left( \overset{}{x_{k}\left[ y_{bk}\right] }\right) =\sum_{1\leq j,k\leq
+2r}x_{j}\left( \overset{}{y_{bj}\left( x_{k}\right) }\right) \left[ y_{bk}%
+\right] =-I_{W} \\
+\parallel \\
+\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \\
+\parallel \\
+\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+y_{b1}\left( x_{1}\right) & \cdots & y_{b1}\left( x_{2r}\right) \\ 
+\vdots & \ddots & \vdots \\ 
+y_{b2r}\left( x_{1}\right) & \cdots & y_{b2r}\left( x_{2e}\right)%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \\
+\parallel \\
+-\left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] =-\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] =-I_{W}
+\end{gather}%
+showing that
+
+\item 
+\begin{gather}
+\left( \overset{}{\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) }\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] =-I_{W} \\
+\Downarrow \\
+\left( \overset{}{\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) }\right) =-\left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right)
+\end{gather}
+
+\item Recall 
+\begin{equation}
+J=\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right]
+\end{equation}%
+producing the transpose $J^{t}$ 
+\begin{gather}
+J^{t}=\left( 
+\begin{array}{ccc}
+y_{1} & \cdots & y_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \\
+\parallel \\
+-\left( \overset{}{\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right] \left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) }\right) \left[ \left( 
+\begin{array}{c}
+x_{b1} \\ 
+\vdots \\ 
+x_{b2r}%
+\end{array}%
+\right) \right] \\
+\parallel \\
+-\left( 
+\begin{array}{ccc}
+x_{1} & \cdots & x_{2r}%
+\end{array}%
+\right) \left[ \left( 
+\begin{array}{c}
+y_{b1} \\ 
+\vdots \\ 
+y_{b2r}%
+\end{array}%
+\right) \right]
+\end{gather}%
+showing that $J$ is antisymmetric i.e. 
+\begin{equation}
+J^{t}=-J.\blacksquare
+\end{equation}
+\end{enumerate}
+
+\subsubsection{Correspondence between Antisymmetric Tensors and
+Antisymmetric Operators}
+
+Recall that the map $\Xi _{WW^{d}}$ 
+\begin{equation}
+\Xi _{WW^{d}}:W\otimes W^{d}\rightarrow \mathcal{L}\left( W\right)
+\end{equation}%
+is given by 
+\begin{equation}
+\Xi _{WW^{d}}\left( b_{xy_{b}}\right) =\sum_{1\leq j\leq 2r}x_{j}\left[
+y_{bj}\right] .
+\end{equation}
+
+\begin{lemma}
+If a tensor $g\in W\otimes W^{d}$ is antisymmetric i.e. 
+\begin{equation}
+\left( \sum_{1\leq j\leq 2r}v_{j}\otimes w_{bj}\right) ^{t}=\sum_{1\leq
+j\leq 2r}w_{j}\otimes v_{bj}=-\sum_{1\leq j\leq 2r}v_{j}\otimes w_{bj}
+\end{equation}%
+then it can be expressed in cannonical form as 
+\begin{equation}
+g=\sum_{1\leq j\leq r}\left( \overset{}{x_{j}\otimes x_{bj+r}-x_{j+r}\otimes
+x_{bj}}\right) .
+\end{equation}
+\end{lemma}
+
+\begin{theorem}
+An antisymmetric tensor $\mathcal{J}_{x}\in W\otimes W^{d}$%
+\begin{equation}
+\mathcal{J}_{x}=\sum_{1\leq j\leq r}\left( \overset{}{x_{j}\otimes
+x_{bj+r}-x_{j+r}\otimes x_{bj}}\right)
+\end{equation}%
+corresponds to an antisymmetric operator $J_{x}=-J_{x}^{t}$ by 
+\begin{equation}
+J_{x}=\Xi _{WW^{d}}\left( \mathcal{J}_{x}\right) =\Xi _{WW^{d}}\left(
+\sum_{1\leq j\leq r}\left( \overset{}{x_{j}\otimes x_{bj+r}-x_{j+r}\otimes
+x_{bj}}\right) \right) =\sum_{1\leq j\leq r}\left( \overset{}{x_{j}\left[
+x_{bj+r}\right] -x_{j+r}\left[ x_{bj}\right] }\right) .
+\end{equation}
+
+\begin{proof}
+\begin{equation}
+\left( \sum_{1\leq j\leq r}\left( \overset{}{x_{j}\left[ x_{bj+r}\right]
+-x_{j+r}\left[ x_{bj}\right] }\right) \right) ^{t}=\sum_{1\leq j\leq
+r}\left( \overset{}{x_{j+r}\left[ x_{bj}\right] -x_{j}\left[ x_{bj+r}\right] 
+}\right)
+\end{equation}%
+\begin{gather}
+\left( \sum_{1\leq j\leq r}\left( \overset{}{x_{j}\left[ x_{bj+r}\right]
+-x_{j+r}\left[ x_{bj}\right] }\right) \right) \left( \sum_{1\leq k\leq
+r}\left( \overset{}{x_{k}\left[ x_{bk+r}\right] -x_{k+r}\left[ x_{bk}\right] 
+}\right) \right) =\sum_{1\leq j,k\leq r}\left\{ -x_{j}\left[ x_{bj+r}\right]
+\left( x_{k+r}\right) \left[ x_{bk}\right] -x_{j+r}\left[ x_{bj}\right]
+\left( x_{k}\right) \left[ x_{bk+r}\right] \right\} \\
+=-\sum_{1\leq j\leq r}\left\{ x_{j}\left[ x_{bj}\right] +x_{j+r}\left[
+x_{bj+r}\right] \right\} =-I_{W}
+\end{gather}
+\end{proof}
+\end{theorem}
+
+\subsection{Complex Cojugate Spaces from Real Spaces}
+
+\begin{itemize}
+\item Let $V_{\mathbb{R}}$ be a real vector space and $J\in \mathcal{L}%
+\left( V_{\mathbb{R}}\right) $ such that 
+\begin{equation}
+J^{2}=-I_{V_{\mathbb{R}}}
+\end{equation}%
+and 
+\begin{equation}
+\mathcal{R}_{e}\left( J\right) =-\mathcal{R}_{e}\left( J\right) ^{t}
+\end{equation}%
+\begin{eqnarray}
+J &=&\sum_{1\leq j\leq r}v_{j}\otimes w_{bj}\longleftrightarrow \sum_{1\leq
+j\leq r}v_{j}\left[ w_{bj}\right] \\
+J^{t} &=&\sum_{1\leq j\leq r}w_{j}\otimes v_{bj}\longleftrightarrow
+\sum_{1\leq j\leq r}w_{j}\left[ v_{bj}\right]
+\end{eqnarray}%
+\begin{eqnarray}
+\left[ e_{bk}\right] J &=&\sum_{1\leq j\leq r}e_{bk}\left( v_{j}\right)
+\otimes w_{bj}\left( e_{l}\right) \longleftrightarrow \sum_{1\leq j\leq
+r}e_{bk}\left( v_{j}\right) w_{bj}\left( e_{l}\right) \\
+J^{t} &=&\sum_{1\leq j\leq r}e_{bk}\left( w\right) _{j}\otimes \left(
+v_{bj}\right) \left( e_{l}\right) \longleftrightarrow \sum_{1\leq j\leq
+r}e_{bk}\left( w_{j}\right) \left( v_{bj}\right) \left( e_{l}\right)
+=\sum_{1\leq j\leq r}w_{bbj}\left( e_{bl}\right) e_{bbk}\left( v_{dj}\right)
+\end{eqnarray}
+\end{itemize}
+
+\section{Constructing Pre-Hilbert Spaces from Tensor Products}
+
+\subsection{The Fundamental Construction}
+
+Starting from a complex vector space $V$ and its conjugate $\overline{V}$,
+we construct a pre-Hilbert space via the tensor product $\overline{V}\otimes
+V$. Elements are finite sums: 
+\begin{equation}
+b_{\overline{v}\mathbf{w}}=\sum_{i}\overline{v_{i}}\otimes w_{i}\quad \text{%
+where }\overline{v_{i}}\in V,w_{i}\in V.
+\end{equation}
+
+\subsection{Defining the Inner Product}
+
+\subsubsection{Approach A: Existing Inner Product}
+
+If $V$ has an inner product $\langle \cdot, \cdot \rangle_V$, define: 
+\begin{equation}
+\langle \overline{u} \otimes v, \overline{x} \otimes y \rangle = \langle u,
+x \rangle_V \cdot \langle v, y \rangle_V,
+\end{equation}
+extended linearly.
+
+\subsubsection{Approach B: Positive Semi-Definite Elements}
+
+\begin{theorem}
+An element $A\in \overline{V}\otimes V$ is \textbf{positive semi-definite}
+if: 
+\begin{equation}
+A=\sum_{i}\overline{v_{i}}\otimes v_{i}
+\end{equation}%
+for finite collections $v_{i}\in V$.
+\end{theorem}
+
+Given such $A$, define an inner product on $V$: 
+\begin{equation}
+\langle x,y\rangle _{A}=\text{Tr}((\overline{\overline{x}}\otimes y)\circ A),
+\end{equation}%
+where $\overline{\overline{x}}\otimes y$ is interpreted as the rank-one
+operator $z\mapsto \langle z,y\rangle x$.
+
+\subsection{Finite-Dimensional Example}
+
+For $V = \mathbb{C}^n$:
+
+\begin{itemize}
+\item $\overline{V} \otimes V \cong M_n(\mathbb{C})$ (complex matrices)
+
+\item Positive semi-definite elements correspond to positive semi-definite
+matrices $P$
+
+\item Induced inner product: $\langle x, y \rangle_P = y^\dagger P x$
+\end{itemize}
+
+\section{Emergent Quantum Mechanics}
+
+\subsection{Algebraic Foundation of Quantum Theory}
+
+Quantum mechanics can be constructed from purely algebraic structures:
+
+\begin{itemize}
+\item Start with complex vector space $V$ (potential states)
+
+\item Physical states: positive elements $\rho \in \overline{V} \otimes V$
+with $\text{Tr}(\rho) = 1$
+
+\item Observables: self-adjoint elements of $\overline{V} \otimes V$
+
+\item Hilbert spaces emerge via completion of the induced pre-Hilbert
+structure
+\end{itemize}
+
+\subsection{State-Dependent Geometry}
+
+Each state $\rho $ defines its own Hilbert space $\mathcal{H}_{\rho }$ via: 
+\begin{equation}
+\langle x,y\rangle _{\rho }=\text{Tr}((\overline{\overline{x}}\otimes
+y)\circ \rho ).
+\end{equation}
+
+This suggests that quantum geometry is fundamentally state-dependent.
+
+\subsection{Physical Interpretation}
+
+\begin{itemize}
+\item $V$: Space of ket vectors $|\psi\rangle$
+
+\item $\overline{V}$: Space of bra vectors $\langle\phi|$
+
+\item $\overline{V} \otimes V$: Space of operators (density matrices)
+
+\item Inner product on $\overline{V} \otimes V$ corresponds to
+Hilbert-Schmidt inner product
+\end{itemize}
+
+\subsection{Mathematical Framework: GNS Construction}
+
+The Gelfand-Naimark-Segal (GNS) construction formalizes this approach:
+
+\begin{itemize}
+\item Start with $*$-algebra $\mathcal{A} = \overline{V} \otimes V$
+
+\item State $\omega: \mathcal{A} \to \mathbb{C}$ with $\omega(A^\dagger A)
+\geq 0$
+
+\item GNS construction yields Hilbert space $H_\omega$ and representation
+\end{itemize}
+
+\section{Theoretical Implications}
+
+\subsection{Conceptual Advantages}
+
+\begin{itemize}
+\item \textbf{More fundamental}: Complex vector space structure is more
+primitive than Hilbert space structure
+
+\item \textbf{State-dependent geometry}: Different physical situations may
+require different Hilbert spaces
+
+\item \textbf{Unified treatment}: Pure and mixed states are elements of the
+same space $\overline{V} \otimes V$
+
+\item \textbf{Foundational clarity}: May resolve measurement problem and
+inform quantum gravity approaches
+\end{itemize}
+
+\subsection{Relation to Algebraic Quantum Field Theory}
+
+This approach aligns with Haag-Kastler algebraic quantum field theory:
+
+\begin{itemize}
+\item Local observables form $C^*$-algebras
+
+\item Hilbert spaces emerge via representation theory
+
+\item Background independence naturally accommodated
+\end{itemize}
+
+\section{Conclusion}
+
+We have demonstrated that quantum mechanics can be fundamentally formulated
+starting from a complex vector space $V$, with Hilbert space structures
+emerging naturally through:
+
+\begin{itemize}
+\item The tensor product construction $\overline{V} \otimes V$
+
+\item Positive semi-definite elements defining inner products
+
+\item Physical states inducing specific Hilbert space geometries
+
+\item The GNS construction providing mathematical rigor
+\end{itemize}
+
+This algebraic approach suggests that the traditional Hilbert space
+formulation of quantum mechanics may be emergent rather than fundamental,
+with deep implications for quantum foundations and quantum gravity.
+
+\end{document}

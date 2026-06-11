@@ -1,0 +1,3313 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, September 20, 2004 09:58:21}
+%TCIDATA{LastRevised=Saturday, November 28, 2009 16:08:59}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Janaks Theorem]{Janaks Theorem and Orbital Energy Functionals (in progress)}
+\author{B. Weiner}
+\affiliation{Department of Physics, Pennsylvania State University}
+\keywords{}
+\pacs{}
+
+\begin{abstract}
+Janaks theorem shows that the rate of change of the total N-electron energy
+with respect to the occupation numbers of the natural orbitals of the model
+Kohn-Sham (KS) independent particle state are equal to the Lagrange
+multipliers associated with the normalization constraint imposed on these
+orbitals. However many conceptual questions surround this theorem. In what
+sense can the occupation numbers vary as the model KS state is by definition
+an Independent Particle State (IPS) with integer occupation numbers? What is
+the functional relationship between the eigenvalues and the occupation number?
+How does one define a KS functional that is differentiable with respect to
+occupation numbers? In order to examine the meaning and content of this
+theorem we review the construction of the implicitly defined Hohenberg-Kohn
+(HK) and KS energy functionals and obtain an expression of Janaks theorem in
+the context of constrained optimization theory. It is shown that, in fact,
+Janaks theorem holds for any total energy functional defined in terms of
+orbitals and occupation numbers. In particular it applies to Antisymmetrized
+Geminal Power energy functionals, which also solely depend on orbitals and
+occupation numbers and whose functional form is explicitly known. The
+properties and structure of these orbital functionals are contrasted and
+compared and subtle differences are discussed..\qquad
+
+\end{abstract}
+\date{11/28/2009}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction\label{Intro}}
+
+Janaks theorem \cite{Janak1978} is a useful auxiliary tool in the Kuhn-Sham
+(KS) \cite{KS1965} approach to Density Functional Theory (DFT), that is
+helpful in analyzing the structure and meaning of the eigenvalues of the KS
+Fock operator. It states that these eigenvalues are equal to the derivatives
+of the exact total energy with respect to the occupation numbers of the First
+Order Reduced Density Operator (FORDO) of the model KS state. However many
+conceptual questions surround this theorem.
+
+\begin{itemize}
+\item In what sense can the occupation numbers vary as the model KS state is
+by definition an Independent Particle State (IPS)\ with integer occupation numbers?
+
+\item What is the functional relationship between the eigenvalues and the
+occupation number?
+
+\item How does one define a KS\ functional that is differentiable with respect
+to occupation numbers?
+\end{itemize}
+
+In both KS-DFT and Hartree-Fock (HF) theory these eigenvalues correspond to
+Lagrange parameters associated with the normalization constraint on the
+orbitals, that constitute the Independent Particle State (IPS), and are
+related to the ionization energies of electrons described by\textit{ }these
+orbitals in the HF case and to the highest occupied one in the KS case. This
+correspondence can be generalized to Multi Configurational Self Consistent
+States (MCSCF) as described, for instance, in \cite{OrtizWeiner2006}.
+
+Constrained optimization theory \cite{Hestenes75} shows, if the Hessian of the
+Lagrangian is nonsingular then the values of Lagrange parameters correspond to
+the sensitivity of the object function with respect to the control parameters,
+i.e. to the values of the constraints. In this case the object function is the
+$N$-electron energy and the control parameters (that vary) are the norms of
+the orbitals. Hence Janaks theorem implies that\emph{ the orbitals must be
+normalized to their occupation numbers }and the energy is dependent on the
+occupation numbers through its dependence on these orbitals. It is of course
+possible to express the energy functional in terms of orthonormal orbitals and
+freely varying occupation numbers, that comply to the basic constraints of
+being positive with a maximum value of one, but this formulation does not
+directly introduce the relationship between the variation of the energy
+functional with respect to the occupation numbers and the eigenvalues of the
+Fock operator.
+
+In general orbital functionals can be classified according to whether they are
+
+\begin{itemize}
+\item invariant to local phase changes of orbitals, i.e. are gauge invariant,
+thus preserve the electron density
+
+\item invariant to global phase changes of the orbitals i.e. to the group
+$U\left(  1\right)  $ $\cite{Gilmore_{b}ook}$, e.g. Density Matrix and KS\ Functionals
+
+\item not invariant to $U\left(  1\right)  $ e.g. correlated AGP\ functionals
+\cite{OrtizWeiner2006}.
+\end{itemize}
+
+In order to answer the preceding questions and analyze the form of the energy
+dependence on occupation numbers all three types of orbital functionals will
+be discussed.
+
+In this paper we will review some of the basic principles and underlying
+mathematical structure of Hohenburg-Kohn (HK) \cite{HK1964} and KS DFT using
+the formalism of super operators \cite{Lowdin1982} (section \ref{HKDFT}). This
+will allow us to express the Levy-Lieb construction of energy functionals as
+an eigenvalue problem. In section \ref{GSO} we discuss orbital based
+functionals and in particular we consider KSDFT and derive Janaks Theorem in
+the context of a constrained variational approach and sensitivity theory again
+using the super operator formalism. The KS\ density functional, density matrix
+functional and the AGP functional determine the total energy in terms of a set
+of occupations numbers and one-electron orbitals. The first two have only been
+defined implicitly while the AGP functional has been explicitly constructed
+\cite{OrtizWeiner2006} in terms of General Spin Orbitals (GSOs), which we
+review in section \ref{AGP}. In this section we compare and contrast the
+properties of the derivatives of this functional with respect to occupation
+numbers to the derivatives obtained indirectly through sensitivity theory for
+the orbital based functional introduced in section \ref{GSO}. In section
+\ref{Discussion} we conclude with a discussion and summary.
+
+\section{Hohenberg-Kohn DFT\label{HKDFT}}
+
+In this section we review some fundamental background needed to define the HK
+density functional utilizing the formalism of \emph{super operators}
+\cite{Lowdin1982} applied to a constrained optimization procedure that allows
+one to formulate its construction in terms of the solution of an eigenvalue
+problem. Most of the important technical mathematical aspects that are needed
+are examined in the appendices, but in some cases a more more detailed
+analysis is deferred elsewhere.
+
+The HK density functional is defined in terms of the kinetic energy operator,
+$K,$ the coulomb operator, $V_{2},$ and the charge density $\rho$, we first
+consider the properties of the charge density:
+
+\subsection{Densities and States\label{DenStat}}
+
+Density Functional Theory is based on the existence of a universal functional,
+$\mathcal{F}\left(  \rho\right)  ,$ of the charge density, $\rho\left(
+\boldsymbol{r}\right)  ,$ where
+\begin{equation}
+\rho\left(  \boldsymbol{r}\right)  =\int D^{1}\left(  \boldsymbol{r,\xi;r,\xi
+}\right)  d\boldsymbol{\xi}%
+\end{equation}
+and $D^{1}\left(  \boldsymbol{r,\xi;r}^{\prime}\boldsymbol{,\xi}^{\prime
+}\right)  $ is the integral kernel of the First Order Reduced Operator (FORDO)
+$D^{1}$ (see Appendix \ref{Denmat} for details of density and reduced density
+operators and matrices), which can be expanded as
+\begin{equation}
+D^{1}=\int D^{1}\left(  \boldsymbol{r,\xi;r}^{\prime}\boldsymbol{,\xi}%
+^{\prime}\right)  \left\vert \boldsymbol{r,\xi}\right\rangle \left\langle
+\boldsymbol{r}^{\prime}\boldsymbol{,\xi}^{\prime}\right\vert d\boldsymbol{r}%
+d\boldsymbol{r}^{\prime}d\boldsymbol{\xi}d\boldsymbol{\xi}^{\prime}%
+\end{equation}
+in the basis $\left\{  \left\vert \boldsymbol{r,\xi}\right\rangle \right\}  $
+formed by the tensor product of the spin states $\left\{  \left\vert
+\boldsymbol{\xi}\right\rangle \right\}  $ and the generalized eigenvectors,
+$\left\{  \left\vert \boldsymbol{r}\right\rangle \right\}  $ (see Appendix
+\ref{Genbasis})$,$ of the position operator. In the proceeding we will use the
+notation $\rho_{D}$ for a charge density that has been determined by a fixed
+state $D$ and $\rho$ for fixed charge density that could be associated with a
+set of states.
+
+For a system that contains on average $N$-electrons the position density must
+satisfy the conditions
+\begin{subequations}
+\label{DensityConst}%
+\begin{align}
+\int\rho\left(  \boldsymbol{r}\right)  d\boldsymbol{r}  &  =N\Rightarrow
+\rho\in L_{1}\left(  \mathbb{R}^{3}\right) \label{number}\\
+\rho\left(  \boldsymbol{r}\right)   &  \geq0\label{positivity}\\
+\rho &  \in L_{3}\left(  \mathbb{R}^{3}\right)  . \label{KE}%
+\end{align}
+The function spaces $L_{1}\left(  \mathbb{R}^{3}\right)  $ and $L_{3}\left(
+\mathbb{R}^{3}\right)  $ are defined in \cite{Lieb1983}. The constraint eq.
+$\left(  \ref{number}\right)  $ does not restrict the density to be the
+contraction of a $N$-electron state and one could consider incoherent and
+coherent mixtures of states describing different number of electrons. However
+in this article we primarily focus on $N$-electron states and mainly consider
+convex sets, $\left\{  \left[  \rho\right]  _{N}\right\}  ,$ of $N$-electron
+state density operators defined by
+\end{subequations}
+\begin{equation}
+\left[  \rho\right]  _{N}=\left\{  \left.  D\right\vert \Xi_{1}\left(
+D\right)  =\rho;D\in S_{N}\subset\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  \right\}  ,\quad1\leq N<\infty
+\end{equation}
+(see Appendix \ref{Denmat} for the definition of the convex set $S_{N}$ and of
+the Banach space of trace class operators $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ and eq. $\left(  \ref{LinCon}\right)  $ for the
+definition of $\Xi_{1})$. The constraint eq. $\left(  \ref{KE}\right)  $
+ensures that the expectation value of the kinetic energy operator is finite
+\cite{Lieb1983} and the constraint eq. $\left(  \ref{positivity}\right)  $ is
+a necessary and sufficient condition for representability i.e. that there
+exists an electronic state that contracts to this density. The constraints
+eqs. $\left(  \ref{number},\ref{KE}\text{ and }\ref{positivity}\right)  $
+define a convex set $\mathcal{D}$ of densities
+\begin{equation}
+\rho\in\mathfrak{D}\subset L_{3+}\left(  \mathbb{R}^{3}\right)  \cap
+L_{1+}\left(  \mathbb{R}^{3}\right)  , \label{Densities}%
+\end{equation}
+(the "+" subscript denoting positive elements) that can be contracted from
+states that have a finite kinetic energy. The constraining functional $\Xi
+_{1}$ can be written in terms of the set of density operators $\left\{
+\left.  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \right\vert \boldsymbol{r\in}\mathbb{R}^{3}\right\}  $,
+(see Appendix \ref{SecQuant} for their definition) as
+\begin{equation}
+\left[  \Xi_{1}\left(  D\right)  \right]  \left(  \boldsymbol{r}\right)
+=\operatorname{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  D\right\}  =\rho_{D}\left(  \boldsymbol{r}%
+\right)  , \label{LinCon}%
+\end{equation}
+the $\left[  {}\right]  $ notation emphasizes the roles of the different
+arguments $D$ and $\boldsymbol{r},$ displaying that the map%
+
+\begin{equation}
+\Xi_{1}:\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \rightarrow
+L_{1}\left(  \mathbb{R}^{3}\right)
+\end{equation}
+has the value $\left[  \Xi_{1}\left(  D\right)  \right]  \in$ $L_{1}\left(
+\mathbb{R}^{3}\right)  $ at the point $D$ and the value $\left[  \Xi
+_{1}\left(  D\right)  \right]  \left(  \boldsymbol{r}\right)
+=\operatorname{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  D\right\}  \in\mathbb{R}$ at the physical
+position $\boldsymbol{r}$. In order to examine the properties of $\Xi_{1}$ it
+is convenient and more useful to consider the range of $\Xi_{1}$ to be
+contained in the space $L_{1}\left(  \mathbb{R}^{3}\right)  $ rather than in
+$L_{3}\left(  \mathbb{R}^{3}\right)  $ or $\mathfrak{D}$ itself. The value,
+$\Xi_{1}\left(  D\right)  ,$ of the function $\Xi_{1}$ at the point $D$ can be
+expressed in terms of an operator valued distribution$,$ $\Phi^{\dagger}%
+\Phi_{\delta},$ whose domain is restricted to the set of Dirac delta
+functions, $\mathcal{D}_{\delta},$ defined on $\mathbb{R}^{3}$ with values in
+the space, $\mathcal{B}\left(  \mathcal{H}^{N}\right)  ,$ of bounded operator
+(see Appendices \ref{Denmat} and \ref{SecQuant}) i.e.%
+\begin{align}
+\Phi^{\dagger}\Phi_{\delta}  &  :\mathcal{D}_{\delta}\rightarrow
+\mathcal{B}\left(  \mathcal{H}^{N}\right) \\
+\Phi^{\dagger}\Phi_{\delta}\left(  \delta_{\mathbf{r}}\right)   &
+=\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)
+\end{align}
+leading to
+\begin{equation}
+\Xi_{1}\left(  D\right)  =\operatorname{Tr}\left\{  \Phi^{\dagger}\Phi
+_{\delta}D\right\}  =\rho_{D}\in L_{1}\left(  \mathbb{R}^{3}\right)  .
+\end{equation}
+
+
+As $D$ is a positive operator it can always be expressed as a square
+\begin{equation}
+D=A^{2},
+\end{equation}
+where
+\begin{equation}
+A\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  \text{ and }A=A^{\dagger
+}\equiv A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\end{equation}
+and $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ and $\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  $ are the Hilbert spaces of
+Hilbert-Schmidt and self adjoint Hilbert-Schmidt operators respectively acting
+on the $N$-electron space $\mathcal{H}^{N}$ (see appendix \ref{Denmat} for the
+definitions of $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ and
+$\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $). The operator $A$ is the
+square root of $D$, which is not unique, as can be observed from the spectral
+expansion
+\begin{equation}
+A=D^{\frac{1}{2}}=\sum_{1\leq j\leq m}\pm\sqrt{\alpha_{j}}\mathcal{P}_{j},
+\label{specA}%
+\end{equation}
+where
+\begin{equation}
+D=\sum_{1\leq j\leq m}\alpha_{j}\mathcal{P}_{j};\,\alpha_{j}\geq0,1\leq j\leq
+m,
+\end{equation}
+$r_{N}=\sum\limits_{1\leq j\leq m}\nu_{j}=$ dimension of $\mathcal{H}^{N}$,
+$\left\{  \left.  \nu_{j}\right\vert 1\leq j\leq m\right\}  $ the degeneracies
+of the eigenvalues $\left\{  \left.  \alpha_{j}\right\vert 1\leq j\leq
+m\right\}  $ and $\left\{  \left.  \mathcal{P}_{j}\right\vert 1\leq j\leq
+m\right\}  $ are orthogonal projectors onto the eigenspaces of $D$. If one
+restricts $A$ to be positive, i.e. uses the positive square roots in eq.
+$\left(  \ref{specA}\right)  $, then it belongs to the cone, $\mathcal{B}%
+_{2sa+}\left(  \mathcal{H}^{N}\right)  ,$ \cite{Encyclo} of positive
+Hilbert-Schmidt operators and uniquely determines $D$. However, in general it
+not convenient to restrict $A$ to be positive and one allows the domain of
+variation of the $N$-electron energy functional to be contained in the
+\emph{real} Hilbert space $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,$
+of dimension $r_{N}^{2},$ which has an orthonormal bases
+\begin{align}
+\Lambda_{jk}  &  =\frac{1}{\sqrt{2}}\left\{  \left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{k}\right\vert +\left\vert \Psi_{k}\right\rangle
+\left\langle \Psi_{j}\right\vert \right\}  ;\quad1\leq j<k\leq r_{N}%
+\nonumber\\
+\Lambda_{jj}  &  =\left\vert \Psi_{j}\right\rangle \left\langle \Psi
+_{j}\right\vert ;\quad1\leq j\leq r_{N}\nonumber\\
+\Lambda_{jk}  &  =\frac{i}{\sqrt{2}}\left\{  \left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{k}\right\vert -\left\vert \Psi_{k}\right\rangle
+\left\langle \Psi_{j}\right\vert \right\}  ;\quad1\leq j>k\leq r_{N},
+\end{align}
+where $\left\{  \left.  \left\vert \Psi_{j}\right\rangle \right\vert 1\leq
+j\leq r_{N}\right\}  $ is any complete orthonormal basis for $\mathcal{H}%
+^{N},$ of course all these spaces are infinite dimensional if $r_{N}=\infty.$
+
+\subsection{The Density Constraint\label{DenCon}}
+
+The Levy-Leib construction \cite{Levy1979,Lieb1983} is based on defining the
+value of the density functional as the minimum of an energy variation over
+states constrained to have a fixed density $\rho\in\mathfrak{D}$. The density
+constraint can be formulated in terms of a quadratic functional $\Xi_{2},$
+based on the linear functional $\Xi_{1}$ eq. $\left(  \ref{LinCon}\right)  ,$
+acting on the space of self adjoint Hilbert-Schmidt operators, $\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  $, where
+\begin{align}
+\Xi_{2}  &  :\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathfrak{D}\subset L_{3+}\left(  \mathbb{R}^{3}\right)  \cap L_{1+}\left(
+\mathbb{R}^{3}\right)  \subset L_{1}\left(  \mathbb{R}^{3}\right) \nonumber\\
+\Xi_{2}\left(  A\right)   &  =\Xi_{1}\left(  A^{2}\right)  =\operatorname{Tr}%
+\left\{  A\Phi^{\dagger}\Phi_{\delta}A\right\}  =\left(  A\left\vert
+\Phi^{\dagger}\Phi_{\delta}A\right.  \right)  =\rho, \label{QuadCon}%
+\end{align}
+where the real symmetric inner product $\left(  \cdot\left\vert \cdot\right.
+\right)  $ in $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ is defined
+as
+\begin{equation}
+\left(  X\left\vert Y\right.  \right)  =\operatorname{Tr}\left\{  XY\right\}
+. \label{Opinner}%
+\end{equation}
+The constraint eq. $\left(  \ref{QuadCon}\right)  $ can be formulated in terms
+of the \emph{super operator valued distribution} $\widehat{\Phi^{\dagger}%
+\Phi_{\delta}},$ as%
+\begin{equation}
+\Xi_{2}\left(  A\right)  =\left(  A\left\vert \widehat{\Phi^{\dagger}%
+\Phi_{\delta}}A\right.  \right)  =\rho,
+\end{equation}
+where
+\begin{equation}
+\widehat{\Phi^{\dagger}\Phi_{\delta}}:\mathcal{D}_{\mathcal{\delta}%
+}\rightarrow\mathcal{B}\left(  \mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  \right)  ,
+\end{equation}
+and has components defined as (Appendix \ref{SecQuant})%
+\begin{equation}
+\widehat{\Phi^{\dagger}\Phi_{\delta}}\left(  \boldsymbol{r}\right)  \left\vert
+X\right)  =\widehat{\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  }\left\vert X\right)  =\left\vert \left[  \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  X\right]
+_{+}\right)  \text{ }\forall X\in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  ,\boldsymbol{r\in}\mathbb{R}^{3},
+\end{equation}
+where
+\begin{equation}
+\left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  X\right]  _{+}=\frac{1}{2}\left[  \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  ,X\right]
+_{+}.
+\end{equation}
+The positive commutator $\left[  ,\right]  _{+}$ is used in the definition of
+the super operator in order to ensure that its action produces a self adjoint operator.
+
+The functional $\Xi_{2}\left(  A\right)  $ is Fr\'{e}chet differentiable and
+one can form the differential, $d\Xi_{2}\left(  A\right)  ,$ \cite{Encyclo},
+(Appendix \ref{DerivDef})
+\begin{equation}
+d\Xi_{2}\left(  A\right)  :\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\rightarrow L_{1}\left(  \boldsymbol{\Delta}_{\rho}\right)  \subseteq
+L_{1}\left(  \mathbb{R}^{3}\right)
+\end{equation}
+of $\Xi_{2}$ at any point $A\in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  ,$ where $\boldsymbol{\Delta}_{A}$ is the closure of the support
+of the density function i.e.
+\begin{equation}
+\boldsymbol{\Delta}_{\rho}=\operatorname*{supp}\rho_{A}=\overline{\left\{
+\left.  \mathbf{r}\right\vert \rho\left(  \mathbf{r}\right)  \neq
+0;\mathbf{r\in}\mathbb{R}\right\}  },
+\end{equation}
+in terms of the components
+\begin{equation}
+\left[  d\Xi_{2}\left(  A\right)  \right]  \left(  \boldsymbol{r}\right)
+=\left(  \left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  A\right]  _{+}\right\vert .
+\end{equation}
+The set of operators $\left\{  \left.  \left\vert \left[  \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  A\right]
+_{+}\right)  \right\vert \boldsymbol{r\in}\mathbb{R}^{3}\right\}  $ forms a
+generalized basis $\left(  \text{Appendix \ref{Genbasis}}\right)  $ for the
+normal spaces of the surface $\Xi_{2}\left(  A\right)  =\rho$ for all points
+$A$ $\left(  \text{Appendix \ref{Regular}}\right)  ,$ which shows that
+$d\Xi_{2}\left(  A\right)  $ is surjective \cite{Encyclo} onto $L_{1}\left(
+\boldsymbol{\Delta}_{\rho}\right)  $ and thus the constraint $\Xi_{2}\left(
+A\right)  =\rho$ is \emph{normal} \cite{Hestenes75}, (Appendix (\ref{Regular}%
+)) everywhere. Hence the largrange mutltiplier function for this constraint is unique.
+
+\subsection{Hohenberg-Kohn Density Functional Construction}
+
+Even though the explicit form of the Hohenberg-Kohn functional, $\mathcal{F}%
+_{HK}\left(  \rho\right)  ,$ is not known one can define it implicitly
+\cite{Levy1979,Lieb1983} by
+\begin{equation}
+\mathcal{F}_{HK}\left(  \rho\right)  =\operatorname{Tr}\left\{  \left(
+K+V_{2}\right)  A_{\ast}\left(  \rho\right)  ^{2}\right\}  =E_{U}\left(
+A_{\ast}\left(  \rho\right)  \right)
+\end{equation}
+in terms of the minima, $E_{U}\left(  A_{\ast}\left(  \rho\right)  \right)  ,$
+of the universal energy functional $E_{U}\left(  A\right)  ,$ that are
+solutions of the constrained quadratic optimization problem
+\begin{subequations}
+\label{HKQ}%
+\begin{align}
+&  E_{U}\left(  A_{\ast}\left(  \rho\right)  \right)  =\min_{A\in
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  }\operatorname{Tr}\left\{
+A\overset{}{\left(  K+V_{2}\right)  A}\right\}  =\left(  A_{\ast}\left(
+\rho\right)  \left\vert \left(  \widehat{K}+\widehat{V_{2}}\right)  A_{\ast
+}\left(  \rho\right)  \right.  \right)  \label{HKQa}\\
+\qquad &  \qquad\qquad\qquad\text{subject to }\Xi_{2}\left(  A\right)
+=\left(  A\left\vert \widehat{\Phi^{\dagger}\Phi}A\right.  \right)
+=\rho,\label{HKQb}%
+\end{align}
+where $K,$ and $V_{2}$ are the kinetic energy and coulomb operators, the
+corresponding super operators $\widehat{K\text{ }}$ and $\widehat{V_{2}}$ are
+defined by
+\end{subequations}
+\begin{equation}
+\widehat{S}\left\vert X\right)  =\left\vert \left[  SX\right]  _{+}\right)
+\text{ }\forall X\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,\quad
+S=K,V_{2}%
+\end{equation}
+and the control densities $\rho\in\mathcal{D}.$ This choice of the density
+$\rho$ coupled with insisting that $A$ is an $N$-electron operator, i.e.
+$A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,$ ensures that $A$ is
+normalized (Appendix \ref{Normalization}$),$ i.e.
+\begin{equation}
+\left(  A\left\vert A\right.  \right)  =1.
+\end{equation}
+The Lagrangian associated with this problem eq. $\left(  \ref{HKQ}\right)  $
+is
+\begin{equation}
+\mathcal{L}\left(  A,\lambda,\rho\right)  =E_{U}\left(  A\right)
+-\left\langle \left.  \lambda\right\vert \left\{  \Xi_{2}\left(  A\right)
+-\rho\right\}  \right\rangle ,\label{Lar}%
+\end{equation}
+where the universal energy is
+\begin{equation}
+E_{U}\left(  A\right)  =\operatorname{Tr}\left\{  \left(  K+V_{2}\right)
+A^{2}\right\}  =\left(  A\left\vert \left(  \widehat{K}+\widehat{V_{2}%
+}\right)  A\right.  \right)  .
+\end{equation}
+$\lceil K+V_{2}$ is bounded below, hence $\left(  \widehat{K}+\widehat{V_{2}%
+}\right)  $ is also bounded below$\rfloor.$ The Lagrange multiplier term can
+be expanded as
+\begin{equation}
+\left\langle \left.  \lambda\right\vert \left\{  \Xi_{2}\left(  A\right)
+-\rho\right\}  \right\rangle =\int\lambda\left(  \boldsymbol{r}\right)
+\left\{  \Xi_{2}\left(  A\right)  \left(  \boldsymbol{r}\right)  -\rho\left(
+\boldsymbol{r}\right)  \right\}  d\boldsymbol{r},\boldsymbol{\,}\lambda\in
+L_{\infty}\left(  \mathbb{R}^{3}\right)  \oplus L_{\frac{3}{2}}\left(
+\mathbb{R}^{3}\right)  ,\rho\in\mathcal{D},
+\end{equation}
+where $\left\langle \cdot|\cdot\right\rangle $ is the scalar product between
+the dual spaces $\left\langle L_{\infty}\left(  \mathbb{R}^{3}\right)  \oplus
+L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)  ,L_{1}\left(  \mathbb{R}%
+^{3}\right)  \cap L_{3}\left(  \mathbb{R}^{3}\right)  \right\rangle $ i.e.
+\begin{equation}
+\left\langle \cdot|\cdot\right\rangle :\left(  L_{\infty}\left(
+\mathbb{R}^{3}\right)  \oplus L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)
+\right)  \times\left(  L_{1}\left(  \mathbb{R}^{3}\right)  \cap L_{3}\left(
+\mathbb{R}^{3}\right)  \right)  \rightarrow\mathbb{R}.
+\end{equation}
+This constraint term in the Lagrangian eq. $\left(  \ref{Lar}\right)  $ can
+also be expressed in the form
+\begin{equation}
+\left\langle \left.  \lambda\right\vert \left\{  \Xi_{2}\left(  A\right)
+-\rho\right\}  \right\rangle =\left\langle \lambda\left\vert \rho\right.
+\right\rangle -\left(  A\left\vert \widehat{\Omega\left(  \lambda\right)
+}\right.  A\right)  =\left(  A\left\vert \left\{  \left\langle \lambda
+\left\vert \rho\right.  \right\rangle \hat{I}-\widehat{\Omega\left(
+\lambda\right)  }\right\}  \right.  A\right)  ,
+\end{equation}
+where $\hat{I}$ is the super operator identity operator, $\Omega\left(
+\lambda\right)  $ is a local one body potential defined as
+\begin{equation}
+\Omega\left(  \lambda\right)  =\int\lambda\left(  \boldsymbol{r}\right)
+\boldsymbol{\Phi}\left(  \boldsymbol{r}\right)  ^{\dagger}\boldsymbol{\Phi
+}\left(  \boldsymbol{r}\right)  d\boldsymbol{r}%
+\end{equation}
+and the associated super operator expectation values are given by
+\begin{equation}
+\left(  A\left\vert \widehat{\Omega\left(  \lambda\right)  }\right.  A\right)
+=\int\lambda\left(  \boldsymbol{r}\right)  \Xi_{2}\left(  A\right)  \left(
+\boldsymbol{r}\right)  d\boldsymbol{r.}%
+\end{equation}
+The Lagrangian for a fixed $N$-particle density $\rho$ can then be recast as
+\begin{equation}
+\mathcal{L}\left(  A,\lambda,\rho\right)  =\left(  A\left\vert \left(
+\widehat{K}+\widehat{V_{2}}-\widehat{\Omega\left(  \lambda\right)  }\right)
+A\right.  \right)  +\left\langle \lambda\left\vert \rho\right.  \right\rangle
+.
+\end{equation}
+
+
+\subsection{Optimization Conditions\label{OpCon}}
+
+Solutions, $A_{\ast},$ of the constrained optimization eq. $\left(
+\ref{HKQ}\right)  $ correspond to unconstrained local saddle points $\left(
+A_{\ast},\lambda_{\ast}\right)  $ \cite{Hestenes75} of the Lagrangian
+$\mathcal{L}\left(  A,\lambda,\rho\right)  $ such that%
+\begin{equation}
+\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\rho\right)  =\max_{\lambda}%
+\min_{A}\mathcal{L}\left(  A,\lambda,\rho\right)  .\label{MinProb}%
+\end{equation}
+These saddle points satisfy the necessary condition
+\begin{equation}
+d\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\rho\right)  =0,\label{NecCon}%
+\end{equation}
+where the linear map for a fixed $\rho$
+\begin{equation}
+d\mathcal{L}\left(  A,\lambda,\rho\right)  :\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \times\left(  L_{\infty}\left(  \mathbb{R}^{3}\right)
+\oplus L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)  \right)  \rightarrow
+\mathbb{R}%
+\end{equation}
+is given by%
+\begin{equation}
+d\mathcal{L}\left(  A,\lambda,\rho\right)  \left(  h,\varphi\right)
+=\left\langle \varphi\left\vert \rho\right.  \right\rangle -\left(
+A\left\vert \widehat{\Omega\left(  \varphi\right)  }\right.  A\right)
++2\left(  h\left\vert \left\{  \widehat{K}+\widehat{V_{2}}-\widehat{\Omega
+\left(  \lambda\right)  }\right\}  \right.  A\right)  .\label{LagDiff}%
+\end{equation}
+The differential eq. $\left(  \ref{LagDiff}\right)  $ can be partitioned into
+$\left(  d_{A}\mathcal{L}\left(  A,\lambda,\rho\right)  ,d_{\lambda
+}\mathcal{L}\left(  A,\lambda,\rho\right)  \right)  $, where
+\begin{subequations}
+\label{differential}%
+\begin{align}
+d_{A}\mathcal{L}\left(  A,\lambda,\rho\right)  \left(  \cdot\right)   &
+=2\left(  \cdot\left\vert \left\{  \widehat{K}+\widehat{V_{2}}-\widehat{\Omega
+\left(  \lambda\right)  }\right\}  \right.  A\right)  \\
+d_{\lambda}\mathcal{L}\left(  A,\lambda,\rho\right)  \left(  \cdot\right)   &
+=\left\langle \cdot\left\vert \rho\right.  \right\rangle -\left(  A\left\vert
+\Omega\left(  \cdot\right)  \right.  A\right)  ,
+\end{align}
+thus giving the necessary stationary point conditions
+\end{subequations}
+\begin{subequations}
+\begin{align}
+\left(  h\left\vert \left\{  \widehat{K}+\widehat{V_{2}}-\widehat{\Omega
+\left(  \lambda_{\ast}\right)  }\right\}  \right.  A_{\ast}\right)   &
+=0\,\forall h\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\label{stata}\\
+\left\langle \varphi\left\vert \rho\right.  \right\rangle -\left(  A_{\ast
+}\left\vert \widehat{\Omega\left(  \varphi\right)  }\right.  A_{\ast}\right)
+&  =0\,\forall\varphi\in L_{\infty}\left(  \mathbb{R}^{3}\right)  \oplus
+L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)  .\label{statb}%
+\end{align}
+Necessary and sufficent conditions for $A_{\ast}$ to be a constrained minimum
+of eq. $\left(  \ref{HKO}\right)  $ are that
+\end{subequations}
+\begin{equation}
+d\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\rho\right)  =0,
+\end{equation}
+and
+\begin{equation}
+d_{AA}^{2}\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\rho\right)  \geq
+0\forall\delta A\in\ker\left\{  d\Xi_{2}\left(  A_{\ast}\right)  \right\}  ,
+\end{equation}
+where
+\begin{equation}
+d_{AA}^{2}\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\rho\right)  =2\left(
+\cdot\left\vert \left\{  \widehat{K}+\widehat{V_{2}}-\widehat{\Omega\left(
+\lambda\right)  }\right\}  \right.  \cdot\right)
+\end{equation}
+i.e.
+\begin{equation}
+\widehat{P}\left(  \widehat{K}+\widehat{V_{2}}-\widehat{\Omega\left(
+\lambda\right)  }\right)  \widehat{P}\geq0,\label{PHess}%
+\end{equation}
+where $\widehat{P}$ is the orthogonal projector onto $\ker\left\{  d\Xi
+_{2}\left(  A_{\ast}\right)  \right\}  .$ 
+
+Harrimans Theorem \cite{Harriman81} ensures that there are solutions to eq.
+$\left(  \ref{statb}\right)  .$ Further if there exist $\lambda_{\ast}$ such
+that there exist simultaneous solutions, $A_{\ast},$ to both eq. $\left(
+\ref{statb}\right)  $ and eq. $\left(  \ref{stata}\right)  $ then these
+$\lambda_{\ast}$ are unique, as the constraint is normal \cite{Hestenes75},
+but there may be many solutions, $A_{\ast}$'s, for a given $\lambda_{\ast}$
+i.e. degenerate $A_{\ast}$'s.  In such cases the restriction of the Hessian to
+$\ker\left\{  d\Xi_{2}\left(  A_{\ast}\right)  \right\}  $ shown in eq.
+$\left(  \ref{PHess}\right)  $ is not positive definite i.e. has some zero
+eigenvalues. ********
+
+If eq. $\left(  \ref{stata}\right)  $ and eq. $\left(  \ref{statb}\right)  $
+are true for all operators $h$ bq.elonging to $\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  $ and all functions $\varphi$ belonging to $L_{\infty
+}\left(  \mathbb{R}^{3}\right)  \oplus L_{\frac{3}{2}}\left(  \mathbb{R}%
+^{3}\right)  $ these conditions are equivalent to
+\begin{equation}
+\left\{  \widehat{K}+\widehat{V_{2}}-\widehat{\Omega\left(  \lambda_{\ast
+}\right)  }\right\}  \left\vert A_{\ast}\right)  =0\label{Stateig}%
+\end{equation}
+and the constraining condition
+\begin{equation}
+\left(  A_{\ast}\left\vert \widehat{\Phi^{\dagger}\Phi}\right.  A_{\ast
+}\right)  =\rho,
+\end{equation}
+which imply that $\widehat{K}+\widehat{V_{2}}-\widehat{\Omega\left(
+\lambda_{\ast}\right)  }$ has a non empty point spectra. If no $A_{\ast}$
+exists (i.e. no $\lambda_{\ast}$ exists) for a given $\rho$ then $\rho$ is not V-representable.
+
+$\lceil$%
+\[
+\left\{  \widehat{K}+\widehat{V_{2}}-\widehat{\Omega\left(  \lambda_{\ast
+}\right)  }\right\}  \left\vert A_{\ast}\right)  =0\Rightarrow
+\operatorname{Tr}\left\{  h\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast
+}\right)  \right\}  A_{\ast}\right\}  =0\forall h
+\]
+$\rfloor$
+
+The optimal value of the Lagrangian satisfies the following identities:
+\begin{align}
+\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\rho\right)   &  =\left(  A_{\ast
+}\left(  \rho\right)  \left\vert \left\{  \left\{  \widehat{K}+\widehat{V_{2}%
+}-\widehat{\Omega\left(  \lambda_{\ast}\right)  }\right\}  +\left\langle
+\left.  \lambda_{\ast}\left(  \rho\right)  \right\vert \rho\right\rangle
+\hat{I}\right\}  \right.  A_{\ast}\left(  \rho\right)  \right)  =\left\langle
+\left.  \lambda_{\ast}\left(  \rho\right)  \right\vert \rho\right\rangle
+\nonumber\\
+&  =\left(  A_{\ast}\left(  \rho\right)  \left\vert \left\{  \widehat{K}%
++\widehat{V_{2}}\right\}  \right.  A_{\ast}\left(  \rho\right)  \right)
+=E_{U}\left(  A_{\ast}\left(  \rho\right)  \right)  .
+\end{align}
+This shows that the optimal values of the universal energy functional, the
+value of the Lagrangian and the value of the HK energy functional are all
+equal at the density $\rho$ i.e.
+\begin{equation}
+\mathcal{F}_{HK}\left(  \rho\right)  =E_{U}\left(  A_{\ast}\left(
+\rho\right)  \right)  =\left\langle \left.  \lambda_{\ast}\left(  \rho\right)
+\right\vert \rho\right\rangle .
+\end{equation}
+Moreover $\rho$ is the density of the ground state $D_{\ast}\left(
+\rho\right)  =A_{\ast}\left(  \rho\right)  ^{2}$ of the Hamiltonian
+\begin{equation}
+K+V_{2}-\Omega\left(  \lambda_{\ast}\left(  \rho\right)  \right)
+\end{equation}
+i.e. of an electronic system subject to an external potential $\lambda_{\ast
+}\left(  \rho\right)  $. Note that the ground state might be a ensemble state.
+
+\subsection{Sensitivity Analysis\label{SenAnal}}
+
+Sensitivity analysis \cite{Hestenes75} examines how the optimal solution
+changes with variation of the value of the constraining functions, which can
+be thought of as control parameters. In this case the $N$-electron state
+energy with variations of $\rho.$ If the optimal points $\left\{  A_{\ast
+},\lambda_{\ast},\rho\right\}  $ are regular (Appendix \ref{Regular}) for a
+set of $\rho^{\prime}s$ then $\left\{  A_{\ast},\lambda_{\ast}\right\}  $ are
+in fact functions of $\rho,$ i.e.
+\begin{align}
+A_{\ast}  &  =A_{\ast}\left(  \rho\right) \nonumber\\
+\lambda_{\ast}  &  =\lambda_{\ast}\left(  \rho\right)  ,
+\end{align}
+and thus single valued i.e. the ground state is non degenerate. The
+sensitivity of the optimal $N$-electron energy to changes in the density
+$\rho$ is then given by
+\begin{equation}
+\frac{\delta E_{U}\left(  A_{\ast}\left(  \rho\right)  \right)  }{\delta\rho
+}=\lambda_{\ast}\left(  \rho\right)  .
+\end{equation}
+By construction
+\begin{equation}
+\mathcal{F}_{HK}\left(  \rho\right)  =E_{U}\left(  A_{\ast}\left(
+\rho\right)  \right)  ,
+\end{equation}
+which shows
+\begin{equation}
+\frac{\delta\mathcal{F}_{HK}\left(  \rho\right)  }{\delta\rho}=\lambda_{\ast
+}\left(  \rho\right)
+\end{equation}
+i.e. that the external potential is equal to the functional derivative of the
+HK functional with respect to the density.
+
+\subsection{Decomposition of the Hohenburg-Kohn Functional\label{DecompHK}}
+
+If a minimizer $D_{\ast}\left(  \rho\right)  $ exists and is unique and then
+one can define kinetic energy, coulomb and exchange-correlation functionals
+as
+\begin{align}
+\mathcal{F}_{K}\left(  \rho\right)   &  =\operatorname{Tr}\left\{  KD_{\ast
+}\left(  \rho\right)  \right\}  ,\nonumber\\
+\mathcal{F}_{C}\left(  \rho\right)   &  =\int\frac{\rho\left(
+\boldsymbol{r,\xi}\right)  \rho\left(  \boldsymbol{r}^{\prime}\boldsymbol{,\xi
+}\right)  }{\left\Vert \boldsymbol{r-r}^{\prime}\right\Vert }d\boldsymbol{r}%
+d\boldsymbol{r}^{\prime}d\boldsymbol{\xi},\nonumber\\
+\mathcal{F}_{XC}\left(  \rho\right)   &  =\operatorname{Tr}\left\{
+V_{2}D_{\ast}\left(  \rho\right)  \right\}  -\mathcal{F}_{C}\left(
+\rho\right)  ,
+\end{align}
+producing the decomposition
+\begin{equation}
+\mathcal{F}_{HK}\left(  \rho\right)  =\mathcal{F}_{K}\left(  \rho\right)
++\mathcal{F}_{C}\left(  \rho\right)  +\mathcal{F}_{XC}\left(  \rho\right)  .
+\end{equation}
+The concept of a unique exchange-correlation functional is central to the
+theory, but the existence of non isolated degenerate $D_{\ast}\left(
+\rho\right)  ^{\prime}$s could give different $\mathcal{F}_{XC}\left(
+\rho\right)  ^{\prime}$s and $\mathcal{F}_{K}\left(  \rho\right)  ^{\prime}$s.
+However if degeneracies do occur one can still define an exchange-correlation
+functional through the imposition of further constrained minimizations.
+
+\subsection{System Energy\label{MolSysEn}}
+
+The total energy functional of a system that contains $N$ electrons and
+experiences an environment described by a \emph{local} potential $\mathrm{v}$
+is
+\begin{equation}
+E\left(  \rho\boldsymbol{,}\mathrm{v}\right)  =\mathcal{F}_{HK}\left(
+\rho\right)  +f_{\rho}\left(  \mathrm{v}\right)  ,
+\end{equation}
+where the explicit effect of the environment is described by the functional
+\begin{equation}
+f_{\rho}\left(  \mathrm{v}\right)  =\int\mathrm{v}\left(  \boldsymbol{r}%
+\right)  \rho\left(  \boldsymbol{r}\right)  d\boldsymbol{r.}%
+\end{equation}
+The ground state energy $E_{GS}\left(  \mathrm{v}\right)  $ and the
+corresponding density $\rho_{GS}$ $\left(  \mathrm{v}\right)  $ are then
+determined by the solution to the constrained optimization problem
+\begin{equation}
+E_{GS}\left(  \mathrm{v}\right)  =E\left(  \rho_{GS}\boldsymbol{,}%
+\mathrm{v}\right)  =\min_{\rho\in\mathcal{D}}E\left(  \rho\boldsymbol{,}%
+\mathrm{v}\right)  , \label{GS}%
+\end{equation}
+which one can make unconstrained in terms of real functions $f\in H_{1}\left(
+\mathbb{R}^{3}\right)  $ \cite{Lieb1983} by setting
+\begin{equation}
+\rho\left(  \boldsymbol{r}\right)  =\frac{Nf\left(  \boldsymbol{r}\right)
+^{2}}{\left\langle f|f\right\rangle }=\frac{N\left\langle f\left\vert
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  f\right.  \right\rangle }{\left\langle f|f\right\rangle },\,f\in
+H_{1}\left(  \mathbb{R}^{3}\right)  . \label{rho_f}%
+\end{equation}
+The minimizer $f_{GS}$ of $E\left(  f\boldsymbol{,}\mathrm{v}\right)  $ then
+satisfies
+\begin{equation}
+\frac{\delta E\left(  f_{GS}\boldsymbol{,}\mathrm{v}\right)  }{\delta f\left(
+\boldsymbol{r}\right)  }=2f_{GS}\left(  \boldsymbol{r}\right)  \left\{
+\frac{N}{\left\langle f_{GS}|f_{GS}\right\rangle }\frac{\delta E\left(
+f_{GS}\boldsymbol{,}\mathrm{v}\right)  }{\delta\rho\left(  \boldsymbol{r}%
+\right)  }-\int\frac{\delta E\left(  f_{GS}\boldsymbol{,}\mathrm{v}\right)
+}{\delta\rho\left(  \boldsymbol{r}^{\prime}\right)  }\rho_{GS}\left(
+\boldsymbol{r}^{\prime}\right)  d\boldsymbol{r}^{\prime}\right\}
+\overset{a.e.}{=}0
+\end{equation}
+which implies that
+\begin{equation}
+f_{GS}\left(  \boldsymbol{r}\right)  \overset{a.e.}{=}0\Leftrightarrow
+\rho_{GS}\left(  \boldsymbol{r}\right)  \overset{a.e.}{=}0
+\end{equation}
+or
+\begin{equation}
+\frac{\delta E\left(  f_{GS}\boldsymbol{,}\mathrm{v}\right)  }{\delta
+\rho\left(  \boldsymbol{r}\right)  }\overset{a.e.}{=}\alpha\left(  \rho
+_{GS}\right)  , \label{fmin}%
+\end{equation}
+where%
+\begin{equation}
+\alpha\left(  \rho_{GS}\right)  =\frac{\left\langle f_{GS}|f_{GS}\right\rangle
+}{N}\int\frac{\delta E\left(  f_{GS}\boldsymbol{,}\mathrm{v}\right)  }%
+{\delta\rho\left(  \boldsymbol{r}^{\prime}\right)  }\rho_{GS}\left(
+\boldsymbol{r}^{\prime}\right)  d\boldsymbol{r}^{\prime}. \label{alpha}%
+\end{equation}
+Hence
+\begin{align}
+\alpha\left(  \rho_{GS}\right)   &  =\frac{\left\langle f_{GS}|f_{GS}%
+\right\rangle }{N}\alpha\left(  \rho_{GS}\right)  \int\rho_{GS}\left(
+\boldsymbol{r}^{\prime}\right)  d\boldsymbol{r}^{\prime}=\frac{\left\langle
+f_{GS}|f_{GS}\right\rangle }{N}\alpha\left(  \rho_{GS}\right) \\
+&  \Rightarrow\alpha\left(  \rho_{GS}\right)  =0\text{ or }f_{GS}\left(
+\boldsymbol{r}\right)  \overset{a.e.}{=}0.
+\end{align}
+So as $f_{GS}\left(  \boldsymbol{r}\right)  \overset{a.e.}{\neq}0$ we obtain
+the well known result
+\begin{equation}
+\frac{\delta E\left(  f_{GS}\boldsymbol{,}\mathrm{v}\right)  }{\delta
+\rho\left(  \boldsymbol{r}\right)  }\overset{a.e.}{=}0\Leftrightarrow
+\frac{\delta\mathcal{F}_{HK}\left(  \rho_{GS}\right)  }{\delta\rho\left(
+\boldsymbol{r}\right)  }\overset{a.e.}{=}-\mathrm{v}\left(  \boldsymbol{r}%
+\right)  .
+\end{equation}
+
+
+\section{Orbital Variables \label{GSO}}
+
+There are two standard approaches to formulating the total energy in terms of
+orbitals and occupation numbers, one is to consider functionals of FORDO's,
+which leads to DMFT, the other is to factor the dependence through the
+density, which leads to KS-DFT and is based on the HK functional. However as
+the explicit forms of these functionals are not known one must rely on the
+implicit definitions via constrained optimizations, though in practice
+approximate explicit forms are utilized. We have recently
+\cite{OrtizWeiner2006} introduced a third approach which is defined on states
+generated by the submanifold of $2M$-electron AGP states. The total energy
+functional, which is explicitly given, \emph{is more general }than a density
+matrix functional while still expressing the total energy in terms of orbitals
+and occupation numbers.
+
+The central focus of this article is on functionals of the density that
+contain no explicit reference to the spin properties of the system. However
+one could widen this focus by considering spin and general spin densities that
+are described by vectors $\boldsymbol{\rho}\left(  \boldsymbol{r}\right)
+=\left(  \rho_{\alpha}\left(  \boldsymbol{r}\right)  ,\rho_{\beta}\left(
+\boldsymbol{r}\right)  \right)  $ and $\boldsymbol{\rho}\left(  \boldsymbol{r}%
+\right)  =\left(  \rho_{\alpha}\left(  \boldsymbol{r}\right)  ,\rho
+_{\alpha\beta}\left(  \boldsymbol{r}\right)  ,\rho_{\beta}\left(
+\boldsymbol{r}\right)  \right)  $ respectively and modify the preceding
+analysis in the appropriate fashion (Appendix \ref{Spin}).
+
+\subsection{Correspondence between Orbitals and Densities\label{Orb_Den}}
+
+Any density $\rho$ can expressed in terms of the Natural Orbitals (NO's)
+$\left\{  \psi_{j}\right\}  $ and occupation numbers $\left\{  N_{j}\right\}
+$ of the FORDO $D_{\ast}^{1}\left(  \rho\right)  $ (Appendix \ref{Denmat}) as%
+
+\begin{equation}
+\rho\left(  \boldsymbol{r}\right)  =\left[  D_{\ast}^{1}\left(  \rho\right)
+\right]  \left(  \boldsymbol{r,r}\right)  =\sum_{1\leq j\leq r}N_{j}\left\vert
+\psi_{j}\left(  \boldsymbol{r}\right)  \right\vert ^{2}, \label{NGSOexpan}%
+\end{equation}
+but many other sets of orbitals also produce the same density, in particular
+Harimanns \cite{Harriman81} theorem ensures that there are always expansions
+of the form
+\begin{equation}
+\rho\left(  \boldsymbol{r}\right)  =\left[  D_{\ast}^{1}\left(  \rho\right)
+\right]  \left(  \boldsymbol{r,r}\right)  =\sum_{1\leq j\leq N}\chi_{j}\left(
+\boldsymbol{r}\right)  ^{2} \label{Genexp}%
+\end{equation}
+in terms of real orthonormal square summable functions $\left\{  \left.
+\chi_{j}\right\vert 1\leq j\leq N\right\}  $.
+
+In general one can express the density in terms of orthogonal square
+integrable functions as
+\begin{equation}
+\rho\left(  \boldsymbol{r}\right)  =\sum_{1\leq j\leq\nu}\left\vert
+\varphi_{j}\left(  \boldsymbol{r}\right)  \right\vert ^{2}, \label{OrthogOrb}%
+\end{equation}
+where
+\begin{equation}
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=N_{j}\delta_{jk};0<N_{j}\leq N,1\leq j\leq\nu;N_{j}=0,\nu+1\leq j\leq r
+\end{equation}
+and $\nu\equiv\nu\left(  \boldsymbol{\varphi}\right)  $ is called the rank of
+the expansion. If $\nu\geq N$ then the functions $\boldsymbol{\varphi}=\left(
+\varphi_{1},\cdots,\varphi_{r}\right)  $ can be interpretted as orbitals. One
+can also expand the density $\rho$ in terms of orthonormal functions
+$\boldsymbol{\tilde{\varphi}}$ and weights $\boldsymbol{N}=\left(
+N_{1},\cdots,N_{r}\right)  $ as
+\begin{equation}
+\rho\left(  \boldsymbol{r}\right)  =\sum_{1\leq j\leq\nu}N_{j}\left\vert
+\tilde{\varphi}_{j}\left(  \boldsymbol{r}\right)  \right\vert ^{2}.
+\label{orthonormal}%
+\end{equation}
+Again if $\nu\geq N$ then $\boldsymbol{\tilde{\varphi}}$ and $\boldsymbol{N}$
+can be interpretted as normalized orbitals and occupation numbers
+respectively. One can make the relationship expressed eq. $\left(
+\ref{OrthogOrb}\right)  $ and eq. $\left(  \ref{orthonormal}\right)  $
+explicit through the introduction of two functionals $\Gamma_{1}$ and
+$\Gamma_{2}:$
+
+\begin{itemize}
+\item The first functional $\Gamma_{1}$ is defined by
+\begin{equation}
+\Gamma_{1}:\mathfrak{S}_{1}\subset\prod\limits_{1\leq j\leq r}\mathcal{H}%
+^{1}\rightarrow L_{1+}\left(  \mathbb{R}^{3}\right)  \subset L_{1}\left(
+\mathbb{R}^{3}\right)  ,
+\end{equation}
+where
+\begin{subequations}
+\label{GammaAll}%
+\begin{align}
+\rho &  =\Gamma_{1}\left(  \boldsymbol{\varphi}\right)  ,\\
+\left[  \Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right]  \left(
+\boldsymbol{r}\right)   &  =\sum_{1\leq j\leq r}\left\vert \varphi_{j}\left(
+\boldsymbol{r}\right)  \right\vert ^{2}=\rho\left(  \boldsymbol{r}\right)
+\label{Gamma}%
+\end{align}
+and%
+\end{subequations}
+\begin{equation}
+\mathfrak{S}_{1}=\left\{  \boldsymbol{\varphi}\left\vert \varphi_{j}%
+,\varphi_{k}\in\mathcal{H}^{1},\left\langle \left.  \varphi_{j}\right\vert
+\varphi_{k}\right\rangle =N_{j}\delta_{jk},\,\boldsymbol{N}\in\mathfrak{N}%
+\left(  N\right)  \right.  \right\}  , \label{set1}%
+\end{equation}
+where
+\begin{equation}
+\mathfrak{N}\left(  N\right)  =\left\{  \boldsymbol{N}\left\vert 0\leq
+N_{j}\leq N,1\leq j\leq r;\sum_{1\leq j\leq r}N_{j}=N\right.  \right\}  .
+\end{equation}
+and as many as $r-1$ of the component functions, $\varphi_{j},$ may be
+identically zero. The set $\mathfrak{S}_{1}$ includes all possible expansions
+of $\rho$ even the one term case considered in eq. $\left(  \ref{rho_f}%
+\right)  $.
+
+\item The second functional $\Gamma_{2}$ is defined by
+\begin{equation}
+\Gamma_{2}:\mathfrak{S}_{2}\subset\prod\limits_{1\leq j\leq r}\mathcal{H}%
+^{1}\times\mathbb{R}^{r}\rightarrow L_{1+}\left(  \mathbb{R}^{3}\right)
+\subset L_{1}\left(  \mathbb{R}^{3}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathfrak{S}_{2}=\left\{  \left(  \boldsymbol{\tilde{\varphi},N}\right)
+\left\vert \left\vert \tilde{\varphi}_{j}\right\rangle ,\left\vert
+\tilde{\varphi}_{k}\right\rangle \in\mathcal{H}^{1},\left\langle \left.
+\varphi_{j}\right\vert \varphi_{k}\right\rangle =\delta_{jk},\,1\leq j\leq
+r;\quad\boldsymbol{N}\in\mathfrak{N}\left(  N\right)  \right.  \right\}  .
+\label{set2}%
+\end{equation}
+
+
+Clearly it is always possible to find $\boldsymbol{\varphi}$ and $\left(
+\boldsymbol{\tilde{\varphi},N}\right)  $ such that
+\begin{equation}
+\rho=\Gamma_{1}\left(  \boldsymbol{\varphi}\right)  =\Gamma_{2}\left(
+\boldsymbol{\tilde{\varphi},N}\right)
+\end{equation}
+and if the number of non zero components in $\boldsymbol{\varphi}$ and
+$\boldsymbol{N}$ are greater than or equal to $N$ then $\boldsymbol{\varphi}$
+and $\left\{  \boldsymbol{\tilde{\varphi},N}\right\}  $ determine the same
+FORDO $D^{1}$ i.e.
+\begin{equation}
+D^{1}\left(  \boldsymbol{\varphi}\right)  =D^{1}\left(  \boldsymbol{\tilde
+{\varphi},N}\right)  =\sum_{1\leq j\leq r}\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{j}\right\vert =\sum_{1\leq j\leq r}\left\vert
+\tilde{\varphi}_{j}\right\rangle \left\langle \tilde{\varphi}_{j}\right\vert
+N_{j}.
+\end{equation}
+The optimization wrt $\rho$ can thus be expressed in terms of
+$\boldsymbol{\varphi}$ via $\Gamma_{1}$ or $\left(  \boldsymbol{\tilde
+{\varphi},N}\right)  $ via $\Gamma_{2}$, However in order to use sensitivity
+theory to relate the variation of the energy with respect to occupation
+numbers to the eigenvalues of the Kohn-Sham operator we focus on $\Gamma_{1}.$
+\end{itemize}
+
+The functional $\Gamma_{1}$ is not one to one and is constant on the
+equivalence class $\mathfrak{S}\left(  \rho\right)  $ of functions%
+\begin{equation}
+\mathfrak{S}\left(  \rho\right)  =\bigcup\limits_{1\leq\nu\leq r}%
+\mathfrak{S}\left(  \nu,\rho\right)  ,
+\end{equation}
+where the equivalence classes of constant rank, $\mathfrak{S}\left(  \nu
+,\rho\right)  ,$ are defined by
+\begin{equation}
+\mathfrak{S}\left(  \nu,\rho\right)  =\left\{  \left.  \boldsymbol{\varphi
+}\right\vert \nu=\nu\left(  \boldsymbol{\varphi}\right)  ,\Gamma_{1}\left(
+\boldsymbol{\varphi}\right)  =\rho\right\}  .
+\end{equation}
+In the following we will limit consideration to the case where $\nu\left(
+\boldsymbol{\varphi}\right)  \geq N$ i.e. to orbitals. Each preimage set
+$\Gamma_{1}^{-1}\left(  \rho\right)  =\mathfrak{S}\left(  \rho\right)
+\subset\mathfrak{S}_{1}$ contains, in general, both single sets of orthogonal
+orbitals normalized to different $\boldsymbol{N}\in\mathfrak{N}\left(
+N\right)  $ and different sets of orthogonal functions normalized to the same
+$\boldsymbol{N}\in\mathfrak{N}\left(  N\right)  ,$ which corresponds to the
+fact that a given density can be expanded in many ways in terms of occupation
+numbers and orbitals.
+
+\subsection{Orbital functionals\label{GSOFunc}}
+
+One can express the total energy via a universal orbital functional,
+$\mathcal{F}_{O}$, whose value is defined by the HK energy functional, as
+\begin{equation}
+\mathcal{F}_{O}\left(  \boldsymbol{\varphi}\right)  =\mathcal{F}_{HK}\left(
+\Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right)  =\mathcal{F}%
+_{HK}\left(  \rho\right)  . \label{FO}%
+\end{equation}
+The orbital energy functional $\mathcal{F}_{O}$ can be decomposed as
+\begin{equation}
+\mathcal{F}_{O}\left(  \boldsymbol{\varphi}\right)  =\mathcal{F}_{T}\left(
+\boldsymbol{\varphi}\right)  +\mathcal{F}_{C}\left(  \boldsymbol{\varphi
+}\right)  +\mathcal{F}_{OXC}\left(  \boldsymbol{\varphi}\right)  , \label{KS1}%
+\end{equation}
+where the orbital kinetic energy functional $\mathcal{F}_{T}$ is given by
+\begin{equation}
+\mathcal{F}_{T}\left(  \boldsymbol{\varphi}\right)  =\sum_{1\leq j\leq
+r}\left\langle \varphi_{j}\left\vert K\varphi_{j}\right.  \right\rangle ,
+\end{equation}
+the orbital exchange-corellation functional $\mathcal{F}_{OXC}$ (which depends
+on $\mathcal{F}_{T}\boldsymbol{)}$, is defined as
+\begin{equation}
+\mathcal{F}_{OXC}\left(  \boldsymbol{\varphi}\right)  =\mathcal{F}_{XC}\left(
+\Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right)  +\mathcal{F}%
+_{K}\left(  \Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right)
+-\mathcal{F}_{T}\left(  \boldsymbol{\varphi}\right)  , \label{KS2}%
+\end{equation}
+and one recalls the definitions HK exchange-corellation functional
+\begin{equation}
+\mathcal{F}_{XC}\left(  \Gamma_{1}\left(  \boldsymbol{\varphi}\right)
+\right)  =\operatorname{Tr}\left\{  V_{2}D_{\ast}\left(  \Gamma_{1}\left(
+\boldsymbol{\varphi}\right)  \right)  \right\}  -\mathcal{F}_{C}\left(
+\Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right)  \label{KS3}%
+\end{equation}
+and the HK kinetic functional
+\begin{equation}
+\mathcal{F}_{K}\left(  \Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right)
+=\operatorname{Tr}\left\{  KD_{\ast}\left(  \Gamma_{1}\left(
+\boldsymbol{\varphi}\right)  \right)  \right\}  \label{KS4}%
+\end{equation}
+that only depend on the density $\rho$.
+
+One should note that:
+
+\begin{itemize}
+\item for fixed values of $\rho$ the HK functionals $\mathcal{F}_{XC}\left(
+\Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right)  $ and $\mathcal{F}%
+_{K}\left(  \Gamma_{1}\left(  \boldsymbol{\varphi}\right)  \right)  $ in eqs.
+$\left(  \ref{KS3}\right)  $ and $\left(  \ref{KS4}\right)  $ are
+\emph{constant} for all $\boldsymbol{\varphi}$ that satisfy $\rho=\Gamma
+_{1}\left(  \boldsymbol{\varphi}\right)  $, while the orbital functionals
+$\mathcal{F}_{T}\left(  \boldsymbol{\varphi}\right)  $ and $\mathcal{F}%
+_{OXC}\left(  \boldsymbol{\varphi}\right)  $ can have \emph{different} values
+for values of $\boldsymbol{\varphi}$ that correspond to a fixed values of
+$\rho$
+
+\item the total energy functionals $\mathcal{F}_{O}\left(  \boldsymbol{\varphi
+}\right)  ,\mathcal{\ }$and $\mathcal{F}_{HK}\left(  \rho\right)  $ have the
+same value when $\rho=$ $\Gamma_{1}\left(  \boldsymbol{\varphi}\right)
+\equiv\rho\left(  \boldsymbol{\varphi}\right)  $
+
+\item the composition in eq. $\left(  \ref{FO}\right)  $ defines a class of
+orbital functionals that have a particular form. One could define orbital
+functionals without reference to densities (as done in section \ref{AGPSect})
+and their form and properties would be quite different.
+\end{itemize}
+
+One can recast the minimization problem that determines the ground state
+energy and density of a system characterized by a local potential $\mathrm{v}$
+in terms of orbitals as
+\begin{equation}
+E_{GS}\left(  \mathrm{v}\right)  =\mathcal{E}\left(  \Gamma_{1}\left(
+\boldsymbol{\varphi}_{GS}\right)  \boldsymbol{,}\mathrm{v}\right)
+=\min_{\boldsymbol{\varphi\in}\mathfrak{S}_{1}}\mathcal{E}_{O}\left(
+\boldsymbol{\varphi,}\mathrm{v}\right)  , \label{KSmin}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{E}_{O}\left(  \boldsymbol{\varphi,}\mathrm{v}\right)  =\mathcal{F}%
+_{O}\left(  \boldsymbol{\varphi}\right)  +f_{\Gamma_{1}\left(
+\boldsymbol{\varphi}\right)  }\left(  \mathrm{v}\right)
+\end{equation}
+and the feasible set $\mathfrak{S}_{1}$ is defined in eq. $\left(
+\ref{set1}\right)  $.
+
+The orbital minimization problem eq. $\left(  \ref{KSmin}\right)  $ can be
+decomposed into two sequential optimizations.
+
+\subsubsection{Varying orbitals with fixed normalization}
+
+\ One first varies the orbitals keeping their normalization fixed and
+determines the saddle point $\mathcal{L}_{\boldsymbol{\varphi}}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{N}\right)  ,\boldsymbol{\varepsilon
+}\left(  \boldsymbol{N}\right)  ,\mu\left(  N\right)  ,\mathrm{v}\right)  $ of
+the Lagrangian
+\begin{equation}
+\mathcal{L}_{\boldsymbol{\varphi}}\left(  \boldsymbol{\varphi}%
+,\boldsymbol{\varepsilon,N,}\mu\boldsymbol{,}\mathrm{v}\right)  =\mathcal{E}%
+_{O}\left(  \boldsymbol{\varphi,}\mathrm{v}\right)  -\sum_{1\leq j,k\leq
+r}\varepsilon_{jk}\left\{  \overset{\,}{\left\langle \left.  \varphi
+_{j}\right\vert \varphi_{k}\right\rangle -N_{j}\delta_{jk}}\right\}
++\mu\left\{  \sum_{\,1\leq j\leq r}\left\langle \left.  \varphi_{j}\right\vert
+\varphi_{j}\right\rangle -N\right\}  \label{OrbLag}%
+\end{equation}
+i.e.
+\begin{equation}
+\mathcal{L}_{\boldsymbol{\varphi}}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{N}\right)  ,\boldsymbol{\varepsilon}\left(  \boldsymbol{N}\right)
+,\mu\left(  N\right)  ,\mathrm{v}\right)  =\max_{\boldsymbol{\varepsilon,}\mu
+}\min_{\boldsymbol{\varphi}}\mathcal{L}_{\boldsymbol{\varphi}}\left(
+\boldsymbol{\varphi},\boldsymbol{\varepsilon},\mu\boldsymbol{,N,}%
+\mathrm{v}\right)  , \label{KSM1}%
+\end{equation}
+which leads to optimal values $\mathcal{E}_{O}\left(  \boldsymbol{\varphi
+}\left(  \boldsymbol{N}\right)  \boldsymbol{,}\mathrm{v}\right)  =$
+$\mathcal{L}_{\boldsymbol{\varphi}}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{N}\right)  ,\boldsymbol{\varepsilon}\left(  \boldsymbol{N}\right)
+,\mu\left(  N\right)  \boldsymbol{,}\mathrm{v}\right)  $ of the orbital energy
+functional for fixed values of the control parameters $\boldsymbol{N}$. The
+particle number constraint $\sum_{\,1\leq j\leq r}\left\langle \left.
+\varphi_{j}\right\vert \varphi_{j}\right\rangle =N$ is equivalent to the
+normalization constraint imposed on the density so that $\rho\in\mathcal{D}$.
+
+The saddle points of $\mathcal{L}_{\boldsymbol{\varphi}}\left(
+\boldsymbol{\varphi},\boldsymbol{\varepsilon,N,}\mu\boldsymbol{,}%
+\mathrm{v}\right)  $ are characterized by the necessary conditions
+\begin{subequations}
+\label{KSC}%
+\begin{align}
+\frac{\delta\mathcal{L}_{\boldsymbol{\varphi}}\left(  \boldsymbol{\varphi
+},\boldsymbol{\varepsilon,}\mu,\boldsymbol{N,}\mathrm{v}\right)  }%
+{\delta\varphi_{j}^{\ast}}  &  =0;\,1\leq j\leq r,\label{KSC1}\\
+\frac{\partial\mathcal{L}_{\boldsymbol{\varphi}}\left(  \boldsymbol{\varphi
+},\boldsymbol{\varepsilon,}\mu,\boldsymbol{N,}\mathrm{v}\right)  }%
+{\partial\varepsilon_{jk}}  &  =0;\,1\leq j,k\leq r\label{KSC2}\\
+\frac{\partial\mathcal{L}_{\boldsymbol{\varphi}}\left(  \boldsymbol{\varphi
+},\boldsymbol{\varepsilon,}\mu,\boldsymbol{N,}\mathrm{v}\right)  }{\partial
+\mu}  &  =0 \label{KSC3}%
+\end{align}
+The condition eq. $\left(  \ref{KSC1}\right)  $ implies that at an optimal
+point the matrix of Lagrange multipliers $\boldsymbol{\varepsilon}\left(
+\boldsymbol{N}\right)  $ is hermitian i.e.
+\end{subequations}
+\begin{equation}
+\varepsilon\left(  \boldsymbol{N}\right)  _{jk}=\varepsilon\left(
+\boldsymbol{N}\right)  _{kj}^{\ast},\quad1\leq j,k\leq r
+\end{equation}
+and
+\begin{equation}
+\frac{\delta\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{N}%
+\right)  ,\mathrm{v}\right)  }{\delta\varphi_{j}^{\ast}}-\sum_{1\leq k\leq
+r}\left(  \varepsilon_{jk}\left(  \boldsymbol{N}\right)  -\mu\left(  N\right)
+\delta_{jk}\right)  \left\vert \varphi_{k}\left(  \boldsymbol{N}\right)
+\right\rangle =0;\,1\leq j\leq r. \label{LagPar}%
+\end{equation}
+Noting that as $\rho=\Gamma_{1}\left(  \boldsymbol{\varphi}\right)  $ and
+$\mathcal{E}_{O}\left(  \boldsymbol{\varphi},\mathrm{v}\right)  \equiv$
+$\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi}\right)
+,\mathrm{v}\right)  $ one can obtain
+\begin{align}
+\frac{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi}\right)
+\boldsymbol{,}\mathrm{v}\right)  }{\delta\varphi_{j}^{\ast}\left(
+\boldsymbol{r}\right)  }  &  =\int\frac{\delta\mathcal{E}_{O}\left(
+\rho\left(  \boldsymbol{\varphi}\right)  \boldsymbol{,}\mathrm{v}\right)
+}{\delta\rho\left(  \boldsymbol{r}^{\prime}\right)  }\frac{\delta\rho\left(
+\boldsymbol{r}^{\prime}\right)  }{\delta\varphi_{j}^{\ast}\left(
+\boldsymbol{r}\right)  }d\boldsymbol{r}^{\prime}\nonumber\\
+&  =\int\frac{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi
+}\right)  \boldsymbol{,}\mathrm{v}\right)  }{\delta\rho\left(  \boldsymbol{r}%
+\right)  }\varphi_{j}\left(  \boldsymbol{r}^{\prime}\right)  \delta\left(
+\boldsymbol{r-r}^{\prime}\right)  d\boldsymbol{r}^{\prime}=\frac
+{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi}\right)
+\boldsymbol{,}\mathrm{v}\right)  }{\delta\rho\left(  \boldsymbol{r}\right)
+}\varphi_{j}\left(  \boldsymbol{r}\right)
+\end{align}
+which gives
+\begin{equation}
+\frac{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi}\right)
+\boldsymbol{,}\mathrm{v}\right)  }{\delta\rho}\left\vert \varphi
+_{j}\right\rangle =\left\vert \frac{\delta\mathcal{E}_{O}\left(  \rho\left(
+\boldsymbol{\varphi}\right)  \boldsymbol{,}\mathrm{v}\right)  }{\delta\rho
+}\varphi_{j}\right\rangle ,
+\end{equation}
+where the operator $\frac{\delta\mathcal{E}_{O}\left(  \rho\left(
+\boldsymbol{\varphi}\right)  \boldsymbol{,}\mathrm{v}\right)  }{\delta\rho}$
+is a multiplication operator in the coordinate representation defined by
+\begin{equation}
+\left[  \frac{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi
+}\right)  \boldsymbol{,}\mathrm{v}\right)  }{\delta\rho}\varphi_{j}\right]
+\left(  \boldsymbol{r}\right)  =\left(  \frac{\delta\mathcal{E}_{O}\left(
+\rho\left(  \boldsymbol{\varphi}\right)  \boldsymbol{,}\mathrm{v}\right)
+}{\delta\rho\left(  \boldsymbol{r}\right)  }\right)  \left(  \varphi
+_{j}\left(  \boldsymbol{r}\right)  \right)  .
+\end{equation}
+Substituting this identity back into eq. $\left(  \ref{LagPar}\right)  $ one
+obtains for the special case of optimized orbitals, $\boldsymbol{\varphi
+\left(  \boldsymbol{N}\right)  },$ that%
+\begin{equation}
+\frac{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi\left(
+\boldsymbol{N}\right)  }\right)  ,\mathrm{v}\right)  }{\delta\rho}\left\vert
+\varphi_{j}\left(  \boldsymbol{N}\right)  \right\rangle =\sum_{1\leq k\leq
+r}\left(  \varepsilon_{jk}\left(  \boldsymbol{N}\right)  -\mu\left(  N\right)
+\delta_{jk}\right)  \left\vert \varphi_{k}\left(  \boldsymbol{N}\right)
+\right\rangle ,\,\varepsilon_{jk}\left(  \boldsymbol{N}\right)  =\varepsilon
+_{kj}^{\ast}\left(  \boldsymbol{N}\right)  , \label{FockEq}%
+\end{equation}
+thus obtaining orbital equations corresponding to the condition eq. $\left(
+\ref{KSC1}\right)  .$
+
+The eqs $\left(  \ref{KSC2}\right)  $ and $\left(  \ref{KSC3}\right)  $
+restate the constraint conditions and as $\left\Vert \left\vert \varphi
+_{k}\left(  \boldsymbol{N}\right)  \right\rangle \right\Vert =N_{k}%
+=0,\nu+1\leq k\leq r$ eqs $\left(  \ref{OrbLag},\ref{KSM1},\ref{KSC}%
+,\ref{LagPar},\ref{FockEq}\right)  $ \emph{only} refer to the variables
+$\left(  \varphi_{1},\cdots,\varphi_{\nu}\right)  $ i.e. to the occupied
+orbitals. One should note that eq. $\left(  \ref{FockEq}\right)  $ is
+\emph{not }an eigenvalue equation unless $\mathcal{E}_{O}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{N}\right)  ,\mathrm{v}\right)  $ is
+invariant to unitary mixing of $\boldsymbol{\varphi}\left(  \boldsymbol{N}%
+\right)  $ that produce the same density. However to this end one can invoke
+Harrimans theorem \cite{Harriman81} which shows that there is always a class
+of IPS's, $\mathfrak{S}\left(  N,\rho\right)  $ (the Harriman set for
+densities associated to states that contain on the average $N$ electrons) that
+produce a given density, so without loss of generality we can always restrict
+the domain of $\Gamma_{1}$ to $\mathfrak{S}\left(  N,\rho\right)  $ and
+replace eq. $\left(  \ref{FockEq}\right)  $ by
+\begin{equation}
+\frac{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi\left(
+\boldsymbol{N}\right)  }\right)  \boldsymbol{,}\mathrm{v}\right)  }{\delta
+\rho}\left\vert \varphi_{j}\left(  \boldsymbol{N}\right)  \right\rangle
+=\left(  \varepsilon_{jj}\left(  \boldsymbol{N}\right)  -\mu\left(  N\right)
+\right)  \left\vert \varphi_{j}\left(  \boldsymbol{N}\right)  \right\rangle
+;\quad1\leq j\leq N \label{FockHarri}%
+\end{equation}
+as $\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{\iota}%
+_{N}\right)  ,\mathrm{v}\right)  $, where
+\begin{equation}
+\boldsymbol{\iota}_{N}=\left(  \overset{N}{\overbrace{1,\cdots,1}%
+},\overset{r-N}{\overbrace{0,\cdots,0}}\right)  ,
+\end{equation}
+is inavariant to unitary mixing of $\boldsymbol{\varphi}\left(
+\boldsymbol{\iota}_{N}\right)  \in\mathfrak{S}\left(  N,\rho\right)  .$
+
+From sensitivity theory the rate of change of the orbital energy functional
+with respect to changes in occupation numbers, which in this case are the
+control parameters $\boldsymbol{N}$, are
+\begin{equation}
+\frac{\partial\mathcal{E}_{O}\left(  \boldsymbol{\varphi\left(  \boldsymbol{N}%
+\right)  },\mathrm{v}\right)  }{\partial N_{j}}=\varepsilon_{jj}\left(
+\boldsymbol{N}\right)  -\mu\left(  N\right)  ;1\leq j\leq\nu, \label{Janak}%
+\end{equation}
+which is Janaks Theorem for \emph{any }fixed set $\boldsymbol{\boldsymbol{N}}$
+of occupation numbers and optimized orbitals $\boldsymbol{\varphi\left(
+\boldsymbol{N}\right)  }$ normalized to these values. If we take expansion eq.
+$\left(  \ref{FockEq}\right)  $ into account we can obtain these relationships
+as expectation values of the operator $\frac{\delta\mathcal{E}_{O}\left(
+\rho\left(  \boldsymbol{\varphi\left(  \boldsymbol{N}\right)  }\right)
+\boldsymbol{,}\mathrm{v}\right)  }{\delta\rho}-\mu I,$ i.e.
+\begin{equation}
+\frac{\partial\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi\left(
+\boldsymbol{N}\right)  }\right)  ,\mathrm{v}\right)  }{\partial N_{j}%
+}=\left\langle \tilde{\varphi}_{j}\left(  \boldsymbol{N}\right)  \left\vert
+\left\{  \frac{\delta\mathcal{E}_{O}\left(  \rho\left(  \boldsymbol{\varphi
+\left(  \boldsymbol{N}\right)  }\right)  \boldsymbol{,}\mathrm{v}\right)
+}{\delta\rho}-\mu\left(  N\right)  I\right\}  \right.  \tilde{\varphi}%
+_{j}\left(  \boldsymbol{N}\right)  \right\rangle =\varepsilon_{jj}\left(
+\boldsymbol{N}\right)  -\mu\left(  N\right)  ,
+\end{equation}
+where
+\begin{equation}
+\left\vert \tilde{\varphi}_{j}\left(  \boldsymbol{N}\right)  \right\rangle
+=\frac{\left\vert \varphi_{j}\left(  \boldsymbol{N}\right)  \right\rangle
+}{\left(  \left\langle \left.  \varphi_{j}\left(  \boldsymbol{N}\right)
+\right\vert \varphi_{j}\left(  \boldsymbol{N}\right)  \right\rangle \right)
+^{\frac{1}{2}}}.
+\end{equation}
+By considering the sensitivity of the energy to changes of the average number
+of electrons in the system one obtains
+\begin{equation}
+\frac{\partial\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{N}\right)  \boldsymbol{,}\mathrm{v}\right)  }{\partial N}%
+=\mu\left(  N\right)
+\end{equation}
+and $\mu\left(  N\right)  $ can be interpreted as the chemical potential of
+the interacting molecular system.
+
+\subsubsection{Varying the normalization}
+
+In the second optimization we can restrict attention to control parameters,
+$\boldsymbol{N},$ such that $\nu\left(  \boldsymbol{N}\right)  \geq N$ and
+$0\leq N_{j}\leq1,1\leq j\leq r$, i.e. that can be interpretted as occupation
+numbers. There one finds minima of $\mathcal{E}_{O}\left(  \boldsymbol{\varphi
+\left(  \boldsymbol{\theta}\right)  ,}\mathrm{v}\right)  \equiv\mathcal{E}%
+_{O}\left(  \boldsymbol{\varphi\left(  N\left(  \boldsymbol{\theta}\right)
+\right)  ,}\mathrm{v}\right)  $ with respect to a constrained variation of the
+normalization control parameters $\boldsymbol{N}=N\left(  \boldsymbol{\theta
+}\right)  $ parameterized by $\boldsymbol{\theta}$, where
+\[
+0\leq\theta_{j}\leq\frac{\pi}{2};\quad1\leq j\leq r
+\]
+for a fixed $N$ that are constrained by $\sum_{1\leq j\leq r}N_{j}=\sum_{1\leq
+j\leq r}\sin\theta_{j}=N$. Stationary points $\boldsymbol{\theta}_{\#}\left(
+N\right)  $ are determined by
+\begin{equation}
+\mathcal{L}_{\boldsymbol{\theta}}\left(  \boldsymbol{\varphi\left(
+\boldsymbol{\theta}_{\#}\right)  ,}N\boldsymbol{,}\eta\left(  N\right)
+\boldsymbol{,}\mathrm{v}\right)  =\max_{\boldsymbol{\eta}}\min
+_{\boldsymbol{\theta}}\mathcal{L}_{\boldsymbol{\theta}}\left(
+\boldsymbol{\varphi,}N\boldsymbol{,}\eta\boldsymbol{,}\mathrm{v}\right)
+\end{equation}
+the Lagrangian
+\begin{equation}
+\mathcal{L}_{\boldsymbol{\theta}}\left(  \boldsymbol{\varphi,}N\boldsymbol{,}%
+\eta\boldsymbol{,}\mathrm{v}\right)  =\mathcal{E}_{O}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{\theta}\right)  \boldsymbol{,}%
+\mathrm{v}\right)  +\eta\left\{  \sum_{1\leq j\leq r}\sin\theta_{j}-N\right\}
+\end{equation}
+where
+\begin{align}
+\frac{\partial\mathcal{L}_{\boldsymbol{\theta}}\left(  \boldsymbol{\varphi
+,}N\boldsymbol{,}\eta\boldsymbol{,}\mathrm{v}\right)  }{\partial\theta_{j}}
+&  =0;1\leq j\leq r\\
+\frac{\partial\mathcal{L}_{\boldsymbol{\theta}}\left(  \boldsymbol{\varphi
+,}N\boldsymbol{,}\eta\boldsymbol{,}\mathrm{v}\right)  }{\partial\eta}  &
+=0.\nonumber
+\end{align}
+The derivatives with respect to $\boldsymbol{\theta}$ are given by the chain
+rule
+\begin{equation}
+\frac{\partial\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{\theta}\left(  N\right)  \right)  \boldsymbol{,}\mathrm{v}\right)
+}{\partial\theta_{j}}=\sum\limits_{1\leq k\leq r}\frac{\partial\mathcal{E}%
+_{O}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{N}\right)  \boldsymbol{,}%
+\mathrm{v}\right)  }{\partial N_{k}}\frac{\partial N_{k}}{\partial\theta_{j}%
+}=\frac{\partial\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{N}\right)  \boldsymbol{,}\mathrm{v}\right)  }{\partial N_{j}}%
+\cos\theta_{j};\quad1\leq j\leq r \label{ThetaDer}%
+\end{equation}
+and
+\begin{equation}
+\frac{\partial\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{N}\right)  \boldsymbol{,}\mathrm{v}\right)  }{\partial N_{j}%
+}=\varepsilon_{jj}\left(  \boldsymbol{N}\left(  \boldsymbol{\theta}\right)
+\right)  -\mu\left(  N\right)  .
+\end{equation}
+Giving
+\begin{equation}
+\frac{\partial\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{\theta}_{\#}\right)  \boldsymbol{,}\mathrm{v}\right)  }%
+{\partial\theta_{j}}=\left\{  \varepsilon_{jj}\left(  \boldsymbol{N}\left(
+\boldsymbol{\theta}_{\#}\right)  \right)  -\mu\left(  N\right)  \right\}
+\cos\theta_{\#j}=0. \label{theta}%
+\end{equation}
+Thus
+\begin{equation}
+\varepsilon_{jj}\left(  \boldsymbol{N}\left(  \boldsymbol{\theta}_{\#}\right)
+\right)  -\mu\left(  N\right)  =0\text{ and/or }\left\{  \cos\theta
+_{\#j}=0\Leftrightarrow\theta_{\#j}=\frac{\pi}{2}\right\}  ;\quad1\leq j\leq
+r. \label{Con1}%
+\end{equation}
+If $\ \theta_{j}=\frac{\pi}{2}$ ($N_{j}\left(  \boldsymbol{\theta}%
+_{\#}\right)  =1)$ then $\varepsilon_{jj}$ can have any value (even
+$\mu\left(  N\right)  $), while if $\theta_{\#j}\neq\frac{\pi}{2}$ (which
+corresponds to non integer occupation) then $\varepsilon_{jj}=$ $\mu\left(
+N\right)  $ i.e. the Lagrange parameters $\left\{  \varepsilon_{jj}\right\}  $
+are degenerate. If $\varepsilon_{jj}=\mu\left(  N\right)  $ then $\theta
+_{\#j}$ does not have to have the value $\frac{\pi}{2}$ though it can. Since
+the inception of the KS approach to DFT\ there has been an extensive
+discussion of the physical meaning of the eigenvalues of the KS operator and
+their relationship to the Fermi energy and chemical potential.
+
+The ground state energy $E\left(  \rho_{GS}\boldsymbol{,}\mathrm{v}\right)
+=\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{\theta}%
+_{\#}\right)  ,\mathrm{v}\right)  $ and the ground state density can then be
+expanded as
+\begin{equation}
+\rho_{GS}\left(  \boldsymbol{r}\right)  =\sum_{1\leq j\leq r}\left\vert
+\left[  \varphi_{j}\left(  \boldsymbol{\theta}_{\#}\right)  \right]  \left(
+\boldsymbol{r}\right)  \right\vert ^{2}. \label{GSen}%
+\end{equation}
+The expansion eq. $\left(  \ref{GSen}\right)  $ is very \emph{non} unique in
+that any set $\boldsymbol{\varphi}\left(  \boldsymbol{\theta}_{\#}^{\prime
+}\right)  \in\mathfrak{S}\left(  \rho_{GS}\right)  $, where
+$\boldsymbol{\theta}_{\#}^{\prime}$ satisfies eq. $\left(  \ref{theta}\right)
+$ produces $\rho_{GS}$ and the same value of the energy functional i.e.
+$\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{\theta}%
+_{\#}^{\prime}\right)  ,\mathrm{v}\right)  =\mathcal{E}_{O}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{\theta}_{\#}\right)  ,\mathrm{v}%
+\right)  $.
+
+\subsection{The Kohn-Sham Density Functional\label{KSDF}}
+
+As pointed out in the last subsection the minima of $\mathcal{E}_{O}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{\theta}_{\#}\right)  ,\mathrm{v}%
+\right)  ,$
+\begin{equation}
+\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{\theta}%
+_{\#}\right)  \boldsymbol{,}\mathrm{v}\right)  =\min_{\boldsymbol{\varphi\in
+}\mathfrak{S}_{1}}\mathcal{E}_{O}\left(  \boldsymbol{\varphi,}\mathrm{v}%
+\right)
+\end{equation}
+are highly degenerate e.g.
+\begin{equation}
+\mathcal{E}_{O}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{\theta}%
+_{\#}\right)  \boldsymbol{,}\mathrm{v}\right)  =const.\,\forall
+\boldsymbol{\varphi\in}\mathfrak{S}\left(  \rho_{GS}\right)  .
+\end{equation}
+This degeneracy is due to the singularity of the map $\Gamma_{1}$ which can be
+removed by constraining $\boldsymbol{\varphi}$ to be a specific representative
+of the equivalence classes $\mathfrak{S}\left(  \rho\right)  .$ One way to
+obtain such a representative is to consider the orbitals formed by the NOsand
+occupation numbers of the FORDO of the $N$-electron ground state $D_{0}\left(
+\rho\right)  =A_{0}\left(  \rho\right)  ^{2}$ of a model independent particle
+$N$-electron system$,$ that has a fixed density $\rho.$ This corresponds to
+finding the minimizers of the universal kinetic energy functional $K_{U}$
+\begin{equation}
+K_{U}\left(  A\right)  =\operatorname{Tr}\left\{  KA^{2}\right\}  ,
+\end{equation}
+subject to the constraint
+\begin{equation}
+\Xi_{2}\left(  A\right)  =\left(  A\left\vert \widehat{\Phi^{\dagger}\Phi
+}A\right.  \right)  =\rho,\,A\in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  .
+\end{equation}
+The constrained minima $K_{U}\left(  D_{0}\left(  \rho\right)  \right)
+=\operatorname{Tr}\left\{  KD_{0}\left(  \rho\right)  \right\}
+=\operatorname{Tr}\left\{  KA_{0}\left(  \rho\right)  ^{2}\right\}  $ is given
+as an unconstrained saddle point $\left(  A_{0}\left(  \rho\right)
+,\lambda_{0}\left(  \rho\right)  \right)  ,$
+\begin{equation}
+\mathcal{L}_{K}\left(  A_{0}\left(  \rho\right)  ,\lambda_{0}\left(
+\rho\right)  ,\rho\right)  =\max_{\lambda}\min_{A}\mathcal{L}_{K}\left(
+A,\lambda,\rho\right)
+\end{equation}
+of the Lagrangian
+\begin{equation}
+\mathcal{L}_{K}\left(  A,\lambda,\rho\right)  =K_{U}\left(  A\right)
+-\Omega_{A}\left(  \lambda\right)  +\left\langle \left.  \lambda\right\vert
+\rho\right\rangle =\left(  A\left\vert \left\{  \left\{  \widehat{K}%
+-\widehat{\Omega\left(  \lambda\right)  }\right\}  +\left\langle \left.
+\lambda\right\vert \rho\right\rangle \hat{I}\right\}  \right.  A\right)  .
+\end{equation}
+If a bound state minimum exists for some local one body potential $\lambda
+_{0}\left(  \rho\right)  $ (which is also the Lagrange parameter function) one
+has
+\begin{equation}
+\left\{  \widehat{K}-\widehat{\Omega\left(  \lambda_{0}\left(  \rho\right)
+\right)  }\right\}  \left\vert A_{0}\left(  \rho\right)  \right)  =0,
+\end{equation}
+where $A_{0}\left(  \rho\right)  \in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  $. This gives a stationary state $D_{0}\left(  \rho\right)
+=A_{0}\left(  \rho\right)  ^{2}$ of the independent particle system with
+Hamiltonian $\left\{  K-\Omega\left(  \lambda_{0}\left(  \rho\right)  \right)
+\right\}  $ i.e.
+\begin{equation}
+\left[  \left\{  K-\Omega\left(  \lambda_{0}\left(  \rho\right)  \right)
+\right\}  ,D_{0}\left(  \rho\right)  \right]  =0,
+\end{equation}
+which in turn defines a FORDO $D_{0}^{1}\left(  \rho\right)  $ given by (see
+Appendix \ref{Denmat})
+\begin{equation}
+D_{0}^{1}\left(  \rho\right)  =NL_{N}^{1}\left(  D_{0}\left(  \rho\right)
+\right)  .
+\end{equation}
+As $K-\Omega\left(  \lambda_{0}\left(  \rho\right)  \right)  $ is an
+one-electron operator the state $D_{0}\left(  \rho\right)  $ must be a mixture
+of IPSsor a pure IPS and thus determined by the eigenvalues $\left\{
+N_{0j}\left(  \rho\right)  \right\}  $ and eigenvectors $\left\{  \left\vert
+\widetilde{\varphi_{0j}\left(  \rho\right)  }\right\rangle \right\}  $ of
+$D_{0}^{1}\left(  \rho\right)  $. If $D_{0}\left(  \rho\right)  $ is a pure
+IPS\ then the occupation numbers $\left\{  N_{0j}\left(  \rho\right)
+\right\}  $ are equal to either $1$ or $0$ (i.e. $N$ ones and $r-N$ zeroes),
+while if it is a ensemble state than there will be some fractional values and
+the number of zero values will be less than $r-N$. Expanding $D_{0}^{1}\left(
+\rho\right)  $ in terms of normalized NOs$\left\{  \left.  \left\vert
+\widetilde{\varphi_{0j}}\right\rangle \right\vert 1\leq j\leq r\right\}  $
+gives
+\begin{equation}
+D_{0}^{1}\left(  \rho\right)  =\sum_{1\leq j\leq r}N_{0j}\left(  \rho\right)
+\left\vert \widetilde{\varphi_{0j}\left(  \rho\right)  }\right\rangle
+\left\langle \widetilde{\varphi_{0j}\left(  \rho\right)  }\right\vert ,
+\end{equation}
+(where in contrast to eq. $\left(  \ref{Gamma}\right)  $ $r\geq N$ ), which
+after renormalizing the NOsto the occupation numbers i.e.
+\begin{equation}
+\left\vert \varphi_{0j}\left(  \rho\right)  \right\rangle =N_{0j}\left(
+\rho\right)  ^{\frac{1}{2}}\left\vert \widetilde{\varphi_{0j}\left(
+\rho\right)  }\right\rangle ,1\leq j\leq r
+\end{equation}
+results in
+\begin{equation}
+\rho\left(  \boldsymbol{r}\right)  =\sum_{1\leq j\leq r}\left\vert \left[
+\varphi_{0j}\left(  \rho\right)  \right]  \left(  \boldsymbol{r}\right)
+\right\vert ^{2}. \label{gammaKS}%
+\end{equation}
+If the constrained minimum of $K_{U}$ is non degenerate then there is a unique
+correspondence, up to unitary mixing of degenerate eigenvectors of $D_{0}%
+^{1}\left(  \rho\right)  ,$ between $\rho$ and $\left\{  \boldsymbol{\varphi
+}_{0}\right\}  ,$ thus modulo this unitary mixing one can define an inverse
+functional $\Gamma_{0}^{-1}$ as
+\begin{equation}
+\boldsymbol{\varphi}_{0}=\Gamma_{0}^{-1}\left(  \rho\right)  .
+\end{equation}
+If the constrained minimum of $K_{U}$ is degenerate, e.g. corresponding to
+FORDOs$\left\{  \left.  D_{0\kappa}^{1}\left(  \rho\right)  \right\vert
+1\leq\kappa\leq m\right\}  $ of the stationary states $\left\{  \left.
+D_{0\kappa}\left(  \rho\right)  \right\vert 1\leq\kappa\leq m\right\}  $ of
+$K-\Omega\left(  \lambda_{0}\left(  \rho\right)  \right)  $ then as
+\begin{equation}
+\left[  \left\{  K-\Omega\left(  \lambda_{0}\left(  \rho\right)  \right)
+\right\}  ,D_{0\kappa}\left(  \rho\right)  \right]  =\left[  \left\{
+K-\Omega\left(  \lambda_{0}\left(  \rho\right)  \right)  \right\}
+,D_{0\kappa}^{1}\left(  \rho\right)  \right]  =0,
+\end{equation}
+the space of degenerate states corresponds to the same set of orbitals
+$\left\{  \left\vert \boldsymbol{\varphi}_{0}\left(  \rho\right)
+\right\rangle \right\}  $ but normalized to different occupation numbers
+$\left\{  \boldsymbol{N}_{0}\left(  \rho\right)  \right\}  ,$ where
+$\boldsymbol{N}_{0}\left(  \rho\right)  $ are convex combinations of $\left\{
+\left.  \boldsymbol{N}_{0\kappa}\left(  \rho\right)  \right\vert 1\leq
+\kappa\leq m\right\}  $. Hence if degeneracies occur these are reflected in
+multiple optimal values for $\boldsymbol{\boldsymbol{N}}_{0}$ for fixed
+$\left\{  \boldsymbol{\varphi}_{0}\left(  \rho\right)  \right\}  $, some of
+the $\left\{  \left.  N_{0j}\right\vert 1\leq j\leq r\right\}  $ can have non
+integer values even for degenerate pure states$\boldsymbol{.}$
+
+The minimal values of the universal kinetic functional $K_{U}\left(
+D_{0}\left(  \rho\right)  \right)  $ produce a kinetic energy functional
+$\mathcal{F}_{T}$ defined on the representatives $\left\{  \boldsymbol{\varphi
+}_{0}\right\}  $ of the equivalence classes $\mathfrak{S}\left(  \rho\right)
+$ whose values are given by
+\begin{equation}
+\mathcal{F}_{T}\left(  \boldsymbol{\varphi}_{0}\right)  =K_{U}\left(
+D_{0}\left(  \Gamma_{1}\left(  \boldsymbol{\varphi}_{0}\right)  \right)
+\right)  . \label{KEFunc}%
+\end{equation}
+The value of $\mathcal{F}_{T}$ is constant on the set of orbitals formed from
+the unitary mixing and the convex combinations of degenerate states just
+described. This allows one to define the Kohn-Sham functional $\mathcal{F}%
+_{KS}\left(  \boldsymbol{\varphi}_{0}\right)  $ as a specific decomposition of
+the HK energy functional $\mathcal{F}_{HK}\left(  \rho\right)  $ in terms of
+orbitals as
+\begin{equation}
+\mathcal{F}_{KS}\left(  \boldsymbol{\varphi}_{0}\right)  =\mathcal{F}%
+_{T}\left(  \boldsymbol{\varphi}_{0}\right)  +\mathcal{F}_{C}\left(
+\boldsymbol{\varphi}_{0}\right)  +\mathcal{F}_{KSXC}\left(
+\boldsymbol{\varphi}_{0}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{F}_{KS}\left(  \boldsymbol{\varphi}_{0}\right)  =\mathcal{F}%
+_{HK}\left(  \Gamma_{1}\left(  \boldsymbol{\varphi}_{0}\right)  \right)  .
+\end{equation}
+
+
+The relationships described in subsection \ref{GSOFunc} derived for stationary
+points $\boldsymbol{\varphi}\left(  \boldsymbol{N}\right)  $ are valid for any
+points contained in the equivalence classes that these points belong to, in
+particular $\boldsymbol{\varphi}_{0}\left(  \boldsymbol{\boldsymbol{N}}%
+_{0}\right)  $. Eq. $\left(  \ref{FockEq}\right)  $, is now an equation for
+determining the KS orbitals $\boldsymbol{\varphi}_{0}\left(  \boldsymbol{N}%
+\right)  $ and the operator introduced there can be identified as the KS
+operator. If the state $D_{0}\left(  \rho\right)  $ is non degenerate and pure
+(therefore has only occupation numbers equal to one or zero) then one can
+choose a set of orbitals that diagonalize this operator as the energy
+$\mathcal{E}_{O}\left(  \boldsymbol{\varphi}_{0}\left(  \boldsymbol{N}%
+_{0}\right)  ,\mathrm{v}\right)  $ is invariant to unitary mixing of occupied
+orbitals, which is the standard way of producing a canonical set of occupied orbitals.
+
+The reference $N$-electron IPS, $D_{0}\left(  \boldsymbol{\boldsymbol{N}}%
+_{0}\right)  $ formed from the NOs$\boldsymbol{\varphi}_{0}$ has two energies
+associated with it. One, $E_{0}\left(  \boldsymbol{\varphi}_{0}\left(
+\boldsymbol{N}_{0}\right)  \right)  $, is the ground state energy of the
+Hamiltonian%
+\begin{equation}
+H_{0}=K+\mathrm{v},
+\end{equation}
+which can be expressed as
+\begin{equation}
+E_{0}\left(  \boldsymbol{\varphi}_{0}\left(  \boldsymbol{N}_{0}\right)
+\right)  =\sum_{1\leq j\leq r}\left\langle \tilde{\varphi}_{0j}\left\vert
+\left(  K+\mathrm{v}\right)  \right.  \tilde{\varphi}_{0j}\right\rangle
+N_{0j}.
+\end{equation}
+The other is the energy of the Hamiltonian
+\begin{equation}
+H=H_{0}+V_{2}%
+\end{equation}
+wrt the IPS $D_{0}\left(  \boldsymbol{N}_{0}\right)  $ given by
+\begin{equation}
+E_{IP}\left(  D_{0}\left(  \boldsymbol{N}_{0}\right)  \right)
+=\operatorname{Tr}\left\{  HD_{0}\left(  \boldsymbol{N}_{0}\right)  \right\}
+.
+\end{equation}
+It should be noted that this value of the energy functional $E_{IP}$ is
+\emph{not }optimized in any way and is \emph{not }related in any simple
+fashion to the energies $\mathcal{E}_{O}\left(  \varphi\boldsymbol{\left(
+\boldsymbol{N}_{0}\right)  },\mathrm{v}\right)  .$
+
+The preceding relationships are equally for orbitals $\boldsymbol{\varphi}%
+_{0}\left(  \boldsymbol{N}_{0}\left(  \boldsymbol{\theta}_{\#}\left(
+N\right)  \right)  \right)  $ that produce the ground state density $\rho
+_{GS}$ and energy $\mathcal{E}_{O}\left(  \boldsymbol{\varphi}_{0}\left(
+\boldsymbol{N}\left(  \boldsymbol{\theta}_{\#}\left(  N\right)  \right)
+\right)  ,\mathrm{v}\right)  $ and the classical Janaks Theorem is a special
+case of eq. $\left(  \ref{Janak}\right)  $
+\begin{equation}
+\frac{\partial\mathcal{E}_{O}\left(  \boldsymbol{\varphi}_{0}\left(
+\boldsymbol{N}_{0}\left(  \boldsymbol{\theta}_{\#}\left(  N\right)  \right)
+\right)  ,\mathrm{v}\right)  }{\partial N_{j}}\equiv\frac{\partial
+\mathcal{E}_{KS}\left(  \boldsymbol{\varphi}_{0}\left(  \boldsymbol{N}%
+_{0}\left(  \boldsymbol{\theta}_{\#}\left(  N\right)  \right)  \right)
+,\mathrm{v}\right)  }{\partial N_{j}}=\varepsilon_{jj}\left(
+\boldsymbol{\varphi}_{0}\left(  \boldsymbol{N}_{0}\left(  \boldsymbol{\theta
+}_{\#}\left(  N\right)  \right)  \right)  \right)  , \label{ClassJanak}%
+\end{equation}
+where we have constrained the orbitals and occupation numbers to be the ones
+that minimize the universal kinetic energy, $K_{U},$ thus producing a model
+IPS. One must, however, note that the Lagrange parameters $\left\{
+\varepsilon_{jj}\left(  \boldsymbol{\varphi}_{0}\left(  \boldsymbol{N}%
+_{0}\left(  \boldsymbol{\theta}_{\#}\left(  N\right)  \right)  \right)
+\right)  \right\}  $ in this equation \emph{are not }associated with the
+minimization of the universal kinetic energy.
+
+The KS energy functional is defined in terms of orbitals and occupation
+numbers and is implicitly defined by the preceding constrained optimization
+procedures, that factor the functional through the density. If one did not
+consider this factorization and directly optimized the orbitals and occupation
+numbers one would determine the same ground state, but not need to introduce a
+model IPS\ and orbitals $\boldsymbol{\varphi}_{0}\left(  \boldsymbol{N}%
+_{0}\right)  $. In the next section we compare and contrast the relationships
+obtained for these functionals with ones obtained for the explicitly defined
+AGP functional. These functionals are defined on the space of correlated
+states formed by the non linear manifold of AGP\ states, where the energy has
+been expressed as an explicit functional of GSOsand parameters that determine
+occupation numbers \cite{OrtizWeiner2006} The minimization of this explicit
+functional can then be compared to the minimization of the implicit
+KS\ functional restricted to the AGP\ manifold.
+
+\section{AGP Energy Functionals \label{AGP}}
+
+We briefly review some of the results found in \cite{OrtizWeiner2006}
+describing AGP states and their associated energy functionals. In
+\cite{OrtizWeiner2006} orbital and occupation number optimization equations
+were derived and it was displayed how the $N$-electron total energy could be
+expressed in terms of ionization potentials, kinetic energies and eigenvalues
+of a generalized Fock operator associated with GSO's. In contrast to the KS
+approach, the occupation numbers were not constrained to refer to IPS's, but
+allowed to vary over the much larger domain of states with doubly degenerate
+state occupation numbers. It has been argued while this set does not contain
+all possible states it contains a large percentage of states important for
+molecular systems \cite{Kramers Deg}. The density matrix energy functional in
+DMFT allows unrestricted variation of occupation numbers (and thus all
+states), but unlike the AGP functional (but in common with the HK\ and KS
+density functionals) it is invariant to the phases of the GSOsi.e. the group
+$U\left(  1\right)  .$
+
+\subsection{Canonical expansion of an AGP state}
+
+The $2M$-electron AGP state, $\left\vert g^{M}\right\rangle $, is the $M^{th}$
+antisymmetric power of the $2$-electron state described by a normalized
+geminal
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}\left\vert \varphi_{j}%
+\varphi_{j+s}\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert
+\tilde{\varphi}_{j}\tilde{\varphi}_{j+s}\right\rangle , \label{geminal}%
+\end{equation}
+given by
+\begin{equation}
+\left\vert g^{M}\right\rangle =\left(  S_{M}\right)  ^{-\frac{1}{2}}%
+\sum_{1\leq j_{1}<\cdots<j_{M}\leq s}n_{j_{1}}^{\frac{1}{2}}\cdots n_{j_{s}%
+}^{\frac{1}{2}}\left\vert \tilde{\varphi}_{j_{1}}\tilde{\varphi}_{j_{1}%
++s}\cdots\tilde{\varphi}_{j_{M}}\tilde{\varphi}_{j_{M}+s}\right\rangle
+=\left(  S_{M}\right)  ^{-\frac{1}{2}}\sum_{1\leq j_{1}<\cdots<j_{M}\leq
+s}\left\vert \varphi_{j_{1}}\varphi_{j_{1}+s}\cdots\varphi_{j_{M}}%
+\varphi_{j_{M}+s}\right\rangle , \label{agp}%
+\end{equation}
+wherer $\left\{  \left.  n_{j}^{\frac{1}{2}}\right\vert 1\leq j\leq s\right\}
+$ are the positive square roots of the occupation numbers%
+\begin{equation}
+\Omega=\left\{  n_{j}\left\vert 0\leq n_{j}\leq1;\sum_{1\leq j\leq s}%
+n_{j}=1;1\leq j\leq s\right.  \right\}
+\end{equation}
+of the FORDO of the two electron AGP\ state density operator, $\left\{
+\left.  \left\vert \tilde{\varphi}_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}  $ are the \emph{orthonormal} Canonical General Spin Orbitals
+(CGSO's) of $\left\vert g\right\rangle $ and $\left\{  \left.  \left\vert
+\varphi_{j}\right\rangle \right\vert 1\leq j\leq2s\right\}  $ are the
+\emph{orthogonal} CGSOsnormalized to $\boldsymbol{n}$ i.e.
+\begin{equation}
+\left\vert \varphi_{j}\right\rangle =n_{j}^{\frac{1}{2}}\left\vert
+\tilde{\varphi}_{j}\right\rangle ,1\leq j\leq2s.
+\end{equation}
+The normalization factor, $\left(  S_{M}\right)  ^{-\frac{1}{2}}$, is given in
+terms of the elementary symmetric function
+\begin{equation}
+S_{M}=\sum_{1\leq j_{1}<\cdots<j_{M}\leq s}n_{j_{1}}\cdots n_{j_{M}}.
+\end{equation}
+It is evident from eq.\ $\left(  \ref{geminal}\right)  $ that the geminal and
+geminal power state are at least invariant to the group $SU\left(  2\right)
+,$ that is formed by $2\times2$ \emph{special} unitary transformations of the
+paired CGSOs$\left\{  \left.  \left\vert \tilde{\varphi}_{j}\right\rangle
+,\left\vert \tilde{\varphi}_{j+s}\right\rangle \right\vert 1\leq j\leq
+s\right\}  ,$ while if degeneracies exist amongst the $\left\{  \left.
+n_{j}\right\vert 1\leq j\leq s\right\}  $ this invariance group is larger
+\cite{AGPCoherent}. The canonical CGSOsare unique up to transformations
+belonging this invariance group.
+
+\subsection{AGP Energy Functionals\label{AGPSect}}
+
+The energy of the AGP state can be expressed as a functional $\mathcal{E}%
+_{AGP}$ of $\boldsymbol{\varphi}\left(  \boldsymbol{n}\right)  $ by
+\begin{align}
+\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{n}\right)
+\right)   &  =\frac{\mathcal{H}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  }{S_{M}\left(  \boldsymbol{n}\right)
+}\nonumber\\
+&  =\frac{1}{S_{M}\left(  \boldsymbol{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}S_{M-1}\left(  \jmath\right)  \left\{  \left\langle \tilde{\varphi}%
+_{j}\left\vert h_{1}\right.  \tilde{\varphi}_{j}\right\rangle +\left\langle
+\tilde{\varphi}_{j+s}\left\vert h\right.  \tilde{\varphi}_{j+s}\right\rangle
++\left\langle \tilde{\varphi}_{j}\tilde{\varphi}_{j+s}||\tilde{\varphi}%
+_{j}\tilde{\varphi}_{j+s}\right\rangle \right\}  \right. \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{M-1}\left(
+\jmath k\right)  \left\langle \tilde{\varphi}_{j}\tilde{\varphi}_{j+s}%
+||\tilde{\varphi}_{k}\tilde{\varphi}_{k+s}\right\rangle \left.  +\sum_{1\leq
+j<k\leq s}n_{i}n_{j}S_{M-2}\left(  \jmath k\right)  \left\langle
+\tilde{\varphi}_{j}\tilde{\varphi}_{k}|||\tilde{\varphi}_{j}\tilde{\varphi
+}_{k}\right\rangle \right\}  . \label{energy}%
+\end{align}
+
+
+\subsection{AGP Lagrangians\label{Lagran}}
+
+Using the same philosophy for optimization as discussed for orbital
+functionals in the preceding sections one can minimize the energy of the
+$2M$-electron state over the manifold of AGP\ states using a nested two step process:
+
+\begin{enumerate}
+\item Keeping the normalization $\boldsymbol{n}$ of the
+GSOs$\boldsymbol{\varphi}$ fixed one finds the constrained minimum
+$\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{n}\right)
+\right)  $ of the functional $\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi
+}\right)  $ for the specified values of the control parameters $\boldsymbol{n}%
+$ i.e.
+\begin{equation}
+\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{n}\right)
+\right)  =\min_{\boldsymbol{\varphi\in}\Lambda\left(  \boldsymbol{n}\right)
+}\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\right)  ,
+\end{equation}
+where
+\[
+\Lambda\left(  \boldsymbol{n}\right)  =\left\{  \boldsymbol{\varphi}\left\vert
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=n_{j}\delta_{jk};\sum_{1\leq j\leq s}n_{j}=1\right.  \right\}  .
+\]
+This is accomplished by finding the unconstrained saddle points $\mathcal{L}%
+\left(  \boldsymbol{\varphi\left(  \boldsymbol{n}\right)  ,\varepsilon\left(
+\boldsymbol{n}\right)  },\eta\right)  $ of the Lagrangian
+\begin{equation}
+\mathcal{L}\left(  \boldsymbol{\varphi,\varepsilon}\right)  =\mathcal{E}%
+_{AGP}\left(  \boldsymbol{\varphi}\right)  -\sum_{1\leq j,k\leq2s}%
+\varepsilon_{kj}\left(  \left\langle \left.  \varphi_{j}\right\vert
+\varphi_{k}\right\rangle -n_{j}\delta_{jk}\right)  +\eta\left\{  \sum_{\,1\leq
+j\leq2s}\left\langle \left.  \varphi_{j}\right\vert \varphi_{j}\right\rangle
+-2\right\}  ,
+\end{equation}
+i.e.
+\begin{equation}
+\mathcal{L}\left(  \boldsymbol{\varphi\left(  \boldsymbol{n}\right)
+,\varepsilon\left(  \boldsymbol{n}\right)  },\eta\right)  =\max
+_{\boldsymbol{\varepsilon},\eta.}\min_{\boldsymbol{\varphi}}\mathcal{L}\left(
+\boldsymbol{\varphi,\varepsilon},\eta\right)
+\end{equation}
+The corresponding stationarity conditions are
+\begin{subequations}
+\label{AGPstat}%
+\begin{align}
+\frac{\delta\mathcal{L}\left(  \boldsymbol{\varphi\left(  \boldsymbol{n}%
+\right)  ,\varepsilon\left(  \boldsymbol{n}\right)  },\eta\right)  }%
+{\delta\boldsymbol{\varphi}}  &  =\boldsymbol{0}\label{agpstat1}\\
+\frac{\partial\mathcal{L}\left(  \boldsymbol{\varphi\left(  \boldsymbol{n}%
+\right)  ,\varepsilon\left(  \boldsymbol{n}\right)  },\eta\right)  }%
+{\partial\boldsymbol{\varepsilon}}  &  =\boldsymbol{0}\label{agpstat2}\\
+\frac{\partial\mathcal{L}\left(  \boldsymbol{\varphi\left(  \boldsymbol{n}%
+\right)  ,\varepsilon\left(  \boldsymbol{n}\right)  },\eta\right)  }%
+{\partial\eta}  &  =\boldsymbol{0} \label{agpstat3}%
+\end{align}
+and eq. $\left(  \ref{agpstat1}\right)  $ gives
+\end{subequations}
+\begin{equation}
+\frac{\delta\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  }{\delta\varphi_{j}}=\sum_{1\leq k\leq
+2s}\varepsilon\boldsymbol{\left(  \boldsymbol{n}\right)  }_{jk}\left\vert
+\varphi_{k}\boldsymbol{\left(  \boldsymbol{n}\right)  }\right\rangle ,
+\end{equation}
+which can be expressed \cite{OrtizWeiner2006} in terms of a generalized Fock
+operator as
+\begin{equation}
+F\left(  \boldsymbol{\varphi}\left(  \boldsymbol{n}\right)  \right)
+\left\vert \varphi_{j}\left(  \boldsymbol{n}\right)  \right\rangle
+=\sum_{1\leq k\leq2s}\varepsilon\boldsymbol{\left(  \boldsymbol{n}\right)
+}_{jk}\left\vert \varphi_{k}\boldsymbol{\left(  \boldsymbol{n}\right)
+}\right\rangle .
+\end{equation}
+Sensitivity theory gives%
+\[
+\frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  }{\partial n_{j}}=\varepsilon_{jj}\left(
+\boldsymbol{n}\right)  .
+\]
+
+
+\item Varying $\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  $ over the normalization control parameters
+$\boldsymbol{n}\in\Omega$ to obtain the minimum $\mathcal{E}_{AGP}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{n}_{\#}\right)  \right)  $ i.e.
+\begin{equation}
+\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{n}%
+_{\#}\right)  \right)  =\min_{\boldsymbol{n}\in\Omega}\mathcal{E}_{AGP}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{n}\right)  \right)  .
+\label{agp_control}%
+\end{equation}
+The optimization eq. $\left(  \ref{agp_control}\right)  $ can be made
+unconstrained by expressing $\boldsymbol{n}$ in terms of the variable
+$\boldsymbol{\theta}$ as
+\begin{equation}
+n_{j}\left(  \boldsymbol{\theta}\right)  =\frac{\cos^{2}\theta_{j}}%
+{\sum\limits_{1\leq j\leq s}\cos^{2}\theta_{j}}\equiv\frac{\cos^{2}\theta_{j}%
+}{\mathcal{N}_{n}\left(  \boldsymbol{\theta}\right)  };0\leq\theta_{j}%
+\leq\frac{\pi}{2} \label{ntheta}%
+\end{equation}
+$\lceil$%
+\begin{equation}
+\sum\limits_{1\leq j\leq s}\frac{\partial\mathcal{E}_{AGP}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{n}\right)  \right)  }{\partial n_{j}%
+}\frac{\partial n_{j}}{\partial\theta_{k}}=0;1\leq k\leq s.
+\end{equation}
+Using eq.$\left(  \ref{ntheta}\right)  $ and observing that
+\begin{equation}
+\frac{\partial n_{j}}{\partial\theta_{k}}=\frac{\cos^{2}\theta_{j}\sin
+2\theta_{k}}{\mathcal{N}\left(  \boldsymbol{\theta}\right)  ^{2}}-\frac
+{\sin2\theta_{k}\delta_{jk}}{\mathcal{N}\left(  \boldsymbol{\theta}\right)
+}=\frac{\sin2\theta_{k}}{\mathcal{N}\left(  \boldsymbol{\theta}\right)
+}\left\{  \frac{\cos^{2}\theta_{j}}{\mathcal{N}\left(  \boldsymbol{\theta
+}\right)  }-\delta_{jk}\right\}
+\end{equation}
+and
+\begin{equation}
+\frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\left(  \boldsymbol{\theta}\right)  \right)  \right)  }{\partial
+n_{j}}=\varepsilon_{jj}\left(  \boldsymbol{n}\left(  \boldsymbol{\theta
+}\right)  \right)
+\end{equation}
+this can be developed to give
+\begin{align}
+&  \frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{\theta}\right)  \right)  }{\partial\theta_{k}}=\sum\limits_{1\leq
+j\leq s}\varepsilon_{jj}\left(  \boldsymbol{\theta}\right)  \frac{\sin
+2\theta_{k}}{\mathcal{N}\left(  \boldsymbol{\theta}\right)  }\left\{
+\frac{\cos^{2}\theta_{j}}{\mathcal{N}\left(  \boldsymbol{\theta}\right)
+}-\delta_{jk}\right\}  =0\nonumber\\
+&  \Rightarrow\sum\limits_{1\leq j\leq s}\varepsilon_{jj}\left(
+\boldsymbol{\theta}\right)  \frac{\cos^{2}\theta_{j}\sin2\theta_{k}%
+}{\mathcal{N}\left(  \boldsymbol{\theta}\right)  ^{2}}=\varepsilon_{kk}\left(
+\boldsymbol{\theta}\right)  \sin2\theta_{k}%
+\end{align}
+$\rfloor$
+\end{enumerate}
+
+We are interested in the dependence on the occupation numbers of the
+$2M$-electron state which we can obtain by using the chain rule
+\begin{align}
+&  \frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  }{\partial N_{j}}=\sum_{1\leq k\leq2s}%
+\frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  }{\partial n_{k}}\frac{\partial n_{k}%
+}{\partial N_{j}}\nonumber\\
+&  \Rightarrow\frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi
+}\left(  \boldsymbol{n}\right)  \right)  }{\partial N_{j}}=\sum_{1\leq
+k\leq2s}\frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  }{\partial n_{k}}\frac{\partial n_{k}%
+}{\partial N_{j}}=\sum_{1\leq k\leq2s}\frac{\partial\mathcal{E}_{AGP}\left(
+\boldsymbol{\varphi}\left(  \boldsymbol{n}\right)  \right)  }{\partial n_{k}%
+}\left(  \frac{\partial N_{k}}{\partial n_{j}}\right)  ^{-1}%
+\end{align}
+i.e.%
+\begin{equation}
+\frac{\partial\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(
+\boldsymbol{n}\right)  \right)  }{\partial\boldsymbol{N}}=\frac{\partial
+\mathcal{E}_{AGP}\left(  \boldsymbol{\varphi}\left(  \boldsymbol{n}\right)
+\right)  }{\partial\boldsymbol{n}}\left(  \frac{\partial\boldsymbol{N}%
+}{\partial\boldsymbol{n}}\right)  ^{-1}.
+\end{equation}
+The Jacobian $\frac{\partial\boldsymbol{N}}{\partial\boldsymbol{n}}$ is
+nonsingular as the occupation numbers of the AGP\ state are explicitly given
+in a $1-1$ fashion by $\left[  {}\right]  $
+\begin{equation}
+\boldsymbol{N}=\mathcal{N}\left(  \boldsymbol{n}\right)  ,
+\end{equation}
+where
+\begin{equation}
+N_{j}=\mathcal{N}_{j}\left(  \boldsymbol{n}\right)  =n_{j}\frac{S_{M-1}\left(
+\jmath\right)  }{S_{M}}=n_{j}\frac{\partial\ln S_{M}}{\partial n_{j}}%
+;\quad1\leq j\leq s.
+\end{equation}
+The matrix elements of the Jacobian $\left(  \frac{\partial\boldsymbol{N}%
+}{\partial\boldsymbol{n}}\right)  $ are
+\begin{align}
+\frac{\partial N_{k}}{\partial n_{j}}  &  =\frac{\partial}{\partial n_{j}%
+}\left\{  n_{k}\frac{\partial\ln S_{M}}{\partial n_{k}}\right\}  =\delta
+_{jk}\frac{\partial\ln S_{M}}{\partial n_{k}}+n_{k}\frac{\partial^{2}\ln
+S_{M}}{\partial n_{j}\partial n_{k}}\nonumber\\
+&  =\delta_{jk}\frac{S_{M-1}\left(  \jmath\right)  }{S_{M}}-n_{k}\frac
+{S_{M-1}\left(  \jmath\right)  S_{M-1}\left(  k\right)  }{S_{M}^{2}}%
++n_{k}\frac{S_{M-2}\left(  jk\right)  }{S_{M}}.
+\end{align}
+
+
+\section{Discussion\label{Discussion}}
+
+\appendix
+
+
+\section{State Density, Reduced Density Operators and Operator Spaces
+\label{Denmat}}
+
+\subsection{State Density Operators and Operator Spaces}
+
+The convex set $S_{N}$ of normalized $N$-electron density operators $D$ is
+defined as
+\begin{equation}
+S_{N}=\left\{  D\left\vert D\in\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)
+;\operatorname{Tr}D=1\right.  \right\}  ,
+\end{equation}
+where $\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)  $ is the cone (see
+below) of positive trace class operators, defined as
+\begin{equation}
+\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)  =\left\{  D\in\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  \left\vert \overset{}{\left\langle
+\Psi\left\vert D\Psi\right.  \right\rangle }\geq0\quad\forall\Psi
+\in\mathcal{H}^{N}\right.  \right\}  ,
+\end{equation}
+where $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ is the space of trace
+class operators defined as
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =\left\{  \left.  X\right\vert
+\operatorname{Tr}\left\{  \left(  X^{\dagger}X\right)  ^{\frac{1}{2}}\right\}
+<\infty\right\}  ,
+\end{equation}
+which is contained in the space of bounded $N$-electron operators
+$\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ defined as
+\begin{align}
+\mathcal{B}\left(  \mathcal{H}^{N}\right)   &  =\left\{  X\left\vert
+\sup_{\substack{\Psi\in\mathcal{H}^{N}\\\left\Vert \Psi\right\Vert
+=1}}\left\{  \left\langle \Psi\left\vert X^{\dagger}X\Psi\right.
+\right\rangle \right\}  <\infty=\sup_{\substack{\Psi\in\mathcal{H}%
+^{N}\\\left\Vert \Psi\right\Vert =1}}\left\{  \left\Vert X\Psi\right\Vert
+\right\}  <\infty\right.  \right. \\
+&  =\left.  \sup_{\substack{\Psi,\Phi\in\mathcal{H}^{N}\\\left\Vert
+\Psi\right\Vert =1,\left\Vert \Phi\right\Vert =1}}\left\{  \left\langle
+\Psi\left\vert X^{\dagger}X\Phi\right.  \right\rangle \right\}  <\infty
+\right\}  .
+\end{align}
+It can be shown that if one considers bounded self-adjoint operators then
+\begin{equation}
+\left\Vert X\right\Vert =\sup_{\substack{\Psi\in\mathcal{H}^{N}\\\left\Vert
+\Psi\right\Vert =1}}\left\{  \left\vert \left\langle \Psi\left\vert
+X\Psi\right.  \right\rangle \right\vert \right\}  =r\left(  X\right)  <\infty,
+\end{equation}
+where $r\left(  X\right)  $ is the spectral radius of $X$.
+
+The convex set property of $S_{N}$ is explicitly displayed by
+\begin{equation}
+S_{N}=\left\{  \left.  \sum_{1\leq j\leq m}\alpha_{j}D_{j}\right\vert
+\sum_{1\leq j\leq m}\alpha_{j}=1;0\leq\alpha_{j}\leq1,D_{j}\in S_{N},1\leq
+j\leq m\right\}  .
+\end{equation}
+and a set $C$ is a cone if $X\in C\Leftrightarrow\alpha X\in C$ $\forall
+\alpha>0,$ which is satisfied by $\mathcal{B}_{1+}\left(  \mathcal{H}%
+^{N}\right)  .$
+
+The spaces $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ and $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $ are Banach spaces with norms defined by
+\begin{equation}
+\left\Vert X\right\Vert =\left[  \sup_{\substack{\Psi\in\mathcal{H}^{N}%
+\\\Psi\neq0}}\left\{  \frac{\left\langle \Psi\left\vert X^{\dagger}%
+X\Psi\right.  \right\rangle }{\left\langle \Psi\left\vert \Psi\right.
+\right\rangle }\right\}  \right]  ^{\frac{1}{2}}=\sup_{_{\substack{\Phi
+,\Psi\in\mathcal{H}^{N}\\\Phi,\Psi\neq0}}}\left\{  \frac{\left\vert
+\left\langle \Phi\left\vert X\Psi\right.  \right\rangle \right\vert
+}{\left\Vert \Phi\right\Vert \left\Vert \Psi\right\Vert }\right\}
+\end{equation}
+and
+\begin{equation}
+\left\Vert X\right\Vert _{1}=\operatorname{Tr}\left\{  \left(  X^{\dagger
+}X\right)  ^{\frac{1}{2}}\right\}
+\end{equation}
+respectively. A closely related space that we have utilized is the space of
+Hilbert Schimdt operators $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $
+defined as
+\begin{equation}
+\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  =\left\{  X\left\vert
+\operatorname{Tr}\left\{  X^{\dagger}X\right\}  <\infty\right.  \right\}  ,
+\end{equation}
+which is a Hilbert space with inner product given by
+\begin{equation}
+\left\langle X\left\vert Y\right.  \right\rangle _{\mathcal{B}_{2}\left(
+\mathcal{H}^{N}\right)  }=\operatorname{Tr}\left\{  X^{\dagger}Y\right\}
+\end{equation}
+and norm by
+\begin{equation}
+\left\Vert X\right\Vert _{2}=\left(  \operatorname{Tr}\left\{  X^{\dagger
+}X\right\}  \right)  ^{\frac{1}{2}}=\left\langle X\left\vert X\right.
+\right\rangle _{\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  }^{\frac{1}{2}%
+}.
+\end{equation}
+
+
+As $\left\Vert X\right\Vert \leq\left\Vert X\right\Vert _{2}\leq\left\Vert
+X\right\Vert _{1}$ \cite{KummerI} on has
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  \subseteq\mathcal{B}_{2}\left(
+\mathcal{H}^{N}\right)  \subseteq\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  .
+\end{equation}
+One can also note that the spaces of compact of operators $\mathcal{C}\left(
+\mathcal{H}^{N}\right)  ,$Hilbert Schmidt operators and trace class operators
+are the completions of the space of finite rank operators, $\mathcal{B}%
+_{0}\left(  \mathcal{H}^{N}\right)  ,$ in the operator norm, $\left\Vert
+{}\right\Vert ,$ the Hilbert-Schmidt norm $\left\Vert {}\right\Vert _{2}$ and
+the trace class norm $\left\Vert X\right\Vert _{1}$ respectively, so that one
+obtains
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  \subseteq\mathcal{C}\left(
+\mathcal{H}^{N}\right)  \subseteq\mathcal{B}_{2}\left(  \mathcal{H}%
+^{N}\right)  \subseteq\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)
+\subseteq\mathcal{B}_{0}\left(  \mathcal{H}^{N}\right)  .
+\end{equation}
+
+
+\subsection{Reduced Density Operators \label{RDO}}
+
+\qquad The space-spin integral kernel, $D^{p}\left(  \boldsymbol{\kappa}%
+_{p}\boldsymbol{,\kappa}_{p}^{\prime}\right)  $ of the $p^{th}$ order reduced
+density operator of the $N$-electron state, $D,$ is defined as%
+\begin{equation}
+D^{p}\left(  \boldsymbol{\kappa}_{p};\boldsymbol{\kappa}_{p}^{\prime}\right)
+=\operatorname{Tr}\left\{  \Phi\left(  \boldsymbol{\kappa}_{p}^{\prime
+}\right)  ^{\dagger}\Phi\left(  \boldsymbol{\kappa}_{p}\right)  D\right\}  ,
+\label{DenMatDef}%
+\end{equation}
+where
+\begin{align}
+\boldsymbol{\kappa}_{p}  &  \equiv\boldsymbol{x}_{1},\cdots,\boldsymbol{x}%
+_{p}\\
+\boldsymbol{x}_{j}  &  \equiv\boldsymbol{r}_{j}\boldsymbol{,\xi}_{j};1\leq
+j\leq p\nonumber
+\end{align}
+and the field operators are defined in Appendix $\left(  \ref{SecQuant}%
+\right)  .$ The multi-electron operators $\Phi\left(  \boldsymbol{\kappa}%
+_{p}\right)  ^{\dagger}$ are defined as the product of the one-electrons
+operators $\Phi\left(  \boldsymbol{\kappa}_{j}\right)  ^{\dagger}$ i.e.%
+\begin{equation}
+\Phi\left(  \boldsymbol{\kappa}_{p}\right)  ^{\dagger}=\Phi\left(
+\boldsymbol{x}_{1}\right)  ^{\dagger}\cdots\Phi\left(  \boldsymbol{x}%
+_{p}\right)  ^{\dagger}.
+\end{equation}
+The space integral kernels are also given by eq.$\left(  \ref{DenMatDef}%
+\right)  $ but with
+\begin{equation}
+\boldsymbol{\kappa}_{p}\equiv\boldsymbol{r}_{1},\cdots,\boldsymbol{r}_{p}.
+\end{equation}
+The $p^{th}$-Order RDO is then given by
+\begin{equation}
+D^{p}=\frac{1}{\left(  p!\right)  ^{2}}\int D^{p}\left(  \boldsymbol{\kappa
+}_{p};\boldsymbol{\kappa}_{p}^{\prime}\right)  \left\vert \boldsymbol{\kappa
+}_{p}\right\rangle \left\langle \boldsymbol{\kappa}_{p}^{\prime}\right\vert
+d\boldsymbol{\kappa}_{p}d\boldsymbol{\kappa}_{p}^{\prime},
+\end{equation}
+where $\left\{  \left\vert \boldsymbol{\kappa}_{p}\right\rangle ,\left\langle
+\boldsymbol{\kappa}_{p}^{\prime}\right\vert \right\}  $ are to be understood
+as generalized bases (Appendix $\left(  \ref{Genbasis}\right)  ).$
+
+The RDO kernel for a state, $D$, that does not have a fixed number of
+electrons can be given in terms of the kernels for pure number states as
+\begin{equation}
+D\left(  \boldsymbol{\kappa};\boldsymbol{\kappa}^{\prime}\right)  =\sum_{0\leq
+p\leq\infty}\alpha_{p}D^{p}\left(  \boldsymbol{\kappa}_{p};\boldsymbol{\kappa
+}_{p}^{\prime}\right)  ;\sum_{1\leq p\leq\infty}\alpha_{j}=1;0\leq\alpha
+_{j}\leq1
+\end{equation}
+
+
+\subsection{Reduced Density Matrices (RDM) \label{RDM}}
+
+The matrix elements $D_{j_{1}\cdots j_{p}k_{1}\cdots k_{p}}^{p}$ of the
+$p^{th}$-Order RDM $\mathbb{D}^{p}$ with respect to the complete orthonormal
+basis $\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j_{1}\leq\cdots\leq j_{p}\leq\infty\right\}  $ of $\mathcal{H}^{1}$ are given
+by%
+\begin{align}
+D_{j_{1}\cdots j_{p}k_{1}\cdots k_{p}}^{p}  &  =\int\varphi_{j_{1}}\left(
+\boldsymbol{x}_{1}\right)  ^{\ast}\cdots\varphi_{j_{p}}\left(  \boldsymbol{x}%
+_{p}\right)  ^{\ast}D^{p}\left(  \boldsymbol{\kappa}_{p};\boldsymbol{\kappa
+}_{p}^{\prime}\right)  \varphi_{k_{1}}\left(  \boldsymbol{x}_{1}^{\prime
+}\right)  \cdots\varphi_{k_{p}}\left(  \boldsymbol{x}_{p}^{\prime}\right)
+d\boldsymbol{\kappa}_{p}d\boldsymbol{\kappa}_{p}^{\prime}\\
+1  &  \leq j_{1}\leq\cdots\leq j_{p}\leq\infty;1\leq k_{1}\leq\cdots\leq
+k_{p}\leq\infty.
+\end{align}
+Thus
+\begin{equation}
+D^{p}=\sum_{\substack{1\leq j_{1}\leq\cdots\leq j_{p}\leq\infty\\1\leq
+k_{1}\leq\cdots\leq k_{p}\leq\infty}}D_{j_{1}\cdots j_{p}k_{1}\cdots k_{p}%
+}^{p}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{p}}\right\rangle \left\langle
+\varphi_{k_{1}}\cdots\varphi_{k_{p}}\right\vert .
+\end{equation}
+$\lceil\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{p}}\right\rangle =\frac
+{1}{\sqrt{p!}}\varphi_{j_{1}}\wedge\cdots\wedge\varphi_{j_{p}}=\mathcal{A}%
+_{p}\varphi_{j_{1}}\otimes\cdots\otimes\varphi_{j_{p}}$ thus the matrix
+elements are given by expectation value with respect to the simple tensor
+product i.e.
+\begin{align}
+&  \left\langle \left.  \varphi_{j_{1}}\cdots\varphi_{j_{p}}\right\vert
+D^{p}\varphi_{k_{1}}\cdots\varphi_{k_{p}}\right\rangle =\frac{1}%
+{p!}\left\langle \left.  \varphi_{j_{1}}\wedge\cdots\wedge\varphi_{j_{p}%
+}\right\vert D^{p}\varphi_{k_{1}}\wedge\cdots\wedge\varphi_{k_{p}%
+}\right\rangle \\
+&  =\frac{1}{p!}\left\langle \left.  \mathcal{A}_{p}\varphi_{j_{1}}%
+\otimes\cdots\otimes\varphi_{j_{p}}\right\vert D^{p}\mathcal{A}_{p}%
+\varphi_{k_{1}}\otimes\cdots\otimes\varphi_{k_{p}}\right\rangle =\frac{1}%
+{p!}\left\langle \left.  \varphi_{j_{1}}\otimes\cdots\otimes\varphi_{j_{p}%
+}\right\vert \mathcal{A}_{p}D^{p}\mathcal{A}_{p}\varphi_{k_{1}}\otimes
+\cdots\otimes\varphi_{k_{p}}\right\rangle \\
+&  =\frac{1}{p!}\left\langle \left.  \varphi_{j_{1}}\otimes\cdots
+\otimes\varphi_{j_{p}}\right\vert D^{p}\varphi_{k_{1}}\otimes\cdots
+\otimes\varphi_{k_{p}}\right\rangle \rfloor
+\end{align}
+
+
+\subsection{Densities \label{Gen. Den}}
+
+\qquad In general we define the density, $\eta_{A}$, of an operator
+$A\in\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ to be
+\begin{equation}
+\eta_{A}\left(  \boldsymbol{r}\right)  =\operatorname{Tr}\left\{  \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  A\right\}
+;\text{ }\boldsymbol{r\in}\mathbb{R}^{3},
+\end{equation}
+which can be complex valued, $A=A^{\dagger}$ then $\eta_{A}$ is real valued
+but can have both positive and negative values, while if $A\geq0$ then
+$\eta_{A}\left(  \boldsymbol{r}\right)  \geq0$ and we denote it by the
+positive density $\rho_{A}$ i.e.
+\begin{equation}
+\rho_{A}\left(  \boldsymbol{r}\right)  =\eta_{A}\left(  \boldsymbol{r}\right)
+=\operatorname{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A\right\}  \geq0;\text{ }A\geq
+0,\boldsymbol{r\in}\mathbb{R}^{3}.
+\end{equation}
+If $A$ is self adjoint then $A$ has the generalized expansion (see Appendix
+\ref{Genbasis})
+\begin{equation}
+A=\int\left\vert a\right\rangle \left\langle a\right\vert da
+\end{equation}
+and
+\begin{equation}
+\eta_{A}\left(  \boldsymbol{r}\right)  =0\Leftrightarrow\Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  \left\vert
+a\right\rangle =0
+\end{equation}
+as%
+\begin{equation}
+\left(  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \right)  ^{2}=\Phi\left(  \boldsymbol{r}\right)
+^{\dagger}\Phi\left(  \boldsymbol{r}\right)  ,
+\end{equation}
+leading to
+\begin{equation}
+\left\langle a\left\vert \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  a\right.  \right\rangle =\left\langle
+a\left\vert \left(  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \right)  ^{2}a\right.  \right\rangle =\left\langle
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  a\left\vert \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  a\right.  \right\rangle =0.
+\end{equation}
+
+
+\section{Generalized Bases \label{Genbasis}}
+
+Generalized bases make use of the "rigged Hilbert space" construction
+\cite{Bohm}. A rigging of a Hilbert space $\mathcal{H}$ is produced by a dense
+(in the Hilbert space norm) Topological Vector Space (TVS) space
+$\mathcal{R\subset H},$ which has a dual $\mathcal{R}^{d}$ such that
+$\mathcal{H=H}^{d}$ can be embedded in $\mathcal{R}^{d}$ i.e.
+$\mathcal{H\subset}$ $\mathcal{R}^{d}$ produing a Gelfand Triple
+$\mathcal{R\subset H\subset R}^{d}.$ Many topologies may be put on
+$\mathcal{R}$ (that are finer than the Hilbert space topology) producing
+different $\mathcal{R}^{d}$'s, the only restriction is that the embedding
+$\mathit{i}$ $:\mathcal{H\rightarrow}$ $\mathcal{R}^{d}$ is antilinear,
+injective and continuous. Different $\mathcal{R}$'s produce different
+riggings. A space that is often chosen for $\mathcal{R}$ is $\mathcal{S}%
+\left(  \mathbb{R}^{n}\right)  $ the space of rapidly decreasing antisymmetric
+test functions on $\mathbb{R}^{n},$ its dual space $\mathcal{S}\left(
+\mathbb{R}^{n}\right)  ^{d}$ is the space of antisymmetric tempered
+distributions, which are generated by the one-electron space that contains
+Dirac delta functions, $\delta_{\mathbf{r}}\left(  \mathbf{r}^{\prime}\right)
+=\delta\left(  \mathbf{r-r}^{\prime}\right)  ,$ and plane waves $w_{\mathbf{k}%
+}\left(  \mathbf{r}^{\prime}\right)  =e^{i\mathbf{k\cdot r}^{\prime}}$
+\cite{Bogolubov}, where $\mathbf{r}^{\prime}\in$ $\mathbb{R}^{3}$ is the
+argument of the distributions indexed by $\mathbf{r}$ and $\mathbf{k}$.
+
+As $\mathcal{R}^{d}$ is the dual of $\mathcal{R}$ one denotes the elements of
+$\mathcal{R}^{d}$ as $\left\langle a^{\prime}\right\vert $ and those of
+$\mathcal{R}$ as $\left\vert a\right\rangle .\mathcal{R}$ and $\mathcal{H}$
+can be embedded in $\mathcal{R}^{d}$ thus one can always consider
+$\left\langle a\right\vert ;$ $a\in\mathcal{R}$ and $\left\langle h\right\vert
+;$ $h\in\mathcal{H}$ with the understanding that $\left\langle a\right\vert $
+are defined on $\mathcal{R}$ and $\left\langle h\right\vert $ on $\mathcal{H}$.
+
+The Nuclear Spectral Theorem \cite{Bohm} states that any self-adjoint operator
+$A$ (in general not bounded) has an expansion
+\begin{equation}
+A=\int_{\sigma\left(  A\right)  }a\left\vert a\right\rangle \left\langle
+a\right\vert da,
+\end{equation}
+$\lceil$where the measure $da$ can be expanded as
+\begin{equation}
+da=da_{ac}+da_{pp}+da_{sc}=da_{ac}+da_{sc}+\sum_{1\leq j\leq r}\delta\left(
+\alpha_{j}-a\right)  da.
+\end{equation}
+One should observe that if there are sets/points in the spectrum that have
+measure zero with respect to the measure $da_{ac}$ that is absolutely
+continuous with respect to Lebesgue measure then they have non zero measure
+with respect $da_{sc},$ the measure that is singularly continuous with respect
+to Lebesgue measure.$\rfloor$
+
+in the sense that
+\begin{align}
+\left\langle \varphi\left\vert A\psi\right.  \right\rangle  &  =\int%
+_{\sigma\left(  A\right)  }a\left\langle \left.  \varphi\right\vert
+a\right\rangle \left\langle \left.  a\right\vert \psi\right\rangle da\\
+\left\langle \left.  \varphi\right\vert a\right\rangle  &  =\overline
+{\left\langle \left.  a\right\vert \varphi\right\rangle },
+\end{align}
+where $\left\{  \left\vert \varphi\right\rangle ,\left\langle \psi\right\vert
+\right\}  \in\mathcal{R},\left\{  \left\vert a\right\rangle ,\left\langle
+a\right\vert \right\}  \in\mathcal{R}^{d}$, the spectrum of $\sigma\left(
+A\right)  \subseteq\mathbb{R}$ and $da$ is a point measure. All of the vectors
+$\left\vert a\right\rangle $ are eigenvectors of $A$ i.e.
+\begin{equation}
+A\left\vert a\right\rangle =a\left\vert a\right\rangle ,
+\end{equation}
+again in the sense%
+\begin{equation}
+\left\langle \varphi\left\vert Aa\right.  \right\rangle =a\left\langle
+\varphi\left\vert a\right.  \right\rangle =a\overline{\left\langle
+\varphi\left\vert a\right.  \right\rangle },\left\vert \varphi\right\rangle
+\in\mathcal{R}.
+\end{equation}
+The set of vectors $\left\{  \left.  \left\vert a\right\rangle \right\vert
+a\in\sigma\left(  A\right)  \right\}  $ forms a generalized basis of
+$\mathcal{H}$ and any vector $\left\vert v\right\rangle \in\mathcal{R}$ has
+the expansion
+\begin{equation}
+\left\vert v\right\rangle =\int_{\sigma\left(  A\right)  }\left\langle \left.
+a\right\vert v\right\rangle \left\vert a\right\rangle da;\left\vert
+a\right\rangle \in\mathcal{R}^{d}%
+\end{equation}
+The basis $\left\{  \left.  \left\vert a\right\rangle \right\vert a\in
+\sigma\left(  A\right)  \right\}  $ is orthonormal in the sense
+\begin{equation}
+\left\langle \left.  a_{1}\right\vert \nu\right\rangle =\int_{\sigma\left(
+A\right)  }\left\langle \left.  a_{1}\right\vert a_{2}\right\rangle
+\left\langle \left.  a_{2}\right\vert v\right\rangle da_{2}\forall\left\vert
+v\right\rangle \in\mathcal{R}%
+\end{equation}
+so that $\left\langle \left.  a_{1}\right\vert a_{2}\right\rangle $ can be
+identified as
+\begin{equation}
+\left\langle \left.  a_{1}\right\vert a_{2}\right\rangle =\delta_{a_{1}-a_{2}%
+}.
+\end{equation}
+The operators $\left\vert a\right\rangle \left\langle a^{\prime}\right\vert $
+can thus be interpretted as
+\begin{equation}
+\left\vert a\right\rangle \left\langle a^{\prime}\right\vert :\mathcal{R}%
+^{d}\rightarrow\mathcal{R}^{d}.
+\end{equation}
+The vectors $\left\vert v\right\rangle \in\mathcal{R}$ have unique expansion
+coefficients $\left\langle \left.  a\right\vert v\right\rangle $ (if the
+spectral measure has no continuously singular parts) i.e.
+\begin{align}
+\left\vert v_{1}\right\rangle  &  =\left\vert v_{2}\right\rangle
+\Leftrightarrow\left\langle \left.  a\right\vert v_{1}\right\rangle
+=\left\langle \left.  a\right\vert v_{2}\right\rangle \forall a\nonumber\\
+\left\langle a^{\prime}\left\vert \int_{\sigma\left(  A\right)  }\left\langle
+\left.  a\right\vert v_{1}\right\rangle \left\vert a\right\rangle da\right.
+\right\rangle  &  =\left\langle a^{\prime}\left\vert \int_{\sigma\left(
+A\right)  }\left\langle \left.  a\right\vert v_{2}\right\rangle \left\vert
+a\right\rangle da\right.  \right\rangle \nonumber\\
+\int_{\sigma\left(  A\right)  }\left\langle \left.  a\right\vert
+v_{1}\right\rangle \delta\left(  a^{\prime}-a\right)  da  &  =\int%
+_{\sigma\left(  A\right)  }\left\langle \left.  a\right\vert v_{2}%
+\right\rangle \delta\left(  a^{\prime}-a\right)  da\nonumber\\
+\left\langle \left.  a^{\prime}\right\vert v_{1}\right\rangle  &
+=\left\langle \left.  a^{\prime}\right\vert v_{2}\right\rangle .
+\end{align}
+Thus%
+\begin{equation}
+\left\vert v_{1}\right\rangle -\left\vert v_{2}\right\rangle =0\Rightarrow
+\int_{\sigma\left(  A\right)  }\left\{  \left\langle \left.  a\right\vert
+v_{1}\right\rangle -\left\langle \left.  a\right\vert v_{2}\right\rangle
+\right\}  \delta\left(  a^{\prime}-a\right)  da=0
+\end{equation}
+in contrast to
+\begin{equation}
+\int_{\sigma\left(  A\right)  }\left\vert v_{1}\left(  a\right)  -v_{2}\left(
+a\right)  \right\vert ^{2}da=0\Leftrightarrow v_{1}\left(  a\right)
+\overset{a.e}{=}v_{2}\left(  a\right)  \text{ wrt }da
+\end{equation}
+as $\left\vert v_{1}\right\rangle $ and $\left\vert v_{2}\right\rangle $ do
+not have to be in $\mathcal{R}$.
+
+If the operator $A$ is a compact \cite{Encyclo} and self-adjoint (thus
+bounded) then the basis $\left\{  \left.  \left\vert a\right\rangle
+\right\vert a\in\sigma\left(  A\right)  ;\right\}  $ is a conventional
+orthonormal basis contained in $\mathcal{H}$ i.e. $\left\vert a\right\rangle
+\in\mathcal{H\,}\forall a\in\sigma\left(  A\right)  .$
+
+In particular consider the position operator $\mathbf{Q},($which is not
+bounded),
+\begin{equation}
+\mathbf{Q}=\int_{\mathbb{R}^{3}}\mathbf{r}\left\vert \mathbf{r}\right\rangle
+\left\langle \mathbf{r}\right\vert d\mathbf{r,}%
+\end{equation}
+then any state, $\left\vert \varphi\right\rangle ,$ that has a wavefunction,
+$\left\langle \left.  \mathbf{r}\right\vert \varphi\right\rangle ,$ belonging
+to the test function space $\mathcal{R}$ $=\mathcal{S}\left(  \mathbb{R}%
+^{n}\right)  ,$ can be expanded as
+\begin{equation}
+\left\vert \varphi\right\rangle =\int_{\mathbb{R}^{3}}\left\langle \left.
+\mathbf{r}\right\vert \varphi\right\rangle \left\vert \mathbf{r}\right\rangle
+d\mathbf{r,}%
+\end{equation}
+where
+\begin{equation}
+\left\langle \left.  \mathbf{r}\right\vert \mathbf{r}^{\prime}\right\rangle
+=\delta_{\mathbf{r-r}^{\prime}}.
+\end{equation}
+(Note that $\mathcal{R}$ $\neq\mathcal{H}$ as there are functions in
+$\mathcal{H}$ that are not bounded on compact sets and hence $\left\langle
+\left.  \mathbf{r}\right\vert \varphi\right\rangle $ is not defined for all
+$\left\vert \varphi\right\rangle \in\mathcal{H}$).
+
+$\lceil$%
+\begin{equation}
+\left\vert \varphi\right\rangle =\left\vert \psi\right\rangle \text{
+}\Leftrightarrow\left\{  \left\langle \left.  \varphi\right\vert
+\chi\right\rangle =\left\langle \left.  \psi\right\vert \chi\right\rangle
+\equiv\left\langle \left.  \varphi\right\vert \chi\right\rangle -\left\langle
+\left.  \psi\right\vert \chi\right\rangle =0\right\}  \forall\chi\mathbf{\in
+}\text{ }\mathcal{R}%
+\end{equation}
+$\rfloor$
+
+\section{Second Quantized Density Operators \label{SecQuant}}
+
+Fermion second quantized operators $\left\{  \left.  a_{j}^{\dagger
+}\right\vert 1\leq j\leq\infty\right\}  $ are defined by the action on the
+vacuum state $\left\vert \phi\right\rangle $ by
+\begin{equation}
+a_{j}^{\dagger}\left\vert \phi\right\rangle =\left\vert \varphi_{j}%
+\right\rangle ,1\leq j\leq\infty,
+\end{equation}
+where $\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq\infty\right\}  $ is a complete orthonormal basis of one-electron space
+$\mathcal{H}^{1}$ and $\left\{  \left.  a_{j}^{\dagger},a_{k}\right\vert 1\leq
+j,k\leq\infty\right\}  $ satisfy the canonical anti-commutation relationships
+\begin{equation}
+\left[  a_{j}^{\dagger},a_{k}\right]  _{+}=a_{j}^{\dagger}a_{k}+a_{k}%
+a_{j}^{\dagger}=\delta_{jk};1\leq j,k\leq\infty.
+\end{equation}
+The operators $\left\{  \left.  a_{j,}a_{j}^{\dagger}\right\vert 1\leq
+j\leq\infty\right\}  $ can be considered as the values of the maps
+\begin{equation}
+\Phi,\Phi^{\dagger}:\mathcal{H}^{1}\rightarrow\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)
+\end{equation}
+given by
+\begin{align}
+a_{j}  &  =\Phi\left(  \varphi_{j}\right)  ,\nonumber\\
+a_{j}^{\dagger}  &  =\Phi\left(  \varphi_{j}\right)  ^{\dagger},
+\end{align}
+where the Fock space, $\mathcal{H}_{\mathcal{F}},$ is defined by
+\begin{equation}
+\mathcal{H}_{\mathcal{F}}=\underset{0\leq N\leq\infty}{\oplus}\wedge
+^{N}\mathcal{H}^{1}.
+\end{equation}
+The point field operators $\left\{  \left.  \Phi\left(  \boldsymbol{r}\right)
+\right\vert \boldsymbol{r\in}\mathbb{R}^{3}\right\}  $ are defined by
+\cite{Thirring}
+\begin{equation}
+\Phi\left(  \boldsymbol{r}\right)  =\sum_{1\leq j\leq\infty}\varphi_{j}\left(
+\boldsymbol{r}\right)  ^{\ast}a_{j}%
+\end{equation}
+and the density operators, $\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  $, formally by
+\begin{equation}
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  =\sum_{1\leq j,k\leq\infty}\varphi_{j}\left(  \boldsymbol{r}\right)
+\varphi_{k}\left(  \boldsymbol{r}\right)  ^{\ast}a_{j}^{\dagger}a_{k}.
+\end{equation}
+The unbounded operators $\Phi\left(  \boldsymbol{r}\right)  $ are densely
+defined (but not closeable) on the Fock space, $\mathcal{H}_{\mathcal{F}},$
+nor the subspaces $\mathcal{H}^{N}=\wedge^{N}\mathcal{H}^{1},$ while the
+domains of their adjoints $\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}$ are
+empty i.e. do not contain any vectors belonging to $\mathcal{H}_{\mathcal{F}}$
+\cite{Thirring}. However, matrix elements, $\operatorname{Tr}\left\{
+A^{\dagger}\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  B\right\}  ,$ of the density super operators
+$\widehat{\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  }$ can be defined as the distributional limits of
+$\operatorname{Tr}\left\{  A^{\dagger}\Phi\left(  f\right)  ^{\dagger}%
+\Phi\left(  f\right)  B\right\}  $ as $f\rightarrow\delta_{\boldsymbol{r}}$
+where
+\begin{equation}
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  \equiv\Phi\left(  \delta_{\boldsymbol{r}}\right)  ^{\dagger}%
+\Phi\left(  \delta_{\boldsymbol{r}}\right)  .
+\end{equation}
+Even though $\Phi\left(  \boldsymbol{r}\right)  $ are not closeable the
+operators $\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  $ are bounded as
+\begin{equation}
+\left\Vert \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \right\Vert =\left[  \sup_{\substack{\Psi\in
+\mathcal{H}_{\mathcal{F}}\\\left\Vert \Psi\right\Vert =1}}\left\{
+\left\langle \Psi\left\vert \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  \Psi\right.  \right\rangle \right\}
+\right]  ^{\frac{1}{2}}=\sup_{\substack{\Psi\in\mathcal{H}_{\mathcal{F}%
+}\\\left\Vert \Psi\right\Vert =1}}\left\{  \rho_{\Psi}\left(  \boldsymbol{r}%
+\right)  \right\}  ^{\frac{1}{2}}<\infty
+\end{equation}
+as all states $\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+\in\mathcal{B}_{1sa+}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ thus
+$\rho_{\Psi}\left(  \boldsymbol{r}\right)  \leq\int\rho_{\Psi}\left(
+\boldsymbol{r}\right)  d\boldsymbol{r}<\infty.$
+
+\section{Super Operators \label{super}}
+
+The set, $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,$ of self adjoint
+Hilbert-Schmidt operators form a real Hilbert space equipped with inner
+product
+\begin{equation}
+\left(  X\left\vert Y\right.  \right)  =\left\langle X\left\vert Y\right.
+\right\rangle _{\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  };X=X^{\dagger
+},Y=Y^{\dagger}.
+\end{equation}
+Super-operators (which could be unbounded), $\widehat{T},$ acting on the
+Hilbert space $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,$ i.e.
+\begin{equation}
+\widehat{T}:\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,
+\end{equation}
+can be generated by self adjoint operators belonging to $\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  $
+\begin{equation}
+T:\mathcal{H}^{N}\rightarrow\mathcal{H}^{N}%
+\end{equation}
+by%
+\begin{equation}
+\widehat{T}\left(  Y\right)  =\frac{1}{2}\left[  T,Y\right]  _{+}\equiv
+\frac{1}{2}\left(  TY+YT\right)  .
+\end{equation}
+Noting that
+\begin{equation}
+\operatorname{Tr}\left\{  TYX\right\}  =\operatorname{Tr}\left\{  XTY\right\}
+=\operatorname{Tr}\left\{  YTX\right\}  =\operatorname{Tr}\left\{
+XYT\right\}  \text{ as }X,Y,T\in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)
+\end{equation}
+one can observe that
+\begin{align}
+\frac{1}{2}\left(  \operatorname{Tr}\left\{  TYX\right\}  +\operatorname{Tr}%
+\left\{  YTX\right\}  \right)   &  =\operatorname{Tr}\left\{  TYX\right\}
+\nonumber\\
+\frac{1}{2}\left(  \operatorname{Tr}\left\{  XTY\right\}  +\operatorname{Tr}%
+\left\{  XYT\right\}  \right)   &  =\operatorname{Tr}\left\{  TYX\right\}
+\end{align}
+leading to
+\begin{equation}
+\left(  \left.  \widehat{T}\left(  Y\right)  \right\vert X\right)  =\left(
+\left.  TY\right\vert X\right)  .
+\end{equation}
+The operator $\widehat{T}$ is self adjoint as
+\begin{align}
+\left(  \widehat{T}X\left\vert Y\right.  \right)   &  =\frac{1}{2}%
+\operatorname{Tr}\left\{  \left[  T,X\right]  _{+}Y\right\}  =\frac{1}%
+{2}\operatorname{Tr}\left\{  TXY+XTY\right\} \nonumber\\
+&  =\frac{1}{2}\operatorname{Tr}\left\{  YTX+TYX\right\}  =\frac{1}%
+{2}\operatorname{Tr}\left\{  XTY+XYT\right\} \nonumber\\
+&  =\left(  X\left\vert \widehat{T}Y\right.  \right)  .
+\end{align}
+The domain, $\operatorname{Dom}\left\{  \widehat{T}\right\}  $, of
+$\widehat{T}$
+\begin{equation}
+\operatorname{Dom}\left\{  \widehat{T}\right\}  =\left\{  Y\left\vert
+\operatorname{Tr}\left\{  \left(  \widehat{T}\left(  Y\right)  \right)
+^{2}\right\}  <\infty\,\right.  \right\}  \equiv\frac{1}{4}\left\{  \left.
+Y\right\vert \operatorname{Tr}\left\{  \left(  TY+YT\right)  \left(
+TY+YT\right)  \right\}  <\infty\,\right\}
+\end{equation}
+can be generated by projectors, $\left\vert \Phi\right\rangle \left\langle
+\Phi\right\vert $ onto normalized states $\left\vert \Phi\right\rangle $ that
+lie in the domain, $\operatorname{Dom}\left\{  T\right\}  $, of $T.$This
+domain is dense in $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ if
+$\operatorname{Dom}\left\{  T\right\}  $ is dense in $\mathcal{H}^{N}$ as
+\[
+\left\{  \left\vert \Phi\right\rangle \left\langle \Phi\right\vert \left\vert
+\operatorname{Tr}\left\{  \left(  \widehat{T}\left(  \left\vert \Phi
+\right\rangle \left\langle \Phi\right\vert \right)  \right)  ^{2}\right\}
+=\frac{1}{2}\left\{  \left\langle \left.  \Phi\right\vert T\Phi\right\rangle
+^{2}+\left\langle \left.  \Phi\right\vert T^{2}\Phi\right\rangle \right\}
+=\left\Vert T\right\Vert ^{2}<\infty\,\right.  ;\left\vert \Phi\right\rangle
+\in\operatorname{Dom}\left\{  T\right\}  \right\}
+\]
+and the domain of $T$ is generated by the set of HS\ convergent real linear
+combinations%
+\begin{equation}
+Y=\sum_{1\leq j\leq\infty}Y_{j}\left\vert \Phi_{j}\right\rangle \left\langle
+\Phi_{j}\right\vert
+\end{equation}
+
+
+The operator $\widehat{T}$ could also be defined in terms of the quadratic
+form
+\begin{align}
+\left(  X\left\vert \widehat{T}Y\right.  \right)   &  =\frac{1}{2}%
+\operatorname{Tr}\left\{  X\left[  T,Y\right]  _{+}\right\}  =\frac{1}%
+{2}\operatorname{Tr}\left\{  XTY+XYT\right\}  =\,\frac{1}{2}\operatorname{Tr}%
+\left\{  XTY+YTX\right\} \nonumber\\
+&  =\frac{1}{2}\operatorname{Tr}\left\{  XTY+XTY\right\}  =\operatorname{Tr}%
+\left\{  XTY\right\}  \forall X,\,Y\in\operatorname{Dom}\left\{
+\widehat{T}\right\}  .
+\end{align}
+
+
+\subsection{Density Super Operators \label{Den Sup Ops}}
+
+The action of the super operator $\widehat{\Phi\left(  \boldsymbol{r}\right)
+^{\dagger}\Phi\left(  \boldsymbol{r}\right)  }:\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  $ is given by
+\begin{equation}
+\widehat{\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  }\left\vert A\right)  =\left\vert \left[  \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  A\right]
+_{+}\right)  =\frac{1}{2}\left\vert \left[  \Phi\left(  \boldsymbol{r}\right)
+^{\dagger}\Phi\left(  \boldsymbol{r}\right)  ,A\right]  _{+}\right)  .
+\label{supproj}%
+\end{equation}
+
+
+\begin{lemma}
+If $A=A^{\dagger}$ and $A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $
+then
+\begin{align}
+\operatorname*{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A^{2}\right\}   &  =0\Leftrightarrow
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  A\Leftrightarrow A\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  =0\nonumber\\
+&  \Leftrightarrow\widehat{\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  }\left\vert A\right)  =0.
+\end{align}
+
+\end{lemma}
+
+\begin{proof}
+$\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  $ is a projection operator and $A^{2}$ is a positive trace class
+operator as $A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ thus
+\begin{align}
+\operatorname*{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A^{2}\right\}   &  =\operatorname*{Tr}%
+\left\{  A\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A\right\} \nonumber\\
+&  =\left\langle A\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \left\vert A\Phi\left(  \boldsymbol{r}\right)
+^{\dagger}\Phi\left(  \boldsymbol{r}\right)  \right.  \right\rangle
+_{\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  }=0,
+\end{align}
+which implies that
+\begin{equation}
+A\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  =0
+\end{equation}
+and hence, by taking the adjoint, that
+\begin{equation}
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  A=0.
+\end{equation}
+Eq. $\left(  \ref{supproj}\right)  $ thus shows that
+\begin{equation}
+\widehat{\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  }\left\vert A\right)  =\left\vert \left[  \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  A\right]
+_{+}\right)  =0.
+\end{equation}
+
+\end{proof}
+
+Consider a set $\Delta\subseteq\mathbb{R}^{3}$ then one can define a subspace,
+$\mathcal{S}_{1\Delta^{c}},$ of $\mathcal{B}_{1sa}\left(  \mathcal{H}%
+^{N}\right)  $ by
+\begin{equation}
+\mathcal{S}_{1\Delta^{c}}=\text{linear span}\left\{  Y\left\vert
+\operatorname*{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  Y\right\}  =0\forall\boldsymbol{r}\in
+\Delta^{c}\right.  ,Y\in\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)
+\right\}  .
+\end{equation}
+The space, $\left(  \mathcal{S}_{1\Delta^{c}}\right)  ^{\bot}\subset
+\mathcal{B}_{sa}\left(  \mathcal{H}^{N}\right)  ,$ perpendicular to
+$\mathcal{S}_{1\Delta^{c}}$ is given by
+\begin{equation}
+\left(  \mathcal{S}_{1\Delta^{c}}\right)  ^{\bot}=\left\{  X\left\vert
+\operatorname*{Tr}\left\{  XY\right\}  =0;\forall Y\in\mathcal{S}_{1\Delta
+^{c}}\right.  \right\}  .
+\end{equation}
+In particular $\left.  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  \right\vert _{\mathcal{H}^{N}}$
+$,\boldsymbol{r}\in\Delta^{c}$ generate a subspace, $\mathcal{C}_{1\Delta^{c}%
+},$ of commuting operators of $\left(  \mathcal{S}_{1\Delta^{c}}\right)
+^{\bot}$ given by
+\begin{equation}
+\left.  \mathfrak{f}_{\Delta^{c}}\right\vert _{\mathcal{H}^{N}}=\int%
+_{\Delta^{c}}f\left(  \boldsymbol{r}\right)  \left.  \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)
+\right\vert _{\mathcal{H}^{N}}d\boldsymbol{r},
+\end{equation}
+where $f\in L_{\infty}\left(  \Delta\right)  $ and $\mathfrak{f}$ is given by
+\begin{equation}
+\mathfrak{f}_{\Delta^{c}}=\text{ }\int_{\Delta^{c}}f\left(  \boldsymbol{r}%
+\right)  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  d\boldsymbol{r}.
+\end{equation}%
+\begin{equation}
+\left\vert \Psi_{1}\right\rangle \left\langle \Psi_{2}\right\vert
+\in\mathcal{S}_{1\Delta^{c}}\text{ if }\Phi\left(  \boldsymbol{r}\right)
+^{\dagger}\Phi\left(  \boldsymbol{r}\right)  \left\vert \Psi_{1}\right\rangle
+=0\text{ or }\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \left\vert \Psi_{2}\right\rangle =0
+\end{equation}%
+\begin{equation}
+\mathfrak{f}_{\Delta^{c}}\left\vert \Psi_{1}\right\rangle \left\langle
+\Psi_{2}\right\vert =0\forall\left\vert \Psi_{1}\right\rangle \left\langle
+\Psi_{2}\right\vert \in\mathcal{S}_{1\Delta^{c}}%
+\end{equation}%
+\begin{equation}
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  \left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+\neq0\forall\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+\in\mathcal{S}_{1\Delta^{c}},\boldsymbol{r}\in\Delta
+\end{equation}%
+\begin{equation}
+\mathfrak{f}_{\Delta}=\left\langle \text{ }\Psi\left\vert \int_{\Delta
+}f\left(  \boldsymbol{r}\right)  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger
+}\Phi\left(  \boldsymbol{r}\right)  d\boldsymbol{r}\right.  \Psi\right\rangle
+=
+\end{equation}
+The complimentary operator $\mathfrak{f}_{\Delta}$ is given by
+\begin{equation}
+\mathfrak{f}_{\Delta}=\text{ }\int_{\Delta}f\left(  \boldsymbol{r}\right)
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  d\boldsymbol{r}.
+\end{equation}
+If $Y\geq0$ i.e. $Y=A^{2}$ for some $A\in\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  ,$ this leads one to consider the subspace,
+$\mathcal{S}_{2\Delta^{c}},$ of $\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  $ defined by
+\begin{subequations}
+\begin{equation}
+\mathcal{S}_{2\Delta^{c}}=\text{ linear span}\left\{  A\left\vert
+\widehat{\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  }\left\vert A\right)  =0\forall\boldsymbol{r}\in
+\Delta^{c},A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \right.
+\right\}  ,
+\end{equation}
+that by the preceeding lemma corresponds to
+\end{subequations}
+\begin{align}
+\mathcal{S}_{2\Delta^{c}}  &  =\text{ linear span}\left\{  A\left\vert
+\operatorname*{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A^{2}\right\}  =0\forall\boldsymbol{r}%
+\in\Delta^{c},A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \right.
+\right\} \nonumber\\
+&  =\text{ linear span}\left\{  A\left\vert \Phi\left(  \boldsymbol{r}\right)
+^{\dagger}\Phi\left(  \boldsymbol{r}\right)  A=0\forall\boldsymbol{r}\in
+\Delta^{c},A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \right.
+\right\}  .
+\end{align}
+One should note that $Y\in\mathcal{S}_{1\Delta^{c}}$ or $A\in\mathcal{S}%
+_{2\Delta^{c}}$ does not preclude that
+\begin{equation}
+\operatorname*{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  Y\right\}  =0,\text{for some }%
+\boldsymbol{r}\in\Delta\text{ and }Y\in\mathcal{S}_{1\Delta^{c}},
+\end{equation}
+nor
+\begin{equation}
+\widehat{\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  }\left\vert A\right)  =0,\text{ for some }%
+\boldsymbol{r}\in\Delta\text{ and }A\in\mathcal{S}_{2\Delta^{c}}.
+\end{equation}
+
+
+As $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ is a Hilbert space one
+can define the orthogonal compliment, $\left(  \mathcal{S}_{2\Delta^{c}%
+}\right)  ^{\bot},$ as
+\begin{equation}
+\left(  \mathcal{S}_{2\Delta^{c}}\right)  ^{\bot}=\left\{  B\left\vert \left(
+B\left\vert A\right.  \right)  =0\forall A\in\mathcal{S}_{2\Delta^{c}}\right.
+\right\}  ,\forall A\in\mathcal{S}_{2\Delta^{c}},B\in\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right) \nonumber
+\end{equation}
+and thus
+\begin{equation}
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  =\mathcal{S}_{2\Delta^{c}%
+}\oplus\left(  \mathcal{S}_{2\Delta^{c}}\right)  ^{\bot}.
+\end{equation}
+This is equivalent to
+\begin{equation}
+\int_{\Delta}\left(  \sum_{1\leq j\leq N}f\left(  \boldsymbol{r}_{j}\right)
+\right)  ^{2}d\boldsymbol{r}_{1}\boldsymbol{\cdots}d\boldsymbol{r}_{N}%
+<\infty;1\leq N\leq\infty.
+\end{equation}
+
+
+\section{Regular Points \label{Regular}}
+
+\subsection{Derivatives \label{DerivDef}}
+
+\bigskip A Banach space mapping, $F,$between spaces $\mathcal{B}_{1}$ and
+$\mathcal{B}_{2}$ i.e.
+\begin{equation}
+F:\mathcal{B}_{1}\rightarrow\mathcal{B}_{2},
+\end{equation}
+is G\^{a}teaux differentiable at a point $A\in\mathcal{B}_{1}$ contained in an
+open subset $U$ of $\mathcal{B}_{1}$ if
+\begin{equation}
+\nabla_{B}F\left(  A\right)  =\lim_{t\rightarrow0}\frac{1}{t}\left\{  F\left(
+A+tB\right)  -F\left(  A\right)  \right\}  =\left.  \frac{d}{dt}F\left(
+A+tB\right)  \right\vert _{t=0},
+\end{equation}
+exists for any $B\in\mathcal{B}_{1}.$ If $\nabla F\left(  A\right)  $ exists
+for all $B\in\mathcal{B}_{1}$ it is called the G\^{a}teaux derivative of $F$
+at $A$ and $\nabla_{B}F\left(  A\right)  $ $=\left[  \nabla F\left(  A\right)
+\right]  \left(  B\right)  $ the directional G\^{a}teaux derivative in the
+direction $B$ at the point $A.$ The map $F$ is called Fr\'{e}chet
+differentiable at a point $A\in\mathcal{B}_{1}$ if there exists a linear
+operator
+\begin{equation}
+dF\left(  A\right)  :\mathcal{B}_{1}\rightarrow\mathcal{B}_{2}%
+\end{equation}
+such that
+\begin{equation}
+\lim_{\left\Vert B\right\Vert \rightarrow0}\frac{1}{\left\Vert B\right\Vert
+}\left\{  F\left(  A+B\right)  -F\left(  A\right)  -\left[  dF\left(
+A\right)  \right]  \left(  B\right)  \right\}  =0,
+\end{equation}
+$dF\left(  A\right)  $ is called the Fr\'{e}chet derivative of $F$ at $A.$ $F$
+is Fr\'{e}chet differentiable in an open subset $U$ of $\mathcal{B}_{1}$if and
+only if it is
+
+\begin{itemize}
+\item G\^{a}teaux differentiable i.e. $\nabla F\left(  A\right)  $ exists
+
+\item $\left[  \nabla F\left(  A\right)  \right]  \left(  B\right)
+\equiv\nabla_{B}F\left(  A\right)  $ is linear in $B$
+
+\item $\sup_{B\neq0}\left\{  \frac{\left\Vert \nabla_{B}F\left(  A\right)
+\right\Vert }{\left\Vert B\right\Vert }\right\}  <\infty$
+\end{itemize}
+
+then
+\begin{equation}
+\nabla_{B}F\left(  A\right)  =\left[  dF\left(  A\right)  \right]  \left(
+B\right)  =\left[  \nabla F\left(  A\right)  \right]  \left(  B\right)  .
+\end{equation}
+Fr\'{e}chet differentiation defines a map (generally non linear) from the
+space of functions, $\mathcal{F}\left(  \mathcal{B}_{1},\mathcal{B}%
+_{2}\right)  ,$ mapping $\mathcal{B}_{1}$ to $\mathcal{B}_{2}$
+\begin{align}
+d  &  :\mathcal{F}\left(  \mathcal{B}_{1},\mathcal{B}_{2}\right)
+\rightarrow\mathcal{F}\left(  \mathcal{B}_{1},\mathcal{B}_{2}\right)
+\nonumber\\
+d  &  :F\rightarrow dF.
+\end{align}
+that produces the Fr\'{e}chet derivative, the Fr\'{e}chet derivative at a
+point $A$ is $dF\left(  A\right)  \in\mathcal{L}\left(  \mathcal{B}%
+_{1},\mathcal{B}_{2}\right)  ,$ the bounded linear maps from $\mathcal{B}_{1}$
+to $\mathcal{B}_{2}.$
+
+\subsection{Tangent and Normal Spaces \label{TanNorm}}
+
+\subsubsection{Differentiability of the Constraint}
+
+The constraint functional is a quadratic map%
+\begin{equation}
+\Xi_{2}:\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathfrak{D}\mathcal{\subset}L_{1+}\left(  \mathbb{R}^{3}\right)  \cap
+L_{3+}\left(  \mathbb{R}^{3}\right)  \subset L_{1}\left(  \mathbb{R}%
+^{3}\right)  ,
+\end{equation}
+where%
+\begin{equation}
+\Xi_{2}\left(  A\right)  =\left(  A\left\vert \widehat{\Phi^{\dagger}\Phi
+}_{\delta}A\right.  \right)  =\rho.
+\end{equation}
+The super operator valued distribution $\widehat{\Phi^{\dagger}\Phi}_{\delta}$
+is defined by
+\begin{align}
+\widehat{\Phi^{\dagger}\Phi}_{\delta}  &  :\mathbb{R}^{3}\cong\mathcal{D}%
+_{\delta}\subset\mathcal{S}\left(  \mathbb{R}^{3}\right)  ^{d}\rightarrow
+\mathcal{B}_{sa}\left(  \mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\right) \nonumber\\
+\widehat{\Phi^{\dagger}\Phi}_{\delta}\left(  \boldsymbol{r}\right)   &
+\equiv\widehat{\Phi^{\dagger}\Phi}\left(  \delta_{\mathbf{r}}\right)
+\in\mathcal{B}_{sa}\left(  \mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\right)  ,
+\end{align}
+(where we have used the identification of $\mathbb{R}^{3}$ with the set of
+Dirac delta functions $\mathcal{D}_{\delta},$ $\mathcal{S}\left(
+\mathbb{R}^{3}\right)  $ is the space of Schwartz test functions also called
+the space of test functions of rapid decrease, and $\mathcal{S}\left(
+\mathbb{R}^{3}\right)  ^{d}$ is the space of Tempered distributions), in terms
+of the operator valued distribution $\Phi^{\dagger}\Phi_{\delta}$
+\begin{align}
+\Phi^{\dagger}\Phi_{\delta}  &  :\mathbb{R}^{3}\rightarrow\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right) \nonumber\\
+\Phi^{\dagger}\Phi_{\delta}\left(  \boldsymbol{r}\right)   &  \equiv
+\Phi^{\dagger}\left(  \delta_{\mathbf{r}}\right)  \Phi\left(  \delta
+_{\mathbf{r}}\right)  \equiv\Phi^{\dagger}\left(  \boldsymbol{r}\right)
+\Phi\left(  \boldsymbol{r}\right)  \in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)
+\end{align}
+as
+\begin{equation}
+\widehat{\Phi^{\dagger}\Phi}_{\delta}\left(  \boldsymbol{r}\right)  \left\vert
+A\right)  =\left\vert \left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger
+}\Phi\left(  \boldsymbol{r}\right)  A\right]  _{+}\right)  .
+\end{equation}
+The density $\rho_{A^{2}}$ associated with an operator $A\in\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  $ is given by
+\begin{equation}
+\left(  \left.  \left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A\right]  _{+}\right\vert A\right)
+=\operatorname{Tr}\left\{  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A^{2}\right\}  \text{ }\forall
+\boldsymbol{r\in}\mathbb{R}^{3}.
+\end{equation}
+One does not distinguish between densities that are only different on sets of
+measure zero i.e.
+\begin{equation}
+\rho\sim\rho^{\prime}\text{ if }\int\left\vert \rho\left(  \boldsymbol{r}%
+\right)  -\rho^{\prime}\left(  \boldsymbol{r}\right)  \right\vert
+d\boldsymbol{r}=0\text{ i.e. }\rho\overset{a.e}{=}\rho^{\prime}.
+\end{equation}
+It is easy to see that $\Xi_{2}$ is Fr\'{e}chet differentiable as the
+directional G\^{a}teaux derivative, $\nabla_{B}\Xi_{2}\left(  A\right)  ,$ of
+$\Xi_{2}$ exists at $A$ for all $B$
+\begin{align}
+&  \lim_{t\rightarrow0}\frac{1}{t}\left\{  \Xi_{2}\left(  A+tB\right)
+-\Xi_{2}\left(  A\right)  \right\}  =\lim_{t\rightarrow0}\frac{1}{t}\left\{
+\left(  \left(  A+tB\right)  \left\vert \widehat{\Phi^{\dagger}\Phi_{\delta}%
+}\left(  A+tB\right)  \right.  \right)  -\left(  A\left\vert \widehat{\Phi
+^{\dagger}\Phi_{\delta}}A\right.  \right)  \right\} \nonumber\\
+&  \left.  \qquad\qquad=\right.  \lim_{t\rightarrow0}\left\{  2\left(
+A\left\vert \widehat{\Phi^{\dagger}\Phi_{\delta}}B\right.  \right)  -t\left(
+B\left\vert \widehat{\Phi^{\dagger}\Phi_{\delta}}B\right.  \right)  \right\}
+=2\left(  A\left\vert \widehat{\Phi^{\dagger}\Phi_{\delta}}B\right.  \right)
+\end{align}
+leading to a G\^{a}teaux derivative
+\begin{equation}
+\nabla\Xi_{2}\left(  A\right)  =2\left(  \left[  \Phi^{\dagger}\Phi_{\delta
+}\left(  A\right)  \right]  _{+}\right\vert ,
+\end{equation}
+which is clearly a bounded linear functional
+\begin{equation}
+\nabla\Xi_{2}\left(  A\right)  :\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  \rightarrow L_{1}\left(  \mathbb{R}^{3}\right)  .
+\end{equation}
+The three conditions for Fr\'{e}chet differentialability are satisfied and the
+Fr\'{e}chet derivative of $\Xi_{2}$ at $A$ is then also
+\begin{equation}
+d\Xi_{2}\left(  A\right)  =\nabla\Xi_{2}\left(  A\right)  =2\left(  \left[
+\Phi^{\dagger}\Phi_{\delta}\left(  A\right)  \right]  _{+}\right\vert
+\end{equation}
+and
+\begin{equation}
+d\Xi_{2}\left(  A\right)  :\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\rightarrow L_{1}\left(  \mathbb{R}^{3}\right)  .
+\end{equation}
+
+
+The differential map
+\begin{equation}
+d\Xi_{2}:\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathcal{L}\left(  \mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+,L_{1}\left(  \mathbb{R}^{3}\right)  \right)
+\end{equation}
+is linear (as $\Xi_{2}$ is quadratic) and one can consider
+\begin{equation}
+\ker d\Xi_{2}=\left\{  \left.  A\right\vert d\Xi_{2}\left(  A\right)
+=0\right\}
+\end{equation}
+and
+\begin{equation}
+\operatorname{range}d\Xi_{2}=\left\{  \left.  B\right\vert B=d\Xi_{2}\left(
+A\right)  \right\}  .
+\end{equation}
+$A\in\ker d\Xi_{2}$ if
+\begin{equation}
+\left(  \left[  \Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(
+\boldsymbol{r}\right)  A\right]  _{+}\right\vert =0\,\forall\boldsymbol{r\in
+}\mathbb{R}^{3}\Longleftrightarrow A=0,
+\end{equation}
+so is empty. However $\ker d\Xi_{2}\left(  A\right)  $ is not empty as
+\begin{align}
+\left(  A\left\vert \widehat{\Phi^{\dagger}\left(  \boldsymbol{r}\right)
+\Phi\left(  \boldsymbol{r}\right)  }B\right.  \right)   &  =\left(
+A\left\vert \left[  \Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(
+\boldsymbol{r}\right)  B\right]  _{+}\right.  \right)  =\operatorname{Tr}%
+\left\{  A\left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  B\right]  _{+}\right\} \nonumber\\
+&  =\operatorname{Tr}\left\{  A\Phi\left(  \boldsymbol{r}\right)  ^{\dagger
+}\Phi\left(  \boldsymbol{r}\right)  B\right\}  =0\quad\forall\boldsymbol{r}%
+\in\mathbb{R}^{3}%
+\end{align}
+implies that $A$ is localized on $\boldsymbol{\Delta}_{A}$ and $B$ on
+$\boldsymbol{\Delta}_{B}$ and
+\begin{equation}
+\boldsymbol{\Delta}_{A}\cap\boldsymbol{\Delta}_{B}=\phi,
+\end{equation}
+where
+\begin{equation}
+\boldsymbol{\Delta}_{X}=\operatorname*{supp}\eta_{X}=\overline{\left\{
+\left.  \mathbf{r}\right\vert \eta_{X}\left(  \mathbf{r}\right)
+\neq0\right\}  },
+\end{equation}
+i.e. the closure of the set of points where $\eta_{X}$ is nonzero. The set
+$\boldsymbol{\Delta}_{X}$ might not be bounded thus not compact. If
+$\boldsymbol{\Delta}_{A}\cap\boldsymbol{\Delta}_{B}=\phi$ then $A\bot B$ i.e.
+\begin{equation}
+\left(  \left.  A\right\vert B\right)  =0.
+\end{equation}
+
+
+\begin{theorem}
+The operators $\left\{  \left.  \left\vert \left[  \Phi\left(  \boldsymbol{r}%
+\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  A\right]  _{+}\right)
+\right\vert \mathbf{r\in}\mathbb{R},A\in\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \right\}  $ are linearly independent .
+
+\begin{proof}
+This is true if the only solution to
+\begin{align}
+&  \int_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}\right)  \left\vert
+\left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  A\right]  _{+}\right)  d\boldsymbol{r}\nonumber\\
+&  =\frac{1}{2}\int_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}\right)
+\left\vert A\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  +\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A\right)  d\boldsymbol{r}=0;\,f\left(
+\boldsymbol{r}\right)  \in\mathbb{R} \label{Th1}%
+\end{align}
+is $f\left(  \boldsymbol{r}\right)  \overset{a.e.}{=}0.$ Eq. $\left(
+\ref{Th1}\right)  $ is equivalent to
+\begin{equation}
+\int_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}\right)
+\operatorname{Tr}\left\{  YA\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  \right\}  d\boldsymbol{r}=0;\,\forall
+Y\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,
+\end{equation}
+thus as%
+\begin{equation}
+\int_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}\right)
+\operatorname{Tr}\left\{  YA\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  \right\}  d\boldsymbol{r}=0;\,\forall
+Y\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  , \label{Theo1}%
+\end{equation}
+where
+\begin{equation}
+Y=Y_{1}+iY_{2};\,Y_{1},Y_{2}\in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  .
+\end{equation}
+Eq. $\left(  \ref{Theo1}\right)  $ can be recast as%
+\begin{equation}
+\operatorname{Tr}\left\{  YA\mathfrak{f}\right\}  =\left\langle Y\left\vert
+A\mathfrak{f}\right.  \right\rangle _{\mathcal{B}_{2}\left(  \mathcal{H}%
+^{N}\right)  }=0;\,\forall Y\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)
+, \label{p1}%
+\end{equation}
+where we constrain $\mathfrak{f}$ to be a Hilbert-Schimdt operator i.e.
+\begin{equation}
+\mathfrak{f}=\int_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}\right)
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  d\boldsymbol{r\,}\in\mathcal{B}_{2sa}\left(  \mathcal{H}\right)  ,
+\end{equation}
+so that%
+\begin{equation}
+\left.  \mathfrak{f}\right\vert _{\mathcal{H}^{N}}\in\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  ,1\leq N\leq\infty.
+\end{equation}
+Eq. $\left(  \ref{p1}\right)  $ shows that
+\begin{equation}
+A\mathfrak{f}=\mathfrak{f}A=0.
+\end{equation}
+The operator $\mathfrak{f}$ can expanded in an alternate form by considering
+its restrictions to $\mathcal{H}^{N}$ for $0\leq N\leq\infty,$ as
+\begin{equation}
+\mathfrak{f}=\sum_{1\leq N\leq\infty}\binom{\boldsymbol{r}_{N}}{N}^{-1}%
+\int_{\boldsymbol{\Delta}_{A}}\sum_{1\leq j\leq N}f\left(  \boldsymbol{r}%
+_{j}\right)  \left\vert \boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}%
+\right\rangle \left\langle \boldsymbol{r}_{1}\cdots\boldsymbol{r}%
+_{N}\right\vert d\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}.
+\end{equation}
+As $A$ is campact and self adjoint it has the expansion
+\begin{equation}
+A=\sum_{1\leq j\leq r_{N}}\alpha_{j}\left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{j}\right\vert ;\,\alpha_{j}\in\mathbb{R},\left\vert
+\Psi_{j}\right\rangle \in\mathcal{H}^{N},1\leq j\leq r_{N}.
+\end{equation}
+thus one can express $\mathfrak{f}A=0$ as
+\begin{align}
+&  \sum_{1\leq j\leq N}\int_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}%
+_{j}\right)  \left\vert \boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}%
+\right\rangle \left\langle \boldsymbol{r}_{1}\cdots\boldsymbol{r}%
+_{N}\right\vert d\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}\sum_{1\leq j\leq
+r_{N}}\alpha_{j}\left\vert \Psi_{j}\right\rangle \left\langle \Psi
+_{j}\right\vert \nonumber\\
+&  =\sum_{1\leq j\leq r_{N}}\alpha_{j}\sum_{1\leq j\leq N}\int%
+_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}_{j}\right)  \left\langle
+\boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}\left\vert \Psi_{j}\right.
+\right\rangle \left\vert \boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}%
+\right\rangle \left\langle \Psi_{j}\right\vert d\boldsymbol{r}_{1}\cdots
+d\boldsymbol{r}_{N}\nonumber\\
+&  =\sum_{1\leq k\leq r_{N}}\alpha_{k}\sum_{1\leq j\leq N}\int%
+_{\boldsymbol{\Delta}_{A}}f\left(  \boldsymbol{r}_{j}\right)  \Psi_{k}\left(
+\boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}\right)  \left\vert \boldsymbol{r}%
+_{1}\cdots\boldsymbol{r}_{N}\right\rangle \left\langle \Psi_{k}\right\vert
+d\boldsymbol{r}_{1}\cdots d\boldsymbol{r}_{N}=0
+\end{align}
+giving
+\begin{equation}
+\alpha_{k}\left\{  \sum_{1\leq j\leq N}f\left(  \boldsymbol{r}_{j}\right)
+\right\}  \Psi_{k}\left(  \boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}\right)
+=0\,\forall k\text{ and almost everywhere for }\boldsymbol{r}_{j}%
+\in\boldsymbol{\Delta}_{A}.
+\end{equation}
+If
+\begin{equation}
+\sum_{1\leq j\leq N}f\left(  \boldsymbol{r}_{j}\right)  \neq0\text{ almost
+everywhere for }\boldsymbol{r}_{j}\in\boldsymbol{\Delta}_{A},\,1\leq j\leq N
+\end{equation}
+then
+\begin{equation}
+\alpha_{k}\Psi_{k}\left(  \boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}\right)
+=0\text{ }\forall k\text{ and almost everywhere for }\boldsymbol{r}_{j}%
+\in\boldsymbol{\Delta}_{A},\,1\leq j\leq N.\text{ }%
+\end{equation}
+If further $\alpha_{k}\neq0$ then
+\begin{equation}
+\Psi_{k}\left(  \boldsymbol{r}_{1}\cdots\boldsymbol{r}_{N}\right)
+\overset{a.e.}{=}0,
+\end{equation}
+which cannot be true as
+\begin{align}
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+\right)  \left\vert \Psi_{k}\right\rangle  &  =0\forall\boldsymbol{r}%
+\in\boldsymbol{\Delta}_{A}\nonumber\\
+&  \Longleftrightarrow\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  \Psi_{k}\left(  \boldsymbol{r}_{1}\cdots\boldsymbol{r}%
+_{N}\right)  =0\forall\boldsymbol{r}\in\boldsymbol{\Delta}_{A}\nonumber\\
+&  \Longleftrightarrow\left\langle \Psi_{k}\left\vert \Phi\left(
+\boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}\right)  \right.
+\Psi_{k}\right\rangle =0\forall\boldsymbol{r}\in\boldsymbol{\Delta}_{A}.
+\end{align}
+Thus%
+\begin{equation}
+\sum_{1\leq j\leq N}f\left(  \boldsymbol{r}_{j}\right)  \overset{a.e.}{=}%
+0;\boldsymbol{r}_{j}\in\boldsymbol{\Delta}_{A},\,1\leq j\leq
+N\Longleftrightarrow f\left(  \boldsymbol{r}\right)  \overset{a.e.}{=}0.
+\end{equation}
+
+\end{proof}
+\end{theorem}
+
+As $\left\{  \left.  \left\vert \left[  \Phi\left(  \boldsymbol{r}\right)
+^{\dagger}\Phi\left(  \boldsymbol{r}\right)  A\right]  _{+}\right)
+\right\vert \mathbf{r\in}\mathbb{R},A\in\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \right\}  $ linearly independent they form generalized
+basis of $\mathcal{D}_{A}\subset\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  $, where $\mathcal{D}_{A}\cong$ $L_{1}\left(  \boldsymbol{\Delta
+}_{A}\right)  =$ $\operatorname{range}\left\{  d\Xi_{2}\left(  A\right)
+\right\}  .$ (Not a Hilbert space isomorpism)
+
+\subsubsection{Tangent and Normal Spaces of the Constraint}
+
+The map $\Xi_{2}$ defines a differentiable manifold in $\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  $ given by
+\begin{equation}
+\mathfrak{M}=\left\{  \left.  A\right\vert \Xi_{2}\left(  A\right)
+=\rho\right\}  .
+\end{equation}
+A tangent vector $\delta A$ at the point $A$ is defined by curves $x\left(
+t\right)  \subset\mathfrak{M,}t\in\left[  -\delta,\delta\right]
+\subset\mathbb{R},$ such that
+\begin{align*}
+\Xi_{2}\left(  x\left(  t\right)  \right)   &  =\rho\,,t\in\left[
+-\delta,\delta\right] \\
+x\left(  0\right)   &  =A\\
+x  &  :\left[  -\delta,\delta\right]  \longrightarrow\mathfrak{M}%
+\end{align*}
+and is defined to be the equivalence class, $\left[  \frac{dx\left(  0\right)
+}{dt}\right]  ,$ of velocity vectors to such curves at the point $A$ that have
+$\frac{dx\left(  0\right)  }{dt}$ as a representative. One can show that any
+tangent vector $\delta A$ (which equals $\frac{dx\left(  0\right)  }{dt}$ for
+some curve $x)$ belongs to $\ker\left\{  d\Xi_{2}\left(  A\right)  \right\}  $
+i.e.%
+\begin{equation}
+\left(  \left.  \left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}%
+\Phi\left(  \boldsymbol{r}\right)  A\right]  _{+}\right\vert \delta A\right)
+=0\forall\boldsymbol{r\in}\mathbb{R}^{3},
+\end{equation}
+so that
+\begin{equation}
+\mathcal{T}_{A}\subseteq\operatorname{Ker}\left\{  d\Xi_{2}\left(  A\right)
+\right\}  ,
+\end{equation}
+where the tangent space $\mathcal{T}_{A}$ $\subset\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  $ at the point $A$ is defined as
+\begin{equation}
+\mathcal{T}_{A}=\left\{  \delta A\left\vert \text{there exists a }x\left(
+t\right)  \text{ such that }x\left(  0\right)  =A\text{ and }\delta
+A=\frac{dx\left(  0\right)  }{dt}\right.  \right\}  .
+\end{equation}
+However one should note that $\delta A\in\ker\left\{  d\Xi_{2}\left(
+A\right)  \right\}  $ does not imply that there exists a $\frac{dx\left(
+0\right)  }{dt}$ such that $\delta A=\frac{dx\left(  0\right)  }{dt}$ i.e.
+this condition is necessary but not sufficient for $\delta A$ to be a tangent vector.
+
+The normal space, $\mathcal{N}_{A}\subset\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  ,$ at the point $A$ is defined as
+\begin{equation}
+\mathcal{N}_{A}=\left\{  B\left\vert \left(  \left.  \delta A\right\vert
+B\right)  =0\,\forall\boldsymbol{r\in}\mathbb{R}^{3},\forall\delta
+A\in\mathcal{T}_{A}\right.  \right\}  =\left(  \mathcal{T}_{A}\right)  ^{\bot
+},
+\end{equation}
+i.e. the orthogonal complement to the tangent space $\mathcal{T}_{A}.$ Clearly%
+\begin{equation}
+\mathcal{N}_{A}=\left(  \mathcal{T}_{A}\right)  ^{\bot}\supseteq\ker\left\{
+d\Xi_{2}\left(  A\right)  \right\}  ^{\bot}\cong\operatorname{range}\left\{
+d\Xi_{2}\left(  A\right)  \right\}  .
+\end{equation}
+
+
+One can show that $\left\{  \left.  \left[  d\Xi_{2}\left[  \boldsymbol{r}%
+\right]  \left(  A\right)  \right]  \left(  \cdot\right)  \equiv\left(
+\left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  A\right]  _{+}\right\vert \equiv\operatorname{Tr}%
+\left\{  \left[  \Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  A\right]  _{+}\cdot\right\}  \right\vert
+\boldsymbol{r\in}\mathbb{R}^{3}\right\}  $ is a linearly independent set that
+forms a generalized basis for the space $\ker\left\{  d\Xi_{2}\left(
+A\right)  \right\}  ^{\bot}$, so that $A$ is a \emph{normal, }hence a\emph{
+regular, }\cite{Hestenes}\emph{ }point of the constraint (see Appendix basis
+\ref{Genbasis}). As $d\Xi_{2}\left(  A\right)  $ is $1-1$ for the space
+$\ker\left\{  d\Xi_{2}\left(  A\right)  \right\}  ^{\bot}\cong%
+\operatorname{range}\left\{  d\Xi_{2}\left(  A\right)  \right\}  $ and
+\begin{equation}
+\left[  d\Xi_{2}\left(  A\right)  \right]  :\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \rightarrow L_{1}\left(  \boldsymbol{\Delta}%
+_{A}\right)
+\end{equation}
+is thus surjective, . *****
+
+\section{Complexification of $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+$ \label{Complex}}
+
+The complex Hilbert space $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $
+can be considered as the complexification of the real Hilbert space
+$\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ i.e.
+\begin{equation}
+\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  =\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \oplus i\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  ,
+\end{equation}
+such that $Z\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  ,$ where
+\begin{equation}
+Z=X+iY;\text{ }X,Y\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\end{equation}
+The inner product in $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ is
+defined in terms of the inner product in $\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  $ as
+\begin{equation}
+\left(  Z_{1}\left\vert Z_{2}\right.  \right)  _{HS}=\left(  X_{1}\left\vert
+X_{2}\right.  \right)  +\left(  Y_{1}\left\vert Y_{2}\right.  \right)
++i\left\{  \left(  X_{1}\left\vert Y_{2}\right.  \right)  -\left(
+Y_{1}\left\vert X_{2}\right.  \right)  \right\}  ,
+\end{equation}
+which corresponds to
+\begin{equation}
+\left(  Z_{1}\left\vert Z_{2}\right.  \right)  _{HS}=\operatorname{Tr}\left\{
+Z_{1}^{\dagger}Z_{2}\right\}  ,
+\end{equation}
+as%
+\begin{equation}
+\operatorname{Tr}\left\{  \left(  X_{1}-iY_{1}\right)  \left(  X_{2}%
++iY_{2}\right)  \right\}  =\operatorname{Tr}\left\{  X_{1}X_{2}-iY_{1}%
+X_{2}+iX_{1}Y_{2}+Y_{1}Y_{2}\right\}  .
+\end{equation}
+
+
+Note that $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ (self adjoint
+operators) and $i\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ (anti self
+adjoint operators) are not orthogonal subspaces (they are not even subspaces
+under $\mathbb{C}$-linear combination).
+
+\section{State Normalization \label{Normalization}}
+
+If $D^{N}\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ then
+\begin{equation}
+\operatorname{Tr}\left\{  \mathcal{N}D^{N}\right\}  =N\operatorname{Tr}%
+\left\{  D^{N}\right\}  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{N}=\int\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(
+\boldsymbol{r}\right)  d\boldsymbol{r,}%
+\end{equation}
+as
+\begin{equation}
+\mathcal{N}\left\vert \Psi\right\rangle =N\left\vert \Psi\right\rangle
+\quad\forall\left\vert \Psi\right\rangle \in\mathcal{H}^{N}.
+\end{equation}
+For any state $D$
+\begin{equation}
+\operatorname{Tr}\left\{  \mathcal{N}D\right\}  =\int\rho\left(
+\boldsymbol{r,\xi}\right)  d\boldsymbol{r}d\boldsymbol{\xi,}%
+\end{equation}
+thus
+\begin{equation}
+N\operatorname{Tr}\left\{  D^{N}\right\}  =N\Rightarrow\operatorname{Tr}%
+\left\{  D^{N}\right\}  =1.
+\end{equation}
+
+
+\section{Does $\rho_{1}=\rho_{2}$ pointwise or in the mean}
+
+When do we consider two densities to be equal i.e.
+\begin{equation}
+\rho_{1}=\rho_{2}%
+\end{equation}
+is it when
+\begin{equation}
+\rho_{1}\left(  \mathbf{r}\right)  =\rho_{2}\left(  \mathbf{r}\right)  \text{
+}\forall\mathbf{r\in}\mathbb{R}^{3}%
+\end{equation}
+or
+\begin{equation}
+\int\left\vert \rho_{1}\left(  \mathbf{r}\right)  -\rho_{2}\left(
+\mathbf{r}\right)  \right\vert d\mathbf{r}=0\text{ i.e. }\rho_{1}%
+\overset{a.e}{=}\rho_{2}?
+\end{equation}
+Two FORDO's are equal when
+\begin{align}
+\left(  A\left\vert D^{1}\right.  \right)   &  =\left(  A\left\vert
+D^{2}\right.  \right)  \text{ }\forall\mathbf{A\in}\mathcal{B}_{sa}\left(
+\mathcal{H}^{1}\right)  \Longleftrightarrow\\
+\left(  A\left\vert D_{1}^{1}-D_{2}^{1}\right.  \right)   &  =0\text{ }%
+\forall\mathbf{A\in}\mathcal{B}_{sa}\left(  \mathcal{H}^{1}\right)
+;\,D_{1}^{1}-D_{2}^{1}\in\mathcal{B}_{1sa}\left(  \mathcal{H}^{1}\right)  ,
+\end{align}
+thus $D_{1}^{1}-D_{2}^{1}=0$ as an operator in $\mathcal{B}_{1sa}\left(
+\mathcal{H}^{1}\right)  $ i.e.
+\begin{equation}
+\int\left\vert D_{1}^{1}\left(  \mathbf{r}_{1}\mathbf{,r}_{2}\right)
+-D_{2}^{1}\left(  \mathbf{r}_{1}\mathbf{,r}_{2}\right)  \right\vert
+d\mathbf{r}_{1}d\mathbf{r}_{2}=0\equiv D_{1}^{1}\left(  \mathbf{r}%
+_{1}\mathbf{,r}_{2}\right)  \overset{a.e}{=}D_{2}^{1}\left(  \mathbf{r}%
+_{1}\mathbf{,r}_{2}\right)
+\end{equation}
+so in particular
+\begin{equation}
+\int\left\{  \rho_{1}\left(  \mathbf{r}\right)  -\rho_{2}\left(
+\mathbf{r}\right)  \right\}  d\mathbf{r}=0\equiv\rho_{1}\overset{a.e}{=}%
+\rho_{2}.
+\end{equation}
+
+
+\section{Spin\label{Spin}}
+
+\section{Symmetric Function Relationships}
+
+\bibliographystyle{apsrev}
+\bibliography{agpopt,bw,novel,San2008,coleman,Coleman2,bibrefs,lowdin-per-olov,Janak}
+
+\end{document}

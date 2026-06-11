@@ -1,0 +1,2948 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, February 06, 2015 09:42:56}
+%TCIDATA{LastRevised=Sunday, May 24, 2015 08:50:41}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Canonical Form of a Real Antisymmetric Matrix\label{realanti}}
+
+A real antisymmetric bilinear form
+\begin{equation}
+g:\mathbb{R}^{r}\times\mathbb{R}^{r}\rightarrow\mathbb{R}%
+\end{equation}
+can be expressed as
+\begin{equation}
+g\left(  a,b\right)  =\left\langle g\left\vert a\wedge b\right.  \right\rangle
+=\left\langle a\left\vert Ab\right.  \right\rangle =\mathbf{a}^{t}%
+\mathbb{A}\mathbf{b},
+\end{equation}
+where
+\begin{equation}
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}%
+A_{j_{1}j_{2}}\left\vert e_{j_{1}}e_{j_{2}}\right\rangle ;\quad A_{j_{1}j_{2}%
+}=-A_{j_{2}j_{1}}%
+\end{equation}
+and
+\begin{equation}
+\left\vert e_{j_{1}}e_{j_{2}}\right\rangle =\frac{1}{\sqrt{2}}\left(
+\left\vert e_{j_{1}}\otimes e_{j_{2}}\right\rangle -\left\vert e_{j_{2}%
+}\otimes e_{j_{1}}\right\rangle \right)  .
+\end{equation}
+
+
+The preceding expressions can be formulated in a canonical way by observing
+that a real antisymmetric\emph{ }matrix $\mathbb{A}=\mathbb{A}^{\ast
+}=-\mathbb{A}^{t}$ can be converted into a \emph{purely imaginary hermitian}
+\emph{ }antisymmetric matrix, $\mathbb{H}$, $\lceil\mathcal{B}\left(
+\mathbb{R}^{2s}\right)  \hookrightarrow\mathcal{B}\left(  \mathbb{C}%
+^{2s}\right)  \rfloor$ with the properties
+\begin{align}
+\mathbb{H}  &  =i\mathbb{A}\nonumber\\
+\mathbb{H}^{\dagger}  &  =-i\mathbb{A}^{t}=i\mathbb{A}=\mathbb{H}\nonumber\\
+\mathbb{H}^{\ast}  &  =-i\mathbb{A}=i\mathbb{A}^{t}\,=\mathbb{H}%
+^{t}=-\mathbb{H}%
+\end{align}
+and
+\begin{equation}
+\mathbb{H}=i\mathbb{A}=\sum_{1\leq j\leq s}\alpha_{j}\left\{  \left\vert
+\mathbf{v}_{j}\right\rangle \left\langle \mathbf{v}_{j}\right\vert -\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \left\langle \mathbf{v}_{j}^{\ast
+}\right\vert \right\}  ;\qquad\alpha_{j}\in\mathbb{R}^{+}, \label{sa}%
+\end{equation}
+where $\left\{  \left\vert \mathbf{v}_{j}\right\rangle ,\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle ;1\leq j\leq r\right\}  $ is an orthonormal basis.
+
+$\lceil$%
+\begin{equation}
+v_{j}\left(  e_{1},\cdots,e_{r}\right)  =\left(  e_{1},\cdots,e_{r}\right)
+\left\vert \mathbf{v}_{j}\right\rangle =\left(  e_{1},\cdots,e_{r}\right)
+R_{e}\left(  v_{j}\right)
+\end{equation}
+$\rfloor$
+
+Eq. $\left(  \ref{sa}\right)  $ is shown by
+\begin{equation}
+\mathbb{H}\left\vert \mathbf{v}\right\rangle =\alpha\left\vert \mathbf{v}%
+\right\rangle \Rightarrow\mathbb{H}^{\ast}\left\vert \mathbf{v}^{\ast
+}\right\rangle =\alpha\left\vert \mathbf{v}^{\ast}\right\rangle \Rightarrow
+\mathbb{H}^{t}\left\vert \mathbf{v}^{\ast}\right\rangle =\alpha\left\vert
+\mathbf{v}^{\ast}\right\rangle \Rightarrow\mathbb{H}\left\vert \mathbf{v}%
+^{\ast}\right\rangle =-\alpha\left\vert \mathbf{v}^{\ast}\right\rangle ,
+\end{equation}
+If $\alpha\neq0$ then $\left\vert \mathbf{v}^{\ast}\right\rangle
+\bot\left\vert \mathbf{v}\right\rangle ,$ if $\alpha=0$ then $\left\vert
+\mathbf{v}^{\ast}\right\rangle $ is degenerate with $\left\vert \mathbf{v}%
+\right\rangle $ and one can always choose an imaginary basis for the kernel of
+$\mathbb{H}$, which could have odd dimension. Thus in the case $r\neq2s$ there
+is always at least one zero eigenvalue of $\mathbb{H}$ i.e. the dimension of
+Ker$\left\{  \mathbb{H}\right\}  \geq1.$
+
+$\lceil$%
+\begin{align}
+\mathbb{H}\left\vert \mathbf{v}\right\rangle  &  =\alpha\left\vert
+\mathbf{v}\right\rangle \\
+\mathbb{H}\left\vert \mathbf{v}^{\ast}\right\rangle  &  =-\alpha\left\vert
+\mathbf{v}^{\ast}\right\rangle .
+\end{align}
+$\rfloor$
+
+Eq. $\left(  \ref{sa}\right)  $ can also be expressed as
+\begin{equation}
+\mathbb{H}=\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & -\boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\dagger}%
+\end{equation}
+leading to
+\begin{equation}
+\mathbb{A}=-i\mathbb{H=}-i\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & -\boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\dagger}.
+\end{equation}
+
+
+$\lceil$Let
+\begin{equation}
+\mathbb{A}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{2}\\
+\mathbb{I}_{2} & \mathbb{O}%
+\end{array}
+\right)  =\mathbb{J}%
+\end{equation}
+then
+\begin{equation}
+\mathbb{H}=i\mathbb{A}=\left\vert \mathbf{v}_{1}\right\rangle \left\langle
+\mathbf{v}_{1}\right\vert +\left\vert \mathbf{v}_{2}\right\rangle \left\langle
+\mathbf{v}_{2}\right\vert -\left(  \left\vert \mathbf{v}_{3}^{\ast
+}\right\rangle \left\langle \mathbf{v}_{3}^{\ast}\right\vert +\left\vert
+\mathbf{v}_{4}^{\ast}\right\rangle \left\langle \mathbf{v}_{4}^{\ast
+}\right\vert \right)  =i\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{2}\\
+\mathbb{I}_{2} & \mathbb{O}%
+\end{array}
+\right)  =i\mathbb{J}%
+\end{equation}
+and
+\begin{equation}
+\mathbb{J=-}ii\mathbb{H}.
+\end{equation}
+Note that complexification does not have to be antisymmetric$\rfloor$
+
+\subsubsection{$\lceil$ Notation}
+
+Vectors in bold face are numerical representations wrt a basis $\left\{
+e_{1},\cdots,e_{2s}\right\}  $ so the row super vector of numerical vectors
+$\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{2s}\right\rangle $ can be viewed
+as the matrix
+\begin{equation}
+\mathbb{V}=\left(  \left.  \mathbf{v}_{1}\right\vert ,\cdots,\left\vert
+\mathbf{v}_{2s}\right.  \right)
+\end{equation}
+whose columns are made up of the numerical vectors $\left\{  \mathbf{v}%
+_{1},\cdots,\mathbf{v}_{2s}\right\}  $ and
+\begin{align}
+&  V\left(  e_{1},\cdots,e_{2s}\right)  =\left(  e_{1},\cdots,e_{2s}\right)
+\mathbb{V}\\
+\mathbb{V}  &  =\left(  \mathbf{e}_{1},\cdots,\mathbf{e}_{2s}\right)
+\mathbb{V}=\left(  \left.  \mathbf{e}_{1}\right\vert ,\cdots,\left\vert
+\mathbf{e}_{2s}\right.  \right)  \mathbb{V}=\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & 1
+\end{array}
+\right)  \mathbb{V}.
+\end{align}
+$\rfloor$
+
+It is important to note that the orthonormal basis eigenvectors of
+$\mathbb{H}$ are defined only up to overall phase factors $e^{i\varphi_{j}}$
+which \emph{do not} preserve the complex conjugate relationship between
+eigenvectors associated with paired eigenvalues of opposite sign, although one
+can always find complex conjugate eigenvector pairs. These different bases are
+related to each other by
+\begin{equation}
+\left\vert \mathbf{v}_{1}^{\prime},\cdots,\mathbf{v}_{2s}^{\prime
+}\right\rangle =\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{s},\mathbf{v}%
+_{1}^{\ast},\cdots,\mathbf{v}_{s}^{\ast}\right\rangle \left(
+\begin{array}
+[c]{ccc}%
+e^{i\varphi_{1}} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & e^{i\varphi_{2s}}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+$\lceil$%
+\begin{equation}
+\left\vert \mathbf{v}_{1}^{\prime},\cdots,\mathbf{v}_{4}^{\prime}\right\rangle
+=\left\vert \mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{1}^{\ast},\mathbf{v}%
+_{2}^{\ast}\right\rangle \left(
+\begin{array}
+[c]{ccc}%
+e^{i\varphi_{1}} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & e^{i\varphi_{4}}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+$\rfloor$
+
+Using a basis with complex conjugate symmetry we obtain
+\begin{equation}
+\mathbb{A}=-\sum_{1\leq j\leq s}i\alpha_{j}\left\{  \left\vert \mathbf{v}%
+_{j}\right\rangle \left\langle \mathbf{v}_{j}\right\vert -\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \left\langle \mathbf{v}_{j}^{\ast
+}\right\vert \right\}  ;\qquad\alpha_{i}\in\mathbb{R}.
+\end{equation}
+$\lceil$%
+\begin{equation}
+\mathbb{A}=-i\left\{  \left\vert \mathbf{v}_{1}\right\rangle \left\langle
+\mathbf{v}_{1}\right\vert +\left\vert \mathbf{v}_{2}\right\rangle \left\langle
+\mathbf{v}_{2}\right\vert -\left(  \left\vert \mathbf{v}_{3}^{\ast
+}\right\rangle \left\langle \mathbf{v}_{3}^{\ast}\right\vert +\left\vert
+\mathbf{v}_{4}^{\ast}\right\rangle \left\langle \mathbf{v}_{4}^{\ast
+}\right\vert \right)  \right\}  .
+\end{equation}
+
+
+$\rfloor$
+
+We can then define a \emph{real} basis $\left\{  \left\vert \mathbf{s}%
+_{j}\right\rangle ;1\leq j\leq r\right\}  $ i.e. $\left\vert \mathbf{s}%
+_{j}\right\rangle =\left\vert \mathbf{s}_{j}^{\ast}\right\rangle $ as
+\begin{align}
+\left\vert \mathbf{s}_{j}\right\rangle  &  =\frac{1}{\sqrt{2}}\left(
+\left\vert \mathbf{v}_{j}\right\rangle +\left\vert \mathbf{v}_{j}^{\ast
+}\right\rangle \right)  =\sqrt{2}\operatorname{Re}\left\vert \mathbf{v}%
+_{j}\right\rangle \nonumber\\
+\left\vert \mathbf{s}_{j+\mathbf{s}}\right\rangle  &  =\frac{-i}{\sqrt{2}%
+}\left(  \left(  \left\vert \mathbf{v}_{j}\right\rangle -\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \right)  \right)  =\sqrt{2}%
+\operatorname{Im}\left\vert \mathbf{v}_{j}\right\rangle ,
+\end{align}
+i.e.
+\begin{equation}
+\left\vert \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}},\mathbf{s}%
+_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}}\right\rangle
+=\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}},\mathbf{v}_{1}%
+^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle \frac{1}{\sqrt{2}%
+}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  ,
+\end{equation}
+which can also be written as
+\begin{equation}
+\mathbb{O}=\mathbb{V}\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  ,
+\end{equation}
+where
+\begin{align}
+\mathbb{O}  &  =\left\vert \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}%
+},\mathbf{s}_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}%
+}\right\rangle \\
+\mathbb{V}  &  =\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}%
+},\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle
+=\left(  \left.  \mathbb{V}_{s}\right\vert \mathbb{V}_{s}^{\ast}\right)  .
+\end{align}
+
+
+$\lceil$%
+\begin{align}
+\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  ^{\dagger}  &  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right) \\
+\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)   &  \in U\left(  2s\right)  ;\,\notin SU\left(  2s\right) \\
+\det\left\{  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \right\}   &  =\left(  \frac{1}{\sqrt{2}}\right)  ^{2}\det\left\{
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \right\}  =\frac{2i}{2}=i=e^{\frac{\pi}{2}i}\neq1.
+\end{align}%
+\begin{align}
+e^{\frac{\pi}{2}i}  &  =i\\
+e^{\pi i}  &  =-1\\
+e^{\frac{3\pi}{2}i}  &  =-i\\
+e^{2\pi i}  &  =1
+\end{align}
+$\rfloor$
+
+$\lceil$%
+\begin{align}
+\left\vert \mathbf{s}_{1}\right\rangle  &  =\frac{1}{\sqrt{2}}\left(
+\left\vert \mathbf{v}_{1}\right\rangle +\left\vert \mathbf{v}_{1}^{\ast
+}\right\rangle \right)  =\sqrt{2}\operatorname{Re}\left\vert \mathbf{v}%
+_{1}\right\rangle \nonumber\\
+\left\vert \mathbf{s}_{2}\right\rangle  &  =\frac{1}{\sqrt{2}}\left(
+\left\vert \mathbf{v}_{2}\right\rangle +\left\vert \mathbf{v}_{2}^{\ast
+}\right\rangle \right)  =\sqrt{2}\operatorname{Re}\left\vert \mathbf{v}%
+_{2}\right\rangle \\
+\left\vert \mathbf{s}_{3}\right\rangle  &  =\frac{-i}{\sqrt{2}}\left(  \left(
+\left\vert \mathbf{v}_{1}\right\rangle -\left\vert \mathbf{v}_{1}^{\ast
+}\right\rangle \right)  \right)  =\sqrt{2}\operatorname{Im}\left\vert
+\mathbf{v}_{1}\right\rangle \\
+\left\vert \mathbf{s}_{4}\right\rangle  &  =\frac{-i}{\sqrt{2}}\left(  \left(
+\left\vert \mathbf{v}_{2}\right\rangle -\left\vert \mathbf{v}_{2}^{\ast
+}\right\rangle \right)  \right)  =\sqrt{2}\operatorname{Im}\left\vert
+\mathbf{v}_{2}\right\rangle .
+\end{align}
+
+
+$\rfloor$
+
+so that
+\begin{align}
+\mathbb{A}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{j}\right\rangle +\left\vert \mathbf{v}_{j}^{\ast}\right\rangle \right)
+\right\}   &  =-i\alpha_{j}\frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{j}\right\rangle -\left\vert \mathbf{v}_{j}^{\ast}\right\rangle \right)
+\nonumber\\
+&  =\alpha_{j}\left\{  \frac{-i}{\sqrt{2}}\left(  \left(  \left\vert
+\mathbf{v}_{j}\right\rangle -\left\vert \mathbf{v}_{j}^{\ast}\right\rangle
+\right)  \right)  \right\}
+\end{align}
+and
+\begin{align}
+\mathbb{A}\left\{  \frac{-i}{\sqrt{2}}\left(  \left(  \left\vert
+\mathbf{v}_{j}\right\rangle -\left\vert \mathbf{v}_{j}^{\ast}\right\rangle
+\right)  \right)  \right\}   &  =\frac{-\alpha_{j}}{\sqrt{2}}\left\vert
+\mathbf{v}_{j}\right\rangle -\frac{\alpha_{j}}{\sqrt{2}}\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \nonumber\\
+&  =-\alpha_{j}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{j}\right\rangle +\left\vert \mathbf{v}_{j}^{\ast}\right\rangle \right)
+\right\}  .
+\end{align}
+$\lceil$%
+\begin{align}
+\mathbb{A}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{1}\right\rangle +\left\vert \mathbf{v}_{1}^{\ast}\right\rangle \right)
+\right\}   &  =\frac{-i}{\sqrt{2}}\left(  \left\vert \mathbf{v}_{1}%
+\right\rangle -\left\vert \mathbf{v}_{1}^{\ast}\right\rangle \right)
+\nonumber\\
+\mathbb{A}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{2}\right\rangle +\left\vert \mathbf{v}_{2}^{\ast}\right\rangle \right)
+\right\}   &  =\frac{-i}{\sqrt{2}}\left(  \left\vert \mathbf{v}_{2}%
+\right\rangle -\left\vert \mathbf{v}_{2}^{\ast}\right\rangle \right) \\
+\mathbb{A}\left\{  \frac{-i}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{1}\right\rangle -\left\vert \mathbf{v}_{1}^{\ast}\right\rangle \right)
+\right\}   &  =-\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{1}\right\rangle +\left\vert \mathbf{v}_{1}^{\ast}\right\rangle \right)
+\right\} \\
+\mathbb{A}\left\{  \frac{-i}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{2}\right\rangle -\left\vert \mathbf{v}_{2}^{\ast}\right\rangle \right)
+\right\}   &  =-\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{2}\right\rangle +\left\vert \mathbf{v}_{2}^{\ast}\right\rangle \right)
+\right\}  ,
+\end{align}
+i.e.%
+
+\begin{align}
+\mathbb{A}\left\vert \mathbf{s}_{1}\right\rangle  &  =\left\vert
+\mathbf{s}_{3}\right\rangle \nonumber\\
+\mathbb{A}\left\vert \mathbf{s}_{2}\right\rangle  &  =\left\vert
+\mathbf{s}_{4}\right\rangle \\
+\mathbb{A}\left\vert \mathbf{s}_{3}\right\rangle  &  =-\left\vert
+\mathbf{s}_{1}\right\rangle \\
+\mathbb{A}\left\vert \mathbf{s}_{4}\right\rangle  &  =-\left\vert
+\mathbf{s}_{2}\right\rangle .
+\end{align}
+$\rfloor$
+
+Thus
+\begin{equation}
+\mathbb{A=}\sum_{1\leq j\leq\mathbf{s}}\alpha_{j}\left\{  \left\vert
+\mathbf{s}_{j}\right\rangle \left\langle \mathbf{s}_{j+\mathbf{s}}\right\vert
+-\left\vert \mathbf{s}_{_{j+\mathbf{s}}}\right\rangle \left\langle
+\mathbf{s}_{j}\right\vert \right\}  ,
+\end{equation}
+$\lceil$%
+\begin{equation}
+\mathbb{A}=\left(  \left\vert \mathbf{s}_{3}\right\rangle \left\langle
+\mathbf{s}_{1}\right\vert +\left\vert \mathbf{s}_{4}\right\rangle \left\langle
+\mathbf{s}_{2}\right\vert \right)  -\left(  \left\vert \mathbf{s}%
+_{1}\right\rangle \left\langle \mathbf{s}_{3}\right\vert +\left\vert
+\mathbf{s}_{2}\right\rangle \left\langle \mathbf{s}_{4}\right\vert \right)
+\end{equation}
+$\rfloor$
+
+which displays the desired result%
+
+\begin{align}
+\left\vert g\right\rangle  &  =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq
+r}A_{j_{1}j_{2}}\left\vert e_{j_{1}}e_{j_{2}}\right\rangle =\frac{1}{2}%
+\sum_{1\leq j_{1},j_{2}\leq r}\left[  \mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{O}^{t}\right]  _{j_{1}j_{2}}\left\vert e_{j_{1}}e_{j_{2}%
+}\right\rangle \\
+&  =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}\left[  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \right]  _{j_{1}j_{2}}\left\vert Oe_{j_{1}}Oe_{j_{2}}\right\rangle \\
+&  =\sum_{1\leq j\leq s}\alpha_{j}\left\vert Oe_{j}Oe_{j+s}\right\rangle
+=\sum_{1\leq j\leq s}\alpha_{j}\left\vert s_{j}s_{j+s}\right\rangle ,
+\end{align}
+$\lceil$%
+\begin{align}
+&  \frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}\left[  \mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{O}^{t}\right]  _{j_{1}j_{2}}\left\vert e_{j_{1}}e_{j_{2}%
+}\right\rangle =\frac{1}{2}\sum_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq
+k_{1},k_{2}\leq r}}\left\{  \mathbb{O}_{j_{1}k_{1}}\beta_{k_{1}k_{2}%
+}\mathbb{O}_{j_{2}k_{2}}\left\vert e_{j_{1}}e_{j_{2}}\right\rangle \right\} \\
+&  =\frac{1}{2}\sum_{1\leq k_{1},k_{2}\leq r}\left\{  \beta_{k_{1}k_{2}%
+}\left\vert \left(  \sum_{1\leq j_{1},j_{2}\leq r}e_{j_{1}}\mathbb{O}%
+_{j_{1}k_{1}}\right)  \left(  \sum_{1\leq j_{1},j_{2}\leq r}e_{j_{2}%
+}\mathbb{O}_{j_{2}k_{2}}\right)  \right\rangle \right\} \\
+&  =\frac{1}{2}\sum_{1\leq k\leq s}\left\{  \beta_{kk+s}\left\vert \left(
+\sum_{1\leq j_{1}\leq r}e_{j_{1}}\mathbb{O}_{j_{1}k}\right)  \left(
+\sum_{1\leq j_{2}\leq r}e_{j_{2}}\mathbb{O}_{j_{2}k+s}\right)  \right\rangle
+\right\}  +\frac{1}{2}\sum_{1\leq k\leq s}\left\{  \beta_{k+sk}\left\vert
+\left(  \sum_{1\leq j_{1}\leq r}e_{j_{1}}\mathbb{O}_{j_{1}k+s}\right)  \left(
+\sum_{1\leq j_{2}\leq r}e_{j_{2}}\mathbb{O}_{j_{2}k}\right)  \right\rangle
+\right\} \\
+&  =\frac{1}{2}\sum_{1\leq k\leq s}\left\{  \alpha_{k}\left\vert \left(
+\sum_{1\leq j_{1}\leq r}e_{j_{1}}\mathbb{O}_{j_{1}k}\right)  \left(
+\sum_{1\leq j_{2}\leq r}e_{j_{2}}\mathbb{O}_{j_{2}k+s}\right)  \right\rangle
+\right\}  -\frac{1}{2}\sum_{1\leq k\leq s}\left\{  \alpha_{k}\left\vert
+\left(  \sum_{1\leq j_{1}\leq r}e_{j_{1}}\mathbb{O}_{j_{1}k+s}\right)  \left(
+\sum_{1\leq j_{2}\leq r}e_{j_{2}}\mathbb{O}_{j_{2}k}\right)  \right\rangle
+\right\}
+\end{align}
+$\rfloor$
+
+i.e. the real cannonical form of a real geminal is
+\begin{equation}
+\left\vert g\right\rangle =\sum\limits_{1\leq j\leq s}\alpha_{j}\left\vert
+s_{j}s_{j+s}\right\rangle ,
+\end{equation}
+while the complex cannonical form of a real geminal is given by
+\begin{equation}
+\left\vert g\right\rangle =-i\sum_{1\leq j\leq s}\alpha_{j}\left\vert
+v_{j}v_{j}^{\ast}\right\rangle .
+\end{equation}
+
+
+$\lceil$%
+\begin{align}
+\left\vert g\right\rangle  &  =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq
+r}A_{j_{1}j_{2}}\left\vert e_{j_{1}}e_{j_{2}}\right\rangle =\frac{1}{2}%
+\sum_{1\leq j_{1},j_{2}\leq r}\left[  -i\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & -\boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\dagger}\right]  _{j_{1}j_{2}}\left\vert e_{j_{1}%
+}e_{j_{2}}\right\rangle =\frac{1}{2}i\sum_{1\leq j_{1},j_{2}\leq r}\left[
+\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\ast t}\right]  _{j_{1}j_{2}}\left\vert e_{j_{1}}%
+e_{j_{2}}\right\rangle \\
+&  =\frac{1}{2}i\sum_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq k_{1},k_{2}\leq
+r}}V_{j_{1}k_{1}}\mathbf{\beta}_{k_{1}k_{2}}V_{j_{2}k_{2}}^{\ast}\left\vert
+e_{j_{1}}e_{j_{2}}\right\rangle =\frac{1}{2}i\sum_{1\leq k\leq r}%
+\mathbf{\beta}_{kk}\left\vert \left(  \sum_{1\leq j_{1}\leq r}e_{j_{1}%
+}V_{j_{1}k}\right)  \left(  \sum_{1\leq j_{2}\leq r}e_{j_{2}}V_{j_{2}k}^{\ast
+}\right)  \right\rangle \\
+&  =-\frac{1}{2}i\sum_{1\leq k\leq s}\alpha_{k}\left\vert \left(  \sum_{1\leq
+j_{1}\leq r}e_{j_{1}}V_{j_{1}k}\right)  \left(  \sum_{1\leq j_{2}\leq
+r}e_{j_{2}}V_{j_{2}k}^{\ast}\right)  \right\rangle +\frac{1}{2}i\sum_{s+1\leq
+k\leq r}\alpha_{k}\left\vert \left(  \sum_{1\leq j_{1}\leq r}e_{j_{1}}%
+V_{j_{1}k}\right)  \left(  \sum_{1\leq j_{2}\leq r}e_{j_{2}}V_{j_{2}k}^{\ast
+}\right)  \right\rangle \\
+&  =-\frac{1}{2}i\sum_{1\leq k\leq s}\alpha_{k}\left\vert \left(  \sum_{1\leq
+j_{1}\leq r}e_{j_{1}}V_{j_{1}k}\right)  \left(  \sum_{1\leq j_{2}\leq
+r}e_{j_{2}}V_{j_{2}k}^{\ast}\right)  \right\rangle +\frac{1}{2}i\sum_{1\leq
+k\leq s}\alpha_{k}\left\vert \left(  \sum_{1\leq j_{1}\leq r}e_{j_{1}}%
+V_{j_{1}k}^{\ast}\right)  \left(  \sum_{1\leq j_{2}\leq r}e_{j_{2}}V_{j_{2}%
+k}\right)  \right\rangle \\
+&  =-i\sum_{1\leq k\leq s}\alpha_{k}\left\vert \left(  \sum_{1\leq j_{1}\leq
+r}e_{j_{1}}V_{j_{1}k}\right)  \left(  \sum_{1\leq j_{2}\leq r}e_{j_{2}%
+}V_{j_{2}k}^{\ast}\right)  \right\rangle =-i\sum_{1\leq k\leq s}\alpha
+_{k}\left\vert \left(  Ve_{k}\right)  \left(  V^{\ast}e_{k}\right)
+\right\rangle =-i\sum_{1\leq k\leq s}\alpha_{k}\left\vert v_{k}v_{k}^{\ast
+}\right\rangle .
+\end{align}
+$\rfloor$
+
+The bases $\left\{  \left\vert \mathbf{s}_{j}\right\rangle ;1\leq j\leq
+r\right\}  $ produces the canonical matrix representation of $\mathbb{A}$
+\begin{equation}
+A\left(  \left\vert \mathbf{s}\right\rangle \right)  =\left\vert
+\mathbf{s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+and we have the expansions
+\begin{align}
+\mathbb{A}  &  =\left\vert \mathbf{s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left\langle \mathbf{s}\right\vert =\left\vert \mathbf{s}%
+\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left\langle \mathbf{s}\right\vert \label{reex}\\
+&  =\left\vert \mathbf{\sigma}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left\langle \mathbf{\sigma}\right\vert ,
+\end{align}
+where
+\begin{equation}
+\left\vert \mathbf{\sigma}\right\rangle =\left\vert \mathbf{s}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)
+\end{equation}
+and
+\begin{align}
+\left\vert \mathbf{s}\right\rangle  &  =O\left\vert e_{1},\cdots\cdots
+,e_{2s}\right\rangle =\left\vert e_{1},\cdots\cdots,e_{2s}\right\rangle
+\mathbb{O}\\
+\left\langle \left.  \mathbf{\sigma}\right\vert \mathbf{\sigma}\right\rangle
+&  =\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  .
+\end{align}
+$\lceil$If
+\begin{equation}
+A\left(  \left\vert \mathbf{s}\right\rangle \right)  =\left\vert
+\mathbf{s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{2}\\
+\mathbb{I}_{2} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+then%
+\begin{align}
+\mathbb{A}  &  =\left\vert \mathbf{s}_{1},\mathbf{s}_{2},\mathbf{s}%
+_{3},\mathbf{s}_{4}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{2}\\
+\mathbb{I}_{2} & \mathbb{O}%
+\end{array}
+\right)  \left\langle \mathbf{s}_{1},\mathbf{s}_{2},\mathbf{s}_{3}%
+,\mathbf{s}_{4}\right\vert =\left\vert \mathbf{s}_{3},\mathbf{s}%
+_{4},-\mathbf{s}_{1},-\mathbf{s}_{2}\right\rangle \left\langle \mathbf{s}%
+_{1},\mathbf{s}_{2},\mathbf{s}_{3},\mathbf{s}_{4}\right\vert \\
+&  =\left\vert \mathbf{s}_{3}\right\rangle \left\langle \mathbf{s}%
+_{1}\right\vert +\left\vert \mathbf{s}_{4}\right\rangle \left\langle
+\mathbf{s}_{2}\right\vert -\left\vert \mathbf{s}_{1}\right\rangle \left\langle
+\mathbf{s}_{3}\right\vert -\left\vert \mathbf{s}_{2}\right\rangle \left\langle
+\mathbf{s}_{4}\right\vert .
+\end{align}
+$\rfloor$
+
+The row vector, $\left\vert \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}%
+},\mathbf{s}_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}%
+}\right\rangle ,$ of basis vectors, $\left\{  \left\vert \mathbf{s}%
+_{1}\right\rangle ,\cdots,\left\vert \mathbf{s}_{\mathbf{s}}\right\rangle
+,\left\vert \mathbf{s}_{\mathbf{s}+1}\right\rangle ,\cdots,\left\vert
+\mathbf{s}_{\mathbf{s}+\mathbf{s}}\right\rangle \right\}  $, can be viewed as
+a real orthogonal matrix, $\mathbb{O},$ whose columns are the real basis
+vectors $\left\{  \left\vert \mathbf{s}_{1}\right\rangle ,\cdots\left\vert
+\mathbf{s}_{\mathbf{s}}\right\rangle ,\left\vert \mathbf{s}_{\mathbf{s}%
++1}\right\rangle ,\cdots\left\vert \mathbf{s}_{\mathbf{s}+\mathbf{s}%
+}\right\rangle \right\}  ,$ such that
+\begin{align}
+O\left\vert e_{1},\cdots\cdots,e_{2s}\right\rangle  &  =\left\vert
+e_{1},\cdots\cdots,e_{2s}\right\rangle \mathbb{O}=\left\vert s_{1}%
+,\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle \\
+\left\vert \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}},\mathbf{s}%
+_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}}\right\rangle  &
+\equiv\mathbb{O}\equiv R_{e}\left(  O\right)
+\end{align}
+and
+\begin{align}
+\mathbb{A}  &  =\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{O}^{t}\\
+A\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle  &
+=\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  .
+\end{align}
+$\lceil$Then%
+\begin{align}
+\mathbb{A}  &  =\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\\
+&  =\mathbb{Q}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{Q}^{t}%
+\end{align}
+but%
+\begin{align}
+\mathbb{QQ}^{t}  &  =\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\\
+&  =\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{O}^{t}%
+\end{align}
+and in general
+\begin{equation}
+\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{O}^{t}\neq\mathbb{I}_{2s}.
+\end{equation}
+$\rfloor$
+
+$\lceil$Let
+\begin{equation}
+\mathbb{TAT}^{t}=\mathbb{A}%
+\end{equation}
+then
+\begin{gather}
+\mathbb{TO}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{T}^{t}=\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\\
+\Downarrow\\
+\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{TO}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{T}^{t}\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right) \\
+\Downarrow\\
+\mathbb{K}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{K}^{t}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)
+\end{gather}
+i.e.
+\begin{equation}
+\mathbb{K\in}Sp\left(  2s,\mathbb{R}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathbb{K=}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{TO}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  .
+\end{equation}
+This shows that%
+\begin{equation}
+\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{T}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}=\mathbb{STS}^{-1}=\mathbb{K}%
+\end{equation}
+so that
+\begin{equation}
+\mathbb{K\in}Sp\left(  2s,\mathbb{R}\right)
+\end{equation}
+\emph{but note that in general}
+\begin{equation}
+\mathbb{K\notin}O\left(  2s,\mathbb{R}\right)  .
+\end{equation}
+$\rfloor$
+
+$\lceil$If
+\begin{equation}
+\mathbb{A}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{2}\\
+\mathbb{I}_{2} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+then
+\begin{align}
+\mathbb{A}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{2}\\
+\mathbb{I}_{2} & \mathbb{O}%
+\end{array}
+\right)  =\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{2}\\
+\mathbb{I}_{2} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{O}^{t}\\
+&  \Longleftrightarrow O\in Sp\left(  4,\mathbb{R}\right)  \cap O\left(
+4,\mathbb{R}\right)  .
+\end{align}
+$\rfloor$
+
+The complex basis $\left\{  \left\vert \mathbf{v}_{j}\right\rangle ,\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle ;1\leq j\leq r\right\}  $ diagonalizes
+$\mathbb{A}$ to give
+\begin{equation}
+\mathbb{A}\left(  \left\vert \mathbf{v}\right\rangle ,\left\vert
+\mathbf{v}^{\ast}\right\rangle \right)  =\left(  \left\vert \mathbf{v}%
+\right\rangle ,\left\vert \mathbf{v}^{\ast}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+-i\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & i\boldsymbol{\alpha}%
+\end{array}
+\right)
+\end{equation}
+and produces the expansion%
+\begin{equation}
+\mathbb{A}=\left(  \left\vert \mathbf{v}\right\rangle ,\left\vert
+\mathbf{v}^{\ast}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+-i\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & i\boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\langle \mathbf{v}\right\vert \\
+\left\langle \mathbf{v}^{\ast}\right\vert
+\end{array}
+\right)  =\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+-i\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & i\boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\dagger}. \label{ccex}%
+\end{equation}
+$\lceil$%
+\begin{equation}
+\mathbb{A}\left(  \left\vert \mathbf{v}\right\rangle ,\left\vert
+\mathbf{v}^{\ast}\right\rangle \right)  =\left(  \left\vert \mathbf{v}%
+\right\rangle ,\left\vert \mathbf{v}^{\ast}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+i\mathbb{I}_{2} & \mathbb{O}\\
+\mathbb{O} & -i\mathbb{I}_{2}%
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+\mathbb{A}  &  =\left(  \left\vert \mathbf{v}_{1},\mathbf{v}_{2}%
+,\mathbf{v}_{1}^{\ast},\mathbf{v}_{2}^{\ast}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+i\mathbb{I}_{2} & \mathbb{O}\\
+\mathbb{O} & -i\mathbb{I}_{2}%
+\end{array}
+\right)  \left(  \left\langle \mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}%
+_{1}^{\ast},\mathbf{v}_{2}^{\ast}\right\vert \right)  =\left(  \left\vert
+i\mathbf{v}_{1},i\mathbf{v}_{2},-i\mathbf{v}_{1}^{\ast},-i\mathbf{v}_{2}%
+^{\ast}\right\rangle \right)  \left(  \left\langle \mathbf{v}_{1}%
+,\mathbf{v}_{2},\mathbf{v}_{1}^{\ast},\mathbf{v}_{2}^{\ast}\right\vert \right)
+\\
+&  =\left(  \left\vert i\mathbf{v}_{1},i\mathbf{v}_{2},-i\mathbf{v}_{1}^{\ast
+},-i\mathbf{v}_{2}^{\ast}\right\rangle \right)  \left(  \left\vert
+i\mathbf{v}_{1},i\mathbf{v}_{2},-i\mathbf{v}_{1}^{\ast},-i\mathbf{v}_{2}%
+^{\ast}\right\rangle \right)  ^{\dagger}\\
+&  =i\left\{  \left\vert \mathbf{v}_{1}\right\rangle \left\langle
+\mathbf{v}_{1}\right\vert +\left\vert \mathbf{v}_{2}\right\rangle \left\langle
+\mathbf{v}_{2}\right\vert -\left\vert \mathbf{v}_{1}^{\ast}\right\rangle
+\left\langle \mathbf{v}_{1}^{\ast}\right\vert -\left\vert \mathbf{v}_{2}%
+^{\ast}\right\rangle \left\langle \mathbf{v}_{2}^{\ast}\right\vert \right\}  .
+\end{align}
+$\rfloor$
+
+The row vector of basis vectors, $\left\vert \mathbf{v}_{1},\cdots
+,\mathbf{v}_{\mathbf{s}},\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}%
+}^{\ast}\right\rangle $, can be viewed as a unitary matrix whose columns are
+the basis vectors $\left\{  \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}%
+},\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\}  $. such
+that
+\begin{align}
+V\left\vert e_{1},\cdots\cdots,e_{2\mathbf{s}}\right\rangle  &  =\left\vert
+e_{1},\cdots\cdots,e_{2\mathbf{s}}\right\rangle \mathbb{V}=\left\vert
+v_{1},\cdots,v_{\mathbf{s}},v_{1}^{\ast},\cdots,v_{\mathbf{s}}^{\ast
+}\right\rangle \\
+\mathbb{V}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{V}_{s} & \mathbb{V}_{s}^{\ast}%
+\end{array}
+\right)  =\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}}%
+,\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle
+\end{align}
+and
+\begin{align}
+\mathbb{A}  &  =i\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\dagger}\\
+\mathbb{A}  &  =i\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}%
+},\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left\langle \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}}%
+,\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\vert .
+\end{align}
+This gives
+\begin{equation}
+\mathbb{A}=i\left\vert \mathbf{\upsilon}_{1},\cdots,\mathbf{\upsilon
+}_{\mathbf{s}},\mathbf{\upsilon}_{1}^{\ast},\cdots,\mathbf{\upsilon
+}_{\mathbf{s}}^{\ast}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{s}%
+\end{array}
+\right)  \left\langle \mathbf{\upsilon}_{1},\cdots,\mathbf{\upsilon
+}_{\mathbf{s}},\mathbf{\upsilon}_{1}^{\ast},\cdots,\mathbf{\upsilon
+}_{\mathbf{s}}^{\ast}\right\vert ,
+\end{equation}
+where
+\begin{equation}
+\left\vert \mathbf{\upsilon}_{1},\cdots,\mathbf{\upsilon}_{\mathbf{s}%
+},\mathbf{\upsilon}_{1}^{\ast},\cdots,\mathbf{\upsilon}_{\mathbf{s}}^{\ast
+}\right\rangle =\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}%
+},\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  .
+\end{equation}
+Note that the expansions of eqs. $\left(  \ref{reex}\right)  $ and $\left(
+\ref{ccex}\right)  $ both give $\mathbb{A}.$ Thus in eq. $\left(
+\ref{reex}\right)  $ all the imaginary terms cancel.
+
+\subsection{Resolutions of the identity}
+
+The following are resolutions of the identity%
+\begin{equation}
+I=\left\vert \mathbf{e}\right)  \left(  \left.  \mathbf{e}\right\vert
+\mathbf{e}\right)  ^{-1}\left(  \mathbf{e}\right\vert =\left\vert
+\mathbf{f}\right)  \left(  \left.  \mathbf{f}\right\vert \mathbf{f}\right)
+^{-1}\left(  \mathbf{f}\right\vert
+\end{equation}%
+\begin{equation}
+I=\left\vert \mathbf{e}\right)  \left(  \left.  \mathbf{e}\mathcal{K}%
+\right\vert \mathbf{e}\right)  ^{-1}\left(  \mathcal{K}^{t}\mathbf{e}%
+\right\vert =\left\vert \mathbf{e}\right)  \left(  \left.  \mathbf{e}%
+\right\vert \mathbf{e}\right)  _{\mathcal{K}}^{-1}\left(  \mathbf{e}%
+\right\vert _{\mathcal{K}},
+\end{equation}
+which can be seen by observing
+\begin{align}
+\left\vert x\right)   &  =\left\vert \mathbf{e}\right)  \left(  \left.
+\mathbf{e}\right\vert \mathbf{e}\right)  ^{-1}\left(  \mathbf{e}\right\vert
+\left\vert x\right)  =\left\vert \mathbf{e}\right)  \left(  \left.
+\mathbf{e}\right\vert \mathbf{e}\right)  ^{-1}\left(  \mathbf{e}\right\vert
+\left\vert \mathbf{e}\right)  R_{e}\left(  x\right)  =\left\vert
+\mathbf{e}\right)  R_{e}\left(  x\right)  =\left\vert x\right) \\
+\left\vert x\right)   &  =\left\vert \mathbf{e}\right)  \left(  \left.
+\mathbf{e}\mathcal{K}\right\vert \mathbf{e}\right)  ^{-1}\left(
+\mathcal{K}^{t}\mathbf{e}\right\vert \left\vert x\right)  =\left\vert
+\mathbf{e}\right)  \left(  \left.  \mathbf{e}\mathcal{K}\right\vert
+\mathbf{e}\right)  ^{-1}\left(  \mathcal{K}^{t}\mathbf{e}\right\vert
+\left\vert \mathbf{e}\right)  \left(  \left.  \mathbf{e}\right\vert
+\mathbf{e}\right)  ^{-1}\left(  \mathbf{e}\right\vert \left\vert x\right) \\
+&  =\left\vert \mathbf{e}\right)  \left(  \left.  \mathbf{e}\right\vert
+\mathbf{e}\right)  ^{-1}\left(  \mathbf{e}\right\vert \left\vert x\right)
+=\left\vert \mathbf{e}\right)  \left(  \left.  \mathbf{e}\right\vert
+\mathbf{e}\right)  ^{-1}\left(  \mathbf{e}\right\vert \left\vert
+\mathbf{e}\right)  R_{e}\left(  x\right)  =\left\vert \mathbf{e}\right)
+R_{e}\left(  x\right)  =\left\vert x\right)  .
+\end{align}
+Using a resolution of the identity one obtains
+\begin{equation}
+X\left\vert \mathbf{e}\right)  =\left\vert \mathbf{e}\right)  R_{e}\left(
+X\right)  =\left\vert \mathbf{e}\right)  \left(  \left.  \mathbf{e}\right\vert
+\mathbf{e}\right)  ^{-1}\left(  \left.  \mathbf{e}\right\vert X\mathbf{e}%
+\right)
+\end{equation}
+i.e.
+\begin{equation}
+R_{e}\left(  X\right)  =\left(  \left.  \mathbf{e}\right\vert \mathbf{e}%
+\right)  ^{-1}\left(  \left.  \mathbf{e}\right\vert X\mathbf{e}\right)
+=\mathbb{S}_{e}^{-1}M_{e}\left(  X\right)
+\end{equation}
+and hence
+\begin{equation}
+\left(  \left.  \mathbf{e}\right\vert X^{-1}\mathbf{e}\right)  =\left(
+\left.  \mathbf{e}\right\vert \mathbf{e}\right)  \left(  \left.
+\mathbf{e}\right\vert X\mathbf{e}\right)  ^{-1}\left(  \left.  \mathbf{e}%
+\right\vert \mathbf{e}\right)
+\end{equation}
+i.e.
+\begin{equation}
+M_{e}\left(  X^{-1}\right)  =\mathbb{S}_{e}M_{e}\left(  X\right)
+^{-1}\mathbb{S}_{e}%
+\end{equation}
+$\lceil$%
+
+\begin{equation}
+X^{-1}X\left\vert \mathbf{e}\right)  =\left\vert \mathbf{e}\right)
+R_{e}\left(  X^{-1}\right)  R_{e}\left(  X\right)  =\left\vert \mathbf{e}%
+\right)  \left(  \left.  \mathbf{e}\right\vert \mathbf{e}\right)  ^{-1}\left(
+\left.  \mathbf{e}\right\vert X^{-1}\mathbf{e}\right)  \left(  \left.
+\mathbf{e}\right\vert \mathbf{e}\right)  ^{-1}\left(  \left.  \mathbf{e}%
+\right\vert X\mathbf{e}\right)  =\left\vert \mathbf{e}\right)
+\end{equation}
+$\rfloor$
+
+One should note the important theorem
+
+\begin{theorem}%
+\begin{equation}
+R_{e}\left(  X\right)  =\left(  \left.  \mathbf{e}\right\vert \mathbf{e}%
+\right)  _{\mathcal{K}}^{-1}\left(  \left.  \mathbf{e}\right\vert
+X\mathbf{e}\right)  _{\mathcal{K}}=\mathbb{S}_{\mathcal{K}e}^{-1}%
+M_{\mathcal{K}e}\left(  X\right)  =\left(  \left.  \mathbf{e}\right\vert
+\mathcal{K}\mathbf{e}\right)  ^{-1}\left(  \left.  \mathbf{e}\right\vert
+\mathcal{K}X\mathbf{e}\right)  =\left(  \left.  \mathbf{e}\right\vert
+\mathbf{e}\right)  ^{-1}\left(  \left.  \mathbf{e}\right\vert X\mathbf{e}%
+\right)
+\end{equation}
+for any basis $\left\{  e_{1},\cdots\cdots,e_{2s}\right\}  $ and invertible
+operator $\mathcal{K}$
+\end{theorem}
+
+\begin{proof}%
+\begin{equation}
+\left(  \left.  \mathbf{e}\right\vert \mathcal{K}\mathbf{e}\right)
+^{-1}\left(  \left.  \mathbf{e}\right\vert \mathcal{K}X\mathbf{e}\right)
+=\left(  \left.  \mathbf{e}\right\vert \mathcal{K}\mathbf{e}\right)
+^{-1}\left(  \left.  \mathbf{e}\right\vert \mathcal{K}\mathbf{e}\right)
+\left(  \left.  \mathbf{e}\right\vert \mathbf{e}\right)  ^{-1}\left(  \left.
+\mathbf{e}\right\vert X\mathbf{e}\right)  =\left(  \left.  \mathbf{e}%
+\right\vert \mathbf{e}\right)  ^{-1}\left(  \left.  \mathbf{e}\right\vert
+X\mathbf{e}\right)  .
+\end{equation}
+
+\end{proof}
+
+\subsection{Inner Products}
+
+\qquad One can construct symmetric and antisymmetric inner prodcuts of
+different signitures by considering non singular symmetric and antisymmetric
+operators $\mathcal{K}$ by%
+\begin{equation}
+\left(  \left.  x\right\vert y\right)  _{\mathcal{K}}=\left(  \left.
+x\right\vert \mathcal{K}y\right)  .
+\end{equation}
+These inner products induce linear functionals
+\begin{equation}
+\left(  x\right\vert _{\mathcal{K}}=\left(  x\right\vert \mathcal{K}=\left(
+\mathcal{K}^{t}x\right\vert ,
+\end{equation}
+Transposes defined by the different inner products are related by
+\begin{align}
+\left(  \left.  M^{t}x\right\vert y\right)   &  =\left(  \left.  x\right\vert
+My\right)  _{\mathcal{K}}=\left(  \left.  x\right\vert \mathcal{K}My\right)
+=\left(  \left.  M^{t}\mathcal{K}^{t}x\right\vert y\right) \\
+&  =\left(  \left.  \mathcal{K}^{-t}M^{t}\mathcal{K}^{t}x\right\vert
+\mathcal{K}y\right)  =\left(  \left.  \mathcal{K}^{-t}M^{t}\mathcal{K}%
+^{t}x\right\vert y\right)  _{\mathcal{K}}%
+\end{align}
+therefore
+\begin{equation}
+M^{t_{\mathcal{K}}}=\mathcal{K}^{-t}M^{t}\mathcal{K}^{t}%
+\end{equation}
+and in particular
+\begin{equation}
+\mathcal{K}^{t_{\mathcal{K}}}=\mathcal{K}^{-t}\mathcal{K}^{t}\mathcal{K}%
+^{t}=\mathcal{K}^{t}.
+\end{equation}
+
+
+\subsection{Representations}
+
+The representation of an operator $T$ wrt the bases $\left\{  e_{1}%
+,\cdots\cdots,e_{2s}\right\}  $ is given by
+\begin{align}
+T\left(  e_{1},\cdots\cdots,e_{2s}\right)   &  =\left(  e_{1},\cdots
+\cdots,e_{2s}\right)  R_{e}\left(  T\right) \\
+R_{e}\left(  T\right)   &  =\mathbb{S}_{\mathcal{K}e}^{-1}M_{\mathcal{K}%
+e}\left(  T\right) \\
+M_{\mathcal{K}e}\left(  T\right)   &  =\left(  e_{1},\cdots\cdots
+,e_{2s}\left\vert Te_{1},\cdots\cdots,e_{2s}\right.  \right)  _{\mathcal{K}%
+}=\left(  e_{1},\cdots\cdots,e_{2s}\left\vert \mathcal{K}Te_{1},\cdots
+\cdots,e_{2s}\right.  \right) \\
+\mathbb{S}_{\mathcal{K}e}^{-1}  &  =\left(  e_{1},\cdots\cdots,e_{2s}%
+\left\vert e_{1},\cdots\cdots,e_{2s}\right.  \right)  _{\mathcal{K}}%
+^{-1}=\left(  e_{1},\cdots\cdots,e_{2s}\left\vert \mathcal{K}e_{1}%
+,\cdots\cdots,e_{2s}\right.  \right)  ^{-1}.
+\end{align}
+
+
+The representations of the transformation $\mathcal{T}_{fe}$ between the bases
+$\left\{  e_{1},\cdots\cdots,e_{2s}\right\}  $ and $\left\{  f_{1}%
+,\cdots\cdots,f_{2s}\right\}  $ is given by
+\begin{align}
+\mathcal{T}_{fe}\left(  e_{1},\cdots\cdots,e_{2s}\right)   &  =\left(
+e_{1},\cdots\cdots,e_{2s}\right)  R_{e}\left(  \mathcal{T}_{fe}\right)
+=\left(  f_{1},\cdots\cdots,f_{2s}\right) \\
+R_{e}\left(  \mathcal{T}_{fe}\right)   &  =\mathbb{S}_{\mathcal{K}e}%
+^{-1}M_{\mathcal{K}e}\left(  \mathcal{T}_{fe}\right) \\
+M_{\mathcal{K}e}\left(  \mathcal{T}_{fe}\right)   &  =\left(  e_{1}%
+,\cdots\cdots,e_{2s}\left\vert \mathcal{T}_{fe}e_{1},\cdots\cdots
+,e_{2s}\right.  \right)  _{\mathcal{K}}.
+\end{align}
+
+
+The representations of an operator $T$ wrt to the two different bases is given
+by
+\begin{align}
+T\left(  e_{1},\cdots\cdots,e_{2s}\right)   &  =\left(  e_{1},\cdots
+\cdots,e_{2s}\right)  R_{e}\left(  T\right) \\
+R_{e}\left(  T\right)   &  =\mathbb{S}_{\mathcal{K}e}^{-1}M_{\mathcal{K}%
+e}\left(  T\right) \\
+M_{\mathcal{K}e}\left(  T\right)   &  =\left(  e_{1},\cdots\cdots
+,e_{2s}\left\vert Te_{1},\cdots\cdots,e_{2s}\right.  \right)  _{\mathcal{K}}%
+\end{align}
+and%
+\begin{align}
+T\left(  f_{1},\cdots\cdots,f_{2s}\right)   &  =\left(  f_{1},\cdots
+\cdots,f_{2s}\right)  R_{f}\left(  T\right) \\
+R_{f}\left(  T\right)   &  =\mathbb{S}_{\mathcal{K}f}^{-1}M_{\mathcal{K}%
+}\left(  T\right) \\
+M_{\mathcal{K}f}\left(  T\right)   &  =\left(  f_{1},\cdots\cdots
+,f_{2s}\left\vert Tf_{1},\cdots\cdots,f_{2s}\right.  \right)  _{\mathcal{K}}.
+\end{align}
+Hence
+\begin{align}
+\mathcal{T}_{fe}^{-1}T\left(  f_{1},\cdots\cdots,f_{2s}\right)   &
+=\mathcal{T}_{fe}^{-1}\left(  f_{1},\cdots\cdots,f_{2s}\right)  R_{f}\left(
+T\right)  =\left(  e_{1},\cdots\cdots,e_{2s}\right)  R_{f}\left(  T\right) \\
+&  =\mathcal{T}_{fe}^{-1}T\mathcal{T}_{fe}\left(  e_{1},\cdots\cdots
+,e_{2s}\right)  =\left(  e_{1},\cdots\cdots,e_{2s}\right)  R_{e}\left(
+\mathcal{T}_{fe}^{-1}\right)  R_{e}\left(  T\right)  R_{e}\left(
+\mathcal{T}_{fe}\right)
+\end{align}
+showing that
+\begin{equation}
+R_{f}\left(  T\right)  =R_{e}\left(  \mathcal{T}_{fe}^{-1}\right)
+R_{e}\left(  T\right)  R_{e}\left(  \mathcal{T}_{fe}\right)  =R_{e}\left(
+\mathcal{T}_{fe}\right)  ^{-1}R_{e}\left(  T\right)  R_{e}\left(
+\mathcal{T}_{fe}\right)  .
+\end{equation}
+
+
+The relationship between matrices wrt the different inner products and bases
+are given by
+\begin{align}
+&  R_{f}\left(  T\right)  =R_{e}\left(  \mathcal{T}_{fe}^{-1}\right)
+R_{e}\left(  T\right)  R_{e}\left(  \mathcal{T}_{fe}\right) \\
+&  \mathbb{S}_{\mathcal{K}_{2}f}^{-1}M_{\mathcal{K}_{2}f}\left(  T\right)
+=\mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}e}\left(  \mathcal{T}%
+_{fe}^{-1}\right)  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}%
+e}\left(  T\right)  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}%
+e}\left(  \mathcal{T}_{fe}\right) \\
+&  M_{\mathcal{K}_{2}f}\left(  T\right)  =\mathbb{S}_{\mathcal{K}_{2}%
+f}\mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}e}\left(  \mathcal{T}%
+_{fe}^{-1}\right)  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}%
+e}\left(  T\right)  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}%
+e}\left(  \mathcal{T}_{fe}\right) \\
+&  \left(  f_{1},\cdots\cdots,f_{2s}\left\vert \mathcal{K}_{2}Tf_{1}%
+,\cdots\cdots,f_{2s}\right.  \right)  =\left(  f_{1},\cdots\cdots
+,f_{2s}\left\vert \mathcal{K}_{2}f_{1},\cdots\cdots,f_{2s}\right.  \right)
+\left(  e_{1},\cdots\cdots,e_{2s}\left\vert \mathcal{K}_{1}e_{1},\cdots
+\cdots,e_{2s}\right.  \right)  \left(  e_{1},\cdots\cdots,e_{2s}\left\vert
+\mathcal{K}_{1}\mathcal{T}_{fe}^{-1}e_{1},\cdots\cdots,e_{2s}\right.  \right)
+\\
+&  \times\left(  e_{1},\cdots\cdots,e_{2s}\left\vert \mathcal{K}_{1}%
+e_{1},\cdots\cdots,e_{2s}\right.  \right)  ^{-1}\left(  e_{1},\cdots
+\cdots,e_{2s}\left\vert \mathcal{K}_{1}Te_{1},\cdots\cdots,e_{2s}\right.
+\right)  \left(  e_{1},\cdots\cdots,e_{2s}\left\vert \mathcal{K}_{1}%
+e_{1},\cdots\cdots,e_{2s}\right.  \right)  ^{-1}\left(  e_{1},\cdots
+\cdots,e_{2s}\left\vert \mathcal{K}_{1}\mathcal{T}_{fe}e_{1},\cdots
+\cdots,e_{2s}\right.  \right)  .
+\end{align}
+
+
+Operators can be expanded in the following manner
+\begin{equation}
+X=\sum_{1\leq j,k\leq r}\left(  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}%
+M_{\mathcal{K}_{1}e}\left(  X\right)  \mathbb{S}_{\mathcal{K}_{1}e}%
+^{-1}\right)  _{jk}\left\vert e_{j}\right)  \left(  e_{k}\right\vert
+_{\mathcal{K}_{1}}=\sum_{1\leq j,k\leq r}\left(  \mathbb{S}_{\mathcal{K}_{1}%
+e}^{-1}M_{\mathcal{K}_{1}e}\left(  X\right)  \mathbb{S}_{\mathcal{K}_{1}%
+e}^{-1}\right)  _{jk}\left\vert e_{j}\right)  \left(  \mathcal{K}_{1}^{t}%
+e_{k}\right\vert .
+\end{equation}
+$\lceil$%
+\begin{align}
+\left(  \mathcal{K}_{1}^{t}e_{m}\right\vert X\left\vert e_{l}\right)   &
+=\sum_{1\leq j,k\leq r}\left(  \mathcal{K}_{1}^{t}e_{m}\right\vert \left(
+\mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}e}\left(  X\right)
+\mathbb{S}_{\mathcal{K}_{1}e}^{-1}\right)  _{jk}\left\vert e_{j}\right)
+\left(  \mathcal{K}_{1}^{t}e_{k}\right\vert \left\vert e_{l}\right) \\
+&  =\sum_{1\leq j,k\leq r}\left(  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}%
+M_{\mathcal{K}_{1}e}\left(  X\right)  \mathbb{S}_{\mathcal{K}_{1}e}%
+^{-1}\right)  _{jk}\left(  \mathcal{K}_{1}^{t}e_{m}\right\vert \left\vert
+e_{j}\right)  \left(  \mathcal{K}_{1}^{t}e_{k}\right\vert \left\vert
+e_{l}\right) \\
+&  =\sum_{1\leq j,k\leq r}\left(  \mathcal{K}_{1}^{t}e_{m}\right\vert
+\left\vert e_{j}\right)  \left(  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}%
+M_{\mathcal{K}_{1}e}\left(  X\right)  \mathbb{S}_{\mathcal{K}_{1}e}%
+^{-1}\right)  _{jk}\left(  \mathcal{K}_{1}^{t}e_{k}\right\vert \left\vert
+e_{l}\right) \\
+&  =\sum_{1\leq j,k\leq r}\left(  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}\right)
+_{mj}\left(  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}M_{\mathcal{K}_{1}e}\left(
+X\right)  \mathbb{S}_{\mathcal{K}_{1}e}^{-1}\right)  _{jk}\left(
+\mathbb{S}_{\mathcal{K}_{1}e}\right)  _{kl}\\
+&  =M_{\mathcal{K}_{1}e}\left(  X\right)  _{ml}.
+\end{align}
+$\rfloor$
+
+$\lceil$Let%
+\begin{equation}
+\mathbb{TO}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{T}^{t}=\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)
+\end{equation}
+then
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{TO}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{T}^{t}\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  .
+\end{equation}
+Define
+\begin{align}
+\mathbb{L}  &  =\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{O}^{t}\mathbb{TO}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right) \\
+\mathbb{T}  &  =\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  \mathbb{OLO}^{t}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)
+\end{align}
+then
+\begin{equation}
+\mathbb{LL}^{t}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)
+\end{equation}
+and
+\begin{equation}
+\mathbb{L\in}O\left(  2s,\mathbb{R}\right)  .
+\end{equation}
+
+
+\subsubsection{Partitioning}
+
+Hence%
+\begin{equation}
+\mathbb{L}=\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{-\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{T}_{11} & \mathbb{T}_{12}\\
+\mathbb{T}_{21} & \mathbb{T}_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha}^{-\frac{1}{2}}\mathbb{T}_{11}\boldsymbol{\alpha}^{\frac
+{1}{2}} & \boldsymbol{\alpha}^{-\frac{1}{2}}\mathbb{T}_{12}\boldsymbol{\alpha
+}^{\frac{1}{2}}\\
+\boldsymbol{\alpha}^{-\frac{1}{2}}\mathbb{T}_{21}\boldsymbol{\alpha}^{\frac
+{1}{2}} & \boldsymbol{\alpha}^{-\frac{1}{2}}\mathbb{T}_{22}\boldsymbol{\alpha
+}^{\frac{1}{2}}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{L}_{11} & \mathbb{L}_{12}\\
+\mathbb{L}_{21} & \mathbb{L}_{22}%
+\end{array}
+\right)
+\end{equation}
+and%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{L}_{11} & \mathbb{L}_{12}\\
+\mathbb{L}_{21} & \mathbb{L}_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{L}_{11}^{t} & \mathbb{L}_{21}^{t}\\
+\mathbb{L}_{12}^{t} & \mathbb{L}_{22}^{t}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{L}_{11}\mathbb{L}_{11}^{t}+\mathbb{L}_{12}\mathbb{L}_{12}^{t} &
+\mathbb{L}_{11}\mathbb{L}_{21}^{t}+\mathbb{L}_{12}\mathbb{L}_{22}^{t}\\
+\mathbb{L}_{21}\mathbb{L}_{11}^{t}+\mathbb{L}_{22}\mathbb{L}_{12}^{t} &
+\mathbb{L}_{21}\mathbb{L}_{21}^{t}+\mathbb{L}_{22}\mathbb{L}_{22}^{t}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+Also
+\begin{align}
+\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{T}_{11} & \mathbb{T}_{12}\\
+\mathbb{T}_{21} & \mathbb{T}_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{T}_{11}^{t} & \mathbb{T}_{21}^{t}\\
+\mathbb{T}_{12}^{t} & \mathbb{T}_{22}^{t}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{T}_{11}\boldsymbol{\alpha} & \mathbb{T}_{12}\boldsymbol{\alpha}\\
+\mathbb{T}_{21}\boldsymbol{\alpha} & \mathbb{T}_{22}\boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{T}_{11}^{t} & \mathbb{T}_{21}^{t}\\
+\mathbb{T}_{12}^{t} & \mathbb{T}_{22}^{t}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{T}_{11}\boldsymbol{\alpha}\mathbb{T}_{11}^{t}+\mathbb{T}%
+_{12}\boldsymbol{\alpha}\mathbb{T}_{12}^{t} & \mathbb{T}_{11}%
+\boldsymbol{\alpha}\mathbb{T}_{21}^{t}+\mathbb{T}_{12}\boldsymbol{\alpha
+}\mathbb{T}_{22}^{t}\\
+\mathbb{T}_{21}\boldsymbol{\alpha}\mathbb{T}_{11}^{t}+\mathbb{T}%
+_{22}\boldsymbol{\alpha}\mathbb{T}_{12}^{t} & \mathbb{T}_{21}%
+\boldsymbol{\alpha}\mathbb{T}_{21}^{t}+\mathbb{T}_{22}\boldsymbol{\alpha
+}\mathbb{T}_{22}^{t}%
+\end{array}
+\right)
+\end{align}
+i.e.
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{T}_{11}\boldsymbol{\alpha}\mathbb{T}_{11}^{t}+\mathbb{T}%
+_{12}\boldsymbol{\alpha}\mathbb{T}_{12}^{t} & \mathbb{T}_{11}%
+\boldsymbol{\alpha}\mathbb{T}_{21}^{t}+\mathbb{T}_{12}\boldsymbol{\alpha
+}\mathbb{T}_{22}^{t}\\
+\mathbb{T}_{21}\boldsymbol{\alpha}\mathbb{T}_{11}^{t}+\mathbb{T}%
+_{22}\boldsymbol{\alpha}\mathbb{T}_{12}^{t} & \mathbb{T}_{21}%
+\boldsymbol{\alpha}\mathbb{T}_{21}^{t}+\mathbb{T}_{22}\boldsymbol{\alpha
+}\mathbb{T}_{22}^{t}%
+\end{array}
+\right)  .
+\end{equation}
+$\rfloor$
+
+\subsubsection{General Forms}
+
+\paragraph{Symplectic}%
+
+\begin{align}
+\mathbb{A}  &  =\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{O}^{t}=\left\vert \mathbf{s}_{1},\cdots,\mathbf{s}%
+_{\mathbf{s}},\mathbf{s}_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}%
++\mathbf{s}}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left\langle \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}}%
+,\mathbf{s}_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}%
+}\right\vert \\
+&  =\left\vert \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}},\mathbf{s}%
+_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}}\right\rangle \left(
+%
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left\langle \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}}%
+,\mathbf{s}_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}%
+}\right\vert \\
+&  =\frac{1}{2}\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}%
+},\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  \left\langle \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}}%
+,\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\vert \\
+&  =\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}},\mathbf{v}%
+_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle i\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left\langle \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}}%
+,\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\vert .
+\end{align}
+i.e.
+\begin{equation}
+\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  =i\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  .
+\end{equation}
+Hence
+\begin{align}
+A  &  =\left\vert e_{1},\cdots\cdots,e_{2s}\right\rangle \mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{O}^{t}\left\langle e_{1},\cdots\cdots,e_{2s}\right\vert
+=\left\vert e_{1},\cdots\cdots,e_{2s}\right\rangle i\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\dagger}\left\langle e_{1},\cdots\cdots,e_{2s}\right\vert
+\\
+&  =\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left\langle s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\vert
+=\left\vert v_{1},\cdots,v_{s},v_{1}^{\ast},\cdots,v_{s}^{\ast}\right\rangle
+i\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left\langle v_{1},\cdots,v_{\mathbf{s}},v_{1}^{\ast},\cdots
+,v_{s}^{\ast}\right\vert \\
+&  =\left\vert \tilde{s}_{1},\cdots,\tilde{s}_{s},\tilde{s}_{s+1}%
+,\cdots,\tilde{s}_{s+s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left\langle \tilde{s}_{1},\cdots,\tilde{s}_{s},\tilde{s}%
+_{s+1},\cdots,\tilde{s}_{s+s}\right\vert =\left\vert \tilde{v}_{1}%
+,\cdots,\tilde{v}_{s},\tilde{v}_{1}^{\ast},\cdots,\tilde{v}_{s}^{\ast
+}\right\rangle i\left(
+\begin{array}
+[c]{cc}%
+-\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  \left\langle \tilde{v}_{1},\cdots,\tilde{v}_{s},\tilde{v}_{1}^{\ast
+},\cdots,\tilde{v}_{s}^{\ast}\right\vert ,
+\end{align}
+where
+\begin{align}
+\left\vert \tilde{s}_{1},\cdots,\tilde{s}_{s},\tilde{s}_{s+1},\cdots,\tilde
+{s}_{s+s}\right\rangle  &  =\left\vert s_{1},\cdots,s_{s},s_{s+1}%
+,\cdots,s_{s+s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}\\
+-\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}%
+\end{array}
+\right) \\
+\left\vert \tilde{v}_{1},\cdots,\tilde{v}_{s},\tilde{v}_{1}^{\ast}%
+,\cdots,\tilde{v}_{s}^{\ast}\right\rangle  &  =\left\vert v_{1},\cdots
+,v_{s},v_{1}^{\ast},\cdots,v_{s}^{\ast}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}^{\frac{1}{2}}%
+\end{array}
+\right)  .
+\end{align}
+The real invariance group associated with $A$ is given by
+\begin{align}
+TAT^{\dagger}  &  =A\\
+R_{s}\left(  T\right)   &  \in\mathcal{B}\left(  \mathbb{R}^{2s}\right)
+\end{align}
+giving
+\begin{equation}
+R_{B}\left(  T\right)  R_{B}\left(  A\right)  R_{B}\left(  T\right)
+^{\dagger}=R_{B}\left(  A\right)  ,
+\end{equation}
+where $R_{B}\left(  T\right)  $ and $R_{B}\left(  A\right)  $ are the
+representations wrt the basis $B.$ This leads to
+\begin{equation}
+R_{s}\left(  T\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  R_{s}\left(  T\right)  ^{t}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  ,
+\end{equation}%
+\begin{equation}
+R_{v}\left(  T\right)  \left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  R_{v}\left(  T\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)
+\end{equation}
+and
+\begin{align}
+T  &  =\left\vert e_{1},\cdots\cdots,e_{2s}\right\rangle R_{e}\left(
+T\right)  \left\langle e_{1},\cdots\cdots,e_{2s}\right\vert =\left\vert
+e_{1},\cdots\cdots,e_{2s}\right\rangle \mathbb{O}R_{e}\left(  T\right)
+\mathbb{O}^{t}\left\langle e_{1},\cdots\cdots,e_{2s}\right\vert \\
+&  =\left\vert s_{1},\cdots\cdots,s_{2s}\right\rangle R_{s}\left(  T\right)
+\left\langle s_{1},\cdots\cdots,s_{2s}\right\vert =\left\vert e_{1}%
+,\cdots\cdots,e_{2s}\right\rangle \mathbb{V}R_{v}\left(  T\right)
+\mathbb{V}^{\dagger}\left\langle e_{1},\cdots\cdots,e_{2s}\right\vert \\
+&  =\left\vert v_{1},\cdots,v_{s},v_{1}^{\ast},\cdots,v_{s}^{\ast
+}\right\rangle R_{v}\left(  T\right)  \left\langle v_{1},\cdots,v_{s}%
+,v_{1}^{\ast},\cdots,v_{s}^{\ast}\right\vert \\
+&  =\left\vert s_{1},\cdots\cdots,s_{2s}\right\rangle \frac{1}{\sqrt{2}%
+}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  R_{v}\left(  T\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left\langle s_{1},\cdots\cdots,s_{2s}\right\vert .
+\end{align}
+
+
+\subsubsection{Real subspace of complex space}
+
+Note that $\mathbb{R}^{2s}$ can be embedded in $\mathbb{C}^{2s}$ as
+\begin{equation}
+\mathbb{R}^{2s}\hookrightarrow\mathbb{C}^{2s}=\mathbb{C}^{s}\oplus
+\overline{\mathbb{C}^{s}},
+\end{equation}
+while a complexification of $\mathbb{R}^{2s}$ produces $\mathbb{C}^{s}.$ This
+can be abstractly expressed as
+\begin{equation}
+V_{2s\mathbb{R}}\hookrightarrow V_{s\mathbb{C}}\oplus\overline{V_{s\mathbb{C}%
+}}%
+\end{equation}
+where a complexification of $V_{2s\mathbb{R}}$ produces $V_{s\mathbb{C}}$.
+
+As%
+\begin{equation}
+\left\vert v_{1},\cdots,v_{s},v_{1}^{\ast},\cdots,v_{s}^{\ast}\right\rangle
+=\left\vert s_{1},\cdots\cdots,s_{2s}\right\rangle \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)
+\end{equation}
+one obtains%
+\begin{align}
+R_{s}\left(  T\right)   &  =\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  R_{v}\left(  T\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+R_{v}\left(  T\right)   &  =\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  R_{s}\left(  T\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  .
+\end{align}
+$\lceil$
+
+The real representation in terms of the complex one is
+\begin{align}
+R_{s}\left(  T\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+T_{s11} & T_{s12}\\
+T_{s21} & T_{s22}%
+\end{array}
+\right)  =\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+T_{v11} & T_{v12}\\
+T_{v21} & T_{v22}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{v11}+T_{v21} & T_{v12}+T_{v22}\\
+i\left(  T_{v11}-T_{v21}\right)  & i\left(  T_{v12}-T_{v22}\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{v11}+T_{v21}+T_{v12}+T_{v22} & -i\left(  T_{v11}+T_{v21}-T_{v12}%
+-T_{v22}\right) \\
+i\left(  T_{v11}-T_{v21}+T_{v12}-T_{v22}\right)  & T_{v11}-T_{v21}%
+-T_{v12}+T_{v22}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{v11}+T_{v22}+T_{v21}+T_{v12} & -i\left(  T_{v11}-T_{v22}+T_{v21}%
+-T_{v12}\right) \\
+i\left(  T_{v11}-T_{v22}-T_{v21}+T_{v12}\right)  & T_{v11}+T_{v22}%
+-T_{v21}-T_{v12}%
+\end{array}
+\right)  ,
+\end{align}
+while the complex one in terms of the real one is
+\begin{align*}
+R_{v}\left(  T\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+T_{v11} & T_{v12}\\
+T_{v21} & T_{v22}%
+\end{array}
+\right)  =\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+T_{s11} & T_{s12}\\
+T_{s21} & T_{s22}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{s11}-iT_{s21} & T_{s12}-iT_{s22}\\
+T_{s11}+iT_{s21} & T_{s12}+iT_{s22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{s11}-iT_{s21}+i\left(  T_{s12}-iT_{s22}\right)  & T_{s11}-iT_{s21}-i\left(
+T_{s12}-iT_{s22}\right) \\
+T_{s11}+iT_{s21}+i\left(  T_{s12}+iT_{s22}\right)  & T_{s11}+iT_{s21}-i\left(
+T_{s12}+iT_{s22}\right)
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{s11}-iT_{s21}+iT_{s12}+T_{s22} & T_{s11}-iT_{s21}-iT_{s12}-T_{s22}\\
+T_{s11}+iT_{s21}+iT_{s12}-T_{s22} & T_{s11}+iT_{s21}-iT_{s12}+T_{s22}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{s11}+T_{s22}-iT_{s21}+iT_{s12} & T_{s11}-T_{s22}-iT_{s21}-iT_{s12}\\
+T_{s11}-T_{s22}+iT_{s21}+iT_{s12} & T_{s11}+T_{s22}+iT_{s21}-iT_{s12}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{s11}+T_{s22}-iT_{s21}+iT_{s12} & T_{s11}-T_{s22}-iT_{s21}-iT_{s12}\\
+\left(  T_{s11}-T_{s22}-iT_{s21}-iT_{s12}\right)  ^{\ast} & \left(
+T_{s11}+T_{s22}-iT_{s21}+iT_{s12}\right)  ^{\ast}%
+\end{array}
+\right)
+\end{align*}
+i.e.
+\begin{equation}
+R_{v}\left(  T\right)  =\left(
+\begin{array}
+[c]{cc}%
+T_{v11} & T_{v12}\\
+\left(  T_{v12}\right)  ^{\ast} & \left(  T_{v11}\right)  ^{\ast}%
+\end{array}
+\right)  .
+\end{equation}
+Using this in the preceding expression for $R_{s}\left(  T\right)  $ gives
+\begin{align}
+R_{s}\left(  T\right)   &  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{v11}+\left(  T_{v11}\right)  ^{\ast}+\left(  T_{v12}\right)  ^{\ast
+}+T_{v12} & -i\left(  T_{v11}-\left(  T_{v11}\right)  ^{\ast}-\left(
+T_{v12}-\left(  T_{v12}\right)  ^{\ast}\right)  \right) \\
+i\left(  T_{v11}-\left(  T_{v11}\right)  ^{\ast}+T_{v12}-\left(
+T_{v12}\right)  ^{\ast}\right)  & T_{v11}+\left(  T_{v11}\right)  ^{\ast
+}-\left(  T_{v12}+\left(  T_{v12}\right)  ^{\ast}\right)
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\operatorname{Re}\left(  T_{v11}+T_{v12}\right)  & \operatorname{Im}\left(
+T_{v11}-T_{v12}\right) \\
+-\operatorname{Im}\left(  T_{v11}+T_{v12}\right)  & \operatorname{Re}\left(
+T_{v11}-T_{v12}\right)
+\end{array}
+\right)  .
+\end{align}
+$\lceil$ This can also be seen from%
+\begin{align}
+R_{s}\left(  T\right)   &  =\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+T_{v11} & T_{v12}\\
+\overline{T_{v12}} & \overline{T_{v11}}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{v11}+\overline{T_{v12}} & T_{v12}+\overline{T_{v11}}\\
+iT_{v11}-i\overline{T_{v12}} & iT_{v12}-i\overline{T_{v11}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+T_{v11}+\overline{T_{v12}}+T_{v12}+\overline{T_{v11}} & -i\left(
+T_{v11}+\overline{T_{v12}}\right)  +i\left(  T_{v12}+\overline{T_{v11}}\right)
+\\
+i\left(  T_{v11}-\overline{T_{v12}}\right)  +i\left(  T_{v12}-\overline
+{T_{v11}}\right)  & \left(  T_{v11}-\overline{T_{v12}}\right)  -\left(
+T_{v12}-\overline{T_{v11}}\right)
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+2\operatorname{Re}\left(  T_{v11}+T_{v12}\right)  & +i\left(  T_{v12}%
+-\overline{T_{v12}}\right)  +i\left(  \overline{T_{v11}}-T_{v11}\right) \\
+i\left(  T_{v11}-\overline{T_{v11}}\right)  +i\left(  T_{v12}-\overline
+{T_{v12}}\right)  & 2\operatorname{Re}\left(  T_{v11}-T_{v12}\right)
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\operatorname{Re}\left(  T_{v11}+T_{v12}\right)  & \operatorname{Im}\left(
+T_{v11}-T_{v12}\right) \\
+-\operatorname{Im}\left(  T_{v11}+T_{v12}\right)  & \operatorname{Re}\left(
+T_{v11}-T_{v12}\right)
+\end{array}
+\right)
+\end{align}
+$\rfloor$
+
+$\lceil$Note that if $r=2$
+\begin{equation}
+R_{s}\left(  T\right)  \left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+-1 & 0
+\end{array}
+\right)  R_{s}\left(  T\right)  ^{t}=\left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+-1 & 0
+\end{array}
+\right)
+\end{equation}
+and
+\begin{equation}
+R_{v}\left(  T\right)  \left(
+\begin{array}
+[c]{cc}%
+-1 & 0\\
+0 & 1
+\end{array}
+\right)  R_{v}\left(  T\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+-1 & 0\\
+0 & 1
+\end{array}
+\right)
+\end{equation}
+i.e. $T\in Sp\left(  2,\mathbb{R}\right)  $ and $T\in U\left(  1,1\right)
+.\rfloor$
+
+$\lceil$If $r=4$ this gives
+\begin{equation}
+R_{s}\left(  T\right)  \left(
+\begin{array}
+[c]{cccc}%
+0 & 0 & \alpha_{1} & 0\\
+0 & 0 & 0 & \alpha_{2}\\
+-\alpha_{1} & 0 & 0 & 0\\
+0 & -\alpha_{2} & 0 & 0
+\end{array}
+\right)  R_{s}\left(  T\right)  ^{t}=\left(
+\begin{array}
+[c]{cccc}%
+0 & 0 & \alpha_{1} & 0\\
+0 & 0 & 0 & \alpha_{2}\\
+-\alpha_{1} & 0 & 0 & 0\\
+0 & -\alpha_{2} & 0 & 0
+\end{array}
+\right)
+\end{equation}
+and
+\begin{equation}
+R_{v}\left(  T\right)  \left(
+\begin{array}
+[c]{cccc}%
+-\alpha_{1} & 0 & 0 & 0\\
+0 & -\alpha_{2} & 0 & 0\\
+0 & 0 & \alpha_{1} & 0\\
+0 & 0 & 0 & \alpha_{2}%
+\end{array}
+\right)  R_{v}\left(  T\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cccc}%
+-\alpha_{1} & 0 & 0 & 0\\
+0 & -\alpha_{2} & 0 & 0\\
+0 & 0 & \alpha_{1} & 0\\
+0 & 0 & 0 & \alpha_{2}%
+\end{array}
+\right)  .
+\end{equation}
+If $\alpha_{1}\neq\alpha_{2}$ then $T\in Sp\left(  2,\mathbb{R}\right)  \times
+Sp\left(  2,\mathbb{R}\right)  $ and $T\in U\left(  1,1\right)  \times
+U\left(  1,1\right)  ,$ while if $\alpha_{1}=\alpha_{2}$ then $T\in Sp\left(
+4,\mathbb{R}\right)  $ and $T\in U\left(  2,2\right)  .\rfloor$
+
+If $R_{s}\left(  T\right)  $ corresponds to a complex transformation
+\begin{equation}
+R_{\mathbb{C}s}\left(  T\right)  :\mathbb{C}^{s}\rightarrow\mathbb{C}^{s}%
+\end{equation}
+then
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+t_{R} & -t_{I}\\
+t_{I} & t_{R}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\operatorname{Re}\left(  T_{v11}+T_{v12}\right)  & \operatorname{Im}\left(
+T_{v11}-T_{v12}\right) \\
+-\operatorname{Im}\left(  T_{v11}+T_{v12}\right)  & \operatorname{Re}\left(
+T_{v11}-T_{v12}\right)
+\end{array}
+\right)  ,
+\end{equation}
+which implies that
+\begin{equation}
+T_{v12}=\mathbb{O}%
+\end{equation}
+i.e.
+\begin{align}
+R_{s}\left(  T\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+\operatorname{Re}T_{v11} & \operatorname{Im}T_{v11}\\
+-\operatorname{Im}T_{v11} & \operatorname{Re}T_{v11}%
+\end{array}
+\right) \\
+R_{v}\left(  T\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+T_{v11} & \mathbb{O}\\
+\mathbb{O} & \overline{T_{v11}}%
+\end{array}
+\right)  .
+\end{align}
+
+
+\paragraph{Orthogonal}%
+
+\begin{align}
+\mathbb{B}  &  =\mathbb{O}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{O}^{t}=\left\vert \mathbf{s}_{1},\cdots,\mathbf{s}%
+_{\mathbf{s}},\mathbf{s}_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}%
++\mathbf{s}}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left\langle \mathbf{s}_{1},\cdots,\mathbf{s}_{\mathbf{s}}%
+,\mathbf{s}_{\mathbf{s}+1},\cdots,\mathbf{s}_{\mathbf{s}+\mathbf{s}%
+}\right\vert \\
+&  =\frac{1}{2}\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}%
+},\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  \left\langle \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}}%
+,\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\vert \\
+&  =\left\vert \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}},\mathbf{v}%
+_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left\langle \mathbf{v}_{1},\cdots,\mathbf{v}_{\mathbf{s}}%
+,\mathbf{v}_{1}^{\ast},\cdots,\mathbf{v}_{\mathbf{s}}^{\ast}\right\vert
+\end{align}
+i.e.%
+\begin{equation}
+\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  .
+\end{equation}
+$\lceil$%
+\begin{align}
+\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)   &  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & -i\boldsymbol{\alpha}\\
+\boldsymbol{\alpha} & i\boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+2\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & 2\boldsymbol{\alpha}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  .
+\end{align}
+
+
+$\rfloor$
+
+Thus
+\begin{equation}
+B=\left\vert e_{1},\cdots\cdots,e_{2\mathbf{s}}\right\rangle \mathbb{O}\left(
+%
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{O}^{t}\left\langle e_{1},\cdots\cdots,e_{2\mathbf{s}%
+}\right\vert =\left\vert e_{1},\cdots\cdots,e_{2\mathbf{s}}\right\rangle
+\mathbb{V}\left(
+\begin{array}
+[c]{cc}%
+\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \mathbb{V}^{\dagger}\left\langle e_{1},\cdots\cdots,e_{2\mathbf{s}%
+}\right\vert .
+\end{equation}
+The invariance group associated with $B$ is given by
+\begin{equation}
+TBT^{\dagger}=B
+\end{equation}
+giving
+\begin{equation}
+R_{B}\left(  T\right)  R_{B}\left(  B\right)  R_{B}\left(  T\right)
+^{\dagger}=R_{B}\left(  B\right)  .
+\end{equation}
+
+
+\subsection{Invariances}
+
+The real antisymmetric form is defined by
+\begin{equation}
+A=-i\sum_{1\leq j\leq s}\alpha_{j}\left\{  \left\vert v_{j}\right\rangle
+\left\langle v_{j}\right\vert -\left\vert v_{j}^{\ast}\right\rangle
+\left\langle v_{j}^{\ast}\right\vert \right\}  ;\qquad\alpha_{j}\in
+\mathbb{R}^{+},
+\end{equation}
+which corresponds to the geminal%
+\begin{equation}
+\left\vert g\right\rangle =-i\sum_{1\leq j\leq s}\alpha_{j}\left\vert
+v_{j}v_{j}^{\ast}\right\rangle .
+\end{equation}
+One can define the orthogonal projectors
+\begin{align}
+P_{A+}  &  =\sum_{1\leq j\leq s}\left\vert v_{j}\right\rangle \left\langle
+v_{j}\right\vert \\
+P_{A-}  &  =\sum_{1\leq j\leq s}\left\vert v_{j}^{\ast}\right\rangle
+\left\langle v_{j}^{\ast}\right\vert
+\end{align}
+so that
+\begin{equation}
+\left[  A,P_{A+}\right]  =\left[  A,P_{A+}\right]  =0
+\end{equation}
+and
+\begin{equation}
+A=P_{A+}AP_{A+}+P_{A-}AP_{A-}.
+\end{equation}
+
+
+If
+\begin{equation}
+\left\vert w_{j},w_{j}^{\ast}\right\rangle =\left\vert v_{j},v_{j}^{\ast
+}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\alpha & b\\
+b^{\ast} & a^{\ast}%
+\end{array}
+\right)  =\left\vert v_{j},v_{j}^{\ast}\right\rangle T,
+\end{equation}
+where
+\begin{equation}
+\det\left(
+\begin{array}
+[c]{cc}%
+a & b\\
+b^{\ast} & a^{\ast}%
+\end{array}
+\right)  =1=\left\vert a\right\vert ^{2}-\left\vert b\right\vert ^{2}%
+\end{equation}
+and
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\alpha & b\\
+b^{\ast} & a^{\ast}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\alpha & b\\
+b^{\ast} & a^{\ast}%
+\end{array}
+\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+\alpha & b\\
+b^{\ast} & a^{\ast}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\alpha^{\ast} & b\\
+b^{\ast} & a
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\left\vert a\right\vert ^{2}+\left\vert b\right\vert ^{2} & ab+\left(
+ab\right)  ^{\ast}\\
+ab+\left(  ab\right)  ^{\ast} & \left\vert a\right\vert ^{2}+\left\vert
+b\right\vert ^{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1
+\end{array}
+\right)
+\end{equation}
+then%
+\begin{align}
+\left\vert a\right\vert ^{2}+\left\vert b\right\vert ^{2}  &  =1\\
+\operatorname{Re}\left(  ab\right)   &  =0
+\end{align}%
+\begin{gather}
+1=\left\vert a\right\vert ^{2}-\left\vert b\right\vert ^{2}\\
+1=\left\vert a\right\vert ^{2}+\left\vert b\right\vert ^{2}\\
+\Downarrow\\
+a=e^{i\theta};\quad b=0
+\end{gather}
+i.e.%
+\begin{equation}
+T=\left(
+\begin{array}
+[c]{cc}%
+e^{i\theta} & 0\\
+0 & e^{-i\theta}%
+\end{array}
+\right)  \Rightarrow T\in SU\left(  2\right)  \cap SU\left(  1,1\right)  .
+\end{equation}
+
+
+\begin{proposition}
+If $\alpha_{1}=\alpha_{2}=\cdots=\alpha_{d}$ and
+\begin{equation}
+\left\vert w_{1},\cdots,w_{d},w_{1}^{\ast},\cdots,w_{d}^{\ast}\right\rangle
+=T\left\vert v_{1},\cdots,v_{d},v_{1}^{\ast},\cdots,v_{d}^{\ast}\right\rangle
+=\left\vert v_{1},\cdots,v_{d},v_{1}^{\ast},\cdots,v_{d}^{\ast}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbb{B}\\
+\mathbb{B}^{\ast} & \mathbb{A}^{\ast}%
+\end{array}
+\right)  =\left\vert v_{j},\cdots,v_{j}^{\ast}\right\rangle \mathbb{T}%
+\end{equation}
+and $T\in SU\left(  2d\right)  $ \textbf{then} $T\in SU\left(  d,d\right)  $
+i.e. $T\in SU\left(  2d\right)  \cap SU\left(  d,d\right)  .$
+\end{proposition}
+
+\begin{proof}%
+\begin{align}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{d} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{d}%
+\end{array}
+\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbb{B}\\
+\mathbb{B}^{\ast} & \mathbb{A}^{\ast}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbb{B}\\
+\mathbb{B}^{\ast} & \mathbb{A}^{\ast}%
+\end{array}
+\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbb{B}\\
+\mathbb{B}^{\ast} & \mathbb{A}^{\ast}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{A}^{\dagger} & \mathbb{B}^{t}\\
+\mathbb{B}^{\dagger} & \mathbb{A}^{t}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{AA}^{\dagger}+\mathbb{BB}^{\dagger} & \mathbb{AB}^{t}+\mathbb{BA}%
+^{t}\\
+\mathbb{B}^{\ast}\mathbb{A}^{\dagger}+\mathbb{A}^{\ast}\mathbb{B}^{\dagger} &
+\mathbb{A}^{\ast}\mathbb{A}^{t}+\mathbb{B}^{\ast}\mathbb{B}^{t}%
+\end{array}
+\right)
+\end{align}
+together with
+\begin{align}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{d} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{d}%
+\end{array}
+\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbb{B}\\
+\mathbb{B}^{\ast} & \mathbb{A}^{\ast}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{d} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{d}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbb{B}\\
+\mathbb{B}^{\ast} & \mathbb{A}^{\ast}%
+\end{array}
+\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & -\mathbb{B}\\
+\mathbb{B}^{\ast} & -\mathbb{A}^{\ast}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{A}^{\dagger} & \mathbb{B}^{t}\\
+\mathbb{B}^{\dagger} & \mathbb{A}^{t}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{AA}^{\dagger}-\mathbb{BB}^{\dagger} & \mathbb{AB}^{t}-\mathbb{BA}%
+^{t}\\
+\mathbb{B}^{\ast}\mathbb{A}^{\dagger}-\mathbb{A}^{\ast}\mathbb{B}^{\dagger} &
+-\mathbb{A}^{\ast}\mathbb{A}^{t}+\mathbb{B}^{\ast}\mathbb{B}^{t}%
+\end{array}
+\right)
+\end{align}
+implies that
+\begin{align}
+\mathbb{T}  &  \mathbb{=}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbb{O}\\
+\mathbb{O} & \mathbb{A}^{\ast}%
+\end{array}
+\right) \\
+\mathbb{AA}^{\dagger}  &  =\mathbb{I}_{d}.
+\end{align}
+Hence
+\begin{equation}
+A=-i\sum_{1\leq k\leq\kappa}\alpha_{\kappa}\sum_{1\leq j\leq d_{j}}\left\{
+\left\vert v_{\kappa j}\right\rangle \left\langle v_{\kappa j}\right\vert
+-\left\vert \left(  v_{\kappa j}\right)  ^{\ast}\right\rangle \left\langle
+\left(  v_{\kappa j}\right)  ^{\ast}\right\vert \right\}
+\end{equation}
+giving%
+\begin{equation}
+\left\vert g\right\rangle =-i\sum_{1\leq k\leq\kappa}\alpha_{\kappa}%
+\sum_{1\leq j\leq d_{j}}\left\vert \left(  v_{\kappa j}\right)  \left(
+v_{\kappa j}\right)  ^{\ast}\right\rangle .
+\end{equation}
+
+\end{proof}
+
+\subsection{Antisymmetric Structure}
+
+Antisymmetric bilinear forms
+\begin{equation}
+g:V\times V\rightarrow\mathbb{F}%
+\end{equation}
+can be expressed as
+\begin{equation}
+g\left(  a,b\right)  =\left\langle g\left\vert a\wedge b\right.  \right\rangle
+=\left\langle a\left\vert Ab\right.  \right\rangle =\mathbf{a}^{t}%
+\mathbb{A}\mathbf{b},
+\end{equation}
+where
+\begin{align}
+\left\langle g\right\vert  &  \in\left(  V\wedge V\right)  ^{d}\\
+\left\langle a\right\vert  &  \in V^{d}\\
+A &  \in\mathcal{B}\left(  V\right)  \\
+a,b &  \in V
+\end{align}
+$\lceil$There is an injective map
+\begin{equation}
+\Upsilon:V\rightarrow V^{d}%
+\end{equation}
+by considering biorthogonal bases$\rfloor$
+
+The cannonical form of a real geminal is
+\begin{equation}
+\left\vert g\right\rangle =\sum\limits_{1\leq j\leq s}\alpha_{j}\left\vert
+s_{j}s_{j+s}\right\rangle =-i\sum_{1\leq j\leq s}\alpha_{j}\left\vert
+v_{j}v_{j}^{\ast}\right\rangle .
+\end{equation}
+
+
+\bigskip%
+
+\begin{equation}
+A=\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left\langle s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\vert
+=\left\vert v_{1},\cdots,v_{s},v_{1}^{\ast},\cdots,v_{s}^{\ast}\right\rangle
+i\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left\langle v_{1},\cdots,v_{\mathbf{s}},v_{1}^{\ast},\cdots
+,v_{s}^{\ast}\right\vert
+\end{equation}%
+\begin{equation}
+J_{A}=\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  \left\langle s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\vert
+=\left\vert v_{1},\cdots,v_{s},v_{1}^{\ast},\cdots,v_{s}^{\ast}\right\rangle
+i\left(
+\begin{array}
+[c]{cc}%
+-\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  \left\langle v_{1},\cdots,v_{\mathbf{s}},v_{1}^{\ast},\cdots
+,v_{s}^{\ast}\right\vert
+\end{equation}%
+\begin{align}
+J_{A}\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle  &
+=\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)  =\left\vert -s_{s+1},\cdots,-s_{s+s},s_{1},\cdots,s_{s},\right\rangle
+\\
+\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle  &
+=\left\vert s_{1},\cdots,s_{s},J_{A}s_{1},\cdots,J_{A}s_{s}\right\rangle
+\end{align}%
+\begin{equation}
+J_{A}J_{A}^{t}=I_{s}=J_{A}^{t}J_{A}=-J_{A}^{2}=-I_{2s}%
+\end{equation}%
+\begin{equation}
+\sigma_{A}=\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{s}%
+\end{array}
+\right)  \left\langle s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\vert
+\end{equation}%
+\begin{equation}
+\sigma_{A}\left\vert s_{1},\cdots,s_{s},s_{s+1},\cdots,s_{s+s}\right\rangle
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{s}%
+\end{array}
+\right)  =\left\vert s_{1},\cdots,s_{s},-s_{s+1},\cdots,-s_{s+s}\right\rangle
+=\left\vert s_{1},\cdots,s_{s},-J_{A}s_{1},\cdots,-J_{A}s_{s}\right\rangle
+\end{equation}%
+\begin{equation}
+\sigma_{A}=P_{A+}-P_{A-}%
+\end{equation}%
+\begin{equation}
+\sigma_{A}^{2}=I_{2s}%
+\end{equation}
+
+
+\bigskip%
+\begin{equation}
+v^{\ast}=\sigma_{A}\left(  v\right)
+\end{equation}%
+\begin{equation}
+V_{\mathbb{R}}=\left\{  v\left.  \sigma_{A}\left(  v\right)  \right\vert
+=v,v\in V_{\mathbb{C}}\right\}
+\end{equation}
+
+
+\bigskip%
+
+\begin{align}
+\left\vert \mathbf{s}_{j}\right\rangle  &  =\frac{1}{\sqrt{2}}\left(
+\left\vert \mathbf{v}_{j}\right\rangle +\left\vert \mathbf{v}_{j}^{\ast
+}\right\rangle \right)  =\sqrt{2}\operatorname{Re}\left\vert \mathbf{v}%
+_{j}\right\rangle \nonumber\\
+\left\vert \mathbf{s}_{j+\mathbf{s}}\right\rangle  &  =\frac{-i}{\sqrt{2}%
+}\left(  \left(  \left\vert \mathbf{v}_{j}\right\rangle -\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \right)  \right)  =\sqrt{2}%
+\operatorname{Im}\left\vert \mathbf{v}_{j}\right\rangle ,
+\end{align}%
+\begin{equation}
+\left[  J_{A},A\right]  =0
+\end{equation}%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+-\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+-\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+-\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\boldsymbol{\alpha}\\
+\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+-\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+-\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+-\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & \boldsymbol{\alpha}%
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\sigma\left(  \operatorname{Re}x+i\operatorname{Im}x\right)
+=\operatorname{Re}x-i\operatorname{Im}x
+\end{equation}
+
+
+
+\end{document}

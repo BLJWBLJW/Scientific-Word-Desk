@@ -1,0 +1,394 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, November 11, 2010 13:39:59}
+%TCIDATA{LastRevised=Sunday, November 21, 2010 09:44:14}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Derivative of Thouless Transform}%
+
+\begin{align}
+&  \frac{\partial}{\partial z_{ph}}\exp\left\{  \sum\limits_{\substack{1\leq
+h\leq2\\3\leq p\leq r}}z_{ph}a_{p}^{\dagger}a_{h}\right\} \nonumber\\
+&  =a_{p}^{\dagger}a_{h}\exp\left\{  \sum\limits_{\substack{1\leq
+h\leq2\\3\leq p\leq r}}z_{ph}a_{p}^{\dagger}a_{h}\right\}  =\exp\left\{
+\sum\limits_{\substack{1\leq h\leq2\\3\leq p\leq r}}z_{ph}a_{p}^{\dagger}%
+a_{h}\right\}  a_{p}^{\dagger}a_{h}\nonumber\\
+&  \frac{\partial}{\partial z_{ph}}c\left(  \mathbf{z}\right)  =c\left(
+\mathbf{z}\right)  a_{p}^{\dagger}a_{h}\nonumber\\
+&  \frac{\partial}{\partial\bar{z}_{ph}}c\left(  \mathbf{z}\right)  ^{\dagger
+}=c\left(  \mathbf{z}\right)  ^{\dagger}a_{h}^{\dagger}a_{p}%
+\end{align}
+
+
+\bigskip%
+\begin{align}
+&  f_{X}\left(  \Phi\left(  \varphi_{1}\left(  \mathbf{z}\right)  \right)
+^{\dagger}\Phi\left(  \varphi_{1}\left(  \mathbf{z}\right)  \right)  \right)
+=\left(  N-1\right)  ^{-1}\left\{  \left(  \left.  \overset{}{\left\vert
+\varphi_{1}\left(  \mathbf{z}\right)  \varphi_{2}\left(  \mathbf{z}\right)
+\right\rangle \left\langle \varphi_{1}\left(  \mathbf{z}\right)  \varphi
+_{2}\left(  \mathbf{z}\right)  \right\vert }\right\vert X_{2}\right)  \right.
+\nonumber\\
+&  \left.  +\left(  \left.  \sum_{3\leq l\leq r}\left\vert \varphi_{1}\left(
+\mathbf{z}\right)  \varphi_{l}\left(  \mathbf{z}\right)  \right\rangle
+\left\langle \varphi_{1}\left(  \mathbf{z}\right)  \varphi_{l}\left(
+\mathbf{z}\right)  \right\vert \right\vert X_{2}\right)  \right\} \nonumber\\
+&  =\left(  N-1\right)  ^{-1}\left\{  Q_{X_{2}}\left(  \mathbf{z}\right)
++\sum_{3\leq l\leq r}\left(  \left.  \overset{}{\left\vert \varphi_{1}\left(
+\mathbf{z}\right)  \varphi_{l}\left(  \mathbf{z}\right)  \right\rangle
+\left\langle \varphi_{1}\left(  \mathbf{z}\right)  \varphi_{l}\left(
+\mathbf{z}\right)  \right\vert }\right\vert X_{2}\right)  \right\} \nonumber\\
+&  =\left(  N-1\right)  ^{-1}\left\{  Q_{X_{2}}\left(  \mathbf{z}\right)
++\sum_{3\leq l\leq r}\left(  \left.  \overset{}{c\left(  \mathbf{z}\right)
+\left\vert \varphi_{1}\varphi_{l}\right\rangle \left\langle \varphi_{1}%
+\varphi_{l}\right\vert c\left(  \mathbf{z}\right)  ^{\dagger}}\right\vert
+X_{2}\right)  \right\} \nonumber\\
+&  =\left(  N-1\right)  ^{-1}\left\{  Q_{X_{2}}\left(  \mathbf{z}\right)
++\sum_{3\leq l\leq r}\left(  \left.  \overset{}{c\left(  \mathbf{z}\right)
+a_{l}^{\dagger}a_{2}\left\vert \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert a_{2}^{\dagger}a_{l}c\left(
+\mathbf{z}\right)  ^{\dagger}}\right\vert X_{2}\right)  \right\}
+\end{align}
+
+
+Thus%
+\begin{align}
+&  f_{X}\left(  \Phi\left(  \varphi_{1}\left(  \mathbf{z}\right)  \right)
+^{\dagger}\Phi\left(  \varphi_{1}\left(  \mathbf{z}\right)  \right)  \right)
+\nonumber\\
+&  =\left(  N-1\right)  ^{-1}\left\{  Q_{X_{2}}\left(  \mathbf{z}\right)
++\sum\limits_{3\leq l\leq r}\frac{\partial^{2}}{\partial z_{l2}\partial\bar
+{z}_{l2}}\left(  \left.  \overset{}{c\left(  \mathbf{z}\right)  \left\vert
+\varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{1}\varphi
+_{2}\right\vert c\left(  \mathbf{z}\right)  ^{\dagger}}\right\vert
+X_{2}\right)  \right\} \nonumber\\
+&  =\left(  N-1\right)  ^{-1}\left\{  Q_{X_{2}}\left(  \mathbf{z}\right)
++\sum\limits_{3\leq l\leq r}\frac{\partial^{2}}{\partial z_{l2}\partial\bar
+{z}_{l2}}Q_{X_{2}}\left(  \mathbf{z}\right)  \right\}  .
+\end{align}
+
+
+\bigskip%
+
+\begin{align}
+&  \left\{  \mathbf{z}\left\vert \frac{\partial^{2}}{\partial z_{l2}%
+\partial\bar{z}_{l2}}\mathbf{z}^{\prime}\right.  \right\}  _{\mathfrak{F}%
+}=\left\{  K_{Q}\left(  \mathbf{z}\right)  \left\vert \frac{\partial^{2}%
+}{\partial z_{l2}\partial\bar{z}_{l2}}K_{P}\left(  \mathbf{z}^{\prime}\right)
+\right.  \right\}  _{\mathfrak{F}}\\
+&  =\int\overline{K_{Q}\left(  \mathbf{z},\mathbf{z}^{\prime\prime}\right)
+}\frac{\partial^{2}}{\partial z_{l2}^{\prime\prime}\partial\bar{z}%
+_{l2}^{\prime\prime}}K_{P}\left(  \mathbf{z}^{\prime},\mathbf{z}^{\prime
+\prime}\right)  d\mu\left(  \mathbf{z}^{\prime\prime}\right) \\
+&  =\sum_{\substack{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r\\1\leq m_{1}%
+<m_{2},n_{1}<n_{2}\leq r}}\overline{Q_{j_{1}j_{2}k_{1}k_{2}}\left(
+\mathbf{z}\right)  }P_{m_{1}m_{2}n_{1}n_{2}}\left(  \mathbf{z}^{\prime
+}\right)  \int P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}^{\prime\prime
+}\right)  \frac{\partial^{2}}{\partial z_{l2}^{\prime\prime}\partial\bar
+{z}_{l2}^{\prime\prime}}\overline{Q_{m_{1}m_{2}n_{1}n_{2}}\left(
+\mathbf{z}^{\prime\prime}\right)  }d\mu\left(  \mathbf{z}^{\prime\prime
+}\right)
+\end{align}
+
+
+\bigskip%
+
+\begin{align}
+Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)   &  =\operatorname*{Tr}%
+\left\{  \left\vert \mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert
+\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert \right\}  \nonumber\\
+&  =\operatorname*{Tr}\left\{  c\left(  \mathbf{z}\right)  \left\vert
+\varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{1}\varphi
+_{2}\right\vert c\left(  \mathbf{z}\right)  ^{\dagger}\left\vert
+\varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\vert \right\}  \nonumber\\
+&  =\operatorname*{Tr}\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert c\left(  \mathbf{z}\right)
+^{\dagger}\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert c\left(  \mathbf{z}\right)
+\right\}  \nonumber\\
+&  =\left(  \left.  \overset{}{\left\vert \varphi_{k_{1}}\varphi_{k_{2}%
+}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}}\right\vert
+}\right\vert \left\vert \varphi_{1}\left(  \mathbf{z}\right)  \varphi
+_{2}\left(  \mathbf{z}\right)  \right\rangle \left\langle \varphi_{1}\left(
+\mathbf{z}\right)  \varphi_{2}\left(  \mathbf{z}\right)  \right\vert \right)
+_{\mathcal{B}\left(  \mathcal{H}^{2}\right)  }\nonumber\\
+&  =\left(  \left.  \overset{}{\left\vert \varphi_{k_{1}}\varphi_{k_{2}%
+}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}}\right\vert
+}\right\vert c\left(  \mathbf{z}\right)  \left\vert \varphi_{1}\varphi
+_{2}\right\rangle \left\langle \varphi_{1}\varphi_{2}\right\vert c\left(
+\mathbf{z}\right)  ^{\dagger}\right)  _{\mathcal{B}\left(  \mathcal{H}%
+^{2}\right)  }\nonumber\\
+&  =\left(  \left.  c\left(  \mathbf{z}\right)  ^{\dagger}%
+\overset{}{\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{2}}\right\vert }c\left(  \mathbf{z}\right)
+\right\vert \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{2}\right\vert \right)  _{\mathcal{B}\left(  \mathcal{H}%
+^{2}\right)  }%
+\end{align}
+hence
+\begin{align}
+\frac{\partial^{2}}{\partial z_{p2}\partial\bar{z}_{p2}}Q_{j_{1}pk_{1}%
+p}\left(  \mathbf{z}\right)   &  =\operatorname*{Tr}\left\{  \left\vert
+\varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{1}\varphi
+_{2}\right\vert c\left(  \mathbf{z}\right)  ^{\dagger}a_{2}^{\dagger}%
+a_{p}\left\vert \varphi_{j_{1}}\varphi_{p}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{p}\right\vert a_{p}^{\dagger}a_{2}c\left(
+\mathbf{z}\right)  \right\}  \nonumber\\
+&  =\operatorname*{Tr}\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert c\left(  \mathbf{z}\right)
+^{\dagger}\left\vert \varphi_{j_{1}}\varphi_{2}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{2}\right\vert c\left(  \mathbf{z}\right)  \right\}
+\nonumber\\
+&  =\left(  \left.  \overset{}{\left\vert \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert }\right\vert c\left(
+\mathbf{z}\right)  ^{\dagger}\left\vert \varphi_{1}\varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{1}\varphi_{k_{1}}\right\vert c\left(
+\mathbf{z}\right)  \right)  _{\mathcal{B}\left(  \mathcal{H}^{2}\right)
+}\nonumber\\
+&  =\left(  \left.  c\left(  \mathbf{z}\right)  \overset{}{\left\vert
+\varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{1}\varphi
+_{2}\right\vert c\left(  \mathbf{z}\right)  ^{\dagger}}\right\vert \left\vert
+\varphi_{1}\varphi_{j_{1}}\right\rangle \left\langle \varphi_{1}\varphi
+_{k_{1}}\right\vert \right)  _{\mathcal{B}\left(  \mathcal{H}^{2}\right)
+}\nonumber\\
+&  =Q_{1j_{1}1k_{1}}\left(  \mathbf{z}\right)
+\end{align}%
+\begin{equation}
+\frac{\partial^{2}}{\partial z_{p_{1}2}\partial\bar{z}_{p_{2}2}}Q_{j_{1}%
+j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  =\left(  \left.
+\overset{}{\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{2}}\right\vert }\right\vert c\left(  \mathbf{z}%
+\right)  \left\vert \varphi_{1}\varphi_{p_{1}}\right\rangle \left\langle
+\varphi_{1}\varphi_{p_{2}}\right\vert c\left(  \mathbf{z}\right)  ^{\dagger
+}\right)  _{\mathcal{B}\left(  \mathcal{H}^{2}\right)  }%
+\end{equation}
+and
+\begin{align}
+\sum\limits_{2\leq l\leq r}\frac{\partial^{2}}{\partial z_{l2}\partial\bar
+{z}_{l2}}Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)   &  =\sum
+\limits_{2\leq l\leq r}\left(  \left.  \overset{}{\left\vert \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\vert }\right\vert c\left(  \mathbf{z}\right)  \left\vert \varphi
+_{1}\varphi_{l}\right\rangle \left\langle \varphi_{1}\varphi_{l}\right\vert
+c\left(  \mathbf{z}\right)  ^{\dagger}\right)  _{\mathcal{B}\left(
+\mathcal{H}^{2}\right)  }\\
+&  =\sum\limits_{1\leq l\leq r}\left(  \left.  \overset{}{\left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\vert }\right\vert c\left(  \mathbf{z}\right)
+\left\vert \varphi_{1}\varphi_{l}\right\rangle \left\langle \varphi_{1}%
+\varphi_{l}\right\vert c\left(  \mathbf{z}\right)  ^{\dagger}\right)
+_{\mathcal{B}\left(  \mathcal{H}^{2}\right)  }\\
+&  =\sum\limits_{1\leq l\leq r}\left(  \left.  \overset{}{\left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\vert }\right\vert c\left(  \mathbf{z}\right)
+\left\vert \varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert \wedge
+P_{\mathcal{H}^{1}}c\left(  \mathbf{z}\right)  ^{\dagger}\right)
+_{\mathcal{B}\left(  \mathcal{H}^{2}\right)  }%
+\end{align}%
+\begin{equation}
+\exp\left\{  \sum\limits_{1\leq h,h^{\prime}\leq2}\alpha_{hh^{\prime}}\left(
+\mathbf{z}\right)  a_{h}^{\dagger}a_{h^{\prime}}+\sum\limits_{3\leq
+p,p^{\prime}\leq r}\alpha_{pp^{\prime}}\left(  \mathbf{z}\right)
+a_{p}^{\dagger}a_{p^{\prime}}\right\}
+\end{equation}%
+\begin{equation}
+\exp\left\{  -\sum\limits_{\substack{1\leq h\leq2\\3\leq p\leq r}}\bar{z}%
+_{ph}a_{h}^{\dagger}a_{p}\right\}
+\end{equation}
+Hence
+\begin{equation}
+\frac{\partial}{\partial z_{ph}}\exp\left\{  \sum\limits_{\substack{1\leq
+h\leq2\\3\leq p\leq r}}z_{ph}a_{p}^{\dagger}a_{h}\right\}  \exp\left\{
+-\sum\limits_{\substack{1\leq h\leq2\\3\leq p\leq r}}\bar{z}_{ph}%
+a_{h}^{\dagger}a_{p}\right\}  \left\vert \varphi_{k}\right\rangle
+\end{equation}%
+\begin{align}
+&  \left\vert \varphi_{1}\left(  \mathbf{z}\right)  \right\rangle \left\langle
+\varphi_{1}\left(  \mathbf{z}\right)  \right\vert \wedge\sum\limits_{1\leq
+j\leq r}\left\vert \varphi_{j}\left(  \mathbf{z}\right)  \right\rangle
+\left\langle \varphi_{j}\left(  \mathbf{z}\right)  \right\vert =\\
+&  \left\vert \varphi_{1}\left(  \mathbf{z}\right)  \varphi_{2}\left(
+\mathbf{z}\right)  \right\rangle \left\langle \varphi_{2}\left(
+\mathbf{z}\right)  \varphi_{1}\left(  \mathbf{z}\right)  \right\vert
++\sum\limits_{3\leq p\leq r}\left\vert \varphi_{1}\left(  \mathbf{z}\right)
+\varphi_{p}\left(  \mathbf{z}\right)  \right\rangle \left\langle \varphi
+_{p}\left(  \mathbf{z}\right)  \varphi_{1}\left(  \mathbf{z}\right)
+\right\vert \\
+&  =\left\vert \varphi_{1}\left(  \mathbf{z}\right)  \varphi_{2}\left(
+\mathbf{z}\right)  \right\rangle \left\langle \varphi_{2}\left(
+\mathbf{z}\right)  \varphi_{1}\left(  \mathbf{z}\right)  \right\vert
++\sum\limits_{3\leq p\leq r}c\left(  \mathbf{z}\right)  \left\vert \varphi
+_{1}\varphi_{p}\right\rangle \left\langle \varphi_{p}\varphi_{1}\right\vert
+c\left(  \mathbf{z}\right)  ^{\dagger}%
+\end{align}%
+\begin{align}
+&  \sum\limits_{3\leq p\leq r}\left\vert \tilde{\varphi}_{1}\left(
+\mathbf{z}\right)  \tilde{\varphi}_{p}\left(  \mathbf{z}\right)  \right\rangle
+\left\langle \tilde{\varphi}_{p}\left(  \mathbf{z}\right)  \tilde{\varphi}%
+_{1}\left(  \mathbf{z}\right)  \right\vert \\
+&  =\sum\limits_{3\leq p\leq r}u\left(  \mathbf{z}\right)  \left\vert
+\tilde{\varphi}_{1}\tilde{\varphi}_{p}\right\rangle \left\langle
+\tilde{\varphi}_{p}\tilde{\varphi}_{1}\right\vert u\left(  \mathbf{z}\right)
+^{\dagger}\\
+&  =\sum\limits_{3\leq p\leq r}u\left(  \mathbf{z}\right)  a_{p}^{\dagger
+}a_{2}\left\vert \tilde{\varphi}_{1}\tilde{\varphi}_{2}\right\rangle
+\left\langle \tilde{\varphi}_{2}\tilde{\varphi}_{1}\right\vert a_{2}^{\dagger
+}a_{p}u\left(  \mathbf{z}\right)  ^{\dagger}\\
+&  =\sum\limits_{3\leq p\leq r}\frac{\partial^{2}}{\partial z_{ph}\partial
+\bar{z}_{hp}}\left\{  u\left(  \mathbf{z}\right)  \left\vert \tilde{\varphi
+}_{1}\tilde{\varphi}_{2}\right\rangle \left\langle \tilde{\varphi}_{2}%
+\tilde{\varphi}_{1}\right\vert u\left(  \mathbf{z}\right)  ^{\dagger}\right\}
+\\
+&  =\sum\limits_{3\leq p\leq r}\frac{\partial^{2}}{\partial z_{ph}\partial
+\bar{z}_{hp}}\left\vert \tilde{\varphi}_{1}\left(  \mathbf{z}\right)
+\tilde{\varphi}_{2}\left(  \mathbf{z}\right)  \right\rangle \left\langle
+\tilde{\varphi}_{2}\left(  \mathbf{z}\right)  \tilde{\varphi}_{1}\left(
+\mathbf{z}\right)  \right\vert
+\end{align}%
+\begin{align}
+& u_{2}\left(  \mathbf{z}\right)  =\exp\left\{  \sum_{3\leq l\leq r}\left(
+z_{1l}\left\vert \varphi_{l}\right\rangle \left\langle \varphi_{1}\right\vert
++z_{2p}\left\vert \varphi_{l}\right\rangle \left\langle \varphi_{2}\right\vert
+\right)  \right\}  \\
+& \times\exp\left\{  \sum_{3\leq l\leq r}\left(  z_{11}\left\vert \varphi
+_{1}\right\rangle \left\langle \varphi_{1}\right\vert +z_{22}\left\vert
+\varphi_{2}\right\rangle \left\langle \varphi_{2}\right\vert +z_{12}\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{2}\right\vert +\bar{z}%
+_{12}\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{1}\right\vert
+\right)  \right\}  \\
+& \times\exp\left\{  -\sum_{3\leq l\leq r}\left(  \bar{z}_{1l}\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{l}\right\vert +\bar{z}%
+_{2p}\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{l}\right\vert
+\right)  \right\}  \\
+& \frac{\partial^{2}}{\partial z_{1k}\partial\bar{z}_{1k}}u_{2}\left(
+\mathbf{z}\right)  =-\left\vert \varphi_{k}\right\rangle \left\langle
+\varphi_{k}\right\vert u_{2}\left(  \mathbf{z}\right)  \\
+& \sum_{3\leq k\leq r}\frac{\partial^{2}}{\partial z_{1k}\partial\bar{z}_{1k}%
+}u_{2}\left(  \mathbf{z}\right)  =-P_{\mathcal{H}_{12}^{1}}^{\bot}u_{2}\left(
+\mathbf{z}\right)
+\end{align}%
+\begin{align}
+& w_{2}\left(  \mathbf{z}\right)  =\exp\left\{  \sum_{3\leq l\leq r}\left(
+z_{1l}a_{l}^{\dagger}a_{1}+z_{2p}a_{l}^{\dagger}a_{2}\right)  \right\}
+\exp\left\{  -\sum_{3\leq l\leq r}\left(  \bar{z}_{1l}a_{1}^{\dagger}%
+a_{l}+\bar{z}_{2p}a_{2}^{\dagger}a_{l}\right)  \right\}  \\
+& \frac{\partial^{2}}{\partial z_{1k}\partial\bar{z}_{1k}}w_{2}\left(
+\mathbf{z}\right)  =-\exp\left\{  \sum_{3\leq l\leq r}\left(  z_{1l}%
+a_{l}^{\dagger}a_{1}+z_{2p}a_{l}^{\dagger}a_{2}\right)  \right\}  a_{1}%
+a_{k}^{\dagger}a_{k}a_{1}^{\dagger}\exp\left\{  -\sum_{3\leq l\leq r}\left(
+\bar{z}_{1l}a_{l}^{\dagger}a_{1}+\bar{z}_{2p}a_{l}^{\dagger}a_{2}\right)
+\right\}  \\
+& =-w_{2}\left(  \mathbf{z}\right)  a_{1}a_{k}^{\dagger}a_{k}a_{1}^{\dagger
+}w_{2}\left(  -\mathbf{z}\right)  ^{\dagger}%
+\end{align}%
+\begin{align}
+\sum_{3\leq k\leq r}\frac{\partial^{2}}{\partial z_{1k}\partial\bar{z}_{1k}%
+}w_{2}\left(  \mathbf{z}\right)    & =-\sum_{3\leq k\leq r}c_{2}\left(
+\mathbf{z}\right)  a_{1}a_{k}^{\dagger}a_{k}a_{1}^{\dagger}c_{2}\left(
+-\mathbf{z}\right)  ^{\dagger}\\
+& =c_{2}\left(  \mathbf{z}\right)  \left\{  a_{1}^{\dagger}a_{1}%
++a_{2}^{\dagger}a_{2}-\mathcal{N}_{1}\right\}  c_{2}\left(  -\mathbf{z}%
+\right)  ^{\dagger}%
+\end{align}%
+\begin{align}
+w_{2}\left(  \mathbf{z}\right)    & =\exp\left\{  \sum_{3\leq l\leq r}\left(
+z_{1l}\left\vert \varphi_{l}\right\rangle \left\langle \varphi_{1}\right\vert
++z_{2p}\left\vert \varphi_{l}\right\rangle \left\langle \varphi_{2}\right\vert
+\right)  \right\}  \\
+& \times\exp\left\{  -\sum_{3\leq l\leq r}\left(  \bar{z}_{1l}\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{l}\right\vert +\bar{z}%
+_{2p}\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{l}\right\vert
+\right)  \right\}
+\end{align}%
+\begin{align}
+& w_{2}\left(  \mathbf{z}\right)  w_{2}\left(  \mathbf{z}\right)  ^{\dagger
+}=\exp\left\{  \sum_{3\leq l\leq r}\left(  z_{1l}\left\vert \varphi
+_{l}\right\rangle \left\langle \varphi_{1}\right\vert +z_{2p}\left\vert
+\varphi_{l}\right\rangle \left\langle \varphi_{2}\right\vert \right)
+\right\}  \\
+& \times\exp\left\{  -\sum_{3\leq l\leq r}\left(  \bar{z}_{1l}\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{l}\right\vert +\bar{z}%
+_{2p}\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{l}\right\vert
+\right)  \right\}  \exp\left\{  -\sum_{3\leq l\leq r}\left(  z_{1l}\left\vert
+\varphi_{l}\right\rangle \left\langle \varphi_{1}\right\vert +z_{2p}\left\vert
+\varphi_{l}\right\rangle \left\langle \varphi_{2}\right\vert \right)
+\right\}  \\
+& \times\exp\left\{  \sum_{3\leq l\leq r}\left(  \bar{z}_{1l}\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{l}\right\vert +\bar{z}%
+_{2p}\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{l}\right\vert
+\right)  \right\}
+\end{align}
+
+
+
+\end{document}

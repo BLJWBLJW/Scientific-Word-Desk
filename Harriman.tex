@@ -1,0 +1,138 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Tuesday, May 27, 2008 09:25:39}
+%TCIDATA{LastRevised=Tuesday, May 27, 2008 11:25:25}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\[
+L_{N}^{1}(D)=D^{1}
+\]%
+\[
+\limfunc{Tr}\left\{ D^{1}\right\} =\limfunc{Tr}\left\{ D\right\} =1
+\]%
+N-Representability for FORDO 
+\[
+\sigma \left( D^{1}\right) \leq \frac{1}{N}
+\]%
+\[
+D^{1}=\int D^{1}\left( x_{1},x_{1}^{\prime }\right) \left\vert
+x_{1}\right\rangle \left\langle x_{1}^{\prime }\right\vert
+dx_{1}dx_{1}^{\prime }
+\]
+
+\begin{eqnarray*}
+\limfunc{Tr}\left\{ D^{1}\right\}  &=&\int D^{1}\left( x_{1},x_{1}\right) 
+\limfunc{Tr}\left\{ \left\vert x_{1}\right\rangle \left\langle x_{1}^{\prime
+}\right\vert \right\} dx_{1}dx_{1}^{\prime } \\
+&=&\int D^{1}\left( x_{1},x_{1}\right) \delta \left( x_{1}-x_{1}^{\prime
+}\right) dx_{1}dx_{1}^{\prime }=\int D^{1}\left( x_{1},x_{1}\right) dx_{1} \\
+&=&\int \rho \left( x_{1}\right) dx_{1}=1
+\end{eqnarray*}%
+\[
+D^{1}\left( x_{1},x_{1}^{\prime }\right) =\int D\left( x_{1\cdots
+}x_{N}^{\prime },x_{1}^{\prime }{}_{\cdots }x_{N}^{\prime }\right)
+dx_{2}\cdots dx_{N}dx_{2}^{\prime }\cdots dx_{N}
+\]%
+Let 
+\begin{eqnarray*}
+\rho \left( x\right)  &=&0;\quad x\in \Delta ^{c} \\
+\Delta  &=&\left[ x_{a},x_{b}\right]  \\
+\rho \left( x\right)  &\geq &0;x\in \Delta  \\
+\int \rho \left( x\right) dx &=&1
+\end{eqnarray*}%
+\[
+f\left( x\right) =2\pi \int_{x_{a}}^{x}\rho \left( y\right) dy
+\]%
+\begin{eqnarray*}
+f\left( x_{a}\right)  &=&0 \\
+f\left( x_{b}\right)  &=&2\pi 
+\end{eqnarray*}%
+\[
+\frac{df\left( x\right) }{dx}=2\pi \rho \left( x\right) 
+\]%
+\[
+p\left( x\right) =\sqrt{\rho \left( x\right) }
+\]%
+define%
+\[
+\varphi _{k}\left( x\right) =p\left( x\right) e^{ikf\left( x\right) }
+\]%
+\begin{eqnarray*}
+\int \varphi _{k}^{\ast }\left( x\right) \varphi _{k^{\prime }}\left(
+x\right) dx &=&\int \rho \left( x\right) e^{i\left( k-k^{\prime }\right)
+f\left( x\right) }dx=\frac{1}{2\pi }\int e^{i\left( k-k^{\prime }\right)
+f\left( x\right) }\frac{df\left( x\right) }{dx}dx=\frac{1}{2\pi }\int
+e^{i\left( k-k^{\prime }\right) f}df \\
+&=&\left\{ 
+\begin{array}{c}
+\frac{1}{2\pi i\left( k-k^{\prime }\right) }\left\vert _{0}^{2\pi
+}e^{i\left( k-k^{\prime }\right) f}\right. =\frac{1}{2\pi i\left(
+k-k^{\prime }\right) }\left( e^{i\left( k-k^{\prime }\right) 2\pi }-1\right)
+=0;k\neq k^{\prime } \\ 
+1;k=k^{\prime }%
+\end{array}%
+\right.  \\
+&=&\delta _{kk^{\prime }}
+\end{eqnarray*}%
+\[
+\int \varphi _{k}^{\ast }\left( x\right) \varphi _{k}\left( x\right) dx=\int
+\rho \left( x\right) dx=1
+\]%
+\begin{eqnarray*}
+\sum_{k}\left\vert \varphi _{k}\left( x\right) \right\vert ^{2}
+&=&\sum_{k}p\left( x\right) ^{2}=\sum_{k}\rho \left( x\right)  \\
+&\Rightarrow &\sum_{k}\lambda _{k}\left\vert \varphi _{k}\left( x\right)
+\right\vert ^{2}=\sum_{k}\lambda _{k}\rho \left( x\right) =\rho \left(
+x\right)  \\
+\text{if }\sum_{k}\lambda _{k} &=&1
+\end{eqnarray*}%
+Let%
+\begin{eqnarray*}
+\Delta  &=&\left[ 0,1\right]  \\
+\rho \left( x\right)  &=&P_{\Delta }\left( x\right)  \\
+\int P_{\Delta }\left( x\right) dx &=&1 \\
+P_{\Delta }\left( x\right)  &=&1\quad x\in \Delta 
+\end{eqnarray*}%
+\begin{eqnarray*}
+\Delta  &=&\left[ 0,\frac{1}{2}\right]  \\
+\rho \left( x\right)  &=&2P_{\Delta }\left( x\right)  \\
+\int P_{\Delta }\left( x\right) dx &=&\frac{1}{2} \\
+P_{\Delta }\left( x\right)  &=&1\quad x\in \Delta  \\
+\rho \left( x\right)  &=&2\quad x\in \Delta 
+\end{eqnarray*}
+
+\end{document}

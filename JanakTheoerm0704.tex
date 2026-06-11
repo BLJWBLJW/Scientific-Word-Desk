@@ -1,0 +1,2544 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, September 20, 2004 09:58:21}
+%TCIDATA{LastRevised=Monday, July 25, 2005 11:36:42}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Janaks Theorem]{Generalized Janaks Theorem}
+\author{B. Weiner}
+\affiliation{Pennsylvania State University}
+\keywords{}
+\pacs{}
+
+\begin{abstract}
+.
+
+\end{abstract}
+\date{07/18/2005}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction\label{Intro}}
+
+Janaks theorem is a useful auxiliary tool in the Kuhn-Sham (KS) approach to
+Density Functional Theory, that is helpful in analyzing the structure and
+meaning of the eigenvalues of the KS Fock operator. It states that these
+eigenvalues are equal to the derivatives of the exact total energy with
+respect to the occupation numbers of the First Order Reduced Density Operator
+(FORDO) of the model KS state. However many conceptual questions surround this
+theorem. In what sense can the occupation numbers vary as the model KS state
+is by definition an Independent Particle State (IPS)\ with integer occupation
+numbers? What is the functional relationship between the eigenvalues and the
+occupation number? How does one define a KS\ functional that is differentiable
+with respect to occupation numbers?
+
+In both KS-DFT and Hartree-Fock theory these eigenvalues correspond to
+Lagrange parameters associated with the normalization constraint on the
+orbitals, that constitute the Independent Particle State (IPS) and to
+ionization energies of electrons described by these orbitals. This
+correspondence can be generalized to Multi Configurational Self Consistent
+States (MCSCF), as described for instance in \cite{WeinerOrtiz05}. Constrained
+optimization theory \cite{Hestenes} shows that the values of the Lagrange
+parameters correspond to the sensitivity of the object function, in this case
+the $N$-electron energy, to variations of the constraint, in this case the
+normalization of the orbitals. Hence Janaks theorem implies that the
+normalization of the orbitals must be a function of the occupation numbers and
+hence it would useful to know the form of this relationship.
+
+In order to answer these questions we will review the basic principles of
+Hohenburg-Kohn (HK), KS DFT (section 2) and Janaks Theorem (section 3) in the
+context of a constrained variational approach and sensitivity theory. However
+the Levy-Leib constrained optimization definition of the density functionals
+does not lead to an explicit form for these functionals and thus makes their
+approximation and investigation difficult.
+
+A well defined KS\ functional determines the total energy in terms of a set of
+occupations numbers and one particle orbitals. Such a functional has been
+explicitly constructed \cite{Weiner&Ortiz2005} for Antisymmetrized Geminal
+Power states in terms of General Spin Orbitals (GSO's) and parameters that
+determine the FORDO occupation numbers (see section 4). In section 5 we
+investigate the form of the derivatives of this functional with respect to
+occupation numbers and the special case of its value at integer occupation. In
+section 6 we conclude with a discussion and summary.
+
+\section{Density Functionals \label{Standard}}
+
+In this section we review some fundamental background needed to defined HK and
+KS density functionals. We will mention important technical mathematical
+aspects that need to be examined, but defer a full analysis of these issues to
+another article \cite{weiner05}. We will focus for simplicity on the
+mathematically most well behaved cases.
+
+\subsection{Hohenberg-Kohn DFT}
+
+The HK density functional is defined in terms of the kinetic energy operator,
+$K,$ the coulomb operator, $V_{2},$ and the charge density $\rho$.
+
+\subsubsection{Densities and States}
+
+\bigskip Density Functional Theory is based on the existence of a universal
+functional, $\mathcal{\tilde{F}}\left(  \rho\right)  $ \cite{HK} of the charge
+density $\rho\left(  \mathbf{r}\right)  ,$ where
+\begin{equation}
+\rho\left(  \mathbf{r}\right)  =\int D^{1}\left(  \mathbf{r,\xi;r,\xi}\right)
+d\mathbf{\xi}%
+\end{equation}
+and $D^{1}\left(  \mathbf{r,\xi;r}^{\prime}\mathbf{,\xi}^{\prime}\right)  $ is
+the integral kernel of the First Order Reduced Operator (FORDO) $D^{1}$
+\cite{Coleman} (see Appendix \ref{DenMat} for details of density and reduced
+density operators and matrices), which can be expanded as
+\begin{equation}
+D^{1}=\int D^{1}\left(  \mathbf{r,\xi;r}^{\prime}\mathbf{,\xi}^{\prime
+}\right)  \left\vert \mathbf{r,\xi}\right\rangle \left\langle \mathbf{r}%
+^{\prime}\mathbf{,\xi}^{\prime}\right\vert d\mathbf{r}d\mathbf{r}^{\prime
+}d\mathbf{\xi}d\mathbf{\xi}^{\prime}%
+\end{equation}
+in the basis $\left\{  \left\vert \mathbf{r,\xi}\right\rangle \right\}  $
+formed by the tensor product of the generalized eigenvectors, $\left\{
+\left\vert \mathbf{r}\right\rangle \right\}  ,$ of the position operator and a
+family of $SU(2)$-coherent spin states $\left\{  \left\vert \mathbf{\xi
+}\right\rangle \right\}  $ $\cite{weiner2005}$ . In order to consider spin
+dependent effects it is convenient to extend the original formulation of DFT
+in terms of $\rho\left(  \mathbf{r}\right)  $ and consider a universal
+functional, $\mathcal{F}\left(  \gamma\right)  $, of the space-spin density
+$\gamma\left(  \mathbf{r,\xi}\right)  =$ $D^{1}\left(  \mathbf{r,\xi;r,\xi
+}\right)  $ \cite{weiner-trickey} and local external potentials of the
+position variable $\mathbf{r}$ and spin space variable $\mathbf{\xi}$ that
+describe the interaction with external electric and magnetic fields. $\lceil
+$The integral kernel of the magnetic dipole operator is local (i.e. diagonal)
+in the coherent state representation but not over the spectrum of the spin
+operator$.\rfloor$
+
+For a system that contains on average $N$-electrons the space spin density
+must satisfy the condition
+\begin{equation}
+\int\gamma\left(  \mathbf{r,\xi}\right)  d\mathbf{r}d\mathbf{\xi}=N,
+\label{Number}%
+\end{equation}
+which does not restrict the density to be the contraction of a pure
+$N$-electron state and one could consider incoherent and coherent mixtures of
+sates describing different number of electrons. Focusing on pure $N$-electron
+states one can define convex sets, $\left\{  \left[  \gamma\right]
+_{N}\right\}  ,$ of $N$-electron state density operators by
+\begin{equation}
+\left[  \gamma\right]  _{N}=\left\{  \left.  D\right\vert \Xi_{1}\left(
+D\right)  =\gamma;D\in S_{N}\subset\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  \right\}
+\end{equation}
+(see Appendix \ref{DenMat} for the definition of the domain $S_{N}$ and
+Appendix \ref{Operators} for the definition of $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $). The constraining functional $\Xi_{1}$ can be
+written in terms of the set of density operators $\left\{  \left.  \Phi\left(
+\mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)  \right\vert
+\mathbf{x\in}\mathbb{X}\right\}  $ as
+\begin{equation}
+\Xi_{1}\left(  D\right)  \left(  \mathbf{x}\right)  =\operatorname{Tr}\left\{
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+D\right\}  =\gamma\left(  \mathbf{x}\right)  .
+\end{equation}
+One can view this set of density operators as a generalized vector operator
+$\Phi^{\dagger}\Phi\mathbf{\ }$with a continuum of components. The
+satisfaction of the condition eq. $\left(  \ref{Number}\right)  $ for
+$D\in\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ implies that the state
+is normalized (see Appendix \ref{Normalization}) i.e.
+\begin{equation}
+\operatorname{Tr}D=1,
+\end{equation}
+and hence $D$ needs only to be constrained to lie in the cone (see Appendix
+\ref{Operators}) of positive operators of $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $. As $D$ is a positive operator it can always be
+expressed as the product
+\begin{equation}
+D=QQ^{\dagger},
+\end{equation}
+where $\left(  \text{Appendix \ref{Operators}}\right)  $
+\begin{equation}
+Q\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  ,
+\end{equation}
+and $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ is the Hilbert space of
+Hilbert-Schmidt operators acting on $N$-electron space $\mathcal{H}^{N}$.
+However this decomposition is not unique, as in particular
+\begin{equation}
+D=QUU^{\dagger}Q^{\dagger}%
+\end{equation}
+for any unitary operator $U\in\mathcal{U}\left(  \mathcal{H}^{N}\right)  $.
+One can remove this unitary group redundancy by choosing the operator $Q$ to
+be self adjoint, leading to
+\begin{equation}
+D=A^{2},
+\end{equation}
+where
+\begin{equation}
+A\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  \text{ and }A=A^{\dagger}.
+\end{equation}
+The operator $A$ is the square root of $D$, which is not unique, as can be
+observed from spectral expansion
+\begin{equation}
+A=D^{\frac{1}{2}}=\sum_{1\leq j\leq r_{N}}\pm\sqrt{\alpha_{j}}\left\vert
+\Upsilon_{j}\right\rangle \left\langle \Upsilon_{j}\right\vert , \label{specA}%
+\end{equation}
+where
+\begin{equation}
+D=\sum_{1\leq j\leq r_{N}}\alpha_{j}\left\vert \Upsilon_{j}\right\rangle
+\left\langle \Upsilon_{j}\right\vert ;\,\alpha_{j}\geq0,1\leq j\leq r_{N}%
+\end{equation}
+and $\left\{  \left.  \left\vert \Upsilon_{j}\right\rangle \right\vert 1\leq
+j\leq r_{N}\right\}  $ is a complete orthornormal set of eigenvectors of $D$.
+One could restrict $A$ to be positive i.e. use the positive square roots in
+eq. $\left(  \ref{specA}\right)  ,$ but that would be too restrictive for our
+purposes, as the set of positive Hilbert Schmidt operators forms a cone but do
+not form a linear space. However, the multi valuedness of the square root
+function is not a problem as the different roots are separated from each other
+and could only form isolated local minima. The domain of variation of the
+$N$-electron energy function can thus be taken to be the \emph{real} Hilbert
+space $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,$ of dimension
+$r_{N}^{2},$ which has an orthonormal basis
+\begin{align}
+\Lambda_{jk}  &  =\frac{1}{\sqrt{2}}\left\{  \left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{k}\right\vert +\left\vert \Psi_{k}\right\rangle
+\left\langle \Psi_{j}\right\vert \right\}  ;\quad1\leq j<k\leq r_{N}%
+\nonumber\\
+\Lambda_{jj}  &  =\left\vert \Psi_{j}\right\rangle \left\langle \Psi
+_{j}\right\vert ;\quad1\leq j\leq r_{N}\nonumber\\
+\Lambda_{jk}  &  =\frac{i}{\sqrt{2}}\left\{  \left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{k}\right\vert -\left\vert \Psi_{k}\right\rangle
+\left\langle \Psi_{j}\right\vert \right\}  ;\quad1\leq j>k\leq r_{N},
+\end{align}
+where $\left\{  \left.  \left\vert \Psi_{j}\right\rangle \right\vert 1\leq
+j\leq r_{N}\right\}  $ is any conb for $\mathcal{H}^{N},$ of course all these
+spaces are infinite dimensional if $r_{N}=\infty.$
+
+\subsubsection{The Density Constraint}
+
+The Levy-Leib construction is based on defining the value of the density
+functional as the minimum of a energy variation over states constrained to
+have a fixed density. The density constraint can either be formulated in terms
+of a quadratic functional $\Xi_{2}$ or a linear functional $\Xi_{1}.$ In terms
+of the quadratic functional
+\begin{equation}
+\Xi_{2}:\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+L_{1+}\left(  \mathbb{X}\right)  \subset L_{1}\left(  \mathbb{X}\right)  ,
+\end{equation}
+where $L_{1+}\left(  \mathbb{X}\right)  $ is the positive cone of
+$L_{1}\left(  \mathbb{X}\right)  ,$ it is given by
+\begin{equation}
+\Xi_{2}\left(  A\right)  =\operatorname{Tr}\left\{  A\Phi^{\dagger}\Phi
+A\right\}  =\left(  A\left\vert \Phi^{\dagger}\Phi A\right.  \right)  =\gamma,
+\end{equation}
+where the real symmetric inner product $\left(  \cdot\left\vert \cdot\right.
+\right)  $ in $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ is defined
+as
+\begin{equation}
+\left(  X\left\vert Y\right.  \right)  =\operatorname{Tr}\left\{  XY\right\}
+.
+\end{equation}
+In terms of the linear functional $\Xi_{1}$%
+\begin{equation}
+\Xi_{1}:\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+L_{1}\left(  \mathbb{X}\right)
+\end{equation}
+it is given by
+\begin{equation}
+\Xi_{1}\left(  X\right)  =\operatorname{Tr}\left\{  \Phi^{\dagger}\Phi
+X\right\}  =\gamma,
+\end{equation}
+where
+\begin{equation}
+X\geq0.
+\end{equation}
+If the differentials of the components of the constraints at a point $X$ form
+a basis (see Appendix basis \ref{Basis}) for $L_{1}\left(  \mathbb{X}\right)
+$ then this point is called \emph{regular}. The components are
+\begin{align}
+D\Xi_{2}\left(  X\right)  \left(  \mathbf{x}\right)   &  =\operatorname{Tr}%
+\left\{  X\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}%
+\right)  \cdot\right\}  =\left(  X\left\vert \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}\right)  \right.  \cdot\right) \\
+D\Xi_{1}\left(  X\right)  \left(  \mathbf{x}\right)   &  =\Xi_{1}\left(
+\mathbf{x}\right)  =\operatorname{Tr}\left\{  \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}\right)  \cdot\right\}  .
+\end{align}
+
+
+It will be convenient to use multiplication super operators
+\begin{equation}
+\widehat{T}:\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,
+\end{equation}
+which could be unbounded, and are defined by the quadratic form
+\cite{weiner05}
+\begin{equation}
+\left(  X\left\vert \widehat{T}Y\right.  \right)  =\operatorname{Tr}\left\{
+XTY\right\}  \,\forall X\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+,\,Y\in\operatorname{Dom}\left\{  T\right\}  ,
+\end{equation}
+giving
+\begin{equation}
+\widehat{T}\left\vert Y\right)  =\left\vert \left[  TY\right]  \right)  ,
+\end{equation}
+where
+\begin{equation}
+T:\operatorname{Dom}\left\{  T\right\}  \subseteq\mathcal{H}^{N}%
+\rightarrow\mathcal{H}^{N}%
+\end{equation}
+and $\left\vert \left[  TY\right]  \right)  $ is the projection of $TY$ onto
+$\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ i.e. the self adjoint part
+of $TY,$ given by
+\[
+\left[  TY\right]  =\frac{1}{2}\left\{  TY+YT\right\}  =\frac{1}{2}\left[
+T,Y\right]  _{+}.
+\]
+One can observe that
+\begin{equation}
+\operatorname{Tr}\left\{  XTY\right\}  =\operatorname{Tr}\left\{  X\left[
+TY\right]  \right\}  ,
+\end{equation}
+as $X\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ and is orthogonal
+to the subspace of anti self adjoint operators.
+
+\subsubsection{Hohenberg-Kohn Density Functional Construction}
+
+Even though the explicit form of the Hohenberg-Kohn functional $\mathcal{F}%
+_{HK}\left(  \gamma\right)  $ is not known one can define it implicitly
+\cite{LevyLieb} as
+\begin{equation}
+\mathcal{F}_{HK}\left(  \gamma\right)  =\operatorname{Tr}\left\{  \left(
+K+V_{2}\right)  D_{\ast}\left(  \gamma\right)  \right\}  =E_{U}\left(
+D_{\ast}\left(  \gamma\right)  \right)
+\end{equation}
+in terms of the minima, $E_{U}\left(  D_{\ast}\left(  \gamma\right)  \right)
+,$ of the universal energy functional $E_{U}\left(  D\right)  ,$ that are
+solutions of the constrained linear optimization
+\begin{equation}
+\min_{D\in\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  }\operatorname{Tr}%
+\left\{  \left(  K+V_{2}\right)  D\right\}  \equiv\min_{D\in\mathcal{B}%
+_{1sa}\left(  \mathcal{H}^{N}\right)  }\text{ }E_{U}\left(  D\right)
+\label{HK}%
+\end{equation}
+subject to
+\begin{align}
+\Xi_{1}\left(  D\right)   &  =\gamma\nonumber\\
+D  &  \geq0, \label{HKC}%
+\end{align}
+which is a linear programing problem, or by the constrained quadratic
+optimization
+\begin{equation}
+\min_{A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  }\operatorname{Tr}%
+\left\{  A\overset{}{\left(  K+V_{2}\right)  A}\right\}  =\left(  A_{\ast
+}\left(  \gamma\right)  \left\vert \widehat{\left(  K+V_{2}\right)  }A_{\ast
+}\left(  \gamma\right)  \right.  \right)  =E_{U}\left(  A_{\ast}\left(
+\gamma\right)  \right)  \label{HKQ}%
+\end{equation}
+subject to
+\begin{equation}
+\Xi_{2}\left(  A\right)  =\left(  A\left\vert \widehat{\Phi^{\dagger}\Phi
+}A\right.  \right)  =\gamma, \label{HKQC}%
+\end{equation}
+where
+\begin{equation}
+D_{\ast}\left(  \gamma\right)  =A_{\ast}\left(  \gamma\right)  ^{2}.
+\end{equation}
+We will focus on the quadratic formulation, which is a convex constrained
+optimization problem. The Lagrangian associated with this constrained
+optimization problem eq. $\left(  \ref{HK}\right)  $ is
+\begin{equation}
+\mathcal{L}\left(  A,\lambda,\gamma\right)  =E_{U}\left(  A\right)
+-\left\langle \left.  \lambda\right\vert \left\{  \Xi_{2}\left(  A\right)
+-\gamma\right\}  \right\rangle , \label{Lar}%
+\end{equation}
+where the universal energy is
+\begin{equation}
+E_{U}\left(  A\right)  =\operatorname{Tr}\left\{  \left(  K+V_{2}\right)
+A^{2}\right\}  =\left(  A\left\vert \widehat{\left(  K+V_{2}\right)
+}A\right.  \right)  ,
+\end{equation}
+the Lagrange multiplier function is
+\begin{equation}
+\left\langle \left.  \lambda\right\vert \left\{  \Xi_{2}\left(  A\right)
+-\gamma\right\}  \right\rangle =\int\lambda\left(  \mathbf{x}\right)  \left\{
+\Xi_{2}\left(  A\right)  \left(  \mathbf{x}\right)  -\gamma\left(
+\mathbf{x}\right)  \right\}  d\mathbf{x,\,}\lambda\in L_{\infty}\left(
+\mathbb{X}\right)  ,\gamma\in L_{1}\left(  \mathbb{X}\right)
+\end{equation}
+where $\left\langle \cdot|\cdot\right\rangle $ is the scalar product between
+the dual spaces $\left\langle L_{\infty}\left(  \mathbb{X}\right)
+,L_{1}\left(  \mathbb{X}\right)  \right\rangle $ i.e.
+\begin{equation}
+\left\langle \cdot|\cdot\right\rangle :L_{\infty}\left(  \mathbb{X}\right)
+\times L_{1}\left(  \mathbb{X}\right)  \rightarrow\mathbb{R}%
+\end{equation}
+and the control density $\gamma$ is chosen to belong to the convex set
+$\mathcal{P}_{N}$ given by
+\begin{equation}
+\mathcal{P}_{N}=\left\{  f\left\vert f\in L_{1}\left(  \mathbb{X}\right)
+;\,f\left(  \mathbf{x}\right)  \geq0;\int f\left(  \mathbf{x}\right)  d\left(
+\mathbf{x}\right)  =N\right.  \right\}  .
+\end{equation}
+This choice of the density $\gamma$ coupled with insisting that $A\in
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $ ensures that $A$ is
+normalized i.e.
+\begin{equation}
+\left(  A\left\vert A\right.  \right)  =1.
+\end{equation}
+
+
+The constraint term in the Lagrangian eq. $\left(  \ref{Lar}\right)  $ can be
+developed to give
+\begin{equation}
+\left\langle \lambda\left\vert \gamma\right.  \right\rangle -\left(
+A\left\vert \widehat{\Omega\left(  \lambda\right)  }\right.  A\right)
+=\left(  A\left\vert \left\{  \left\langle \lambda\left\vert \gamma\right.
+\right\rangle \hat{I}-\widehat{\Omega\left(  \lambda\right)  }\right\}
+\right.  A\right)  ,
+\end{equation}
+where $\Omega\left(  \lambda\right)  $ is a local potential defined as
+\begin{equation}
+\Omega\left(  \lambda\right)  =\int\lambda\left(  \mathbf{x}\right)
+\mathbf{\Phi}\left(  \mathbf{x}\right)  ^{\dagger}\mathbf{\Phi}\left(
+\mathbf{x}\right)  d\mathbf{x}%
+\end{equation}
+and
+\begin{equation}
+\left(  A\left\vert \widehat{\Omega\left(  \lambda\right)  }\right.  A\right)
+=\int\lambda\left(  \mathbf{x}\right)  \Xi_{2}\left(  A\right)  \left(
+\mathbf{x}\right)  d\mathbf{x.}%
+\end{equation}
+
+
+\subsubsection{Optimization Conditions}
+
+Regular solutions $A_{\ast}$ of the constrained quadratic optimization eqs.
+$\left(  \ref{HKQ}\right)  $ and $\left(  \ref{HKQC}\right)  $ correspond to
+unconstrained local saddle points $\left(  A_{\ast},\lambda_{\ast}\right)  $
+\cite{KKT} of the Lagrangian $\mathcal{L}\left(  A_{\ast},\lambda_{\ast
+},\gamma\right)  $
+\begin{equation}
+\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\gamma\right)  =\max_{\lambda}%
+\min_{A}\mathcal{L}\left(  A,\lambda,\gamma\right)
+\end{equation}
+that satisfy the necessary condition
+\begin{equation}
+D\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\gamma\right)  =0,
+\end{equation}
+where the linear map
+\begin{equation}
+D\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\gamma\right)  :\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  \times L_{\infty}\left(  \mathbb{X}%
+\right)  \rightarrow\mathbb{R}%
+\end{equation}
+is given by%
+\begin{equation}
+D\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\gamma\right)  \left(
+h,\varphi\right)  =\left\langle \varphi\left\vert \gamma\right.  \right\rangle
+-\left(  A_{\ast}\left\vert \widehat{\Omega\left(  \varphi\right)  }\right.
+A_{\ast}\right)  +2\left(  h\left\vert \left\{  \widehat{K+V_{2}-\Omega\left(
+\lambda\right)  }\right\}  \right.  A_{\ast}\right)  . \label{LagDiff}%
+\end{equation}
+As $A_{\ast}$ is a regular point of the constraint $\lambda_{\ast}$ is unique.
+The differential eq. $\left(  \ref{LagDiff}\right)  $ can be partitioned into
+$\left(  D_{AA}\mathcal{L}\left(  A,\lambda,\gamma\right)  ,D_{\lambda
+}\mathcal{L}\left(  A,\lambda,\gamma\right)  \right)  $, where
+\begin{align}
+D_{A}\mathcal{L}\left(  A,\lambda,\gamma\right)   &  =2\left(  \cdot\left\vert
+\widehat{\left\{  K+V_{2}-\Omega\left(  \lambda\right)  \right\}  }\right.
+A\right) \nonumber\\
+D_{\lambda}\mathcal{L}\left(  A,\lambda,\gamma\right)   &  =\left\langle
+\cdot\left\vert \gamma\right.  \right\rangle -\left(  A\left\vert
+\Omega\left(  \cdot\right)  \right.  A\right)  ,
+\end{align}
+thus giving the stationary point conditions
+\begin{subequations}
+\begin{align}
+\left(  h\left\vert \widehat{\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast
+}\right)  \right\}  }\right.  A_{\ast}\right)   &  =0\,\forall h\in
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right) \label{stata}\\
+\left\langle \varphi\left\vert \gamma\right.  \right\rangle -\left(  A_{\ast
+}\left\vert \widehat{\Omega\left(  \varphi\right)  }\right.  A_{\ast}\right)
+&  =0\,\forall\varphi\in L_{\infty}\left(  \mathbb{X}\right)  . \label{statb}%
+\end{align}
+If eq. $\left(  \ref{stata}\right)  $ and eq. $\left(  \ref{statb}\right)  $
+are true for all operators $h$ belonging to $\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  $ and all functions $\varphi$ belonging to $L_{\infty
+}\left(  \mathbb{X}\right)  $ these conditions are equivalent to
+\end{subequations}
+\begin{equation}
+\widehat{\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\right)  \right\}
+}\left\vert A_{\ast}\right)  =0 \label{Stateig}%
+\end{equation}
+and constraining condition
+\begin{equation}
+\left(  A_{\ast}\left\vert \widehat{\Phi^{\dagger}\Phi}\right.  A_{\ast
+}\right)  =\gamma.
+\end{equation}
+(For unbounded operators $K+V_{2}-\Omega\left(  \lambda_{\ast}\right)  $ one
+must be more precise, but we will only consider the case when an eigenvector
+$\left\vert A_{\ast}\right)  $ exists and thus eq. $\left(  \ref{stata}%
+\right)  $ is true for all $h\in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  $). The optimal value of the Lagrangian satisfies the following
+identities:
+\begin{align}
+\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\gamma\right)   &  =\left(
+A_{\ast}\left(  \gamma\right)  \left\vert \left\{  \widehat{\left\{
+K+V_{2}-\Omega\left(  \lambda_{\ast}\right)  \right\}  }+\left\langle \left.
+\lambda_{\ast}\left(  \gamma\right)  \right\vert \gamma\right\rangle \hat
+{I}\right\}  \right.  A_{\ast}\left(  \gamma\right)  \right)  =\left\langle
+\left.  \lambda_{\ast}\left(  \gamma\right)  \right\vert \gamma\right\rangle
+\nonumber\\
+&  =\left(  A_{\ast}\left(  \gamma\right)  \left\vert \widehat{K+V_{2}%
+}\right.  A_{\ast}\left(  \gamma\right)  \right)  =E_{U}\left(  A_{\ast
+}\left(  \gamma\right)  \right)  .
+\end{align}
+This shows that the energy of the universal energy functional at the density
+$\gamma$ is equal to the value of the Lagrangian and is also the value of the
+HK energy functional i.e.
+\begin{equation}
+\mathcal{F}_{HK}\left(  \gamma\right)  =E_{U}\left(  A_{\ast}\left(
+\gamma\right)  \right)  =\left\langle \left.  \lambda_{\ast}\left(
+\gamma\right)  \right\vert \gamma\right\rangle .
+\end{equation}
+
+
+The Hessian $D^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)  $ of the
+Lagrangian at the point $\left(  A,\lambda,\gamma\right)  $ is given by
+\begin{equation}
+D^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)  =\left(
+\begin{array}
+[c]{cc}%
+D_{AA}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)  & D_{A\lambda}%
+^{2}\mathcal{L}\left(  A,\lambda,\gamma\right) \\
+D_{\lambda A}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)  & D_{\lambda}%
+^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+D_{AA}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)  & D_{A\lambda}%
+^{2}\mathcal{L}\left(  A,\lambda,\gamma\right) \\
+D_{\lambda A}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)  & \mathbb{O}%
+\end{array}
+\right)  ,
+\end{equation}
+where%
+\begin{align}
+D_{AA}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)   &  :\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  \times\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathbb{R}\nonumber\\
+D_{\lambda A}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)   &  :L_{\infty
+}\left(  \mathbb{X}\right)  \times\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  \rightarrow\mathbb{R}%
+\end{align}
+and%
+\begin{align}
+D_{AA}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)   &  =2\left(
+\cdot\left\vert \widehat{\left\{  K+V_{2}-\Omega\left(  \lambda\right)
+\right\}  }\right.  \cdot\right) \nonumber\\
+D_{A\lambda}^{2}\mathcal{L}\left(  A,\lambda,\gamma\right)   &  =-2\left(
+A\widehat{\left\vert \Omega\left(  \cdot\right)  \right.  }\cdot\right)
+=-2\left(  A\left\vert \widehat{\Phi^{\dagger}\Phi}\right.  \cdot\right)
+=-2D_{A}\Xi_{2}\left(  A\right)  .
+\end{align}
+A stationary point $A_{\ast}$ is a constrained local minimum of $E_{U}$ if the
+sub block $D_{A}^{2}\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\gamma\right)
+$ of the Hessian $D^{2}\mathcal{L}\left(  A_{\ast},\lambda_{\ast}%
+,\gamma\right)  $ is positive at the point $A$ i.e.%
+\begin{equation}
+\left(  h\left\vert \widehat{\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast
+}\right)  \right\}  }\right.  h\right)  \geq0\,\forall h\in\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  .
+\end{equation}
+It is non degenerate, i.e. unique, if this is a strict inequality. At a
+regular point $A$ of the constraint
+\begin{equation}
+\Xi_{2}\left(  A\right)  :\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\rightarrow L_{1}\left(  \mathbb{X}\right)
+\end{equation}
+the differential $D\Xi_{2}\left(  A\right)  $ of the functional $\Xi_{2}$
+\begin{equation}
+D\Xi_{2}\left(  A\right)  :\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\rightarrow L_{1}\left(  \mathbb{X}\right)
+\end{equation}
+is surjective \cite{weiner2005}. If the universal energy is differentiable at
+an optimal solution $A_{\ast}$ i.e. $DE_{U}\left(  A_{\ast}\right)  $ exists
+and if $A_{\ast}$ is regular point of the constraint, then it is a regular solution.
+
+If two states $D_{\ast1}\left(  \gamma\right)  =$ $A_{\ast1}\left(
+\gamma\right)  ^{2}$ and $D_{\ast2}\left(  \gamma\right)  =$ $A_{\ast2}\left(
+\gamma\right)  ^{2}$ are degenerate then the states
+\begin{equation}
+\alpha_{1}D_{\ast1}\left(  \gamma\right)  +\alpha_{2}D_{\ast2}\left(
+\gamma\right)  =\left(  1-\alpha\right)  D_{\ast1}\left(  \gamma\right)
++\alpha D_{\ast2}\left(  \gamma\right)
+\end{equation}
+are also degenerate, so one has a line of minima, generated by $\left\{
+D_{\ast1}\left(  \gamma\right)  ,D_{\ast2}\left(  \gamma\right)  \right\}  ,$
+which are not isolated. Hence%
+\begin{equation}
+\operatorname{Tr}\left\{  \left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(
+\gamma\right)  \right)  \right\}  D_{\ast1}\left(  \gamma\right)  \right\}
+=\operatorname{Tr}\left\{  \left\{  K+V_{2}-\Omega\left(  \lambda_{\ast
+}\left(  \gamma\right)  \right)  \right\}  D_{\ast2}\left(  \gamma\right)
+\right\}  =0.
+\end{equation}
+As $D_{\ast1}\left(  \gamma\right)  $ and $D_{\ast2}\left(  \gamma\right)  $
+are unconstrained stationary states of $K+V_{2}-\Omega\left(  \lambda_{\ast
+}\left(  \gamma\right)  \right)  $
+\begin{equation}
+\left[  \left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(  \gamma\right)
+\right)  \right\}  ,D_{\ast j}\left(  \gamma\right)  \right]  =0.
+\end{equation}
+This implies that
+\begin{equation}
+\left[  \left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(  \gamma\right)
+\right)  \right\}  ,A_{\ast j}\left(  \gamma\right)  \right]  =0.
+\end{equation}
+As
+\begin{equation}
+\widehat{\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(  \gamma\right)
+\right)  \right\}  }\left\vert A_{\ast j}\left(  \gamma\right)  \right)
+=0\Rightarrow\left[  \left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(
+\gamma\right)  \right)  \right\}  ,A_{\ast j}\left(  \gamma\right)  \right]
+_{+}=0,
+\end{equation}
+we can deduce that
+\begin{equation}
+\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(  \gamma\right)  \right)
+\right\}  A_{\ast j}\left(  \gamma\right)  =0.
+\end{equation}
+$\lceil$As
+\begin{align}
+D_{1}  &  =A_{1}^{2}\\
+D_{2}  &  =A_{2}^{2}%
+\end{align}
+and $A_{1}$ and $A_{2}$ are degenerate, but
+\begin{equation}
+\beta_{1}A_{1}+\beta_{2}A_{2}%
+\end{equation}
+are not minima unless
+\begin{equation}
+A_{1}A_{2}=0.\rfloor
+\end{equation}
+
+
+\subsubsection{Mathematical Qualifications}
+
+The existence of the differential of $\left(  A\left\vert \widehat{\left(
+K+V_{2}\right)  }A\right.  \right)  $ at a point $A$ is equivalent to Frechet
+differentiability at the point $A$. If $\widehat{\left(  K+V_{2}\right)  }$ is
+unbounded then this quadratic form is not continuous at all points and hence
+there are points where it is not Frechet differentiable and thus where the
+differential does not exist. At these points we cannot use the eigenvector
+expression eq. $\left(  \ref{Stateig}\right)  .$ However the function $\left(
+A\left\vert \widehat{\left(  K+V_{2}\right)  }A\right.  \right)  $ does have a
+minimal value $A_{\ast}\left(  \gamma\right)  $ for each $\gamma$ and
+\begin{align}
+\left(  h\left\vert \widehat{\left(  K+V_{2}\right)  }A_{\ast}\left(
+\gamma\right)  \right.  \right)   &  =0\\
+\left(  h\left\vert \widehat{\left(  K+V_{2}\right)  }h\right.  \right)   &
+\geq0
+\end{align}
+for all operators $h$ belonging to the domain of $\widehat{\left(
+K+V_{2}\right)  }.$ If $ht$ belongs to the domain of $\widehat{\left(
+K+V_{2}\right)  }$ for $t\leq\left\vert \delta\right\vert $ and the quadratic
+form is continuous at these points then one can produce the Gateux derivative
+in the direction of $h.$ At such points a weak form of the Lagrange multiplier
+theorem holds.
+
+Another point to consider is when $\widehat{\left(  K+V_{2}\right)  }$ has
+only a continuous spectrum, then no eigenvector exists, even though a minimum
+does. Again a weak form of the Lagrange multiplier theorem holds.
+
+These considerations have implications about $V$-representatbility \cite{Vrep}
+
+A further phenomena is when the local minimum is degenerate, then the point
+$A_{\ast}$ does not produce an invertible Hessian sub block $D_{AA}%
+^{2}\mathcal{L}$ so a unique $D_{\ast}$ $=A_{\ast}^{2}$ does not exist. This
+does not effect the definition of the HK energy functional, but it does the
+definitions of the HK kinetic energy and XC functionals as different
+degenerate $D_{\ast}$'s produce different values for these component
+functionals. The multivaluedness of the square root function $D_{\ast}%
+^{\frac{1}{2}}$ produce isolated local minima that are degenerate.
+
+\subsubsection{Sensitivity Analysis}
+
+Sensitivity analysis \cite{sensitivity} examines how the optimal solution
+changes with variation of the value of the constraining functions, which can
+be thought of as control paramaters. In this case the $N$-electron state
+energy with variations of $\gamma.$ If the optimal points $\left\{  A_{\ast
+},\lambda_{\ast},\gamma\right\}  $ are regular for a range of $\gamma^{\prime
+}s$ then $\left\{  A_{\ast},\lambda_{\ast}\right\}  $ are in fact functions of
+$\gamma$ \cite{weiner2005} i.e.
+\begin{align}
+A_{\ast}  &  =A_{\ast}\left(  \gamma\right) \nonumber\\
+\lambda_{\ast}  &  =\lambda_{\ast}\left(  \gamma\right)  ,
+\end{align}
+hence
+\begin{equation}
+D_{\ast}=D_{\ast}\left(  \gamma\right)  =A_{\ast}\left(  \gamma\right)  ^{2}.
+\end{equation}
+As all points along these paths are feasable one obtains the important
+identity
+\begin{equation}
+\mathcal{L}\left(  A_{\ast},\lambda_{\ast},\gamma\right)  =\mathcal{L}\left(
+A_{\ast}\left(  \gamma\right)  ,\lambda_{\ast}\left(  \gamma\right)
+,\gamma\right)  =E_{U}\left(  A_{\ast}\left(  \gamma\right)  \right)
+-\left\langle \left.  \lambda\right\vert \left\{  \Xi_{2}\left(  A_{\ast
+}\left(  \gamma\right)  \right)  -\gamma\right\}  \right\rangle =E_{U}\left(
+A_{\ast}\left(  \gamma\right)  \right)  .
+\end{equation}
+It can be shown \cite{Hestenes} that the sensitivity of the optimal
+$N$-electron energy to changes in the density $\gamma$ is given by
+\begin{equation}
+\frac{\delta E_{U}\left(  A_{\ast}\left(  \gamma\right)  \right)  }%
+{\delta\gamma}=\lambda_{\ast}\left(  \gamma\right)  .
+\end{equation}
+By definition
+\begin{equation}
+\mathcal{F}_{HK}\left(  \gamma\right)  =E_{U}\left(  A_{\ast}\left(
+\gamma\right)  \right)
+\end{equation}
+which gives
+\begin{equation}
+\frac{\delta\mathcal{F}_{HK}\left(  \gamma\right)  }{\delta\gamma}%
+=\lambda_{\ast}\left(  \gamma\right)  .
+\end{equation}
+One could find the ground state of the universal system by finding
+\begin{equation}
+\mathcal{F}_{HK}\left(  \gamma_{0}\right)  =\min_{\gamma\in\mathcal{P}%
+}\mathcal{F}_{HK}\left(  \gamma\right)  , \label{EUniGS}%
+\end{equation}
+physically this would be the ground state of a uniform gas of electrons. At
+such a point%
+\begin{align}
+&  \widehat{\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(  \gamma
+_{0}\right)  \right)  \right\}  }\left\vert A_{\ast}\left(  \gamma_{0}\right)
+\right)  =0\nonumber\\
+&  \mathcal{F}_{HK}\left(  \gamma_{0}\right)  =E_{U}\left(  A_{\ast}\left(
+\gamma_{0}\right)  \right)  =\left\langle \left.  \lambda_{\ast}\left(
+\gamma_{0}\right)  \right\vert \gamma_{0}\right\rangle .
+\end{align}
+The constraining potential $\Omega\left(  \lambda_{\ast}\left(  \gamma
+_{0}\right)  \right)  $ is probably a uniform potential produced by a
+background of positive charges. One can make eq. $\left(  \ref{EUniGS}\right)
+$ an unconstrained optimization by expressing the density as
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =\frac{Nf\left(  \mathbf{x}\right)  ^{2}%
+}{\left\langle f|f\right\rangle }=\frac{N\left\langle f\left\vert \Phi\left(
+\mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)  f\right.
+\right\rangle }{\left\langle f|f\right\rangle },\,f\in L_{2}\left(
+\mathbb{X}\right)  ,
+\end{equation}
+giving%
+\begin{equation}
+\frac{\delta\mathcal{F}_{HK}\left(  \gamma\right)  }{\delta f}=\frac
+{\delta\mathcal{F}_{HK}\left(  \gamma\right)  }{\delta\gamma}\frac
+{\delta\gamma}{\delta f}=\int\frac{\delta\mathcal{F}_{HK}\left(
+\gamma\right)  }{\delta\gamma\left(  \mathbf{x}\right)  }\frac{\delta
+\gamma\left(  \mathbf{x}\right)  }{\delta f\left(  \mathbf{x}^{\prime}\right)
+}d\mathbf{x}=\int\lambda_{\ast}\left(  \gamma\right)  \left(  \mathbf{x}%
+\right)  \frac{\delta\gamma\left(  \mathbf{x}\right)  }{\delta f\left(
+\mathbf{x}^{\prime}\right)  }d\mathbf{x,}%
+\end{equation}
+which can be evaluated by noting that%
+\begin{equation}
+\frac{\delta\gamma\left(  \mathbf{x}\right)  }{\delta f\left(  \mathbf{x}%
+^{\prime}\right)  }=\frac{2N}{\left\langle f|f\right\rangle }\left\{
+\left\langle f\left\vert \overset{}{\left\{  \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}\right)  -\gamma\left(  \mathbf{x}\right)
+I\right\}  }\right.  \mathbf{x}^{\prime}\right\rangle \right\}  =\frac
+{2N}{\left\langle f|f\right\rangle }\left\{  f\left(  \mathbf{x}\right)
+\delta\left(  \mathbf{x-x}^{\prime}\right)  -\gamma\left(  \mathbf{x}\right)
+f\left(  \mathbf{x}^{\prime}\right)  \right\}
+\end{equation}
+and hence
+\begin{align}
+\frac{\delta\mathcal{F}_{HK}\left(  \gamma\right)  }{\delta f\left(
+\mathbf{x}^{\prime}\right)  }  &  =\frac{2N}{\left\langle f|f\right\rangle
+}\int\lambda_{\ast}\left(  \gamma\right)  \left(  \mathbf{x}\right)  \left\{
+\left\langle f\left\vert \overset{}{\Phi\left(  \mathbf{x}\right)  ^{\dagger
+}\Phi\left(  \mathbf{x}\right)  }\right.  \mathbf{x}^{\prime}\right\rangle
+-\gamma\left(  \mathbf{x}\right)  f\left(  \mathbf{x}^{\prime}\right)
+\right\}  d\mathbf{x}\nonumber\\
+&  =\frac{2N}{\left\langle f|f\right\rangle }f\left(  \mathbf{x}^{\prime
+}\right)  \left\{  \lambda_{\ast}\left(  \gamma\right)  \left(  \mathbf{x}%
+^{\prime}\right)  -\int\lambda_{\ast}\left(  \gamma\right)  \left(
+\mathbf{x}\right)  \gamma\left(  \mathbf{x}\right)  d\mathbf{x}\right\}
+\nonumber\\
+&  =\frac{2N}{\left\langle f|f\right\rangle }f\left(  \mathbf{x}^{\prime
+}\right)  \left\{  \overset{}{\lambda_{\ast}\left(  \gamma\right)  \left(
+\mathbf{x}^{\prime}\right)  -\left\langle \left.  \lambda_{\ast}\left(
+\gamma\right)  \right\vert \gamma\right\rangle }\right\}  .
+\end{align}
+At a stationary point
+\begin{equation}
+\frac{\delta\mathcal{F}_{HK}\left(  \gamma\right)  }{\delta f}%
+=0\Leftrightarrow\lambda_{\ast}\left(  \gamma\right)  \left(  \mathbf{x}%
+^{\prime}\right)  -\left\langle \left.  \lambda_{\ast}\left(  \gamma\right)
+\right\vert \gamma\right\rangle =0\,\forall\mathbf{x}^{\prime}, \label{Ustat}%
+\end{equation}
+i.e. $\lambda_{\ast}\left(  \gamma\right)  $ is constant. A special case of
+this is $\lambda_{\ast}\left(  \gamma\right)  =0$ $=\frac{\delta
+\mathcal{F}_{HK}\left(  \gamma\right)  }{\delta\gamma}.$The equality
+$\lambda_{\ast}\left(  \gamma\right)  =0$ shows that the density constraint is
+not active at such stationary points, while $\lambda_{\ast}\left(
+\gamma\right)  =$ const. could correspond to a uniform positive background.
+
+\subsubsection{Decomposition of the Hohenburg-Kohn Functional}
+
+If a minimal point $D_{\ast}\left(  \gamma\right)  $ exists and is unique and
+then one can define kinetic energy, coulomb and exchange-correlation
+functionals by eq. $\left(  \ref{HK}\right)  $ as $.$
+\begin{align}
+\mathcal{F}_{K}\left(  \gamma\right)   &  =\operatorname{Tr}\left\{  KD_{\ast
+}\left(  \gamma\right)  \right\}  ,\nonumber\\
+\mathcal{F}_{C}\left(  \gamma\right)   &  =\int\frac{\gamma\left(
+\mathbf{r,\xi}\right)  \gamma\left(  \mathbf{r}^{\prime}\mathbf{,\xi}\right)
+}{\left\Vert \mathbf{r-r}^{\prime}\right\Vert }d\mathbf{r}d\mathbf{r}^{\prime
+}d\mathbf{\xi},\nonumber\\
+\mathcal{F}_{XC}\left(  \gamma\right)   &  =\operatorname{Tr}\left\{
+V_{2}D_{\ast}\left(  \gamma\right)  \right\}  -\mathcal{F}_{C}\left(
+\gamma\right)  ,
+\end{align}
+producing the decomposition
+\begin{equation}
+\mathcal{F}_{HK}\left(  \gamma\right)  =\mathcal{F}_{K}\left(  \gamma\right)
++\mathcal{F}_{C}\left(  \gamma\right)  +\mathcal{F}_{XC}\left(  \gamma\right)
+.
+\end{equation}
+As the concept of an exchange-correlation functional is central to the theory
+the existence of a unique $D_{\ast}\left(  \gamma\right)  $ is crucial.
+Different degenerate $D_{\ast}\left(  \gamma\right)  ^{\prime}$s could give
+different $\mathcal{F}_{XC}\left(  \gamma\right)  ^{\prime}$s and
+$\mathcal{F}_{K}\left(  \gamma\right)  ^{\prime}$s.
+
+\subsubsection{Molecular System Energy}
+
+The total energy functional of a system that contains $N$ electrons and
+experiences an environment described by a \emph{local} potential $\mathrm{v}$
+is
+\begin{equation}
+E\left(  \gamma\mathbf{,}\mathrm{v}\right)  =\mathcal{F}_{HK}\left(
+\gamma\right)  +f_{\gamma}\left(  \mathrm{v}\right)  ,
+\end{equation}
+where the explicit effect of the environment is described by the functional
+\begin{equation}
+f_{\gamma}\left(  \mathrm{v}\right)  =\int\mathrm{v}\left(  \mathbf{r,\xi
+}\right)  \gamma\left(  \mathbf{r,\xi}\right)  d\mathbf{r}d\mathbf{\xi.}%
+\end{equation}
+The ground state energy $E_{GS}\left(  \mathrm{v}\right)  $ and the
+corresponding space-spin density $\gamma_{GS}$ $\left(  \mathrm{v}\right)  $
+are then determined by
+\begin{equation}
+E_{GS}\left(  \mathrm{v}\right)  =E\left(  \gamma_{GS}\mathbf{,}%
+\mathrm{v}\right)  =\min_{\mathbf{\gamma\in}\mathcal{D}}E\left(
+\gamma\mathbf{,}\mathrm{v}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{D}=\left\{  \gamma\left\vert \int\gamma\left(  \mathbf{r,\xi}\right)
+d\mathbf{r}d\mathbf{\xi}=N,\quad\gamma\left(  \mathbf{r,\xi}\right)
+\geq0,\,\gamma\in L_{1}\left(  \mathbb{X}\right)  \right.  \right\}  .
+\end{equation}
+Clearly
+\begin{equation}
+\widehat{\left\{  K+V_{2}+\mathrm{v}-\Omega\left(  \lambda_{\ast}\left(
+\gamma\right)  \right)  \right\}  }\left\vert A_{\ast}\left(  \gamma\right)
+\right)  =0 \label{vstat}%
+\end{equation}
+as $f_{\gamma}\left(  \mathrm{v}\right)  $ is just a constant for fixed
+$\gamma$, which can be recast as
+\begin{equation}
+\widehat{\left\{  K+V_{2}-\Omega\left(  \lambda_{\ast}\left(  \gamma\right)
+-\mathrm{v}\right)  \right\}  }\left\vert A_{\ast}\left(  \gamma\right)
+\right)  =0,
+\end{equation}
+where
+\begin{equation}
+\Omega\left(  \lambda_{\ast}\left(  \gamma\right)  -\mathrm{v}\right)
+=\int\left\{  \lambda_{\ast}\left(  \gamma\right)  -\mathrm{v}\right\}
+\left(  \mathbf{x}\right)  \Phi\left(  \mathbf{x}\right)  ^{\dagger}%
+\Phi\left(  \mathbf{x}\right)  d\mathbf{x.}%
+\end{equation}
+This shows that if there exists a $\left\vert A_{\ast}\left(  \gamma\right)
+\right)  $ such that eq. $\left(  \ref{Stateig}\right)  $ is satisfied and
+$\lambda_{\ast}\left(  \gamma\right)  -\mathrm{v}$ is invertible on
+$\operatorname{Supp}\gamma$ then $\gamma$ is V-representable \cite{weiner2005}.
+
+In order to find the ground state energy $E\left(  \ \gamma_{GS}%
+\mathbf{,}\mathrm{v}\right)  $ one needs to solve a constrained optimization
+problem, however by defining
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =\frac{Nf\left(  \mathbf{x}\right)  ^{2}%
+}{\left\langle f|f\right\rangle }=\frac{N\left\langle f\left\vert \Phi\left(
+\mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)  f\right.
+\right\rangle }{\left\langle f|f\right\rangle },\,f\in L_{2}\left(
+\mathbb{X}\right)  ,
+\end{equation}
+this becomes the unconstrained problem
+\begin{equation}
+\min_{f}E\left(  f\mathbf{,}\mathrm{v}\right)  ;\quad f\in L_{2}\left(
+\mathbb{X}\right)  .
+\end{equation}
+The stationary points of $E\left(  f\mathbf{,}\mathrm{v}\right)  $ with
+respect to variations of the density occur when
+\begin{equation}
+\frac{\delta E\left(  f\mathbf{,}\mathrm{v}\right)  }{\delta f}=\frac{\delta
+E\left(  f\mathbf{,}\mathrm{v}\right)  }{\delta\gamma}\frac{\delta\gamma
+}{\delta f}=\left\{  \frac{\delta\mathcal{F}_{HK}\left(  \gamma\right)
+}{\delta\gamma}+\mathrm{v}\right\}  \frac{\delta\gamma}{\delta f}=0.
+\end{equation}
+As
+\begin{equation}
+\frac{\delta E\left(  f\mathbf{,}\mathrm{v}\right)  }{\delta f\left(
+\mathbf{x}^{\prime}\right)  }=\frac{2N}{\left\langle f|f\right\rangle
+}f\left(  \mathbf{x}^{\prime}\right)  \left\{  \overset{}{\lambda_{\ast
+}\left(  \gamma\right)  \left(  \mathbf{x}^{\prime}\right)  -\left\langle
+\left.  \lambda_{\ast}\left(  \gamma\right)  \right\vert \gamma\right\rangle
+}\right\}
+\end{equation}
+one observes
+\begin{equation}
+\frac{\delta E\left(  f\mathbf{,}\mathrm{v}\right)  }{\delta f}%
+=0\Leftrightarrow\left[  \lambda_{\ast}\left(  \gamma\right)  -\mathrm{v}%
+\right]  \left(  \mathbf{x}^{\prime}\right)  -\left\langle \left.  \left[
+\lambda_{\ast}\left(  \gamma\right)  -\mathrm{v}\right]  \right\vert
+\gamma\right\rangle =0\,\forall\mathbf{x}^{\prime},
+\end{equation}
+showing that $\lambda_{\ast}\left(  \gamma\right)  -\mathrm{v}=$ const. at
+stationary points. In particular at minimizers $\gamma_{GS}$ of $E\left(
+\gamma\mathbf{,}\mathrm{v}\right)  $
+\begin{equation}
+\mathrm{v}=-\frac{\delta\mathcal{F}_{HK}\left(  \ \gamma_{GS}\right)  }%
+{\delta\gamma}+\text{const. and }\Omega\left(  \lambda_{\ast}\left(
+\gamma_{GS}\right)  -\mathrm{v}+\text{const.}\right)  =0,
+\end{equation}
+where const. $=\left\langle \left.  \lambda_{\ast}\left(  \gamma\right)
+\right\vert \gamma\right\rangle =E_{GS}\left(  \mathrm{v}\right)  .$ This last
+identity shows that the optimization problem is not constrained by $\gamma$,
+which is consistent with finding the ground state of $\widehat{K+V_{2}%
++\mathrm{v}-E_{GS}\left(  \mathrm{v}\right)  I}$ over all states $\left\vert
+A\right)  .$
+
+\subsection{Kohn-Sham DFT}
+
+\subsubsection{Correspondence between Orbitals and Densities}
+
+The density $\gamma_{GS}$ $\left(  \mathrm{v}\right)  $ can be always be
+expressed in terms of the Natural General Spin Orbitals (NGSO's) $\left\{
+\psi_{j}\right\}  $ and occupation numbers $\left\{  N_{j}\right\}  $ of the
+FORDO $D_{\ast}^{1}\left(  \gamma\right)  $ as%
+
+\begin{equation}
+\left[  \gamma_{GS}\left(  \mathrm{v}\right)  \right]  \left(  \mathbf{x}%
+\right)  =\left[  D_{\ast}^{1}\left(  \gamma_{GS}\left(  \mathrm{v}\right)
+\right)  \right]  \left(  \mathbf{x,x}\right)  =\sum_{1\leq j\leq r_{1}}%
+N_{j}\left\vert \psi_{j}\left(  \mathbf{x}\right)  \right\vert ^{2},
+\label{NGSOexpan}%
+\end{equation}
+but many other sets of GSO's also produce the same density, in particular
+Harimanns \cite{Harimann} theorem ensures that there are always expansions of
+the form
+\begin{equation}
+\left[  \gamma_{GS}\left(  \mathrm{v}\right)  \right]  \left(  \mathbf{x}%
+\right)  =\left[  D_{\ast}^{1}\left(  \gamma_{GS}\left(  \mathrm{v}\right)
+\right)  \right]  \left(  \mathbf{x,x}\right)  =\sum_{1\leq j\leq N}\left\vert
+\varphi_{j}\left(  \mathbf{x}\right)  \right\vert ^{2} \label{Genexp}%
+\end{equation}
+in terms of square summable functions $\left\{  \left.  \varphi_{j}\right\vert
+1\leq j\leq N\right\}  $ for any density $\gamma$.
+
+In general the density $\gamma$ is a functional of orthogonal sets of GSO's
+$\mathbf{\psi}$
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =N_{j}%
+\delta_{jk},0\leq N_{j}\leq1,1\leq j,k\leq r_{1},
+\end{equation}
+defined by%
+\begin{align}
+\gamma &  =\Gamma\left(  \mathbf{\psi}\right)  ,\nonumber\\
+\left[  \Gamma\left(  \mathbf{\psi}\right)  \right]  \left(  \mathbf{x}%
+\right)   &  =\sum_{1\leq j\leq r_{1}}\left\vert \psi_{j}\left(
+\mathbf{x}\right)  \right\vert ^{2}=\gamma\left(  \mathbf{x}\right)  ,
+\end{align}
+where
+\begin{equation}
+\Gamma:B_{1}\left(  \mathcal{H}^{1}\right)  \subset\mathcal{H}^{1}\rightarrow
+L_{1+}\left(  \mathbb{X}\right)  \subset L_{1}\left(  \mathbb{X}\right)
+\end{equation}
+and $B_{1}\left(  \mathcal{H}^{1}\right)  $ is the unit ball of $\mathcal{H}%
+^{1}$ i.e.
+\begin{equation}
+B_{1}\left(  \mathcal{H}^{1}\right)  =\left\{  \left.  \psi\right\vert
+\left\Vert \psi\right\Vert \leq1\right\}  .
+\end{equation}
+In the preceeding definition some of the functions may be identically zero. As
+many sets of GSO's $\mathbf{\psi}$ produce the same density the inverse
+$\Gamma^{-1}$ does not exist. One could restrict attention to the real Hilbert
+space $L_{2}\left(  \mathbb{X}\right)  $ instead of $\mathcal{H}^{1}$ and use
+real valued functions in the expansions eqs.$\left(  \ref{NGSOexpan}\right)  $
+and $\left(  \ref{Genexp}\right)  $ e.g.
+\begin{equation}
+\left[  \gamma_{GS}\left(  \mathrm{v}\right)  \right]  \left(  \mathbf{x}%
+\right)  =\left[  D_{\ast}^{1}\left(  \gamma_{GS}\left(  \mathrm{v}\right)
+\right)  \right]  \left(  \mathbf{x,x}\right)  =\sum_{1\leq j\leq r_{1}}%
+N_{j}\tilde{\psi}_{j}\left(  \mathbf{x}\right)  ^{2}=\sum_{1\leq j\leq r_{1}%
+}\varphi_{j}\left(  \mathbf{x}\right)  ^{2},
+\end{equation}
+where %
+
+\begin{align}
+\psi_{j}\left(  \mathbf{x}\right)    & =\tilde{\psi}_{j}\left(  \mathbf{x}%
+\right)  e^{i\theta_{j}\left(  \mathbf{x}\right)  }\nonumber\\
+\varphi_{j}\left(  \mathbf{x}\right)    & =N_{j}^{\frac{1}{2}}\psi_{j}\left(
+\mathbf{x}\right)  ,
+\end{align}
+but one looses some physical information e.g. the expectation value of the
+kinetic operator. Of course the expansion eq. $\left(  \ref{NGSOexpan}\right)
+$ provides a unique correspondence up to unitary mixing of NGSO's with same
+occupation number, but one has to know the FORDO of the exact $N$-electron
+ground state in order use it.
+
+A more accessible route to the production an inverse function $\Gamma^{-1}$ is
+to consider a universal kinetic energy functional $K_{U}$ of the $N$-electron
+state and a kinetic energy functional $\mathcal{F}_{T}$ of the density defined
+by
+\begin{equation}
+\mathcal{F}_{T}\left(  \gamma\right)  =K_{U}\left(  D_{\#}\left(
+\gamma\right)  \right)  =\operatorname{Tr}\left\{  KD_{\#}\left(
+\gamma\right)  \right\}  =\operatorname{Tr}\left\{  KA_{\#}^{2}\left(
+\gamma\right)  \right\}  =\min_{D\in\left[  \gamma\right]  _{N}}%
+\operatorname{Tr}\left\{  KA_{\#}^{2}\left(  \gamma\right)  \right\}  .
+\label{KEFunc}%
+\end{equation}
+If a bound state minimum exists for some local one body potential one has
+\begin{equation}
+\widehat{\left\{  K-\Omega\left(  \lambda_{\#}\left(  \gamma\right)  \right)
+\right\}  }\left\vert A_{\#}\left(  \gamma\right)  \right)  =0,
+\end{equation}
+where $A_{\#}\left(  \gamma\right)  \in\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  $ and $\left(  A_{\#}\left(  \gamma\right)  ,\lambda_{\#}\left(
+\gamma\right)  \right)  $ is an unconstrained saddle point of the Lagrangian
+\begin{equation}
+\mathcal{L}_{K}\left(  A,\lambda,\gamma\right)  =K_{U}\left(  A\right)
+-\Omega_{A}\left(  \lambda\right)  +\left\langle \left.  \lambda\right\vert
+\gamma\right\rangle =\left(  A\left\vert \left\{  \widehat{\left\{
+K-\Omega\left(  \lambda\right)  \right\}  }+\left\langle \left.
+\lambda\right\vert \gamma\right\rangle \hat{I}\right\}  \right.  A\right)  .
+\end{equation}
+This gives a stationary state $D_{\#}\left(  \gamma\right)  =A_{\#}\left(
+\gamma\right)  ^{2}$ of $\left\{  K-\Omega\left(  \lambda_{\#}\left(
+\gamma\right)  \right)  \right\}  $ i.e.
+\begin{equation}
+\left[  \left\{  K-\Omega\left(  \lambda_{\#}\left(  \gamma\right)  \right)
+\right\}  ,D_{\#}\left(  \gamma\right)  \right]  =0,
+\end{equation}
+which in turn defines a FORDO $D_{\#}^{1}\left(  \gamma\right)  $ given by
+(see Appendix \ref{Denmat})
+\begin{equation}
+D_{\#}^{1}\left(  \gamma\right)  =NL_{N}^{1}\left(  D_{\#}\left(
+\gamma\right)  \right)  .
+\end{equation}
+As $K-\Omega\left(  \lambda_{\#}\left(  \gamma\right)  \right)  $ is an one
+electron operator the state $D_{\#}\left(  \gamma\right)  $ must be a mixture
+of IPS's or a pure IPS and thus determined by the eigenvalues $\left\{
+N_{\#j}\left(  \gamma\right)  \right\}  $ and eigenvectors $\left\{
+\left\vert \widetilde{\varphi_{\#j}\left(  \gamma\right)  }\right\rangle
+\right\}  $of $D_{\#}^{1}\left(  \gamma\right)  $. Expanding $D_{\#}%
+^{1}\left(  \gamma\right)  $ in terms of normalized NGSO's $\left\{  \left.
+\left\vert \widetilde{\varphi_{\#j}}\right\rangle \right\vert 1\leq j\leq
+r\right\}  $ gives
+\begin{equation}
+D_{\#}^{1}\left(  \gamma\right)  =\sum_{1\leq j\leq r_{1}}N_{\#j}\left(
+\gamma\right)  \left\vert \widetilde{\varphi_{\#j}\left(  \gamma\right)
+}\right\rangle \left\langle \widetilde{\varphi_{\#j}\left(  \gamma\right)
+}\right\vert ,
+\end{equation}
+which after renormalizing the NGSO's to the occupation numbers i.e.
+\begin{equation}
+\left\vert \varphi_{\#j}\left(  \gamma\right)  \right\rangle =N_{\#j}\left(
+\gamma\right)  ^{\frac{1}{2}}\left\vert \widetilde{\varphi_{\#j}\left(
+\gamma\right)  }\right\rangle ,1\leq j\leq r_{1}%
+\end{equation}
+results in
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =\sum_{1\leq j\leq r_{1}}\left\vert \left[
+\varphi_{\#j}\left(  \gamma\right)  \right]  \left(  \mathbf{x}\right)
+\right\vert ^{2}. \label{gammaKS}%
+\end{equation}
+If the constrained minimum of $K_{U}$ is non degenerate then there is a unique
+correspondence, up to unitary mixing of degenerate eigenvectors of $D_{\#}%
+^{1}\left(  \gamma\right)  ,$ between $\gamma$ and $\left\{  \left\vert
+\mathbf{\varphi}_{\#}\right\rangle \right\}  ,$ thus modulo this unitary
+mixing
+\begin{equation}
+\mathbf{\varphi}_{\#}=\Gamma_{\#}^{-1}\left(  \gamma\right)  .
+\end{equation}
+If the constrained minimum of $K_{U}$ is degenerate, e.g. corresponding to
+FORDO's $\left\{  \left.  D_{\#\kappa}^{1}\left(  \gamma\right)  \right\vert
+1\leq\kappa\leq m\right\}  $ of the stationary states $\left\{  \left.
+D_{\#\kappa}\left(  \gamma\right)  \right\vert 1\leq\kappa\leq m\right\}  $ of
+$K-\Omega\left(  \lambda_{\#}\left(  \gamma\right)  \right)  $ then as
+\begin{equation}
+\left[  \left\{  K-\Omega\left(  \lambda_{\#}\left(  \gamma\right)  \right)
+\right\}  ,D_{\#\kappa}\left(  \gamma\right)  \right]  =\left[  \left\{
+K-\Omega\left(  \lambda_{\#}\left(  \gamma\right)  \right)  \right\}
+,D_{\#\kappa}^{1}\left(  \gamma\right)  \right]  =0,
+\end{equation}
+the space of degenerate states corresponds to the same set of NGSO's $\left\{
+\left\vert \mathbf{\varphi}_{\#}\left(  \gamma\right)  \right\rangle \right\}
+$ but normalized to different occupation numbers $\left\{  \mathbf{N}%
+_{\#}\left(  \gamma\right)  \right\}  ,$ where $\mathbf{N}_{\#}\left(
+\gamma\right)  $ are convex combinations of $\left\{  \left.  \mathbf{N}%
+_{\#\kappa}\left(  \gamma\right)  \right\vert 1\leq\kappa\leq m\right\}  $.
+Hence if degeneracies occur these are reflected in multiple optimal values for
+$\mathbf{\mathbf{N}_{\#}}$ for fixed $\left\{  \left\vert \widetilde
+{\mathbf{\varphi}_{\#}\left(  \gamma\right)  }\right\rangle \right\}
+\mathbf{.}$
+
+The values of the universal kinetic energy functional $\mathcal{F}_{T}\left(
+\gamma\right)  $ also correspond to the minima of the following constrained
+problem, expressed in terms of $\left\{  \left.  N_{j},\left\vert \varphi
+_{j}\right\rangle \right\vert 1\leq j\leq r_{1}\right\}  $ as the sequential
+minimization
+\begin{subequations}
+\begin{equation}
+\mathcal{F}_{T}\left(  \mathbf{N}_{\#}\mathbf{,\varphi}_{\#}\right)
+=\mathcal{F}_{T}\left(  \gamma\left(  \mathbf{N}_{\#}\mathbf{,\varphi}%
+_{\#}\right)  \right)  =K_{U}\left(  \mathbf{N}_{\#}\mathbf{,\varphi}%
+_{\#},\gamma\right)  =\min_{\mathbf{N,\varphi}}K_{U}\left(  \mathbf{N,\varphi
+},\gamma\right)  =\min_{\mathbf{N}}\min_{\mathbf{\varphi}}\left\{  \sum_{1\leq
+j\leq r_{1}}\left\langle \varphi_{j}\left\vert K\varphi_{j}\right.
+\right\rangle \right\}  ,
+\end{equation}
+where $\gamma$ and $\mathbf{N}$ play the role of control parameters and the
+first minimization is constrained by
+\end{subequations}
+\begin{align}
+\quad &  \sum_{1\leq j\leq r_{1}}\left\langle \varphi_{j}\left\vert
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+\right.  \varphi_{j}\right\rangle =\gamma\left(  \mathbf{x}\right)
+,\nonumber\\
+&  \int\gamma\left(  \mathbf{x}\right)  d\mathbf{x}=N,\nonumber\\
+&  \left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=N_{j}\delta_{jk},\,1\leq j,k\leq r_{1}%
+\end{align}
+and the second by
+\begin{equation}
+0\leq N_{j}\leq1,\,1\leq j\leq r_{1}.
+\end{equation}
+The Lagrangian for the first minimization, where $\mathbf{N}$ and $\gamma$ are
+fixed is%
+\[
+\mathcal{L}\left(  \mathbf{\varphi},\lambda,\mathbf{\nu},\gamma,\mathbf{N}%
+\right)  =K_{U}\left(  \mathbf{\varphi}\right)  -\left\langle \left.
+\lambda\right\vert \left\{  \Xi_{IP}\left(  \mathbf{\varphi}\right)
+-\gamma\right\}  \right\rangle -\sum_{1\leq j,k\leq r_{1}}\nu_{jk}\left\{
+N_{j}\delta_{jk}-\left\langle \left.  \varphi_{j}\right\vert \varphi
+_{k}\right\rangle \right\}  ,
+\]
+where
+\begin{equation}
+\Xi_{IP}\left(  \mathbf{\varphi}\right)  =\sum_{1\leq j\leq r}\left\langle
+\varphi_{j}\left\vert \Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(
+\mathbf{x}\right)  \right.  \varphi_{j}\right\rangle
+\end{equation}
+and hence
+\begin{equation}
+\sum_{1\leq j\leq r_{1}}\left\langle \varphi_{j}\left\vert \Omega\left(
+\lambda\right)  \right.  \varphi_{j}\right\rangle =\left\langle \left.
+\lambda\right\vert \left\{  \Xi_{IP}\left(  \mathbf{\varphi}\right)
+-\gamma\right\}  \right\rangle .
+\end{equation}
+The solution of this optimization is
+\begin{align}
+K_{U}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}\right)  \right)
+&  =\mathcal{L}\left(  \mathbf{\varphi}_{\#},\lambda_{\#},\mathbf{\nu}%
+_{\#},\gamma,\mathbf{N}\right)  =\max_{\lambda,\mathbf{\nu}}\min
+_{\mathbf{\varphi}}\mathcal{L}\left(  \mathbf{\varphi},\lambda,\mathbf{\nu
+},\gamma,\mathbf{N}\right) \nonumber\\
+&  =\max_{\lambda,\mathbf{\nu}}\min_{\mathbf{\varphi}}\left\{  \sum_{1\leq
+j\leq r_{1}}\left\langle \varphi_{j}\left\vert \left\{  \overset{}%
+{K-\Omega\left(  \lambda\right)  }\right\}  \varphi_{j}\right.  \right\rangle
+-\sum_{1\leq j,k\leq r_{1}}\nu_{jk}\left\{  N_{j}\delta_{jk}-\left\langle
+\left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle \right\}  \right\}  .
+\end{align}
+Sensitivity theory gives that at optimal $\mathbf{\varphi}_{\#}$'s,
+$\nu_{\#jj}$'s and $\lambda_{\#}$'s
+\begin{equation}
+\frac{\partial K_{U}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}%
+\right)  \right)  }{\partial N_{j}}=\nu_{\#jj}\left(  \mathbf{N}\right)
+\end{equation}
+and
+\begin{equation}
+\frac{\delta K_{U}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}%
+\right)  \right)  }{\delta\gamma\left(  \mathbf{x}\right)  }=\left[
+\lambda_{\#}\left(  \gamma\right)  \right]  \left(  \mathbf{x}\right)  .
+\end{equation}
+One can then vary the control parameter $\mathbf{N}$ in an unconstrained
+fashion, while keeping $\gamma$ fixed (thus keeping $\sum_{1\leq j,k\leq
+r_{1}}N_{j}=N,$ by setting
+\begin{equation}
+N_{j}=\sin^{2}\theta_{j},1\leq\theta_{j}\leq2\pi,1\leq j\leq r_{1}.
+\end{equation}
+This gives
+\begin{equation}
+\frac{\partial\mathcal{L}\left(  \mathbf{\varphi},\lambda,\mathbf{\nu}%
+,\gamma,\mathbf{N}\right)  }{\partial\theta_{l}}=\sum_{1\leq j\leq r_{1}}%
+\frac{\partial\mathcal{L}\left(  \mathbf{\varphi},\lambda,\mathbf{\nu}%
+,\gamma,\mathbf{N}\right)  }{\partial N_{j}}\sin2\theta_{l}\delta_{jl}%
+=\frac{\partial\mathcal{L}\left(  \mathbf{\varphi},\lambda,\mathbf{\nu}%
+,\gamma,\mathbf{N}\right)  }{\partial N_{l}}\sin2\theta_{l}.
+\end{equation}
+The universal kinetic energy functional can then be defined as
+\begin{equation}
+\mathcal{F}_{T}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}%
+_{\#}\right)  \right)  =\mathcal{F}_{T}\left(  \Gamma^{-1}\left(
+\gamma\right)  \right)  =\mathcal{F}_{T}\left(  \gamma\right)  =K_{U}\left(
+\mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}_{\#}\right)  \right)
+=\min_{\mathbf{N}}\min_{\mathbf{\varphi}}K_{U}\left(  \mathbf{\varphi}\left(
+\gamma,\mathbf{N}\right)  \right)
+\end{equation}
+and can be expanded as
+\begin{equation}
+\mathcal{F}_{T}\left(  \gamma\right)  =\sum_{1\leq j\leq r_{1}}\left\langle
+\widetilde{\varphi_{\#j}\left(  \gamma\right)  }\left\vert K\widetilde
+{\varphi_{\#j}\left(  \gamma\right)  }\right.  \right\rangle N_{\#j}\left(
+\gamma\right)  =\sum_{1\leq j\leq r_{1}}\left\langle \varphi_{\#j}\left(
+\gamma,\mathbf{N}_{\#}\right)  \left\vert K\varphi_{\#j}\left(  \gamma
+,\mathbf{N}_{\#}\right)  \right.  \right\rangle ,
+\end{equation}
+where there may be multiple values of $\mathbf{N}_{\#}$. By sensitivity theory
+one has that for any value of the control parameter $\mathbf{N}$
+\begin{equation}
+\frac{\partial K_{U}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}%
+\right)  \right)  }{\partial N_{j}}=\nu_{\#jj}\left(  \mathbf{N}\right)  ,
+\end{equation}
+thus
+\begin{equation}
+\frac{\partial\mathcal{F}_{T}\left(  \mathbf{\varphi}_{\#}\left(
+\gamma,\mathbf{N}\right)  \right)  }{\partial N_{j}}=\frac{\partial
+K_{U}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}\right)  \right)
+}{\partial N_{j}}=\nu_{\#jj}\left(  \mathbf{N}\right)  .
+\end{equation}
+Thus at stationary points
+\begin{equation}
+\sin2\theta_{j}=0\text{ or }\frac{\partial\mathcal{L}\left(  \mathbf{\varphi
+}_{\#},\lambda_{\#},\mathbf{\nu}_{\#},\gamma,\mathbf{N}_{\#}\right)
+}{\partial N_{j}}=\frac{\partial K_{U}\left(  \mathbf{\varphi}_{\#}\left(
+\gamma,\mathbf{N}\right)  \right)  }{\partial N_{j}}=\nu_{\#jj}\left(
+\mathbf{N}\right)  =0,
+\end{equation}
+the first condition implies that
+\begin{equation}
+\theta_{j}=n\frac{\pi}{2}\Rightarrow\sin\theta_{j}=1\Rightarrow N_{j}=1.
+\end{equation}
+Thus at stationary points $\mathbf{N}_{\#}$, either $\nu_{\#jj}\left(
+\mathbf{N}_{\#}\right)  =0$ or $N_{\#j}=1.$
+
+\subsubsection{Model KS-IPS}
+
+One can define for a given space-spin density $\gamma$ in an environment
+characterized by a local potential $\mathrm{w}$ a total energy functional
+\begin{equation}
+\mathcal{E}_{NI}\left(  \gamma\mathbf{,}\mathrm{w}\right)  =\mathcal{F}%
+_{T}\left(  \gamma\right)  +f_{\gamma}\left(  \mathrm{w}\right)  ,
+\end{equation}
+and then determine a local potential $\mathrm{w}_{\#}$ such that
+\begin{equation}
+E_{NIGS}\left(  \mathrm{w}_{\#}\right)  =\mathcal{E}_{NIGS}\left(  \gamma
+_{GS}\left(  \mathrm{v}\right)  \mathbf{,}\mathrm{w}_{\#}\right)
+=\min_{\mathbf{\gamma\in}\mathcal{D}}\mathcal{E}_{NI}\left(  \gamma
+\mathbf{,}\mathrm{w}_{\#}\right)  . \label{NIGS}%
+\end{equation}
+As the Hamiltonian describing noninteracting electrons is a one body
+Hamiltonian the ground state density operator $D_{\#}\left(  \gamma
+_{GS}\left(  \mathrm{v}\right)  \mathbf{,}\mathrm{w}_{\#}\right)  $ must be an
+ensemble or a pure Independent Particle State (IPS)\ density operator. Thus
+the space-spin density of the ground state of the interacting system in an
+local external potential $\mathrm{v}$ is the same as space-spin density of the
+ground state of a non interacting system determined by an environment
+$\mathrm{w}_{\#}\mathrm{.}$
+
+We can express the non interacting energy in terms of the orthogoanl GSO
+variables $\mathbf{\varphi\in}B_{1}\left(  L_{2}\left(  \mathbb{X}\right)
+\right)  $ as
+\begin{align}
+&  \mathcal{E}_{NI}\left(  \Gamma\left(  \mathbf{\varphi}\right)
+\mathbf{,}\mathrm{w}\right)  =\mathcal{F}_{T}\left(  \Gamma\left(
+\mathbf{\varphi}\right)  \right)  +f_{\Gamma\left(  \mathbf{\varphi}\right)
+}\left(  \mathrm{w}\right) \nonumber\\
+&  \equiv\mathcal{E}_{NI}\left(  \mathbf{\varphi,}\mathrm{w}\right)
+=\mathcal{F}_{T}\left(  \mathbf{\varphi}\right)  +f_{\mathbf{\varphi}}\left(
+\mathrm{w}\right)  ,
+\end{align}
+where we have set $\mathcal{F}\circ\Gamma\equiv\mathcal{F}.$ Explicitly the
+functional $\mathcal{E}_{NI}\left(  \mathbf{\varphi,}\mathrm{w}\right)  $ is
+\begin{equation}
+\mathcal{E}_{NI}\left(  \mathbf{\varphi,}\mathrm{w}\right)  =\sum_{1\leq j\leq
+r_{1}}\left\langle \varphi_{j}\left\vert \left\{  K+\mathrm{w}\right\}
+\varphi_{j}\right.  \right\rangle =\sum_{1\leq j\leq r_{1}}\left\langle
+\tilde{\varphi}_{j}\left\vert \left\{  K+\mathrm{w}\right\}  \tilde{\varphi
+}_{j}\right.  \right\rangle N_{j}, \label{NI}%
+\end{equation}
+where
+\begin{equation}
+\left\vert \varphi_{j}\right\rangle =N_{j}^{\frac{1}{2}}\left\vert
+\tilde{\varphi}_{j}\right\rangle ;1\leq j\leq r_{1}%
+\end{equation}
+and
+\begin{equation}
+\left\langle \tilde{\varphi}_{j}\left\vert \tilde{\varphi}_{k}\right.
+\right\rangle =\delta_{jk};\quad\left\langle \varphi_{j}\left\vert \varphi
+_{k}\right.  \right\rangle =N_{j}\delta_{jk};\quad1\leq j,k\leq r_{1}.
+\end{equation}
+The minimization eq. $\left(  \ref{NIGS}\right)  $
+\begin{equation}
+E_{NIGS}\left(  \mathrm{w}_{\#}\right)  =\mathcal{E}_{NIGS}\left(
+\mathbf{\varphi}_{GS}\left(  \mathrm{v}\right)  \mathbf{,}\mathrm{w}%
+_{\#}\right)  =\min_{\mathbf{\varphi\in}\mathfrak{S}}\mathcal{E}_{NI}\left(
+\mathbf{\varphi,}\mathrm{w}_{\#}\right)  =\min_{\mathbf{\varphi\in
+}\mathfrak{\tilde{S}}}\mathcal{E}_{NI}\left(  \mathbf{\tilde{\varphi}%
+,}\mathrm{w}_{\#}\right)  \label{MNIGS}%
+\end{equation}
+can be expressed equivalently in either of the two forms of eq. $\left(
+\ref{NI}\right)  $ i.e. in terms of $\mathbf{\varphi}$ normalized to
+$\mathbf{N}$ or the orthonormal set $\mathbf{\tilde{\varphi}}$ with
+$\mathbf{N}$ being explicitly expressed in the functional $\mathcal{E}_{NI}.$
+then becomes where the set of feasable values is defined as
+\begin{align}
+\mathfrak{S}  &  =\left\{  \mathbf{\varphi}\left\vert \mathbf{\varphi\in}%
+B_{1}\left(  L_{2}\left(  \mathbb{X}\right)  \right)  ;\,\int\left[
+\Gamma\left(  \mathbf{\varphi}\right)  \right]  \left(  \mathbf{x}\right)
+d\mathbf{x}=N;\,\left\langle \left.  \varphi_{j}\right\vert \varphi
+_{k}\right\rangle =N_{j}\delta_{jk},1\leq j,k\leq r_{1}\right.  \right\}
+\nonumber\\
+&  \equiv\left\{  \mathbf{\varphi}\left\vert \left\langle \left.  \varphi
+_{j}\right\vert \varphi_{k}\right\rangle =N_{j}\delta_{jk};\,0\leq N_{j}%
+\leq1,1\leq j,k\leq r_{1};\,\sum_{1\leq j\leq r_{1}}N_{j}=N\right.  \right\}
+\end{align}
+and
+\begin{align}
+\mathfrak{\tilde{S}}  &  =\left\{  \mathbf{\tilde{\varphi}}\left\vert
+\mathbf{\tilde{\varphi}\in}S_{1}\left(  L_{2}\left(  \mathbb{X}\right)
+\right)  ;\,\int\left[  \tilde{\Gamma}\left(  \mathbf{\tilde{\varphi}}\right)
+\right]  \left(  \mathbf{x}\right)  d\mathbf{x}=N;\,\left\langle \left.
+\tilde{\varphi}_{j}\right\vert \tilde{\varphi}_{k}\right\rangle =\delta
+_{jk},1\leq j,k\leq r_{1}\right.  \right\} \nonumber\\
+&  \equiv\left\{  \mathbf{\tilde{\varphi}}\left\vert \left\langle \left.
+\tilde{\varphi}_{j}\right\vert \tilde{\varphi}_{k}\right\rangle =\delta
+_{jk};\,0\leq N_{j}\leq1,1\leq j,k\leq r_{1};\,\sum_{1\leq j\leq r_{1}}%
+N_{j}=N\right.  \right\}  .
+\end{align}
+We will focus on the optimization in terms of $\mathbf{\varphi}$. The
+minimization eq. $\left(  \ref{MNIGS}\right)  $ can be considered as a
+sequential optimization
+\begin{equation}
+E_{NIGS}\left(  \mathrm{w}_{\#}\right)  =\min_{\mathbf{N\in}\mathcal{N}}%
+\min_{\mathbf{\varphi\in}\mathfrak{S}_{\mathbf{N}}}\mathcal{E}_{NI}\left(
+\mathbf{\varphi,}\mathrm{w}_{\#}\right)  , \label{seqopt}%
+\end{equation}
+where
+\begin{equation}
+\mathfrak{S}_{\mathbf{N}}=\left\{  \mathbf{\varphi}\left\vert \,\,\left\langle
+\left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle =N_{j}\delta
+_{jk},1\leq j,k\leq r_{1}\right.  \right\}
+\end{equation}
+and
+\begin{equation}
+\mathcal{N}=\left\{  \mathbf{N}\left\vert 0\leq N_{j}\leq1,1\leq j\leq
+r_{1};\sum_{1\leq j\leq r_{1}}N_{j}=N\right.  \right\}  .
+\end{equation}
+The Lagrangian for the first optimization is
+\begin{equation}
+\mathcal{L}_{K}\left(  \mathbf{\varphi},\mathbf{\varepsilon,N,}\mathrm{w}%
+_{\#}\right)  =\mathcal{E}_{NI}\left(  \mathbf{\varphi,}\mathrm{w}%
+_{\#}\right)  -\sum_{1\leq j,k\leq r_{1}}\varepsilon_{jk}\left(  \left\langle
+\left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle -N_{j}\delta
+_{jk}\right)  ,
+\end{equation}
+which gives the constrained minimum $\mathcal{E}_{NI}\left(  \mathbf{\varphi
+}\left(  \mathbf{N}\right)  \mathbf{,}\mathrm{w}_{\#}\right)  $ of
+$\mathcal{E}_{NI}\left(  \mathbf{\varphi,}\mathrm{w}_{\#}\right)  $ as the
+unconstrained saddle point
+\begin{equation}
+\mathcal{L}_{K}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon\left(  \mathbf{N}\right)  ,N,}\mathrm{w}_{\#}\right)
+=\max_{\mathbf{\varepsilon}}\min_{\mathbf{\varphi\in}\mathfrak{S}_{\mathbf{N}%
+}}\mathcal{L}_{K}\left(  \mathbf{\varphi},\mathbf{\varepsilon,N,}%
+\mathrm{w}_{\#}\right)  .
+\end{equation}
+The necessary conditions for this saddle point are
+\begin{subequations}
+\begin{align}
+\frac{\delta\mathcal{L}_{K}\left(  \mathbf{\varphi},\mathbf{\varepsilon
+,N,}\mathrm{w}_{\#}\right)  }{\delta\varphi_{j}}  &  =0;\,1\leq j\leq
+r_{1}\label{LK1}\\
+\frac{\partial\mathcal{L}_{K}\left(  \mathbf{\varphi},\mathbf{\varepsilon
+,N,}\mathrm{w}_{\#}\right)  }{\partial\varepsilon_{jk}}  &  =0;\,1\leq j,k\leq
+r_{1}. \label{LK2}%
+\end{align}
+The condition eq. $\left(  \ref{LK2}\right)  $ just gives back the constraint,
+while condition eq. $\left(  \ref{LK1}\right)  $ gives for the optimal point
+$\mathbf{\varphi}\left(  \mathbf{N}\right)  $
+\end{subequations}
+\begin{equation}
+\frac{\delta\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+\mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\varphi_{j}}-2\sum_{1\leq k\leq
+r_{1}}\varepsilon_{jk}\left(  \mathbf{N}\right)  \left\vert \varphi_{k}\left(
+\mathbf{N}\right)  \right\rangle =0;\,1\leq j\leq r_{1},
+\end{equation}
+which after noting that
+\begin{align}
+\frac{\delta\mathcal{E}_{NI}\left(  \mathbf{\varphi,}\mathrm{w}_{\#}\right)
+}{\delta\varphi_{j}\left(  \mathbf{x}\right)  }  &  =\int\frac{\delta
+\mathcal{E}_{NI}\left(  \gamma\mathbf{,}\mathrm{w}_{\#}\right)  }{\delta
+\gamma\left(  \mathbf{x}^{\prime}\right)  }\frac{\delta\gamma\left(
+\mathbf{x}^{\prime}\right)  }{\delta\varphi_{j}\left(  \mathbf{x}\right)
+}d\mathbf{x}^{\prime}\nonumber\\
+&  =2\int\frac{\delta\mathcal{E}_{NI}\left(  \gamma\mathbf{,}\mathrm{w}%
+_{\#}\right)  }{\delta\gamma\left(  \mathbf{x}\right)  }\varphi_{j}\left(
+\mathbf{x}^{\prime}\right)  \delta\left(  \mathbf{x-x}^{\prime}\right)
+d\mathbf{x}^{\prime}=2\frac{\delta\mathcal{E}_{NI}\left(  \gamma
+\mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\gamma\left(  \mathbf{x}\right)
+}\varphi_{j}\left(  \mathbf{x}\right)
+\end{align}
+gives%
+\begin{equation}
+\frac{\delta\mathcal{E}_{NI}\left(  \gamma\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\gamma
+}\left\vert \varphi_{j}\left(  \mathbf{N}\right)  \right\rangle -\sum_{1\leq
+k\leq r_{1}}\varepsilon_{jk}\left(  \mathbf{N}\right)  \left\vert \varphi
+_{k}\left(  \mathbf{N}\right)  \right\rangle =0;\,1\leq j\leq r_{1}.
+\label{NIstat}%
+\end{equation}
+The operator $\frac{\delta\mathcal{E}_{NI}\left(  \gamma\mathbf{,}%
+\mathrm{w}_{\#}\right)  }{\delta\gamma}$ is a multiplication operator given
+by
+\begin{equation}
+\frac{\delta\mathcal{E}_{NI}\left(  \gamma\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\gamma
+}\left\vert \varphi_{k}\left(  \mathbf{N}\right)  \right\rangle =\left\vert
+\frac{\delta\mathcal{E}_{NI}\left(  \gamma\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\gamma
+}\varphi_{k}\left(  \mathbf{N}\right)  \right\rangle ,
+\end{equation}
+where
+\begin{equation}
+\left[  \frac{\delta\mathcal{E}_{NI}\left(  \gamma\left(  \mathbf{\varphi
+}\left(  \mathbf{N}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)
+}{\delta\gamma}\varphi_{k}\left(  \mathbf{N}\right)  \right]  \left(
+\mathbf{x}\right)  =\frac{\delta\mathcal{E}_{NI}\left(  \gamma\left(
+\mathbf{\varphi}\left(  \mathbf{N}\right)  \right)  \mathbf{,}\mathrm{w}%
+_{\#}\right)  }{\delta\gamma\left(  \mathbf{x}\right)  }\left[  \varphi
+_{k}\left(  \mathbf{N}\right)  \right]  \left(  \mathbf{x}\right)  .
+\end{equation}
+The equation eq. $\left(  \ref{NIstat}\right)  ,$which could be expressed in
+terms of the orthonormal GSO's $\mathbf{\tilde{\varphi}}\left(  \mathbf{N}%
+\right)  $ as
+\begin{equation}
+\frac{\delta\mathcal{E}_{NI}\left(  \gamma\left(  \mathbf{\tilde{\varphi}%
+}\left(  \mathbf{N}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)
+}{\delta\gamma}\left\vert \tilde{\varphi}_{j}\left(  \mathbf{N}\right)
+\right\rangle -\sum_{1\leq k\leq r_{1}}\tilde{\varepsilon}_{jk}\left(
+\mathbf{N}\right)  \left\vert \tilde{\varphi}_{k}\left(  \mathbf{N}\right)
+\right\rangle =0;\,1\leq j\leq r_{1},
+\end{equation}
+where
+\begin{equation}
+\tilde{\varepsilon}_{jk}\left(  \mathbf{N}\right)  =\varepsilon_{jk}\left(
+\mathbf{N}\right)  \left(  \frac{N_{k}}{N_{j}}\right)  ^{\frac{1}{2}};\,1\leq
+j,k\leq r_{1},
+\end{equation}
+is not an eigenvalue equation as $\mathcal{E}_{NI}\left(  \gamma\left(
+\mathbf{\varphi}\left(  \mathbf{N}\right)  \right)  \mathbf{,}\mathrm{w}%
+_{\#}\right)  $ is not invariant to mixing of GSO's that correspond to
+different values of $N_{j}$'s. One also would expect that the minimum
+$\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+\mathbf{,}\mathrm{w}_{\#}\right)  $ will in general be degenerate i.e. many
+values $\left\{  \mathbf{\varphi}_{\kappa}\left(  \mathbf{N}\right)  \right\}
+$ will give this value. The isolated degenerate points are of course no
+problem as they give different local minima.
+
+The constraints on the control parameter $\mathbf{N}$
+\begin{equation}
+0\leq N_{j}\leq1,1\leq j\leq r_{1}%
+\end{equation}
+in the outer minimization of eq. $\left(  \ref{seqopt}\right)  $ can be held
+by setting
+\begin{equation}
+N_{j}\left(  \mathbf{\theta}\right)  =\sin^{2}\theta_{j}%
+\end{equation}
+and introducing a Lagrange parameter $\eta$ for the constraint
+\begin{equation}
+\sum_{1\leq j\leq r_{1}}N_{j}\left(  \mathbf{\theta}\right)  =N.
+\end{equation}
+The outer control parameter $N$ could be \emph{any }postive number and
+corresponds to the avarage number of electrons in the system. The constrained
+minimum $E_{NIGS}\left(  \mathrm{w}_{\#}\right)  $ of $\mathcal{E}_{NI}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\right)  \mathbf{,}\mathrm{w}_{\#}\right)  $
+with respect to $\mathbf{N}$ is then given by the saddle point of the
+Lagrangian
+\begin{equation}
+\mathcal{L}_{N}\left(  \mathbf{N}\left(  \mathbf{\theta}\right)  ,\eta\left(
+\mathbf{\theta}\right)  \mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)
+=\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}\left(
+\mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)
+-\eta\left\{  \sum_{1\leq j\leq r_{1}}N_{j}-N\right\}  ,
+\end{equation}
+i.e.
+\begin{equation}
+\mathcal{L}_{N}\left(  \mathbf{N}\left(  \mathbf{\theta}\left(  N\right)
+\right)  ,\eta\mathbf{,}\mathrm{w}_{\#}\right)  =\max_{\mathbf{\eta}}%
+\min_{\mathbf{\theta}}\mathcal{L}_{N}\left(  \mathbf{\varphi}\left(
+\mathbf{\theta}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)  .
+\end{equation}
+The necessary conditions for $\left(  \mathbf{\theta},\eta\right)  $ to be a
+saddle point are
+\begin{subequations}
+\begin{align}
+\frac{\partial\mathcal{L}_{N}\left(  \mathbf{\varphi}\left(  \mathbf{\theta
+}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)  }{\partial
+\theta_{j}}  &  =0,\,1\leq j\leq r_{1}\label{LNA}\\
+\frac{\partial\mathcal{L}_{N}\left(  \mathbf{\varphi}\left(  \mathbf{\theta
+}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)  }{\partial\eta}
+&  =0. \label{LNB}%
+\end{align}
+Noting that
+\end{subequations}
+\begin{equation}
+\frac{\partial\mathcal{L}_{N}\left(  \mathbf{\varphi}\left(  \mathbf{\theta
+}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)  }{\partial
+\theta_{j}}=\frac{\partial\mathcal{L}_{N}\left(  \mathbf{\varphi}\left(
+\mathbf{\theta}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)
+}{\partial N_{j}}\frac{\partial N_{j}}{\partial\theta_{j}}=\frac
+{\partial\mathcal{L}_{N}\left(  \mathbf{\varphi}\left(  \mathbf{\theta
+}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)  }{\partial N_{j}%
+}\sin2\theta_{j};\,1\leq j\leq r_{1}%
+\end{equation}
+condition eq. $\left(  \ref{LNA}\right)  $ gives
+\begin{equation}
+\frac{\partial\mathcal{L}_{N}\left(  \mathbf{\varphi}\left(  \mathbf{\theta
+}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{w}_{\#}\right)  }{\partial N_{j}%
+}=0\text{ or }\sin2\theta_{j}=0.
+\end{equation}
+The derivative of the Lagrangian wrt $N_{j}$ produces%
+\begin{equation}
+\frac{\partial\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)
+}{\partial N_{j}}=\eta\left(  N\right)  ,
+\end{equation}
+which after observing
+\begin{align}
+&  \frac{\partial\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\left(  \mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}%
+_{\#}\right)  }{\partial N_{j}}=\int\frac{\delta\mathcal{E}_{NI}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\left(  \mathbf{\theta}\right)  \right)
+\mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\gamma\left(  \mathbf{x}^{\prime
+}\right)  }\frac{\partial\gamma\left(  \mathbf{x}^{\prime}\right)  }{\partial
+N_{j}}d\mathbf{x}^{\prime}\nonumber\\
+&  =\int\frac{\delta\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\left(  \mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}%
+_{\#}\right)  }{\delta\gamma\left(  \mathbf{x}^{\prime}\right)  }\left[
+\tilde{\varphi}_{j}\left(  \mathbf{N}\left(  \mathbf{\theta}\right)  \right)
+\right]  \left(  \mathbf{x}^{\prime}\right)  ^{2}d\mathbf{x}^{\prime
+}\nonumber\\
+&  =\left\langle \tilde{\varphi}_{j}\left(  \mathbf{N}\left(  \mathbf{\theta
+}\right)  \right)  \left\vert \frac{\delta\mathcal{E}_{NI}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\left(  \mathbf{\theta}\right)  \right)
+\mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\gamma}\tilde{\varphi}_{j}\left(
+\mathbf{N}\left(  \mathbf{\theta}\right)  \right)  \right.  \right\rangle
+=\tilde{\varepsilon}_{jj}\mathbf{\left(  \mathbf{N}\left(  \mathbf{\theta
+}\right)  \right)  }=\varepsilon_{jj}\mathbf{\left(  \mathbf{N}\left(
+\mathbf{\theta}\right)  \right)  },
+\end{align}
+one obtains
+\begin{equation}
+\frac{\partial\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)
+}{\partial N_{j}}=\varepsilon_{jj}\mathbf{\left(  \mathbf{N}\left(
+\mathbf{\theta}\right)  \right)  }.
+\end{equation}
+After noting that
+\begin{equation}
+\sin2\theta_{j}=0\Rightarrow N_{j}\left(  \mathbf{\theta}\right)  =1,
+\end{equation}
+Hence
+\begin{equation}
+\frac{\partial\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)
+}{\partial N_{j}}=\varepsilon_{jj}\mathbf{\left(  \mathbf{N}\left(
+\mathbf{\theta}\right)  \right)  }=\eta\left(  N\right)  \text{ or }%
+N_{j}\left(  \mathbf{\theta}\right)  =1;\,1\leq j\leq r_{1}.
+\end{equation}
+If $N_{j}\left(  \mathbf{\theta}\right)  \neq1$ then $\frac{\partial
+\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}\left(
+\mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)  }{\partial
+N_{j}}=\varepsilon_{jj}\mathbf{\left(  \mathbf{N}\left(  \mathbf{\theta
+}\right)  \right)  }=\eta\left(  N\right)  ,$ but if $\frac{\partial
+\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}\left(
+\mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)  }{\partial
+N_{j}}=\varepsilon_{jj}\mathbf{\left(  \mathbf{N}\left(  \mathbf{\theta
+}\right)  \right)  }=\eta\left(  N\right)  $ then $N_{j}\left(  \mathbf{\theta
+}\right)  $ might or might not equal one.
+
+By considering sensitivity theory
+\begin{equation}
+\frac{\partial\mathcal{E}_{NI}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)
+}{\partial N}=\eta\left(  N\right)
+\end{equation}
+and $\eta\left(  N\right)  $ can be interpretted as the chemical potential of
+the IP model system.
+
+\subsubsection{Kohn-Sham energy functional}
+
+One can define a Kohn-Sham energy functional, $\mathcal{F}_{KS},$ whose value
+is the same as the HK energy functional, but whose decomposition is different
+as
+\begin{align}
+\mathcal{F}_{KS}\left(  \gamma\right)   &  =\mathcal{F}_{KS}\left(
+\Gamma\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}_{\#}\right)
+\right)  \right)  =\mathcal{F}_{KS}\left(  \mathbf{\varphi}_{\#}\left(
+\gamma,\mathbf{N}_{\#}\right)  \right) \nonumber\\
+&  =\mathcal{F}_{T}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}%
+_{\#}\right)  \right)  +\mathcal{F}_{C}\left(  \gamma\right)  +\mathcal{F}%
+_{KSXC}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}_{\#}\right)
+\right)  ,
+\end{align}
+where the Kohn-Sham exchange functional is defined as
+\begin{equation}
+\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}%
+_{\#}\right)  \right)  =\mathcal{F}_{XC}\left(  \gamma\right)  +\mathcal{F}%
+_{K}\left(  \gamma\right)  -\mathcal{F}_{T}\left(  \mathbf{\varphi}%
+_{\#}\left(  \gamma,\mathbf{N}_{\#}\right)  \right)  .
+\end{equation}
+(Recall $\mathcal{F}_{K}\left(  \gamma\right)  =\operatorname{Tr}\left\{
+KD_{\ast}\left(  \gamma\right)  \right\}  $ and $\mathcal{F}_{XC}\left(
+\gamma\right)  =\operatorname{Tr}\left\{  V_{2}D_{\ast}\left(  \gamma\right)
+\right\}  -\mathcal{F}_{C}\left(  \gamma\right)  $)$.$The motivation for the
+introduction of $\mathcal{F}_{KS}$ is that one can parameterize $\gamma$
+uniquely in terms of $\left\{  \varphi_{\#j}\left(  \gamma,\mathbf{N}%
+_{\#}\right)  \right\}  $ (which are unique up to unitary transformation that
+mix orbitals that correspond to degenerate occupation numbers and occupation
+numbers corresponding to degenerate density constrained ground states of $K$ )
+through eq. $\left(  \ref{KEFunct}\right)  $ i.e.
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =\sum_{1\leq j\leq r_{1}}\left\vert \left[
+\varphi_{\#j}\left(  \gamma,\mathbf{N}_{\#}\right)  \right]  \left(
+\mathbf{x}\right)  \right\vert ^{2}.
+\end{equation}
+If the correspondence was not unique then a different choice $\mathbf{\varphi
+}\left(  \gamma,\mathbf{N}\right)  $ of orbitals would produce $\mathcal{F}%
+_{KSXC}\left(  \mathbf{\varphi}\left(  \gamma,\mathbf{N}\right)  \right)
+\neq\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}_{\#}\left(  \gamma
+,\mathbf{N}_{\#}\right)  \right)  $ as $\mathcal{F}_{T}\left(  \mathbf{\varphi
+}\left(  \gamma,\mathbf{N}\right)  \right)  \neq\mathcal{F}_{T}\left(
+\mathbf{\varphi}_{\#}\left(  \gamma,\mathbf{N}_{\#}\right)  \right)  .$In the
+case of the degeneracy discussed before all the degenerate $\left\{
+\mathbf{N}\right\}  $ produce the same values for Kohn-Sham exchange
+functional so this does not result in such an ambiguity.
+
+Actually the KS functional is based on a change of variable and a recipe for
+the decomposition of the total energy functional. Unique values for KS XC
+energy at any one density $\gamma$ are in fact \emph{not} necessary and could
+vary depending on what set of GSO's is used to expand $\gamma$. A Kohn-Sham
+energy functional can be expressed in terms of the variables $\left\{  \left.
+\varphi_{j}\right\vert 1\leq j\leq r_{1}\right\}  $ as
+\begin{equation}
+\mathcal{F}_{KS}\left(  \mathbf{\varphi}\right)  =\mathcal{F}_{T}\left(
+\mathbf{\varphi}\right)  +\mathcal{F}_{C}\left(  \mathbf{\varphi}\right)
++\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}\right)  , \label{KS1}%
+\end{equation}
+where $\mathbf{\varphi}$ are sets of orthogonal functions belonging to the
+unit ball of the \emph{real} Hilbert space $L_{2}\left(  \mathbb{X}\right)  ,$
+and the density $\gamma=\Gamma\left(  \mathbf{\varphi}\right)  $ i.e. is
+defined by the GSO's $\mathbf{\varphi}$ by
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =\sum_{1\leq j\leq r_{1}}\varphi_{j}\left(
+\mathbf{x}\right)  ^{2}. \label{DC}%
+\end{equation}
+The KS exchange corellation functional is defined as
+\begin{equation}
+\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}\right)  =\mathcal{F}_{XC}\left(
+\Gamma\left(  \mathbf{\varphi}\right)  \right)  +\mathcal{F}_{K}\left(
+\mathbf{\varphi}\right)  -\mathcal{F}_{T}\left(  \Gamma\left(  \mathbf{\varphi
+}\right)  \right)  , \label{KS2}%
+\end{equation}
+where,
+\begin{equation}
+\mathcal{F}_{XC}\left(  \Gamma\left(  \mathbf{\varphi}\right)  \right)
+=\operatorname{Tr}\left\{  V_{2}D_{\ast}\left(  \gamma\right)  \right\}
+-\mathcal{F}_{C}\left(  \gamma\right)  \label{KS3}%
+\end{equation}
+and
+\begin{equation}
+\mathcal{F}_{K}\left(  \mathbf{\varphi}\right)  =\operatorname{Tr}\left\{
+KD_{\ast}\left(  \gamma\right)  \right\}  . \label{KS4}%
+\end{equation}
+One should note the functionals in eqs $\left(  \ref{KS3}\right)  $ and
+$\left(  \ref{KS4}\right)  $ are constant for all $\mathbf{\varphi}$ that
+satisfy $\gamma=\Gamma\left(  \mathbf{\varphi}\right)  $ for a fixed $\gamma$,
+while the functional
+\begin{equation}
+\mathcal{F}_{T}\left(  \mathbf{\varphi}\right)  =\sum_{1\leq j\leq r_{1}%
+}\left\langle \varphi_{j}\left\vert K\varphi_{j}\right.  \right\rangle
+\end{equation}
+can have different values even if $\Gamma\left(  \mathbf{\varphi}\right)
+=\gamma$ and $\gamma$ is constant.
+
+The minimization problem that determines the ground state energy and
+space-spin density of a system characterized by a local potential $\mathrm{v}$
+is
+\begin{equation}
+\min_{\mathbf{\varphi\in}\mathfrak{S}}\mathcal{E}_{KS}\left(  \mathbf{\varphi
+,}\mathrm{v}\right)  \label{KSmin}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{E}_{KS}\left(  \mathbf{\varphi,}\mathrm{v}\right)  =\mathcal{F}%
+_{KS}\left(  \mathbf{\varphi}\right)  +f_{\Gamma\left(  \mathbf{\varphi
+}\right)  }\left(  \mathrm{v}\right)  .
+\end{equation}
+The feasible set corresponds to the constraints
+\begin{equation}
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=N_{j}\delta_{jk},\,1\leq j,k\leq r_{1},
+\end{equation}
+with control parameters $\left\{  \left.  N_{j}\right\vert 1\leq j,\leq
+r_{1}\right\}  $ constrained by
+\begin{equation}
+0\leq N_{j}\leq1,\,1\leq j\leq r_{1};\sum_{\,1\leq j\leq r_{1}}N_{j}=N.
+\end{equation}
+The Kohn-Sham minimization problem can be decomposed into two sequential
+optimizations, the first step is to determine the saddle point $\mathcal{L}%
+\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  ,\mathbf{\varepsilon
+}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)  $ of the Largrangian
+\begin{equation}
+\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi},\mathbf{\varepsilon
+,N,}\mathrm{v}\right)  =\mathcal{E}_{KS}\left(  \mathbf{\varphi,}%
+\mathrm{v}\right)  -\sum_{1\leq j,k\leq r_{1}}\varepsilon_{jk}\left\{
+\overset{}{\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}%
+\right\rangle -N_{j}\delta_{jk}}\right\}  ,
+\end{equation}
+i.e.
+\begin{equation}
+\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\right)  ,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)
+=\max_{\mathbf{\varepsilon}}\min_{\mathbf{\varphi}}\mathcal{L}\left(
+\mathbf{\varphi},\mathbf{\varepsilon,N,}\mathrm{v}\right)  , \label{KSM1}%
+\end{equation}
+leading to optimal values $\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \mathbf{,}\mathrm{v}\right)  =$ $\mathcal{L}%
+_{\mathbf{\varphi}}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  ,\mathbf{N,}\mathrm{v}\right)
+$ of the KS energy for fixed values of the control parameters $\mathbf{N}$.
+The second step to find a minima of $\mathcal{E}_{KS}\left(  \mathbf{\varphi
+}\left(  \mathbf{N}\right)  \mathbf{,}\mathrm{v}\right)  $ with respect to a
+constrained variation of these control parameters. The constraints
+\begin{equation}
+0\leq N_{j}\leq1,1\leq j\leq r_{1}%
+\end{equation}
+on the control parameter $\mathbf{N}$ can be held by setting
+\begin{equation}
+N_{j}\left(  \mathbf{\theta}\right)  =\sin^{2}\theta_{j},
+\end{equation}
+while one can introduce a Lagrange parameter $\eta$ in order to hold the
+constraint
+\begin{equation}
+\sum_{1\leq j\leq r_{1}}N_{j}\left(  \mathbf{\theta}\right)  =N.
+\end{equation}
+This leads to a Lagrangian
+\begin{equation}
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi}\left(  \mathbf{N}\left(
+\mathbf{\theta}\right)  \right)  ,\eta,N,\mathrm{v}\right)  =\mathcal{E}%
+_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  \mathbf{,}%
+\mathrm{v}\right)  -\eta\left\{  \sum_{\,1\leq j\leq r_{1}}N_{j}-N\right\}
+\end{equation}
+and the determination of the saddle point $\mathcal{L}_{\mathbf{\theta}%
+}\left(  \mathbf{\varphi}\left(  \mathbf{N}\left(  \mathbf{\theta}\left(
+N\right)  \right)  \right)  ,\eta\left(  N\right)  ,\mathrm{v}\right)  $ given
+by
+\begin{equation}
+\max_{\eta}\min_{\mathbf{\theta}}\mathcal{L}_{\mathbf{\theta}}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\left(  \mathbf{\theta}\right)  \right)
+,\eta,N,\mathrm{v}\right)  .
+\end{equation}
+The saddle points of $\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi
+},\mathbf{\varepsilon,N,}\mathrm{v}\right)  $ are characterized by the
+necessary conditions
+\begin{subequations}
+\begin{align}
+\frac{\delta\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi
+},\mathbf{\varepsilon,N,}\mathrm{v}\right)  }{\delta\varphi_{j}}  &
+=0;\,1\leq j\leq r_{1}\label{KSC1}\\
+\frac{\partial\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi
+},\mathbf{\varepsilon,N,}\mathrm{v}\right)  }{\partial\varepsilon_{jk}}  &
+=0;\,1\leq j,k\leq r_{1}. \label{KSC2}%
+\end{align}
+The condition eq. $\left(  \ref{KSC1}\right)  $ produces for each value of
+$\mathbf{N}$
+\end{subequations}
+\begin{equation}
+\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)  }%
+{\delta\varphi_{j}}-2\sum_{1\leq k\leq r_{1}}\varepsilon_{jk}\left(
+\mathbf{N}\right)  \left\vert \varphi_{k}\left(  \mathbf{N}\right)
+\right\rangle =0;\,1\leq j\leq r_{1}.
+\end{equation}
+which after noting that
+\begin{align}
+\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\varphi,}\mathrm{v}\right)
+}{\delta\varphi_{j}\left(  \mathbf{x}\right)  }  &  =\int\frac{\delta
+\mathcal{E}_{KS}\left(  \mathbf{\varphi,}\mathrm{v}\right)  }{\delta
+\gamma\left(  \mathbf{x}^{\prime}\right)  }\frac{\delta\gamma\left(
+\mathbf{x}^{\prime}\right)  }{\delta\varphi_{j}\left(  \mathbf{x}\right)
+}d\mathbf{x}^{\prime}\nonumber\\
+&  =2\int\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\varphi,}\mathrm{v}%
+\right)  }{\delta\gamma\left(  \mathbf{x}\right)  }\varphi_{j}\left(
+\mathbf{x}^{\prime}\right)  \delta\left(  \mathbf{x-x}^{\prime}\right)
+d\mathbf{x}^{\prime}=2\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\varphi
+,}\mathrm{v}\right)  }{\delta\gamma\left(  \mathbf{x}\right)  }\varphi
+_{j}\left(  \mathbf{x}\right)
+\end{align}
+gives%
+\begin{equation}
+\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\mathbf{\varphi}\left(
+\mathbf{N}\right)  ,}\mathrm{v}\right)  }{\delta\gamma}\left\vert \varphi
+_{j}\left(  \mathbf{N}\right)  \right\rangle -\sum_{1\leq k\leq r_{1}%
+}\varepsilon_{jk}\left(  \mathbf{N}\right)  \left\vert \varphi_{k}\left(
+\mathbf{N}\right)  \right\rangle =0;\,1\leq j\leq r_{1}.
+\end{equation}
+The operator $\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\mathbf{\varphi
+}\left(  \mathbf{N}\right)  ,}\mathrm{v}\right)  }{\delta\gamma}$ is a
+multiplication operator given by
+\begin{equation}
+\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\mathbf{\varphi}\left(
+\mathbf{N}\right)  ,}\mathrm{v}\right)  }{\delta\gamma}\left\vert \varphi
+_{j}\left(  \mathbf{N}\right)  \right\rangle =\left\vert \frac{\delta
+\mathcal{E}_{KS}\left(  \mathbf{\mathbf{\varphi}\left(  \mathbf{N}\right)
+,}\mathrm{v}\right)  }{\delta\gamma}\varphi_{j}\left(  \mathbf{N}\right)
+\right\rangle ,
+\end{equation}
+where
+\begin{equation}
+\left[  \frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\mathbf{\varphi}\left(
+\mathbf{N}\right)  ,}\mathrm{v}\right)  }{\delta\gamma}\varphi_{j}\left(
+\mathbf{N}\right)  \right]  \left(  \mathbf{x}\right)  =\frac{\delta
+\mathcal{E}_{NI}\left(  \gamma\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\right)  \right)  \mathbf{,}\mathrm{w}_{\#}\right)  }{\delta\gamma\left(
+\mathbf{x}\right)  }\left[  \varphi_{j}\left(  \mathbf{N}\right)  \right]
+\left(  \mathbf{x}\right)  .
+\end{equation}
+We thus obtain the intermediate Kohn-Sham equations that correspond to
+condition eq. $\left(  \ref{KSC1}\right)  $
+\begin{equation}
+\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\mathbf{\varphi}\left(
+\mathbf{N}\right)  ,}\mathrm{v}\right)  }{\delta\gamma}\left\vert \varphi
+_{j}\left(  \mathbf{N}\right)  \right\rangle =\sum_{1\leq k\leq r_{1}%
+}\varepsilon_{jk}\left(  \mathbf{N}\right)  \left\vert \varphi_{k}\left(
+\mathbf{N}\right)  \right\rangle .
+\end{equation}
+This is not an eigenvalue equation unless $\mathcal{E}_{KS}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)  $ is invariant
+to unitary mixing of $\mathbf{\varphi}\left(  \mathbf{N}\right)  .$From
+sensitivity theory the rate of change of the KS energy with respect to changes
+in occupation numbers, which are the control parameters, is
+\begin{equation}
+\frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\right)  ,\mathrm{v}\right)  }{\partial N_{j}}=\varepsilon_{jj}\left(
+\mathbf{N}\right)  .
+\end{equation}
+After noting that
+\begin{align}
+&  \frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\left(  \mathbf{\theta}\right)  \right)  ,\eta,N,\mathrm{v}\right)
+}{\partial\theta_{j}}=\frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\left(  \mathbf{\theta}\right)  \right)
+,\eta,N,\mathrm{v}\right)  }{\partial N_{j}}\frac{\partial N_{j}}%
+{\partial\theta_{j}}=\frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\left(  \mathbf{\theta}\right)  \right)
+,\eta,N,\mathrm{v}\right)  }{\partial N_{j}}\sin2\theta_{j}\,\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad\qquad1\leq j\leq r_{1},
+\end{align}
+one observes that the stationarity conditions eq. $\left(  \ref{KSC2}\right)
+$ for the outer optimization give
+\begin{equation}
+\frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)
+,\eta\mathbf{,}N\mathbf{,}\mathrm{v}\right)  }{\partial N_{j}}=0\text{ }
+\label{out1}%
+\end{equation}
+or%
+\begin{equation}
+\sin2\theta\left(  N\right)  _{j}=0. \label{out2}%
+\end{equation}
+The stationary condition eq. $\left(  \ref{out1}\right)  $ produces
+\begin{equation}
+\frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)  \mathbf{,}%
+\mathrm{v}\right)  }{\partial N_{j}}=\eta\left(  N\right)  ,
+\end{equation}
+which after noting
+\begin{align}
+&  \frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \mathbf{,}\mathrm{v}\right)  }{\partial N_{j}}=\int
+\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+\mathbf{,}\mathrm{v}\right)  }{\delta\gamma\left(  \mathbf{x}^{\prime}\right)
+}\frac{\partial\gamma\left(  \mathbf{x}^{\prime}\right)  }{\partial N_{j}%
+}d\mathbf{x}^{\prime}\nonumber\\
+&  =\int\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \mathbf{,}\mathrm{v}\right)  }{\delta\gamma\left(
+\mathbf{x}^{\prime}\right)  }\left[  \tilde{\varphi}_{j}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\right)  \right)  \right]  \left(  \mathbf{x}^{\prime
+}\right)  ^{2}d\mathbf{x}^{\prime}\nonumber\\
+&  =\left\langle \tilde{\varphi}_{j}\left(  \mathbf{N}\right)  \left\vert
+\frac{\delta\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+\mathbf{,}\mathrm{v}\right)  }{\delta\gamma}\tilde{\varphi}_{j}\left(
+\mathbf{N}\right)  \right.  \right\rangle =\tilde{\varepsilon}_{jj}%
+\mathbf{\left(  \mathbf{N}\right)  }=\varepsilon_{jj}\mathbf{\left(
+\mathbf{N}\right)  },
+\end{align}
+one obtains
+\begin{equation}
+\frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)  \mathbf{,}%
+\mathrm{v}\right)  }{\partial N_{j}}=\varepsilon_{jj}\mathbf{\left(
+\mathbf{N}\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)  }%
+=\eta\left(  N\right)  .
+\end{equation}
+The stationary condition eq. $\left(  \ref{out2}\right)  $ gives
+\begin{equation}
+\sin2\theta_{j}\left(  N\right)  =0\Rightarrow N_{j}\left(  \mathbf{\theta
+}\left(  N\right)  \right)  =1.
+\end{equation}
+Hence
+\begin{equation}
+\frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)  \mathbf{,}%
+\mathrm{v}\right)  }{\partial N_{j}}=\eta\left(  N\right)  \text{ or }%
+N_{j}\left(  \mathbf{\theta}\left(  N\right)  \right)  =1;\,1\leq j\leq r_{1}.
+\end{equation}
+If $N_{j}\left(  \mathbf{\theta}\left(  N\right)  \right)  \neq1$ then
+$\frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)  \mathbf{,}%
+\mathrm{v}\right)  }{\partial N_{j}}=\varepsilon_{jj}\mathbf{\left(
+\mathbf{N}\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)  }%
+=\eta\left(  N\right)  ,$ but if $\frac{\partial\mathcal{E}_{KS}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\left(  \mathbf{\theta}\left(  N\right)
+\right)  \right)  \mathbf{,}\mathrm{v}\right)  }{\partial N_{j}}%
+=\varepsilon_{jj}\mathbf{\left(  \mathbf{N}\left(  \mathbf{\theta}\left(
+N\right)  \right)  \right)  }=\eta\left(  N\right)  $ then $N_{j}\left(
+\mathbf{\theta}\left(  N\right)  \right)  $ might or might not equal one.
+
+By considering sensitivity theory one obtains
+\begin{equation}
+\frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\left(  \mathbf{\theta}\left(  N\right)  \right)  \right)  \mathbf{,}%
+\mathrm{v}\right)  }{\partial N}=\eta\left(  N\right)
+\end{equation}
+and $\eta\left(  N\right)  $ can be interpretted as the chemical potential of
+the interacting molecular system.
+
+\subsubsection{Janaks Theorem}
+
+One can develop the Kohn-Sham energy functional as%
+\begin{align}
+&  \mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+\mathbf{,}\mathrm{v}\right)  =\mathcal{F}_{KS}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \right)  +f_{\Gamma\left(  \mathbf{\varphi}\right)
+}\left(  \mathrm{v}\right) \nonumber\\
+&  =\mathcal{F}_{T}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  \right)
++\mathcal{F}_{C}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  \right)
++\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  \right)
++f_{\Gamma\left(  \mathbf{\varphi}\right)  }\left(  \mathrm{v}\right)
+\nonumber\\
+&  =\sum_{1\leq j\leq r_{1}}\left\langle \widetilde{\varphi_{j}}\left\vert
+K\widetilde{\varphi_{j}}\right.  \right\rangle N_{j}+\int\frac{\gamma\left(
+\mathbf{r,\xi}\right)  \gamma\left(  \mathbf{r}^{\prime}\mathbf{,\xi}\right)
+}{\left\Vert \mathbf{r-r}^{\prime}\right\Vert }d\mathbf{r}d\mathbf{r}^{\prime
+}d\mathbf{\xi}+\int\mathrm{v}\left(  \mathbf{r,\xi}\right)  \gamma\left(
+\mathbf{r,\xi}\right)  d\mathbf{r}d\mathbf{\xi}+\mathcal{F}_{KSXC}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\right)  \right)  ,
+\end{align}
+where
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =\sum_{1\leq j\leq r_{1}}\varphi_{j}\left(
+\mathbf{x}\right)  ^{2}=\sum_{1\leq j\leq r_{1}}\widetilde{\varphi_{j}\left(
+\mathbf{x}\right)  }^{2}N_{j}.
+\end{equation}
+Using
+\begin{equation}
+\frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\right)  ,\mathrm{v}\right)  }{\partial N_{j}}=\int\frac{\delta\mathcal{E}%
+_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)
+}{\delta\gamma\left(  \mathbf{x}\right)  }\frac{\partial\gamma\left(
+\mathbf{x}\right)  }{\partial N_{j}}d\mathbf{x=}\int\frac{\delta
+\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathrm{v}\right)  }{\delta\gamma\left(  \mathbf{x}\right)  }\widetilde
+{\varphi_{j}\left(  \mathbf{x}\right)  }^{2}d\mathbf{x} \label{DerNj}%
+\end{equation}
+one obtains Janaks Theorem
+\begin{align}
+&  \frac{\partial\mathcal{E}_{KS}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  ,\mathrm{v}\right)  }{\partial N_{j}}=\left\langle
+\widetilde{\varphi_{j}}\left\vert \frac{\delta\mathcal{E}_{KS}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)  }{\delta
+\gamma\left(  \mathbf{x}\right)  }\widetilde{\varphi_{j}}\right.
+\right\rangle =\nonumber\\
+&  \left\langle \widetilde{\varphi_{j}}\left\vert K\widetilde{\varphi_{j}%
+}\right.  \right\rangle +\int\frac{\delta}{\delta\gamma\left(  \mathbf{x}%
+\right)  }\left\{  \mathcal{F}_{C}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \right)  +\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}\left(
+\mathbf{N}\right)  \right)  +f_{\Gamma\left(  \mathbf{\varphi}\right)
+}\left(  \mathrm{v}\right)  \right\}  \frac{\partial\gamma\left(
+\mathbf{x}\right)  }{\partial N_{j}}d\mathbf{x=}\nonumber\\
+&  \left\langle \widetilde{\varphi_{j}}\left\vert K\widetilde{\varphi_{j}%
+}\right.  \right\rangle +\left\langle \widetilde{\varphi_{j}}\left\vert
+\frac{\delta}{\delta\gamma\left(  \mathbf{x}\right)  }\left\{  \mathcal{F}%
+_{C}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  \right)  +\mathcal{F}%
+_{KSXC}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)  \right)
++f_{\Gamma\left(  \mathbf{\varphi}\right)  }\left(  \mathrm{v}\right)
+\right\}  \right.  \widetilde{\varphi_{j}}\right\rangle =\varepsilon
+_{jj}\left(  \mathbf{N}\right)  .
+\end{align}
+
+
+\section{AGP Energy Functionals\label{AGP}}
+
+\subsection{Canonical expansion of an AGP state}
+
+\bigskip The $2N$-electron AGP state, $\left\vert g^{N}\right\rangle $, is the
+$N^{th}$ antisymmetric power of the $2$-electron state described by the
+geminal
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert
+\psi_{j}\psi_{j+s}\right\rangle , \label{geminal}%
+\end{equation}
+where $\left\{  \left.  n_{j}^{\frac{1}{2}}\right\vert 1\leq j\leq s\right\}
+$ are the positive square roots of $\left\{  \left.  n_{j}\right\vert 1\leq
+j\leq s\right\}  ,$ and is given by \cite{Weiner&ortiz04}
+\begin{equation}
+\left\vert g^{N}\right\rangle =\left(  S_{N}\right)  ^{-\frac{1}{2}}%
+\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}n_{j_{1}}^{\frac{1}{2}}\cdots n_{j_{s}%
+}^{\frac{1}{2}}\left\vert \psi_{j_{1}}\psi_{j_{1}+s}\cdots\psi_{j_{N}}%
+\psi_{j_{N}+s}\right\rangle . \label{agp}%
+\end{equation}
+The normalization factor, $\left(  S_{N}\right)  ^{-\frac{1}{2}}$, is given in
+terms of the elementary symmetric function
+\begin{equation}
+S_{N}=\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}n_{j_{1}}\cdots n_{j_{N}},
+\end{equation}
+and the geminals $\left\vert g\right\rangle $ represent normalized
+two--electron states so that
+\begin{equation}
+\sum_{1\leq j\leq s}n_{j}=1.
+\end{equation}
+Note that
+\begin{equation}
+S_{0}=1.
+\end{equation}
+It is evident from eq.\ $\left(  \ref{geminal}\right)  $ that the geminal and
+geminal power state are at the least invariant to the group
+\begin{equation}
+SU\left(  2\right)  ^{s}=\overset{s\text{-factors}}{\overbrace{\,SU\left(
+2\right)  \times\cdots\times SU\left(  2\right)  }},
+\end{equation}
+that is formed by $2\times2$ \emph{special} unitary transformations of the
+paired CGSOs $\left\{  \left.  \left\vert \psi_{j}\right\rangle ,\left\vert
+\psi_{j+s}\right\rangle \right\vert 1\leq j\leq s\right\}  ,$ while if
+degeneracies exist amongst the $\left\{  \left.  n_{j}\right\vert 1\leq j\leq
+s\right\}  $ this invariance group is larger \cite{AGPCoherent}. The canonical
+CSGOs are unique up to transformations belonging this invariance group.
+
+\subsection{The AGP Energy Functional}
+
+The energy of the AGP state is given by \emph{ }
+\begin{align}
+\mathcal{E}\left(  \mathbf{n,\varphi}\right)   &  =\frac{\mathcal{H}\left(
+\mathbf{n,\varphi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }\nonumber\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left\langle \varphi
+_{j}\left\vert h_{1}\varphi_{j}\right.  \right\rangle +\left\langle
+\varphi_{j+s}\left\vert h_{1}\varphi_{j+s}\right.  \right\rangle +\left\langle
+\varphi_{j}\varphi_{j+s}||\varphi_{j}\varphi_{j+s}\right\rangle \right\}
+\right. \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\jmath k\right)  \left\langle \varphi_{j}\varphi_{j+s}||\varphi_{k}%
+\varphi_{k+s}\right\rangle \left.  +\sum_{1\leq j<k\leq s}n_{i}n_{j}%
+S_{N-2}\left(  \jmath k\right)  \left\langle \varphi_{j}\varphi_{k}%
+|||\varphi_{j}\varphi_{k}\right\rangle \right\}  \label{energy}%
+\end{align}
+in terms of geminal occupation numbers and orthonormal CGSO's, while in terms
+of the one electron group parameters it is
+\begin{equation}
+\mathcal{E}\left(  \mathbf{\eta},\mathbf{\lambda}\right)  =\frac
+{\mathcal{H}\left(  \mathbf{\eta},\mathbf{\lambda}\right)  }{S_{N}\left(
+\mathbf{\eta}\right)  }=\frac{\left\langle \left.  g\left(  \mathbf{\eta
+},\mathbf{\lambda}\right)  ^{N}\right\vert Hg\left(  \mathbf{\eta
+},\mathbf{\lambda}\right)  ^{N}\right\rangle }{S_{N}\left(  \mathbf{\eta
+}\right)  }, \label{gp_funct}%
+\end{equation}
+where%
+\begin{equation}
+S_{N}\left(  \mathbf{\eta}\right)  =\left\langle \left.  k\left(
+\mathbf{\eta}\right)  g_{0}^{N}\right\vert k\left(  \mathbf{\eta}\right)
+g_{0}^{N}\right\rangle =\sum_{1\leq j_{1}<\cdots<j_{N}\leq s}e^{2\left(
+\eta_{j_{1}}+\cdots+\eta_{j_{N}}\right)  }n_{0j_{1}}\cdots n_{0j_{N}}.
+\end{equation}
+
+
+\section{\bigskip AGP Lagrangian\label{Lagran}}
+
+One can define a Lagrangian
+\begin{equation}
+\mathcal{L}\left(  \mathbf{n,\varphi}\right)  =\mathcal{E}\left(
+\mathbf{n,\varphi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon_{kj}\left(
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+-\delta_{jk}\right)
+\end{equation}
+associated with the constrained variation (orthogonal with a fixed
+normalization) of energy function $\mathcal{E}\left(  \mathbf{n,\varphi
+}\right)  .$ At constrained stationary points
+\begin{equation}
+\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)  }{\partial n_{j}%
+}=\frac{\partial\mathcal{E}\left(  \mathbf{n,\varphi}\right)  }{\partial
+n_{j}}.
+\end{equation}
+This gives
+\begin{align}
+&  \frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)  }{\partial
+N_{j}}=\sum_{1\leq k\leq2s}\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi
+}\right)  }{\partial n_{k}}\frac{\partial n_{k}}{\partial N_{j}}\\
+&  \Rightarrow\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)
+}{\partial N_{j}}=\sum_{1\leq k\leq2s}\frac{\partial\mathcal{L}\left(
+\mathbf{n,\varphi}\right)  }{\partial n_{k}}\frac{\partial n_{k}}{\partial
+N_{j}}=\sum_{1\leq k\leq2s}\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi
+}\right)  }{\partial n_{k}}\left(  \frac{\partial N_{k}}{\partial n_{j}%
+}\right)  ^{-1}%
+\end{align}
+i.e.%
+\begin{equation}
+\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)  }{\partial
+\mathbf{N}}=\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)
+}{\partial\mathbf{N}}=\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi
+}\right)  }{\partial\mathbf{n}}\left(  \frac{\partial\mathbf{N}}%
+{\partial\mathbf{n}}\right)  ^{-1}.
+\end{equation}
+At a constrained stationary point
+\begin{equation}
+\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)  }{\partial
+\mathbf{N}}=\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)
+}{\partial\mathbf{n}}=\mathbf{0.}%
+\end{equation}
+The occupation numbers of the AGP\ state are
+\begin{align}
+N_{j}  &  =\mathcal{N}_{j}\left(  \mathbf{n}\right)  =n_{j}\frac
+{S_{N-1}\left(  \jmath\right)  }{S_{N}}=n_{j}\frac{\partial\ln S_{N}}{\partial
+n_{j}};\quad1\leq j\leq s,\\
+\mathbf{N}  &  =\mathcal{N}\left(  \mathbf{n}\right)  .
+\end{align}%
+\begin{equation}
+\frac{\partial S_{N}}{\partial n_{j}}=S_{N-1}\left(  j\right)
+\end{equation}%
+\begin{align}
+\sum_{j}n_{j}S_{N-1}\left(  j\right)   &  =NS_{N}\\
+\sum_{k}n_{k}S_{N-2}\left(  jk\right)   &  =\left(  N-1\right)  S_{N-1}\left(
+j\right) \\
+\sum_{j<k}n_{j}n_{k}S_{N-2}\left(  jk\right)   &  =\frac{N\left(  N-1\right)
+}{2}S_{N}%
+\end{align}
+The Jacobian is given by
+\begin{equation}
+\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)  }{\partial n_{j}%
+}=\sum_{k}\frac{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)
+}{\partial N_{k}}\frac{\partial N_{k}}{\partial n_{j}}=\sum_{k}\frac
+{\partial\mathcal{L}\left(  \mathbf{n,\varphi}\right)  }{\partial N_{k}}J_{kj}%
+\end{equation}
+The matrix elements of the Jacobian are
+\begin{align}
+\frac{\partial N_{k}}{\partial n_{j}}  &  =\frac{\partial}{\partial n_{j}%
+}\left\{  n_{k}\frac{\partial\ln S_{N}}{\partial n_{k}}\right\}  =\delta
+_{jk}\frac{\partial\ln S_{N}}{\partial n_{k}}+n_{k}\frac{\partial^{2}\ln
+S_{N}}{\partial n_{j}\partial n_{k}}\\
+&  =\delta_{jk}\frac{S_{N-1}\left(  \jmath\right)  }{S_{N}}-n_{k}\frac
+{S_{N-1}\left(  \jmath\right)  S_{N-1}\left(  k\right)  }{S_{N}^{2}}%
++n_{k}\frac{S_{N-2}\left(  jk\right)  }{S_{N}}.\nonumber
+\end{align}
+For a $2N$-electron IPS the geminal has the form
+\begin{equation}
+\left\vert g\right\rangle =N^{-\frac{1}{2}}\sum_{1\leq j\leq N}\left\vert
+\psi_{j}\psi_{j+s}\right\rangle
+\end{equation}
+which for a $8$-electron case is
+\begin{equation}
+\left\vert g\right\rangle =4^{-\frac{1}{2}}\sum_{1\leq j\leq4}\left\vert
+\psi_{j}\psi_{j+s}\right\rangle =\frac{1}{2}\sum_{1\leq j\leq4}\left\vert
+\psi_{j}\psi_{j+s}\right\rangle
+\end{equation}
+so that
+\begin{equation}
+n_{j}=\left\{
+\begin{array}
+[c]{c}%
+N^{-1};1\leq j\leq N\\
+\qquad0;\text{ }N+1\leq j\leq s
+\end{array}
+\right.
+\end{equation}
+which for a $6$-electron case is%
+\begin{equation}
+n_{j}=\left\{
+\begin{array}
+[c]{c}%
+\frac{1}{4};1\leq j\leq4\\
+0;\text{ }5\leq j\leq s
+\end{array}
+\right.
+\end{equation}%
+\begin{equation}
+S_{N}=N^{-N}%
+\end{equation}
+which for a $8$-electron case is%
+\begin{equation}
+S_{4}=\frac{1}{256}.
+\end{equation}
+The first derivatives of the symmetric function are
+\begin{equation}
+S_{N-1}\left(  \jmath\right)  =\sum_{\substack{j\notin\left\{  j_{1}%
+,\cdots,j_{N-1}\right\}  \\1\leq j_{1}<\cdots<j_{N-1}\leq N}}n_{j_{1}}\cdots
+n_{j_{N-1}}=\left\{
+\begin{array}
+[c]{c}%
+\binom{N}{N-1}N^{-\left(  N-1\right)  };\quad j\notin\left\{  1,\cdots
+,N\right\} \\
+\binom{N-1}{N-1}N^{-\left(  N-1\right)  };\quad j\in\left\{  1,\cdots
+,N\right\}
+\end{array}
+\right.
+\end{equation}
+which for a $8$-electron $s=8$ case where $\left(  n_{1},n_{2},n_{3}%
+,n_{4}\right)  =\left(  \frac{1}{4},\frac{1}{4},\frac{1}{4},\frac{1}%
+{4}\right)  $ is%
+
+\begin{align}
+S_{3}\left(  8\right)   &  =n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{1}n_{2}%
+n_{5}+n_{1}n_{2}n_{6}+n_{1}n_{2}n_{7}\\
+&  +n_{1}n_{3}n_{4}+n_{1}n_{3}n_{5}+n_{1}n_{3}n_{6}+n_{1}n_{3}n_{7}\\
+&  +n_{1}n_{4}n_{5}+n_{1}n_{4}n_{6}+n_{1}n_{4}n_{7}\\
+&  +n_{1}n_{5}n_{6}+n_{1}n_{5}n_{7}+n_{1}n_{6}n_{7}\\
+&  +n_{2}n_{3}n_{4}+n_{2}n_{3}n_{5}+n_{2}n_{3}n_{6}+n_{2}n_{3}n_{7}\\
+&  +n_{2}n_{4}n_{5}+n_{2}n_{4}n_{6}+n_{2}n_{4}n_{7}\\
+&  +n_{2}n_{5}n_{6}+n_{2}n_{5}n_{7}+n_{2}n_{6}n_{7}\\
+&  +n_{3}n_{4}n_{5}+n_{3}n_{4}n_{6}+n_{3}n_{4}n_{7}\\
+&  +n_{3}n_{5}n_{6}+n_{3}n_{5}n_{7}+n_{3}n_{6}n_{7}\\
+&  +n_{4}n_{5}n_{6}+n_{4}n_{5}n_{7}+n_{4}n_{6}n_{7}+n_{5}n_{6}n_{7}%
+\end{align}%
+\begin{equation}
+S_{4}\left(  \jmath\right)  =\sum_{\substack{j\notin\left\{  j_{1},j_{2}%
+,j_{3},j_{4}\right\}  \\1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq8}}n_{j_{1}}n_{j_{2}%
+}n_{j_{3}}n_{j_{4}}=\left\{
+\begin{array}
+[c]{c}%
+\frac{1}{16};\quad j\notin\left\{  1,2,3,4\right\} \\
+\frac{1}{64};\quad j\in\left\{  1,2,3,4\right\}
+\end{array}
+\right.
+\end{equation}%
+\begin{equation}
+S_{N-2}\left(  jk\right)  =\sum_{\substack{j,k\notin\left\{  j_{1}%
+,\cdots,j_{N-2}\right\}  \\1\leq j_{1}<\cdots<j_{N-2}\leq N}}n_{j_{1}}\cdots
+n_{j_{N-2}}=\left\{
+\begin{array}
+[c]{c}%
+\binom{N}{N-2}N^{-\left(  N-2\right)  };\quad j,k\notin\left\{  1,\cdots
+,N\right\} \\
+\binom{N-1}{N-2}N^{-\left(  N-2\right)  };\quad j\notin\left\{  1,\cdots
+,N\right\}  ,k\in\left\{  1,\cdots,N\right\} \\
+\binom{N-1}{N-2}N^{-\left(  N-2\right)  };\quad k\notin\left\{  1,\cdots
+,N\right\}  ,j\in\left\{  1,\cdots,N\right\} \\
+\binom{N-2}{N-2}N^{-\left(  N-2\right)  };\quad j\in\left\{  1,\cdots
+,N\right\}  ,k\in\left\{  1,\cdots,N\right\}
+\end{array}
+\right.
+\end{equation}
+which for a $8$-electron case is
+\begin{align}
+S_{2}\left(  7,8\right)  =n_{1}n_{2}  &  +n_{1}n_{3}+n_{1}n_{4}+n_{1}%
+n_{5}+n_{1}n_{6}+n_{2}n_{3}+n_{2}n_{4}+n_{2}n_{5}\\
+&  +n_{2}n_{6}+n_{3}n_{4}+n_{3}n_{5}+n_{3}n_{6}+n_{4}n_{5}+n_{4}n_{6}%
++n_{5}n_{6}%
+\end{align}%
+\begin{equation}
+S_{2}\left(  jk\right)  =\sum_{\substack{j,k\notin\left\{  j_{1}%
+,\cdots,j_{N-2}\right\}  \\1\leq j_{1}<\cdots<j_{N-2}\leq N}}n_{j_{1}}\cdots
+n_{j_{N-2}}=\left\{
+\begin{array}
+[c]{c}%
+\frac{3}{8};\quad j,k\notin\left\{  1,\cdots,N\right\}  \qquad\qquad\qquad\\
+\frac{3}{16};\quad j\notin\left\{  1,\cdots,N\right\}  ,k\in\left\{
+1,\cdots,N\right\} \\
+\frac{3}{16};\quad k\notin\left\{  1,\cdots,N\right\}  ,j\in\left\{
+1,\cdots,N\right\} \\
+\frac{1}{16};\quad j\in\left\{  1,\cdots,N\right\}  ,k\in\left\{
+1,\cdots,N\right\}
+\end{array}
+\right.
+\end{equation}
+The diagonal
+\begin{equation}
+\frac{\partial N_{k}}{\partial n_{k}}=\left\{
+\begin{array}
+[c]{c}%
+N;\quad k\notin\left\{  1,\cdots,N\right\} \\
+0;\quad k\in\left\{  1,\cdots,N\right\}
+\end{array}
+\right.
+\end{equation}%
+\begin{equation}
+\frac{\partial N_{k}}{\partial n_{j}}=\left\{
+\begin{array}
+[c]{c}%
+-n_{k}\frac{N\left(  N+1\right)  }{2};\quad j\neq k\notin\left\{
+1,\cdots,N\right\} \\
+n_{k};\quad j\notin\left\{  1,\cdots,N\right\}  ,k\in\left\{  1,\cdots
+,N\right\} \\
+n_{k};\quad k\notin\left\{  1,\cdots,N\right\}  ,j\in\left\{  1,\cdots
+,N\right\} \\
+0;\quad j\in\left\{  1,\cdots,N\right\}  ,k\in\left\{  1,\cdots,N\right\}
+\end{array}
+\right.
+\end{equation}
+
+
+The occupation number variation nonunitary subgroup $G_{num}$ is given by
+\begin{equation}
+G_{num}=\left\{  \left.  k\left(  \mathbf{\eta}\right)  =\exp\left\{
+\sum_{1\leq j\leq s}\eta_{j}\Omega_{j}\right\}  \right\vert \eta_{j}%
+\in\mathbb{R}\right\}  , \label{occup}%
+\end{equation}
+where
+\begin{equation}
+\Omega_{j}=\left(  a_{j}^{\dagger}a_{j}+a_{j+s}^{\dagger}a_{j+s}\right)
+;\quad1\leq j\leq s.
+\end{equation}
+The manifold of $2N$-electron AGP\ states $\mathcal{M}$ can be expressed as
+\begin{equation}
+\mathcal{M}\mathcal{=}\left\{  \left.  \overset{}{k\left(  \mathbf{\eta
+}\right)  u\left(  \mathbf{\lambda}\right)  }\left\vert g_{0}^{N}\right\rangle
+\right\vert \right.  \left.  \mathbf{\lambda}=\mathbf{\lambda}^{\dagger
+}\right\}  .
+\end{equation}
+Explicitly the action on a reference geminal is given by
+\begin{equation}
+\left\vert \tilde{g}\left(  \mathbf{\eta},\mathbf{\lambda}\right)
+\right\rangle =k\left(  \mathbf{\eta}\right)  u\left(  \mathbf{\lambda
+}\right)  \left\vert g_{0}\right\rangle =\sum_{1\leq l\leq s}e^{\eta_{l}%
+}c_{0l}\left\vert \varphi_{l}\left(  \mathbf{\lambda}\right)  \varphi
+_{l+s}\left(  \mathbf{\lambda}\right)  \right\rangle ,
+\end{equation}
+where
+\begin{equation}
+\left\vert \varphi_{l}\left(  \mathbf{\lambda}\right)  \right\rangle
+=\exp\left\{  i\sum_{1\leq j,k\leq2s}\lambda_{jk}a_{j}^{\dagger}a_{k}\right\}
+\left\vert \varphi_{0l}\right\rangle .
+\end{equation}
+One can define a normalized geminal by
+\begin{equation}
+\left\vert g\left(  \mathbf{\eta},\mathbf{\lambda}\right)  \right\rangle
+=\mathit{s}\left(  \mathbf{\eta}\right)  ^{-\frac{1}{2}}\left\vert \tilde
+{g}\left(  \mathbf{\eta},\mathbf{\lambda}\right)  \right\rangle ,
+\end{equation}
+where
+\begin{equation}
+\mathit{s}\left(  \mathbf{\eta}\right)  =\left\langle \left.  \tilde{g}\left(
+\mathbf{\eta},\mathbf{\lambda}\right)  \right\vert \tilde{g}\left(
+\mathbf{\eta},\mathbf{\lambda}\right)  \right\rangle =\sum_{1\leq l\leq
+s}e^{2\eta_{l}}c_{0l}^{2}=\sum_{1\leq l\leq s}e^{2\eta_{l}}n_{0l}%
+\end{equation}
+giving
+\begin{align}
+\left\vert g\left(  \mathbf{\eta},\mathbf{\lambda}\right)  \right\rangle  &
+=\mathit{s}\left(  \mathbf{\eta}\right)  ^{-\frac{1}{2}}\sum_{1\leq l\leq
+s}e^{\eta_{l}}c_{0l}\left\vert \varphi_{l}\left(  \mathbf{\lambda}\right)
+\varphi_{l+s}\left(  \mathbf{\lambda}\right)  \right\rangle \\
+&  =\sum_{1\leq l\leq s}e^{\eta_{l}}c_{0l}\mathit{s}\left(  \mathbf{\eta
+}\right)  ^{-\frac{1}{2}}\left\vert \varphi_{l}\left(  \mathbf{\lambda
+}\right)  \varphi_{l+s}\left(  \mathbf{\lambda}\right)  \right\rangle
+=\sum_{1\leq l\leq s}c_{l}\left(  \mathbf{\eta}\right)  \left\vert \varphi
+_{l}\left(  \mathbf{\lambda}\right)  \varphi_{l+s}\left(  \mathbf{\lambda
+}\right)  \right\rangle ,
+\end{align}
+where
+\begin{equation}
+c_{l}\left(  \mathbf{\eta}\right)  =e^{\eta_{l}}c_{0l}\mathit{s}\left(
+\mathbf{\eta}\right)  ^{-\frac{1}{2}}%
+\end{equation}
+leading to
+\begin{equation}
+n_{l}\left(  \mathbf{\eta}\right)  =e^{2\eta_{l}}n_{0l}\mathit{s}\left(
+\mathbf{\eta}\right)  ^{-1}.
+\end{equation}
+This gives
+\begin{equation}
+\sum_{1\leq l\leq s}n_{l}\left(  \mathbf{\eta}\right)  =\mathit{s}\left(
+\mathbf{\eta}\right)  ^{-1}\sum_{1\leq l\leq s}e^{2\eta_{l}}n_{0l}=\left(
+\sum_{1\leq l\leq s}e^{2\eta_{l}}n_{0l}\right)  ^{-1}\sum_{1\leq l\leq
+s}e^{2\eta_{l}}n_{0l}=1
+\end{equation}
+which shows that $\left\{  n_{l}\left(  \mathbf{\eta}\right)  \right\}  $
+satisfy the geminal occupation number positivity and normalization
+constraints. We can define%
+\begin{equation}
+\left\vert \varphi_{l}\left(  \mathbf{\eta,\lambda}\right)  \right\rangle
+=\exp\eta_{l}\exp\left\{  i\sum_{1\leq j,k\leq2s}\lambda_{jk}a_{j}^{\dagger
+}a_{k}\right\}  \left\vert \varphi_{0l}\right\rangle ,
+\end{equation}
+so that
+\begin{equation}
+\left\langle \left.  \varphi_{l}\left(  \mathbf{\eta,\lambda}\right)
+\right\vert \varphi_{l}\left(  \mathbf{\eta,\lambda}\right)  \right\rangle
+=e^{2\eta_{l}}\left\langle \left.  \varphi_{0l}\right\vert \varphi
+_{0l}\right\rangle =e^{2\eta_{l}}%
+\end{equation}
+and
+\begin{equation}
+\left\vert g\left(  \mathbf{\eta},\mathbf{\lambda}\right)  \right\rangle
+=\mathit{s}\left(  \mathbf{\eta}\right)  ^{-\frac{1}{2}}\sum_{1\leq l\leq
+s}c_{0l}\left\vert \varphi_{l}\left(  \mathbf{\eta,\lambda}\right)
+\varphi_{l+s}\left(  \mathbf{\eta,\lambda}\right)  \right\rangle .
+\end{equation}
+
+
+We can express the geminal occupation numbers (and hence the occupation
+numbers of the FORDM) and the normalization of the CGSO's in terms of
+$\mathbf{\eta}$
+\begin{align}
+n_{l}\left(  \mathbf{\eta}\right)   &  =e^{2\eta_{l}}n_{0l}\mathit{s}\left(
+\mathbf{\eta}\right)  ^{-1}\nonumber\\
+s_{l}  &  =\left\langle \left.  \varphi_{l}\left(  \mathbf{\eta,\lambda
+}\right)  \right\vert \varphi_{l}\left(  \mathbf{\eta,\lambda}\right)
+\right\rangle =e^{2\eta_{l}}%
+\end{align}
+giving
+\begin{equation}
+\eta_{l}=\frac{1}{2}\ln\left\langle \left.  \varphi_{l}\left(  \mathbf{\eta
+,\lambda}\right)  \right\vert \varphi_{l}\left(  \mathbf{\eta,\lambda}\right)
+\right\rangle \equiv\frac{1}{2}\ln\left\langle \left.  \varphi_{l}\left(
+\mathbf{\lambda}\right)  \right\vert \varphi_{l}\left(  \mathbf{\lambda
+}\right)  \right\rangle =\frac{1}{2}\ln s_{l}%
+\end{equation}
+Hence%
+\begin{equation}
+\mathcal{E}\left(  \mathbf{n}_{\min}\mathbf{,\varphi}_{\min}\right)
+=\mathcal{E}\left(  \mathbf{\eta}_{\min}\mathbf{,\lambda}_{\min}\right)
+=\mathcal{E}\left(  \mathbf{\varphi}_{\min}\right)
+\end{equation}
+where
+\begin{align}
+\mathcal{E}\left(  \mathbf{n}_{\min}\mathbf{,\varphi}_{\min}\right)   &
+=\min_{\mathbf{n\in\mathcal{S},\varphi\in}\mathcal{O}\left(  \mathbf{1}%
+_{s}\right)  }\mathcal{E}\left(  \mathbf{n,\varphi}\right) \\
+\mathcal{E}\left(  \mathbf{\eta}_{\min}\mathbf{,\lambda}_{\min}\right)   &
+=\min_{\mathbf{\eta,\lambda}}\mathcal{E}\left(  \mathbf{\eta,\lambda}\right)
+\\
+\mathcal{E}\left(  \mathbf{\varphi}_{\min}\right)   &  =\min_{\mathbf{s\in
+}\mathbb{R}_{+}^{s}}\min_{\mathbf{\varphi\in}\mathcal{O}\left(  \mathbf{s}%
+\right)  }\mathcal{E}\left(  \mathbf{\varphi}\right)
+\end{align}%
+\begin{align}
+\mathcal{S}  &  =\left\{  \left.  \mathbf{n}\right\vert n_{j}\geq0,1\leq j\leq
+s;\sum_{1\leq j\leq s}n_{j}=1\right\} \\
+\mathcal{O}\left(  \mathbf{s}\right)   &  =\left\{  \left.  \mathbf{\varphi
+}\right\vert \left\langle \left.  \varphi_{j}\right\vert \varphi
+_{k}\right\rangle =s_{j}\delta_{jk},1\leq j,k\leq s\right\}  .
+\end{align}%
+\begin{equation}
+\mathbf{\lambda}=\mathbf{\lambda}^{\dagger},\mathbf{\eta\in}\mathbb{R}^{s}%
+\end{equation}%
+\begin{align}
+\mathcal{L}\left(  \mathbf{\varphi,s}\right)   &  =\mathcal{E}\left(
+\mathbf{n}_{0}\mathbf{,\varphi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon
+_{kj}\left(  \left\langle \left.  \varphi_{j}\right\vert \varphi
+_{k}\right\rangle -s_{j}\delta_{jk}\right) \\
+\frac{\partial\mathcal{L}\left(  \mathbf{\varphi,s}\right)  }{\partial s_{j}}
+&  =\varepsilon_{jj}.
+\end{align}%
+\begin{equation}
+\mathcal{L}\left(  \mathbf{n\left(  \mathbf{\eta}\right)  ,\varphi}\right)
+=\mathcal{L}\left(  \mathbf{\varphi,s}\left(  \mathbf{\eta}\right)  \right)
+\end{equation}
+
+
+\section{\bigskip Generalized Janaks Theorem\label{General}}
+
+\section{\bigskip Discussion}
+
+\appendix
+
+\section{Reduced Density Operators \label{Denmat}}
+
+\bigskip
+
+\section{Operator Sets and Subspaces \label{Operators}}
+
+\bigskip
+
+\section{State Normalization \label{Normalization}}
+
+If $D^{N}\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ then
+\begin{equation}
+\operatorname{Tr}\left\{  \mathcal{N}D^{N}\right\}  =N\operatorname{Tr}%
+\left\{  D^{N}\right\}
+\end{equation}
+as
+\begin{equation}
+\mathcal{N}\left\vert \Psi\right\rangle =N\left\vert \Psi\right\rangle
+\quad\forall\left\vert \Psi\right\rangle \in\mathcal{H}^{N}%
+\end{equation}
+and
+\begin{equation}
+\operatorname{Tr}\left\{  \mathcal{N}D^{N}\right\}  =\int\gamma\left(
+\mathbf{r,\xi}\right)  d\mathbf{r}d\mathbf{\xi.}%
+\end{equation}
+Thus
+\begin{equation}
+N\operatorname{Tr}\left\{  D^{N}\right\}  =N\Rightarrow\operatorname{Tr}%
+\left\{  D^{N}\right\}  =1.
+\end{equation}
+
+
+
+\end{document}

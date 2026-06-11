@@ -1,0 +1,346 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, January 18, 2004 10:54:13}
+%TCIDATA{LastRevised=Sunday, January 18, 2004 10:54:35}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{equation}
+\mathfrak{C}^{-\frac{1}{2}}\mathfrak{DC}^{-\frac{1}{2}}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{C}^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\mathbf{\bar{C}}^{-\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+D_{\mathbf{z\bar{z}}}^{2}\mathcal{E}_{0} & D_{\mathbf{zz}}^{2}\mathcal{E}%
+_{0}\\
+D_{\mathbf{\bar{z}\bar{z}}}^{2}\mathcal{E}_{0} & D_{\mathbf{\bar{z}z}}%
+^{2}\mathcal{E}_{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{C}^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\mathbf{\bar{C}}^{-\frac{1}{2}}%
+\end{array}
+\right)
+\end{equation}
+%
+
+\begin{equation}
+\mathfrak{C}^{-\frac{1}{2}}\mathfrak{DC}^{-\frac{1}{2}}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{\nu} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{\nu}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{A} & \mathbf{B}\\
+\overline{\mathbf{B}} & \overline{\mathbf{A}}%
+\end{array}
+\right)  =\sum_{1\leq j\leq\nu}\eta_{j}\left\{  \mathbf{v}_{j}\mathbf{v}%
+_{j}^{\dagger}-\mathbf{v}_{j+\nu}\mathbf{v}_{j+\nu}^{\dagger}\right\}
+=\sum_{1\leq j\leq2\nu}\eta_{j}\mathbf{v}_{j}\mathbf{v}_{j}^{\dagger},
+\end{equation}%
+\begin{equation}
+\mathfrak{C}^{-\frac{1}{2}}\left(
+\begin{array}
+[c]{cc}%
+D_{\mathbf{z\bar{z}}}^{2}\mathcal{E}_{0} & D_{\mathbf{zz}}^{2}\mathcal{E}%
+_{0}\\
+D_{\mathbf{\bar{z}\bar{z}}}^{2}\mathcal{E}_{0} & D_{\mathbf{\bar{z}z}}%
+^{2}\mathcal{E}_{0}%
+\end{array}
+\right)  \mathfrak{C}^{-\frac{1}{2}}=\frac{1}{\mathcal{S}\left(
+\mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma}_{0}\right)  }\mathfrak{C}%
+^{-\frac{1}{2}}\mathfrak{\Delta}^{\frac{1}{2}}\left\{  \sum_{1\leq j\leq\nu
+}\left(  \sigma_{j}-\mathcal{E}\left(  \mathbf{\bar{\varsigma}}_{0}%
+,\mathbf{\varsigma}_{0}\right)  \right)  \left\{  \mathbf{y}_{j}\mathbf{y}%
+_{j}^{\dagger}+\mathbf{y}_{j+\nu}\mathbf{y}_{j+\nu}^{\dagger}\right\}
+\right\}  \mathfrak{\Delta}^{\frac{1}{2}}\mathfrak{C}^{-\frac{1}{2}}.
+\end{equation}%
+\begin{align}
+\mathfrak{C}^{-\frac{1}{2}}\mathfrak{DC}^{-\frac{1}{2}}  & =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{\nu} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{\nu}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{C}^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\mathbf{\bar{C}}^{-\frac{1}{2}}%
+\end{array}
+\right)  \\
+& \frac{1}{\mathcal{S}\left(  \mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma
+}_{0}\right)  }\mathfrak{\Delta}^{\frac{1}{2}}\left\{  \sum_{1\leq j\leq\nu
+}\left(  \sigma_{j}-\mathcal{E}\left(  \mathbf{\bar{\varsigma}}_{0}%
+,\mathbf{\varsigma}_{0}\right)  \right)  \left\{  \mathbf{y}_{j}\mathbf{y}%
+_{j}^{\dagger}+\mathbf{y}_{j+\nu}\mathbf{y}_{j+\nu}^{\dagger}\right\}
+\right\}  \mathfrak{\Delta}^{\frac{1}{2}}\\
+& \left(
+\begin{array}
+[c]{cc}%
+\mathbf{C}^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\mathbf{\bar{C}}^{-\frac{1}{2}}%
+\end{array}
+\right)  ^{\dagger}%
+\end{align}%
+\begin{align}
+&  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{C}\left(  \mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma}_{0}\right)
+& \mathbf{0}\\
+\mathbf{0} & -\mathbf{\bar{C}}\left(  \mathbf{\bar{\varsigma}}_{0}%
+,\mathbf{\varsigma}_{0}\right)
+\end{array}
+\right)  =\nonumber\\
+&  \qquad\qquad\qquad\frac{1}{\mathcal{S}\left(  \mathbf{\bar{\varsigma}}%
+_{0},\mathbf{\varsigma}_{0}\right)  }\left\{  \left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle  & \mathbf{0}\\
+\mathbf{0} & -\overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma
+}_{0}\right)  \right\vert \mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(
+\mathbf{\varsigma}_{0}\right)  \right\rangle }%
+\end{array}
+\right)  \right.  \nonumber\\
+&  \left.  -\frac{1}{\mathcal{S}\left(  \mathbf{\bar{\varsigma}}%
+_{0},\mathbf{\varsigma}_{0}\right)  }\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\rangle
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\rangle
+& \mathbf{0}\\
+\mathbf{0} & \overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma}%
+_{0}\right)  \right\vert \mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle \left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\vert \mathbf{Y}^{\dagger}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle }%
+\end{array}
+\right)  \right\}  \\
+&  \approx\frac{1}{\mathcal{S}\left(  \mathbf{\bar{\varsigma}}_{0}%
+,\mathbf{\varsigma}_{0}\right)  }\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle  & \mathbf{0}\\
+\mathbf{0} & -\overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma
+}_{0}\right)  \right\vert \mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(
+\mathbf{\varsigma}_{0}\right)  \right\rangle }%
+\end{array}
+\right)  \\
+&  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{C}^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\mathbf{\bar{C}}^{-\frac{1}{2}}%
+\end{array}
+\right)  =\mathcal{S}\left(  \mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma
+}_{0}\right)  ^{\frac{1}{2}}\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle ^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma
+}_{0}\right)  \right\vert \mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(
+\mathbf{\varsigma}_{0}\right)  \right\rangle }^{-\frac{1}{2}}%
+\end{array}
+\right)  .
+\end{align}%
+\begin{align}
+\Delta & =\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle  & \left\langle \left.  \Phi\left(  \mathbf{\varsigma}%
+_{0}\right)  \right\vert \mathbf{YY}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle \\
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y^{\dagger}Y^{\dagger}}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle  & \overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma
+}_{0}\right)  \right\vert \mathbf{Y^{\dagger}Y}\Phi\left(  \mathbf{\varsigma
+}_{0}\right)  \right\rangle }%
+\end{array}
+\right)  \\
+& \approx\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle  & 0\\
+0 & \overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\vert \mathbf{Y^{\dagger}Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle }%
+\end{array}
+\right)
+\end{align}%
+\begin{equation}
+\frac{1}{\mathcal{S}\left(  \mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma
+}_{0}\right)  }\mathfrak{\Delta}^{\frac{1}{2}}=\frac{1}{\mathcal{S}\left(
+\mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma}_{0}\right)  }\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle ^{\frac{1}{2}} & 0\\
+0 & \overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\vert \mathbf{Y^{\dagger}Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle }^{\frac{1}{2}}%
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+& \left(
+\begin{array}
+[c]{cc}%
+\mathbf{C}^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\mathbf{\bar{C}}^{-\frac{1}{2}}%
+\end{array}
+\right)  \frac{1}{\mathcal{S}\left(  \mathbf{\bar{\varsigma}}_{0}%
+,\mathbf{\varsigma}_{0}\right)  }\mathfrak{\Delta}^{\frac{1}{2}}=\\
+& \mathcal{S}\left(  \mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma}%
+_{0}\right)  ^{\frac{1}{2}}\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle ^{-\frac{1}{2}} & \mathbf{0}\\
+\mathbf{0} & -i\overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma
+}_{0}\right)  \right\vert \mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(
+\mathbf{\varsigma}_{0}\right)  \right\rangle }^{-\frac{1}{2}}%
+\end{array}
+\right)  \\
+& \frac{1}{\mathcal{S}\left(  \mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma
+}_{0}\right)  }\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)  \right\vert
+\mathbf{Y}^{\dagger}\mathbf{Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle ^{\frac{1}{2}} & 0\\
+0 & \overline{\left\langle \left.  \Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\vert \mathbf{Y^{\dagger}Y}\Phi\left(  \mathbf{\varsigma}_{0}\right)
+\right\rangle }^{\frac{1}{2}}%
+\end{array}
+\right)  \\
+& =\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & -i
+\end{array}
+\right)
+\end{align}%
+\begin{align}
+& \mathfrak{C}^{-\frac{1}{2}}\left(
+\begin{array}
+[c]{cc}%
+D_{\mathbf{z\bar{z}}}^{2}\mathcal{E}_{0} & D_{\mathbf{zz}}^{2}\mathcal{E}%
+_{0}\\
+D_{\mathbf{\bar{z}\bar{z}}}^{2}\mathcal{E}_{0} & D_{\mathbf{\bar{z}z}}%
+^{2}\mathcal{E}_{0}%
+\end{array}
+\right)  \mathfrak{C}^{-\frac{1}{2}}=\frac{1}{\mathcal{S}\left(
+\mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma}_{0}\right)  }\mathfrak{C}%
+^{-\frac{1}{2}}\mathfrak{\Delta}^{\frac{1}{2}}\left\{  \sum_{1\leq j\leq\nu
+}\left(  \sigma_{j}-\mathcal{E}\left(  \mathbf{\bar{\varsigma}}_{0}%
+,\mathbf{\varsigma}_{0}\right)  \right)  \left\{  \mathbf{y}_{j}\mathbf{y}%
+_{j}^{\dagger}+\mathbf{y}_{j+\nu}\mathbf{y}_{j+\nu}^{\dagger}\right\}
+\right\}  \mathfrak{\Delta}^{\frac{1}{2}}\mathfrak{C}^{-\frac{1}{2}}\\
+& \left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & -i
+\end{array}
+\right)  \left\{  \sum_{1\leq j\leq\nu}\left(  \sigma_{j}-\mathcal{E}\left(
+\mathbf{\bar{\varsigma}}_{0},\mathbf{\varsigma}_{0}\right)  \right)  \left\{
+\mathbf{y}_{j}\mathbf{y}_{j}^{\dagger}+\mathbf{y}_{j+\nu}\mathbf{y}_{j+\nu
+}^{\dagger}\right\}  \right\}  \left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & -i
+\end{array}
+\right)
+\end{align}
+
+
+
+\end{document}

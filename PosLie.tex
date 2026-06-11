@@ -1,0 +1,143 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, December 23, 2003 17:25:21}
+%TCIDATA{LastRevised=Tuesday, December 23, 2003 20:08:49}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+We wish to prove that
+\begin{equation}
+\left\{  f\left(  \mathbf{z}\right)  ,g\left(  \mathbf{z}\right)  \right\}
+=\frac{\left\langle \left.  \Phi\left(  \mathbf{z}\right)  \right\vert \left[
+F,G\right]  \Phi\left(  \mathbf{z}\right)  \right\rangle }{\left\langle
+\left.  \Phi\left(  \mathbf{z}\right)  \right\vert \Phi\left(  \mathbf{z}%
+\right)  \right\rangle }%
+\end{equation}
+where
+\begin{equation}
+O=\sum_{ij}O_{ij}a_{i}^{\dagger}a_{j},
+\end{equation}%
+\begin{equation}
+\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  =\frac{\left\langle \left.
+\Phi\left(  \mathbf{z}\right)  \right\vert O\Phi\left(  \mathbf{z}\right)
+\right\rangle }{\left\langle \left.  \Phi\left(  \mathbf{z}\right)
+\right\vert \Phi\left(  \mathbf{z}\right)  \right\rangle }=\frac
+{\mathcal{O}_{u}\left(  \mathbf{\bar{z},z}\right)  }{\mathcal{S}\left(
+\mathbf{\bar{z},z}\right)  },
+\end{equation}
+\begin{align}
+\left\{  f\left(  \mathbf{z}\right)  ,g\left(  \mathbf{z}\right)  \right\}
+&  =\omega\left(  \mathbf{z}\right)  ^{-1}\left(  X_{f}\left(  \mathbf{z}%
+\right)  ,X_{g}\left(  \mathbf{z}\right)  \right)  \nonumber\\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial f\left(  \mathbf{z}\right)  }{\partial\mathbf{\bar{z}}} &
+\frac{\partial f\left(  \mathbf{z}\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\overline{\mathbf{C}\left(  \mathbf{\bar{z},z}\right)  }^{-1}\\
+-i\mathbf{C}\left(  \mathbf{\bar{z},z}\right)  ^{-1} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\partial g\left(  \mathbf{z}\right)  }{\partial\mathbf{\bar{z}}}\\
+\frac{\partial g\left(  \mathbf{z}\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  .
+\end{align}
+In particular
+\begin{equation}
+\left\{  \rho_{ji}\left(  \mathbf{z}\right)  ,\rho_{lk}\left(  \mathbf{z}%
+\right)  \right\}  =\frac{\left\langle \left.  \Phi\left(  \mathbf{z}\right)
+\right\vert \left[  a_{i}^{\dagger}a_{j},a_{k}^{\dagger}a_{l}\right]
+\Phi\left(  \mathbf{z}\right)  \right\rangle }{\left\langle \left.
+\Phi\left(  \mathbf{z}\right)  \right\vert \Phi\left(  \mathbf{z}\right)
+\right\rangle }=\frac{\left\langle \left.  \Phi\left(  \mathbf{z}\right)
+\right\vert \left\{  a_{i}^{\dagger}a_{l}\delta_{jk}-a_{k}^{\dagger}%
+a_{j}\delta_{il}\right\}  \Phi\left(  \mathbf{z}\right)  \right\rangle
+}{\left\langle \left.  \Phi\left(  \mathbf{z}\right)  \right\vert \Phi\left(
+\mathbf{z}\right)  \right\rangle }%
+\end{equation}%
+\begin{align}
+f_{jk}\left(  \mathbf{z}\right)    & =\frac{\left\langle \left.  \Phi\left(
+\mathbf{z}\right)  \right\vert q_{jk}^{\dagger}\Phi\left(  \mathbf{z}\right)
+\right\rangle }{\left\langle \left.  \Phi\left(  \mathbf{z}\right)
+\right\vert \Phi\left(  \mathbf{z}\right)  \right\rangle }\\
+\frac{\partial f\left(  \mathbf{z}\right)  }{\partial\mathbf{\bar{z}}_{rs}}  &
+=\frac{1}{\left\langle \left.  \Phi\left(  \mathbf{z}\right)  \right\vert
+\Phi\left(  \mathbf{z}\right)  \right\rangle }\left\{  \left\langle \left.
+\Phi\left(  \mathbf{z}\right)  \right\vert q_{rs}q_{jk}^{\dagger}\Phi\left(
+\mathbf{z}\right)  \right\rangle -f_{jk}\left(  \mathbf{z}\right)
+\left\langle \left.  \Phi\left(  \mathbf{z}\right)  \right\vert q_{rs}%
+\Phi\left(  \mathbf{z}\right)  \right\rangle \right\}
+\end{align}
+
+
+
+\end{document}

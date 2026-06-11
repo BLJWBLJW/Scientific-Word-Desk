@@ -1,0 +1,1324 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, April 20, 2003 13:13:14}
+%TCIDATA{LastRevised=Monday, May 19, 2003 11:16:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Adapted Operator Basis]{Contraction Adapted Operator Basis}
+\author{Brian Weiner}
+\affiliation{PSU}
+\keywords{}
+\pacs{}
+
+\begin{abstract}
+
+
+\end{abstract}
+\date[Date text]{date}
+\tableofcontents
+
+
+\section{Operator Space Basis}
+
+\subsection{Generalized Bases for $\mathcal{B}\left(  \mathcal{H}^{N}\right)
+$ and $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $}
+
+The duality between $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ and
+$\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ can be expressed in terms of the
+scalar product
+\begin{equation}
+\left(  X|Y\right)  =Tr\left\{  X^{\dagger}Y\right\}  ;\quad X\in
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  ,Y\in\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)
+\end{equation}
+Following the Dirac convention we can denote operators, $Y\in\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $, as $\left\vert Y\right)  $ and
+operators, $X\in\mathcal{B}\left(  \mathcal{H}^{N}\right)  $, as $\left(
+X\right\vert $ thus producing the super operator%
+\begin{equation}
+\left\vert Y\right)  \left(  X\right\vert :\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)
+\end{equation}
+whose action is given by
+\begin{equation}
+\left\vert Y\right)  \left(  X\right\vert \,Z=Tr\left\{  X^{\dagger}Z\right\}
+\left\vert Y\right)  \equiv Tr\left\{  X^{\dagger}Z\right\}  Y
+\end{equation}
+
+
+We can introduce a generalized basis, $\left\{  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert \right\}  $,
+\emph{for both} of the dual spaces $\mathcal{B}\left(  \mathcal{H}^{N}\right)
+$ and $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $, composed of ket-bra
+operators that correspond to the generalized eigenvectors of the $N$-particle
+space-spin coordinate operator. None of the basis elements $\left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert $
+belong to $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ as the action of any
+individual $\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert $ on any vector belonging to $\mathcal{H}^{N}$ produces
+a vector $\notin\mathcal{H}^{N}$. The notation $\left\vert \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+\right)  $ signifies that $\left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert $ is to be considered within the
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $-topology, while the notation
+$\left(  \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right\vert $ signifies that $\left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert $ is to be
+considered within the $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $-topology.
+
+This basis allows one to define a super operator resolution of the identity on
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ by
+\begin{equation}
+\hat{I}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  \left(  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert \right\vert d\mathsf{z}%
+^{N}d\mathsf{z}^{\prime N},
+\end{equation}
+which can be expressed symbolically as
+\begin{equation}
+\hat{I}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }=\left(  \left(
+\underline{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert }\right\vert \right)  \left(  \left\vert \underline
+{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert }\right)  \right)  ^{t},
+\end{equation}
+producing the generalized expansion of an element $X\in\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ as%
+\begin{align}
+X  &  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  \left(  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert |X\right)  d\mathsf{z}%
+^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  Tr\left\{  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert ^{\dagger
+}X\right\}  d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  \left\langle \mathsf{z}^{N}|X\mathsf{z}%
+^{\prime N}\right\rangle d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+X\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}%
+\end{align}
+where $X\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  $ is the integral
+kernel corresponding to $X$.
+
+The space of Hilbert-Schmidt operators $\mathcal{B}_{2}\left(  \mathcal{H}%
+^{N}\right)  $ is a Hilbert space and is contained in the Banach space
+$\mathcal{B}\left(  \mathcal{H}^{N}\right)  $. The predual $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $ of $\mathcal{B}\left(  \mathcal{H}%
+^{N}\right)  $ is contained in $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)
+,$ thus $\mathcal{B}\left(  \mathcal{H}^{N}\right)  \supset\mathcal{B}%
+_{2}\left(  \mathcal{H}^{N}\right)  \supset\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ form a Gelfand Triple all spanned by the basis
+$\left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right\}  $.
+
+The basis $\left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert \right\}  $ can be graded into sub bases
+$\left\{  \mathfrak{b}_{m}\left(  \mathsf{z}\right)  \right\}  $ with
+precisely $m$ bra and ket coordinates \emph{unequal} which are defined as
+\begin{equation}
+\mathfrak{b}_{m}\left(  \mathsf{z}\right)  =\left\{  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert |\mathsf{z}%
+^{N}\overset{m}{\neq}\mathsf{z}^{\prime N}\right\}
+\end{equation}
+where $\mathsf{z}^{N}\overset{m}{\neq}\mathsf{z}^{\prime N}$ denotes that the
+coordinates $\mathsf{z}^{N}$ and $\mathsf{z}^{\prime N}$ have exactly $m$
+values different, which could be equivalently written as $\mathsf{z}%
+^{N}\overset{N-m}{=}\mathsf{z}^{\prime N}$ i.e. $\mathsf{z}^{N}$ and
+$\mathsf{z}^{\prime N}$ have exactly $N-m$ values in common. These bases
+produce a graded decomposition of $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $ as the direct sum
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq m\leq N}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq m\leq N}}
+%EndExpansion
+\mathfrak{B}_{m}\left(  \mathsf{z}^{N}\right)
+\end{equation}
+where $\mathfrak{B}_{m}\left(  \mathsf{z}\right)  $ is defined as the closed
+linear span of the basis $\left\{  \mathfrak{b}_{m}\left(  \mathsf{z}\right)
+\right\}  $ i.e.
+\begin{equation}
+\mathfrak{B}_{m}\left(  \mathsf{z}^{N}\right)  =\overline
+{\operatorname{linspan}}\left\{  \left.  \underset{}{\left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert }\right\vert
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert \in\mathfrak{b}_{m}\left(  \mathsf{z}^{N}\right)  \right\}
+\end{equation}
+and the closure is taken wrt the trace norm topology. In order to analyze the
+kernels of the contraction maps $\left\{  L_{N}^{p}|0\leq p\leq N\right\}  $
+it is useful to consider the sequence of subspaces $\left\{  \mathfrak{V}%
+_{p}\left(  \mathsf{z}\right)  \right\}  $, that are generated by $\left\{
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert \right\}  $ that have at least $p$ differences between
+$\mathsf{z}^{N}$ and $\mathsf{z}^{\prime N}$ (denoted by $\mathsf{z}%
+^{N}\overset{p}{\nsim}$ $\mathsf{z}^{\prime N}$) or equivalently generated by
+bases elements that have at most $N-p$ values in common between $\mathsf{z}%
+^{N}$ and $\mathsf{z}^{\prime N}$ (denoted by $\mathsf{z}^{N}\overset
+{N-p}{\sim}$ $\mathsf{z}^{\prime N})$, which are defined as
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathsf{z}^{N}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{p\leq m\leq N}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{p\leq m\leq N}}
+%EndExpansion
+\mathfrak{B}_{m}\left(  \mathsf{z}^{N}\right)
+\end{equation}
+so that
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathsf{z}^{N}\right)  =\overline
+{\operatorname{linspan}}\left\{  \left.  \left\vert \mathsf{z}^{N}%
+\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert \overset{}%
+{}\right\vert \mathsf{z}^{N}\overset{p}{\nsim}\mathsf{z}^{\prime N}\right\}
+=\overline{\operatorname{linspan}}\left\{  \mathfrak{c}_{p}\left(
+\mathsf{z}^{N}\right)  \right\}
+\end{equation}
+where $\mathfrak{c}_{p}\left(  \mathsf{z}^{N}\right)  \equiv\left\{  \left.
+\underset{}{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert }\right\vert \mathsf{z}^{N}\overset{p}{\nsim}%
+\mathsf{z}^{\prime N}\right\}  $ $\equiv\left\{  \left.  \underset
+{}{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert }\right\vert \mathsf{z}^{N}\overset{N-p}{\sim}\mathsf{z}^{\prime
+N}\right\}  $ and hence $\mathfrak{V}_{0}\left(  \mathsf{z}^{N}\right)
+=\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $. One should also observe
+that
+\begin{equation}
+\mathfrak{B}_{p}\left(  \mathsf{z}^{N}\right)  =\mathfrak{V}_{p-1}\left(
+\mathsf{z}^{N}\right)  \ominus\mathfrak{V}_{p}\left(  \mathsf{z}^{N}\right)
+\end{equation}
+These subspaces partially characterize the kernel of the maps $\left\{
+L_{N}^{p}\right\}  $ as they have the property
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathsf{z}^{N}\right)  \supset\ker L_{N}^{p}%
+\supset\mathfrak{V}_{p+1}\left(  \mathsf{z}^{N}\right)  .
+\end{equation}
+and one has in general%
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =\mathfrak{V}_{0}\left(
+\mathsf{z}^{N}\right)  \supset\ker L_{N}^{0}\supset\mathfrak{V}_{1}\left(
+\mathsf{z}\right)  \supset\cdots\supset\ker L_{N}^{N-1}\supset\mathfrak{V}%
+_{N}\left(  \mathsf{z}^{N}\right)  \supset\ker L_{N}^{N}=\phi
+\end{equation}
+
+
+\subsection{Proper Bases for $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ and
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $}
+
+One can repeat all the above for proper bases of $\mathcal{H}^{N}$ generated
+by complete orthonormal bases $\left\{  \varphi_{j}\right\}  $ of
+$\mathcal{H}^{N}$ to produce $\mathfrak{B}_{p}\left(  \mathbf{\varphi}%
+^{N}\right)  ,$ $\mathfrak{b}_{p}\left(  \mathbf{\varphi}^{N}\right)
+,\mathfrak{c}_{p}\left(  \mathbf{\varphi}^{N}\right)  $ and $\mathfrak{V}%
+_{p}\left(  \mathbf{\varphi}^{N}\right)  $ and their associated decompositions
+of $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  .$ Hence in particular
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathbf{\varphi}^{N}\right)  \supset\ker L_{N}%
+^{p}\supset\mathfrak{V}_{p+1}\left(  \mathbf{\varphi}^{N}\right)
+\end{equation}
+The space with at \emph{least} $p$ differences (with \emph{most N-p} the
+same)
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathbf{\varphi}^{N}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{p\leq m\leq N}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{p\leq m\leq N}}
+%EndExpansion
+\mathfrak{B}_{m}\left(  \mathbf{\varphi}^{N}\right)
+\end{equation}
+The space with $m$ different coordinates can be expressed as
+\begin{equation}
+\mathfrak{B}_{m}\left(  \mathbf{\varphi}^{N}\right)  =\overline
+{\operatorname{linspan}}\left\{  \left.  \underset{}{\left\vert
+\mathbf{\varphi}^{N}\right\rangle \left\langle \varphi^{\prime N}\right\vert
+}\right\vert \left\vert \mathbf{\varphi}^{N}\right\rangle \left\langle
+\varphi^{\prime N}\right\vert \in\mathfrak{b}_{m}\left(  \mathbf{\varphi}%
+^{N}\right)  \right\}
+\end{equation}
+and the space with at least $p$ differences can be expressed as%
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathbf{\varphi}^{N}\right)  =\overline
+{\operatorname{linspan}}\left\{  \left.  \left\vert \mathbf{\varphi}%
+^{N}\right\rangle \left\langle \varphi^{\prime N}\right\vert \overset{}%
+{}\right\vert \mathbf{\varphi}^{N}\overset{p}{\nsim}\varphi^{\prime
+N}\right\}  =\overline{\operatorname{linspan}}\left\{  \mathfrak{c}_{p}\left(
+\mathbf{\varphi}^{N}\right)  \right\}
+\end{equation}
+The space with exactly $p$ different coordinates can be expressed as the
+difference of the spaces with at least $p-1$ differences and the space with at
+least $p$ differences
+\begin{equation}
+\mathfrak{B}_{p}\left(  \mathbf{\varphi}^{N}\right)  =\mathfrak{V}%
+_{p-1}\left(  \mathbf{\varphi}^{N}\right)  \ominus\mathfrak{V}_{p}\left(
+\mathbf{\varphi}^{N}\right)
+\end{equation}
+
+
+\section{Representations of $U\left(  \mathcal{H}^{1}\right)  $}
+
+One can define subspaces of $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $
+that produce irreducible representations of $SU\left(  \mathcal{H}^{1}\right)
+$ that are based on the kernels of the contraction maps $\left\{  \left.
+L_{N}^{P}\right\vert 0\leq p\leq N\right\}  ,$ namely
+\begin{equation}
+\mathcal{K}_{Np}=\ker L_{N}^{p-1}\ominus\ker L_{N}^{p};\quad1\leq p\leq N
+\end{equation}
+and
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =%
+%TCIMACRO{\tbigoplus \limits_{1\leq p\leq N}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{1\leq p\leq N}}
+%EndExpansion
+\mathcal{K}_{Np}\oplus\mathcal{K}_{N0}%
+\end{equation}
+where $\mathcal{K}_{N0}$ is a compliment of $%
+%TCIMACRO{\tbigoplus \limits_{1\leq p\leq N}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{1\leq p\leq N}}
+%EndExpansion
+\mathcal{K}_{Np}$ in $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $. These
+subspaces are related to the ones introduced previously by $\mathcal{K}%
+_{Np}\supset\mathfrak{B}_{p+1}\left(  \mathbf{\varphi}^{N}\right)  $.
+
+\subsection{One Particle Operators $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{1}\right)  $}
+
+In particular one can consider the bases of the operator space $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{1}\right)  $ given by%
+\begin{equation}
+\left\{  \left\{  \left.  \left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{j}\right\vert -\left\vert \varphi_{j+1}\right\rangle \left\langle
+\varphi_{j+1}\right\vert \right\vert 1\leq j\leq r\right\}  ,\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert
+\right\vert 1\leq j\neq k\leq r\right\}  ,\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{1}\right\vert \right\}
+\end{equation}
+that is adapted to the decomposition
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  =\mathcal{K}_{11od}%
+\oplus\mathcal{K}_{11d}\oplus\mathcal{K}_{10}\label{graddec}%
+\end{equation}
+where
+\begin{align}
+\mathcal{K}_{11od} &  =\overline{\operatorname{linspan}}\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert
+\right\vert 1\leq j\neq k\leq r\right\}  \nonumber\\
+\mathcal{K}_{11d} &  =\overline{\operatorname{linspan}}\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert
+-\left\vert \varphi_{j+1}\right\rangle \left\langle \varphi_{j+1}\right\vert
+\right\vert 1\leq j\leq r\right\}  \nonumber\\
+\mathcal{K}_{10} &  =\left\{  \left.  \alpha\left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert \right\vert \alpha
+\in\mathbb{C}\right\}
+\end{align}
+Let us denote these basis elements by
+\begin{align}
+\left\vert \varphi_{jk}\right)   &  =\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{k}\right\vert ;\quad1\leq j\neq k\leq r\nonumber\\
+\left\vert \varphi_{j+1}\right)   &  =\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{j}\right\vert -\left\vert \varphi_{j+1}\right\rangle
+\left\langle \varphi_{j+1}\right\vert ;\quad1\leq j\leq r\nonumber\\
+\left\vert \varphi_{1}\right)   &  =\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{1}\right\vert
+\end{align}
+We can note that
+\begin{equation}
+\left\vert \varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert
+-\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  =\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert
+\end{equation}
+and
+\begin{equation}
+\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  +\left(  \left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert \right)  =\left(  \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)
+\end{equation}
+so that
+\begin{equation}
+\left\vert \varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert
+-\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  -\left(  \left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert \right)  =\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert
+\end{equation}
+etc., hence generating all diagonal basis elements $\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert
+\right\vert ;2\leq j\leq r\right\}  $ as%
+\begin{equation}
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert
+=\left\vert \varphi_{1}\right)  -\sum_{2\leq m\leq j}\left\vert \varphi
+_{j}\right)  ;\quad1\leq j\leq r
+\end{equation}
+Any element of $X\in\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  $ can be
+expanded%
+\begin{align}
+A &  =\sum_{1\leq j,k\leq\infty}A_{jk}\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{k}\right\vert \\
+&  =\sum_{1\leq j\neq k\leq r}X_{jk}\left\vert \varphi_{jk}\right)
++\sum_{2\leq j\leq r}X_{j}\left\vert \varphi_{j}\right)  +X_{1}\left\vert
+\varphi_{1}\right)
+\end{align}
+where
+\begin{align}
+X_{1} &  =Tr\left\{  A\right\}  \nonumber\\
+X_{jk} &  =A_{jk}\nonumber\\
+X_{j} &  =Tr\left\{  A\right\}  -\sum_{1\leq m\leq j-1}A_{mm};\quad2\leq j\leq
+r
+\end{align}
+The choice of $\left\vert \varphi_{1}\right)  =\left\vert \varphi
+_{1}\right\rangle \left\langle \varphi_{1}\right\vert $ is quite arbitrary,
+one can just as well use $\left\vert \varphi_{1}\right)  =\left\vert
+\varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert $ for any other
+$j,$ which just produces a change of basis for $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ and hence a change of expansion coefficients while
+still produces a decomposition that is isomorphic to eq. $\left(
+\ref{graddec}\right)  $.
+
+\subsection{Two Particle Operators $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{2}\right)  $}
+
+$\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ can be decomposed as
+\begin{align}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)   &  =\left(  \ker L_{2}%
+^{1}\ominus\ker L_{2}^{2}\right)  \oplus\left(  \ker L_{2}^{0}\ominus\ker
+L_{2}^{1}\right)  \oplus\left(  \ker L_{2}^{0}\right)  ^{c}\nonumber\\
+&  =\ker L_{2}^{0}\oplus\left(  \ker L_{2}^{0}\right)  ^{c}\nonumber\\
+&  =\ker L_{2}^{1}\oplus\left(  \ker L_{2}^{1}\right)  ^{c}\label{expan1}\\
+&  =\mathcal{K}_{22}\oplus\mathcal{K}_{21}\oplus\mathcal{K}_{20}%
+\end{align}
+as $\ker L_{2}^{2}=\phi$. It can be shown that if $L_{2}^{1}$ is surjective
+then
+\begin{equation}
+\mathcal{K}_{21}\oplus\mathcal{K}_{20}\cong\mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)
+\end{equation}
+One can show that $L_{p}^{p-1}$ is surjective if $\dim\left(  \mathcal{H}%
+^{1}\right)  >2(p-1).$ The decomposition eq. $\left(  \ref{expan1}\right)  $
+can be analyzed in terms of the lie groups as
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  =sl\left(  \mathcal{H}%
+^{2}\right)  _{2}\oplus sl\left(  \mathcal{H}^{2}\right)  _{2}^{c}=gl\left(
+\mathcal{H}^{2}\right)  _{2}%
+\end{equation}
+as
+\begin{align}
+sl\left(  \mathcal{H}^{2}\right)  _{2} &  =\mathcal{K}_{22}\oplus
+\mathcal{K}_{21}\nonumber\\
+sl\left(  \mathcal{H}^{2}\right)  _{2}^{c} &  =\mathcal{K}_{20}%
+\end{align}
+and
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  =\left(  sl\left(
+\mathcal{H}^{2}\right)  _{2}\ominus sl\left(  \mathcal{H}^{1}\right)
+_{2}\right)  \oplus sl\left(  \mathcal{H}^{1}\right)  _{2}\oplus sl\left(
+\mathcal{H}^{2}\right)  _{2}^{c}%
+\end{equation}
+where $sl\left(  \mathcal{H}^{2}\right)  _{2}$ and $sl\left(  \mathcal{H}%
+^{1}\right)  _{2}$ are representations of the special linear lie algebras
+$sl\left(  \mathcal{H}^{2}\right)  $ and $sl\left(  \mathcal{H}^{1}\right)  $
+respectively in $\mathcal{H}^{2}.$ By exponentiating these subspaces one
+obtains representations of the lie groups
+\begin{align}
+SL\left(  \mathcal{H}^{2}\right)  _{2} &  =\exp\left(  sl\left(
+\mathcal{H}^{2}\right)  _{2}\right)  \nonumber\\
+SL\left(  \mathcal{H}^{1}\right)  _{2} &  =\exp\left(  sl\left(
+\mathcal{H}^{1}\right)  _{2}\right)
+\end{align}
+The decomposition eq. $\left(  \ref{expan1}\right)  $ also has the property
+that it carries irreducible adjoint representation of $SU\left(
+\mathcal{H}^{1}\right)  $ i.e.%
+\begin{align}
+\operatorname{Ad}\left(  SU\left(  \mathcal{H}^{1}\right)  _{2}\right)   &
+:\mathcal{K}_{22}\rightarrow\mathcal{K}_{22}\nonumber\\
+\operatorname{Ad}\left(  SU\left(  \mathcal{H}^{1}\right)  _{2}\right)   &
+:\mathcal{K}_{21}\rightarrow\mathcal{K}_{21}%
+\end{align}
+which can be deduced from the intertwining property
+\begin{equation}
+L_{N}^{P}\circ\operatorname{Ad}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{p}\right)  =\operatorname{Ad}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{p}\right)  \circ L_{N}^{P}%
+\end{equation}
+which gives that
+\begin{equation}
+\operatorname{Ad}\left(  SU\left(  \mathcal{H}^{1}\right)  _{p}\right)  :\ker
+L_{N}^{P}\rightarrow\ker L_{N}^{P}%
+\end{equation}
+so in particular
+\begin{equation}
+L_{2}^{1}\circ\operatorname{Ad}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{1}\right)  =\operatorname{Ad}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{1}\right)  \circ L_{2}^{1}%
+\end{equation}
+The subspaces $\mathcal{K}_{22}$ and $\mathcal{K}_{21}$ can be decomposed into
+diagonal $\left\{  \left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{1}}\varphi_{j_{2}}\right\vert \right\}  $ and non
+diagonal $\left\{  \left.  \left\vert \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{k_{1}}\varphi_{k_{2}}\right\vert
+\right\vert j_{1},j_{2}\neq k_{1},k_{2}\right\}  $ parts wrt the basis
+$\left\{  \left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \right\}  $
+of $\mathcal{H}^{2}$ i.e.
+\begin{align}
+\mathcal{K}_{22} &  =\mathcal{K}_{22od}\oplus\mathcal{K}_{22d}\nonumber\\
+\mathcal{K}_{21} &  =\mathcal{K}_{21od}\oplus\mathcal{K}_{21d}%
+\end{align}
+so that
+\begin{align}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)   &  =\mathcal{K}_{22od}%
+\oplus\mathcal{K}_{22d}\oplus\mathcal{K}_{21od}\oplus\mathcal{K}_{21d}%
+\oplus\mathcal{K}_{20}\nonumber\\
+&  =\ker L_{2}^{1}\oplus\left(  \ker L_{2}^{1}\right)  ^{c}\nonumber\\
+&  =\left(  \ker L_{2}^{1}\ominus\ker L_{2}^{2}\right)  \oplus\left(  \ker
+L_{2}^{0}\ominus\ker L_{2}^{1}\right)  \oplus\left(  \ker L_{2}^{0}\right)
+^{c}\nonumber\\
+&  =\mathcal{K}_{22}\oplus\mathcal{K}_{21}\oplus\mathcal{K}_{20}%
+\end{align}
+One can define diagonal and off-diagonal two particle operator subspaces as
+\begin{align}
+\mathcal{K}_{2d} &  =\mathcal{K}_{22d}\oplus\mathcal{K}_{21d}\nonumber\\
+\mathcal{K}_{2od} &  =\mathcal{K}_{22od}\oplus\mathcal{K}_{21od}%
+\end{align}
+so that
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  =\mathcal{K}_{2d}%
+\oplus\mathcal{K}_{2od}%
+\end{equation}
+and observe that
+\begin{align}
+L_{2}^{1} &  :\mathcal{K}_{2d}\rightarrow\mathcal{K}_{1d}\nonumber\\
+L_{2}^{1} &  :\mathcal{K}_{2od}\rightarrow\mathcal{K}_{1od}%
+\end{align}
+which can seen by considering for example
+\begin{align}
+L_{2}^{1}\left(  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert \right)   &  =\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{3}\right\vert \nonumber\\
+L_{2}^{1}\left(  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{2}\right\vert \right)   &  =\left\vert \varphi
+_{1}\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert
+\end{align}
+
+
+\subsubsection{Example $\dim\left(  \mathcal{H}^{1}\right)  =4$}
+
+We can consider as an example a space $\mathcal{H}^{1}$ that has dimension 4.
+In this case the number of different coordinates of the basis of
+$\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  $ can be displayed by the
+matrix
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccccccc}%
+\ast & 12 & 13 & 14 & 23 & 24 & 34\\
+12 & 0 & 1 & 1 & 1 & 1 & 2\\
+13 & 1 & 0 & 1 & 1 & 2 & 1\\
+14 & 1 & 1 & 0 & 2 & 1 & 1\\
+23 & 1 & 1 & 2 & 0 & 1 & 1\\
+24 & 1 & 2 & 1 & 1 & 0 & 1\\
+34 & 2 & 1 & 1 & 1 & 1 & 0
+\end{array}
+\right)
+\end{equation}
+
+
+Then
+\begin{align}
+&  \dim\left(  \mathcal{H}^{1}\right)  =r=4;\quad\dim\left(  \mathcal{H}%
+^{2}\right)  =\binom{r}{2}=\binom{4}{2}=6\nonumber\\
+&  \dim\left(  \mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  \right)
+=r^{2}=16;\quad\dim\left(  \mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)
+\right)  =\binom{r}{2}^{2}=36\nonumber\\
+&  \dim\left(  \mathcal{K}_{21}\oplus\mathcal{K}_{20}\right)  =\dim\left(
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  \right)  =16\nonumber\\
+&  \dim\left(  \mathcal{K}_{2d}\right)  =\binom{r}{2}=6\nonumber\\
+&  \dim\left(  \mathcal{K}_{21d}\right)  =r-1=3\nonumber\\
+&  \dim\left(  \mathcal{K}_{21od}\right)  =r\left(  r-1\right)  =12\nonumber\\
+&  \dim\left(  \mathcal{K}_{20}\right)  =1\nonumber\\
+&  \dim\left(  \mathcal{K}_{2}\right)  =\binom{r}{2}\left(  \binom{r}%
+{2}-1\right)  =30\nonumber\\
+&  \dim\left(  \mathcal{K}_{22}\right)  =\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{2}\right)  \right)  -\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)  \right)  =36-16=20\nonumber\\
+&  \dim\left(  \mathcal{K}_{22od}\right)  =\binom{r}{2}\binom{r-2}{2}%
++2\binom{r}{2}\left(  \frac{r-2}{2}\right)  +2\binom{r}{2}\left(  \frac
+{r-4}{2}\right) \nonumber\\
+&  =\binom{4}{2}\binom{2}{2}+2\binom{2}{2}\left(  \frac{2}{2}\right)
++2\binom{2}{2}\left(  \frac{0}{2}\right)  =6\times1+2\times6\times
+1=18\nonumber\\
+&  \dim\left(  \mathcal{K}_{22d}\right)  =\dim\left(  \mathcal{K}_{2d}\right)
+-\dim\left(  \mathcal{K}_{21d}\right)  =6-4=2
+\end{align}
+
+
+The space $\mathfrak{B}_{2}\left(  \mathbf{\varphi}^{N}\right)  \subset
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ with no coordinates in common
+has dimension
+\begin{equation}
+\binom{r}{2}\binom{r-2}{2}=\binom{4}{2}\binom{2}{2}=\left(  6\right)  \left(
+1\right)  =6
+\end{equation}
+these basis elements have the form
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left\vert \varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{2}}\right\vert ;\quad1\leq\left(  j_{1}<j_{2}\right)  \neq\left(
+k_{1}<k_{2}\right)  \leq4
+\end{equation}
+The space $\mathfrak{B}_{1}\left(  \mathbf{\varphi}^{N}\right)  \subset
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ with one difference has
+dimension
+\begin{equation}
+2\binom{r}{2}\left(  r-2\right)  =2\left(  6\right)  \left(  2\right)  =24
+\end{equation}
+these basis elements have the form
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left\vert \varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{j_{2}}\right\vert ;\quad1\leq j_{1}\neq k_{1}\leq4;\quad1\leq
+j_{2}\neq j_{1},k_{1}\leq4
+\end{equation}
+The space $\mathfrak{B}_{0}\left(  \mathbf{\varphi}^{N}\right)  \subset
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ with no differences has
+dimension%
+\begin{equation}
+\binom{r}{2}=\binom{4}{2}=6
+\end{equation}
+these basis elements have the form
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{j_{1}%
+}\right\vert \wedge\left\vert \varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{j_{2}}\right\vert ;\quad1\leq j_{1}\neq j_{2}\leq4
+\end{equation}
+The sum of the dimensions is
+\begin{equation}
+6+24+6=36
+\end{equation}
+which is the dimension of $\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  .$
+
+The space $\mathcal{K}_{22od}$ is generated by the $6$ linear independent
+elements which include the basis of $\mathfrak{B}_{2}\left(  \mathbf{\varphi
+}^{2}\right)  $
+\begin{equation}
+\mathfrak{b}_{2}\left(  \mathbf{\varphi}^{2}\right)  =\left\{  \left\vert
+\varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{3}\varphi
+_{4}\right\vert ,\left\vert \varphi_{1}\varphi_{3}\right\rangle \left\langle
+\varphi_{2}\varphi_{4}\right\vert ,\left\vert \varphi_{1}\varphi
+_{4}\right\rangle \left\langle \varphi_{2}\varphi_{3}\right\vert ,\left\vert
+\varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi_{1}\varphi
+_{4}\right\vert ,\left\vert \varphi_{2}\varphi_{4}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert ,\left\vert \varphi_{3}\varphi
+_{4}\right\rangle \left\langle \varphi_{1}\varphi_{2}\right\vert \right\}
+\end{equation}
+$\lceil$In general
+\begin{align}
+&  \left\{  \left\vert \varphi_{j_{1}k_{1}}\right)  \wedge\left\vert
+\varphi_{j_{2}k_{2}}\right)  =\left\vert \varphi_{j_{1}}\right\rangle
+\left\langle \varphi_{k_{1}}\right\vert \wedge\left\vert \varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{k_{2}}\right\vert =\left\vert
+\varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\vert \right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\left.  j_{1}\neq k_{1},k_{2};\quad j_{2}\neq
+k_{1},k_{2};\quad j_{1}<j_{2};k_{1}<k_{2}\right\}
+\end{align}
+and contains $\binom{r}{2}\times\binom{r-2}{2}$ basis elements$\rfloor$ and
+the subspace of $\mathfrak{B}_{1}\left(  \mathbf{\varphi}^{2}\right)  $
+generated by the basis
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \right)  \wedge\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{3}\right\vert
+\right. \nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{4}\right\vert
+\nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{2}\right\vert
+\nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert -\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \,\left.  \left(  \left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{2}\right\vert ,\left(  \left\vert \varphi_{3}%
+\right\rangle \left\langle \varphi_{3}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{1}\right\vert
+\right\}  \subset\mathfrak{b}_{1}\left(  \mathbf{\varphi}^{2}\right)
+\end{align}
+$\lceil$In general
+\begin{equation}
+\left(  \left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{j_{1}%
+}\right\vert -\left\vert \varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{j_{2}}\right\vert \right)  \wedge\left\vert \varphi_{j_{3}%
+}\right\rangle \left\langle \varphi_{j_{4}}\right\vert ;1\leq j_{1}<j_{2}%
+\neq\left(  j_{3}\neq j_{4}\right)
+\end{equation}
+and contains $2\binom{r}{2}\binom{r-2}{2}$ elements$\rfloor.$
+
+The space $\mathcal{K}_{22d}$ is generated by a subset of diagonal basis
+elements
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \right)  \wedge\left(  \left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  ,\right.
+\nonumber\\
+&  \left.  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert \right)  \wedge\left(  \left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \right\}
+\subset\mathfrak{b}_{0}\left(  \mathbf{\varphi}^{2}\right)
+\end{align}
+$\mathbf{\lceil}$In general
+\begin{align}
+&  \text{ }\left\{  \left(  \left\vert \varphi_{j_{1}}\right\rangle
+\left\langle \varphi_{j_{1}}\right\vert -\left\vert \varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{j_{2}}\right\vert \right)  \wedge\left(
+\left\vert \varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{3}%
+}\right\vert -\left\vert \varphi_{j_{4}}\right\rangle \left\langle
+\varphi_{j_{4}}\right\vert \right)  \right.  =\nonumber\\
+&  \,\left\vert \varphi_{j_{1}}\varphi_{j_{3}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{3}}\right\vert -\left\vert \varphi_{j_{1}}%
+\varphi_{j_{4}}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{4}%
+}\right\vert -\left\vert \varphi_{j_{2}}\varphi_{j_{3}}\right\rangle
+\left\langle \varphi_{j_{2}}\varphi_{j_{3}}\right\vert +\left\vert
+\varphi_{j_{2}}\varphi_{j_{4}}\right\rangle \left\langle \varphi_{j_{2}%
+}\varphi_{j_{4}}\right\vert \quad\left.  j_{1}\neq j_{2}\neq j_{3}\neq
+j_{4}\right\}
+\end{align}
+and contains $\binom{r}{2}^{2}-\binom{r}{2}\times\binom{r-2}{2}-r\left(
+r-1\right)  $ elements$\rfloor$ to generate $\mathcal{K}_{22d}$ which is
+evidently of dimension $2.$
+
+We can check the result of the contraction map $L_{2}^{1}$ on these elements
+by evaluating generic sample elements
+\begin{align}
+Tr\left\{  \left(  \left\vert \varphi_{1}\varphi_{3}\right\rangle \left\langle
+\varphi_{1}\varphi_{4}\right\vert -\left\vert \varphi_{2}\varphi
+_{3}\right\rangle \left\langle \varphi_{2}\varphi_{4}\right\vert \right)
+a_{j}^{\dagger}a_{k}\right\}   &  =0\quad\forall j,k\nonumber\\
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{3}\varphi_{4}\right\vert a_{j}^{\dagger}a_{k}\right\}   &
+=0\quad\forall j,k\nonumber\\
+Tr\left\{  \left(  \left\vert \varphi_{1}\varphi_{3}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert -\left\vert \varphi_{1}\varphi
+_{4}\right\rangle \left\langle \varphi_{1}\varphi_{4}\right\vert -\left\vert
+\varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi_{2}\varphi
+_{3}\right\vert +\left\vert \varphi_{2}\varphi_{4}\right\rangle \left\langle
+\varphi_{2}\varphi_{4}\right\vert \right)  a_{j}^{\dagger}a_{k}\right\}   &
+=0\quad\forall j,k
+\end{align}
+Obviously such elements $\notin\ker L_{2}^{2}$ $=\phi$ as $\left\{  Tr\left\{
+Ba_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}\right\}  \right\}  $
+are not all zero.
+
+The space $\mathcal{K}_{21od}$ of dimension $12$ is a subspace of
+$\mathfrak{B}_{1}\left(  \mathbf{\varphi}^{2}\right)  $ and is generated by
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert +\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \right)  \wedge\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{3}\right\vert
+\right. \nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{4}\right\vert
+\nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{2}\right\vert
+\nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert +\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert +\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert +\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert +\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \left.  \left(  \,\left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert +\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{2}\right\vert ,\left(  \left\vert \varphi_{3}%
+\right\rangle \left\langle \varphi_{3}\right\vert +\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{1}\right\vert
+\right\}  \subset\mathfrak{b}_{1}\left(  \mathbf{\varphi}^{2}\right)
+\end{align}
+$\mathbf{\lceil}$In general
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{j_{1}}\right\rangle \left\langle
+\varphi_{j_{1}}\right\vert +\left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{2}}\right\vert \right)  \wedge\left\vert
+\varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{4}}\right\vert \right.
+=\nonumber\\
+&  \,\left\vert \varphi_{j_{1}}\varphi_{j_{3}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{4}}\right\vert +\left\vert \varphi_{j_{2}}%
+\varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{2}}\varphi_{j_{4}%
+}\right\vert \qquad\left.  \left(  j_{1}<j_{2}\right)  \neq\left(  j_{3}\neq
+j_{4}\right)  \right\}
+\end{align}
+and contains $r\left(  r-1\right)  $ elements$\rfloor.$
+
+The space $\mathcal{K}_{21d}$ must be of dimension $r-1=3$ and has a basis
+given by
+\begin{align}
+&  \left\{  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert \right)  ,\right. \nonumber\\
+&  \,\,\nonumber\\
+&  \left.  \,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right)  \right\}  \subset\mathfrak{b}_{0}\left(
+\mathbf{\varphi}^{2}\right)
+\end{align}
+$\mathbf{\lceil}$In general
+\begin{equation}
+\left\{  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{j_{1}}\right\rangle
+\left\langle \varphi_{j_{1}}\right\vert -\left\vert \varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{j_{2}}\right\vert \right)  \right.
+=\left\vert \varphi_{1}\varphi_{j_{1}}\right\rangle \left\langle \varphi
+_{1}\varphi_{j_{1}}\right\vert -\left\vert \varphi_{1}\varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{1}\varphi_{j_{2}}\right\vert
+\qquad\left.  j_{1}\neq j_{2}\neq1\right\}
+\end{equation}
+and contains $r-1$ elements$\rfloor.$
+
+and $\dim\left(  \mathcal{K}_{20}\right)  =1$ and is spanned by
+\begin{equation}
+\left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{1}%
+\varphi_{2}\right\vert
+\end{equation}
+
+
+We can check the result of the contraction map $L_{2}^{0}$ on these elements
+by evaluating
+\begin{equation}
+Tr\left\{  B\right\}
+\end{equation}
+which gives for example
+\begin{align*}
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert \right\}   &  =0\\
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{2}\right\vert -\left\vert \varphi_{1}\varphi
+_{3}\right\rangle \left\langle \varphi_{1}\varphi_{3}\right\vert \right\}   &
+=0
+\end{align*}
+and the results of contraction map $L_{2}^{1}$ by
+\begin{equation}
+Tr\left\{  Ba_{j}^{\dagger}a_{k}\right\}
+\end{equation}
+which gives for example%
+\begin{align*}
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert a_{j}^{\dagger}a_{k}\right\}   &
+=0\quad\not \forall \,j,k\\
+Tr\left\{  \left(  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{2}\right\vert -\left\vert \varphi_{1}\varphi
+_{3}\right\rangle \left\langle \varphi_{1}\varphi_{3}\right\vert \right)
+a_{j}^{\dagger}a_{k}\right\}   &  =0\quad\not \forall \,j,k
+\end{align*}
+
+
+\subsubsection{Example of $\dim\left(  \mathcal{H}^{1}\right)  =6$}
+
+We can consider as an example a space $\mathcal{H}^{1}$ that has dimension
+$6$. In this case the number of different coordinates of the basis of
+$\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  $ can be displayed by the
+matrix
+\begin{equation}
+\left(
+\begin{array}
+[c]{cccccccccccccccc}%
+\ast & 12 & 13 & 14 & 15 & 16 & 23 & 24 & 25 & 26 & 34 & 35 & 36 & 45 & 46 &
+56\\
+12 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 2 & 2 & 2\\
+13 & 1 & 0 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 1 & 1 & 1 & 2 & 2 & 2\\
+14 & 1 & 1 & 0 & 1 & 1 & 2 & 1 & 2 & 2 & 1 & 2 & 2 & 1 & 1 & 2\\
+15 & 1 & 1 & 1 & 0 & 1 & 2 & 2 & 1 & 2 & 2 & 1 & 2 & 1 & 2 & 1\\
+16 & 1 & 1 & 1 & 1 & 0 & 2 & 2 & 2 & 1 & 2 & 2 & 1 & 2 & 1 & 1\\
+23 & 1 & 1 & 2 & 2 & 2 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 2 & 2 & 2\\
+24 & 1 & 2 & 1 & 2 & 2 & 1 & 0 & 1 & 1 & 1 & 2 & 2 & 1 & 1 & 2\\
+25 & 1 & 2 & 2 & 1 & 2 & 1 & 1 & 0 & 1 & 2 & 1 & 2 & 1 & 2 & 1\\
+26 & 1 & 2 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 2 & 2 & 1 & 2 & 1 & 1\\
+34 & 2 & 1 & 1 & 2 & 2 & 1 & 1 & 2 & 2 & 0 & 1 & 1 & 1 & 1 & 2\\
+35 & 2 & 1 & 2 & 1 & 2 & 1 & 2 & 1 & 2 & 1 & 0 & 1 & 1 & 2 & 1\\
+36 & 2 & 1 & 2 & 2 & 1 & 1 & 2 & 2 & 1 & 1 & 1 & 0 & 2 & 1 & 1\\
+45 & 2 & 2 & 1 & 1 & 2 & 2 & 1 & 1 & 2 & 1 & 1 & 2 & 0 & 1 & 1\\
+46 & 2 & 2 & 1 & 2 & 1 & 2 & 1 & 2 & 1 & 1 & 2 & 1 & 1 & 0 & 1\\
+56 & 2 & 2 & 2 & 1 & 1 & 2 & 2 & 1 & 1 & 2 & 1 & 1 & 1 & 1 & 0
+\end{array}
+\right)
+\end{equation}
+Then
+\begin{align}
+&  \dim\left(  \mathcal{H}^{2}\right)  =r=6;\quad\dim\left(  \mathcal{H}%
+^{2}\right)  =\binom{r}{2}=\binom{6}{2}=15\nonumber\\
+&  \dim\left(  \mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  \right)
+=r^{2}=36;\quad\dim\left(  \mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)
+\right)  =\binom{r}{2}^{2}=225\nonumber\\
+&  \dim\left(  \mathcal{K}_{21}\oplus\mathcal{K}_{20}\right)  =\dim\left(
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  \right)  =36\nonumber\\
+&  \dim\left(  \mathcal{K}_{21d}\right)  =5\nonumber\\
+&  \dim\left(  \mathcal{K}_{21od}\right)  =r\left(  r-1\right)  =30\nonumber\\
+&  \dim\left(  \mathcal{K}_{20}\right)  =1\nonumber\\
+&  \dim\left(  \mathcal{K}_{22}\right)  =\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{2}\right)  \right)  -\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)  \right)  =225-36=189\nonumber\\
+&  \dim\left(  \mathcal{K}_{22od}\right)  =\binom{r}{2}\binom{r-2}{2}%
++2\binom{r}{2}\left(  \frac{r-2}{2}\right)  +2\binom{r}{2}\left(  \frac
+{r-4}{2}\right) \nonumber\\
+&  =\binom{6}{2}\binom{4}{2}+2\binom{6}{2}\left(  \frac{4}{2}\right)
++2\binom{6}{2}\left(  \frac{6-4}{2}\right)  =15\times6+2\times15\times
+2+2\times15\times1=180\nonumber\\
+&  \dim\left(  \mathcal{K}_{22d}\right)  =\binom{r}{2}-\binom{r}%
+{1}=15-6=9\nonumber\\
+&  \dim\left(  \mathcal{K}_{2d}\right)  =\binom{r}{2}=15\nonumber\\
+&  \dim\left(  \mathcal{K}_{2od}\right)  =\binom{r}{2}\left(  \binom{r}%
+{2}-1\right)  =210
+\end{align}
+The space $\mathfrak{B}_{2}\left(  \mathbf{\varphi}^{N}\right)  \subset
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ with no coordinates in common
+has dimension
+\begin{equation}
+\binom{r}{2}\binom{r-2}{2}=\binom{6}{2}\binom{4}{2}=\left(  15\right)  \left(
+6\right)  =90
+\end{equation}
+these basis elements have the form
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left\vert \varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{2}}\right\vert ;\quad1\leq\left(  j_{1}<j_{2}\right)  \neq\left(
+k_{1}<k_{2}\right)  \leq6
+\end{equation}
+The space $\mathfrak{B}_{1}\left(  \mathbf{\varphi}^{N}\right)  \subset
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ with one difference has
+dimension
+\begin{equation}
+2\binom{r}{2}\left(  r-2\right)  =2\left(  15\right)  \left(  4\right)  =120
+\end{equation}
+these basis elements have the form
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left\vert \varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{j_{2}}\right\vert ;\quad1\leq j_{1}\neq k_{1}\leq6;\quad1\leq
+j_{2}\neq j_{1},k_{1}\leq6
+\end{equation}
+The space $\mathfrak{B}_{0}\left(  \mathbf{\varphi}^{N}\right)  \subset
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ with no differences has
+dimension%
+\begin{equation}
+\binom{r}{2}=\binom{6}{2}=15
+\end{equation}
+these basis elements have the form
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{j_{1}%
+}\right\vert \wedge\left\vert \varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{j_{2}}\right\vert ;\quad1\leq j_{1}\neq j_{2}\leq6
+\end{equation}
+The sum of these dimensions is
+\begin{equation}
+90+120+15=225
+\end{equation}
+which is the dimension of $\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  .$
+
+The space $\mathfrak{B}_{2}\left(  \mathbf{\varphi}^{N}\right)  \subset
+\mathcal{K}_{22}=\ker L_{2}^{1}$, while only parts of the spaces
+$\mathfrak{B}_{1}\left(  \mathbf{\varphi}^{N}\right)  $ and $\mathfrak{B}%
+_{0}\left(  \mathbf{\varphi}^{N}\right)  $ are contained in $\mathcal{K}_{22}%
+$. The space $\mathfrak{B}_{2}\left(  \mathbf{\varphi}^{N}\right)
+=\mathcal{K}_{22od}$ is generated by the $90$ linear independent elements
+(i.e. is of dimension $90)$
+\begin{equation}
+\mathfrak{b}_{2}\left(  \mathbf{\varphi}^{N}\right)  =\left\vert \varphi
+_{1}\varphi_{2}\right\rangle \left\langle \varphi_{3}\varphi_{4}\right\vert
+,\cdots\cdots\cdots,\left\vert \varphi_{3}\varphi_{4}\right\rangle
+\left\langle \varphi_{5}\varphi_{6}\right\vert
+\end{equation}
+$\lceil$In general
+\begin{align}
+&  \left\{  \left\vert \varphi_{j_{1}}\right\rangle \left\langle
+\varphi_{k_{1}}\right\vert \wedge\left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{k_{2}}\right\vert =\left\vert \varphi_{j_{1}}%
+\varphi_{j_{2}}\right\rangle \left\langle \varphi_{k_{1}}\varphi_{k_{2}%
+}\right\vert \right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+j_{1}\neq k_{1},k_{2};\quad j_{2}\neq k_{1},k_{2};\quad j_{1}<j_{2}%
+;k_{1}<k_{2}\right\}
+\end{align}
+and contains $\binom{r}{2}\binom{r-2}{2}$ basis elements$\rfloor$
+
+The part of $\mathfrak{B}_{1}\left(  \mathbf{\varphi}^{N}\right)  $ that is
+contained in $\mathcal{K}_{22od}\subset\mathcal{K}_{22}$ is formed by the
+basis elements
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left(  \left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{2}}\right\vert -\left\vert \varphi_{j_{3}%
+}\right\rangle \left\langle \varphi_{j_{3}}\right\vert \right)  ;\quad
+j_{1}\neq j_{2},j_{3};k_{1}\neq j_{2},j_{3};j_{2}<j_{3}%
+\end{equation}
+which number
+\begin{equation}
+2\binom{r}{2}\left(  \frac{r-2}{2}\right)  =2\left(  15\right)  \left(
+2\right)  =60
+\end{equation}
+The corresponding plus combinations
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left(  \left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{2}}\right\vert +\left\vert \varphi_{j_{3}%
+}\right\rangle \left\langle \varphi_{j_{3}}\right\vert \right)  ;\quad
+j_{1}\neq k_{1};j_{1}\neq j_{2},j_{3};k_{1}\neq j_{2},j_{3};j_{2}<j_{3}%
+\end{equation}
+number $60$, and some of these are also in $\mathcal{K}_{22od}\subset\ker
+L_{2}^{1}$ as can be seen by considering $\left\{  \left\vert \varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{k_{1}}\right\vert \wedge\left(
+\left\vert \varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{2}%
+}\right\vert +\left\vert \varphi_{j_{3}}\right\rangle \left\langle
+\varphi_{j_{3}}\right\vert \right)  \right\}  $ for a fixed $\left(
+j_{1},k_{1}\right)  ,$ which number $\left(  \frac{r-2}{2}\right)  =2.$ As
+both of these map to $\left\vert \varphi_{j_{1}}\right\rangle \left\langle
+\varphi_{k_{1}}\right\vert $ we can form $\pm$ combinations
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left(  \left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{2}}\right\vert +\left\vert \varphi_{j_{3}%
+}\right\rangle \left\langle \varphi_{j_{3}}\right\vert \right)  \pm\left\vert
+\varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}}\right\vert
+\wedge\left(  \left\vert \varphi_{j_{4}}\right\rangle \left\langle
+\varphi_{j_{4}}\right\vert +\left\vert \varphi_{j_{5}}\right\rangle
+\left\langle \varphi_{j_{5}}\right\vert \right)
+\end{equation}
+with one combination being in $\ker L_{2}^{1}$ and one being in its compliment
+$\left(  \ker L_{2}^{1}\right)  ^{c}.$ The combinations%
+\begin{align}
+&  \left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left(  \left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{2}}\right\vert +\left\vert \varphi_{j_{3}%
+}\right\rangle \left\langle \varphi_{j_{3}}\right\vert \right)  -\left\vert
+\varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}}\right\vert
+\wedge\left(  \left\vert \varphi_{j_{4}}\right\rangle \left\langle
+\varphi_{j_{4}}\right\vert +\left\vert \varphi_{j_{5}}\right\rangle
+\left\langle \varphi_{j_{5}}\right\vert \right) \nonumber\\
+&  j_{1}\neq k_{1};j_{1}\neq j_{2},j_{3};k_{1}\neq j_{2},j_{3};j_{2}%
+<j_{3};j_{1}\neq k_{1};j_{1}\neq j_{4},j_{5};k_{1}\neq j_{4},j_{5};j_{4}<j_{5}%
+\end{align}
+are in $\mathcal{K}_{22od}\subset\ker L_{2}^{1}$ and number%
+\begin{equation}
+\binom{r}{2}\left(  \frac{r-2}{2}\right)  =30
+\end{equation}
+hence $\dim\mathcal{K}_{22od}=90+60+30=180.$ The plus combinations are in
+$\left(  \ker L_{2}^{1}\right)  ^{c}$ and produce $\mathcal{K}_{1od}$ which is
+of dimension $30$. The dimension of the space with a fixed $\left(
+j_{1},k_{1}\right)  $ generated by
+\begin{equation}
+\left\vert \varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}%
+}\right\vert \wedge\left(  \left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{2}}\right\vert +\left\vert \varphi_{j_{3}%
+}\right\rangle \left\langle \varphi_{j_{3}}\right\vert \right)  ;\quad
+j_{1}\neq k_{1};j_{1}\neq j_{2},j_{3};k_{1}\neq j_{2},j_{3};j_{2}<j_{3}%
+\end{equation}
+belonging to $\ker L_{2}^{1}$ is $\left(  \frac{r-2}{2}\right)  -1=\left(
+\frac{r-4}{2}\right)  $ and the dimension of the space generated by all such
+elements is given by
+\begin{equation}
+2\binom{r}{2}\left(  \frac{r-4}{2}\right)  =2\left(  15\right)  \left(
+1\right)  =30
+\end{equation}
+
+
+The space $\mathcal{K}_{22d}$ is generated by elements of the type
+\begin{align}
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  \wedge\left(  \left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert -\left\vert \varphi_{4}\right\rangle
+\left\langle \varphi_{4}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{1}\varphi_{3}\right\rangle
+\left\langle \varphi_{1}\varphi_{3}\right\vert -\left\vert \varphi_{1}%
+\varphi_{4}\right\rangle \left\langle \varphi_{1}\varphi_{4}\right\vert
+-\left\vert \varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi
+_{2}\varphi_{3}\right\vert +\left\vert \varphi_{2}\varphi_{4}\right\rangle
+\left\langle \varphi_{2}\varphi_{4}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  \wedge\left(  \left\vert \varphi_{5}\right\rangle
+\left\langle \varphi_{5}\right\vert -\left\vert \varphi_{6}\right\rangle
+\left\langle \varphi_{6}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{1}\varphi_{5}\right\rangle
+\left\langle \varphi_{1}\varphi_{5}\right\vert -\left\vert \varphi_{1}%
+\varphi_{6}\right\rangle \left\langle \varphi_{1}\varphi_{6}\right\vert
+-\left\vert \varphi_{2}\varphi_{5}\right\rangle \left\langle \varphi
+_{2}\varphi_{5}\right\vert +\left\vert \varphi_{2}\varphi_{6}\right\rangle
+\left\langle \varphi_{2}\varphi_{6}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left(  \left\vert \varphi_{5}\right\rangle
+\left\langle \varphi_{5}\right\vert -\left\vert \varphi_{6}\right\rangle
+\left\langle \varphi_{6}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{3}\varphi_{5}\right\rangle
+\left\langle \varphi_{3}\varphi_{5}\right\vert -\left\vert \varphi_{3}%
+\varphi_{6}\right\rangle \left\langle \varphi_{3}\varphi_{6}\right\vert
+-\left\vert \varphi_{4}\varphi_{5}\right\rangle \left\langle \varphi
+_{4}\varphi_{5}\right\vert +\left\vert \varphi_{4}\varphi_{6}\right\rangle
+\left\langle \varphi_{4}\varphi_{6}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left(  \left\vert \varphi_{4}\right\rangle
+\left\langle \varphi_{4}\right\vert -\left\vert \varphi_{5}\right\rangle
+\left\langle \varphi_{5}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{3}\varphi_{5}\right\rangle
+\left\langle \varphi_{3}\varphi_{5}\right\vert -\left\vert \varphi_{3}%
+\varphi_{4}\right\rangle \left\langle \varphi_{3}\varphi_{4}\right\vert
+-\left\vert \varphi_{4}\varphi_{5}\right\rangle \left\langle \varphi
+_{4}\varphi_{5}\right\vert +\left\vert \varphi_{2}\varphi_{4}\right\rangle
+\left\langle \varphi_{2}\varphi_{4}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left(  \left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{1}\right\vert -\left\vert \varphi_{6}\right\rangle
+\left\langle \varphi_{6}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert -\left\vert \varphi_{1}%
+\varphi_{3}\right\rangle \left\langle \varphi_{1}\varphi_{3}\right\vert
+-\left\vert \varphi_{2}\varphi_{6}\right\rangle \left\langle \varphi
+_{2}\varphi_{6}\right\vert +\left\vert \varphi_{3}\varphi_{6}\right\rangle
+\left\langle \varphi_{3}\varphi_{6}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{6}\right\rangle \left\langle \varphi
+_{6}\right\vert \right)  \wedge\left(  \left\vert \varphi_{4}\right\rangle
+\left\langle \varphi_{4}\right\vert -\left\vert \varphi_{5}\right\rangle
+\left\langle \varphi_{5}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{1}\varphi_{4}\right\rangle
+\left\langle \varphi_{1}\varphi_{4}\right\vert -\left\vert \varphi_{1}%
+\varphi_{5}\right\rangle \left\langle \varphi_{1}\varphi_{5}\right\vert
+-\left\vert \varphi_{4}\varphi_{6}\right\rangle \left\langle \varphi
+_{4}\varphi_{6}\right\vert +\left\vert \varphi_{5}\varphi_{6}\right\rangle
+\left\langle \varphi_{5}\varphi_{6}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left(  \left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{2}\right\vert -\left\vert \varphi_{4}\right\rangle
+\left\langle \varphi_{4}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert -\left\vert \varphi_{1}%
+\varphi_{4}\right\rangle \left\langle \varphi_{1}\varphi_{4}\right\vert
+-\left\vert \varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi
+_{2}\varphi_{3}\right\vert +\left\vert \varphi_{3}\varphi_{4}\right\rangle
+\left\langle \varphi_{3}\varphi_{4}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left(  \left\vert \varphi_{4}\right\rangle
+\left\langle \varphi_{4}\right\vert -\left\vert \varphi_{6}\right\rangle
+\left\langle \varphi_{6}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{1}\varphi_{4}\right\rangle
+\left\langle \varphi_{1}\varphi_{4}\right\vert -\left\vert \varphi_{1}%
+\varphi_{6}\right\rangle \left\langle \varphi_{1}\varphi_{6}\right\vert
+-\left\vert \varphi_{3}\varphi_{4}\right\rangle \left\langle \varphi
+_{3}\varphi_{4}\right\vert +\left\vert \varphi_{3}\varphi_{6}\right\rangle
+\left\langle \varphi_{3}\varphi_{6}\right\vert \nonumber\\
+&  \left(  \left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left(  \left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert -\left\vert \varphi_{5}\right\rangle
+\left\langle \varphi_{5}\right\vert \right) \nonumber\\
+&  \qquad\qquad\qquad=\left\vert \varphi_{2}\varphi_{3}\right\rangle
+\left\langle \varphi_{2}\varphi_{3}\right\vert -\left\vert \varphi_{2}%
+\varphi_{5}\right\rangle \left\langle \varphi_{2}\varphi_{5}\right\vert
+-\left\vert \varphi_{3}\varphi_{4}\right\rangle \left\langle \varphi
+_{3}\varphi_{4}\right\vert +\left\vert \varphi_{4}\varphi_{5}\right\rangle
+\left\langle \varphi_{4}\varphi_{5}\right\vert
+\end{align}
+contains $9$
+
+The space $\mathcal{K}_{21od}$ of dimension $30$ is generated by
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert +\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \right)  \wedge\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{3}\right\vert
+\right. \nonumber\\
+&  \left.  \left(  \,\left\vert \varphi_{5}\right\rangle \left\langle
+\varphi_{5}\right\vert +\left\vert \varphi_{6}\right\rangle \left\langle
+\varphi_{6}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{2}\right\vert ,\left(  \left\vert \varphi_{5}%
+\right\rangle \left\langle \varphi_{5}\right\vert +\left\vert \varphi
+_{6}\right\rangle \left\langle \varphi_{6}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{1}\right\vert
+\right\}  \subset\mathfrak{b}_{1}\left(  \mathbf{\varphi}^{N}\right)
+\end{align}
+$\mathbf{\lceil}$In general
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{j_{1}}\right\rangle \left\langle
+\varphi_{j_{1}}\right\vert +\left\vert \varphi_{j_{2}}\right\rangle
+\left\langle \varphi_{j_{2}}\right\vert \right)  \wedge\left\vert
+\varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{4}}\right\vert \right.
+=\nonumber\\
+&  \,\left\vert \varphi_{j_{1}}\varphi_{j_{3}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{4}}\right\vert +\left\vert \varphi_{j_{2}}%
+\varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{2}}\varphi_{j_{4}%
+}\right\vert \qquad\left.  \left(  j_{1}<j_{2}\right)  \neq\left(  j_{3}\neq
+j_{4}\right)  \right\}
+\end{align}
+and contains $r\left(  r-1\right)  $ elements$\rfloor.$
+
+The space $\mathcal{K}_{21d}$ of dimension $5$ is generated by%
+\begin{align}
+&  \left\{  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert \right)  ,\right. \nonumber\\
+&  \,\,\,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right) \nonumber\\
+&  \,\left\vert \varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert
+\wedge\left(  \left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert -\left\vert \varphi_{5}\right\rangle \left\langle \varphi
+_{5}\right\vert \right) \nonumber\\
+& \nonumber\\
+&  \left.  \,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{5}\right\rangle \left\langle
+\varphi_{5}\right\vert -\left\vert \varphi_{6}\right\rangle \left\langle
+\varphi_{6}\right\vert \right)  \right\}  \subset\mathfrak{b}_{0}\left(
+\mathbf{\varphi}^{N}\right)
+\end{align}
+
+
+The space $\mathcal{K}_{20}$ of dimension $1$ is spanned by
+\begin{equation}
+\left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{1}%
+\varphi_{2}\right\vert =\left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert \wedge\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \in\mathfrak{b}_{2}\left(  \mathbf{\varphi}^{N}\right)
+\end{equation}
+
+
+
+\end{document}

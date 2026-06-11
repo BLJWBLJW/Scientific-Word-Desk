@@ -1,0 +1,181 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, December 20, 2002 11:44:01}
+%TCIDATA{LastRevised=Friday, December 20, 2002 17:28:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Transition Amplitudes and Expectation Values wrt IPSs}
+
+We will need to calculate expectation values and transition amplitudes between
+IPS\ composed of non orthogonal 1-particle states, we will follow the
+presentation found in "On the Evaluation of Nonorthogonal Matrix
+Elements\textit{" }by Jacob Verbeek and J.H. van Lenthe THEOCHEM 1990.
+Consider two IPSs $\left\vert \Psi\right\rangle $ and $\left\vert
+\Phi\right\rangle $ composed of nonorthogonal general spin orbitals $\left\{
+\psi_{j}|1\leq j\leq N\right\}  $ and $\left\{  \varphi_{j}|1\leq j\leq
+N\right\}  $ and the transition amplitude
+\begin{equation}
+\left\langle \Psi|H\Phi\right\rangle
+\end{equation}
+where the Hamiltonian is a sum of one and two particle operators
+\begin{equation}
+H=%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+h\left(  j\right)  +\frac{1}{2}%
+%TCIMACRO{\dsum \limits_{1\leq j\neq k\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\neq k\leq N}}
+%EndExpansion
+g\left(  j,k\right)
+\end{equation}
+
+
+The transition amplitude of the $1$-particle part is given by
+\begin{equation}
+\left\langle \Psi\left\vert
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+h\left(  j\right)  \right.  \Phi\right\rangle =Tr\left\{  \mathbf{h}%
+\operatorname{adj}\left(  \mathbf{S}\right)  \right\}
+\end{equation}
+where the matrix $\mathbf{h}$ has matrix elements $\left\{  h_{jk}|1\leq
+j,k\leq N\right\}  $ given by
+\begin{equation}
+h_{jk}=\left\langle \psi_{j}|h\left(  1\right)  \varphi_{k}\right\rangle =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\psi_{j}\left(  \mathsf{z}\right)  ^{\ast}h\left(  \mathsf{z,z}^{\prime
+}\right)  \varphi_{k}\left(  \mathsf{z}^{\prime}\right)  d\mathsf{z}%
+d\mathsf{z}^{\prime}%
+\end{equation}
+and the classical $N\times N$ adjugate matrix $\operatorname{adj}\left(
+\mathbf{S}\right)  $ of the overlap matrix $\mathbf{S\equiv}\left\{
+\left\langle \psi_{j}|\varphi_{k}\right\rangle |1\leq j,k\leq N\right\}  $ is
+defined by
+\begin{equation}
+\left(  \operatorname{adj}\left(  \mathbf{S}\right)  \right)  _{jk}=\left(
+-1\right)  ^{j+k}\det\left(  \mathbf{S}\left[  k|j\right]  \right)
+\end{equation}
+where $\mathbf{S}\left[  k|j\right]  $ is the $\left(  N-1\right)  \times$
+$\left(  N-1\right)  $ matrix obtained from $\mathbf{S}$ by deleting the row
+$k$ and the column $j$.
+
+The transition amplitude of the $2$-particle part is given by
+\begin{equation}
+\left\langle \Psi\left\vert \frac{1}{2}%
+%TCIMACRO{\dsum \limits_{1\leq j\neq k\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\neq k\leq N}}
+%EndExpansion
+g\left(  j,k\right)  \right.  \Phi\right\rangle =Tr\left\{  \mathbf{G}%
+\operatorname{adj}^{\left(  2\right)  }\left(  \mathbf{S}\right)  \right\}
+\end{equation}
+where the matrix $\mathbf{G}$ has matrix elements $\left\{  g_{jklm}|1\leq
+j<k\leq N;1\leq l<m\leq N\right\}  $ given by
+\begin{align}
+g_{jklm}  & =\left\langle \psi_{j}\psi_{k}|g\left(  j,k\right)  \varphi
+_{l}\varphi_{m}\right\rangle \nonumber\\
+& =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \psi_{j}\left(  \mathsf{z}_{1}\right)  ^{\ast}\psi_{k}\left(
+\mathsf{z}_{2}\right)  ^{\ast}g\left(  \mathsf{z}_{1}\mathsf{,\mathsf{z}%
+_{2},\mathsf{z}_{1}^{\prime},z}_{2}^{\prime}\right)  \varphi_{l}\left(
+\mathsf{z}_{1}^{\prime}\right)  \varphi_{m}\left(  \mathsf{z}_{2}^{\prime
+}\right)  \right.  \nonumber\\
+& \left.  -\psi_{j}\left(  \mathsf{z}_{1}\right)  ^{\ast}\psi_{k}\left(
+\mathsf{z}_{2}\right)  ^{\ast}g\left(  \mathsf{z}_{1}\mathsf{,\mathsf{z}%
+_{2},\mathsf{z}_{1}^{\prime},z}_{2}^{\prime}\right)  \varphi_{m}\left(
+\mathsf{z}_{1}^{\prime}\right)  \varphi_{l}\left(  \mathsf{z}_{2}^{\prime
+}\right)  \right\}  d\mathsf{z}^{2}d\mathsf{z}^{\prime2}%
+\end{align}
+and the second order $\binom{N}{2}\times$ $\binom{N}{2}$ adjugate matrix
+$\operatorname{adj}^{\left(  2\right)  }\left(  \mathbf{S}\right)  $ is
+defined by
+\begin{equation}
+\left(  \operatorname{adj}^{\left(  2\right)  }\left(  \mathbf{S}\right)
+\right)  _{jklm}=\left(  -1\right)  ^{j+k}\det\left(  \mathbf{S}\left[
+lm|jk\right]  \right)
+\end{equation}
+where
+
+$\mathbf{S}\left[  lm|jk\right]  $ is the $\left(  N-2\right)  \times\left(
+N-2\right)  $ matrix obtained from $\mathbf{S}$ by deleting the rows $l,m$ and
+the column $j,k$.
+
+
+
+
+\end{document}

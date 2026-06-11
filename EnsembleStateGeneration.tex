@@ -1,0 +1,232 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Saturday, February 08, 2003 11:29:37}
+%TCIDATA{LastRevised=Saturday, February 08, 2003 11:37:21}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\subsection{Ensemble State Generation}
+
+From the preceding we have that $L_{\infty}\left(  \mathsf{Z}^{N}\right)  $
+acting on an $a.e.$ nonzero amplitude produces all (unnormalized) pure states,
+the question thus arrises on whether $L_{\infty}\left(  \mathsf{Z}^{N}\right)
+$ can produce \emph{all} unnormalized states by acting on an a $a.e.$ nonzero
+positive kernel $D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  $
+of a density operator $\in\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)  $ in
+the following manner%
+\begin{equation}
+D\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  =T\left(  \mathsf{z}%
+^{N}\right)  D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+T\left(  \mathsf{z}^{\prime N}\right)  ^{\ast}%
+\end{equation}
+One can start by examining the diagonal elements to obtain
+\begin{align}
+D\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)   &  =\left\vert T\left(
+\mathsf{z}^{N}\right)  \right\vert ^{2}D_{ref}\left(  \mathsf{z}%
+^{N},\mathsf{z}^{N}\right) \nonumber\\
+&  \Rightarrow\left\vert T\left(  \mathsf{z}^{N}\right)  \right\vert =\left\{
+%
+\begin{array}
+[c]{c}%
+\left(  \frac{D\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  }{D_{ref}\left(
+\mathsf{z}^{N},\mathsf{z}^{N}\right)  }\right)  ^{\frac{1}{2}};\quad\text{when
+}D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  \neq0\\
+\qquad\qquad0;\qquad\qquad\text{when }D_{ref}\left(  \mathsf{z}^{N}%
+,\mathsf{z}^{N}\right)  =0\text{ }%
+\end{array}
+\right.  \text{ }%
+\end{align}
+which is well defined $a.e.$ The off diagonal elements will "determine" the
+phase of the transformation $T\left(  \mathsf{z}^{N}\right)  =\left\vert
+T\left(  \mathsf{z}^{N}\right)  \right\vert e^{i\theta\left(  \mathsf{z}%
+^{N}\right)  }$ by
+\begin{align}
+D\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)   &  =\left\vert T\left(
+\mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime N}\right)  \right\vert
+e^{i\left(  \theta\left(  \mathsf{z}^{N}\right)  -\theta\left(  \mathsf{z}%
+^{\prime N}\right)  \right)  }D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right) \nonumber\\
+&  \Rightarrow e^{i\left(  \theta\left(  \mathsf{z}^{N}\right)  -\theta\left(
+\mathsf{z}^{\prime N}\right)  \right)  }=\frac{D\left(  \mathsf{z}%
+^{N},\mathsf{z}^{\prime N}\right)  }{D_{ref}\left(  \mathsf{z}^{N}%
+,\mathsf{z}^{\prime N}\right)  \left\vert T\left(  \mathsf{z}^{N}\right)
+T\left(  \mathsf{z}^{\prime N}\right)  \right\vert }%
+\end{align}
+which is well defined as long as
+\begin{equation}
+\left\vert T\left(  \mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime
+N}\right)  \right\vert =0\Leftrightarrow D\left(  \mathsf{z}^{N}%
+,\mathsf{z}^{\prime N}\right)  =0
+\end{equation}
+which means that
+\begin{equation}
+D\left(  \mathsf{z}^{\prime N},\mathsf{z}^{\prime N}\right)  =0\text{ or
+}D\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  =0\Rightarrow D\left(
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  =0
+\end{equation}
+when $\breve{D}\geq0$. First we see if is true for proper vectors $\left\vert
+\mathsf{v}^{N}\right\rangle =\left\vert \mathsf{v}_{1}\cdots\mathsf{v}%
+_{N}\right\rangle $, in that case
+\begin{align}
+D\left(  \mathsf{v}^{N},\mathsf{v}^{N}\right)   &  =\left\langle
+\mathsf{v}^{N}|\breve{D}\mathsf{v}^{N}\right\rangle =\left\langle
+\mathsf{v}^{N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{v}^{N}\right\rangle
+=0\nonumber\\
+&  \Rightarrow\breve{Q}\left\vert \mathsf{v}^{N}\right\rangle =0 \label{c1}%
+\end{align}
+and
+\begin{align}
+D\left(  \mathsf{v}^{\prime N},\mathsf{v}^{\prime N}\right)   &  =\left\langle
+\mathsf{v}^{\prime N}|\breve{D}\mathsf{v}^{\prime N}\right\rangle
+=\left\langle \mathsf{v}^{\prime N}|\breve{Q}^{\dagger}\breve{Q}%
+\mathsf{v}^{\prime N}\right\rangle =0\nonumber\\
+&  \Rightarrow\breve{Q}\left\vert \mathsf{v}^{\prime N}\right\rangle =0
+\label{c2}%
+\end{align}
+so either condition eq. $\left(  \ref{c1}\right)  $ or eq. $\left(
+\ref{c2}\right)  $ clearly implies that
+\begin{equation}
+\left\langle \mathsf{v}^{N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{v}^{\prime
+N}\right\rangle =D\left(  \mathsf{v}^{N},\mathsf{v}^{\prime N}\right)  =0
+\end{equation}
+To see if this true for the generalized basis we must see if
+\begin{equation}
+\left\langle \mathsf{z}^{N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{z}%
+^{N}\right\rangle =0\Rightarrow\breve{Q}\left\vert \mathsf{z}^{N}\right\rangle
+=0
+\end{equation}
+is true in a rigged Hilbert space \cite{Bohm78}, which we show to be true in
+Appendix \ref{rigged}. Thus we have that
+\begin{equation}
+\left\vert T\left(  \mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime
+N}\right)  \right\vert =0\Leftrightarrow D\left(  \mathsf{z}^{N}%
+,\mathsf{z}^{\prime N}\right)  =0\text{ if }\breve{D}\geq0
+\end{equation}
+and we can hence define phase differences as
+\begin{equation}
+e^{i\left(  \theta\left(  \mathsf{z}^{N}\right)  -\theta\left(  \mathsf{z}%
+^{\prime N}\right)  \right)  }=\left\{
+\begin{array}
+[c]{c}%
+\frac{D\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  }{D_{ref}\left(
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \left\vert T\left(
+\mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime N}\right)  \right\vert
+};\left\vert T\left(  \mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime
+N}\right)  \right\vert \neq0,D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right)  \neq0\\
+\text{\qquad\qquad}0\qquad\text{\qquad};\text{\qquad otherwise\qquad
+\qquad\qquad\qquad\qquad}%
+\end{array}
+\right.
+\end{equation}
+which is sufficient to define the transformation $\breve{D}_{ref}%
+\rightarrow\breve{D}$ \emph{for any }$\breve{D}$ as long as $D_{ref}\left(
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \neq0\,a.e.$
+
+The transformations $\hat{T}$ can either decrease or leave invariant the rank
+of $\breve{D}^{N}$, thus only if $\breve{D}_{ref}$ has maximal rank will all
+density operators be generated by such transformations ($\breve{D}_{ref}$ need
+not be a density operator associated with a fixed number of particles, all
+that is needed is that $\breve{D}_{ref}$ $\in\mathcal{B}_{1+}\left(
+\mathcal{H}^{N}\right)  $ with maximal rank and thus could be any density
+operator, including ones describing indeterminate number of particles.)
+
+\section{Rigged Hilbert Spaces\label{rigged}}
+
+Rigging a Hilbert space allows one to introduce and use generalized bases in a
+mathematical rigorous fashion. Rigged Hilbert spaces are bracketed by a dual
+pair of Banach spaces $\mathcal{V}_{L}\supset\mathcal{H\supset}\mathcal{V}%
+_{S}$ so that $\mathcal{H}$ and $\mathcal{V}_{S}.$can be naturally embedded in
+$\mathcal{V}_{L}.$ The space $\mathcal{V}_{S}$ is dense in $\mathcal{H}$ wrt
+to the Hilbert space norm, while both $\mathcal{H}$ and $\mathcal{V}_{S}$ are
+dense in $\mathcal{V}_{L}$ wrt the norm of $\mathcal{V}_{L}$. The elements of
+a generalized bases $\left\{  \left\vert \mathsf{z}\right\rangle \right\}  $
+belong to and generate $\mathcal{V}_{L},$ but they do not belong to
+$\mathcal{H}$. The action of an operator $\breve{Q}\in\mathcal{B}\left(
+\mathcal{H}\right)  $ on $\mathcal{V}_{L}$ is given by
+\begin{equation}
+\left(  \breve{Q}\mathsf{z}|\varphi\right)  =\left(  \mathsf{z}|\breve
+{Q}^{\dagger}\varphi\right)  \quad\forall\left\vert \varphi\right\rangle
+\in\mathcal{V}_{S}%
+\end{equation}
+where $\breve{Q}^{\dagger}$ is the Hilbert space adjoint of $\breve{Q}$ (which
+is well defined as $\breve{Q}$ is a bounded operator), where $\left(
+|\right)  $ is the scalar product between $\mathcal{V}_{L}$ and $\mathcal{V}%
+_{S}$. Hence one can observe that $\breve{Q}\left\vert \mathsf{z}\right\rangle
+=0$ means
+\begin{equation}
+\left(  \mathsf{z}|\breve{Q}^{\dagger}\varphi\right)  =0\,\forall\left\vert
+\varphi\right\rangle \in\mathcal{V}_{S}%
+\end{equation}
+i.e. $\breve{Q}^{\dagger}\left\vert \varphi\right\rangle =0$ which implies
+that $\breve{Q}^{\ddagger}\left\vert \mathsf{z}\right\rangle $ is the zero
+vector in $\mathcal{V}_{L}$. Thus $\left\langle \mathsf{z}^{N}|\breve
+{Q}^{\dagger}\breve{Q}\mathsf{z}^{N}\right\rangle =0$ or $\left\langle
+\mathsf{z}^{\prime N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{z}^{\prime
+N}\right\rangle =0\Rightarrow\left\langle \mathsf{z}^{\prime N}|\breve
+{Q}^{\dagger}\breve{Q}\mathsf{z}^{N}\right\rangle =0.$
+
+
+\end{document}

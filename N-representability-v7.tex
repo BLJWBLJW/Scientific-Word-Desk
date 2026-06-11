@@ -1,0 +1,979 @@
+% the N in N-representability problem
+% number of modes (number of single particle wavefunctions, local dimension)
+% the number of particles
+%\def\electron{fermion }
+%\def\electrons{fermions }
+
+
+\documentclass[aps,prl,showpacs,superscriptaddress,floatfix,twocolumn]{revtex4}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Friday, November 15, 2024 12:39:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bma}{\begin{subequations}}
+\newcommand{\ema}{\end{subequations}}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\Tr}{tr}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\set}[1]{\lbrace #1 \rbrace}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\SSS}{\mathcal{S}}
+\def\N{N}
+\def\m{d}
+\def\n{N}
+\input{tcilatex}
+
+\begin{document}
+
+\title{$N$-representability is QMA-complete}
+\author{Yi-Kai \surname{Liu}}
+\affiliation{Computer Science and Engineering, University of California, San Diego, US}
+\author{Matthias \surname{Christandl}}
+\affiliation{Centre for Quantum Computation, Centre for Mathematical Sciences, DAMTP,
+University of Cambridge, Wilberforce Road, Cambridge CB3 0WA, United Kingdom}
+\author{F. \surname{Verstraete}}
+\affiliation{Institute for Quantum Information, Caltech, Pasadena, US}
+\affiliation{Facult\"at f\"ur Physik, Universit\"at Wien, Boltzmanngasse 5, A-1090 Wien,
+Austria}
+\pacs{03.67.–a, 31.25.-v}
+\date{\today}
+
+\begin{abstract}
+%We show that the $\N$-representability problem, a central object of study in the field of quantum chemistry, is
+%QMA-complete and hence NP-hard.
+We study the computational complexity of the $N$-representability problem in
+quantum chemistry. We show that this problem is QMA-complete, which is the
+quantum generalization of NP-complete. Our proof uses a simple mapping from
+spin systems to fermionic systems, as well as a convex optimization
+technique that reduces the problem of finding ground states to $N$%
+-representability. 
+%In addition, we show that pure-state $\N$-representability is in QMA,
+%and thus is no harder than the standard $\N$-representability problem.
+\end{abstract}
+
+\maketitle
+
+The central theoretical problem in the field of many-body strongly
+correlated quantum systems is to find efficient ways of simulating
+Schr\"odinger's equations: it is very easy to write down those equations,
+but notoriously difficult to solve them or even to find approximate
+solutions. The main difficulty is the fact that the dimension of the Hilbert
+space describing a system of $N$ quantum particles scales exponentially in $N
+$. This makes a direct numerical simulation intractable: every time an extra
+particle is added to the system, the computational resources would have to
+be doubled.
+
+The situation is not hopeless, however, as in principle it could be that all
+physical wavefunctions, i.e., the ones that are realized in nature, have
+very special properties and can be parameterized in an efficient way. The
+idea would then be to propose a variational class of wavefunctions that
+capture the physics of the systems of interest, and then do an optimization
+over this restricted class. This approach has proven to be very successful,
+as witnessed by mean field theory and renormalization group methods. So far,
+an efficient variational class to describe complex wavefunctions such as
+those arising in quantum chemistry has not been found.
+
+One of the basic problems in quantum chemistry is to find the ground state
+of a Hamiltonian describing the many-body system of an atom or molecule. The
+essential element that makes typical Hamiltonians very ungeneric is the fact
+that at most 2-body interactions occur. This implies that the number of free
+parameters in such Hamiltonians scales at most quadratically in the number
+of particles or modes, and hence the ground states of all such systems form
+a small-dimensional manifold.
+
+In the case of a Hamiltonian with only 2-body interactions, the energy
+corresponding to a wavefunction is completely determined by its 2-body
+correlation functions, and as a consequence the ground state will be the one
+with extremal 2-body reduced density operators. This fact was realized a
+long time ago, and led Coulson \cite{Coulson} to propose the following
+problem: given a set of $N$ quantum particles, can we characterize the
+allowed sets of 2-body correlations or density operators between all pairs
+of particles?
+
+If the particles under consideration are fermions, this has been called the 
+\textit{$N$-representability problem}~\cite{Coleman}. 
+%In the case of fermions, the complete $\N$-body wavefunction can
+%always be written as a linear combination of Slater determinants,
+%and one is interested in the reduced density operators acting on
+%pairs of fermions.
+Here, we consider the reduced density operators acting on pairs of fermions,
+and we want to decide whether they are consistent with some global state
+over $N$ fermions. %A variant of this problem is
+%\textit{pure-state} $\N$-representability, where we impose an
+%additional requirement that the $\N$ fermions must be in a pure
+%state; this problem seems more complicated, because the set of
+%feasible reduced density operators is no longer convex.
+
+An efficient solution to the $N$-representability problem would be a huge
+breakthrough, as it would (for example) allow us to calculate the binding
+energies of all molecules. Therefore, a very large effort has been devoted
+to solving this problem and there exists a large literature on this subject
+(see e.g. \cite{book1,book,Mazziotti}).
+
+Here we will show that the $N$-representability problem is intractable, as
+it is QMA-complete and hence NP-hard. The complexity class QMA (Quantum
+Merlin-Arthur) is the natural generalization of the class NP
+(nondeterministic polynomial time) to the setting of quantum computing. 
+%it was introduced by Kitaev \cite{Kitaev}. %We will also
+%show that pure-state $\N$-representability is in QMA, and thus is no
+%harder than the standard version of the problem.
+Colloquially, a problem is in QMA if there exists an efficient quantum
+algorithm that, when given a possible solution to the problem, can verify
+whether it is correct; here the ``solution'' may be a quantum state on
+polynomially many qubits~\footnote{%
+Technically, the problem must be formulated as a yes-or-no question, e.g.,
+``for a given Hamiltonian $H$, is the ground state energy less than $\gamma$%
+?'' If the answer is yes, there exists a ``witness'' (e.g., the ground
+state) which can prove it. Moreover, there is an efficient algorithm that
+can check the validity of a witness.}. A problem is QMA-hard if it is at
+least as hard as any other problem in QMA; that is, given an efficient
+algorithm for this problem, one could solve every other problem in QMA
+efficiently~\footnote{%
+This includes search and optimization problems, e.g., ``find the ground
+state energy of $H$.'' These problems may be QMA-hard, even though they are
+not phrased as yes-or-no questions.}. We say that a problem is QMA-complete
+if it is in QMA and it is also QMA-hard.
+
+In a seminal work, Kitaev \cite{Kitaev} 
+%quantized the proof of Levin and Cook where they showed that 3-SAT is NP-complete and
+proved that the Local Hamiltonian problem---determining the ground state
+energy of a spin Hamiltonian that is a sum of 5-body terms (on $n$ qubits),
+with accuracy $\pm \varepsilon$ where $\varepsilon$ is inverse polynomial in 
+$n$---is QMA-complete. In fact, it was later shown that this problem remains
+QMA-complete when restricted to 2-body interactions \cite{Kempe1,Kempe2},
+and even in the case of geometrically local interactions \cite{Terhal}.
+
+Because the Hamiltonians under consideration are local, the corresponding
+ground states have extremal local properties. The dual problem of
+determining the ground state energy of a local Hamiltonian is to decide
+whether a given set of local density operators can be realized as the
+reduced density operators of the same global state. Checking the consistency
+of such a set of local density operators $\rho^{(ij)}$, i.e., checking
+whether there exists a global state $\sigma$ compatible with those local
+density operators, is a QMA-complete problem itself \cite{Yi-Kai}. In the
+present paper, we will use very similar techniques to prove that $N$%
+-representability, which is the fermionic version of that problem, is also
+QMA-complete.
+
+To sketch the main ideas of the proof, we will first consider the classical
+marginal problem: %given a probability distribution
+%over $\N$ discrete variables that can take the values $\pm 1$, determine the extreme points of all the 2-point
+%marginal distributions
+%\[p(a_i,a_j)=\sum_{k_1,...k_{i-1},k_{i+1},...k_{j-1},k_{j+1},...}p\left(a_{k_1},a_{k_2},...\right).\]
+suppose we have $N$ random variables that can take the values $\pm 1$,
+according to some joint probability distribution, and we define the
+2-variable marginal distributions 
+\[
+p(a_i,a_j) = \sum_{a_1,...,a_{i-1},a_{i+1},...,a_{j-1},a_{j+1},...,a_N}
+p(a_1,a_2,...,a_N). 
+\]
+Given a set of marginal probability distributions, we would like to check
+whether they are consistent, i.e., whether there exists a global probability
+distribution whose marginals are equal to the ones we were given.
+
+Suppose that there exists an efficient algorithm (whose running time is
+polynomial in $N$) to solve this problem. Then it would be possible to
+identify ground states of all Ising spin glasses. The strategy would be as
+follows: since the set of consistent marginals is convex and the energy is a
+linear function of the marginals, the problem amounts to minimizing a linear
+function subject to a set of convex constraints that can be checked in
+polynomial time. This can be done in polynomial time using the ellipsoid
+method \cite{GLS}. It therefore follows that an efficient algorithm for
+checking consistency allows to find ground states of Ising spin glasses, a
+problem that is known to be NP-hard \cite{Barahona}. Hence the problem of
+determining whether a set of binary marginals is consistent is itself
+NP-hard. 
+% Note: finding ground states of Ising models is not in NP because it's a search problem, not a decision problem.
+% Also, consistency of marginals is not in NP because it's not clear how to represent the global probability
+% distribution as a classical witness; however, the problem is in MA.
+
+Let us now formulate the $N$-representability problem in the context of
+quantum chemistry. Electrons and nuclei tend to arrange themselves such as
+to minimize their energy, and the binding energy of a molecule can be
+determined by calculating the minimal energy of the corresponding
+Hamiltonian. In practice, the nuclei are fairly well localized and can be
+treated as classical degrees of freedom, and the wavefunction of the $N$
+electrons can be approximated as a linear combination of tensor products of
+the $d$ single-particle modes in the system (those form the basis set).
+
+As electrons are fermionic, the complete wavefunction must be antisymmetric,
+and this is most easily taken into account by working in the formalism of
+second quantization: 
+\[
+|\psi\rangle = \sum_{{\tiny 
+\begin{array}{l}
+i_1,...,i_d=0 \\ 
+i_1+...+i_d=N%
+\end{array}%
+}}^1 c_{i_1,...,i_d} (a_1^\dagger)^{i_1}...(a_d^\dagger)^{i_d}
+|\Omega\rangle. 
+\]
+Here $a_j^\dagger$ is the creation operator for the $j$'th mode, and $%
+|\Omega\rangle$ represents the vacuum state without fermions. The creation
+and annihilation operators obey the following anticommutation relations: 
+\[
+\{a_i,a_j\} = 0 = \{a_i^\dagger,a_j^\dagger\} \hspace{1cm}
+\{a_i,a_j^\dagger\} = 2\delta_{ij}. 
+\]
+Note that we restrict ourselves to the subspace of states with exactly $N$
+fermions. $d$ denotes the number of modes, which is typically much larger
+than $N$. The number of degrees of freedom is $\binom{d}{N}$, which grows
+exponentially in $N$ when $d \geq cN$ for some constant $c>1$.
+
+In the case of quantum chemistry, the Hamiltonian typically contains only
+one- and two-body interactions between all modes, and so it can be written
+as a linear combination of terms of the form $a_i^\dagger a_j$ and $%
+a_i^\dagger a_j^\dagger a_l a_k$. 
+%and the energy is therefore a linear combination of terms
+%\bea \rho^{(1)}_{ij}&\equiv&\langle\psi|a_i^\dagger a_j|\psi\rangle\\
+%\rho^{(2)}_{ijkl}&\equiv&\langle\psi|a_i^\dagger a_j^\dagger a_ka_l|\psi\rangle\label{cons}\eea
+
+The 2-fermion reduced density matrix (2-RDM) is calculated by tracing out
+all but two of the fermions: 
+\[
+\rho^{(2)} = \Tr_{3,\ldots,N} \rho^{(N)}. 
+\]
+where $\rho^{(N)}$ is a mixture of states $| \psi \rangle$ with exactly $N$
+fermions. In the language of second quantization, the matrix elements of the
+2-RDM are given by: 
+\[
+\rho^{(2)}_{ijkl} = \frac{1}{N(N-1)} \langle a_k^\dagger a_l^\dagger a_j a_i
+\rangle. 
+\]
+
+The $N$-representability problem (with $d$ modes) can now be stated as
+follows. Consider a system of $N$ fermions and $d$ modes, $d \leq \poly(N)$.
+(For purposes of complexity, we consider $N$ to be the ``size'' of the
+problem.) We are given a 2-fermion density matrix $\rho$, of size $\frac{%
+d(d-1)}{2} \times \frac{d(d-1)}{2}$, where each entry is specified with $%
+\poly(N)$ bits of precision. In addition, we are given a real number $\beta
+\geq 1/\poly(N)$, specified with $\poly(N)$ bits of precision. The problem
+is to distinguish between the following two cases:
+
+\begin{itemize}
+\item There exists an $N$-fermion state $\sigma$ such that $\Tr%
+_{3,\ldots,N}(\sigma) = \rho$. In this case, answer ``YES.''
+
+\item For all $N$-fermion states $\sigma$, $\lVert \Tr_{3,\ldots,N}(\sigma)
+- \rho \rVert_1 \geq \beta$. In this case, answer ``NO.''
+\end{itemize}
+
+If neither of these cases applies, then one may answer either ``YES'' or
+``NO.'' Note that we do not insist on solving the problem exactly; we allow
+an error tolerance of $\beta \geq 1/\poly(N)$. We use the $\ell_1$ matrix
+norm or trace distance, $\lVert A \rVert_1 = \Tr |A|$, to measure the
+distance between $\sigma$ and $\rho$.
+
+%We define the pure-state $\N$-representability problem in a similar
+%way, with the following modifications.  In addition to $\rho$ and
+%$\beta$, we are given a real number $\delta \geq 1/\poly(\n)$,
+%specified with $\poly(\n)$ bits of precision.  We have to distinguish
+%between these two cases:
+%\begin{itemize}
+%\item There exists an $\n$-fermion pure state $\sigma$ such that
+%$\Tr_{3,\ldots,\n}(\sigma) = \rho$.  In this case, answer ``YES.''
+%\item For all $\n$-fermion states $\sigma$ such that $\Tr(\sigma^2)
+%\geq 1-\delta$, we have that
+%$\lVert \Tr_{3,\ldots,\n}(\sigma) - \rho \rVert_1 \geq \beta$.
+%In this case, answer ``NO.''
+%\end{itemize}
+%Note that we use $\Tr(\sigma^2)$ to measure the purity of the state
+%$\sigma$, and we allow an error tolerance $\delta \geq 1/\poly(\n)$.
+
+We will show that $N$-representability is QMA-complete. The proof consists
+of two parts. First, we show that any 2-local Hamiltonian of spins can be
+simulated using a 2-local Hamiltonian of fermions with $d=2N$. Using
+techniques of convex programming, we show that an oracle for $N$%
+-representability would allow us to estimate the ground state energies of
+2-local Hamiltonians; thus, $N$-representability is QMA-hard.
+
+Second, we show that $N$-representability is in QMA; specifically, we
+construct a quantum verifier that can check whether a 2-particle state is $N$%
+-representable, given a suitable witness. 
+%by using the fact that QMA+=QMA \cite{Aharonov} and that consistency of
+%local density operators of a fermionic state of $\m$ modes can be checked by calculating many-body expectation values
+%on a $N$-qubit state obtained by performing a Jordan-Wigner transformation.
+%We also show that pure-state $\N$-representability is in QMA, using similar techniques.
+
+\vskip 10pt
+
+Let us first show how to map a 2-local Hamiltonian, defined on a system of $N
+$ qubits, to a 2-local Hamiltonian on fermions, with $d = 2N$ modes; this is
+the opposite of what has been done in \cite{VC}. The idea is to represent
+each qubit $i$ as a single fermion that can be in two different modes $%
+a_i,b_i$; so each $N$-qubit basis state corresponds to the following $N$%
+-fermion state: 
+\begin{equation}
+| z_1 \rangle \otimes \cdots \otimes | z_N \rangle \mapsto
+(a_1^\dagger)^{1-z_1} (b_1^\dagger)^{z_1} \cdots (a_N^\dagger)^{1-z_N}
+(b_N^\dagger)^{z_N} | \Omega \rangle.  \label{map0}
+\end{equation}
+Also, all the relevant single-qubit operators should correspond to bilinear
+functions of the creation and annihilation operators (this construction
+guarantees that operators on different qubits commute). This can be achieved
+by the following mapping: 
+\begin{equation}
+\sigma^x_i \leftrightarrow a_i^\dagger b_i + b_i^\dagger a_i, \ \sigma^y_i
+\leftrightarrow i\left( b_i^\dagger a_i - a_i^\dagger b_i \right), \
+\sigma^z_i \leftrightarrow \openone - 2 b_i^\dagger b_i.  \label{map}
+\end{equation}
+%\begin{eqnarray}
+%\sigma^x_i &\leftrightarrow& a_i^\dagger b_i + b_i^\dagger a_i \nonumber\\
+%\sigma^y_i &\leftrightarrow& i\left( b_i^\dagger a_i - a_i^\dagger b_i \right) \nonumber\\
+%\sigma^z_i &\leftrightarrow& \openone - 2 b_i^\dagger b_i \label{map}
+%\end{eqnarray}
+It can easily be checked that these fermionic operators obey the Pauli
+commutation relations within the subspace spanned by states of the form (\ref%
+{map0}).
+
+Recall that the qubit Hamiltonian can be written as a linear combination of
+Pauli operators. So the fermionic Hamiltonian can now be created by
+rewriting these Pauli operators with respect to the above mapping (note that
+only bilinear terms occur, and hence operators on different sites commute).
+Notice that if the qubit Hamiltonian only contains 2-body terms, then the
+fermionic Hamiltonian will only contain terms with at most 2 annihilation
+and 2 creation operators.
+
+The only thing that is left to do is to guarantee that there is exactly one
+fermion on every site $i$. This can be achieved by adding the following
+projectors as extra terms in the fermionic Hamiltonian: 
+\[
+P_i=(2a_i^\dagger a_i-\openone)(2b_i^\dagger b_i-\openone).
+\]
+All the $P_i$ are biquadratic and commute with all the operators introduced
+in (\ref{map}), and hence the complete Hamiltonian will be block diagonal.
+By making the weights of these projectors large enough (a constant times the
+norm of the Hamiltonian, which is at most polynomial in $N$), we can always
+guarantee that the ground state of the full Hamiltonian will have exactly
+one fermion per site \footnote{%
+Another option would be to represent each qubit $i$ using either zero or two
+fermions, e.g., for a single qubit, $| 0 \rangle$ and $| 1 \rangle$
+correspond to $| \Omega \rangle$ and $a_i^\dagger b_i^\dagger | \Omega
+\rangle$. Define the mapping $\sigma^x_i \leftrightarrow \left( a_i^\dagger
+b_i + b_i^\dagger a_i \right) +  \left( b_i a_i + a_i^\dagger b_i^\dagger
+\right)$, $\sigma^y_i \leftrightarrow i\left( b_i^\dagger a_i - a_i^\dagger
+b_i \right) +  i\left( a_i^\dagger b_i^\dagger - b_i a_i \right)$, $%
+\sigma^z_i \leftrightarrow \openone - 2 b_i^\dagger b_i$. Then the
+Hamiltonian would act identically on the subspace with one fermion per site,
+and on the subspace with zero or two fermions per site, 
+%Then the subspace with even fermion occupation number would be isomorphic to the one with odd occupation number,
+and even a small constant in front of the projectors $P_i$ would be enough
+to guarantee that we end up in the right subspace.}.
+
+\vskip 10pt
+
+Let us now assume that we have an efficient algorithm for $N$%
+-representability. We claim that this allows us to efficiently determine the
+ground state energy of a 2-local Hamiltonian on qubits, a problem which is
+known to be QMA-hard \cite{Kempe2}. We start by transforming the Hamiltonian 
+$H_{\text{qubit}}$ on $N$ qubits with 2-particle interactions into a
+Hamiltonian $H_{\text{fermi}}$ on $d=2N$ fermionic modes with 2-particle
+interactions (as described above). The problem of finding the ground state
+energy of $H_{\text{fermi}}$ can be expressed as a convex program, which can
+be solved in polynomial time using an oracle for $N$-representability (this
+is what we will show below). Our approach is similar to \cite{Yi-Kai},
+though in this case we are dealing with fermions rather than qubits.
+
+The basic idea is to construct a convex program that finds a 2-particle
+density matrix $\rho$ which is $N$-representable, and which minimizes the
+expectation value of $H_{\text{fermi}}$. This program has polynomially many
+variables, and it is easy to see that the set of $N$-representable states is
+convex, and $\langle H_{\text{fermi}} \rangle$ is a linear function of $\rho$%
+.
+
+There are two minor complications. First, $H_{\text{fermi}}$ describes a
+system with $2N$ modes and an arbitrary number of particles, whereas $N$%
+-representability pertains to a system with exactly $N$ particles. But this
+is not a problem, because the interesting behavior in $H_{\text{fermi}}$
+occurs in a subspace where all the states have exactly $N$ particles. So, in
+our convex program, we only need to consider states $\rho$ that have exactly 
+$N$ particles.
+
+This lets us simplify $H_{\text{fermi}}$ as follows. Since we are only
+interested in how it acts on $N$-particle states, we can write $a_i^\dagger
+a_j = \frac{1}{N-1} a_i^\dagger (\sum_k a_k^\dagger a_k) a_j$. So we can
+assume that all the terms in $H_{\text{fermi}}$ are of the form $a_i^\dagger
+a_j^\dagger a_l a_k$.
+
+Second, convex optimization algorithms usually require that the set $K$ of
+feasible solutions be full-dimensional, i.e., $K$ cannot lie in a
+lower-dimensional subspace. So we have to represent the state $\rho$ in such
+a way that there are no redundant variables.
+
+Let $\mathcal{S}$ be a complete set of 2-particle observables \footnote{%
+One possible set of observables is the following: First, define $a_I =
+a_{i_2} a_{i_1}$, for all pairs $I = \lbrace i_1,i_2 \rbrace$, $i_1<i_2$.
+Also fix an ordering on the pairs $I$. We now define the following
+observables: $X_{IJ} = a_I^\dagger a_J + a_J^\dagger a_I$, for all $I \prec J
+$; $Y_{IJ} = -i a_I^\dagger a_J +i a_J^\dagger a_I$, for all $I \prec J$;
+and $Z_I = a_I^\dagger a_I$, for all $I$ except the last one. These
+operators are Hermitian, with eigenvalues in the interval $[-1,1]$. Taking
+real linear combinations, these operators form a basis for the space of
+2-fermion density matrices.}, and let $\ell = |\mathcal{S}|$; note that $%
+\ell \leq \poly(d) \leq \poly(N)$. We represent $\rho$ in terms of its
+expectation values $\alpha_S = \Tr(S\rho)$ for all $S \in \mathcal{S}$; let $%
+\vec{\alpha} \in \mathbb{R}^\ell$ denote the vector of these expectation
+values. We define $K$ to be the set of all $\vec{\alpha}$ such that the
+corresponding state $\rho$ is $N$-representable. Note that the $N$%
+-representability oracle allows us to test whether a given point $\vec{\alpha%
+}$ is in $K$.
+
+We write our Hamiltonian in the form $H = \sum_{S \in \mathcal{S}} \gamma_S S
+$ (plus a constant term); the coefficients $\gamma_S$ can be computed using
+the Gram-Schmidt procedure. It is easy to see that $\Tr(H\rho) = \sum_{S \in 
+\mathcal{S}} \gamma_S \alpha_S$. Our convex program is as follows: find some 
+$\vec{\alpha} \in K$ that minimizes $f(\vec{\alpha}) = \sum_{S \in \mathcal{S%
+}} \gamma_S \alpha_S$.
+
+We can solve this convex program in polynomial time, using the shallow-cut
+ellipsoid algorithm (see \cite{GLS}, and references cited therein). We
+mention a few technical details. The algorithm requires some additional
+information about $K$, namely a guarantee that $K$ is contained in a ball of
+radius $R$ centered at 0, and $K$ contains a ball of radius $r$ centered at
+some point $p$. (Also, the running time of the algorithm grows polynomially
+in $\log(R/r)$.) In our case, we can set $R = \sqrt{\ell}$, and $r = 1/\poly%
+(\ell)$ \footnote{%
+It is easy to see that $K$ is contained in a ball of radius $R = \sqrt{\ell}$%
+, since for all $\vec{\alpha} \in K$, we have $-1 \leq \alpha_S \leq 1$. 
+%____old version____
+%\vskip 1pt \hspace{4pt}
+%The second claim, that $K$ contains a
+%ball of radius $r = 1/\poly(\ell)$, is less trivial.  We need to show that,
+%starting from 0 (i.e., the fully mixed state on 2 fermions), if we add a
+%$1/\poly(\ell)$ perturbation in any direction, the resulting state will
+%still be $\N$-representable.
+%\vskip 1pt \hspace{4pt}
+%First consider the classical version of the problem, where we only
+%consider the diagonal observables $Z_I$, and we restrict ourselves to
+%classical mixtures of basis states.  Fix the number of modes $\m$.
+%The claim is true when we have $\n=2$ particles, and likewise when we
+%have $\n=\m-2$ particles.  Moreover, when we decrease the number of
+%particles from $\n$ to $\n-1$ (for instance by choosing one of the
+%particles at random and throwing it away), the ball contained in $K$
+%shrinks by a factor of $1-\frac{2}{\n}$ at worst.  Thus the claim
+%remains true when we have $\n=\m/2$ particles.
+%\vskip 1pt \hspace{4pt}
+%Now we return to the original quantum problem.  Take an arbitrary
+%$1/\poly(\ell)$ perturbation away from 0.  We will show that there is
+%an $\n$-particle state with these expectation values.  From the above
+%argument, we know there is an $\n$-particle diagonal state $\sigma_{\text{dg}}$
+%that has the desired $Z_I$ expectation values.  We now perturb
+%$\sigma_{\text{dg}}$ by adding $X_{IJ}$ and $Y_{IJ}$ terms, to get
+%the desired expectation values for these observables.  Note that the
+%$X_{IJ}$ and $Y_{IJ}$ are orthogonal, so these perturbations do not
+%interfere with each other or with $\sigma_{\text{dg}}$.  Also,
+%without loss of generality, we can assume that $\sigma_{\text{dg}}$
+%has all its eigenvalues bounded away from 0, say by $(2\binom{\m}{\n})^{-1}$,
+%so that after the perturbations, the state is still positive semidefinite.
+%____old version____
+%\vskip 1pt \hspace{4pt}
+%The second claim, that $K$ contains a
+%ball of radius $r = 1/\poly(\ell)$, is less trivial.  The proof is as
+%follows.  We will consider $\N$-representability for different values
+%of $\N$; let $K_{\n}$ denote the set of all vectors $\vec{\alpha}$ that
+%are $\n$-representable.  Obviously, $K_2$ contains a ball of radius
+%$1/\poly(\ell)$ (this is the trivial case).  We will show that $K_{\m-2}$
+%also contains a ball of radius $1/\poly(\ell)$, where ``$\poly$'' here
+%refers to a different polynomial (proof deferred to the next paragraph).
+%Also, notice that $K_{\n-1} \supseteq K_{\n}$, for all $3 \leq \n \leq
+%\m-2$ (since, if $\vec{\alpha}$ is consistent with some $\n$-fermion
+%state $\sigma$, then it is consistent with the $(\n-1)$-fermion state
+%$\sigma'$ that results from tracing out the last particle).  The claim
+%then follows immediately.
+%\vskip 1pt \hspace{4pt}
+%Now we will prove that $K_{\m-2}$ contains a ball of radius
+%$1/\poly(\ell)$.  First, consider what happens when we switch the roles
+%of the annihilation and creation operators, i.e., we replace $a_i$ with
+%$a_i^\dagger$, and vice versa.  Then $a_I^\dagger a_J$ becomes $a_I
+%a_J^\dagger$.  These are the ``particle-hole'' operators.  We restrict
+%them to act on the subspace of $\n$-fermion states; then we can write the
+%``particle-hole'' operators as linear combinations of the standard
+%operators, and vice versa; e.g., if $I = \set{i_1,i_2}$, then $a_I
+%a_I^\dagger = 1 - a_{i_1}^\dagger a_{i_1} - a_{i_2}^\dagger a_{i_2} +
+%a_I^\dagger a_I = \binom{\n}{2}^{-1} \sum_J a_J^\dagger a_J - (\n-1)^{-1}
+%\sum_{i_1 \in J} a_J^\dagger a_J - (\n-1)^{-1} \sum_{i_2 \in J}
+%a_J^\dagger a_J + a_I^\dagger a_I$; similar but more complicated
+%equations hold in the other cases.
+%\vskip 1pt \hspace{4pt}
+%Motivated by the above, we define ``particle-hole'' observables:
+%$X'_{IJ} = a_I a_J^\dagger + a_J a_I^\dagger$; $Y'_{IJ} = -i a_I
+%a_J^\dagger +i a_J a_I^\dagger$; and $Z'_I = a_I a_I^\dagger$.  Let
+%$\vec{\alpha}'$ denote a vector containing expectation values for these
+%observables; let $K'_{\n}$ be the set of all $\vec{\alpha}'$ that are
+%$\n$-representable.  We know that we can write the ``particle-hole''
+%observables as linear combinations of the standard observables, and vice
+%versa.  Thus there is a linear transformation $A$ that maps $K_{\n}$ to
+%$K'_{\n}$, and moreover, $A$ is invertible.
+%\vskip 1pt \hspace{4pt}
+%In particular, $A$ maps $K_2$ to $K'_2$; and, because of the symmetry
+%between particles and ``particle holes,'' we have that $K'_2 = K_{\m-2}$.
+%Thus $A$ maps $K_2$ to $K_{\m-2}$.  Now we are almost done; we know that
+%$K_2$ contains a ball of radius $1/\poly(\ell)$, and we just need to show
+%that the map $A$ does not shrink the radius of the ball too much.  Write
+%the singular value decomposition $A = UDV$, where $U$ and $V$ are
+%unitary, and $D$ is diagonal, with diagonal entries $D_{ii}>0$.  Let
+%$B = A^{-1}$.  We can calculate the matrix elements of $B$, and show
+%that $\Tr(B^\dagger B) = \sum_{ij}
+%|B_{ij}|^2 \leq \poly(\ell)$.  At the same time, $\Tr(B^\dagger B) =
+%\Tr(D^{-2}) \geq D_{ii}^{-2}$, for all $i$.  So we have $D_{ii} \geq
+%1/\poly(\ell)$, for all $i$.  This implies that the map $A$ shrinks the
+%radius of the ball by at most a $\poly(\ell)$ factor.  So $K_{\m-2}$
+%contains a ball of radius $1/\poly(\ell)$.
+%____current version____
+\vskip 1pt \hspace{4pt} The second claim, that $K$ contains a ball of radius 
+$r = 1/\poly(\ell)$, is less trivial. The proof is as follows. \vskip 1pt 
+\hspace{4pt} We will consider $N$-representability for different values of $N
+$; let $K_{N}$ denote the set of all vectors $\vec{\alpha}$ that are $N$%
+-representable. Obviously, $K_2$ contains a ball of radius $1/\poly(\ell)$
+(this is the trivial case). We will prove that $K_{N}$ contains a ball of
+radius $1/\poly(\ell)$, for all $2 \leq N \leq d-2$. \vskip 1pt \hspace{4pt}
+We define ``particle-hole'' observables, by replacing $a_i$ with $a_i^\dagger
+$, and vice versa: $X^{\prime }_{IJ} = a_I a_J^\dagger + a_J a_I^\dagger$; $%
+Y^{\prime }_{IJ} = -i a_I a_J^\dagger +i a_J a_I^\dagger$; and $Z^{\prime
+}_I = a_I a_I^\dagger$. Let $\vec{\alpha}^{\prime }$ denote a vector
+containing expectation values for these observables; let $K^{\prime }_{N}$
+be the set of all $\vec{\alpha}^{\prime }$ that are $N$-representable. %
+\vskip 1pt \hspace{4pt} First, we claim that $K_2 = K^{\prime }_{d-2}$.
+Notice that there is a natural correspondence between the 2-particle Slater
+basis states and the $(d-2)$-particle Slater basis states: the 2-particle
+state with modes $i$ and $j$ occupied corresponds to the $(d-2)$-particle
+state with modes $i$ and $j$ empty. \vskip 1pt \hspace{4pt} So take any
+point $\alpha \in K_2$, which represents the expectation values of the
+2-particle observables for some 2-particle state $\sigma$. Use $\sigma$ to
+construct a $(d-2)$-particle state $\tau$, by replacing each 2-particle
+Slater basis state with the corresponding $(d-2)$-particle Slater basis
+state. Then the expectation values of the 2-particle observables for $\sigma$
+are exactly the expectation values of the 2-hole observables for $\tau$. So $%
+\alpha$ is in $K^{\prime }_{d-2}$. This shows that $K_2 \subseteq K^{\prime
+}_{d-2}$. A similar argument shows that $K^{\prime }_{d-2} \subseteq K_2$.
+So $K_2 = K^{\prime }_{d-2}$. \vskip 1pt \hspace{4pt} Next, we claim that
+there is an invertible linear transformation $A$ that maps $K^{\prime }_{d-2}
+$ to $K_{d-2}$. \vskip 1pt \hspace{4pt} First we map $K^{\prime }_{d-2}$ to $%
+K_{d-2}$. Observe that we can write each 2-particle operator as a linear
+combination of 2-hole operators. (This holds provided we restrict the
+operators to act only on the subspace of $(d-2)$-particle states.) For
+instance, when $I \cap J = \emptyset$, $a_I^\dagger a_J = a_J a_I^\dagger$.
+When $|I \cap J| = 1$, we write equations such as $a_i^\dagger a_l^\dagger
+a_l a_j  = a_i^\dagger a_j a_l^\dagger a_l  = -a_j a_i^\dagger (1 - a_l
+a_l^\dagger)  = -a_j a_i^\dagger + a_j a_i^\dagger a_l a_l^\dagger  = -a_j
+a_i^\dagger + a_l a_j a_i^\dagger a_l^\dagger$; then use the fact that $a_j
+a_i^\dagger  = (\sum_{k \neq i,j} a_k a_k^\dagger) a_j a_i^\dagger  =
+\sum_{k \neq i,j} a_k a_j a_i^\dagger a_k^\dagger$. When $I = J$, we have $%
+a_I^\dagger a_I = \sum_{L \cap I = \emptyset} a_L a_L^\dagger$. (For each of
+these equations, it is easy to check that the left and right sides act
+identically on all $(d-2)$-particle Slater basis states.) \vskip 1pt \hspace{%
+4pt} Thus, for any $(d-2)$-particle state $\sigma$, the expectation values
+of the 2-particle observables are linear functions of the expectation values
+of the 2-hole observables. Thus we have a linear transformation $A$ that
+maps $K^{\prime }_{d-2}$ to $K_{d-2}$. \vskip 1pt \hspace{4pt} Similarly, we
+can map $K_{d-2}$ to $K^{\prime }_{d-2}$. We write each 2-hole operator as a
+linear combination of 2-particle operators (again, restricting the operators
+to act only on the subspace of $(d-2)$-particle states). For instance, when $%
+I \cap J = \emptyset$, $a_I a_J^\dagger = a_J^\dagger a_I$. When $|I \cap J|
+= 1$, we write equations such as $a_l a_i a_j^\dagger a_l^\dagger  = a_i
+a_j^\dagger a_l a_l^\dagger  = -a_j^\dagger a_i (1 - a_l^\dagger a_l)  =
+-a_j^\dagger a_i + a_j^\dagger a_i a_l^\dagger a_l  = -a_j^\dagger a_i +
+a_j^\dagger a_l^\dagger a_l a_i$; then use the fact that $a_j^\dagger a_i  =
+(\frac{1}{d-3} \sum_{k \neq i,j} a_k^\dagger a_k) a_j^\dagger a_i  = \frac{1%
+}{d-3} \sum_{k \neq i,j} a_j^\dagger a_k^\dagger a_k a_i$. When $I = J$, we
+write $a_I a_I^\dagger  = a_{i_1} a_{i_1}^\dagger a_{i_2} a_{i_2}^\dagger  =
+(1 - a_{i_1}^\dagger a_{i_1}) (1 - a_{i_2}^\dagger a_{i_2})  = 1 -
+a_{i_1}^\dagger a_{i_1} - a_{i_2}^\dagger a_{i_2} + a_I^\dagger a_I$; then
+use the fact that $1 = \binom{d-2}{2}^{-1} \sum_L a_L^\dagger a_L$, and $%
+a_i^\dagger a_i  = \frac{1}{d-3} \sum_{l \neq i} a_l^\dagger a_l a_i^\dagger
+a_i  = \frac{1}{d-3} \sum_{l \neq i} a_i^\dagger a_l^\dagger a_l a_i$. %
+\vskip 1pt \hspace{4pt} Thus, for any $(d-2)$-particle state $\sigma$, the
+expectation values of the 2-hole observables are linear functions of the
+expectation values of the 2-particle observables. Thus we have a linear
+transformation $B$ that maps $K_{d-2}$ to $K^{\prime }_{d-2}$, and $B =
+A^{-1}$. \vskip 1pt \hspace{4pt} We claim that $K_{d-2}$ contains a ball of
+radius $1/\poly(\ell)$. We know that $K^{\prime }_{d-2}$ contains a ball of
+radius $1/\poly(\ell)$ (since $K_2 = K^{\prime }_{d-2}$), and we will show
+that the map $A$ does not shrink this too much. Write the singular value
+decomposition $A = UDV$, where $U$ and $V$ are unitary, and $D$ is diagonal,
+with diagonal entries $D_{ii}>0$. Let $B = A^{-1}$. Looking at the matrix
+elements of $B$, we can see that $\Tr(B^\dagger B) = \sum_{ij} |B_{ij}|^2
+\leq \poly(\ell)$. At the same time, $\Tr(B^\dagger B) = \Tr(U D^{-1} V
+V^{-1} D^{-1} U^{-1}) = \Tr(D^{-2}) \geq D_{ii}^{-2}$, for all $i$. So we
+have $D_{ii} \geq 1/\poly(\ell)$, for all $i$. Thus the map $A$ shrinks the
+radius of the ball by at most a $\poly(\ell)$ factor. So $K_{d-2}$ contains
+a ball of radius $1/\poly(\ell)$. \vskip 1pt \hspace{4pt} Now we are almost
+done. Notice that $K_{N-1} \supseteq K_{N}$, for all $3 \leq N \leq d-2$
+(since, if $\vec{\alpha}$ is consistent with some $N$-fermion state $\sigma$%
+, then it is consistent with the $(N-1)$-fermion state $\sigma^{\prime }$
+that results from tracing out the last particle). So we conclude that $K_{N}$
+contains a ball of radius $1/\poly(\ell)$, for all $2 \leq N \leq d-2$. This
+completes the proof.}.
+
+There is also the issue of numerical precision. Our oracle for $N$%
+-representability has limited accuracy---it may give incorrect answers for
+points near the boundary of $K$. On the other hand, we only need an
+approximate solution to the convex program, in order to solve the Local
+Hamiltonian problem. It turns out that $1/\poly(N)$ precision is sufficient.
+The ellipsoid algorithm still works in this setting; see \cite{GLS} for
+details.
+
+Note that, in place of the ellipsoid algorithm, we could have used a
+different algorithm based on random walks in convex bodies \cite{BV}; this
+was the approach used in \cite{Yi-Kai}. However, it is not clear if we could
+use one of the interior-point methods for convex optimization; these methods
+are substantially faster, but they usually require an explicit description
+of the constraints, not just a membership oracle.
+
+This completes the proof that $N$-representability is QMA-hard. As a
+corollary, we have also proven that estimating the ground state energy for
+local fermionic Hamiltonians is QMA-hard. Note that the use of the ellipsoid
+algorithm to reduce a convex optimization problem to a convex membership
+problem is not new; see \cite{GLS} for references to related work.
+
+\vskip 10pt
+
+Next, we show that $N$-representability is in QMA. That is, we construct a
+poly-time quantum verifier $V$ that takes two inputs: a description of the
+problem (that is, $\rho$ and $\beta$); and a ``witness'' $\tau$, which is a
+quantum state on polynomially many qubits. The verifier $V$ should have the
+following property: if $\rho$ is $N$-representable, there exists a witness $%
+\tau$ that causes $V$ to output ``true'' with probability $\geq p_1$; if $%
+\rho$ is not $N$-representable (within error tolerance $\beta$), then for
+all possible states $\tau$, $V$ outputs ``true'' with probability $\leq p_0$%
+; and $p_1 - p_0 \geq 1/\poly(N)$.
+
+The idea is that, when $\rho$ is $N$-representable, the correct witness $\tau
+$ consists of (multiple copies of) an $N$-fermion state $\sigma$ that
+satisfies $\Tr_{3,\ldots,N}(\sigma) = \rho$. Then the verifier can use
+quantum state tomography to compare $\sigma$ and $\rho$.
+
+%Say we have a 2-fermion state $\rho$ which is $\N$-representable;
+%then it is natural to use the corresponding $\n$-fermion state
+%$\sigma$ as the witness.
+
+We represent the $N$-fermion state $\sigma$ using $d$ qubits, via the
+following mapping: 
+\[
+(a_1^\dagger)^{i_1} ... (a_d^\dagger)^{i_d} | \Omega \rangle \leftrightarrow
+| i_1 \rangle \otimes ... \otimes | i_d \rangle. 
+\]
+Call the resulting qubit state $\tilde{\sigma}$. We use the Jordan-Wigner
+transform to map the fermionic annihilation operators to qubit operators: 
+\[
+a_i \leftrightarrow A_i \equiv -(\otimes_{k<i}\hspace{.1cm}\sigma_k^z)
+\otimes | 0 \rangle \langle 1 |_i. 
+\]
+Thus, an observable $O = a_i^\dagger a_j^\dagger a_l a_k + a_k^\dagger
+a_l^\dagger a_j a_i$ is transformed into $\tilde{O} = A_i^\dagger
+A_j^\dagger A_l A_k + A_k^\dagger A_l^\dagger A_j A_i$, which is a tensor
+product of many single-qubit observables and one four-qubit observable.
+
+We claim that the expectation value $\langle \tilde{O} \rangle$ can be
+estimated efficiently. Without loss of generality, assume that the
+eigenvalues of $\tilde{O}$ lie in the interval $[0,1]$. Then there is an
+efficiently-implementable measurement which outputs ``1'' with probability $%
+\langle \tilde{O} \rangle$ \footnote{%
+For example, let $\lambda_i$ and $| \theta_i \rangle$ be the eigenvalues and
+eigenvectors of $\tilde{O}$, and note that they are easy to compute. Add an
+ancilla qubit, perform the unitary operation $U:\: | \theta_i \rangle| 0
+\rangle \mapsto | \theta_i \rangle \left( \sqrt{1-\lambda_i}| 0 \rangle + 
+\sqrt{\lambda_i}| 1 \rangle \right)$, and measure the ancilla in the 0,1
+basis.}. By repeating this measurement on multiple copies of the same state,
+we can estimate $\langle \tilde{O} \rangle$; for our purposes, it is enough
+to have polynomially many copies of the state.
+
+We now describe the verifier $V$. The witness $\tau$ consists of several
+(i.e., polynomially many) blocks, where each block has $d$ qubits,
+supposedly representing one copy of the state $\tilde{\sigma}$. On each
+block, $V$ measures the observable $\sum_k | 1 \rangle \langle 1 |_k$, and
+if the outcome does not equal $N$, $V$ outputs ``false.'' This projects each
+block onto the space of $N$-particle states.
+
+Next, $V$ performs measurements on each block, to estimate the expectation
+values of $\tilde{\sigma}$, for a suitable set of observables. Then $V$
+checks whether they match the expectation values of $\rho$. One problem
+arises: the prover could try to cheat by entangling the different blocks of
+qubits. One can show that this does not fool the verifier, using a Markov
+argument, as was done in \cite{Aharonov}. This suffices to show that $N$%
+-representability is in QMA, and hence finishes the proof.
+
+What can be said about the complexity of the pure-state $N$%
+-representability-problem, where one has to decide whether the reduced
+density operators arise from a pure state of N fermions? In that case, the
+verifier must be able to convince himself that the state he gets is pure.
+This can be done when he gets two states $\rho$ and $\sigma$ that are
+promised to be uncorrelated, i.e. that he gets the state $\rho\otimes\sigma$%
+: then Arthur can calculate the expectation value of the observable $\Tr%
+(\rho\sigma)$, and this can only be close to $1$ when $\rho$ is pure and $%
+\sigma\simeq\rho$. Indeed, if $\Tr(\sigma^2) \leq 1-\varepsilon$, then for
+all states $\tau$, $\Tr(\sigma\tau) \leq \sqrt{\Tr(\sigma^2)\Tr(\tau^2)}
+\leq (1-\varepsilon)^{1/2} \leq 1-\varepsilon/2$. The problem however is
+that Merlin can cheat, and hand out a correlated state to Arthur, such that
+the above test becomes inconclusive. This is precisely the feature that
+distinguishes the complexity class QMA(k) from QMA \cite{Matsumoto}: in
+QMA(k), the verifier is promised to get a tensor product of different
+states, and it has been conjectured that QMA(k) is strictly larger than QMA.
+The above discussion shows that the pure-state $N$-representability problem
+is contained in QMA(k), and it is hence plausible that it is harder than the 
+$N$-representability problem. It would be very interesting to investigate
+whether the problem is QMA(k)-complete.
+
+%is also in QMA.  The idea is that the verifier can measure the purity of the
+%state $\sigma$ using the ``swap test'':  assume we are given two copies of
+%$\sigma$; adjoin an ancilla qubit prepared in the state $\ket{+} =
+%(\ket{0}+\ket{1})/\sqrt{2}$; do a controlled-swap between the two copies of
+%$\sigma$, controlled by the ancilla qubit; measure the ancilla qubit in the
+%Hadamard basis $\ket{\pm} = (\ket{0}\pm\ket{1})/\sqrt{2}$.  Then the
+%probability of observing $\ket{+}$ is $(1 + \Tr(\sigma^2))/2$, which
+%measures the purity of $\sigma$.
+%
+%The main difficulty is that the swap test requires a product state $\sigma
+%\otimes \sigma$, whereas a dishonest prover might give us an arbitrary state
+%$\tau$.  To get around this, the verifier can do the following trick:  assume
+%we are given an arbitrary state $\tau$, on $r+s$ blocks of qubits (where each
+%block supposedly represents one copy of the state $\sigma$); randomly permute
+%the blocks, then keep a subset of $r$ blocks, and discard the rest; let
+%$\tau'$ denote the resulting state.  For our purposes, we will set $r =
+%\poly(\n)$ and $s = \poly(r)$.
+%
+%By the de Finetti theorem for finite quantum states \cite{KR}, $\tau'$ is
+%close to a mixture of $r$-fold tensor product states; in particular, there is
+%a state $\tau'' = \int P(\sigma) \sigma^{\otimes r} d\sigma$ such that
+%$\lVert \tau' - \tau'' \rVert_1 \leq O(r/\sqrt{s})$.  So the swap test will
+%work properly on $\tau'$.  It is now straightforward to construct a QMA
+%verifier for pure-state $\N$-representability; we omit the details.
+
+%$\N$-representability also belong to the class QMA. This can be understood as follows. Consider a fermionic
+%wavefunction (\ref{wave}), and the corresponding \N-qubit state
+%\be|\psi_{qubit}\rangle=\sum_{{\tiny\begin{array}{l}i_1,i_2,... i_N=0\\ i_1+i_2+...=n \end{array}}}^1
+%c_{i_1,i_2,...}|i_1\rangle|i_2\rangle...|i_N\rangle\label{wavequbit}\ee
+
+%Every local expectation value on the original wavefunction $\langle\psi|a_i^\dagger a_j^\dagger a_k
+%a_l|\psi\rangle$ can be mapped to an expectation value of a different operator on the state $|\psi_{qubit}\rangle$
+%by doing a Jordan-Wigner transformation:
+%\[ a_i\rightarrow \left(\otimes_{k<i}\hspace{.1cm}\sigma_k^z\right)|0_i\rangle\langle 1_i|\equiv A_i\]
+%The operators $A_i$ are highly nonlocal, and we have
+
+%\[\langle\psi|a_i^\dagger a_j^\dagger a_k a_l|\psi\rangle=\langle\psi_{qubit}|A_i^\dagger A_j^\dagger A_k
+%A_l|\psi_{qubit}\rangle.\]
+
+%Given a state $|\psi_{qubit}\rangle$, this expectation value can be evaluated efficiently, as it is just the
+%expectation value of a tensor product of local observables. If Merlin would now give many copies of the state
+%$|\psi_{qubit}\rangle$ to Arthur (note that he cannot gain anything by entangling the copies or giving different
+%copies because of the argument given in cite{Aharonov,Yi-Kai}), Arthur could measure the corresponding observables
+%and check consistency up to polynomial precision. This showes that $N$-representability is in QMA, finishing the
+%proof.
+
+\vskip 10pt
+
+It is remarkable that checking consistency of 2-body reduced density
+operators of fermionic states is so hard, while checking consistency of
+1-body reduced density operators is simple \cite{Coleman}. This can be
+easily understood from the previous discussion: the extreme points of the
+convex set of 1-body density operators $\langle a_i^\dagger a_j\rangle$
+correspond to ground states of Hamiltonians only containing bilinear terms
+in $a_i^\dagger$ and $a_j$; such Hamiltonians can easily be diagonalized as
+they represent systems of free fermions, and hence the consistency problem
+can easily be solved. As shown in \cite{Coleman}, consistency can be decided
+in that case based solely on the eigenvalues of the reduced density
+operators. A number of related problems, where consistency only depends on
+the eigenvalues, have been investigated recently~\cite{reduced}; most
+remarkably, a characterisation has been obtained for the polytope of
+1-particle marginals that are $N$-representable under the condition that the 
+$N$-particle wavefunction must be pure \cite{Klyachko05}.
+
+These results have to be contrasted with our problem of finding the $N$%
+-representable 2-body density operators, where the eigenvalues alone are not
+enough to decide consistency but also the eigenvectors are relevant.
+Actually, let us consider the simpler problem of deciding $N$%
+-representability of 2-fermion density operators where only the diagonal
+elements $D_{ij}=\langle a_i^\dagger a_j^\dagger a_j a_i\rangle$ are
+specified. If we consider the case $d=2N$ and the mapping discussed above,
+one easily finds that the extreme points of this set would be obtained by
+ground states of local spin Hamiltonians which only contain commuting $%
+\sigma^z$ operators. These correspond to spin-glasses, and so the problem of
+deciding $N$-representability of $\{D_{ij}\}$ is NP-hard \cite{Barahona}. It
+was indeed pointed out a long time ago that $N$-representability restricted
+to the diagonal elements is equivalent to a combinatorial problem \cite{Kuhn}
+that was later shown to be equivalent to the NP-hard problem of deciding
+membership in the boolean quadric polytope \cite{Deza}.
+
+Let's finally discuss the relevance of the above results in the context of
+quantum chemistry. We have shown that it is a hopeless task to determine the
+ground states of all local fermionic Hamiltonians, and in particular, that
+an approach by means of the $N$-representability problem is intractable,
+even on a quantum computer. But it is possible that other physical systems,
+e.g.~systems with different particle statistics, additional symmetry or a
+limited number of modes, might allow for an efficient characterisation of
+the two-particle reduced density matrices, and hence an efficient
+calculation of the ground states of local Hamiltonians. This seems to be the
+case in e.g. one-dimensional translational invariant spin systems, where the
+density matrix renormalization group \cite{DMRG} allows for a systematic
+approximation of the allowed convex set of reduced density operators from
+within \cite{VC06}. A very different numerical approach has been developed
+in the context of quantum chemistry and it known as the the contracted Schr{%
+\"o}dinger equation~\cite{book}. In that method, one approximates the convex
+set from the outside, and the $N$-representability problem is a crucial
+ingredient of the algorithm. The foregoing discussion shows that this
+approach has to break down in the most general case, and it would be very
+interesting to investigate the conditions under which those approximations
+are justified.
+
+%The results in this paper show that it is a hopeless task to
+%determine ground state of all local fermionic Hamiltonians. But it
+%could well be that this problem becomes tractable when there is more
+%symmetry present.
+
+%Another interesting problem is to characterize the
+%convex set of reduced density operators of a translational invariant
+%state (with bounded local dimension). There are very good
+%indications that the complexity of this problem is polynomial, but a
+%proof is still missing \cite{VCfaith}. Furthermore, if the system is
+%permutation invariant, an efficient characterisation of the
+%two-particle reduced density matrix is possible, because
+%$\N$-particle permutation symmetric states can be characterised with
+%a polynomial number of parameters using Schur-Weyl duality.
+%%This follows from Schur-Weyl duality which allows us to rewrite
+%%$$ \sigma=\sum_{\lambda} \omega_\lambda \sigma_{U_\lambda} \otimes \frac{\openone_{V_\lambda}}{\textrm{dim} V_\lambda}.$$
+%%The sum extends over all partitions $\lambda$ of $\N$ into $d$ parts
+%%and $U_\lambda$ ($V_\lambda$) is the space of the representation of
+%%the unitary group $U(d)$ (the symmetric group $S_n$) with highest
+%%weight (Young frame) $\lambda$. The number of free parameters is a
+%%polynomial in $\N$ since $\dim U_\lambda$ as well as the number of
+%%partitions are both bounded by polynomials in $\N$.
+%However, this argument breaks down for growing $d$.
+%%And indeed, as we saw before $d$ cannot grow arbitrarily fast,
+%%else we could solve $\N$-representability.
+%
+%However, with the help of quantum de Finetti
+%theorems we can obtain results for slowly growing $d$. Such theorems
+%quantify how well $k$-particle reduced density matrices arising from
+%permutation-invariant states can be approximated by convex
+%combinations of tensor product states~\cite{Hudson, CKMR06}. The set
+%of tensor product density operators can be efficiently characterised
+%and (for fixed $k$) the approximation is still an inverse polynomial
+%in $\poly(\N)$ if $d=o(\N^{\frac{1}{2}-\epsilon})$ for $\epsilon>0$
+%and in the case of bosons even if
+%$d=o(\N^{1-\epsilon})$~\cite{CKMR06}.
+%(Note that the remarkable success of (dynamical) mean field theories
+%relies on the fact that tensor product density operators are often
+%very good approximations of the real ones, despite the fact that the
+%underlying Hamiltonian has no permutation symmetry.)
+%
+%%The intuitive reason for the efficiency can in this case be traced
+%%to so-called de Finetti theorems.
+%
+%%$\N$-representability can be solved when the reduced density
+%%operators are so-called "exchangable". This happens when the
+%%underlying Hamiltonian is permutation invariant with respect to the
+%%modes and when additionally the number of modes tends to infinity.
+%%In that case, one can use the quantum de-Finetti theorem
+%%\cite{Hudson} (also valid in the case of fermionic statistics!) and
+%%infer that the corresponding extreme points of the 2-particle
+%%density operators are tensor products of the extreme 1-particle
+%%density operators.
+
+In conclusion, we investigated the problem of $N$-representability, and
+characterized its computational complexity by showing that it is
+QMA-complete. Obviously, the theory of quantum computing was a prerequisite
+to pinpoint the computational complexity of this classic problem. .
+
+\vskip 10pt
+
+\noindent \textit{Acknowledgements:} Y.K.L. and M.C. thank the Institute for
+Quantum Information for its hospitality. Y.K.L. is supported by an ARO/DTO
+Quantum Computing Graduate Research Fellowship. M.C. acknowledges an EPSRC
+Postdoctoral and a Nevile Research Fellowship which he holds at Magdalene
+College Cambridge, and is supported by the EU under the FP6-FET Integrated
+Project SCALA, CT-015714. F.V. is supported by the Gordon and Betty Moore
+Foundation through Caltech's Center for the Physics of Information, and by
+the National Science Foundation under Grant No. PHY-0456720.
+
+\begin{thebibliography}{99}
+\bibitem{} 
+%\bibitem{CKMR06} M. Christandl, R. K{\"o}nig, G. Mitchison and R. Renner,
+%quant-ph/0602130 (2006).
+
+\bibitem{Coulson} C. A. Coulson, Rev. Mod. Phys. \textbf{32}, 175 (1960); R.
+H. Trethold, Phys. Rev. \textbf{105}, 1421 (1957).
+
+\bibitem{Coleman} A. J. Coleman, Rev. Mod. Phys. \textbf{35}, 668 (1963).
+
+\bibitem{book1} A.J. Coleman and V.I. Yukalov, \textit{Reduced Density
+Matrices: Coulson's Challenge}, Springer (2000).
+
+\bibitem{book} J. Cioslowski, \textit{Many-Electron Densities and Reduced
+Density Matrices}, Kluwer Academic (2000).
+
+\bibitem{Mazziotti} D. A. Mazziotti, Acc. Chem. Res. \textbf{39}, 207 (2006).
+
+\bibitem{Kitaev} A. Yu Kitaev, A. H. Shen and M. N. Vyalyi, \textit{%
+Classical and Quantum Computation}, AMS (2002).
+
+\bibitem{Kempe1} J. Kempe and O. Regev, Quant. Info. and Comput. \textbf{3},
+258 (2003).
+
+\bibitem{Kempe2} J. Kempe, A. Kitaev and O. Regev, SIAM J. Comput. \textbf{35%
+}, 1070 (2006); quant-ph/0406180.
+
+\bibitem{Terhal} R. Oliveira and B. Terhal, quant-ph/0504050.
+
+\bibitem{Yi-Kai} Y.-K. Liu, Proc. RANDOM 2006, 438; quant-ph/0604166.
+
+\bibitem{GLS} M. Gr\"otschel, L. Lov\'asz and A. Schrijver, \textit{%
+Geometric Algorithms and Combinatorial Optimization}, Springer-Verlag (1988).
+
+\bibitem{Barahona} F. Barahona, J. Phys. A: Math. Gen. \textbf{15}, 3241
+(1982).
+
+\bibitem{VC} F. Verstraete and J.I. Cirac, J. Stat. Mech. P09012 (2005).
+
+\bibitem{BV} D. Bertsimas and S. Vempala, J. Assoc. Comput. Mach. \textbf{51}%
+, 540-556 (2004).
+
+\bibitem{Aharonov} D. Aharonov and O. Regev, Proc. FOCS 2003, 210;
+quant-ph/0307220. 
+%\bibitem{KR} R. K\"onig and R. Renner, J. Math. Phys. 46, 122108 (2005); quant-ph/0410229.
+
+\bibitem{Matsumoto} H. Kobayashi, K. Matsumoto and Tomoyuki Yamakami,
+quant-ph/0110006.
+
+\bibitem{reduced} A. Higuchi, A. Sudbery, J. Szulc, Phys. Rev. Lett. \textbf{%
+90}, 107902 (2003); S. Bravyi, Quantum Inf. and Comp. \textbf{4}, 12 (2004);
+M. Christandl and G. Mitchison, Commun. Math. Phys. \textbf{261}, 789
+(2006); A. Klyachko, quant-ph/0409113; S. Daftuar and P. Hayden, Ann. Phys. 
+\textbf{315}, 80 (2005).
+
+\bibitem{Klyachko05} A. Klyachko, J. of Physics: Conference Series \textbf{36%
+} (1) pp.72-86 (2006).
+
+\bibitem{Kuhn} M. L. Yoseloff and H. W. Kuhn, Journ. of Math. Phys. \textbf{%
+10}, 703 (1969).
+
+\bibitem{Deza} M. Deza and M. Laurent, Journ. of Comp. and Appl. Math. 
+\textbf{55}, 217 (1994).
+
+\bibitem{DMRG} U. Schollwoeck, Rev. Mod. Phys. \textbf{77}, 259 (2005).
+
+\bibitem{VC06} F. Verstraete and J.I. Cirac, Phys. Rev. B \textbf{73},
+094423 (2006). 
+%\bibitem{Hudson}  R. L. Hudson and G. R. Moody, Wahrscheinlichkeitstheorie
+%Gebiete {\bf 33}, 343 (1976). C. M. Caves, C. A. Fuchs and R.
+%Schack, J. Math. Phys. {\bf 43}, 4537 (2002). R. K{\"o}nig and R
+%Renner, J. Math. Phys. {\bf 46}, 122108 (2005). R. Renner, PhD
+%thesis, ETH Z{\"u}rich, quant-ph/0512258 (2005).
+\end{thebibliography}
+
+\end{document}

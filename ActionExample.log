@@ -1,0 +1,402 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.7.7)  7 JUL 2010 12:36
+entering extended mode
+**C:/sw55/Docs/ActionExample.tex
+(C:/sw55/Docs/ActionExample.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1 \widehat
+            {}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \widehat
+            {}
+? 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+(C:\Users\bqw\AppData\Roaming\MiKTeX\2.8\tex\latex\revtex4\revtex4.cls
+Document Class: revtex4 2001/08/03 v4.0 (http://publish.aps.org/revtex4/ for do
+cumentation)
+ Copyright (c) 2001 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <ogawa@teleport.com>
+ Based on work by David Carlisle <david@dcarlisle.demon.co.uk>.
+ltxutil: portions licensed from W. E. Baxter (web@superscript.com)
+Class revtex4 Info: Repairing broken LateX \@sect on input line 596.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4 Info: Repairing broken LaTeX \@xbitor on input line 1610.
+ltxgrid: portions licensed from W. E. Baxter (web@superscript.com)
+\c@linecount=\count81
+\output=\toks14
+\@protection@box=\box27
+\@topmark@saved=\toks15
+\footins@saved=\box28
+\pagesofar=\box29
+\footbox=\box30
+\pagegrid@col=\count82
+Class revtex4 Info: Incorporating package {textcase}  [1998/11/12 v0.06 Text on
+ly upper/lower case changing (DPC)]. on input line 3682.
+("C:\Program Files\MiKTeX 2.8\tex\latex\ltxmisc\url.sty"
+! Missing $ inserted.
+<inserted text> 
+                $
+l.27 
+     
+? 
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--27
+[][]$[]$ 
+ []
+
+! You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m 
+l.38 \@
+       namedef{Url@OT1encSpecials}{%
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.38 \@
+       namedef{Url@OT1encSpecials}{%
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \@
+       namedef{Url@OT1encSpecials}{%
+? 
+! Undefined control sequence.
+l.40   \do
+          \^^8c{\mathchar30 }\do\^^9c{\mathchar27 }\do\^^df{\mathchar25 }%
+? 
+! Undefined control sequence.
+l.40   \do\Œ
+            {\mathchar30 }\do\^^9c{\mathchar27 }\do\^^df{\mathchar25 }%
+? 
+! Undefined control sequence.
+l.40   \do\Œ{\mathchar30 }\do
+                             \^^9c{\mathchar27 }\do\^^df{\mathchar25 }%
+? 
+! Undefined control sequence.
+l.40   \do\Œ{\mathchar30 }\do\œ
+                               {\mathchar27 }\do\^^df{\mathchar25 }%
+? 
+! Undefined control sequence.
+l.40   \do\Œ{\mathchar30 }\do\œ{\mathchar27 }\do
+                                                \^^df{\mathchar25 }%
+? 
+! Undefined control sequence.
+l.40   \do\Œ{\mathchar30 }\do\œ{\mathchar27 }\do\ß
+                                                  {\mathchar25 }%
+? 
+! Undefined control sequence.
+l.41   \do
+          \~{\lower.45ex\hbox{\m@th$\mathchar126$}}% For tt style
+? 
+
+LaTeX Warning: Command \~ invalid in math mode on input line 41.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 41.
+
+LaTeX Font Info:    Try loading font information for +cmr on input line 41.
+LaTeX Font Info:    No file cmr.fd. on input line 41.
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 41.
+
+! Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.41 ...o\~{\lower.45ex\hbox{\m@th$\mathchar126$}}
+                                                  % For tt style
+? 
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 41.
+
+! Undefined control sequence.
+<argument> ...ng \@curr@enc \lower .45ex\hbox {\m 
+                                                  @th$\mathchar 126$}
+l.41 ...o\~{\lower.45ex\hbox{\m@th$\mathchar126$}}
+                                                  % For tt style
+? 
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.41 ...o\~{\lower.45ex\hbox{\m@th$\mathchar126$}}
+                                                  % For tt style
+? 
+! Missing { inserted.
+<to be read again> 
+                   \edef 
+l.41 ...o\~{\lower.45ex\hbox{\m@th$\mathchar126$}}
+                                                  % For tt style
+? 
+! Undefined control sequence.
+<argument> ...ng \@curr@enc \lower .45ex\hbox {\m 
+                                                  @th$\mathchar 126$}
+l.41 ...o\~{\lower.45ex\hbox{\m@th$\mathchar126$}}
+                                                  % For tt style
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.41 ...o\~{\lower.45ex\hbox{\m@th$\mathchar126$}}
+                                                  % For tt style
+? 
+! Undefined control sequence.
+l.43   \do
+          \^^b5{\mu}%
+? 
+! Undefined control sequence.
+l.43   \do\µ
+            {\mu}%
+? 
+! Undefined control sequence.
+l.44   \Url
+           @OTnonTT % more for any but typewriter
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.46 
+     
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.46 
+     
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+Overfull \hbox (262.06839pt too wide) in paragraph at lines 38--46
+[][]$\OML/cmm/m/it/10 namedef[][]$ 
+ []
+
+! You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m 
+l.54 \@
+       namedef{Url@T1encSpecials}{\do\^^b5{\mu}\do\^^bf{\mathchar190 }%
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.54 \@
+       namedef{Url@T1encSpecials}{\do\^^b5{\mu}\do\^^bf{\mathchar190 }%
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \@
+       namedef{Url@T1encSpecials}{\do\^^b5{\mu}\do\^^bf{\mathchar190 }%
+? 
+! Undefined control sequence.
+l.54 \@namedef{Url@T1encSpecials}{\do
+                                     \^^b5{\mu}\do\^^bf{\mathchar190 }%
+? 
+! Undefined control sequence.
+l.54 \@namedef{Url@T1encSpecials}{\do\µ
+                                       {\mu}\do\^^bf{\mathchar190 }%
+? 
+! Undefined control sequence.
+l.54 \@namedef{Url@T1encSpecials}{\do\µ{\mu}\do
+                                               \^^bf{\mathchar190 }%
+? 
+! Undefined control sequence.
+l.54 \@namedef{Url@T1encSpecials}{\do\µ{\mu}\do\¿
+                                                 {\mathchar190 }%
+? 
+! Undefined control sequence.
+l.55   \do
+          \^^8c{\mathchar215 }\do\^^9c{\mathchar247 }\do\^^df{\mathchar255 }%
+? 
+! Undefined control sequence.
+l.55   \do\Œ
+            {\mathchar215 }\do\^^9c{\mathchar247 }\do\^^df{\mathchar255 }%
+? 
+! Undefined control sequence.
+l.55   \do\Œ{\mathchar215 }\do
+                              \^^9c{\mathchar247 }\do\^^df{\mathchar255 }%
+? 
+! Undefined control sequence.
+l.55   \do\Œ{\mathchar215 }\do\œ
+                                {\mathchar247 }\do\^^df{\mathchar255 }%
+? 
+! Undefined control sequence.
+l.55   \do\Œ{\mathchar215 }\do\œ{\mathchar247 }\do
+                                                  \^^df{\mathchar255 }%
+? 
+! Undefined control sequence.
+l.55 ...\Œ{\mathchar215 }\do\œ{\mathchar247 }\do\ß
+                                                  {\mathchar255 }%
+? 
+! Undefined control sequence.
+l.56   \do
+          \^^ff{\mathchar184 }}
+? 
+! Undefined control sequence.
+l.56   \do\ÿ
+            {\mathchar184 }}
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.57 
+     
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no ¾ in font cmr10!
+Missing character: There is no × in font cmr10!
+Missing character: There is no ÷ in font cmr10!
+Missing character: There is no ÿ in font cmr10!
+Missing character: There is no ¸ in font cmr10!
+
+Overfull \hbox (154.7906pt too wide) in paragraph at lines 54--57
+[][]$\OML/cmm/m/it/10 namedef[][]$ 
+ []
+
+! You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m 
+l.58 \@
+       namedef{Url@LY1encSpecials}{\do\~{\mathchar158 }}
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 \@
+       namedef{Url@LY1encSpecials}{\do\~{\mathchar158 }}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \@
+       namedef{Url@LY1encSpecials}{\do\~{\mathchar158 }}
+? 
+! Undefined control sequence.
+l.58 \@namedef{Url@LY1encSpecials}{\do
+                                      \~{\mathchar158 }}
+? 
+
+LaTeX Warning: Command \~ invalid in math mode on input line 58.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 58.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 ...f{Url@LY1encSpecials}{\do\~{\mathchar158 }
+                                                  }
+? 
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.58 ...f{Url@LY1encSpecials}{\do\~{\mathchar158 }
+                                                  }
+? 
+! Extra }, or forgotten $.
+\add@accent ... \accent@spacefactor \spacefactor }
+                                                  \accent #1 #2\egroup \spac...
+l.58 ...f{Url@LY1encSpecials}{\do\~{\mathchar158 }
+                                                  }
+? 
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.58 ...f{Url@LY1encSpecials}{\do\~{\mathchar158 }
+                                                  }
+? 
+! Missing { inserted.
+<to be read again> 
+                   \edef 
+l.58 ...f{Url@LY1encSpecials}{\do\~{\mathchar158 }
+                                                  }
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.58 ...f{Url@LY1encSpecials}{\do\~{\mathchar158 }
+                                                  }
+? 
+! Extra }, or forgotten $.
+\UseTextAccent ...se@text@encoding \@curr@enc #3}}
+                                                  
+l.58 ...f{Url@LY1encSpecials}{\do\~{\mathchar158 }
+                                                  }
+? 
+! Extra }, or forgotten $.
+l.58 ...{Url@LY1encSpecials}{\do\~{\mathchar158 }}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 
+     
+? 
+Missing character: There is no ž in font cmr10!
+Missing character: There is no ž in font cmr10!
+! Use of \Url Error doesn't match its definition.
+l.167 ...xpandafter\expandafter \let \Url@moving\@
+                                                  undefined
+? 
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.167 ...pandafter\expandafter \let \Url@moving\@u
+                                                  ndefined
+? 
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+! TeX capacity exceeded, sorry [input stack size=5000].
+\url.sty-h@@k ->\url.sty-h@@k 
+                              \let \@unprocessedoptions \relax 
+l.4201 \appdef
+              \class@inithook{%
+If you really absolutely need more capacity,
+you can ask a wizard to enlarge me.
+
+ 
+Here is how much of TeX's memory you used:
+ 791 strings out of 495286
+ 10173 string characters out of 3180373
+ 65331 words of memory out of 3000000
+ 4079 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5000i,7n,20p,215b,782s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

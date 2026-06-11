@@ -1,0 +1,5 @@
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Display\AdaptiveBrightness
+systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"
+10.0.26100 N/A Build 26100
+

@@ -1,0 +1,2247 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, June 26, 2008 11:45:27}
+%TCIDATA{LastRevised=Friday, November 13, 2009 15:12:59}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Short title for running header]{Tangent and Normal Spaces}
+\author{Brian Weiner}
+\affiliation{Penn State}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\subsection{General Setting}
+
+Consider the, in general nonlinear, map
+\begin{equation}
+\boldsymbol{g}:\mathbb{R}^{n}\longrightarrow\mathbb{R}^{m}%
+\end{equation}
+given by%
+\begin{equation}
+\boldsymbol{g}\left(  \boldsymbol{A}\right)  =\left(
+\begin{array}
+[c]{c}%
+g_{1}\left(  \boldsymbol{A}\right) \\
+\vdots\\
+g_{m}\left(  \boldsymbol{A}\right)
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\rho_{1}\\
+\vdots\\
+\rho_{m}%
+\end{array}
+\right)  =\boldsymbol{\rho}\in\mathbb{R}^{m};\boldsymbol{A\in}\mathbb{R}^{n},
+\end{equation}
+that defines a manifold
+\begin{equation}
+\mathfrak{M}=\left\{  \left.  \boldsymbol{A}\right\vert \boldsymbol{g}\left(
+\boldsymbol{A}\right)  =\boldsymbol{\rho}\right\}  ,
+\end{equation}
+which is a level surface in $\mathbb{R}^{n+m}.$ In this case both the domain
+and range are inner product spaces.
+
+\subsection{Density Functional Example}
+
+As a special case one can consider the bilinear function
+\begin{equation}
+\boldsymbol{f}\left(  A\right)  =\left(  \left.  A\right\vert \widehat
+{\Phi^{\dagger}\Phi_{\varphi}}A\right)  ,\quad A\in\mathcal{B}_{sa}\left(
+\mathcal{H}\right)  \cong\mathbb{R}^{n^{2}};n=\binom{m}{N}^{2};\quad
+\boldsymbol{f}\left(  A\right)  \in\mathbb{R}^{m}%
+\end{equation}
+where $\Phi^{\dagger}\Phi_{\varphi}$ is a fixed vector operator with
+components
+\begin{equation}
+\Phi^{\dagger}\Phi_{\varphi j}=\Phi\left(  \varphi_{j}\right)  ^{\dagger}%
+\Phi\left(  \varphi_{j}\right)
+\end{equation}
+formed by the conb $\left\{  \left.  \varphi_{j}\right\vert 1\leq j\leq
+m\right\}  $ for $\mathcal{H}$ and
+\begin{equation}
+\widehat{\Phi^{\dagger}\Phi_{\varphi}}_{j}\left\vert A\right)  =\frac{1}%
+{2}\left\vert \left[  \Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(
+\varphi_{j}\right)  ,A\right]  _{+}\right)  \equiv\widehat{\Phi^{\dagger}%
+\Phi_{\varphi}}_{j}A=\frac{1}{2}\left[  \Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  ,A\right]  _{+}.
+\end{equation}
+As $m\rightarrow\infty$ the operators $\Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  \rightarrow\Phi\left(
+\delta_{\mathbf{r}}\right)  ^{\dagger}\Phi\left(  \delta_{\mathbf{r}}\right)
+$ and $\Phi^{\dagger}\Phi_{\varphi}\rightarrow\Phi^{\dagger}\Phi_{\delta}$
+i.e. the vector operator tends to a distributional operator%
+\begin{align}
+\Phi^{\dagger}\Phi_{\varphi}  &  :\mathbb{N}\rightarrow\mathcal{B}\left(
+\mathcal{H}\right) \\
+\Phi^{\dagger}\Phi_{\delta}  &  :\mathcal{D}_{\delta}\equiv\mathbb{R}%
+^{3}\rightarrow\mathcal{B}\left(  \mathcal{H}\right)
+\end{align}
+and $\Phi^{\dagger}\Phi_{\varphi}$ defines the super operator $\widehat
+{\Phi^{\dagger}\Phi_{\varphi}}$ by symmetrized multiplication. Noting that
+\begin{equation}
+A=\sum_{1\leq p,q\leq n}A_{pq}\left\vert \Psi_{p}\right\rangle \left\langle
+\Psi_{q}\right\vert
+\end{equation}
+this quadratic function can written in detail as%
+\begin{align}
+&  \boldsymbol{f}_{j}\left(  A\right)  =\left(  A\left\vert \widehat
+{\Phi^{\dagger}\Phi_{\varphi j}}A\right.  \right)  =\frac{1}{2}%
+\operatorname{Tr}\left\{  A\left[  \Phi\left(  \varphi_{j}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j}\right)  ,A\right]  _{+}\right\} \\
+&  =\frac{1}{2}\operatorname{Tr}\left\{  A\left(  \Phi\left(  \varphi
+_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  A+A\Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \right)
+\right\}  =\operatorname{Tr}\left\{  \Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  A^{2}\right\} \\
+&  =\sum_{1\leq p,q,s\leq n}\left\langle \Psi_{s}\left\vert \Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.
+\right\rangle A_{pq}A_{qs}%
+\end{align}
+The first derrivatives of $\boldsymbol{f}$ at the point $A$ are then
+\begin{align}
+\frac{\partial\boldsymbol{f}_{j}\left(  A\right)  }{\partial A_{\alpha\beta}}
+&  =\sum_{1\leq p,q,s\leq n}\left\langle \Psi_{s}\left\vert \Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.
+\right\rangle \left\{  \delta_{\alpha p}\delta_{\beta q}A_{qs}+A_{pq}%
+\delta_{\alpha q}\delta_{\beta s}\right\} \\
+&  =\sum_{1\leq s\leq n}\left\{  A_{\beta s}\left\langle \Psi_{s}\left\vert
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+\Psi_{\alpha}\right.  \right\rangle +\left\langle \Psi_{\beta}\left\vert
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+\Psi_{s}\right.  \right\rangle A_{s\alpha}\right\} \\
+&  =\sum_{1\leq s\leq n}\left\{  A_{\beta s}\left\langle \Psi_{s}\left\vert
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+\Psi_{\alpha}\right.  \right\rangle +\left\langle \Psi_{\beta}\left\vert
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+\Psi_{s}\right.  \right\rangle A_{s\alpha}\right\}
+\end{align}
+and the second
+\begin{equation}
+\frac{\partial^{2}\boldsymbol{f}_{j}\left(  A\right)  }{\partial A_{\lambda
+\mu}\partial A_{\alpha\beta}}=\left\langle \Psi_{\mu}\left\vert \Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{\alpha
+}\right.  \right\rangle \delta_{\lambda\beta}+\left\langle \Psi_{\beta
+}\left\vert \Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi
+_{j}\right)  \Psi_{\lambda}\right.  \right\rangle \delta_{\mu\alpha}.
+\end{equation}
+For
+\begin{equation}
+A\rightarrow A+\delta A
+\end{equation}
+(if $\delta A$ belongs to the tangent space then $A+\delta A$ does not belong
+to the surface), i.e. expanding for each component in a small nbhd of $A,$ we
+get
+\begin{align}
+&  \boldsymbol{f}_{j}\left(  A+\delta A\right)  =\sum_{1\leq p,q,s\leq
+n}\left\langle \Psi_{s}\left\vert \Phi\left(  \varphi_{j}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.  \right\rangle \left(
+A+\delta A\right)  _{pq}\left(  A+\delta A\right)  _{qs}\\
+&  =\sum_{1\leq p,q,s\leq n}\left\langle \Psi_{s}\left\vert \Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.
+\right\rangle A_{pq}A_{qs}\\
+&  +\sum_{1\leq p,q,s\leq n}\left\langle \Psi_{s}\left\vert \Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.
+\right\rangle \left\{  \delta A_{pq}A_{qs}+A_{pq}\delta A_{qs}\right\} \\
+&  +\sum_{1\leq p,q,s\leq n}\left\langle \Psi_{s}\left\vert \Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.
+\right\rangle \delta A_{pq}\delta A_{qs}%
+\end{align}
+giving%
+\begin{align}
+&  =\rho_{j}+\sum_{1\leq p,q,s\leq n}\left\{  A_{qs}\left\langle \Psi
+_{s}\left\vert \Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(
+\varphi_{j}\right)  \Psi_{p}\right.  \right\rangle \delta A_{pq}+\delta
+A_{qs}\left\langle \Psi_{s}\left\vert \Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.  \right\rangle
+A_{pq}\right\} \\
+&  +\sum_{1\leq p,q,s\leq n}\delta A_{qs}\left\langle \Psi_{s}\left\vert
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+\Psi_{p}\right.  \right\rangle \delta A_{pq}%
+\end{align}
+$\left(  \text{the last term can be written as }\sum_{1\leq p,s\leq
+n}\left\langle \Psi_{s}\left\vert \Phi\left(  \varphi_{j}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.  \right\rangle \left(  \delta
+A\right)  _{ps}^{2}\right)  $ producing
+\begin{align}
+\boldsymbol{f}\left(  A\right)   &  =\boldsymbol{\rho}+2\left(  j\updownarrow%
+\begin{array}
+[c]{ccc}%
+\vdots & \cdots & \vdots\\
+\vdots & \left\langle \Psi_{q}\left\vert A\Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.  \right\rangle  &
+\vdots\\
+\vdots & \cdots & \vdots
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\vdots\\
+\delta A_{pq}\\
+\vdots
+\end{array}
+\right) \\
+&  +\frac{1}{2}\left(
+\begin{array}
+[c]{ccc}%
+\cdots & \delta A_{pq} & \cdots
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\vdots & \cdots & \vdots\\
+\vdots & \left\langle \Psi_{s}\left\vert \Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  \Psi_{p}\right.  \right\rangle
+\delta_{rq} & \vdots\\
+\vdots & \cdots & \vdots
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\vdots\\
+\delta A_{rs}\\
+\vdots
+\end{array}
+\right)
+\end{align}
+
+
+\subsection{General Function}
+
+Assuming the function $\boldsymbol{g}\left(  \boldsymbol{A}\right)  $ is
+Fr\'{e}chet differentiable
+\begin{align}
+\left[  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right]  \left(
+\delta\boldsymbol{A}\right)   &  =\left(
+\begin{array}
+[c]{ccc}%
+\frac{\partial g_{1}\left(  \boldsymbol{A}\right)  }{\partial A_{1}} & \cdots
+& \frac{\partial g_{1}\left(  \boldsymbol{A}\right)  }{\partial A_{n}}\\
+\vdots & \ddots & \vdots\\
+\frac{\partial g_{m}\left(  \boldsymbol{A}\right)  }{\partial A_{1}} & \cdots
+& \frac{\partial g_{m}\left(  \boldsymbol{A}\right)  }{\partial A_{n}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta A_{1}\\
+\vdots\\
+\delta A_{n}%
+\end{array}
+\right)  =\mathbb{D}\boldsymbol{g}\left(  \boldsymbol{A}\right)  \left\vert
+\delta\boldsymbol{A}\right) \nonumber\\
+&  =\left(
+\begin{array}
+[c]{c}%
+\nabla g_{1}\left(  \boldsymbol{A}\right) \\
+\vdots\\
+\nabla g_{m}\left(  \boldsymbol{A}\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta A_{1}\\
+\vdots\\
+\delta A_{n}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\delta\rho_{1}\\
+\vdots\\
+\delta\rho_{m}%
+\end{array}
+\right)  \in\mathbb{R}^{m}.
+\end{align}%
+\begin{align}
+&  \left[  d^{2}\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right]  \left(
+\delta\boldsymbol{A}\right)  =\frac{1}{2}\left(
+\begin{array}
+[c]{ccc}%
+\delta A_{1} & \cdots & \delta A_{n}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\nabla^{2}g_{1}\left(  \boldsymbol{A}\right) \\
+\vdots\\
+\nabla^{2}g_{m}\left(  \boldsymbol{A}\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta A_{1}\\
+\vdots\\
+\delta A_{n}%
+\end{array}
+\right) \nonumber\\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{c}%
+\left(
+\begin{array}
+[c]{ccc}%
+\delta A_{1} & \cdots & \delta A_{n}%
+\end{array}
+\right)  \nabla^{2}g_{1}\left(  \boldsymbol{A}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta A_{1}\\
+\vdots\\
+\delta A_{n}%
+\end{array}
+\right) \\
+\vdots\\
+\left(
+\begin{array}
+[c]{ccc}%
+\delta A_{1} & \cdots & \delta A_{n}%
+\end{array}
+\right)  \nabla^{2}g_{m}\left(  \boldsymbol{A}\right)  \left(
+\begin{array}
+[c]{c}%
+\delta A_{1}\\
+\vdots\\
+\delta A_{n}%
+\end{array}
+\right)
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\delta^{2}\rho_{1}\\
+\vdots\\
+\delta^{2}\rho_{m}%
+\end{array}
+\right)  \in\mathbb{R}^{m}.
+\end{align}
+
+
+\subsection{Density Functional Example}
+
+For the above example
+\begin{align}
+\left(  \nabla f_{j}\left(  A\right)  \right)  _{pq}  &  =\frac{\partial
+f_{j}\left(  A\right)  }{\partial A_{pq}}=\left(  \left.  A\right\vert
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+\left\vert \varphi_{p}\right\rangle \left\langle \varphi_{q}\right\vert
+\right)  =\operatorname{Tr}\left\{  A\Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  \left\vert \varphi_{p}\right\rangle
+\left\langle \varphi_{q}\right\vert \right\} \\
+&  =\left\langle \varphi_{q}\left\vert A\Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  \varphi_{p}\right.  \right\rangle
+;\quad1\leq j\leq m;\,1\leq p,q\leq\sqrt{n}%
+\end{align}
+and
+\begin{equation}
+d\boldsymbol{f}\left(  A\right)  =\left(  \widehat{\Phi^{\dagger}\Phi
+_{\varphi}}A\right\vert =\frac{1}{2}\left(  \left[  \Phi^{\dagger}%
+\Phi_{\varphi},A\right]  _{+}\right\vert .
+\end{equation}
+The second derrivatives are%
+\begin{equation}
+\left(  \nabla^{2}f_{j}\left(  A\right)  \right)  _{pqrs}=\left\langle
+\Psi_{s}\left\vert \Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(
+\varphi_{j}\right)  \Psi_{p}\right.  \right\rangle \delta_{rq};\quad1\leq
+p,q,r,s\leq\sqrt{n}.
+\end{equation}
+
+
+\subsection{General Function}
+
+The \emph{kernel}, $\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ,$of $d\boldsymbol{g}\left(  \boldsymbol{A}\right)  $ is defined as%
+\begin{equation}
+\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  =\left\{
+\left.  \delta\boldsymbol{A}\right\vert \left[  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right]  \left(  \delta\boldsymbol{A}\right)
+=\boldsymbol{0}\right\}  \subseteq\mathbb{R}^{n}.
+\end{equation}
+The \emph{tangent space} $\mathcal{T}_{\boldsymbol{A}}$ of $\boldsymbol{g}$ at
+the point $\boldsymbol{A}$ is contained in this kernel. A tangent vector
+$\delta\boldsymbol{A}$ at the point $\boldsymbol{A}$ is defined by considering
+curves $\in\mathfrak{M}$%
+\begin{align}
+\boldsymbol{g}\left(  \boldsymbol{x}\left(  t\right)  \right)   &
+=\mathbf{\rho}\,,t\in\left[  -\delta,\delta\right] \nonumber\\
+\boldsymbol{x}\left(  0\right)   &  =\boldsymbol{A}\nonumber\\
+\boldsymbol{x}  &  :\left[  -\delta,\delta\right]  \longrightarrow
+\mathbb{R}^{n}%
+\end{align}
+and is defined to be formed by the equivalence class of velocity vectors to
+such curves at the point $\boldsymbol{A}$ i.e. $\left\{  \frac{d\boldsymbol{x}%
+\left(  0\right)  }{dt}\right\}  .$ The Taylor series of $\boldsymbol{x}$
+around $0$ is
+\begin{equation}
+\boldsymbol{x}\left(  t\right)  =\boldsymbol{A}+\frac{d\boldsymbol{x}\left(
+0\right)  }{dt}t+\frac{1}{2}\frac{d^{2}\boldsymbol{x}\left(  0\right)
+}{dt^{2}}t^{2}+\cdots
+\end{equation}
+and of $\boldsymbol{g}$ restricted to the curve $\boldsymbol{x}$ that lies in
+the surface $\mathfrak{M}$ is
+\begin{equation}
+\boldsymbol{g}\left(  \boldsymbol{x}\left(  t\right)  \right)
+=\boldsymbol{\rho}+\frac{d\boldsymbol{g}\left(  \boldsymbol{x}\left(
+0\right)  \right)  }{dt}t+\frac{1}{2}\frac{d^{2}\boldsymbol{g}\left(
+\boldsymbol{x}\left(  0\right)  \right)  }{dt^{2}}t^{2}+\cdots
+=\boldsymbol{\rho}%
+\end{equation}
+where%
+\begin{align}
+\frac{d\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)  }{dt}
+&  =\mathbb{D}_{x}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)
+\right)  \frac{d\boldsymbol{x}\left(  0\right)  }{dt}\nonumber\\
+\frac{d^{2}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)
+}{dt^{2}}  &  =\left.  \left\{  \frac{d}{dt}\mathbb{D}_{x}\boldsymbol{g}%
+\left(  \boldsymbol{x}\left(  t\right)  \right)  \right\}  \right\vert
+_{t=0}\frac{d\boldsymbol{x}\left(  0\right)  }{dt}+\mathbb{D}_{x}%
+\boldsymbol{g}\left(  \boldsymbol{x}\left(  t\right)  \right)  \frac
+{d^{2}\boldsymbol{x}\left(  0\right)  }{dt^{2}}\nonumber\\
+&  =\left(  \frac{d\boldsymbol{x}\left(  0\right)  }{dt}\right)
+^{t}\mathbb{D}_{x}^{2}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)
+\right)  \frac{d\boldsymbol{x}\left(  0\right)  }{dt}+\mathbb{D}%
+_{x}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)  \frac
+{d^{2}\boldsymbol{x}\left(  0\right)  }{dt^{2}}.
+\end{align}
+Hence
+\begin{equation}
+\frac{d\boldsymbol{g}\left(  \boldsymbol{x}\left(  t\right)  \right)  }%
+{dt}=\frac{d\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)
+}{dt}+\frac{d^{2}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)
+\right)  }{dt^{2}}t+\cdots=\mathbf{0}%
+\end{equation}
+and \emph{in particular }at $t=0$\emph{ }%
+\begin{equation}
+\frac{d\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)  }%
+{dt}=\mathbb{D}_{x}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)
+\right)  \frac{d\boldsymbol{x}\left(  0\right)  }{dt}=\mathbf{0},
+\end{equation}
+i.e.
+\begin{equation}
+\frac{d\boldsymbol{x}\left(  0\right)  }{dt}\in\ker\left\{  \mathbb{D}%
+_{x}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)  \right\}  .
+\end{equation}
+The derrivatives wrt $x$ are the same as wrt $\boldsymbol{A}$ thus
+\begin{align}
+\mathbb{D}_{x}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)
+&  =\mathbb{D}\boldsymbol{g}\left(  \boldsymbol{A}\right) \nonumber\\
+\mathbb{D}_{x}^{2}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)
+\right)   &  =\mathbb{D}^{2}\boldsymbol{g}\left(  \boldsymbol{A}\right)  ,
+\end{align}
+thus
+\begin{equation}
+\frac{d\boldsymbol{x}\left(  0\right)  }{dt}\in\ker\left\{  \mathbb{D}%
+\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  .
+\end{equation}
+One should note that
+\begin{equation}
+\delta\boldsymbol{A}\in\ker\left\{  \mathbb{D}\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}
+\end{equation}
+\emph{does not imply} that $\exists$ $\frac{d\boldsymbol{x}\left(  0\right)
+}{dt}$ $\backepsilon$ $\delta\boldsymbol{A}=\frac{d\boldsymbol{x}\left(
+0\right)  }{dt}$ i.e. this condition is necessary but not sufficient for
+$\delta\boldsymbol{A}$ to be a tangent vector. One can write the above as
+\begin{equation}
+\left[  d\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)
+\right]  \left(  \delta\boldsymbol{A}\right)  =\mathbb{D}_{x}\boldsymbol{g}%
+\left(  \boldsymbol{x}\left(  0\right)  \right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}x_{1}\left(  0\right)  }{\boldsymbol{d}t}\\
+\vdots\\
+\frac{\boldsymbol{d}x_{n}\left(  0\right)  }{\boldsymbol{d}t}%
+\end{array}
+\right)  =\boldsymbol{0}.
+\end{equation}
+In detail this gives
+\begin{align}
+\mathbb{D}_{x}\boldsymbol{g}\left(  \boldsymbol{x}\left(  0\right)  \right)
+\left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}x_{1}\left(  0\right)  }{\boldsymbol{d}t}\\
+\vdots\\
+\frac{\boldsymbol{d}x_{n}\left(  0\right)  }{\boldsymbol{d}t}%
+\end{array}
+\right)   &  =\left(
+\begin{array}
+[c]{c}%
+\nabla g_{1}\left(  \boldsymbol{A}\right) \\
+\vdots\\
+\nabla g_{m}\left(  \boldsymbol{A}\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}x_{1}\left(  0\right)  }{\boldsymbol{d}t}\\
+\vdots\\
+\frac{\boldsymbol{d}x_{n}\left(  0\right)  }{\boldsymbol{d}t}%
+\end{array}
+\right) \nonumber\\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\frac{\partial g_{1}\left(  \boldsymbol{A}\right)  }{\partial\boldsymbol{A}%
+_{1}} & \cdots & \frac{\partial g_{1}\left(  \boldsymbol{A}\right)  }%
+{\partial\boldsymbol{A}_{n}}\\
+\vdots & \ddots & \vdots\\
+\frac{\partial g_{m}\left(  \boldsymbol{A}\right)  }{\partial\boldsymbol{A}%
+_{1}} & \cdots & \frac{\partial g_{m}\left(  \boldsymbol{A}\right)  }%
+{\partial\boldsymbol{A}_{n}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}x_{1}\left(  0\right)  }{\boldsymbol{d}t}\\
+\vdots\\
+\frac{\boldsymbol{d}x_{n}\left(  0\right)  }{\boldsymbol{d}t}%
+\end{array}
+\right)  =0.
+\end{align}
+
+
+\subsection{Density Functional Example}
+
+For the example $\boldsymbol{f}\left(  A\right)  $ this gives that if $\delta
+A\in\mathcal{T}_{A}\mathfrak{\ }$then
+\begin{equation}
+\left[  d\boldsymbol{f}\left(  A\right)  \right]  \left(  \delta A\right)
+=\mathbf{0}, \label{Ker}%
+\end{equation}
+i.e. if $\delta A\in\mathcal{T}_{A}\mathfrak{\ }$then $\left\vert \delta
+A\right)  \bot\left\vert \left[  \Phi\left(  \varphi_{j}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j}\right)  ,A\right]  _{+}\right)  \forall j,$but being
+orthogonal $\forall j$ does not mean it is in the tangent space, i.e. does not
+ensure that $\delta A=\dot{x}\left(  0\right)  $, which can thus be smaller
+than the kernel.
+
+One should note that $\left(  \widehat{\Phi^{\dagger}\Phi_{\varphi}%
+}A\right\vert $ is not an operator but a \emph{vector} \emph{operator }with
+operator components $\left[  \Phi\left(  \varphi_{j}\right)  ^{\dagger}%
+\Phi\left(  \varphi_{j}\right)  ,A\right]  _{+},$ $1\leq j\leq m$, so the
+condition eq. $\left(  \ref{Ker}\right)  $ gives $m$ equations%
+\begin{equation}
+\left(  A\left\vert \widehat{\Phi\left(  \varphi_{j}\right)  ^{\dagger}%
+\Phi\left(  \varphi_{j}\right)  }\delta A\right.  \right)  =\operatorname{Tr}%
+\left\{  A\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi
+_{j}\right)  \delta A\right\}  =0;\quad1\leq j\leq m.
+\end{equation}
+Note that if $\delta A\in\mathcal{T}_{A}$ then $A+\delta A$ does not belong to
+the surface.
+
+\subsubsection{Tangent Vectors in the DFT\ example}
+
+The curves in the surface satisfy%
+
+\begin{equation}
+\left(  x\left(  t\right)  \left\vert \widehat{\Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  }x\left(  t\right)  \right.
+\right)  =\operatorname{Tr}\left\{  x\left(  t\right)  \Phi\left(  \varphi
+_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  x\left(  t\right)
+\right\}  =\rho_{j};\quad1\leq j\leq m
+\end{equation}
+and belong to the surface $\mathfrak{M\subset}\mathcal{B}_{sa}\left(
+\mathcal{H}^{N}\right)  $
+\begin{equation}
+\mathfrak{M}=\left\{  A\left\vert \left(  A\left\vert \widehat{\Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  }A\right.
+\right)  =\operatorname{Tr}\left\{  \Phi\left(  \varphi_{j}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j}\right)  A^{2}\right\}  =\rho_{j};\quad1\leq j\leq
+m\right.  \right\}  .
+\end{equation}
+Note that
+\begin{equation}
+\left(  A\left\vert \widehat{\Phi\left(  \varphi_{j}\right)  ^{\dagger}%
+\Phi\left(  \varphi_{j}\right)  }A\right.  \right)  =\left\langle A\left\vert
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+A\right.  \right\rangle _{HS}%
+\end{equation}
+in terms of the Hilbert-Schmidt product
+\begin{equation}
+\left\langle \cdot\left\vert \cdot\right.  \right\rangle _{HS}:\mathcal{B}%
+_{2}\left(  \mathcal{H}^{N}\right)  \times\mathcal{B}_{2}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathbb{C}.
+\end{equation}
+The real symmetric inner product
+\begin{equation}
+\left(  \cdot\left\vert \cdot\right.  \right)  :\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  \times\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\rightarrow\mathbb{R}%
+\end{equation}
+has the invariance group $O\left(  \mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  \right)  \equiv O\left(  n,\mathbb{R}\right)  .$The group of
+inner automorphisms%
+\begin{align}
+\widehat{U}  &  :\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\rightarrow\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right) \\
+\widehat{U}\left(  A\right)   &  =U^{\dagger}AU;\,U\in U\left(  \mathcal{H}%
+^{N}\right)  ;\,A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\end{align}
+is contained in $O\left(  \mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\right)  .$ The operators
+\begin{equation}
+\left\{  \left.  \widehat{\Phi\left(  \varphi_{j}\right)  ^{\dagger}%
+\Phi\left(  \varphi_{j}\right)  }\right\vert 1\leq j\leq m\right\}
+\end{equation}
+form a commuting set thus are simultaneously diagonalizable. The conditions
+
+%
+
+\begin{align}
+&  \left(  A\left\vert \widehat{O}\left(  t\right)  ^{t}\widehat{\Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  }\widehat
+{O}\left(  t\right)  A\right.  \right)  =\left(  A\left\vert \widehat
+{\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+}A\right.  \right)  \equiv\label{invar}\\
+&  \operatorname{Tr}\left\{  \left(  \widehat{O}\left(  t\right)  \left(
+A\right)  \right)  \Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(
+\varphi_{j}\right)  \left(  \widehat{O}\left(  t\right)  \left(  A\right)
+\right)  \right\}  =\operatorname{Tr}\left\{  A\Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  A\right\}
+\end{align}%
+\begin{equation}
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad1\leq j\leq
+m,\widehat{O}\left(  t\right)  \in\mathfrak{G,}%
+\end{equation}
+where
+\begin{equation}
+\widehat{O}\left(  t\right)  =\exp\left\{  \sum_{1\leq k\leq\nu}\lambda
+_{k}\widehat{\Lambda}_{k}\right\}  ;\widehat{\Lambda}_{k}=-\widehat{\Lambda
+}_{k}^{t}\,,\lambda_{k}\in\mathbb{R},1\leq k\leq\nu
+\end{equation}
+and $\left\{  \left.  \widehat{\Lambda}_{k}\right\vert 1\leq k\leq\nu\right\}
+$ are the generators of the Lie algebra, $\mathcal{G},$ of $\mathfrak{G}$. The
+conditions eq $\left(  \ref{invar}\right)  $ imply the necessary but not
+sufficient conditions
+\begin{equation}
+\left(  A\left\vert \left[  \widehat{\Phi\left(  \varphi_{j}\right)
+^{\dagger}\Phi\left(  \varphi_{j}\right)  },\widehat{\Lambda}_{k}\right]
+\right.  A\right)  =0;1\leq k\leq\nu\,\text{, }1\leq j\leq m,
+\end{equation}
+which can be written as
+\begin{align}
+0  &  =\operatorname{Tr}\left\{  \left[  \widehat{\Phi\left(  \varphi
+_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  },\widehat{\Lambda}%
+_{k}\right]  \left\vert A\right)  \left(  A\right\vert \right\} \\
+&  =\operatorname{Tr}\left\{  \left[  \widehat{\Lambda}_{k},\left\vert
+A\right)  \left(  A\right\vert \right]  \widehat{\Phi\left(  \varphi
+_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  }\right\} \\
+&  =\operatorname{Tr}\left\{  \left[  \left\vert A\right)  \left(
+A\right\vert ,\widehat{\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(
+\varphi_{j}\right)  }\right]  \widehat{\Lambda}_{k}\right\}  ,
+\end{align}
+by considering%
+\begin{equation}
+\operatorname{Tr}\left\{  \left[  A,B\right]  D\right\}  =\operatorname{Tr}%
+\left\{  ABD-BAD\right\}  .
+\end{equation}%
+\begin{equation}
+\operatorname{Tr}\left\{  \widehat{\Lambda}_{k}\left(  A\right)  \Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  A-A\Phi\left(
+\varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \widehat
+{\Lambda}_{k}\left(  A\right)  \right\}
+\end{equation}
+which is equivalent to
+\begin{equation}
+\delta\left(  A\left\vert \widehat{\Lambda}_{k}A\right.  \right)
+=\delta\operatorname{Tr}\left\{  \left(  \widehat{\Lambda}_{k}\left(
+A\right)  \right)  \Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(
+\varphi_{j}\right)  \left(  \widehat{\Lambda}_{k}\left(  A\right)  \right)
+\right\}  =0
+\end{equation}
+wrt variations produced by the commutative subgroup, $\mathfrak{G}_{\varphi},$
+of $U\left(  \mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  \right)  $ formed
+by the unitary transformations
+\begin{equation}
+\exp i\left\{  \sum_{1\leq j\leq m}\lambda_{j}\widehat{\Phi\left(  \varphi
+_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  }\right\}  ;\lambda
+_{j}\in\mathbb{R},1\leq j\leq m.\,
+\end{equation}
+$\lceil$%
+\begin{equation}
+\left\langle \Psi\left\vert \left[  \Phi\left(  \varphi_{j}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j}\right)  ,H\right]  \Psi\right.  \right\rangle =0
+\end{equation}
+The energy is stable wrt to one particle variations of the coefficients of the
+state $\Psi$ in the basis $\left\{  \varphi_{j}\right\}  $ or equivalently the
+one particle coefficients are stable to time variations.
+
+Consider the CI expansion
+\begin{equation}
+\sum_{1\leq j_{1}<\cdots<j_{N}\leq r}C_{j_{1}\cdots j_{N}}\left\vert
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle
+\end{equation}
+then every state can be obtained by the general linear transformations
+\begin{equation}
+\exp\left\{  \sum_{1\leq M\leq N}\sum_{1\leq j_{1}<\cdots<j_{M}\leq r}%
+Z_{j_{1}\cdots j_{M}}\Phi\left(  \varphi_{j_{1}}\right)  ^{\dagger}\Phi\left(
+\varphi_{j_{1}}\right)  \cdots\Phi\left(  \varphi_{j_{M}}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j_{M}}\right)  \right\}
+\end{equation}
+$\rfloor$
+
+The set of operators $\left\{  \left.  \widehat{\Lambda}_{j}\right\vert 1\leq
+j\leq\nu\right\}  $ produces a basis $\left\{  \left.  \left\vert
+\widehat{\Lambda}_{j}A\right)  \right\vert 1\leq j\leq\nu\right\}  $ of the
+tangent space$.\mathfrak{G}_{\varphi}$ is a subgroup of $\mathfrak{G}.$
+
+Clearly a subgroup $\mathfrak{G}$ of transformations that satisfy this
+condition are produced by
+\begin{align}
+U  &  =e^{i\Lambda}\\
+\Lambda &  \in\operatorname{alg}\left\{  \left.  \Phi\left(  \varphi
+_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)  \right\vert 1\leq j\leq
+m\right\} \\
+\widehat{U}\left(  A\right)   &  =U^{\dagger}AU,
+\end{align}
+another subgroup is given by the inner isometry group of $A$ i.e.%
+\begin{equation}
+U^{\dagger}AU=A.
+\end{equation}
+
+
+\subsection{General Function}
+
+The kernel must be at least $n-m$ dimensional as
+\begin{equation}
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  :\mathbb{R}^{n}\rightarrow
+\mathbb{R}^{m}%
+\end{equation}
+and the equation
+\[
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \left(  \delta\boldsymbol{A}%
+\right)  =\boldsymbol{0}%
+\]
+must have at least $n-m$ linearly independent solutions. It might have more
+solutions, which could produce a larger kernel.
+
+One can decompose $\mathbb{R}^{n}$ into the direct sum
+\[
+\mathbb{R}^{n}=\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  \oplus\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ^{\bot}%
+\]
+and
+\[
+\boldsymbol{dg}\left(  \boldsymbol{A}\right)  :\ker\left\{  d\boldsymbol{g}%
+\left(  \boldsymbol{A}\right)  \right\}  ^{\bot}\overset{1-1}{\rightarrow
+}\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ,
+\]
+i.e. $\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}
+^{\bot}\cong\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  $.
+
+$\lceil$%
+\begin{align}
+\mathbf{x}  &  \mathbf{\in}\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right\}  \equiv\left(  \mathbf{y}\left\vert d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \mathbf{x}\right.  \right)  =0\forall
+\mathbf{y\Rightarrow}\left(  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+^{\dagger}\mathbf{y}\left\vert \mathbf{x}\right.  \right)  =0\nonumber\\
+&  \Rightarrow d\boldsymbol{g}\left(  \boldsymbol{A}\right)  ^{\dagger
+}\mathbf{y\bot}\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  \text{ i.e. }\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  ^{\dagger}\right\}  \mathbf{\bot}\ker\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}
+\end{align}
+$\rfloor$
+
+The \emph{normal space, }$\mathcal{N}_{\boldsymbol{A}}\boldsymbol{g},$ of
+$\boldsymbol{g}$ at the point $\boldsymbol{A}$ is%
+\[
+\mathcal{N}_{\boldsymbol{A}}\boldsymbol{g}=\left(  \mathcal{T}_{\boldsymbol{A}%
+}\right)  ^{\bot},
+\]
+and
+\begin{equation}
+\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  \cong\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ^{\bot}\subseteq\mathcal{N}_{\boldsymbol{A}}\boldsymbol{g}%
+\subseteq\mathbb{R}^{m}.
+\end{equation}
+Thus there might be normals outside the range of $d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  $.
+
+\subsection{General Dual Spaces}
+
+Observe that
+\[
+\boldsymbol{g}:V\longrightarrow W\equiv\boldsymbol{g}:\mathbb{R}%
+^{n}\longrightarrow\mathbb{R}^{m}%
+\]
+$\lceil$In the DFT example
+\begin{align}
+V  &  =V^{d}=\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right) \\
+W  &  =L_{1}\left(  \Delta_{A}\right) \\
+W^{\boldsymbol{d}}  &  =L_{\infty}\left(  \Delta_{A}\right) \\
+\boldsymbol{g}\left(  A\right)   &  =\operatorname{Tr}\left\{  \Phi^{\dagger
+}\Phi_{\delta}A^{2}\right\}
+\end{align}
+$\rfloor$
+
+as theses are linear spaces we have the following relationships%
+\[
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  :V\longrightarrow W\equiv
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  :\mathbb{R}^{n}\longrightarrow
+\mathbb{R}^{m}%
+\]
+$\left[  \left[  d\boldsymbol{g}\left(  A\right)  \right]  \left(  \delta
+A\right)  =2\operatorname{Tr}\left\{  A\Phi^{\dagger}\Phi_{\delta}\delta
+A\right\}  \right]  $%
+\begin{align*}
+\left\langle \bullet,\bullet\right\rangle _{V} &  :V^{\boldsymbol{d}}\times
+V\longrightarrow\mathbb{R}\\
+\left\langle \bullet,\bullet\right\rangle _{W} &  :W^{\boldsymbol{d}}\times
+W\longrightarrow\mathbb{R}%
+\end{align*}
+$\left[
+\begin{array}
+[c]{c}%
+\begin{array}
+[c]{c}%
+\begin{array}
+[c]{c}%
+\left\langle \left.  \lambda\right\vert 2\operatorname{Tr}\left\{
+A\Phi^{\dagger}\Phi_{\delta}\delta A\right\}  \right\rangle _{L_{\infty
+}\left(  \Delta_{A}\right)  \times L_{1}\left(  \Delta_{A}\right)  }=\left(
+\left.  \left[  d\boldsymbol{g}\left(  A\right)  \right]  ^{\dagger}\left(
+\lambda\right)  \right\vert \delta A\right)  _{\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  }\\
+=2\int_{\Delta_{A}}\lambda\left(  \boldsymbol{r}\right)  \operatorname{Tr}%
+\left\{  A\Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(
+\boldsymbol{r}\right)  \delta A\right\}  d\boldsymbol{r}\\
+=2\int_{\Delta_{A}}\operatorname{Tr}\left\{  A\lambda\left(  \boldsymbol{r}%
+\right)  \Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(
+\boldsymbol{r}\right)  dx\delta A\right\}  d\boldsymbol{r}=2\operatorname{Tr}%
+\left\{  \mathfrak{l}_{A}\delta A\right\}  \\
+=2\left(  \left.  \left[  A\mathbf{\lambda}\right]  _{+}\right\vert \delta
+A\right)  _{\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  }=2\left(
+\left.  \mathfrak{l}_{A}\right\vert \delta A\right)  _{\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  }%
+\end{array}
+\\
+\mathfrak{l}_{A}=\left[  A\mathbf{\lambda}\right]  _{+}=\int_{\Delta_{A}%
+}\lambda\left(  \boldsymbol{r}\right)  \left[  A\Phi^{\dagger}\left(
+\boldsymbol{r}\right)  \Phi\left(  \boldsymbol{r}\right)  \right]
+_{+}d\boldsymbol{r}=\frac{1}{2}\int_{\Delta_{A}}\lambda\left(  \boldsymbol{r}%
+\right)  \left\{  A\Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(
+\boldsymbol{r}\right)  +\Phi^{\dagger}\left(  \boldsymbol{r}\right)
+\Phi\left(  \boldsymbol{r}\right)  A\right\}  d\boldsymbol{r}\\
+\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  ,\,\lambda\in L_{\infty
+}\left(  \Delta_{A}\right)  \\
+\mathbf{\lambda=}\int_{\Delta_{A}}\lambda\left(  \boldsymbol{r}\right)
+\Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(  \boldsymbol{r}%
+\right)  d\boldsymbol{r}%
+\end{array}
+\\
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  \supseteq\mathcal{C}\left(
+\mathcal{H}^{N}\right)  \supseteq\mathcal{B}_{2sa}\left(  \mathcal{H}%
+^{N}\right)  \supseteq\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)
+\supseteq\mathcal{B}_{0sa}\left(  \mathcal{H}^{N}\right)
+\end{array}
+\right]  $
+
+$\left[
+\begin{array}
+[c]{c}%
+\int_{\Delta_{A}}\lambda\left(  \boldsymbol{r}\right)  \left\vert \left[
+A\Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(  \boldsymbol{r}%
+\right)  \right]  _{+}\right)  d\boldsymbol{r}=0\Longleftrightarrow
+\lambda\left(  \boldsymbol{r}\right)  \overset{a.e.}{=}0\\
+\int_{\Delta_{A}}\lambda\left(  \boldsymbol{r}\right)  \left(  \left[
+A\Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(  \boldsymbol{r}%
+\right)  \right]  _{+}\right\vert d\boldsymbol{r}=0\Longleftrightarrow
+\lambda\left(  \boldsymbol{r}\right)  \overset{a.e.}{=}0\\
+\ker\left\{  dg\left(  A\right)  ^{\dagger}\right\}  =\left\{  \lambda
+\left\vert \left[  dg\left(  A\right)  ^{\dagger}\right]  \left(
+\lambda\right)  =0\right.  \right\}  \\
+\left[  dg\left(  A\right)  ^{\dagger}\right]  \left(  \lambda\right)
+=0\Longleftrightarrow\left(  \left.  \left[  dg\left(  A\right)  ^{\dagger
+}\right]  \left(  \lambda\right)  \right\vert \delta A\right)  =0\forall\delta
+A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \\
+=\left\langle \left.  \lambda\right\vert \left[  dg\left(  A\right)  \right]
+\left(  \delta A\right)  \right\rangle _{L_{\infty}\left(  \Delta_{A}\right)
+\times L_{1}\left(  \Delta_{A}\right)  }=0\forall\delta A\in\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  \\
+\Rightarrow\lambda\bot\operatorname{range}\left\{  dg\left(  A\right)
+\right\}  \equiv\lambda\in\left[  \operatorname{range}\left\{  dg\left(
+A\right)  \right\}  \right]  ^{\bot}\text{ }\\
+\text{i.e. }\lambda\in\ker\left\{  dg\left(  A\right)  ^{\dagger}\right\}
+\Longleftrightarrow\lambda\in\left[  \operatorname{range}\left\{  dg\left(
+A\right)  \right\}  \right]  ^{\bot}\\
+\operatorname{range}\left\{  dg\left(  A\right)  \right\}  =L_{1}\left(
+\Delta_{A}\right)  \text{ }\equiv dg\left(  A\right)  \text{ is surjective}\\
+dg\left(  A\right)  \text{ is surjective }\equiv\left[  \operatorname{range}%
+\left\{  dg\left(  A\right)  \right\}  \right]  ^{\bot}=\phi\\
+\left[  \operatorname{range}\left\{  dg\left(  A\right)  \right\}  \right]
+^{\bot}=\phi\equiv\int_{\Delta_{A}}\lambda\left(  \boldsymbol{r}\right)
+\left\vert \left[  A\Phi^{\dagger}\left(  \boldsymbol{r}\right)  \Phi\left(
+\boldsymbol{r}\right)  \right]  _{+}\right)  d\boldsymbol{r}%
+=0\Longleftrightarrow\lambda\left(  \boldsymbol{r}\right)  \overset{a.e.}{=}0
+\end{array}
+\right]  $%
+\begin{align*}
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  ^{\dagger} &  :W^{\boldsymbol{d}%
+}\longrightarrow V^{\boldsymbol{d}}\\
+\left\langle \left.  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  ^{\dagger
+}\boldsymbol{w}_{\boldsymbol{d}}\right\vert \boldsymbol{v}\right\rangle _{V}
+&  =\left\langle \left.  \boldsymbol{w}_{\boldsymbol{d}}\right\vert
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \boldsymbol{v}\right\rangle
+_{W}\,\forall\boldsymbol{v\in}\operatorname*{domain}\left\{  d\boldsymbol{g}%
+\left(  \boldsymbol{A}\right)  \right\}  \subseteq V
+\end{align*}%
+\[
+\dagger:\mathcal{L}\left(  V,W\right)  \longrightarrow\mathcal{L}\left(
+W^{\boldsymbol{d}},V^{\boldsymbol{d}}\right)
+\]
+$\lceil$%
+\[
+_{V}\left\langle d\boldsymbol{g}\left(  \boldsymbol{A}\right)  ^{\dagger
+}\boldsymbol{w}_{\boldsymbol{A}}\right\vert =\,_{W}\left\langle \boldsymbol{w}%
+_{\boldsymbol{A}}\right\vert d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+=\left(  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \left\vert
+\boldsymbol{w}\right\rangle _{W}\right)  ^{\dagger}%
+\]
+if $W$ can be embedded in $W^{\boldsymbol{d}}\rfloor$
+
+Hence%
+\begin{align*}
+\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ^{\bot} &  =\left\{  \boldsymbol{w}_{\boldsymbol{d}}\in
+W^{\boldsymbol{d}}\left\vert \left\langle \left.  \boldsymbol{w}%
+_{\boldsymbol{d}}\right\vert \boldsymbol{w}\right\rangle _{W}=0\forall
+\boldsymbol{w}\in\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  \subseteq W\right.  \right\}  \\
+&  \equiv\left\{  \boldsymbol{w}_{\boldsymbol{d}}\in W^{\boldsymbol{d}%
+}\left\vert \left\langle \left.  \boldsymbol{w}_{\boldsymbol{d}}\right\vert
+\boldsymbol{w}\right\rangle _{W}=0\forall\boldsymbol{w}\in
+\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  \subseteq\mathbb{R}^{m}\right.  \right\}
+\end{align*}
+and
+\begin{align*}
+\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  ^{\bot}
+&  =\left\{  \boldsymbol{v}_{\boldsymbol{A}}\in V^{\boldsymbol{d}}\left\vert
+\left\langle \left.  \boldsymbol{v}_{\boldsymbol{d}}\right\vert \boldsymbol{v}%
+\right\rangle _{V}=0\forall\boldsymbol{v}\in\ker\left\{  d\boldsymbol{g}%
+\left(  \boldsymbol{A}\right)  \right\}  \subseteq V\right.  \right\}  \\
+&  \equiv\left\{  \boldsymbol{v}_{\boldsymbol{A}}\in V^{\boldsymbol{d}%
+}\left\vert \left\langle \left.  \boldsymbol{v}_{\boldsymbol{d}}\right\vert
+\boldsymbol{v}\right\rangle _{V}=0\forall\boldsymbol{v}\in\ker\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  \subseteq
+\mathbb{R}^{n}\right.  \right\}  .
+\end{align*}
+
+
+If $\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right\}  =\mathbb{R}^{m}$ then $\left\{  \left.  \nabla g_{j}\left(
+\boldsymbol{A}\right)  \right\vert 1\leq j\leq m\right\}  $ are linearly
+independent and the vector $\left\langle \boldsymbol{v}\right\vert
+\in\mathbb{R}^{m}$ can be uniquely expanded as
+\begin{align}
+\left\langle \boldsymbol{v}\right\vert  &  =\sum_{1\leq j\leq m}\lambda
+_{j}\nabla g_{j}\left(  \boldsymbol{A}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\lambda_{1} & ,\cdots, & \lambda_{m}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\nabla g_{1}\left(  \boldsymbol{A}\right) \\
+\vdots\\
+\nabla g_{m}\left(  \boldsymbol{A}\right)
+\end{array}
+\right) \nonumber\\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\lambda_{1} & ,\cdots, & \lambda_{m}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\frac{\partial g_{1}\left(  \boldsymbol{A}\right)  }{\partial\boldsymbol{A}%
+_{1}} & \cdots & \frac{\partial g_{1}\left(  \boldsymbol{A}\right)  }%
+{\partial\boldsymbol{A}_{n}}\\
+\vdots & \ddots & \vdots\\
+\frac{\partial g_{m}\left(  \boldsymbol{A}\right)  }{\partial\boldsymbol{A}%
+_{1}} & \cdots & \frac{\partial g_{m}\left(  \boldsymbol{A}\right)  }%
+{\partial\boldsymbol{A}_{n}}%
+\end{array}
+\right) \nonumber\\
+&  =\left\langle \boldsymbol{\lambda}\right\vert \nabla\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \equiv\left\langle \boldsymbol{\lambda}\right\vert
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  .
+\end{align}
+If $\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right\}  \subset\mathbb{R}^{m}$ then $d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  $ has a non empty \emph{left kernel} i.e.
+\begin{equation}
+\exists\,\left\langle \boldsymbol{v}\right\vert \backepsilon\left\langle
+\boldsymbol{\lambda}\right\vert d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+=\boldsymbol{0}\Longleftrightarrow\boldsymbol{\lambda\in}\ker\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  ^{\dagger}\right\}
+\end{equation}
+and%
+\begin{align}
+\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ^{\bot}  &  =\left\{  \left.  \boldsymbol{\lambda}\right\vert
+\left\langle \left.  \boldsymbol{\lambda}\right\vert \left[  d\boldsymbol{g}%
+\left(  \boldsymbol{A}\right)  \right]  \left(  \delta\boldsymbol{A}\right)
+\right\rangle =0\forall\delta\boldsymbol{A}\in\operatorname*{domain}\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  \right\} \nonumber\\
+&  =\left\{  \left.  \boldsymbol{\lambda}\right\vert \left\langle \left.
+\boldsymbol{\lambda}\right\vert \left[  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right]  \left(  \delta\boldsymbol{A}\right)  \right\rangle
+=0\forall\delta\boldsymbol{A}\in\ker\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  ^{\bot}\right\}
+\end{align}
+If $\boldsymbol{\eta}\neq\boldsymbol{0\in}\ker\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  ^{\dagger}\right\}  $ then
+\begin{align}
+\left\langle \left.  \boldsymbol{\eta}\right\vert \left[  d\boldsymbol{g}%
+\left(  \boldsymbol{A}\right)  \right]  \left(  \delta\boldsymbol{A}\right)
+\right\rangle  &  =0\forall\delta\boldsymbol{A}\in V=\left\langle \left.
+\boldsymbol{\eta}\right\vert \boldsymbol{w}\right\rangle =0\forall
+\boldsymbol{w\in}\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\} \nonumber\\
+&  \Rightarrow\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  \subset W
+\end{align}
+thus $d\boldsymbol{g}\left(  \boldsymbol{A}\right)  $ is not surjective.
+Further
+\begin{equation}
+\left\langle \boldsymbol{\lambda}\right\vert \left[  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right]  =\left\langle \boldsymbol{\lambda
+}+\boldsymbol{\eta}\right\vert \left[  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right]  \text{ \thinspace for }\boldsymbol{\eta}\in\ker\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  ^{\dagger}\right\}
+\end{equation}
+so functionals on $\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  $ are not unique.
+
+\subsection{Density Functional Example}
+
+For the case $\boldsymbol{f}\left(  A\right)  $ one has in the infinite
+dimensional case $V=V^{d}=\mathcal{B}_{sa}\left(  \mathcal{H}^{N}\right)  ,$
+$W=L_{1}\left(  \mathbb{R}^{3}\right)  $ and $W^{d}=L_{\infty}\left(
+\mathbb{R}^{3}\right)  ,$while in the finite dimensional case $V=V^{d}%
+=\mathbb{R}^{n},$ and $V=V^{d}=\mathbb{R}^{m}.$
+
+\subsection{General Function}%
+
+\begin{align}
+\mathbb{R}^{n}  &  =\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ^{\bot}\oplus\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right\} \nonumber\\
+\mathbb{R}^{m}  &  =\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  ^{\bot}\oplus\operatorname*{Range}\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\} \nonumber\\
+\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}   &  \cong\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ^{\bot}%
+\end{align}
+and in all cases
+\begin{equation}
+\mathcal{T}_{\boldsymbol{A}}\subseteq\ker\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  .
+\end{equation}
+A point on the constraint manifold is called \emph{normal }if $\left\{
+\left.  \nabla g_{j}\left(  \boldsymbol{A}\right)  \right\vert 1\leq j\leq
+m\right\}  $ generates the normal space (thus is a linearly independent basis
+or generalized basis for this space)
+\begin{equation}
+\text{in general }\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  \subseteq\mathcal{N}_{\boldsymbol{A}%
+}\boldsymbol{g}\Rightarrow\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  ^{\bot}\supseteq\left(  \mathcal{N}%
+_{\boldsymbol{A}}\boldsymbol{g}\right)  ^{\bot}%
+\end{equation}
+and \emph{regular }if $\mathcal{T}_{\boldsymbol{A}}=\ker\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  $%
+\begin{equation}
+\text{in general }\mathcal{T}_{\boldsymbol{A}}\subseteq\ker\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  \Rightarrow\left(
+\mathcal{T}_{\boldsymbol{A}}\right)  ^{\bot}\supseteq\ker\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  ^{\bot}.
+\end{equation}
+\emph{Normal implies regular. }Thus for a normal point $\boldsymbol{A}$
+\begin{align}
+\mathcal{N}_{\boldsymbol{A}}\boldsymbol{g}  &  =\left(  \mathcal{T}%
+_{\boldsymbol{A}}\right)  ^{\bot}=\ker\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  ^{\bot}\nonumber\\
+\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  ^{\bot}
+&  \cong\operatorname*{Range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right\}  =W.
+\end{align}
+
+
+e.g. 1%
+
+\begin{align*}
+&  g:\mathbb{R}^{2}\rightarrow\mathbb{R}\\
+&  g\left(  x,y\right)  =x^{2}+y^{2}=c^{2};\quad y=f\left(  x\right)
+=+\sqrt{c^{2}-x^{2}};\quad\\
+&  \left[  df\left(  x\right)  \right]  \left(  \delta x\right)  =\left[
+-x\left(  c^{2}-x^{2}\right)  ^{-\frac{1}{2}}\right]  \left(  \delta x\right)
+\\
+&  \left\langle \nabla g\left(  x,y\right)  \right\vert =\left(  2x,2y\right)
+\\
+&  \ker\left\{  dg\left(  x,y\right)  \right\}  =\left\{  \left.
+\alpha\left(
+\begin{array}
+[c]{c}%
+y\\
+-x
+\end{array}
+\right)  \right\vert \alpha\in\mathbb{R}\right\}  \cong\mathbb{R}\\
+&  x\left(  t\right)  =c\cos\left(  \omega t+\omega_{0}\right)  ,\,y\left(
+t\right)  =c\sin\left(  \omega t+\omega_{0}\right) \\
+\theta\left(  t\right)   &  =\omega t+\omega_{0}=\tan^{-1}\left\{
+\frac{y\left(  t\right)  }{x\left(  t\right)  }\right\}  ;\omega\in
+\mathbb{R},\quad\tan^{-1}\text{ is the principal value }\\
+&  \text{for }x\neq0\text{ then }\\
+\theta\left(  0\right)   &  =\omega_{0}=\left\{
+\begin{array}
+[c]{c}%
+\tan^{-1}\left\{  \frac{y}{x}\right\}  ;x>0\\
+\tan^{-1}\left\{  \frac{y}{x}\right\}  -\pi;x<0
+\end{array}
+\right. \\
+\text{for }x  &  =0\text{ then }\omega_{0}=\left\{
+\begin{array}
+[c]{c}%
+\frac{\pi}{2};y>0\\
+-\frac{\pi}{2};y<0
+\end{array}
+\right. \\
+&  \mathcal{T}_{\left(  x,y\right)  }g=\left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  =\left\{  \omega\left(
+\begin{array}
+[c]{c}%
+-c\sin\left(  \omega_{0}\right) \\
+c\cos\left(  \omega_{0}\right)
+\end{array}
+\right)  =\omega\left(
+\begin{array}
+[c]{c}%
+-y\\
+x
+\end{array}
+\right)  \right. \\
+&  \left.  ,\omega\in\mathbb{R}\equiv\alpha\left(
+\begin{array}
+[c]{c}%
+y\\
+-x
+\end{array}
+\right)  \right\} \\
+&  \mathcal{N}_{\left(  x,y\right)  }g=\left[  \mathcal{T}_{\left(
+x,y\right)  }g\right]  ^{\bot}\cong\mathbb{R}%
+\end{align*}
+
+
+e.g. 2%
+
+\begin{align*}
+g  &  :\mathbb{R}^{3}\rightarrow\mathbb{R};\quad g\left(  x,y,z\right)
+=x^{2}+y^{2}+z^{2}-c^{2}=0;\quad dg\left(  x,y,z\right)  :\mathbb{R}%
+^{3}\rightarrow\mathbb{R}\\
+&  \left[  dg\left(  x,y,z\right)  \right]  \left(  \delta x,\delta y,\delta
+z\right)  =\left(  2x,2y,2z\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  \equiv\left\langle \left.  \nabla g\left(  x,y,z\right)  \right\vert
+\delta\boldsymbol{x}\right\rangle \\
+z  &  =f\left(  x,y\right)  =+\sqrt{c^{2}-x^{2}-y^{2}}\quad f:\mathbb{R}%
+^{2}\rightarrow\mathbb{R};\quad df\left(  x,y\right)  :\mathbb{R}%
+^{2}\rightarrow\mathbb{R}\\
+&  \left[  df\left(  x,y\right)  \right]  \left(  \delta x,\delta y\right)
+=\frac{-1}{\sqrt{c^{2}-x^{2}-y^{2}}}\left(  x,y\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  \equiv\left\langle \left.  \nabla f\left(  x,y\right)  \right\vert
+\delta\boldsymbol{x}\right\rangle \\
+&  g\left(  x,y,z\right)  =F\left(  \left(  x,y\right)  ,f\left(  x,y\right)
+\right)  =0=x^{2}+y^{2}+z^{2}-c^{2}\equiv\operatorname*{graph}\left\{  \text{
+}f\right\} \\
+&  \ker\left\{  dg\left(  x,y,z\right)  \right\}  =\left\{  \left.  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  \right\vert \left(  2x,2y,2z\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  =0\right\}  \cong\mathbb{R}^{2}\\
+&  \mathcal{N}_{\left(  x,y,z\right)  }g=\left\{  \left.  \alpha\left(
+x,y,z\right)  \right\vert \alpha\in\mathbb{R}\right\}  \cong\mathbb{R}%
+\end{align*}
+
+
+e.g. 3%
+
+\begin{align*}
+&  g,dg\left(  \boldsymbol{r}\right)  :\mathbb{R}^{3}\rightarrow\mathbb{R}%
+^{2}\equiv V\longrightarrow W;\,dg\left(  \boldsymbol{r}\right)  ^{\dagger
+}:\mathbb{R}^{2}\rightarrow\mathbb{R}^{3}\equiv V^{\boldsymbol{A}%
+}\longrightarrow W^{\boldsymbol{A}}\\
+&  g_{1}\left(  x,y,z\right)  =x^{2}+y^{2}+z^{2}=c_{1}^{2}\\
+&  g_{2}\left(  x,y,z\right)  =x^{2}+y^{2}=c_{2}^{2}\\
+&  \left\langle \nabla g_{1}\left(  x,y,z\right)  \right\vert =\left(
+2x,2y,2z\right) \\
+&  \left\langle \nabla g_{2}\left(  x,y,z\right)  \right\vert =\left(
+2x,2y,0\right) \\
+&  \ker\left\{  d\boldsymbol{g}\left(  x,y,z\right)  \right\}  =\left\{
+\left.  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  \right\vert \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0\\
+0
+\end{array}
+\right)  \right\}  \subset V\equiv\mathbb{R}^{3}\\
+&  \left.
+\begin{array}
+[c]{c}%
+2x\delta x+2y\delta y+2z\delta z=0\\
+2x\delta x+2y\delta y=0
+\end{array}
+\right\}  \Rightarrow\left.
+\begin{array}
+[c]{c}%
+z\delta z=0\Rightarrow\delta z=0\text{ if }z\neq0\text{ and }\delta
+z\in\mathbb{R}\text{ if }z=0\\
+\delta x=-\frac{y}{x}\delta y\text{ or }\delta y=-\frac{x}{y}\delta x
+\end{array}
+\right\} \\
+&  \ker\left\{  d\boldsymbol{g}\left(  x,y,z\right)  \right\}  =\left\{
+\left.  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+-\frac{x}{y}\delta x\\
+0
+\end{array}
+\right)  \right\vert \left(
+\begin{array}
+[c]{ccc}%
+x & y & z
+\end{array}
+\right)  \neq\left(
+\begin{array}
+[c]{ccc}%
+0 & 0 & 0
+\end{array}
+\right)  \right\}
+\end{align*}
+The kernel of the constraint
+\[
+\ker\left\{  d\boldsymbol{g}\left(  x,y,z\right)  \right\}  ==\left\{  \left.
+\left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  \right\vert \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0\\
+0
+\end{array}
+\right)  \right\}  \subset V\equiv\mathbb{R}^{3}%
+\]%
+\[
+\left.
+\begin{array}
+[c]{c}%
+2x\delta x+2y\delta y+2z\delta z=0\\
+2x\delta x+2y\delta y=0
+\end{array}
+\right\}  \Rightarrow\left.
+\begin{array}
+[c]{c}%
+z\delta z=0\Rightarrow\delta z=0\text{ if }z\neq0\text{ and }\delta
+z\in\mathbb{R}\text{ if }z=0\\
+\delta x=-\frac{y}{x}\delta y\text{ or }\delta y=-\frac{x}{y}\delta x
+\end{array}
+\right\}
+\]%
+\begin{align*}
+x  &  =0,y\neq0\\
+&
+\begin{array}
+[c]{c}%
+2y\delta y+2z\delta z=0\\
+2y\delta y=0\Rightarrow\delta y=0\Rightarrow2z\delta z=0
+\end{array}
+\end{align*}%
+\begin{align*}
+\ker\left\{  d\boldsymbol{g}\left(  x,y,z\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+1\\
+-\frac{x}{y}\\
+0
+\end{array}
+\right)  \right\vert \alpha\in\mathbb{R}\right\} \\
+\ker\left\{  d\boldsymbol{g}\left(  x,y,0\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+1\\
+-\frac{x}{y}\\
+0
+\end{array}
+\right)  ,\beta\left(
+\begin{array}
+[c]{c}%
+0\\
+0\\
+1
+\end{array}
+\right)  \right\vert \alpha,\beta\in\mathbb{R}\right\}
+\end{align*}%
+\begin{align*}
+\ker\left\{  d\boldsymbol{g}\left(  0,y,z\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+1\\
+0\\
+0
+\end{array}
+\right)  \right\vert \alpha\in\mathbb{R}\right\} \\
+\ker\left\{  d\boldsymbol{g}\left(  0,y,0\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+1\\
+0\\
+0
+\end{array}
+\right)  ,\beta\left(
+\begin{array}
+[c]{c}%
+0\\
+0\\
+1
+\end{array}
+\right)  \right\vert \alpha,\beta\in\mathbb{R}\right\}
+\end{align*}%
+\begin{align*}
+\ker\left\{  d\boldsymbol{g}\left(  x,0,z\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+0\\
+1\\
+0
+\end{array}
+\right)  \right\vert \alpha\in\mathbb{R}\right\} \\
+\ker\left\{  d\boldsymbol{g}\left(  x,0,0\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+0\\
+1\\
+0
+\end{array}
+\right)  ,\beta\left(
+\begin{array}
+[c]{c}%
+0\\
+0\\
+1
+\end{array}
+\right)  \right\vert \alpha,\beta\in\mathbb{R}\right\}
+\end{align*}%
+\begin{align*}
+\ker\left\{  d\boldsymbol{g}\left(  0,0,z\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+0\\
+1\\
+0
+\end{array}
+\right)  ,\beta\left(
+\begin{array}
+[c]{c}%
+1\\
+0\\
+0
+\end{array}
+\right)  \right\vert \alpha,\beta\in\mathbb{R}\right\} \\
+\ker\left\{  d\boldsymbol{g}\left(  0,0,0\right)  \right\}   &  =\left\{
+\left.  \alpha\left(
+\begin{array}
+[c]{c}%
+0\\
+1\\
+0
+\end{array}
+\right)  ,\beta\left(
+\begin{array}
+[c]{c}%
+1\\
+0\\
+0
+\end{array}
+\right)  ,\gamma\left(
+\begin{array}
+[c]{c}%
+0\\
+0\\
+1
+\end{array}
+\right)  \right\vert \alpha,\beta,\gamma\in\mathbb{R}\right\}
+\end{align*}
+The Normal space $\mathcal{N}_{\left(  x,y,z\right)  }\boldsymbol{g:}$ in
+order to see if the bases are lin. indep we consider%
+\begin{align*}
+&  \alpha_{1}\left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z
+\end{array}
+\right)  +\alpha_{2}\left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 0
+\end{array}
+\right)  =0\\
+&  \Rightarrow\alpha_{1}+\alpha_{2}=0\text{ if }x\neq0\text{ or }y\neq0\text{
+and }\alpha_{1}z=0\\
+&  \Rightarrow\alpha_{1}=\alpha_{2}=0\text{ if }z\neq0\text{ so vectors are
+lin. indep. }\\
+&  \Rightarrow\alpha_{1}=-\alpha_{2}\text{ if }z=0\text{ so vectors are lin.
+dep.}\\
+\mathcal{N}_{\left(  x,y,z\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  x,y,z\right)  \right\}
+=\operatorname*{range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{r}\right)
+\right\}  \subset W
+\end{align*}%
+\begin{align*}
+\mathcal{N}_{\left(  x,y,z\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  x,y,z\right)  ,\left(
+x,y,0\right)  \right\}  =\operatorname*{range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{r}\right)  \right\} \\
+\mathcal{N}_{\left(  x,y,0\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  x,y,0\right)  \right\}
+=\operatorname*{range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{r}\right)
+\right\} \\
+\mathcal{N}_{\left(  0,y,z\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  0,y,z\right)  ,\left(
+0,y,0\right)  \right\}  =\operatorname*{range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{r}\right)  \right\} \\
+\mathcal{N}_{\left(  0,y,0\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  0,y,0\right)  \right\}
+=\operatorname*{range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{r}\right)
+\right\} \\
+\mathcal{N}_{\left(  x,0,z\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  x,0,y\right)  ,\left(
+x,0,0\right)  \right\}  =\operatorname*{range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{r}\right)  \right\} \\
+\mathcal{N}_{\left(  x,0,0\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  x,0,0\right)  \right\}
+=\operatorname*{range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{r}\right)
+\right\} \\
+\mathcal{N}_{\left(  0,0,z\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  0,0,z\right)  \right\}
+=\operatorname*{range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{r}\right)
+\right\} \\
+\mathcal{N}_{\left(  0,0,0\right)  }\boldsymbol{g}  &  =\left\{  \phi\right\}
+=\operatorname*{range}\left\{  d\boldsymbol{g}\left(  \boldsymbol{r}\right)
+\right\}
+\end{align*}%
+\[
+V^{\boldsymbol{A}}\equiv\mathbb{R}^{3};W^{\boldsymbol{A}}\equiv\mathbb{R}^{2}%
+\]%
+\[
+dg\left(  \boldsymbol{r}\right)  ^{\dagger}:W^{\boldsymbol{A}}\rightarrow
+V^{\boldsymbol{A}}%
+\]
+Consider the Single Valued Decomposition (SVD)
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+u_{11} & u_{12}\\
+u_{21} & u_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+v_{11} & v_{12} & v_{13}\\
+v_{21} & v_{22} & v_{23}\\
+v_{31} & v_{32} & v_{33}%
+\end{array}
+\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{ccc}%
+\alpha_{1} & 0 & 0\\
+0 & \alpha_{2} & 0
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+u_{11} & u_{12}\\
+u_{21} & u_{22}%
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{ccc}%
+\alpha_{1} & 0 & 0\\
+0 & \alpha_{2} & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+v_{11} & v_{12} & v_{13}\\
+v_{21} & v_{22} & v_{23}\\
+v_{31} & v_{32} & v_{33}%
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+&  \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right) \nonumber\\
+&  =\alpha_{1}\left\vert \left(
+\begin{array}
+[c]{cc}%
+w_{11} & w_{12}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{ccc}%
+v_{11}^{\boldsymbol{A}} & v_{12}^{\boldsymbol{A}} & v_{13}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert +\alpha_{2}\left\vert \left(
+\begin{array}
+[c]{cc}%
+w_{21} & w_{22}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{ccc}%
+v_{21}^{\boldsymbol{A}} & v_{22}^{\boldsymbol{A}} & v_{23}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert
+\end{align}%
+\begin{align}
+&  \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+2x & 2x\\
+2y & 2y\\
+2z & 0
+\end{array}
+\right)  \equiv dg\left(  \boldsymbol{r}\right)  ^{\dagger}\nonumber\\
+&  =\alpha_{1}\left\vert \left(
+\begin{array}
+[c]{ccc}%
+v_{11} & v_{12} & v_{13}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{cc}%
+w_{11}^{\boldsymbol{A}} & w_{12}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert +\alpha_{2}\left\vert \left(
+\begin{array}
+[c]{ccc}%
+v_{21} & v_{22} & v_{23}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{cc}%
+w_{21}^{\boldsymbol{A}} & w_{22}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert
+\end{align}%
+\begin{align}
+&  dg\left(  \boldsymbol{r}\right)  dg\left(  \boldsymbol{r}\right)
+^{\dagger}=\left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+2x & 2x\\
+2y & 2y\\
+2z & 0
+\end{array}
+\right) \nonumber\\
+&  =\left(
+\begin{array}
+[c]{cc}%
+4x^{2}+4y^{2}+4z^{2} & 4x^{2}+4y^{2}\\
+4x^{2}+4y^{2} & 4x^{2}+4y^{2}%
+\end{array}
+\right) \nonumber\\
+&  =\alpha_{1}^{2}\left\vert \left(
+\begin{array}
+[c]{cc}%
+w_{11} & w_{12}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{cc}%
+w_{11}^{\boldsymbol{A}} & w_{12}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert +\alpha_{2}^{2}\left\vert \left(
+\begin{array}
+[c]{cc}%
+w_{21} & w_{22}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{cc}%
+w_{21}^{\boldsymbol{A}} & w_{22}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert
+\end{align}%
+\begin{align}
+&  \boldsymbol{d}g\left(  \boldsymbol{r}\right)  ^{\dagger}\boldsymbol{d}%
+g\left(  \boldsymbol{r}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right) \nonumber\\
+&  =\left(
+\begin{array}
+[c]{cc}%
+2x & 2x\\
+2y & 2y\\
+2z & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & 2y & 0
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+16x^{2} & 16xy & 4xz\\
+16xy & 16y^{2} & 4yz\\
+4xz & 4yz & 0
+\end{array}
+\right) \nonumber\\
+&  =\alpha_{1}^{2}\left\vert \left(
+\begin{array}
+[c]{ccc}%
+v_{11} & v_{12} & v_{13}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{ccc}%
+v_{11}^{\boldsymbol{A}} & v_{12}^{\boldsymbol{A}} & v_{13}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert \\
+&  +\alpha_{2}^{2}\left\vert \left(
+\begin{array}
+[c]{ccc}%
+v_{21} & v_{22} & v_{23}%
+\end{array}
+\right)  \right\rangle \left\langle \left(
+\begin{array}
+[c]{ccc}%
+v_{21}^{\boldsymbol{A}} & v_{22}^{\boldsymbol{A}} & v_{23}^{\boldsymbol{A}}%
+\end{array}
+\right)  \right\vert
+\end{align}%
+\begin{align}
+&  \mathcal{N}_{\left(  x,y,z\right)  }\boldsymbol{g\quad\bot\quad}%
+\mathcal{T}_{\left(  x,y,z\right)  }\boldsymbol{g}\\
+&  \mathcal{T}_{\left(  x,y,z\right)  }\boldsymbol{g}=\left[  \mathcal{N}%
+_{\left(  x,y,z\right)  }\boldsymbol{g}\right]  ^{\bot}%
+\end{align}%
+\begin{equation}
+\operatorname*{Rank}\left\{  d\boldsymbol{g}\left(  \boldsymbol{x}\right)
+\right\}  =\dim\left\{  \mathcal{N}_{\left(  x,y,z\right)  }\boldsymbol{g}%
+\right\}
+\end{equation}
+e.g. 4%
+
+\begin{align}
+g  &  :\mathbb{R}^{3}\rightarrow\mathbb{R}^{2}\nonumber\\
+g_{1}\left(  x,y,z\right)   &  =x^{2}+y^{2}+z^{2}=c_{1}^{2}\nonumber\\
+g_{2}\left(  x,y,z\right)   &  =x^{2}-y^{2}=c_{2}^{2}\nonumber\\
+\left\langle \nabla g_{1}\left(  x,y,z\right)  \right\vert  &  =\left(
+2x,2y,2z\right) \nonumber\\
+\left\langle \nabla g_{2}\left(  x,y,z\right)  \right\vert  &  =\left(
+2x,-2y,0\right) \nonumber\\
+\ker\left\{  d\boldsymbol{g}\left(  x,y,z\right)  \right\}   &  =\left\{
+\left.  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  \right\vert \left(
+\begin{array}
+[c]{ccc}%
+2x & 2y & 2z\\
+2x & -2y & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y\\
+\delta z
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0\\
+0
+\end{array}
+\right)  \right\} \nonumber\\
+\mathcal{N}_{\left(  x,y,z\right)  }\boldsymbol{g}  &
+=\operatorname*{linearspan}\left\{  \left(  2x,2y,2z\right)  ,\left(
+2x,-2y,0\right)  \right\}
+\end{align}
+e.g.5%
+
+\begin{align}
+g_{1}  &  :\mathbb{R}^{2}\rightarrow\mathbb{R}\nonumber\\
+g_{1}\left(  x,y\right)   &  =\left(  x^{2}+y^{2}-1\right)  ^{2}=0=x^{4}%
++y^{4}+4x^{2}y^{2}-2x^{2}-2y^{2}+1\nonumber\\
+\left\langle \nabla g_{1}\left(  x,y\right)  \right\vert  &  =4\left(  \left(
+x^{2}+y^{2}-1\right)  x,\left(  x^{2}+y^{2}-1\right)  y\right) \nonumber\\
+\ker\left\{  \boldsymbol{d}g_{1}\left[  \boldsymbol{r}_{0}\right]  \right\}
+&  =\left\{
+\begin{array}
+[c]{c}%
+\left.  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  \right\vert \left(
+\begin{array}
+[c]{cc}%
+\left(  x^{2}+y^{2}-1\right)  x & \left(  x^{2}+y^{2}-1\right)  y
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right) \\
+=\left(
+\begin{array}
+[c]{c}%
+0\\
+0
+\end{array}
+\right)
+\end{array}
+\right\} \nonumber\\
+\mathcal{N}_{\left(  x,y\right)  }g_{1}  &  =\left[  \mathcal{T}_{\left(
+x,y\right)  }g_{1}\right]  ^{\bot}%
+\end{align}
+Let $\left(  x,y\right)  =\left(  0,1\right)  $ then
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\left(  x^{2}+y^{2}-1\right)  x & \left(  x^{2}+y^{2}-1\right)  y
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+0 & 0
+\end{array}
+\right)
+\end{equation}
+which gives
+\begin{equation}
+\ker\left\{  dg_{1}\left[  \left(  0,1\right)  \right]  \right\}
+=\mathbb{R}^{2}.
+\end{equation}
+A tangent vector $\left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  $ at the point $\boldsymbol{r}_{0}$ is defined by considering curves%
+\begin{align}
+g_{1}\left(  v\left(  t\right)  \right)   &  =0\,,t\in\left[  0,\delta\right]
+\nonumber\\
+v\left(  0\right)   &  =\boldsymbol{r}_{0},
+\end{align}
+$%
+\begin{array}
+[c]{c}%
+\text{such curves could be }x\left(  t\right)  =\cos\left(  \omega
+t+\omega_{0}\right)  ;y\left(  t\right)  =\sin\left(  \omega t+\omega
+_{0}\right)  ;t\in\left[  0,\frac{2\pi}{\omega}\right)  \text{, }\\
+\omega\text{ is an arbitary constant }\\
+\text{and }\omega_{0}\text{ determines the point where the tangent space is
+evaluated,}%
+\end{array}
+$
+
+and must be a solution of
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}v_{x}\left(  t\right)  }{\boldsymbol{d}t}\\
+\frac{\boldsymbol{d}v_{y}\left(  t\right)  }{\boldsymbol{d}t}%
+\end{array}
+\right)
+\end{equation}
+This implies the necessary condition
+\begin{equation}
+\frac{dg_{1}\left(  v\left(  t\right)  \right)  }{dt}=\left\langle \nabla
+g_{1}\left(  x,y\right)  \left\vert \frac{dv\left(  t\right)  }{dt}\right.
+\right\rangle =\nabla g_{1}\left(  x,y\right)  ^{t}\left(
+\begin{array}
+[c]{c}%
+\frac{dx}{dt}\\
+\frac{dy}{\boldsymbol{d}t}%
+\end{array}
+\right)  =0
+\end{equation}
+i.e.$\left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  \in$ $\ker\left\{  dg_{1}\left[  \boldsymbol{r}_{0}\right]  \right\}
+$. The curve $g_{1}$ is the unit circles with center at the origin, thus its
+tangent at $\left(  0,1\right)  $ is the line generated by $\left(
+1,0\right)  $ i.e the vectors $\left\{  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+0
+\end{array}
+\right)  \right\}  ,$which form a subspace of $\ker\left\{  dg_{1}\left[
+\left(  0,1\right)  \right]  \right\}  .$ This can be seen by considering the
+curve
+\begin{equation}
+x\left(  t\right)  =\cos\left(  \omega t+\omega_{0}\right)  ,\,y\left(
+t\right)  =\sin\left(  \omega t+\omega_{0}\right)  ,
+\end{equation}
+where
+\begin{align}
+x  &  =x\left(  0\right)  =\cos\left(  \omega_{0}\right)  \Rightarrow
+\omega_{0}=\cos^{-1}\left(  x\right) \nonumber\\
+y  &  =y\left(  0\right)  =\sin\left(  \omega_{0}\right)  \Rightarrow
+\omega_{0}=\sin^{-1}\left(  y\right)
+\end{align}
+which has derivatives
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}x}{\boldsymbol{d}t}\\
+\frac{\boldsymbol{d}y}{\boldsymbol{d}t}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+-\omega\sin\left(  \omega t+\omega_{0}\right) \\
+\omega\cos\left(  \omega t+\omega_{0}\right)
+\end{array}
+\right)
+\end{equation}
+and thus tangent vectors at the point $\left(  x,y\right)  =\left(  x\left(
+0\right)  ,y\left(  0\right)  \right)  $
+\begin{equation}
+\left.  \left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}x}{\boldsymbol{d}t}\\
+\frac{\boldsymbol{d}y}{\boldsymbol{d}t}%
+\end{array}
+\right)  \right\vert _{t=0}=\left(
+\begin{array}
+[c]{c}%
+-\omega\sin\left(  \omega_{0}\right) \\
+\omega\cos\left(  \omega_{0}\right)
+\end{array}
+\right)  =\omega\left(
+\begin{array}
+[c]{c}%
+-y\\
+x
+\end{array}
+\right)  .
+\end{equation}
+At the point $\left(  0,1\right)  \equiv\omega_{0}=\frac{\pi}{2}$ this gives
+\begin{equation}
+\left.  \left(
+\begin{array}
+[c]{c}%
+\frac{\boldsymbol{d}x}{\boldsymbol{d}t}\\
+\frac{\boldsymbol{d}y}{\boldsymbol{d}t}%
+\end{array}
+\right)  \right\vert _{t=0}=\left(
+\begin{array}
+[c]{c}%
+-\omega\\
+0
+\end{array}
+\right)  ;\omega\in\mathbb{R}%
+\end{equation}
+and thus
+\begin{equation}
+\mathcal{T}_{\left(  0,1\right)  }g_{1}=\operatorname*{linearspan}\left\{
+\left(
+\begin{array}
+[c]{cc}%
+1 & 0
+\end{array}
+\right)  \right\}  .
+\end{equation}
+$dg_{1}\left[  \left(  0,1\right)  \right]  $ $\equiv0$ is not surjective and
+does not equal the normal space which is defined as
+\begin{equation}
+\mathcal{N}_{\left(  x,y\right)  }g_{1}=\left[  \mathcal{T}_{\left(
+x,y\right)  }g_{1}\right]  ^{\bot}=\operatorname*{linearspan}\left\{  \left(
+\begin{array}
+[c]{cc}%
+0 & 1
+\end{array}
+\right)  \right\}  .
+\end{equation}
+
+
+e.g.6%
+
+\begin{align}
+g_{1}  &  :\mathbb{R}^{2}\rightarrow\mathbb{R}\nonumber\\
+&  g_{1}\left(  x,y\right)  =x^{2}-y^{2}=0\nonumber\\
+&  \left\langle \nabla g_{1}\left(  x,y\right)  \right\vert =2\left(
+x,-y\right) \nonumber\\
+&  \ker\left\{  dg_{1}\left[  \boldsymbol{r}_{0}\right]  \right\}  =\left\{
+\left.  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  \right\vert \left(
+\begin{array}
+[c]{cc}%
+x & -y
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x\\
+\delta y
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0\\
+0
+\end{array}
+\right)  \right\} \nonumber\\
+&  \mathcal{N}_{\left(  x,y\right)  }g_{1}=\operatorname*{linearspan}\left\{
+\left(
+\begin{array}
+[c]{cc}%
+x & -y
+\end{array}
+\right)  \right\}
+\end{align}
+Let $\left(  x,y\right)  =\left(  0,0\right)  $ then
+\begin{equation}
+\nabla g_{1}\left(  0,0\right)  =\left(
+\begin{array}
+[c]{cc}%
+x & -y
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+0 & 0
+\end{array}
+\right)
+\end{equation}
+which also gives
+\begin{equation}
+\ker\left\{  dg_{1}\left[  \left(  0,1\right)  \right]  \right\}
+=\mathbb{R}^{2}.
+\end{equation}
+Now
+\begin{align}
+\mathcal{T}_{\left(  0,0\right)  }g_{1}  &  =\operatorname*{linearspan}%
+\left\{  \left(
+\begin{array}
+[c]{cc}%
+0 & 1
+\end{array}
+\right)  \right\} \nonumber\\
+\mathcal{N}_{\left(  x,y\right)  }g_{1}  &  =\left[  \mathcal{T}_{\left(
+0,0\right)  }g_{1}\right]  ^{\bot}=\operatorname*{linearspan}\left\{  \left(
+\begin{array}
+[c]{cc}%
+1 & 0
+\end{array}
+\right)  \right\}
+\end{align}
+
+
+A point on the constraint manifold is called \emph{normal }if $\left\{  \nabla
+g_{1}\left(  x,y\right)  \right\}  $ generates the normal space, which at the
+point $\left(  0,0\right)  $ it does not, and \emph{regular }if $\mathcal{T}%
+_{\left(  x,y\right)  }g_{1}=\ker\left\{  dg_{1}\left[  \left(  x,y\right)
+\right]  \right\}  ,$ which again at the point $\left(  0,0\right)  $ is not
+true. \emph{Normal implies regular. }Thus for a normal point $\left(
+x,y\right)  $
+\begin{align}
+\mathcal{N}_{\left(  x,y\right)  }g_{1}  &  =\left[  \mathcal{T}_{\left(
+x,y\right)  }g_{1}\right]  ^{\bot}=\ker\left\{  dg_{1}\left[  \left(
+x,y\right)  \right]  \right\}  ^{\bot}\nonumber\\
+\ker\left\{  dg_{1}\left[  \left(  x,y\right)  \right]  \right\}  ^{\bot}  &
+\cong\operatorname*{range}\left\{  dg_{1}\left[  \left(  x,y\right)  \right]
+\right\}
+\end{align}
+
+
+\begin{itemize}
+\item $m=n$
+\end{itemize}
+
+\begin{itemize}
+\item $m<n$
+
+\item $m>n$
+\end{itemize}
+
+\section{Banach Space}
+
+If a Banach space $\mathcal{B}$ has a basis $\left\{  \left.  \left\vert
+e_{j}\right\rangle \right\vert 1\leq j\leq\infty\right\}  $ then
+\[
+T:\mathcal{B}\rightarrow\mathbb{R}^{\infty}%
+\]
+where $\mathbb{R}^{\infty}$ is the space of sequencies (not in general
+convergent)\ given by
+\[
+\left\vert c\right\rangle =\sum_{1\leq j\leq\infty}c_{j}\left\vert
+e_{j}\right\rangle \equiv\left\vert \boldsymbol{e}\right\rangle \boldsymbol{c}%
+\]
+this correspondence might not be $1-1.$ If the Banach space is a closure of a
+subset of distributions then
+\[
+\left\vert c\right\rangle =\int c\left(  x\right)  \left\vert x\right\rangle
+\equiv\left\vert \boldsymbol{x}\right\rangle \boldsymbol{c}%
+\]
+
+
+\section{\bigskip Extra}
+
+As the example is quadratic it useful to consider the Hessian $d^{2}%
+\boldsymbol{f}\left(  A\right)  $ and note that a sufficient condition that
+$\boldsymbol{A}+\delta\boldsymbol{A}$ $\in\mathfrak{M}$ is that $\delta
+A\in\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  $
+and
+\begin{equation}
+\left(  \left.  \delta A\right\vert \widehat{\Phi^{\dagger}\Phi_{\varphi}%
+}\delta A\right)  =\mathbf{0}.
+\end{equation}
+$\lceil$%
+\begin{equation}
+\left(  \left.  \delta A\right\vert \Phi\left(  \varphi_{j}\right)  ^{\dagger
+}\Phi\left(  \varphi_{j}\right)  \delta A\right)  =\operatorname{Tr}\left\{
+\Phi\left(  \varphi_{j}\right)  ^{\dagger}\Phi\left(  \varphi_{j}\right)
+\left(  \delta A\right)  ^{2}\right\}  =0
+\end{equation}
+In order to satisfy this constraint a positive matrix to have a zero diagonal,
+which is not possible as the trace would then be zero%
+\begin{align}
+\mathbf{\rho}  &  =\operatorname{Tr}\left\{  \Phi^{\dagger}\Phi_{\varphi}%
+D_{1}\right\}  =\operatorname{Tr}\left\{  \Phi^{\dagger}\Phi_{\varphi}%
+D_{2}\right\} \\
+\Delta &  =D_{1}-D_{2}\\
+\mathbf{0}  &  =\operatorname{Tr}\left\{  \Phi^{\dagger}\Phi_{\varphi}%
+\Delta\right\}
+\end{align}
+$\rfloor$
+
+Misc:
+\begin{align*}
+\mathbb{R}^{m}  &  =\operatorname*{Range}\left\{  d\boldsymbol{g}\left(
+\boldsymbol{A}\right)  \right\}  \oplus\operatorname*{Range}\left\{
+d\boldsymbol{g}\left(  \boldsymbol{A}\right)  \right\}  ^{c}\\
+&  \qquad\cup\qquad\qquad\qquad\qquad\cap\\
+\mathbb{R}^{m}  &  =\left[  \ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right\}  ^{c}\right]  \oplus\left[  \ker\left\{  d\boldsymbol{g}%
+\left(  \boldsymbol{A}\right)  \right\}  ^{c}\right]  ^{c},
+\end{align*}
+which gives for inner product (self dual) spaces
+\[
+\mathbb{R}^{m}=\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}\right)
+\right\}  ^{\bot}\oplus\ker\left\{  d\boldsymbol{g}\left(  \boldsymbol{A}%
+\right)  \right\}  .
+\]
+
+
+
+\end{document}

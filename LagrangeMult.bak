@@ -1,0 +1,496 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, May 15, 2008 09:56:10}
+%TCIDATA{LastRevised=Friday, November 27, 2009 15:30:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+%
+
+\begin{equation}
+\min_{\boldsymbol{g}\left(  \boldsymbol{x}\right)  =\boldsymbol{c}}f\left(
+\boldsymbol{x}\right)  ,
+\end{equation}
+where $\boldsymbol{x\in}W$ and $\boldsymbol{c\in}V$
+\[
+\boldsymbol{g:}W\rightarrow V.
+\]
+The Lagrangian is%
+\begin{equation}
+\mathcal{L}\left(  \boldsymbol{x,\mu}\right)  =f\left(  \boldsymbol{x}\right)
+-\left\langle \boldsymbol{\mu}\left\vert \boldsymbol{g}\left(  \boldsymbol{x}%
+\right)  -\boldsymbol{c}\right.  \right\rangle
+\end{equation}
+and the constrained minimum of the constrained problem is an unconstrained
+saddle point of the Lagrangian. Necessary conditions (KKT\ conditions) for the
+constrained stationary points are
+\begin{align}
+\nabla_{x}\mathcal{L}\left(  \boldsymbol{x,\mu}\right)   &  =\left\langle
+\nabla_{x}f\left(  \boldsymbol{x}\right)  \right\vert -\left\langle
+\boldsymbol{\mu}\left\vert \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}%
+\right)  \right.  \right\vert =\boldsymbol{0}\\
+&  \Rightarrow\nabla_{x}f\left(  \boldsymbol{x}\right)  =\left\langle
+\boldsymbol{\mu}\left\vert \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}%
+\right)  \right.  \right\rangle =\sum_{1\leq j\leq\varkappa}\mu_{j}\nabla
+_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)  _{j}=\sum_{1\leq
+j\leq\varkappa}\mu_{j}\nabla_{x}g_{j}\left(  \boldsymbol{x}\right)  \\
+&  =\boldsymbol{\mu}\nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)
+\end{align}
+and
+\begin{equation}
+\nabla_{\mu}\mathcal{L}\left(  \boldsymbol{x,\mu}\right)  =\boldsymbol{g}%
+\left(  \boldsymbol{x}\right)  -\boldsymbol{c}=\boldsymbol{0.}%
+\end{equation}%
+\[
+\nabla_{x}f\left(  \boldsymbol{x}\right)  \left[  \nabla_{x}\boldsymbol{g}%
+\left(  \boldsymbol{x}\right)  \right]  ^{-1}=\boldsymbol{\mu}%
+\]
+The constraint condition is recovered by the max wrt to variations of the
+Lagrange parameter.
+
+The changes $\delta\boldsymbol{x}$ must maintain the constraint thus
+\begin{align*}
+\boldsymbol{g}\left(  \boldsymbol{x}+\delta\boldsymbol{x}\right)   &
+=\boldsymbol{g}\left(  \boldsymbol{x}\right)  +\nabla_{x}\boldsymbol{g}\left(
+\boldsymbol{x}\right)  \left\vert \delta\boldsymbol{x}\right\rangle
+=\boldsymbol{g}\left(  \boldsymbol{x}\right)  \\
+&  \Rightarrow\left[  \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)
+\right]  \left\vert \delta\boldsymbol{x}\right\rangle =\mathbf{0}\\
+&  \Leftrightarrow\left\vert \delta\boldsymbol{x}\right\rangle \in\ker\left[
+\nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)  \right]
+\end{align*}
+The linear approximation $\left[  \nabla_{x}\boldsymbol{g}\left(
+\boldsymbol{x}\right)  \right]  $ to $\boldsymbol{g}$ at $\boldsymbol{x}$
+maps
+\begin{align*}
+d\boldsymbol{g}\left(  \boldsymbol{x}\right)   &  \equiv\nabla_{x}%
+\boldsymbol{g}\left(  \boldsymbol{x}\right)  :\mathcal{T}_{\boldsymbol{x}%
+}\rightarrow V;\quad\delta\boldsymbol{x}\in\mathcal{T}_{\boldsymbol{x}}\\
+\left[  \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)  \right]
+\left\vert \delta\boldsymbol{x}\right\rangle  &  =\delta\boldsymbol{c}%
+\quad\delta\boldsymbol{c}\in V.
+\end{align*}
+At stationary points for $\left\Vert \delta\boldsymbol{x}\right\Vert
+\leq\varepsilon$
+\begin{align}
+\mathcal{L}\left(  \boldsymbol{x}+\delta\boldsymbol{x,\mu}\right)   &
+=f\left(  \boldsymbol{x}+\delta\boldsymbol{x}\right)  -\left\langle
+\boldsymbol{\mu}\left\vert \boldsymbol{g}\left(  \boldsymbol{x}+\delta
+\boldsymbol{x}\right)  -\boldsymbol{c}\right.  \right\rangle \nonumber\\
+&  =f\left(  \boldsymbol{x}\right)  +\left\langle \left.  \nabla_{x}f\left(
+\boldsymbol{x}\right)  \right\vert \delta\boldsymbol{x}\right\rangle
+-\left\langle \boldsymbol{\mu}\left\vert \nabla_{x}\boldsymbol{g}\left(
+\boldsymbol{x}\right)  \right.  \delta\boldsymbol{x}\right\rangle \nonumber\\
+&  =\mathcal{L}\left(  \boldsymbol{x,\mu}\right)
+\end{align}
+giving%
+\begin{equation}
+\left\langle \left.  \nabla_{x}f\left(  \boldsymbol{x}\right)  \right\vert
+\delta\boldsymbol{x}\right\rangle -\left\langle \boldsymbol{\mu}\left\vert
+\nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)  \right.  \delta
+\boldsymbol{x}\right\rangle =0\forall\delta\boldsymbol{x\in}\mathcal{T}%
+_{\boldsymbol{x}}.
+\end{equation}
+The normal space $\mathcal{N}_{\boldsymbol{x}}$ of $\boldsymbol{g}\left(
+\boldsymbol{x}\right)  =\boldsymbol{c}$ is given by
+\[
+\mathcal{N}_{\boldsymbol{x}}=\operatorname{linspan}\left\{  \left.  \nabla
+_{x}g_{j}\left(  \boldsymbol{x}\right)  \right\vert 1\leq j\leq\varkappa
+\right\}
+\]
+If $\dim\left\{  \mathcal{N}_{\boldsymbol{x}}\right\}  =\varkappa$ then the
+constraints are \emph{regular}.
+
+If $\dim\left\{  \operatorname{Ran}\left\{  \left[  \nabla_{x}\boldsymbol{g}%
+\left(  \boldsymbol{x}\right)  \right]  \right\}  \right\}  =\varkappa,$ i.e.
+the map $\left[  \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)
+\right]  $ is surjective, \emph{and }$\boldsymbol{g}\left(  \boldsymbol{x}%
+\right)  =\boldsymbol{c}$ then this point is regular \cite{Hestenes}. The
+tangent space $\mathcal{T}_{\boldsymbol{x}}$ to the level surface
+$\boldsymbol{g}\left(  \boldsymbol{x}\right)  =\boldsymbol{c}$ at this point
+is the space of vectors
+\[
+\mathcal{T}_{\boldsymbol{x}}=\operatorname{linspan}\left\{  h\left\vert
+\left\langle \left.  \left[  \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}%
+\right)  \right]  \right\vert h\right\rangle =0\right.  \right\}
+=\ker\left\{  \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)  \right\}
+\]
+and
+\begin{equation}
+\mathcal{T}_{\boldsymbol{x}}=\operatorname{linspan}\left\{  h\left\vert
+h=\mathbf{\dot{r}}\left(  0\right)  ;\boldsymbol{g}\left(  \mathbf{r}\left(
+t\right)  \right)  =\boldsymbol{c},\left\vert t\right\vert \leq\delta
+;\mathbf{r}\left(  0\right)  =\boldsymbol{c}\right.  \right\}  .
+\end{equation}
+Clearly
+\begin{equation}
+\mathcal{T}_{\boldsymbol{x}}=\ker\left\{  \nabla_{x}\boldsymbol{g}\left(
+\boldsymbol{x}\right)  \right\}  \subset W.
+\end{equation}
+For regular points $\ker\left\{  \left[  \nabla_{x}\boldsymbol{g}\left(
+\boldsymbol{x}\right)  \right]  \right\}  =\mathcal{T}_{\boldsymbol{x}}$, thus
+$\dim\left\{  \mathcal{T}_{\boldsymbol{x}}\right\}  =\left(  r-\varkappa
+\right)  $ and
+\begin{equation}
+\mathbb{R}^{r}=\mathcal{T}_{\boldsymbol{x}}\oplus\mathcal{N}_{\boldsymbol{x}}.
+\end{equation}
+For non regular points $\mathcal{T}_{\boldsymbol{x}}\oplus\mathcal{N}%
+_{\boldsymbol{x}}\subset\mathbb{R}^{r}.$
+
+At the minimum $\nabla_{x}f\left(  \boldsymbol{x}_{\#}\right)  \in
+\mathcal{N}_{\boldsymbol{x}_{\#}}$ and variations $\delta\boldsymbol{x\in
+}\mathcal{T}_{\boldsymbol{x}_{\#}}$ are orthogonal to $\nabla_{x}f\left(
+\boldsymbol{x}_{\#}\right)  $ and thus to first order do not change the value
+of $f\left(  \boldsymbol{x}_{\#}\right)  $.
+
+\subsection{Examples}
+
+One constraint $\varkappa=1$
+
+1.%
+\begin{align*}
+g_{1}\left(  \boldsymbol{x}\right)   &  =c_{1}\equiv\sum_{1\leq j\leq r}%
+x_{j}=c\equiv\left(  1,\cdots,1\right)  \left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+\vdots\\
+x_{r}%
+\end{array}
+\right)  =c\\
+\nabla_{x}g_{1}\left(  \boldsymbol{x}\right)   &  =\left(  \frac{\partial
+g_{1}}{\partial x_{1}},\cdots,\frac{\partial g_{1}}{\partial x_{r}}\right)
+=\left(  1,\cdots,1\right)
+\end{align*}%
+\begin{align*}
+\mathcal{N}_{\boldsymbol{x}}  &  =\left\{  \left.  \eta\left(  1,\cdots
+,1\right)  \right\vert \eta\in\mathbb{R}\right\}  \cong\mathbb{R}\\
+\mathcal{T}_{\boldsymbol{x}}  &  =\left\{  \left.  \delta\boldsymbol{x}%
+\right\vert \delta\boldsymbol{x}\bot\left(  1,\cdots,1\right)  \right\}
+\cong\mathbb{R}^{r-1}%
+\end{align*}
+hence%
+\[
+\nabla_{x}f\left(  \boldsymbol{x}\right)  =\left\langle \boldsymbol{\mu
+}\left\vert \nabla_{x}\boldsymbol{g}\left(  \boldsymbol{x}\right)  \right.
+\right\rangle =\mu\left(  1,\cdots,1\right)  .
+\]
+So at min
+\[
+\frac{\partial f\left(  \boldsymbol{x}_{\#}\right)  }{\partial x_{1}}%
+=\cdots=\frac{\partial f\left(  \boldsymbol{x}_{\#}\right)  }{\partial x_{r}%
+}=\mu
+\]
+Let
+\[
+0\leq x_{j}\leq1\quad1\leq j\leq r
+\]
+so one can set
+\[
+f\left(  \boldsymbol{\theta}\right)  =f\left(  \boldsymbol{x}\left(
+\boldsymbol{\theta}\right)  \right)
+\]
+where%
+\[
+x_{j}\left(  \boldsymbol{\theta}\right)  =\cos\theta_{j};\quad0\leq\theta
+_{j}\leq\frac{\pi}{2}%
+\]%
+\begin{align*}
+g_{1}\left(  \boldsymbol{\theta}\right)   &  =c_{1}\equiv\sum_{1\leq j\leq
+r}\cos\theta_{j}=c\\
+\nabla_{\theta}g_{1}\left(  \boldsymbol{\theta}\right)   &  =\left(
+\frac{\partial g_{1}}{\partial\theta_{1}},\cdots,\frac{\partial g_{1}%
+}{\partial\theta_{r}}\right)  =-\left(  \sin\theta_{1},\cdots,\sin\theta
+_{r}\right)
+\end{align*}%
+\[
+\frac{\partial f\left(  \boldsymbol{\theta}\right)  }{\partial\theta_{j}}%
+=\sum_{k}\frac{\partial f\left(  \boldsymbol{x}\left(  \boldsymbol{\theta
+}\right)  \right)  }{\partial x_{k}}\frac{\partial x_{k}}{\partial\theta_{j}%
+}=-\sum_{k}\frac{\partial f\left(  \boldsymbol{x}\left(  \boldsymbol{\theta
+}\right)  \right)  }{\partial x_{k}}\sin\theta_{k}\delta_{jk}=-\frac{\partial
+f\left(  \boldsymbol{x}\left(  \boldsymbol{\theta}\right)  \right)  }{\partial
+x_{j}}\sin\theta_{j}%
+\]%
+\[
+\nabla_{\theta}f\left(  \boldsymbol{x}\right)  =\left\langle \boldsymbol{\mu
+}\left\vert \nabla_{\theta}\boldsymbol{g}\left(  \boldsymbol{\theta}\right)
+\right.  \right\rangle =-\mu\left(  \sin\theta_{1},\cdots,\sin\theta
+_{r}\right)  .
+\]%
+\[
+\frac{\partial f\left(  \boldsymbol{\theta}\right)  }{\partial\theta_{j}}%
+=-\mu\sin\theta_{j}=-\frac{\partial f\left(  \boldsymbol{x}\left(
+\boldsymbol{\theta}\right)  \right)  }{\partial x_{j}}\sin\theta_{j}%
+\]
+At a constrained min
+\begin{align*}
+-\mu\sin\theta_{j}+\frac{\partial f\left(  \boldsymbol{x}\left(
+\boldsymbol{\theta}\right)  \right)  }{\partial x_{j}}\sin\theta_{j}  &  =0\\
+\sin\theta_{j}\left\{  \frac{\partial f\left(  \boldsymbol{x}\left(
+\boldsymbol{\theta}\right)  \right)  }{\partial x_{j}}-\mu\right\}   &  =0\\
+\sin\theta_{j}  &  =0\text{ and/or }\frac{\partial f\left(  \boldsymbol{x}%
+\left(  \boldsymbol{\theta}\right)  \right)  }{\partial x_{j}}=\mu
+\end{align*}
+and
+\[
+\sum_{1\leq j\leq r}\cos\theta_{j}=c
+\]
+note
+\[
+\sin\theta_{j}=0\Rightarrow x_{j}=\cos\theta_{j}=1;\quad0\leq\theta_{j}%
+\leq\frac{\pi}{2}%
+\]
+
+
+If we use the parameterization
+\[
+g_{1}\left(  \boldsymbol{\theta}\right)  =\sum_{1\leq j\leq r}\cos^{2}%
+\theta_{j}=c
+\]
+then $\sin\theta_{j}$ is replaced by $\sin2\theta_{j}$ and
+\[
+\sin2\theta_{j}=0\Rightarrow x_{j}=\cos^{2}\theta_{j}=1\text{ \emph{or }%
+}0;\quad0\leq\theta_{j}\leq\frac{\pi}{2}.
+\]
+
+
+The eigenvalues of the matrix $F\left(  \mathbb{D}^{2},\boldsymbol{\varphi
+}\right)  $ (the diagonal elements of the matrix $\tilde{F}\left(
+\mathbb{D}^{2},\boldsymbol{\varphi}\right)  $ ) are
+\begin{align}
+\varepsilon_{j}  &  =\tilde{F}\left(  \mathbb{D}^{2},\boldsymbol{\varphi
+}\right)  _{jj}=\frac{1}{\left\langle \left.  \Psi\right\vert \Psi
+\right\rangle }\left\{  \left\langle \left.  \Psi\right\vert b_{j}^{\dagger
+}b_{j}H\Psi\right\rangle -\left\langle \left.  b_{j}\Psi\right\vert Hb_{j}%
+\Psi\right\rangle \right\} \nonumber\\
+&  =N_{j}\left\{  \mathcal{E}_{N}\left(  \mathbb{D}^{2},\boldsymbol{\varphi
+}\right)  -\mathcal{E}_{N-1}\left(  \mathbb{D}^{2},\boldsymbol{\varphi
+,}\varphi_{j}\right)  \right\}  ,
+\end{align}
+where the occupation of the GSO's $\left\{  \left\vert \varsigma
+_{p}\right\rangle \right\}  $ is
+\begin{equation}
+N_{j}=\frac{\left\langle \left.  \Psi\right\vert b_{j}^{\dagger}b_{j}%
+\Psi\right\rangle }{\left\langle \left.  \Psi\right\vert \Psi\right\rangle }.
+\end{equation}
+Hence
+\begin{equation}
+\varepsilon_{j}=N_{j}I\left(  \varphi_{j}\right)  ,
+\end{equation}
+where $\left\{  I\left(  \varphi_{j}\right)  \right\}  $ are the ionization
+energies associated with the GSO's $\left\{  \left\vert \varphi_{j}%
+\right\rangle \right\}  $
+
+Thus if $x_{j}=1$ then $\varepsilon_{j}$ can be anything, while if $0\leq
+x_{j}<1$ then $\varepsilon_{j}=\mu.$ If $\varepsilon_{j}$ are the Lagrange
+parameters form the orbital variation then
+\[
+N_{j}I\left(  \varphi_{j}\right)  =\mu=const.
+\]
+This is the work done (changing units) in removing an electron from the
+orbital $\varphi_{j}.$
+
+2.
+\begin{align*}
+f\left(  \boldsymbol{x}\right)   &  =5x_{1}^{2}+4x_{1}x_{2}+x_{2}^{2};\quad
+g\left(  \boldsymbol{x}\right)  =3x_{1}+2x_{2}=-5\\
+\nabla_{x}f\left(  \boldsymbol{x}\right)   &  =\left(  10x_{1}+4x_{2}%
+,4x_{1}+2x_{2}\right)  \quad\nabla_{x}g\left(  \boldsymbol{x}\right)  =\left(
+3,2\right)
+\end{align*}
+so at min
+\begin{align*}
+\left(  10x_{1}+4x_{2},4x_{1}+2x_{2}\right)   &  =\mu\left(  3,2\right) \\
+\left(  5x_{1}+2x_{2},2x_{1}+1x_{2}\right)   &  =\frac{\mu}{2}\left(
+3,2\right) \\
+2\left(
+\begin{array}
+[c]{cc}%
+5 & 2\\
+2 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+x_{2}%
+\end{array}
+\right)   &  =\mu\left(
+\begin{array}
+[c]{c}%
+3\\
+2
+\end{array}
+\right) \\
+\left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+x_{2}%
+\end{array}
+\right)   &  =\frac{\mu}{2}\left(
+\begin{array}
+[c]{cc}%
+5 & 2\\
+2 & 1
+\end{array}
+\right)  ^{-1}\left(
+\begin{array}
+[c]{c}%
+3\\
+2
+\end{array}
+\right)
+\end{align*}
+\emph{and}
+\begin{align*}
+3x_{1}+2x_{2}  &  =-5\\
+\left(  3,2\right)  \left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+x_{2}%
+\end{array}
+\right)   &  =-5
+\end{align*}
+the last condition specifies $\mu$.
+
+3.
+\begin{align*}
+f\left(  \boldsymbol{x}\right)   &  =5x_{1}^{2}+4x_{1}x_{2}+x_{2}^{2};\\
+g_{1}\left(  \boldsymbol{x}\right)   &  =3x_{1}^{2}+2x_{2}^{2}=-5\\
+g_{2}\left(  \boldsymbol{x}\right)   &  =4x_{1}^{2}+x_{2}^{2}=-1\\
+\nabla_{x}f\left(  \boldsymbol{x}\right)   &  =\left(  10x_{1}+4x_{2}%
+,4x_{1}+2x_{2}\right) \\
+\nabla_{x}g_{1}\left(  \boldsymbol{x}\right)   &  =\left(  6x_{1}%
+,4x_{2}\right) \\
+\nabla_{x}g_{2}\left(  \boldsymbol{x}\right)   &  =\left(  8x_{1}%
+,2x_{2}\right)
+\end{align*}
+so at min
+\begin{align*}
+\left(  10x_{1}+4x_{2},4x_{1}+2x_{2}\right)   &  =\mu\left(  3,2\right) \\
+\left(  5x_{1}+2x_{2},2x_{1}+1x_{2}\right)   &  =\frac{\mu}{2}\left(
+3,2\right) \\
+2\left(
+\begin{array}
+[c]{cc}%
+5 & 2\\
+2 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+x_{2}%
+\end{array}
+\right)   &  =\mu\left(
+\begin{array}
+[c]{c}%
+3\\
+2
+\end{array}
+\right) \\
+\left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+x_{2}%
+\end{array}
+\right)   &  =\frac{\mu}{2}\left(
+\begin{array}
+[c]{cc}%
+5 & 2\\
+2 & 1
+\end{array}
+\right)  ^{-1}\left(
+\begin{array}
+[c]{c}%
+3\\
+2
+\end{array}
+\right)
+\end{align*}
+\emph{and}
+\begin{align*}
+3x_{1}+2x_{2}  &  =-5\\
+\left(  3,2\right)  \left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+x_{2}%
+\end{array}
+\right)   &  =-5
+\end{align*}
+the last condition specifies $\mu$.
+
+
+\end{document}

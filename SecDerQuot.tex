@@ -1,0 +1,839 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Tuesday, January 15, 2002 15:08:19}
+%TCIDATA{LastRevised=Tuesday, July 24, 2007 20:26:02}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+\preprint{}
+\title[Quotient Derivatives]{Derivatives of a Quotient}
+\author{Brian Weiner}
+\affiliation{PSU}
+\author{}
+\keywords{}
+\pacs{PACS number}
+\date{01/30/02}
+\startpage{1}
+\endpage{}
+\maketitle
+\tableofcontents
+
+\section{ Derivatives of AGP\ Energy Functions}
+
+\subsection{First and Second derivatives of a quotient}
+
+The energy of an $2N$-electron system described by an AGP\ state is given by
+the quotient 
+\begin{equation}
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) =\frac{\mathcal{H}_{N}\left( 
+\mathbf{\gamma }\right) }{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }
+\end{equation}%
+where 
+\begin{eqnarray}
+\mathcal{H}_{N}\left( \mathbf{\gamma }\right)  &=&\left\langle g^{N}\left( 
+\mathbf{\gamma }\right) |Hg^{N}\left( \mathbf{\gamma }\right) \right\rangle 
+\\
+\mathcal{N}_{N}\left( \mathbf{\gamma }\right)  &=&\left\langle g^{N}\left( 
+\mathbf{\gamma }\right) |g^{N}\left( \mathbf{\gamma }\right) \right\rangle 
+\end{eqnarray}%
+$\mathcal{E}_{N}\left( \mathbf{\gamma }\right) $, $\mathcal{H}_{N}\left( 
+\mathbf{\gamma }\right) $ and $\mathcal{N}_{N}\left( \mathbf{\gamma }\right) 
+$ are nonlinear functions defined on the \emph{linear manifold }of geminals%
+\emph{\ }$\mathcal{H}^{2}$, and $\mathbf{\gamma }$ is a coordinate system
+for this manifold. $\mathcal{E}_{N}$, $\mathcal{H}_{N}$ and $\mathcal{N}_{N}$
+can also be considered as bilinear functions $\mathcal{E}$, $\mathcal{H}$
+and $\mathcal{N}$ on the \emph{nonlinear }manifold, $\mathfrak{g}^{N}$, of $%
+2N$-electron AGP states. These functions are non holomorphic real valued
+functions of the complex variables $\mathbf{\gamma .}$ $\lceil $%
+Alternatively they can be viewed as functions of two independent sets of
+real variables $\left\{ \func{Re}\mathbf{\gamma ,\func{Im}\gamma }\right\} $%
+. One can express the variation of these functions in terms of derivatives
+wrt $\left\{ \mathbf{\gamma ,\gamma }^{\ast }\right\} $ treating $\mathbf{%
+\gamma }$ as independent of $\mathbf{\gamma }^{\ast }$ in the spririt of a
+generating function, but only allowing variations of the form $\left( \delta 
+\mathbf{\gamma ,}\delta \mathbf{\gamma }^{\ast }\right) $. This in effect
+produces a representation of a function of $f:\mathbb{C}^{r}\rightarrow 
+\mathbb{C}$ as a restricted function $\tilde{f}:\mathbb{C}^{r}\times \mathbb{%
+C}^{r}\rightarrow \mathbb{C}\rfloor .$ The first derivatives of the energy 
+\begin{equation}
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) =\frac{\mathcal{H}_{N}\left( 
+\mathbf{\gamma }\right) }{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }
+\end{equation}%
+are 
+\begin{eqnarray}
+\frac{\delta \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{jk}} &=&\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\{ 
+\frac{\delta \mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{jk}}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \frac{\delta \mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma _{jk}}\right\}   \nonumber
+\\
+\frac{\delta \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{jk}^{\ast }} &=&\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }%
+\left\{ \frac{\delta \mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\delta
+\gamma _{jk}^{\ast }}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \frac{%
+\delta \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{jk}^{\ast }}\right\} 
+\end{eqnarray}%
+where $\mathcal{E}_{N}$ is also a considered a function of $\mathbf{\gamma }%
+^{\ast }$ i.e $\mathcal{E}_{N}=\mathcal{E}_{N}\left( \mathbf{\gamma }^{\ast
+},\mathbf{\gamma }\right) \in \mathbb{R}$. We can write these derivatives in
+second quantization as 
+\begin{eqnarray}
+\frac{\delta \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{jk}} &=&\frac{N}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\{
+\left\langle G^{\dagger N}\phi |Ha_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger
+N-1}\phi \right\rangle -\mathcal{E}_{N}\left( \mathbf{\gamma }\right)
+\left\langle G^{\dagger N}\phi |a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger
+N-1}\phi \right\rangle \right\}   \nonumber \\
+\frac{\delta \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{jk}^{\ast }} &=&\frac{N}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }%
+\left\{ \left\langle a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-1}\phi
+|HG^{\dagger N}\phi \right\rangle -\mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) \left\langle a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-1}\phi
+|G^{\dagger N}\phi \right\rangle \right\} 
+\end{eqnarray}%
+$\lceil $which makes it clear that $\frac{\delta \mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) }{\delta \gamma _{jk}^{\ast }}=\left( \frac{\delta 
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma _{jk}}\right)
+^{\ast }\rfloor $. The total first order variation of $\mathcal{E}_{N}$ is
+given by 
+\begin{eqnarray}
+\delta ^{\left( 1\right) }\mathcal{E}_{N} &=&\left[ \mathrm{\partial }%
+_{\gamma }\mathcal{E}_{N}\right] ^{t}\cdot \delta \mathbf{\gamma }+\left[ 
+\mathrm{\partial }_{\gamma }\mathcal{E}_{N}\right] ^{\dagger }\cdot \delta 
+\mathbf{\gamma }^{\ast }  \nonumber \\
+&=&\left[ \mathrm{\partial }_{\gamma ^{\ast }}\mathcal{E}_{N}\right]
+^{\dagger }\cdot \delta \mathbf{\gamma }+\left[ \mathrm{\partial }_{\gamma }%
+\mathcal{E}_{N}\right] ^{\dagger }\cdot \delta \mathbf{\gamma }^{\ast } 
+\nonumber \\
+&=&\left( 
+\begin{array}{c}
+\mathrm{\partial }_{\gamma ^{\ast }}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma }\mathcal{E}_{N}%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right)   \nonumber \\
+&\equiv &\left[ d\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \right]
+\left( \delta \mathbf{\gamma }\right) 
+\end{eqnarray}%
+where 
+\begin{equation}
+\mathrm{\partial }_{\gamma }\mathcal{E}_{N}=\left( 
+\begin{array}{c}
+\frac{\delta \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{12}} \\ 
+\vdots  \\ 
+\frac{\delta \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\delta \gamma
+_{r-1r}}%
+\end{array}%
+\right) =\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\{ 
+\mathrm{\partial }_{\gamma }\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{%
+\gamma }\right) \mathrm{\partial }_{\gamma }\mathcal{N}_{N}\right\} 
+\end{equation}%
+$\lceil $The actual matrix of the differential of $\mathcal{E}_{N}$ is not $%
+\mathrm{D}_{\gamma }\mathcal{E}_{N}\rfloor .$ In particular one can see from
+the second quantized form that 
+\begin{equation}
+\left[ \mathrm{\partial }_{\gamma }\mathcal{E}_{N}\right] ^{t}\cdot \mathbf{%
+\gamma }=0\Leftrightarrow \left[ \mathrm{\partial }_{\gamma }\mathcal{E}_{N}%
+\right] ^{\dagger }\cdot \mathbf{\gamma }^{\ast }=0
+\end{equation}%
+which is as expected as $\mathcal{E}_{N}$ is a homogeneous function of
+degree zero of $\mathbf{\gamma }$.
+
+The second derivatives $\left\{ \frac{\partial ^{2}\mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{lm}\partial \gamma _{jk}}%
+\right\} $ are given by 
+\begin{eqnarray}
+&&\frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{lm}\partial \gamma _{jk}}=\frac{\partial }{\partial \gamma
+_{lm}}\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\{ \frac{%
+\partial \mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{jk}}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \frac{\partial \mathcal{%
+N}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{jk}}\right\} = 
+\nonumber \\
+&&\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\{ \frac{%
+\partial ^{2}\mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{lm}\partial \gamma _{jk}}-\frac{\partial \mathcal{E}_{N}\left( \mathbf{%
+\gamma }\right) }{\partial \gamma _{lm}}\frac{\partial \mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{jk}}-\mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) \frac{\partial ^{2}\mathcal{N}_{N}\left( \mathbf{%
+\gamma }\right) }{\partial \gamma _{lm}\partial \gamma _{jk}}\right. 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \left. -\frac{1}{\mathcal{N}_{N}\left( \mathbf{%
+\gamma }\right) }\left\{ \frac{\partial \mathcal{H}_{N}\left( \mathbf{\gamma 
+}\right) }{\partial \gamma _{jk}}-\mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) \frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{jk}}\right\} \frac{\partial \mathcal{N}_{N}\left( \mathbf{%
+\gamma }\right) }{\partial \gamma _{lm}}\right\}  \nonumber \\
+&=&\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\{ \frac{%
+\partial ^{2}\mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{lm}\partial \gamma _{jk}}-\frac{\partial \mathcal{E}_{N}\left( \mathbf{%
+\gamma }\right) }{\partial \gamma _{lm}}\frac{\partial \mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{jk}}-\mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) \frac{\partial ^{2}\mathcal{N}_{N}\left( \mathbf{%
+\gamma }\right) }{\partial \gamma _{lm}\partial \gamma _{jk}}-\frac{\partial 
+\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{lm}}\frac{%
+\partial \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{jk}}\right\}
+\end{eqnarray}%
+This can also be expressed in second quantization as 
+\begin{eqnarray}
+&&\frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{lm}\partial \gamma _{jk}}=\frac{1}{\mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }\times  \nonumber \\
+&&\left\{ N\left( N-1\right) \left\langle G^{\dagger N}\phi |\left( H-%
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) I\right) a_{l}^{\dagger
+}a_{m}^{\dagger }a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-2}\phi
+\right\rangle -\frac{\partial \mathcal{E}_{N}\left( \mathbf{\gamma }\right) 
+}{\partial \gamma _{lm}}\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{jk}}-\frac{\partial \mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{lm}}\frac{\partial \mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{jk}}\right\}
+\end{eqnarray}%
+where%
+\begin{eqnarray}
+&&\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{\partial
+\gamma _{lm}}\frac{\partial \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{jk}}=  \nonumber \\
+&&\frac{N^{2}}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\langle
+G^{\dagger N}\phi |a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-1}\phi
+\right\rangle \left\{ \left\langle G^{\dagger N}\phi |Ha_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi \right\rangle -\mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) \left\langle G^{\dagger N}\phi |a_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi \right\rangle \right\}
+\end{eqnarray}%
+and $\left\{ \frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{lm}^{\ast }\partial \gamma _{jk}},\frac{\partial
+^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{lm}\partial \gamma _{jk}^{\ast }},\frac{\partial ^{2}\mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{lm}^{\ast }\partial \gamma
+_{jk}^{\ast }}\right\} $ are given by 
+\begin{eqnarray}
+&&\frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{lm}^{\ast }\partial \gamma _{jk}}=N^{2}\left\langle
+a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-1}\phi |Ha_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi \right\rangle =\frac{1}{\mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }\times  \nonumber \\
+&&\left\{ N^{2}\left\langle a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger
+N-1}\phi |\left( H-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) I\right)
+a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-1}\phi \right\rangle -\frac{%
+\partial \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{lm}^{\ast }}\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{jk}}-\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{lm}^{\ast }}\frac{\partial \mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{jk}}\right\}
+\end{eqnarray}%
+where%
+\begin{eqnarray}
+&&\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{\partial
+\gamma _{lm}^{\ast }}\frac{\partial \mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{jk}}=  \nonumber \\
+&&\frac{N^{2}}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\langle
+a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-1}\phi |G^{\dagger N}\phi
+\right\rangle \left\{ \left\langle G^{\dagger N}\phi |Ha_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi \right\rangle -\mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) \left\langle G^{\dagger N}\phi |a_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi \right\rangle \right\}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{lm}\partial \gamma _{jk}^{\ast }}=\left\langle
+a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-1}\phi |Ha_{l}^{\dagger
+}a_{m}^{\dagger }G^{\dagger N-1}\phi \right\rangle =\frac{1}{\mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }\times  \nonumber \\
+&&\left\{ N^{2}\left\langle a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger
+N}\phi |\left( H-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) I\right)
+a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-2}\phi \right\rangle -\frac{%
+\partial \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{lm}}\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{jk}^{\ast }}-\frac{\partial \mathcal{N}_{N}\left( \mathbf{%
+\gamma }\right) }{\partial \gamma _{lm}}\frac{\partial \mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{jk}^{\ast }}\right\}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+&&\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{\partial
+\gamma _{lm}^{\ast }}\frac{\partial \mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{jk}}=  \nonumber \\
+&&\frac{N^{2}}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left\langle
+G^{\dagger N}\phi |a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-1}\phi
+\right\rangle \left\{ \left\langle a_{j}^{\dagger }a_{k}^{\dagger
+}G^{\dagger N-1}\phi |HG^{\dagger N}\phi \right\rangle -\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) \left\langle a_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi |G^{\dagger N}\phi \right\rangle
+\right\}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{%
+\partial \gamma _{lm}^{\ast }\partial \gamma _{jk}^{\ast }}=\left\langle
+a_{l}^{\dagger }a_{m}^{\dagger }a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger
+N-2}\phi |HG^{\dagger N}\phi \right\rangle =\frac{1}{\mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }\times  \nonumber \\
+&&\left\{ N\left( N-1\right) \left\langle a_{l}^{\dagger }a_{m}^{\dagger
+}a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-2}\phi |\left( H-\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) I\right) G^{\dagger N}\phi \right\rangle -%
+\frac{\partial \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial
+\gamma _{lm}^{\ast }}\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{jk}^{\ast }}-\frac{\partial \mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{lm}^{\ast }}\frac{%
+\partial \mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{jk}^{\ast }}\right\}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+&&\frac{\partial \mathcal{N}_{N}\left( \mathbf{\gamma }\right) }{\partial
+\gamma _{lm}^{\ast }}\frac{\partial \mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{jk}^{\ast }}=  \nonumber \\
+&&\frac{N\left( N-1\right) }{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }%
+\left\langle a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-1}\phi |G^{\dagger
+N}\phi \right\rangle \left\{ \left\langle a_{j}^{\dagger }a_{k}^{\dagger
+}G^{\dagger N-1}\phi |HG^{\dagger N}\phi \right\rangle -\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) \left\langle a_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi |G^{\dagger N}\phi \right\rangle
+\right\}
+\end{eqnarray}%
+The Hessian $\mathrm{D}_{\gamma }^{2}\mathcal{E}_{N}$ is 
+\begin{equation}
+\mathrm{D}_{\gamma }^{2}\mathcal{E}_{N}=\left( 
+\begin{array}{cc}
+\frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial 
+\mathbf{\gamma }\partial \mathbf{\gamma }} & \frac{\partial ^{2}\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) }{\partial \mathbf{\gamma }\partial 
+\mathbf{\gamma }^{\ast }} \\ 
+\frac{\partial ^{2}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial 
+\mathbf{\gamma }^{\ast }\partial \mathbf{\gamma }} & \frac{\partial ^{2}%
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) }{\partial \mathbf{\gamma }%
+^{\ast }\partial \mathbf{\gamma }^{\ast }}%
+\end{array}%
+\right) \equiv \left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{E}_{N} & \mathrm{\partial }%
+_{\gamma \gamma ^{\ast }}^{2}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{E}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N}%
+\end{array}%
+\right)
+\end{equation}%
+which allows us to write the second order variation as 
+\begin{eqnarray}
+\delta ^{(2)}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) &=&\frac{1}{2}%
+\left( \delta \mathbf{\gamma ,}\delta \mathbf{\gamma }^{\ast }\right) \left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{E}_{N} & \mathrm{\partial }%
+_{\gamma \gamma ^{\ast }}^{2}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{E}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right)  \nonumber \\
+&\equiv &\frac{1}{2}\mathbf{h}^{t}\,\mathrm{D}_{\gamma }^{2}\mathcal{E}_{N}\,%
+\mathbf{h}
+\end{eqnarray}%
+where 
+\begin{equation}
+\mathbf{h=}\left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right)
+\end{equation}%
+This can be transformed to the hermitian expression 
+\begin{eqnarray}
+\delta ^{(2)}\mathcal{E}_{N}\left( \mathbf{\gamma }\right) &=&\frac{1}{2}%
+\left( \delta \mathbf{\gamma ,}\delta \mathbf{\gamma }^{\ast }\right) \left( 
+\begin{array}{cc}
+0 & 1 \\ 
+1 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+0 & 1 \\ 
+1 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{E}_{N} & \mathrm{\partial }%
+_{\gamma \gamma ^{\ast }}^{2}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{E}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right)  \nonumber \\
+&=&\frac{1}{2}\left( \delta \mathbf{\gamma }^{\ast },\delta \mathbf{\gamma }%
+\right) \left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{E}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{E}_{N} & \mathrm{\partial }%
+_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right)  \nonumber \\
+&=&\frac{1}{2}\left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{E}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{E}_{N} & \mathrm{\partial }%
+_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) \equiv \mathbf{h}^{\dagger }\mathcal{D}_{\gamma }^{2}\mathcal{E}_{N}%
+\mathbf{h}
+\end{eqnarray}%
+We can express $\mathrm{D}_{\gamma }^{2}\mathcal{E}_{N}$ as the sum 
+\begin{eqnarray}
+\mathrm{D}_{\gamma }^{2}\mathcal{E}_{N} &=&\frac{1}{\mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }\left\{ \mathrm{D}_{\gamma }^{2}\mathcal{H}_{N}-%
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma }^{2}%
+\mathcal{N}_{N}-\mathrm{D}_{\gamma }\mathcal{E}_{N}\otimes \mathrm{D}%
+_{\gamma }\mathcal{N}_{N}-\mathrm{D}_{\gamma }\mathcal{E}_{N}\otimes \mathrm{%
+D}_{\gamma }\mathcal{H}_{N}\right\} \\
+&\Updownarrow &  \nonumber \\
+D_{\gamma }^{2}\mathcal{E}_{N} &=&\frac{1}{\mathcal{N}_{N}\left( \mathbf{%
+\gamma }\right) }\left\{ D_{\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) D_{\gamma }^{2}\mathcal{N}_{N}-\left\vert
+D_{\gamma }\mathcal{E}_{N}\right\rangle \left\langle D_{\gamma }\mathcal{N}%
+_{N}\right\vert -\left\vert D_{\gamma }\mathcal{N}_{N}\right\rangle
+\left\langle D_{\gamma }\mathcal{E}_{N}\right\vert \right\}
+\end{eqnarray}
+
+A necessary and sufficent condition for $\mathbf{\gamma }$ to be a local
+minimum of $\mathcal{E}_{N}$ is that $\mathcal{D}_{\gamma }^{2}\mathcal{E}%
+_{N}\geq 0$ and $\mathrm{D}_{\gamma }\mathcal{E}_{N}=0$. If these conditions
+are satisfied 
+\begin{equation}
+\mathrm{D}_{\gamma }^{2}\mathcal{E}_{N}=\frac{1}{\mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }\left\{ \mathrm{D}_{\gamma }^{2}\mathcal{H}_{N}-%
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma }^{2}%
+\mathcal{N}_{N}\right\} 
+\end{equation}%
+and%
+\begin{eqnarray}
+\mathrm{D}_{\gamma }^{2}\mathcal{E}_{N} &=&\left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{E}_{N} & \mathrm{\partial }%
+_{\gamma \gamma ^{\ast }}^{2}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{E}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N}%
+\end{array}%
+\right)  \\
+&=&\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{H}_{N}-\mathcal{E}_{N}%
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{N}_{N} & \mathrm{\partial }%
+_{\gamma \gamma ^{\ast }}^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\mathrm{\partial 
+}_{\gamma \gamma ^{\ast }}^{2}\mathcal{N}_{N} \\ 
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{N}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\mathrm{\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{N}_{N}%
+\end{array}%
+\right) 
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{H}_{N}-\mathcal{E}_{N}%
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{N}_{N} &=&N\left( N-1\right)
+\left\langle G^{\dagger N}\phi |\left( H-\mathcal{E}_{N}\left( \mathbf{%
+\gamma }\right) I\right) a_{l}^{\dagger }a_{m}^{\dagger }a_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-2}\phi \right\rangle   \nonumber \\
+\mathrm{\partial }_{\gamma \gamma ^{\ast }}^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\mathrm{\partial }_{\gamma \gamma ^{\ast }}^{2}\mathcal{N}_{N}
+&=&N^{2}\left\langle a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N}\phi
+|\left( H-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) I\right)
+a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-2}\phi \right\rangle   \nonumber
+\\
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{N}_{N}
+&=&N^{2}\left\langle a_{l}^{\dagger }a_{m}^{\dagger }G^{\dagger N-1}\phi
+|\left( H-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) I\right)
+a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-1}\phi \right\rangle   \nonumber
+\\
+\mathrm{\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{H}_{N}-%
+\mathcal{E}_{N}\mathrm{\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}%
+\mathcal{N}_{N} &=&N\left( N-1\right) \left\langle a_{l}^{\dagger
+}a_{m}^{\dagger }a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-2}\phi |\left(
+H-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) I\right) G^{\dagger N}\phi
+\right\rangle .
+\end{eqnarray}%
+At such local minima $\mathbf{\gamma }$ must be an eigenvector of $\mathcal{D%
+}_{\gamma }^{2}\mathcal{E}_{N}$ associated with the eigenvalue zero as it is
+always true that 
+\begin{equation}
+\left( 
+\begin{array}{c}
+\mathbf{\gamma } \\ 
+\mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{cc}
+\mathrm{\partial }_{\gamma ^{\ast }\gamma }^{2}\mathcal{E}_{N} & \mathrm{%
+\partial }_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N} \\ 
+\mathrm{\partial }_{\gamma \gamma }^{2}\mathcal{E}_{N} & \mathrm{\partial }%
+_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{E}_{N}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathbf{\gamma } \\ 
+\mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) =0
+\end{equation}%
+and if $\mathcal{D}_{\gamma }^{2}\mathcal{E}_{N}\geqslant 0$ then $\left( 
+\begin{array}{c}
+\mathbf{\gamma } \\ 
+\mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) $ must be an eigenvector.
+
+\subsection{First Derivative of AGP energy expanded in terms of the second
+derivative}
+
+The first derivatives can be expressed in second quantization as 
+\begin{eqnarray}
+\frac{\partial \mathcal{H}_{N}\left( g\right) }{\partial \gamma _{pq}} &=&%
+\frac{\partial \left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi
+\right\rangle }{\partial \gamma _{pq}}=N\left\langle G^{\dagger N}\phi
+|Ha_{p}^{\dagger }a_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle 
+\nonumber \\
+&=&N\sum_{1\leq j,k\leq r}\gamma _{jk}^{\ast }\left\langle a_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi |Ha_{p}^{\dagger }a_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\sum_{1\leq j,k\leq r}\gamma _{jk}^{\ast
+}\frac{\partial ^{2}\mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial
+\gamma _{jk}^{\ast }\partial \gamma _{pq}}  \nonumber \\
+\frac{\partial \mathcal{H}_{N}\left( g\right) }{\partial \gamma _{pq}^{\ast }%
+} &=&\frac{\partial \left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi
+\right\rangle }{\partial \gamma _{pq}^{\ast }}=N\left\langle a_{p}^{\dagger
+}a_{q}^{\dagger }G^{\dagger N-1}\phi |HG^{\dagger N}\phi \right\rangle 
+\nonumber \\
+&=&N\sum_{1\leq j,k\leq r}\gamma _{jk}\left\langle a_{p}^{\dagger
+}a_{q}^{\dagger }G^{\dagger N-1}\phi |Ha_{j}^{\dagger }a_{k}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\sum_{1\leq j,k\leq r}\frac{\partial ^{2}%
+\mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{pq}^{\ast
+}\partial \gamma _{jk}}\gamma _{jk}
+\end{eqnarray}%
+$\lceil $Note 
+\begin{equation}
+\frac{\partial ^{2}\mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial
+\gamma _{jk}^{\ast }\partial \gamma _{pq}}=N\left\langle a_{j}^{\dagger
+}a_{k}^{\dagger }G^{\dagger N-1}\phi |Ha_{p}^{\dagger }a_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle \rfloor
+\end{equation}%
+Hence 
+\begin{eqnarray}
+&&\frac{\partial \mathcal{E}_{N}\left( g\right) }{\partial \gamma _{pq}}=%
+\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\sum_{1\leq j,k\leq
+r}\gamma _{jk}^{\ast }\left\{ \frac{\partial ^{2}\mathcal{H}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{jk}^{\ast }\partial \gamma _{pq}}%
+-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \frac{\partial ^{2}\mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{jk}^{\ast }\partial
+\gamma _{pq}}\right\}  \nonumber \\
+&\equiv &\mathrm{D}_{\gamma }\mathcal{E}_{N}=\frac{1}{\mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }\mathbf{\gamma }^{\dagger }\cdot \left\{ \mathrm{D}%
+_{\gamma ^{\ast }\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{%
+\gamma }\right) \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}\mathcal{N}%
+_{N}\right\} \\
+&&\frac{\partial \mathcal{E}_{N}\left( g\right) }{\partial \gamma
+_{pq}^{\ast }}=\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }%
+\sum_{1\leq j,k\leq r}\left\{ \frac{\partial ^{2}\mathcal{H}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{pq}^{\ast }\partial \gamma _{jk}}%
+-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \frac{\partial ^{2}\mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{pq}^{\ast }\partial
+\gamma _{jk}}\right\} \gamma _{jk}  \nonumber \\
+&\equiv &\mathrm{D}_{\gamma ^{\ast }}\mathcal{E}_{N}=\frac{1}{\mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }\left\{ \mathrm{D}_{\gamma \gamma ^{\ast
+}}^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D%
+}_{\gamma \gamma ^{\ast }}^{2}\mathcal{N}_{N}\right\} \cdot \mathbf{\gamma }
+\end{eqnarray}%
+The unnormalized energy derivatives can also be expanded as 
+\begin{eqnarray}
+\frac{\partial \mathcal{H}_{N}\left( g\right) }{\partial \gamma _{pq}} &=&%
+\frac{\partial \left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi
+\right\rangle }{\partial \gamma _{pq}}=N\left\langle G^{\dagger N}\phi
+|Ha_{p}^{\dagger }a_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle 
+\nonumber \\
+&=&N\sum_{1\leq j,k\leq r}\left\langle G^{\dagger N}\phi |Ha_{p}^{\dagger
+}a_{q}^{\dagger }a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-2}\phi
+\right\rangle \gamma _{jk}=\frac{N}{N-1}\sum_{1\leq j,k\leq r}\frac{\partial
+^{2}\mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{jk}\partial \gamma _{pq}}\gamma _{jk}  \nonumber \\
+\frac{\partial \mathcal{H}_{N}\left( g\right) }{\partial \gamma _{pq}^{\ast }%
+} &=&\frac{\partial \left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi
+\right\rangle }{\partial \gamma _{pq}^{\ast }}=N\left\langle a_{p}^{\dagger
+}a_{q}^{\dagger }G^{\dagger N-1}\phi |HG^{\dagger N}\phi \right\rangle 
+\nonumber \\
+&=&N\sum_{1\leq j,k\leq r}\gamma _{jk}^{\ast }\left\langle a_{p}^{\dagger
+}a_{q}^{\dagger }a_{j}^{\dagger }a_{k}^{\dagger }G^{\dagger N-1}\phi
+|HG^{\dagger N-1}\phi \right\rangle =\frac{N}{N-1}\sum_{1\leq j,k\leq
+r}\gamma _{jk}^{\ast }\frac{\partial ^{2}\mathcal{H}_{N}\left( \mathbf{%
+\gamma }\right) }{\partial \gamma _{pq}^{\ast }\partial \gamma _{jk}^{\ast }}
+\end{eqnarray}%
+leading to the expressions 
+\begin{eqnarray}
+&&\frac{\partial \mathcal{E}_{N}\left( g\right) }{\partial \gamma _{pq}}=%
+\frac{N}{N-1}\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }%
+\sum_{1\leq j,k\leq r}\left\{ \frac{\partial ^{2}\mathcal{H}_{N}\left( 
+\mathbf{\gamma }\right) }{\partial \gamma _{jk}\partial \gamma _{pq}}-%
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \frac{\partial ^{2}\mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma _{jk}\partial \gamma
+_{pq}}\right\} \gamma _{jk}  \nonumber \\
+&\equiv &\mathrm{D}_{\gamma }\mathcal{E}_{N}=\frac{N}{N-1}\frac{1}{\mathcal{N%
+}_{N}\left( \mathbf{\gamma }\right) }\left\{ \mathrm{D}_{\gamma \gamma }^{2}%
+\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}%
+_{\gamma \gamma }^{2}\mathcal{N}_{N}\right\} \cdot \mathbf{\gamma } \\
+&&\frac{\partial \mathcal{E}_{N}\left( g\right) }{\partial \gamma
+_{pq}^{\ast }}=\frac{N}{N-1}\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }%
+\right) }\sum_{1\leq j,k\leq r}\gamma _{jk}^{\ast }\left\{ \frac{\partial
+^{2}\mathcal{H}_{N}\left( \mathbf{\gamma }\right) }{\partial \gamma
+_{jk}^{\ast }\partial \gamma _{pq}^{\ast }}-\mathcal{E}_{N}\left( \mathbf{%
+\gamma }\right) \frac{\partial ^{2}\mathcal{N}_{N}\left( \mathbf{\gamma }%
+\right) }{\partial \gamma _{jk}^{\ast }\partial \gamma _{pq}^{\ast }}\right\}
+\nonumber \\
+&\equiv &\mathrm{D}_{\gamma ^{\ast }}\mathcal{E}_{N}=\frac{N}{N-1}\frac{1}{%
+\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\mathbf{\gamma }^{\dagger
+}\cdot \left\{ \mathrm{D}_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{H}%
+_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma ^{\ast
+}\gamma ^{\ast }}^{2}\mathcal{N}_{N}\right\}
+\end{eqnarray}%
+Thus we can express an arbitary first order variation as 
+\begin{eqnarray}
+\delta ^{\left( 1\right) }\mathcal{E}_{N} &=&\left[ \mathrm{D}_{\gamma }%
+\mathcal{E}_{N}\right] ^{t}\cdot \delta \mathbf{\gamma }+\left[ \mathrm{D}%
+_{\gamma }\mathcal{E}_{N}\right] ^{\dagger }\cdot \delta \mathbf{\gamma }%
+^{\ast }  \nonumber \\
+&=&\frac{1}{2}\left\{ \left\{ \frac{N}{N-1}\frac{1}{\mathcal{N}_{N}\left( 
+\mathbf{\gamma }\right) }\mathbf{\gamma }^{t}\cdot \left\{ \mathrm{D}%
+_{\gamma \gamma }^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) \mathrm{D}_{\gamma \gamma }^{2}\mathcal{N}_{N}\right\} \right.
++\right.  \nonumber \\
+&&\qquad \qquad \qquad \left. \frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }%
+\right) }\mathbf{\gamma }^{\dagger }\cdot \left\{ \mathrm{D}_{\gamma ^{\ast
+}\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) 
+\mathrm{D}_{\gamma ^{\ast }\gamma }^{2}\mathcal{N}_{N}\right\} \right\}
+\cdot \delta \mathbf{\gamma +}  \nonumber \\
+&&\qquad \left\{ \frac{N}{N-1}\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }%
+\right) }\mathbf{\gamma }^{\dagger }\cdot \left\{ \mathrm{D}_{\gamma ^{\ast
+}\gamma ^{\ast }}^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) \mathrm{D}_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{N}%
+_{N}\right\} \right. +  \nonumber \\
+&&\qquad \qquad \qquad \left. \left. \frac{1}{\mathcal{N}_{N}\left( \mathbf{%
+\gamma }\right) }\mathbf{\gamma }^{t}\cdot \left\{ \mathrm{D}_{\gamma \gamma
+^{\ast }}^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) 
+\mathrm{D}_{\gamma \gamma ^{\ast }}^{2}\mathcal{N}_{N}\right\} \cdot \delta 
+\mathbf{\gamma }^{\ast }\right\} \right\}
+\end{eqnarray}%
+which can be written more compactly as 
+\begin{eqnarray}
+&&\delta ^{\left( 1\right) }\mathcal{E}_{N}=  \nonumber \\
+&&\frac{1}{2}\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left( 
+\mathbf{\gamma ,\gamma }^{\ast }\right) \left( 
+\begin{array}{cc}
+\frac{N}{N-1}\left\{ \mathrm{D}_{\gamma \gamma }^{2}\mathcal{H}_{N}-\mathcal{%
+E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma \gamma }^{2}\mathcal{%
+N}_{N}\right\} & \left\{ \mathrm{D}_{\gamma \gamma ^{\ast }}^{2}\mathcal{H}%
+_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma \gamma
+^{\ast }}^{2}\mathcal{N}_{N}\right\} \\ 
+\left\{ \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}%
+\mathcal{N}_{N}\right\} & \frac{N}{N-1}\left\{ \mathrm{D}_{\gamma ^{\ast
+}\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) 
+\mathrm{D}_{\gamma ^{\ast }\gamma }^{2}\mathcal{N}_{N}\right\}%
+\end{array}%
+\right)  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \times \left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) \\
+&=&\frac{1}{2}\frac{1}{\mathcal{N}_{N}\left( \mathbf{\gamma }\right) }\left( 
+\mathbf{\gamma }^{\ast }\mathbf{,\gamma }\right) \left( 
+\begin{array}{cc}
+\left\{ \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}%
+\mathcal{N}_{N}\right\} & \frac{N}{N-1}\left\{ \mathrm{D}_{\gamma \gamma
+}^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}%
+_{\gamma \gamma }^{2}\mathcal{N}_{N}\right\} \\ 
+\frac{N}{N-1}\left\{ \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}\mathcal{H}_{N}-%
+\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma ^{\ast
+}\gamma }^{2}\mathcal{N}_{N}\right\} & \left\{ \mathrm{D}_{\gamma \gamma
+^{\ast }}^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) 
+\mathrm{D}_{\gamma \gamma ^{\ast }}^{2}\mathcal{N}_{N}\right\}%
+\end{array}%
+\right)  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \times \left( 
+\begin{array}{c}
+\delta \mathbf{\gamma } \\ 
+\delta \mathbf{\gamma }^{\ast }%
+\end{array}%
+\right)
+\end{eqnarray}%
+in the above expression the central matrix is hermitian and has the form%
+\begin{equation}
+\left( 
+\begin{array}{cc}
+A & B \\ 
+B^{\ast } & A^{\ast }%
+\end{array}%
+\right)
+\end{equation}%
+which can be transformed into a real symmetric matrix 
+\begin{eqnarray}
+&&\frac{1}{\sqrt{2}}\left( 
+\begin{array}{cc}
+I & I \\ 
+-iI & iI%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+A & B \\ 
+B^{\ast } & A^{\ast }%
+\end{array}%
+\right) \frac{1}{\sqrt{2}}\left( 
+\begin{array}{cc}
+I & iI \\ 
+I & -iI%
+\end{array}%
+\right) =  \nonumber \\
+&&\frac{1}{2}\left( 
+\begin{array}{cc}
+A+B^{\ast } & B+A^{\ast } \\ 
+-iA+iB^{\ast } & -iB+iA^{\ast }%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+I & iI \\ 
+I & -iI%
+\end{array}%
+\right) =  \nonumber \\
+&&\frac{1}{2}\left( 
+\begin{array}{cc}
+A+B^{\ast }+B+A^{\ast } & iA+iB^{\ast }-iB-iA^{\ast } \\ 
+-iA+iB^{\ast }-iB+iA^{\ast } & A-B^{\ast }-B+A^{\ast }%
+\end{array}%
+\right)  \nonumber \\
+&=&\left( 
+\begin{array}{cc}
+\func{Re}\left( A+B\right) & \func{Im}\left( B-A\right) \\ 
+\func{Im}\left( A+B\right) & \func{Re}\left( A-B\right)%
+\end{array}%
+\right)
+\end{eqnarray}%
+so that 
+\begin{equation}
+\delta ^{\left( 1\right) }\mathcal{E}_{N}=\frac{1}{2}\frac{1}{\mathcal{N}%
+_{N}\left( \mathbf{\gamma }\right) }\left( \func{Re}\mathbf{\gamma ,}\func{Im%
+}\mathbf{\gamma }\right) \left( 
+\begin{array}{cc}
+\func{Re}\left( A+B\right) & \func{Im}\left( B-A\right) \\ 
+\func{Im}\left( A+B\right) & \func{Re}\left( A-B\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\func{Re}\delta \mathbf{\gamma } \\ 
+\func{Im}\delta \mathbf{\gamma }%
+\end{array}%
+\right)
+\end{equation}
+
+One can note that 
+\begin{equation}
+\mathcal{E}_{N}\left( \mathbf{\gamma }+z\mathbf{\gamma }\right) =\frac{%
+\mathcal{H}_{N}\left( \mathbf{\gamma }+z\mathbf{\gamma }\right) }{\mathcal{N}%
+_{N}\left( \mathbf{\gamma }+z\mathbf{\gamma }\right) }=\mathcal{E}_{N}\left( 
+\mathbf{\gamma }\right) \quad \forall z\in \mathbb{C}
+\end{equation}%
+which implies that 
+\begin{equation}
+\left( \mathbf{\gamma ,\gamma }^{\ast }\right) \left( 
+\begin{array}{cc}
+\frac{N}{N-1}\left\{ \mathrm{D}_{\gamma \gamma }^{2}\mathcal{H}_{N}-\mathcal{%
+E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma \gamma }^{2}\mathcal{%
+N}_{N}\right\} & \left\{ \mathrm{D}_{\gamma \gamma ^{\ast }}^{2}\mathcal{H}%
+_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma \gamma
+^{\ast }}^{2}\mathcal{N}_{N}\right\} \\ 
+\left\{ \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}\mathcal{H}_{N}-\mathcal{E}%
+_{N}\left( \mathbf{\gamma }\right) \mathrm{D}_{\gamma ^{\ast }\gamma }^{2}%
+\mathcal{N}_{N}\right\} & \frac{N}{N-1}\left\{ \mathrm{D}_{\gamma ^{\ast
+}\gamma ^{\ast }}^{2}\mathcal{H}_{N}-\mathcal{E}_{N}\left( \mathbf{\gamma }%
+\right) \mathrm{D}_{\gamma ^{\ast }\gamma ^{\ast }}^{2}\mathcal{N}%
+_{N}\right\}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathbf{\gamma } \\ 
+\mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) =0
+\end{equation}%
+This means that the above matrix either has $\left( 
+\begin{array}{c}
+\mathbf{\gamma } \\ 
+\mathbf{\gamma }^{\ast }%
+\end{array}%
+\right) $ as a zero eigenvalue or has both positive and negative eigenvalues.
+
+\end{document}

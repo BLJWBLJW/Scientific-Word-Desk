@@ -1,0 +1,100 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, December 28, 2009 10:22:45}
+%TCIDATA{LastRevised=Tuesday, December 29, 2009 10:20:29}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Positive Functionals]{Extensions of Positive Linear Functionals and the N-Representability Problem }
+\author{Brian Weiner}
+\affiliation{Department of Physics, DuBois, Pennsylvania State University}
+\maketitle
+
+
+\begin{center}
+
+
+{\large Extensions of Positive Linear Functionals and the }
+
+{\large N-Representability Problem }
+
+{\large Brian Weiner}
+
+{\large Department of Physics, DuBois, Pennsylvania State University}
+
+\bigskip
+
+
+\end{center}
+
+One of the oldest unsolved problems in Quantum Chemistry is the "The
+$N$-Representability Problem" which is to determine whether a positive matrix
+that acts on the Hilbert space of two electron states is in fact derived from
+an $N$-electron density matrix and thus is a Second Order Reduced Density
+Matrix (SORDM). If one had an \emph{intrinsic} solution of this problem, i.e.
+a solution that only involved SORDM matrix elements, then one could reduce the
+number of variables needed to variationally determine the $N$-electron ground
+state from being proportional to $r^{N}$ (obviously dependent on the number of
+electrons in the system) to being proportional to $r^{4},$(not dependent on
+the number of electrons in the system) where $r$ is the dimension of the
+approximating one electron Hilbert space.
+
+On this $50^{th}$ anniversary of the first Sanibel conference it seems
+appropriate and instructive to review the basic formulation of the
+$N$-Representability problem and scan (incompletely) some of the important
+milestones achieved on the yet incomplete journey to a solution. At the same
+time I will recast the problem in terms of extensions of positive linear
+functionals defined on subspaces of Fock space. The full $N$-electron density
+matrix determines a bounded positive linear functional on the vector spaces of
+$N$-electron operators, while SORDM's define positive linear functionals on
+the subspace of $2$-electron operators. In this context the $N$%
+-Representability problem becomes one of determining the conditions a positive
+linear functional defined on a subspace must satisfy in order to be extended
+to a positive linear functional defined on a space containing this subspace.
+
+In this presentation I will review some results from the mathematical
+literature and apply them to the $N$-Representability problem for First Order
+Reduced Density Matrices (FORDM's) (a solved problem) and for SORDM's leading
+to \emph{Necessary and Sufficient intrinsic }conditions for such extensions to
+exist. The problem of how to apply these conditions in a meaningful and
+practical way still remains elusive but viewing the $N$-Representability
+problem from this perspective hopefully will enhance the prospects of finding
+a practical solution.
+
+
+\end{document}

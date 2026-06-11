@@ -1,0 +1,874 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, November 19, 2007 08:47:41}
+%TCIDATA{LastRevised=Thursday, January 10, 2008 15:25:16}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Geminal Power States}
+
+The general expressions for the AGP SORDO and FORDO\ are
+\begin{align*}
+D^{2}\left(  \left\vert g^{\frac{N}{2}}\right\rangle \left\langle g^{\frac
+{N}{2}}\right\vert \right)   &  =\left(  S_{\frac{N}{2}}\right)  ^{-1}\left\{
+\sum_{1\leq j\leq s}n_{j}S_{\frac{N}{2}-1}\left(  \hat{\jmath}\right)
+\left\vert \psi_{j}\psi_{j+s}\right\rangle \left\langle \psi_{j}\psi
+_{j+s}\right\vert \right. \\
+&  +\sum_{1\leq j\neq k\leq s}c_{j}c_{k}e^{i\left(  \theta_{j}-\theta
+_{k}\right)  }S_{\frac{N}{2}-1}\left(  \hat{\jmath}\hat{k}\right)  \left\vert
+\psi_{j}\psi_{j+s}\right\rangle \left\langle \psi_{k}\psi_{k+s}\right\vert \\
+&  \left.  +\sum_{\substack{1\leq j<k\leq r\\k\neq j+s}}n_{j}n_{k}S_{\frac
+{N}{2}-2}\left(  \hat{\jmath}\hat{k}\right)  \left\vert \psi_{j}\psi
+_{k}\right\rangle \left\langle \psi_{j}\psi_{k}\right\vert \right\}  .
+\end{align*}
+and
+\[
+D^{1}\left(  \left\vert g^{\frac{N}{2}}\right\rangle \left\langle g^{\frac
+{N}{2}}\right\vert \right)  =\left(  S_{\frac{N}{2}}\right)  ^{-1}\sum_{1\leq
+j\leq s}n_{j}S_{\frac{N}{2}-1}\left(  \hat{\jmath}\right)  \left\{  \left\vert
+\psi_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}
+\]
+repectively, where $n_{j}=c_{j}^{2}$. The energy of an AGP\ state is given by
+\begin{align*}
+&  \mathcal{E}\left(  \mathbf{n},\mathbf{\psi,\theta}\right)  =\frac
+{\mathcal{H}\left(  \mathbf{n},\mathbf{\psi}\right)  }{S_{\frac{N}{2}}\left(
+\mathbf{n}\right)  }=\\
+&  \left\{  \sum_{1\leq j\leq s}n_{j}S_{\frac{N}{2}-1}\left(  \hat{\jmath
+}\right)  \left\{  \overset{}{\left\langle \psi_{j}\left\vert h_{1}\psi
+_{j}\right.  \right\rangle +\left\langle \psi_{j+s}\left\vert h_{1}\psi
+_{j+s}\right.  \right\rangle }+\,\left\langle \psi_{j}\psi_{j+s}\right\vert
+\left\vert \psi_{j}\psi_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j\neq k\leq s}\left\{  c_{j}c_{k}e^{i\left(  \theta_{j}%
+-\theta_{k}\right)  }S_{\frac{N}{2}-1}\left(  \hat{\jmath}\hat{k}\right)
+\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{k}\psi
+_{k+s}\right\rangle \right. \\
+&  \qquad\qquad\qquad\left.  \left.  \left.  +\frac{1}{2}\overset{}{n_{j}%
+n_{k}S_{\frac{N}{2}-2}\left(  \hat{\jmath}\hat{k}\right)  \left\langle
+\psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle }\right\}  \right\}  \right/
+S_{\frac{N}{2}}\left(  \mathbf{n}\right)  ,
+\end{align*}
+where
+\begin{align*}
+\left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle  &
+=\left\langle \psi_{j}\psi_{k}||\psi_{j}\psi_{k}\right\rangle +\left\langle
+\psi_{j}\psi_{k+s}||\psi_{j}\psi_{k+s}\right\rangle \\
+&  +\left\langle \psi_{j+s}\psi_{k}||\psi_{j+s}\psi_{k}\right\rangle
++\left\langle \psi_{j+s}\psi_{k+s}||\psi_{j+s}\psi_{k+s}\right\rangle
+\end{align*}
+and
+\begin{align*}
+\left\langle \psi_{j}\psi_{k}||\psi_{l}\psi_{m}\right\rangle  &  =\int\left\{
+\psi_{j}^{\ast}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \psi_{k}^{\ast
+}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\Vert
+\mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(  \mathbf{r}%
+_{1}\mathbf{,\xi}_{1}\right)  \psi_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}%
+_{2}\right)  \right. \\
+&  -\left.  \psi_{j}^{\ast}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)
+\psi_{k}^{\ast}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(
+\mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \psi_{m}\left(  \mathbf{r}%
+_{1}\mathbf{,\xi}_{1}\right)  \right\}  d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi
+_{1}d\xi_{2}.
+\end{align*}
+The symmetric functions are given by
+\begin{align*}
+S_{m}  &  \equiv S_{m}\left(  \mathbf{n}\right)  =\sum_{1\leq j_{1}%
+<\cdots<j_{m}\leq s}n_{j_{1}}\cdots n_{j_{m}}\\
+S_{m}  &  =0,\,m<0\\
+S_{0}  &  =1\\
+S_{1}  &  =\sum_{1\leq j_{1}\leq s}n_{j_{1}}\\
+S_{1}\left(  \hat{k}\right)   &  =\sum_{1\leq j_{1}\neq k\leq s}n_{j_{1}}\\
+S_{1}\left(  \hat{k}\hat{l}\right)   &  =\sum_{1\leq j_{1}\neq k,l\leq
+s}n_{j_{1}}\\
+S_{2}  &  =\sum_{1\leq j_{1}<j_{2}\leq s}n_{j_{1}}n_{j_{2}}\\
+S_{2}\left(  \hat{k}\right)   &  =\sum_{\substack{1\leq j_{1}<j_{2}\leq
+s\\j_{1},j_{2}\neq k}}n_{j_{1}}n_{j_{2}}.
+\end{align*}
+
+
+\section{Example States}
+
+We will consider low spin geminals
+\[
+S_{0}\left\vert g\right\rangle =0
+\]
+formed from spin orbitals
+\[
+S_{0}\left\vert \psi\right\rangle =\pm\frac{1}{2}\left\vert \psi\right\rangle
+\]
+that produce the same FORDO, starting with the geminal%
+
+\[
+\left\vert g_{+}\right\rangle =\left\vert \psi_{1}\psi_{3}\right\rangle
++\left\vert \psi_{2}\psi_{4}\right\rangle =\left\vert \varphi_{1}\alpha
+\varphi_{3}\beta\right\rangle +\left\vert \varphi_{2}\alpha\varphi_{4}%
+\beta\right\rangle
+\]%
+\begin{align}
+&  =\frac{1}{\sqrt{2}}\left\{  \varphi_{1}\left(  1\right)  \alpha\left(
+1\right)  \otimes\varphi_{3}\left(  2\right)  \beta\left(  2\right)
+-\varphi_{3}\left(  1\right)  \beta\left(  1\right)  \otimes\varphi_{1}\left(
+2\right)  \alpha\left(  2\right)  \right\} \nonumber\\
+&  +\frac{1}{\sqrt{2}}\left\{  \varphi_{2}\left(  1\right)  \alpha\left(
+1\right)  \otimes\varphi_{4}\left(  2\right)  \beta\left(  2\right)
+-\varphi_{2}\left(  1\right)  \beta\left(  1\right)  \otimes\varphi_{4}\left(
+2\right)  \alpha\left(  2\right)  \right\} \nonumber
+\end{align}%
+\begin{align}
+&  =\frac{1}{\sqrt{2}}\left\{  \left\{  \varphi_{1}\left(  1\right)
+\otimes\varphi_{3}\left(  2\right)  +\varphi_{2}\left(  1\right)
+\otimes\varphi_{4}\left(  2\right)  \right\}  \alpha\left(  1\right)
+\otimes\beta\left(  2\right)  \right. \nonumber\\
+&  -\left\{  \varphi_{3}\left(  1\right)  \otimes\varphi_{1}\left(  2\right)
++\varphi_{4}\left(  1\right)  \otimes\varphi_{2}\left(  2\right)  \right\}
+\beta\left(  1\right)  \otimes\alpha\left(  2\right)  .
+\end{align}
+One can observe that if we replace $\left\vert \psi_{2}\right\rangle $ with
+$-\left\vert \psi_{2}\right\rangle $ $\equiv\left\vert \varphi_{2}%
+\right\rangle \rightarrow-\left\vert \varphi_{2}\right\rangle $ we obtain
+\[
+\left\vert g_{-}\right\rangle =\left\vert \psi_{1}\psi_{3}\right\rangle
+-\left\vert \psi_{2}\psi_{4}\right\rangle =\left\vert \varphi_{1}\alpha
+\varphi_{3}\beta\right\rangle -\left\vert \varphi_{2}\alpha\varphi_{4}%
+\beta\right\rangle
+\]%
+\begin{align}
+&  =\frac{1}{\sqrt{2}}\left\{  \varphi_{1}\left(  1\right)  \alpha\left(
+1\right)  \otimes\varphi_{3}\left(  2\right)  \beta\left(  2\right)
+-\varphi_{3}\left(  1\right)  \beta\left(  1\right)  \otimes\varphi_{1}\left(
+2\right)  \alpha\left(  2\right)  \right\} \nonumber\\
+&  -\frac{1}{\sqrt{2}}\left\{  \varphi_{2}\left(  1\right)  \alpha\left(
+1\right)  \otimes\varphi_{4}\left(  2\right)  \beta\left(  2\right)
+-\varphi_{2}\left(  1\right)  \beta\left(  1\right)  \otimes\varphi_{4}\left(
+2\right)  \alpha\left(  2\right)  \right\} \nonumber
+\end{align}%
+\begin{align}
+&  =\frac{1}{\sqrt{2}}\left\{  \left\{  \varphi_{1}\left(  1\right)
+\otimes\varphi_{3}\left(  2\right)  -\varphi_{2}\left(  1\right)
+\otimes\varphi_{4}\left(  2\right)  \right\}  \alpha\left(  1\right)
+\otimes\beta\left(  2\right)  \right. \nonumber\\
+&  -\left\{  \varphi_{3}\left(  1\right)  \otimes\varphi_{1}\left(  2\right)
+-\varphi_{2}\left(  1\right)  \otimes\varphi_{4}\left(  2\right)  \right\}
+\beta\left(  1\right)  \otimes\alpha\left(  2\right)
+\end{align}
+and do not alter the FORDO, but do change the SORDO. The common FORDO\ is
+\begin{align}
+D^{1}  &  =\frac{1}{4}\left\{  \left\vert \psi_{1}\right\rangle \left\langle
+\psi_{1}\right\vert +\left\vert \psi_{2}\right\rangle \left\langle \psi
+_{2}\right\vert +\left\vert \psi_{3}\right\rangle \left\langle \psi
+_{3}\right\vert +\left\vert \psi_{4}\right\rangle \left\langle \psi
+_{4}\right\vert \right\} \nonumber\\
+&  \equiv\frac{1}{4}\left\{  \left\vert 1\alpha\right\rangle \left\langle
+1\alpha\right\vert +\left\vert 2\alpha\right\rangle \left\langle
+2\alpha\right\vert +\left\vert 3\beta\right\rangle \left\langle 3\beta
+\right\vert +\left\vert 4\beta\right\rangle \left\langle 4\beta\right\vert
+\right\}
+\end{align}
+while the SORDO's are
+\begin{align}
+D^{2}\left(  g_{+}\right)   &  =\frac{1}{2}\left\{  \left\vert \psi_{1}%
+\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{3}\right\vert +\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{4}\right\vert \right\} \nonumber\\
+&  \equiv\frac{1}{2}\left\{  \left\vert 1\alpha3\beta\right\rangle
+\left\langle 1\alpha3\beta\right\vert +\left\vert 1\alpha3\beta\right\rangle
+\left\langle 2\alpha4\beta\right\vert +\left\vert 2\alpha4\beta\right\rangle
+\left\langle 1\alpha3\beta\right\vert +\left\vert 2\alpha4\beta\right\rangle
+\left\langle 2\alpha4\beta\right\vert \right\}  .
+\end{align}
+and
+\begin{align}
+D^{2}\left(  g_{-}\right)   &  =\frac{1}{2}\left\{  \left\vert \psi_{1}%
+\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert -\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+-\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{3}\right\vert +\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{4}\right\vert \right\} \nonumber\\
+&  \equiv\frac{1}{2}\left\{  \left\vert 1\alpha3\beta\right\rangle
+\left\langle 1\alpha3\beta\right\vert -\left\vert 1\alpha3\beta\right\rangle
+\left\langle 2\alpha4\beta\right\vert -\left\vert 2\alpha4\beta\right\rangle
+\left\langle 1\alpha3\beta\right\vert +\left\vert 2\alpha4\beta\right\rangle
+\left\langle 2\alpha4\beta\right\vert \right\}  .
+\end{align}
+If we further set
+\begin{align}
+\left\vert \varphi_{1}\right\rangle  &  =\left\vert \varphi_{3}\right\rangle
+\nonumber\\
+\left\vert \varphi_{2}\right\rangle  &  =\left\vert \varphi_{4}\right\rangle
+\end{align}
+to form restricted singlet spin geminals that factor into a product of space
+and spin parts then
+\begin{align}
+\left\vert g_{+}\right\rangle  &  =\frac{1}{\sqrt{2}}\left\{  \overset{}%
+{}\left\{  \varphi_{1}\left(  1\right)  \otimes\varphi_{1}\left(  2\right)
++\varphi_{2}\left(  1\right)  \otimes\varphi_{2}\left(  2\right)  \right\}
+\right. \nonumber\\
+&  \left.  \left\{  \alpha\left(  1\right)  \otimes\beta\left(  2\right)
+-\beta\left(  1\right)  \otimes\alpha\left(  2\right)  \right\}  \overset{}%
+{}\right\}
+\end{align}
+and
+\begin{align}
+\left\vert g_{-}\right\rangle  &  =\frac{1}{\sqrt{2}}\left\{  \overset{}%
+{}\left\{  \varphi_{1}\left(  1\right)  \otimes\varphi_{1}\left(  2\right)
+-\varphi_{2}\left(  1\right)  \otimes\varphi_{2}\left(  2\right)  \right\}
+\right. \nonumber\\
+&  \left.  \left\{  \alpha\left(  1\right)  \otimes\beta\left(  2\right)
+-\beta\left(  1\right)  \otimes\alpha\left(  2\right)  \right\}  \overset{}%
+{}\right\}
+\end{align}
+i.e.
+\[
+\left\vert g_{+}\right\rangle =\left(  \sqrt{2}\right)  ^{-1}\left\{
+\left\vert \psi_{1}\psi_{3}\right\rangle +\left\vert \psi_{2}\psi
+_{4}\right\rangle \right\}  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert
+\varphi_{1}\alpha\varphi_{1}\beta\right\rangle +\left\vert \varphi_{2}%
+\alpha\varphi_{2}\beta\right\rangle \right\}
+\]%
+\[
+\left\vert g_{-}\right\rangle =\left(  \sqrt{2}\right)  ^{-1}\left\{
+\left\vert \psi_{1}\psi_{3}\right\rangle -\left\vert \psi_{2}\psi
+_{4}\right\rangle \right\}  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert
+\varphi_{1}\alpha\varphi_{1}\beta\right\rangle -\left\vert \varphi_{2}%
+\alpha\varphi_{2}\beta\right\rangle \right\}
+\]
+and $\left\vert g_{-}\right\rangle $ is obtained from $\left\vert
+g_{+}\right\rangle $ by replacing $\left\vert \varphi_{2}\right\rangle $ by
+$\left\vert i\varphi_{2}\right\rangle $. Thus
+\[
+D^{1}\left(  g_{+}\right)  =D^{1}\left(  g_{-}\right)
+\]
+while again
+\[
+D^{2}\left(  g_{+}\right)  \neq D^{2}\left(  g_{-}\right)
+\]
+as
+\begin{align}
+D^{2}\left(  g_{+}\right)   &  =\frac{1}{2}\left\{  \left\vert \psi_{1}%
+\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{3}\right\vert +\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{4}\right\vert \right\} \nonumber\\
+&  \equiv\frac{1}{2}\left\{  \left\vert 1\alpha1\beta\right\rangle
+\left\langle 1\alpha1\beta\right\vert +\left\vert 1\alpha1\beta\right\rangle
+\left\langle 2\alpha2\beta\right\vert +\left\vert 2\alpha2\beta\right\rangle
+\left\langle 1\alpha1\beta\right\vert +\left\vert 2\alpha2\beta\right\rangle
+\left\langle 2\alpha2\beta\right\vert \right\}  .
+\end{align}
+and
+\begin{align}
+D^{2}\left(  g_{-}\right)   &  =\frac{1}{2}\left\{  \left\vert \psi_{1}%
+\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert -\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+-\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{3}\right\vert +\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{4}\right\vert \right\} \nonumber\\
+&  \equiv\frac{1}{2}\left\{  \left\vert 1\alpha1\beta\right\rangle
+\left\langle 1\alpha1\beta\right\vert -\left\vert 1\alpha1\beta\right\rangle
+\left\langle 2\alpha2\beta\right\vert -\left\vert 2\alpha2\beta\right\rangle
+\left\langle 1\alpha1\beta\right\vert +\left\vert 2\alpha2\beta\right\rangle
+\left\langle 2\alpha2\beta\right\vert \right\}  .
+\end{align}
+
+
+\subsection{SORDO}
+
+We will use the general form of the SORDO for the case
+\begin{align*}
+m  &  =\frac{N}{2}=\frac{2}{2}=1\\
+n_{1}  &  =n_{2}=\frac{1}{2}\\
+c_{1}  &  =c_{2}=\frac{1}{\sqrt{2}}.
+\end{align*}
+As $m=1$ the symmetric functions, which refer to the number of pairs are
+\begin{align*}
+S_{1-1}\left(  \hat{\jmath}\hat{k}\right)   &  =S_{0}\left(  \hat{\jmath}%
+\hat{k}\right)  =1\\
+S_{1-1}\left(  \hat{\jmath}\right)   &  =S_{0}\left(  \hat{\jmath}\right)
+=1\\
+S_{1-2}\left(  \hat{\jmath}\hat{k}\right)   &  =S_{-1}\left(  \hat{\jmath}%
+\hat{k}\right)  =0.
+\end{align*}
+Using the general form we obtain%
+\begin{align*}
+&  D^{2}\left(  \left\vert g^{1}\right\rangle \left\langle g^{1}\right\vert
+\right)  =\left(  S_{1}\right)  ^{-1}\left\{  \sum_{1\leq j\leq s}n_{j}%
+S_{1-1}\left(  \hat{\jmath}\right)  \left\vert \psi_{j}\psi_{j+s}\right\rangle
+\left\langle \psi_{j}\psi_{j+s}\right\vert \right. \\
+&  +\sum_{1\leq j\neq k\leq s}c_{j}c_{k}e^{i\left(  \theta_{j}-\theta
+_{k}\right)  }S_{1-1}\left(  \hat{\jmath}\hat{k}\right)  \left\vert \psi
+_{j}\psi_{j+s}\right\rangle \left\langle \psi_{k}\psi_{k+s}\right\vert \left.
++\sum_{\substack{1\leq j<k\leq r\\k\neq j+s}}n_{j}n_{k}S_{1-2}\left(
+\hat{\jmath}\hat{k}\right)  \left\vert \psi_{j}\psi_{k}\right\rangle
+\left\langle \psi_{j}\psi_{k}\right\vert \right\}  ,
+\end{align*}
+which gives, after noting
+\begin{align*}
+S_{1}  &  =n_{1}+n_{2}=1\\
+S_{\frac{2}{2}-1}\left(  \hat{1}\hat{2}\right)   &  =S_{0}\left(  \hat{1}%
+\hat{2}\right)  =1\\
+S_{\frac{2}{2}-1}\left(  \hat{1}\right)   &  =S_{0}\left(  \hat{1}\right)
+=1;S_{\frac{2}{2}-1}\left(  \hat{2}\right)  =S_{0}\left(  \hat{2}\right)  =1\\
+S_{\frac{2}{2}-2}\left(  \hat{1}\hat{2}\right)   &  =S_{-1}\left(  \hat{1}%
+\hat{2}\right)  =0,
+\end{align*}
+the SORDO%
+\begin{align*}
+&  D^{2}\left(  \left\vert g_{+}^{1}\right\rangle \left\langle g_{+}%
+^{1}\right\vert \right)  =\frac{1}{2}\left\{  \left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+\right\} \\
+&  +\frac{1}{2}\left\{  \left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{2}\psi_{4}\right\vert e^{i\left(  \theta_{1}-\theta_{2}\right)
+}+\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{3}\right\vert e^{-i\left(  \theta_{1}-\theta_{2}\right)  }\right\} \\
+&  =\frac{1}{2}\left\{  \left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{3}\right\vert +\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{4}\right\vert +\left\vert \psi_{2}\psi
+_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+\right\}
+\end{align*}
+as
+\[
+\theta_{1}=\theta_{2}=0.
+\]
+This should be compared to the previous direct derivation%
+\begin{align}
+D^{2}\left(  g_{+}\right)   &  =\frac{1}{2}\left\{  \left\vert \psi_{1}%
+\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{3}\right\vert +\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{4}\right\vert \right\} \nonumber\\
+&  \equiv\frac{1}{2}\left\{  \left\vert 1\alpha3\beta\right\rangle
+\left\langle 1\alpha3\beta\right\vert +\left\vert 1\alpha3\beta\right\rangle
+\left\langle 2\alpha4\beta\right\vert +\left\vert 2\alpha4\beta\right\rangle
+\left\langle 1\alpha3\beta\right\vert +\left\vert 2\alpha4\beta\right\rangle
+\left\langle 2\alpha4\beta\right\vert \right\}  .
+\end{align}
+In the $\left\vert g_{-}\right\rangle $ case
+\begin{align*}
+\theta_{1}  &  =0\\
+\theta_{2}  &  =\pi
+\end{align*}
+and we obtain
+\begin{align*}
+&  D^{2}\left(  \left\vert g_{-}^{1}\right\rangle \left\langle g_{-}%
+^{1}\right\vert \right)  =\frac{1}{2}\left\{  \left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+\right\} \\
+&  +\frac{1}{2}\left\{  \left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{2}\psi_{4}\right\vert e^{i\left(  \theta_{1}-\theta_{2}\right)
+}+\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{3}\right\vert e^{-i\left(  \theta_{1}-\theta_{2}\right)  }\right\} \\
+&  =\frac{1}{2}\left\{  \left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{3}\right\vert -\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{4}\right\vert -\left\vert \psi_{2}\psi
+_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left\vert
+\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
+\right\}
+\end{align*}
+as
+\begin{align*}
+e^{i\theta}  &  =\cos\theta-i\sin\theta\\
+e^{i\pi}  &  =\cos\pi-i\sin\pi=-1\\
+e^{-i\pi}  &  =\cos\left(  -\pi\right)  -i\sin\left(  -\pi\right)  =-1.
+\end{align*}
+
+
+\subsection{Energy}
+
+In these cases
+\[
+\left\vert g_{\theta}\right\rangle =c_{1}e^{i\theta_{1}}\left\vert \psi
+_{1}\psi_{3}\right\rangle +c_{2}e^{i\theta_{2}}\left\vert \psi_{2}\psi
+_{4}\right\rangle
+\]
+
+
+and%
+\begin{align*}
+n_{1}  &  =n_{2}=\frac{1}{2}\\
+c_{1}  &  =c_{2}=\frac{1}{\sqrt{2}}%
+\end{align*}
+giving%
+\begin{align*}
+\left\vert g_{\theta}\right\rangle  &  =\frac{1}{\sqrt{2}}\left\{  \left\vert
+\psi_{1}\psi_{3}\right\rangle +e^{i\theta}\left\vert \psi_{2}\psi
+_{4}\right\rangle \right\} \\
+&  =\frac{1}{\sqrt{2}}\left\{  \left\vert 1\alpha1\beta\right\rangle
++e^{i\theta}\left\vert 2\alpha2\beta\right\rangle \right\}  .
+\end{align*}
+The symmetric functions are
+\begin{align*}
+S_{1}\left(  \mathbf{n}\right)   &  =n_{1}+n_{2}=1\\
+S_{0}\left(  \hat{1}\right)   &  =S_{0}\left(  \hat{2}\right)  =1\\
+S_{-1}\left(  \hat{1}\hat{2}\right)   &  =0
+\end{align*}
+and the energy is given by%
+\begin{align*}
+&  \mathcal{E}\left(  \theta\right)  =\frac{\mathcal{H}\left(  \theta\right)
+}{S_{\frac{N}{2}}}=S_{1}\left(  \mathbf{n}\right)  ^{-1}\left\{  \sum_{1\leq
+j\leq2}n_{j}S_{0}\left(  \hat{\jmath}\right)  \left\{  \overset{}{\left\langle
+\psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle +\left\langle
+\psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle }+\,\left\langle
+\psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{j}\psi_{j+s}\right\rangle
+\right\}  \right. \\
+&  +\sum_{1\leq j\neq k\leq2}\left\{  c_{j}c_{k}e^{i\left(  \theta_{j}%
+-\theta_{k}\right)  }S_{0}\left(  \hat{\jmath}\hat{k}\right)  \left\langle
+\psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{k}\psi_{k+s}\right\rangle
++\frac{1}{2}\overset{}{n_{i}n_{j}S_{-1}\left(  \hat{\jmath}\hat{k}\right)
+\left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle }\right\}
+\end{align*}%
+\begin{align*}
+&  =\frac{1}{2}\sum_{1\leq j\leq2}\left\{  \overset{}{\left\langle \psi
+_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle +\left\langle \psi
+_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle }+\,\left\langle
+\psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{j}\psi_{j+s}\right\rangle
+\right\} \\
+&  +\frac{1}{2}\sum_{1\leq j\neq k\leq2}e^{i\left(  \theta_{j}-\theta
+_{k}\right)  }\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi
+_{k}\psi_{k+s}\right\rangle \\
+&  =\frac{1}{2}\left\{  \overset{}{\left\langle \psi_{1}\left\vert h_{1}%
+\psi_{1}\right.  \right\rangle +\left\langle \psi_{2}\left\vert h_{1}\psi
+_{2}\right.  \right\rangle +\left\langle \psi_{3}\left\vert h_{1}\psi
+_{3}\right.  \right\rangle +\left\langle \psi_{4}\left\vert h_{1}\psi
+_{4}\right.  \right\rangle }\right. \\
+&  \left.  \,+\left\langle \psi_{1}\psi_{3}\right\vert \left\vert \psi_{1}%
+\psi_{3}\right\rangle +\left\langle \psi_{2}\psi_{4}\right\vert \left\vert
+\psi_{2}\psi_{4}\right\rangle +e^{i\theta}\left\langle \psi_{1}\psi
+_{3}\right\vert \left\vert \psi_{2}\psi_{4}\right\rangle +e^{-i\theta
+}\left\langle \psi_{2}\psi_{4}\right\vert \left\vert \psi_{1}\psi
+_{3}\right\rangle \overset{}{}\right\}  .
+\end{align*}
+Thus giving in the +/- cases%
+\begin{align*}
+&  \mathcal{E}\left(  g_{+}\right)  =\frac{1}{2}\left\{  \overset
+{}{\left\langle 1\alpha\left\vert h_{1}1\alpha\right.  \right\rangle
++\left\langle 2\alpha\left\vert h_{1}2\alpha\right.  \right\rangle
++\left\langle 1\beta\left\vert h_{1}1\beta\right.  \right\rangle +\left\langle
+2\beta\left\vert h_{1}2\beta\right.  \right\rangle }\right. \\
+&  \left.  \,+\left\langle 1\alpha1\beta\right\vert \left\vert 1\alpha
+1\beta\right\rangle +\left\langle 2\alpha2\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle +\left\langle 1\alpha1\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle +\left\langle 1\alpha1\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle \overset{}{}\right\}
+\end{align*}
+and
+\begin{align*}
+&  \mathcal{E}\left(  g_{-}\right)  =\frac{1}{2}\left\{  \overset
+{}{\left\langle 1\alpha\left\vert h_{1}1\alpha\right.  \right\rangle
++\left\langle 2\alpha\left\vert h_{1}2\alpha\right.  \right\rangle
++\left\langle 1\beta\left\vert h_{1}1\beta\right.  \right\rangle +\left\langle
+2\beta\left\vert h_{1}2\beta\right.  \right\rangle }\right. \\
+&  \left.  \,+\left\langle 1\alpha1\beta\right\vert \left\vert 1\alpha
+1\beta\right\rangle +\left\langle 2\alpha2\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle -\left\langle 1\alpha1\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle -\left\langle 1\alpha1\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle \overset{}{}\right\}  ,
+\end{align*}
+where%
+\begin{align*}
+&  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle =\left\langle
+jk||jk\right\rangle +\left\langle j\,k+s||j\,k+s\right\rangle +\\
+&  \left\langle j+s\,k||j+s\,k\right\rangle +\left\langle
+j+s\,k+s||j+s\,k+s\right\rangle ;1\leq j,k\leq s.
+\end{align*}
+and%
+
+\begin{align*}
+\left\langle jk||lm\right\rangle  &  =\int\left\{  \psi_{j}^{\ast}\left(
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \psi_{k}^{\ast}\left(  \mathbf{r}%
+_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}%
+-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(  \mathbf{r}_{1}\mathbf{,\xi}%
+_{1}\right)  \psi_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \right.
+\\
+&  -\left.  \psi_{j}^{\ast}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)
+\psi_{k}^{\ast}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(
+\mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \psi_{m}\left(  \mathbf{r}%
+_{1}\mathbf{,\xi}_{1}\right)  \right\}  d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi
+_{1}d\xi_{2}\\
+&  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad1\leq j,k\leq2s;1\leq l,m\leq2s.
+\end{align*}
+
+
+\section{Pure Spin Geminals}
+
+We can compare the preceding $\left\vert g_{+}\right\rangle $ and $\left\vert
+g_{-}\right\rangle $ geminals with pure spin ones that do not have the same
+FORDO. The low spin triplet is
+\[
+\left\vert g_{10}\right\rangle =\left(  \sqrt{2}\right)  ^{-1}\left\{
+\left\vert \psi_{1}\psi_{3}\right\rangle +\left\vert \psi_{2}\psi
+_{4}\right\rangle \right\}  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert
+\varphi_{1}\alpha\varphi_{2}\beta\right\rangle +\left\vert \varphi_{1}%
+\beta\varphi_{2}\alpha\right\rangle \right\}  ,
+\]
+which can be seperated into a product of spacr and spin factors as%
+\begin{align}
+\left\vert g_{10}\right\rangle  &  =\left(  \sqrt{2}\right)  ^{-1}\left\{
+\left\vert \varphi_{1}\alpha\varphi_{2}\beta\right\rangle +\left\vert
+\varphi_{1}\beta\varphi_{2}\alpha\right\rangle \right\} \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \varphi_{1}\left(  1\right)  \alpha\left(
+1\right)  \otimes\varphi_{2}\left(  2\right)  \beta\left(  2\right)
+-\varphi_{2}\left(  1\right)  \beta\left(  1\right)  \otimes\varphi_{1}\left(
+2\right)  \alpha\left(  2\right)  \right\} \nonumber\\
+&  +\frac{1}{\sqrt{2}}\left\{  \varphi_{1}\left(  1\right)  \beta\left(
+1\right)  \otimes\varphi_{2}\left(  2\right)  \alpha\left(  2\right)
+-\varphi_{2}\left(  1\right)  \alpha\left(  1\right)  \otimes\varphi
+_{1}\left(  2\right)  \beta\left(  2\right)  \right\} \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \left\{  \varphi_{1}\left(  1\right)
+\otimes\varphi_{2}\left(  2\right)  -\varphi_{2}\left(  1\right)
+\otimes\varphi_{1}\left(  2\right)  \right\}  \alpha\left(  1\right)
+\otimes\beta\left(  2\right)  \right. \nonumber\\
+&  +\left\{  \varphi_{2}\left(  1\right)  \otimes\varphi_{1}\left(  2\right)
+-\varphi_{1}\left(  1\right)  \otimes\varphi_{2}\left(  2\right)  \right\}
+\beta\left(  1\right)  \otimes\alpha\left(  2\right) \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \left\{  \varphi_{1}\left(  1\right)
+\otimes\varphi_{2}\left(  2\right)  -\varphi_{2}\left(  1\right)
+\otimes\varphi_{1}\left(  2\right)  \right\}  \left\{  \alpha\left(  1\right)
+\otimes\beta\left(  2\right)  +\beta\left(  1\right)  \otimes\alpha\left(
+2\right)  \right\}  \right\}  ,
+\end{align}
+and the low spin singlet%
+\[
+\left\vert g_{00}\right\rangle =\left(  \sqrt{2}\right)  ^{-1}\left\{
+\left\vert \psi_{1}\psi_{3}\right\rangle -\left\vert \psi_{2}\psi
+_{4}\right\rangle \right\}  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert
+\varphi_{1}\alpha\varphi_{2}\beta\right\rangle -\left\vert \varphi_{1}%
+\beta\varphi_{2}\alpha\right\rangle \right\}  ,
+\]
+which can be seperated as%
+\begin{align}
+\left\vert g_{00}\right\rangle  &  =\left(  \sqrt{2}\right)  ^{-1}\left\{
+\left\vert \varphi_{1}\alpha\varphi_{2}\beta\right\rangle -\left\vert
+\varphi_{1}\beta\varphi_{2}\alpha\right\rangle \right\} \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \varphi_{1}\left(  1\right)  \alpha\left(
+1\right)  \otimes\varphi_{2}\left(  2\right)  \beta\left(  2\right)
+-\varphi_{2}\left(  1\right)  \beta\left(  1\right)  \otimes\varphi_{1}\left(
+2\right)  \alpha\left(  2\right)  \right\} \nonumber\\
+&  -\frac{1}{\sqrt{2}}\left\{  \varphi_{1}\left(  1\right)  \beta\left(
+1\right)  \otimes\varphi_{2}\left(  2\right)  \alpha\left(  2\right)
+-\varphi_{2}\left(  1\right)  \alpha\left(  1\right)  \otimes\varphi
+_{1}\left(  2\right)  \beta\left(  2\right)  \right\} \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \left\{  \varphi_{1}\left(  1\right)
+\otimes\varphi_{2}\left(  2\right)  +\varphi_{2}\left(  1\right)
+\otimes\varphi_{1}\left(  2\right)  \right\}  \alpha\left(  1\right)
+\otimes\beta\left(  2\right)  \right. \nonumber\\
+&  -\left\{  \varphi_{2}\left(  1\right)  \otimes\varphi_{1}\left(  2\right)
++\varphi_{1}\left(  1\right)  \otimes\varphi_{2}\left(  2\right)  \right\}
+\beta\left(  1\right)  \otimes\alpha\left(  2\right) \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \left\{  \varphi_{1}\left(  1\right)
+\otimes\varphi_{2}\left(  2\right)  +\varphi_{2}\left(  1\right)
+\otimes\varphi_{1}\left(  2\right)  \right\}  \left\{  \alpha\left(  1\right)
+\otimes\beta\left(  2\right)  -\beta\left(  1\right)  \otimes\alpha\left(
+2\right)  \right\}  \right\}  .
+\end{align}
+
+
+The spin squared operator is given by
+\[
+S^{2}=S_{-}S_{+}+S_{0}^{2}+S_{0}%
+\]
+where
+\begin{align*}
+S_{+}  &  =\sum_{1\leq j\leq s}a_{j\alpha}^{\dagger}a_{j\beta}\\
+S_{-}  &  =\sum_{1\leq j\leq s}a_{j\beta}^{\dagger}a_{j\alpha}=S_{+}^{\dagger
+}\\
+S_{0}  &  =\sum_{1\leq j\leq s}a_{j\alpha}^{\dagger}a_{j\alpha}-\sum_{1\leq
+j\leq s}a_{j\beta}^{\dagger}a_{j\beta}.
+\end{align*}
+Thus
+\begin{align*}
+&  S^{2}\left\vert g_{10}\right\rangle =S^{2}\left(  \sqrt{2}\right)
+^{-1}\left\{  \left\vert \varphi_{1}\alpha\varphi_{2}\beta\right\rangle
++\left\vert \varphi_{1}\beta\varphi_{2}\alpha\right\rangle \right\}
+=S_{-}S_{+}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{2}\beta\right\rangle +\left\vert \varphi_{1}\beta\varphi
+_{2}\alpha\right\rangle \right\} \\
+&  =S_{-}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{2}\alpha\right\rangle +\left\vert \varphi_{1}\alpha\varphi
+_{2}\alpha\right\rangle \right\}  =2\left(  \sqrt{2}\right)  ^{-1}\left\{
+\left\vert \varphi_{1}\beta\varphi_{2}\alpha\right\rangle +\left\vert
+\varphi_{1}\alpha\varphi_{2}\beta\right\rangle \right\}  =2\left\vert
+g_{10}\right\rangle
+\end{align*}
+and
+\begin{align*}
+&  S^{2}\left\vert g_{00}\right\rangle =S^{2}\left(  \sqrt{2}\right)
+^{-1}\left\{  \left\vert \varphi_{1}\alpha\varphi_{2}\beta\right\rangle
+-\left\vert \varphi_{1}\beta\varphi_{2}\alpha\right\rangle \right\}
+=S_{-}S_{+}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{2}\beta\right\rangle -\left\vert \varphi_{1}\beta\varphi
+_{2}\alpha\right\rangle \right\} \\
+&  =S_{-}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{2}\alpha\right\rangle -\left\vert \varphi_{1}\alpha\varphi
+_{2}\alpha\right\rangle \right\} \\
+&  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}\beta
+\varphi_{2}\alpha\right\rangle +\left\vert \varphi_{1}\alpha\varphi_{2}%
+\beta\right\rangle -\left\vert \varphi_{1}\beta\varphi_{2}\alpha\right\rangle
+-\left\vert \varphi_{1}\beta\varphi_{2}\alpha\right\rangle \right\}  =0,
+\end{align*}
+showing that $\left\vert g_{10}\right\rangle $ and $\left\vert g_{00}%
+\right\rangle $ are pure spin states.
+
+This should be compared to%
+\begin{align*}
+S^{2}\left\vert g_{+}\right\rangle =  &  S^{2}\left(  \sqrt{2}\right)
+^{-1}\left\{  \left\vert \varphi_{1}\alpha\varphi_{3}\beta\right\rangle
++\left\vert \varphi_{2}\alpha\varphi_{4}\beta\right\rangle \right\}
+=S_{-}S_{+}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{3}\beta\right\rangle +\left\vert \varphi_{2}\alpha\varphi
+_{4}\beta\right\rangle \right\} \\
+&  =S_{-}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{3}\alpha\right\rangle +\left\vert \varphi_{2}\alpha\varphi
+_{4}\alpha\right\rangle \right\} \\
+&  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}\beta
+\varphi_{3}\alpha\right\rangle +\left\vert \varphi_{1}\alpha\varphi_{3}%
+\beta\right\rangle +\left\vert \varphi_{2}\beta\varphi_{4}\alpha\right\rangle
++\left\vert \varphi_{2}\alpha\varphi_{4}\beta\right\rangle \right\}
+\end{align*}
+which shows that $\left\vert g_{+}\right\rangle $ is not in general an
+eigenstate of $S^{2}$. However in the special case restricted case when
+$\varphi_{1}=\varphi_{3}$ we obtain
+\[
+S^{2}\left\vert g_{+}\right\rangle =\left\vert 1\beta1\alpha\right\rangle
++\left\vert 1\alpha1\beta\right\rangle +\left\vert 2\beta2\alpha\right\rangle
++\left\vert 2\alpha2\beta\right\rangle =0,
+\]
+showing that it is a pure singlet state. The negative geminal gives
+\begin{align*}
+S^{2}\left\vert g_{-}\right\rangle =  &  S^{2}\left(  \sqrt{2}\right)
+^{-1}\left\{  \left\vert \varphi_{1}\alpha\varphi_{3}\beta\right\rangle
+-\left\vert \varphi_{2}\alpha\varphi_{4}\beta\right\rangle \right\}
+=S_{-}S_{+}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{3}\beta\right\rangle -\left\vert \varphi_{2}\alpha\varphi
+_{4}\beta\right\rangle \right\} \\
+&  =S_{-}\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}%
+\alpha\varphi_{3}\alpha\right\rangle -\left\vert \varphi_{2}\alpha\varphi
+_{4}\alpha\right\rangle \right\} \\
+&  =\left(  \sqrt{2}\right)  ^{-1}\left\{  \left\vert \varphi_{1}\beta
+\varphi_{3}\alpha\right\rangle +\left\vert \varphi_{1}\alpha\varphi_{3}%
+\beta\right\rangle -\left\vert \varphi_{2}\beta\varphi_{4}\alpha\right\rangle
+-\left\vert \varphi_{2}\alpha\varphi_{4}\beta\right\rangle \right\}  ,
+\end{align*}
+which again is not in general an eigenstate of spin unless $\varphi
+_{1}=\varphi_{3}$ where again it becames a restricted singlet.
+
+\section{Density Matrix Functional}
+
+One can define an AGP DMF by
+\[
+F\left(  D^{1}\right)  =\min_{\mathbf{\theta}}\mathcal{E}\left(
+\mathbf{\theta}\right)
+\]
+where for fixed $\mathbf{c}$ and $\mathbf{\psi}$ the energy is just a function
+of the angular differences $\left\{  \left.  \theta_{j}-\theta_{k}\right\vert
+1\leq j<k\leq s\right\}  $ and is given by
+\begin{align*}
+&  \mathcal{E}\left(  \mathbf{\theta}\right)  =\frac{\mathcal{H}\left(
+\theta\right)  }{S_{\frac{N}{2}}}=S_{\frac{N}{2}}{}^{-1}\left\{  \sum_{1\leq
+j\leq s}n_{j}S_{\frac{N}{2}-1}\left(  \hat{\jmath}\right)  \left\{  \overset
+{}{\left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle
++\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle
+}+\,\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{j}\psi
+_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j\neq k\leq s}\left\{  c_{j}c_{k}e^{i\left(  \theta_{j}%
+-\theta_{k}\right)  }S_{\frac{N}{2}-1}\left(  \hat{\jmath}\hat{k}\right)
+\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{k}\psi
+_{k+s}\right\rangle +\frac{1}{2}n_{j}n_{k}S_{\frac{N}{2}-2}\left(  \hat
+{\jmath}\hat{k}\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi
+_{k}\right\rangle \,\overset{}{}\right\}  .
+\end{align*}
+When the FORDO\ is doubly degenerate it is uniquely parameterized by $\left\{
+\mathbf{\psi,c}\right\}  ,$ where $\mathbf{\psi}$ are representatives of the
+equivalence classes produced by the normalized GSO's $\left\{  \left\vert
+\psi\right\rangle \right\}  $ defined by
+\begin{align*}
+\left\{  \left\vert \psi_{a}\right\rangle ,\left\vert \psi_{b}\right\rangle
+\right\}   &  \sim\left\{  \left\vert \psi_{c}\right\rangle ,\left\vert
+\psi_{d}\right\rangle \right\} \\
+&  \Updownarrow\\
+\left\vert \psi_{a}\psi_{b}\right\rangle \left\langle \psi_{a}\psi
+_{b}\right\vert  &  =\left\vert \psi_{c}\psi_{d}\right\rangle \left\langle
+\psi_{c}\psi_{d}\right\vert
+\end{align*}
+the canonical coeffcients $\mathbf{c}$ lie on the positive portion of the
+hypersphere
+\[
+\sum\limits_{1\leq j\leq s}c_{j}^{2}=1;\,c_{j}\geq0;1\leq j\leq s
+\]
+and the angles $\mathbf{\theta}=\left(  \theta_{2},\cdots,\theta_{s}\right)  $ satisfy%
+
+\[
+0\leq\theta_{2},\cdots,\theta_{s}<2\pi;\theta_{1}=0.
+\]
+In the case of our two particle example
+\begin{align*}
+\mathcal{E}\left(  \theta\right)   &  =\frac{1}{2}\left\{  \overset
+{}{\left\langle 1\alpha\left\vert h_{1}1\alpha\right.  \right\rangle
++\left\langle 1\beta\left\vert h_{1}1\beta\right.  \right\rangle +\left\langle
+2\alpha\left\vert h_{1}2\alpha\right.  \right\rangle +\left\langle
+2\beta\left\vert h_{1}2\beta\right.  \right\rangle }\right.  \\
+&  \left.  \,+\left\langle 1\alpha1\beta\right\vert \left\vert 1\alpha
+1\beta\right\rangle +\left\langle 2\alpha2\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle +e^{i\theta}\left\langle 1\alpha1\beta\right\vert
+\left\vert 2\alpha2\beta\right\rangle +e^{-i\theta}\left\langle 2\alpha
+2\beta\right\vert \left\vert 1\alpha1\beta\right\rangle \overset{}{}\right\}
+\\
+&  =\frac{1}{2}\left\{  \overset{}{\left\langle 1\alpha\left\vert h_{1}%
+1\alpha\right.  \right\rangle +\left\langle 1\beta\left\vert h_{1}%
+1\beta\right.  \right\rangle +\left\langle 2\alpha\left\vert h_{1}%
+2\alpha\right.  \right\rangle +\left\langle 2\beta\left\vert h_{1}%
+2\beta\right.  \right\rangle }\right.  \\
+&  \left.  \,+\left\langle 1\alpha1\beta\right\vert \left\vert 1\alpha
+1\beta\right\rangle +\left\langle 2\alpha2\beta\right\vert \left\vert
+2\alpha2\beta\right\rangle +2\operatorname{Re}e^{i\theta}\left\langle
+1\alpha1\beta\right\vert \left\vert 2\alpha2\beta\right\rangle \overset{}%
+{}\right\}
+\end{align*}
+which becomes%
+\[
+\mathcal{E}\left(  \theta\right)  =\left\langle 1\left\vert h_{1}1\right.
+\right\rangle +\left\langle 2\left\vert h_{1}2\right.  \right\rangle +\left(
+\left.  11\right\vert 11\right)  +\left(  \left.  22\right\vert 22\right)
++2\operatorname{Re}e^{i\theta}\left(  \left.  11\right\vert 22\right)  .
+\]
+The constraint on the canonical coefficients gives
+\[
+c_{1}^{2}+c_{2}^{2}=1
+\]
+leading to
+\[
+c_{2}=+\sqrt{1-c_{1}^{2}}%
+\]
+or the parameterization
+\begin{align*}
+c_{1} &  =\cos\chi\\
+c_{2} &  =\sin\chi\\
+0 &  \leq\chi\leq\frac{\pi}{2}.
+\end{align*}
+The specific value of the DMF at the point
+\[
+\left(  \mathbf{\varphi,c}\right)  =\left(  \varphi_{1},\varphi_{2},\frac
+{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right)
+\]
+as
+\[
+F\left(  \mathbf{\varphi,}\left(  \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}%
+}\right)  \right)  =\min_{\mathbf{\theta}}\left\{  \left\langle 1\left\vert
+h_{1}1\right.  \right\rangle +\left\langle 2\left\vert h_{1}2\right.
+\right\rangle +\left(  \left.  11\right\vert 11\right)  +\left(  \left.
+22\right\vert 22\right)  +2\operatorname{Re}\left\{  e^{i\theta}\left(
+\left.  11\right\vert 22\right)  \right\}  \right\}
+\]
+Note that
+\begin{align*}
+z  & =re^{i\omega}=r\left(  \cos\omega+i\sin\omega\right)  \\
+r  & =+\sqrt{\left(  \operatorname{Re}z\right)  ^{2}+\left(  \operatorname{Im}%
+z\right)  ^{2}}\\
+\operatorname{Re}z  & =r\cos\omega;\,\operatorname{Im}z=r\sin\omega
+\end{align*}
+hence
+\[
+\operatorname{Re}\left\{  e^{i\theta}\left(  \left.  11\right\vert 22\right)
+\right\}  =\operatorname{Re}\left\{  e^{i\theta}ae^{i\alpha}\right\}
+=\operatorname{Re}\left\{  e^{i\left(  \theta+\alpha\right)  }a\right\}
+=a\cos\left(  \theta+\alpha\right)
+\]
+where
+\[
+a=\left\vert \left(  \left.  11\right\vert 22\right)  \right\vert
+\]
+and thus
+\begin{align*}
+\min_{\theta}\left\{  a\cos\left(  \theta+\alpha\right)  \right\}    & =-a\\
+\theta_{\min}  & =\pi-\alpha
+\end{align*}
+Hence
+\[
+F\left(  \mathbf{\varphi,}\left(  \frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}%
+}\right)  \right)  =\left\langle 1\left\vert h_{1}1\right.  \right\rangle
++\left\langle 2\left\vert h_{1}2\right.  \right\rangle +\left(  \left.
+11\right\vert 11\right)  +\left(  \left.  22\right\vert 22\right)
+-2\left\vert \left(  \left.  11\right\vert 22\right)  \right\vert
+\]
+
+
+
+\end{document}

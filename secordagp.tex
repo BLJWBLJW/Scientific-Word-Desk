@@ -1,0 +1,927 @@
+
+\documentstyle[preprint,aps]{revtex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Thursday, August 02, 2001 17:59:03}
+%TCIDATA{LastRevised=Friday, August 03, 2001 15:36:12}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX - APS and AIP Article">}
+%TCIDATA{CSTFile=revtxtci.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\begin{document}
+\title{AGP\ Second Energy Derivatives}
+\author{B. Weiner}
+\address{}
+\date{8/3/01}
+\maketitle
+\pacs{}
+
+\begin{abstract}
+\end{abstract}
+
+\subsection{Second Derivatives of the 2N-Electron Unnormalized AGP State }
+
+\subsubsection{Calculation of the Matrix Elements $\left\langle
+b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\protect\phi %
+|Hb_{p_{2}}^{\dagger }b_{q_{2}}^{\dagger }G^{\dagger N-1}\protect\phi %
+\right\rangle $}
+
+\begin{itemize}
+\item $\left| p_{1}\right| \neq \left| q_{1}\right| ;\quad \left|
+p_{2}\right| \neq \left| q_{2}\right| $
+\end{itemize}
+
+These subdivide into three cases $\left( p_{1},q_{1}\right) \neq \left(
+p_{2},q_{2}\right) $; $\left( p_{1},q_{1}\right) $ and $\left(
+p_{2},q_{2}\right) $ have one common value and $\left( p_{1},q_{1}\right)
+=\left( p_{2},q_{2}\right) $. The first one with no common indices produces
+
+\begin{equation}
+\left\langle b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p_{2}}^{\dagger }b_{q_{2}}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\left\langle
+p_{1}q_{1}||p_{2}q_{2}\right\rangle S_{N-1}\left( \hat{p}_{1}\hat{q}_{1}\hat{%
+p}_{2}\hat{q}_{2}\right)
+\end{equation}%
+the next one, with one common index, produces
+
+\begin{eqnarray}
+&&\left\langle b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p_{1}}^{\dagger }b_{q_{2}}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\times  \nonumber \\
+&&\left\{ h_{q_{1}q_{2}}S_{N-1}\left( \hat{p}_{1}\hat{q}_{1}\hat{q}%
+_{2}\right) \right. +\sum_{l\neq \left| q_{1}\right| \neq \left|
+q_{2}\right| =1}^{s}n_{l}S_{N-2}\left( \hat{p}_{1}\hat{q}_{1}\hat{q}_{2}\hat{%
+l}\right) \left\{ \left\langle q_{1}l||q_{2}l\right\rangle +\left\langle
+q_{1}l+s||q_{2}l+s\right\rangle \right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\quad \qquad \left. +\left\langle p_{1}q_{1}||p_{1}q_{2}\right\rangle
+S_{N-1}\left( \hat{p}_{1}\hat{q}_{1}\hat{q}_{2}\right) \right\}
+\end{eqnarray}%
+and the third one, with the pairs of indices identical, produces 
+\begin{eqnarray}
+&&\left\langle b_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle =\left\{
+\left( N-1\right) !\right\} ^{2}\times  \nonumber \\
+&&\left\{ S_{N-1}\left( \hat{p}\hat{q}\right) +\right. \left\{
+h_{pp}+h_{qq}\right\} S_{N-1}\left( \hat{p}\hat{q}\right) +\sum_{i\neq
+\left| p\right| ,\left| q\right| =1}^{s}\left\{ h_{ii}+h_{i+si+s}\right\}
+n_{j}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right)  \nonumber \\
+&&\sum_{i\neq \left| p\right| ,\left| q\right| =1}^{s}n_{i}S_{N-1}\left( 
+\hat{\imath}\hat{p}\hat{q}\right) \left\langle ii+s||ii+s\right\rangle
++\sum_{i\neq \left| p\right| ,\left| q\right| =1}^{s}\zeta _{i}^{\ast }\zeta
+_{j}S_{N-1}\left( \hat{\imath}\hat{p}\hat{q}\right) \left\langle
+ii+s||ii+s\right\rangle  \nonumber \\
+&&\sum_{i\neq \left| p\right| ,\left| q\right| =1}^{s}n_{i}S_{N-2}\left( 
+\hat{\imath}\hat{p}\hat{q}\right) \left\{ \left\langle ip||ip\right\rangle
++\left\langle i+sp||i+sp\right\rangle +\left\langle iq||iq\right\rangle
++\left\langle i+sq||i+sq\right\rangle \right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \quad +\left. S_{N-1}(\hat{p}\hat{q})\left\langle pq||pq\right\rangle
+\right\}
+\end{eqnarray}
+
+\begin{itemize}
+\item $\left| p_{1}\right| \neq \left| q_{1}\right| ;\quad \left|
+p_{2}\right| =\left| q_{2}\right| =\left| p\right| $. There are three
+possibilities in this case:
+
+\begin{itemize}
+\item $\left| p_{1}\right| \neq \left| q_{1}\right| \neq \left| p\right| $%
+\begin{eqnarray}
+&&\left\langle b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\times  \nonumber \\
+&&\sum_{\kappa \neq \left| p_{1}\right| \neq \left| q_{1}\right|
+}^{s}\left\{ S_{N-2}\left( \hat{p}\hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right)
+\zeta _{\kappa }\zeta _{p}^{\ast }\left\langle p_{1}q_{1}||\kappa \kappa
++s\right\rangle +S_{N-1}\left( \hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right)
+\left\langle p_{1}q_{1}||pp+s\right\rangle \right.  \nonumber \\
+&&+S_{N-2}\left( \hat{p}\hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right) \zeta
+_{p}^{\ast }\left\langle \kappa \kappa +s||\bar{p}_{1}\bar{q}%
+_{1}\right\rangle \zeta _{p_{1}}\zeta _{q_{1}}\zeta _{\kappa }^{\ast }+\zeta
+_{p}^{\ast }\left\{ \left\langle p_{1}p||\bar{q}_{1}p\right\rangle \zeta
+_{q_{1}}+\left\langle p_{1}p||\bar{q}_{1}p\right\rangle \zeta _{p_{1}}\right.
+\nonumber \\
+&&+S_{N-2}\left( \hat{p}\hat{p}_{1}\hat{q}_{1}\right) \zeta
+_{p_{1}}\left\langle p_{1}q_{1}||p_{1}p_{1}+s\right\rangle +\zeta
+_{q_{1}}\left\langle p_{1}q_{1}||p_{1}p_{1}+s\right\rangle +\left\{ \zeta
+_{q_{1}}h_{p_{1}\bar{q}_{1}}+\zeta _{p_{1}}h_{q_{1}\bar{p}_{1}}\right\}
+\end{eqnarray}
+
+\item $\left| p_{1}\right| =\left| p\right| $%
+\begin{eqnarray}
+&&\left\langle b_{p}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\times  \nonumber \\
+&&\qquad \left\{ \sum_{\kappa \neq \left| p\right| \neq \left| q_{1}\right|
+}^{s}\left\{ S_{N-2}\left( \hat{\kappa}\hat{p}\hat{q}_{1}\right)
+\left\langle \kappa \kappa +s||\bar{p}\bar{q}_{1}\right\rangle \zeta
+_{q_{1}}\zeta _{\kappa }^{\ast }+\left\langle q_{1}\kappa ||\bar{p}\kappa
+\right\rangle n_{\kappa }\right\} \right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. +\left\langle
+pq_{1}||pp_{1}+s\right\rangle S_{N-1}\left( \hat{p}\hat{q}_{1}\right) +h_{p%
+\bar{q}_{1}}S_{N-1}\left( \hat{p}\hat{q}_{1}\right) \right\}
+\end{eqnarray}
+
+\item $\,\left| q_{1}\right| =\left| p\right| \,$%
+\begin{eqnarray}
+&&\left\langle b_{p_{1}}^{\dagger }b_{p}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\times  \nonumber \\
+&&\qquad \left\{ \sum_{\kappa \neq \left| p_{1}\right| \neq \left| p\right|
+}^{s}\left\{ S_{N-2}\left( \hat{\kappa}\hat{p}_{1}\hat{p}\right)
+\left\langle \kappa \kappa +s||\bar{p}_{1}\bar{p}\right\rangle \zeta
+_{p_{1}}\zeta _{\kappa }^{\ast }+\left\langle p_{1}\kappa ||\bar{p}\kappa
+\right\rangle n_{\kappa }\right\} \right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. +\left\langle
+p_{1}p||pp+s\right\rangle S_{N-1}\left( \hat{p}_{1}\hat{p}\right) +h_{p\bar{p%
+}_{1}}S_{N-1}\left( \hat{p}_{1}\hat{p}\right) \right\}
+\end{eqnarray}
+\end{itemize}
+
+\item $\left| p_{1}\right| =\left| q_{1}\right| =\left| p\right| ;\quad
+\left| p_{2}\right| =\left| q_{2}\right| =\left| q\right| $. There are two
+possibilities in this case:
+
+\begin{itemize}
+\item $p\neq q$%
+\begin{eqnarray*}
+&&\left\langle b_{q}^{\dagger }b_{q+s}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\times \\
+&&\left\{ S_{N-2}\left( \hat{p}\hat{q}\right) \zeta _{p}^{\ast }\zeta
+_{q}^{\ast }\left\{ h_{0}+h_{pp}+h_{p+sp+s}+\left\langle
+pp+s||pp+s\right\rangle \right\} \right. +\sum_{j\neq p\neq q}^{s}\left\{
+S_{N-3}\left( \hat{p}\hat{q}\hat{\jmath}\right) \zeta _{q}^{\ast }\right. \\
+&&\left\{ \zeta _{p}^{\ast }n_{j}\left\{ h_{jj}+h_{j+sj+s}+\left\langle
+jj+s||jj+s\right\rangle +\left\langle jp|||jp\right\rangle \right\} \right.
+\left. +\zeta _{j}^{\ast }\left\langle jj+s||pp+s\right\rangle \right\} \\
+&&\qquad \qquad \qquad +S_{N-2}\left( \hat{p}\hat{q}\right) \zeta _{p}^{\ast
+}\zeta _{q}^{\ast }\left\{ h_{qq}+h_{q+sq+s}+\left\langle
+qq+s||qq+s\right\rangle +\left\langle qp|||qp\right\rangle \right\} \\
+&&\sum_{j\neq k\neq p\neq q}^{s}S_{N-3}\left( \hat{p}\hat{q}\hat{\jmath}\hat{%
+k}\right) \zeta _{q}^{\ast }\zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta
+_{k}\left\langle jj+s||kk+s\right\rangle +\sum_{j\neq p\neq
+q}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\hat{q}\right) \zeta _{p}^{\ast
+}\zeta _{j}^{\ast }\left\langle jj+s||qq+s\right\rangle \\
+&&\left. +2\zeta _{p}^{\ast }\sum_{j,k\neq p\neq q}^{s}S_{N-4}\left( \hat{p}%
+\hat{q}\hat{\jmath}\hat{k}\right) \zeta _{q}^{\ast }n_{j}n_{k}\left\langle
+jk|||jk\right\rangle +4\zeta _{p}^{\ast }\sum_{k\neq p\neq
+q}^{s}S_{N-3}\left( \hat{p}\hat{q}\hat{k}\right) \zeta _{q}^{\ast
+}n_{k}\left\langle qk|||qk\right\rangle \right\}
+\end{eqnarray*}%
+\begin{equation}
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad
+\end{equation}
+
+\item $p=q$%
+\begin{eqnarray}
+&&\left\langle b_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle =\left\{
+\left( N-1\right) !\right\} ^{2}\times  \nonumber \\
+&&\qquad \qquad \left\{ S_{N-1}\left( \hat{p}\hat{q}\right) +\right. \left\{
+h_{pp}+h_{qq}\right\} S_{N-1}\left( \hat{p}\hat{q}\right) +\sum_{i\neq
+\left| p\right| ,\left| q\right| =1}^{s}\left\{ h_{ii}+h_{i+si+s}\right\}
+n_{j}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right)  \nonumber \\
+&&\left. {}\right. \qquad \sum_{i\neq \left| p\right| ,\left| q\right|
+=1}^{s}n_{i}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right) \left\langle
+ii+s||ii+s\right\rangle +\sum_{i,j\neq \left| p\right| ,\left| q\right|
+=1}^{s}\zeta _{i}^{\ast }\zeta _{j}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}%
+\right) \left\langle ii+s||jj+s\right\rangle  \nonumber \\
+&&\left. {}\right. \qquad \sum_{i\neq \left| p\right| ,\left| q\right|
+=1}^{s}n_{i}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right) \left\{
+\left\langle ip||ip\right\rangle +\left\langle i+sp||i+sp\right\rangle
++\left\langle iq||iq\right\rangle +\left\langle i+sq||i+sq\right\rangle
+\right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad +\left. S_{N-1}(\hat{p}\hat{q}%
+)\left\langle pq||pq\right\rangle +\sum_{i,j\neq \left| p\right| ,\left|
+q\right| =1}^{s}n_{i}n_{j}S_{N-3}\left( \hat{\imath}\hat{\jmath}\hat{p}\hat{q%
+}\right) \left\langle ij|||ij\right\rangle \right\}
+\end{eqnarray}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Calculation of the Matrix Elements $\left\langle G^{\dagger N}%
+\protect\phi |Hb_{p_{2}}^{\dagger }b_{q_{2}}^{\dagger }b_{p_{1}}^{\dagger
+}b_{q_{1}}^{\dagger }G^{\dagger N-2}\protect\phi \right\rangle $}
+
+\begin{itemize}
+\item $\left| p_{1}\right| \neq \left| q_{1}\right| ;\quad \left|
+p_{2}\right| \neq \left| q_{2}\right| $
+\end{itemize}
+
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p_{2}}^{\dagger }b_{q_{2}}^{\dagger
+}b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-2}\phi \right\rangle =
+\nonumber \\
+&&\qquad \qquad \qquad N!\left( N-1\right) !S_{N-2}\left( \hat{p}_{1}\hat{q}%
+_{1}\hat{p}_{2}\hat{q}_{2}\right) \left\{ \zeta _{q_{1}}^{\ast }\zeta
+_{q_{2}}^{\ast }+\zeta _{q_{1}}^{\ast }\zeta _{p_{2}}^{\ast }+\zeta
+_{p_{1}}^{\ast }\zeta _{q_{2}}^{\ast }+\zeta _{p_{1}}^{\ast }\zeta
+_{p_{2}}^{\ast }\right\}
+\end{eqnarray}
+
+\begin{itemize}
+\item $\left| p_{1}\right| \neq \left| q_{1}\right| ;\quad \left|
+p_{2}\right| =\left| q_{2}\right| =\left| p\right| $
+\end{itemize}
+
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-2}\phi \right\rangle
+=N!\left( N-1\right) !\times \left\{ {}\right.  \nonumber \\
+&&\sum_{\kappa \neq \left| p_{1}\right| \neq \left| q_{1}\right|
+}^{s}\left\{ \zeta _{p}^{\ast }S_{N-2}\left( \hat{\kappa}\hat{p}_{1}\hat{q}%
+_{1}\hat{p}\right) \zeta _{\kappa }^{\ast }\left\langle \kappa \kappa
++s||p_{1}q_{1}\right\rangle +S_{N-3}\left( \hat{\kappa}\hat{p}_{1}\hat{q}_{1}%
+\hat{p}\right) \left\langle \bar{p}_{1}\bar{q}_{1}||\kappa \kappa
++s\right\rangle \zeta _{p_{1}}^{\ast }\zeta _{q_{1}}^{\ast }\zeta _{\kappa
+}\zeta _{p}^{\ast }\right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\left. +\left\langle \bar{q}_{1}\kappa ||p_{1}\kappa \right\rangle n_{\kappa
+}\zeta _{q_{1}}^{\ast }+\left\langle \bar{p}_{1}\kappa ||q_{1}\kappa
+\right\rangle n_{\kappa }\zeta _{p_{1}}^{\ast }\right\}  \nonumber \\
+&&\qquad \qquad +S_{N-2}\left( \hat{p}\hat{p}_{1}\hat{q}_{1}\right)
+\left\langle \bar{p}_{1}\bar{q}_{1}||pp+s\right\rangle \zeta _{p_{1}}^{\ast
+}\zeta _{q_{1}}^{\ast }+\left\langle \bar{q}_{1}p||p_{1}p\right\rangle \zeta
+_{p}^{\ast }\zeta _{q_{1}}^{\ast }+\left\langle \bar{p}_{1}p||q_{1}p\right%
+\rangle \zeta _{p}^{\ast }\zeta _{p_{1}}^{\ast }  \nonumber \\
+&&\qquad \left. +\zeta _{q_{1}}^{\ast }\left\langle
+q_{1}q_{1}+s||p_{1}q_{1}\right\rangle S_{N-2}\left( \hat{p}\hat{p}_{1}\hat{q}%
+_{1}\right) \zeta _{p}^{\ast }+\zeta _{p}^{\ast }\left\{ \zeta
+_{q_{1}}^{\ast }h_{\bar{q}_{1}p_{1}}+\zeta _{p_{1}}^{\ast }h_{\bar{p}%
+_{1}q_{1}}\right\} S_{N-2}\left( \hat{p}\hat{p}_{1}\hat{q}_{1}\right)
+\right\}
+\end{eqnarray}
+
+\begin{itemize}
+\item $\left| p_{1}\right| =\left| q_{1}\right| =\left| p\right| ;\quad
+\left| p_{2}\right| =\left| q_{2}\right| =\left| q\right| $
+\end{itemize}
+
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{q}^{\dagger }b_{q+s}^{\dagger
+}b_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-2}\phi \right\rangle = 
+\nonumber \\
+&&N!\left( N-1\right) !\left\{ \zeta _{p}^{\ast }\zeta _{q}^{\ast
+}S_{N-2}\left( \hat{p}\hat{q}\right) \left\{
+h_{0}+h_{pp}+h_{p+sp+s}+\left\langle pp+s||pp+s\right\rangle \right\} \right.
+\nonumber \\
+&&\left. {}\right. \qquad \quad +\sum_{i\neq p,q}^{s}\zeta _{q}^{\ast
+}S_{N-3}\left( \hat{p}\hat{q}\hat{\imath}\right) \left\{ \zeta _{p}^{\ast
+}n_{i}\left\{ h_{ii}+h_{i+si+s}+\left\langle ii+s||ii+s\right\rangle
++\left\langle ip|||ip\right\rangle \right\} \right.  \nonumber \\
+&&\qquad \qquad \qquad +S_{N-2}\left( \hat{p}\hat{q}\right) \left\{ \zeta
+_{p}^{\ast }\zeta _{q}^{\ast }\left\{ h_{qq}+h_{q+sq+s}+\left\langle
+qq+s||qq+s\right\rangle +\left\langle qp|||qp\right\rangle \right\} \right\}
+\nonumber \\
+&&+\sum_{i\neq j\neq p\neq q}^{s}\left\{ \zeta _{q}^{\ast }\zeta _{i}^{\ast
+}\zeta _{j}S_{N-3}\left( \hat{p}\hat{q}\hat{\imath}\hat{\jmath}\right)
+\left\langle ii+s||jj+s\right\rangle \right\} +\sum_{i\neq p\neq q}^{s}\zeta
+_{i}^{\ast }S_{N-2}\left( \hat{p}\hat{q}\hat{\imath}\right) \left\langle
+ii+s||pp+s\right\rangle  \nonumber \\
+&&\qquad \qquad \left. +\zeta _{p}^{\ast }\sum_{i<j\neq p}^{s}\left\{
+n_{i}n_{j}S_{N-4}\left( \hat{p}\hat{q}\hat{\imath}\hat{\jmath}\right)
+\left\langle ij|||ij\right\rangle \right\} +4\zeta _{p}^{\ast }\sum_{j\neq
+p}^{s}\zeta _{q}^{\ast }n_{j}S_{N-3}\left( \hat{p}\hat{\imath}\hat{\jmath}%
+\right) \left\langle ij|||ij\right\rangle \right\}
+\end{eqnarray}
+
+\appendix
+
+\section{Computation of Second Derivatives}
+
+\subsection{{\it Calculation of} $\left\langle b_{p_{1}}^{\dagger
+}b_{q_{1}}^{\dagger }G^{\dagger N-1}\protect\phi |Hb_{p_{2}}^{\dagger
+}b_{q_{2}}^{\dagger }G^{\dagger N-1}\protect\phi \right\rangle $}
+
+This case can be further subdivided into three cases $\left(
+p_{1},q_{1}\right) \neq \left( p_{2},q_{2}\right) $; $\left(
+p_{1},q_{1}\right) $ and $\left( p_{2},q_{2}\right) $ have one common value
+and $\left( p_{1},q_{1}\right) =\left( p_{2},q_{2}\right) $. We first deal
+with
+
+\subsubsection{{\it No common value }$\left( p_{1},q_{1}\right) \neq \left(
+p_{2},q_{2}\right) $}
+
+In this case there are no $h_{0}$ or $h_{1}$ terms, the two electron term is
+calculated from 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\qquad \left\langle \eta _{p_{1}}\eta _{q_{1}}\eta _{j_{2}}\eta
+_{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}%
+\sum_{i,j,k,l=1}^{r}\left\langle ij||kl\right\rangle b_{i}^{\dagger
+}b_{j}^{\dagger }b_{l}b_{k}\eta _{p_{2}}\eta _{q_{2}}\eta _{k_{2}\,}\eta
+_{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{2},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq p_{1},q_{1},p_{2},q_{2}\quad 2\leq m\leq N}
+\end{eqnarray}%
+which equals 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{j_{2}}\cdots \zeta _{j_{N}}  \nonumber \\
+&&\qquad \left\langle \eta _{p_{1}}\eta _{q_{1}}\eta _{j_{2}}\eta
+_{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}%
+\left\langle p_{1}q_{1}||p_{2}q_{2}\right\rangle b_{p_{1}}^{\dagger
+}b_{q_{1}}^{\dagger }b_{q_{2}}b_{p_{2}}\eta _{p_{2}}\eta _{q_{2}}\eta
+_{j_{2}\,}\eta _{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\right.
+\right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad _{1\leq j_{2},\cdots ,j_{N}\leq s;\,\,\,\,j_{m}\neq
+p_{1},q_{1},p_{2},q_{2}\quad 2\leq m\leq N}
+\end{eqnarray}%
+and after summation gives the derivative 
+\begin{equation}
+\left\langle b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p_{2}}^{\dagger }b_{q_{2}}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\left\langle
+p_{1}q_{1}||p_{2}q_{2}\right\rangle S_{N-1}\left( \hat{p}_{1}\hat{q}_{1}\hat{%
+p}_{2}\hat{q}_{2}\right)
+\end{equation}
+
+\subsubsection{$\left( p_{1},q_{1}\right) $ {\it and} $\left(
+p_{2},q_{2}\right) $ {\it have one common value}}
+
+We now consider the case where when two of the indices are equal. We still
+do not get a $h_{0}$ term. If we let $p_{1}=p_{2}$ the one electron terms is
+obtained by noting that $b_{i}^{\dagger }b_{j}$ must annihilate the $q_{2}$
+from the bra and $q_{2}$ from the ket as can be seen from 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\qquad \left\langle \eta _{p_{1}}\eta _{q_{1}}\eta _{j_{2}}\eta
+_{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left|
+\sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger }b_{j}\eta _{p_{1}}\eta _{q_{2}}\eta
+_{k_{2}\,}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right.
+\right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad _{1\leq j_{2},\cdots ,j_{N}\leq
+s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,\,j_{m},\,k_{m}\neq
+p_{1},q_{1},q_{2}\quad 2\leq m\leq N}  \nonumber \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad =\left\{ \left( N-1\right) !\right\} ^{2}h_{q_{1}q_{2}}S_{N-1}\left( 
+\hat{p}_{1}\hat{q}_{1}\hat{q}_{2}\right)
+\end{eqnarray}
+
+The two electron term for the $p_{1}=p_{2}$ case is computed by considering 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\left\langle \eta _{p_{1}}\eta _{q_{1}}\eta _{j_{2}}\eta _{j_{2}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}\sum_{i,j,k,l=1}^{r}\left%
+\langle ij||kl\right\rangle b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\eta
+_{p_{1}}\eta _{q_{2}}\eta _{k_{2}\,}\eta _{k_{2}+s}\cdots \eta
+_{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{2},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq p_{1},q_{1},q_{2}\quad 2\leq m\leq N}
+\end{eqnarray}%
+which equals 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{j_{2}}\cdots \zeta _{j_{N}}  \nonumber \\
+&&\left\langle \eta _{p_{1}}\eta _{q_{1}}\eta _{j_{2}}\eta _{j_{2}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}\sum_{l\neq
+q_{1},q_{2}=1}^{r}\left\langle q_{1}l||q_{2}l\right\rangle
+b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }b_{q_{2}}b_{p_{1}}\eta _{p_{1}}\eta
+_{q_{2}}\eta _{j_{2}\,}\eta _{j_{2}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}\right. \right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad _{1\leq j_{2},\cdots ,j_{N}\leq s;\,\,\,\,j_{m}\neq
+p_{1},q_{1},q_{2}\quad 2\leq m\leq N}
+\end{eqnarray}%
+which sums to give 
+\begin{eqnarray}
+&&\left\{ \left( N-1\right) !\right\} ^{2}\left\{ \sum_{l\neq \left|
+q_{1}\right| \neq \left| q_{2}\right| =1}^{s}n_{l}S_{N-2}\left( \hat{p}_{1}%
+\hat{q}_{1}\hat{q}_{2}\hat{l}\right) \left\{ \left\langle
+q_{1}l||q_{2}l\right\rangle +\left\langle q_{1}l+s||q_{2}l+s\right\rangle
+\right\} \right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad
+\qquad \left. +\left\langle p_{1}q_{1}||p_{1}q_{2}\right\rangle
+S_{N-1}\left( \hat{p}_{1}\hat{q}_{1}\hat{q}_{2}\right) \right\}
+\end{eqnarray}%
+Collecting together terms we have the derivative for one common index 
+\begin{eqnarray}
+&&\left\langle b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p_{1}}^{\dagger }b_{q_{2}}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\left\{ h_{q_{1}q_{2}}S_{N-1}\left( 
+\hat{p}_{1}\hat{q}_{1}\hat{q}_{2}\right) \right.  \nonumber \\
+&&\left. {}\right. \qquad \qquad +\sum_{l\neq \left| q_{1}\right| \neq
+\left| q_{2}\right| =1}^{s}n_{l}S_{N-2}\left( \hat{p}_{1}\hat{q}_{1}\hat{q}%
+_{2}\hat{l}\right) \left\{ \left\langle q_{1}l||q_{2}l\right\rangle
++\left\langle q_{1}l+s||q_{2}l+s\right\rangle \right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\quad \left. +\left\langle p_{1}q_{1}||p_{1}q_{2}\right\rangle S_{N-1}\left( 
+\hat{p}_{1}\hat{q}_{1}\hat{q}_{2}\right) \right\}
+\end{eqnarray}%
+The other terms produced in the one common index case can be obtained from
+this one by commuting the field operators.
+
+\subsubsection{{\it All values the same }$\left( p_{1},q_{1}\right) =\left(
+p_{2},q_{2}\right) $}
+
+In this case the term coming from $h_{0}$ is $\left\{ \left( N-1\right)
+!\right\} ^{2}S_{N-1}\left( \hat{p}_{1}\hat{q}_{1}\right) $. The one
+electron term is obtained by considering 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\qquad \left\langle \eta _{p}\eta _{q}\eta _{j_{2}}\eta _{j_{2}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\left| \sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger
+}b_{j}\eta _{p}\eta _{q}\eta _{k_{2}}\eta _{k_{2}+s}\cdots \eta
+_{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq j_{2},\cdots
+,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,\,j_{m},k_{m}\neq
+p,q;\quad 2\leq m\leq N}  \nonumber \\
+&=&\left\{ \left( N-1\right) !\right\} ^{2}\left\{ \left\{
+h_{pp}+h_{qq}\right\} S_{N-1}\left( \hat{p}\hat{q}\right) +\sum_{i\neq
+\left| p\right| ,\left| q\right| =1}^{s}\left\{ h_{ii}+h_{i+si+s}\right\}
+n_{j}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right) \right\}
+\end{eqnarray}%
+The two electron term is obtained by considering 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\left\langle \eta _{p}\eta _{q}\eta _{j_{2}}\eta _{j_{2}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}\sum_{i\neq \left| p\right|
+,\left| q\right| }^{s}\left\langle ii+s||ii+s\right\rangle b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{i}b_{i+s}\eta _{p}\eta _{q}\eta _{k_{2}\,}\eta
+_{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{2},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq \left| p\right| ,\left| q\right| \quad 2\leq m\leq
+N}
+\end{eqnarray}%
+which produces 
+\begin{equation}
+\sum_{i\neq \left| p\right| ,\left| q\right| =1}^{s}n_{i}S_{N-2}\left( \hat{%
+\imath}\hat{p}\hat{q}\right) \left\langle ii+s||ii+s\right\rangle
+\end{equation}%
+and 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\left\langle \eta _{p}\eta _{q}\eta _{j_{2}}\eta _{j_{2}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}\sum_{i,j\neq \left| p\right|
+,\left| q\right| }^{s}\left\langle ii+s||jj+s\right\rangle b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{j}b_{j+s}\eta _{p}\eta _{q}\eta _{k_{2}\,}\eta
+_{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{2},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq \left| p\right| ,\left| q\right| \quad 2\leq m\leq
+N}
+\end{eqnarray}%
+which produces 
+\begin{equation}
+\sum_{i,j\neq \left| p\right| ,\left| q\right| =1}^{s}\zeta _{i}^{\ast
+}\zeta _{j}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right) \left\langle
+ii+s||jj+s\right\rangle
+\end{equation}%
+and 
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\left\langle \eta _{p}\eta _{q}\eta _{j_{2}}\eta _{j_{2}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}\sum_{i,j\neq \left| p\right|
+,\left| q\right| }^{r}\left\langle ij||ij\right\rangle b_{i}^{\dagger
+}b_{j}^{\dagger }b_{j}b_{i}\eta _{p}\eta _{q}\eta _{k_{2}\,}\eta
+_{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{2},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq \left| p\right| ,\left| q\right| \quad 2\leq m\leq
+N}
+\end{eqnarray}%
+which produces 
+\begin{equation}
+\sum_{i,j\neq \left| p\right| ,\left| q\right|
+=1}^{s}n_{i}n_{j}S_{N-3}\left( \hat{\imath}\hat{\jmath}\hat{p}\hat{q}\right)
+\left\langle ij|||ij\right\rangle
+\end{equation}%
+and%
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\qquad \left\langle \eta _{p}\eta _{q}\eta _{j_{2}}\eta _{j_{2}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}\sum_{i\neq \left| p\right|
+,\left| q\right| }^{r}\left\langle ip||ip\right\rangle b_{p}^{\dagger
+}b_{i}^{\dagger }b_{p}b_{i}\eta _{p}\eta _{q}\eta _{k_{2}\,}\eta
+_{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{2},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq p,q\quad 2\leq m\leq N}
+\end{eqnarray}%
+which produces 
+\begin{equation}
+\sum_{i\neq \left| p\right| ,\left| q\right| =1}^{s}n_{i}S_{N-2}\left( \hat{%
+\imath}\hat{p}\hat{q}\right) \left\{ \left\langle ip||ip\right\rangle
++\left\langle i+sp||i+sp\right\rangle +\left\langle iq||iq\right\rangle
++\left\langle i+sq||i+sq\right\rangle \right\}
+\end{equation}%
+and%
+\begin{eqnarray}
+&&\sum \zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \nonumber \\
+&&\qquad \left\langle \eta _{p}\eta _{q}\eta _{j_{2}}\eta _{j_{2}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\left| \left\langle pq||pq\right\rangle
+b_{p}^{\dagger }b_{q}^{\dagger }b_{q}b_{p}\eta _{p}\eta _{q}\eta
+_{k_{2}\,}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right.
+\right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{2},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq p,q\quad 2\leq m\leq N}
+\end{eqnarray}%
+which produces%
+\begin{equation}
+S_{N-1}(\hat{p}\hat{q})\left\langle pq||pq\right\rangle
+\end{equation}%
+Collecting together all these terms we finally obtain the derivative when
+all indices are common%
+\begin{eqnarray}
+&&\left\langle b_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle =\left\{
+\left( N-1\right) !\right\} ^{2}\left\{ S_{N-1}\left( \hat{p}\hat{q}\right)
++\right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \left\{ h_{pp}+h_{qq}\right\}
+S_{N-1}\left( \hat{p}\hat{q}\right) +\sum_{i\neq \left| p\right| ,\left|
+q\right| =1}^{s}\left\{ h_{ii}+h_{i+si+s}\right\} n_{j}S_{N-2}\left( \hat{%
+\imath}\hat{p}\hat{q}\right)  \nonumber \\
+&&\left. {}\right. \qquad \qquad \sum_{i\neq \left| p\right| ,\left|
+q\right| =1}^{s}n_{i}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right)
+\left\langle ii+s||ii+s\right\rangle +\sum_{i,j\neq \left| p\right| ,\left|
+q\right| =1}^{s}\zeta _{i}^{\ast }\zeta _{j}S_{N-2}\left( \hat{\imath}\hat{p}%
+\hat{q}\right) \left\langle ii+s||jj+s\right\rangle  \nonumber \\
+&&\left. {}\right. \qquad \qquad \sum_{i\neq \left| p\right| ,\left|
+q\right| =1}^{s}n_{i}S_{N-2}\left( \hat{\imath}\hat{p}\hat{q}\right) \left\{
+\left\langle ip||ip\right\rangle +\left\langle i+sp||i+sp\right\rangle
++\left\langle iq||iq\right\rangle +\left\langle i+sq||i+sq\right\rangle
+\right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad +\left. S_{N-1}(\hat{p}%
+\hat{q})\left\langle pq||pq\right\rangle +\sum_{i,j\neq \left| p\right|
+,\left| q\right| =1}^{s}n_{i}n_{j}S_{N-3}\left( \hat{\imath}\hat{\jmath}\hat{%
+p}\hat{q}\right) \left\langle ij|||ij\right\rangle \right\}
+\end{eqnarray}
+
+\subsection{Calculation of $\left\langle b_{p_{1}}^{\dagger
+}b_{q_{1}}^{\dagger }G^{\dagger N-1}\protect\phi |Hb_{p}^{\dagger
+}b_{p+s}^{\dagger }G^{\dagger N-1}\protect\phi \right\rangle $}
+
+This case is produced by differentiating $\left\langle G^{\dagger N}\phi
+|Hb_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+^{\ast }$ with respect $\zeta _{p}$ i.e. 
+\[
+\frac{\partial }{\partial \zeta _{p}}\left\langle G^{\dagger N}\phi
+|Hb_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+^{\ast }=\frac{\partial }{\partial \zeta _{p}}\left\langle
+b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi |HG^{\dagger
+N}\phi \right\rangle =\left\{ \left( N-1\right) !\right\} ^{2}\times \qquad
+\qquad 
+\]%
+\begin{eqnarray}
+&&\frac{\partial }{\partial \zeta _{p}}\left\{ \sum_{\kappa \neq \left|
+p_{1}\right| \neq \left| q_{1}\right| }^{s}\left\{ S_{N-1}\left( \hat{\kappa}%
+\hat{p}_{1}\hat{q}_{1}\right) \zeta _{\kappa }\left\langle
+p_{1}q_{1}||\kappa \kappa +s\right\rangle +S_{N-2}\left( \hat{\kappa}\hat{p}%
+_{1}\hat{q}_{1}\right) \left\langle \kappa \kappa +s||\bar{p}_{1}\bar{q}%
+_{1}\right\rangle \zeta _{p_{1}}\zeta _{q_{1}}\zeta _{\kappa }^{\ast
+}\right. \right.  \nonumber \\
+&&\quad \quad \quad \quad \left. +\left\langle p_{1}\kappa ||\bar{q}%
+_{1}\kappa \right\rangle n_{\kappa }\zeta _{q_{1}}+\left\langle q_{1}\kappa
+||\bar{p}_{1}\kappa \right\rangle n_{\kappa }\zeta _{p_{1}}\right\} +\zeta
+_{p_{1}}\left\langle p_{1}q_{1}||p_{1}p_{1}+s\right\rangle S_{N-1}\left( 
+\hat{p}_{1}\hat{q}_{1}\right)  \nonumber \\
+&&\quad \quad \quad \quad \qquad \left. +\zeta _{q_{1}}\left\langle
+p_{1}q_{1}||q_{1}q_{1}+s\right\rangle S_{N-1}\left( \hat{p}_{1}\hat{q}%
+_{1}\right) +\left\{ \zeta _{q_{1}}h_{p_{1}\bar{q}_{1}}+\zeta
+_{p_{1}}h_{q_{1}\bar{p}_{1}}\right\} S_{N-1}\left( \hat{p}_{1}\hat{q}%
+_{1}\right) \right\}
+\end{eqnarray}%
+which we divide into the cases $\left| p_{1}\right| \neq \left| q_{1}\right|
+\neq \left| p\right| ,\,\left| p_{1}\right| =\left| p\right| ,\,\left|
+q_{1}\right| =\left| p\right| $, we consider these cases in order
+
+\begin{itemize}
+\item $\left| p_{1}\right| \neq \left| q_{1}\right| \neq \left| p\right| $%
+\begin{eqnarray}
+&&\left\langle b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=\left\{ \left( N-1\right) !\right\} ^{2}\times  \nonumber \\
+&&\sum_{\kappa \neq \left| p_{1}\right| \neq \left| q_{1}\right|
+}^{s}\left\{ S_{N-2}\left( \hat{p}\hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right)
+\zeta _{\kappa }\zeta _{p}^{\ast }\left\langle p_{1}q_{1}||\kappa \kappa
++s\right\rangle +S_{N-1}\left( \hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right)
+\left\langle p_{1}q_{1}||pp+s\right\rangle \right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. +S_{N-2}\left( 
+\hat{p}\hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right) \zeta _{p}^{\ast
+}\left\langle \kappa \kappa +s||\bar{p}_{1}\bar{q}_{1}\right\rangle \zeta
+_{p_{1}}\zeta _{q_{1}}\zeta _{\kappa }^{\ast }\right\}  \nonumber \\
+&&+\zeta _{p}^{\ast }\left\{ \left\langle p_{1}p||\bar{q}_{1}p\right\rangle
+\zeta _{q_{1}}+\left\langle p_{1}p||\bar{q}_{1}p\right\rangle \zeta
+_{p_{1}}+S_{N-2}\left( \hat{p}\hat{p}_{1}\hat{q}_{1}\right) \left\{ \zeta
+_{p_{1}}\left\langle p_{1}q_{1}||p_{1}p_{1}+s\right\rangle \right. \right. 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. \left. +\zeta
+_{q_{1}}\left\langle p_{1}q_{1}||p_{1}p_{1}+s\right\rangle +\left\{ \zeta
+_{q_{1}}h_{p_{1}\bar{q}_{1}}+\zeta _{p_{1}}h_{q_{1}\bar{p}_{1}}\right\}
+\right\} \right\}
+\end{eqnarray}
+
+\item $\left| p_{1}\right| =\left| p\right| $%
+\begin{eqnarray}
+&&\left\langle b_{p}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle = 
+\nonumber \\
+&&\qquad \left\{ \left( N-1\right) !\right\} ^{2}\sum_{\kappa \neq \left|
+p\right| \neq \left| q_{1}\right| }^{s}\left\{ S_{N-2}\left( \hat{\kappa}%
+\hat{p}\hat{q}_{1}\right) \left\langle \kappa \kappa +s||\bar{p}\bar{q}%
+_{1}\right\rangle \zeta _{q_{1}}\zeta _{\kappa }^{\ast }+\left\langle
+q_{1}\kappa ||\bar{p}\kappa \right\rangle n_{\kappa }\right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad +\left\langle
+pq_{1}||pp_{1}+s\right\rangle S_{N-1}\left( \hat{p}\hat{q}_{1}\right) +h_{p%
+\bar{q}_{1}}S_{N-1}\left( \hat{p}\hat{q}_{1}\right)
+\end{eqnarray}
+
+\item $\,\left| q_{1}\right| =\left| p\right| \,$%
+\begin{eqnarray}
+&&\left\langle b_{p_{1}}^{\dagger }b_{p}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle = 
+\nonumber \\
+&&\qquad \left\{ \left( N-1\right) !\right\} ^{2}\sum_{\kappa \neq \left|
+p_{1}\right| \neq \left| p\right| }^{s}\left\{ S_{N-2}\left( \hat{\kappa}%
+\hat{p}_{1}\hat{p}\right) \left\langle \kappa \kappa +s||\bar{p}_{1}\bar{p}%
+\right\rangle \zeta _{p_{1}}\zeta _{\kappa }^{\ast }+\left\langle
+p_{1}\kappa ||\bar{p}\kappa \right\rangle n_{\kappa }\right\}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad +\left\langle
+p_{1}p||pp+s\right\rangle S_{N-1}\left( \hat{p}_{1}\hat{p}\right) +h_{p\bar{p%
+}_{1}}S_{N-1}\left( \hat{p}_{1}\hat{p}\right)
+\end{eqnarray}
+\end{itemize}
+
+\subsection{Calculation of $\left\langle b_{q}^{\dagger }b_{q+s}^{\dagger
+}G^{\dagger N-1}\protect\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger
+N-1}\protect\phi \right\rangle $}
+
+In order to produce this matrix element we can differentiate $\left\langle
+G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi
+\right\rangle $ with respect to $\zeta _{q}^{\ast }$
+
+\begin{eqnarray}
+\frac{\partial }{\partial \zeta _{q}^{\ast }} &&\left\langle G^{\dagger
+N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=  \nonumber \\
+&&\qquad \frac{\partial }{\partial \zeta _{q}^{\ast }}\left\{ \left(
+N-1\right) !\right\} ^{2}\left\{ S_{N-1}\left( \hat{p}\right) \zeta
+_{p}^{\ast }\left\{ h_{0}+h_{pp}+h_{p+sp+s}+\left\langle
+pp+s||pp+s\right\rangle \right\} \right.  \nonumber \\
+&&\left. {}\right. \qquad +\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath%
+}\right) \left\{ \zeta _{p}^{\ast }n_{j}\left\{
+h_{jj}+h_{j+sj+s}+\left\langle jj+s||jj+s\right\rangle +\left\langle
+jp|||jp\right\rangle \right\} \right.  \nonumber \\
+&&\left. {}\right. \qquad \qquad \left. +\zeta _{j}^{\ast }\left\langle
+jj+s||pp+s\right\rangle \right\} +\sum_{j\neq k\neq p}S_{N-2}\left( \hat{p}%
+\hat{\jmath}\hat{k}\right) \zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta
+_{k}\left\langle jj+s||kk+s\right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left.
++\zeta _{p}^{\ast }\sum_{j<k\neq p}S_{N-3}\left( \hat{p}\hat{\jmath}\hat{k}%
+\right) n_{j}n_{k}\left\langle jk|||jk\right\rangle \right\}
+\end{eqnarray}%
+we have two cases:
+
+\begin{itemize}
+\item $p\neq q$%
+\begin{eqnarray}
+&&\left\langle b_{q}^{\dagger }b_{q+s}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle = 
+\nonumber \\
+&&\left\{ \left( N-1\right) !\right\} ^{2}\left\{ S_{N-2}\left( \hat{p}\hat{q%
+}\right) \zeta _{p}^{\ast }\zeta _{q}^{\ast }\left\{
+h_{0}+h_{pp}+h_{p+sp+s}+\left\langle pp+s||pp+s\right\rangle \right\} \right.
+\nonumber \\
+&&+\sum_{j\neq p}^{s}S_{N-3}\left( \hat{p}\hat{q}\hat{\jmath}\right) \zeta
+_{q}^{\ast }\left\{ \zeta _{p}^{\ast }n_{j}\left\{
+h_{jj}+h_{j+sj+s}+\left\langle jj+s||jj+s\right\rangle +\left\langle
+jp|||jp\right\rangle \right\} \right.  \nonumber \\
+&&\left. +\zeta _{j}^{\ast }\left\langle jj+s||pp+s\right\rangle \right\}
++S_{N-2}\left( \hat{p}\hat{q}\right) \zeta _{p}^{\ast }\zeta _{q}^{\ast
+}\left\{ h_{qq}+h_{q+sq+s}+\left\langle qq+s||qq+s\right\rangle
++\left\langle qp|||qp\right\rangle \right\}  \nonumber \\
+&&\sum_{j\neq k\neq p}S_{N-3}\left( \hat{p}\hat{q}\hat{\jmath}\hat{k}\right)
+\zeta _{q}^{\ast }\zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta _{k}\left\langle
+jj+s||kk+s\right\rangle +\sum_{j\neq p}S_{N-2}\left( \hat{p}\hat{\jmath}\hat{%
+q}\right) \zeta _{p}^{\ast }\zeta _{j}^{\ast }\left\langle
+jj+s||qq+s\right\rangle  \nonumber \\
+&&\left. +2\zeta _{p}^{\ast }\sum_{j,k\neq p}S_{N-4}\left( \hat{p}\hat{q}%
+\hat{\jmath}\hat{k}\right) \zeta _{q}^{\ast }n_{j}n_{k}\left\langle
+jk|||jk\right\rangle +4\zeta _{p}^{\ast }\sum_{k\neq p}S_{N-3}\left( \hat{p}%
+\hat{q}\hat{k}\right) \zeta _{q}^{\ast }n_{k}\left\langle
+qk|||qk\right\rangle \right\}
+\end{eqnarray}
+
+\item $p=q$%
+\begin{eqnarray}
+&&\left\langle b_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle = 
+\nonumber \\
+&&\qquad \qquad \left\{ \left( N-1\right) !\right\} ^{2}\left\{
+S_{N-1}\left( \hat{p}\right) \left\{ h_{0}+h_{pp}+h_{p+sp+s}+\left\langle
+pp+s||pp+s\right\rangle \right\} \right.  \nonumber \\
+&&\left. {}\right. \qquad +\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath%
+}\right) \left\{ n_{j}\left\{ h_{jj}+h_{j+sj+s}+\left\langle
+jj+s||jj+s\right\rangle +\left\langle jp|||jp\right\rangle \right\} \right. 
+\nonumber \\
+&&\left. {}\right. \qquad \qquad \left. +\zeta _{j}^{\ast }\left\langle
+jj+s||pp+s\right\rangle \right\} +\sum_{j\neq k\neq p}S_{N-2}\left( \hat{p}%
+\hat{\jmath}\hat{k}\right) \zeta _{j}^{\ast }\zeta _{k}\left\langle
+jj+s||kk+s\right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left.
++\sum_{j<k\neq p}S_{N-3}\left( \hat{p}\hat{\jmath}\hat{k}\right)
+n_{j}n_{k}\left\langle jk|||jk\right\rangle \right\}
+\end{eqnarray}
+\end{itemize}
+
+\subsection{Calculation of $\left\langle G^{\dagger N}\protect\phi %
+|Hb_{p_{2}}^{\dagger }b_{q_{2}}^{\dagger }b_{p_{1}}^{\dagger
+}b_{q_{1}}^{\dagger }G^{\dagger N-2}\protect\phi \right\rangle $}
+
+In this case we must calculate the matrix element directly by taking
+expectation values between IPS's. There are no contributions from $h_{0}$
+nor $h_{1}$ the contribution from $h_{2}$ comes from 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p_{2}}^{\dagger }b_{q_{2}}^{\dagger
+}b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-2}\phi \right\rangle
+=\left( N-1\right) !N!\times  \nonumber \\
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{3}}\cdots \zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\right. \left\{ \left\langle
+p_{1}p_{2}||q_{1}q_{2}\right\rangle b_{p_{1}}^{\dagger }b_{p_{2}}^{\dagger
+}b_{q_{2}}b_{q_{1}}\right.  \nonumber \\
+&&\left. +\left\langle p_{1}q_{2}||q_{1}p_{2}\right\rangle
+b_{p_{1}}^{\dagger }b_{q_{2}}^{\dagger }b_{p_{2}}b_{q_{1}}+\left\langle
+q_{1}p_{2}||p_{1}q_{2}\right\rangle b_{q_{1}}^{\dagger }b_{p_{2}}^{\dagger
+}b_{q_{2}}b_{p_{1}}+\left\langle q_{1}q_{2}||p_{1}p_{2}\right\rangle
+b_{q_{1}}^{\dagger }b_{q_{2}}^{\dagger }b_{p_{2}}b_{p_{1}}\right\}  \nonumber
+\\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \left. \eta _{p_{1}}\eta _{q_{1}}\eta _{p_{2}}\eta _{q_{2}}\eta
+_{k_{3}\,}\eta _{k_{3}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right\rangle 
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{3},\cdots ,k_{N}\leq
+s;\,\,\,j_{m},\,k_{m}\neq \left| p_{1}\right| ,\left| q_{1}\right| ,\left|
+p_{2}\right| ,\left| q_{2}\right| \quad 3\leq m\leq N}
+\end{eqnarray}%
+which results in
+
+\begin{equation}
+\left( N-1\right) !N!S_{N-2}\left( \hat{p}_{1}\hat{q}_{1}\hat{p}_{2}\hat{q}%
+_{2}\right) \left\{ \zeta _{q_{1}}^{\ast }\zeta _{q_{2}}^{\ast }+\zeta
+_{q_{1}}^{\ast }\zeta _{p_{2}}^{\ast }+\zeta _{p_{1}}^{\ast }\zeta
+_{q_{2}}^{\ast }+\zeta _{p_{1}}^{\ast }\zeta _{p_{2}}^{\ast }\right\}
+\end{equation}
+
+\subsection{Calculation of $\left\langle G^{\dagger N}\protect\phi %
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger
+}G^{\dagger N-2}\protect\phi \right\rangle $}
+
+In order to produce the matrix element $\left\langle G^{\dagger N}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger
+}G^{\dagger N-2}\phi \right\rangle $ we can differentiate $\left\langle
+G^{\dagger N}\phi |Hb_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger
+N-1}\phi \right\rangle $ with respect to $\zeta _{p}$. 
+\begin{eqnarray}
+&\frac{\partial }{\partial \zeta _{p}}&\left\langle G^{\dagger N}\phi
+|Hb_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=N!\left( N-1\right) !\times \frac{\partial }{\partial \zeta _{p}}  \nonumber
+\\
+&&\left\{ \sum_{\kappa \neq \left| p_{1}\right| \neq \left| q_{1}\right|
+}^{s}\left\{ S_{N-1}\left( \hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right) \zeta
+_{\kappa }^{\ast }\left\langle \kappa \kappa +s||p_{1}q_{1}\right\rangle
++S_{N-2}\left( \hat{\kappa}\hat{p}_{1}\hat{q}_{1}\right) \left\langle \bar{p}%
+_{1}\bar{q}_{1}||\kappa \kappa +s\right\rangle \zeta _{p_{1}}^{\ast }\zeta
+_{q_{1}}^{\ast }\zeta _{\kappa }\right. \right.  \nonumber \\
+&&\quad \quad \quad \quad \quad \left. +\left\langle \bar{q}_{1}\kappa
+||p_{1}\kappa \right\rangle n_{\kappa }\zeta _{q_{1}}^{\ast }+\left\langle 
+\bar{p}_{1}\kappa ||q_{1}\kappa \right\rangle n_{\kappa }\zeta
+_{p_{1}}^{\ast }\right\} +\zeta _{p_{1}}^{\ast }\left\langle
+p_{1}p_{1}+s||p_{1}q_{1}\right\rangle S_{N-1}\left( \hat{p}_{1}\hat{q}%
+_{1}\right)  \nonumber \\
+&&\quad \quad \quad \quad \quad \left. +\zeta _{q_{1}}^{\ast }\left\langle
+q_{1}q_{1}+s||p_{1}q_{1}\right\rangle S_{N-1}\left( \hat{p}_{1}\hat{q}%
+_{1}\right) +\left\{ \zeta _{q_{1}}^{\ast }h_{\bar{q}_{1}p_{1}}+\zeta
+_{p_{1}}^{\ast }h_{\bar{p}_{1}q_{1}}\right\} S_{N-1}\left( \hat{p}_{1}\hat{q}%
+_{1}\right) \right\}
+\end{eqnarray}%
+to produce%
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}b_{p_{1}}^{\dagger }b_{q_{1}}^{\dagger }G^{\dagger N-2}\phi \right\rangle
+=N!\left( N-1\right) !\times \left\{ {}\right.  \nonumber \\
+&&\sum_{\kappa \neq \left| p_{1}\right| \neq \left| q_{1}\right|
+}^{s}\left\{ \zeta _{p}^{\ast }S_{N-2}\left( \hat{\kappa}\hat{p}_{1}\hat{q}%
+_{1}\hat{p}\right) \zeta _{\kappa }^{\ast }\left\langle \kappa \kappa
++s||p_{1}q_{1}\right\rangle +S_{N-3}\left( \hat{\kappa}\hat{p}_{1}\hat{q}_{1}%
+\hat{p}\right) \left\langle \bar{p}_{1}\bar{q}_{1}||\kappa \kappa
++s\right\rangle \zeta _{p_{1}}^{\ast }\zeta _{q_{1}}^{\ast }\zeta _{\kappa
+}\zeta _{p}^{\ast }\right.  \nonumber \\
+&&\qquad \qquad \left. +\left\langle \bar{q}_{1}\kappa ||p_{1}\kappa
+\right\rangle n_{\kappa }\zeta _{q_{1}}^{\ast }+\left\langle \bar{p}%
+_{1}\kappa ||q_{1}\kappa \right\rangle n_{\kappa }\zeta _{p_{1}}^{\ast
+}\right\} +S_{N-2}\left( \hat{p}\hat{p}_{1}\hat{q}_{1}\right) \left\langle 
+\bar{p}_{1}\bar{q}_{1}||pp+s\right\rangle \zeta _{p_{1}}^{\ast }\zeta
+_{q_{1}}^{\ast }  \nonumber \\
+&&\qquad \qquad +\left\langle \bar{q}_{1}p||p_{1}p\right\rangle \zeta
+_{p}^{\ast }\zeta _{q_{1}}^{\ast }+\left\langle \bar{p}_{1}p||q_{1}p\right%
+\rangle \zeta _{p}^{\ast }\zeta _{p_{1}}^{\ast }+\zeta _{q_{1}}^{\ast
+}\left\langle q_{1}q_{1}+s||p_{1}q_{1}\right\rangle S_{N-2}\left( \hat{p}%
+\hat{p}_{1}\hat{q}_{1}\right) \zeta _{p}^{\ast }  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\left. +\zeta _{p}^{\ast }\left\{ \zeta _{q_{1}}^{\ast }h_{\bar{q}%
+_{1}p_{1}}+\zeta _{p_{1}}^{\ast }h_{\bar{p}_{1}q_{1}}\right\} S_{N-2}\left( 
+\hat{p}\hat{p}_{1}\hat{q}_{1}\right) \right\}
+\end{eqnarray}
+
+\subsection{Calculation of $\left\langle G^{\dagger N}\protect\phi %
+|Hb_{q}^{\dagger }b_{q+s}^{\dagger }b_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-2}\protect\phi \right\rangle $}
+
+This case is produced by differentiating $\left\langle G^{\dagger N}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle $ with
+respect to $\zeta _{q}$ 
+\begin{eqnarray}
+&&\frac{\partial }{\partial \zeta _{p}}\left\langle G^{\dagger N}\phi
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+=N!\left( N-1\right) !\times \frac{\partial }{\partial \zeta _{p}}  \nonumber
+\\
+&&\left\{ \zeta _{p}^{\ast }S_{N-1}\left( \hat{p}\right) \left\{
+h_{0}+h_{pp}+h_{p+sp+s}+\left\langle pp+s||pp+s\right\rangle \right\} \right.
+\nonumber \\
+&&\left. {}\right. \quad +\sum_{i\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\imath}%
+\right) \left\{ \zeta _{p}^{\ast }n_{i}\left\{
+h_{ii}+h_{i+si+s}+\left\langle ii+s||ii+s\right\rangle +\left\langle
+ip|||ip\right\rangle \right\} \right.  \nonumber \\
+&&\qquad \qquad \left. +\zeta _{i}^{\ast }\left\langle
+ii+s||pp+s\right\rangle \right\} +\sum_{i\neq j\neq p}\zeta _{i}^{\ast
+}\zeta _{j}S_{N-2}\left( \hat{p}\hat{\imath}\hat{\jmath}\right) \left\langle
+ii+s||jj+s\right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. +\zeta _{p}^{\ast
+}\sum_{i<j\neq p}n_{i}n_{j}S_{N-3}\left( \hat{p}\hat{\imath}\hat{\jmath}%
+\right) \left\langle ij|||ij\right\rangle \right\}
+\end{eqnarray}%
+producing 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{q}^{\dagger }b_{q+s}^{\dagger
+}b_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-2}\phi \right\rangle = 
+\nonumber \\
+&&N!\left( N-1\right) !\left\{ \zeta _{p}^{\ast }\zeta _{q}^{\ast
+}S_{N-2}\left( \hat{p}\hat{q}\right) \left\{
+h_{0}+h_{pp}+h_{p+sp+s}+\left\langle pp+s||pp+s\right\rangle \right\} \right.
+\nonumber \\
+&&\left. {}\right. \quad +\sum_{i\neq p,q}^{s}\zeta _{q}^{\ast
+}S_{N-3}\left( \hat{p}\hat{q}\hat{\imath}\right) \left\{ \zeta _{p}^{\ast
+}n_{i}\left\{ h_{ii}+h_{i+si+s}+\left\langle ii+s||ii+s\right\rangle
++\left\langle ip|||ip\right\rangle \right\} \right.  \nonumber \\
+&&+S_{N-2}\left( \hat{p}\hat{q}\right) \left\{ \zeta _{p}^{\ast }\zeta
+_{q}^{\ast }\left\{ h_{qq}+h_{q+sq+s}+\left\langle qq+s||qq+s\right\rangle
++\left\langle qp|||qp\right\rangle \right\} \right\}  \nonumber \\
+&&+\sum_{i\neq j\neq p\neq q}\left\{ \zeta _{q}^{\ast }\zeta _{i}^{\ast
+}\zeta _{j}S_{N-3}\left( \hat{p}\hat{q}\hat{\imath}\hat{\jmath}\right)
+\left\langle ii+s||jj+s\right\rangle \right\} +\sum_{i\neq p\neq q}\zeta
+_{i}^{\ast }S_{N-2}\left( \hat{p}\hat{q}\hat{\imath}\right) \left\langle
+ii+s||pp+s\right\rangle  \nonumber \\
+&&\qquad \qquad \left. +\zeta _{p}^{\ast }\sum_{i<j\neq p}\left\{
+n_{i}n_{j}S_{N-4}\left( \hat{p}\hat{q}\hat{\imath}\hat{\jmath}\right)
+\left\langle ij|||ij\right\rangle \right\} +4\zeta _{p}^{\ast }\sum_{j\neq
+p}\zeta _{q}^{\ast }n_{j}S_{N-3}\left( \hat{p}\hat{\imath}\hat{\jmath}%
+\right) \left\langle ij|||ij\right\rangle \right\}
+\end{eqnarray}
+
+\end{document}

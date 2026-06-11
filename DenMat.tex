@@ -1,0 +1,704 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{Created=Thursday, January 03, 2002 09:02:25}
+%TCIDATA{LastRevised=Saturday, June 21, 2003 12:00:21}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\preprint{}
+\title[Geminal Density Operators]{Geminal Density Operators}
+\author{Brian Weiner}
+\affiliation{PSU}
+\date{06/17/03}
+\startpage{1}
+\endpage{2}
+\maketitle
+\tableofcontents
+
+\section{Two Particle Density Operators\label{Two Particle}}
+
+\subsection{Orthonormal Basis}
+
+\subsubsection{Contraction}
+
+The normalized geminal $\left\vert g\right\rangle $ can be expanded on an
+unordered orthonormal basis as 
+\begin{equation}
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq
+r}c_{j_{1}j_{2}}\left\vert \psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle
+;\quad c_{j_{1}j_{2}}=-c_{j_{2}j_{1}}
+\end{equation}%
+and its density operator as 
+\begin{equation}
+\left\vert g\right\rangle \left\langle g\right\vert =\frac{1}{4}\sum
+_{\substack{ 1\leq j_{1},j_{2}\leq r \\ 1\leq k_{1},k_{2}\leq r}}%
+c_{j_{1}j_{2}}\left\vert \psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle
+\left\langle \psi _{k_{1}}\otimes \psi _{k_{2}}\right\vert
+c_{k_{1}k_{2}}^{\ast }
+\end{equation}%
+As $\left\langle g|g\right\rangle =1$ one observes that 
+\begin{equation}
+\func{Tr}\left\{ \mathbf{cc}^{\dagger }\right\} =4
+\end{equation}%
+The expansion in terms of the tensor product basis can be compared to 
+\begin{equation}
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \psi _{j_{1}}\wedge \psi _{j_{2}}\right\rangle
+;\quad \tilde{c}_{j_{1}j_{2}}=-\tilde{c}_{j_{2}j_{1}}
+\end{equation}%
+in terms of the antisymmetrized tensor product basis 
+\begin{equation}
+\left\vert \psi _{j_{1}}\wedge \psi _{j_{2}}\right\rangle =\frac{1}{\sqrt{2}}%
+\left( \left\vert \psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle
+-\left\vert \psi _{j_{2}}\otimes \psi _{j_{1}}\right\rangle \right) 
+\end{equation}%
+Evaluating the antisymmetric expansion we obtain 
+\begin{eqnarray}
+\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}_{j_{1}j_{2}}\left\vert
+\psi _{j_{1}}\wedge \psi _{j_{2}}\right\rangle  &=&\frac{1}{2}\sum_{1\leq
+j_{1},j_{2}\leq r}\tilde{c}_{j_{1}j_{2}}\frac{1}{\sqrt{2}}\left( \left\vert
+\psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle -\left\vert \psi
+_{j_{2}}\otimes \psi _{j_{1}}\right\rangle \right)   \notag \\
+&=&\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle -%
+\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \psi _{j_{2}}\otimes \psi _{j_{1}}\right\rangle  
+\notag \\
+&=&\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle +%
+\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle  
+\notag \\
+&=&\frac{2}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \psi _{j_{1}}\otimes \psi _{j_{2}}\right\rangle 
+\end{eqnarray}%
+which shows that 
+\begin{equation}
+c_{j_{1}j_{2}}=\sqrt{2}\tilde{c}_{j_{1}j_{2}}
+\end{equation}%
+The contraction map \textrm{L}$_{2}^{1}$ acting on $\left\vert
+g\right\rangle \left\langle g\right\vert $ produces 
+\begin{eqnarray}
+\mathrm{L}_{2}^{1}\left( \left\vert g\right\rangle \left\langle g\right\vert
+\right)  &=&\frac{1}{4}\sum_{\substack{ 1\leq j_{1},j_{2}\leq r \\ 1\leq
+k_{1},k_{2}\leq r}}c_{j_{1}j_{2}}c_{k_{1}k_{2}}^{\ast }\left\langle \psi
+_{k_{2}}|\psi _{j_{2}}\right\rangle \left\vert \psi _{j_{1}}\right\rangle
+\left\langle \psi _{k_{1}}\right\vert =\frac{1}{4}\sum_{\substack{ 1\leq
+j_{1},j_{2}\leq r \\ 1\leq k_{1},k_{2}\leq r}}c_{j_{1}j_{2}}c_{k_{1}k_{2}}^{%
+\ast }\delta _{k_{2}j_{2}}\left\vert \psi _{j_{1}}\right\rangle \left\langle
+\psi _{k_{1}}\right\vert   \notag \\
+&=&\frac{1}{4}\sum_{\substack{ 1\leq j_{1},j_{2}\leq r \\ 1\leq k_{1}\leq r}}%
+c_{j_{1}j_{2}}c_{k_{1}j_{2}}^{\ast }\left\vert \psi _{j_{1}}\right\rangle
+\left\langle \psi _{k_{1}}\right\vert =\frac{1}{4}\sum_{1\leq
+j_{1},j_{2}\leq r}\left( \mathbf{cc}^{\dagger }\right)
+_{j_{1}k_{1}}\left\vert \psi _{j_{1}}\right\rangle \left\langle \psi
+_{k_{1}}\right\vert 
+\end{eqnarray}%
+The First Order Reduced Density Operator (FORDO) $D^{1}\left( g\right) $
+normalized to the number of electrons in the system is given by 
+\begin{equation}
+D^{1}\left( g\right) =2\mathrm{L}_{2}^{1}\left( \left\vert g\right\rangle
+\left\langle g\right\vert \right) 
+\end{equation}%
+and the First Order Reduced Density Matrix (FORDM), $\mathbb{D}_{\psi
+}^{1}\left( g\right) ,$ which is the \emph{representation} of $D^{1}\left(
+g\right) $ in the $\mathbf{\psi }$ basis by 
+\begin{equation}
+\mathbb{D}_{\psi }^{1}\left( g\right) =\frac{1}{2}\mathbf{cc}^{\dagger }=%
+\mathbf{\tilde{c}\tilde{c}}^{\dagger }
+\end{equation}%
+both of which have trace equal to $2$ i.e. 
+\begin{equation}
+\func{Tr}\left\{ D^{1}\left( g\right) \right\} =\frac{1}{2}\func{Tr}\left\{ 
+\mathbf{cc}^{\dagger }\right\} =\func{Tr}\left\{ \mathbf{\tilde{c}\tilde{c}}%
+^{\dagger }\right\} =2
+\end{equation}%
+One can also observe that 
+\begin{equation}
+\mathbb{D}_{\psi }^{1}\left( g\right) ^{\ast }=\frac{1}{2}\mathbf{c}%
+^{\dagger }\mathbf{c}
+\end{equation}%
+as $\mathbf{c}$ is antisymmetric 
+\begin{equation}
+\mathbb{D}_{\psi }^{1}\left( g\right) =\frac{1}{2}\mathbf{cc}^{\dagger }=-%
+\frac{1}{2}\mathbf{cc}^{\ast }=\frac{1}{2}\mathbf{c}^{t}\mathbf{c}^{\ast }
+\end{equation}%
+The NGSO's $\left\{ \mathbf{w}_{j};1\leq j\leq r\right\} $ of $\mathbb{D}%
+_{\psi }^{1}\left( g\right) $ are given by 
+\begin{equation}
+\mathbb{D}_{\psi }^{1}\left( g\right) \mathbf{w}_{j}=n_{j}\mathbf{w}_{j}
+\end{equation}%
+and 
+\begin{equation}
+\mathbb{W}^{\dagger }\mathbb{D}_{\psi }^{1}\left( g\right) \mathbb{W=}\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) 
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{n=}\left( 
+\begin{array}{ccc}
+n_{1} & 0 & 0 \\ 
+0 & \ddots  & 0 \\ 
+0 & 0 & n_{s}%
+\end{array}%
+\right) ;\qquad n_{j}\geq 0,\quad r=2s
+\end{equation}
+
+\subsection{Non Orthonormal Basis}
+
+\subsubsection{Basis Transformation}
+
+If the basis $\left\vert \mathbf{\psi }\right\rangle $ is a transformation
+of another basis $\left\vert \mathbf{\varphi }\right\rangle $ that is not
+necessarily orthonormal then.%
+\begin{equation}
+\left\vert \mathbf{\psi }\right\rangle =V\left\vert \mathbf{\varphi }%
+\right\rangle =\left\vert \mathbf{\varphi }\right\rangle \mathbb{V}_{\varphi
+}
+\end{equation}%
+i.e. 
+\begin{equation}
+\left\vert \psi _{j}\right\rangle =V\left\vert \varphi _{j}\right\rangle
+=\sum_{1\leq k\leq r}\left\vert \varphi _{k}\right\rangle V_{kj};\qquad
+1\leq j\leq r
+\end{equation}%
+We also have the following relationships 
+\begin{eqnarray}
+\left\langle \mathbf{\psi }|\mathbf{\psi }\right\rangle &=&\mathbb{I}%
+_{r}=\left\langle \mathbf{\varphi }|V^{\dagger }V\mathbf{\varphi }%
+\right\rangle =\mathbb{V}_{\varphi }^{\dagger }\left\langle \mathbf{\varphi }%
+|\mathbf{\varphi }\right\rangle \mathbb{V}_{\varphi }\equiv \mathbb{V}%
+_{\varphi }^{\dagger }\mathbb{SV}_{\varphi }  \notag \\
+\mathbb{V}_{\varphi }^{-1\dagger }\mathbb{V}_{\varphi }^{-1} &=&\mathbb{S} 
+\notag \\
+\mathbb{S}^{-1} &=&\mathbb{V}_{\varphi }\mathbb{V}_{\varphi }^{\dagger } 
+\notag \\
+\mathbb{V}_{\varphi }^{-1} &=&\mathbb{V}_{\varphi }^{\dagger }\mathbb{S} 
+\notag \\
+\mathbb{V}_{\varphi }^{\dagger } &=&\mathbb{S}^{-1}\mathbb{V}_{\varphi }^{-1}
+\end{eqnarray}%
+The geminal can be expressed on the general basis as 
+\begin{eqnarray}
+\left\vert g\right\rangle &=&\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq
+r}c_{j_{1}j_{2}}\left\vert V\varphi _{j_{1}}V\varphi _{j_{2}}\right\rangle =%
+\frac{1}{2}\sum_{1\leq k_{1},k_{2}\leq r}\gamma _{k_{1}k_{2}}\left\vert
+\varphi _{k_{1}}\varphi _{k_{2}}\right\rangle  \notag \\
+&=&\frac{1}{2}\sum_{\substack{ 1\leq j_{1},j_{2}\leq r  \\ 1\leq
+k_{1},k_{2}\leq r}}c_{j_{1}j_{2}}V_{k_{1}j_{1}}V_{k_{2}j_{2}}\left\vert
+\varphi _{k_{1}}\varphi _{k_{2}}\right\rangle =\frac{1}{2}\sum_{\substack{ %
+1\leq j_{1},j_{2}\leq r  \\ 1\leq k_{1},k_{2}\leq r}}%
+V_{k_{1}j_{1}}c_{j_{1}j_{2}}V_{j_{2}k_{2}}^{t}\left\vert \varphi
+_{k_{1}}\varphi _{k_{2}}\right\rangle  \notag \\
+&=&\frac{1}{2}\sum_{1\leq k_{1},k_{2}\leq r}\left( \mathbb{V}_{\varphi }%
+\mathbf{c}\mathbb{V}_{\varphi }^{t}\right) _{k_{1}k_{2}}\left\vert \varphi
+_{k_{1}}\varphi _{k_{2}}\right\rangle
+\end{eqnarray}%
+i.e. 
+\begin{equation}
+\mathbf{\gamma =}\mathbb{V}_{\varphi }\mathbf{c}\mathbb{V}_{\varphi }^{t}=-%
+\mathbf{\gamma }^{t}
+\end{equation}%
+We can also note that 
+\begin{eqnarray}
+\left\langle \mathbf{\varphi \otimes \varphi }|g\right\rangle &=&\frac{1}{2}%
+\mathbb{S}\mathbf{\gamma }\mathbb{S}^{t}=\frac{1}{2}\mathbb{SV}_{\varphi }%
+\mathbf{c}\mathbb{V}_{\varphi }^{t}\mathbb{S}^{t}  \notag \\
+\left\langle \mathbf{\psi \otimes \psi }|g\right\rangle &=&\frac{1}{2}%
+\mathbf{c}
+\end{eqnarray}
+
+\subsubsection{Contraction}
+
+On the general basis 
+\begin{eqnarray}
+\mathrm{L}_{2}^{1}\left( \left\vert g\right\rangle \left\langle g\right\vert
+\right) &=&\frac{1}{4}\sum_{\substack{ 1\leq j_{1},j_{2}\leq r  \\ 1\leq
+k_{1},k_{2}\leq r}}\gamma _{j_{1}j_{2}}\gamma _{k_{1}k_{2}}^{\ast
+}\left\langle \varphi _{k_{2}}|\varphi _{j_{2}}\right\rangle \left\vert
+\varphi _{j_{1}}\right\rangle \left\langle \varphi _{k_{1}}\right\vert =%
+\frac{1}{4}\sum_{\substack{ 1\leq j_{1},j_{2}\leq r  \\ 1\leq
+k_{1},k_{2}\leq r}}\gamma _{j_{1}j_{2}}\gamma _{k_{1}k_{2}}^{\ast
+}S_{k_{2}j_{2}}\left\vert \varphi _{j_{1}}\right\rangle \left\langle \varphi
+_{k_{1}}\right\vert  \notag \\
+&=&\frac{1}{4}\sum_{1\leq j_{1},j_{2}\leq r}\left( \mathbf{\gamma }\mathbb{S}%
+^{t}\mathbf{\gamma }^{\dagger }\right) _{j_{1}k_{1}}\left\vert \varphi
+_{j_{1}}\right\rangle \left\langle \varphi _{k_{1}}\right\vert =\frac{1}{4}%
+\sum_{1\leq j_{1},j_{2}\leq r}\left( \mathbf{\gamma }^{t}\mathbb{S}^{\ast }%
+\mathbf{\gamma }^{\ast }\right) _{j_{1}k_{1}}\left\vert \varphi
+_{j_{1}}\right\rangle \left\langle \varphi _{k_{1}}\right\vert
+\end{eqnarray}%
+Thus the (FORDM) in the general basis is (see section $\left( \ref{Change}%
+\right) $) 
+\begin{equation}
+\mathbb{D}_{\varphi }^{1}\left( g\right) =\frac{1}{2}\mathbf{\gamma \,}%
+\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }\mathbb{S}
+\end{equation}%
+Hence we have 
+\begin{eqnarray}
+\mathbb{D}_{\varphi }^{1}\left( g\right) &=&\mathbb{S}^{-1}\left\langle 
+\mathbf{\varphi }|D^{1}\left( g\right) \mathbf{\varphi }\right\rangle  \notag
+\\
+\mathbb{D}_{\psi }^{1}\left( g\right) &=&\left\langle \mathbf{\psi }%
+|D^{1}\left( g\right) \mathbf{\psi }\right\rangle  \notag \\
+\mathbb{D}_{\varphi }^{1}\left( g\right) &=&\mathbb{V}_{\varphi }\mathbb{D}%
+_{\psi }^{1}\left( g\right) \mathbb{V}_{\varphi }^{-1}  \label{dentran}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+\left\langle \mathbf{\psi }|D^{1}\left( g\right) \mathbf{\psi }\right\rangle
+&=&\frac{1}{2}\mathbf{cc}^{\dagger }=\mathbb{D}_{\psi }^{1}\left( g\right) 
+\notag \\
+\left\langle \mathbf{\varphi }|D^{1}\left( g\right) \mathbf{\varphi }%
+\right\rangle &=&\frac{1}{2}\mathbb{S}\mathbf{\gamma \,}\mathbb{S}^{t}%
+\mathbf{\gamma }^{\dagger }\mathbb{S}\neq \mathbb{D}_{\varphi }^{1}\left(
+g\right)
+\end{eqnarray}%
+as (see section $\left( \ref{Change}\right) $) 
+\begin{equation}
+\mathbb{D}_{\varphi }^{1}\left( g\right) =\mathbb{S}^{-1}\left\langle 
+\mathbf{\varphi }|D^{1}\left( g\right) \mathbf{\varphi }\right\rangle =\frac{%
+1}{2}\mathbf{\gamma \,}\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }\mathbb{S}
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{\gamma }=\mathbb{V}_{\varphi }\mathbf{c}\mathbb{V}_{\varphi }^{t}
+\end{equation}%
+as test of consistency we see that 
+\begin{equation}
+\mathbb{V}_{\varphi }^{-1}\mathbb{D}_{\varphi }^{1}\left( g\right) \mathbb{V}%
+_{\varphi }=\frac{1}{2}\mathbb{V}_{\varphi }^{-1}\mathbf{\gamma \,}\mathbb{S}%
+^{t}\mathbf{\gamma }^{\dagger }\mathbb{SV}_{\varphi }=\frac{1}{2}\mathbb{V}%
+_{\varphi }^{-1}\mathbb{V}_{\varphi }\mathbf{c}\mathbb{V}_{\varphi }^{t}%
+\mathbf{\,}\mathbb{S}^{t}\mathbb{V}_{\varphi }^{\ast }\mathbf{c}^{\dagger }%
+\mathbb{V}_{\varphi }^{\dagger }\mathbb{SV}_{\varphi }=\frac{1}{2}\mathbf{cc}%
+^{\dagger }=\mathbb{D}_{\psi }^{1}\left( g\right)
+\end{equation}%
+as it should.
+
+The NGSO's $\left\{ \mathbf{w}_{\varphi j};1\leq j\leq r\right\} $ of $%
+\mathbb{D}_{\varphi }^{1}\left( g\right) $ are given by 
+\begin{equation}
+\mathbb{D}_{\varphi }^{1}\left( g\right) \mathbf{w}_{\varphi j}=n_{j}\mathbf{%
+w}_{\varphi j}
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{W}_{\varphi }^{\dagger }\mathbb{S}\mathbf{W}_{\varphi }=\mathbb{I}%
+_{r}
+\end{equation}%
+$\lceil \left\langle w_{j}|w_{k}\right\rangle =\mathbf{w}_{\varphi
+j}^{\dagger }\mathbb{S}\mathbf{w}_{\varphi k}\rfloor $ hence%
+\begin{equation}
+\mathbf{W}_{\varphi }^{\dagger }\mathbb{SD}_{\varphi }^{1}\left( g\right) 
+\mathbf{W}_{\varphi }=\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right)
+\end{equation}
+
+\section{Special Orthonormal Basis\label{Special}}
+
+We can choose the orthonormal basis to be the symmetrical orthonormalized
+basis i.e.$\mathbb{V}_{\varphi }=\mathbb{S}^{-\frac{1}{2}}$ so that 
+\begin{equation}
+\left\vert \mathbf{\psi }\right\rangle =S^{-\frac{1}{2}}\left\vert \mathbf{%
+\varphi }\right\rangle =\left\vert \mathbf{\varphi }\right\rangle \mathbb{S}%
+^{-\frac{1}{2}}
+\end{equation}%
+then 
+\begin{equation}
+\mathbb{D}_{\psi }^{1}\left( g\right) =\mathbb{S}^{\frac{1}{2}}\mathbb{D}%
+_{\varphi }^{1}\left( g\right) \mathbb{S}^{-\frac{1}{2}}=\mathbb{S}^{\frac{1%
+}{2}}\frac{1}{2}\mathbf{\gamma \,}\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }%
+\mathbb{SS}^{-\frac{1}{2}}=\frac{1}{2}\mathbb{S}^{\frac{1}{2}}\mathbf{\gamma
+\,}\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }\mathbb{S}^{\frac{1}{2}}
+\end{equation}%
+and solve the eigenvalue problem in this basis to give 
+\begin{equation}
+\mathbf{W}_{\psi }^{\dagger }\mathbb{D}_{\psi }^{1}\left( g\right) \mathbf{W}%
+_{\psi }=\frac{1}{2}\mathbf{W}_{\psi }^{\dagger }\mathbb{S}^{\frac{1}{2}}%
+\mathbf{\gamma \,}\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }\mathbb{S}^{\frac{%
+1}{2}}\mathbf{W}_{\psi }=\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right)
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{W}_{\psi }^{\dagger }\mathbf{W}_{\psi }=\mathbf{W}_{\psi }\mathbf{W}%
+_{\psi }^{\dagger }=\mathbb{I}_{r}
+\end{equation}%
+The geminal coefficients in this orthogonal basis are thus 
+\begin{equation}
+\mathbf{c}=\mathbb{S}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}^{\frac{1}{2}t}
+\end{equation}%
+giving 
+\begin{equation}
+\mathbf{cc}^{\dagger }=\mathbb{S}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}^{%
+\frac{1}{2}t}\mathbb{S}^{\frac{1}{2}t}\mathbf{\gamma }^{\dagger }\mathbb{S}^{%
+\frac{1}{2}}=\mathbb{S}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}^{t}\mathbf{%
+\gamma }^{\dagger }\mathbb{S}^{\frac{1}{2}}
+\end{equation}%
+which is consistent with eq. $\left( \ref{dentran}\right) $
+
+One can further observe that 
+\begin{eqnarray}
+\mathbb{D}_{\psi }^{1}\left( g\right) \mathbf{W}_{\psi } &=&\mathbf{W}_{\psi
+}\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) =  \notag \\
+\frac{1}{2}\mathbb{S}^{\frac{1}{2}}\mathbf{\gamma \,}\mathbb{S}^{t}\mathbf{%
+\gamma }^{\dagger }\mathbb{S}^{\frac{1}{2}}\mathbf{W}_{\psi } &=&\mathbf{W}%
+_{\psi }\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) \Rightarrow  \notag \\
+\frac{1}{2}\mathbb{S}^{\frac{1}{2}}\mathbf{\gamma \,}\mathbb{S}^{t}\mathbf{%
+\gamma }^{\dagger }\mathbb{SS}^{-\frac{1}{2}}\mathbf{W}_{\psi } &=&\mathbf{W}%
+_{\psi }\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) \Rightarrow  \notag \\
+\frac{1}{2}\mathbf{\gamma \,}\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }%
+\mathbb{SS}^{-\frac{1}{2}}\mathbf{W}_{\psi } &=&\mathbb{S}^{-\frac{1}{2}}%
+\mathbf{W}_{\psi }\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) =  \notag \\
+\frac{1}{2}\mathbf{\gamma \,}\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }%
+\mathbb{S}\mathbf{W}_{\varphi } &=&\mathbf{W}_{\varphi }\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) =  \notag \\
+\mathbb{D}_{\varphi }^{1}\left( g\right) \mathbf{W}_{\varphi } &=&\mathbf{W}%
+_{\varphi }\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right)
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+\mathbf{W}_{\varphi } &=&\mathbb{S}^{-\frac{1}{2}}\mathbf{W}_{\psi }  \notag
+\\
+\mathbb{D}_{\varphi }^{1}\left( g\right) &=&\frac{1}{2}\mathbf{\gamma \,}%
+\mathbb{S}^{t}\mathbf{\gamma }^{\dagger }\mathbb{S}
+\end{eqnarray}%
+and is consistent with 
+\begin{equation}
+\mathbf{W}_{\varphi }^{\dagger }\mathbb{SD}_{\varphi }^{1}\left( g\right) 
+\mathbf{W}_{\varphi }=\mathbf{W}_{\varphi }^{\dagger }\mathbb{S}\mathbf{W}%
+_{\varphi }\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right)
+\end{equation}%
+If $\mathbf{W}_{\psi }$ are \emph{the} canonical orbitals of $g$ then 
+\begin{eqnarray}
+&&\mathbf{W}_{\psi }^{\dagger }\mathbf{cW}_{\psi }^{\ast }=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+\mathbf{-n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right)  \notag \\
+&\equiv &\mathbf{W}_{\psi }^{\dagger }\mathbb{S}^{\frac{1}{2}}\mathbf{\gamma 
+}\mathbb{S}^{\frac{1}{2}t}\mathbf{W}_{\psi }^{\ast }=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+\mathbf{-n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right)  \notag \\
+&\equiv &\mathbf{W}_{\varphi }^{\dagger }\mathbb{S}\mathbf{\gamma }\mathbb{S}%
+^{t}\mathbf{W}_{\varphi }^{\ast }=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+\mathbf{-n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right)
+\end{eqnarray}%
+Noting that 
+\begin{eqnarray}
+\mathbf{W}_{\varphi }^{\dagger }\mathbb{S}\mathbf{W}_{\varphi } &=&\mathbb{I}
+\notag \\
+\mathbf{W}_{\varphi }^{-1} &=&\mathbf{W}_{\varphi }^{\dagger }\mathbb{S} 
+\notag \\
+\mathbf{W}_{\varphi }^{\ast -1} &=&\mathbf{W}_{\varphi }^{t}\mathbb{S}^{t} 
+\notag \\
+\mathbf{W}_{\varphi }^{\dagger -1} &=&\mathbb{S}\mathbf{W}_{\varphi }
+\end{eqnarray}%
+we obtain 
+\begin{equation}
+\mathbf{c}=\mathbf{W}_{\psi }\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+\mathbf{-n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right) \mathbf{W}_{\psi }^{t}
+\end{equation}%
+and 
+\begin{equation}
+\mathbf{\gamma }=\mathbf{W}_{\varphi }\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+\mathbf{-n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right) \mathbf{W}_{\varphi }^{t}
+\end{equation}
+
+\section{Change of Basis\label{Change}}
+
+\subsubsection{Basis transformations}
+
+The transformation between the $\mathbf{\varphi }$ and $\mathbf{\psi }$
+basis induce the following transformations between the representations: 
+\begin{equation}
+A\left\vert \mathbf{\psi }\right\rangle =\left\vert \mathbf{\psi }%
+\right\rangle \mathbb{A}_{\psi }=\left\vert \mathbf{\varphi }\right\rangle 
+\mathbb{V}_{\varphi }\mathbb{A}_{\psi }=A\left\vert \mathbf{\varphi }%
+\right\rangle \mathbb{V}_{\varphi }=\left\vert \mathbf{\varphi }%
+\right\rangle \mathbb{A}_{\varphi }\mathbb{V}_{\varphi }
+\end{equation}%
+thus 
+\begin{equation}
+\mathbb{V}_{\varphi }\mathbb{A}_{\psi }=\mathbb{A}_{\varphi }\mathbb{V}%
+_{\varphi }\Rightarrow \mathbb{A}_{\varphi }=\mathbb{V}_{\varphi }\mathbb{A}%
+_{\psi }\mathbb{V}_{\varphi }^{-1}\text{ }\Longleftrightarrow \text{ }%
+\mathbb{A}_{\psi }=\mathbb{V}_{\varphi }^{-1}\mathbb{A}_{\varphi }\mathbb{V}%
+_{\varphi }
+\end{equation}%
+where $\mathbb{A}_{\varphi }$ and $\mathbb{A}_{\psi }$ are the
+representations of the operator on the basis $\mathbf{\varphi }$ and $%
+\mathbf{\psi }$ respectively. The relationship between the matrix of an
+operator and its representation can be easily obtained by%
+\begin{equation}
+\left\langle \mathbf{\varphi }|A\mathbf{\varphi }\right\rangle =\left\langle 
+\mathbf{\varphi }|\mathbf{\varphi }\right\rangle \mathbb{A}_{\varphi }\equiv 
+\mathbb{SA}_{\varphi }\Rightarrow \mathbb{A}_{\varphi }=\mathbb{S}%
+^{-1}\left\langle \mathbf{\varphi }|A\mathbf{\varphi }\right\rangle
+\end{equation}%
+and 
+\begin{equation}
+\left\langle \mathbf{\psi }|A\mathbf{\psi }\right\rangle =\left\langle 
+\mathbf{\psi }|\mathbf{\psi }\right\rangle \mathbb{A}_{\psi }=\mathbb{A}%
+_{\psi }\Rightarrow \mathbb{A}_{\psi }=\left\langle \mathbf{\psi }|A\mathbf{%
+\psi }\right\rangle
+\end{equation}%
+The relationship between vectors represented on these two basis are given by:%
+\begin{equation}
+\left\vert v\right\rangle =\left\vert \mathbf{\psi }\right\rangle \mathbf{v}%
+_{\psi }=\left\vert \mathbf{\varphi }\right\rangle \mathbb{V}_{\varphi }%
+\mathbf{v}_{\psi }=\left\vert \mathbf{\varphi }\right\rangle \mathbf{v}%
+_{\varphi }
+\end{equation}%
+thus 
+\begin{equation}
+\mathbf{v}_{\varphi }=\mathbb{V}_{\varphi }\mathbf{v}_{\psi
+}\Longleftrightarrow \mathbf{v}_{\psi }=\mathbb{V}_{\varphi }^{-1}\mathbf{v}%
+_{\varphi }
+\end{equation}%
+and the relation between the \textquotedblright matrix\textquotedblright\ of 
+$\left\vert v\right\rangle $ and the representation of $\left\vert
+v\right\rangle $ is given by%
+\begin{equation}
+\left\langle \mathbf{\varphi }|v\right\rangle =\left\langle \mathbf{\varphi
+|\varphi }\right\rangle \mathbf{v}_{\varphi }\Longleftrightarrow \mathbf{v}%
+_{\varphi }=\left\langle \mathbf{\varphi |\varphi }\right\rangle
+^{-1}\left\langle \mathbf{\varphi }|v\right\rangle
+\end{equation}%
+and 
+\begin{eqnarray}
+\mathbf{v}_{\varphi }^{\dagger }\left\langle \mathbf{\varphi |\varphi }%
+\right\rangle \mathbf{v}_{\varphi } &=&\mathbb{I}_{r}  \notag \\
+\left\langle \mathbf{\varphi }|v\right\rangle ^{\dagger }\left\langle 
+\mathbf{\varphi |\varphi }\right\rangle ^{-1}\left\langle \mathbf{\varphi }%
+|v\right\rangle &=&\mathbb{I}_{r}
+\end{eqnarray}%
+Obviously in the orthonormal basis 
+\begin{equation}
+\mathbf{v}_{\psi }=\left\langle \mathbf{\psi }|v\right\rangle
+\end{equation}%
+In order to study algebraic properties of operators in the two
+representations we introduce the resolutions of the identity 
+\begin{eqnarray}
+I &=&\left\vert \mathbf{\varphi }\right\rangle \left\langle \mathbf{\varphi }%
+|\mathbf{\varphi }\right\rangle ^{-1}\left\langle \mathbf{\varphi }%
+\right\vert  \notag \\
+I &=&\left\vert \mathbf{\psi }\right\rangle \left\langle \mathbf{\psi }|%
+\mathbf{\psi }\right\rangle ^{-1}\left\langle \mathbf{\psi }\right\vert
+=\left\vert \mathbf{\psi }\right\rangle \left\langle \mathbf{\psi }%
+\right\vert .
+\end{eqnarray}%
+which gives%
+\begin{eqnarray}
+A &=&\left\vert \mathbf{\varphi }\right\rangle \left\langle \mathbf{\varphi }%
+|\mathbf{\varphi }\right\rangle ^{-1}\left\langle \mathbf{\varphi |}A\mathbf{%
+\varphi }\right\rangle \left\langle \mathbf{\varphi }|\mathbf{\varphi }%
+\right\rangle ^{-1}\left\langle \mathbf{\varphi }\right\vert  \notag \\
+&\equiv &\sum \left\vert \varphi _{k}\right\rangle \left\langle \varphi
+_{l}\right\vert \left[ \left\langle \mathbf{\varphi }|\mathbf{\varphi }%
+\right\rangle ^{-1}\right] _{kk_{1}}\left[ \left\langle \mathbf{\varphi |}A%
+\mathbf{\varphi }\right\rangle \right] _{k_{1}k_{2}}\left[ \left\langle 
+\mathbf{\varphi }|\mathbf{\varphi }\right\rangle ^{-1}\right] _{k_{2}l}
+\end{eqnarray}%
+and 
+\begin{equation}
+A\left\vert \mathbf{\varphi }\right\rangle =\left\vert \mathbf{\varphi }%
+\right\rangle \left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle
+^{-1}\left\langle \mathbf{\varphi |}A\mathbf{\varphi }\right\rangle
+=\left\vert \mathbf{\varphi }\right\rangle \mathbb{A}_{\varphi }
+\end{equation}%
+Hence 
+\begin{equation}
+A=\sum \left\vert \varphi _{k}\right\rangle \left\langle \varphi
+_{l}\right\vert \left[ \mathbb{A}_{\varphi }\left\langle \mathbf{\varphi }|%
+\mathbf{\varphi }\right\rangle ^{-1}\right] _{kl}
+\end{equation}%
+Using the resolution of the identity the eigenvalue equation 
+\begin{equation}
+A\left\vert v_{j}\right\rangle =\lambda _{j}\left\vert v_{j}\right\rangle
+\end{equation}%
+then becomes 
+\begin{equation}
+\left\vert \mathbf{\varphi }\right\rangle \left\langle \mathbf{\varphi }|%
+\mathbf{\varphi }\right\rangle ^{-1}\left\langle \mathbf{\varphi |}A\mathbf{%
+\varphi }\right\rangle \left\langle \mathbf{\varphi }|\mathbf{\varphi }%
+\right\rangle ^{-1}\left\langle \mathbf{\varphi }|v_{j}\right\rangle
+=\lambda _{j}\left\vert v_{j}\right\rangle
+\end{equation}%
+and hence 
+\begin{eqnarray}
+&&\left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle \left\langle 
+\mathbf{\varphi }|\mathbf{\varphi }\right\rangle ^{-1}\left\langle \mathbf{%
+\varphi |}A\mathbf{\varphi }\right\rangle \left\langle \mathbf{\varphi }|%
+\mathbf{\varphi }\right\rangle ^{-1}\left\langle \mathbf{\varphi }%
+|v_{j}\right\rangle =\lambda _{j}\left\langle \mathbf{\varphi }%
+|v_{j}\right\rangle  \notag \\
+&\Rightarrow &\left\langle \mathbf{\varphi |}A\mathbf{\varphi }\right\rangle
+\left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle
+^{-1}\left\langle \mathbf{\varphi }|v_{j}\right\rangle =\lambda
+_{j}\left\langle \mathbf{\varphi }|v_{j}\right\rangle  \notag \\
+&\Rightarrow &\left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle
+^{-1}\left\langle \mathbf{\varphi |}A\mathbf{\varphi }\right\rangle
+\left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle
+^{-1}\left\langle \mathbf{\varphi }|v_{j}\right\rangle =\lambda
+_{j}\left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle
+^{-1}\left\langle \mathbf{\varphi }|v_{j}\right\rangle
+\end{eqnarray}%
+which we can also write as expected as 
+\begin{equation}
+\mathbb{A}_{\varphi }\mathbf{v}_{\varphi j}=\lambda _{j}\mathbf{v}_{\varphi
+j}
+\end{equation}%
+giving 
+\begin{equation}
+\mathbb{A}_{\varphi }\mathbf{V}_{\varphi }=\mathbf{V}_{\varphi }\mathbf{%
+\lambda }
+\end{equation}%
+Solutions to this problem can also be obtained by solving the matrix
+eigenvalue problem 
+\begin{equation}
+\left\langle \mathbf{\varphi |}A\mathbf{\varphi }\right\rangle \mathbf{a}%
+_{j}=\lambda _{j}\left\langle \mathbf{\varphi }|\mathbf{\varphi }%
+\right\rangle \mathbf{a}_{j}
+\end{equation}%
+which gives 
+\begin{equation}
+\mathbf{a}_{j}=\left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle
+^{-1}\left\langle \mathbf{\varphi }|v_{j}\right\rangle =\mathbf{v}_{\varphi }
+\end{equation}%
+and 
+\begin{equation}
+\mathbf{V}_{\varphi }^{\dagger }\left\langle \mathbf{\varphi |}A\mathbf{%
+\varphi }\right\rangle \mathbf{V}_{\varphi }=\mathbf{\lambda }
+\end{equation}
+
+\subsubsection{Symmetric orthogonalization}
+
+We can choose $\mathbb{V}_{\varphi }$ to be given by 
+\begin{equation}
+\mathbb{V}_{\varphi }=\mathbb{S}^{-\frac{1}{2}}
+\end{equation}%
+then 
+\begin{equation}
+\left\langle \mathbf{\psi }|\mathbf{\psi }\right\rangle =\mathbb{S}^{-\frac{1%
+}{2}}\left\langle \mathbf{\varphi }|\mathbf{\varphi }\right\rangle \mathbb{S}%
+^{-\frac{1}{2}}=\mathbb{I}_{r}
+\end{equation}%
+and the eigenvalue problem in this orthonormal representation becomes 
+\begin{equation}
+\mathbb{S}^{\frac{1}{2}}\mathbb{A}_{\varphi }\mathbb{S}^{-\frac{1}{2}}%
+\mathbf{v}_{\psi j}=\lambda _{j}\mathbf{v}_{\psi j}
+\end{equation}%
+giving 
+\begin{equation}
+\mathbf{V}_{\psi }^{\dagger }\mathbb{S}^{\frac{1}{2}}\mathbb{A}_{\varphi }%
+\mathbb{S}^{-\frac{1}{2}}\mathbf{V}_{\psi }=\mathbf{\lambda }
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{V}_{\psi }^{\dagger }\mathbf{V}_{\psi }=\mathbf{V}_{\psi }\mathbf{V}%
+_{\psi }^{\dagger }=\mathbb{I}_{r}
+\end{equation}
+
+\end{document}

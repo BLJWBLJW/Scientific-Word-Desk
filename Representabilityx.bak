@@ -1,0 +1,1854 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, July 19, 2009 10:44:53}
+%TCIDATA{LastRevised=Thursday, January 14, 2010 09:48:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+
+The $N$-representability problem, first explicitly introduced by Husimi
+\cite{Husimi} then Coulson \cite{Coulson} is based on the realization that
+states of the $N$-electrons forming molecular and atomic systems are
+determined by at most two electron interactions that in turn determine reduced
+two particle states, represented by Second Order Reduced Density Operators
+(SORDO's) that belong to the subset, $S_{N}^{2},$ of the set of postive trace
+class operators acting in the Hilbert space $\mathcal{H}^{2},$ describing
+$2$-electrons. These SORDO's can be represented by Second Order Reduced
+Density Matrices (SORDM's) which are determined by
+\begin{equation}
+\eta_{2}=\frac{1}{2}\binom{r}{2}\left(  \binom{r}{2}+1\right)  \sim r^{4}%
+\end{equation}
+complex parameters, where $r$ is the size of the orthonormal basis set that
+spans a finite dimensional approximation to $\mathcal{H}^{1},$ which should be
+contrasted to the number $\eta_{N}$
+\begin{equation}
+\eta_{N}=\frac{1}{2}\binom{r}{N}\left(  \binom{r}{N}+1\right)  \sim r^{2N}%
+\end{equation}
+of complex parameters that is needed in general to determine the density
+matrix of an $N$-electron states which are representations of postive
+normalized trace class operators acting in the Hilbert space, $\mathcal{H}%
+^{N}$. A crucial difference is that $\eta_{2}$ does not depend on the number
+of electrons while $\eta_{N}$ does so
+\begin{equation}
+\frac{\eta_{N}}{\eta_{2}}\sim r^{2N-4},
+\end{equation}
+which increase rapidly as the number of electrons increases.
+
+The formulation of the problem can be extended to distinguish between pure
+states, ensemble (also known as mixed) states and states that describe varying
+number of particles.
+
+Even though the significant physical interactions that determine the nature of
+the state are most pairwise the fact that electrons are fermions implies a
+basic underlying exchange symmetry [thus a conservation principle and an
+invariance group] that can be thought of as an $N$-electron interaction. This
+basic symmetry interaction determines a class of possible electron states from
+which a physical state is determined by coulombic interaction between
+electrons and electrons and nuclei, the kinetic energy of the electrons and
+the presence of electric and magnetic fields. States determined by the
+$\eta_{2}$ parameters are called reduced states in contrast to those
+determined by those determined by the $\eta_{N}$ parameters. Every state
+determines a reduced state however the set of conditions that intrinsically
+characterize reduced states are not known.
+
+We formulate the problem of determing whether an element of the set of postive
+trace class operators, $\mathcal{B}_{1+}\left(  \mathcal{H}^{2}\right)  ,$
+acting in $\mathcal{H}^{2}$ actually is a reduced state by considering whether
+the bounded postive linear functional that it determines on the set of bounded
+operators, $\mathcal{B}\left(  \mathcal{H}^{2}\right)  ,$ acting in
+$\mathcal{H}^{2}$ can be extended to a positive bounded linear functional
+acting on the set of bounded operators acting in $\mathcal{H}^{N}$ i.e. we
+formulate the conditions for a postive trace class operator acting in
+$\mathcal{H}^{2}$ to be $N$-representable in terms of whether it can be
+extended to a bounded positive linear functional on $\mathcal{B}\left(
+\mathcal{H}^{N}\right)  .$
+
+\section{Background}
+
+\subsection{Fermi Fock Space and Algebra}
+
+We consider the fermion Fock space, $\mathcal{H}_{F},$ based on the one
+particle space Hilbert space $\mathcal{H}^{1}$ and the fermion Fock algebra
+$\mathcal{F}$, defined by
+\begin{align}
+\mathcal{H}_{\mathcal{F}}  &  =\underset{0\leq N\leq\infty}{\oplus}%
+\mathcal{H}^{N},\\
+\mathcal{H}^{N}  &  =\wedge^{N}\mathcal{H}^{1}%
+\end{align}
+and
+\begin{equation}
+\mathcal{F}=\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  ,
+\end{equation}
+where $\wedge$ denotes antisymmetric tensor product and $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ is the space of bounded operators acting
+in $\mathcal{H}_{\mathcal{F}}$. The Fock algebra can be generated by
+polynomials of second quantized operators, $\left\{  \left.  a_{j}^{\dagger
+}\right\vert 1\leq j\leq\infty\right\}  ,$ which are defined by their action
+on the vacuum state $\left\vert \phi\right\rangle $ by
+\begin{equation}
+a_{j}^{\dagger}\left\vert \phi\right\rangle =\left\vert \varphi_{j}%
+\right\rangle ,1\leq j\leq\infty,
+\end{equation}
+where $\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq\infty\right\}  $ is a complete orthonormal basis of one-particle space
+$\mathcal{H}^{1}$ and satisfy the anti-commutation relationships given by
+\begin{equation}
+\left[  a_{j}^{\dagger},a_{k}\right]  _{+}=a_{j}^{\dagger}a_{k}+a_{k}%
+a_{j}^{\dagger}=\delta_{jk};1\leq j,k\leq\infty.
+\end{equation}
+The operators $\left\{  \left.  a_{j,}a_{j}^{\dagger}\right\vert 1\leq
+j\leq\infty\right\}  $ can be considered as the values of the maps
+\begin{equation}
+\Phi,\Phi^{\dagger}:\mathcal{H}^{1}\rightarrow\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)
+\end{equation}
+given by
+\begin{align}
+a_{j}  &  =\Phi\left(  \varphi_{j}\right)  ,\\
+a_{j}^{\dagger}  &  =\Phi\left(  \varphi_{j}\right)  ^{\dagger}\equiv
+\Phi^{\dagger}\left(  \varphi_{j}\right)  .
+\end{align}
+The point field operators $\left\{  \left.  \Phi\left(  \boldsymbol{r}\right)
+\right\vert \boldsymbol{r\in}\mathbb{R}^{3}\right\}  $ are defined by
+\cite{Thirring}
+\begin{equation}
+\Phi\left(  \boldsymbol{r}\right)  =\sum_{1\leq j\leq\infty}\overline
+{\varphi_{j}\left(  \boldsymbol{r}\right)  }a_{j}.
+\end{equation}
+The unbounded operators $\Phi\left(  \boldsymbol{r}\right)  $ are densely
+defined (but not closeable) on the Fock space, $\mathcal{H}_{\mathcal{F}},$
+nor the subspaces $\mathcal{H}^{N}=\wedge^{N}\mathcal{H}^{1},$ and the domains
+of their adjoints $\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}$ are empty
+i.e. do not contain any vectors belonging to $\mathcal{H}_{\mathcal{F}}$
+\cite{Thirring}. However, matrix elements, $\left\langle \varphi\left\vert
+\Phi\left(  \boldsymbol{r}\right)  ^{\dagger}\Phi\left(  \boldsymbol{r}%
+^{\prime}\right)  \right.  \psi\right\rangle ,$ can be defined as the
+distributional limits of $\left\langle \varphi\left\vert \Phi\left(  f\right)
+^{\dagger}\Phi\left(  f^{\prime}\right)  \right.  \psi\right\rangle $ as
+$f,f^{\prime}\rightarrow$ delta functions.
+
+\subsection{Ket-Bra Representation of Second Quantized Operators}
+
+\subsubsection{First Quantization of Second Quantization Operators}
+
+\bigskip By considering the restrictions of $a_{j}^{\dagger}$ to
+$\mathcal{H}^{N}$ for $0\leq N\leq\infty$ one obtains%
+\begin{align}
+a_{j}^{\dagger}  &  =\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\sum_{1\leq N\leq\infty}\sum_{1\leq j_{2}<\cdots<j_{N}%
+\leq\infty}\left\vert \varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert
+\nonumber\\
+a_{j}  &  =\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert
++\sum_{1\leq N\leq\infty}\sum_{1\leq j_{2}<\cdots<j_{N}\leq\infty}\left\vert
+\varphi_{j_{2}}\cdots\varphi_{j_{N+1}}\right\rangle \left\langle \varphi
+_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N+1}}\right\vert . \label{FQ}%
+\end{align}
+These expansions \emph{do }preserve the algebraic structure as can be observed
+from%
+\begin{align}
+a_{j}^{\dagger}a_{k}  &  =\sum_{\substack{1\leq N,M\leq\infty\\1\leq
+j_{2}<\cdots<j_{N}\leq\infty\\1\leq k_{2}<\cdots<k_{M}\leq\infty}}\left\vert
+\varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\left.  \varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert \varphi_{k_{2}}%
+\cdots\varphi_{k_{M}}\right\rangle \left\langle \varphi_{k}\varphi_{k_{2}%
+}\cdots\varphi_{k_{M}}\right\vert \nonumber\\
+&  =\frac{1}{\left(  N-1\right)  !}\sum_{\sigma\in\mathcal{S}_{N-1}}\left(
+-1\right)  ^{\pi\left(  \sigma\right)  }\delta_{j_{2}k_{\sigma\left(
+2\right)  }}\cdots\delta_{j_{N}k_{\sigma\left(  N\right)  }}\sum
+_{\substack{1\leq N\leq\infty\\1\leq j_{2}<\cdots<j_{N}\leq\infty\\1\leq
+k_{2}<\cdots<k_{N}\leq\infty}}\left\vert \varphi_{j}\varphi_{j_{2}}%
+\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k}\varphi_{k_{2}%
+}\cdots\varphi_{k_{N}}\right\vert ,
+\end{align}
+
+
+which leads to
+\begin{equation}
+a_{j}^{\dagger}a_{k}=\sum_{1\leq N\leq\infty}\sum_{1\leq j_{2}<\cdots
+<j_{N}\leq\infty}\left\vert \varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{k}\varphi_{j_{2}}\cdots\varphi_{j_{N}%
+}\right\vert ,
+\end{equation}
+\begin{equation}
+a_{j}^{\dagger}a_{j}=\sum_{1\leq N\leq\infty}\sum_{1\leq j_{2}<\cdots
+<j_{N}\leq\infty}\left\vert \varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}%
+}\right\vert ,
+\end{equation}
+and
+\begin{equation}
+\mathcal{N=}\sum_{1\leq j\leq\infty}a_{j}^{\dagger}a_{j}=\sum_{1\leq
+N\leq\infty}NP_{\mathcal{H}^{N}}. \label{NumOp}%
+\end{equation}
+Eq. $\left(  \ref{NumOp}\right)  $ can be seen by considering the example%
+\begin{equation}
+\sum_{1\leq j\leq\infty}\left.  a_{j}^{\dagger}a_{j}\right\vert _{\mathcal{H}%
+^{2}}=\sum_{1\leq j,j_{2}\leq\infty}\left\vert \varphi_{j}\varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{j}\varphi_{j_{2}}\right\vert
+=2\sum_{1\leq j<j_{2}\leq\infty}\left\vert \varphi_{j}\varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{j}\varphi_{j_{2}}\right\vert
+=2P_{\mathcal{H}^{2}}.
+\end{equation}
+
+
+\subsubsection{Second Quantization of First Quantized Operators}
+
+The inverse relationship between FQ and SQ operators is%
+
+\begin{equation}
+\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{k_{1}}\cdots\varphi_{k_{N}}\right\vert =P_{N}a_{j_{1}}^{\dagger
+}\cdots a_{j_{N}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}P_{N}%
+\end{equation}
+
+
+\subsection{Particle Conserving Operators}
+
+The operator ideal spaces $\left\{  \mathcal{C}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  ,\mathcal{B}_{k}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  ;1\leq\kappa\leq2\right\}  $ are contained in $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ and
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{C}%
+\left(  \mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{B}_{2}\left(
+\mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{B}_{1}\left(
+\mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{B}_{0}\left(
+\mathcal{H}_{\mathcal{F}}\right)  ,
+\end{equation}
+where $\mathcal{C}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ are compact,
+$\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ are Hilbert
+Schmidt, $\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ are trace
+class and $\mathcal{B}_{0}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ are
+finite rank operators. The spaces $\left\{  \mathcal{C}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  ,\mathcal{B}_{k}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  ;1\leq\kappa\leq2\right\}  $ are normed spaces, which are the
+completions of $\mathcal{B}_{0}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ in
+the appropiate norms. Thus it is often more convenient to work within the
+context of finite rank operators and take the appropiate limits (if they
+exist) when necessary.
+
+The self adjoint number operator, $\mathcal{N},$ defined as
+\begin{equation}
+\mathcal{N=}\sum_{1\leq j\leq\infty}a_{j}^{\dagger}a_{j}=\int\Phi\left(
+\boldsymbol{x}\right)  ^{\dagger}\Phi\left(  \boldsymbol{x}\right)  dx
+\end{equation}
+allows one to decomposes the space $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  $ into a direct sum of operators that commute with
+$\mathcal{N}$ and those that do not as
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  =\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{e}\oplus\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{o}.
+\end{equation}
+The subspace (which is also a subalgebra) $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{e}$ can be identified with polynomials and strong
+limits of polynomials of even numbers of creators and annihilators in
+\emph{normal form} i.e.%
+\begin{equation}
+X=\sum_{\substack{1\leq P\leq\infty\\1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq
+k_{1}<\cdots<k_{P}\leq\infty}}X_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}a_{j_{1}%
+}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}},
+\end{equation}
+while the subspace $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{o}$
+corresponds to an odd number. The subspace $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{e}$ decomposes as the direct sums
+\begin{align}
+\mathcal{F}_{e} &  =\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+_{e}\nonumber\\
+&  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eN}\label{BanSp}\\
+&  \cong%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  ,\label{BanAlg}%
+\end{align}
+where the two Banach space direct sums are \emph{different} but isomorphic. In
+order to show the validity of the first decomposition one needs to show that
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eN}\cap\mathcal{B}%
+\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eN^{\prime}}=\phi
+\end{equation}
+or equivalently that
+\begin{equation}
+\sum_{0\leq N\leq\infty}A_{N}=0\Leftrightarrow A_{N}=0,0\leq N\leq\infty
+,A_{N}\in\mathcal{B}_{sa}\left(  \mathcal{H}^{N}\right)  .
+\end{equation}
+It is easy to see that the last condition is satisfied, consider
+\begin{equation}
+\left(  \sum_{0\leq N\leq\infty}A_{N}\right)  \left\vert \Psi_{M}%
+\right\rangle
+\end{equation}
+and chose $\left\vert \Psi_{M}\right\rangle \in\mathcal{H}^{M},$ $0\leq
+M\leq\infty.$
+
+The spaces $\mathcal{B}_{0sa}\left(  \mathcal{H}^{N}\right)  ,0\leq
+N\leq\infty$ are othogonal with respect to the H-S norm, but $\mathcal{B}%
+_{0sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eN}$ are not, consider%
+\begin{align}
+&  \sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}X_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}%
+\operatorname*{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots a_{j_{P}}^{\dagger
+}a_{k_{P}}\cdots a_{k_{1}}\mathcal{N}_{1}\right\}  ,P\neq N\nonumber\\
+&  =\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}X_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}%
+P\operatorname*{Tr}\nolimits_{N}\left\{  a_{j_{1}}^{\dagger}\cdots a_{j_{P}%
+}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}\right\}  \neq0.
+\end{align}
+
+
+The subspaces $\left\{  \left.  \mathcal{B}\left(  \mathcal{H}^{N}\right)
+\right\vert 0\leq N\leq\infty\right\}  $ are subalgebras while the subspaces
+$\left\{  \left.  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+_{eN}\right\vert 0\leq N\leq\infty\right\}  $ \emph{are not }(the identity has
+components in all the spaces and $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{e1}$ has to have the identity added to it to be closed). Thus eq.
+$\left(  \ref{BanAlg}\right)  $ is a direct sum of algebras while eq. $\left(
+\ref{BanSp}\right)  $ is just a direct sum of banach spaces.
+
+\subsection{Complexification}
+
+As density operators and hamiltonians are in general self adjoint we can
+restrict attention to the real space $\mathcal{B}_{sa}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  ,$which is a real subspace of $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ such thats its complexification gives
+$\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ i.e.
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  =\mathcal{B}_{sa}\left(
+\mathcal{H}_{\mathcal{F}}\right)  \oplus i\mathcal{B}_{sa}\left(
+\mathcal{H}_{\mathcal{F}}\right)
+\end{equation}
+such that $Z\in\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  ,$ where
+\begin{equation}
+Z=X+iY;\text{ }X,Y\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  .
+\end{equation}
+The inner product in $\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ is
+defined in terms of the inner product in $\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  $ as
+\begin{equation}
+\left(  Z_{1}\left\vert Z_{2}\right.  \right)  _{HS}=\left(  X_{1}\left\vert
+X_{2}\right.  \right)  +\left(  Y_{1}\left\vert Y_{2}\right.  \right)
++i\left\{  \left(  X_{1}\left\vert Y_{2}\right.  \right)  -\left(
+Y_{1}\left\vert X_{2}\right.  \right)  \right\}  ,
+\end{equation}
+which corresponds to
+\begin{equation}
+\left(  Z_{1}\left\vert Z_{2}\right.  \right)  _{HS}=\operatorname{Tr}\left\{
+Z_{1}^{\dagger}Z_{2}\right\}  ,
+\end{equation}
+as%
+\begin{equation}
+\operatorname{Tr}\left\{  \left(  X_{1}-iY_{1}\right)  \left(  X_{2}%
++iY_{2}\right)  \right\}  =\operatorname{Tr}\left\{  X_{1}X_{2}-iY_{1}%
+X_{2}+iX_{1}Y_{2}+Y_{1}Y_{2}\right\}  .
+\end{equation}
+
+
+For density operators and hamiltonians that commute with the number operator
+$\mathcal{N}$ we can wlog consider $\mathcal{B}_{sa}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{e}.$
+
+Note that $\mathcal{B}_{2sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ (self
+adjoint operators) and $i\mathcal{B}_{2sa}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  $ (anti self adjoint operators) are not orthogonal subspaces of
+$\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ as they are not
+even subspaces under $\mathbb{C}$-linear combination.
+
+The are not closed under the operator product, however they are closed under
+the Jordan product and thus form Jordan algebras (which are non associative).
+
+\section{Expansion and Contraction Maps.}
+
+The contraction maps, $\left\{  \left.  L_{N}^{P}\right\vert 0\leq P\leq
+N;0\leq N\leq\infty\right\}  ,$ map $N$-particle states%
+\begin{equation}
+S_{N}=\left\{  D^{N}\left\vert D^{N}\in\mathcal{B}_{1+}\left(  \mathcal{H}%
+^{N}\right)  ;\operatorname{Tr}D^{N}=1\right.  \right\}  ,
+\end{equation}
+to reduced $P$-particle states
+\begin{equation}
+L_{N}^{P}:S_{N}\subset\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)
+\subset\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  \longrightarrow
+\tilde{S}_{NP}\subset S_{P}\subset\mathcal{B}_{1+}\left(  \mathcal{H}%
+^{P}\right)  \subset\mathcal{B}_{1sa}\left(  \mathcal{H}^{P}\right)  ,
+\end{equation}
+where $\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  $ is the space of self
+adjoint trace class operators acting in $\mathcal{H}^{N},$ $\mathcal{B}%
+_{1+}\left(  \mathcal{H}^{N}\right)  $ the cone of positive self adjoint trace
+class operators, $S_{N}$ the convex set of $N$-particle states, $S_{P}%
+,\mathcal{B}_{1+}\left(  \mathcal{H}^{P}\right)  ,\mathcal{B}_{1sa}\left(
+\mathcal{H}^{P}\right)  $ the corresponding $P$-particle objects and
+$\tilde{S}_{NP}$ the set of $N$- representable $P^{th}$ order Reduced Density
+Operators (PRDO's) that are normalized to $1$ i.e.
+\begin{equation}
+\tilde{S}_{NP}=\left\{  \left.  \tilde{D}_{NP}\right\vert \tilde{D}_{NP}%
+=L_{N}^{P}\left(  D^{N}\right)  ,D^{N}\in S_{N}\right\}  .
+\end{equation}
+The set, $\left\{  D_{NP}\right\}  ,$ of reduced density operators
+\begin{equation}
+D_{NP}=\binom{N}{P}\tilde{D}_{NP},
+\end{equation}
+normalized to the number of $P$-particle groups is denoted by $S_{NP}$ i.e.
+\begin{equation}
+S_{NP}=\left\{  \left.  D_{NP}\right\vert D_{NP}=\binom{N}{P}L_{N}^{P}\left(
+D^{N}\right)  ,D^{N}\in S_{N}\right\}  .
+\end{equation}
+The contraction maps are explicitly defined by
+\begin{align}
+\tilde{D}_{NP}  &  =L_{N}^{P}\left(  D^{N}\right)  =\binom{N}{P}^{-1}%
+\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}<\cdots
+<k_{P}\leq\infty}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots
+a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}D^{N}\right\}  \left\vert
+\varphi_{j_{1}}\cdots\varphi_{j_{P}}\right\rangle \left\langle \varphi_{k_{1}%
+}\cdots\varphi_{k_{P}}\right\vert \nonumber\\
+&  =\binom{N}{P}^{-1}\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq
+k_{1}<\cdots<k_{P}\leq\infty}}D_{NPj_{1}\cdots j_{P}k_{1}\cdots k_{P}%
+}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{P}}\right\rangle \left\langle
+\varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\vert ;0\leq P\leq N.
+\end{align}
+
+
+As $S_{N},S_{P},S_{NP}$ and $\tilde{S}_{NP}$ are convex sets they are
+generated by their extreme points $\operatorname*{ext}\left\{  S_{N}\right\}
+,\operatorname*{ext}\left\{  S_{P}\right\}  ,\operatorname*{ext}\left\{
+S_{NP}\right\}  $ and $\operatorname*{ext}\left\{  \tilde{S}_{NP}\right\}
+.$The extreme points $\operatorname*{ext}\left\{  S_{N}\right\}
+,\operatorname*{ext}\left\{  S_{P}\right\}  $ of $S_{N}$ and $S_{P}$
+respectively are pure states that are projectors onto one dimensional
+subspaces of $\mathcal{H}^{N}$ and $\mathcal{H}^{P}$ (their rank is 1), which
+should be constrasted to $\operatorname*{ext}\left\{  \tilde{S}_{NP}\right\}
+$ whose rank can never be one ($N\neq P,0$ ) and thus must generate a subset
+of $S_{P}.$These subsets are convex sets of \emph{mixed states}$.$ In the case
+$P=1$
+\begin{equation}
+\tilde{S}_{N1}=\left\{  \left.  \tilde{D}_{N1}\right\vert \tilde{D}_{N1}%
+=L_{N}^{1}\left(  D^{N}\right)  ,D^{N}\in S_{N}\right\} \nonumber
+\end{equation}
+It is easy to see that
+\begin{equation}
+\operatorname*{Tr}\left\{  \tilde{D}_{N1}\right\}  =1\text{ and }\tilde
+{D}_{N1}\geq0\text{ for }\tilde{D}_{N1}\in\tilde{S}_{N1}%
+\end{equation}
+thus
+\begin{equation}
+\tilde{S}_{N1}\subset S_{1}.
+\end{equation}
+Convex sets are generated by their extreme points and one can show that
+\begin{equation}
+\operatorname*{ext}\left\{  \tilde{S}_{N1}\right\}  =\left\{  \tilde{D}%
+_{N1}\left\vert \tilde{D}_{N1}=\frac{1}{N}\sum_{1\leq j\leq N}\left\vert
+\psi_{j}\right\rangle \left\langle \psi_{j}\right\vert ;\text{ where }\left\{
+\left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq j\leq
+\infty\right\}  \text{ are conb's of }\mathcal{H}^{1}\right.  \right\}  ,
+\end{equation}
+thus%
+\begin{equation}
+\tilde{S}_{N1}=\left\{  \tilde{D}_{1}\left\vert \tilde{D}_{1}=\sum_{1\leq
+j\leq\infty}\beta_{j}\tilde{D}_{N1j};\sum_{1\leq j\leq\infty}\beta_{j}%
+=1,0\leq\beta_{j}\leq1,1\leq j\leq\infty\right.  \right\}  ,
+\end{equation}
+where $\tilde{D}_{N1j}\in\operatorname*{ext}\left\{  \tilde{S}_{N1}\right\}
+,1\leq j\leq\infty.$ As $\tilde{S}_{N1}\subset S_{1}$ one has the spectral
+decomposition
+\begin{equation}
+\tilde{S}_{N1}=\left\{  \tilde{D}_{1}\left\vert \tilde{D}_{1}=\sum_{1\leq
+j\leq\infty}\alpha_{j}\left\vert \psi_{j}\right\rangle \left\langle \psi
+_{j}\right\vert ;\sum_{1\leq j\leq\infty}\alpha_{j}=1,0\leq\alpha_{j}%
+\leq1,1\leq j\leq\infty\right.  \right\}  .
+\end{equation}
+
+
+In the case $P=2$
+\begin{align}
+&  \tilde{S}_{N2}=\left\{  \left.  \tilde{D}_{N2}\right\vert \tilde{D}%
+_{N2}=L_{N}^{2}\left(  D^{N}\right)  ,D^{N}\in S_{N}\right\} \nonumber\\
+&  =\left\{  \tilde{D}_{2N}\left\vert \tilde{D}_{2N}=\sum_{1\leq j\leq\infty
+}\alpha_{j}\left\vert \psi_{2j}\right\rangle \left\langle \psi_{2j}\right\vert
+;\sum_{1\leq j\leq\infty}\alpha_{j}=1,0\leq\alpha_{j}\leq1,\right.  \right.
+\nonumber\\
+&  \left.  1\leq j\leq\infty,\left\{  \left.  \left\vert \psi_{2j}%
+\right\rangle \right\vert 1\leq j\leq\infty\right\}  \text{ are conb's of
+}\mathcal{H}^{2}\right\} \nonumber\\
+&  =\left\{  \tilde{D}\left\vert \tilde{D}=\sum_{1\leq j\leq\infty}\beta
+_{j}\tilde{D}_{j};\sum_{1\leq j\leq\infty}\beta_{j}=1,0\leq\beta_{j}%
+\leq1,1\leq j\leq\infty\right.  \right\}
+\end{align}
+and
+\begin{equation}
+\tilde{S}_{N2}\subset S_{2}.
+\end{equation}
+If one knew the extreme points of $\tilde{S}_{N2}$ the problem would be solved.
+
+The preceding definitions produce the normalization
+\begin{align}
+&  \operatorname{Tr}\left\{  D_{N1}\right\}  =\sum_{1\leq j_{1}\leq\infty
+}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{1}}D^{N}\right\}  \text{
+}\left\langle \left.  \varphi_{j_{1}}\right\vert \varphi_{j_{1}}\right\rangle
+_{1}=\operatorname{Tr}\left\{  \mathcal{N}D^{N}\right\}  =N\nonumber\\
+&  \operatorname{Tr}\left\{  D_{N2}\right\}  =\sum_{1\leq j_{1}<j_{2}%
+\leq\infty}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger
+}a_{j_{2}}a_{j_{1}}D^{N}\right\}  \left\langle \left.  \varphi_{j_{1}}%
+\varphi_{j_{2}}\right\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle
+_{2}=\operatorname{Tr}\left\{  \mathcal{N}_{2}D^{N}\right\}  =\binom{N}%
+{2}\nonumber\\
+&  \qquad\qquad\qquad\quad\qquad\qquad\qquad\quad\vdots\nonumber\\
+&  \operatorname{Tr}\left\{  D_{NP}\right\}  =\sum_{1\leq j_{1}<\cdots
+<j_{P}\leq\infty}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots a_{j_{P}%
+}^{\dagger}a_{j_{P}}\cdots a_{j_{1}}D^{N}\right\}  \left\langle \left.
+\varphi_{j_{1}}\cdots\varphi_{j_{P}}\right\vert \varphi_{j_{1}}\cdots
+\varphi_{j_{P}}\right\rangle _{P}\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\quad\left.  =\right.  \operatorname{Tr}\left\{  \mathcal{N}_{P}%
+D^{N}\right\}  =\binom{N}{P}\nonumber\\
+&  \qquad\qquad\qquad\quad\qquad\qquad\qquad\quad\vdots
+\end{align}
+and
+\begin{equation}
+\operatorname{Tr}\left\{  \tilde{D}_{NP}\right\}  =1\,\forall N,P.
+\end{equation}
+
+
+In the coordinate representation
+\begin{equation}
+D^{p}\left(  \boldsymbol{\kappa}_{p};\boldsymbol{\kappa}_{p}^{\prime}\right)
+=\operatorname{Tr}\left\{  \Phi\left(  \boldsymbol{\kappa}_{p}^{\prime
+}\right)  ^{\dagger}\Phi\left(  \boldsymbol{\kappa}_{p}\right)  D\right\}
+=\int D^{p}\left(  \boldsymbol{\kappa}_{p};\boldsymbol{\kappa}_{p}^{\prime
+}\right)  \left\vert \boldsymbol{\kappa}_{p}\right\rangle \left\langle
+\boldsymbol{\kappa}_{p}^{\prime}\right\vert d\boldsymbol{\kappa}%
+_{p}d\boldsymbol{\kappa}_{p}^{\prime}, \label{DenMatDef}%
+\end{equation}
+where
+\begin{align}
+\boldsymbol{\kappa}_{p}  &  \equiv\boldsymbol{x}_{1},\cdots,\boldsymbol{x}%
+_{p},\\
+\boldsymbol{x}_{j}  &  \equiv\boldsymbol{r}_{j}\boldsymbol{,\xi}_{j};1\leq
+j\leq p.\nonumber
+\end{align}
+The operators $\Phi\left(  \boldsymbol{\kappa}_{p}\right)  ^{\dagger}$ are
+defined as the product of the one-electrons operators $\Phi\left(
+\boldsymbol{\kappa}_{1}\right)  ^{\dagger}$ i.e.%
+\begin{equation}
+\Phi\left(  \boldsymbol{\kappa}_{p}\right)  ^{\dagger}=\Phi\left(
+\boldsymbol{x}_{1}\right)  ^{\dagger}\cdots\Phi\left(  \boldsymbol{x}%
+_{p}\right)  ^{\dagger}.
+\end{equation}
+
+
+The adjoint maps, $\Gamma_{P}^{N},$ wrt to the scalar products (which are
+generaliztions of the Hilbert-Schmidt inner products ---the spaces
+$\mathcal{B}_{sa}\left(  \mathcal{H}^{N}\right)  \supseteq\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)  \supseteq\mathcal{B}_{1sa}\left(
+\mathcal{H}^{N}\right)  $ could be thought of as a Gelfand Triple.)
+\begin{align}
+\text{ }\left\langle \left.  \bullet\right\vert \bullet\right\rangle _{N}  &
+:\mathcal{B}_{sa}\left(  \mathcal{H}^{N}\right)  \times\mathcal{B}%
+_{1sa}\left(  \mathcal{H}^{N}\right)  \rightarrow\mathbb{R}\\
+\text{ }\left\langle \left.  \bullet\right\vert \bullet\right\rangle _{p}  &
+:\mathcal{B}_{sa}\left(  \mathcal{H}^{p}\right)  \times\mathcal{B}%
+_{1sa}\left(  \mathcal{H}^{p}\right)  \rightarrow\mathbb{R}%
+\end{align}
+are defined as
+\begin{equation}
+\left\langle \left.  \Gamma_{P}^{N}\left(  X\right)  \right\vert
+Y\right\rangle _{N}=\left\langle \left.  X\right\vert L_{N}^{P}\left(
+Y\right)  \right\rangle _{P}.
+\end{equation}
+The maps $\left\{  L_{N}^{P},\Gamma_{P}^{N}\right\}  $ can be naturally
+extended to $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+_{sae},\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{sa}$ and
+$\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  .$ $L_{N}^{P}$ is
+surjective, while $\Gamma_{P}^{N}$ is injective, thus in the infinite
+dimensional case $\Gamma_{P}^{N}\left(  \mathcal{B}_{sa}\left(  \mathcal{H}%
+^{P}\right)  \right)  $ is a proper subspace of $\mathcal{B}_{sa}\left(
+\mathcal{H}^{N}\right)  $ for $N>P,$while in the finite dimensional case for
+$P<\left[  \frac{N}{2}\right]  .$ Further as
+\begin{equation}
+\left\langle \left.  \Gamma_{P}^{N}\left(  X\right)  \right\vert
+Y\right\rangle _{N}=\left\langle \left.  X\right\vert L_{N}^{P}\left(
+Y\right)  \right\rangle _{P}=0,\,Y\in\ker\left\{  L_{N}^{P}\right\}
+\end{equation}
+one has
+\begin{equation}
+\operatorname*{ran}\left\{  \Gamma_{P}^{N}\right\}  \subset\mathcal{B}\left(
+\mathcal{H}^{N}\right)  \bot\ker\left\{  L_{N}^{P}\right\}  \subset
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  .
+\end{equation}
+Taking the closure in Hilbert-Schmidt norm one obtains
+\begin{equation}
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  =\overline{\ker\left\{
+L_{N}^{P}\right\}  }\oplus\ker\left\{  L_{N}^{P}\right\}  ^{\bot}.
+\end{equation}%
+\begin{equation}
+\ker\left\{  L_{N}^{P}\right\}  ^{\bot}=%
+%TCIMACRO{\dbigcup \limits_{P\leq P^{\prime}<N}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{P\leq P^{\prime}<N}}
+%EndExpansion
+\operatorname*{ran}\left\{  \Gamma_{P^{\prime}}^{N}\right\}
+\end{equation}
+
+
+We can define operators, $T_{NP},$ belonging to $\mathcal{B}_{1sa}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{e}$ that act in $\mathcal{H}_{\mathcal{F}%
+}$
+\begin{equation}
+\binom{N}{P}T_{NP}=\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq
+k_{1}<\cdots<k_{P}\leq\infty}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger
+}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}D^{N}\right\}  a_{j_{1}%
+}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}%
+\end{equation}
+and in particular both $\mathcal{H}^{P^{\prime}}$ and $\mathcal{H}^{N}$ by
+taking restrictions$.$ One can observe that
+\begin{equation}
+D_{NP^{\prime}}=L_{N}^{P^{\prime}}\left(  D^{N}\right)  =\left.
+T_{NP}\right\vert _{\mathcal{H}^{P^{\prime}}};0\leq P^{\prime}\leq P;0\leq
+P\leq N
+\end{equation}
+and prove that
+\begin{equation}
+\Gamma_{P}^{N}\left(  D_{NP}\right)  =\left.  T_{NP}\right\vert _{\mathcal{H}%
+^{N}}.
+\end{equation}
+
+
+$\lceil$%
+\begin{align}
+T_{NN}  &  =\sum_{\substack{1\leq j_{1}<\cdots<j_{N}\leq\infty\\1\leq
+k_{1}<\cdots<k_{N}\leq\infty}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger
+}\cdots a_{j_{N}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}D^{N}\right\}  a_{j_{1}%
+}^{\dagger}\cdots a_{j_{N}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}\nonumber\\
+\left.  T_{NN}\right\vert _{\mathcal{H}^{N}}  &  =D^{N}\nonumber\\
+D_{NP}  &  =\binom{N}{P}L_{N}^{P}\left(  D^{N}\right)  =\sum_{\substack{1\leq
+j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}<\cdots<k_{P}\leq\infty
+}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots a_{j_{P}}^{\dagger
+}a_{k_{P}}\cdots a_{k_{1}}D^{N}\right\}  \left\vert \varphi_{j_{1}}%
+\cdots\varphi_{j_{P}}\right\rangle \left\langle \varphi_{k_{1}}\cdots
+\varphi_{k_{P}}\right\vert \nonumber\\
+&  =\binom{N}{P}L_{N}^{P}\left(  \left.  T_{NN}\right\vert _{\mathcal{H}^{N}%
+}\right)  =L_{N}^{P}\left(  \Gamma_{N}^{N}\left(  D_{NN}\right)  \right)  \neq
+L_{N}^{P}\left(  \Gamma_{P}^{N}\left(  D_{NP}\right)  \right)  .\rfloor
+\end{align}
+
+
+\subsection{The Second Quantization Map $\Gamma.\label{SeCQuant}$}
+
+The restrictions of the field operators give
+\begin{align}
+\left.  a_{j_{1}}^{\dagger}\cdots a_{j_{N}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}%
+}\right\vert _{\mathcal{H}^{N}}  &  =\left\vert \varphi_{j_{1}}\cdots
+\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k_{1}}\cdots\varphi_{k_{N}%
+}\right\vert \\
+\left.  a_{j_{1}}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}%
+}\right\vert _{\mathcal{H}^{N}}  &  =\sum_{1\leq j_{P+1}<\cdots<j_{N}%
+\leq\infty}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{P}}\varphi_{j_{P+1}%
+}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k_{1}}\cdots
+\varphi_{k_{P}}\varphi_{j_{P+1}}\cdots\varphi_{j_{N}}\right\vert ,
+\end{align}
+
+
+The two decompositions of the even Fock algbra%
+\begin{equation}
+\mathcal{F}_{e}=\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}=%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eN}\cong%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N}\right)
+\end{equation}
+can be further refined to give
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  \cong\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{eN},
+\end{equation}
+this isomorphism is a vector space one but not an algebraic one i.e.%
+\begin{equation}
+\Gamma:\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}X_{Pj_{1}\cdots j_{P}k_{1}\cdots k_{P}}\left\vert
+\varphi_{j_{1}}\cdots\varphi_{j_{P}}\right\rangle \left\langle \varphi_{k_{1}%
+}\cdots\varphi_{k_{P}}\right\vert \longrightarrow\sum_{\substack{1\leq
+j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}<\cdots<k_{P}\leq\infty}%
+}X_{Pj_{1}\cdots j_{P}k_{1}\cdots k_{P}}a_{j_{1}}^{\dagger}\cdots a_{j_{P}%
+}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}%
+\end{equation}
+but
+\begin{equation}
+\Gamma(XY)\neq\Gamma(X)\Gamma(Y).
+\end{equation}
+
+
+Consider the special case $X_{P}=P_{\mathcal{H}^{P}}$ then
+\begin{align}
+\Gamma\left(  P_{\mathcal{H}^{P}}\right)   &  =\Gamma\left(  \sum_{1\leq
+j_{1}<\cdots<j_{P}\leq\infty}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{P}%
+}\right\rangle \left\langle \varphi_{j_{1}}\cdots\varphi_{j_{P}}\right\vert
+\right) \nonumber\\
+&  =\sum_{1\leq j_{1}<\cdots<j_{P}\leq\infty}a_{j_{1}}^{\dagger}\cdots
+a_{j_{P}}^{\dagger}a_{j_{P}}\cdots a_{j_{1}}=\mathcal{N}_{P},
+\end{align}%
+\begin{equation}
+\frac{\left\langle \Psi_{N}\left.  \mathcal{N}_{P}\right\vert \Psi
+_{N}\right\rangle }{\left\langle \left.  \Psi_{N}\right\vert \Psi
+_{N}\right\rangle }=\binom{N}{P},
+\end{equation}%
+\begin{equation}
+\Gamma_{P}^{N}\left(  P_{\mathcal{H}^{P}}\right)  =\binom{N}{P}^{-1}\left.
+\Gamma\left(  P_{\mathcal{H}^{P}}\right)  \right\vert _{\mathcal{H}^{N}}%
+\end{equation}
+and
+\begin{equation}
+P_{\mathcal{H}^{N}}=\Gamma_{P}^{N}\left(  P_{\mathcal{H}^{P}}\right)  .
+\end{equation}
+
+
+As one can expand the second quantized operators in terms of ket-bra's one
+obtains
+\begin{equation}
+\Gamma\left(  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert \right)  =a_{j}^{\dagger}a_{k}=\left\vert \varphi
+_{j}\right\rangle \left\langle \varphi_{k}\right\vert +\sum_{1\leq N\leq
+\infty}\sum_{1\leq j_{2}<\cdots<j_{N}\leq\infty}\left\vert \varphi_{j}%
+\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi
+_{k}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert .
+\end{equation}
+
+
+Each element of $%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ (which is a direct sum of
+algebras) can be represented as $\left(
+\begin{array}
+[c]{c}%
+X_{0}\\
+\vdots\\
+X_{\infty}%
+\end{array}
+\right)  _{FQ}$ (with only finitely many non zero elements), $X_{N}%
+\in\mathcal{B}\left(  \mathcal{H}^{N}\right)  $. The direct sum $%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eN}$ is only a vector
+space direct sum and not a direct sum of algebras but we can still represent
+each element as $\left(
+\begin{array}
+[c]{c}%
+Y_{0}\\
+\vdots\\
+Y_{\infty}%
+\end{array}
+\right)  _{SQ},$ $Y_{N}\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+_{eN}$. Using the direct sum representations we obtain
+\begin{equation}
+\Gamma\left(  \left(
+\begin{array}
+[c]{c}%
+X_{0}\\
+\vdots\\
+X_{\infty}%
+\end{array}
+\right)  _{FQ}\right)  =\left(
+\begin{array}
+[c]{c}%
+\Gamma\left(  X_{0}\right) \\
+\vdots\\
+\Gamma\left(  X_{\infty}\right)
+\end{array}
+\right)  _{SQ}=\left(
+\begin{array}
+[c]{c}%
+Y_{0}\\
+\vdots\\
+Y_{\infty}%
+\end{array}
+\right)  _{SQ}%
+\end{equation}
+and%
+\begin{equation}
+\Gamma(X_{P})=\sum_{P\leq N\leq\infty}\left.  \Gamma\left(  X_{P}\right)
+\right\vert _{\mathcal{H}^{N}}=\sum_{P\leq N\leq\infty}\binom{N}{P}\Gamma
+_{P}^{N}\left(  X_{P}\right)  .
+\end{equation}
+We can reexpress $\Gamma(X_{P})$ wrt the decomposition $%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ as
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+0\\
+\vdots\\
+X_{P}\\
+\vdots\\
+\binom{N}{P}\Gamma_{P}^{N}\left(  X_{P}\right) \\
+\vdots
+\end{array}
+\right)  _{FQ}%
+\end{equation}
+leading to $\Gamma(\sum\limits_{0\leq P\leq N}X_{P})=\sum\limits_{0\leq P\leq
+N}\Gamma(X_{P})$ being given by
+\begin{equation}
+\Gamma\left(  \left(
+\begin{array}
+[c]{c}%
+X_{0}\\
+\vdots\\
+X_{N}\\
+\vdots\\
+X_{\infty}%
+\end{array}
+\right)  _{FQ}\right)  =\left(
+\begin{array}
+[c]{c}%
+\vdots\\
+\sum\limits_{0\leq P\leq N}\binom{N}{P}\Gamma_{P}^{N}\left(  X_{P}\right) \\
+\vdots
+\end{array}
+\right)  _{FQ}.
+\end{equation}
+
+
+\begin{theorem}
+$X_{P}\geq0$ $\Rightarrow\left.  \Gamma\left(  X_{P}\right)  \right\vert
+_{\mathcal{H}^{N}}\geq0,$ $N>P$
+
+\begin{proof}%
+\begin{align}
+\left\langle \Psi_{N}\left\vert \left.  \Gamma\left(  X_{P}\right)
+\right\vert _{\mathcal{H}^{N}}\right.  \Psi_{N}\right\rangle  &  =\left\langle
+\Psi_{N}\left\vert \sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq
+k_{1}<\cdots<k_{P}\leq\infty}}X_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}a_{j_{1}%
+}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}\right.
+\Psi_{N}\right\rangle \nonumber\\
+=  &  \sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}X_{Pj_{1}\cdots j_{P}k_{1}\cdots k_{P}}\left\langle
+\Psi_{N}a_{j_{1}}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}%
+}\Psi_{N}\right\rangle \nonumber\\
+=\binom{N}{P}  &  \sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq
+k_{1}<\cdots<k_{P}\leq\infty}}X_{Pj_{1}\cdots j_{P}k_{1}\cdots k_{P}}L_{N}%
+^{P}\left(  \left\vert \Psi_{N}\right\rangle \left\langle \Psi_{N}\right\vert
+\right)  _{k_{1}\cdots k_{P}j_{1}\cdots j_{P}}\nonumber\\
+&  \Rightarrow\operatorname{Tr}\left\{  X_{P}L_{N}^{P}\left(  \left\vert
+\Psi_{N}\right\rangle \left\langle \Psi_{N}\right\vert \right)  \right\}
+\geq0
+\end{align}
+as $X_{P}\geq0.$
+\end{proof}
+\end{theorem}
+
+\section{The Kummer Cone}
+
+Cones are defined by
+\begin{equation}
+C=\left\{  \left.  X\right\vert \alpha X\in X\right\}
+\end{equation}
+they do not have be convex sets nor linear spaces, if they are they are convex
+cones or linear cones.
+
+Let $X_{P}\in\mathcal{B}_{sa}\left(  \mathcal{H}^{P}\right)  $ such
+$\sigma\left(  X_{P}\right)  \cap\left(  -\infty,0\right)  \neq\phi$ then
+\begin{align}
+\inf_{\Phi_{P}\in\mathcal{H}^{P}}\left\{  \frac{\left\langle \left.  \Phi
+_{P}\right\vert X_{P}\Phi_{P}\right\rangle }{\left\langle \left.  \Phi
+_{P}\right\vert \Phi_{P}\right\rangle }\right\}   &  =\inf_{D^{P}\in
+S_{P}\subset\mathcal{B}_{1sa+}\left(  \mathcal{H}^{P}\right)  }\left\{
+\operatorname*{Tr}\left\{  X_{P}D^{P}\right\}  \right\} \nonumber\\
+&  =\inf_{D^{P}\in S_{P}\subset\mathcal{B}_{1sa+}\left(  \mathcal{H}%
+^{P}\right)  }\left\{  \left\langle \left.  X_{P}\right\vert D^{P}%
+\right\rangle _{P}\right\}  =\alpha\left(  X_{P}\right)  <0
+\end{align}
+($\alpha\left(  X_{P}\right)  $ is the lowest eigenvalue or generalized
+eigenvalue of $X_{P}$) then by shifting one obtains the positive operator
+\begin{equation}
+X_{P}-\alpha\left(  X_{P}\right)  P_{P}\geq0\Leftrightarrow X_{P}\geq
+\alpha\left(  X_{P}\right)  P_{P},
+\end{equation}
+which expands to a positive $N$-particle operator%
+\begin{equation}
+\Gamma_{P}^{N}\left(  X_{P}-\alpha\left(  X_{P}\right)  P_{P}\right)
+=\Gamma_{P}^{N}\left(  X_{P}\right)  -\alpha\left(  X_{P}\right)  \Gamma
+_{P}^{N}\left(  P_{P}\right)  =\Gamma_{P}^{N}\left(  X_{P}\right)
+-\alpha\left(  X_{P}\right)  P_{N}\geq0.
+\end{equation}
+Consider the expansion of the unshifted operator (which by hypothesis is not
+positive) then
+\begin{equation}
+\inf_{\Phi_{N}\in\mathcal{H}^{N}}\left\{  \frac{\left\langle \left.  \Phi
+_{N}\right\vert \Gamma_{P}^{N}\left(  X_{P}\right)  \Phi_{N}\right\rangle
+}{\left\langle \left.  \Phi_{N}\right\vert \Phi_{N}\right\rangle }\right\}
+=\alpha\left(  \Gamma_{P}^{N}\left(  X_{P}\right)  \right)  \geq\alpha\left(
+X_{P}\right)  ,
+\end{equation}
+as%
+\begin{align}
+\alpha\left(  \Gamma_{P}^{N}\left(  X_{P}\right)  \right)   &  =\inf_{\Phi
+_{N}\in\mathcal{H}^{N}}\left\{  \frac{\left\langle \left.  \Phi_{N}\right\vert
+\Gamma_{P}^{N}\left(  X_{P}\right)  \Phi_{N}\right\rangle }{\left\langle
+\left.  \Phi_{N}\right\vert \Phi_{N}\right\rangle }\right\}  =\inf_{D^{N}\in
+S_{N}}\left\{  \left\langle \left.  \Gamma_{P}^{N}\left(  X_{P}\right)
+\right\vert D^{N}\right\rangle _{N}\right\} \nonumber\\
+&  =\inf_{D^{N}\in S_{N}}\left\{  \left\langle \left.  X_{P}\right\vert
+L_{N}^{P}\left(  D^{N}\right)  \right\rangle _{P}\right\}  =\inf_{D_{NP}%
+\in\tilde{S}_{NP}}\left\{  \left\langle \left.  X_{P}\right\vert
+D_{NP}\right\rangle _{P}\right\}  \geq\alpha\left(  X_{P}\right)
+\end{align}
+due to $\tilde{S}_{NP}=L_{N}^{P}\left(  S_{N}\right)  \subset S_{P}$. Thus the
+expanded operator is less negative and by shifting
+\begin{equation}
+\Gamma_{P}^{N}\left(  X_{P}\right)  -\alpha\left(  \Gamma_{P}^{N}\left(
+X_{P}\right)  \right)  P_{N}\geq0.
+\end{equation}
+Hence
+\begin{equation}
+\alpha\left(  X_{P}\right)  -\alpha\left(  \Gamma_{P}^{N}\left(  X_{P}\right)
+\right)  =\inf_{\Phi_{P}\in\mathcal{H}^{P}}\left\{  \frac{\left\langle \left.
+\Phi_{P}\right\vert \left\{  X_{P}-\alpha\left(  \Gamma_{P}^{N}\left(
+X_{P}\right)  P_{P}\right)  \right\}  \Phi_{P}\right\rangle }{\left\langle
+\left.  \Phi_{P}\right\vert \Phi_{P}\right\rangle }\right\}  \leq0
+\end{equation}
+i.e.%
+\begin{equation}
+X_{P}-\alpha\left(  \Gamma_{P}^{N}\left(  X_{P}\right)  \right)  P_{P}\ngeq0.
+\end{equation}
+
+
+\begin{theorem}
+$\exists Y_{P}=\left.  \Gamma\left(  Y_{P}\right)  \right\vert _{\mathcal{H}%
+^{P}}\ngeq0$ $\ni\Gamma_{P}^{N}\left(  Y_{P}\right)  =\binom{N}{P}^{-1}\left.
+\Gamma\left(  Y_{P}\right)  \right\vert _{\mathcal{H}^{N}}\geq0,$ $N>P$
+
+\begin{proof}
+For $P=1$ let
+\begin{equation}
+X_{1}=-\left\vert \psi\right\rangle \left\langle \psi\right\vert
+\end{equation}
+then
+\begin{equation}
+\inf_{\varphi\in\mathcal{H}^{1}}\left\{  \frac{\left\langle \left.
+\varphi\right\vert X_{1}\varphi\right\rangle }{\left\langle \left.
+\varphi\right\vert \varphi\right\rangle }\right\}  =\alpha\left(
+X_{1}\right)  =-1<0
+\end{equation}
+and
+\begin{align}
+&  \inf_{\Phi_{N}\in\mathcal{H}^{N}}\left\{  \frac{\left\langle \left.
+\Phi_{N}\right\vert \Gamma_{1}^{N}\left(  X_{1}\right)  \Phi_{N}\right\rangle
+}{\left\langle \left.  \Phi_{N}\right\vert \Phi_{N}\right\rangle }\right\}
+=\inf_{\Phi_{N}\in\mathcal{H}^{N}}\operatorname{Tr}\left\{  \Gamma_{1}%
+^{N}\left(  X_{1}\right)  \frac{\left\vert \Phi_{N}\right\rangle \left\langle
+\Phi_{N}\right\vert }{\left\langle \left.  \Phi_{N}\right\vert \Phi
+_{N}\right\rangle }\right\} \nonumber\\
+&  =\inf_{\Phi_{N}\in\mathcal{H}^{N}}\operatorname{Tr}\left\{  X_{1}L_{N}%
+^{1}\left(  \frac{\left\vert \Phi_{N}\right\rangle \left\langle \Phi
+_{N}\right\vert }{\left\langle \left.  \Phi_{N}\right\vert \Phi_{N}%
+\right\rangle }\right)  \right\}  =\inf_{\Phi_{N}\in\mathcal{H}^{N}%
+}\operatorname{Tr}\left\{  \left(  -\left\vert \psi\right\rangle \left\langle
+\psi\right\vert \right)  L_{N}^{1}\left(  \frac{\left\vert \Phi_{N}%
+\right\rangle \left\langle \Phi_{N}\right\vert }{\left\langle \left.  \Phi
+_{N}\right\vert \Phi_{N}\right\rangle }\right)  \right\} \nonumber\\
+&  =-\frac{1}{N}=\alpha\left(  \Gamma_{1}^{N}\left(  X_{1}\right)  \right)
+>\alpha\left(  X_{1}\right)  .
+\end{align}
+Thus
+\begin{align}
+&  \inf_{\varphi\in\mathcal{H}^{1}}\left\{  \frac{\left\langle \left.
+\varphi\right\vert \left\{  X_{1}-\alpha\left(  \Gamma_{1}^{N}\left(
+X_{1}\right)  \right)  \right\}  \varphi\right\rangle }{\left\langle \left.
+\varphi\right\vert \varphi\right\rangle }\right\}  =\alpha\left(
+X_{1}\right)  -\alpha\left(  \Gamma_{1}^{N}\left(  X_{1}\right)  \right) \\
+&  =-1+\frac{1}{N}=\frac{1-N}{N}<0
+\end{align}
+and trivally
+\begin{align}
+&  \inf_{\Phi\in\mathcal{H}^{N}}\left\{  \frac{\left\langle \left.
+\Phi\right\vert \Gamma_{1}^{N}\left(  X_{1}-\alpha\left(  \Gamma_{1}%
+^{N}\left(  X_{1}\right)  P_{1}\right)  \right)  \Phi\right\rangle
+}{\left\langle \left.  \Phi\right\vert \Phi\right\rangle }\right\}  =\\
+&  \alpha\left(  \Gamma_{1}^{N}\left(  X_{1}\right)  \right)  -\alpha\left(
+\Gamma_{1}^{N}\left(  X_{1}\right)  \right)  =0\\
+&  \Leftrightarrow\Gamma_{1}^{N}\left(  X_{1}-\alpha\left(  \Gamma_{1}%
+^{N}\left(  X_{1}\right)  \right)  \right)  \geq0.
+\end{align}
+The above is based on the fact for states $D^{N}\in S_{N}$ one has
+\begin{align}
+&  \sup_{\varphi_{1}\in\mathcal{H}^{1}}\left\{  \frac{\left\langle \left.
+\varphi_{1}\right\vert L_{N}^{1}\left(  D^{N}\right)  \varphi_{1}\right\rangle
+}{\left\langle \left.  \varphi_{1}\right\vert \varphi_{1}\right\rangle
+}\right\}  =\sup_{\varphi_{1}\in\mathcal{H}^{1}}\left\{  \operatorname{Tr}%
+\left\{  \Gamma_{1}^{N}\left(  \frac{\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{1}\right\vert }{\left\langle \left.  \varphi
+_{1}\right\vert \varphi_{1}\right\rangle }\right)  D^{N}\right\}  \right\} \\
+&  \left.  =\right.  \sup_{\varphi_{1}\in\mathcal{H}^{1}}\left\{
+\operatorname{Tr}\left\{  \binom{N}{1}^{-1}\Gamma\left(  \frac{\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert }{\left\langle
+\left.  \varphi_{1}\right\vert \varphi_{1}\right\rangle }\right)
+D^{N}\right\}  \right\} \\
+&  \left.  =\right.  \sup_{\substack{\varphi_{1}\in\mathcal{H}^{1}\\\left\Vert
+\varphi_{1}\right\Vert =1}}\left\{  \operatorname{Tr}\left\{  \frac{1}{N}%
+\Phi\left(  \varphi_{1}\right)  ^{\dagger}\Phi\left(  \varphi_{1}\right)
+D^{N}\right\}  \right\}  =\beta\left(  L_{N}^{1}\left(  D^{N}\right)  \right)
+=\frac{1}{N},
+\end{align}
+which is based on the fact that $\Phi\left(  \varphi_{1}\right)  $ is a
+partial isometry ($\Phi\left(  \varphi_{1}\right)  ^{\dagger}\Phi\left(
+\varphi_{1}\right)  $ and $\Phi\left(  \varphi_{1}\right)  \Phi\left(
+\varphi_{1}\right)  ^{\dagger}$ are idempotent projections) and
+\begin{equation}
+\left\Vert \Phi\left(  \varphi_{1}\right)  \right\Vert =\left\Vert \Phi\left(
+\varphi_{1}\right)  ^{\dagger}\right\Vert =1.
+\end{equation}
+The corresponding 2-particle operators $\Phi\left(  \varphi_{a}\right)
+^{\dagger}\Phi\left(  \varphi_{b}\right)  ^{\dagger}\Phi\left(  \varphi
+_{b}\right)  \Phi\left(  \varphi_{a}\right)  =$ $\Phi\left(  \varphi
+_{a}\right)  ^{\dagger}\Phi\left(  \varphi_{a}\right)  \Phi\left(  \varphi
+_{b}\right)  ^{\dagger}\Phi\left(  \varphi_{b}\right)  $ are also idempotent
+and thus projectors hence
+\begin{equation}
+\left\Vert \Phi\left(  \varphi_{b}\right)  \Phi\left(  \varphi_{a}\right)
+\right\Vert =\left\Vert \Phi\left(  \varphi_{a}\right)  ^{\dagger}\Phi\left(
+\varphi_{b}\right)  ^{\dagger}\right\Vert =1
+\end{equation}
+and
+\begin{align}
+&  \sup_{\varphi_{a}\varphi_{b},\in\mathcal{H}^{1}}\left\{  \frac{\left\langle
+\left.  \varphi_{b}\varphi_{a}\right\vert L_{N}^{2}\left(  D^{N}\right)
+\varphi_{b}\varphi_{a}\right\rangle }{\left\langle \left.  \varphi_{b}%
+\varphi_{a}\right\vert \varphi_{b}\varphi_{a}\right\rangle }\right\} \\
+&  \left.  =\right.  \sup_{\varphi_{a}\varphi_{b},\in\mathcal{H}^{1}}\left\{
+\operatorname{Tr}\left\{  \binom{N}{2}^{-1}\Gamma\left(  \frac{\left\vert
+\varphi_{b}\varphi_{a}\right\rangle \left\langle \varphi_{b}\varphi
+_{a}\right\vert }{\left\langle \left.  \varphi_{b}\varphi_{a}\right\vert
+\varphi_{b}\varphi_{a}\right\rangle }\right)  D^{N}\right\}  \right\} \\
+&  \left.  =\right.  \sup_{\substack{\varphi_{a},\varphi_{b}\in\mathcal{H}%
+^{1}\\\left\Vert \varphi_{a}\right\Vert =\left\Vert \varphi_{b}\right\Vert
+=1}}\left\{  \operatorname{Tr}\left\{  \frac{2}{N\left(  N+1\right)  }%
+\Phi\left(  \varphi_{a}\right)  ^{\dagger}\Phi\left(  \varphi_{b}\right)
+^{\dagger}\Phi\left(  \varphi_{b}\right)  \Phi\left(  \varphi_{a}\right)
+D^{N}\right\}  \right\}  =\frac{2}{N\left(  N+1\right)  },
+\end{align}
+however $\left\vert \varphi_{b}\varphi_{a}\right\rangle $ are the set of
+decomposable unit vectors in $\mathcal{H}^{2}$ which is a subset of all unit
+vectors. This set is given by
+\begin{align}
+&  \left\vert g\right\rangle =\sum_{1\leq j<k\leq\infty}g_{jk}\left\vert
+\varphi_{j}\varphi_{k}\right\rangle \\
+&  \sum_{1\leq j<k\leq\infty}\left\vert g_{jk}\right\vert ^{2}=1.
+\end{align}
+Consider
+\begin{align}
+&  \sum_{_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq k_{1}<k_{2}\leq r}%
+}}\overline{g}_{j_{1}j_{2}}g_{k_{1}k_{2}}\left\langle \left.  \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\vert L_{N}^{2}\left(  D^{N}\right)  \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\rangle =\sum_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq
+k_{1}<k_{2}\leq r}}\overline{g}_{j_{1}j_{2}}g_{k_{1}k_{2}}\operatorname{Tr}%
+\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}D^{N}\right\}
+\\
+&  =\sum_{_{\substack{1\leq j_{1}\leq s\\1\leq k_{1}\leq s}}}c_{j_{1}j_{1}%
++s}c_{k_{1}k_{1}+s}\operatorname{Tr}\left\{  b_{j_{1}}^{\dagger}b_{j_{1}%
++s}^{\dagger}b_{k_{1}+s}b_{k_{1}}D^{N}\right\}
+\end{align}
+and an extreme geminal
+\begin{align}
+&  =\frac{1}{s^{2}}\sum_{_{\substack{1\leq j_{1}\leq s\\1\leq k_{1}\leq s}%
+}}\operatorname{Tr}\left\{  b_{j_{1}}^{\dagger}b_{j_{1}+s}^{\dagger}%
+b_{k_{1}+s}b_{k_{1}}D^{N}\right\} \\
+&  =\frac{1}{s^{2}}\sum_{_{\substack{1\leq j_{1}\leq s\\1\leq k_{1}\leq s}%
+}}\operatorname{Tr}\left\{  b_{j_{1}}^{\dagger}b_{j_{1}+s}^{\dagger}%
+b_{j_{1}+s}b_{j_{1}}D^{N}\right\}  +\frac{2}{s^{2}}\sum_{_{1\leq j_{1}%
+<k_{1}\leq s}}\operatorname{Re}\left\{  \operatorname{Tr}\left\{  b_{j_{1}%
+}^{\dagger}b_{j_{1}+s}^{\dagger}b_{k_{1}+s}b_{k_{1}}D^{N}\right\}  \right\} \\
+&  =\frac{1}{s^{2}}\binom{N}{2}+\frac{2}{s^{2}}\sum_{_{1\leq j_{1}<k_{1}\leq
+s}}\operatorname{Re}\left\{  \operatorname{Tr}\left\{  b_{j_{1}}^{\dagger
+}b_{j_{1}+s}^{\dagger}b_{k_{1}+s}b_{k_{1}}D^{N}\right\}  \right\}  .
+\end{align}
+If the extreme geminal was an eigenvector of $L_{N}^{2}\left(  D^{N}\right)  $
+then
+\begin{align}
+\operatorname{Tr}\left\{  b_{j_{1}}^{\dagger}b_{j_{1}+s}^{\dagger}b_{k_{1}%
++s}b_{k_{1}}D^{N}\right\}   &  =0;\text{ }j_{1}\neq k_{1}\\
+&  \Rightarrow\sum_{_{1\leq j_{1}<k_{1}\leq s}}\operatorname{Re}\left\{
+\operatorname{Tr}\left\{  b_{j_{1}}^{\dagger}b_{j_{1}+s}^{\dagger}b_{k_{1}%
++s}b_{k_{1}}D^{N}\right\}  \right\}  =0
+\end{align}
+and
+\begin{equation}
+\left\langle \left.  g\right\vert L_{N}^{2}\left(  D^{N}\right)
+g\right\rangle =\frac{1}{s^{2}}\sum_{_{\substack{1\leq j_{1}<j_{2}\leq
+r\\1\leq k_{1}<k_{2}\leq r}}}\left\langle \left.  \varphi_{j_{1}}%
+\varphi_{j_{2}}\right\vert L_{N}^{2}\left(  D^{N}\right)  \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\rangle =\frac{1}{s^{2}}\binom{N}{2}.
+\end{equation}
+
+\end{proof}
+\end{theorem}
+
+The Kummer cone $\mathcal{K}_{NP}$ is defined as
+\begin{equation}
+\mathcal{K}_{NP}=\left\{  \left.  X_{P}\right\vert X_{P}\in\mathcal{B}%
+_{sa}\left(  \mathcal{H}^{P}\right)  ,\Gamma_{P}^{N}\left(  X_{P}\right)
+\geq0\right\}
+\end{equation}
+it is \emph{crucial to observe} that
+\begin{equation}
+\mathcal{K}_{NP}\supset\mathcal{B}_{sa+}\left(  \mathcal{H}^{P}\right)  \text{
+and }\Gamma_{P}^{N}\left(  \mathcal{K}_{NP}\right)  \subset\mathcal{B}%
+_{sa+}\left(  \mathcal{H}^{N}\right)
+\end{equation}
+
+
+\begin{theorem}
+(Garrod \& Percus)
+\end{theorem}
+
+$D_{P}\in\tilde{S}_{NP}$ $\Longleftrightarrow\left\{  \left\langle \left.
+X_{P}\right\vert D_{P}\right\rangle _{P}\geq0\,\,\forall\,\Gamma_{P}%
+^{N}\left(  X_{P}\right)  \geq0\right\}  \equiv\left\langle \left.
+X_{P}\right\vert D_{P}\right\rangle _{P}\geq0\,\forall X_{P}\in\mathcal{K}%
+_{NP}.$
+
+\begin{corollary}
+\begin{theorem}
+If $D_{P}\notin\tilde{S}_{NP},$ but $D_{P}\in S_{P}$ then $\exists\,X_{P}%
+\in\mathcal{K}_{NP}\supset\mathcal{B}_{sa+}\left(  \mathcal{H}^{P}\right)
+\ni$
+\begin{equation}
+\left\langle \left.  X_{P}\right\vert D_{P}\right\rangle _{P}=\left\langle
+\left.  X_{P}\right\vert L_{N}^{P}\left(  D_{N}\right)  \right\rangle
+_{P}=\left\langle \left.  \Gamma_{P}^{N}\left(  X_{P}\right)  \right\vert
+D_{N}\right\rangle _{N}<0.
+\end{equation}
+
+\end{theorem}
+\end{corollary}
+
+\section{States}
+
+A state is positive normalized linear function acting on $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ it is called normal if it can be
+identified with an element of the predual $\mathcal{B}_{1}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ and abnormal otherwise i.e. if it belongs
+to $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  ^{\ast}%
+\ominus\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  .$ If we focus
+on expectation values of self adjoint observables one can restrict attention
+to
+\begin{subequations}
+\label{States}%
+\begin{align}
+f  &  :\mathcal{B}_{sa}\left(  \mathcal{H}_{F}\right)  \rightarrow\mathbb{R}\\
+f\left(  X\right)   &  \geq0\forall X\geq0\\
+f\left(  I\right)   &  =1\\
+f\left(  X\right)   &  =\operatorname{Tr}\left\{  XD\right\}  ;\text{ }D\in
+S\subset\mathcal{B}_{1+}\left(  \mathcal{H}_{\mathcal{F}}\right)  \text{ if
+}f\text{ is normal,}%
+\end{align}
+where
+\end{subequations}
+\begin{equation}
+S=\left\{  \left.  D\right\vert D\in\mathcal{B}_{1+}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  ;\operatorname{Tr}\left\{  D\right\}  =1\right\}
+\end{equation}
+One can consider $\mathcal{B}_{2sa}\left(  \mathcal{H}_{F}\right)  $ as a real
+Hilbert space with inner product $\left(  \left.  \bullet\right\vert
+\bullet\right)  $ defined as
+\begin{equation}
+\left(  \left.  X\right\vert Y\right)  =\operatorname{Tr}\left\{  XY\right\}
+.
+\end{equation}
+As any positive element of $\mathcal{B}_{1sa}\left(  \mathcal{H}_{F}\right)  $
+can be expressed as the square of elements of $\mathcal{B}_{1sa}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ i.e.%
+\begin{equation}
+D=Q^{2}%
+\end{equation}
+the set of states $S$ can be described as
+\begin{equation}
+S=\left\{  \left.  Q\right\vert \left(  \left.  Q\right\vert Q\right)
+=1;Q\in\mathcal{B}_{2sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right\}  .
+\end{equation}
+One should note that the correspondence between $Q$ and $D$ is not $1-1$ as
+$D$ has many square roots i.e.
+\begin{equation}
+Q=\sum\left(  \pm\alpha_{j}\right)  \left\vert \Phi_{j}\right\rangle
+\left\langle \Phi_{j}\right\vert ,
+\end{equation}
+where
+\begin{equation}
+D=\sum\alpha_{j}^{2}\left\vert \Phi_{j}\right\rangle \left\langle \Phi
+_{j}\right\vert .
+\end{equation}
+
+
+\section{Partial States}
+
+A partial state is a postive linear functional defined on a subspace
+$\mathcal{W}$ of $\mathcal{B}_{sa}\left(  \mathcal{H}_{F}\right)  $ that
+contains the identity $I$ and satisfies eq. $\left(  \ref{States}\right)  $
+for elements of the subspace. If the subspace does not contain the identity
+then the functional can be extended to a subspace that does if
+\begin{equation}
+\sup_{\substack{0\leq X\leq I\\X\in\mathcal{W}}}f\left(  X\right)  \leq1
+\end{equation}
+and%
+\begin{equation}
+\inf_{\substack{X\geq I\\X\in\mathcal{W}}}f\left(  X\right)  \geq1.
+\end{equation}
+
+
+\subsection{Positive Operators contained within the Unit Ball $\mathfrak{B}%
+_{1}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right)  $}
+
+The condition $0$ $\leq X\leq I,$ $X\in\mathcal{B}_{+}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  $ can be expressed as
+\begin{equation}
+0\leq\left\langle \left.  \Phi\right\vert X\Phi\right\rangle \leq\left\langle
+\left.  \Phi\right\vert \Phi\right\rangle \text{ }\forall\Phi\in
+\mathcal{H}_{\mathcal{F}}%
+\end{equation}
+which is equivalent to
+\begin{equation}
+\sup_{\Phi}\left\{  \frac{\left\langle \left.  \Phi\right\vert X\Phi
+\right\rangle }{\left\langle \left.  \Phi\right\vert \Phi\right\rangle
+}\right\}  \leq1\Leftrightarrow\left\Vert X\right\Vert \leq1;X\geq0
+\end{equation}
+and $X\geq I$ is equivalent to
+\begin{equation}
+\inf_{\Phi}\left\{  \frac{\left\langle \left.  \Phi\right\vert X\Phi
+\right\rangle }{\left\langle \left.  \Phi\right\vert \Phi\right\rangle
+}\right\}  \geq1\Leftrightarrow\left\Vert X\right\Vert \geq1;X\geq0.
+\end{equation}
+The extreme points of the unit ball are the unit hypersphere
+\begin{equation}
+\mathfrak{S}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\right)  =\operatorname*{ext}\left\{  \mathfrak{B}_{1}\left(  \mathcal{B}%
+\left(  \mathcal{H}_{\mathcal{F}}\right)  \right)  \right\}  =\left\{
+X\left\vert \left\Vert X\right\Vert =1,X\in\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  \right.  \right\}  ,
+\end{equation}
+and the positive hyperant
+\begin{equation}
+\mathfrak{S}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\right)  _{+}=\mathfrak{S}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  \right)  \cap\mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  .
+\end{equation}
+The positive hyperant of the unit ball can be decomposed into the convex sets
+$\left\{  \left.  \Lambda_{P}\right\vert 0\leq P\leq\infty\right\}  $ defined by
+
+It is obvious that
+\begin{equation}
+\lambda\leq I,\lambda\in\Lambda_{P},1\leq P\leq\infty.
+\end{equation}
+The identity operator $I\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  $ can be expressed as a sum of orthogonal projectors onto the
+subspaces $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ as%
+\begin{equation}
+I=\sum_{0\leq N\leq\infty}P_{N}%
+\end{equation}
+thus
+\begin{equation}
+I>P_{N},\,0\leq N\leq\infty.
+\end{equation}
+The projectors $\left\{  \left.  P_{N}\right\vert 0\leq N\leq\infty\right\}  $
+act as the identity elements $\left\{  \left.  I_{N}\right\vert 0\leq
+N\leq\infty\right\}  $ on the spaces $\left\{  \left.  \mathcal{H}%
+^{N}\right\vert 0\leq N\leq\infty\right\}  $ i.e.%
+\begin{equation}
+I_{N}=\left.  I\right\vert _{\mathcal{H}^{N}}=P_{N}.
+\end{equation}
+One can observe that
+\begin{equation}
+P_{N}=\left.  \binom{N}{P}^{-1}\mathcal{N}_{P}\right\vert _{\mathcal{H}^{N}%
+};0\leq P\leq N
+\end{equation}
+so in particular
+\begin{equation}
+I=\sum_{0\leq N\leq\infty}\left.  N^{-1}\mathcal{N}_{1}\right\vert
+_{\mathcal{H}^{N}}.
+\end{equation}
+
+
+If $D\in S_{P}$ $\subset\mathcal{B}_{1sa}\left(  \mathcal{H}^{P}\right)  $
+then
+\begin{align}
+0  &  \leq\left\langle \left.  \Phi\right\vert D\Phi\right\rangle
+\leq\left\langle \left.  \Phi\right\vert \Phi\right\rangle \text{ }\forall
+\Phi\in\mathcal{H}^{P}\\
+\operatorname{Tr}\left\{  D\right\}   &  =1\\
+\left\langle \left.  \Phi\right\vert D\Phi\right\rangle  &  =0\text{ }%
+\forall\Phi\in\mathcal{H}^{M},\text{ }M\neq P
+\end{align}
+However it only defines a partial state, $D_{NP},$ on $\mathcal{B}_{sa}\left(
+\mathcal{H}_{F}\right)  $ if $D_{NP}\in\tilde{S}_{PN}\subset S_{P}$ for $P\leq
+N.$
+
+To further analyse these operators one can introduce the following
+definitions
+\begin{align}
+\Lambda_{P}  &  =\left\{  \lambda\left\vert \lambda=\sum_{\substack{1\leq
+j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}<\cdots<k_{P}\leq\infty}%
+}\lambda_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}a_{j_{1}}^{\dagger}\cdots
+a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}\right.  \right. \nonumber\\
+&  \left.  \frac{\left\langle \left.  \Phi\right\vert \lambda\Phi\right\rangle
+}{\left\langle \left.  \Phi\right\vert \Phi\right\rangle }\leq1\text{ }%
+\forall\left\vert \Phi\right\rangle \in\mathcal{H}^{P},\lambda\in
+\mathcal{B}_{sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right\}
+\end{align}
+which are convex sets. It is obvious that
+\begin{equation}
+\lambda\leq I,\lambda\in\Lambda_{P},1\leq P\leq\infty.
+\end{equation}
+
+
+\section{Invariant Subspaces of SU$\left(  \mathcal{H}^{1}\right)  $}
+
+The expansion map is the adjoint of contraction map i.e.
+\begin{equation}
+\left\langle \left.  \Gamma_{P}^{N}\left(  X\right)  \right\vert
+Y\right\rangle _{N}=\left\langle \left.  X\right\vert L_{N}^{P}\left(
+Y\right)  \right\rangle _{P}.
+\end{equation}
+One can expand $\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  $ as a direct
+sum
+\begin{equation}
+\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq P\leq N}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq P\leq N}}
+%EndExpansion
+\mathfrak{B}_{NP},
+\end{equation}
+where
+\begin{equation}
+\mathfrak{B}_{NP}=\ker\left\{  L_{N}^{P-1}\right\}  \ominus\ker\left\{
+L_{N}^{P}\right\}  ,1\leq P\leq N.
+\end{equation}
+It is easy to see that%
+\begin{equation}
+\ker\left\{  L_{N}^{0}\right\}  \supseteq\cdots\supseteq\ker\left\{  L_{N}%
+^{N}\right\}
+\end{equation}
+and%
+\begin{equation}
+\operatorname*{Tr}\left\{  Y\right\}  =L_{N}^{0}\left(  Y\right)
+\end{equation}
+so that
+\begin{equation}
+Y\in\ker\left\{  L_{N}^{0}\right\}  \Leftrightarrow\operatorname*{Tr}\left\{
+Y\right\}  =0
+\end{equation}
+and hence
+\begin{equation}
+Y\in\ker\left\{  L_{N}^{P}\right\}  ,1\leq P\leq N\Rightarrow
+\operatorname*{Tr}\left\{  Y\right\}  =0.
+\end{equation}
+One should note that
+\begin{equation}
+\ker\left\{  L_{N}^{N}\right\}  =\phi
+\end{equation}
+as
+\begin{equation}
+L_{N}^{N}=\widehat{I_{N}}.
+\end{equation}
+Any operator $X_{N}\in\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  $ can
+be expanded as
+\begin{equation}
+X_{N}=X_{NN}+\cdots+X_{N1}+X_{N0},
+\end{equation}
+where
+\begin{equation}
+X_{NP}\in\mathfrak{B}_{NP};1\leq P\leq N
+\end{equation}
+and
+\begin{equation}
+X_{N0}=X_{N}-X_{NN}+\cdots+X_{N1},
+\end{equation}
+so that
+\begin{align}
+\operatorname*{Tr}\left\{  X_{N}\right\}   &  =\operatorname*{Tr}\left\{
+X_{N0}\right\} \nonumber\\
+\operatorname*{Tr}\left\{  X_{NP}\right\}   &  =0,1\leq P\leq N.
+\end{align}
+
+
+Each subspace $\mathcal{H}^{N}$ carries a representation of $SU\left(
+\mathcal{H}^{1}\right)  $ given by
+\begin{equation}
+u_{N}\left\vert \varphi_{1}\cdots\varphi_{N}\right\rangle =u\wedge\cdots\wedge
+u\left\vert \varphi_{1}\cdots\varphi_{N}\right\rangle =\left\vert u\varphi
+_{1}\cdots u\varphi_{N}\right\rangle
+\end{equation}
+and it can be shown that
+\begin{equation}
+L_{N}^{P}\left(  u_{N}Xu_{N}^{\dagger}\right)  =u_{P}L_{N}^{P}\left(
+X\right)  u_{P}^{\dagger},X\in\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)
+\end{equation}
+thus
+\begin{equation}
+u_{N}Xu_{N}^{\dagger}\in\ker\left\{  L_{N}^{P}\right\}  \Leftrightarrow
+X\in\ker\left\{  L_{N}^{P}\right\}
+\end{equation}
+i.e. $\ker\left\{  L_{N}^{P}\right\}  $ is invariant (but reducible) under the
+action of $SU\left(  \mathcal{H}^{1}\right)  $
+\begin{equation}
+\widehat{u_{N}}:\ker\left\{  L_{N}^{P}\right\}  \rightarrow\ker\left\{
+L_{N}^{P}\right\}
+\end{equation}
+and
+\begin{equation}
+\widehat{u_{P}}\circ L_{N}^{P}=L_{N}^{P}\circ\widehat{u_{N}}.
+\end{equation}
+The Hilbert-Schmidt space $\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  $
+carries a representation of $SU\left(  \mathcal{H}^{1}\right)  $
+\begin{equation}
+\widehat{u_{N}}\left(  A\right)  =u_{N}Au_{N}^{\dagger},\,A\in\mathcal{B}%
+_{2sa}\left(  \mathcal{H}^{N}\right)
+\end{equation}
+that is reducible and has the direct sum decomposition
+\begin{equation}
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq P\leq N}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq P\leq N}}
+%EndExpansion
+\mathfrak{B}_{NP},
+\end{equation}
+into \emph{orthogonal }irreducible subspaces $\left\{  \mathfrak{B}_{NP};0\leq
+P\leq N\right\}  ,$ where
+\begin{equation}
+\mathfrak{B}_{N0}=\mathbb{R}.
+\end{equation}
+$.$ These spaces have the property
+\begin{align}
+X_{N}  &  =\sum_{0\leq P\leq N}X_{NP},X_{NP}\in\mathfrak{B}_{NP};0\leq P\leq
+N\\
+\sum_{Q+1\leq P\leq N}X_{NP}  &  \in\ker\left\{  L_{N}^{Q}\right\}  ,
+\end{align}
+where
+\begin{equation}
+X_{N0}=\operatorname*{Tr}\left\{  X_{N}\right\}  P_{N}.
+\end{equation}
+If $X_{N}$ $\notin\mathcal{B}_{1sa}\left(  \mathcal{H}^{N}\right)  $ then
+$\operatorname*{Tr}\left\{  X_{N}\right\}  $ can be formally set as $\infty$
+or $-\infty.$
+
+The pure part expansion can be generalized to the space $\mathcal{B}%
+_{2sa}\left(  \mathcal{H}_{F}\right)  _{e}$ which expanded as
+\begin{align}
+\mathcal{B}_{0sa}\left(  \mathcal{H}_{F}\right)  _{e}  &  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq\infty}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq\infty}}
+%EndExpansion
+\mathcal{B}_{0sa}\left(  \mathcal{H}^{N}\right)  _{e}=%
+%TCIMACRO{\dbigoplus \limits_{\substack{0\leq N\leq\infty\\0\leq P\leq N}}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{\substack{0\leq N\leq\infty\\0\leq P\leq N}}}
+%EndExpansion
+\mathfrak{B}_{NP}\\
+X  &  =\sum_{\substack{0\leq N\leq\infty\\0\leq P\leq N}}X_{NP}=\sum_{0\leq
+P\leq\infty}\sum_{P\leq N\leq\infty}X_{NP}=\sum_{0\leq P\leq\infty}X_{P},
+\end{align}
+where
+\begin{equation}
+X_{P}=\sum_{P\leq N\leq\infty}X_{NP}.
+\end{equation}
+In particular
+\begin{equation}
+X_{0}=\sum_{0\leq N\leq\infty}X_{N0}=\operatorname*{Tr}\left\{  X\right\}  I
+\end{equation}
+and
+\begin{equation}
+X=\sum_{0\leq P\leq\infty}X_{P_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}}a_{j_{1}%
+}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}.
+\end{equation}
+The space $\mathcal{B}_{2sa}\left(  \mathcal{H}_{F}\right)  _{e}$ thus also
+carries a representation of $SU\left(  \mathcal{H}^{1}\right)  $as
+\begin{align}
+\widehat{u}(A)  &  =uAu^{\dagger}=\sum_{0\leq N\leq\infty}\widehat{u_{N}%
+}\left(  A_{N}\right)  =\sum_{\substack{0\leq P\leq N\\0\leq N\leq\infty
+}}\widehat{u_{N}}\left(  A_{NP}\right)  ,\\
+\widehat{u_{N}}  &  =\left.  \widehat{u}\right\vert _{\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  }%
+\end{align}
+and
+\begin{equation}
+u\left(  \lambda\right)  =\exp i\left\{  \sum_{1\leq j,k\leq\infty}%
+\lambda_{jk}a_{j}^{\dagger}a_{k}\right\}  ;\lambda_{jk}=\overline{\lambda
+}_{kj},1\leq j,k\leq\infty,\operatorname*{Tr}\left\{  \lambda\right\}  =0.
+\end{equation}
+One can also note that
+\begin{equation}
+\mathcal{B}_{2sa}\left(  \mathcal{H}_{F}\right)  _{e}=\mathfrak{U}\left(
+SU\left(  \mathcal{H}^{1}\right)  \right)  ,
+\end{equation}
+where $\mathfrak{U}\left(  SU\left(  \mathcal{H}^{1}\right)  \right)  $ is a
+representation of the universal covering algebra of $SU\left(  \mathcal{H}%
+^{1}\right)  .$
+
+\section{Extra}
+
+Consider
+\begin{equation}
+T_{NP}=\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots
+a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}D^{N}\right\}  a_{j_{1}}^{\dagger
+}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}%
+\end{equation}
+then
+\begin{equation}
+0\leq\left\langle \left.  \Phi\right\vert T_{NP}\Phi\right\rangle \leq
+\binom{N}{P}\left\langle \left.  \Phi\right\vert \Phi\right\rangle \text{
+}\forall\Phi\in\mathcal{H}^{P}%
+\end{equation}
+and for $\Phi\in\mathcal{H}^{P}$
+\begin{align}
+&  \sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots
+a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}D^{N}\right\}  \left\langle
+\left.  \Phi\right\vert a_{j_{1}}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}%
+}\cdots a_{k_{1}}\Phi\right\rangle \\
+&  =\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots
+a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}D^{N}\right\}  \bar{C}%
+_{j_{1}\cdots j_{P}}C_{k_{1}\cdots k_{P}}\\
+&  =\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq\infty\\1\leq k_{1}%
+<\cdots<k_{P}\leq\infty}}D_{NPj_{1}\cdots j_{P}k_{1}\cdots k_{P}}\bar
+{C}_{j_{1}\cdots j_{P}}C_{k_{1}\cdots k_{P}}\geq0.
+\end{align}
+In particular for $\Phi\in\mathcal{H}^{2}$
+\begin{equation}
+0\leq\left\langle \left.  \Phi\right\vert T_{N2}\Phi\right\rangle \leq
+\binom{N}{2}\left\langle \left.  \Phi\right\vert \Phi\right\rangle \text{
+}\forall\Phi\in\mathcal{H}^{2},
+\end{equation}%
+\begin{align}
+\left\langle \left.  \Phi\right\vert T_{N2}\Phi\right\rangle =  &
+\sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq\infty
+}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}D^{N}\right\}  \left\langle \left.  \Phi\right\vert a_{j_{1}%
+}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}\Phi\right\rangle \\
+&  \sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq\infty
+}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}D^{N}\right\}  \left\langle \left.  a_{j_{1}}a_{j_{2}}%
+\Phi\right\vert a_{k_{2}}a_{k_{1}}\Phi\right\rangle \\
+&  =\sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq\infty
+}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}D^{N}\right\}  \bar{C}_{j_{1}j_{2}}C_{k_{1}k_{2}}\\
+&  =\sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq\infty
+}}D_{NPj_{1}j_{2}k_{1}k_{2}}\bar{C}_{j_{1}j_{2}}C_{k_{1}k_{2}}\geq0.
+\end{align}
+and
+\begin{equation}
+\left.  T_{N2}\right\vert _{\mathcal{H}^{2}}=\binom{N}{2}L_{N}^{2}\left(
+D^{N}\right)
+\end{equation}
+Let $\Phi\in\mathcal{H}^{P};3\leq P\leq N$ then%
+\begin{align}
+\left\langle \left.  a_{j_{1}}a_{j_{2}}\Phi\right\vert a_{k_{2}}a_{k_{1}}%
+\Phi\right\rangle  &  =\sum_{1\leq m,m^{\prime}\leq\infty}\overline{C}%
+_{j_{1}j_{2}m^{\prime}}C_{k_{1}k_{2}m}\left\langle \left.  \varphi_{m^{\prime
+}}\right\vert \varphi_{m}\right\rangle =\sum_{1\leq m\leq\infty}\overline
+{C}_{j_{1}j_{2}m}C_{k_{1}k_{2}m}=R_{j_{1}j_{2}k_{1}k_{2}}\\
+\sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq\infty
+}}\overline{V}_{j_{1}j_{2}}R_{j_{1}j_{2}k_{1}k_{2}}V_{k_{1}k_{2}}  &
+=\sum_{1\leq m\leq\infty}\left(  \sum_{1\leq j_{1}<j_{2}\leq\infty}%
+\overline{V}_{j_{1}j_{2}}\overline{C}_{j_{1}j_{2}m}\right)  \left(
+\sum_{1\leq k_{1}<k_{2}\leq\infty}C_{k_{1}k_{2}m}V_{k_{1}k_{2}}\right)  \geq0
+\end{align}%
+\begin{align}
+\left\langle \left.  \Phi\right\vert T_{N2}\Phi\right\rangle =  &
+\sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq\infty
+}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}D^{N}\right\}  \left\langle \left.  \Phi\right\vert a_{j_{1}%
+}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}\Phi\right\rangle \\
+=  &  \sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq
+\infty}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger
+}a_{k_{2}}a_{k_{1}}D^{N}\right\}  \left\langle \left.  a_{j_{1}}a_{j_{2}}%
+\Phi\right\vert a_{k_{2}}a_{k_{1}}\Phi\right\rangle \\
+&  =\sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}\leq\infty
+}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}\left\vert \Phi\right\rangle \left\langle \Phi\right\vert \right\}
+\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}D^{N}\right\} \\
+&  \equiv\sum_{\substack{1\leq j_{1}<j_{2}\leq\infty\\1\leq k_{1}<k_{2}%
+\leq\infty}}f_{j_{1}j_{2}k_{1}k_{2}}X_{j_{1}j_{2}k_{1}k_{2}}=f(X);\text{ }%
+f\in\mathcal{B}_{1sa}\left(  \mathcal{H}^{2}\right)  ,X\in\mathcal{B}%
+_{sa}\left(  \mathcal{H}^{2}\right)  ,
+\end{align}
+where
+\begin{equation}
+f_{j_{1}j_{2}k_{1}k_{2}}=\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}%
+a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}D^{N}\right\}  ;X_{j_{1}j_{2}k_{1}k_{2}%
+}=\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}\left\vert \Phi\right\rangle \left\langle \Phi\right\vert \right\}
+.
+\end{equation}
+
+
+\section{Extra}
+
+This can also be seen coordinate wise by considering the special case
+$X_{2}=P_{2}$ then
+\begin{align}
+3\Gamma_{2}^{3}\left(  P_{\mathcal{H}^{2}}\right)   &  =\frac{1}{4\left(
+3!\right)  }\sum_{\substack{1\leq j_{1},j_{2}\leq\infty\\1\leq k_{1},k_{2}%
+\leq\infty\\1\leq l_{1},l_{2},l_{3}\leq\infty}}\delta_{\left(  j_{1}%
+j_{2}\right)  \left(  k_{1}k_{2}\right)  }a_{j_{1}}^{\dagger}a_{j_{2}%
+}^{\dagger}a_{k_{2}}a_{k_{1}}\left\vert \varphi_{l_{1}}\varphi_{l_{2}}%
+\varphi_{l_{3}}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{l_{2}%
+}\varphi_{l_{3}}\right\vert \\
+&  =\frac{3}{4\left(  3!\right)  }\sum_{\substack{1\leq j_{1},j_{2}\leq
+\infty\\1\leq l_{1},l_{2},l_{3}\leq\infty}}\delta_{\left(  j_{1}j_{2}\right)
+\left(  l_{1}l_{2}\right)  }\left\vert \varphi_{j_{1}}\varphi_{j_{2}}%
+\varphi_{l_{3}}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{l_{2}%
+}\varphi_{l_{3}}\right\vert \\
+&  =\frac{\left(  3\right)  \left(  4\right)  }{4\left(  3!\right)  }%
+\sum_{1\leq l_{1},l_{2},l_{3}\leq\infty}\left\vert \varphi_{l_{1}}%
+\varphi_{l_{2}}\varphi_{l_{3}}\right\rangle \left\langle \varphi_{l_{1}%
+}\varphi_{l_{2}}\varphi_{l_{3}}\right\vert \\
+&  =\frac{\left(  3\right)  \left(  4\right)  }{4}\sum_{1\leq l_{1}%
+<l_{2}<l_{3}\leq\infty}\left\vert \varphi_{l_{1}}\varphi_{l_{2}}\varphi
+_{l_{3}}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{l_{2}}%
+\varphi_{l_{3}}\right\vert ,
+\end{align}
+hence%
+\begin{equation}
+\Gamma_{2}^{3}\left(  P_{\mathcal{H}^{2}}\right)  =P_{\mathcal{H}^{3}}.
+\end{equation}
+Consider $\left.  \Gamma\left(  X_{P}\right)  \right\vert _{\mathcal{H}^{P+1}%
+}=\left(  P+1\right)  \Gamma_{P}^{P+1}\left(  X_{P}\right)  $
+\begin{align}
+\left.  \Gamma\left(  X_{P}\right)  \right\vert _{\mathcal{H}^{P+1}}  &
+=\left(  P+1\right)  \Gamma_{P}^{P+1}\left(  X_{P}\right) \\
+&  =\frac{1}{\left(  P!\right)  ^{3}\left(  P+1\right)  }\sum_{\substack{1\leq
+j_{1},\cdots,j_{P}\leq\infty\\1\leq k_{1},\cdots,k_{P}\leq\infty\\1\leq
+l_{1},\cdots,l_{P+1}\leq\infty}}X_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}%
+a_{j_{1}}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{P}}\cdots a_{k_{1}%
+}\left\vert \varphi_{l_{1}}\cdots\varphi_{l_{P+1}}\right\rangle \left\langle
+\varphi_{l_{1}}\cdots\varphi_{l_{P+1}}\right\vert \\
+&  =\frac{1}{\left(  P!\right)  ^{2}\left(  P+1\right)  }\sum_{\substack{1\leq
+j_{1},\cdots,j_{P}\leq\infty\\1\leq l_{1},\cdots,l_{P+1}\leq\infty}%
+}X_{j_{1}\cdots j_{P}l_{1}\cdots l_{P}}\left\vert \varphi_{j_{1}}\cdots
+\varphi_{j_{P}}\varphi_{l_{P+1}}\right\rangle \left\langle \varphi_{l_{1}%
+}\cdots\varphi_{l_{P}}\varphi_{l_{P+1}}\right\vert \Rightarrow\\
+\Gamma_{P}^{P+1}\left(  X_{P}\right)   &  =\sum_{\substack{1\leq j_{1}%
+<\cdots,<j_{P}\leq\infty\\1\leq l_{1}<\cdots<l_{P+1}\leq\infty}}X_{j_{1}\cdots
+j_{P}l_{1}\cdots l_{P}}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{P}}%
+\varphi_{l_{P+1}}\right\rangle \left\langle \varphi_{l_{1}}\cdots
+\varphi_{l_{P}}\varphi_{l_{P+1}}\right\vert .
+\end{align}
+Consider $\left.  \Gamma\left(  X_{2}\right)  \right\vert _{\mathcal{H}^{3}%
+}=3\Gamma_{2}^{3}\left(  X_{2}\right)  $
+\begin{align}
+\left.  \Gamma\left(  X_{2}\right)  \right\vert _{\mathcal{H}^{3}}  &
+=3\Gamma_{2}^{3}\left(  X_{2}\right) \\
+&  =\frac{1}{\left(  2\right)  ^{3}3}\sum_{\substack{1\leq j_{1},j_{2}%
+\leq\infty\\1\leq k_{1},k_{2}\leq\infty\\1\leq l_{1},l_{2},l_{3}\leq\infty
+}}X_{j_{1}j_{2}k_{1}k_{2}}a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{2}}\left\vert \varphi_{l_{1}}\varphi_{l_{2}}\varphi_{l_{3}%
+}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{l_{2}}\varphi_{l_{3}%
+}\right\vert \\
+&  =\frac{1}{\left(  2\right)  ^{3}3}\sum_{\substack{1\leq j_{1},j_{2}%
+\leq\infty\\1\leq l_{1},l_{2},l_{3}\leq\infty}}X_{j_{1}j_{2}l_{1}l_{2}%
+}\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{l_{3}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{l_{2}}\varphi_{l_{3}}\right\vert .
+\end{align}
+Let
+\begin{equation}
+X_{P}=\left.  \Gamma\left(  X_{P}\right)  \right\vert _{\mathcal{H}^{P}}%
+=\sum_{1\leq j\leq\infty}\alpha_{j}\left\vert \Phi_{Pj}\right\rangle
+\left\langle \Phi_{Pj}\right\vert -\sum_{1\leq j\leq\infty}\beta_{j}\left\vert
+\Phi_{Pj}\right\rangle \left\langle \Phi_{Pj}\right\vert ;\alpha_{j},\beta
+_{j}\geq0\,
+\end{equation}
+and
+\begin{equation}
+\left\langle \left.  \Gamma_{P}^{N}\left(  X_{P}\right)  \right\vert
+\left\vert \Psi_{N}\right\rangle \left\langle \Psi_{N}\right\vert
+\right\rangle _{N}=\left\langle \left.  X_{P}\right\vert L_{N}^{P}\left(
+\left\vert \Psi_{N}\right\rangle \left\langle \Psi_{N}\right\vert \right)
+\right\rangle _{P}\geq0\,\forall\Psi_{N}.
+\end{equation}
+Then
+\begin{align}
+&  \left\langle \left.  \left\{  \sum_{1\leq j\leq\infty}\alpha_{j}\left\vert
+\Phi_{Pj}^{+}\right\rangle \left\langle \Phi_{Pj}^{+}\right\vert -\sum_{1\leq
+j\leq\infty}\beta_{j}\left\vert \Phi_{Pj}^{-}\right\rangle \left\langle
+\Phi_{Pj}^{-}\right\vert \right\}  \right\vert L_{N}^{P}\left(  \left\vert
+\Psi_{N}\right\rangle \left\langle \Psi_{N}\right\vert \right)  \right\rangle
+_{P}=\\
+&  \left\langle \left.  \Gamma_{P}^{N}\left(  \sum_{1\leq j\leq\infty}%
+\alpha_{j}\left\vert \Phi_{Pj}^{+}\right\rangle \left\langle \Phi_{Pj}%
+^{+}\right\vert \right)  \right\vert \left\vert \Psi_{N}\right\rangle
+\left\langle \Psi_{N}\right\vert \right\rangle _{N}-\left\langle \left.
+\Gamma_{P}^{N}\left(  \sum_{1\leq j\leq\infty}\beta_{j}\left\vert \Phi
+_{Pj}^{-}\right\rangle \left\langle \Phi_{Pj}^{-}\right\vert \right)
+\right\vert \left\vert \Psi_{N}\right\rangle \left\langle \Psi_{N}\right\vert
+\right\rangle _{N}\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  \geq\right.
+0\qquad\forall\Psi_{N},
+\end{align}
+or more generally
+\begin{equation}
+\left\langle \left.  \Gamma_{P}^{N}\left(  \sum_{1\leq j\leq\infty}\alpha
+_{j}\left\vert \Phi_{Pj}^{+}\right\rangle \left\langle \Phi_{Pj}%
+^{+}\right\vert \right)  \right\vert \left\vert \Psi_{N}\right\rangle
+\left\langle \Psi_{N}\right\vert \right\rangle _{N}\geq\left\langle \left.
+\Gamma_{P}^{N}\left(  \sum_{1\leq j\leq\infty}\beta_{j}\left\vert \Phi
+_{Pj}^{-}\right\rangle \left\langle \Phi_{Pj}^{-}\right\vert \right)
+\right\vert \left\vert \Psi_{N}\right\rangle \left\langle \Psi_{N}\right\vert
+\right\rangle _{N}\forall\Psi_{N}%
+\end{equation}
+
+
+\begin{theorem}
+\begin{proof}
+Is
+\begin{equation}
+\Gamma_{P}^{N}\left(  \left\vert \Phi_{Pj}^{+}\right\rangle \left\langle
+\Phi_{Pj}^{+}\right\vert \right)  \bot\Gamma_{P}^{N}\left(  \left\vert
+\Phi_{Pj}^{-}\right\rangle \left\langle \Phi_{Pj}^{-}\right\vert \right)
+\end{equation}
+i.e.%
+\begin{align}
+\left(  \Gamma_{P}^{N}\left(  \left\vert \Phi_{Pj}^{+}\right\rangle
+\left\langle \Phi_{Pj}^{+}\right\vert \right)  \left\vert \Gamma_{P}%
+^{N}\left(  \left\vert \Phi_{Pj}^{-}\right\rangle \left\langle \Phi_{Pj}%
+^{-}\right\vert \right)  \right.  \right)  _{N}  &  =\left(  L_{N}^{P}%
+\Gamma_{P}^{N}\left(  \left\vert \Phi_{Pj}^{+}\right\rangle \left\langle
+\Phi_{Pj}^{+}\right\vert \right)  \left\vert \left\vert \Phi_{Pj}%
+^{-}\right\rangle \left\langle \Phi_{Pj}^{-}\right\vert \right.  \right)
+_{P}\\
+&  =\left(  \left\vert \Phi_{Pj}^{+}\right\rangle \left\langle \Phi_{Pj}%
+^{+}\right\vert \left\vert L_{N}^{P}\Gamma_{P}^{N}\left(  \left\vert \Phi
+_{Pj}^{-}\right\rangle \left\langle \Phi_{Pj}^{-}\right\vert \right)  \right.
+\right)  _{P}=0
+\end{align}
+$\lceil$yes, think of $AA^{\dagger}$ and $A^{\dagger}A$ if $A$ is compact$,$%
+\begin{align}
+A  &  =\sum_{1\leq j\leq\infty}\alpha_{j}\left\vert f_{j}\right\rangle
+\left\langle e_{j}^{d}\right\vert ;\,A^{\dagger}=\sum_{1\leq j\leq\infty
+}\overline{\alpha}_{j}\left\vert e_{j}\right\rangle \left\langle f_{j}%
+^{d}\right\vert \\
+A  &  :E\rightarrow F;\quad A^{\dagger}:F^{d}\rightarrow E^{d}\\
+\text{Let }F  &  \subset F^{d}\text{ and }E\subset E^{d}\\
+AA^{\dagger}  &  =\sum_{1\leq j\leq\infty}\left\vert \alpha_{j}\right\vert
+^{2}\left\vert f_{j}\right\rangle \left\langle f_{j}^{d}\right\vert
+\,;\,A^{\dagger}A=\sum_{1\leq j\leq\infty}\left\vert \alpha_{j}\right\vert
+^{2}\left\vert e_{j}\right\rangle \left\langle e_{j}^{d}\right\vert \\
+AA^{\dagger}  &  :F\rightarrow F;\quad A^{\dagger}A:E\rightarrow E,
+\end{align}
+where $\left\{  \left\vert e_{j}\right\rangle ,\left\langle e_{j}%
+^{d}\right\vert \right\}  $ and $\left\{  \left\vert f_{j}\right\rangle
+,\left\langle f_{j}^{d}\right\vert \right\}  $ are biorthogonal bases. So
+\begin{align}
+\left\langle \left.  e_{k}\right\vert e_{l}\right\rangle _{E}  &  =\delta
+_{kl}\\
+\left\langle \left.  Ae_{k}\right\vert Ae_{l}\right\rangle _{F}  &
+=\left\langle \left.  e_{k}\right\vert A^{\dagger}Ae_{l}\right\rangle
+_{E}=\left\langle e_{k}\left\vert \sum_{1\leq j\leq\infty}\left\vert
+\alpha_{j}\right\vert ^{2}\left\vert e_{j}\right\rangle \left\langle e_{j}%
+^{d}\right\vert e_{l}\right.  \right\rangle _{E}\\
+&  =\delta_{kl}.\rfloor
+\end{align}%
+\begin{equation}
+a_{j}^{\dagger}a_{k}=\left(  \sum_{0\leq N\leq\infty}P_{N}\right)
+a_{j}^{\dagger}a_{k}\left(  \sum_{0\leq N\leq\infty}P_{N}\right)  =\sum_{0\leq
+N\leq\infty}P_{N}a_{j}^{\dagger}a_{k}P_{N},
+\end{equation}
+where%
+\begin{equation}
+\sum_{0\leq N\leq\infty}P_{N}=I_{F}.
+\end{equation}
+
+\end{proof}
+\end{theorem}
+
+
+\end{document}

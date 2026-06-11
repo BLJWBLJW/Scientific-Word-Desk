@@ -1,0 +1,217 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Saturday, July 14, 2007 10:19:53}
+%TCIDATA{LastRevised=Tuesday, July 17, 2007 17:39:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Thoules}%
+
+\begin{equation}
+\left\vert g\right\rangle =%
+%TCIMACRO{\dsum \limits_{1\leq j<k\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j<k\leq2s}}
+%EndExpansion
+g_{jk}\left\vert \varphi_{j}\varphi_{k}\right\rangle =%
+%TCIMACRO{\dsum \limits_{1\leq j\leq s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq s}}
+%EndExpansion
+c_{j}\left\vert \psi_{j}\psi_{j+s}\right\rangle
+\end{equation}%
+\begin{align}
+&  \left\vert z\right\rangle =\exp\left\{
+%TCIMACRO{\dsum \limits_{1\leq h\leq2;3\leq p\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq h\leq2;3\leq p\leq2s}}
+%EndExpansion
+z_{ph}a_{p}^{\dagger}a_{h}\right\}  \left\vert \psi_{1}\psi_{2}\right\rangle
+\\
+&  =\left\{  1+%
+%TCIMACRO{\dsum \limits_{1\leq h\leq2;3\leq p\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq h\leq2;3\leq p\leq2s}}
+%EndExpansion
+z_{ph}a_{p}^{\dagger}a_{h}+%
+%TCIMACRO{\dsum \limits_{3\leq p_{1}\leq2s;3\leq p_{2}\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{3\leq p_{1}\leq2s;3\leq p_{2}\leq2s}}
+%EndExpansion
+z_{p1}z_{p_{2}2}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger}a_{2}a_{1}\right\}
+\left\vert \psi_{1}\psi_{2}\right\rangle
+\end{align}%
+\begin{equation}
+\left\vert g\right\rangle =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert z\right\rangle \left\langle \left.  z\right\vert g\right\rangle
+d\mu\left(  z\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq2s}}
+%EndExpansion
+c_{j}%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert z\right\rangle \left\langle \left.  z\right\vert \psi_{j}\psi
+_{j+s}\right\rangle d\mu\left(  z\right)
+\end{equation}%
+\begin{align}%
+%TCIMACRO{\dsum \limits_{3\leq p_{1}\leq2s;3\leq p_{2}\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{3\leq p_{1}\leq2s;3\leq p_{2}\leq2s}}
+%EndExpansion
+z_{p_{1}h_{1}}z_{p_{2}h_{2}}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger}a_{2}%
+a_{1}\left\vert \psi_{1}\psi_{2}\right\rangle  & =%
+%TCIMACRO{\dsum \limits_{3\leq p_{1},p_{2}\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{3\leq p_{1},p_{2}\leq2s}}
+%EndExpansion
+z_{p_{1}1}z_{p_{2}2}\left\vert p_{1}p_{2}\right\rangle \\%
+%TCIMACRO{\dsum \limits_{1\leq h\leq2;3\leq p\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq h\leq2;3\leq p\leq2s}}
+%EndExpansion
+z_{ph}a_{p}^{\dagger}a_{h}\left\vert \psi_{1}\psi_{2}\right\rangle  & =%
+%TCIMACRO{\dsum \limits_{1\leq h\leq2;3\leq p\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq h\leq2;3\leq p\leq2s}}
+%EndExpansion
+\left\{  z_{p1}\left\vert p\psi_{2}\right\rangle +z_{p2}\left\vert \psi
+_{1}p\right\rangle \right\}
+\end{align}%
+\begin{align}
+\left\langle \left.  z\right\vert g\right\rangle _{2} &  =%
+%TCIMACRO{\dsum \limits_{\substack{3\leq p_{1},p_{2}\leq2s\\1\leq j\leq s}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\substack{3\leq p_{1},p_{2}\leq2s\\1\leq j\leq s}}}
+%EndExpansion
+c_{j}\bar{z}_{p_{1}1}\bar{z}_{p_{2}2}\left\langle \left.  p_{1}p_{2}%
+\right\vert jj+s\right\rangle \\
+&  =%
+%TCIMACRO{\dsum \limits_{\substack{3\leq p_{1},p_{2}\leq2s\\1\leq j\leq s}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\substack{3\leq p_{1},p_{2}\leq2s\\1\leq j\leq s}}}
+%EndExpansion
+c_{j}\bar{z}_{p_{1}1}\bar{z}_{p_{2}2}\left\{  \delta_{p_{1}j}\delta
+_{p_{21}j+s}-\delta_{p_{1}j+s}\delta_{p_{21}j}\right\}  \\
+&  =%
+%TCIMACRO{\dsum \limits_{1\leq j\leq s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq s}}
+%EndExpansion
+c_{j}\left\{  \bar{z}_{j1}\bar{z}_{j+s2}-\bar{z}_{j+s1}\bar{z}_{j2}\right\}
+\end{align}%
+\begin{align}
+\left\langle \left.  z\right\vert g\right\rangle _{1}  & =%
+%TCIMACRO{\dsum \limits_{1\leq h\leq2;3\leq p\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq h\leq2;3\leq p\leq2s}}
+%EndExpansion
+c_{j}\left\{  \bar{z}_{p1}\left\langle \left.  p\psi_{2}\right\vert
+jj+s\right\rangle +\bar{z}_{p2}\left\langle \left.  \psi_{1}p\right\vert
+jj+s\right\rangle \right\}  \\
+& =%
+%TCIMACRO{\dsum \limits_{3\leq p\leq2s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{3\leq p\leq2s}}
+%EndExpansion
+c_{j}\left\{  \bar{z}_{p1}\left\{  \delta_{pj}\delta_{2j+s}-\delta
+_{pj+s}\delta_{2j}\right\}  +\bar{z}_{p2}\left\{  \delta_{pj}\delta
+_{1j+s}-\delta_{pj+s}\delta_{1j}\right\}  \right\}  \\
+& =c_{2}\bar{z}_{2+s1}+c_{1}\bar{z}_{1+s2}%
+\end{align}%
+\begin{equation}
+\left\langle \left.  z\right\vert g\right\rangle =1+c_{2}\bar{z}_{2+s1}%
++c_{1}\bar{z}_{1+s2}+%
+%TCIMACRO{\dsum \limits_{1\leq j\leq s}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq s}}
+%EndExpansion
+c_{j}\left\{  \bar{z}_{j1}\bar{z}_{j+s2}-\bar{z}_{j+s1}\bar{z}_{j2}\right\}
+\end{equation}
+
+
+\section{Harmonic Oscillator}%
+
+\begin{equation}
+\left\langle \left.  \mathbf{x}_{1}\mathbf{x}_{2}\right\vert g\right\rangle
+=\frac{1}{\sqrt{2}}\sum_{1\leq j\leq s}c_{j}\varphi_{j}\left(  \mathbf{x}%
+_{1}\right)  \wedge\varphi_{j+s}\left(  \mathbf{x}_{2}\right)
+\end{equation}
+
+
+
+\end{document}

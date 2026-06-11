@@ -1,0 +1,195 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, July 09, 2004 10:50:13}
+%TCIDATA{LastRevised=Friday, July 09, 2004 15:40:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{align}
+E_{1}  & =\sum_{1\leq j,k\leq s}h_{1jk}z_{j}^{\ast}z_{k}=\mathbf{z}^{\dagger
+}\mathbf{h}_{1}\mathbf{z}\\
+\frac{\partial E_{1}}{\partial z_{\mu}^{\ast}}  & =\sum_{1\leq k\leq s}h_{1\mu
+k}z_{k}=\left(  \mathbf{h}_{1}\mathbf{z}\right)  _{\mu}\\
+\frac{\partial E_{1}}{\partial z_{\mu}}  & =\sum_{1\leq k\leq s}h_{1k\mu}%
+z_{k}^{\ast}=\left(  \mathbf{z}^{\dagger}\mathbf{h}_{1}\right)  _{\mu}=\left(
+\frac{\partial E_{1}}{\partial z_{\mu}^{\ast}}\right)  ^{\ast}%
+\end{align}%
+\begin{align}
+E  & =\frac{1}{2}\sum_{1\leq j,k,l,m\leq s}h_{jklm}z_{j}^{\ast}z_{k}^{\ast
+}z_{l}z_{m}=\frac{1}{2}\left(  \mathbf{z}^{\dagger}\otimes\mathbf{z}^{\dagger
+}\right)  \mathbb{H}\left(  \mathbf{z\otimes z}\right)  \\
+\frac{\partial E}{\partial z_{\mu}^{\ast}}  & =\frac{1}{2}\left\{  \sum_{1\leq
+k,l,m\leq s}h_{\mu klm}z_{k}^{\ast}z_{l}z_{m}+\sum_{1\leq k,l,m\leq s}h_{k\mu
+lm}z_{k}^{\ast}z_{l}z_{m}\right\}
+\end{align}%
+\begin{align}
+h_{jklm}  & =h_{lmjk}^{\ast}\\
+h_{jklm}  & =h_{kjml}%
+\end{align}
+if
+\begin{equation}
+h_{jklm}=h_{kjlm}=h_{kjlm}%
+\end{equation}
+then
+\begin{align}
+\frac{\partial E}{\partial z_{\mu}^{\ast}}  & =\sum_{1\leq k,l,m\leq s}h_{\mu
+klm}z_{k}^{\ast}z_{l}z_{m}=\sum_{1\leq l\leq s}\left\{  \sum_{1\leq k,m\leq
+s}h_{\mu klm}z_{k}^{\ast}z_{m}\right\}  z_{l}\\
+& =\sum_{1\leq l\leq s}F_{\mu l}z_{l}=\left(  \mathbb{F}\mathbf{z}\right)
+_{\mu}%
+\end{align}
+where
+\begin{align}
+F_{\mu l}  & =\sum_{1\leq k,m\leq s}h_{\mu klm}z_{k}^{\ast}z_{m}\\
+F_{l\mu}^{\ast}  & =\sum_{1\leq k,m\leq s}h_{lk\mu m}^{\ast}z_{k}z_{m}^{\ast
+}=\sum_{1\leq k,m\leq s}h_{\mu klm}z_{m}z_{k}^{\ast}%
+\end{align}%
+\begin{equation}
+\Rightarrow\sum_{1\leq\mu,j\leq s}F_{\mu l}z_{\mu}^{\ast}z_{l}=\sum_{1\leq
+k,m,\mu,l\leq s}h_{\mu klm}z_{\mu}^{\ast}z_{k}^{\ast}z_{l}z_{m}=2E=\mathbf{z}%
+^{\dagger}\mathbb{F}\mathbf{z}%
+\end{equation}%
+\begin{align}
+E  & =\frac{1}{2}\sum_{1\leq j,k,l,m\leq s}h_{jklm}z_{j}^{\ast}z_{k}^{\ast
+}z_{l}z_{m}\\
+\frac{\partial E}{\partial z_{\mu}}  & =\frac{1}{2}\left\{  \sum_{1\leq
+j,k,l\leq s}h_{jkl\mu}z_{j}^{\ast}z_{k}^{\ast}z_{l}+\sum_{1\leq j,k,l,m\leq
+s}h_{jk\mu m}z_{j}^{\ast}z_{k}^{\ast}z_{m}\right\}  \\
+& =\sum_{1\leq j,k,l\leq s}h_{jkl\mu}z_{j}^{\ast}z_{k}^{\ast}z_{l}%
+\end{align}%
+\begin{align}
+\frac{\partial E}{\partial z_{\mu}}  & =\sum_{1\leq j,k,l\leq s}h_{jkl\mu
+}z_{j}^{\ast}z_{k}^{\ast}z_{l}=\sum_{1\leq k\leq s}\left\{  \sum_{1\leq
+j,l\leq s}h_{jkl\mu}z_{j}^{\ast}z_{l}\right\}  z_{k}^{\ast}\\
+& =\left[  \sum_{1\leq l\leq s}\left\{  \sum_{1\leq m,k\leq s}h_{k\mu ml}%
+z_{m}z_{k}^{\ast}\right\}  z_{l}\right]  ^{\ast}=\left(  \frac{\partial
+E}{\partial z_{\mu}^{\ast}}\right)  ^{\ast}\\
+& =\sum_{1\leq l\leq s}z_{k}^{\ast}G_{k\mu}=\left(  \mathbf{z}^{\dagger
+}\mathbb{G}\right)  _{\mu}\\
+G_{l\mu}  & =\sum_{1\leq j,k\leq s}h_{jlk\mu}z_{j}^{\ast}z_{k}=\sum_{1\leq
+j,k\leq s}h_{l\mu jl}^{\ast}z_{j}^{\ast}z_{k}=\sum_{1\leq j,k\leq s}h_{\mu
+klj}^{\ast}z_{j}^{\ast}z_{k}=\left[  \sum_{1\leq k,m\leq s}h_{\mu klm}%
+z_{k}^{\ast}z_{m}\right]  ^{\ast}=F_{\mu l}^{\ast}%
+\end{align}%
+\begin{equation}
+\sum_{1\leq l\leq s}z_{k}^{\ast}G_{k\mu}=\sum_{1\leq l\leq s}z_{k}^{\ast
+}F_{\mu k}^{\ast}=\left(  \mathbf{z}^{\dagger}\mathbb{F}^{\dagger}\right)
+_{\mu}%
+\end{equation}%
+\begin{equation}
+\delta E=\left(
+\begin{array}
+[c]{cc}%
+\partial_{z^{\ast}}E & \partial_{z}E
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{z}^{\ast}\\
+\delta\mathbf{z}%
+\end{array}
+\right)
+\end{equation}
+%
+
+\begin{equation}
+\delta E=0\forall\delta\mathbf{z}^{\ast},\delta\mathbf{z}%
+\end{equation}%
+\begin{equation}
+\delta\mathbf{z}=\delta\mathbf{x\in}\mathbb{R}\Rightarrow\left[
+\operatorname{Re}\left(
+\begin{array}
+[c]{cc}%
+\partial_{z^{\ast}}E & \partial_{z}E
+\end{array}
+\right)  \right]  \delta\mathbf{x=0}\forall\delta\mathbf{x}%
+\end{equation}%
+\begin{equation}
+\left(  \partial_{z}E+\partial_{z^{\ast}}E\right)  \cdot\delta\mathbf{x=0}%
+\Leftrightarrow\left(  \partial_{z}E+\partial_{z^{\ast}}E\right)
+=\mathbf{0}\Leftrightarrow\left(  \mathbb{F}\mathbf{z}\right)  _{\mu}+\left(
+\mathbf{z}^{\dagger}\mathbb{F}^{\dagger}\right)  _{\mu}=0
+\end{equation}%
+\begin{equation}
+\delta\mathbf{z}=i\delta\mathbf{x}\Rightarrow\left[  \operatorname{Im}\left(
+\begin{array}
+[c]{cc}%
+\partial_{z^{\ast}}E & \partial_{z}E
+\end{array}
+\right)  \right]  \delta\mathbf{x=0}\forall\delta\mathbf{x}%
+\end{equation}%
+\begin{equation}
+\left(  \partial_{z}E-\partial_{z^{\ast}}E\right)  \cdot\delta\mathbf{x=0}%
+\Leftrightarrow\left(  \partial_{z}E-\partial_{z^{\ast}}E\right)
+=\mathbf{0}\Leftrightarrow\left(  \mathbb{F}\mathbf{z}\right)  _{\mu}-\left(
+\mathbf{z}^{\dagger}\mathbb{F}^{\dagger}\right)  _{\mu}=0
+\end{equation}%
+\begin{equation}
+\Leftrightarrow\mathbb{F}\mathbf{z=0}%
+\end{equation}
+
+
+
+\end{document}

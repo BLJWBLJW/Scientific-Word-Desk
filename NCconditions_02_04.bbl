@@ -1,0 +1,146 @@
+\begin{thebibliography}{22}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Coleman}(1963)}]{Coleman63}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Coleman}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{pages}{668} (\bibinfo{year}{1963}).
+
+\bibitem[{\citenamefont{Coleman and Yukalov}(2000)}]{Coleman2000}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Coleman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{V.~I.} \bibnamefont{Yukalov}},
+  \emph{\bibinfo{title}{Reduced Density Matrices: Coulson's Challenge}}
+  (\bibinfo{publisher}{Springer}, \bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Husimi}(1940)}]{Husimi}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Husimi}},
+  \bibinfo{journal}{Proc. Phys.---Math. Soc. Jpn}
+  \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{264} (\bibinfo{year}{1940}).
+
+\bibitem[{\citenamefont{Mazziotti}(2007{\natexlab{a}})}]{Mazziotti2007}
+\bibinfo{author}{\bibfnamefont{D.~A.} \bibnamefont{Mazziotti}},
+  \emph{\bibinfo{title}{Reduced-Density-Matrix Mechanics: With Application to
+  Many-Electron Atoms and Molecules (Advances in Chemical Physics, Vol. 134)}}
+  (\bibinfo{publisher}{Wiley}, \bibinfo{address}{New York},
+  \bibinfo{year}{2007}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Mazziotti}(2007{\natexlab{b}})}]{Mazziotti}
+\bibinfo{author}{\bibfnamefont{D.~A.} \bibnamefont{Mazziotti}},
+  \emph{\bibinfo{title}{Contracted Schrödinger Equation}}
+  (\bibinfo{publisher}{Wiley}, \bibinfo{year}{2007}{\natexlab{b}}), pp.
+  \bibinfo{pages}{165--203}.
+
+\bibitem[{\citenamefont{Valdemoro et~al.}(2000)\citenamefont{Valdemoro, Tel,
+  and P\'erez-Romero}}]{Valdemoro}
+\bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Valdemoro}},
+  \bibinfo{author}{\bibfnamefont{L.~M.} \bibnamefont{Tel}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{P\'erez-Romero}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
+  \bibinfo{pages}{032507} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Liu et~al.}(2007)\citenamefont{Liu, Christandl, and
+  Verstraete}}]{NPhard}
+\bibinfo{author}{\bibfnamefont{Y.-K.} \bibnamefont{Liu}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Christandl}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Verstraete}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{98}},
+  \bibinfo{pages}{110503} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Weiner}(1984)}]{Weiner83}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{30}},
+  \bibinfo{pages}{2922} (\bibinfo{year}{1984}).
+
+\bibitem[{\citenamefont{Ito}(1993)}]{Encyclo}
+\bibinfo{editor}{\bibfnamefont{K.}~\bibnamefont{Ito}}, ed.,
+  \emph{\bibinfo{title}{Encyclopedia of Mathematics}}, vol.~\bibinfo{volume}{2}
+  (\bibinfo{publisher}{MIT press}, \bibinfo{address}{Cambridge, Massachusetts;
+  London, England}, \bibinfo{year}{1993}), \bibinfo{edition}{2nd} ed.
+
+\bibitem[{\citenamefont{Krein}(1937)}]{Krein}
+\bibinfo{author}{\bibfnamefont{M.~G.} \bibnamefont{Krein}},
+  \bibinfo{journal}{Inst. Sci. Mat. Mec. Univ. Kharkoff (Zapiski Inst. Mat.
+  Mechs.)} \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{227}
+  (\bibinfo{year}{1937}).
+
+\bibitem[{\citenamefont{Naimark}(1970)}]{Naimark}
+\bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Naimark}},
+  \emph{\bibinfo{title}{Normed Rings}} (\bibinfo{publisher}{Wolters-Noordhoff},
+  \bibinfo{address}{Groningen, Netherlands}, \bibinfo{year}{1970}), pp.
+  \bibinfo{pages}{63--64}.
+
+\bibitem[{\citenamefont{Segal}(1947)}]{Segal}
+\bibinfo{author}{\bibfnamefont{I.~E.} \bibnamefont{Segal}},
+  \bibinfo{journal}{The Annals of Mathematics} \textbf{\bibinfo{volume}{48}},
+  \bibinfo{pages}{930} (\bibinfo{year}{1947}).
+
+\bibitem[{\citenamefont{Kadsion and Ringrose}(1983)}]{KadisonRinrose}
+\bibinfo{author}{\bibfnamefont{R.~V.} \bibnamefont{Kadsion}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~R.} \bibnamefont{Ringrose}},
+  \emph{\bibinfo{title}{Fundementals of the Theory of Operator Algebras}}
+  (\bibinfo{publisher}{Academic Press}, \bibinfo{address}{New York},
+  \bibinfo{year}{1983}), vol.~\bibinfo{volume}{1}, pp.
+  \bibinfo{pages}{212--213, 266--267, 295--296}.
+
+\bibitem[{\citenamefont{Kummar}(1967)}]{Kummar67}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Kummar}}, \bibinfo{journal}{J.
+  Math. Phys.} \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{2063}
+  (\bibinfo{year}{1967}).
+
+\bibitem[{\citenamefont{Kadison}(1951)}]{Kadison}
+\bibinfo{author}{\bibfnamefont{R.~V.} \bibnamefont{Kadison}},
+  \bibinfo{journal}{Ann. of Math.} \textbf{\bibinfo{volume}{54}},
+  \bibinfo{pages}{325} (\bibinfo{year}{1951}).
+
+\bibitem[{\citenamefont{Takesaki}(1979)}]{Takesaki}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Takesaki}},
+  \emph{\bibinfo{title}{Theory of Operator Algebras}}
+  (\bibinfo{publisher}{Springer-Verlag}, \bibinfo{address}{New York},
+  \bibinfo{year}{1979}), vol.~\bibinfo{volume}{1}, pp. \bibinfo{pages}{47--55}.
+
+\bibitem[{\citenamefont{Garrod and Percus}(1964)}]{PQG}
+\bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Garrod}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Percus}},
+  \bibinfo{journal}{J. Math. Phys.} \textbf{\bibinfo{volume}{5}},
+  \bibinfo{pages}{1756} (\bibinfo{year}{1964}).
+
+\bibitem[{\citenamefont{Kummar}(1970)}]{Kummar70}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Kummar}}, \bibinfo{journal}{J.
+  Math. Phys.} \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{449}
+  (\bibinfo{year}{1970}).
+
+\bibitem[{\citenamefont{Emch}(1972)}]{Emch}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Emch}},
+  \emph{\bibinfo{title}{Algebraic Methods in Statistical Mechanics and Quantum
+  Field Theory}} (\bibinfo{publisher}{Wiley}, \bibinfo{address}{New York},
+  \bibinfo{year}{1972}).
+
+\bibitem[{\citenamefont{Mazziotti}(2011)}]{Mazziotti2011}
+\bibinfo{author}{\bibfnamefont{D.~A.} \bibnamefont{Mazziotti}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{106}},
+  \bibinfo{pages}{083001} (\bibinfo{year}{2011}).
+
+\bibitem[{\citenamefont{Weiner and Ortiz}(2005)}]{OrtizWeiner2006}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Ortiz}},
+  \bibinfo{journal}{Int. J. Quantum Chem.} \textbf{\bibinfo{volume}{104}},
+  \bibinfo{pages}{299} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Mazziotti}(2001)}]{Mazziotti2001}
+\bibinfo{author}{\bibfnamefont{D.~A.} \bibnamefont{Mazziotti}},
+  \bibinfo{journal}{Chemical Physics Letters} \textbf{\bibinfo{volume}{338}},
+  \bibinfo{pages}{323 } (\bibinfo{year}{2001}).
+
+\end{thebibliography}

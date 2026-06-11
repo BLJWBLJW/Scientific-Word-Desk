@@ -1,0 +1,433 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, May 11, 2004 20:44:16}
+%TCIDATA{LastRevised=Sunday, May 16, 2004 12:33:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{align}
+&  \mathcal{H}\left(  \mathbf{\psi,n}\right)  =\sum_{1\leq j\leq s}%
+N_{j}\left\{  \left(  \left.  \psi_{j}\right\vert h_{1}\psi_{j}\right)
++\left(  \left.  \psi_{j+s}\right\vert h_{1}\psi_{j+s}\right)  +\left(
+\left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{j}\psi_{j+s}\right)  -\left(
+\left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{j+s}\psi_{j}\right)  \right\}
+\nonumber\\
+&  \qquad\qquad+\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}%
+}S_{N-1}\left(  \hat{\jmath}\hat{k}\right)  \left\{  \left(  \left.  \psi
+_{j}\psi_{j+s}\right\vert h_{2}\psi_{k}\psi_{k+s}\right)  -\left(  \left.
+\psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{k+s}\psi_{k}\right)  \right\}
+\nonumber\\
+&  \qquad\qquad+\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(  \hat{\jmath
+}\hat{k}\right)  \left\{  \left(  \left.  \psi_{j}\psi_{k}\right\vert
+h_{2}\psi_{j}\psi_{k}\right)  -\left(  \left.  \psi_{j}\psi_{k}\right\vert
+h_{2}\psi_{k}\psi_{j}\right)  \right\}  \label{unnormE}%
+\end{align}
+%
+
+\begin{align}
+&  \frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu
+}^{\ast}}=\left\{  \sum_{1\leq j\leq s}N_{j}\left\{  h_{1}\left\{  \left\vert
+\psi_{j}\right\rangle \left\langle \psi_{j}\right\vert +\left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert \right\}  +\left(
+\left.  \psi_{j+s}\right\vert h_{2}\psi_{j+s}\right)  \left\vert \psi
+_{j}\right\rangle \left\langle \psi_{j}\right\vert \right.  \right.
+\nonumber\\
+&  \qquad\left.  +\left(  \left.  \psi_{j}\right\vert h_{2}\psi_{j}\right)
+\left\vert \psi_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert -\left(
+\left.  \psi_{j+s}\right\vert h_{2}\psi_{j}\right)  \left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j}\right\vert -\left(  \left.  \psi
+_{j}\right\vert h_{2}\psi_{j+s}\right)  \left\vert \psi_{j}\right\rangle
+\left\langle \psi_{j+s}\right\vert \right\}  \nonumber\\
+&  \qquad+\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}%
+S_{N-1}\left(  \hat{\jmath}\hat{k}\right)  \left\{  \left(  \left.  \psi
+_{j+s}\right\vert h_{2}\psi_{k+s}\right)  \left\vert \psi_{k}\right\rangle
+\left\langle \psi_{j}\right\vert +\left(  \left.  \psi_{j}\right\vert
+h_{2}\psi_{k}\right)  \left\vert \psi_{k+s}\right\rangle \left\langle
+\psi_{j+s}\right\vert \right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  -\left(  \left.  \psi
+_{j+s}\right\vert h_{2}\psi_{k}\right)  \left\vert \psi_{k+s}\right\rangle
+\left\langle \psi_{j}\right\vert -\left(  \left.  \psi_{j}\right\vert
+h_{2}\psi_{k+s}\right)  \left\vert \psi_{k}\right\rangle \left\langle
+\psi_{j+s}\right\vert \right\}  \nonumber\\
+&  \qquad+2\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(  \hat{\jmath}\hat
+{k}\right)  \left\{  \left(  \left.  \psi_{k}\right\vert h_{2}\psi_{k}\right)
+\left\vert \psi_{j}\right\rangle \left\langle \psi_{j}\right\vert -\left(
+\left.  \psi_{k}\right\vert h_{2}\psi_{j}\right)  \left\vert \psi
+_{k}\right\rangle \left\langle \psi_{j}\right\vert \right\}  \left.
+\overset{}{}\right\}  \left\vert \psi_{\mu}\right\rangle ,
+\end{align}%
+\begin{align}
+&  \frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu}%
+}=\left\langle \psi_{\mu}\right\vert \left\{  \sum_{1\leq j\leq s}\left\{
+N_{j}\left\{  \left\vert \psi_{j}\right\rangle \left\langle \psi
+_{j}\right\vert +\left\vert \psi_{j+s}\right\rangle \left\langle \psi
+_{j+s}\right\vert \right\}  h_{1}+\left(  \left.  \psi_{j+s}\right\vert
+h_{2}\psi_{j+s}\right)  \left\vert \psi_{j}\right\rangle \left\langle \psi
+_{j}\right\vert \right.  \right.  \nonumber\\
+&  \qquad\left.  +\left(  \left.  \psi_{j}\right\vert h_{2}\psi_{j}\right)
+\left\vert \psi_{j+s}\right\rangle \left\langle \psi_{j+s}\right\vert -\left(
+\left.  \psi_{j+s}\right\vert h_{2}\psi_{j}\right)  \left\vert \psi
+_{j+s}\right\rangle \left\langle \psi_{j}\right\vert -\left(  \left.  \psi
+_{j}\right\vert h_{2}\psi_{j+s}\right)  \left\vert \psi_{j}\right\rangle
+\left\langle \psi_{j+s}\right\vert \right\}  \nonumber\\
+&  \qquad+\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}%
+S_{N-1}\left(  \hat{\jmath}\hat{k}\right)  \left\{  \left(  \left.  \psi
+_{j+s}\right\vert h_{2}\psi_{k+s}\right)  \left\vert \psi_{k}\right\rangle
+\left\langle \psi_{j}\right\vert +\left(  \left.  \psi_{j}\right\vert
+h_{2}\psi_{k}\right)  \left\vert \psi_{k+s}\right\rangle \left\langle
+\psi_{j+s}\right\vert \right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  -\left(  \left.  \psi
+_{j+s}\right\vert h_{2}\psi_{k}\right)  \left\vert \psi_{k+s}\right\rangle
+\left\langle \psi_{j}\right\vert -\left(  \left.  \psi_{j}\right\vert
+h_{2}\psi_{k+s}\right)  \left\vert \psi_{k}\right\rangle \left\langle
+\psi_{j+s}\right\vert \right\}  \nonumber\\
+&  \qquad+2\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(  \hat{\jmath}\hat
+{k}\right)  \left\{  \left(  \left.  \psi_{k}\right\vert h_{2}\psi_{k}\right)
+\left\vert \psi_{j}\right\rangle \left\langle \psi_{j}\right\vert -\left(
+\left.  \psi_{k}\right\vert h_{2}\psi_{j}\right)  \left\vert \psi
+_{k}\right\rangle \left\langle \psi_{j}\right\vert \right\}  \left.
+\overset{}{}\right\}  ,
+\end{align}
+Hence%
+\begin{align}
+\frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu
+}^{\ast}} &  =F\left(  \mathbf{\psi,n}\right)  \left\vert \psi_{\mu
+}\right\rangle \\
+\frac{\delta\mathcal{H}\left(  \mathbf{\psi,n}\right)  }{\delta\psi_{\mu}} &
+=\left\langle \psi_{\mu}\right\vert F\left(  \mathbf{\psi,n}\right)
+\end{align}
+where
+\begin{align}
+&  F\left(  \mathbf{\psi,n}\right)  =\sum_{\substack{1\leq j\leq s\\1\leq
+m\leq2s}}N_{j}\left\{  \left\vert \psi_{m}\right\rangle \left\langle \psi
+_{j}\right\vert h_{1mj}+\left\vert \psi_{j+s}\right\rangle \left\langle
+\psi_{j+s}\right\vert h_{1mj+s}+\left\vert \psi_{m}\right\rangle \left\langle
+\psi_{j}\right\vert \left(  \left.  \psi_{j+s}\right\vert h_{2}\psi
+_{j+s}\right)  _{mj}\right.  \nonumber\\
+&  \qquad\left.  +\,\left\vert \psi_{m}\right\rangle \left\langle \psi
+_{j+s}\right\vert \left(  \left.  \psi_{j}\right\vert h_{2}\psi_{j}\right)
+_{mj+s}-\left\vert \psi_{m}\right\rangle \left\langle \psi_{j}\right\vert
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j}\right)  _{mj+s}-\left\vert
+\psi_{m}\right\rangle \left\langle \psi_{j+s}\right\vert \left(  \left.
+\psi_{j}\right\vert h_{2}\psi_{j+s}\right)  _{mj}\right\}  \nonumber\\
+&  \qquad+\sum_{\substack{1\leq j,k\leq s\\1\leq m\leq2s}}n_{j}^{\frac{1}{2}%
+}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \hat{\jmath}\hat{k}\right)  \left\{
+\left\vert \psi_{m}\right\rangle \left\langle \psi_{j}\right\vert \left(
+\left.  \psi_{j+s}\right\vert h_{2}\psi_{k+s}\right)  _{mk}+\left\vert
+\psi_{m}\right\rangle \left\langle \psi_{j+s}\right\vert \left(  \left.
+\psi_{j}\right\vert h_{2}\psi_{k}\right)  _{mk+s}\right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  -\left\vert \psi_{m}%
+\right\rangle \left\langle \psi_{j}\right\vert \left(  \left.  \psi
+_{j+s}\right\vert h_{2}\psi_{k}\right)  _{mk+s}-\left\vert \psi_{m}%
+\right\rangle \left\langle \psi_{j+s}\right\vert \left(  \left.  \psi
+_{j}\right\vert h_{2}\psi_{k+s}\right)  _{mk}\right\}  \nonumber\\
+&  \qquad+2\sum_{\substack{1\leq j,k\leq2s\\1\leq m\leq2s}}n_{j}n_{k}%
+S_{N-2}\left(  \hat{\jmath}\hat{k}\right)  \left\{  \left\vert \psi
+_{m}\right\rangle \left\langle \psi_{j}\right\vert \left(  \left.  \psi
+_{k}\right\vert h_{2}\psi_{k}\right)  _{mj}-\left\vert \psi_{m}\right\rangle
+\left\langle \psi_{j}\right\vert \left(  \left.  \psi_{k}\right\vert h_{2}%
+\psi_{j}\right)  _{mk}\right\}  ,
+\end{align}
+giving%
+\begin{equation}
+F\left(  \mathbf{\psi,n}\right)  =\sum_{1\leq j,m\leq2s}\left\{  N_{j}\left\{
+h_{1mj}+A_{mj}-B_{mj}\right\}  +\left\{  C_{mj}-D_{mj}\right\}  +2\overset
+{}{\left\{  E_{mj}-F_{mj}\right\}  \left\vert \psi_{m}\right\rangle
+\left\langle \psi_{j}\right\vert }\right\}  ,
+\end{equation}%
+\begin{equation}
+F_{mj}=\sum_{1\leq k\leq2s}n_{j}n_{k}S_{N-2}\left(  \hat{\jmath}\hat
+{k}\right)  \left(  \left.  \psi_{k}\right\vert h_{2}\psi_{j}\right)
+_{mk};1\leq j\leq2s
+\end{equation}%
+\begin{equation}
+E_{mj}=\sum_{1\leq k\leq2s}n_{j}n_{k}S_{N-2}\left(  \hat{\jmath}\hat
+{k}\right)  \left(  \left.  \psi_{k}\right\vert h_{2}\psi_{k}\right)
+_{mj};1\leq j\leq2s
+\end{equation}%
+\begin{equation}
+D_{mj}=\left\{
+\begin{array}
+[c]{c}%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \hat{\jmath}\hat
+{k}\right)  \left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{k}\right)
+_{mk+s};1\leq j\leq s\\%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \hat{\jmath}\hat
+{k}\right)  \left(  \left.  \psi_{j-s}\right\vert h_{2}\psi_{k}\right)
+_{mk+s};s+1\leq j\leq2s
+\end{array}
+\right.
+\end{equation}%
+\begin{equation}
+C_{mj}=\left\{
+\begin{array}
+[c]{c}%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \hat{\jmath}\hat
+{k}\right)  \left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{k+s}\right)
+_{mk};1\leq j\leq s\\%
+%TCIMACRO{\tsum \limits_{1\leq k\leq s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq s}}
+%EndExpansion
+n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(  \hat{\jmath}\hat
+{k}\right)  \left(  \left.  \psi_{j-s}\right\vert h_{2}\psi_{k}\right)
+_{mk+s};s+1\leq j\leq2s
+\end{array}
+\right.
+\end{equation}%
+\begin{equation}
+A_{mj}=\left\{
+\begin{array}
+[c]{c}%
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j+s}\right)  _{mj};1\leq
+j\leq s\\
+\left(  \left.  \psi_{j-s}\right\vert h_{2}\psi_{j-s}\right)  _{mj};s+1\leq
+j\leq s
+\end{array}
+\right.
+\end{equation}%
+\begin{equation}
+B_{mj}=\left\{
+\begin{array}
+[c]{c}%
+\left(  \left.  \psi_{j+s}\right\vert h_{2}\psi_{j}\right)  _{mj+s};1\leq
+j\leq s\\
+\left(  \left.  \psi_{j-s}\right\vert h_{2}\psi_{j}\right)  _{mj-s};s+1\leq
+j\leq s
+\end{array}
+\right.
+\end{equation}
+
+
+\section{Fock Operator and Energy}%
+
+\begin{equation}
+f\left(  \mathbf{x}\right)  =f_{0}+f_{1}\left(  \mathbf{x}\right)
++\cdots+f_{n}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+f_{m}\left(  \mathbf{x}\right)
+\end{equation}
+where
+\begin{equation}
+f_{m}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m}\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m}\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m}}.
+\end{equation}
+Consider
+\begin{align}
+\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)    & =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{l}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m-1}}\\
+x_{l}\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)    & =%
+%TCIMACRO{\tsum \limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j_{1},\cdots,j_{m-1}\neq l\leq r}}
+%EndExpansion
+c_{j_{1}\cdots j_{l}\cdots j_{m}}x_{j_{1}}\cdots x_{j_{m-1}}x_{l}\\%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}}{\partial x_{l}}\left(  \mathbf{x}\right)    &
+=mf_{m}\left(  \mathbf{x}\right)
+\end{align}
+hence%
+\begin{align}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial f}{\partial x_{l}}\left(  \mathbf{x}\right)    & =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial}{\partial x_{l}}%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+f_{m}\left(  \mathbf{x}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}\left(  \mathbf{x}\right)  }{\partial x_{l}}=%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion%
+%TCIMACRO{\tsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+x_{l}\frac{\partial f_{m}\left(  \mathbf{x}\right)  }{\partial x_{l}}=%
+%TCIMACRO{\tsum \limits_{0\leq m\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{0\leq m\leq n}}
+%EndExpansion
+mf_{m}\left(  \mathbf{x}\right)  \\
+& =f_{1}\left(  \mathbf{x}\right)  +2f_{2}\left(  \mathbf{x}\right)
++\cdots+nf_{n}\left(  \mathbf{x}\right)  .
+\end{align}
+Thus
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+\left\langle \left.  \psi_{l}\right\vert F\left(  \mathbf{\psi,n}\right)
+\psi_{l}\right\rangle =Tr\left\{  F\left(  \mathbf{\psi,n}\right)  \right\}
+=\mathcal{H}_{1}\left(  \mathbf{\psi,n}\right)  +2\mathcal{H}_{2}\left(
+\mathbf{\psi,n}\right)
+\end{equation}
+showing that
+\begin{equation}
+Tr\left\{  F\left(  \mathbf{\psi,n}\right)  \right\}  -\mathcal{H}\left(
+\mathbf{\psi,n}\right)  =\mathcal{H}_{2}\left(  \mathbf{\psi,n}\right)
+\end{equation}
+and
+\begin{equation}
+2\mathcal{H}\left(  \mathbf{\psi,n}\right)  =Tr\left\{  F\left(
+\mathbf{\psi,n}\right)  \right\}  +\mathcal{H}_{1}\left(  \mathbf{\psi
+,n}\right)
+\end{equation}
+which gives
+\begin{equation}
+\mathcal{H}\left(  \mathbf{\psi,n}\right)  =Tr\left\{  F\left(  \mathbf{\psi
+,n}\right)  \right\}  -\mathcal{H}_{2}\left(  \mathbf{\psi,n}\right)
+\end{equation}
+and
+\begin{equation}
+\mathcal{H}\left(  \mathbf{\psi,n}\right)  =\frac{1}{2}\left\{  Tr\left\{
+F\left(  \mathbf{\psi,n}\right)  \right\}  +\mathcal{H}_{1}\left(
+\mathbf{\psi,n}\right)  \right\}  .
+\end{equation}
+Noting that
+\begin{equation}
+Tr\left\{  F\left(  \mathbf{\psi,n}\right)  \right\}  =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+\varepsilon_{l}\left(  \mathbf{\psi,n}\right)
+\end{equation}
+and
+\begin{equation}
+\mathcal{H}_{1}\left(  \mathbf{\psi,n}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq l\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq2s}}
+%EndExpansion
+N_{l}\left(  \left.  \psi_{l}\right\vert h_{1}\psi_{l}\right)
+\end{equation}
+and
+\begin{equation}
+\left(  \left.  \psi_{l}\right\vert h_{1}\psi_{l}\right)  \leq0,
+\end{equation}
+it seems that the CGSO's should be occupied by an aufbau principle based on
+$\left\{  \left(  \left.  \psi_{l}\right\vert h_{1}\psi_{l}\right)  \right\}
+,$ i.e
+\begin{equation}
+N_{1}\geq N_{2}\geq\cdots\geq N_{s}%
+\end{equation}
+corresponding to
+\begin{equation}
+\left(  \left.  \psi_{1}\right\vert h_{1}\psi_{1}\right)  \leq\left(  \left.
+\psi_{1+s}\right\vert h_{1}\psi_{1+s}\right)  \leq\left(  \left.  \psi
+_{2}\right\vert h_{1}\psi_{2}\right)  \leq\left(  \left.  \psi_{2+s}%
+\right\vert h_{1}\psi_{2+s}\right)  \leq\cdots\leq\left(  \left.  \psi
+_{s}\right\vert h_{1}\psi_{s}\right)  \leq\left(  \left.  \psi_{2s}\right\vert
+h_{1}\psi_{2s}\right)
+\end{equation}
+
+
+
+\end{document}

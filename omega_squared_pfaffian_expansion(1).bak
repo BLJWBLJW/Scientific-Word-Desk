@@ -1,0 +1,114 @@
+
+\documentclass[aps,prd,onecolumn,nofootinbib]{revtex4-2}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{bm}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Saturday, June 21, 2025 17:23:16}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\input{tcilatex}
+
+\begin{document}
+
+\title{Expansion of $\omega^2$ in Terms of Pfaffian Compound Matrices}
+\author{ChatGPT}
+\date{\today}
+\maketitle
+
+\section{Goal}
+
+Let $A$ be a skew-symmetric $2n \times 2n$ matrix, and define the 2-form: 
+\begin{equation*}
+\omega = \sum_{i < j} A_{ij} \, e_i \wedge e_j \in \Lambda^2 V 
+\end{equation*}
+We want to express $\omega^2 \in \Lambda^4 V$ in terms of \textbf{Pfaffians
+of $4 \times 4$ principal submatrices} of $A$ \^{a}\euro '\ the so-called 
+\emph{compound Pfaffian matrix} entries.
+
+\section{Step-by-Step Breakdown}
+
+We work in a $2n$-dimensional space $V$ with basis $\{e_1, \dots, e_{2n}\}$.
+Fix $n \geq 2$, so $\omega^2 \in \Lambda^4 V$.
+
+\subsection{Quadratic Expansion of $\protect\omega$}
+
+\begin{equation*}
+\omega = \sum_{i<j} A_{ij} \, e_i \wedge e_j 
+\end{equation*}
+Then: 
+\begin{equation*}
+\omega^2 = \sum_{i<j} \sum_{k<\ell} A_{ij} A_{k\ell} (e_i \wedge e_j \wedge
+e_k \wedge e_\ell) 
+\end{equation*}
+Only terms with disjoint index pairs $(i<j), (k<\ell)$ contribute. The sum
+is over unordered \emph{partitions} of 4 distinct indices into two unordered
+pairs.
+
+\subsection{Basis for $\Lambda^4 V$}
+
+All wedge monomials $e_i \wedge e_j \wedge e_k \wedge e_\ell$ with $i < j <
+k < \ell$ form a basis of $\Lambda^4 V$. Each such 4-subset $I =
+\{i,j,k,\ell\}$ defines a $4 \times 4$ principal submatrix $A_I$.
+
+\begin{equation*}
+\omega^2 = \sum_{\substack{ I \subset \{1, \dots, 2n\}  \\ |I| = 4}} \text{Pf%
+}(A_I) \cdot \beta_I 
+\end{equation*}
+where $\beta_I = e_{i_1} \wedge e_{i_2} \wedge e_{i_3} \wedge e_{i_4}$ and $%
+\text{Pf}(A_I)$ is the Pfaffian of the $4 \times 4$ submatrix $A_I$.
+
+\section{Example: $n = 3$, $\dim V = 6$}
+
+Let $I = \{1,2,3,4\}$. The submatrix $A_I$ is: 
+\begin{equation*}
+A_I = 
+\begin{bmatrix}
+0 & A_{12} & A_{13} & A_{14} \\ 
+-A_{12} & 0 & A_{23} & A_{24} \\ 
+-A_{13} & -A_{23} & 0 & A_{34} \\ 
+-A_{14} & -A_{24} & -A_{34} & 0%
+\end{bmatrix}
+\end{equation*}
+The Pfaffian of $A_I$ is: 
+\begin{equation*}
+\text{Pf}(A_I) = A_{12} A_{34} - A_{13} A_{24} + A_{14} A_{23} 
+\end{equation*}
+So: 
+\begin{equation*}
+\text{Contribution to } \omega^2 \text{ from } I = \text{Pf}(A_I) \cdot e_1
+\wedge e_2 \wedge e_3 \wedge e_4 
+\end{equation*}
+
+\section{Connection to Compound Pfaffian Matrix}
+
+This yields: 
+\begin{equation*}
+\omega ^{2}=\sum_{I\in \binom{2n}{4}}\text{Pf}(A_{I})\cdot e_{I}
+\end{equation*}%
+where $e_{I}=e_{i_{1}}\wedge e_{i_{2}}\wedge e_{i_{3}}\wedge e_{i_{4}}$ and $%
+\text{Pf}(A_{I})$ is the entry of the second compound Pfaffian matrix $\text{%
+Pf}_{2}(A)$.
+
+\section{Final Summary}
+
+\begin{equation*}
+%TCIMACRO{%
+%\TeXButton{boxed}{\omega^2 = \sum_{I \subset \{1,\dots,2n\},\, |I| = 4} \text{Pf}(A_I) \cdot e_I}}%
+%BeginExpansion
+\omega^2 = \sum_{I \subset \{1,\dots,2n\},\, |I| = 4} \text{Pf}(A_I) \cdot e_I%
+%EndExpansion
+\end{equation*}%
+This is the coordinate expansion of $\omega ^{2}$ in $\Lambda ^{4}V$, with
+coefficients given by $4\times 4$ Pfaffian minors of $A$ \^{a}\euro
+\textquotedblright\ the entries of the compound Pfaffian matrix.
+
+\end{document}

@@ -1,0 +1,209 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, July 12, 2019 20:12:44}
+%TCIDATA{LastRevised=Thursday, July 18, 2019 12:34:54}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Orthogonal Transformations }
+
+Consider a vector space $V$ over the field $\mathbb{F}$ equipped with a
+positive definite inner product%
+\begin{equation}
+\left\langle \left.  {}\right\vert \right\rangle :V\times V\rightarrow
+\mathbb{F}%
+\end{equation}
+and bases of vectors $\left\{  \left.  \varphi_{j}\right\vert 1\leq j\leq
+r\right\}  $ and $\left\{  \left.  \psi_{j}\right\vert 1\leq j\leq r\right\}
+$ that are orthogonal wrt $\left\langle \left.  {}\right\vert \right\rangle $
+i.e.
+\begin{equation}
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =\delta
+_{jk};1\leq j,k\leq r
+\end{equation}
+and%
+\begin{equation}
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=\delta_{jk};1\leq j,k\leq r.
+\end{equation}
+
+
+If the bases are normalized then the transition operators%
+\begin{equation}
+\left\vert \varphi_{j}\right\rangle \left\langle \psi_{j}\right\vert :\psi
+_{k}\rightarrow\varphi_{k};1\leq k\leq r
+\end{equation}
+are partial isometries and their sum
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\left\vert \varphi_{j}\right\rangle \left\langle \psi_{j}\right\vert :\psi
+_{k}\rightarrow\varphi_{k};1\leq k\leq r
+\end{equation}
+is an isometry. All partial isometries and isometries are given by
+\begin{equation}
+\left\vert O_{1}\varphi_{j}\right\rangle \left\langle O_{2}\psi_{j}\right\vert
+;1\leq j\leq r,O_{1},O_{2}\in O\left(  r,\mathbb{F}\right)
+\end{equation}
+and
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\left\vert O_{1}\varphi_{j}\right\rangle \left\langle O_{2}\psi_{j}\right\vert
+,O_{1},O_{2}\in O\left(  r,\mathbb{F}\right)  .
+\end{equation}
+
+
+Any diagonal operator can be expressed as
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\lambda_{j}\left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{j}\right\vert
+\end{equation}
+so that
+\begin{equation}%
+%TCIMACRO{\tsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\lambda_{j}\left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{j}\right\vert :\varphi_{k}\rightarrow\lambda_{k}\varphi_{k}%
+\end{equation}
+if
+\begin{equation}
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=\delta_{jk}%
+\end{equation}
+
+
+A transformation $T\in GL\left(  V,\mathbb{F}\right)  $ has the effect
+\begin{equation}
+T:v_{k}\rightarrow w_{k},
+\end{equation}
+where if $\left\{  \left.  v_{j}\right\vert 1\leq j\leq r\right\}  $ are
+linearly independent then $\left\{  \left.  w_{j}\right\vert 1\leq j\leq
+r\right\}  =\left\{  T\left(  w_{j}\right)  \right\}  $ are linearly
+independent.
+\begin{equation}
+Oe_{j}\bot Oe_{k}%
+\end{equation}%
+\begin{align}
+&
+%TCIMACRO{\tsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\left\vert Oe_{j}\right\rangle \left\langle e_{j}\right\vert \\%
+%TCIMACRO{\tsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\left\vert Of_{j}\right\rangle \left\langle f_{j}\right\vert  & =%
+%TCIMACRO{\tsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\left\vert OO_{1}e_{j}\right\rangle \left\langle O_{1}e_{j}\right\vert
+\end{align}%
+\begin{equation}
+A=\sum_{1\leq j\leq s}i\alpha_{j}\left\{  \left\vert v_{j}\right\rangle
+\left\langle v_{j}\right\vert -\left\vert v_{j}^{\ast}\right\rangle
+\left\langle v_{j}^{\ast}\right\vert \right\}  ;\qquad\alpha_{j}\in
+\mathbb{R}^{+}\label{sa}%
+\end{equation}
+
+
+\begin{theorem}
+Any orthogonal transformation $O$ can be expanded
+\begin{equation}
+O=\sum\left\vert f_{j}\right\rangle \left\langle e_{j}\right\vert
+\end{equation}
+
+\end{theorem}
+
+\begin{proof}%
+\begin{equation}
+O=\exp\left\{  A\right\}  =\exp\left\{  \sum_{1\leq j\leq s}i\alpha
+_{j}\left\{  \left\vert v_{j}\right\rangle \left\langle v_{j}\right\vert
+-\left\vert v_{j}^{\ast}\right\rangle \left\langle v_{j}^{\ast}\right\vert
+\right\}  \right\}
+\end{equation}
+
+\end{proof}
+
+
+\end{document}

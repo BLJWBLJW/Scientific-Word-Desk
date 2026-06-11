@@ -1,0 +1,668 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Wednesday, August 21, 2019 13:15:11}
+%TCIDATA{LastRevised=Wednesday, September 25, 2019 20:26:33}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Lattice}
+
+A lattice is a partially ordered set in which every two elements have a
+\emph{unique supremum, }$\vee,$ (also called a \emph{least upper bound} (LUB)
+or \emph{join}) and a \emph{unique infimum, }$\wedge,$ (also called a
+\emph{greatest lower bound} (GLB) or \emph{meet}).
+
+A \emph{complemented lattice} is a \emph{bounded lattice} ($\equiv$\emph{with
+least element 0 and greatest element 1}), in which every element $a$ has a
+complement, i.e. an element $b$ satisfying
+\begin{align}
+a\vee b &  =1\\
+a\wedge b &  =0.
+\end{align}
+
+
+\begin{remark}
+Complements need not be unique.
+\end{remark}
+
+A \emph{relatively complemented lattice} is a lattice such that every
+interval, $[c,d]$ viewed as a bounded lattice in its own right, is a
+complemented lattice.
+
+An \emph{orthocomplementation }on a complemented lattice is an
+\emph{involution }which is \emph{order-reversing} and maps each element to a
+complement. \emph{An orthocomplemented lattice satisfying a weak form of the
+modular law is called an }\underline{\emph{orthomodular lattice.}}
+
+In \emph{distributive lattices, complements are unique.} \emph{Every
+complemented distributive lattice has a unique orthocomplementation and is in
+fact a Boolean algebra.}
+
+In general an element may have more than one complement. However, in a
+(bounded) distributive lattice every element will have at most one complement.
+A lattice in which every element has exactly one complement is called a
+\emph{uniquely complemented} lattice
+
+A lattice with the property that every interval (viewed as a sublattice) is
+complemented is called a \emph{relatively complemented lattice}. In other
+words, a relatively complemented lattice is characterized by the property that
+for every element $a$ in an interval $[c,d]$ there is an element $b$ such
+that
+\begin{align}
+a\vee b  &  =d\\
+a\wedge b  &  =c.
+\end{align}
+
+
+Such an element $b$ is called a \emph{complement} of $a$ relative to the interval.
+
+\emph{A distributive lattice is complemented if and only if it is bounded and
+relatively complemented.}
+
+\begin{remark}
+\emph{The lattice of subspaces of a vector space provide an example of a
+complemented lattice that is not, in general, distributive.}
+\end{remark}
+
+\subsection{Orthocomplementation}
+
+An \emph{orthocomplementation on a bounded lattice} is a function that maps
+each element $a$ to an "\emph{orthocomplement}" $a^{\bot}$ in such a way that
+the following axioms are satisfied
+
+\begin{enumerate}
+\item Complement law%
+\begin{align}
+a^{\bot}\vee a  &  =1\\
+a^{\bot}\wedge a  &  =0
+\end{align}
+
+
+\item Involution law%
+\begin{equation}
+\left(  a^{\bot}\right)  ^{\bot}=a
+\end{equation}
+
+
+\item Order-reversing%
+\begin{equation}
+a\leq b\Rightarrow b^{\bot}\leq a^{\bot}%
+\end{equation}
+
+\end{enumerate}
+
+An \emph{orthocomplemented lattice or ortholattice is a bounded lattice which
+is equipped with an orthocomplementation}. \emph{The lattice of subspaces of
+an inner product space, and the orthogonal complement operation, provides an
+example of an orthocomplemented lattice that is not, in general,
+distributive.}
+
+\emph{Boolean algebras are a special case of orthocomplemented lattices},
+which in turn are a special case of \emph{complemented lattices} (with extra structure).
+
+\begin{remark}
+The closed subspaces of a separable Hilbert space represent quantum
+propositions and behave as an orthocomplemented lattice. The
+\emph{intersection} of two subspaces correspond to the \emph{meet} operation
+and the \emph{union} of two subspaces to the \emph{join} operation i.e.
+\begin{align}
+V_{1}\cap V_{2}  &  \leftrightarrow V_{1}\wedge V_{2}\\
+V_{1}\cup V_{2}  &  \leftrightarrow V_{1}\vee V_{2}%
+\end{align}
+and \emph{orthocomplementation} to \emph{orthogonality i.e.} the symbol
+maintains in its meaning in the subspace and lattice settings.
+\end{remark}
+
+\begin{remark}
+The \emph{intersection} of two subspaces is the largest subspace containd in
+both of the subspaces, while the union of two subspaces is the smallest
+subspace containing both the subspaces.
+\end{remark}
+
+\begin{remark}
+The partial order is subspace inclusion i.e.
+\begin{equation}
+V_{n}\supset V_{n-1}\supset\cdots\supset V_{1}.
+\end{equation}
+Of course the index set does not have to be the natural numbers.
+\end{remark}
+
+\emph{Orthocomplemented lattices, like Boolean algebras, satisfy de Morgan's
+laws:}%
+\begin{align}
+(a\vee b)^{\perp}  &  =a^{\bot}\wedge b^{\bot}\\
+(a\wedge b)^{\perp}  &  =a^{\bot}\vee b^{\bot}%
+\end{align}
+
+
+\subsection{Orthomodular lattices}
+
+A \emph{lattice }is called \emph{modular} if for all elements $a,b$ and $c$
+\begin{equation}
+a\leq c\Rightarrow a\vee(b\wedge c)=(a\vee b)\wedge c.
+\end{equation}
+
+
+This is \emph{weaker than distributivity}. A natural further weakening of this
+condition for \emph{orthocomplemented lattices, (necessary for applications in
+quantum logic)}, is to require it only in the special case
+\begin{equation}
+b=a^{\bot}.
+\end{equation}
+An \emph{orthomodular lattice} is therefore defined as an
+\emph{orthocomplemented lattice} such that for any two elements
+\begin{equation}
+a\leq c\Rightarrow a\vee(a^{\bot}\wedge c)=(a\vee a^{\bot})\wedge c=c.
+\end{equation}
+
+
+If $\mathcal{A}$ is an arbitrary von Neumann algebra, then the set
+$P(\mathcal{A})$ \emph{of all its projections is a complete orthomodular
+lattice}. In these conditions, if $\mathcal{A}$ is a \emph{factor}, then a
+\emph{dimension function }can be defined on the set $P(\mathcal{A})$.
+Dependent on the set of values of this function, the factors are divided into
+the types $I_{n},I_{\infty},II_{1},II_{\infty}$ and $III$ (the Murray--von
+Neumann classification). It has been established that lattices of projections
+of factors of the type $I_{n}$ and $II_{1}$ are \emph{continuous geometries.}
+
+\begin{definition}
+A continuous geometry is a lattice $\mathcal{L}$ with the following properties:
+\end{definition}
+
+\begin{enumerate}
+\item $\mathcal{L}$ is modular.
+
+\item $\mathcal{L}$ is complete.
+
+\item The lattice operations $\wedge,\vee$ satisfy the continuity property%
+\begin{equation}
+\left(
+%TCIMACRO{\tbigwedge \limits_{\alpha\in\mathfrak{A}}}%
+%BeginExpansion
+{\textstyle\bigwedge\limits_{\alpha\in\mathfrak{A}}}
+%EndExpansion
+a_{\alpha}\right)  \vee b=%
+%TCIMACRO{\tbigwedge \limits_{\alpha\in\mathfrak{A}}}%
+%BeginExpansion
+{\textstyle\bigwedge\limits_{\alpha\in\mathfrak{A}}}
+%EndExpansion
+\left(  a_{\alpha}\vee b\right)  ,
+\end{equation}
+where $\mathfrak{A}$ is a directed set i.e. if $\U{3b1} <\U{3b2} $ then
+$a_{\U{3b1} }<a\U{1d66} $,
+
+\item The same condition with $\wedge$ and $\vee$ reversed i.e.
+\begin{equation}
+\left(
+%TCIMACRO{\tbigvee \limits_{\alpha\in\mathfrak{A}}}%
+%BeginExpansion
+{\textstyle\bigvee\limits_{\alpha\in\mathfrak{A}}}
+%EndExpansion
+a_{\alpha}\right)  \wedge b=%
+%TCIMACRO{\tbigvee \limits_{\alpha\in\mathfrak{A}}}%
+%BeginExpansion
+{\textstyle\bigvee\limits_{\alpha\in\mathfrak{A}}}
+%EndExpansion
+\left(  a_{\alpha}\wedge b\right)  ,
+\end{equation}
+.
+
+\item Every element in $\mathcal{L}$ has a complement (not necessarily unique).
+
+\item $\mathcal{L}$ is irreducible i.e. the only elements with unique
+complements are $0$ and $1$.
+\end{enumerate}
+
+\begin{example}
+Finite-dimensional complex projective space, or rather its set of linear
+subspaces, is a continuous geometry,with dimensions taking values in the
+discrete set $\{0,1/n,2/n,...,1\}$
+\end{example}
+
+\begin{example}
+The projections of a finite type II$_{1}$ von Neumann algebra form a
+continuous geometry with dimensions taking values in the unit interval $[0,1]$.
+\end{example}
+
+\begin{example}
+Kaplansky (1955) showed that \emph{any} orthocomplemented complete modular
+lattice is a continuous geometry.
+\end{example}
+
+\begin{example}
+If $V$ is a vector space over a field (or division ring) $\mathbb{F}$, then
+there is a natural map from the lattice $\mathcal{L}(V)$ of subspaces of $V$
+to the lattice of subspaces of $V\otimes\mathbb{F}^{2}$ that multiplies
+dimensions by $2$. So we can take a direct limit of%
+\begin{equation}
+PG(\mathbb{F})\subset PG(\mathbb{F}^{2})\subset PG(\mathbb{F}^{4})\subset
+PG(\mathbb{F}^{8})\subset\cdots
+\end{equation}
+This has a dimension function taking values in all dyadic rationals between
+$0$ and $1$. Its completion is a continuous geometry containing elements of
+every dimension in $[0,1]$. This geometry was constructed by von Neumann and
+is called the continuous geometry over $\mathbb{F}.$
+\end{example}
+
+\section{Projectors}
+
+The lattice structure of the set of subspaces can be translated to algebraic
+operations on the set of orthogonal projectors $P\left(  \mathcal{H}\right)
+\subset\mathcal{B}\left(  \mathcal{H}\right)  ,$ the partial order
+"$\supseteq"$ of subspace inclusion maps to "$\geq"$ of operator ordering and
+orthocomplementation "$\bot"$ maps to orthogonality i.e.
+\begin{equation}
+P^{\bot}=I_{\mathcal{H}}-P.
+\end{equation}
+The meet and join operations follow from the use of the SVD\ and psuedo
+inverse defined by
+\begin{equation}
+A^{+}=\sum_{1\leq j\leq\kappa}\left\vert e_{j}\right\rangle \left\vert
+\alpha_{j}\right\vert ^{-1}\left\langle f_{j}\right\vert .
+\end{equation}
+
+
+\begin{theorem}
+Let $A$ be an $m\times n$ matrix, and $B$ an $m\times k$ matrix both defined
+on $\mathbb{C}$, then%
+\begin{equation}
+\operatorname{Ran}\left\{  AA^{\dagger}+BB^{\dagger}\right\}
+=\operatorname{Ran}\left\{  A\right\}  \cup\operatorname{Ran}\left\{
+B\right\}
+\end{equation}
+
+\end{theorem}
+
+and%
+\begin{equation}
+\operatorname{Ker}\left\{  AA^{\dagger}+BB^{\dagger}\right\}
+=\operatorname{Ker}\left\{  A\right\}  \cap\operatorname{Ker}\left\{
+B\right\}  .
+\end{equation}
+
+
+\begin{corollary}
+If $P$ and $Q$ are projections on $\mathbb{C}^{n}$
+\begin{equation}
+\operatorname{Ran}\left\{  P+Q\right\}  =\operatorname{Ran}\left\{  P\right\}
+\cup\operatorname{Ran}\left\{  Q\right\}
+\end{equation}
+and
+\begin{equation}
+\operatorname{Ker}\left\{  P+Q\right\}  =\operatorname{Ker}\left\{  P\right\}
+\cap\operatorname{Ker}\left\{  Q\right\}  .
+\end{equation}
+
+\end{corollary}
+
+\begin{remark}
+The sum of two projectors is not in general a projector i.e.%
+\begin{equation}
+\sum_{1\leq j\leq m}\left\vert e_{j}\right\rangle \left\langle e_{j}%
+\right\vert +\sum_{1\leq j\leq n}\left\vert f_{j}\right\rangle \left\langle
+f_{j}\right\vert \neq\sum_{1\leq j\leq\kappa}\left\vert h_{j}\right\rangle
+\left\langle h_{j}\right\vert ,
+\end{equation}
+unless
+\begin{equation}
+\sum_{1\leq k\leq m}\sum_{1\leq j\leq n}\left\vert e_{j}\right\rangle
+\left\langle e_{j}\right\vert \left\vert f_{k}\right\rangle \left\langle
+f_{k}\right\vert =-\sum_{1\leq k\leq m}\sum_{1\leq j\leq n}\left\vert
+f_{k}\right\rangle \left\langle f_{k}\right\vert \left\vert e_{j}\right\rangle
+\left\langle e_{j}\right\vert
+\end{equation}
+i.e.%
+\begin{equation}
+\left\{  P,Q\right\}  =0.
+\end{equation}
+
+\end{remark}
+
+\begin{theorem}
+Let $M$ and $N$ be subspaces of $\mathbb{C}^{n}$. Let $P=P_{M}$ and $Q=P_{N}$.
+Then all the following expressions are equal to the orthogonal projection
+$P_{P\cup Q}$ on $M\cup N$ i.e.%
+\begin{align}
+P_{M\cup N}  &  =\left(  P+Q\right)  \left(  P+Q\right)  ^{+}\\
+&  =\left(  P+Q\right)  ^{+}\left(  P+Q\right) \\
+&  =Q+\left(  PQ^{\bot}\right)  ^{+}\left(  PQ^{\bot}\right) \\
+&  =P+P^{\bot}\left(  P^{\bot}Q\right)  ^{+}\\
+&  =Q+Q^{\bot}\left(  Q^{\bot}P\right)  ^{+}.
+\end{align}
+
+\end{theorem}
+
+\begin{theorem}
+Let $M$ and $N$ be subspaces of $\mathbb{C}^{n}$. Let $P=P_{M}$ and $Q=P_{N}$.
+Then all the following expressions are equal to the orthogonal projection
+$P_{P\cap Q}$ onto $M\cap N$ i.e.,
+\begin{align}
+P_{M\cap N}  &  =2Q\left(  P+Q\right)  P^{+}\\
+&  =2P\left(  P+Q\right)  Q^{+}\\
+&  =2\left(  P-P\left(  P+Q\right)  ^{+}P\right) \\
+&  =P-\left(  P-QP\right)  ^{+}\left(  P-QP\right)  =P-\left(  Q^{\bot
+}P\right)  ^{+}\left(  Q^{\bot}P\right) \\
+&  =Q-\left(  Q-PQ\right)  ^{+}\left(  Q-PQ\right)  =Q-\left(  P^{\bot
+}Q\right)  ^{+}\left(  P^{\bot}Q\right) \\
+&  =P-P\left(  PQ^{\bot}\right)  ^{+}\\
+&  =Q-Q\left(  QP^{\bot}\right)  ^{+}.
+\end{align}
+
+
+\begin{remark}
+Von Neumann also showed that%
+\begin{equation}
+P_{M\cap N}=\lim\limits_{n\rightarrow\infty}\left\{  P\left(  QP\right)
+^{n}\right\}  .
+\end{equation}
+
+\end{remark}
+\end{theorem}
+
+\section{Projectors in a Geometric Algebra}
+
+The Geometric/Clifford algebra $\mathcal{F}$ can be viewed as the $w^{\ast}%
+$-algebra $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  ,$ where
+$\mathcal{H}_{\mathcal{F}}$ is the exterior algebra, $%
+%TCIMACRO{\tbigwedge }%
+%BeginExpansion
+{\textstyle\bigwedge}
+%EndExpansion
+\left(  \mathcal{H}^{1}\right)  $ of the Hilbert space $\mathcal{H}^{1}$ as
+well as exterior algebra $%
+%TCIMACRO{\tbigwedge }%
+%BeginExpansion
+{\textstyle\bigwedge}
+%EndExpansion
+\left(  \mathcal{F}_{1}\right)  ,$ that is equipped with a Clifford/Geometric product.
+
+Consider the self adjoint conb $\left\{  \left.  \widetilde{x}_{j}\right\vert
+1\leq j\leq2r\right\}  $ of the complex Geometric/Clifford algebra
+$\mathcal{A}_{2r},$ where the a positive definite inner product in
+$\mathcal{A}_{2r}$ is given by
+\begin{equation}
+\left\langle \left.  A\right\vert B\right\rangle _{\mathcal{F}}%
+=\operatorname*{tr}\left\{  A^{\dagger}B\right\}  \equiv\left\langle
+\left\langle A^{\dagger}B\right\rangle \right\rangle _{0},
+\end{equation}
+which also defines a norm
+\begin{equation}
+\left\Vert A\right\Vert _{\mathcal{F}}=\left(  \operatorname*{tr}\left\{
+A^{\dagger}A\right\}  \right)  ^{\frac{1}{2}},
+\end{equation}
+thus making $\mathcal{F}$ a $c^{\ast}$, $w^{\ast}$ and \emph{Hilbert algebra},
+when $r<\infty.$
+
+\begin{remark}%
+\begin{equation}
+\left\langle A\right\rangle _{0}=\operatorname*{tr}\left\{  A\right\}  I_{2r}.
+\end{equation}
+
+\end{remark}
+
+The psuedo scalar $\mathcal{J}_{2r}$ is given by%
+\begin{equation}
+\mathcal{J}_{2r}=%
+%TCIMACRO{\tprod \limits_{1\leq j\leq2r}}%
+%BeginExpansion
+{\textstyle\prod\limits_{1\leq j\leq2r}}
+%EndExpansion
+\widetilde{x}_{j}=\widetilde{x}_{1}\cdots\widetilde{x}_{2r}%
+\end{equation}
+and has the properties
+
+\begin{enumerate}
+\item
+\begin{align}
+\mathcal{J}_{2r}\mathcal{J}_{2r}^{\dagger}  &  =I_{2r}\\
+&  \Downarrow\\
+\mathcal{J}_{2r}^{-1}  &  =\mathcal{J}_{2r}^{\dagger}%
+\end{align}
+
+
+\item
+\begin{equation}
+\left(  \mathcal{J}_{2r}\right)  ^{2}=-I_{2r}.
+\end{equation}
+
+\end{enumerate}
+
+Hence
+\begin{equation}
+\mathcal{J}_{2r}^{-1}=\left(
+%TCIMACRO{\tprod \limits_{1\leq j\leq2r}}%
+%BeginExpansion
+{\textstyle\prod\limits_{1\leq j\leq2r}}
+%EndExpansion
+\widetilde{x}_{j}\right)  ^{\dagger}=\widetilde{x}_{2r}\cdots\widetilde{x}%
+_{1}.
+\end{equation}
+
+
+\subsection{Hodge Duality}
+
+The \emph{dual} $A^{\%}$ of an $n$ -blade $A$ is defined by
+\begin{equation}
+A^{\%}=A\mathcal{J}_{2r}=\left(  -1\right)  ^{n\left(  r-n\right)
+}\mathcal{J}_{2r}A.
+\end{equation}
+The action of the dual operator "$\%"$ on the basis $\left\{  \left.
+\widetilde{x}_{j_{1}}\cdots\widetilde{x}_{j_{n}}\right\vert 1\leq j_{1}<\cdots
+j_{n}\leq2r;0\leq n\leq2r\right\}  $ is
+\begin{equation}
+\left(  \widetilde{x}_{j_{1}}\cdots\widetilde{x}_{j_{n}}\right)
+^{\%}=\widetilde{x}_{j_{1}}\cdots\widetilde{x}_{j_{n}}\widetilde{x}_{2r}%
+\cdots\widetilde{x}_{1}\in\mathcal{A}_{2r-n},
+\end{equation}
+i.e.%
+\begin{equation}
+\%:\mathcal{F}_{n}\rightarrow\mathcal{F}_{2r-n}.
+\end{equation}
+
+
+\begin{example}
+$r=2$
+\begin{align}
+I_{2r}\left(  \widetilde{x}_{4}\widetilde{x}_{3}\widetilde{x}_{2}%
+\widetilde{x}_{1}\right)   &  =\widetilde{x}_{4}\widetilde{x}_{3}%
+\widetilde{x}_{2}\widetilde{x}_{1}=\mathcal{J}_{4}^{-1}\\
+\widetilde{x}_{1}\left(  \widetilde{x}_{4}\widetilde{x}_{3}\widetilde{x}%
+_{2}\widetilde{x}_{1}\right)   &  =-\widetilde{x}_{4}\widetilde{x}%
+_{3}\widetilde{x}_{2}\\
+\widetilde{x}_{2}\left(  \widetilde{x}_{4}\widetilde{x}_{3}\widetilde{x}%
+_{2}\widetilde{x}_{1}\right)   &  =\widetilde{x}_{4}\widetilde{x}%
+_{3}\widetilde{x}_{1}\\
+\widetilde{x}_{3}\left(  \widetilde{x}_{4}\widetilde{x}_{3}\widetilde{x}%
+_{2}\widetilde{x}_{1}\right)   &  =-\widetilde{x}_{4}\widetilde{x}%
+_{2}\widetilde{x}_{1}\\
+\widetilde{x}_{4}\left(  \widetilde{x}_{4}\widetilde{x}_{3}\widetilde{x}%
+_{2}\widetilde{x}_{1}\right)   &  =\widetilde{x}_{3}\widetilde{x}%
+_{2}\widetilde{x}_{1}\\
+\widetilde{x}_{1}\widetilde{x}_{2}\left(  \widetilde{x}_{4}\widetilde{x}%
+_{3}\widetilde{x}_{2}\widetilde{x}_{1}\right)   &  =\widetilde{x}_{1}\left(
+\widetilde{x}_{4}\widetilde{x}_{3}\widetilde{x}_{1}\right)  =\widetilde{x}%
+_{4}\widetilde{x}_{3}%
+\end{align}
+The inner (geometric) and outer (wedge) products are related by duality.
+Specifically, for $A_{n}=\left\langle A\right\rangle _{n}$ and $B_{m}%
+=\left\langle B\right\rangle _{m}$%
+\begin{equation}
+A_{n}(B_{m}\mathcal{J}_{2r})=(A_{n}\wedge B_{m})\mathcal{J}_{2r}=\left(
+-1\right)  ^{m\left(  2r-m\right)  }(A_{n}\mathcal{J}_{2r})B_{m}%
+\end{equation}
+or equivalently%
+\begin{equation}
+(A_{n}\wedge B_{m})^{\%}=A_{n}^{\%}B_{m}=\left(  -1\right)  ^{m\left(
+2r-m\right)  }A_{n}B_{m}^{\%}.
+\end{equation}
+$\lceil$%
+\begin{align}
+\widetilde{x}_{1}\widetilde{x}_{2}\left(  \widetilde{x}_{4}\widetilde{x}%
+_{3}\widetilde{x}_{2}\widetilde{x}_{1}\right)   &  =\widetilde{x}%
+_{4}\widetilde{x}_{3}\\
+\widetilde{x}_{1}\left(  \widetilde{x}_{4}\widetilde{x}_{3}\widetilde{x}%
+_{2}\widetilde{x}_{1}\right)  \widetilde{x}_{2}  &  =-\widetilde{x}%
+_{4}\widetilde{x}_{3}\
+\end{align}
+$\rfloor$
+\end{example}
+
+Right multiplication, $R_{\mathcal{J}_{2r}^{\dagger}},$ by $\mathcal{J}_{2r}$
+is a unitary operator on $\mathcal{F}$ as
+\begin{equation}
+\left\langle \left.  A^{\%}\right\vert B^{\%}\right\rangle _{\mathcal{F}%
+}=\left\langle \left.  A\mathcal{J}_{2r}\right\vert B\mathcal{J}%
+_{2r}\right\rangle _{\mathcal{F}}=\operatorname*{tr}\left\{  \left(
+A\mathcal{J}_{2r}\right)  ^{\dagger}B\mathcal{J}_{2r}\right\}
+=\operatorname*{tr}\left\{  \mathcal{J}_{2r}^{\dagger}A^{\dagger}%
+B\mathcal{J}_{2r}\right\}  =\operatorname*{tr}\left\{  A^{\dagger}B\right\}
+=\left\langle \left.  A\right\vert B\right\rangle _{\mathcal{F}}%
+\end{equation}
+and the adjoint action $\widehat{\mathcal{J}_{2r}}$ is a unitary $c^{\ast}%
+$-algebra \emph{involution} as
+\begin{equation}
+\left\langle \left.  \mathcal{J}_{2r}A\mathcal{J}_{2r}^{\dagger}\right\vert
+\mathcal{J}_{2r}B\mathcal{J}_{2r}^{\dagger}\right\rangle _{\mathcal{F}%
+}=\operatorname*{tr}\left\{  \left(  \mathcal{J}_{2r}A\mathcal{J}%
+_{2r}^{\dagger}\right)  ^{\dagger}\mathcal{J}_{2r}B\mathcal{J}_{2r}^{\dagger
+}\right\}  =\operatorname*{tr}\left\{  \mathcal{J}_{2r}A^{\dagger}%
+\mathcal{J}_{2r}^{\dagger}\mathcal{J}_{2r}B\mathcal{J}_{2r}^{\dagger}\right\}
+=\operatorname*{tr}\left\{  A^{\dagger}B\right\}  =\left\langle \left.
+A\right\vert B\right\rangle _{\mathcal{F}}.
+\end{equation}
+$\lceil$%
+\begin{equation}
+\widetilde{x}_{1}\widetilde{x}_{2}\widetilde{x}_{3}\widetilde{x}%
+_{4}\widetilde{x}_{1}\widetilde{x}_{2}\widetilde{x}_{4}\widetilde{x}%
+_{3}\widetilde{x}_{2}\widetilde{x}_{1}=\widetilde{x}_{1}\widetilde{x}%
+_{2}\widetilde{x}_{3}\widetilde{x}_{4}\widetilde{x}_{4}\widetilde{x}%
+_{3}=\widetilde{x}_{1}\widetilde{x}_{2}%
+\end{equation}
+$\rfloor$
+
+$\lceil$%
+\begin{equation}
+R_{\mathcal{J}_{2r}^{\dagger}}(A\wedge B)=R_{\mathcal{J}_{2r}^{\dagger}%
+}\left(  A\right)  B=AB^{\%}=\left(  -1\right)  ^{m\left(  2r-m\right)
+}AR_{\mathcal{J}_{2r}^{\dagger}}\left(  B\right)  .
+\end{equation}
+$\rfloor$
+
+The \emph{wedge product} is also known as the \emph{outer product or
+progressive product. One can define another product called the regressive
+product, }$\vee,$\emph{ by }%
+\begin{equation}
+\left(  A_{n}\vee B_{m}\right)  ^{\%}=A_{n}^{\%}\wedge B_{m}^{\%}.
+\end{equation}
+
+
+\subsection{The Algebra of Subspaces}
+
+To every $n$-dimensional subspace $V_{n}$ in $\mathcal{F}$ there corresponds
+an $n-$blade $A_{n}=\left\langle A\right\rangle _{n}$ such that $V_{n}$ is the
+solution set of the equation%
+\begin{equation}
+x\wedge A_{n}=0.
+\end{equation}
+Let $A_{n}$ be called the blade of $V_{n}$ while $V_{n}$ is called the support
+of $A_{n}$. Since $A_{n}$ has a definite orientation and magnitude $\left\Vert
+A_{n}\right\Vert _{\mathcal{F}}$, it associates an oriented weight or measure
+with $V_{n}$. Thus, every blade in $\mathcal{F}$ determines a unique weighted
+subspace of $V_{n}.$
+
+Let $\mathfrak{B}=\left\{  \left.  B_{n}\right\vert 0\leq n\leq2r\right\}  $
+be the set of all blades in $\mathcal{F}$ including the "scalars" as
+$0$-blades. This set is closed under the inner and outer products. Therefore,
+under these operations $\mathfrak{B}$ can be regarded as an algebra (\emph{not
+a linear algebra}) of weighted subspaces in $\left\{  \left.  V_{n}\right\vert
+0\leq n\leq2r\right\}  $. Note that $\mathfrak{B}$ is not closed under
+addition, though some of its subsets are. With addition all of $\mathcal{F}$
+can be generated from $\left\{  \left.  B_{n}\right\vert 0\leq n\leq
+2r\right\}  $. For blades $A_{n}$ and $B_{m}$, we define a new product
+$A_{n}\vee B_{m}$ by
+\begin{equation}
+A_{n}\vee B_{m}=A_{n}^{\%}B_{m}.
+\end{equation}
+This is Grassmann's regressive product. With this definition, Grassmann's
+entire algebra of extension has been perfectly imbedded in geometric algebra.
+All the properties of ther egressive product follow immediately from the
+properties of the inner product and duality. Thus, it can be shown that for
+\begin{equation}
+\text{Grade}\left(  A\right)  +\text{Grade}\left(  B\right)  >n
+\end{equation}
+the regressive product is associative and is related to the outer product by
+the \textquotedblleft De Morgan\textquotedblright\ rule%
+\begin{equation}
+(A\vee B)^{\%}=A^{\%}\wedge B^{\%}%
+\end{equation}
+
+
+
+\end{document}

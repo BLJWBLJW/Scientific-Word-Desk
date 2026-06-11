@@ -1,0 +1,165 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, December 17, 2002 21:19:09}
+%TCIDATA{LastRevised=Tuesday, December 17, 2002 21:59:45}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+The expectation value of $T\left(  \nu,\omega\right)  ^{\dagger}\left(
+\mathbf{P\bullet P}\right)  T\left(  \nu,\omega\right)  $ is given by %
+
+\begin{align*}
+&  \left\langle \Psi|T\left(  \nu,\omega\right)  ^{\dagger}\left(
+\mathbf{P\bullet P}\right)  T\left(  \nu,\omega\right)  \Psi\right\rangle =\\
+- &  \left\langle \left(  \mathbf{\nabla}_{j}-\mathbf{\nabla}_{j}%
+\omega\right)  \nu_{N}\Psi|\left(  \mathbf{\nabla}_{j}-\mathbf{\nabla}%
+_{j}\omega\right)  \nu_{N}\Psi\right\rangle \\
+&  =-\left\langle \left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu
+_{N}\mathbf{\nabla}_{j}-\nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\right\}  \Psi|\left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu
+_{N}\mathbf{\nabla}_{j}-\nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\right\}  \Psi\right\rangle \\
+&  =\left\langle \Psi|\left\{  \mathbf{\nabla}_{j}\nu_{N}\bullet
+\mathbf{\nabla}_{j}\nu_{N}+\nu_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)
+\bullet\mathbf{\nabla}_{j}-\nu_{N}\mathbf{\nabla}_{j}\nu_{N}\bullet
+\mathbf{\nabla}_{j}\omega\right.  \right.  \\
+&  +\nu_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  \bullet\mathbf{\nabla
+}_{j}+\left(  \nu_{N}\right)  ^{2}\mathbf{\nabla}_{j}^{2}-\nu_{N}%
+\mathbf{\nabla}_{j}\nu_{N}\bullet\mathbf{\nabla}_{j}\omega-\left(  \nu
+_{N}\right)  ^{2}\left(  \mathbf{\nabla}_{j}^{2}\omega\right)  -\nu
+_{N}\mathbf{\nabla}_{j}\omega\bullet\mathbf{\nabla}_{j}\\
+&  \left.  -\nu_{N}\mathbf{\nabla}_{j}\omega_{N}\bullet\mathbf{\nabla}_{j}%
+\nu_{N}-\left(  \nu_{N}\right)  ^{2}\mathbf{\nabla}_{j}\omega_{N}%
+\bullet\mathbf{\nabla}_{j}+\nu_{N}^{2}\mathbf{\nabla}_{j}\omega_{N}%
+\bullet\mathbf{\nabla}_{j}\omega_{N}\right\}  \left.  \Psi\right\rangle
+\end{align*}
+we break this term into the parts
+\begin{align}
+& \left\langle \left(  \mathbf{\nabla}_{j}\nu_{N}\right)  \Psi|\left\{
+\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}\mathbf{\nabla}_{j}-\nu
+_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)  \right\}  \Psi\right\rangle
+\nonumber\\
+& =\left\langle \Psi|\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  \left\{
+\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}\mathbf{\nabla}_{j}-\nu
+_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)  \right\}  \Psi\right\rangle
+\nonumber\\
+& =\left\langle \Psi|\left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)
+\bullet\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}\left(
+\mathbf{\nabla}_{j}\nu_{N}\right)  \bullet\mathbf{\nabla}_{j}-\nu_{N}\left(
+\mathbf{\nabla}_{j}\nu_{N}\right)  \bullet\left(  \mathbf{\nabla}_{j}%
+\omega_{N}\right)  \right\}  \Psi\right\rangle
+\end{align}%
+\begin{align}
+& \left\langle \nu_{N}\mathbf{\nabla}_{j}\Psi|\left\{  \left(  \mathbf{\nabla
+}_{j}\nu_{N}\right)  +\nu_{N}\mathbf{\nabla}_{j}-\nu_{N}\left(  \mathbf{\nabla
+}_{j}\omega_{N}\right)  \right\}  \Psi\right\rangle \nonumber\\
+& =-\left\langle \Psi|\nu_{N}\mathbf{\nabla}_{j}\left\{  \left(
+\mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}\mathbf{\nabla}_{j}-\nu_{N}\left(
+\mathbf{\nabla}_{j}\omega_{N}\right)  \right\}  \Psi\right\rangle \nonumber\\
+& =-\left\langle \Psi|\left\{  \nu_{N}\left(  \mathbf{\nabla}_{j}^{2}\nu
+_{N}\right)  +\nu_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  \bullet
+\mathbf{\nabla}_{j}+\nu_{N}^{2}\mathbf{\nabla}_{j}^{2}\right.  \right.
+\nonumber\\
+& \left.  \left.  +\nu_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)
+\bullet\mathbf{\nabla}_{j}-\nu_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)
+\bullet\left(  \mathbf{\nabla}_{j}\omega_{N}\right)  -\nu_{N}^{2}\left(
+\mathbf{\nabla}_{j}^{2}\omega_{N}\right)  \Psi\right\}  \right\rangle
+\end{align}%
+\begin{align}
+& \left\langle \nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\Psi|\left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}%
+\mathbf{\nabla}_{j}-\nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\right\}  \Psi\right\rangle \nonumber\\
+& =\left\langle \Psi|\nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}\mathbf{\nabla
+}_{j}-\nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)  \right\}
+\Psi\right\rangle \nonumber\\
+& =\left\langle \Psi|\left\{  \nu_{N}\left(  \mathbf{\nabla}_{j}\omega
+_{N}\right)  \bullet\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}%
+^{2}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)  \bullet\mathbf{\nabla}%
+_{j}\right.  \right.  \nonumber\\
+& \qquad\qquad\qquad\qquad\left.  \left.  -\nu_{N}^{2}\left(  \mathbf{\nabla
+}_{j}\omega_{N}\right)  \bullet\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\right\}  \right\rangle \Psi
+\end{align}
+which we can collect into
+\begin{align}
+& \left\langle \Psi|\left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)
+\bullet\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu_{N}\left(
+\mathbf{\nabla}_{j}\nu_{N}\right)  \bullet\left(  \mathbf{\nabla}_{j}%
+\omega_{N}\right)  \right.  \right.  \nonumber\\
+& \qquad-\nu_{N}^{2}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\bullet\left(  \mathbf{\nabla}_{j}\omega_{N}\right)  -\nu_{N}\left(
+\mathbf{\nabla}_{j}^{2}\nu_{N}\right)  +\nu_{N}^{2}\left(  \mathbf{\nabla}%
+_{j}^{2}\omega_{N}\right)  \nonumber\\
+& \qquad\qquad\left.  \left.  -\nu_{N}^{2}\mathbf{\nabla}_{j}^{2}-\nu
+_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  \bullet\mathbf{\nabla}_{j}%
++\nu_{N}^{2}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)  \bullet
+\mathbf{\nabla}_{j}\right\}  \Psi\right\rangle
+\end{align}
+
+
+
+\end{document}

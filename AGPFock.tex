@@ -1,0 +1,150 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, July 13, 2004 08:36:20}
+%TCIDATA{LastRevised=Tuesday, July 13, 2004 13:31:35}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{align}
+&  \mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\nonumber\\
+&  \sum_{1\leq j\leq2s}n_{j}S_{N-1}\left(  \jmath\right)  \left(  \left.
+\psi_{j}\right\vert h_{1}\psi_{j}\right)  \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \left\{
+\overset{}{\left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{k}%
+\psi_{k+s}\right)  -\left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}%
+\psi_{k+s}\psi_{k}\right)  }\right\}  \nonumber\\
+&  +\sum_{1\leq j\leq2s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \overset
+{}{\left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi_{j}\psi
+_{j+s}\right)  -\left(  \left.  \psi_{j}\psi_{j+s}\right\vert h_{2}\psi
+_{j+s}\psi_{j}\right)  }\right\}  \\
+&  +\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath k\right)  \left\{
+\overset{}{\left(  \left.  \psi_{j}\psi_{k}\right\vert h_{2}\psi_{j}\psi
+_{k}\right)  -\left(  \left.  \psi_{j}\psi_{k}\right\vert h_{2}\psi_{k}%
+\psi_{j}\right)  }\right\}  ,\label{unnormE}%
+\end{align}
+Let
+\begin{equation}
+\left(  \left\vert \psi_{1}\right\rangle ,\cdots,\left\vert \psi
+_{2s}\right\rangle \right)  =\left(  \left\vert \varphi_{1}\right\rangle
+,\cdots,\left\vert \varphi_{2s}\right\rangle \right)  \mathbb{C}%
+\end{equation}
+i.e.
+\begin{equation}
+\left\vert \psi_{j}\right\rangle =\sum_{1\leq k\leq2s}\left\vert \varphi
+_{k}\right\rangle c_{kj}\qquad1\leq j\leq2s.
+\end{equation}
+Then
+\begin{align}
+&  \mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\mathcal{H}\left(  \mathbf{n},\mathbf{c}^{\ast}\mathbf{,c},\mathbf{\theta
+}\right)  \nonumber\\
+&  \sum_{1\leq p,q\leq2s}h_{1pq}\sum_{1\leq j\leq2s}n_{j}S_{N-1}\left(
+\jmath\right)  c_{jp}^{\ast}c_{jq}\nonumber\\
+&  +\sum_{\substack{1\leq p,q\leq2s\\1\leq m,n\leq2s}}h_{2pqmn}\left\{
+\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)  \left\{
+\overset{}{c_{jp}^{\ast}c_{j+sq}^{\ast}c_{km}c_{k+sn}-c_{jp}^{\ast}%
+c_{j+sq}^{\ast}c_{k+sm}c_{kn}}\right\}  \right.  \\
+&  +\sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \overset
+{}{c_{jp}^{\ast}c_{j+sq}^{\ast}c_{jm}c_{j+sn}-c_{jp}^{\ast}c_{j+sq}^{\ast
+}c_{j+sm}c_{jn}}\right\}  \\
+&  +\left.  \frac{1}{2}\sum_{1\leq j,k\leq2s}n_{j}n_{k}S_{N-2}\left(  \jmath
+k\right)  \left\{  \overset{}{c_{jp}^{\ast}c_{kq}^{\ast}c_{jm}c_{kn}%
+-c_{jp}^{\ast}c_{kq}^{\ast}c_{km}c_{jn}}\right\}  \right\}  ,
+\end{align}
+for $1\leq a\leq s;1\leq b\leq2s$%
+\begin{align}
+&  \frac{\partial\mathcal{H}\left(  \mathbf{n},\mathbf{c}^{\ast}%
+\mathbf{,c},\mathbf{\theta}\right)  }{\partial c_{ab}}=\sum_{1\leq m\leq
+2s}c_{am}^{\ast}h_{1mb}n_{a}S_{N-1}\left(  a\right)  \nonumber\\
+&  +\sum_{\substack{1\leq p,q\leq2s\\1\leq m\leq2s}}\left\{  h_{2pqbm}%
+-h_{2pqmb}\right\}  \left\{  \sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}%
+n_{a}^{\frac{1}{2}}e^{i\left(  \theta_{j}-\theta_{a}\right)  }S_{N-1}\left(
+\jmath a\right)  c_{jp}^{\ast}c_{j+sq}^{\ast}c_{a+sm}\right.  \nonumber\\
+&  +\sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  c_{ap}^{\ast
+}c_{a+sq}^{\ast}c_{a+sm}+\left.  \sum_{1\leq j\leq2s}n_{j}n_{a}S_{N-2}\left(
+\jmath a\right)  c_{jp}^{\ast}c_{aq}^{\ast}c_{jm}\right\}
+\end{align}
+for $s+1\leq a\leq2s;1\leq b\leq2s$%
+\begin{align}
+&  \frac{\partial\mathcal{H}\left(  \mathbf{n},\mathbf{c}^{\ast}%
+\mathbf{,c},\mathbf{\theta}\right)  }{\partial c_{ab}}=\sum_{1\leq m\leq
+2s}c_{am}^{\ast}h_{1mb}n_{a}S_{N-1}\left(  a\right)  +\sum_{\substack{1\leq
+p,q\leq2s\\1\leq m\leq2s}}\left\{  h_{2pqbm}-h_{2pqmb}\right\}  \times
+\nonumber\\
+&  \qquad\qquad\left\{  \sum_{1\leq j\leq s}\left\{  n_{j}^{\frac{1}{2}}%
+n_{a}^{\frac{1}{2}}e^{i\left(  \theta_{j}-\theta_{a}\right)  }S_{N-1}\left(
+\jmath a\right)  c_{jp}^{\ast}c_{j+sq}^{\ast}c_{a-sm}+n_{j}S_{N-1}\left(
+\jmath\right)  c_{a-sp}^{\ast}c_{aq}^{\ast}c_{a-sm}\right\}  \right.  \\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
++\sum_{1\leq j\leq2s}n_{a}n_{j}S_{N-2}\left(  aj\right)  c_{ap}^{\ast}%
+c_{jq}^{\ast}c_{jm}\right\}
+\end{align}
+
+
+
+\end{document}

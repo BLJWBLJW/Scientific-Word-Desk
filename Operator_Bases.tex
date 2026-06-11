@@ -1,0 +1,2147 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, April 20, 2003 13:13:14}
+%TCIDATA{LastRevised=Friday, May 09, 2003 10:49:01}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\subsubsection{Generalized Bases for $\mathcal{B}\left(  \mathcal{H}%
+^{N}\right)  $ and $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $}
+
+The duality between $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ and
+$\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ can be expressed in terms of the
+scalar product
+\begin{equation}
+\left(  X|Y\right)  =Tr\left\{  X^{\dagger}Y\right\}  ;\quad X\in
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  ,Y\in\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)
+\end{equation}
+Following the Dirac convention we can denote operators, $Y\in\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $, as $\left\vert Y\right)  $ and
+operators, $X\in\mathcal{B}\left(  \mathcal{H}^{N}\right)  $, as $\left(
+X\right\vert $ thus producing the super operator%
+\begin{equation}
+\left\vert Y\right)  \left(  X\right\vert :\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)
+\end{equation}
+whose action is given by
+\begin{equation}
+\left\vert Y\right)  \left(  X\right\vert \,Z=Tr\left\{  X^{\dagger}Z\right\}
+\left\vert Y\right)  \equiv Tr\left\{  X^{\dagger}Z\right\}  Y
+\end{equation}
+
+
+We can introduce a generalized basis, $\left\{  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert \right\}  $,
+\emph{for both} of the dual spaces $\mathcal{B}\left(  \mathcal{H}^{N}\right)
+$ and $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $, composed of ket-bra
+operators that correspond to the generalized eigenvectors of the $N$-particle
+space-spin coordinate operator. None of the basis elements $\left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert $
+belong to $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ as the action of any
+individual $\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert $ on any vector belonging to $\mathcal{H}^{N}$ produces
+a vector $\notin\mathcal{H}^{N}$. The notation $\left\vert \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+\right)  $ signifies that $\left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert $ is to be considered within the
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $-topology, while the notation
+$\left(  \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right\vert $ signifies that $\left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert $ is to be
+considered within the $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $-topology.
+
+This basis allows one to define a super operator resolution of the identity on
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ by
+\begin{equation}
+\hat{I}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  \left(  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert \right\vert d\mathsf{z}%
+^{N}d\mathsf{z}^{\prime N},
+\end{equation}
+which can be expressed symbolically as
+\begin{equation}
+\hat{I}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }=\left(  \left(
+\underline{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert }\right\vert \right)  \left(  \left\vert \underline
+{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert }\right)  \right)  ^{t},
+\end{equation}
+producing the generalized expansion of an element $X\in\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ as%
+\begin{align}
+X  &  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  \left(  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert |X\right)  d\mathsf{z}%
+^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  Tr\left\{  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert ^{\dagger
+}X\right\}  d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right)  \left\langle \mathsf{z}^{N}|X\mathsf{z}%
+^{\prime N}\right\rangle d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+X\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}%
+\end{align}
+where $X\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  $ is the integral
+kernel corresponding to $X$.
+
+The basis $\left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert \right\}  $ can be graded into sub bases
+$\left\{  \mathfrak{b}_{m}\left(  \mathsf{z}\right)  \right\}  $ with $m$ bra
+and ket coordinates equal which are defined as
+\begin{equation}
+\mathfrak{b}_{m}\left(  \mathsf{z}\right)  =\left\{  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert |\mathsf{z}%
+^{N}\overset{m}{=}\mathsf{z}^{\prime N}\right\}
+\end{equation}
+where $\mathsf{z}^{N}\overset{m}{=}\mathsf{z}^{\prime N}$ denotes that the
+coordinates $\mathsf{z}^{N}$ and $\mathsf{z}^{\prime N}$ have exactly $m$
+values in common, which could be equivalently written as $\mathsf{z}%
+^{N}\overset{N-m}{\neq}\mathsf{z}^{\prime N}$ i.e. $\mathsf{z}^{N}$ and
+$\mathsf{z}^{\prime N}$ have exactly $N-m$ values different. These bases
+produce a graded decomposition of $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $ as the direct sum
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq m\leq N}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq m\leq N}}
+%EndExpansion
+\mathfrak{B}_{m}\left(  \mathsf{z}\right)
+\end{equation}
+where $\mathfrak{B}_{m}\left(  \mathsf{z}\right)  $ is defined as the closed
+linear span of the basis $\left\{  \mathfrak{b}_{m}\left(  \mathsf{z}\right)
+\right\}  $ i.e.
+\begin{equation}
+\mathfrak{B}_{m}\left(  \mathsf{z}\right)  =\overline{\operatorname{linspan}%
+}\left\{  \left.  \underset{}{\left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert }\right\vert \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+\in\mathfrak{b}_{m}\left(  \mathsf{z}\right)  \right\}
+\end{equation}
+and the closure is taken wrt the trace norm topology. In order to analyze the
+kernels of the contraction maps $\left\{  L_{N}^{p}|0\leq p\leq N\right\}  $
+it is useful to consider the sequence of subspaces $\left\{  \mathfrak{V}%
+_{p}\left(  \mathsf{z}\right)  \right\}  $, that are generated by $\left\{
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert \right\}  $ that have at least $p$ differences between
+$\mathsf{z}^{N}$ and $\mathsf{z}^{\prime N}$ (denoted by $\mathsf{z}%
+^{N}\overset{p}{\nsim}$ $\mathsf{z}^{\prime N}$) or equivalently generated by
+bases elements that have at most $N-p$ values in common between $\mathsf{z}%
+^{N}$ and $\mathsf{z}^{\prime N}$ (denoted by $\mathsf{z}^{N}\overset
+{N-p}{\sim}$ $\mathsf{z}^{\prime N})$, which are defined as
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathsf{z}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq m\leq N-p}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq m\leq N-p}}
+%EndExpansion
+\mathfrak{B}_{m}\left(  \mathsf{z}\right)
+\end{equation}
+so that
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathsf{z}\right)  =\overline{\operatorname{linspan}%
+}\left\{  \left.  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert \overset{}{}\right\vert \mathsf{z}%
+^{N}\overset{p}{\nsim}\mathsf{z}^{\prime N}\right\}  =\overline
+{\operatorname{linspan}}\left\{  \mathfrak{c}_{p}\left(  \mathsf{z}\right)
+\right\}
+\end{equation}
+where $\mathfrak{c}_{p}\left(  \mathsf{z}\right)  \equiv\left\{  \left.
+\underset{}{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert }\right\vert \mathsf{z}^{N}\overset{p}{\nsim}%
+\mathsf{z}^{\prime N}\right\}  $ $\equiv\left\{  \left.  \underset
+{}{\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert }\right\vert \mathsf{z}^{N}\overset{N-p}{\sim}\mathsf{z}^{\prime
+N}\right\}  $ and hence $\mathfrak{V}_{0}\left(  \mathsf{z}\right)
+=\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $. One should also observe
+that
+\begin{equation}
+\mathfrak{B}_{N-p}\left(  \mathsf{z}\right)  =\mathfrak{V}_{p-1}\left(
+\mathsf{z}\right)  \ominus\mathfrak{V}_{p}\left(  \mathsf{z}\right)
+\end{equation}
+These subspaces partially characterize the kernel of the maps $\left\{
+L_{N}^{p}\right\}  $ as they have the property
+\begin{equation}
+\mathfrak{V}_{p-1}\left(  \mathsf{z}\right)  \supset\ker L_{N}^{p}%
+\supset\mathfrak{V}_{p}\left(  \mathsf{z}\right)  .
+\end{equation}
+and one has in general%
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =\mathfrak{V}_{0}\left(
+\mathsf{z}\right)  \supset\ker L_{N}^{0}\supset\mathfrak{V}_{1}\left(
+\mathsf{z}\right)  \supset\ker L_{N}^{1}\supset\mathfrak{V}_{2}\left(
+\mathsf{z}\right)  \supset\cdots\supset\mathfrak{V}_{N}\left(  \mathsf{z}%
+\right)  \supset\ker L_{N}^{N}=\phi
+\end{equation}
+
+
+\section{Proper Bases for $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ and
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $}
+
+One can repeat all the above for proper bases of $\mathcal{H}^{N}$ generated
+by complete orthonormal bases $\left\{  \varphi_{j}\right\}  $ of
+$\mathcal{H}^{N}$ to produce $\mathfrak{B}_{p}\left(  \mathbf{\varphi}\right)
+,$ $\mathfrak{b}_{p}\left(  \mathbf{\varphi}\right)  ,\mathfrak{c}_{p}\left(
+\mathbf{\varphi}\right)  $ and $\mathfrak{V}_{p}\left(  \mathbf{\varphi
+}\right)  $ and their associated decompositions of $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  .$ Hence in particular
+\begin{equation}
+\mathfrak{V}_{p-1}\left(  \mathbf{\varphi}\right)  \supset\ker L_{N}%
+^{p}\supset\mathfrak{V}_{p}\left(  \mathbf{\varphi}\right)
+\end{equation}%
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathbf{\varphi}\right)  =%
+%TCIMACRO{\dbigoplus \limits_{0\leq m\leq N-p}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq m\leq N-p}}
+%EndExpansion
+\mathfrak{B}_{m}\left(  \mathbf{\varphi}\right)
+\end{equation}%
+\begin{equation}
+\mathfrak{B}_{m}\left(  \mathbf{\varphi}\right)  =\overline
+{\operatorname{linspan}}\left\{  \left.  \underset{}{\left\vert
+\mathbf{\varphi}^{N}\right\rangle \left\langle \mathbf{\varphi}^{\not \prime
+N}\right\vert }\right\vert \left\vert \mathbf{\varphi}^{N}\right\rangle
+\left\langle \mathbf{\varphi}^{\not \prime N}\right\vert \in\mathfrak{b}%
+_{m}\left(  \mathbf{\varphi}\right)  \right\}
+\end{equation}%
+\begin{equation}
+\mathfrak{V}_{p}\left(  \mathbf{\varphi}\right)  =\overline
+{\operatorname{linspan}}\left\{  \left.  \left\vert \mathbf{\varphi}%
+^{N}\right\rangle \left\langle \mathbf{\varphi}^{\not \prime N}\right\vert
+\overset{}{}\right\vert \mathbf{\varphi}^{N}\overset{p}{\nsim}\mathbf{\varphi
+}^{\not \prime N}\right\}  =\overline{\operatorname{linspan}}\left\{
+\mathfrak{c}_{p}\left(  \mathbf{\varphi}\right)  \right\}
+\end{equation}%
+\begin{equation}
+\mathfrak{B}_{N-p}\left(  \mathbf{\varphi}\right)  =\mathfrak{V}_{p-1}\left(
+\mathbf{\varphi}\right)  \ominus\mathfrak{V}_{p}\left(  \mathbf{\varphi
+}\right)
+\end{equation}
+
+
+\section{Representations of $U\left(  \mathcal{H}^{1}\right)  $}
+
+One can define subspaces of $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $
+that produce irreducible representations of $SU\left(  \mathcal{H}^{1}\right)
+$ that are based on the kernels of the contraction maps $\left\{  \left.
+L_{N}^{P}\right\vert 0\leq p\leq N\right\}  ,$ namely
+\begin{equation}
+\mathcal{K}_{Np}=\ker L_{N}^{p-1}\ominus\ker L_{N}^{p};\quad1\leq p\leq N
+\end{equation}
+and
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =%
+%TCIMACRO{\tbigoplus \limits_{1\leq p\leq N}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{1\leq p\leq N}}
+%EndExpansion
+\mathcal{K}_{Np}\oplus\mathcal{K}^{c}%
+\end{equation}
+where $\mathcal{K}^{c}$ is a compliment of $%
+%TCIMACRO{\tbigoplus \limits_{1\leq p\leq N}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{1\leq p\leq N}}
+%EndExpansion
+\mathcal{K}_{Np}$ in $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $.
+
+\subsection{Examples}
+
+Consider the bases of the operator space $\mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)  $ given by%
+\begin{equation}
+\left\{  \left\{  \left.  \left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{j}\right\vert -\left\vert \varphi_{j+1}\right\rangle \left\langle
+\varphi_{j+1}\right\vert \right\vert 1\leq j\leq\infty\right\}  ,\left\{
+\left.  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert \right\vert 1\leq j\neq k\leq\infty\right\}  ,\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert \right\}
+\end{equation}
+that is adapted to the decomposition
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  =\mathcal{K}_{11od}%
+\oplus\mathcal{K}_{11d}\oplus\mathcal{S}_{1d} \label{graddec}%
+\end{equation}
+where
+\begin{align}
+\mathcal{K}_{11od}  &  =\overline{\operatorname{linspan}}\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert
+\right\vert 1\leq j\neq k\leq\infty\right\} \nonumber\\
+\mathcal{K}_{11d}  &  =\overline{\operatorname{linspan}}\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert
+-\left\vert \varphi_{j+1}\right\rangle \left\langle \varphi_{j+1}\right\vert
+\right\vert 1\leq j\leq\infty\right\} \nonumber\\
+\mathcal{S}_{1d}  &  =\left\{  \left.  \alpha\left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert \right\vert \alpha
+\in\mathbb{C}\right\}
+\end{align}
+Let us denote these basis elements by
+\begin{align}
+\left\vert \varphi_{jk}\right)   &  =\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{k}\right\vert ;\quad1\leq j\neq k\leq\infty\nonumber\\
+\left\vert \varphi_{j+1}\right)   &  =\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{j}\right\vert -\left\vert \varphi_{j+1}\right\rangle
+\left\langle \varphi_{j+1}\right\vert ;\quad1\leq j\leq\infty\nonumber\\
+\left\vert \varphi_{1}\right)   &  =\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{1}\right\vert
+\end{align}
+We can note that
+\begin{equation}
+\left\vert \varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert
+-\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  =\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert
+\end{equation}
+and
+\begin{equation}
+\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  +\left(  \left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert \right)  =\left(  \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)
+\end{equation}
+so that
+\begin{equation}
+\left\vert \varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert
+-\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  -\left(  \left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert \right)  =\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert
+\end{equation}
+etc., hence generating all diagonal basis elements $\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert
+\right\vert ;2\leq j\leq\infty\right\}  $ as%
+\begin{equation}
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert
+=\left\vert \varphi_{1}\right)  -\sum_{2\leq m\leq j}\left\vert \varphi
+_{j}\right)  ;\quad1\leq j\leq\infty
+\end{equation}
+Any element of $X\in\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  $ can be
+expanded%
+\begin{align}
+A  &  =\sum_{1\leq j,k\leq\infty}A_{jk}\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{k}\right\vert \\
+&  =\sum_{1\leq j\neq k\leq\infty}X_{jk}\left\vert \varphi_{jk}\right)
++\sum_{2\leq j\leq\infty}X_{\mathcal{K}j}\left\vert \varphi_{j}\right)
++X_{1}\left\vert \varphi_{1}\right)
+\end{align}
+where
+\begin{align}
+X_{1}  &  =Tr\left\{  A\right\} \nonumber\\
+X_{jk}  &  =A_{jk}\nonumber\\
+X_{j}  &  =Tr\left\{  A\right\}  -\sum_{1\leq m\leq j-1}A_{mm};\quad2\leq
+j\leq\infty
+\end{align}
+The choice of $\left\vert \varphi_{1}\right)  =\left\vert \varphi
+_{1}\right\rangle \left\langle \varphi_{1}\right\vert $ is quite arbitray, one
+can just as well use $\left\vert \varphi_{1}\right)  =\left\vert \varphi
+_{j}\right\rangle \left\langle \varphi_{j}\right\vert $ for any other $j,$
+which just produces a change of basis for $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ and hence a change of expansion coefficients while
+still produces a decomposition that is isomorphic to eq. $\left(
+\ref{graddec}\right)  $.
+
+One can use the basis $\left\{  \left\{  \left.  \left\vert \varphi
+_{j}\right)  \right\vert 1\leq j\leq\infty\right\}  ,\left\{  \left.
+\left\vert \varphi_{jk}\right)  \right\vert 1\leq j\neq k\leq\infty\right\}
+\right\}  $ to construct basis of $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $ for $2\leq N\leq\infty$ in the following manner:
+
+$\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  $ can be decomposed as
+\begin{align}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)   &  =\left(  \ker L_{2}%
+^{1}\ominus\ker L_{2}^{2}\right)  \oplus\left(  \ker L_{2}^{0}\ominus\ker
+L_{2}^{1}\right)  \oplus\left(  \ker L_{2}^{0}\right)  ^{c}\nonumber\\
+&  =\ker L_{2}^{0}\oplus\left(  \ker L_{2}^{0}\right)  ^{c}%
+\end{align}
+as $\ker L_{2}^{2}=\phi$, in terms of the notation introduced this is
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  =\mathcal{K}_{22}%
+\oplus\mathcal{K}_{21}\oplus\mathcal{K}_{20}%
+\end{equation}
+where $\mathcal{K}_{20}=$ $\mathcal{K}^{c}$ in $\mathcal{B}_{1}\left(
+\mathcal{H}^{2}\right)  .$ It can be shown that
+\begin{equation}
+\mathcal{K}_{21}\oplus\mathcal{K}_{20}\cong\mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)
+\end{equation}
+This decomposition can be analysed in terms of lie groups as
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  =sl\left(  \mathcal{H}%
+^{2}\right)  _{2}\oplus sl\left(  \mathcal{H}^{2}\right)  _{2}^{c}%
+\end{equation}
+as
+\begin{align}
+sl\left(  \mathcal{H}^{2}\right)  _{2} &  =\mathcal{K}_{22}\oplus
+\mathcal{K}_{21}\nonumber\\
+sl\left(  \mathcal{H}^{2}\right)  _{2}^{c} &  =\mathcal{K}_{20}%
+\end{align}
+and
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  =\left(  sl\left(
+\mathcal{H}^{2}\right)  _{2}\ominus sl\left(  \mathcal{H}^{1}\right)
+_{2}\right)  \oplus sl\left(  \mathcal{H}^{1}\right)  _{2}\oplus sl\left(
+\mathcal{H}^{2}\right)  _{2}^{c}%
+\end{equation}
+where $sl\left(  \mathcal{H}^{2}\right)  _{2}$ and $sl\left(  \mathcal{H}%
+^{1}\right)  _{2}$ are representations of $sl\left(  \mathcal{H}^{2}\right)  $
+and $sl\left(  \mathcal{H}^{1}\right)  $ respectively in $\mathcal{H}^{2}.$ By
+exponentiating these subspaces one obtains representations of the lie groups
+\begin{align}
+SL\left(  \mathcal{H}^{2}\right)  _{2} &  =\exp\left(  sl\left(
+\mathcal{H}^{2}\right)  _{2}\right)  \nonumber\\
+SL\left(  \mathcal{H}^{1}\right)  _{2} &  =\exp\left(  sl\left(
+\mathcal{H}^{1}\right)  _{2}\right)
+\end{align}
+This decomposition also has the property that it carries an adjoint
+representation of $SU\left(  \mathcal{H}^{1}\right)  $ i.e.%
+\begin{align}
+\operatorname{Adj}\left(  SU\left(  \mathcal{H}^{1}\right)  _{2}\right)   &
+:\mathcal{K}_{22}\rightarrow\mathcal{K}_{22}\nonumber\\
+\operatorname{Adj}\left(  SU\left(  \mathcal{H}^{1}\right)  _{2}\right)   &
+:\mathcal{K}_{21}\rightarrow\mathcal{K}_{21}%
+\end{align}
+which can be deduced from the intertwining property
+\begin{equation}
+L_{N}^{P}\circ\operatorname{Adj}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{p}\right)  =\operatorname{Adj}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{p}\right)  \circ L_{N}^{P}%
+\end{equation}
+which gives that
+\begin{equation}
+\operatorname{Adj}\left(  SU\left(  \mathcal{H}^{1}\right)  _{p}\right)  :\ker
+L_{N}^{P}\rightarrow\ker L_{N}^{P}%
+\end{equation}
+so in particular
+\begin{equation}
+L_{2}^{1}\circ\operatorname{Adj}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{1}\right)  =\operatorname{Adj}\left(  SU\left(  \mathcal{H}^{1}\right)
+_{1}\right)  \circ L_{2}^{1}%
+\end{equation}
+The subspaces $\mathcal{K}_{22}$ and $\mathcal{K}_{21}$ can be decomposed into
+diagonal and non diagonal parts wrt the basis $\left\{  \left\vert
+\varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \right\}  $ of $\mathcal{H}^{2}$
+i.e.
+\begin{align}
+\mathcal{K}_{22} &  =\mathcal{K}_{22od}\oplus\mathcal{K}_{22d}\nonumber\\
+\mathcal{K}_{21} &  =\mathcal{K}_{21od}\oplus\mathcal{K}_{21d}%
+\end{align}
+so that
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)  =\mathcal{K}_{22od}%
+\oplus\mathcal{K}_{22d}\oplus\mathcal{K}_{21od}\oplus\mathcal{K}_{21d}%
+\oplus\mathcal{K}_{20}%
+\end{equation}
+We can consider as an example a space $\mathcal{H}^{1}$ that has dimension 4.
+Then%
+\begin{equation}
+\left(  \ker L_{2}^{1}\ominus\ker L_{2}^{2}\right)  \oplus\left(  \ker
+L_{2}^{0}\ominus\ker L_{2}^{1}\right)  \oplus\left(  \ker L_{2}^{0}\right)
+^{c}\equiv\mathcal{K}_{22}\oplus\mathcal{K}_{21}\oplus\mathcal{K}_{20}%
+\end{equation}
+and
+\begin{align}
+&  \dim\left(  \mathcal{K}_{21}\oplus\mathcal{K}_{20}\right)  =\dim\left(
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  \right)  =16\nonumber\\
+&  \dim\left(  \mathcal{K}_{20}\right)  =1\nonumber\\
+&  \dim\left(  \mathcal{K}_{22}\right)  =\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{2}\right)  \right)  -\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)  \right)  =36-16=20\nonumber\\
+&  \dim\left(  \mathcal{K}_{22od}\right)  =18\nonumber\\
+&  \dim\left(  \mathcal{K}_{22d}\right)  =2\nonumber\\
+&  \dim\left(  \mathcal{K}_{21od}\right)  =12\nonumber\\
+&  \dim\left(  \mathcal{K}_{21d}\right)  =3
+\end{align}
+
+
+The space $\mathcal{K}_{22od}$ is generated by the $18$ linear independent
+elements (i.e. is of dimension $18)$
+\begin{equation}
+\mathfrak{b}_{0}\left(  \mathbf{\varphi}\right)  =\left\{  \left\vert
+\varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{3}\varphi
+_{4}\right\vert ,\left\vert \varphi_{1}\varphi_{3}\right\rangle \left\langle
+\varphi_{2}\varphi_{4}\right\vert ,\left\vert \varphi_{1}\varphi
+_{4}\right\rangle \left\langle \varphi_{2}\varphi_{3}\right\vert ,\left\vert
+\varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi_{1}\varphi
+_{4}\right\vert ,\left\vert \varphi_{2}\varphi_{4}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert ,\left\vert \varphi_{3}\varphi
+_{4}\right\rangle \left\langle \varphi_{1}\varphi_{2}\right\vert \right\}
+\end{equation}
+\begin{align}
+& \mathbf{\lceil}\text{In general }\left\{  \left\vert \varphi_{j_{1}%
+k_{1}j_{2}k_{2}}^{0}\right)  =\left\vert \varphi_{j_{1}k_{1}}\right)
+\wedge\left\vert \varphi_{j_{2}k_{2}}\right)  =\left\vert \varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{k_{1}}\right\vert \wedge\left\vert
+\varphi_{j_{2}}\right\rangle \left\langle \varphi_{k_{2}}\right\vert
+=\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert \right.  \nonumber\\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+j_{1}\neq k_{1},k_{2};\quad j_{2}\neq k_{1},k_{2};\quad j_{1}<j_{2}%
+;k_{1}<k_{2}\right\}  \rfloor
+\end{align}
+
+
+and
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \right)  \wedge\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{3}\right\vert
+\right.  \nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{4}\right\vert
+\nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{2}\right\vert
+\nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert -\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \,\,\,\left(  \left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \,\left.  \left(  \left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{2}\right\vert ,\left(  \left\vert \varphi_{3}%
+\right\rangle \left\langle \varphi_{3}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{1}\right\vert
+\right\}  \subset\mathfrak{b}_{1}\left(  \mathbf{\varphi}\right)
+\end{align}
+The space $\mathcal{K}_{22d}$ is generated by
+\begin{subequations}
+\begin{align}
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right)  \wedge\left(  \left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert -\left\vert \varphi_{4}\right\rangle
+\left\langle \varphi_{4}\right\vert \right)  \nonumber\\
+&  =\left\vert \varphi_{1}\varphi_{3}\right\rangle \left\langle \varphi
+_{1}\varphi_{3}\right\vert -\left\vert \varphi_{2}\varphi_{3}\right\rangle
+\left\langle \varphi_{2}\varphi_{3}\right\vert -\left\vert \varphi_{1}%
+\varphi_{4}\right\rangle \left\langle \varphi_{1}\varphi_{4}\right\vert
++\left\vert \varphi_{2}\varphi_{4}\right\rangle \left\langle \varphi
+_{2}\varphi_{4}\right\vert \label{b1}\\
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left(  \left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{2}\right\vert -\left\vert \varphi_{4}\right\rangle
+\left\langle \varphi_{4}\right\vert \right)  \nonumber\\
+&  =\left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi
+_{1}\varphi_{2}\right\vert -\left\vert \varphi_{2}\varphi_{3}\right\rangle
+\left\langle \varphi_{2}\varphi_{3}\right\vert -\left\vert \varphi_{1}%
+\varphi_{4}\right\rangle \left\langle \varphi_{1}\varphi_{4}\right\vert
++\left\vert \varphi_{3}\varphi_{4}\right\rangle \left\langle \varphi
+_{3}\varphi_{4}\right\vert \label{b2}\\
+&  \left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left(  \left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{3}\right\vert \right)  \nonumber\\
+&  =\left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi
+_{1}\varphi_{2}\right\vert -\left\vert \varphi_{2}\varphi_{4}\right\rangle
+\left\langle \varphi_{2}\varphi_{4}\right\vert -\left\vert \varphi_{1}%
+\varphi_{3}\right\rangle \left\langle \varphi_{1}\varphi_{3}\right\vert
++\left\vert \varphi_{3}\varphi_{4}\right\rangle \left\langle \varphi
+_{3}\varphi_{4}\right\vert \label{b3}%
+\end{align}
+However basis element eq. $\left(  \ref{b1}\right)  -$ basis element eq.
+$\left(  \ref{b2}\right)  =$ basis element eq. $\left(  \ref{b3}\right)  $, so
+we can choose basis element eq. $\left(  \ref{b1}\right)  $ and eq. $\left(
+\ref{b2}\right)  $
+\end{subequations}
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert -\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \right)  \wedge\left(  \left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  ,\right.
+\nonumber\\
+&  \left.  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert \right)  \wedge\left(  \left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert -\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \right\}
+\subset\mathfrak{b}_{1}\left(  \mathbf{\varphi}\right)
+\end{align}%
+\begin{align}
+& \mathbf{\lceil}\text{In general }\left\{  \left(  \left\vert \varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{j_{1}}\right\vert -\left\vert
+\varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{2}}\right\vert \right)
+\wedge\left(  \left\vert \varphi_{j_{3}}\right\rangle \left\langle
+\varphi_{j_{3}}\right\vert -\left\vert \varphi_{j_{4}}\right\rangle
+\left\langle \varphi_{j_{4}}\right\vert \right)  \right.  =\nonumber\\
+& \,\left\vert \varphi_{j_{1}}\varphi_{j_{3}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{3}}\right\vert -\left\vert \varphi_{j_{1}}%
+\varphi_{j_{4}}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{4}%
+}\right\vert -\left\vert \varphi_{j_{2}}\varphi_{j_{3}}\right\rangle
+\left\langle \varphi_{j_{2}}\varphi_{j_{3}}\right\vert +\left\vert
+\varphi_{j_{2}}\varphi_{j_{4}}\right\rangle \left\langle \varphi_{j_{2}%
+}\varphi_{j_{4}}\right\vert \qquad\left.  j_{1}\neq j_{2}\neq j_{3}\neq
+j_{4}\right\}  \rfloor
+\end{align}
+to generate $\mathcal{K}_{22d}$ which is evidently of dimension $2.$We can
+check the result of the contraction map $L_{2}^{1}$ on these elements by
+evaluating generic sample elements
+\[
+Tr\left\{  \left(  \left\vert \varphi_{1}\varphi_{3}\right\rangle \left\langle
+\varphi_{1}\varphi_{4}\right\vert -\left\vert \varphi_{2}\varphi
+_{3}\right\rangle \left\langle \varphi_{2}\varphi_{4}\right\vert \right)
+a_{j}^{\dagger}a_{k}\right\}  =0\quad\forall j,k
+\]
+and
+\begin{equation}
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{3}\varphi_{4}\right\vert a_{j}^{\dagger}a_{k}\right\}  =0\quad\forall
+j,k
+\end{equation}
+and
+\[
+Tr\left\{  \left(  \left\vert \varphi_{1}\varphi_{3}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert -\left\vert \varphi_{1}\varphi
+_{4}\right\rangle \left\langle \varphi_{1}\varphi_{4}\right\vert -\left\vert
+\varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi_{2}\varphi
+_{3}\right\vert +\left\vert \varphi_{2}\varphi_{4}\right\rangle \left\langle
+\varphi_{2}\varphi_{4}\right\vert \right)  a_{j}^{\dagger}a_{k}\right\}
+=0\quad\forall j,k
+\]
+Obviously such elements $\notin\ker L_{2}^{2}$ $=\phi$ as $\left\{  Tr\left\{
+Ba_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}\right\}  \right\}  $
+are not all zero.
+
+The space $\mathcal{K}_{21od}$ of dimension $12$ is generated by
+\begin{align}
+&  \left\{  \left(  \left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert +\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert \right)  \wedge\left\vert \varphi_{3}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi_{2}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{3}\right\vert
+\right.  \nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{4}\right\vert
+\nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{2}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{1}%
+\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{2}\right\vert
+\nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert +\left\vert \varphi_{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{4}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert +\left\vert \varphi
+_{3}\right\rangle \left\langle \varphi_{3}\right\vert \right)  \wedge
+\left\vert \varphi_{4}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \left(  \,\,\,\left\vert \varphi_{2}\right\rangle \left\langle \varphi
+_{2}\right\vert +\left\vert \varphi_{4}\right\rangle \left\langle \varphi
+_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{3}\right\vert ,\left(  \left\vert \varphi_{2}%
+\right\rangle \left\langle \varphi_{2}\right\vert +\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{3}\right\rangle \left\langle \varphi_{1}\right\vert
+\nonumber\\
+&  \left.  \left(  \,\left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert +\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right)  \wedge\left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{2}\right\vert ,\left(  \left\vert \varphi_{3}%
+\right\rangle \left\langle \varphi_{3}\right\vert +\left\vert \varphi
+_{4}\right\rangle \left\langle \varphi_{4}\right\vert \right)  \wedge
+\left\vert \varphi_{2}\right\rangle \left\langle \varphi_{1}\right\vert
+\right\}  \subset\mathfrak{b}_{1}\left(  \mathbf{\varphi}\right)
+\end{align}%
+\begin{align}
+& \mathbf{\lceil}\text{In general }\left\{  \left(  \left\vert \varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{j_{1}}\right\vert +\left\vert
+\varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{2}}\right\vert \right)
+\wedge\left\vert \varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{4}%
+}\right\vert \right.  =\nonumber\\
+& \,\left\vert \varphi_{j_{1}}\varphi_{j_{3}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{4}}\right\vert +\left\vert \varphi_{j_{2}}%
+\varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{2}}\varphi_{j_{4}%
+}\right\vert \qquad\left.  \left(  j_{1}<j_{2}\right)  \neq\left(  j_{3}\neq
+j_{4}\right)  \right\}  \rfloor
+\end{align}
+The space $\mathcal{K}_{21d}$ must be of dimension $3$ as $\dim\left(
+\mathcal{K}_{22d}\right)  =2$ and $\dim\left(  \mathcal{K}_{20}\right)  =1$
+and has a basis given by
+\begin{align}
+&  \left\{  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert -\left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert \right)  ,\right.  \nonumber\\
+&  \,\,\,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right)  \nonumber\\
+&  \left.  \,\left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \wedge\left(  \left\vert \varphi_{3}\right\rangle \left\langle
+\varphi_{3}\right\vert -\left\vert \varphi_{4}\right\rangle \left\langle
+\varphi_{4}\right\vert \right)  \right\}  \subset\mathfrak{b}_{1}\left(
+\mathbf{\varphi}\right)
+\end{align}%
+\begin{equation}
+\mathbf{\lceil}\text{In general }\left\{  \left\vert \varphi_{1}\right\rangle
+\left\langle \varphi_{1}\right\vert \wedge\left(  \left\vert \varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{j_{1}}\right\vert -\left\vert
+\varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{2}}\right\vert \right)
+\right.  =\left\vert \varphi_{1}\varphi_{j_{1}}\right\rangle \left\langle
+\varphi_{1}\varphi_{j_{1}}\right\vert -\left\vert \varphi_{1}\varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{1}\varphi_{j_{2}}\right\vert
+\qquad\left.  j_{1}\neq j_{2}\neq1\right\}  \rfloor
+\end{equation}
+We can check the result of the contraction map $L_{2}^{0}$ on these elements
+by evaluating
+\begin{equation}
+Tr\left\{  B\right\}
+\end{equation}
+which gives for example
+\begin{align*}
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert \right\}   &  =0\\
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{2}\right\vert -\left\vert \varphi_{1}\varphi
+_{3}\right\rangle \left\langle \varphi_{1}\varphi_{3}\right\vert \right\}   &
+=0
+\end{align*}
+and the results of contraction map $L_{2}^{1}$ by
+\begin{equation}
+Tr\left\{  Ba_{j}^{\dagger}a_{k}\right\}
+\end{equation}
+which gives for example%
+\begin{align*}
+Tr\left\{  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{3}\right\vert a_{j}^{\dagger}a_{k}\right\}   &
+=0\quad\not \forall\,j,k\\
+Tr\left\{  \left(  \left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{2}\right\vert -\left\vert \varphi_{1}\varphi
+_{3}\right\rangle \left\langle \varphi_{1}\varphi_{3}\right\vert \right)
+a_{j}^{\dagger}a_{k}\right\}   &  =0\quad\not \forall\,j,k
+\end{align*}
+
+
+The space $\mathcal{S}_{2d}$ of dimension $1$ is spanned by
+\begin{equation}
+\left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle \varphi_{1}%
+\varphi_{2}\right\vert =\left\vert \varphi_{1}\right\rangle \left\langle
+\varphi_{1}\right\vert \wedge\left\vert \varphi_{2}\right\rangle \left\langle
+\varphi_{2}\right\vert
+\end{equation}
+
+
+$\mathcal{B}_{1}\left(  \mathcal{H}^{3}\right)  $ can be decomposed as
+\begin{align}
+\mathcal{B}_{1}\left(  \mathcal{H}^{3}\right)   &  =\left(  \ker L_{3}%
+^{2}\ominus\ker L_{3}^{3}\right)  \oplus\left(  \ker L_{3}^{1}\ominus\ker
+L_{3}^{2}\right)  \oplus\left(  \ker L_{3}^{0}\ominus\ker L_{3}^{1}\right)
+\oplus\left(  \ker L_{3}^{0}\right)  ^{c}\nonumber\\
+&  =\ker L_{3}^{0}\oplus\left(  \ker L_{2}^{0}\right)  ^{c}\nonumber\\
+&  \equiv\mathcal{K}_{33}\oplus\mathcal{K}_{32}\oplus\mathcal{K}_{31}%
+\oplus\mathcal{K}_{30}%
+\end{align}
+\bigskip We have the following isomorphims%
+\begin{align}
+\mathcal{K}_{31}\oplus\mathcal{K}_{30}  & \cong\mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)  \nonumber\\
+\mathcal{K}_{32}\oplus\mathcal{K}_{31}\oplus\mathcal{K}_{30}  & \cong
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)
+\end{align}
+and hence%
+\begin{align}
+&  \dim\left(  \mathcal{K}_{31}\oplus\mathcal{K}_{30}\right)  =\dim\left(
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)  \right)  =16\nonumber\\
+&  \dim\left(  \mathcal{K}_{32}\oplus\mathcal{K}_{31}\oplus\mathcal{K}%
+_{30}\right)  =\dim\left(  \mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)
+\right)  =36\\
+&  \dim\left(  \mathcal{K}_{30}\right)  =1\nonumber\\
+&  \dim\left(  \mathcal{K}_{32}\right)  =\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{2}\right)  \right)  -\dim\left(  \mathcal{B}_{1}\left(
+\mathcal{H}^{1}\right)  \right)  =36-16=20\nonumber\\
+&  \dim\left(  \mathcal{K}_{22od}\right)  =18\nonumber\\
+&  \dim\left(  \mathcal{K}_{22d}\right)  =2\nonumber\\
+&  \dim\left(  \mathcal{K}_{21od}\right)  =12\nonumber\\
+&  \dim\left(  \mathcal{K}_{21d}\right)  =3
+\end{align}
+
+
+The space $\mathcal{K}_{1}=\ker L_{N}^{0}\ominus\ker L_{N}^{1}$ contains trace
+class operators that have zero trace but have non zero one trace. This space
+contains the spaces $\left\{  \mathfrak{B}_{N-1}\left(  \mathbf{\varphi
+}\right)  \right\}  $ and $\mathfrak{B}_{N-1}\left(  \mathsf{z}\right)  $
+i.e.$\mathcal{K}_{1}$ can be decomposed as the direct sum
+\begin{equation}
+\mathcal{K}_{1}=\mathfrak{B}_{N-1}\left(  \mathbf{\varphi}\right)
+\oplus\mathfrak{B}_{N-1}\left(  \mathbf{\varphi}\right)  ^{c_{\mathcal{K}_{1}%
+}}%
+\end{equation}
+so that
+\begin{equation}
+X_{1}=\sum_{\substack{1\leq j_{2}<\cdots<j_{N}\leq\infty\\1\leq j,k\leq\infty
+}}X_{jkj_{2}\cdots j_{N}}\left\vert \varphi_{j}\varphi_{j_{2}}\cdots
+\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k}\varphi_{j_{2}}%
+\cdots\varphi_{j_{N}}\right\vert ;\qquad L_{N}^{0}\left(  X\right)
+=0;L_{N}^{1}\left(  X\right)  \neq0
+\end{equation}
+can be further develope as a sum of an \textit{off diagonal }and a
+\textit{diagonal }component.\textit{ }
+\begin{align}
+X_{1} &  =\sum_{\substack{1\leq j_{2}<\cdots<j_{N}\leq\infty\\1\leq j\neq
+k\leq\infty}}X_{jkj_{2}\cdots j_{N}}\left\vert \varphi_{j}\varphi_{j_{2}%
+}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k}\varphi_{j_{2}%
+}\cdots\varphi_{j_{N}}\right\vert \\
+&  +\frac{1}{2}\sum_{\substack{1\leq j_{2}<\cdots<j_{N}\leq\infty\\1\leq
+j\leq\infty}}X_{jj_{2}\cdots j_{N}}\left\{  \left\vert \varphi_{j}%
+\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi
+_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert -\left\vert \varphi
+_{j+1}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{j+1}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert \right\}  \\
+&  \equiv X_{1K_{od}}+X_{1K_{d}}%
+\end{align}
+where
+\begin{equation}
+X_{1K_{od}}=\sum_{\substack{1\leq j_{2}<\cdots<j_{N}\leq\infty\\1\leq j\neq
+k\leq\infty}}X_{jkj_{2}\cdots j_{N}}\left\vert \varphi_{j}\varphi_{j_{2}%
+}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k}\varphi_{j_{2}%
+}\cdots\varphi_{j_{N}}\right\vert \in\mathfrak{B}_{N-1}\left(  \mathbf{\varphi
+}\right)
+\end{equation}
+and
+\begin{equation}
+X_{1K_{d}}=\frac{1}{2}\sum_{\substack{1\leq j_{2}<\cdots<j_{N}\leq
+\infty\\1\leq j\leq\infty}}X_{jj_{2}\cdots j_{N}}\left\{  \left\vert
+\varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert -\left\vert
+\varphi_{j+1}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{j+1}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert \right\}
+\in\mathfrak{B}_{N-1}\left(  \mathbf{\varphi}\right)  ^{c_{\mathcal{K}_{1}}}%
+\end{equation}
+
+
+The space $\mathcal{K}_{2}=\ker L_{N}^{1}\ominus\ker L_{N}^{2}$ contains trace
+class operators that have zero one trace but have non zero two trace. This
+space contains the spaces $\left\{  \mathfrak{B}_{N-2}\left(  \mathbf{\varphi
+}\right)  \right\}  $ and $\mathfrak{B}_{N-2}\left(  \mathsf{z}\right)  $
+i.e.$\mathcal{K}_{2}$ can be decomposed as the direct sum
+\begin{equation}
+\mathcal{K}_{2}=\mathfrak{B}_{N-2}\left(  \mathbf{\varphi}\right)
+\oplus\mathfrak{B}_{N-2}\left(  \mathbf{\varphi}\right)  ^{c_{\mathcal{K}_{2}%
+}}%
+\end{equation}
+so that
+\begin{equation}
+X_{2}=\sum_{\substack{1\leq j_{3}<\cdots<j_{N}\leq\infty\\1\leq j_{1}%
+<,j_{2},k_{1}<k_{2}\leq\infty}}X_{j_{1}j_{2}k_{1}k_{2}j_{3}\cdots j_{N}%
+}\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{j_{3}%
+}\cdots\varphi_{j_{N}}\right\vert ;\qquad L_{N}^{1}\left(  X\right)
+=0;L_{N}^{2}\left(  X\right)  \neq0
+\end{equation}
+can be further developed as a sum of an \textit{off diagonal }and a
+\textit{diagonal }component.\textit{ }
+\begin{align}
+&  X_{2}=\sum_{\substack{1\leq j_{3}<\cdots<j_{N}\leq\infty\\1\leq
+j_{1}<,j_{2}\neq k_{1}<k_{2}\leq\infty}}X_{j_{1}j_{2}k_{1}k_{2}j_{3}\cdots
+j_{N}}\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}}\cdots
+\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k_{1}}\varphi_{k_{2}%
+}\varphi_{j_{3}}\cdots\varphi_{j_{N}}\right\vert +\\
+&  \frac{1}{2}\sum_{\substack{1\leq j_{3}<\cdots<j_{N}\leq\infty\\1\leq
+j_{1}\neq k_{1}\leq\infty}}X_{j_{1}k_{1}j_{2}j_{3}\cdots j_{N}}\left\{
+\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{k_{1}}\varphi_{j_{2}}\varphi_{j_{3}%
+}\cdots\varphi_{j_{N}}\right\vert -\left\vert \varphi_{j_{1}}\varphi_{j_{2}%
++1}\varphi_{j_{3}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{j_{2}+1}\varphi_{j_{3}}\cdots\varphi_{j_{N}%
+}\right\vert \right\} \\
+&  \equiv X_{2K_{od}}+X_{2K_{d}}%
+\end{align}
+where
+\begin{equation}
+X_{1K_{od}}=\sum_{\substack{1\leq j_{2}<\cdots<j_{N}\leq\infty\\1\leq j\neq
+k\leq\infty}}X_{jkj_{2}\cdots j_{N}}\left\vert \varphi_{j}\varphi_{j_{2}%
+}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k}\varphi_{j_{2}%
+}\cdots\varphi_{j_{N}}\right\vert \in\mathfrak{B}_{N-1}\left(  \mathbf{\varphi
+}\right)
+\end{equation}
+and
+\begin{equation}
+X_{1K_{d}}=\frac{1}{2}\sum_{\substack{1\leq j_{2}<\cdots<j_{N}\leq
+\infty\\1\leq j\leq\infty}}X_{jj_{2}\cdots j_{N}}\left\{  \left\vert
+\varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{j}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert -\left\vert
+\varphi_{j+1}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{j+1}\varphi_{j_{2}}\cdots\varphi_{j_{N}}\right\vert \right\}
+\in\mathfrak{B}_{N-1}\left(  \mathbf{\varphi}\right)  ^{c}%
+\end{equation}
+The
+
+In particular one can use the basis $\mathfrak{v}_{2}$ of $\mathfrak{V}_{2}$
+to construct a new mixed generalized-proper basis of $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ that is adapted to the decomposition eq. $\left(
+\ref{orthog}\right)  $. There are three types of elements in this adapted basis:
+
+\begin{enumerate}
+\item The generalized operators $\mathfrak{v}_{2}=\left\{  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+\left\vert \mathsf{z}^{N}\overset{2}{\nsim}\mathsf{z}^{\prime N}\right.
+\right\}  $. These span the space $\mathfrak{V}_{2}$ but which we will denote
+as $\mathcal{K}_{OD}$ in this context. This basis could be changed into a
+proper basis by defining trace class "wavepackets"
+\[
+l_{\mu}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+l_{\mu}\left(  \mathsf{z}^{N};\mathsf{z}^{\prime N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N};\qquad\mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}%
+\]
+but for the purposes of this article we find it more convenient to stay with
+the generalized basis.
+
+\item The proper trace class operators that are elements of $\ker L_{N}^{1}$
+\begin{align*}
+&  \left\{  k_{\kappa}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+k_{\kappa}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime
+}\mathsf{z}^{N-1}\right)  \left\vert \mathsf{z}_{1}\mathsf{z}^{N-1}%
+\right\rangle \left\langle \mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right\vert
+d\mathsf{z}_{1}d\mathsf{z}_{1}^{\prime}d\mathsf{z}^{N-1}\right. \\
+&  \qquad\qquad\left.  \left\vert
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+k_{\kappa}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime
+}\mathsf{z}^{N-1}\right)  d\mathsf{z}^{N-1}\right.  \overset{a.e}{=}%
+0\quad\forall\mathsf{z}_{1}\mathsf{z}_{1}^{\prime};1\leq\kappa\leq
+\infty\overset{}{}\right\}
+\end{align*}
+
+
+which span a space which we will denote $\mathcal{K}_{D}$.
+
+\item The proper trace class operators that are elements of $\left[  \ker
+L_{N}^{1}\right]  ^{c}$%
+\begin{align*}
+&  \left\{  \mathfrak{x}_{\lambda}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\mathfrak{x}_{\lambda}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}%
+_{1}^{\prime}\mathsf{z}^{N-1}\right)  \left\vert \mathsf{z}_{1}\mathsf{z}%
+^{N-1}\right\rangle \left\langle \mathsf{z}_{1}^{\prime}\mathsf{z}%
+^{N-1}\right\vert d\mathsf{z}_{1}d\mathsf{z}_{1}^{\prime}d\mathsf{z}%
+^{N-1}|\right. \\
+&  \qquad\qquad\qquad\left.  \int\mathfrak{x}_{\lambda}\left(  \mathsf{z}%
+_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right)
+d\mathsf{z}^{N-1}\neq0\quad\forall\mathsf{z}_{1}\mathsf{z}_{1}^{\prime}%
+\in\Delta;1\leq\lambda\leq\infty\overset{}{}\right\}
+\end{align*}
+
+
+where $\Delta$ is a set of non zero measure. These span the space $\left[
+\ker L_{N}^{1}\right]  ^{c}$.
+\end{enumerate}
+
+The basis elements of type 1 and type 2 together clearly span $\ker L_{N}^{1}
+$, which can be expressed as the direct sum%
+
+\begin{equation}
+\ker L_{N}^{1}=\mathcal{K}_{OD}\oplus\mathcal{K}_{D}.
+\end{equation}
+$\mathcal{K}_{OD}$ can be further decomposed as direct a integral
+\cite{dirint} of subspaces, $\mathcal{K}_{\left\vert \mathsf{z}_{1}%
+\mathsf{z}^{N-1}\right\rangle \left\langle \mathsf{z}_{1}^{\prime}%
+\mathsf{z}^{\prime N}\right\vert }$, indexed by the generalized basis elements
+$\left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{\prime N}\right\vert \right\}  $, where $\mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}$ i.e.
+\begin{equation}
+\mathcal{K}_{OD}\equiv\mathfrak{V}_{2}=\int_{\oplus}\mathcal{K}_{\left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+}d\mathsf{z}^{N}d\mathsf{z}^{\prime N};\quad\mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}.
+\end{equation}
+
+
+One can define a basis of the dual space $\mathcal{B}\left(  \mathcal{H}%
+^{N}\right)  $ that is biorthogonal to the basis of $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ just described by%
+\begin{equation}
+\left\{  \left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert \left\vert \mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}\right.  \right\}  ,\left\{  k_{\kappa}^{d}\right\}
+,\left\{  \mathfrak{x}_{\lambda}^{d}\right\}  \right\}
+\end{equation}
+where
+\begin{align}
+\left(  k_{\kappa}^{d}|k_{\lambda}\right)   &  =\delta_{\kappa\lambda
+}\nonumber\\
+\left(  \mathfrak{x}_{\kappa}^{d}|\mathfrak{x}_{\lambda}\right)   &
+=\delta_{\kappa\lambda}%
+\end{align}
+and
+\begin{equation}
+\left(  k_{\kappa}^{d}|b\right)  =\left(  \mathfrak{x}_{\kappa}^{d}|b\right)
+=0
+\end{equation}
+for all other basis elements $\left\{  \left\vert b\right)  \right\}  $ of
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  .$ The dual basis elements of
+$\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ are explicitly expressed as:
+
+\begin{enumerate}
+\item The same generalized operators $\left\{  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert \left\vert
+\mathsf{z}^{N}\overset{2}{\nsim}\mathsf{z}^{\prime N}\right.  \right\}  $.
+These span a space which we will denote as $\mathcal{K}_{OD}^{d}$. This basis
+could be changed into a proper basis by defining bounded operator
+"wavepackets"
+\begin{equation}
+l_{\mu}^{d}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+l_{\mu}^{d}\left(  \mathsf{z}^{N};\mathsf{z}^{\prime N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N};\qquad\mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}%
+\end{equation}
+but again for the purposes of this article we find it more convenient to stay
+with the generalized basis.
+
+\item The proper bounded operators%
+\begin{align}
+&  \left\{  k_{\kappa}^{d}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+k_{\kappa}^{d}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime
+}\mathsf{z}^{N-1}\right)  \left\vert \mathsf{z}_{1}\mathsf{z}^{N-1}%
+\right\rangle \left\langle \mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right\vert
+d\mathsf{z}_{1}d\mathsf{z}_{1}^{\prime}d\mathsf{z}^{N-1}\right. \nonumber\\
+&  \qquad\qquad\qquad\left.  \left\vert
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+k_{\kappa}^{d}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime
+}\mathsf{z}^{N-1}\right)  d\mathsf{z}^{N-1}\right.  \overset{a.e}{=}%
+0\quad\forall\mathsf{z}_{1}\mathsf{z}_{1}^{\prime};1\leq\kappa\leq
+\infty\overset{}{}\right\}
+\end{align}
+
+
+which span a space which we will denote $\mathcal{K}_{D}^{d}$.
+
+\item The proper bounded operators%
+\begin{align}
+&  \left\{  \mathfrak{x}_{\lambda}^{d}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\mathfrak{x}_{\lambda}^{d}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1}%
+;\mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right)  \left\vert \mathsf{z}%
+_{1}\mathsf{z}^{N-1}\right\rangle \left\langle \mathsf{z}_{1}^{\prime
+}\mathsf{z}^{N-1}\right\vert d\mathsf{z}_{1}d\mathsf{z}_{1}^{\prime
+}d\mathsf{z}^{N-1}|\right. \nonumber\\
+&  \qquad\qquad\qquad\left.  \int\mathfrak{x}_{\lambda}^{d}\left(
+\mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right)
+d\mathsf{z}^{N-1}\neq0\quad\forall\mathsf{z}_{1}\mathsf{z}_{1}^{\prime}%
+\in\Delta;1\leq\lambda\leq\infty\overset{}{}\right\}
+\end{align}
+
+
+where $\Delta$ is a set of non zero measure. These span the space $\left[
+\ker L_{N}^{1}\right]  ^{cd}$. It \emph{should} be noted that in general%
+\begin{equation}
+k_{\kappa}^{d}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime
+}\mathsf{z}^{N-1}\right)  \neq k_{\kappa}\left(  \mathsf{z}_{1}\mathsf{z}%
+^{N-1};\mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right)  ^{\ast}%
+\end{equation}
+and
+\begin{equation}
+\mathfrak{x}_{\lambda}^{d}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1}%
+;\mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right)  \neq\mathfrak{x}_{\lambda
+}\left(  \mathsf{z}_{1}\mathsf{z}^{N-1};\mathsf{z}_{1}^{\prime}\mathsf{z}%
+^{N-1}\right)  ^{\ast}.
+\end{equation}
+
+\end{enumerate}
+
+The biorthogonality of the preceding bases can be displayed symbolically as%
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+\left(  \underline{\left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert }\right\vert \\
+\left(  \underline{k^{d}}\right\vert \\
+\left(  \underline{\mathfrak{x}^{d}}\right\vert
+\end{array}
+\right)  \left(  \left\vert \underline{\left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert }\right)  ,\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}^{d}\right)
+}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)
+\end{equation}
+This basis also provides us with a resolution of the identity symbolically
+expressed as%
+\begin{equation}
+\hat{I}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }=\left(
+\underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right)  },\underline{\left\vert k\right)
+},\underline{\left\vert \mathfrak{x}\right)  }\right)  \left(
+\begin{array}
+[c]{c}%
+\underline{\left(  \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right\vert }\\
+\underline{\left(  k^{d}\right\vert }\\
+\underline{\left(  \mathfrak{x}^{d}\right\vert }%
+\end{array}
+\right)  \label{rescan}%
+\end{equation}
+where $\left\vert \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right)  $ denotes the basis $\left\{
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert \left\vert \mathsf{z}^{N}\overset{2}{\nsim}\mathsf{z}^{\prime
+N}\right.  \right\}  $.
+
+Any element $X\in\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ can thus be
+expanded as
+\begin{equation}
+X=X_{\mathcal{K}_{OD}}+X_{\mathcal{K}_{D}}+X_{\left[  \ker L_{N}^{1}\right]
+^{c}} \label{kerdec}%
+\end{equation}
+where
+\begin{align}
+X_{\mathcal{K}_{OD}}  &  =\int\left(  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert |X\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  \int Tr\left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert ^{\dagger}X\right\}  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =\int\left\langle \mathsf{z}^{N}|X\mathsf{z}^{\prime N}\right\rangle
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =\int X\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N};\quad\mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}%
+\end{align}%
+\begin{equation}
+\qquad X_{\mathcal{K}_{D}}=%
+%TCIMACRO{\dsum \limits_{\kappa}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\kappa}}
+%EndExpansion
+\left(  k_{\kappa}^{d}|X\right)  k_{\kappa}=%
+%TCIMACRO{\dsum \limits_{\kappa}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\kappa}}
+%EndExpansion
+Tr\left\{  k_{\kappa}^{d\dagger}X\right\}  k_{\kappa}\qquad\qquad\qquad
+\end{equation}
+and
+\begin{equation}
+X_{\left[  \ker L_{N}^{1}\right]  ^{c}}=%
+%TCIMACRO{\dsum \limits_{\kappa}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\kappa}}
+%EndExpansion
+\left(  \mathfrak{x}_{\lambda}^{d}|X\right)  \mathfrak{x}_{\lambda}=%
+%TCIMACRO{\dsum \limits_{\kappa}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\kappa}}
+%EndExpansion
+Tr\left\{  \mathfrak{x}_{\lambda}^{d\dagger}X\right\}  \mathfrak{x}_{\lambda
+}\qquad\qquad\qquad
+\end{equation}
+When analyzing the properties of an operator $X\in\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ it behooves us to both consider its expansion wrt
+the subspace decomposition $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $
+induced by $\ker L_{N}^{1}$ as in eq. $\left(  \ref{kerdec}\right)  $ and its
+expansion wrt to subspace decomposition of $\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  $ given by $\left\{  \mathfrak{B}_{m}|0\leq m\leq
+N\right\}  $ i.e.
+\begin{equation}
+X=\sum_{0\leq m\leq N}X_{\mathfrak{B}_{m}}%
+\end{equation}
+where
+\begin{equation}
+X_{\mathfrak{B}_{m}}=%
+%TCIMACRO{\dint \limits_{\mathsf{z}^{\prime N}\,\overset{m}{=}\,\mathsf{z}^{N}%
+%}}%
+%BeginExpansion
+{\displaystyle\int\limits_{\mathsf{z}^{\prime N}\,\overset{m}{=}%
+\,\mathsf{z}^{N}}}
+%EndExpansion
+X_{m}\left(  \mathsf{z}^{\prime N},\mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{\prime N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}%
+\end{equation}
+Explicitly using the resolution of the identity for the basis $\left\{
+\underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right)  },\underline{\left\vert k\right)
+},\underline{\left\vert \mathfrak{x}\right)  }\right\}  $ we obtain%
+\begin{align}
+X  &  =\left(  \underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)  },\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)  }\right)
+\left(
+\begin{array}
+[c]{c}%
+\underline{\left(  \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right\vert }\\
+\underline{\left(  k^{d}\right\vert }\\
+\underline{\left(  \mathfrak{x}^{d}\right\vert }%
+\end{array}
+\right)  \left\vert X\right) \nonumber\\
+&  =\left(  \underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)  },\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)  }\right)
+\mathbb{X}_{can}%
+\end{align}
+and for the basis $\left\{  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right\}
+$%
+\begin{equation}
+X=\left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)  \left(
+\begin{array}
+[c]{c}%
+\mathfrak{b}_{0}\\
+\vdots\\
+\mathfrak{b}_{N}%
+\end{array}
+\right)  \left\vert X\right)  =\left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}%
+_{N}\right)  \mathbb{X}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }%
+\end{equation}
+leading to the transformation from the representation $\mathbb{X}_{can}$ to
+$\mathbb{X}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }$ given as
+\begin{align}
+\mathbb{X}_{can}  &  =\left(
+\begin{array}
+[c]{c}%
+\underline{\left(  \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right\vert }\\
+\underline{\left(  k^{d}\right\vert }\\
+\underline{\left(  \mathfrak{x}^{d}\right\vert }%
+\end{array}
+\right)  \left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)
+\mathbb{X}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }\nonumber\\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \left(  \left.  \underline{\left(  k^{d}\right\vert }\right\vert
+\mathfrak{b}_{N-1}\right)  & \left(  \left.  \underline{\left(  k^{d}%
+\right\vert }\right\vert \mathfrak{b}_{N}\right) \\
+\mathbb{O} & \left(  \left.  \underline{\left(  \mathfrak{x}^{d}\right\vert
+}\right\vert \mathfrak{b}_{N-1}\right)  & \left(  \left.  \underline{\left(
+\mathfrak{x}^{d}\right\vert }\right\vert \mathfrak{b}_{N}\right)
+\end{array}
+\right)  \mathbb{X}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }%
+\end{align}
+and the transformation from the representation $\mathbb{X}_{\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  }$ to $\mathbb{X}_{can}$ as
+\begin{align}
+\mathbb{X}_{\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  }  &  =\left(
+\begin{array}
+[c]{c}%
+\mathfrak{b}_{0}\\
+\vdots\\
+\mathfrak{b}_{N}%
+\end{array}
+\right)  \left(  \underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)  },\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)  }\right)
+\mathbb{X}_{can}\nonumber\\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \left(  \mathfrak{b}_{N-1}\left\vert \underline{\left\vert
+k\right)  }\right.  \right)  & \left(  \mathfrak{b}_{N-1}\left\vert
+\underline{\left\vert \mathfrak{x}\right)  }\right.  \right) \\
+\mathbb{O} & \left(  \mathfrak{b}_{N}\left\vert \underline{\left\vert
+k\right)  }\right.  \right)  & \left(  \mathfrak{b}_{N}\left\vert
+\underline{\left\vert \mathfrak{x}\right)  }\right.  \right)
+\end{array}
+\right)  \mathbb{X}_{can}%
+\end{align}
+Explicitly the expansion coefficients that change are given by
+\begin{subequations}
+\begin{align}
+X_{k_{j}}  &  =%
+%TCIMACRO{\dint \limits_{\mathsf{z}_{1}^{N}\,\overset{_{1}}{=}\,\mathsf{z}%
+%_{2}^{N};\mathsf{z}_{1}^{N}\,\overset{}{=}\,\mathsf{z}_{2}^{N}}}%
+%BeginExpansion
+{\displaystyle\int\limits_{\mathsf{z}_{1}^{N}\,\overset{_{1}}{=}%
+\,\mathsf{z}_{2}^{N};\mathsf{z}_{1}^{N}\,\overset{}{=}\,\mathsf{z}_{2}^{N}}}
+%EndExpansion
+k_{j}^{d}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  ^{\ast}X\left(
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  d\mathsf{z}_{1}^{N}%
+d\mathsf{z}_{2}^{N}\\
+X_{\mathfrak{x}_{j}}  &  =%
+%TCIMACRO{\dint \limits_{\mathsf{z}_{1}^{N}\,\overset{_{1}}{=}\,\mathsf{z}%
+%_{2}^{N};\mathsf{z}_{1}^{N}\,\overset{}{=}\,\mathsf{z}_{2}^{N}}}%
+%BeginExpansion
+{\displaystyle\int\limits_{\mathsf{z}_{1}^{N}\,\overset{_{1}}{=}%
+\,\mathsf{z}_{2}^{N};\mathsf{z}_{1}^{N}\,\overset{}{=}\,\mathsf{z}_{2}^{N}}}
+%EndExpansion
+\mathfrak{x}_{j}^{d}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+^{\ast}X\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  d\mathsf{z}%
+_{1}^{N}d\mathsf{z}_{2}^{N}%
+\end{align}
+and
+\end{subequations}
+\begin{equation}
+X\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq\infty}}
+%EndExpansion
+\left\{  X_{k_{j}}k_{j}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
++X_{\mathfrak{x}_{j}}\mathfrak{x}_{j}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right)  \right\}  ;\qquad\mathsf{z}_{1}^{N}\,\overset{_{1}}{=}%
+\,\mathsf{z}_{2}^{N};\mathsf{z}_{1}^{N}\,\overset{}{=}\,\mathsf{z}_{2}^{N}%
+\end{equation}
+
+
+\subsubsection{Non Canonical Basis of Complimentary Subspaces of $\ker
+L_{N}^{1}.$}
+
+We can utilize the maps $\tilde{\Gamma}$ introduced in eq. $\left(
+\ref{Csubspace}\right)  $ to define a map $\Upsilon:\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $ to produce bases adapted to the decompositions eq. $\left(
+\ref{nonorthog}\right)  $ as
+\begin{align}
+&  \left\{  \left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert \,\forall\mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}\right\}  ,\left\{  k_{\kappa}\,;1\leq\lambda\leq
+\infty\right\}  ,\left\{  \tilde{\Gamma}\left(  \mathfrak{x}_{\lambda}\right)
+\,;1\leq\lambda\leq\infty\right\}  \right\} \nonumber\\
+&  \equiv\left\{  \left\{  \Upsilon\left(  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert \right)
+\,\forall\mathsf{z}^{N}\overset{2}{\nsim}\mathsf{z}^{\prime N}\right\}
+,\left\{  \Upsilon\left(  k_{\kappa}\right)  \,;1\leq\lambda\leq
+\infty\right\}  ,\left\{  \Upsilon\left(  \mathfrak{x}_{\lambda}\right)
+\,;1\leq\lambda\leq\infty\right\}  \right\}  \label{noncanbasis}%
+\end{align}
+where one should note that it is only the bases elements of $\left[  \ker
+L_{N}^{1}\right]  ^{c}$ that have been changed. The\emph{\ }dual basis
+elements $\left\{  \left(  k_{\kappa}^{d}\right\vert \right\}  $ are now no
+longer biorthogonal to $\left\{  \left\vert \tilde{\Gamma}\left(
+\mathfrak{x}_{\lambda}\right)  \right)  \right\}  $ as%
+\begin{equation}
+\tilde{\Gamma}\left(  \mathfrak{x}_{\lambda}\right)  =\Gamma\left(
+\mathfrak{x}_{\lambda}\right)  +\mathfrak{x}_{\lambda}.
+\end{equation}
+and
+\begin{equation}
+\Gamma\left(  \mathfrak{x}_{\lambda}\right)  =\sum_{\kappa}\left\vert
+k_{\kappa}\right)  \left[  \Gamma_{\mathcal{K}_{D}}\right]  _{\kappa\lambda}+%
+%TCIMACRO{\dint _{\mathsf{z}^{N}\,\overset{2}{\neq\,}\mathsf{z}^{\prime N}}}%
+%BeginExpansion
+{\displaystyle\int_{\mathsf{z}^{N}\,\overset{2}{\neq\,}\mathsf{z}^{\prime N}}}
+%EndExpansion
+\left[  \Gamma_{\mathcal{K}_{OD}}\right]  _{\lambda}\left(  \mathsf{z}%
+^{N};\mathsf{z}^{\prime N}\right)  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert d\mathsf{z}^{N}d\mathsf{z}%
+^{\prime N}%
+\end{equation}
+However one can construct a basis that is biorthogonal to eq. $\left(
+\ref{noncanbasis}\right)  $ by considering
+\begin{align}
+&  \left(  \Upsilon_{\Gamma}^{d}\left(  \underline{\left(  \left\vert
+\mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right\vert },\underline{\left(  k^{d}\right\vert },\left(  \underline
+{\mathfrak{x}^{d}}\right\vert \right)  \right)  \left(  \Upsilon_{\Gamma
+}\left(  \underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)  },\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)  }\right)
+\right)  ^{t}=\nonumber\\
+&  \left(  \underline{\left(  \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right\vert },\underline
+{\left(  k^{d}\right\vert },\left(  \underline{\mathfrak{x}^{d}}\right\vert
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & -\mathbf{\Gamma}_{\mathcal{K}_{OD}}\\
+\mathbb{O} & \mathbb{I} & -\mathbf{\Gamma}_{\mathcal{K}_{D}}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & \mathbf{\Gamma}_{\mathcal{K}_{OD}}\\
+\mathbb{O} & \mathbb{I} & \mathbf{\Gamma}_{\mathcal{K}_{D}}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right)  }\\
+\underline{\left\vert k\right)  }\\
+\underline{\left\vert \mathfrak{x}\right)  }%
+\end{array}
+\right) \nonumber\\
+&  \left.  =\right.  \left(  \underline{\left(  \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right\vert },\underline{\left(  k^{d}\right\vert },\left(  \underline
+{\mathfrak{x}^{d}}\right\vert \right)  \left(
+\begin{array}
+[c]{c}%
+\underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right)  }\\
+\underline{\left\vert k\right)  }\\
+\underline{\left\vert \mathfrak{x}\right)  }%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)
+\end{align}
+which shows that the dual map $\Upsilon^{d}$ to $\Upsilon$, which is defined
+by%
+\begin{equation}
+\left(  \Upsilon^{d}\left(  A\right)  |B\right)  =\left(  A|\Upsilon\left(
+B\right)  \right)  \quad\forall B\in\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  \quad\forall A\in\mathcal{B}\left(  \mathcal{H}^{N}\right)  ,
+\end{equation}
+is given by
+\begin{align}
+\Upsilon_{\Gamma}^{d}\left(  \underline{\left(  \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right\vert },\underline{\left(  k^{d}\right\vert },\left(  \underline
+{\mathfrak{x}^{d}}\right\vert \right)   &  =\left(  \underline{\left(
+\left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime
+N}\right\vert \right\vert },\underline{\left(  k^{d}\right\vert },\left(
+\underline{\mathfrak{x}^{d}}\right\vert \right)  \mathbf{\Upsilon}_{\Gamma
+}^{d}\nonumber\\
+&  =\left(  \underline{\left(  \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right\vert },\underline
+{\left(  k^{d}\right\vert },\left(  \underline{\mathfrak{x}^{d}}\right\vert
+\right)  \mathbf{\Upsilon}_{\Gamma}^{-1}%
+\end{align}
+where
+\begin{equation}
+\Upsilon_{\Gamma}\left(  \underline{\left\vert \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)
+},\underline{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)
+}\right)  =\left(  \underline{\left\vert \left\vert \mathsf{z}^{N}%
+\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)
+},\underline{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)
+}\right)  \mathbf{\Upsilon}_{\Gamma}%
+\end{equation}
+and
+\begin{subequations}
+\begin{align}
+\mathbf{\Upsilon}_{\Gamma}  &  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbf{\Gamma}_{\mathcal{K}%
+_{OD}}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbf{\Gamma}_{\mathcal{K}_{D}%
+}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right) \\
+\mathbf{\Upsilon}_{\Gamma}^{-1}  &  \mathbb{=}\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & -\mathbf{\Gamma}_{\mathcal{K}%
+_{OD}}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & -\mathbf{\Gamma}_{\mathcal{K}_{D}%
+}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)
+\end{align}
+
+
+The non canonical representations, $\tilde{\Gamma}\left(  \mathcal{V}\right)
+$, of the base of the vector bundle $\mathfrak{B}_{L_{N}^{1}}$ are thus given
+by
+\end{subequations}
+\begin{align}
+\mathcal{V}_{\Gamma}  &  =\left\{  \left(  \underline{\left\vert \left\vert
+\mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right)  },\underline{\left\vert k\right)  },\underline{\left\vert
+\mathfrak{x}\right)  }\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbf{\Gamma}_{\mathcal{K}%
+_{OD}}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbf{\Gamma}_{\mathcal{K}_{D}%
+}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{0}\\
+\mathbf{0}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\nonumber\\
+&  =\left\{  \left(  \underline{\left\vert \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)
+},\underline{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)
+}\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{y}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{y}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\nonumber\\
+&  =\left\{  \left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)  \left(
+\begin{array}
+[c]{c}%
+\mathfrak{b}_{0}\\
+\vdots\\
+\mathfrak{b}_{N}%
+\end{array}
+\right)  \left(  \underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)  },\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)  }\right)
+\left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{y}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{y}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\nonumber\\
+&  =\left\{  \left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \left(  \mathfrak{b}_{N-1}|\left\vert \underline{k}\right)
+\right)  & \left(  \mathfrak{b}_{N}|\left\vert \underline{k}\right)  \right)
+\\
+\mathbb{O} & \left(  \mathfrak{b}_{N-1}|\underline{\left\vert \mathfrak{x}%
+\right)  }\right)  & \left(  \mathfrak{b}_{N}|\underline{\left\vert
+\mathfrak{x}\right)  }\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{y}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{y}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\end{align}
+
+
+\subsubsection{Non Canonical Basis of Complimentary Subspaces of $\ker
+L_{N}^{1}.$}
+
+We can utilize the maps $\tilde{\Gamma}$ introduced in eq. $\left(
+\ref{Csubspace}\right)  $ to define a map $\Upsilon:\mathcal{B}_{1}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $ to produce bases adapted to the decompositions eq. $\left(
+\ref{nonorthog}\right)  $ as
+\begin{align}
+&  \left\{  \left\{  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{\prime N}\right\vert \,\forall\mathsf{z}^{N}\overset{2}{\nsim
+}\mathsf{z}^{\prime N}\right\}  ,\left\{  k_{\kappa}\,;1\leq\lambda\leq
+\infty\right\}  ,\left\{  \tilde{\Gamma}\left(  \mathfrak{x}_{\lambda}\right)
+\,;1\leq\lambda\leq\infty\right\}  \right\} \nonumber\\
+&  \equiv\left\{  \left\{  \Upsilon\left(  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{\prime N}\right\vert \right)
+\,\forall\mathsf{z}^{N}\overset{2}{\nsim}\mathsf{z}^{\prime N}\right\}
+,\left\{  \Upsilon\left(  k_{\kappa}\right)  \,;1\leq\lambda\leq
+\infty\right\}  ,\left\{  \Upsilon\left(  \mathfrak{x}_{\lambda}\right)
+\,;1\leq\lambda\leq\infty\right\}  \right\}  \label{noncanbasis}%
+\end{align}
+where one should note that it is only the bases elements of $\left[  \ker
+L_{N}^{1}\right]  ^{c}$ that have been changed. The\emph{\ }dual basis
+elements $\left\{  \left(  k_{\kappa}^{d}\right\vert \right\}  $ are now no
+longer biorthogonal to $\left\{  \left\vert \tilde{\Gamma}\left(
+\mathfrak{x}_{\lambda}\right)  \right)  \right\}  $ as%
+\begin{equation}
+\tilde{\Gamma}\left(  \mathfrak{x}_{\lambda}\right)  =\Gamma\left(
+\mathfrak{x}_{\lambda}\right)  +\mathfrak{x}_{\lambda}.
+\end{equation}
+and
+\begin{equation}
+\Gamma\left(  \mathfrak{x}_{\lambda}\right)  =\sum_{\kappa}\left\vert
+k_{\kappa}\right)  \left[  \Gamma_{\mathcal{K}_{D}}\right]  _{\kappa\lambda}+%
+%TCIMACRO{\dint _{\mathsf{z}^{N}\,\overset{2}{\neq\,}\mathsf{z}^{\prime N}}}%
+%BeginExpansion
+{\displaystyle\int_{\mathsf{z}^{N}\,\overset{2}{\neq\,}\mathsf{z}^{\prime N}}}
+%EndExpansion
+\left[  \Gamma_{\mathcal{K}_{OD}}\right]  _{\lambda}\left(  \mathsf{z}%
+^{N};\mathsf{z}^{\prime N}\right)  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{\prime N}\right\vert d\mathsf{z}^{N}d\mathsf{z}%
+^{\prime N}%
+\end{equation}
+However one can construct a basis that is biorthogonal to eq. $\left(
+\ref{noncanbasis}\right)  $ by considering
+\begin{align}
+&  \left(  \Upsilon_{\Gamma}^{d}\left(  \underline{\left(  \left\vert
+\mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right\vert },\underline{\left(  k^{d}\right\vert },\left(  \underline
+{\mathfrak{x}^{d}}\right\vert \right)  \right)  \left(  \Upsilon_{\Gamma
+}\left(  \underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)  },\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)  }\right)
+\right)  ^{t}=\nonumber\\
+&  \left(  \underline{\left(  \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right\vert },\underline
+{\left(  k^{d}\right\vert },\left(  \underline{\mathfrak{x}^{d}}\right\vert
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & -\mathbf{\Gamma}_{\mathcal{K}_{OD}}\\
+\mathbb{O} & \mathbb{I} & -\mathbf{\Gamma}_{\mathcal{K}_{D}}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & \mathbf{\Gamma}_{\mathcal{K}_{OD}}\\
+\mathbb{O} & \mathbb{I} & \mathbf{\Gamma}_{\mathcal{K}_{D}}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right)  }\\
+\underline{\left\vert k\right)  }\\
+\underline{\left\vert \mathfrak{x}\right)  }%
+\end{array}
+\right) \nonumber\\
+&  \left.  =\right.  \left(  \underline{\left(  \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right\vert },\underline{\left(  k^{d}\right\vert },\left(  \underline
+{\mathfrak{x}^{d}}\right\vert \right)  \left(
+\begin{array}
+[c]{c}%
+\underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle
+\mathsf{z}^{\prime N}\right\vert \right)  }\\
+\underline{\left\vert k\right)  }\\
+\underline{\left\vert \mathfrak{x}\right)  }%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)
+\end{align}
+which shows that the dual map $\Upsilon^{d}$ to $\Upsilon$, which is defined
+by%
+\begin{equation}
+\left(  \Upsilon^{d}\left(  A\right)  |B\right)  =\left(  A|\Upsilon\left(
+B\right)  \right)  \quad\forall B\in\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  \quad\forall A\in\mathcal{B}\left(  \mathcal{H}^{N}\right)  ,
+\end{equation}
+is given by
+\begin{align}
+\Upsilon_{\Gamma}^{d}\left(  \underline{\left(  \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right\vert },\underline{\left(  k^{d}\right\vert },\left(  \underline
+{\mathfrak{x}^{d}}\right\vert \right)   &  =\left(  \underline{\left(
+\left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime
+N}\right\vert \right\vert },\underline{\left(  k^{d}\right\vert },\left(
+\underline{\mathfrak{x}^{d}}\right\vert \right)  \mathbf{\Upsilon}_{\Gamma
+}^{d}\nonumber\\
+&  =\left(  \underline{\left(  \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right\vert },\underline
+{\left(  k^{d}\right\vert },\left(  \underline{\mathfrak{x}^{d}}\right\vert
+\right)  \mathbf{\Upsilon}_{\Gamma}^{-1}%
+\end{align}
+where
+\begin{equation}
+\Upsilon_{\Gamma}\left(  \underline{\left\vert \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)
+},\underline{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)
+}\right)  =\left(  \underline{\left\vert \left\vert \mathsf{z}^{N}%
+\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)
+},\underline{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)
+}\right)  \mathbf{\Upsilon}_{\Gamma}%
+\end{equation}
+and
+\begin{subequations}
+\begin{align}
+\mathbf{\Upsilon}_{\Gamma}  &  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbf{\Gamma}_{\mathcal{K}%
+_{OD}}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbf{\Gamma}_{\mathcal{K}_{D}%
+}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right) \\
+\mathbf{\Upsilon}_{\Gamma}^{-1}  &  \mathbb{=}\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & -\mathbf{\Gamma}_{\mathcal{K}%
+_{OD}}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & -\mathbf{\Gamma}_{\mathcal{K}_{D}%
+}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)
+\end{align}
+
+
+The non canonical representations, $\tilde{\Gamma}\left(  \mathcal{V}\right)
+$, of the base of the vector bundle $\mathfrak{B}_{L_{N}^{1}}$ are thus given
+by
+\end{subequations}
+\begin{align}
+\mathcal{V}_{\Gamma}  &  =\left\{  \left(  \underline{\left\vert \left\vert
+\mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right)  },\underline{\left\vert k\right)  },\underline{\left\vert
+\mathfrak{x}\right)  }\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbf{\Gamma}_{\mathcal{K}%
+_{OD}}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbf{\Gamma}_{\mathcal{K}_{D}%
+}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{0}\\
+\mathbf{0}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\nonumber\\
+&  =\left\{  \left(  \underline{\left\vert \left\vert \mathsf{z}%
+^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)
+},\underline{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)
+}\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{y}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{y}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\nonumber\\
+&  =\left\{  \left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)  \left(
+\begin{array}
+[c]{c}%
+\mathfrak{b}_{0}\\
+\vdots\\
+\mathfrak{b}_{N}%
+\end{array}
+\right)  \left(  \underline{\left\vert \left\vert \mathsf{z}^{N}\right\rangle
+_{2}\left\langle \mathsf{z}^{\prime N}\right\vert \right)  },\underline
+{\left\vert k\right)  },\underline{\left\vert \mathfrak{x}\right)  }\right)
+\left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{y}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{y}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\nonumber\\
+&  =\left\{  \left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \left(  \mathfrak{b}_{N-1}|\left\vert \underline{k}\right)
+\right)  & \left(  \mathfrak{b}_{N}|\left\vert \underline{k}\right)  \right)
+\\
+\mathbb{O} & \left(  \mathfrak{b}_{N-1}|\underline{\left\vert \mathfrak{x}%
+\right)  }\right)  & \left(  \mathfrak{b}_{N}|\underline{\left\vert
+\mathfrak{x}\right)  }\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{y}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{y}\\
+\mathfrak{y}%
+\end{array}
+\right)  ;\mathfrak{y\in}\left[  \ker L_{N}^{1}\right]  ^{c}\right\}
+\end{align}
+
+
+\subsubsection{Non Canonical Bases that Contain States \label{noncanstate}}
+
+We concentrate on those representations of the base that are generated by the
+set $\mathfrak{P}$ of maps $\left\{  \Gamma\right\}  $ that induce base
+representatives and contains a maximal number of states
+\begin{equation}
+\mathfrak{P}=\left\{  \Gamma|\tilde{\Gamma}\left(  \mathfrak{d}_{1}\right)
+\in\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)  \,\forall\,\mathfrak{d}%
+_{1}\in\ \mathfrak{C}_{1}\right\}
+\end{equation}
+where $\mathfrak{C}_{1}$ is the set of $\left[  \ker L_{N}^{1}\right]  ^{c}%
+$-components of unnormalized states i.e.
+\begin{equation}
+\mathfrak{C}_{1}=\left\{  \mathfrak{d}_{1}|\mathfrak{d}_{1}\in\left[  \ker
+L_{N}^{1}\right]  ^{c}\,\text{such that }\exists\mathfrak{d\in}\left[  \ker
+L_{N}^{1}\right]  \text{ so that }\mathfrak{d+d}_{1}\in\mathcal{B}_{1+}\left(
+\mathcal{H}^{N}\right)  \right\}
+\end{equation}
+Thus the cone
+\begin{equation}
+\mathcal{V}_{\Gamma+}=\mathcal{V}_{\Gamma}\cap\mathcal{B}_{1+}\left(
+\mathcal{H}^{N}\right)  \equiv\left\{  \tilde{\Gamma}\left(  \mathfrak{d}%
+_{1}\right)  |\mathfrak{d}_{1}\in\ \mathfrak{C}_{1};\tilde{\Gamma}\left(
+\mathfrak{d}_{1}\right)  \in\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)
+\right\}
+\end{equation}
+is given by
+\begin{equation}
+\mathcal{V}_{\Gamma+}=\left\{  \left(  \underline{\left\vert \left\vert
+\mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime N}\right\vert
+\right)  },\underline{\left\vert k\right)  },\underline{\left\vert
+\mathfrak{x}\right)  }\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I}_{\mathcal{K}_{OD}} & \mathbb{O} & \mathbf{\Gamma}_{\mathcal{K}%
+_{OD}}\\
+\mathbb{O} & \mathbb{I}_{\mathcal{K}_{D}} & \mathbf{\Gamma}_{\mathcal{K}_{D}%
+}\\
+\mathbb{O} & \mathbb{O} & \mathbb{I}_{\left[  \ker L_{N}^{1}\right]  ^{c}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{0}\\
+\mathbf{0}\\
+\mathfrak{d}_{1}%
+\end{array}
+\right)  ;\mathfrak{d}_{1}\mathfrak{\in C}_{1}\right\}
+\end{equation}
+We denote a typical element of $\mathcal{V}_{\Gamma+}$ as $D_{0_{F}}^{N}$ thus
+for $\mathfrak{d}_{1}\mathfrak{\in C}_{1}$
+\begin{align}
+D_{0_{F}}^{N}  &  =\Upsilon_{\Gamma}\left(  \mathfrak{d}_{1}\right)
+=\tilde{\Gamma}\left(  \mathfrak{d}_{1}\right)  =\left(  \underline{\left\vert
+\left\vert \mathsf{z}^{N}\right\rangle _{2}\left\langle \mathsf{z}^{\prime
+N}\right\vert \right)  },\underline{\left\vert k\right)  },\underline
+{\left\vert \mathfrak{x}\right)  }\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{d}_{1}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{d}_{1}\\
+\mathfrak{d}_{1}%
+\end{array}
+\right) \nonumber\\
+&  =\left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbb{I} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \left(  \mathfrak{b}_{N-1}|\left\vert \underline{k}\right)
+\right)  & \left(  \mathfrak{b}_{N}|\left\vert \underline{k}\right)  \right)
+\\
+\mathbb{O} & \left(  \mathfrak{b}_{N-1}|\underline{\left\vert \mathfrak{x}%
+\right)  }\right)  & \left(  \mathfrak{b}_{N}|\underline{\left\vert
+\mathfrak{x}\right)  }\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\Gamma}_{\mathcal{K}_{OD}}\mathfrak{d}_{1}\\
+\mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{d}_{1}\\
+\mathfrak{d}_{1}%
+\end{array}
+\right) \nonumber\\
+&  =\left(  \mathfrak{b}_{0},\cdots,\mathfrak{b}_{N}\right)  \left(
+\begin{array}
+[c]{c}%
+D_{0_{F}\mathfrak{B}_{0}}^{N}\\
+\vdots\\
+D_{0_{F}\mathfrak{B}_{N}}^{N}%
+\end{array}
+\right)
+\end{align}
+recall that the domain of $\Upsilon_{\Gamma}$ is all of $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $, while that of $\tilde{\Gamma}$ is
+$\left[  \ker L_{N}^{1}\right]  ^{c}$ and
+\begin{equation}
+D_{0_{F}\mathfrak{B}_{m}}^{N}=%
+%TCIMACRO{\dint \limits_{\mathsf{z}^{\prime N}\,\overset{m}{=}\,\mathsf{z}^{N}%
+%}}%
+%BeginExpansion
+{\displaystyle\int\limits_{\mathsf{z}^{\prime N}\,\overset{m}{=}%
+\,\mathsf{z}^{N}}}
+%EndExpansion
+D_{0_{F}}^{N}\left(  \mathsf{z}^{\prime N},\mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{\prime N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}%
+\end{equation}
+so in particular%
+\begin{align}
+&  D_{0_{F}\mathfrak{B}_{N}}^{N}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+D_{0_{F}}^{N}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}\nonumber\\
+&  \qquad\quad\left.  =\right.  \left(  \mathfrak{b}_{N}|\underline{\left\vert
+\mathfrak{x}\right)  }\right)  \mathbf{\Gamma}_{\mathcal{K}_{D}}%
+\mathfrak{d}_{1}+\left(  \mathfrak{b}_{N}|\underline{\left\vert \mathfrak{x}%
+\right)  }\right)  \mathfrak{d}_{1}\nonumber\\
+&  \qquad\quad\left.  =\right.  \left(  \mathfrak{b}_{N}|\underline{\left\vert
+k\right)  }\right)  \left(  \underline{\left(  k^{d}\right\vert }%
+|\Gamma\left(  \mathfrak{d}_{1}\right)  \right)  +\left(  \mathfrak{b}%
+_{N}|\mathfrak{d}_{1}\right) \nonumber\\
+&  \left.  =\right.
+%TCIMACRO{\dsum \limits_{1\leq\nu\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq\nu\leq\infty}}
+%EndExpansion%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+k_{\nu}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  \Gamma\left[
+\mathfrak{d}_{1}\right]  \left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}+\int\mathfrak{d}_{1}\left(  \mathsf{z}^{N},\mathsf{z}%
+^{N}\right)  \left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+\end{align}
+so that
+\begin{equation}
+D_{0_{F}}^{N}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  =D_{0_{F}%
+\mathfrak{B}_{N}}^{N}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq\nu\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq\nu\leq\infty}}
+%EndExpansion
+k_{\nu}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  \Gamma\left[
+\mathfrak{d}_{1}\right]  \left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)
++\mathfrak{d}_{1}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)
+\end{equation}
+while
+\begin{align}
+D_{0_{F}\mathfrak{B}_{N-1}}^{N}  &  =%
+%TCIMACRO{\dint \limits_{\mathsf{z}^{\prime N}\,\overset{N-1}{=}\,\mathsf{z}%
+%^{N}}}%
+%BeginExpansion
+{\displaystyle\int\limits_{\mathsf{z}^{\prime N}\,\overset{N-1}{=}%
+\,\mathsf{z}^{N}}}
+%EndExpansion
+D_{0_{F}}^{N}\left(  \mathsf{z}^{\prime N},\mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{\prime N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}\nonumber\\
+&  =\left(  \mathfrak{b}_{N-1}|\underline{\left\vert \mathfrak{x}\right)
+}\right)  \mathbf{\Gamma}_{\mathcal{K}_{D}}\mathfrak{d}_{1}+\left(
+\mathfrak{b}_{N-1}|\underline{\left\vert \mathfrak{x}\right)  }\right)
+\mathfrak{d}_{1}\nonumber\\
+&  =\left(  \mathfrak{b}_{N-1}|\underline{\left\vert k\right)  }\right)
+\left(  \underline{\left(  k^{d}\right\vert }|\Gamma\left(  \mathfrak{d}%
+_{1}\right)  \right)  +\left(  \mathfrak{b}_{N-1}|\mathfrak{d}_{1}\right)
+\nonumber\\
+&  =%
+%TCIMACRO{\dsum \limits_{1\leq\nu\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq\nu\leq\infty}}
+%EndExpansion%
+%TCIMACRO{\dint \limits_{\mathsf{z}^{\prime N}\,\overset{N-1}{=}\,\mathsf{z}%
+%^{N}}}%
+%BeginExpansion
+{\displaystyle\int\limits_{\mathsf{z}^{\prime N}\,\overset{N-1}{=}%
+\,\mathsf{z}^{N}}}
+%EndExpansion
+k_{\nu}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \Gamma\left[
+\mathfrak{d}_{1}\right]  \left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert d\mathsf{z}^{N}\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad+%
+%TCIMACRO{\dint \limits_{\mathsf{z}^{\prime N}\,\overset{N-1}{=}\,\mathsf{z}%
+%^{N}}}%
+%BeginExpansion
+{\displaystyle\int\limits_{\mathsf{z}^{\prime N}\,\overset{N-1}{=}%
+\,\mathsf{z}^{N}}}
+%EndExpansion
+\mathfrak{d}_{1}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert d\mathsf{z}^{N}d\mathsf{z}^{\prime N}%
+\end{align}
+so that
+\begin{equation}
+D_{0_{F}}^{N}\left(  \mathsf{z}^{\prime N},\mathsf{z}^{N}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq\nu\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq\nu\leq\infty}}
+%EndExpansion
+k_{\nu}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \Gamma\left[
+\mathfrak{d}_{1}\right]  \left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
++\mathfrak{d}_{1}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+;\quad\mathsf{z}^{\prime N}\overset{N-1}{=}\mathsf{z}^{N}%
+\end{equation}
+where we have used the notation $\Gamma\left[  \mathfrak{d}_{1}\right]
+\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  $ to distinguish between
+arguments that are representation dependent and those that are not.
+
+
+\end{document}

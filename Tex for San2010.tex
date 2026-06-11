@@ -1,0 +1,811 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, January 14, 2010 09:28:36}
+%TCIDATA{LastRevised=Thursday, February 04, 2010 21:25:25}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+$\bigskip1$%
+\[
+\mathcal{H}_{\mathcal{F}}=%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq r}}
+%EndExpansion
+\mathcal{H}^{N}%
+\]%
+\[
+\mathcal{H}^{N}=%
+%TCIMACRO{\dbigwedge \nolimits^{N}}%
+%BeginExpansion
+{\displaystyle\bigwedge\nolimits^{N}}
+%EndExpansion
+\mathcal{H}^{1}%
+\]
+2%
+\[
+a_{j}^{\dagger}\left\vert \phi\right\rangle =\left\vert \varphi_{j}%
+\right\rangle ,1\leq j\leq r
+\]
+$3$%
+\[
+\mathcal{H}^{1}=\operatorname*{linspan}\left\{  \left.  \left\vert \varphi
+_{j}\right\rangle \right\vert 1\leq j\leq r\right\}
+\]
+4%
+
+\[
+\left[  a_{j}^{\dagger},a_{k}\right]  _{+}=a_{j}^{\dagger}a_{k}+a_{k}%
+a_{j}^{\dagger}=\delta_{jk};1\leq j,k\leq r
+\]
+5%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\]
+5a%
+\[
+\text{Bounded operators acting in }\mathcal{H}_{\mathcal{F}}%
+\]
+
+
+$6$%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  =\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{e}\oplus\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{o}%
+\]
+7%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eP}=
+\]
+7a%
+\[
+\left\{  \sum_{1\leq j_{1}<\cdots<j_{P},k_{1}<\cdots<k_{P}\leq r}%
+X_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}a_{j_{1}}^{\dagger}\cdots a_{j_{P}%
+}^{\dagger}a_{k_{P}}\cdots a_{k_{1}}\right\}
+\]
+8%
+\begin{gather*}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}\\
+\shortparallel\\%
+%TCIMACRO{\dbigoplus \limits_{0\leq P\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq P\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eP}\cong%
+%TCIMACRO{\dbigoplus \limits_{0\leq P\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq P\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{P}\right)
+\end{gather*}
+8a%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}=%
+%TCIMACRO{\dbigoplus \limits_{0\leq P\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq P\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eP}%
+\]
+8b%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eP}\cap\mathcal{B}%
+\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eP^{\prime}}=\phi
+\]
+8c%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e0}=\mathbb{C}I
+\]
+8d%
+\[
+\sum_{0\leq j\leq m}c_{j}X_{j}=0,\,X_{j}\in\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{ej}\Leftrightarrow c_{j}=0,0\leq j\leq m
+\]
+8e%
+\[
+f\left(  X_{j}\right)  =d_{j},0\leq j\leq m
+\]
+8f setting%
+\[
+f\left(  \sum_{0\leq j\leq m_{1}}X_{j}\right)  =d_{1};f\left(  \sum
+_{m_{1}+1\leq j\leq m_{2}}X_{j}\right)  =d_{2}%
+\]
+
+
+$\bigskip\ $limits the values as a new set of l.i. vectors must be chosen.
+
+$\left\{  X_{j}\right\}  $ is a basis
+\begin{align}
+f\left(  \sum_{0\leq j\leq m}c_{j}X_{j}\right)   &  =\mathbf{c\cdot d}\\
+f  &  \leftrightarrow\mathbf{d}%
+\end{align}
+
+
+9%
+
+\[
+E\left(  D^{N}\right)  =\operatorname{Tr}\left\{  HD^{N}\right\}
+=\operatorname{Tr}\left\{  \left(  H_{0}+H_{1}+H_{2}\right)  D^{N}\right\}
+\]
+9a%
+\begin{gather*}
+D^{N}\in\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right) \\
+\text{N-Electron State Operator \quad Positive Trace Class Operators}%
+\end{gather*}
+10%
+\begin{align*}
+H_{0}  &  =\eta I,\\
+H_{1}  &  =\sum_{1\leq j,k\leq r}h_{1jk}a_{j}^{\dagger}a_{k},\\
+H_{2}  &  =\sum_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq k_{1}<k_{2}\leq
+r}}h_{2j_{1}j_{2}k_{1}k_{2}}a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}%
+\end{align*}
+11%
+\[
+\eta=\sum_{1\leq\alpha<\beta\leq N_{nuc}}\frac{Z_{\alpha}Z_{\beta}}{\left\Vert
+\mathbf{R}_{\alpha}-\mathbf{R}_{\beta}\right\Vert }%
+\]
+12%
+\[
+h_{1jk}=\left\langle \varphi_{j}\left\vert \left(  \sum_{_{1\leq\alpha\leq
+N_{nuc}}}\frac{Z_{\alpha}}{\left\Vert \mathbf{R}_{\alpha}-\mathbf{r}%
+\right\Vert }-\frac{1}{2m_{e}}\nabla_{\mathbf{r}}^{2}\right)  \right.
+\varphi_{k}\right\rangle
+\]
+13%
+\[
+h_{2j_{1}j_{2}k_{1}k_{2}}=\left\langle \varphi_{j_{1}}\varphi_{j_{2}%
+}\left\vert \frac{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert
+}\right.  \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\]
+14%
+\begin{align*}
+E\left(  D^{N}\right)   &  =\eta+\sum_{1\leq j,k\leq r}h_{1jk}%
+\operatorname{Tr}\left\{  a_{j}^{\dagger}a_{k}D^{N}\right\} \\
+&  \qquad+\sum_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq k_{1}<k_{2}\leq
+r}}h_{2j_{1}j_{2}k_{1}k_{2}}\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger
+}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}D^{N}\right\}
+\end{align*}
+15%
+\begin{align*}
+D_{2k_{1}k_{2}j_{1}j_{2}}^{N}  &  =\operatorname{Tr}\left\{  a_{j_{1}%
+}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}D^{N}\right\} \\
+D_{1kj}^{N}  &  =\operatorname{Tr}\left\{  a_{j}^{\dagger}a_{k}D^{N}\right\}
+\end{align*}
+15a%
+\begin{align*}
+\mathcal{N}_{1}  &  =\sum_{1\leq j\leq r}a_{j}^{\dagger}a_{j}\\
+\mathcal{N}_{2}  &  =\sum_{1\leq j_{1}<j_{2}\leq r}a_{j_{1}}^{\dagger}%
+a_{j_{2}}^{\dagger}a_{j_{2}}a_{j_{1}}%
+\end{align*}
+15b%
+\begin{align*}
+\operatorname{Tr}\left\{  \mathcal{N}_{1}D^{N}\right\}   &  =\operatorname{Tr}%
+\left\{  \mathbf{D}_{1}^{N}\right\}  =N\\
+\operatorname{Tr}\left\{  \mathcal{N}_{2}D^{N}\right\}   &  =\operatorname{Tr}%
+\left\{  \mathbf{D}_{2}^{N}\right\}  =\binom{N}{2}%
+\end{align*}
+15c%
+\[
+D_{1kj}^{N}=\left(  N-1\right)  ^{-1}\sum_{1\leq j_{2}\leq r}D_{2kj_{2}jj_{2}%
+}^{N}%
+\]
+15d%
+\begin{align*}
+D_{2j_{2}kj_{2}j}^{N}  &  =-D_{2kj_{2}j_{2}j}^{N}=-D_{2j_{2}kjj_{2}}%
+^{N}=D_{2kj_{2}jj_{2}}^{N}\\
+1  &  \leq k<j_{2}\leq r;1\leq j<j_{2}\leq r
+\end{align*}
+16%
+\[
+D_{k_{1}\cdots k_{N}j_{1}\cdots j_{N}}^{N}=\operatorname{Tr}\left\{  a_{j_{1}%
+}^{\dagger}\cdots a_{j_{N}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}D^{N}\right\}
+\]
+17%
+\[
+\mathbf{D}^{N}=\left\{  \left.  D_{k_{1}\cdots k_{N}j_{1}\cdots j_{N}}%
+^{N}\right\vert 1\leq j_{1}<\cdots<j_{N}\leq r,1\leq k_{1}<\cdots<k_{N}\leq
+r\right\}
+\]
+18%
+\[
+\mathbf{D}_{2}^{N}=\left\{  \left.  D_{2k_{1}k_{2}j_{1}j_{2}}^{N}\right\vert
+1\leq j_{1}<j_{2}\leq r,1\leq k_{1}<k_{2}\leq r\right\}
+\]
+19%
+\[
+\mathbf{D}_{1}^{N}=\left\{  \left.  D_{1kj}^{N}\right\vert 1\leq j\leq r,1\leq
+k\leq r\right\}
+\]
+
+
+20
+\begin{subequations}
+\label{States}%
+\begin{gather*}
+f:\mathcal{B}\left(  \mathcal{H}_{F}\right)  \rightarrow\mathbb{R}\\
+f\left(  X\right)  \geq0\quad\forall X\geq0\\
+f\left(  I\right)  =1
+\end{gather*}
+20a%
+\end{subequations}
+\begin{gather*}
+\left\Vert X\right\Vert =\sup_{\substack{\left\Vert \Phi\right\Vert
+=1\\\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}}\left\{  \left\vert
+\left\langle \left.  \Phi\right\vert X\Phi\right\rangle \right\vert \right\}
+\\
+X=X^{\dagger}%
+\end{gather*}
+20b%
+\begin{gather*}
+\left\Vert X\right\Vert _{1}=\operatorname{Tr}\left\{  \left\vert X\right\vert
+\right\}  ,X=X^{\dagger}\\
+\left\vert X\right\vert \text{ is positive square root of }X^{2}%
+\end{gather*}
+20c%
+\[
+\mathcal{B}_{1}\left(  \mathcal{H}_{F}\right)
+\]%
+\[
+\mathcal{B}\left(  \mathcal{H}_{F}\right)
+\]%
+\[
+f\left(  X\right)  =\operatorname{Tr}\left\{  XD\right\}  ;\text{ }D\in
+S_{F}\subset\mathcal{B}_{1+}\left(  \mathcal{H}_{F}\right)
+\]
+20d%
+\[
+S_{F}=\left\{  \left.  D\right\vert D\in\mathcal{B}_{1+}\left(  \mathcal{H}%
+_{F}\right)  ;\operatorname{Tr}\left\{  D\right\}  =1\right\}
+\]
+20e%
+\begin{gather*}
+\sum_{1\leq j\leq\nu}\alpha_{j}D_{j}\in S_{F}\\
+\sum_{1\leq j\leq\nu}\alpha_{j}=1,0\leq\alpha_{j}\leq1,1\leq j\leq\nu
+\end{gather*}
+21%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\text{ and
+}\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}%
+\]
+21a%
+\[
+f\left(  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}\right)
+=\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}%
+}a_{k_{1}}D^{N}\right\}
+\]
+21b%
+\[
+f\left(  a_{j_{1}}^{\dagger}a_{k_{1}}\right)  =\operatorname{Tr}\left\{
+a_{j_{1}}^{\dagger}a_{k_{1}}D^{N}\right\}
+\]
+21c%
+\begin{gather*}
+D_{k_{1}\cdots k_{N}j_{1}\cdots j_{N}}^{N}\\
+\shortparallel\\
+f\left(  a_{j_{1}}^{\dagger}\cdots a_{j_{N}}^{\dagger}a_{k_{N}}\cdots
+a_{k_{1}}\right)  =\operatorname{Tr}\left\{  a_{j_{1}}^{\dagger}\cdots
+a_{j_{N}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}D^{N}\right\}
+\end{gather*}
+21d%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{eN}%
+\]
+22%
+\[
+\sup_{\substack{0\leq X\leq I\\\\X\in\mathcal{W}}}f\left(  X\right)  \leq1
+\]
+23%
+\[
+\inf_{\substack{X\geq I\\\\X\in\mathcal{W}}}f\left(  X\right)  \geq1
+\]
+23a%
+\[
+\mathcal{W}%
+\]
+24%
+\[
+0\leq X\leq I,X\in\mathcal{B}_{+}\left(  \mathcal{H}_{F}\right)
+\]
+24aa%
+\[
+0\leq X\leq I\equiv\left[  \left\Vert X\right\Vert \leq1\right]  \,\&\,\left[
+X\in\mathcal{B}_{+}\left(  \mathcal{H}_{F}\right)  \right]
+\]
+24a%
+\[
+0\leq\left\langle \left.  \Phi\right\vert X\Phi\right\rangle \leq\left\langle
+\left.  \Phi\right\vert \Phi\right\rangle \text{ }\forall\Phi\in
+\mathcal{H}_{F}%
+\]
+24b%
+\[
+0\leq\sup_{\substack{\left\Vert \Phi\right\Vert =1\\\left\vert \Phi
+\right\rangle \in\mathcal{H}_{F}}}\left\{  \left\langle \left.  \Phi
+\right\vert X\Phi\right\rangle \right\}  =\left\Vert X\right\Vert =r\left(
+X\right)  \leq1;X\geq0
+\]
+24c%
+\[
+\mathfrak{B}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}_{F}\right)  \right)
+=\left\{  \left.  X\right\vert X\leq I;X\in\mathcal{B}_{+}\left(
+\mathcal{H}_{F}\right)  \right\}
+\]
+24c1%
+\[
+\mathfrak{B}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}_{F}\right)
+_{e1}\right)
+\]
+24c2%
+\[
+\mathcal{W}=\mathcal{B}\left(  \mathcal{H}_{F}\right)  _{e1}%
+\]
+24d%
+\[
+\mathfrak{S}_{1}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\right)  =\operatorname*{ext}\left\{  \mathfrak{B}_{1}\left(  \mathcal{B}%
+\left(  \mathcal{H}_{\mathcal{F}}\right)  \right)  \right\}  =\left\{
+X\left\vert \left\Vert X\right\Vert =1,X\in\mathcal{B}\left(  \mathcal{H}%
+_{F}\right)  \right.  \right\}
+\]
+24e%
+\[
+\mathfrak{S}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\right)  =\mathfrak{S}_{1}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  \right)  \cap\mathcal{B}_{+}\left(  \mathcal{H}_{F}\right)
+\]
+25%
+\[
+X\geq I\equiv\left[  \inf_{_{\substack{\left\Vert \Phi\right\Vert
+=1\\\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}}}\left\{  \left\langle
+\left.  \Phi\right\vert X\Phi\right\rangle \right\}  \geq1\right]
+\,\&\,\left[  X\in\mathcal{B}_{+}\left(  \mathcal{H}_{F}\right)  \right]
+\]
+25a%
+\[
+\infty>\inf_{_{\substack{\left\Vert \Phi\right\Vert =1\\\left\vert
+\Phi\right\rangle \in\mathcal{H}_{F}}}}\left\{  \left\vert \left\langle
+\left.  \Phi\right\vert X\Phi\right\rangle \right\vert \right\}  \geq1;X\geq0
+\]
+25b%
+\[
+\mathfrak{A}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}_{F}\right)  \right)
+=\left\{  \left.  X\right\vert \left(  X-I\right)  \geq0;X\in\mathcal{B}%
+_{+}\left(  \mathcal{H}_{F}\right)  \right\}
+\]
+25b1%
+\[
+\mathfrak{A}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}_{F}\right)
+_{e1}\right)
+\]%
+\[
+\inf_{X\geq I}f\left(  X-I\right)  \geq0
+\]
+25c%
+\[
+\mathfrak{A}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}_{F}\right)  \right)
+\cap\mathcal{B}\left(  \mathcal{H}_{F}\right)  _{e1}=\phi
+\]
+26%
+\[
+\sup_{\substack{X_{1}\in\mathfrak{B}_{1+}\left(  \mathcal{B}\left(
+\mathcal{H}_{F}\right)  _{e1}\right)  }}f_{1}\left(  X_{1}\right)  \leq1
+\]
+26a%
+\[
+\inf_{X_{1}\in\mathfrak{A}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}%
+_{F}\right)  _{e1}\right)  }f_{1}\left(  X_{1}\right)  \geq1
+\]
+26b%
+\begin{gather*}
+f_{1}:B\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\rightarrow\mathbb{C}\\
+f_{1}\left(  X_{1}\right)  \geq0,X_{1}\geq0
+\end{gather*}
+26c
+\begin{subequations}
+\label{FORDcon}%
+\begin{align*}
+0 &  \leq f_{1}\left(  X_{1}\right)  \leq1\,\forall X_{1}\in\mathfrak{B}%
+_{1+}\left(  B\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\right)  \\
+1 &  \leq f_{1}\left(  X_{1}\right)  <\infty\,\forall X_{1}\in\mathfrak{A}%
+_{1+}\left(  B\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\right)
+\end{align*}
+26d%
+\end{subequations}
+\[
+f_{1}\left(  X_{1}\right)  \leq1\,\forall X_{1}\in\operatorname*{Proj}\left\{
+\Lambda_{1}\right\}
+\]
+26d1%
+\[
+\operatorname*{ext}\left\{  \mathfrak{B}_{1+}\left(  \mathcal{W}\right)
+\right\}  =\operatorname*{Proj}\left\{  \mathcal{W}\right\}
+\]
+26e%
+\[
+\operatorname*{ext}\left\{  \mathfrak{B}_{1+}\left(  B\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{e1}\right)  \right\}  =\operatorname*{Proj}\left\{
+B\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\right\}
+\]
+26f%
+\[
+\operatorname*{ext}\left\{  \mathfrak{B}_{1+}\left(  B\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{e2}\right)  \right\}  =\operatorname*{Proj}\left\{
+B\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}\right\}
+\]
+27%
+\[
+f_{1}\left(  X_{1}\right)  =\operatorname*{Tr}\left\{  X_{1}D\right\}
+,X_{1}\in\Lambda_{1}%
+\]
+27a%
+\[
+\tilde{f}_{1}\left(  X\right)  =\operatorname*{Tr}\left\{  XD\right\}
+,X\in\mathcal{B}_{sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}%
+\]
+28%
+\[
+f_{1}\left(  \mathcal{N}_{1}\right)  =N
+\]
+28a%
+\[
+f_{1}^{N}\left(  \left(  \mathcal{N}_{1}\right)  ^{2}\right)  =N^{2}%
+\]
+28b%
+\[
+f_{1}^{N}\left(  X\right)  =\operatorname*{Tr}\left\{  XD^{N}\right\}
+,X\in\mathcal{B}_{sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e},
+\]
+29%
+\[
+\lambda_{1}=\sum_{\substack{1\leq j,k\leq r\\1\leq l\leq r}}u_{jl}\beta
+_{l}\bar{u}_{kl}a_{j}^{\dagger}a_{k}=\sum_{1\leq l\leq r}\beta_{l}%
+b_{l}^{\dagger}b_{l}%
+\]
+29b%
+\[
+b_{l}^{\dagger}=\sum_{1\leq j\leq r}a_{j}^{\dagger}u_{jl}%
+\]
+30%
+\begin{align*}
+\left\Vert \lambda_{1}\right\Vert  &  =\sup_{\substack{\left\Vert
+\Phi\right\Vert =1\\\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}}\left\{
+\left\langle \left.  \Phi\right\vert \lambda_{1}\Phi\right\rangle \right\}
+=\sup_{\substack{\left\Vert \Phi\right\Vert =1\\\left\vert \Phi\right\rangle
+\in\mathcal{H}_{F}}}\left\{  \sum_{1\leq l\leq r}\beta_{l}\left\langle \left.
+\Phi\right\vert b_{l}^{\dagger}b_{l}\Phi\right\rangle \right\}  \\
+&  =\sum_{1\leq l\leq r}\beta_{l}\sup_{\substack{\left\Vert \Phi\right\Vert
+=1\\\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}}\left\{  \left\langle
+\left.  \Phi\right\vert b_{l}^{\dagger}b_{l}\Phi\right\rangle \right\}
+=\sum_{1\leq l\leq r}\beta_{l}\leq1
+\end{align*}
+30a%
+\[
+\left\Vert b_{l}^{\dagger}b_{l}\right\Vert =\sup_{\substack{\left\Vert
+\Phi\right\Vert =1\\\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}}\left\{
+\left\langle \left.  \Phi\right\vert b_{l}^{\dagger}b_{l}\Phi\right\rangle
+\right\}  =1
+\]
+30b%
+\begin{align*}
+\left\Vert \left(  b_{l}^{\dagger}b_{l}\right)  ^{2}\right\Vert  &
+=\left\Vert b_{l}^{\dagger}b_{l}\right\Vert ^{2}\\
+\left\Vert \left(  b_{l}^{\dagger}b_{l}\right)  ^{2}\right\Vert  &
+=\left\Vert b_{l}^{\dagger}b_{l}\right\Vert \\
+&  \Downarrow\\
+\left\Vert b_{l}^{\dagger}b_{l}\right\Vert ^{2} &  =\left\Vert b_{l}^{\dagger
+}b_{l}\right\Vert
+\end{align*}
+31%
+\[
+\operatorname*{Proj}\left\{  \mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{e1}\right\}  =\operatorname*{ext}\left(  \mathfrak{B}_{1}\left(
+\mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\right)
+\right)
+\]
+31a%
+\begin{gather*}
+\operatorname*{Proj}\left\{  B\left(  \mathcal{H}_{\mathcal{F}}\right)
+_{e1}\right\}  =\\
+\left\{  \left.  a_{l}^{\dagger}a_{l}\right\vert \forall\text{conb's }\left\{
+\left.  \left\vert \varphi_{l}\right\rangle \right\vert 1\leq l\leq r\right\}
+\text{ of }\mathcal{H}^{1}\right\}
+\end{gather*}
+32%
+\begin{gather*}
+0\leq f_{1}\left(  a_{l}^{\dagger}a_{l}\right)  \leq1\,\\
+\forall\text{conb's }\left\{  \left.  \left\vert \varphi_{l}\right\rangle
+\right\vert 1\leq l\leq r\right\}  \text{ of }\mathcal{H}^{1}%
+\end{gather*}
+33%
+\begin{gather*}
+\inf_{_{\substack{\left\Vert \Phi\right\Vert =1\\\left\vert \Phi\right\rangle
+\in\mathcal{H}_{F}}}}\left\{  \left\langle \Phi\left\vert \left(  \sum_{1\leq
+l\leq r}\beta_{l}a_{l}^{\dagger}a_{l}\right)  \right.  \Phi\right\rangle
+\right\}  \geq1\\
+\Rightarrow\beta_{l}\geq1,1\leq l\leq r
+\end{gather*}
+34
+\begin{subequations}
+\label{SORDcon}%
+\begin{align*}
+0 &  \leq f_{2}\left(  \lambda_{2}\right)  \leq1\,\forall\lambda_{2}%
+\in\mathfrak{B}_{1+}\left(  \Lambda_{2}\right)  \Leftrightarrow\left(
+\left\Vert \lambda_{2}\right\Vert \leq1,\lambda_{1}\geq0\right)  \\
+1 &  \leq f_{2}\left(  \lambda_{2}\right)  \leq\infty\,\forall\lambda_{2}%
+\in\mathfrak{A}_{1+}\left(  \Lambda_{2}\right)  \Leftrightarrow\lambda
+_{2}-I\geq0
+\end{align*}
+35
+\end{subequations}
+\begin{subequations}
+\[
+f_{2}\left(  \mathcal{N}_{1}\right)  =N
+\]
+35a%
+\end{subequations}
+\[
+f_{2}\left(  \mathcal{N}_{2}\right)  =\binom{N}{2}%
+\]
+35b%
+\[
+\tilde{f}_{1}\left(  \mathcal{N}_{2}\right)  =\binom{N}{2}%
+\]
+35c%
+\[
+\tilde{f}_{1}\left(  \left(  \mathcal{N}_{1}\right)  ^{2}\right)  =N^{2}%
+\]
+35d%
+\[
+\tilde{f}_{1}%
+\]
+35e%
+\[
+\tilde{f}_{1}\left(  X_{1}\right)  =f_{1}\left(  X_{1}\right)
+=\operatorname*{Tr}\left\{  X_{1}D^{N}\right\}  ,X_{1}\in\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{e1}%
+\]
+35f%
+\begin{gather*}
+f_{D^{N}}\left(  X\right)  =\operatorname*{Tr}\left\{  XD^{N}\right\}
+,X\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \\
+f_{D^{N}}\left(  X\right)  =\tilde{f}_{1}\left(  X\right)  ,X\in
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\oplus\left\{
+\mathcal{N}_{2}\right\}
+\end{gather*}
+35g%
+\[
+\min\left\{  \operatorname*{rank}\mathbf{D}_{1}^{N}\right\}  =N
+\]
+36%
+\[
+\left(  \mathcal{N}_{1}\right)  ^{2}=\mathcal{N}_{1}+2\mathcal{N}_{2}%
+\]
+37a%
+\[
+\mathcal{W}=\mathcal{B}\left(  \mathcal{H}_{F}\right)  _{e1}\oplus
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}%
+\]%
+\[
+f_{2}^{N}\left(  X\right)  =\operatorname*{Tr}\left\{  XD^{N}\right\}
+,X\in\mathcal{B}_{sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}%
+\]
+37b%
+\[
+f_{2}^{N}\left(  X_{2}\right)  =f_{2}\left(  X_{2}\right)  =\operatorname*{Tr}%
+\left\{  X_{2}D^{N}\right\}  ,X_{2}\in\Lambda_{2}%
+\]
+37c%
+\begin{gather*}
+\Downarrow\\
+f_{2}\left(  a_{j}^{\dagger}a_{k}\right)  =\left(  N-1\right)  ^{-1}%
+f_{2}\left(  a_{j}^{\dagger}\mathcal{N}_{1}a_{k}\right)
+\end{gather*}
+37c1%
+\begin{align}
+f_{2}\left(  a_{j_{1}}^{\dagger}a_{k_{1}}\right)   &  =\left(  N-1\right)
+^{-1}f_{2}\left(  a_{j_{1}}^{\dagger}\mathcal{N}_{1}a_{k_{1}}\right)  =\left(
+N-1\right)  ^{-1}\operatorname*{Tr}\left\{  a_{j_{1}}^{\dagger}\mathcal{N}%
+_{1}a_{k_{1}}X^{N}\right\}  \\
+&  =\operatorname*{Tr}\left\{  a_{j_{1}}^{\dagger}a_{k_{1}}X^{N}\right\}
+\end{align}%
+\[
+f_{1}\left(  \left(  \mathcal{N}_{1}\right)  ^{2}\right)  =N^{2}=f_{1}\left(
+\mathcal{N}_{1}\right)  ^{2}%
+\]
+37d%
+\[
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}\oplus
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}%
+\]
+37e%
+\begin{gather*}
+f_{2}:\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e1}%
+\oplus\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}%
+\rightarrow\mathbb{C}\\
+f_{2}\left(  X_{2}\right)  \geq0,X_{2}\geq0
+\end{gather*}
+37f%
+\[
+\sup_{\substack{X_{2}\in\mathfrak{B}_{1+}\left(  \mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{e2}\right)  }}f_{2}\left(  X_{2}\right)
+\leq1
+\]
+37g%
+\[
+\inf_{X_{2}\in\mathfrak{A}_{1+}\left(  \mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{e2}\right)  }f_{2}\left(  X_{2}\right)  \geq1
+\]
+38%
+\[
+\operatorname*{Proj}\left\{  \mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{e2}\right\}  =\operatorname*{ext}\left(  \mathfrak{B}_{1}\left(
+\mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}\right)
+\right)
+\]
+38a%
+\begin{gather*}
+\operatorname*{Proj}\left\{  B\left(  \mathcal{H}_{\mathcal{F}}\right)
+_{e2}\right\}  =\\
+\left\{  \left.  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{j_{2}}a_{j_{1}%
+}\right\vert \forall\text{conb's }\left\{  \left.  \left\vert \varphi
+_{l}\right\rangle \right\vert 1\leq l\leq r\right\}  \text{ of }%
+\mathcal{H}^{1}\right\}
+\end{gather*}
+38b%
+\[
+\lambda_{2}=\sum_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq k_{1}<k_{2}\leq
+r}}\lambda_{2j_{1}j_{2}k_{1}k_{2}}a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger
+}a_{k_{2}}a_{k_{1}}=\sum_{1\leq l\leq r}\beta_{l}g_{l}^{\dagger}g_{l}%
+\]
+38c%
+\[
+g^{\dagger}=\sum_{1\leq j\leq s}a_{j}^{\dagger}a_{j+s}^{\dagger}c_{j}%
+\]
+38d%
+\[
+0\leq c_{j}\leq1,\,\sum_{1\leq j\leq s}c_{j}^{2}=1
+\]
+39%
+\begin{gather*}
+\left\Vert b_{j_{1}}^{\dagger}b_{j_{2}}^{\dagger}\right\Vert ^{2}=\left\Vert
+b_{j_{1}}b_{j_{2}}\right\Vert ^{2}=\left\Vert b_{j_{1}}^{\dagger}b_{j_{2}%
+}^{\dagger}\right\Vert \\
+=\left\Vert b_{j_{2}}b_{j_{1}}\right\Vert =\left\Vert b_{j_{1}}^{\dagger
+}b_{j_{2}}^{\dagger}b_{j_{2}}b_{j_{1}}\right\Vert =1
+\end{gather*}
+40%
+\[
+\operatorname*{Proj}\left\{  \mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{e2}\right\}  =\operatorname*{ext}\left(  \mathfrak{B}_{1}\left(
+\mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}\right)
+\right)
+\]
+41%
+\begin{gather*}
+0\leq f_{2}\left(  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{j_{2}}a_{j_{1}%
+}\right)  \leq1\,\\
+\forall\text{conb's }\left\{  \left.  \left\vert \psi_{l}\right\rangle
+\right\vert 1\leq l\leq r\right\}  \text{ of }\mathcal{H}^{1}%
+\end{gather*}
+41a%
+\begin{gather*}
+f_{D^{N}}\left(  X\right)  =\operatorname*{Tr}\left\{  XD^{N}\right\}
+,X\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \\
+f_{D^{N}}\left(  X_{2}\right)  =f_{2}\left(  X_{2}\right)  ,X_{2}%
+\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}%
+\end{gather*}
+41b%
+\[
+\left(  D_{2}^{N}\right)  _{gg}=\operatorname*{Tr}\left\{  g^{\dagger}%
+gD^{N}\right\}
+\]
+
+
+42
+\begin{gather*}
+\text{\emph{It should be noted }that }g^{\dagger}g\text{ are \emph{not }}\\
+\text{extreme points of the unit ball }\mathfrak{B}_{1}\left(  \left(
+\mathcal{B}_{+}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e2}\right)
+\right)  \text{ }\\
+\text{\emph{unless }\textbf{they are produced by geminal creators }}\\
+\text{\textbf{that have rank equal to one} \emph{even if }}\left\Vert
+g^{\dagger}g\right\Vert =1
+\end{gather*}
+
+
+\bigskip
+
+The maximum value of a geminal occupation number (thus the max eigenvalue
+possible for a SORDO) is given by
+
+42c%
+\[
+c_{j}=\frac{1}{\sqrt{s}},1\leq j\leq s
+\]
+43%
+\begin{gather*}
+\sup_{\substack{D^{N}\in S_{N}\\\left\langle g\left\vert g\right.
+\right\rangle _{\mathcal{H}^{2}}=1}}\left\{  \operatorname*{Tr}\left\{
+g^{\dagger}gD^{N}\right\}  \right\}  \\
+=\left\{
+\begin{array}
+[c]{c}%
+\frac{N}{2},\,N\text{ even}\\
+\\
+\frac{N-1}{2},\,N\text{ odd}%
+\end{array}
+\right.
+\end{gather*}
+
+
+
+\end{document}

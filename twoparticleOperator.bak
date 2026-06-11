@@ -1,0 +1,1563 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Wednesday, May 27, 2026 09:35:50}
+%TCIDATA{LastRevised=Wednesday, June 10, 2026 06:44:59}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Second Quantization}
+
+In the following $\mathcal{H}^{1}$ is a $r$ dimensionsal $\mathbb{C}$-Hilbert
+space with a conb $\left\{  \left.  \varphi_{j}\right\vert 1\leq j\leq
+r\right\}  .$
+
+\begin{notation}%
+\begin{equation}
+\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle =\sqrt
+{N!}\left\vert \varphi_{j_{1}}\wedge\cdots\wedge\varphi_{j_{N}}\right\rangle ,
+\end{equation}
+where
+\begin{equation}
+\left\Vert \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle
+\right\Vert _{\mathcal{H}_{\mathcal{F}}}^{2}=\left\langle \left.
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert \varphi_{j_{1}}\cdots
+\varphi_{j_{N}}\right\rangle =1.
+\end{equation}
+
+\end{notation}
+
+\begin{definition}
+The second quantization map
+\begin{equation}
+\Gamma\in\mathcal{L}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  \right)
+\end{equation}
+is defined by
+\begin{align}
+&  \Gamma\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \right)
+=\sum_{0\leq R,S\leq r}\Gamma_{RS}\left(  \left\vert \varphi_{k_{1}}%
+\cdots\varphi_{k_{P}}\right\rangle \left\langle \varphi_{l_{1}}\cdots
+\varphi_{l_{Q}}\right\vert \right)  =\Gamma_{PQ}\left(  \left\vert
+\varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle \left\langle \varphi_{l_{1}%
+}\cdots\varphi_{l_{Q}}\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\binom{N+P}{P}^{\frac{1}{2}}\binom{N+Q}{Q}^{\frac
+{1}{2}}\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \bullet
+P_{\mathcal{H}^{N}}\\
+&  =\sum_{0\leq N\leq r}\binom{N+P}{P}^{\frac{1}{2}}\binom{N+Q}{Q}^{\frac
+{1}{2}}\Gamma_{PQ}^{N+P,N+Q}\left(  \left\vert \varphi_{k_{1}}\cdots
+\varphi_{k_{P}}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}%
+}\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\sqrt{\binom{N+P}{P}}\sqrt{\binom{N+Q}{Q}}\Gamma
+_{PQ}^{N+P,N+Q}\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}%
+}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert
+\right) \\
+&  =\sum_{0\leq N\leq r}\sum_{1\leq j_{1}<\cdots<j_{N}\leq r}\left\vert
+\varphi_{k_{1}}\cdots\varphi_{k_{P}}\varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\varphi
+_{j_{1}}\cdots\varphi_{j_{N}}\right\vert ,
+\end{align}
+where
+
+\begin{remark}
+$\Gamma$ is a linear map it does not produce the CAR's.
+\end{remark}
+
+\begin{enumerate}
+\item
+\begin{gather}
+a_{k_{1}}^{\dagger}\cdots a_{k_{P}}^{\dagger}a_{l_{Q}}\cdots a_{l_{1}}%
+=\Gamma\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \right) \\
+1\leq k_{1}<\cdots<k_{P}\leq r,1\leq l_{1}<\cdots<l_{Q}\leq r\ ,\\
+0\leq P,Q\leq r.
+\end{gather}
+
+
+\item $\left\{  \left.  \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle \right\vert 0\leq N\leq r,1\leq k_{1}<\cdots<k_{N}\leq
+r\right\}  $ is a conb for $\mathcal{H}_{\mathcal{F}}.$
+
+\item The ket-bra operators $\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}%
+}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert
+\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ are defined by
+\begin{gather}
+\left[  \overset{}{\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}%
+}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert
+}\right]  \left\vert \varphi_{m_{1}}\cdots\varphi_{m_{N}}\right\rangle
+=\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle \left\langle
+\left.  \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \varphi_{m_{1}}%
+\cdots\varphi_{m_{N}}\right\rangle \\
+1\leq k_{1}<\cdots<k_{P}\leq r,1\leq l_{1}<\cdots<l_{Q}\leq r,1\leq
+m_{1}<\cdots<m_{N}\leq r\\
+0\leq N,P,Q\leq r.
+\end{gather}
+
+
+\item The orthogonal projector onto the subspace $\mathcal{H}^{N}$ is given
+by
+\begin{equation}
+P_{\mathcal{H}^{N}}=\sum_{1\leq j_{1}<\cdots<j_{N}\leq r}\left\vert
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{j_{1}%
+}\cdots\varphi_{j_{N}}\right\vert .
+\end{equation}
+
+
+\item $\mathcal{H}_{\mathcal{F}}$ is the exterior Hilbert algebra with
+identity $\left\vert \phi\right\rangle $ i.e.
+
+\begin{enumerate}
+\item
+\begin{equation}
+\mathcal{H}_{\mathcal{F}}={\LARGE \wedge}\left(  \mathcal{F}\right)
+=\bigoplus\limits_{0\leq N\leq r}\mathcal{H}^{N},
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{H}^{N}={\LARGE \wedge}^{N}\mathcal{H}^{1}%
+\end{equation}
+
+
+\item The Hilbert space is given by
+\begin{equation}
+\mathcal{H}^{1}=\mathbb{C}\text{-}\operatorname{linspan}\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \right\vert 1\leq j\leq r\right\}
+\end{equation}
+
+
+\item $\left\vert \phi\right\rangle $ is a vacuum vector and
+\begin{equation}
+\mathcal{H}^{0}=\mathbb{C}\left\vert \phi\right\rangle .
+\end{equation}
+
+\end{enumerate}
+
+\item The cases $N=P=Q=0$ are defined by
+\begin{equation}
+\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{0}}\right\rangle =\left\vert
+\phi\right\rangle
+\end{equation}
+
+
+\item The product "$\bullet$"
+\begin{equation}
+\bullet:\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \times
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \rightarrow
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\end{equation}
+is defined by
+\begin{equation}
+\left\vert \Psi_{1}\right\rangle \left\langle \Phi_{1}\right\vert
+\bullet\left\vert \Psi_{2}\right\rangle \left\langle \Phi_{2}\right\vert
+=\left\vert \Psi_{1}\wedge\Psi_{2}\right\rangle \left\langle \Phi_{1}%
+\wedge\Phi_{2}\right\vert ,\quad\Psi_{1},\Psi_{2},\Phi_{1},\Phi_{2}%
+\in\mathcal{H}_{\mathcal{F}}.
+\end{equation}
+
+\end{enumerate}
+\end{definition}
+
+\begin{remark}%
+\begin{equation}
+a_{k_{1}}^{\dagger}a_{l_{1}}=\Gamma\left(  \left\vert \varphi_{k_{1}%
+}\right\rangle \left\langle \varphi_{l_{1}}\right\vert \right)
+\end{equation}
+
+\end{remark}
+
+\section{Majorano Operators}
+
+\begin{definition}
+\begin{enumerate}
+\item Creation and annihilation operators in terms of Majorano operators
+\begin{align}
+a_{j}^{\dagger}  &  =\frac{1}{\sqrt{2}}\left(  x_{j}-ix_{j+r}\right) \\
+a_{j}  &  =\frac{1}{\sqrt{2}}\left(  x_{j}+ix_{j+r}\right)
+\end{align}
+
+
+\item Majorano operators in terms of Creation and annihilation operators
+\begin{align}
+x_{j}  &  =\frac{1}{\sqrt{2}}\left(  a_{j}^{\dagger}+a_{j}\right) \\
+x_{j+r}  &  =\frac{i}{\sqrt{2}}\left(  a_{j}^{\dagger}-a_{j}\right)  .
+\end{align}
+
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+The second quantiztion map $\Gamma$ acting on ket bras to produce Majorano
+operators%
+\begin{align}
+x_{j}  &  =\frac{1}{\sqrt{2}}\left(  \overset{}{\Gamma\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert \ \right)
++\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert \ \right)  }\right)  =\frac{1}{\sqrt{2}}\Gamma\left(
+\overset{}{\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
++\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert }\right) \\
+x_{j+r}  &  =\frac{i}{\sqrt{2}}\left(  \overset{}{\Gamma\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert \ \right)
+-\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert \ \right)  }\right)  =\frac{i}{\sqrt{2}}\Gamma\left(
+\overset{}{\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+-\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+CAR for Mjorano and second quantized operators relationships
+\begin{align}
+\left\{  x_{j},x_{k+r}\right\}   &  =\frac{i}{2}\left\{  \overset{}{\left(
+a_{j}^{\dagger}+a_{j}\right)  ,\left(  a_{k}^{\dagger}-a_{k}\right)
+}\right\}  =\frac{i}{2}\left\{  \Gamma\left(  \overset{}{\left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert +\left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)  ,\left(
+\Gamma\left(  \overset{}{\left\vert \varphi_{k}\right\rangle \left\langle
+\phi\right\vert -\left\vert \phi\right\rangle \left\langle \varphi
+_{k}\right\vert }\right)  \right)  \right\}  =0\\
+\left\{  x_{j},x_{k}\right\}   &  =\frac{1}{2}\left\{  \overset{}{\left(
+a_{j}^{\dagger}+a_{j}\right)  ,\left(  a_{k}^{\dagger}+a_{k}\right)
+}\right\}  =\frac{1}{2}\left\{  \Gamma\left(  \overset{}{\left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert +\left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)  ,\left(
+\Gamma\left(  \overset{}{\left\vert \varphi_{k}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{k}\right\vert }\right)  \right)  \right\}  =I_{\mathcal{F}}\delta
+_{jk}\Rightarrow x_{j}^{2}=\frac{1}{2}I_{\mathcal{F}}\\
+\left\{  x_{j+r},x_{k+r}\right\}   &  =-\frac{i}{2}\left\{  \overset{}{\left(
+a_{j}^{\dagger}-a_{j}\right)  ,\left(  a_{k}^{\dagger}-a_{k}\right)
+}\right\}  =-\frac{i}{2}\left\{  \Gamma\left(  \overset{}{\left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert -\left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)  ,\left(
+\Gamma\left(  \overset{}{\left\vert \varphi_{k}\right\rangle \left\langle
+\phi\right\vert -\left\vert \phi\right\rangle \left\langle \varphi
+_{k}\right\vert }\right)  \right)  \right\}  =I_{\mathcal{F}}\delta
+_{jk}\Rightarrow x_{j+k}^{2}=\frac{1}{2}I_{\mathcal{F}}%
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+CAR for ket - bra operators
+
+\begin{enumerate}
+\item
+\begin{align}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}   &  =\left\{
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert ,\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}  -\left\{
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\}  +\left\{
+\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}  -\left\{
+\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\} \\
+&  =0-\left(  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert +\left\vert \phi\right\rangle \left\langle \phi\right\vert
+\delta_{jk}\right)  +\left(  \left\vert \phi\right\rangle \left\langle
+\phi\right\vert \delta_{jk}+\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert \right)  -0=0
+\end{align}
+i.e.
+\begin{equation}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  =0.
+\end{equation}
+
+
+\item
+\begin{align}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert +\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}   &  =\left\{
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert ,\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}  +\left\{
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\}  +\left\{
+\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}  +\left\{
+\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\} \\
+&  =0+\left(  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert +\left\vert \phi\right\rangle \left\langle \phi\right\vert
+\delta_{jk}\right)  +\left(  \left\vert \phi\right\rangle \left\langle
+\phi\right\vert \delta_{jk}+\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert \right)  -0=2\left(  \left\vert \varphi_{j}%
+\right\rangle \left\langle \varphi_{k}\right\vert +\left\vert \phi
+\right\rangle \left\langle \phi\right\vert \delta_{jk}\right)
+\end{align}
+i.e.
+\begin{equation}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert +\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  =2\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert +\left\vert
+\phi\right\rangle \left\langle \phi\right\vert \delta_{jk}\right)  .
+\end{equation}
+
+
+\item
+\begin{align}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert -\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}   &  =\left\{
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert ,\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}  -\left\{
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\}  -\left\{
+\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}  +\left\{
+\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\} \\
+&  =0-\left(  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert +\left\vert \phi\right\rangle \left\langle \phi\right\vert
+\delta_{jk}\right)  -\left(  \left\vert \phi\right\rangle \left\langle
+\phi\right\vert \delta_{jk}+\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert \right)  +0=-2\left(  \left\vert \varphi_{j}%
+\right\rangle \left\langle \varphi_{k}\right\vert +\left\vert \phi
+\right\rangle \left\langle \phi\right\vert \delta_{jk}\right)
+\end{align}
+i.e.
+\begin{equation}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert -\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  =-2\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert +\left\vert
+\phi\right\rangle \left\langle \phi\right\vert \delta_{jk}\right)  .
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+${\Large \wedge}$-CAR for ket - bra operators
+
+\begin{enumerate}
+\item
+\begin{align}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  _{\wedge}  &
+=\left\{  \left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+,\left\vert \varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}
+_{\wedge}-\left\{  \left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert ,\left\vert \phi\right\rangle \left\langle \varphi
+_{k}\right\vert \right\}  _{\wedge}+\left\{  \left\vert \phi\right\rangle
+\left\langle \varphi_{j}\right\vert ,\left\vert \varphi_{k}\right\rangle
+\left\langle \phi\right\vert \right\}  _{\wedge}-\left\{  \left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\}  _{\wedge}\\
+&  =\left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle \left\langle
+\phi\wedge\phi\right\vert +\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert -\left\vert \varphi_{j}\ \right\rangle \left\langle
+\varphi_{k}\right\vert -\left\vert \varphi_{k}\wedge\varphi_{j}\right\rangle
+\left\langle \phi\wedge\phi\right\vert \\
+&  +\left\vert \varphi_{k}\right\rangle \left\langle \varphi_{j}\right\vert
++\left\vert \phi\wedge\phi\right\rangle \left\langle \varphi_{j}\wedge
+\varphi_{k}\right\vert -\left\vert \phi\wedge\phi\right\rangle \left\langle
+\varphi_{j}\wedge\varphi_{k}\right\vert -\left\vert \varphi_{k}\right\rangle
+\left\langle \varphi_{j}\right\vert \\
+&  =0
+\end{align}
+i.e.%
+\begin{equation}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  _{\wedge}=0.
+\end{equation}
+
+
+\item
+\begin{align}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert +\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  _{\wedge}  &
+=\left\{  \left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+,\left\vert \varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}
+_{\wedge}+\left\{  \left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert ,\left\vert \phi\right\rangle \left\langle \varphi
+_{k}\right\vert \right\}  _{\wedge}+\left\{  \left\vert \phi\right\rangle
+\left\langle \varphi_{j}\right\vert ,\left\vert \varphi_{k}\right\rangle
+\left\langle \phi\right\vert \right\}  _{\wedge}+\left\{  \left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\}  _{\wedge}\\
+&  =\left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle \left\langle
+\phi\wedge\phi\right\vert +\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert +\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert +\left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle
+\left\langle \phi\wedge\phi\right\vert \\
+&  +\left\vert \varphi_{k}\right\rangle \left\langle \varphi_{j}\right\vert
++\left\vert \phi\wedge\phi\right\rangle \left\langle \varphi_{j}\wedge
+\varphi_{k}\right\vert +\left\vert \phi\wedge\phi\right\rangle \left\langle
+\varphi_{j}\wedge\varphi_{k}\right\vert +\left\vert \varphi_{k}\right\rangle
+\left\langle \varphi_{j}\right\vert \\
+&  =\ 2\left(  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert +\left\vert \varphi_{k}\right\rangle \left\langle \varphi
+_{j}\right\vert +\left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle
+\left\langle \phi\wedge\phi\right\vert +\left\vert \phi\wedge\phi\right\rangle
+\left\langle \varphi_{j}\wedge\varphi_{k}\right\vert \right)
+\end{align}
+i.e.%
+\begin{equation}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert +\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  _{\wedge}=\ 2\left(
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert
++\left\vert \varphi_{k}\right\rangle \left\langle \varphi_{j}\right\vert
++\left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle \left\langle \phi
+\wedge\phi\right\vert +\left\vert \phi\wedge\phi\right\rangle \left\langle
+\varphi_{j}\wedge\varphi_{k}\right\vert \right)  .
+\end{equation}
+
+
+\item
+\begin{align}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert -\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  _{\wedge}  &
+=\left\{  \left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+,\left\vert \varphi_{k}\right\rangle \left\langle \phi\right\vert \right\}
+_{\wedge}-\left\{  \left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert ,\left\vert \phi\right\rangle \left\langle \varphi
+_{k}\right\vert \right\}  _{\wedge}-\left\{  \left\vert \phi\right\rangle
+\left\langle \varphi_{j}\right\vert ,\left\vert \varphi_{k}\right\rangle
+\left\langle \phi\right\vert \right\}  _{\wedge}+\left\{  \left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert ,\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert \right\}  _{\wedge}\\
+&  =\left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle \left\langle
+\phi\wedge\phi\right\vert +\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert -\left\vert \varphi_{j}\ \right\rangle \left\langle
+\varphi_{k}\right\vert -\left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle
+\left\langle \phi\wedge\phi\right\vert \\
+&  +\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert
++\left\vert \phi\wedge\phi\right\rangle \left\langle \varphi_{j}\wedge
+\varphi_{k}\right\vert -\left\vert \phi\wedge\phi\right\rangle \left\langle
+\varphi_{j}\wedge\varphi_{k}\right\vert -\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{k}\right\vert \\
+&  =\ 2\left(  \left\vert \varphi_{j}\ \right\rangle \left\langle \varphi
+_{k}\right\vert \right)
+\end{align}
+i.e.%
+\begin{equation}
+\left\{  \left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert -\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  ,\left(  \overset{}{\left\vert \varphi
+_{k}\right\rangle \left\langle \phi\right\vert -\left\vert \phi\right\rangle
+\left\langle \varphi_{k}\right\vert }\right)  \right\}  _{\wedge}=\ 2\left(
+\left\vert \varphi_{j}\ \right\rangle \left\langle \varphi_{k}\right\vert
+\right)  .
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+Clifford product is defined by
+\begin{equation}
+x_{j}x_{k}=\left(  \left.  x_{j}\right\vert x_{k}\right)  I_{\mathcal{F}%
+}+x_{j}\wedge x_{k}%
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+Clifford and exterior products of ket-bra Majorano operators
+\begin{equation}
+\left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  \left(  \overset{}{\left\vert \varphi_{j}%
+\right\rangle \left\langle \phi\right\vert +\left\vert \phi\right\rangle
+\left\langle \varphi_{j}\right\vert }\right)  =\left\vert \varphi
+_{j}\right\rangle \left\langle \varphi_{j}\right\vert +\left\vert
+\phi\right\rangle \left\langle \phi\right\vert
+\end{equation}
+and
+\begin{equation}
+\left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  \wedge\left(  \overset{}{\left\vert \varphi
+_{j}\right\rangle \left\langle \phi\right\vert +\left\vert \phi\right\rangle
+\left\langle \varphi_{j}\right\vert }\right)  =2\left\vert \varphi
+_{j}\right\rangle \ \left\langle \varphi_{j}\right\vert .\
+\end{equation}
+
+\end{remark}
+
+\begin{theorem}
+$\Gamma\in\mathcal{L}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  \right)  $ is NOT a c$^{\ast}$-algebra, Clifford algebra NOR an
+exterior algebra map i.e.
+
+\begin{enumerate}
+\item
+\begin{equation}
+\Gamma\left(  A\right)  \Gamma\left(  B\right)  \neq\Gamma\left(  AB\right)
+\quad\forall A,B\in\mathcal{F}%
+\end{equation}
+nor
+
+\item
+\begin{equation}
+\Gamma\left(  A\right)  \wedge\Gamma\left(  B\right)  \neq\Gamma\left(
+A\wedge B\right)  \quad\forall A,B\in\mathcal{F}.
+\end{equation}
+
+\end{enumerate}
+
+\begin{proof}
+\begin{enumerate}
+\item If $\Gamma$ were a c$^{\ast}$-algebra $\equiv$ Clifford algebra map
+then
+\begin{equation}
+\Gamma\left(  A\right)  \Gamma\left(  B\right)  =\Gamma\left(  AB\right)
+\quad\forall A,B\in\mathcal{F}.
+\end{equation}
+
+
+\item If $\Gamma$ were an exterior algebra map then
+\begin{equation}
+\Gamma\left(  A\right)  \wedge\Gamma\left(  B\right)  =\Gamma\left(  A\wedge
+B\right)  \quad\forall A,B\in\mathcal{F}.
+\end{equation}
+
+\end{enumerate}
+
+Consider the ket-bra operators
+\begin{equation}
+X_{j}=\frac{1}{\sqrt{2}}\left(  \overset{}{\left\vert \varphi_{j}\right\rangle
+\left\langle \phi\right\vert +\left\vert \phi\right\rangle \left\langle
+\varphi_{j}\right\vert }\right)
+\end{equation}
+that map into Majorano operarors
+\begin{equation}
+\Gamma\left(  X_{j}\right)  =x_{j}%
+\end{equation}
+that have the properties
+
+\begin{enumerate}
+\item
+\begin{equation}
+\Gamma\left(  X_{j}\right)  ^{2}=\Gamma\left(  X_{j}\right)  \Gamma\left(
+X_{j}\right)  =x_{j}^{2}=\frac{1}{2}I_{\mathcal{F}}%
+\end{equation}
+and
+
+\item
+\begin{equation}
+\Gamma\left(  X_{j}\right)  ^{2\wedge}=\Gamma\left(  X_{j}\right)
+\wedge\Gamma\left(  X_{j}\right)  =x_{j}\wedge x_{j}=0.
+\end{equation}
+However
+
+\item
+\begin{equation}
+\Gamma\left(  X_{j}^{2}\right)  =\Gamma\left(  \left(  \overset{}{\left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert +\left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)  \left(
+\overset{}{\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
++\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)
+\right)  =\frac{1}{2}\Gamma\left(  \overset{}{\left\vert \varphi
+_{j}\right\rangle \left\langle \varphi_{j}\right\vert +\left\vert
+\phi\right\rangle \left\langle \phi\right\vert }\right)  =\frac{1}{2}\left(
+a_{j}^{\dagger}a_{j}+I_{\mathcal{F}}\right)  ,
+\end{equation}
+while%
+\begin{equation}
+\Gamma\left(  X_{j}\right)  ^{2}=\Gamma\left(  X_{j}\right)  \Gamma\left(
+X_{j}\right)  =x_{j}^{2}=\frac{1}{2}I_{\mathcal{F}}%
+\end{equation}
+so%
+\begin{equation}
+\Gamma\left(  X_{j}\right)  ^{2}\neq\Gamma\left(  X_{j}\right)  \Gamma\left(
+X_{j}\right)  .
+\end{equation}
+and
+\end{enumerate}
+
+%
+
+\begin{equation}
+\Gamma\left(  X_{j}\wedge X_{j}\right)  =\Gamma\left(  \frac{1}{2}\left(
+\overset{}{\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
++\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)
+\wedge\left(  \overset{}{\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert }\right)  \right)  =\frac{1}{2}\Gamma\left(  \left\vert
+\varphi_{j}\right\rangle \ \left\langle \varphi_{j}\right\vert +\left\vert
+\phi\right\rangle \ \left\langle \phi\right\vert \right)  =\frac{1}{2}\left(
+a_{j}^{\dagger}a_{j}+I_{\mathcal{F}}\right)
+\end{equation}
+so%
+\begin{equation}
+\Gamma\left(  X_{j}\wedge X_{j}\right)  \neq\Gamma\left(  X_{j}\right)
+\wedge\Gamma\left(  X_{j}\right)  .\blacksquare
+\end{equation}
+
+\end{proof}
+\end{theorem}
+
+\begin{remark}
+In general for $j\neq k$
+
+\begin{enumerate}
+\item $\Gamma\left(  X_{j}\right)  \wedge\Gamma\left(  X_{k}\right)
+=\Gamma\left(  \left(  \overset{}{X_{j}}\right)  \wedge\left(
+\overset{}{X_{k}}\right)  \right)  $%
+\begin{equation}%
+\begin{array}
+[c]{ccc}%
+\Gamma\left(  X_{j}\right)  \wedge\Gamma\left(  X_{k}\right)  & {\LARGE \mid}
+& \ \Gamma\left(  \left(  \overset{}{X_{j}}\right)  \wedge\left(
+\overset{}{X_{k}}\right)  \right) \\
+\parallel & {\LARGE \mid} & \parallel\\
+\frac{1}{2}\Gamma\left(  \overset{}{\left\vert \varphi_{j}\right\rangle
+\left\langle \phi\right\vert +\left\vert \phi\right\rangle \left\langle
+\varphi_{j}\right\vert }\right)  \wedge\Gamma\left(  \overset{}{\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert +\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert }\right)  &
+{\LARGE \mid} & \frac{1}{2}\ \Gamma\left(  \left(  \overset{}{\left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert +\left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)  \wedge\left(
+\overset{}{\left\vert \varphi_{k}\right\rangle \left\langle \phi\right\vert
++\left\vert \phi\right\rangle \left\langle \varphi_{k}\right\vert }\right)
+\right) \\
+\parallel & {\LARGE \mid} & \parallel\\
+\frac{1}{2}\left(  a_{j}^{\dagger}+a_{j}\right)  \wedge\left(  a_{k}^{\dagger
+}+a_{k}\right)  & {\LARGE \mid} & \frac{1}{2}\ \Gamma\left(
+\overset{}{\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+\wedge\left\vert \varphi_{k}\right\rangle \left\langle \phi\right\vert
++\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert }%
+\wedge\left\vert \phi\right\rangle \left\langle \varphi_{k}\right\vert
++\overset{}{\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert
+\wedge\left\vert \varphi_{k}\right\rangle \left\langle \phi\right\vert
++\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert }%
+\wedge\left\vert \phi\right\rangle \left\langle \varphi_{k}\right\vert \right)
+\\
+\parallel & {\LARGE \mid} & \parallel\\
+\frac{1}{2}\left(  a_{j}^{\dagger}a_{k}^{\dagger}+a_{j}^{\dagger}a_{k}%
++a_{k}^{\dagger}a_{j}+a_{k}a_{j}\right)  & {\LARGE \mid} &
+\begin{array}
+[c]{c}%
+\frac{1}{2}\Gamma\left(  \left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle
+\left\langle \phi\right\vert +\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert +\left\vert \varphi_{k}\right\rangle \left\langle
+\varphi_{j}\right\vert +\left\vert \phi\right\rangle \left\langle \varphi
+_{j}\wedge\varphi_{k}\right\vert \right) \\
+\parallel\\
+\frac{1}{2}\Gamma\left(  \left\vert \varphi_{j}\wedge\varphi_{k}\right\rangle
+\left\langle \phi\right\vert \right)  +\Gamma\left(  \left\vert \varphi
+_{j}\right\rangle \left\langle \varphi_{k}\right\vert \right)  +\Gamma\left(
+\left\vert \varphi_{k}\right\rangle \left\langle \varphi_{j}\right\vert
+\right)  +\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
+_{j}\wedge\varphi_{k}\right\vert \right)
+\end{array}
+\end{array}
+\end{equation}
+so
+\begin{equation}
+\Gamma\left(  X_{j}\right)  \wedge\Gamma\left(  X_{k}\right)  =\Gamma\left(
+\left(  \overset{}{X_{j}}\right)  \wedge\left(  \overset{}{X_{k}}\right)
+\right)
+\end{equation}
+BUT
+
+\item $\Gamma\left(  X_{j}\right)  \Gamma\left(  X_{k}\right)  \neq
+\Gamma\left(  X_{j}X_{k}\right)  $%
+\begin{equation}%
+\begin{array}
+[c]{ccc}%
+\Gamma\left(  X_{j}\right)  \Gamma\left(  X_{k}\right)  & {\LARGE \mid} &
+\Gamma\left(  \left(  \overset{}{X_{j}}\right)  \left(  \overset{}{X_{k}%
+}\right)  \right) \\
+\parallel & {\LARGE \mid} & \parallel\\
+\frac{1}{2}\Gamma\left(  \overset{}{\left\vert \varphi_{j}\right\rangle
+\left\langle \phi\right\vert +\left\vert \phi\right\rangle \left\langle
+\varphi_{j}\right\vert }\right)  \Gamma\left(  \overset{}{\left\vert
+\varphi_{k}\right\rangle \left\langle \phi\right\vert +\left\vert
+\phi\right\rangle \left\langle \varphi_{k}\right\vert }\right)  &
+{\LARGE \mid} & \frac{1}{2}\ \Gamma\left(  \left(  \overset{}{\left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert +\left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)  \left(
+\overset{}{\left\vert \varphi_{k}\right\rangle \left\langle \phi\right\vert
++\left\vert \phi\right\rangle \left\langle \varphi_{k}\right\vert }\right)
+\right) \\
+\parallel & {\LARGE \mid} & \parallel\\
+\frac{1}{2}\left(  a_{j}^{\dagger}+a_{j}\right)  \left(  a_{k}^{\dagger}%
++a_{k}\right)  & {\LARGE \mid} & \frac{1}{2}\ \Gamma\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \varphi_{k}\right\vert \right) \\
+\parallel & {\LARGE \mid} & \parallel\\
+\frac{1}{2}\left(  a_{j}^{\dagger}a_{k}^{\dagger}+a_{j}^{\dagger}a_{k}%
++a_{k}^{\dagger}a_{j}+a_{k}a_{j}\right)  & {\LARGE \mid} & \frac{1}{2}%
+\ \Gamma\left(  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert \right)
+\end{array}
+\end{equation}
+so
+\begin{equation}
+\Gamma\left(  X_{j}\right)  \Gamma\left(  X_{k}\right)  \neq\Gamma\left(
+X_{j}X_{k}\right)  .
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\section{Diagonalization of Two Particle Operators}
+
+Let $A\in\mathcal{A}_{\left(  2,2\right)  }$
+\begin{equation}
+A=\sum_{1\leq j,k,l,m\leq r}a_{j}^{\dagger}a_{k}^{\dagger}a_{l}a_{m}%
+\mathcal{R}_{\varphi}\left(  A\right)  _{jkml}%
+\end{equation}
+and
+\begin{equation}
+\mathcal{R}_{\varphi}\left(  A\right)  =\mathcal{R}_{\varphi}\left(  A\right)
+^{\dagger}%
+\end{equation}
+then
+\begin{equation}
+U_{2}^{\dagger}\mathcal{R}_{\varphi}\left(  A\right)  U_{2}=\mathcal{R}%
+_{u\varphi}\left(  A\right)  ,
+\end{equation}
+where $U_{2}\in U\left(  \mathcal{H}^{2}\right)  .$ In more detail
+\begin{equation}
+\mathcal{R}_{u\varphi}\left(  A\right)  _{p_{1}q_{1}p_{2}q_{2}}=\sum_{1\leq
+p_{1},q_{1},p_{2},q_{2}\leq r}\overline{U_{jkp_{1}q_{1}}}\mathcal{R}_{\varphi
+}\left(  A\right)  _{jkml}U_{mlp_{2}q_{2}}%
+\end{equation}
+and%
+\begin{equation}
+A=\sum_{1\leq p_{1},q_{1},p_{2},q_{2}\leq r}b_{p_{1}}^{\dagger}b_{q_{1}%
+}^{\dagger}b_{p_{2}}b_{q_{2}}\mathcal{R}_{u\varphi}\left(  A\right)
+_{p_{1}q_{1}q_{2}p_{2}}.
+\end{equation}
+Geminal $g_{p}\in$ $\mathcal{A}_{\left(  2,0\right)  }$ operators are defined
+as
+\begin{equation}
+g_{p}=\sum_{1\leq j,k\leq r}a_{j}^{\dagger}a_{k}^{\dagger}\mathcal{R}%
+_{\varphi}\left(  g_{p}\right)  _{jk}.
+\end{equation}
+The restriction $A_{\mathcal{H}^{2}}$ of $A$ to $\mathcal{H}^{2}$ is
+\begin{equation}
+A_{\mathcal{H}^{2}}=\sum_{1\leq j,k,l,m\leq r}\left\vert \varphi_{j}%
+\varphi_{k}\right\rangle \left\langle \varphi_{m}\varphi_{l}\right\vert
+\mathcal{R}_{\varphi}\left(  A\right)  _{jkml}.
+\end{equation}
+For $A_{\mathcal{H}^{2}}\in\mathcal{B}_{0}\left(  \mathcal{H}^{2}\right)  $ it
+can diagonalized in terms of eiegnevalues and eigen geminals as
+\begin{align}
+A_{\mathcal{H}^{2}}  &  =\sum_{1\leq p\leq r}\left\vert g_{p}\right\rangle
+\left\langle g_{p}\right\vert \mathcal{R}_{\varphi}\left(  A\right)
+_{pp}=\sum_{1\leq p\leq\binom{r}{2}}\left\vert \sum_{1\leq j,k\leq
+r}\left\vert \varphi_{j}\varphi_{k}\right\rangle \mathcal{R}_{\varphi}\left(
+g_{p}\right)  _{jk}\right\rangle \left\langle \sum_{1\leq j,k\leq
+r}\left\langle \varphi_{m}\varphi_{l}\right\vert \mathcal{R}_{\varphi}\left(
+g_{p}\right)  _{ml}\right\vert \mathcal{R}_{\varphi}\left(  A_{\mathcal{H}%
+^{2}}\right)  _{pp}\\
+&  =\sum_{1\leq j,k,l,m\leq r}\left\vert \varphi_{j}\varphi_{k}\right\rangle
+\left\langle \varphi_{m}\varphi_{l}\right\vert \sum_{1\leq p\leq\binom{r}{2}%
+}\mathcal{R}_{\varphi}\left(  g_{p}\right)  _{jk}\mathcal{R}_{\varphi}\left(
+g_{p}\right)  _{ml}\mathcal{R}_{\varphi}\left(  A_{\mathcal{H}^{2}}\right)
+_{pp},
+\end{align}
+where
+\begin{equation}
+\left\vert g_{p}\right\rangle =\sum_{1\leq j,k\leq r}\left\vert \varphi
+_{j}\varphi_{k}\right\rangle \mathcal{R}_{\varphi}\left(  g_{p}\right)  _{jk}%
+\end{equation}
+which is the restriction of $g_{p}$ to $\mathcal{H}^{2}.$
+
+\begin{example}
+$r=3$%
+\begin{align}
+\mathcal{H}_{\mathcal{F}}  &  =\mathcal{H}^{0}+\mathcal{H}^{1}+\mathcal{H}%
+^{2}+\mathcal{H}^{3}\\
+&  =\left\vert \phi\right\rangle +\left\{  \left\vert \mathcal{\varphi}%
+_{1}\right\rangle ,\left\vert \mathcal{\varphi}_{2}\right\rangle ,\left\vert
+\mathcal{\varphi}_{3}\right\rangle \right\}  +\left\{  \left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\rangle ,\left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{3}\right\rangle ,\left\vert
+\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\rangle \right\}  +\left\{
+\left\vert \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}%
+_{3}\right\rangle \right\}
+\end{align}%
+\begin{align}
+\Gamma\left(  \left\vert \mathcal{\varphi}_{1}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\right\vert \right)   &  =\left\vert \mathcal{\varphi
+}_{1}\right\rangle \left\langle \mathcal{\varphi}_{1}\right\vert \bullet
+P_{\mathcal{H}^{0}}+\left\vert \mathcal{\varphi}_{1}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\right\vert \bullet P_{\mathcal{H}^{1}}+\left\vert
+\mathcal{\varphi}_{1}\right\rangle \left\langle \mathcal{\varphi}%
+_{1}\right\vert \bullet P_{\mathcal{H}^{2}}+\left\vert \mathcal{\varphi}%
+_{1}\right\rangle \left\langle \mathcal{\varphi}_{1}\right\vert \bullet
+P_{\mathcal{H}^{3}}\\
+&  =\left\vert \mathcal{\varphi}_{1}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\right\vert +2\left(  \left\vert \mathcal{\varphi}%
+_{1}\mathcal{\varphi}_{2}\right\rangle \left\langle \mathcal{\varphi}%
+_{1}\mathcal{\varphi}_{2}\right\vert +\left\vert \mathcal{\varphi}%
+_{1}\mathcal{\varphi}_{3}\right\rangle \left\langle \mathcal{\varphi}%
+_{1}\mathcal{\varphi}_{3}\right\vert \right)  +3\left\vert \mathcal{\varphi
+}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\vert
+\end{align}%
+\begin{equation}
+\Gamma\left(  \overset{}{\left\vert \mathcal{\varphi}_{1}\right\rangle
+\left\langle \mathcal{\varphi}_{1}\right\vert \wedge\left\vert
+\mathcal{\varphi}_{2}\right\rangle \left\langle \mathcal{\varphi}%
+_{2}\right\vert }\right)  =\Gamma\left(  \left\vert \mathcal{\varphi}%
+_{1}\wedge\mathcal{\varphi}_{2}\right\rangle \left\langle \mathcal{\varphi
+}_{1}\wedge\mathcal{\varphi}_{2}\right\vert \right)  =\left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\vert +2\left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\rangle
+\left\langle \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}%
+_{3}\right\vert
+\end{equation}%
+\begin{align}
+\Gamma\left(  \left\vert \mathcal{\varphi}_{1}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\right\vert \right)  \wedge\Gamma\left(  \left\vert
+\mathcal{\varphi}_{2}\right\rangle \left\langle \mathcal{\varphi}%
+_{2}\right\vert \right)   &  =\left(  \ \left\vert \mathcal{\varphi}%
+_{1}\right\rangle \left\langle \mathcal{\varphi}_{1}\right\vert +2\left(
+\overset{}{\left\vert \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\rangle
+\left\langle \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\vert +\left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{3}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{3}\right\vert }\right)  +3\left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\rangle
+\left\langle \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}%
+_{3}\right\vert \right) \\
+&  \wedge\left(  \left\vert \mathcal{\varphi}_{2}\right\rangle \left\langle
+\mathcal{\varphi}_{2}\right\vert +2\left(  \overset{}{\left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\vert +\left\vert
+\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\rangle \left\langle
+\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\vert }\right)  +3\left\vert
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\rangle
+\left\langle \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}%
+_{3}\right\vert \right) \\
+&  =\left\vert \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\rangle
+\left\langle \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\right\vert
++\ 2\left\vert \mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}%
+_{3}\right\rangle \left\langle \mathcal{\varphi}_{1}\mathcal{\varphi}%
+_{2}\mathcal{\varphi}_{3}\right\vert +2\left\vert \mathcal{\varphi}%
+_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\rangle \left\langle
+\mathcal{\varphi}_{1}\mathcal{\varphi}_{2}\mathcal{\varphi}_{3}\right\vert
+\end{align}
+
+\end{example}
+
+\begin{remark}%
+\begin{equation}
+\left(  Q_{\mathcal{H}^{N}}\right)  _{PQ}=P_{\mathcal{H}^{N}}\binom{N+P}%
+{P}^{\frac{1}{2}}\binom{N+Q}{Q}^{\frac{1}{2}}%
+\end{equation}%
+\begin{equation}
+\Gamma\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \right)
+=\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle \left\langle
+\varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \bullet\left(  Q_{\mathcal{H}%
+^{N}}\right)  _{PQ}%
+\end{equation}
+
+\end{remark}
+
+The second quantization of $A_{\mathcal{H}^{2}}\in\mathcal{B}\left(
+\mathcal{H}^{2}\right)  \subset\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  $ is
+\begin{equation}
+\Gamma\left(  A_{\mathcal{H}^{2}}\right)  =\sum_{1\leq j,k,l,m\leq r}%
+a_{j}^{\dagger}a_{k}^{\dagger}a_{l}a_{m}\mathcal{R}_{\varphi}\left(  A\right)
+_{jkml}%
+\end{equation}%
+\begin{align}
+\Gamma\left(  A_{\mathcal{H}^{2}}\right)   &  =\Gamma\left(  \sum_{1\leq p\leq
+r}\left\vert g_{p}\right\rangle \left\langle g_{p}\right\vert \mathcal{R}%
+_{\varphi}\left(  A\right)  _{pp}\right)  =\sum_{1\leq p\leq r}\Gamma\left(
+\left\vert \overset{}{g_{p}}\right\rangle \left\langle \overset{}{g_{p}%
+}\right\vert \right)  \mathcal{R}_{\varphi}\left(  A\right)  _{pp}=\sum_{1\leq
+p\leq r}\Gamma\left(  \left\vert \overset{}{g_{p}}\right\rangle \left\langle
+\overset{}{\phi}\right\vert \right)  \Gamma\left(  \left\vert \overset{}{\phi
+}\right\rangle \left\langle \overset{}{g_{p}}\right\vert \right)
+\mathcal{R}_{\varphi}\left(  A\right)  _{pp}=\sum_{1\leq p\leq r}%
+g_{p}^{\dagger}g_{p}\mathcal{R}_{\varphi}\left(  A\right)  _{pp}\\
+&  =\sum_{1\leq j,k,l,m\leq r}a_{j}^{\dagger}a_{k}^{\dagger}a_{l}a_{m}%
+\sum_{1\leq p\leq\binom{r}{2}}\mathcal{R}_{\varphi}\left(  g_{p}\right)
+_{jk}\mathcal{R}_{\varphi}\left(  g_{p}\right)  _{ml}\mathcal{R}_{\varphi
+}\left(  A_{\mathcal{H}^{2}}\right)  _{pp}%
+\end{align}
+
+
+\begin{remark}
+$\Gamma$ is multiplicative on $\mathcal{B}\left(  \mathcal{H}^{N}%
+,\mathcal{H}^{0}\right)  $ i.e.
+\begin{equation}
+\Gamma\left(  \left\vert \overset{}{\Psi}\right\rangle \left\langle
+\overset{}{\Phi}\right\vert \right)  =\Gamma\left(  \left\vert \overset{}{\Psi
+}\right\rangle \left\langle \overset{}{\phi}\right\vert \left\vert
+\overset{}{\phi}\right\rangle \left\langle \overset{}{\Phi}\right\vert
+\right)  =\Gamma\left(  \left\vert \overset{}{\Psi}\right\rangle \left\langle
+\overset{}{\Phi}\right\vert \right)  \Gamma\left(  \left\vert \overset{}{\phi
+}\right\rangle \left\langle \overset{}{\Phi}\right\vert \right)
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\mathcal{H}_{\mathcal{F}}\cong\left\{  \left.  \overset{}{\left\vert
+\Psi\right\rangle \left\langle \phi\right\vert }\right\vert \Psi\in
+\mathcal{H}_{\mathcal{F}}\right\}  \cong\left\{  \left.  \overset{}{\left\vert
+\phi\right\rangle \left\langle \Phi\right\vert }\right\vert \Phi\in
+\mathcal{H}_{\mathcal{F}}\right\}  \cong\mathcal{H}_{\mathcal{F}}^{d}%
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\mathcal{B}_{00}\left(  \mathcal{H}_{\mathcal{F}}\right)  \cong\mathcal{H}%
+_{\mathcal{F}}\otimes\mathcal{H}_{\mathcal{F}}^{d}%
+\end{equation}
+and
+\begin{align}
+\mathcal{H}_{\mathcal{F}}  &  \cong\Gamma\left(  \mathcal{A}_{\left\vert
+{}\right\rangle \left\langle \phi\right\vert }\right) \\
+\mathcal{H}_{\mathcal{F}}^{d}  &  \cong\Gamma\left(  \mathcal{A}_{\left\vert
+\phi\right\rangle \left\langle {}\right\vert }\right)  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{align}
+&  \Gamma\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \phi\right\vert \right)  =\sum_{0\leq R,S\leq r}\Gamma
+_{RS}\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \phi\right\vert \right)  =\Gamma_{PQ}\left(  \left\vert
+\varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle \left\langle \phi\right\vert
+\right) \\
+&  =\sum_{0\leq N\leq r}\binom{N+P}{P}^{\frac{1}{2}}\left\vert \varphi_{k_{1}%
+}\cdots\varphi_{k_{P}}\right\rangle \left\langle \phi\right\vert \bullet
+P_{\mathcal{H}^{N}}\\
+&  =\sum_{0\leq N\leq r}\binom{N+P}{P}^{\frac{1}{2}}\Gamma_{P0}^{N+P,N\ }%
+\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \phi\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\sum_{1\leq j_{1}<\cdots<j_{N}\leq r}\left\vert
+\varphi_{k_{1}}\cdots\varphi_{k_{P}}\varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert
+=\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle \sum_{0\leq
+N\leq r}\sum_{1\leq j_{1}<\cdots<j_{N}\leq r}\left\vert \varphi_{j_{1}}%
+\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{j_{1}}\cdots
+\varphi_{j_{N}}\right\vert
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\Gamma\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \phi\right\vert \right)  =a_{k_{1}}^{\dagger}\cdots a_{k_{P}%
+}^{\dagger}%
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{align}
+a_{j}^{\dagger}  &  =\frac{1}{\sqrt{2}}\left(  x_{j}-ix_{j+r}\right) \\
+a_{j}  &  =\frac{1}{\sqrt{2}}\left(  x_{j}+ix_{j+r}\right)
+\end{align}%
+\begin{align}
+\Gamma\left(  \left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+\ \right)   &  =a_{j}^{\dagger}\\
+\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert
+\ \right)   &  =a_{j}%
+\end{align}%
+\begin{equation}
+I_{\mathcal{F}}=a_{j}^{\dagger}a_{j}+a_{j}a_{j}^{\dagger}=\Gamma\left(
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert \ \right)
+\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert
+\ \right)  +\Gamma\left(  \left\vert \phi\right\rangle \left\langle
+\varphi_{j}\right\vert \ \right)  \Gamma\left(  \left\vert \varphi
+_{j}\right\rangle \left\langle \phi\right\vert \ \right)
+\end{equation}%
+\begin{align}
+a_{j}^{\dagger}a_{j}  &  =\left(  \left.  a_{j}^{\dagger}\right\vert
+a_{j}\right)  I_{\mathcal{F}}+a_{j}^{\dagger}\wedge a_{j}=\frac{1}{2}\left\{
+a_{j}^{\dagger},a_{j}\right\}  +\frac{1}{2}\left[  a_{j}^{\dagger}%
+,a_{j}\right]  =\frac{1}{2}I_{\mathcal{F}}+a_{j}^{\dagger}\wedge a_{j}\\
+a_{j}a_{j}^{\dagger}  &  =\left(  \left.  a_{j}\right\vert a_{j}^{\dagger
+}\right)  I_{\mathcal{F}}+a_{j}\wedge a_{j}^{\dagger}=\frac{1}{2}\left\{
+a_{j},a_{j}^{\dagger}\right\}  -\frac{1}{2}\left[  a_{j}^{\dagger}%
+,a_{j}\right]  =\frac{1}{2}I_{\mathcal{F}}-a_{j}^{\dagger}\wedge a_{j}%
+\end{align}%
+\begin{align}
+a_{j}a_{j}^{\dagger}  &  =\frac{1}{2}\left(  x_{j}+ix_{j+r}\right)  \left(
+x_{j}-ix_{j+r}\right)  =\frac{1}{2}I_{\mathcal{F}}+ix_{j+r}x_{j}\\
+a_{j}^{\dagger}a_{j}  &  =\frac{1}{2}\left(  x_{j}-ix_{j+r}\right)  \left(
+x_{j}+ix_{j+r}\right)  =\frac{1}{2}I_{\mathcal{F}}-ix_{j+r}x_{j}%
+\end{align}%
+\begin{align}
+a_{j}\wedge a_{j}^{\dagger}  &  =\frac{1}{2}\left(  x_{j}+ix_{j+r}\right)
+\wedge\left(  x_{j}-ix_{j+r}\right)  =ix_{j+r}\wedge x_{j}\\
+a_{j}^{\dagger}\wedge a_{j}  &  =\frac{1}{2}\left(  x_{j}-ix_{j+r}\right)
+\wedge\left(  x_{j}+ix_{j+r}\right)  =-ix_{j+r}\wedge x_{j}%
+\end{align}%
+\begin{align}
+x_{j}  &  =\frac{1}{\sqrt{2}}\left(  \overset{}{\Gamma\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert \ \right)
++\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert \ \right)  }\right)  =\frac{1}{\sqrt{2}}\Gamma\left(
+\overset{}{\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
++\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert }\right) \\
+x_{j+r}  &  =\frac{i}{\sqrt{2}}\left(  \overset{}{\Gamma\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert \ \right)
+-\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert \ \right)  }\right)  =\frac{i}{\sqrt{2}}\Gamma\left(
+\overset{}{\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+-\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert }\right)
+\end{align}%
+\begin{align}
+a_{j}^{\dagger}a_{j}  &  =\Gamma\left(  \left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{j}\right\vert \right) \\
+a_{j}a_{j}^{\dagger}  &  =I_{\boldsymbol{F}}-a_{j}^{\dagger}a_{j}%
+=\Gamma\left(  \left\vert \phi\right\rangle \left\langle \phi\right\vert
+\right)  -\Gamma\left(  \left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{j}\right\vert \right)  =\Gamma\left(  \left\vert \phi\right\rangle
+\left\langle \phi\right\vert -\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{j}\right\vert \right)
+\end{align}%
+\begin{align}
+\Gamma\left(  \left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{j}\right\vert \right)   &  =\frac{1}{2}\Gamma\left(  \left\vert
+\phi\right\rangle \left\langle \phi\right\vert \right)  +\Gamma\left(
+\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert \right)
+\wedge\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert \ \right)  =\frac{1}{2}\Gamma\left(  \left\vert \phi
+\right\rangle \left\langle \phi\right\vert \right)  +\Gamma\left(  \left\vert
+\varphi_{j}\right\rangle \left\langle \phi\right\vert \wedge\left\vert
+\phi\right\rangle \left\langle \varphi_{j}\right\vert \right) \\
+&  =\frac{1}{2}\Gamma\left(  \left\vert \phi\right\rangle \left\langle
+\phi\right\vert \right)  +\Gamma\left(  \left\vert \varphi_{j}\wedge
+\phi\right\rangle \left\langle \phi\wedge\varphi_{j}\right\vert \right)
+\ =\frac{1}{2}\Gamma\left(  \left\vert \phi\right\rangle \left\langle
+\phi\right\vert \right)  +\Gamma\left(  \left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{j}\right\vert \right)
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\Gamma\left(  x_{j}\wedge x_{k}\right)  =
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+$\mathcal{F}$ has two major multiplication operations defined
+
+\begin{enumerate}
+\item Clifford $\equiv$ Operator $\equiv$ c$^{\ast}$-operator product "$\circ
+$" when $\mathcal{F=B}\left(  \mathcal{H}_{\mathcal{F}}\right)  .$
+
+\item Exterior product "$\wedge$" when $\mathcal{F}={\LARGE \wedge}\left(
+\mathcal{F}_{1}\right)  .$
+\end{enumerate}
+\end{remark}
+
+\begin{lemma}
+The second quantization map $\Gamma$ is an exterior algebra isomorphism i.e.
+$\Gamma$ is a Banach space isomorphism and
+\begin{equation}
+\Gamma\left(  A\wedge B\right)  =\Gamma\left(  A\right)  \wedge\Gamma\left(
+B\right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{lemma}
+The second quantization map $\Gamma$ is NOT a c$^{\ast}$-algebra isomorphis
+i.e. in general i.e. $\Gamma$ is a Banach space isomorphism and
+\begin{equation}
+\Gamma\left(  A\circ B\right)  \neq\Gamma\left(  A\right)  \circ\Gamma\left(
+B\right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{definition}
+$M\in\mathcal{L}\left(  V\right)  $
+\begin{equation}
+M:V\rightarrow W
+\end{equation}
+is positive if
+\begin{equation}
+w=Mv\in W_{+}\text{ if }v\in V_{+}%
+\end{equation}
+and postive definite if
+\begin{equation}
+w=Mv\in W_{+}\text{ }\operatorname*{Iff}\text{ }v\in V_{+}%
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+Is the map $\Gamma$ positive i.e.
+\begin{equation}
+\left\{  \left\langle \left.  v\right\vert A_{\mathcal{H}^{2}}v\right\rangle
+,\quad v\in\mathcal{H}^{2},\left\Vert v\right\Vert _{\mathcal{H}^{2}}%
+=1\geq0\right\}  \overset{?}{\Leftrightarrow}\left\{  \left\langle \left.
+v\right\vert \Gamma\left(  A_{\mathcal{H}^{2}}\right)  v\right\rangle ,\quad
+v\in\mathcal{H}_{\mathcal{F}},\left\Vert v\right\Vert _{\mathcal{H}%
+_{\mathcal{F}}}=1\geq0\right\}
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\Gamma\left(  A_{\mathcal{H}^{2}}\right)  \Gamma\left(  B_{\mathcal{H}^{2}%
+}\right)  =\Gamma\left(  A_{\mathcal{H}^{2}}B_{\mathcal{H}^{2}}\right)  +
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+In general the second quantization map is defined by
+\begin{align}
+&  \Gamma\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \right)
+=\sum_{0\leq R,S\leq r}\Gamma_{RS}\left(  \left\vert \varphi_{k_{1}}%
+\cdots\varphi_{k_{P}}\right\rangle \left\langle \varphi_{l_{1}}\cdots
+\varphi_{l_{Q}}\right\vert \right)  =\Gamma_{PQ}\left(  \left\vert
+\varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle \left\langle \varphi_{l_{1}%
+}\cdots\varphi_{l_{Q}}\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\binom{N+P}{P}^{\frac{1}{2}}\binom{N+Q}{Q}^{\frac
+{1}{2}}\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}}\right\rangle
+\left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert \bullet
+P_{\mathcal{H}^{N}}\\
+&  =\sum_{0\leq N\leq r}\binom{N+P}{P}^{\frac{1}{2}}\binom{N+Q}{Q}^{\frac
+{1}{2}}\Gamma_{PQ}^{N+P,N+Q}\left(  \left\vert \varphi_{k_{1}}\cdots
+\varphi_{k_{P}}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}%
+}\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\sqrt{\binom{N+P}{P}}\sqrt{\binom{N+Q}{Q}}\Gamma
+_{PQ}^{N+P,N+Q}\left(  \left\vert \varphi_{k_{1}}\cdots\varphi_{k_{P}%
+}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\right\vert
+\right) \\
+&  =\sum_{0\leq N\leq r}\sum_{1\leq j_{1}<\cdots<j_{N}\leq r}\left\vert
+\varphi_{k_{1}}\cdots\varphi_{k_{P}}\varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{l_{1}}\cdots\varphi_{l_{Q}}\varphi
+_{j_{1}}\cdots\varphi_{j_{N}}\right\vert
+\end{align}
+In the case of two particle operators the second quantization map gives
+\begin{align}
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}  &  =\Gamma\left(
+\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle
+\varphi_{l_{1}}\varphi_{l_{2}}\right\vert \right)  =\sum_{0\leq R,S\leq
+r}\Gamma_{RS}\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{l_{2}}\right\vert \right)  =\Gamma
+_{22}\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{l_{2}}\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\binom{N+2}{2}\left\vert \varphi_{k_{1}}\varphi
+_{k_{2}}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{l_{2}}\right\vert
+\bullet P_{\mathcal{H}^{N}}\\
+&  =\sum_{0\leq N\leq r}\binom{N+2}{2}\Gamma_{22}^{N+2,N+2}\left(  \left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{l_{1}%
+}\varphi_{l_{2}}\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\binom{N+2}{2}\Gamma_{22}^{N+2,N+2}\left(  \left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{l_{1}%
+}\varphi_{l_{2}}\right\vert \right) \\
+&  =\sum_{0\leq N\leq r}\sum_{1\leq j_{1}<\cdots<j_{N}\leq r}\left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{l_{2}}\varphi_{j_{1}%
+}\cdots\varphi_{j_{N}}\right\vert
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\Gamma\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{l_{2}}\right\vert \left\vert
+\varphi_{p_{1}}\varphi_{p_{2}}\right\rangle \left\langle \varphi_{q_{1}%
+}\varphi_{q_{2}}\right\vert \right)  =\Gamma\left(  \left\vert \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{q_{1}}\varphi_{q_{2}%
+}\right\vert \right)  \left\langle \varphi_{l_{1}}\varphi_{l_{2}}\right\vert
+\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right\rangle =a_{k_{1}}^{\dagger
+}a_{k_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}\left\langle \left.  \varphi_{l_{1}%
+}\varphi_{l_{2}}\right\vert \varphi_{p_{1}}\varphi_{p_{2}}\right\rangle
+\end{equation}
+
+\end{remark}
+
+%
+
+\begin{gather*}
+\Gamma\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{l_{2}}\right\vert \right)  \Gamma\left(
+\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right\rangle \left\langle
+\varphi_{q_{1}}\varphi_{q_{2}}\right\vert \right)  =a_{k_{1}}^{\dagger
+}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger
+}a_{q_{1}}a_{q_{2}}\\
+\parallel\\
+:a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}a_{p_{1}}^{\dagger
+}a_{p_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}:\\
+\parallel\\
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger
+}a_{l_{1}}a_{l_{2}}a_{q_{1}}a_{q_{2}}\\
++\\
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\delta_{l_{2},p_{2}}-a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}%
+}^{\dagger}a_{l_{2}}a_{q_{1}}a_{q_{2}}\delta_{l_{1},p_{2}}-a_{k_{1}}^{\dagger
+}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}}a_{q_{1}}a_{q_{2}}%
+\delta_{l_{2},p_{1}}+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger
+}a_{l_{2}}a_{q_{1}}a_{q_{2}}\delta_{l_{1},p_{1}}\\
++\\
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}(\delta_{l_{2},p_{1}%
+}\delta_{l_{1},p_{2}}-\delta_{l_{1},p_{1}}\delta_{l_{2},p_{2}}).
+\end{gather*}%
+\begin{gather*}
+\Gamma\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{l_{2}}\right\vert \right)  \Gamma\left(
+\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right\rangle \left\langle
+\varphi_{q_{1}}\varphi_{q_{2}}\right\vert \right)  =a_{k_{1}}^{\dagger
+}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger
+}a_{q_{1}}a_{q_{2}}\\
+\parallel\\
+\Gamma\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{p_{1}}%
+\varphi_{p_{2}}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{l_{2}%
+}\varphi_{q_{1}}\varphi_{q_{2}}\right\vert \right) \\
++\\
+\Gamma\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{p_{1}%
+}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{q_{1}}\varphi_{q_{2}%
+}\right\vert \right)  \delta_{l_{2}p_{2}}-\Gamma\left(  \left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\varphi_{p_{1}}\right\rangle \left\langle
+\varphi_{l_{2}}\varphi_{q_{1}}\varphi_{q_{2}}\right\vert \right)
+\delta_{l_{1}p_{2}}-\Gamma\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}%
+}\varphi_{p_{2}}\right\rangle \left\langle \varphi_{l_{1}}\varphi_{q_{1}%
+}\varphi_{q_{2}}\right\vert \right)  \delta_{l_{2}p_{1}}+\Gamma\left(
+\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{p_{2}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{q_{1}}\varphi_{q_{2}}\right\vert \right)
+\delta_{l_{1}p_{1}}\\
++\\
+\Gamma\left(  \left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\left\langle \varphi_{q_{1}}\varphi_{q_{2}}\right\vert \right)  (\delta
+_{l_{2}p_{1}}\delta_{l_{1}p_{2}}-\delta_{l_{1}p_{1}}\delta_{l_{2}p_{2}}).
+\end{gather*}
+
+
+\begin{remark}
+Projectors onto $\mathcal{H}^{2}:$ Consider the normalized geminal $\left\vert
+g\right\rangle $
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j<k\leq r}\left\vert \varphi_{j}%
+\varphi_{k}\right\rangle \mathcal{R}_{g}\left(  g\right)  _{jk},
+\end{equation}
+where
+\begin{equation}
+\left\langle \left.  g\right\vert g\right\rangle =1,
+\end{equation}
+then
+\begin{equation}
+\left\vert g\right\rangle \left\langle g\right\vert ^{2}=\left\vert
+g\right\rangle \left\langle g\right\vert
+\end{equation}
+and
+\begin{equation}
+\left\vert g\right\rangle \left\langle g\right\vert ^{\dagger}=\left\vert
+g\right\rangle \left\langle g\right\vert
+\end{equation}
+thus $\left\vert g\right\rangle \left\langle g\right\vert $ is an orthogonal projector.
+\end{remark}
+
+\begin{remark}
+$\left\vert g\right\rangle \left\langle g\right\vert $ can be expanded
+\begin{equation}
+\left\vert g\right\rangle \left\langle g\right\vert =\left\vert \sum_{1\leq
+k_{1}<k_{2}\leq r}\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}}\right\rangle \left\langle
+\sum_{1\leq l_{1}<l_{2}\leq r}\left\vert \varphi_{l_{1}}\varphi_{l_{2}%
+}\right\rangle \mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\right\vert
+=\sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r}}\left\vert
+\overset{}{\varphi_{k_{1}}\varphi_{k_{2}}}\right\rangle \left\langle
+\overset{}{\varphi_{l_{1}}\varphi_{l_{2}}}\right\vert \overline{\mathcal{R}%
+_{g}\left(  g\right)  _{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)
+_{l_{1}l_{2}}%
+\end{equation}%
+\begin{equation}
+\left\vert g\right\rangle \left\langle g\right\vert ^{2}=\sum_{\substack{1\leq
+k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r\\1\leq p_{1}<p_{2}\leq r\\1\leq
+q_{1}<q_{2}\leq r}}\left\vert \overset{}{\varphi_{k_{1}}\varphi_{k_{2}}%
+}\right\rangle \left\langle \overset{}{\varphi_{q_{1}}\varphi_{q_{2}}%
+}\right\vert \overline{\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}}}\left(
+\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\left\langle \overset{}{\varphi
+_{l_{1}}\varphi_{l_{2}}}\right\vert \left\vert \overset{}{\varphi_{p_{1}%
+}\varphi_{p_{2}}}\right\rangle \overline{\mathcal{R}_{g}\left(  g\right)
+_{p_{1}p_{2}}}\right)  \mathcal{R}_{g}\left(  g\right)  _{q_{1}q_{2}}%
+\end{equation}%
+\begin{equation}
+\Gamma\left(  \left\vert g\right\rangle \left\langle g\right\vert \right)
+=\sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r}%
+}\Gamma\left(  \left\vert \overset{}{\varphi_{k_{1}}\varphi_{k_{2}}%
+}\right\rangle \left\langle \overset{}{\varphi_{l_{1}}\varphi_{l_{2}}%
+}\right\vert \right)  \overline{\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}%
+}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}=\sum_{\substack{1\leq
+k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r}}a_{k_{1}}^{\dagger}a_{k_{2}%
+}^{\dagger}a_{l_{1}}a_{l_{2}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}%
+\end{equation}%
+\begin{equation}
+\Gamma\left(  \left(  \left\vert g\right\rangle \left\langle g\right\vert
+\right)  ^{2}\right)  =\Gamma\left(  \left\vert g\right\rangle \left\langle
+g\right\vert \left\vert g\right\rangle \left\langle g\right\vert \right)
+=\Gamma\left(  \left\vert g\right\rangle \left\langle g\right\vert \right)
+=\sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r}}a_{k_{1}%
+}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}\overline{\mathcal{R}%
+_{g}\left(  g\right)  _{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)
+_{l_{1}l_{2}}\sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq
+r}}a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}\overline
+{\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}}}\mathcal{R}_{g}\left(
+g\right)  _{l_{1}l_{2}}%
+\end{equation}%
+\begin{equation}
+\Gamma\left(  \left\vert g\right\rangle \left\langle g\right\vert \right)
+\Gamma\left(  \left\vert g\right\rangle \left\langle g\right\vert \right)
+=\sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r\\1\leq
+p_{1}<p_{2}\leq r\\1\leq q_{1}<q_{2}\leq r}}a_{k_{1}}^{\dagger}a_{k_{2}%
+}^{\dagger}a_{l_{1}}a_{l_{2}}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger}a_{q_{1}%
+}a_{q_{2}}\overline{\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}}}%
+\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline{\mathcal{R}_{g}\left(
+g\right)  _{p_{1}p_{2}}}\mathcal{R}_{g}\left(  g\right)  _{q_{1}q_{2}}\\
+=\sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r\\1\leq
+p_{1}<p_{2}\leq r\\1\leq q_{1}<q_{2}\leq r}}\left(
+\begin{array}
+[c]{c}%
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger
+}a_{l_{1}}a_{l_{2}}a_{q_{1}}a_{q_{2}}+\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{p_{1}}^{\dagger}a_{l_{1}}a_{q_{1}}a_{q_{2}}\!\delta_{l_{2}p_{2}}-a_{k_{1}%
+}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{2}}a_{q_{1}}a_{q_{2}%
+}\!\delta_{l_{1}p_{2}}\\
+-\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{1}}+\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{p_{2}}^{\dagger}a_{l_{2}}a_{q_{1}}a_{q_{2}}\!\delta_{l_{1}p_{1}%
+}+\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}\!(\delta
+_{l_{2}p_{1}}\delta_{l_{1}p_{2}}-\delta_{l_{1}p_{1}}\delta_{l_{2}p_{2}})
+\end{array}
+\right)  {\Huge \,}\overline{\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}}%
+}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline{\mathcal{R}%
+_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}_{g}\left(  g\right)
+_{q_{1}q_{2}}%
+\end{equation}%
+\begin{align}
+&  \sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r\\1\leq
+p_{1}<p_{2}\leq r\\1\leq q_{1}<q_{2}\leq r}}\left(
+\begin{array}
+[c]{c}%
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger
+}a_{l_{1}}a_{l_{2}}a_{q_{1}}a_{q_{2}}\overline{\mathcal{R}_{g}\left(
+g\right)  _{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}%
+}\overline{\mathcal{R}_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}%
+_{g}\left(  g\right)  _{q_{1}q_{2}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{2}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline
+{\mathcal{R}_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}_{g}\left(
+g\right)  _{q_{1}q_{2}}\\
+-a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{2}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{1}p_{2}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline
+{\mathcal{R}_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}_{g}\left(
+g\right)  _{q_{1}q_{2}}\\
+-\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{1}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline
+{\mathcal{R}_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}_{g}\left(
+g\right)  _{q_{1}q_{2}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{2}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{1}p_{1}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline
+{\mathcal{R}_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}_{g}\left(
+g\right)  _{q_{1}q_{2}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}\!\left(
+\delta_{l_{2}p_{1}}\delta_{l_{1}p_{2}}\overline{\mathcal{R}_{g}\left(
+g\right)  _{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}%
+}\overline{\mathcal{R}_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}%
+_{g}\left(  g\right)  _{q_{1}q_{2}}-\delta_{l_{1}p_{1}}\delta_{l_{2}p_{2}%
+}\overline{\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}}}\mathcal{R}%
+_{g}\left(  g\right)  _{l_{1}l_{2}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{p_{1}p_{2}}}\mathcal{R}_{g}\left(  g\right)  _{q_{1}q_{2}}\right)
+\end{array}
+\right) \\
+&  =\sum_{\substack{1\leq k_{1}<k_{2}\leq r\\1\leq l_{1}<l_{2}\leq r\\1\leq
+p_{1}<p_{2}\leq r\\1\leq q_{1}<q_{2}\leq r}}\left(
+\begin{array}
+[c]{c}%
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger
+}a_{l_{1}}a_{l_{2}}a_{q_{1}}a_{q_{2}}\overline{\mathcal{R}_{g}\left(
+g\right)  _{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}%
+}\overline{\mathcal{R}_{g}\left(  g\right)  _{p_{1}p_{2}}}\mathcal{R}%
+_{g}\left(  g\right)  _{q_{1}q_{2}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{2}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\mathcal{R}%
+_{g}\left(  g^{\dagger}\right)  _{l_{2}p_{1}}\mathcal{R}_{g}\left(  g\right)
+_{q_{1}q_{2}}\\
++a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{2}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{1}p_{2}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g^{\dagger}\right)  _{p_{1}l_{1}%
+}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\mathcal{R}_{g}\left(
+g\right)  _{q_{1}q_{2}}\\
+-\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{1}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline
+{\mathcal{R}_{g}\left(  g\right)  _{l_{2}p_{2}}}\mathcal{R}_{g}\left(
+g\right)  _{q_{1}q_{2}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{2}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{1}p_{1}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}}\overline
+{\mathcal{R}_{g}\left(  g\right)  _{l_{1}p_{2}}}\mathcal{R}_{g}\left(
+g\right)  _{q_{1}q_{2}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}\!\left(
+\delta_{l_{2}p_{1}}\delta_{l_{1}p_{2}}\overline{\mathcal{R}_{g}\left(
+g\right)  _{k_{1}k_{2}}}\mathcal{R}_{g}\left(  g\right)  _{l_{1}l_{2}%
+}\overline{\mathcal{R}_{g}\left(  g\right)  _{l_{2}l_{1}}}\mathcal{R}%
+_{g}\left(  g\right)  _{q_{1}q_{2}}-\delta_{l_{1}p_{1}}\delta_{l_{2}p_{2}%
+}\overline{\mathcal{R}_{g}\left(  g\right)  _{k_{1}k_{2}}}\mathcal{R}%
+_{g}\left(  g\right)  _{l_{1}l_{2}}\overline{\mathcal{R}_{g}\left(  g\right)
+_{l_{1}l_{2}}}\mathcal{R}_{g}\left(  g\right)  _{q_{1}q_{2}}\right)
+\end{array}
+\right)
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}a_{p_{1}}^{\dagger
+}a_{p_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}=\;a_{k_{1}}^{\dagger}a_{k_{2}}%
+^{\dagger}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}a_{q_{1}%
+}a_{q_{2}}\!\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{2}}-a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}%
+a_{p_{1}}^{\dagger}a_{l_{2}}a_{q_{1}}a_{q_{2}}\!\delta_{l_{1}p_{2}}\\
+-\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{1}}+\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{p_{2}}^{\dagger}a_{l_{2}}a_{q_{1}}a_{q_{2}}\!\delta_{l_{1}p_{1}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}\!(\delta
+_{l_{2}p_{1}}\delta_{l_{1}p_{2}}-\delta_{l_{1}p_{1}}\delta_{l_{2}p_{2}}).
+\end{equation}%
+\begin{equation}
+\mathfrak{N}:a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{1}}a_{l_{2}}a_{p_{1}%
+}^{\dagger}a_{p_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}\rightarrow\;a_{k_{1}%
+}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}%
+}a_{l_{2}}a_{q_{1}}a_{q_{2}}\!\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{1}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{2}}-a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}%
+a_{p_{1}}^{\dagger}a_{l_{2}}a_{q_{1}}a_{q_{2}}\!\delta_{l_{1}p_{2}}\\
+-\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{p_{2}}^{\dagger}a_{l_{1}}a_{q_{1}%
+}a_{q_{2}}\!\delta_{l_{2}p_{1}}+\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{p_{2}}^{\dagger}a_{l_{2}}a_{q_{1}}a_{q_{2}}\!\delta_{l_{1}p_{1}}\\
++\!a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{q_{1}}a_{q_{2}}\!(\delta
+_{l_{2}p_{1}}\delta_{l_{1}p_{2}}-\delta_{l_{1}p_{1}}\delta_{l_{2}p_{2}}).
+\end{equation}
+
+\end{remark}
+
+
+\end{document}

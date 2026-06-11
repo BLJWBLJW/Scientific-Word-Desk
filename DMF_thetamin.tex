@@ -1,0 +1,372 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, June 28, 2004 22:18:25}
+%TCIDATA{LastRevised=Monday, June 28, 2004 22:19:16}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+For convenience we can express $\mathbf{\theta}$ as a diagonal matrix
+\begin{equation}
+\mathbf{\hat{\theta}=}\left(
+\begin{array}
+[c]{cccc}%
+0 & 0 & \cdots & 0\\
+\vdots & \theta_{2} &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & \cdots & \theta_{s}%
+\end{array}
+\right)
+\end{equation}
+allowing us to express the vector $e^{i\mathbf{\theta}}$ in matrix form as%
+\begin{equation}
+e^{i\mathbf{\theta}}=e^{i\mathbf{\hat{\theta}}}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+\vdots\\
+1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cccc}%
+1 & 0 & \cdots & 0\\
+\vdots & e^{i\theta_{2}} &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & \cdots & e^{i\theta_{s}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+\vdots\\
+1
+\end{array}
+\right)  .
+\end{equation}
+This gives
+\begin{equation}
+f\left(  \mathbf{\theta}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  e^{-i\mathbf{\hat{\theta}}}\mathbb{M}e^{i\mathbf{\hat{\theta}}%
+}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)
+\end{equation}
+allowing us to obtain the Taylors series expansion about the point
+$\mathbf{\theta}_{0}$ as
+\begin{align}
+f\left(  \mathbf{\theta}_{0}+\delta\mathbf{\theta}\right)   &  =f\left(
+\mathbf{\theta}_{0}\right)  +\partial_{\mathbf{\theta}}f\left(  \mathbf{\theta
+}_{0}\right)  ^{t}\delta\mathbf{\theta}+\delta\mathbf{\theta}^{t}%
+\partial_{\mathbf{\theta}}^{2}f\left(  \mathbf{\theta}_{0}\right)
+\delta\mathbf{\theta+\cdots}\nonumber\\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  e^{-i\widehat{\left(  \mathbf{\theta}_{0}+\delta\mathbf{\theta
+}\right)  }}\mathbb{M}e^{i\widehat{\left(  \mathbf{\theta}_{0}+\delta
+\mathbf{\theta}\right)  }}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  .\label{Taytheta}%
+\end{align}
+Noting that
+\begin{equation}
+e^{i\widehat{\left(  \mathbf{\theta}_{0}+\delta\mathbf{\theta}\right)  }%
+}=e^{i\widehat{\mathbf{\theta}_{0}}}e^{i\widehat{\delta\mathbf{\theta}}%
+}=e^{i\widehat{\mathbf{\theta}_{0}}}\left\{  \mathbb{I}_{s}+i\delta
+\mathbf{\hat{\theta}}+i^{2}\left(  \delta\mathbf{\hat{\theta}}\right)
+^{2}+\cdots\right\}  ,
+\end{equation}
+eq. $\left(  \ref{Taytheta}\right)  $gives
+\begin{align}
+f\left(  \mathbf{\theta}_{0}+\delta\mathbf{\theta}\right)   &  =\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \left\{  \mathbb{I}_{s}+\left(  -i\right)  \delta\mathbf{\hat{\theta
+}}+\left(  -\frac{i}{2}\right)  ^{2}\left(  \delta\mathbf{\hat{\theta}%
+}\right)  ^{2}+\cdots\right\}  \mathbb{M}\left(  \mathbf{\theta}\right)
+\times\nonumber\\
+&  \left\{  \mathbb{I}_{s}+i\delta\mathbf{\hat{\theta}}+\left(  \frac{i}%
+{2}\right)  ^{2}\left(  \delta\mathbf{\hat{\theta}}\right)  ^{2}%
++\cdots\right\}  \left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  ,
+\end{align}
+where
+\begin{equation}
+\mathbb{M}\left(  \mathbf{\theta}\right)  =e^{-i\widehat{\mathbf{\theta}_{0}}%
+}\mathbb{M}e^{i\widehat{\mathbf{\theta}_{0}}},
+\end{equation}
+showing that
+\begin{align}
+&  \delta^{1}f\left(  \mathbf{\theta}_{0}\right)  =i\left\{  \left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \mathbb{M}\left(  \mathbf{\theta}\right)  \delta\mathbf{\hat{\theta}%
+}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  -\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \delta\mathbf{\hat{\theta}}\mathbb{M}\left(  \mathbf{\theta}\right)
+\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  \right\}  \nonumber\\
+&  =i\left\{  \left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \mathbb{M}\left(  \mathbf{\theta}\right)  \delta\mathbf{\hat{\theta}%
+}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  -\left[  \left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \mathbb{M}\left(  \mathbf{\theta}\right)  \delta\mathbf{\hat{\theta}%
+}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  \right]  ^{\ast}\right\}  \nonumber\\
+&  =-2\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \operatorname{Im}\left\{  \mathbb{M}\left(  \mathbf{\theta}\right)
+\right\}  \left(
+\begin{array}
+[c]{c}%
+\delta\theta_{1}\\
+\vdots\\
+\delta\theta_{s}%
+\end{array}
+\right)
+\end{align}
+Hence
+\begin{equation}
+\partial_{\mathbf{\theta}}f\left(  \mathbf{\theta}_{0}\right)  ^{t}=-2\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \operatorname{Im}\left\{  \mathbb{M}\left(  \mathbf{\theta}\right)
+\right\}  .
+\end{equation}
+The second order variation $\delta^{2}f\left(  \mathbf{\theta}_{0}\right)  $
+is given by
+\begin{align}
+\delta^{2}f\left(  \mathbf{\theta}_{0}\right)   &  =-\frac{1}{2}\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \left\{  \overset{}{\mathbb{M}\left(  \mathbf{\theta}\right)  \left(
+\delta\mathbf{\hat{\theta}}\right)  ^{2}+\left(  \delta\mathbf{\hat{\theta}%
+}\right)  ^{2}\mathbb{M}\left(  \mathbf{\theta}\right)  }+\delta
+\mathbf{\hat{\theta}}\mathbb{M}\left(  \mathbf{\theta}\right)  \delta
+\mathbf{\hat{\theta}}\right\}  \left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  \nonumber\\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \left[  \delta\mathbf{\hat{\theta},}\left[  \mathbb{M}\left(
+\mathbf{\theta}\right)  ,\delta\mathbf{\hat{\theta}}\right]  \right]  \left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)
+\end{align}
+which gives
+\begin{align}
+& \left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \mathbb{M}\left(  \mathbf{\theta}\right)  \left(  \delta
+\mathbf{\hat{\theta}}\right)  ^{2}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  =\sum_{jk}M_{jk}\delta\theta_{k}^{2}\\
+& \Rightarrow\frac{\partial}{\partial\theta_{l}}=2\sum_{j}M_{jl}\delta
+\theta_{l}\\
+& \left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \left(  \delta\mathbf{\hat{\theta}}\right)  ^{2}\mathbb{M}\left(
+\mathbf{\theta}\right)  \left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  =2\sum_{j}M_{lj}\delta\theta_{l}\\
+& \left(
+\begin{array}
+[c]{ccc}%
+1 & \cdots & 1
+\end{array}
+\right)  \delta\mathbf{\hat{\theta}}\mathbb{M}\left(  \mathbf{\theta}\right)
+\delta\mathbf{\hat{\theta}}\left(
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right)  =\sum_{j}\left\{  M_{lj}\delta\theta_{j}+M_{jl}\delta\theta
+_{j}\right\}
+\end{align}%
+\begin{equation}
+f\left(  \mathbf{\theta}\right)  =\sum_{1\leq j,k\leq s}e^{-i\theta_{k}}%
+M_{kj}e^{i\theta_{j}},
+\end{equation}%
+\begin{align}
+\frac{\partial f\left(  \mathbf{\theta}\right)  }{\partial\theta_{l}}  &
+=i\sum_{1\leq j\leq s}\left\{  e^{-i\theta_{j}}M_{jl}e^{i\theta_{l}%
+}-e^{-i\theta_{l}}M_{lj}e^{i\theta_{j}}\right\}  \\
+\frac{\partial^{2}f\left(  \mathbf{\theta}\right)  }{\partial\theta
+_{l}\partial\theta_{m}}  & =-\left\{  \sum_{1\leq j\leq s}\left\{
+e^{-i\theta_{j}}M_{jl}e^{i\theta_{l}}+e^{-i\theta_{l}}M_{lj}e^{i\theta_{j}%
+}\right\}  \delta_{lm}-e^{-i\theta_{m}}M_{ml}e^{i\theta_{l}}-e^{-i\theta_{l}%
+}M_{lm}e^{i\theta_{m}}\right\}
+\end{align}%
+\begin{equation}
+\delta\mathbf{\theta=-}\left[  \frac{\partial^{2}f\left(  \mathbf{\theta
+}\right)  }{\partial\mathbf{\theta}\partial\mathbf{\theta}}\right]  ^{-1}%
+\frac{\partial f\left(  \mathbf{\theta}\right)  }{\partial\mathbf{\theta}}%
+\end{equation}
+
+
+
+\end{document}

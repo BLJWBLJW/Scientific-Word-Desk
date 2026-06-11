@@ -1,0 +1,110 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Wednesday, May 30, 2007 12:29:48}
+%TCIDATA{LastRevised=Wednesday, May 30, 2007 15:37:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+In fig's \ref{fig:figone-first}, \ref{fig:figone-second}, \ref{fig:figone-third}, figs \ref{fig:figtwo-first} and   \ref{fig:figtwo-second}%
+
+\begin{figure}
+\begin{center}
+\subfigure{\label{fig:figone-first}\includegraphics[width=85mm]{transmitted.eps}}
+\subfigure{\label{fig:figone-second}\includegraphics[width=85mm]{absorbed.eps}}
+\subfigure{\label{fig:figone-third}\includegraphics[width=85mm]{reflected.eps}}
+
+\end{center}
+\\
+\caption{(Color online). Plots of the magnitudes of (a) the power transmitted,
+(b) absorbed and (c) reflected by the light incident on the slab formed by a
+LC that has relative permittivity of 2,3 and 4.}
+
+\label{fig:figone}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\subfigure{\label{fig:figtwo-first}\includegraphics[width=85mm]{indexofrefract.eps}}
+\subfigure{\label{fig:figtwo-second}\includegraphics[width=85mm]{impedance.eps}}
+
+\end{center}
+\\
+\caption{(Color online). Plots of (a) the real (solid)
+and imaginary (dashed) parts of the bulk
+refractive index and (b) of the real (solid)
+and imaginary (dashed) parts of the intrinsic
+impedance of the slabs formed by a LC that is tuned to have a relative
+permittivity of 2,3 and 4.}
+
+\label{fig:figtwo}
+\end{figure}
+
+
+\end{document} 

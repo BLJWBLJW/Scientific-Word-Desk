@@ -1,0 +1,3042 @@
+
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mitpress}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, November 25, 2011 14:25:16}
+%TCIDATA{LastRevised=Wednesday, May 23, 2012 11:38:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\A Simple MIT Press Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=LaTeX Article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newdimen\dummy
+\dummy=\oddsidemargin
+\addtolength{\dummy}{72pt}
+\marginparwidth=.5\dummy
+\marginparsep=.1\dummy
+\input{tcilatex}
+\begin{document}
+
+\title{Mixed Particle Operator Idempotency}
+\author{Brian Weiner \\
+%EndAName
+PSU}
+\maketitle
+
+\begin{abstract}
+Replace this text with the text of your own abstract.
+\end{abstract}
+
+\section{Mixed Particle Operator Idempotency}
+
+The following relationship will be important 
+\begin{align*}
+& \Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) =\hat{\lambda}_{1}\wedge P_{%
+\mathcal{H}^{1}}=\sum_{\substack{ 1\leq j_{1}\leq 4  \\ 1\leq j_{2}\leq 4}}%
+\lambda _{1j_{1}j_{1}}\left\vert \varphi _{j_{1}}\right\rangle \left\langle
+\varphi _{j_{1}}\right\vert \wedge \left\vert \varphi _{j_{2}}\right\rangle
+\left\langle \varphi _{j_{2}}\right\vert \\
+& =\frac{1}{2}\sum_{1\leq j_{1}<j_{2}\leq 4}\left( \lambda
+_{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}\right) \left\vert \varphi
+_{j_{1}}\varphi _{j_{2}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\right\vert
+\end{align*}
+
+The idempotency condition for a mixed one and two particle operator leads to
+the evaluation of 
+\begin{eqnarray*}
+&&\Gamma \left( \hat{\lambda}_{1}+\hat{\lambda}_{2}\right) ^{2}-\Gamma
+\left( \hat{\lambda}_{1}+\hat{\lambda}_{2}\right) =\left( \sum_{1\leq N\leq
+r}\Gamma _{N}\left( \hat{\lambda}_{1}+\hat{\lambda}_{2}\right) \right)
+^{2}-\Gamma \left( \hat{\lambda}_{1}+\hat{\lambda}_{2}\right) \\
+&=&\left( \sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \hat{\lambda}%
+_{1}\right) +\sum_{2\leq N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \hat{%
+\lambda}_{2}\right) \right) ^{2}-\left( \sum_{1\leq N\leq r}N\Gamma
+_{1}^{N}\left( \hat{\lambda}_{1}\right) +\sum_{2\leq N\leq r}\binom{N}{2}%
+\Gamma _{2}^{N}\left( \hat{\lambda}_{2}\right) \right) \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \hat{\lambda}_{1}\right)
+\left( N\Gamma _{1}^{N}\left( \hat{\lambda}_{1}\right) -P_{\mathcal{H}%
+^{N}}\right) +\sum_{2\leq N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \hat{%
+\lambda}_{2}\right) \left( \binom{N}{2}\Gamma _{2}^{N}\left( \hat{\lambda}%
+_{2}\right) -P_{\mathcal{H}^{N}}\right) \\
+&&+\sum_{1\leq N\leq r}N\binom{N}{2}\left\{ \Gamma _{1}^{N}\left( \hat{%
+\lambda}_{1}\right) \Gamma _{2}^{N}\left( \hat{\lambda}_{2}\right) +\Gamma
+_{2}^{N}\left( \hat{\lambda}_{2}\right) \Gamma _{1}^{N}\left( \hat{\lambda}%
+_{1}\right) \right\}
+\end{eqnarray*}%
+\begin{gather*}
+\quad \parallel \\
+\Gamma _{2}^{2}\left( \hat{\lambda}_{2}\right) ^{2}+9\Gamma _{2}^{3}\left( 
+\hat{\lambda}_{2}\right) ^{2}+36\Gamma _{2}^{4}\left( \hat{\lambda}%
+_{2}\right) ^{2}+\cdots +\binom{r}{2}^{2}\Gamma _{2}^{r}\left( \hat{\lambda}%
+_{2}\right) ^{2} \\
+-\left( \Gamma _{2}^{2}\left( \hat{\lambda}_{2}\right) +3\Gamma
+_{2}^{3}\left( \hat{\lambda}_{2}\right) +6\Gamma _{2}^{4}\left( \hat{\lambda}%
+_{2}\right) +\cdots +\binom{r}{2}\Gamma _{2}^{r}\left( \hat{\lambda}%
+_{2}\right) \right) + \\
+\\
+2\left\{ \Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) \hat{\lambda}_{2}+%
+\hat{\lambda}_{2}\Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) \right\}
++9\left\{ \Gamma _{1}^{3}\left( \hat{\lambda}_{1}\right) \Gamma
+_{2}^{3}\left( \hat{\lambda}_{2}\right) +\Gamma _{2}^{3}\left( \hat{\lambda}%
+_{2}\right) \Gamma _{1}^{3}\left( \hat{\lambda}_{1}\right) \right\} \\
++\cdots +r\binom{r}{2}\left\{ \Gamma _{1}^{r}\left( \hat{\lambda}_{1}\right)
+\Gamma _{2}^{r}\left( \hat{\lambda}_{2}\right) +\Gamma _{2}^{r}\left( \hat{%
+\lambda}_{2}\right) \Gamma _{1}^{r}\left( \hat{\lambda}_{1}\right) \right\} +
+\\
+\parallel \\
+\Gamma _{1}^{1}\left( \hat{\lambda}_{1}\right) ^{2}+4\Gamma _{1}^{2}\left( 
+\hat{\lambda}_{1}\right) ^{2}+9\Gamma _{1}^{3}\left( \hat{\lambda}%
+_{1}\right) ^{2}+\cdots +\binom{r}{1}^{2}\Gamma _{1}^{r}\left( \hat{\lambda}%
+_{1}\right) ^{2} \\
+-\left( \Gamma _{1}^{1}\left( \hat{\lambda}_{1}\right) +2\Gamma
+_{1}^{2}\left( \hat{\lambda}_{1}\right) +3\Gamma _{1}^{3}\left( \hat{\lambda}%
+_{1}\right) +\cdots +\binom{r}{1}\Gamma _{1}^{r}\left( \hat{\lambda}%
+_{1}\right) \right)
+\end{gather*}%
+\begin{gather*}
+\parallel \\
+\Gamma _{1}^{1}\left( \hat{\lambda}_{1}\right) ^{2}-\Gamma _{1}^{1}\left( 
+\hat{\lambda}_{1}\right) \\
++4\Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) ^{2}-2\Gamma _{1}^{2}\left( 
+\hat{\lambda}_{1}\right) +\Gamma _{2}^{2}\left( \hat{\lambda}_{2}\right)
+^{2}-\Gamma _{2}^{2}\left( \hat{\lambda}_{2}\right) +2\left\{ \Gamma
+_{1}^{2}\left( \hat{\lambda}_{1}\right) \hat{\lambda}_{2}+\hat{\lambda}%
+_{2}\Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) \right\} \\
++9\Gamma _{1}^{3}\left( \hat{\lambda}_{1}\right) ^{2}-3\Gamma _{1}^{3}\left( 
+\hat{\lambda}_{1}\right) +9\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right)
+^{2}-3\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) +9\left\{ \Gamma
+_{1}^{3}\left( \hat{\lambda}_{1}\right) \Gamma _{2}^{3}\left( \hat{\lambda}%
+_{2}\right) +\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) \Gamma
+_{1}^{3}\left( \hat{\lambda}_{1}\right) \right\} \\
++16\Gamma _{1}^{4}\left( \hat{\lambda}_{1}\right) ^{2}-4\Gamma
+_{1}^{4}\left( \hat{\lambda}_{1}\right) +36\Gamma _{2}^{4}\left( \hat{\lambda%
+}_{2}\right) ^{2}-6\Gamma _{2}^{4}\left( \hat{\lambda}_{2}\right) +24\left\{
+\Gamma _{1}^{4}\left( \hat{\lambda}_{1}\right) \Gamma _{2}^{4}\left( \hat{%
+\lambda}_{2}\right) +\Gamma _{2}^{4}\left( \hat{\lambda}_{2}\right) \Gamma
+_{1}^{4}\left( \hat{\lambda}_{1}\right) \right\} + \\
++ \\
+\vdots \\
++ \\
+\binom{r}{1}^{2}\Gamma _{1}^{r}\left( \hat{\lambda}_{1}\right) ^{2}-\binom{r%
+}{1}\Gamma _{1}^{r}\left( \hat{\lambda}_{1}\right) +\binom{r}{2}^{2}\Gamma
+_{2}^{r}\left( \hat{\lambda}_{2}\right) ^{2}-\binom{r}{2}\Gamma
+_{2}^{r}\left( \hat{\lambda}_{2}\right) +r\binom{r}{2}\left\{ \Gamma
+_{1}^{r}\left( \hat{\lambda}_{1}\right) \Gamma _{2}^{r}\left( \hat{\lambda}%
+_{2}\right) +\Gamma _{2}^{r}\left( \hat{\lambda}_{2}\right) \Gamma
+_{1}^{r}\left( \hat{\lambda}_{1}\right) \right\}
+\end{gather*}
+
+\subsubsection{Examples}
+
+\paragraph{Example 1}
+
+\begin{eqnarray*}
+&&a_{1}^{\dagger }a_{1}+a_{2}^{\dagger }a_{2}-a_{1}^{\dagger }a_{2}^{\dagger
+}a_{2}a_{1}=\Gamma \left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert +\left\vert \varphi _{2}\right\rangle \left\langle
+\varphi _{2}\right\vert -\left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{0\leq N\leq r}\Gamma _{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert -\left\vert \varphi
+_{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) \\
+&=&\sum_{1\leq N\leq r}\Gamma _{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) -\sum_{2\leq
+N\leq r}\Gamma _{N}\left( \left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+is a projector. \ The FQ parts are given by 
+\begin{eqnarray*}
+&&\Gamma _{1}^{N}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert +\left\vert \varphi _{2}\right\rangle \left\langle
+\varphi _{2}\right\vert \right) \\
+&=&\frac{1}{\left( N-1\right) !}\sum_{1\leq j_{2},\cdots ,j_{N}\leq r}\left(
+\left\vert \varphi _{1}\right\rangle \left\langle \varphi _{1}\right\vert
++\left\vert \varphi _{2}\right\rangle \left\langle \varphi _{2}\right\vert
+\right) \wedge \left\vert \varphi _{j_{2}}\cdots \varphi
+_{j_{N}}\right\rangle \left\langle \varphi _{j_{2}}\cdots \varphi
+_{j_{N}}\right\vert \\
+&=&\sum_{1\leq j_{2},\cdots ,j_{N}\leq r}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) \wedge
+\left\vert \varphi _{j_{2}}\wedge \cdots \wedge \varphi
+_{j_{N}}\right\rangle \left\langle \varphi _{j_{2}}\wedge \cdots \wedge
+\varphi _{j_{N}}\right\vert \\
+&=&\sum_{1\leq j_{2},\cdots ,j_{N}\leq r}\left\{ \left\vert \varphi
+_{1}\wedge \varphi _{j_{2}}\wedge \cdots \wedge \varphi
+_{j_{N}}\right\rangle \left\langle \varphi _{1}\wedge \varphi _{j_{2}}\wedge
+\cdots \wedge \varphi _{j_{N}}\right\vert \right. \\
+&&\left. +\left\vert \varphi _{2}\wedge \varphi _{j_{2}}\wedge \cdots \wedge
+\varphi _{j_{N}}\right\rangle \left\langle \varphi _{2}\wedge \varphi
+_{j_{2}}\wedge \cdots \wedge \varphi _{j_{N}}\right\vert \right\} \\
+&=&\frac{\left( N-1\right) !}{N!}\sum_{1\leq j_{2}<\cdots <j_{N}\leq
+r}\left\{ \left\vert \varphi _{1}\varphi _{j_{2}}\cdots \varphi
+_{j_{N}}\right\rangle \left\langle \varphi _{1}\varphi _{j_{2}}\cdots
+\varphi _{j_{N}}\right\vert +\left\vert \varphi _{2}\varphi _{j_{2}}\cdots
+\varphi _{j_{N}}\right\rangle \left\langle \varphi _{2}\varphi
+_{j_{2}}\cdots \varphi _{j_{N}}\right\vert \right\} \\
+&=&\frac{1}{N}\sum_{1\leq j_{2}<\cdots <j_{N}\leq r}\left\{ \left\vert
+\varphi _{1}\varphi _{j_{2}}\cdots \varphi _{j_{N}}\right\rangle
+\left\langle \varphi _{1}\varphi _{j_{2}}\cdots \varphi _{j_{N}}\right\vert
++\left\vert \varphi _{2}\varphi _{j_{2}}\cdots \varphi _{j_{N}}\right\rangle
+\left\langle \varphi _{2}\varphi _{j_{2}}\cdots \varphi _{j_{N}}\right\vert
+\right\} .
+\end{eqnarray*}
+
+The relationship%
+\begin{equation*}
+\left( \Gamma _{N}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert +\left\vert \varphi _{2}\right\rangle \left\langle
+\varphi _{2}\right\vert -\left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) \right) ^{2}=\Gamma
+_{N}\left( \left\vert \varphi _{1}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi _{2}\right\rangle \left\langle \varphi
+_{2}\right\vert -\left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{equation*}%
+gives 
+\begin{eqnarray*}
+&&\left( \sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\right) ^{2} \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+leading to 
+\begin{eqnarray*}
+&&\left( \sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) \right)
+^{2}+\left( \sum_{2\leq N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) \right) ^{2} \\
+&&-2\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) \sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+and 
+\begin{eqnarray*}
+&&\sum_{1\leq N\leq r}\left( N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) \right)
+^{2}+\sum_{2\leq N\leq r}\left( \binom{N}{2}\Gamma _{2}^{N}\left( \left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) \right) ^{2} \\
+&&-2\sum_{2\leq N\leq r}N\binom{N}{2}\Gamma _{1}^{N}\left( \left\vert
+\varphi _{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert
+\varphi _{2}\right\rangle \left\langle \varphi _{2}\right\vert \right)
+\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+Thus for $N=1$ 
+\begin{equation*}
+\left( \left\vert \varphi _{1}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi _{2}\right\rangle \left\langle \varphi
+_{2}\right\vert \right) ^{2}=\left\vert \varphi _{1}\right\rangle
+\left\langle \varphi _{1}\right\vert +\left\vert \varphi _{2}\right\rangle
+\left\langle \varphi _{2}\right\vert
+\end{equation*}%
+and for $N=2$%
+\begin{equation*}
+\Gamma _{1}^{2}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert +\left\vert \varphi _{2}\right\rangle \left\langle
+\varphi _{2}\right\vert \right) =\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert
+\end{equation*}%
+\begin{eqnarray*}
+&\left( 2\Gamma _{1}^{2}\left( \left\vert \varphi _{1}\right\rangle
+\left\langle \varphi _{1}\right\vert +\left\vert \varphi _{2}\right\rangle
+\left\langle \varphi _{2}\right\vert \right) \right) ^{2}+\left( \left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) ^{2}&-4\Gamma _{1}^{2}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) \left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \\
+&&\left. =2\right. \Gamma _{1}^{2}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert +\left\vert \varphi
+_{2}\right\rangle \left\langle \varphi _{2}\right\vert \right) -\left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert
+\end{eqnarray*}%
+which gives%
+\begin{eqnarray*}
+&&4\left( \left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle
+\varphi _{1}\varphi _{2}\right\vert \right) ^{2}+\left( \left\vert \varphi
+_{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) ^{2}-4\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert
+\left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\right\vert \\
+&&\left. =2\right. \left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert -\left\vert \varphi
+_{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert
+\end{eqnarray*}%
+which balances.
+
+\paragraph{Example 2}
+
+Another projector is 
+\begin{eqnarray*}
+&&a_{1}^{\dagger }a_{1}-a_{1}^{\dagger }a_{2}^{\dagger }a_{2}a_{1}=\Gamma
+\left( \left\vert \varphi _{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{0\leq N\leq r}\Gamma _{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert -\left\vert \varphi
+_{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) =\sum_{1\leq N\leq r}\Gamma _{N}\left( \left\vert
+\varphi _{1}\right\rangle \left\langle \varphi _{1}\right\vert \right)
+-\sum_{2\leq N\leq r}\Gamma _{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+Its FQ parts are given by 
+\begin{eqnarray*}
+&&\Gamma _{1}^{N}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert \right) =\frac{1}{\left( N-1\right) !}\sum_{1\leq
+j_{2},\cdots ,j_{N}\leq r}\left( \left\vert \varphi _{1}\right\rangle
+\left\langle \varphi _{1}\right\vert \right) \wedge \left\vert \varphi
+_{j_{2}}\cdots \varphi _{j_{N}}\right\rangle \left\langle \varphi
+_{j_{2}}\cdots \varphi _{j_{N}}\right\vert \\
+&=&\sum_{1\leq j_{2},\cdots ,j_{N}\leq r}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) \wedge
+\left\vert \varphi _{j_{2}}\wedge \cdots \wedge \varphi
+_{j_{N}}\right\rangle \left\langle \varphi _{j_{2}}\wedge \cdots \wedge
+\varphi _{j_{N}}\right\vert \\
+&=&\sum_{1\leq j_{2},\cdots ,j_{N}\leq r}\left\vert \varphi _{1}\wedge
+\varphi _{j_{2}}\wedge \cdots \wedge \varphi _{j_{N}}\right\rangle
+\left\langle \varphi _{1}\wedge \varphi _{j_{2}}\wedge \cdots \wedge \varphi
+_{j_{N}}\right\vert \\
+&=&\frac{\left( N-1\right) !}{N!}\sum_{1\leq j_{2}<\cdots <j_{N}\leq
+r}\left\vert \varphi _{1}\varphi _{j_{2}}\cdots \varphi
+_{j_{N}}\right\rangle \left\langle \varphi _{1}\varphi _{j_{2}}\cdots
+\varphi _{j_{N}}\right\vert \\
+&=&\frac{1}{N}\sum_{1\leq j_{2}<\cdots <j_{N}\leq r}\left\vert \varphi
+_{1}\varphi _{j_{2}}\cdots \varphi _{j_{N}}\right\rangle \left\langle
+\varphi _{1}\varphi _{j_{2}}\cdots \varphi _{j_{N}}\right\vert .
+\end{eqnarray*}%
+The idempotency condition is 
+\begin{equation*}
+\left( \Gamma _{N}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert -\left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) \right) ^{2}=\Gamma
+_{N}\left( \left\vert \varphi _{1}\right\rangle \left\langle \varphi
+_{1}\right\vert -\left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) ,
+\end{equation*}%
+which gives 
+\begin{eqnarray*}
+&&\left( \sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\right) ^{2} \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+leading to 
+\begin{eqnarray*}
+&&\left( \sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) \right)
+^{2}+\left( \sum_{2\leq N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) \right) ^{2} \\
+&&-2\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) \sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+and 
+\begin{eqnarray*}
+&&\sum_{1\leq N\leq r}\left( N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) \right)
+^{2}+\sum_{2\leq N\leq r}\left( \binom{N}{2}\Gamma _{2}^{N}\left( \left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) \right) ^{2} \\
+&&-2\sum_{2\leq N\leq r}N\binom{N}{2}\Gamma _{1}^{N}\left( \left\vert
+\varphi _{1}\right\rangle \left\langle \varphi _{1}\right\vert \right)
+\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \right) \\
+&=&\sum_{1\leq N\leq r}N\Gamma _{1}^{N}\left( \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi _{1}\right\vert \right) -\sum_{2\leq
+N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \right)
+\end{eqnarray*}%
+Thus for $N=1$ 
+\begin{equation*}
+\left( \left\vert \varphi _{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \right) ^{2}=\left\vert \varphi _{1}\right\rangle
+\left\langle \varphi _{1}\right\vert
+\end{equation*}%
+and for $N=2$%
+\begin{equation*}
+\Gamma _{1}^{2}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert \right) =\frac{1}{2}\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert
+\end{equation*}%
+\begin{eqnarray*}
+&&\left( 2\Gamma _{1}^{2}\left( \left\vert \varphi _{1}\right\rangle
+\left\langle \varphi _{1}\right\vert \right) \right) ^{2}+\left( \left\vert
+\varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\right\vert \right) ^{2} \\
+&&-4\Gamma _{1}^{2}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert \right) \left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \\
+&=&2\Gamma _{1}^{2}\left( \left\vert \varphi _{1}\right\rangle \left\langle
+\varphi _{1}\right\vert \right) -\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert
+\end{eqnarray*}%
+which gives%
+\begin{eqnarray*}
+&&\left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\right\vert +\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \\
+&&-2\left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\right\vert \left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert \\
+&=&\left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\right\vert -\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert
+\end{eqnarray*}%
+which balances.
+
+\subsection{The one particle condition}
+
+is 
+\begin{equation*}
+\Gamma _{1}^{1}\left( \hat{\lambda}_{1}\right) ^{2}-\Gamma _{1}^{1}\left( 
+\hat{\lambda}_{1}\right) =0.
+\end{equation*}%
+The one particle expansion gives 
+\begin{equation*}
+\hat{\lambda}_{1}^{2}-\hat{\lambda}_{1}=0,
+\end{equation*}%
+which shows that $\hat{\lambda}_{1}$ is a projector, i.e. 
+\begin{equation*}
+\hat{\lambda}_{1}=P_{\nu },
+\end{equation*}%
+where $\nu $ is the dimension of the projector, thus 
+\begin{equation*}
+\lambda _{1j_{1}j_{1}}=1\text{ or }0.
+\end{equation*}
+
+\subsection{The two particle condition}
+
+is 
+\begin{eqnarray*}
+0 &=&\hat{\lambda}_{2}^{2}+2\left\{ \Gamma _{1}^{2}\left( \hat{\lambda}%
+_{1}\right) \hat{\lambda}_{2}+\hat{\lambda}_{2}\Gamma _{1}^{2}\left( \hat{%
+\lambda}_{1}\right) \right\} +4\Gamma _{1}^{2}\left( \hat{\lambda}%
+_{1}\right) ^{2}-2\Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) -\hat{%
+\lambda}_{2} \\
+&=&\hat{\lambda}_{2}\left( \hat{\lambda}_{2}-P_{\mathcal{H}^{2}}\right)
++2\Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) \left( \hat{\lambda}_{2}-P_{%
+\mathcal{H}^{2}}\right) +2\left( \hat{\lambda}_{2}-P_{\mathcal{H}%
+^{2}}\right) \Gamma _{1}^{2}\left( \hat{\lambda}_{1}\right) +2\Gamma
+_{1}^{2}\left( \hat{\lambda}_{1}\right) \left( 2\Gamma _{1}^{2}\left( \hat{%
+\lambda}_{1}\right) +P_{\mathcal{H}^{2}}\right)
+\end{eqnarray*}%
+The expansion of the projector 
+\begin{equation*}
+\hat{\lambda}_{1}=P_{\mathcal{\nu }}
+\end{equation*}%
+gives in the 1$\rightarrow 2$ case 
+\begin{align*}
+& \Gamma _{1}^{2}\left( P_{\mathcal{\nu }}\right) =P_{\mathcal{\nu }}\wedge
+P_{\mathcal{H}^{1}}=\sum_{\substack{ 1\leq j_{1}\leq \nu  \\ 1\leq j_{2}\leq
+r}}\left\vert \varphi _{j_{1}}\right\rangle \left\langle \varphi
+_{j_{1}}\right\vert \wedge \left\vert \varphi _{j_{2}}\right\rangle
+\left\langle \varphi _{j_{2}}\right\vert \\
+& =\frac{1}{2}\sum_{1\leq j_{1}<j_{2}\leq r}\left( \lambda
+_{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}\right) \left\vert \varphi
+_{j_{1}}\varphi _{j_{2}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\right\vert .
+\end{align*}%
+$\lceil $Let $\nu =3$ then 
+\begin{eqnarray*}
+\Gamma _{1}^{2}\left( P_{3}\right) &=&\frac{1}{2}\left( 2\left\vert
+12\right\rangle \left\langle 12\right\vert +2\left\vert 13\right\rangle
+\left\langle 13\right\vert +\left\vert 14\right\rangle \left\langle
+14\right\vert +2\left\vert 23\right\rangle \left\langle 23\right\vert
++\left\vert 24\right\rangle \left\langle 24\right\vert \right) \\
+&=&\left\vert 12\right\rangle \left\langle 12\right\vert +\left\vert
+13\right\rangle \left\langle 13\right\vert +\left\vert 23\right\rangle
+\left\langle 23\right\vert +\frac{1}{2}\left( \left\vert 14\right\rangle
+\left\langle 14\right\vert +\left\vert 24\right\rangle \left\langle
+24\right\vert \right) ,
+\end{eqnarray*}%
+which shows that $\Gamma _{1}^{2}\left( P_{3}\right) $ is \emph{not} a
+projector.$\rfloor $
+
+Hence 
+\begin{eqnarray*}
+&&\hat{\lambda}_{2}\left( \hat{\lambda}_{2}-P_{\mathcal{H}^{2}}\right)
++2\Gamma _{1}^{2}\left( P_{\mathcal{\nu }}\right) \left( \hat{\lambda}%
+_{2}-P_{\mathcal{H}^{2}}\right) +2\left( \hat{\lambda}_{2}-P_{\mathcal{H}%
+^{2}}\right) \Gamma _{1}^{2}\left( P_{\mathcal{\nu }}\right) + \\
+&&\qquad \qquad \qquad 2\Gamma _{1}^{2}\left( P_{\mathcal{\nu }}\right)
+\left( 2\Gamma _{1}^{2}\left( P_{\mathcal{\nu }}\right) +P_{\mathcal{H}%
+^{2}}\right) =0
+\end{eqnarray*}
+
+\paragraph{Example}
+
+The two particle condition for decomposable diagonal operators gives 
+\begin{eqnarray*}
+&&\left\{ \left( \lambda _{2}^{2}\right) _{j_{1}j_{2}j_{1}j_{2}}-\lambda
+_{2j_{1}j_{2}j_{1}j_{2}}\right\} +2\left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}\right) \lambda _{2j_{1}j_{2}j_{1}j_{2}} \\
+&&\left. +\right. \left\{ \left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}\right) ^{2}-\left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}\right) \right\} =0,1\leq j_{1}<j_{2}\leq r,
+\end{eqnarray*}%
+which factorizes to give%
+\begin{eqnarray*}
+&=&\lambda _{2j_{1}j_{2}j_{1}j_{2}}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}-1\right) \left. +\right. 2\left( \lambda
+_{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}\right) \left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}\right) +\left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}\right) \left( \left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}\right) -1\right) \\
+&=&\lambda _{2j_{1}j_{2}j_{1}j_{2}}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}-1\right) \left. +\right. \left( \lambda
+_{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}\right) \left\{ 2\lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}-1\right\} \\
+&=&0;1\leq j_{1}<j_{2}\leq r.
+\end{eqnarray*}
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is zero dimensional i.e. $\hat{%
+\protect\lambda}_{1}=0$ then}
+
+\begin{equation*}
+\lambda _{1j_{1}j_{1}}=\lambda _{1j_{2}j_{2}}=0;\,1\leq j_{1}<j_{2}\leq r
+\end{equation*}%
+and we obtain for decomposable diagonal operators 
+\begin{equation*}
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}-1\right) =0\Leftrightarrow \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}=0\text{ or }1;1\leq j_{1}<j_{2}\leq r
+\end{equation*}%
+and thus $\hat{\lambda}_{2}$ is a projector.
+
+\paragraph{ If $P_{\mathcal{\protect\nu }}$ is one dimensional then}
+
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{1jj} &=&0;2\leq j\leq r,
+\end{eqnarray*}%
+we obtain for decomposable diagonal operators 
+\begin{eqnarray*}
+&&\lambda _{21j1j}\left( \lambda _{21j1j}+1\right) =0,\, \\
+&&\left. \Rightarrow \right. \lambda _{21j1j}=0\text{ or }-1;2\leq j\leq r,
+\end{eqnarray*}%
+while 
+\begin{eqnarray*}
+&&\lambda _{2jkjk}\left( \lambda _{2jkjk}-1\right) =0,\, \\
+&&\left. \Rightarrow \right. \lambda _{2jkjk}=0\text{ or }1;2\leq j<k\leq r
+\end{eqnarray*}
+
+$\lceil $The set of solutions for decomposable diagonal operators for $r=4$
+are 
+\begin{eqnarray*}
+&&\left\{ \lambda _{21212},\lambda _{21313},\lambda _{21414},\lambda
+_{22323},\lambda _{22424},\lambda _{23434}\right\} = \\
+&&\left\{ 
+\begin{array}{c}
+\left\{ 0,0,0,0,0,0\right\} ,\left\{ 0,0,0,1,0,0\right\} ,\left\{
+0,0,0,1,1,0\right\} ,\left\{ 0,0,0,1,1,1\right\} \\ 
+\left\{ -1,0,0,0,0,0\right\} ,\left\{ -1,0,0,1,0,0\right\} ,\left\{
+-1,0,0,1,1,0\right\} ,\left\{ -1,0,0,1,1,1\right\} \\ 
+\left\{ -1,-1,0,0,0,0\right\} ,\left\{ -1,-1,0,1,0,0\right\} ,\left\{
+-1,-1,0,1,1,0\right\} ,\left\{ -1,-1,0,1,1,1\right\} \\ 
+\left\{ -1,-1,-1,0,0,0\right\} ,\left\{ -1,-1,-1,1,0,0\right\} ,\left\{
+-1,-1,-1,1,1,0\right\} ,\left\{ -1,-1,-1,1,1,1\right\}%
+\end{array}%
+\right. \\
+&&\rfloor
+\end{eqnarray*}
+
+\subparagraph{Example showing that this condition is not sufficient}
+
+\begin{eqnarray*}
+\lambda &=&n_{1}-n_{1}n_{2}-n_{1}n_{3}=\,n_{1}\left( 1-n_{2}-n_{3}\right) \\
+\lambda ^{2} &=&n_{1}\left( 1-\left( n_{2}+n_{3}\right) \right)
+^{2}=n_{1}\left( 1-2n_{2}-2n_{3}+n_{2}+2n_{2}n_{3}+n_{3}\right) \\
+&=&n_{1}\left( 1-n_{2}-n_{3}+2n_{2}n_{3}\right)
+=n_{1}-n_{1}n_{2}-n_{1}n_{3}+2n_{1}n_{2}n_{3}\neq \lambda
+\end{eqnarray*}%
+even though the two particle idempotency conditions are satisfied. This is
+consistent as the restriction of $\lambda $ to $\mathcal{H}^{2}$ is
+idempotent i.e. 
+\begin{equation*}
+\left( \left. \lambda \right\vert _{\mathcal{H}^{2}}\right) ^{2}=\left(
+\left. \left( n_{1}-n_{1}n_{2}-n_{1}n_{3}\right) \right\vert _{\mathcal{H}%
+^{2}}\right) ^{2}=\left. \left( n_{1}-n_{1}n_{2}-n_{1}n_{3}\right)
+\right\vert _{\mathcal{H}^{2}}
+\end{equation*}%
+and 
+\begin{equation*}
+\left. \lambda ^{2}\right\vert _{\mathcal{H}^{2}}=\left( \left. \lambda
+\right\vert _{\mathcal{H}^{2}}\right) ^{2}
+\end{equation*}%
+as $\lambda $ is particle conserving. The higher order conditions rule out $%
+n_{1}-n_{1}n_{2}-n_{1}n_{3}$ being a projector.
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is two dimensional}
+
+(again for for decomposable diagonal operators)%
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{122} &=&1 \\
+\lambda _{1jj} &=&0;\,3\leq j\leq r
+\end{eqnarray*}%
+i.e. 
+\begin{equation}
+\lambda =a_{1}^{\dagger }a_{1}+a_{2}^{\dagger }a_{2}+\sum_{1\leq j<k\leq
+r}\lambda _{2bjkjk}a_{j}^{\dagger }a_{k}^{\dagger }a_{k}a_{j},
+\end{equation}%
+the condition 
+\begin{eqnarray}
+&&\left( \lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}\right) \left( \left(
+\lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}\right) -1\right)  \notag \\
+&&+2\left( \lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}\right) \left(
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}\right)  \notag \\
+&&+\lambda _{2j_{1}j_{2}j_{1}j_{2}}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}-1\right) =0  \notag \\
+&&1\leq j_{1}<j_{2}\leq r,
+\end{eqnarray}%
+gives that 
+\begin{eqnarray}
+0 &=&\lambda _{21212}^{2}+3\lambda _{21212}+2  \notag \\
+&=&\left( \lambda _{21212}+1\right) \left( \lambda _{21212}+2\right)  \notag
+\\
+&\Rightarrow &\lambda _{21212}=-1\text{ or }-2,
+\end{eqnarray}%
+while (in the case $r=4$)
+
+\begin{equation*}
+\lambda _{21414},\lambda _{22424},\lambda _{21313},\lambda _{22323}=0\text{
+or }-1
+\end{equation*}%
+and 
+\begin{equation*}
+\lambda _{23434}=0\text{ or }1.
+\end{equation*}%
+Thus the set of solutions (in the case $r=4$) are 
+\begin{eqnarray*}
+&&\left\{ \lambda _{21212},\lambda _{21313},\lambda _{21414},\lambda
+_{22323},\lambda _{22424},\lambda _{23434}\right\} = \\
+&&\left\{ 
+\begin{array}{c}
+\begin{array}{c}
+\left\{ -1,-1,0,0,0,0\right\} ,\left\{ -1,-1,0,0,0,1\right\} ,\left\{
+-1,-1,-1,0,0,0\right\} ,\left\{ -1,-1,-1,0,0,1\right\} \\ 
+\left\{ -1,-1,-1,-1,0,0\right\} ,\left\{ -1,-1,-1,-1,0,1\right\} ,\left\{
+-1,-1,-1,-1,-1,0\right\} , \\ 
+\left\{ -1,-1,-1,-1,-1,1\right\} ,\left\{ -2,0,0,0,0,0\right\}%
+\end{array}
+\\ 
+\begin{array}{c}
+\left\{ -2,-1,0,0,0,0\right\} ,\left\{ -2,-1,0,0,0,1\right\} ,\left\{
+-2,-1,-1,0,0,0\right\} ,\left\{ -2,-1,-1,0,0,1\right\} \\ 
+\left\{ -2,-1,-1,-1,0,0\right\} ,\left\{ -2,-1,-1,-1,0,1\right\} ,\left\{
+-2,-1,-1,-1,-1,0\right\} , \\ 
+\left\{ -2,-1,-1,-1,-1,1\right\}%
+\end{array}
+\\ 
+\begin{array}{c}
+\left\{ -2,-2,0,0,0,0\right\} ,\left\{ -2,-2,0,0,0,1\right\} ,\left\{
+-2,-2,-1,0,0,0\right\} ,\left\{ -2,-2,-1,0,0,1\right\} \\ 
+\left\{ -2,-2,-1,-1,0,0\right\} ,\left\{ -2,-2,-1,-1,0,1\right\} ,\left\{
+-2,-2,-1,-1,-1,0\right\} , \\ 
+\left\{ -2,-2,-1,-1,-1,1\right\}%
+\end{array}%
+\end{array}%
+\right.
+\end{eqnarray*}
+
+\subparagraph{Example}
+
+\begin{equation*}
+\lambda =a_{1}^{\dagger }a_{1}+a_{2}^{\dagger }a_{2}-2a_{1}^{\dagger
+}a_{2}^{\dagger }a_{2}a_{1}=n_{1}+n_{2}-2n_{1}n_{2}
+\end{equation*}%
+\begin{eqnarray*}
+\lambda ^{2} &=&\left( n_{1}+n_{2}-2n_{1}n_{2}\right) ^{2}=\left(
+n_{1}+n_{2}\right) ^{2}-4\left( n_{1}+n_{2}\right) n_{1}n_{2}+\left(
+2n_{1}n_{2}\right) ^{2} \\
+&=&n_{1}+n_{2}+2n_{1}n_{2}-8n_{1}n_{2}+4n_{1}n_{2}=n_{1}+n_{2}-2n_{1}n_{2}=%
+\lambda .
+\end{eqnarray*}
+
+\paragraph{ If $P_{\mathcal{\protect\nu }}$ is three dimensional}
+
+(again for decomposable diagonal operators)%
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{122} &=&1 \\
+\lambda _{133} &=&1 \\
+\lambda _{144} &=&0
+\end{eqnarray*}%
+we obtain 
+\begin{eqnarray*}
+0 &=&\lambda _{21212}^{2}+3\lambda _{21212}+2 \\
+&=&\left( \lambda _{21212}+1\right) \left( \lambda _{21212}+2\right) \\
+&\Rightarrow &\lambda _{21212}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21313}+1\right) \left( \lambda _{21313}+2\right) \\
+&\Rightarrow &\lambda _{21313}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{22323}+1\right) \left( \lambda _{22323}+2\right) \\
+&\Rightarrow &\lambda _{22323}=-1\text{ or }-2,
+\end{eqnarray*}%
+while
+
+\begin{equation*}
+\lambda _{21414},\lambda _{22424},\lambda _{23434}=0\text{ or }-1.
+\end{equation*}%
+The set of solutions is ........
+
+\subparagraph{Example showing conditions are not sufficient}
+
+\begin{eqnarray*}
+\lambda &=&a_{1}^{\dagger }a_{1}+a_{2}^{\dagger }a_{2}+a_{3}^{\dagger
+}a_{3}-a_{1}^{\dagger }a_{2}^{\dagger }a_{2}a_{1}-2a_{1}^{\dagger
+}a_{3}^{\dagger }a_{3}a_{1}-2a_{2}^{\dagger }a_{3}^{\dagger }a_{3}a_{2} \\
+&=&n_{1}+n_{2}+n_{3}-n_{1}n_{2}-2n_{1}n_{3}-2n_{2}n_{3}
+\end{eqnarray*}%
+then%
+\begin{eqnarray*}
+\lambda ^{2} &=&\left(
+n_{1}+n_{2}+n_{3}-n_{1}n_{2}-2n_{1}n_{3}-2n_{2}n_{3}\right) ^{2} \\
+&=&\left\{ \left( n_{1}+n_{2}+n_{3}\right) -\left(
+n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}\right) \right\} ^{2} \\
+&\neq &\lambda .
+\end{eqnarray*}
+
+$\lceil $ As%
+\begin{eqnarray}
+\left( n_{1}+n_{2}+n_{3}\right) ^{2} &=&\left( n_{1}+n_{2}+n_{3}\right)
+\left( n_{1}+n_{2}+n_{3}\right)  \notag \\
+&=&n_{1}+n_{2}+n_{3}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}
+\end{eqnarray}
+
+\begin{eqnarray}
+&&2\left( n_{1}+n_{2}+n_{3}\right) \left(
+n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}\right)  \notag \\
+&=&2n_{1}n_{2}+4n_{1}n_{3}+4n_{1}n_{2}n_{3}+2n_{1}n_{2}+4n_{2}n_{3}+2n_{1}n_{2}n_{3}+4n_{2}n_{3}+4n_{1}n_{3}+2n_{1}n_{2}n_{3}
+\notag \\
+&=&4n_{1}n_{2}+8n_{1}n_{3}+8n_{1}n_{2}n_{3}+8n_{2}n_{3}
+\end{eqnarray}%
+\begin{eqnarray}
+&&\left( n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}\right) ^{2}=\left(
+n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}\right) \left(
+n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}\right)  \notag \\
+&=&n_{1}n_{2}+2n_{1}n_{2}n_{3}+2n_{1}n_{2}n_{3}+2n_{1}n_{2}n_{3}+4n_{1}n_{3}+4n_{1}n_{2}n_{3}+2n_{1}n_{2}n_{3}+4n_{1}n_{2}n_{3}+4n_{2}n_{3}
+\notag \\
+&=&n_{1}n_{2}+4n_{1}n_{3}+4n_{2}n_{3}+16n_{1}n_{2}n_{3}
+\end{eqnarray}%
+$\rfloor $
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is four dimensional}
+
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{122} &=&1 \\
+\lambda _{133} &=&1 \\
+\lambda _{144} &=&1
+\end{eqnarray*}%
+we obtain 
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21212}+1\right) \left( \lambda _{21212}+2\right) \\
+&\Rightarrow &\lambda _{21212}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21313}+1\right) \left( \lambda _{21313}+2\right) \\
+&\Rightarrow &\lambda _{21313}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21414}+1\right) \left( \lambda _{21414}+2\right) \\
+&\Rightarrow &\lambda _{21414}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{22323}+1\right) \left( \lambda _{22323}+2\right) \\
+&\Rightarrow &\lambda _{22323}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{22424}+1\right) \left( \lambda _{22424}+2\right) \\
+&\Rightarrow &\lambda _{22424}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{23434}+1\right) \left( \lambda _{23434}+2\right) \\
+&\Rightarrow &\lambda _{23434}=-1\text{ or }-2.
+\end{eqnarray*}
+
+\subparagraph{Example}
+
+\begin{eqnarray*}
+\lambda &=&a_{1}^{\dagger }a_{1}+a_{2}^{\dagger }a_{2}+a_{3}^{\dagger
+}a_{3}+a_{4}^{\dagger }a_{4}-a_{1}^{\dagger }a_{2}^{\dagger
+}a_{2}a_{1}-2a_{1}^{\dagger }a_{3}^{\dagger }a_{3}a_{1}-2a_{2}^{\dagger
+}a_{3}^{\dagger }a_{3}a_{2} \\
+&=&n_{1}+n_{2}+n_{3}+n_{4}-n_{1}n_{2}-2n_{1}n_{3}-2n_{2}n_{3}
+\end{eqnarray*}%
+\begin{eqnarray*}
+\lambda ^{2} &=&\left(
+n_{1}+n_{2}+n_{3}+n_{4}-n_{1}n_{2}-2n_{1}n_{3}-2n_{2}n_{3}\right) ^{2} \\
+&=&\left( \left( n_{1}+n_{2}+n_{3}+n_{4}\right) ^{2}-2\left(
+n_{1}+n_{2}+n_{3}+n_{4}\right) \left(
+n_{1}n_{2}-2n_{1}n_{3}-2n_{2}n_{3}\right) \right. ^{2} \\
+&&\left. +\left( n_{1}n_{2}-2n_{1}n_{3}-2n_{2}n_{3}\right) ^{2}\right)
+\end{eqnarray*}%
+The set of solutions is .........
+
+\subsection{The three particle condition}
+
+expansion gives 
+\begin{equation*}
+9\Gamma _{1}^{3}\left( \hat{\lambda}_{1}\right) ^{2}-3\Gamma _{1}^{3}\left( 
+\hat{\lambda}_{1}\right) +9\left\{ \Gamma _{1}^{3}\left( \hat{\lambda}%
+_{1}\right) \Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) +\Gamma
+_{2}^{3}\left( \hat{\lambda}_{2}\right) \Gamma _{1}^{3}\left( \hat{\lambda}%
+_{1}\right) \right\} +9\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right)
+^{2}-3\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) =0.
+\end{equation*}
+
+\subsubsection{Decomposable diagonal operators}
+
+The three particle condition gives 
+\begin{eqnarray*}
+&=&\left( \lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}+\lambda
+_{1}{}_{j_{3}j_{3}}\right) ^{2}-\left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}+\lambda _{1}{}_{j_{3}j_{3}}\right) \\
+&&+2\left( \lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}+\lambda
+_{1}{}_{j_{3}j_{3}}\right) \left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) \\
+&&+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) ^{2}-\left(
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+&=&\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) \left(
+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) -1\right) \\
+&&+2\left( \lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}+\lambda
+_{1}{}_{j_{3}j_{3}}\right) \left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) \\
+&&\left. +\right. \left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}+\lambda _{1}{}_{j_{3}j_{3}}\right) \left( \left( \lambda
+_{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}+\lambda _{1}{}_{j_{3}j_{3}}\right)
+-1\right) =0
+\end{eqnarray*}
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is zero dimensional i.e. $\hat{%
+\protect\lambda}_{1}=0$ then}
+
+\begin{equation*}
+\lambda _{1j_{1}j_{1}}=\lambda _{1j_{2}j_{2}}=\lambda
+_{1j_{3}j_{3}}=0;\,1\leq j_{1}<j_{2}<j_{3}\leq 4
+\end{equation*}%
+and we obtain 
+\begin{eqnarray*}
+&&\left( \lambda _{21j_{2}1j_{2}}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) \left( \left( \lambda
+_{21j_{2}1j_{2}}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) -1\right) =0 \\
+&&\left. \Rightarrow \right. \lambda _{21j_{2}1j_{2}}+\lambda
+_{21j_{3}1j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}=0\text{ or }1;1\leq
+j_{1}<j_{2}\leq 4.
+\end{eqnarray*}%
+Noting from the preceeding that in this case 
+\begin{equation*}
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}=0\text{ or }1;1\leq j_{1}<j_{2}\leq 4
+\end{equation*}%
+one can conclude that $\hat{\lambda}_{2}$ is a one dimensional projector.
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is one dimensional i.e.}
+
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{1jj} &=&0;2\leq j\leq 4,
+\end{eqnarray*}%
+one obtains%
+\begin{eqnarray*}
+&&\left( \lambda _{21j_{2}1j_{2}}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) \left( \left( \lambda
+_{21j_{2}1j_{2}}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) +1\right) =0 \\
+&&\left. \Rightarrow \right. \lambda _{21j_{2}1j_{2}}+\lambda
+_{21j_{3}1j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}=0\text{ or }-1;\,2\leq
+j_{2}<j_{3}\leq 4
+\end{eqnarray*}%
+and by taking into account the two particle conditions for a one dimensional 
+$P_{\mathcal{\nu }}$ that are 
+\begin{eqnarray*}
+\,\lambda _{21j1j} &=&0\text{ or }-1;2\leq j\leq 4, \\
+\lambda _{2jkjk} &=&0\text{ or }1;2\leq j<k\leq 4.
+\end{eqnarray*}%
+the only possibilities are 
+\begin{equation*}
+\left\{ \left\{ \lambda _{21j_{2}1j_{2}},\lambda _{21j_{3}1j_{3}},\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right\} \right\} =\left\{ \left\{ 0,0,0\right\}
+,\left\{ -1,0,1\right\} ,\left\{ 0,-1,1\right\} ,\left\{ -1,0,0\right\}
+,\left\{ 0,-1,0\right\} \right\}
+\end{equation*}
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is two dimensional}
+
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{122} &=&1 \\
+\lambda _{1jj} &=&0;\,3\leq j\leq 4
+\end{eqnarray*}%
+we obtain from 
+\begin{eqnarray*}
+&&\left( \lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}+\lambda
+_{1}{}_{j_{3}j_{3}}\right) \left( \left( \lambda _{1j_{1}j_{1}}+\lambda
+_{1j_{2}j_{2}}+\lambda _{1}{}_{j_{3}j_{3}}\right) -1\right) \\
+&&+2\left( \lambda _{1j_{1}j_{1}}+\lambda _{1j_{2}j_{2}}+\lambda
+_{1}{}_{j_{3}j_{3}}\right) \left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) \\
+&&+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) \left(
+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) -1\right) =
+\\
+&&2+3\left( \lambda _{211212}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{22j_{3}2j_{3}}\right) \\
+&&\left. +\right. \left( \lambda _{211212}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{22j_{3}2j_{3}}\right) \left( \lambda _{211212}+\lambda
+_{21j_{3}1j_{3}}+\lambda _{22j_{3}2j_{3}}\right) =0
+\end{eqnarray*}%
+which factorizes to give 
+\begin{equation*}
+\left( \left( \lambda _{211212}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{22j_{3}2j_{3}}\right) +2\right) \left( \left( \lambda _{211212}+\lambda
+_{21j_{3}1j_{3}}+\lambda _{22j_{3}2j_{3}}\right) +1\right)
+\end{equation*}%
+so that 
+\begin{equation*}
+\left( \lambda _{211212}+\lambda _{21j_{3}1j_{3}}+\lambda
+_{22j_{3}2j_{3}}\right) =-2\text{ or }-1
+\end{equation*}
+The solutions from before are 
+\begin{eqnarray*}
+&&\left\{ \lambda _{21212},\lambda _{21313},\lambda _{21414},\lambda
+_{22323},\lambda _{22424},\lambda _{23434}\right\} = \\
+&&\left\{ 
+\begin{array}{c}
+\begin{array}{c}
+\left\{ -1,-1,0,0,0,0\right\} ,\left\{ -1,-1,0,0,0,1\right\} ,\left\{
+-1,-1,-1,0,0,0\right\} ,\left\{ -1,-1,-1,0,0,1\right\} \\ 
+\left\{ -1,-1,-1,-1,0,0\right\} ,\left\{ -1,-1,-1,-1,0,1\right\} ,\left\{
+-1,-1,-1,-1,-1,0\right\} , \\ 
+\left\{ -1,-1,-1,-1,-1,1\right\} ,\left\{ -1,-1,0,0,0,0\right\} ,\left\{
+-2,0,0,0,0,0\right\}%
+\end{array}
+\\ 
+\begin{array}{c}
+\left\{ -2,-1,0,0,0,0\right\} ,\left\{ -2,-1,0,0,0,1\right\} ,\left\{
+-2,-1,-1,0,0,0\right\} ,\left\{ -2,-1,-1,0,0,1\right\} \\ 
+\left\{ -2,-1,-1,-1,0,0\right\} ,\left\{ -2,-1,-1,-1,0,1\right\} ,\left\{
+-2,-1,-1,-1,-1,0\right\} , \\ 
+\left\{ -2,-1,-1,-1,-1,1\right\}%
+\end{array}
+\\ 
+\begin{array}{c}
+\left\{ -2,-2,0,0,0,0\right\} ,\left\{ -2,-2,0,0,0,1\right\} ,\left\{
+-2,-2,-1,0,0,0\right\} ,\left\{ -2,-2,-1,0,0,1\right\} \\ 
+\left\{ -2,-2,-1,-1,0,0\right\} ,\left\{ -2,-2,-1,-1,0,1\right\} ,\left\{
+-2,-2,-1,-1,-1,0\right\} , \\ 
+\left\{ -2,-2,-1,-1,-1,1\right\}%
+\end{array}%
+\end{array}%
+\right.
+\end{eqnarray*}
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is three dimensional}
+
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{122} &=&1 \\
+\lambda _{133} &=&1 \\
+\lambda _{144} &=&0
+\end{eqnarray*}%
+we obtain 
+\begin{eqnarray*}
+0 &=&\left( \lambda _{2}^{2}\right) _{1212}+3\lambda _{21212}+2 \\
+&=&\left( \lambda _{21212}+1\right) \left( \lambda _{21212}+2\right) \\
+&\Rightarrow &\lambda _{21212}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21313}+1\right) \left( \lambda _{21313}+2\right) \\
+&\Rightarrow &\lambda _{21313}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{22323}+1\right) \left( \lambda _{22323}+2\right) \\
+&\Rightarrow &\lambda _{22323}=-1\text{ or }-2,
+\end{eqnarray*}%
+while
+
+\begin{equation*}
+\lambda _{21414},\lambda _{22424},\lambda _{23434}=0\text{ or }-1.
+\end{equation*}
+
+\paragraph{If $P_{\mathcal{\protect\nu }}$ is four dimensional}
+
+\begin{eqnarray*}
+\lambda _{111} &=&1 \\
+\lambda _{122} &=&1 \\
+\lambda _{133} &=&1 \\
+\lambda _{144} &=&1
+\end{eqnarray*}%
+we obtain 
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21212}+1\right) \left( \lambda _{21212}+2\right) \\
+&\Rightarrow &\lambda _{21212}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21313}+1\right) \left( \lambda _{21313}+2\right) \\
+&\Rightarrow &\lambda _{21313}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{21414}+1\right) \left( \lambda _{21414}+2\right) \\
+&\Rightarrow &\lambda _{21414}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{22323}+1\right) \left( \lambda _{22323}+2\right) \\
+&\Rightarrow &\lambda _{22323}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{22424}+1\right) \left( \lambda _{22424}+2\right) \\
+&\Rightarrow &\lambda _{22424}=-1\text{ or }-2,
+\end{eqnarray*}%
+\begin{eqnarray*}
+0 &=&\left( \lambda _{23434}+1\right) \left( \lambda _{23434}+2\right) \\
+&\Rightarrow &\lambda _{23434}=-1\text{ or }-2.
+\end{eqnarray*}%
+\begin{equation*}
+\lambda _{1j_{1}j_{1}}=1,\lambda _{1j_{2}j_{2}}=0,\lambda _{1j_{3}j_{3}}=0%
+\text{ }
+\end{equation*}%
+we obtain 
+\begin{eqnarray*}
+&&2\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) +-\left(
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) \\
+&=&\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) \left(
+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) +1\right) \\
+&=&0
+\end{eqnarray*}%
+which implies that%
+\begin{equation*}
+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) =-1\text{
+or }\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) =0.
+\end{equation*}%
+$\lceil $ Note 
+\begin{eqnarray*}
+&&\left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\right\vert \wedge \left\vert \varphi _{3}\right\rangle
+\left\langle \varphi _{3}\right\vert =2\left\vert \varphi _{1}\wedge \varphi
+_{2}\right\rangle \left\langle \varphi _{1}\wedge \varphi _{2}\right\vert
+\wedge \left\vert \varphi _{3}\right\rangle \left\langle \varphi
+_{3}\right\vert \\
+&=&2\left\vert \varphi _{1}\wedge \varphi _{2}\wedge \varphi
+_{3}\right\rangle \left\langle \varphi _{1}\wedge \varphi _{2}\wedge \varphi
+_{3}\right\vert =\frac{1}{3}\left\vert \varphi _{1}\varphi _{2}\varphi
+_{3}\right\rangle \left\langle \varphi _{1}\varphi _{2}\varphi
+_{3}\right\vert
+\end{eqnarray*}%
+\begin{align*}
+\hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}& =\frac{1}{6}\left\{ \lambda
+_{21212}\left( \left\vert \varphi _{1}\varphi _{2}\varphi _{3}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\varphi _{3}\right\vert +\left\vert
+\varphi _{1}\varphi _{2}\varphi _{4}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\varphi _{4}\right\vert \right) \right. \\
+& +\lambda _{21313}\left( \left\vert \varphi _{1}\varphi _{3}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{3}\varphi
+_{2}\right\vert +\left\vert \varphi _{1}\varphi _{3}\varphi
+_{4}\right\rangle \left\langle \varphi _{1}\varphi _{3}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{21414}\left( \left\vert \varphi _{1}\varphi _{4}\varphi
+_{3}\right\rangle \left\langle \varphi _{1}\varphi _{4}\varphi
+_{3}\right\vert +\left\vert \varphi _{1}\varphi _{4}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{4}\varphi
+_{2}\right\vert \right) \\
+& +\lambda _{22323}\left( \left\vert \varphi _{2}\varphi _{3}\varphi
+_{1}\right\rangle \left\langle \varphi _{2}\varphi _{3}\varphi
+_{1}\right\vert +\left\vert \varphi _{2}\varphi _{3}\varphi
+_{4}\right\rangle \left\langle \varphi _{2}\varphi _{3}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{22424}\left( \left\vert \varphi _{2}\varphi _{4}\varphi
+_{1}\right\rangle \left\langle \varphi _{2}\varphi _{4}\varphi
+_{1}\right\vert +\left\vert \varphi _{2}\varphi _{4}\varphi
+_{3}\right\rangle \left\langle \varphi _{2}\varphi _{4}\varphi
+_{3}\right\vert \right) \\
+& +\lambda _{23434}\left( \left\vert \varphi _{3}\varphi _{4}\varphi
+_{2}\right\rangle \left\langle \varphi _{3}\varphi _{4}\varphi
+_{2}\right\vert +\left\vert \varphi _{3}\varphi _{4}\varphi
+_{1}\right\rangle \left\langle \varphi _{3}\varphi _{4}\varphi
+_{1}\right\vert \right) \\
+& +\lambda _{22121}\left( \left\vert \varphi _{2}\varphi _{1}\varphi
+_{3}\right\rangle \left\langle \varphi _{2}\varphi _{1}\varphi
+_{3}\right\vert +\left\vert \varphi _{2}\varphi _{1}\varphi
+_{4}\right\rangle \left\langle \varphi _{2}\varphi _{1}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{23131}\left( \left\vert \varphi _{3}\varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{3}\varphi _{1}\varphi
+_{2}\right\vert +\left\vert \varphi _{3}\varphi _{1}\varphi
+_{4}\right\rangle \left\langle \varphi _{3}\varphi _{1}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{24141}\left( \left\vert \varphi _{4}\varphi _{1}\varphi
+_{3}\right\rangle \left\langle \varphi _{4}\varphi _{1}\varphi
+_{3}\right\vert +\left\vert \varphi _{4}\varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{4}\varphi _{1}\varphi
+_{2}\right\vert \right) \\
+& +\lambda _{23232}\left( \left\vert \varphi _{3}\varphi _{2}\varphi
+_{1}\right\rangle \left\langle \varphi _{3}\varphi _{2}\varphi
+_{1}\right\vert +\left\vert \varphi _{3}\varphi _{2}\varphi
+_{4}\right\rangle \left\langle \varphi _{3}\varphi _{2}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{24242}\left( \left\vert \varphi _{4}\varphi _{2}\varphi
+_{3}\right\rangle \left\langle \varphi _{4}\varphi _{2}\varphi
+_{3}\right\vert +\left\vert \varphi _{4}\varphi _{2}\varphi
+_{1}\right\rangle \left\langle \varphi _{4}\varphi _{2}\varphi
+_{1}\right\vert \right) \\
+& +\left. \lambda _{24343}\left( \left\vert \varphi _{4}\varphi _{3}\varphi
+_{1}\right\rangle \left\langle \varphi _{4}\varphi _{3}\varphi
+_{1}\right\vert +\left\vert \varphi _{4}\varphi _{3}\varphi
+_{2}\right\rangle \left\langle \varphi _{4}\varphi _{3}\varphi
+_{2}\right\vert \right) \right\}
+\end{align*}%
+giving%
+\begin{align*}
+& \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}=\frac{1}{3}\left\{ \left(
+\lambda _{21212}+\lambda _{21313}+\lambda _{22323}\right) \left\vert \varphi
+_{1}\varphi _{2}\varphi _{3}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\varphi _{3}\right\vert \right. \\
+& +\left( \lambda _{21212}+\lambda _{21414}+\lambda _{22424}\right)
+\left\vert \varphi _{1}\varphi _{2}\varphi _{4}\right\rangle \left\langle
+\varphi _{1}\varphi _{2}\varphi _{4}\right\vert +\left( \lambda
+_{21313}+\lambda _{21414}+\lambda _{23434}\right) \left\vert \varphi
+_{1}\varphi _{3}\varphi _{4}\right\rangle \left\langle \varphi _{1}\varphi
+_{3}\varphi _{4}\right\vert \\
+& +\left. \left( \lambda _{22323}+\lambda _{22424}+\lambda _{23434}\right)
+\left\vert \varphi _{2}\varphi _{3}\varphi _{4}\right\rangle \left\langle
+\varphi _{2}\varphi _{3}\varphi _{4}\right\vert \right\}
+\end{align*}%
+hence 
+\begin{align*}
+P_{\mathcal{H}^{2}}\wedge P_{\mathcal{H}^{1}}& =\left\vert \varphi
+_{1}\varphi _{2}\varphi _{3}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\varphi _{3}\right\vert +\left\vert \varphi _{1}\varphi _{2}\varphi
+_{4}\right\rangle \left\langle \varphi _{1}\varphi _{2}\varphi
+_{4}\right\vert \\
+& +\left\vert \varphi _{1}\varphi _{3}\varphi _{4}\right\rangle \left\langle
+\varphi _{1}\varphi _{3}\varphi _{4}\right\vert +\left\vert \varphi
+_{2}\varphi _{3}\varphi _{4}\right\rangle \left\langle \varphi _{2}\varphi
+_{3}\varphi _{4}\right\vert =P_{\mathcal{H}^{3}}
+\end{align*}%
+and its square is 
+\begin{eqnarray*}
+&&\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) ^{2}=\Gamma _{2}^{3}\left( 
+\hat{\lambda}_{2}\right) \circ \Gamma _{2}^{3}\left( \hat{\lambda}%
+_{2}\right) =\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}\right) \circ
+\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}\right) \\
+&=&\frac{1}{9}\sum_{1\leq j_{1}<j_{2}\leq 4}\left\{ \left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}^{2}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}^{2}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}^{2}\right) \right. + \\
+&&+\left. 2\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{1}j_{2}j_{1}j_{2}}\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) \right\} \left\vert \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\vert \\
+&=&\frac{1}{9}\sum_{1\leq j_{1}<j_{2}<j_{3}\leq 4}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) ^{2}\left\vert \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\vert .\rfloor
+\end{eqnarray*}%
+This gives the three particle conditions%
+\begin{eqnarray*}
+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) ^{2}-\left(
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) &=&0,\, \\
+1 &\leq &j_{1}<j_{2}<j_{3}\leq 4
+\end{eqnarray*}%
+i.e. the matrix 
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) ^{2}=\mathfrak{S}_{3}\left( 
+\hat{\lambda}_{2}\right) ,
+\end{equation*}%
+where 
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}=\lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}},\,1\leq
+j_{1}<j_{2}<j_{3}\leq 4.
+\end{equation*}%
+\emph{This condition shows that }$\hat{\lambda}_{2}$\emph{\ is a one
+dimensional projector}.
+
+One can define 
+\begin{eqnarray*}
+&&C_{3}\left( \exp \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}=\det_{j_{1}j_{2}j_{3}}\left\{ \exp \lambda
+_{2}\right\} =\exp \lambda _{2j_{1}j_{2}j_{1}j_{2}}\exp \lambda
+_{2j_{1}j_{3}j_{1}j_{3}}\exp \lambda _{2j_{2}j_{3}j_{2}j_{3}} \\
+&=&\exp \left\{ \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right\} ;1\leq
+j_{1}<j_{2}<j_{3}\leq 4
+\end{eqnarray*}%
+so that%
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}=\ln \left\{ C_{3}\left( \exp \hat{\lambda}%
+_{2}\right) \right\} _{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}};1\leq
+j_{1}<j_{2}<j_{3}\leq 4
+\end{equation*}%
+and 
+\begin{equation*}
+\exp \left\{ \mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}\right\} =C_{3}\left( \exp \hat{\lambda}%
+_{2}\right) _{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}};1\leq j_{1}<j_{2}<j_{3}\leq 4.
+\end{equation*}%
+Thus 
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{3}\left(
+\exp \hat{\lambda}_{2}\right) \right\}
+\end{equation*}%
+and 
+\begin{equation*}
+\exp \left\{ \mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) \right\}
+=C_{3}\left( \exp \hat{\lambda}_{2}\right) \text{ if }C_{3}\left( \exp \hat{%
+\lambda}_{2}\right) \geq 0.
+\end{equation*}%
+Thus $\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) $\ is like a cumulant,
+while the RHS\ is like a characteristic function.
+
+\subsection{The four particle}
+
+expansion gives 
+\begin{eqnarray*}
+&&\Gamma _{2}^{4}\left( \hat{\lambda}_{2}\right) =\left( \hat{\lambda}%
+_{2}\right) \wedge P_{\mathcal{H}^{2}}=\sum_{\substack{ 1\leq
+j_{1}<j_{2}\leq 4  \\ 1\leq j_{3}<j_{4}\leq 4}}\lambda
+_{2j_{1}j_{2}j_{1}j_{2}}\left\vert \varphi _{j_{1}}\varphi
+_{j_{2}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\right\vert \wedge \left\vert \varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{3}}\varphi
+_{j_{4}}\right\vert \\
+&=&\frac{1}{6}\sum_{1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq 4}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{1}j_{4}j_{1}j_{4}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}+\lambda
+_{2j_{2}j_{4}j_{2}j_{4}}+\lambda _{2j_{3}j_{4}j_{3}j_{4}}\right) \\
+&&\times \left\vert \varphi _{j_{1}}\varphi _{j_{2}}\varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\varphi _{j_{4}}\right\vert
+\end{eqnarray*}%
+and its square is 
+\begin{eqnarray*}
+&&\Gamma _{2}^{4}\left( \hat{\lambda}_{2}\right) ^{2}=\Gamma _{2}^{4}\left( 
+\hat{\lambda}_{2}\right) \circ \Gamma _{2}^{4}\left( \hat{\lambda}%
+_{2}\right) =\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{2}}\right) \circ
+\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{2}}\right) \\
+&=&\frac{1}{36}\sum_{1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq 4}\left\{ \left(
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}^{2}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}^{2}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}^{2}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}^{2}\right) \right. \\
+&&+2\left( \lambda _{2j_{1}j_{1}}\lambda _{2j_{2}j_{2}}+\lambda
+_{2j_{1}j_{1}}\lambda _{2j_{3}j_{3}}+\lambda _{2j_{1}j_{1}}\lambda
+_{2j_{4}j_{4}}+\lambda _{2j_{2}j_{2}}\lambda _{2j_{3}j_{3}}+\lambda
+_{2j_{2}j_{2}}\lambda _{2j_{4}j_{4}}\right. + \\
+&&\left. \left. \lambda _{2j_{3}j_{3}}\lambda _{2j_{4}j_{4}}\right) \right\}
+\left\vert \varphi _{j_{1}}\varphi _{j_{2}}\varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\varphi _{j_{4}}\right\vert \\
+&=&\frac{1}{36}\sum_{1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq 4}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{1}j_{4}j_{1}j_{4}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}+\lambda
+_{2j_{2}j_{4}j_{2}j_{4}}+\lambda _{2j_{3}j_{4}j_{3}j_{4}}\right) ^{2} \\
+&&\times \left\vert \varphi _{j_{1}}\varphi _{j_{2}}\varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\varphi _{j_{4}}\right\vert
+\end{eqnarray*}%
+This gives the four particle conditions%
+\begin{eqnarray*}
+&&\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{1}j_{4}j_{1}j_{4}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}+\lambda _{2j_{2}j_{4}j_{2}j_{4}}+\lambda
+_{2j_{3}j_{4}j_{3}j_{4}}\right) ^{2}- \\
+&&\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{1}j_{4}j_{1}j_{4}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}+\lambda _{2j_{2}j_{4}j_{2}j_{4}}+\lambda
+_{2j_{3}j_{4}j_{3}j_{4}}\right) =0, \\
+\, &&1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq 4
+\end{eqnarray*}%
+i.e. the matrix 
+\begin{equation*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right) ^{2}=\mathfrak{S}_{4}\left( 
+\hat{\lambda}_{2}\right) ,
+\end{equation*}%
+where 
+\begin{eqnarray*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}} &=&\lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{1}j_{4}j_{1}j_{4}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}+\lambda
+_{2j_{2}j_{4}j_{2}j_{4}}+\lambda _{2j_{3}j_{4}j_{3}j_{4}},\, \\
+1 &\leq &j_{1}<j_{2}<j_{3}<j_{4}\leq 4.
+\end{eqnarray*}%
+\emph{This condition again shows that }$\hat{\lambda}_{2}$\emph{\ is a one
+dimensional projector}.
+
+One can define 
+\begin{eqnarray*}
+&&C_{4}\left( \exp \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}}= \\
+&&\det_{j_{1}j_{2}j_{3}j_{4}}\left\{ \exp \lambda _{2}\right\} =\exp \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}\exp \lambda _{2j_{1}j_{3}j_{1}j_{3}}\exp \lambda
+_{2j_{1}j_{4}j_{1}j_{4}}\exp \lambda _{2j_{2}j_{3}j_{2}j_{3}}\exp \lambda
+_{2j_{2}j_{4}j_{2}j_{4}}\exp \lambda _{2j_{3}j_{4}j_{3}j_{4}} \\
+&=&\exp \left\{ \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{1}j_{4}j_{1}j_{4}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}+\lambda _{2j_{2}j_{4}j_{2}j_{4}}+\lambda
+_{2j_{3}j_{4}j_{3}j_{4}}\right\} ; \\
+&&1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq 4
+\end{eqnarray*}%
+so that%
+\begin{equation*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}}=\ln \left\{ C_{4}\left( \exp 
+\hat{\lambda}_{2}\right) \right\}
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}};1\leq
+j_{1}<j_{2}<j_{3}<j_{4}\leq 4.
+\end{equation*}%
+Thus 
+\begin{equation*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{4}\left(
+\exp \hat{\lambda}_{2}\right) \right\}
+\end{equation*}%
+and in general 
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{N}\left(
+\exp \hat{\lambda}_{2}\right) \right\} ,
+\end{equation*}%
+where 
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{1}\right) _{j_{1}j_{2}\cdots
+j_{N-1}j_{N}jj_{1}j_{2}\cdots j_{N-1}j_{N}}=\sum_{1\leq \kappa <\mu \leq
+N}\lambda _{2j_{\kappa }j_{\mu }j_{\kappa }j_{\mu }}.
+\end{equation*}%
+One also has%
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{N}\left( 
+\hat{\lambda}_{2}\right) \right\}
+\end{equation*}%
+and the general condition 
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{2}\right) ^{2}=\mathfrak{S}_{N}\left( 
+\hat{\lambda}_{2}\right) .
+\end{equation*}
+
+\section{Idempotency Condition in SQ}
+
+We consider two particle operators that can be expanded as 
+\begin{equation}
+\lambda =\lambda _{1}+\lambda _{2}=\sum_{1\leq i\leq r}\lambda
+_{1i}n_{i}+\sum_{1\leq j<k\leq r}\lambda _{2jkjk}n_{j}n_{k}
+\end{equation}%
+in terms of the non orthogonal projectors $\left\{ n_{i}\right\} $ and their
+products.
+
+\subsection{One Particle Part}
+
+The one particle expansion gives 
+\begin{equation*}
+\hat{\lambda}_{1}^{2}-\hat{\lambda}_{1}=0,
+\end{equation*}%
+which shows that $\hat{\lambda}_{1}$ is a projector, i.e. 
+\begin{equation*}
+\hat{\lambda}_{1}=P_{\nu },
+\end{equation*}%
+where $\nu $ is the dimension of the projector, thus 
+\begin{equation*}
+\lambda _{1j_{1}j_{1}}=1\text{ or }0.
+\end{equation*}
+
+\paragraph{One Dimensional One Particle Projector}
+
+\begin{equation*}
+\lambda =n_{1}+\sum_{1\leq j<k\leq 4}\lambda _{2jkjk}n_{j}n_{k}
+\end{equation*}%
+giving%
+\begin{eqnarray*}
+&&\lambda ^{2}= \\
+&&\left( 
+\begin{array}{c}
+n_{1}+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}= \\
+&&n_{1} \\
+&&+2n_{1}\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) \\
+&&+\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}.
+\end{eqnarray*}%
+The second term gives%
+\begin{eqnarray}
+&&2n_{1}\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&&\left. =\right. 2\lambda _{21212}n_{1}n_{2}+2\lambda
+_{21313}n_{1}n_{3}+2\lambda _{21414}n_{1}n_{4}  \notag \\
+&&+2\lambda _{22323}n_{1}n_{2}n_{3}+2\lambda
+_{22424}n_{1}n_{2}n_{4}+2\lambda _{23434}n_{1}n_{3}n_{4}  \notag
+\end{eqnarray}%
+and the third term 
+\begin{eqnarray*}
+&&\left( \lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4}+\lambda _{22323}n_{2}n_{3}+\lambda
+_{22424}n_{2}n_{4}+\lambda _{23434}n_{3}n_{4}\right) \\
+&&\times \left( \lambda _{21212}n_{1}n_{2}+\lambda
+_{21313}n_{1}n_{3}+\lambda _{21414}n_{1}n_{4}+\lambda
+_{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}\right) \\
+&=&\lambda _{21212}^{2}n_{1}n_{2}+\left( \lambda _{21212}\lambda
+_{21313}+\lambda _{21212}\lambda _{22323}\right) n_{1}n_{2}n_{3} \\
+&&+\left( \lambda _{21212}\lambda _{21414}+\lambda _{21212}\lambda
+_{22424}\right) n_{1}n_{2}n_{4}+\lambda _{21212}\lambda
+_{23434}n_{1}n_{2}n_{3}n_{4} \\
+&&+\left( \lambda _{21313}\lambda _{21212}+\lambda _{21313}\lambda
+_{22323}\right) n_{1}n_{2}n_{3}+\lambda _{21313}^{2}n_{1}n_{3} \\
+&&+\left( \lambda _{21313}\lambda _{21414}+\lambda _{21313}\lambda
+_{23434}\right) n_{1}n_{3}n_{4}+\lambda _{21313}\lambda
+_{22424}n_{1}n_{2}n_{3}n_{4} \\
+&&+\left( \lambda _{21414}\lambda _{21212}+\lambda _{21414}\lambda
+_{22424}\right) n_{1}n_{2}n_{4}+\left( \lambda _{21414}\lambda
+_{21313}+\lambda _{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4} \\
+&&+\lambda _{21414}^{2}n_{1}n_{4}+\lambda _{21414}\lambda
+_{22323}n_{1}n_{2}n_{3}n_{4} \\
+&&+\left( \lambda _{22323}\lambda _{21212}+\lambda _{22323}\lambda
+_{21313}\right) n_{1}n_{2}n_{3}+\lambda _{22323}\lambda
+_{21414}n_{1}n_{2}n_{3}n_{4} \\
+&&+\lambda _{22323}^{2}n_{2}n_{3}+\left( \lambda _{22323}\lambda
+_{22424}+\lambda _{22323}\lambda _{23434}\right) n_{2}n_{3}n_{4} \\
+&&+\left( \lambda _{22424}\lambda _{21212}+\lambda _{22424}\lambda
+_{21414}\right) n_{1}n_{2}n_{4}+\lambda _{22424}\lambda
+_{21313}n_{1}n_{2}n_{3}n_{4} \\
+&&+\left( \lambda _{22424}\lambda _{22323}+\lambda _{22424}\lambda
+_{23434}\right) n_{2}n_{3}n_{4}+\lambda _{22424}^{2}n_{2}n_{4} \\
+&&+\lambda _{23434}\lambda _{21212}n_{1}n_{2}n_{3}n_{4}+\left( \lambda
+_{23434}\lambda _{21313}+\lambda _{23434}\lambda _{21414}\right)
+n_{1}n_{3}n_{4} \\
+&&+\left( \lambda _{23434}\lambda _{22323}+\lambda _{23434}\lambda
+_{22424}\right) n_{2}n_{3}n_{4}+\lambda _{23434}^{2}n_{3}n_{4}
+\end{eqnarray*}%
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}  \notag \\
+&=&\lambda _{21212}^{2}n_{1}n_{2}+\lambda _{21313}^{2}n_{1}n_{3}+\lambda
+_{21414}^{2}n_{1}n_{4}+\lambda _{22323}^{2}n_{2}n_{3}+\lambda
+_{22424}^{2}n_{2}n_{4}+\lambda _{23434}^{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+2\lambda _{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+2\lambda _{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22323}\lambda
+_{23434}+2\lambda _{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+Hence%
+\begin{eqnarray}
+\lambda ^{2} &=&n_{1}+\left( \lambda _{21212}^{2}+2\lambda _{21212}\right)
+n_{1}n_{2}  \notag \\
+&&+\left( \lambda _{21313}^{2}+2\lambda _{21313}\right) n_{1}n_{3}+\left(
+\lambda _{21414}^{2}+2\lambda _{21414}\right) n_{1}n_{4}  \notag \\
+&&+\lambda _{22323}^{2}n_{2}n_{3}+\lambda _{22424}^{2}n_{2}n_{4}+\lambda
+_{23434}^{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+2\lambda _{21313}\lambda _{22323}+2\lambda _{22323}\right)
+n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22424}+2\lambda _{22424}\right)
+n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+2\lambda _{21414}\lambda _{23434}+2\lambda _{23434}\right)
+n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22323}\lambda
+_{23434}+2\lambda _{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\lambda ^{2}-\lambda =  \notag \\
+&&\left( \lambda _{21212}^{2}+\lambda _{21212}\right) n_{1}n_{2}+\left(
+\lambda _{21313}^{2}+\lambda _{21313}\right) n_{1}n_{3}+\left( \lambda
+_{21414}^{2}+\lambda _{21414}\right) n_{1}n_{4}  \notag \\
+&&+\left( \lambda _{22323}^{2}-\lambda _{22323}\right) n_{2}n_{3}+\left(
+\lambda _{22424}^{2}-\lambda _{22424}\right) n_{2}n_{4}+\left( \lambda
+_{23434}^{2}-\lambda _{23434}\right) n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+2\lambda _{21313}\lambda _{22323}+2\lambda _{22323}\right)
+n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22424}+2\lambda _{22424}\right)
+n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+2\lambda _{21414}\lambda _{23434}+2\lambda _{23434}\right)
+n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22323}\lambda
+_{23434}+2\lambda _{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+Thus in order that $\lambda $ be a projector the following equations have to
+be satisfied%
+\begin{eqnarray}
+\left( \lambda _{21212}^{2}+\lambda _{21212}\right) &=&0\Rightarrow \lambda
+_{21212}=-1\text{ or }0  \notag \\
+\left( \lambda _{21313}^{2}+\lambda _{21313}\right) &=&0\Rightarrow \lambda
+_{21313}=-1\text{ or }0  \notag \\
+\left( \lambda _{21414}^{2}+\lambda _{21414}\right) &=&0\Rightarrow \lambda
+_{21414}=-1\text{ or }0  \notag \\
+\left( \lambda _{22323}^{2}-\lambda _{22323}\right) &=&0\Rightarrow \lambda
+_{22323}=\text{ }0\text{ or }1  \notag \\
+\left( \lambda _{22424}^{2}-\lambda _{22424}\right) &=&0\Rightarrow \lambda
+_{22424}=\text{ }0\text{ or }1  \notag \\
+\left( \lambda _{23434}^{2}-\lambda _{23434}\right) &=&0\Rightarrow \lambda
+_{23434}=\text{ }0\text{ or }1
+\end{eqnarray}%
+\begin{eqnarray}
+&&\lambda _{21212}\lambda _{21313}+\lambda _{21212}\lambda _{22323}+\lambda
+_{21313}\lambda _{22323}+\lambda _{22323}=0  \notag \\
+&&\lambda _{21212}\lambda _{21414}+\lambda _{21212}\lambda _{22424}+\lambda
+_{21414}\lambda _{22424}+\lambda _{22424}=0  \notag \\
+&&\lambda _{21313}\lambda _{21414}+\lambda _{21313}\lambda _{23434}+\lambda
+_{21414}\lambda _{23434}+\lambda _{23434}=0  \notag \\
+&&\lambda _{22323}\lambda _{22424}+\lambda _{22323}\lambda _{23434}+\lambda
+_{23434}\lambda _{22424}=0
+\end{eqnarray}%
+Let 
+\begin{equation}
+\lambda _{22323}=\text{ }0\text{ }
+\end{equation}%
+then 
+\begin{equation}
+\lambda _{21212}\lambda _{21313}=0
+\end{equation}%
+thus either 
+\begin{equation}
+\lambda _{21212}=\lambda _{21313}=0
+\end{equation}%
+or 
+\begin{eqnarray}
+\lambda _{21212} &=&-1\text{ and }\lambda _{21313}=0 \\
+\lambda _{21212} &=&0\text{ and }\lambda _{21313}=-1.
+\end{eqnarray}%
+If 
+\begin{equation}
+\lambda _{22323}=\text{ }1\text{ }
+\end{equation}%
+then 
+\begin{equation}
+\lambda _{21212}\lambda _{21313}+\lambda _{21212}+\lambda _{21313}=-1.
+\end{equation}%
+If 
+\begin{equation}
+\lambda _{21212}=-1\text{ and }\lambda _{21313}=-1
+\end{equation}%
+one gets 
+\begin{equation}
+-1=-1
+\end{equation}%
+If%
+\begin{equation}
+\lambda _{21212}=-1\text{ and }\lambda _{21313}=0
+\end{equation}%
+one gets 
+\begin{equation}
+-1=-1
+\end{equation}%
+If%
+\begin{equation}
+\lambda _{21212}=0\text{ and }\lambda _{21313}=0
+\end{equation}%
+one gets 
+\begin{equation}
+0=-1
+\end{equation}%
+Consider%
+\begin{eqnarray}
+\lambda _{2} &=&n_{1}-n_{1}n_{2}=n_{1}\left( 1-n_{2}\right)  \notag \\
+\lambda _{2} &=&n_{1}-2n_{1}n_{2}=n_{1}\left( 1-2n_{2}\right)  \notag \\
+\lambda _{2} &=&n_{1}-n_{2}n_{3} \\
+\lambda _{2} &=&n_{1}-n_{1}n_{2}+n_{2}n_{3}  \notag \\
+\lambda _{2} &=&n_{1}-n_{1}n_{2}-n_{1}n_{3}+n_{2}n_{3}=n_{1}\left(
+1-n_{2}+n_{3}\right) +n_{2}n_{3}  \notag \\
+\lambda _{2} &=&n_{1}-n_{2}n_{3}.
+\end{eqnarray}%
+\begin{equation}
+\left( n_{1}\left( 1-n_{2}\right) \right) ^{2}=n_{1}\left( 1-n_{2}\right)
+^{2}=n_{1}\left( 1-2n_{2}+n_{2}\right) =n_{1}\left( 1-n_{2}\right)
+\end{equation}%
+\begin{equation}
+\left( n_{1}\left( 1-2n_{2}\right) \right) ^{2}=n_{1}\left( 1-2n_{2}\right)
+^{2}=n_{1}\left( 1-4n_{2}+4n_{2}\right) =n_{1}
+\end{equation}%
+\begin{equation}
+\left( n_{1}-n_{2}n_{3}\right) ^{2}=n_{1}+n_{2}n_{3}-2n_{1}n_{2}n_{3}.
+\end{equation}%
+\begin{eqnarray}
+\left( n_{1}-n_{1}n_{2}+n_{2}n_{3}\right) ^{2} &=&\left(
+n_{1}-n_{1}n_{2}+n_{2}n_{3}\right) \left( n_{1}-n_{1}n_{2}+n_{2}n_{3}\right)
+\\
+&=&n_{1}-n_{1}n_{2}+n_{1}n_{2}n_{3}-n_{1}n_{2}+n_{1}n_{2}-n_{1}n_{2}n_{3}+n_{1}n_{2}n_{3}-n_{1}n_{2}n_{3}+n_{2}n_{3}
+\\
+&=&n_{1}-n_{1}n_{2}+n_{2}n_{3}
+\end{eqnarray}%
+\begin{eqnarray}
+&&\left( n_{1}-n_{1}n_{2}-n_{1}n_{3}+n_{2}n_{3}\right)
+^{2}=n_{1}+n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}  \notag \\
+&&-2n_{1}n_{2}-2n_{1}n_{3}-2n_{1}n_{2}n_{3}+2n_{1}n_{2}n_{3}-2n_{1}n_{2}n_{3}-2n_{1}n_{2}n_{3}
+\notag \\
+&=&n_{1}+n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}-2n_{1}n_{2}-2n_{1}n_{3}-4n_{1}n_{2}n_{3}
+\notag \\
+&=&n_{1}-n_{1}n_{2}-n_{1}n_{3}+n_{2}n_{3}-4n_{1}n_{2}n_{3}
+\end{eqnarray}
+
+\paragraph{Two Dimensional One Particle Projector}
+
+Thus for example 
+\begin{equation*}
+\lambda =n_{1}+n_{2}+\sum_{1\leq j<k\leq 4}\lambda _{2jkjk}n_{j}n_{k}
+\end{equation*}%
+giving%
+\begin{eqnarray*}
+&&\lambda ^{2}= \\
+&&\left( 
+\begin{array}{c}
+n_{1}+n_{2}+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}= \\
+&&n_{1}+n_{2}+2n_{1}n_{2} \\
+&&+2\left( n_{1}+n_{2}\right) \left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) \\
+&&+\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}.
+\end{eqnarray*}%
+The second term gives%
+\begin{eqnarray}
+&&2\left( n_{1}+n_{2}\right)  \notag \\
+&&\times \left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&&\left. =\right. 4\lambda _{21212}n_{1}n_{2}+2\lambda
+_{21313}n_{1}n_{3}+2\lambda _{21313}n_{1}n_{2}n_{3}  \notag \\
+&&+2\lambda _{21414}n_{1}n_{4}+2\lambda _{21414}n_{1}n_{2}n_{4}  \notag \\
+&&+2\lambda _{22323}n_{2}n_{3}+2\lambda _{22323}n_{1}n_{2}n_{3}+2\lambda
+_{22424}n_{2}n_{4}  \notag \\
+&&+2\lambda _{22424}n_{1}n_{2}n_{4}+2\lambda
+_{23434}n_{1}n_{3}n_{4}+2\lambda _{23434}n_{2}n_{3}n_{4}  \notag \\
+&&\left. =\right. 4\lambda _{21212}n_{1}n_{2}+2\lambda
+_{21313}n_{1}n_{3}+2\lambda _{21414}n_{1}n_{4}  \notag \\
+&&+2\lambda _{22323}n_{2}n_{3}+2\lambda _{22424}n_{2}n_{4}  \notag \\
+&&+2\left( \lambda _{21313}+\lambda _{22323}\right) n_{1}n_{2}n_{3}+2\left(
+\lambda _{21414}+\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+2\lambda _{23434}n_{1}n_{3}n_{4}+2\lambda _{23434}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+and the third term 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}  \notag \\
+&=&\lambda _{21212}^{2}n_{1}n_{2}+\lambda _{21313}^{2}n_{1}n_{3}+\lambda
+_{21414}^{2}n_{1}n_{4}+\lambda _{22323}^{2}n_{2}n_{3}+\lambda
+_{22424}^{2}n_{2}n_{4}+\lambda _{23434}^{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+2\lambda _{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+2\lambda _{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22323}\lambda
+_{23434}+2\lambda _{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+Hence%
+\begin{eqnarray}
+\lambda ^{2} &=&n_{1}+n_{2}+\left( \lambda _{21212}^{2}+4\lambda
+_{21212}+2\right) n_{1}n_{2}  \notag \\
+&&+\left( \lambda _{21313}^{2}+2\lambda _{21313}\right) n_{1}n_{3}+\left(
+\lambda _{21414}^{2}+2\lambda _{21414}\right) n_{1}n_{4}  \notag \\
+&&+\left( \lambda _{22323}^{2}+2\lambda _{22323}\right) n_{2}n_{3}+\left(
+\lambda _{22424}^{2}+2\lambda _{22424}\right) n_{2}n_{4}+\lambda
+_{23434}^{2}n_{3}n_{4}  \notag \\
+&&+2\left( \left( \lambda _{21212}\lambda _{21313}+\lambda _{21212}\lambda
+_{22323}+\lambda _{21313}+\lambda _{22323}\right) n_{1}n_{2}n_{3}\right. 
+\notag \\
+&&+\left( \lambda _{21212}\lambda _{21414}+\lambda _{21212}\lambda
+_{22424}+\lambda _{21414}+\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( \lambda _{21313}\lambda _{21414}+\lambda _{21313}\lambda
+_{23434}+\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( \lambda _{22323}\lambda _{22424}+\lambda _{22424}\lambda
+_{23434}+\lambda _{23434}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left. \left( \lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda
+_{22424}+\lambda _{21414}\lambda _{22323}\right) \right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\lambda ^{2}-\lambda =\left( \lambda _{21212}^{2}+3\lambda
+_{21212}+2\right) n_{1}n_{2}+\lambda _{21313}\left( \lambda
+_{21313}+1\right) n_{1}n_{3}  \notag \\
+&&+\lambda _{21414}\left( \lambda _{21414}+1\right) n_{1}n_{4}  \notag \\
+&&+\lambda _{22323}\left( \lambda _{22323}+1\right) n_{2}n_{3}+\lambda
+_{22424}\left( \lambda _{22424}+1\right) n_{2}n_{4}+\lambda
+_{23434}^{2}n_{3}n_{4}  \notag \\
+&&+\left( \left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+\lambda _{21313}+\lambda _{22323}\right) n_{1}n_{2}n_{3}\right. 
+\notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+\lambda _{21414}+\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22424}\lambda
+_{23434}+\lambda _{23434}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left. 2\left( \lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda
+_{22424}+\lambda _{21414}\lambda _{22323}\right) \right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+Thus in order that $\lambda $ the following equations have to be satisfied%
+\begin{eqnarray}
+\left( \lambda _{21212}^{2}+3\lambda _{21212}+2\right) &=&0  \label{12} \\
+\lambda _{21313}\left( \lambda _{21313}+1\right) &=&0  \label{13} \\
+\lambda _{21414}\left( \lambda _{21414}+1\right) &=&0  \label{14} \\
+\lambda _{22323}\left( \lambda _{22323}+1\right) &=&0  \label{23} \\
+\lambda _{22424}\left( \lambda _{22424}+1\right) &=&0  \label{24} \\
+\lambda _{23434}^{2}-\lambda _{23434} &=&0  \label{34}
+\end{eqnarray}%
+\begin{eqnarray}
+2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda _{22323}+\lambda
+_{21313}+\lambda _{22323} &=&0 \\
+2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda _{22424}+\lambda
+_{21414}+\lambda _{22424} &=&0 \\
+2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda _{23434}+\lambda
+_{23434} &=&0 \\
+2\lambda _{22323}\lambda _{22424}+2\lambda _{22424}\lambda _{23434}+\lambda
+_{23434} &=&0
+\end{eqnarray}%
+\begin{equation}
+\lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda _{22424}+\lambda
+_{21414}\lambda _{22323}=0
+\end{equation}%
+from eq. $\left( \ref{12}\right) $ one obtains 
+\begin{equation}
+\lambda _{21212}=-1\text{ or }-2  \label{12sol}
+\end{equation}%
+and from eqs $\left( \ref{13}-\ref{24}\right) $ that 
+\begin{eqnarray}
+\lambda _{21313} &=&-1\text{ or }0  \notag \\
+\lambda _{21414} &=&-1\text{ or }0  \notag \\
+\lambda _{22323} &=&-1\text{ or }0  \notag \\
+\lambda _{22424} &=&-1\text{ or }0
+\end{eqnarray}%
+and from eq. $\left( \ref{34}\right) $ one obtains%
+\begin{equation}
+\lambda _{23434}=0\text{ or }1.
+\end{equation}%
+Eq $\left( \ref{12sol}\right) $ gives for both $\lambda _{21212}=-1$ or $-2$ 
+\begin{eqnarray}
+\lambda _{21313} &=&-\lambda _{22323}  \notag \\
+\lambda _{21414} &=&-\lambda _{22424}  \notag \\
+\lambda _{21313}\lambda _{21414} &=&0  \notag \\
+\lambda _{22323}\lambda _{22424} &=&0
+\end{eqnarray}%
+which gives 
+\begin{equation}
+\lambda _{21313}=\lambda _{21414}=\lambda _{22323}=\lambda _{22424}=0.
+\end{equation}%
+Thus the only solutions are
+
+\bigskip 
+\begin{eqnarray}
+\lambda &=&n_{1}+n_{2}-n_{1}n_{2} \\
+\lambda &=&n_{1}+n_{2}-2n_{1}n_{2}.
+\end{eqnarray}%
+These are projectors as 
+\begin{eqnarray}
+\left( n_{1}+n_{2}-n_{1}n_{2}\right) ^{2} &=&n_{1}+n_{2}+2n_{1}n_{2}-2\left(
+n_{1}+n_{2}\right) n_{1}n_{2}+n_{1}n_{2}  \notag \\
+&=&n_{1}+n_{2}+2n_{1}n_{2}-4n_{1}n_{2}+n_{1}n_{2}  \notag \\
+&=&n_{1}+n_{2}-n_{1}n_{2}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+\left( n_{1}+n_{2}-2n_{1}n_{2}\right) ^{2}
+&=&n_{1}+n_{2}+2n_{1}n_{2}-4\left( n_{1}+n_{2}\right) n_{1}n_{2}+4n_{1}n_{2}
+\notag \\
+&=&n_{1}+n_{2}+2n_{1}n_{2}-8n_{1}n_{2}+4n_{1}n_{2}  \notag \\
+&=&n_{1}+n_{2}-2n_{1}n_{2}.
+\end{eqnarray}
+
+\paragraph{Three Dimensional One Particle Projector}
+
+\begin{equation*}
+\lambda =n_{1}+n_{2}+n_{3}+\sum_{1\leq j<k\leq 4}\lambda _{2jkjk}n_{j}n_{k}
+\end{equation*}%
+\begin{eqnarray*}
+&&\lambda ^{2}= \\
+&&\left( 
+\begin{array}{c}
+n_{1}+n_{2}+n_{3}+\lambda _{21212}n_{1}n_{2}+\lambda
+_{21313}n_{1}n_{3}+\lambda _{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}= \\
+&&n_{1}+n_{2}+n_{3}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3} \\
+&&+2\left( n_{1}+n_{2}+n_{3}\right) \left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) \\
+&&+\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}.
+\end{eqnarray*}
+
+The first term gives%
+\begin{equation}
+n_{1}+n_{2}+n_{3}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}
+\end{equation}
+
+The second term gives%
+\begin{eqnarray}
+&&2\left( n_{1}+n_{2}+n_{3}\right)  \notag \\
+&&\times \left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&=&2\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4}+ \\ 
+\lambda _{22323}n_{1}n_{2}n_{3}+\lambda _{22424}n_{1}n_{2}n_{4}+\lambda
+_{23434}n_{1}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&&+2\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{2}n_{3}+\lambda
+_{21414}n_{1}n_{2}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{2}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&&+2\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}n_{3}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{3}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{3}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&=&4\lambda _{21212}n_{1}n_{2}+4\lambda _{21313}n_{1}n_{3}+2\lambda
+_{21414}n_{1}n_{4}+4\lambda _{22323}n_{2}n_{3}  \notag \\
+&&+2\lambda _{22424}n_{2}n_{4}+2\lambda _{23434}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}+2\lambda _{21313}+2\lambda _{22323}\right)
+n_{1}n_{2}n_{3}+\left( 2\lambda _{23434}+2\lambda _{21414}\right)
+n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22424}+2\lambda _{21414}\right) n_{1}n_{2}n_{4}+\left(
+2\lambda _{22424}+2\lambda _{23434}\right) n_{2}n_{3}n_{4}
+\end{eqnarray}%
+The third term gives%
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}  \notag \\
+&=&\lambda _{21212}^{2}n_{1}n_{2}+\lambda _{21313}^{2}n_{1}n_{3}+\lambda
+_{21414}^{2}n_{1}n_{4}+\lambda _{22323}^{2}n_{2}n_{3}+\lambda
+_{22424}^{2}n_{2}n_{4}+\lambda _{23434}^{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+2\lambda _{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+2\lambda _{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22323}\lambda
+_{23434}+2\lambda _{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}
+
+\bigskip Hence 
+\begin{eqnarray}
+\lambda ^{2}
+&=&n_{1}+n_{2}+n_{3}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{1}n_{4}+2n_{2}n_{3}+2n_{2}n_{4}+2n_{3}n_{4}
+\notag \\
+&&+\left( 4\lambda _{21212}+\lambda _{21212}^{2}\right) n_{1}n_{2}+\left(
+4\lambda _{21313}+\lambda _{21313}^{2}\right) n_{1}n_{3}  \notag \\
+&&++\left( 2\lambda _{21414}+\lambda _{21414}^{2}\right) n_{1}n_{4}+\left(
+4\lambda _{22323}+\lambda _{22323}^{2}\right) n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{22424}+\lambda _{22424}^{2}\right) n_{2}n_{4}+\left(
+2\lambda _{23434}+\lambda _{23434}^{2}\right) n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}+2\lambda _{21313}+2\lambda _{22323}+\left(
+2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda _{22323}+2\lambda
+_{21313}\lambda _{22323}\right) \right) n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{23434}+2\lambda _{21414}+\left( 2\lambda
+_{21313}\lambda _{21414}+2\lambda _{21313}\lambda _{23434}+2\lambda
+_{21414}\lambda _{23434}\right) \right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22424}+2\lambda _{21414}+\left( 2\lambda
+_{21212}\lambda _{21414}+2\lambda _{21212}\lambda _{22424}+2\lambda
+_{21414}\lambda _{22424}\right) \right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{22424}+2\lambda _{23434}+\left( 2\lambda
+_{22323}\lambda _{22424}+2\lambda _{22323}\lambda _{23434}+2\lambda
+_{23434}\lambda _{22424}\right) \right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}
+
+\bigskip 
+\begin{eqnarray*}
+&&\lambda ^{2}-\lambda = \\
+&&\left( 2+3\lambda _{21212}+\lambda _{21212}^{2}\right) n_{1}n_{2}+\left(
+2+3\lambda _{21313}+\lambda _{21313}^{2}\right) n_{1}n_{3}+\left( \lambda
+_{21414}+\lambda _{21414}^{2}\right) n_{1}n_{4} \\
+&&+\left( 2+3\lambda _{22323}+\lambda _{22323}^{2}\right) n_{2}n_{3}+\left(
+\lambda _{22424}+\lambda _{22424}^{2}\right) n_{2}n_{4}+\left( \lambda
+_{23434}+\lambda _{23434}^{2}\right) n_{3}n_{4} \\
+&&+\left( 2\lambda _{21212}+2\lambda _{21313}+2\lambda _{22323}+2\lambda
+_{21212}\lambda _{21313}+2\lambda _{21212}\lambda _{22323}+2\lambda
+_{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3} \\
+&&+\left( 2\lambda _{23434}+2\lambda _{21414}+2\lambda _{21313}\lambda
+_{21414}+2\lambda _{21313}\lambda _{23434}+2\lambda _{21414}\lambda
+_{23434}\right) n_{1}n_{3}n_{4} \\
+&&+\left( 2\lambda _{22424}+2\lambda _{21414}+2\lambda _{21212}\lambda
+_{21414}+2\lambda _{21212}\lambda _{22424}+2\lambda _{21414}\lambda
+_{22424}\right) n_{1}n_{2}n_{4} \\
+&&+\left( 2\lambda _{22424}+2\lambda _{23434}+2\lambda _{22323}\lambda
+_{22424}+2\lambda _{22323}\lambda _{23434}+2\lambda _{23434}\lambda
+_{22424}\right) n_{2}n_{3}n_{4} \\
+&&+2\left( \lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda
+_{22424}+\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}=0
+\end{eqnarray*}
+
+\bigskip
+
+\bigskip Thus in order that $\lambda $ be a projector the following
+equations have to be satisfied%
+\begin{eqnarray}
+\left( \lambda _{21212}^{2}+3\lambda _{21212}+2\right) &=&0\Rightarrow
+\lambda _{21212}=-2\text{ or }-1  \notag \\
+\left( 2+3\lambda _{21313}+\lambda _{21313}^{2}\right) &=&0\Rightarrow
+\lambda _{21313}=-2\text{ or }-1  \notag \\
+\lambda _{21414}\left( \lambda _{21414}+1\right) &=&0\Rightarrow \lambda
+_{21414}=0\text{ or }-1  \notag \\
+\left( 2+3\lambda _{22323}+\lambda _{22323}^{2}\right) &=&0\Rightarrow
+\lambda _{22323}=-2\text{ or }-1  \notag \\
+\lambda _{22424}\left( \lambda _{22424}+1\right) &=&0\Rightarrow \lambda
+_{22424}=0\text{ or }-1  \notag \\
+\lambda _{23434}\left( \lambda _{23434}+1\right) &=&0\Rightarrow \lambda
+_{23434}=0\text{ or }-1
+\end{eqnarray}%
+\begin{eqnarray*}
+&&\lambda _{21212}+\lambda _{21212}\lambda _{21313}+\lambda _{21212}\lambda
+_{22323}+\lambda _{21313}+\lambda _{22323}+\lambda _{21313}\lambda _{22323}=0
+\\
+&&\lambda _{23434}+\lambda _{21414}+\lambda _{21414}\lambda _{23434}+\lambda
+_{21313}\lambda _{21414}+\lambda _{21313}\lambda _{23434}=0 \\
+&&\lambda _{22424}+\lambda _{21414}+\lambda _{21414}\lambda _{22424}+\lambda
+_{21212}\lambda _{21414}+\lambda _{21212}\lambda _{22424}=0 \\
+&&\lambda _{22424}+\lambda _{23434}\lambda _{22424}+\lambda _{23434}+\lambda
+_{22323}\lambda _{22424}+\lambda _{22323}\lambda _{23434}=0
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&\lambda _{21212}\left( 1+\lambda _{21313}+\lambda _{22323}\right) +\lambda
+_{21313}\left( 1+\lambda _{22323}\right) +\lambda _{22323}=0 \\
+&&\lambda _{23434}\left( 1+\lambda _{23434}+\lambda _{23434}\right) +\lambda
+_{21414}\left( 1+\lambda _{21313}\right) =0 \\
+&&\lambda _{22424}+\lambda _{21414}+\lambda _{21414}\lambda _{22424}+\lambda
+_{21212}\lambda _{21414}+\lambda _{21212}\lambda _{22424}=0 \\
+&&\lambda _{22424}+\lambda _{23434}\lambda _{22424}+\lambda _{23434}+\lambda
+_{22323}\lambda _{22424}+\lambda _{22323}\lambda _{23434}=0
+\end{eqnarray*}%
+\begin{equation}
+\lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda _{22424}+\lambda
+_{21414}\lambda _{22323}=0\Rightarrow \lambda _{23434}=\lambda
+_{22424}=\lambda _{21414}=0
+\end{equation}%
+If 
+\begin{equation}
+\lambda _{21212}=\lambda _{21313}=\lambda _{22323}=-1
+\end{equation}%
+then the condition is satisfied. If 
+\begin{equation}
+\lambda _{21212}=\lambda _{21313}=\lambda _{22323}=-2
+\end{equation}%
+\begin{equation}
+-2\left( -1\right) +-2\left( -1\right) +-2\left( -1\right) =6\neq 0,
+\end{equation}%
+while if 
+\begin{equation}
+\lambda _{21212}=-1,\lambda _{21313}=\lambda _{22323}=-2
+\end{equation}%
+then 
+\begin{equation}
+0+2+2=4\neq 0,
+\end{equation}%
+and if 
+\begin{equation}
+\lambda _{21212}=\lambda _{21313}=-1,\lambda _{22323}=-2
+\end{equation}%
+\begin{equation}
+0+0+2=2\neq 0,
+\end{equation}%
+so 
+\begin{equation}
+\lambda _{21212}=\lambda _{21313}=\lambda _{22323}=-1
+\end{equation}%
+is the only solution. Testing this gives 
+\begin{eqnarray}
+&&\lambda ^{2}=\left(
+n_{1}+n_{2}+n_{3}-n_{1}n_{2}-n_{1}n_{3}-n_{2}n_{3}\right)
+^{2}=n_{1}+n_{2}+n_{3}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}  \notag \\
+&&-2\left( n_{1}+n_{2}+n_{3}\right) \left(
+n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}\right) +\left(
+n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}\right) ^{2}.  \notag
+\end{eqnarray}%
+the second term gives%
+\begin{eqnarray}
+&&-2\left( n_{1}+n_{2}+n_{3}\right) \left(
+n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}\right) \\
+&=&-2\left( 2n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}+3n_{1}n_{2}n_{3}\right) \\
+&=&-4n_{1}n_{2}-4n_{1}n_{3}-4n_{2}n_{3}-6n_{1}n_{2}n_{3}
+\end{eqnarray}%
+and the third%
+\begin{eqnarray}
+&&\left( n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}\right) \left(
+n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}\right) \\
+&=&n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}+6n_{1}n_{2}n_{3}.
+\end{eqnarray}%
+Hence 
+\begin{eqnarray}
+\lambda ^{2}
+&=&n_{1}+n_{2}+n_{3}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{2}n_{3}-4n_{1}n_{2}-4n_{1}n_{3}
+\notag \\
+&&-4n_{2}n_{3}-6n_{1}n_{2}n_{3}+n_{1}n_{2}+n_{1}n_{3}+n_{2}n_{3}+6n_{1}n_{2}n_{3}
+\notag \\
+&=&n_{1}+n_{2}+n_{3}-n_{1}n_{2}-n_{1}n_{3}-n_{2}n_{3}=\lambda .
+\end{eqnarray}
+
+\paragraph{Four Dimensional One Particle Projector}
+
+\begin{equation*}
+\lambda =n_{1}+n_{2}+n_{3}+n_{4}+\sum_{1\leq j<k\leq 4}\lambda
+_{2jkjk}n_{j}n_{k}=\mathcal{N}_{1}+\sum_{1\leq j<k\leq 4}\lambda
+_{2jkjk}n_{j}n_{k}
+\end{equation*}
+
+\begin{eqnarray*}
+&&\lambda ^{2}= \\
+&&\left( 
+\begin{array}{c}
+n_{1}+n_{2}+n_{3}+n_{4}+\lambda _{21212}n_{1}n_{2}+\lambda
+_{21313}n_{1}n_{3}+\lambda _{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}= \\
+&&n_{1}+n_{2}+n_{3}+n_{4}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{1}n_{4}+2n_{2}n_{3}+2n_{2}n_{4}+2n_{3}n_{4}
+\\
+&&+2\left( n_{1}+n_{2}+n_{3}+n_{4}\right) \left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) \\
+&&+\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}.
+\end{eqnarray*}
+
+\bigskip The first term gives%
+\begin{equation}
+n_{1}+n_{2}+n_{3}+n_{4}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{1}n_{4}+2n_{2}n_{3}+2n_{2}n_{4}+2n_{3}n_{4}
+\end{equation}
+
+The second term gives%
+\begin{eqnarray}
+&&2\left( n_{1}+n_{2}+n_{3}+n_{4}\right)  \notag \\
+&&\times \left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&=&2\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4}+ \\ 
+\lambda _{22323}n_{1}n_{2}n_{3}+\lambda _{22424}n_{1}n_{2}n_{4}+\lambda
+_{23434}n_{1}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&&+2\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{2}n_{3}+\lambda
+_{21414}n_{1}n_{2}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{2}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&&+2\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}n_{3}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{3}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{3}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&&+2\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}n_{4}+\lambda _{21313}n_{1}n_{3}n_{4}+\lambda
+_{21414}n_{1}n_{4}+ \\ 
+\lambda _{22323}n_{2}n_{3}n_{4}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right)  \notag \\
+&=&4\lambda _{21212}n_{1}n_{2}+4\lambda _{21313}n_{1}n_{3}+4\lambda
+_{21414}n_{1}n_{4}+4\lambda _{22323}n_{2}n_{3}  \notag \\
+&&+4\lambda _{22424}n_{2}n_{4}+4\lambda _{23434}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}+2\lambda _{21313}+2\lambda _{22323}\right)
+n_{1}n_{2}n_{3}+\left( 2\lambda _{23434}+2\lambda _{21414}+2\lambda
+_{21313}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22424}+2\lambda _{21414}+2\lambda _{21212}\right)
+n_{1}n_{2}n_{4}+\left( 2\lambda _{22424}+2\lambda _{23434}+2\lambda
+_{22323}\right) n_{2}n_{3}n_{4}
+\end{eqnarray}
+
+\bigskip
+
+\begin{itemize}
+\item The third term gives%
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}  \notag \\
+&=&\lambda _{21212}^{2}n_{1}n_{2}+\lambda _{21313}^{2}n_{1}n_{3}+\lambda
+_{21414}^{2}n_{1}n_{4}+\lambda _{22323}^{2}n_{2}n_{3}+\lambda
+_{22424}^{2}n_{2}n_{4}+\lambda _{23434}^{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+2\lambda _{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+2\lambda _{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22323}\lambda
+_{23434}+2\lambda _{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+Hence 
+\begin{eqnarray}
+\lambda ^{2}
+&=&n_{1}+n_{2}+n_{3}+n_{4}+2n_{1}n_{2}+2n_{1}n_{3}+2n_{1}n_{4}+2n_{2}n_{3}+2n_{2}n_{4}+2n_{3}n_{4}
+\notag \\
+&&+\left( 4\lambda _{21212}+\lambda _{21212}^{2}\right) n_{1}n_{2}+\left(
+4\lambda _{21313}+\lambda _{21313}^{2}\right) n_{1}n_{3}  \notag \\
+&&+\left( 4\lambda _{21414}+\lambda _{21414}^{2}\right) n_{1}n_{4}+\left(
+4\lambda _{22323}+\lambda _{22323}^{2}\right) n_{2}n_{3}  \notag \\
+&&+\left( 4\lambda _{22424}+\lambda _{22424}^{2}\right) n_{2}n_{4}+\left(
+4\lambda _{23434}+\lambda _{23434}^{2}\right) n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}+2\lambda _{21313}+2\lambda _{22323}+2\lambda
+_{21212}\lambda _{21313}+2\lambda _{21212}\lambda _{22323}+2\lambda
+_{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{23434}+2\lambda _{21414}+2\lambda _{21313}+2\lambda
+_{21313}\lambda _{21414}+2\lambda _{21313}\lambda _{23434}+2\lambda
+_{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22424}+2\lambda _{21414}+2\lambda _{21212}+2\lambda
+_{21212}\lambda _{21414}+2\lambda _{21212}\lambda _{22424}+2\lambda
+_{21414}\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{22424}+2\lambda _{23434}+2\lambda _{22323}+2\lambda
+_{22323}\lambda _{22424}+2\lambda _{22323}\lambda _{23434}+2\lambda
+_{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+2\left( \lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda
+_{22424}+\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+\begin{eqnarray*}
+&&\lambda ^{2}-\lambda = \\
+&&\left( 2+3\lambda _{21212}+\lambda _{21212}^{2}\right) n_{1}n_{2}+\left(
+2+3\lambda _{21313}+\lambda _{21313}^{2}\right) n_{1}n_{3}+\left( 2+3\lambda
+_{21414}+\lambda _{21414}^{2}\right) n_{1}n_{4} \\
+&&+\left( 2+3\lambda _{22323}+\lambda _{22323}^{2}\right) n_{2}n_{3}+\left(
+2+3\lambda _{22424}+\lambda _{22424}^{2}\right) n_{2}n_{4}+\left( 2+3\lambda
+_{23434}+\lambda _{23434}^{2}\right) n_{3}n_{4} \\
+&&+\left( 2\lambda _{21212}+2\lambda _{21313}+2\lambda _{22323}+2\lambda
+_{21212}\lambda _{21313}+2\lambda _{21212}\lambda _{22323}+2\lambda
+_{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3} \\
+&&+\left( 2\lambda _{23434}+2\lambda _{21414}+2\lambda _{21313}+2\lambda
+_{21313}\lambda _{21414}+2\lambda _{21313}\lambda _{23434}+2\lambda
+_{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4} \\
+&&+\left( 2\lambda _{22424}+2\lambda _{21414}+2\lambda _{21212}+2\lambda
+_{21212}\lambda _{21414}+2\lambda _{21212}\lambda _{22424}+2\lambda
+_{21414}\lambda _{22424}\right) n_{1}n_{2}n_{4} \\
+&&+\left( 2\lambda _{22424}+2\lambda _{23434}+2\lambda _{22323}+2\lambda
+_{22323}\lambda _{22424}+2\lambda _{22424}\lambda _{23434}+2\lambda
+_{22323}\lambda _{23434}\right) n_{2}n_{3}n_{4} \\
+&&+\left( \lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda
+_{22424}+\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}=0
+\end{eqnarray*}%
+\begin{eqnarray}
+\left( 2+3\lambda _{21212}+\lambda _{21212}^{2}\right) &=&0\Rightarrow
+\lambda _{21212}=-2\text{ or }-1  \notag \\
+\left( 2+3\lambda _{21313}+\lambda _{21313}^{2}\right) &=&0\Rightarrow
+\lambda _{21313}=-2\text{ or }-1  \notag \\
+\left( 2+3\lambda _{21414}+\lambda _{21414}^{2}\right) &=&0\Rightarrow
+\lambda _{21313}=-2\text{ or }-1  \notag \\
+\left( 2+3\lambda _{22323}+\lambda _{22323}^{2}\right) &=&0\Rightarrow
+\lambda _{22323}=-2\text{ or }-1  \notag \\
+\left( 2+3\lambda _{22424}+\lambda _{22424}^{2}\right) &=&0\Rightarrow
+\lambda _{22323}=-2\text{ or }-1  \notag \\
+\left( 2+3\lambda _{23434}+\lambda _{23434}^{2}\right) &=&0\Rightarrow
+\lambda _{22323}=-2\text{ or }-1
+\end{eqnarray}%
+\begin{eqnarray}
+&&\lambda _{21212}\left( 1+\lambda _{21212}\right) +\lambda _{21313}\left(
+1+\lambda _{22323}\right) +\lambda _{22323}\left( 1+\lambda _{21212}\right)
+=0  \notag \\
+&&\lambda _{23434}\left( 1+\lambda _{21313}\right) +\lambda _{21414}\left(
+1+\lambda _{21313}\right) +\lambda _{21313}\left( 1+\right) =0  \notag \\
+&&\lambda _{22424}\left( 1+\lambda _{21212}\right) +\lambda _{21414}\left(
+1+\lambda _{21212}\right) +\lambda _{21212}\left( 1+\right) =0  \notag \\
+&&\lambda _{22424}\left( 1+\lambda _{22323}\right) +\lambda _{23434}\left(
+1+\lambda _{22424}\right) +\lambda _{22424}\left( 1+\right) =0
+\end{eqnarray}%
+\begin{equation}
+\lambda _{21212}\lambda _{23434}+\lambda _{21313}\lambda _{22424}+\lambda
+_{21414}\lambda _{22323}=0\Rightarrow \lambda _{23434}=\lambda
+_{22424}=\lambda _{21414}=0
+\end{equation}%
+Thus there are no solutions.%
+\begin{eqnarray}
+&&\left(
+n_{1}+n_{2}+n_{3}+n_{4}-n_{1}n_{2}-n_{1}n_{3}-n_{1}n_{4}-n_{2}n_{3}-n_{2}n_{4}-n_{3}n_{4}\right) ^{2}
+\notag \\
+&=&\left( n_{1}+n_{2}+n_{3}+n_{4}\right) ^{2}-2\left(
+n_{1}+n_{2}+n_{3}+n_{4}\right)  \notag \\
+&&\times \left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right) 
+\notag \\
+&&+\left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right) 
+\notag \\
+&&\times \left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right)
+\end{eqnarray}%
+The first term gives%
+\begin{equation}
+n_{1}+n_{2}+n_{3}+n_{4}+2\left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right)
+\end{equation}%
+the second gives%
+\begin{eqnarray}
+&&-2\left( n_{1}+n_{2}+n_{3}+n_{4}\right) \left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right) 
+\notag \\
+&&-2\left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{1}n_{3}n_{4}\right.
+\notag \\
+&&+n_{1}n_{2}+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{2}n_{3}n_{4}
+\notag \\
+&&+n_{1}n_{2}n_{3}+n_{1}n_{3}+n_{1}n_{3}n_{4}+n_{2}n_{3}+n_{2}n_{3}n_{4}+n_{3}n_{4}
+\notag \\
+&&\left.
++n_{1}n_{2}n_{4}+n_{1}n_{3}n_{4}+n_{1}n_{4}+n_{2}n_{3}n_{4}+n_{2}n_{4}+n_{3}n_{4}\right)
+\notag \\
+&=&-4\left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right. 
+\notag \\
+&&\left.
++n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{1}n_{3}n_{4}+n_{2}n_{3}n_{4}\right)
+\end{eqnarray}%
+and the third term 
+\begin{eqnarray}
+&&n_{1}n_{2}+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{1}n_{2}n_{3}n_{4}
+\notag \\
+&&+n_{1}n_{2}n_{3}+n_{1}n_{3}+n_{1}n_{3}n_{4}+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{3}n_{4}+n_{1}n_{3}n_{4}
+\notag \\
+&&+n_{1}n_{2}n_{4}+n_{1}n_{3}n_{4}+n_{1}n_{4}+n_{1}n_{2}n_{3}n_{4}+n_{1}n_{2}n_{4}+n_{1}n_{3}n_{4}
+\notag \\
+&&+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{3}n_{4}+n_{2}n_{3}+n_{2}n_{3}n_{4}+n_{2}n_{3}n_{4}
+\notag \\
+&&+n_{1}n_{2}n_{4}+n_{1}n_{2}n_{3}n_{4}+n_{1}n_{2}n_{4}+n_{2}n_{3}n_{4}+n_{2}n_{4}+n_{2}n_{3}n_{4}
+\notag \\
+&&+n_{1}n_{2}n_{3}n_{4}+n_{1}n_{3}n_{4}+n_{1}n_{3}n_{4}+n_{2}n_{3}n_{4}+n_{2}n_{3}n_{4}+n_{3}n_{4}
+\notag \\
+&=&\left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right. 
+\notag \\
+&&+2\left(
+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{1}n_{3}n_{4}+n_{2}n_{3}n_{4}\right) 
+\notag \\
+&&\left. +6n_{1}n_{2}n_{3}n_{4}\right)
+\end{eqnarray}%
+Thus%
+\begin{eqnarray*}
+\lambda ^{2} &=&\left( n_{1}+n_{2}+n_{3}+n_{4}\right. \\
+&&-2\left(
+n_{1}n_{2}+n_{1}n_{3}+n_{1}n_{4}+n_{2}n_{3}+n_{2}n_{4}+n_{3}n_{4}\right) \\
+&&-2\left(
+n_{1}n_{2}n_{3}+n_{1}n_{2}n_{4}+n_{1}n_{3}n_{4}+n_{2}n_{3}n_{4}\right) \\
+&&\left. +\,6n_{1}n_{2}n_{3}n_{4}\right) \neq \lambda
+\end{eqnarray*}%
+In general 
+\begin{equation*}
+\lambda =\sum_{1\leq j\leq \nu }n_{j}+\sum_{1\leq j<k\leq r}\lambda
+_{2jkjk}n_{j}n_{k}
+\end{equation*}%
+and $\lceil $%
+\begin{eqnarray}
+&&\sum_{\substack{ 1\leq j_{1}<k_{1}\leq r  \\ 1\leq j_{2}<k_{2}\leq r}}%
+\lambda _{2j_{1}k_{1}j_{1}k_{1}}\lambda
+_{2j_{2}k_{2}j_{2}k_{2}}n_{j_{1}}n_{k_{1}}n_{j_{2}}n_{k_{2}}=\sum_{1\leq
+j_{1}<k_{1}\leq r}\lambda _{2j_{1}k_{1}j_{1}k_{1}}^{2}n_{j_{1}}n_{k_{1}} 
+\notag \\
+&&+\frac{1}{4}\sum_{\substack{ 1\leq j_{1}\neq k_{1}\leq r  \\ 1\leq
+j_{2}\neq k_{2}\leq r}}\lambda _{2j_{1}k_{1}j_{1}k_{1}}\lambda
+_{2j_{2}k_{2}j_{2}k_{2}}n_{j_{1}}n_{k_{1}}n_{j_{2}}n_{k_{2}}  \notag \\
+&&+\sum_{\substack{ 1\leq j_{1}<k_{1}\leq r  \\ 1\leq j_{2}<k_{2}\leq r}}%
+\lambda _{2j_{1}k_{1}j_{1}k_{1}}\lambda
+_{2j_{2}k_{2}j_{2}k_{2}}n_{j_{1}}n_{k_{1}}n_{j_{2}}n_{k_{2}}
+\end{eqnarray}%
+\begin{eqnarray}
+&&\sum_{\substack{ 1\leq j_{1}<k_{1}\leq r  \\ 1\leq j_{2}<k_{2}\leq r}}%
+\lambda _{2j_{1}k_{1}j_{1}k_{1}}\lambda
+_{2j_{2}k_{2}j_{2}k_{2}}n_{j_{1}}n_{k_{1}}n_{j_{2}}n_{k_{2}}  \notag \\
+&=&\sum_{1\leq i<j\leq r}\lambda _{2ijij}^{2}n_{i}n_{j}  \notag \\
+&&+2\sum_{\substack{ 1\leq i<j<k\leq r}}\left( \lambda _{2ijij}\lambda
+_{2ikik}+\lambda _{2ijij}\lambda _{2jkjk}+\lambda _{2ikik}\lambda
+_{2jkjk}\right) n_{i}n_{j}n_{k}  \notag \\
+&&+2\sum_{\substack{ 1\leq i<j<k\leq r}}\left( \lambda _{2ijij}\lambda
+_{2klkl}+\lambda _{2ikik}\lambda _{2jljl}+\lambda _{2ilil}\lambda
+_{2jkjk}\right) n_{i}n_{j}n_{k}n_{l}
+\end{eqnarray}%
+$\lceil $%
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\lambda _{21212}n_{1}n_{2}+\lambda _{21313}n_{1}n_{3}+\lambda
+_{21414}n_{1}n_{4} \\ 
++\lambda _{22323}n_{2}n_{3}+\lambda _{22424}n_{2}n_{4}+\lambda
+_{23434}n_{3}n_{4}%
+\end{array}%
+\right) ^{2}  \notag \\
+&=&\lambda _{21212}^{2}n_{1}n_{2}+\lambda _{21313}^{2}n_{1}n_{3}+\lambda
+_{21414}^{2}n_{1}n_{4}+\lambda _{22323}^{2}n_{2}n_{3}+\lambda
+_{22424}^{2}n_{2}n_{4}+\lambda _{23434}^{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21313}+2\lambda _{21212}\lambda
+_{22323}+2\lambda _{21313}\lambda _{22323}\right) n_{1}n_{2}n_{3}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{21414}+2\lambda _{21212}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22424}\right) n_{1}n_{2}n_{4}  \notag \\
+&&+\left( 2\lambda _{21313}\lambda _{21414}+2\lambda _{21313}\lambda
+_{23434}+2\lambda _{21414}\lambda _{23434}\right) n_{1}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{22323}\lambda _{22424}+2\lambda _{22323}\lambda
+_{23434}+2\lambda _{23434}\lambda _{22424}\right) n_{2}n_{3}n_{4}  \notag \\
+&&+\left( 2\lambda _{21212}\lambda _{23434}+2\lambda _{21313}\lambda
+_{22424}+2\lambda _{21414}\lambda _{22323}\right) n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}
+\end{itemize}
+
+The first term is 
+\begin{equation}
+\sum_{1\leq i\leq \nu }n_{i}+2\sum_{1\leq j<k\leq r}n_{j}n_{k}
+\end{equation}%
+The second term gives 
+\begin{equation}
+2\sum_{\substack{ 1\leq j,k\leq r  \\ 1\leq i\leq \nu }}\lambda
+_{2jkjk}n_{i}n_{j}n_{k}=4\sum_{1\leq i<j\leq \nu }\lambda
+_{2ijijk}n_{i}n_{j}+2\sum_{\substack{ 1\leq i\leq \nu  \\ \nu +1\leq j\leq r 
+}}\lambda _{2ijijk}n_{i}n_{j}+2\sum_{1\leq i\leq \nu }\sum_{i+1\leq j<k\leq
+r}\lambda _{2jkjk}n_{i}n_{j}n_{k}.
+\end{equation}%
+The third term 
+\begin{eqnarray}
+&&\sum_{\substack{ 1\leq j_{1}<k_{1}\leq r  \\ 1\leq j_{2}<k_{2}\leq r}}%
+\lambda _{2j_{1}k_{1}j_{1}k_{1}}\lambda
+_{2j_{2}k_{2}j_{2}k_{2}}n_{j_{1}}n_{k_{1}}n_{j_{2}}n_{k_{2}}=\sum_{1\leq
+j_{1}<k_{1}\leq r}\lambda _{2j_{2}k_{2}j_{2}k_{2}}^{2}n_{j_{1}}n_{k_{1}} 
+\notag \\
+&&+2\sum_{1\leq i_{1}<i_{2}<i_{3}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{1}i_{3}i_{1}i_{3}}+\lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}  \notag \\
+&&+2\sum_{1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{3}i_{4}i_{3}i_{4}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{4}i_{2}i_{4}}+\lambda
+_{2i_{1}i_{4}i_{1}i_{4}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}n_{i_{4}}.
+\end{eqnarray}%
+Hence%
+\begin{eqnarray}
+&&\lambda ^{2}=\sum_{1\leq i\leq \nu }n_{i}+2\sum_{1\leq j<k\leq \nu
+}n_{j}n_{k}+4\sum_{1\leq i<j\leq \nu }\lambda _{2ijijk}n_{i}n_{j}+2\sum 
+_{\substack{ 1\leq i\leq \nu  \\ \nu +1\leq j\leq r}}\lambda
+_{2ijijk}n_{i}n_{j}  \notag \\
+&&+2\sum_{1\leq i\leq \nu }\sum_{i+1\leq j<k\leq r}\lambda
+_{2jkjk}n_{i}n_{j}n_{k}+2\sum_{1\leq i\leq \nu }\sum_{i+1\leq j<k\leq
+r}\lambda _{2jkjk}n_{i}n_{j}n_{k}+\sum_{1\leq j_{1}<k_{1}\leq r}\lambda
+_{2j_{2}k_{2}j_{2}k_{2}}^{2}n_{j_{1}}n_{k_{1}}  \notag \\
+&&+2\sum_{1\leq i_{1}<i_{2}<i_{3}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{1}i_{3}i_{1}i_{3}}+\lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}  \notag \\
+&&+2\sum_{1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{3}i_{4}i_{3}i_{4}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{4}i_{2}i_{4}}+\lambda
+_{2i_{1}i_{4}i_{1}i_{4}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}n_{i_{4}}
+\end{eqnarray}%
+\begin{eqnarray}
+&=&\sum_{1\leq i\leq \nu }n_{i}+2\sum_{1\leq j<k\leq \nu
+}n_{j}n_{k}+\sum_{1\leq i<j\leq \nu }\left( \lambda _{2ijij}^{2}+4\lambda
+_{2ijij}+2\right) n_{i}n_{j}  \notag \\
+&&+\sum_{1\leq i\leq \nu }\sum_{\nu +1\leq j\leq r}\left( \lambda
+_{2ijij}^{2}+2\lambda _{2ijij}\right) n_{i}n_{j}+\sum_{\nu +1\leq i<j\leq
+r}\lambda _{2ijij}^{2}n_{i}n_{j}  \notag \\
+&&+2\sum_{1\leq i_{1}\leq \nu }\sum_{i+1\leq i_{2}<i_{3}\leq r}\left(
+\lambda _{2jkjk}+\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}+\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda
+_{2i_{2}i_{3}i_{2}i_{3}}+\lambda _{2i_{1}i_{3}i_{1}i_{3}}\lambda
+_{2i_{2}i_{3}i_{2}i_{3}}\right) n_{i_{1}}n_{i_{2}}n_{i_{3}}  \notag \\
+&&+2\sum_{\nu +1\leq i_{1}<i_{2}<i_{3}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{1}i_{3}i_{1}i_{3}}+\lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}  \notag \\
+&&+2\sum_{1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{3}i_{4}i_{3}i_{4}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{4}i_{2}i_{4}}+\lambda
+_{2i_{1}i_{4}i_{1}i_{4}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}n_{i_{4}}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\lambda ^{2}-\lambda =\sum_{1\leq i<j\leq \nu }\left( \lambda
+_{2ijij}^{2}+3\lambda _{2ijij}+2\right) n_{i}n_{j}+\sum_{\nu +1\leq j<k\leq
+r}\left( \lambda _{2ijij}^{2}+\lambda _{2ijij}\right) n_{i}n_{j}  \notag \\
+&&+\sum_{\nu +1\leq j<k\leq r}\left( \lambda _{2ijij}^{2}-\lambda
+_{2ijij}\right) n_{i}n_{j}  \notag \\
+&&+2\sum_{1\leq i_{1}\leq \nu }\sum_{i+1\leq i_{2}<i_{3}\leq r}\left(
+\lambda _{2jkjk}+\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}+\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda
+_{2i_{2}i_{3}i_{2}i_{3}}+\lambda _{2i_{1}i_{3}i_{1}i_{3}}\lambda
+_{2i_{2}i_{3}i_{2}i_{3}}\right) n_{i_{1}}n_{i_{2}}n_{i_{3}}  \notag \\
+&&+2\sum_{\nu +1\leq i_{1}<i_{2}<i_{3}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{1}i_{3}i_{1}i_{3}}+\lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}  \notag \\
+&&+2\sum_{1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r}\left( \lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{3}i_{4}i_{3}i_{4}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{4}i_{2}i_{4}}+\lambda
+_{2i_{1}i_{4}i_{1}i_{4}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}\right)
+n_{i_{1}}n_{i_{2}}n_{i_{3}}n_{i_{4}}.
+\end{eqnarray}%
+The projection conditions are 
+\begin{eqnarray}
+\quad &&\left. \lambda \right. _{2ijij}^{2}+3\lambda _{2ijij}+2=0;\quad
+\Rightarrow \lambda _{2ijij}=-2\text{ or }-1 \\
+&&1\leq i<j\leq \nu \\
+&&\lambda _{2ijij}^{2}+\lambda _{2ijij}=0;\quad \Rightarrow \lambda
+_{2ijij}=-1\text{ or }0 \\
+&&1\leq i\leq \nu ,\nu +1\leq j\leq \nu \\
+&&\lambda _{2ijij}^{2}-\lambda _{2ijij}=0;\Rightarrow \lambda _{2ijij}=0%
+\text{ or }1 \\
+&&\nu \leq i<j\leq r, \\
+&&\lambda _{2jkjk}+\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}+\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda
+_{2i_{2}i_{3}i_{2}i_{3}}+\lambda _{2i_{1}i_{3}i_{1}i_{3}}\lambda
+_{2i_{2}i_{3}i_{2}i_{3}}=0;\quad \\
+&&1\leq i_{1}\leq \nu ,i+1\leq i_{2}<i_{3}\leq r \\
+&&\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{1}i_{3}i_{1}i_{3}}+\lambda
+_{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}=0;\quad \\
+&&\nu +1\leq i_{1}<i_{2}<i_{3}\leq r \\
+&&\lambda _{2i_{1}i_{2}i_{1}i_{2}}\lambda _{2i_{3}i_{4}i_{3}i_{4}}+\lambda
+_{2i_{1}i_{3}i_{1}i_{3}}\lambda _{2i_{2}i_{4}i_{2}i_{4}}+\lambda
+_{2i_{1}i_{4}i_{1}i_{4}}\lambda _{2i_{2}i_{3}i_{2}i_{3}}=0;\quad \\
+&&1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r.
+\end{eqnarray}
+
+\section{Idempotency Condition in SQ 2}
+
+We consider operators that can be expanded as 
+\begin{equation}
+\lambda =\lambda _{1}+\lambda _{2}=\sum_{1\leq i\leq r}\lambda
+_{1i}n_{i}+\sum_{1\leq j<k\leq r}\lambda _{2jkjk}n_{j}n_{k}=\sum_{1\leq
+j_{1},j_{2}\leq r}\eta _{j_{1}j_{2}}n_{j_{1}}n_{j_{2}};\,\eta
+_{j_{1}j_{2}}=\eta _{j_{2}j_{1}}\in \mathbb{R}
+\end{equation}%
+giving 
+\begin{equation}
+\lambda ^{2}=\left( \lambda _{1}+\lambda _{2}\right) ^{2}=\lambda
+_{1}^{2}+\lambda _{2}^{2}+2\lambda _{1}\lambda _{2}
+\end{equation}%
+Noting that 
+\begin{align}
+\left( \lambda _{2}\right) ^{2}& =2\sum_{\substack{ 1\leq
+l_{1}<l_{2}<l_{3}<l_{4}\leq r}}\left\{ \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{3}l_{4}l_{3}l_{4}}+\lambda
+_{2l_{1}l_{3}l_{1}l_{3}}\lambda _{2l_{2}l_{4}l_{2}l_{4}}+\lambda
+_{2l_{1}l_{4}l_{1}l_{4}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}\right\}
+n_{l_{1}}n_{l_{2}}n_{l_{3}}n_{l_{4}}  \notag \\
+& +2\sum_{\substack{ 1\leq l_{1}<l_{2}<l_{3}\leq r}}\left\{ \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{1}l_{3}l_{1}l_{3}}+\lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}+\lambda
+_{2l_{1}l_{3}l_{1}l_{3}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}\right\}
+n_{l_{1}}n_{l_{2}}n_{l_{3}}  \notag \\
+& +\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r}}\left( \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\right) ^{2}n_{l_{1}}n_{l_{2}},  \notag
+\end{align}%
+\begin{equation}
+\left( \lambda _{1}\right) ^{2}=2\sum_{1\leq l_{1}<l_{2}\leq r}\lambda
+_{1l_{1}}\lambda _{1l_{2}}n_{l_{1}}n_{l_{2}}+\sum_{1\leq l\leq r}\left(
+\lambda _{1l}\right) ^{2}n_{l}
+\end{equation}%
+and 
+\begin{eqnarray}
+2\lambda _{1}\lambda _{2} &=&\sum_{1\leq l\leq r}\lambda
+_{1l_{1}}n_{l_{1}}\sum_{1\leq l_{2}\neq l_{3}\leq r}\lambda
+_{2l_{2}l_{3}}n_{l_{2}}n_{l_{3}}=\sum_{1\leq l_{1},l_{2}\neq l_{3}\leq
+r}\lambda _{1l_{1}}\lambda _{2l_{2}l_{3}}n_{l_{1}}n_{l_{2}}n_{l_{3}} \\
+&=&2\sum_{1\leq l_{1}<l_{2}<l_{3}\leq r}\left( \lambda _{1l_{1}}\lambda
+_{2l_{2}l_{3}}+\lambda _{1l_{2}}\lambda _{2l_{1}l_{3}}+\lambda
+_{1l_{3}}\lambda _{2l_{1}l_{3}}\right) n_{l_{1}}n_{l_{2}}n_{l_{3}} \\
+&&+4\sum_{1\leq l_{1}<l_{2}\leq r}\lambda _{1l_{1}}\lambda
+_{2l_{1}l_{2}}n_{l_{1}}n_{l_{2}}.
+\end{eqnarray}%
+Hence%
+\begin{equation}
+\left( \lambda _{1}\right) ^{2}=2\sum_{1\leq l_{1}<l_{2}\leq r}\lambda
+_{1l_{1}}\lambda _{1l_{2}}n_{l_{1}}n_{l_{2}}+\sum_{1\leq l\leq r}\left(
+\lambda _{1l}\right) ^{2}n_{l}
+\end{equation}
+\begin{align}
+\lambda ^{2}& =2\sum_{\substack{ 1\leq l_{1}<l_{2}<l_{3}<l_{4}\leq r}}%
+\left\{ \lambda _{2l_{1}l_{2}l_{1}l_{2}}\lambda
+_{2l_{3}l_{4}l_{3}l_{4}}+\lambda _{2l_{1}l_{3}l_{1}l_{3}}\lambda
+_{2l_{2}l_{4}l_{2}l_{4}}+\lambda _{2l_{1}l_{4}l_{1}l_{4}}\lambda
+_{2l_{2}l_{3}l_{2}l_{3}}\right\} n_{l_{1}}n_{l_{2}}n_{l_{3}}n_{l_{4}}  \notag
+\\
+& +2\sum_{\substack{ 1\leq l_{1}<l_{2}<l_{3}\leq r}}\left\{ \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{1}l_{3}l_{1}l_{3}}+\lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}+\lambda
+_{2l_{1}l_{3}l_{1}l_{3}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}\right\}
+n_{l_{1}}n_{l_{2}}n_{l_{3}}  \notag \\
+& +\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r}}\left( \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\right) ^{2}n_{l_{1}}n_{l_{2}}  \notag \\
+& +2\sum_{1\leq l_{1}<l_{2}\leq r}\lambda _{1l_{1}}\lambda
+_{1l_{2}}n_{l_{1}}n_{l_{2}}+\sum_{1\leq l\leq r}\left( \lambda _{1l}\right)
+^{2}n_{l} \\
+& +2\sum_{1\leq l_{1}<l_{2}<l_{3}\leq r}\left( \lambda _{1l_{1}}\lambda
+_{2l_{2}l_{3}}+\lambda _{1l_{2}}\lambda _{2l_{1}l_{3}}+\lambda
+_{1l_{3}}\lambda _{2l_{1}l_{3}}\right) n_{l_{1}}n_{l_{2}}n_{l_{3}} \\
+& +2\sum_{1\leq l_{1}<l_{2}\leq r}\left( \lambda _{1l_{1}}\lambda
+_{2l_{2}l_{3}}\right) n_{l_{1}}n_{l_{2}}
+\end{align}%
+giving 
+\begin{align}
+\lambda ^{2}& =2\sum_{\substack{ 1\leq l_{1}<l_{2}<l_{3}<l_{4}\leq r}}%
+\left\{ \lambda _{2l_{1}l_{2}l_{1}l_{2}}\lambda
+_{2l_{3}l_{4}l_{3}l_{4}}+\lambda _{2l_{1}l_{3}l_{1}l_{3}}\lambda
+_{2l_{2}l_{4}l_{2}l_{4}}+\lambda _{2l_{1}l_{4}l_{1}l_{4}}\lambda
+_{2l_{2}l_{3}l_{2}l_{3}}\right\} n_{l_{1}}n_{l_{2}}n_{l_{3}}n_{l_{4}}  \notag
+\\
+& +2\sum_{\substack{ 1\leq l_{1}<l_{2}<l_{3}\leq r}}\left\{ \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{1}l_{3}l_{1}l_{3}}+\lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}+\lambda
+_{2l_{1}l_{3}l_{1}l_{3}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}\right.  \notag \\
+& \left. \lambda _{1l_{1}}\lambda _{2l_{2}l_{3}}+\lambda _{1l_{2}}\lambda
+_{2l_{1}l_{3}}+\lambda _{1l_{3}}\lambda _{2l_{1}l_{2}}\right\}
+n_{l_{1}}n_{l_{2}}n_{l_{3}} \\
+& +\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r}}\left\{ \left( \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\right) ^{2}+4\lambda _{1l_{1}}\lambda
+_{2l_{2}l_{3}}+2\lambda _{1l_{1}}\lambda _{1l_{2}}\right\} n_{l_{1}}n_{l_{2}}
+\notag \\
+& +\sum_{1\leq l\leq r}\left( \lambda _{1l}\right) ^{2}n_{l}
+\end{align}%
+First we consider $r=4$%
+\begin{eqnarray}
+\lambda ^{2} &=&2\left\{ \lambda _{21212}\lambda _{23434}+\lambda
+_{21313}\lambda _{22424}+\lambda _{21414}\lambda _{22323}\right\}
+n_{1}n_{2}n_{3}n_{4} \\
+&&+2\left\{ \lambda _{21212}\lambda _{21313}+\lambda _{21212}\lambda
+_{22323}+\lambda _{21313}\lambda _{22323}\right. \\
+&&+\left. \lambda _{111}\lambda _{22323}+\lambda _{122}\lambda
+_{21313}+\lambda _{133}\lambda _{21212}\right\} n_{1}n_{2}n_{3} \\
+&&+2\left\{ \lambda _{21212}\lambda _{21414}+\lambda _{21212}\lambda
+_{22424}+\lambda _{21414}\lambda _{22424}\right. \\
+&&+\left. \lambda _{111}\lambda _{22424}+\lambda _{122}\lambda
+_{21414}+\lambda _{144}\lambda _{21212}\right\} n_{1}n_{2}n_{4} \\
+&&+2\left\{ \lambda _{21313}\lambda _{21414}+\lambda _{21313}\lambda
+_{23434}+\lambda _{21414}\lambda _{23434}\right. \\
+&&+\left. \lambda _{111}\lambda _{23434}+\lambda _{133}\lambda
+_{21414}+\lambda _{144}\lambda _{21313}\right\} n_{1}n_{3}n_{4} \\
+&&+2\left\{ \lambda _{22323}\lambda _{22424}+\lambda _{22323}\lambda
+_{23434}+\lambda _{22424}\lambda _{23434}\right. \\
+&&+\left. \lambda _{122}\lambda _{23434}+\lambda _{133}\lambda
+_{22424}+\lambda _{144}\lambda _{22323}\right\} n_{2}n_{3}n_{4} \\
+&&+\left\{ \left( \lambda _{21212}\right) ^{2}+4\lambda _{111}\lambda
+_{22323}+2\lambda _{111}\lambda _{111}\right\} n_{1}n_{2}
+\end{eqnarray}
+\begin{eqnarray}
+&&\eta _{11}\eta _{11}n_{1}n_{1}n_{1}n_{1}+\eta _{11}\eta
+_{12}n_{1}n_{1}n_{1}n_{2}+\eta _{11}\eta _{13}n_{1}n_{1}n_{1}n_{3}+\eta
+_{11}\eta _{14}n_{1}n_{1}n_{1}n_{4} \\
+&&\eta _{11}\eta _{21}n_{1}n_{1}n_{2}n_{1}+\eta _{11}\eta
+_{22}n_{1}n_{1}n_{2}n_{2}+\eta _{11}\eta _{23}n_{1}n_{1}n_{2}n_{3}+\eta
+_{11}\eta _{24}n_{1}n_{1}n_{2}n_{4} \\
+&&\eta _{11}\eta _{31}n_{1}n_{1}n_{3}n_{1}+\eta _{11}\eta
+_{32}n_{1}n_{1}n_{3}n_{2}+\eta _{11}\eta _{33}n_{1}n_{1}n_{3}n_{3}+\eta
+_{11}\eta _{34}n_{1}n_{1}n_{3}n_{4} \\
+&&\eta _{11}\eta _{41}n_{1}n_{1}n_{4}n_{1}+\eta _{11}\eta
+_{42}n_{1}n_{1}n_{4}n_{2}+\eta _{11}\eta _{43}n_{1}n_{1}n_{4}n_{3}+\eta
+_{11}\eta _{44}n_{1}n_{1}n_{4}n_{4} \\
+&=&\left( \eta _{11}\right) ^{2}n_{1}+\left( 2\eta _{11}\eta _{12}+\eta
+_{11}\eta _{22}\right) n_{1}n_{2}+\left( 2\eta _{11}\eta _{13}+\eta
+_{11}\eta _{33}\right) n_{1}n_{3}+\left( 2\eta _{11}\eta _{14}+\eta
+_{11}\eta _{44}\right) n_{1}n_{4} \\
+&&+2\eta _{11}\eta _{23}n_{1}n_{2}n_{3}+2\eta _{11}\eta
+_{24}n_{1}n_{2}n_{4}+2\eta _{11}\eta _{34}n_{1}n_{3}n_{4}
+\end{eqnarray}%
+\begin{eqnarray}
+&&\eta _{12}\eta _{11}n_{1}n_{2}n_{1}n_{1}+\eta _{12}\eta
+_{12}n_{1}n_{2}n_{1}n_{2}+\eta _{12}\eta _{13}n_{1}n_{2}n_{1}n_{3}+\eta
+_{12}\eta _{14}n_{1}n_{2}n_{1}n_{4} \\
+&&\eta _{12}\eta _{21}n_{1}n_{2}n_{2}n_{1}+\eta _{12}\eta
+_{22}n_{1}n_{2}n_{2}n_{2}+\eta _{12}\eta _{23}n_{1}n_{2}n_{2}n_{3}+\eta
+_{12}\eta _{24}n_{1}n_{2}n_{2}n_{4} \\
+&&\eta _{12}\eta _{31}n_{1}n_{2}n_{3}n_{1}+\eta _{12}\eta
+_{32}n_{1}n_{2}n_{3}n_{2}+\eta _{12}\eta _{33}n_{1}n_{2}n_{3}n_{3}+\eta
+_{12}\eta _{34}n_{1}n_{2}n_{3}n_{4} \\
+&&\eta _{12}\eta _{41}n_{1}n_{2}n_{4}n_{1}+\eta _{12}\eta
+_{42}n_{1}n_{2}n_{4}n_{2}+\eta _{12}\eta _{43}n_{1}n_{2}n_{4}n_{3}+\eta
+_{12}\eta _{44}n_{1}n_{2}n_{4}n_{4} \\
+&=&\left( \eta _{12}\eta _{11}+2\left( \eta _{12}\right) ^{2}+\eta _{12}\eta
+_{22}\right) n_{1}n_{2}+\left( 2\eta _{12}\eta _{13}+2\eta _{12}\eta
+_{23}+\eta _{12}\eta _{33}\right) n_{1}n_{2}n_{3} \\
+&&+\left( 2\eta _{12}\eta _{41}+2\eta _{12}\eta _{42}+\eta _{12}\eta
+_{44}\right) n_{1}n_{2}n_{4}+2\eta _{12}\eta _{34}n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+\begin{eqnarray}
+&&\eta _{13}\eta _{11}n_{1}n_{3}n_{1}n_{1}+\eta _{13}\eta
+_{12}n_{1}n_{3}n_{1}n_{2}+\eta _{13}\eta _{13}n_{1}n_{3}n_{1}n_{3}+\eta
+_{13}\eta _{14}n_{1}n_{3}n_{1}n_{4} \\
+&&\eta _{13}\eta _{21}n_{1}n_{3}n_{2}n_{1}+\eta _{13}\eta
+_{22}n_{1}n_{3}n_{2}n_{2}+\eta _{13}\eta _{23}n_{1}n_{3}n_{2}n_{3}+\eta
+_{13}\eta _{24}n_{1}n_{3}n_{2}n_{4} \\
+&&\eta _{13}\eta _{31}n_{1}n_{3}n_{3}n_{1}+\eta _{13}\eta
+_{32}n_{1}n_{3}n_{3}n_{2}+\eta _{13}\eta _{33}n_{1}n_{3}n_{3}n_{3}+\eta
+_{13}\eta _{34}n_{1}n_{3}n_{3}n_{4} \\
+&&\eta _{13}\eta _{41}n_{1}n_{3}n_{4}n_{1}+\eta _{13}\eta
+_{42}n_{1}n_{3}n_{4}n_{2}+\eta _{13}\eta _{43}n_{1}n_{3}n_{4}n_{3}+\eta
+_{13}\eta _{44}n_{1}n_{3}n_{4}n_{4} \\
+&=&\left( \eta _{13}\eta _{11}+2\left( \eta _{13}\right) ^{2}+\eta _{13}\eta
+_{33}\right) n_{1}n_{3}+\left( 2\eta _{13}\eta _{14}+2\eta _{13}\eta
+_{34}+\eta _{13}\eta _{44}\right) n_{1}n_{3}n_{4} \\
+&&+\left( 2\eta _{13}\eta _{21}+\eta _{13}\eta _{22}+2\eta _{13}\eta
+_{23}+\eta _{13}\eta _{32}\right) n_{1}n_{2}n_{3}+2\eta _{13}\eta
+_{24}n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+\begin{eqnarray}
+&&\eta _{14}\eta _{11}n_{1}n_{4}n_{1}n_{1}+\eta _{14}\eta
+_{12}n_{1}n_{4}n_{1}n_{2}+\eta _{14}\eta _{13}n_{1}n_{4}n_{1}n_{3}+\eta
+_{14}\eta _{14}n_{1}n_{4}n_{1}n_{4} \\
+&&\eta _{14}\eta _{21}n_{1}n_{4}n_{2}n_{1}+\eta _{14}\eta
+_{22}n_{1}n_{4}n_{2}n_{2}+\eta _{14}\eta _{23}n_{1}n_{4}n_{2}n_{3}+\eta
+_{14}\eta _{24}n_{1}n_{4}n_{2}n_{4} \\
+&&\eta _{14}\eta _{31}n_{1}n_{4}n_{3}n_{1}+\eta _{14}\eta
+_{32}n_{1}n_{4}n_{3}n_{2}+\eta _{14}\eta _{33}n_{1}n_{4}n_{3}n_{3}+\eta
+_{14}\eta _{34}n_{1}n_{4}n_{3}n_{4} \\
+&&\eta _{14}\eta _{41}n_{1}n_{4}n_{4}n_{1}+\eta _{14}\eta
+_{42}n_{1}n_{4}n_{4}n_{2}+\eta _{14}\eta _{43}n_{1}n_{4}n_{4}n_{3}+\eta
+_{14}\eta _{44}n_{1}n_{4}n_{4}n_{4} \\
+&=&\left( \eta _{14}\eta _{11}+2\left( \eta _{14}\right) ^{2}+\eta _{14}\eta
+_{44}\right) n_{1}n_{4}+\left( 2\eta _{14}\eta _{12}+2\eta _{14}\eta
+_{24}\right) n_{1}n_{2}n_{4} \\
+&&+\left( 2\eta _{14}\eta _{13}+\eta _{14}\eta _{23}+\eta _{14}\eta
+_{33}+2\eta _{14}\eta _{34}\right) n_{1}n_{3}n_{4}+2\eta _{14}\eta
+_{23}n_{1}n_{2}n_{3}n_{4}
+\end{eqnarray}%
+This can be arranged into 
+\begin{gather}
+\lambda ^{2}  \notag \\
+\parallel
+\end{gather}%
+\begin{eqnarray}
+&&8\sum_{1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq r}\left( \eta _{j_{1}j_{2}}\eta
+_{j_{3}j_{4}}+\eta _{j_{1}j_{3}}\eta _{j_{2}j_{4}}+\eta _{j_{1}j_{4}}\eta
+_{j_{2}j_{3}}\right) n_{j_{1}}n_{j_{2}}n_{j_{3}}n_{j_{4}} \\
+&&+ \\
+&&\sum_{1\leq j_{1}<j_{2}<j_{3}\leq r}\left( \eta _{j_{1}j_{2}}\eta
+_{j_{3}j_{4}}+\eta _{j_{1}j_{3}}\eta _{j_{2}j_{4}}+\eta _{j_{1}j_{4}}\eta
+_{j_{2}j_{3}}\right) n_{j_{1}}n_{j_{2}}n_{j_{3}}
+\end{eqnarray}
+
+\section{The General Case}
+
+\paragraph{\protect\bigskip Commutation Relationships}
+
+\begin{equation}
+\left[ a_{l}^{\dagger }a_{l},a_{k}^{\dagger }\right] =a_{l}^{\dagger
+}a_{l}a_{k}^{\dagger }-a_{k}^{\dagger }a_{l}^{\dagger }a_{l}=a_{l}^{\dagger
+}\delta _{lk}+a_{k}^{\dagger }a_{l}^{\dagger }a_{l}-a_{k}^{\dagger
+}a_{l}^{\dagger }a_{l}=a_{l}^{\dagger }\delta _{lk}
+\end{equation}%
+hence%
+\begin{equation}
+\left[ a_{l}^{\dagger }a_{l},a_{k}\right] =\left[ n_{l},a_{k}\right]
+=-a_{l}\delta _{lk}
+\end{equation}%
+and 
+\begin{equation}
+\left[ n_{l},a_{k}^{\dagger }\right] =a_{l}^{\dagger }\delta _{lk}.
+\end{equation}%
+This gives 
+\begin{eqnarray}
+\left[ a_{l}^{\dagger }a_{l},a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}\right]  &=&\left[ a_{l}^{\dagger
+}a_{l},a_{l_{1}}^{\dagger }\right] a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}+a_{l_{1}}^{\dagger }\left[ a_{l}^{\dagger
+}a_{l},a_{l_{2}}^{\dagger }\right] a_{l_{4}}a_{l_{3}}+a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }\left[ a_{l}^{\dagger }a_{l},a_{l_{4}}\right]
+a_{l_{3}}+a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{l_{4}}\left[
+a_{l}^{\dagger }a_{l},a_{l_{3}}\right]  \\
+&=&a_{l}^{\dagger }a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}\delta
+_{ll_{1}}+a_{l_{1}}^{\dagger }a_{l}^{\dagger }a_{l_{4}}a_{l_{3}}\delta
+_{ll_{2}}-a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{l}a_{l_{3}}\delta
+_{ll_{4}}-a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{l_{4}}a_{l}^{\dagger
+}\delta _{ll_{3}}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r \\ 1\leq l_{3}<l_{4}\leq r}}%
+\lambda _{2l_{1}l_{2}l_{3}l_{4}}\left[ a_{l}^{\dagger
+}a_{l},a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}\right] = 
+\notag \\
+&&\frac{1}{4}\sum_{\substack{ 1\leq l_{1},l_{2}\leq r \\ 1\leq
+l_{3},l_{4}\leq r}}\lambda _{2l_{1}l_{2}l_{3}l_{4}}\left\{ a_{l}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}\delta _{ll_{1}}+a_{l_{1}}^{\dagger
+}a_{l}^{\dagger }a_{l_{4}}a_{l_{3}}\delta _{ll_{2}}-a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l}a_{l_{3}}\delta _{ll_{4}}-a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l}^{\dagger }\delta _{ll_{3}}\right\}  
+\notag \\
+&=&\frac{1}{4}\sum_{\substack{ 1\leq l_{1},l_{2}\leq r \\ 1\leq
+l_{3},l_{4}\leq r}}\left\{ \lambda _{2ll_{2}l_{3}l_{4}}a_{l}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}+\lambda
+_{2l_{1}ll_{3}l_{4}}a_{l_{1}}^{\dagger }a_{l}^{\dagger
+}a_{l_{4}}a_{l_{3}}-\lambda _{2l_{1}l_{2}l_{3}l}a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l}a_{l_{3}}-\lambda
+_{2l_{1}l_{2}ll_{4}}a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l}\right\}   \notag \\
+&=&\frac{1}{2}\left\{ \sum_{\substack{ 1\leq l_{2}\leq r \\ 1\leq
+l_{3},l_{4}\leq r}}\lambda _{2ll_{2}l_{3}l_{4}}a_{l}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}-\sum_{\substack{ 1\leq
+l_{1},l_{2}\leq r \\ 1\leq l_{3}\leq r}}\lambda
+_{2l_{1}l_{2}l_{3}l}a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l}a_{l_{3}}\right\} .
+\end{eqnarray}%
+Thus 
+\begin{equation}
+n_{l}\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r \\ 1\leq l_{3}<l_{4}\leq r}}%
+\lambda _{2l_{1}l_{2}l_{3}l_{4}}a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}=\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r \\ 1\leq
+l_{3}<l_{4}\leq r}}\lambda _{2l_{1}l_{2}l_{3}l_{4}}a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}n_{l}+\frac{1}{2}\left\{ \sum
+_{\substack{ 1\leq l_{2}\leq r \\ 1\leq l_{3},l_{4}\leq r}}\lambda
+_{2ll_{2}l_{3}l_{4}}a_{l}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}-\sum_{\substack{ 1\leq l_{1},l_{2}\leq r \\ 1\leq
+l_{3}\leq r}}\lambda _{2l_{1}l_{2}l_{3}l}a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l}a_{l_{3}}\right\} 
+\end{equation}%
+and 
+\begin{equation}
+n_{l}\lambda _{2}+\lambda _{2}n_{l}=2n_{l}\lambda _{2}-\sum_{\substack{ %
+1\leq l_{2}\leq r \\ 1\leq l_{3}<l_{4}\leq r}}\lambda
+_{2ll_{2}l_{3}l_{4}}a_{l}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}-\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r \\ 1\leq
+l_{3}\leq r}}\lambda _{2l_{1}l_{2}l_{3}l}a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l}a_{l_{3}}.
+\end{equation}%
+Hence 
+\begin{equation}
+n_{l}\lambda _{2}+\lambda _{2}n_{l}=\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r
+\\ 1\leq l_{3}<l_{4}\leq r}}\lambda _{2l_{1}l_{2}l_{3}l_{4}}a_{l}^{\dagger
+}a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{l}a_{l_{4}}a_{l_{3}}+\sum
+_{\substack{ 1\leq l_{2}\leq r \\ 1\leq l_{3}<l_{4}\leq r}}\lambda
+_{2ll_{2}l_{3}l_{4}}a_{l}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}-\sum_{\substack{ 1\leq l_{1}\leq r \\ 1\leq
+l_{3}<l_{4}\leq r}}\lambda _{2l_{1}ll_{3}l_{4}}a_{l}^{\dagger
+}a_{l_{1}}^{\dagger }a_{l_{4}}a_{l_{3}}
+\end{equation}
+
+The idempotency condition gives 
+\begin{equation}
+\Lambda _{111}=\sum_{1\leq l\leq r}\alpha _{l}\left( \alpha _{l}-1\right)
+a_{l}^{\dagger }a_{l}=0\Leftrightarrow \alpha _{l}=1\text{ or }\alpha _{l}=0
+\end{equation}%
+and 
+\begin{align}
+& \Lambda _{112}+\Lambda _{222}+\Lambda _{122}=2\sum_{1\leq l_{1}<l_{2}\leq
+\nu }a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{l_{2}}a_{l_{1}}+\sum
+_{\substack{ 1\leq l_{1}<l_{2}\leq r \\ 1\leq k_{3}<k_{4}\leq r}}\left\{
+\lambda _{2l_{1}l_{2}k_{3}k_{4}}^{2}-\lambda
+_{2l_{1}l_{2}k_{3}k_{4}}\right\} a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{k_{4}}a_{k_{3}}  \notag \\
+& +\frac{1}{4}\left( \sum_{\substack{ 1\leq l_{1}\leq \nu ,\nu +1\leq
+l_{2}\leq r \\ \nu +1\leq l_{3},l_{4}\leq r}}\lambda
+_{2l_{1}l_{2}l_{3}l_{4}}+\sum_{\substack{ \nu +1\leq l_{1}\leq r,1\leq
+l_{2}\leq \nu  \\ \nu +1\leq l_{3},l_{4}\leq r}}\lambda
+_{2l_{1}l_{2}l_{3}l_{4}}+\sum_{\substack{ 1\leq l_{1},l_{2}\leq r \\ 1\leq
+l_{3}\leq \nu ,\nu +1\leq l_{4}\leq r}}\lambda _{2l_{1}l_{2}l_{3}l_{4}}+\sum
+_{\substack{ 1\leq l_{1},l_{2}\leq r \\ \nu +1\leq l_{3}\leq r,1\leq
+l_{4}\leq \nu }}\lambda _{2l_{1}l_{2}l_{3}l_{4}}\right) a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}=0
+\end{align}%
+The last term is equal to%
+\begin{eqnarray}
+\Lambda _{122} &=&4\sum_{\substack{ 1\leq l_{1}<l_{2}\leq \nu , \\ 1\leq
+l_{3}<l_{4}\leq \nu }}\lambda _{2l_{1}l_{2}l_{3}l_{4}}a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}+\sum_{\substack{ 1\leq l_{1}\leq \nu
+,\nu +1\leq l_{2}\leq r \\ \nu +1\leq l_{3},l_{4}\leq r}}\lambda
+_{2l_{1}l_{2}l_{3}l_{4}}a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}  \notag \\
+&&+\sum_{\substack{ 1\leq l_{1},l_{2}\leq r \\ 1\leq l_{3}\leq \nu ,\nu
++1\leq l_{4}\leq r}}\lambda _{2l_{1}l_{2}l_{3}l_{4}}a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}+\sum_{\substack{ 1\leq
+l_{1},l_{2}\leq r \\ \nu +1\leq l_{3}\leq r,1\leq l_{4}\leq \nu }}\lambda
+_{2l_{1}l_{2}l_{3}l_{4}}a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}\left. =\right. 0
+\end{eqnarray}%
+giving 
+\begin{eqnarray}
+\Lambda _{112}+\Lambda _{222}+\Lambda _{122} &=&\sum_{\substack{ 1\leq
+l_{1}<l_{2}\leq \nu , \\ 1\leq l_{3}<l_{4}\leq \nu }}\left( 2\delta
+_{l_{1}l_{3}}\delta _{l_{2}l_{4}}+3\lambda _{2l_{1}l_{2}l_{3}l_{4}}+\lambda
+_{2l_{1}l_{2}l_{3}l_{4}}^{2}\right) a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}  \notag \\
+&&+\sum_{\substack{ \nu +1\leq l_{1}\leq \nu ,1\leq l_{2}\leq \nu , \\ \nu
++1\leq l_{3}<l_{4}\leq r}}\left( \lambda
+_{2l_{1}l_{2}k_{3}k_{4}}^{2}+\lambda _{2l_{1}l_{2}k_{3}k_{4}}\right)
+a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}  \notag \\
+&&+\sum_{\substack{ \nu +1\leq l_{1},l_{2}\leq r \\ 1\leq l_{3}\leq \nu ,\nu
++1\leq l_{4}\leq r}}\left( \lambda _{2l_{1}l_{2}k_{3}k_{4}}^{2}+\lambda
+_{2l_{1}l_{2}k_{3}k_{4}}\right) a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}  \notag \\
+&&+\sum_{\substack{ \nu +1\leq l_{1},l_{2}\leq r \\ \nu +1\leq l_{3}\leq
+r,1\leq l_{4}\leq \nu }}\left( \lambda _{2l_{1}l_{2}k_{3}k_{4}}^{2}+\lambda
+_{2l_{1}l_{2}k_{3}k_{4}}\right) a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}  \notag \\
+&&+\sum_{\substack{ \nu +1\leq l_{1}<l_{2}\leq r, \\ \nu +1\leq
+l_{3}<l_{4}\leq r}}\left( \lambda _{2l_{1}l_{2}k_{3}k_{4}}^{2}-\lambda
+_{2l_{1}l_{2}k_{3}k_{4}}\right) a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger
+}a_{l_{4}}a_{l_{3}}\left. =\right. 0
+\end{eqnarray}%
+\begin{align}
+& \Lambda _{223}+\Lambda _{123}=9\sum_{\substack{ 1\leq
+l_{1}<l_{2}<k_{2}\leq r \\ 1\leq l_{3}<k_{3}<k_{4}\leq r}}\sum_{\substack{ %
+\sigma ,\eta \in S_{3} \\ 1\leq l_{4}\leq r}}\left( -1\right) ^{\pi \left(
+\sigma \right) }\left( -1\right) ^{\pi \left( \eta \right) }\lambda
+_{2\sigma \left( l_{1}\right) \sigma \left( l_{2}\right) \eta \left(
+l_{3}\right) l_{4}}\lambda _{2l_{4}\sigma \left( k_{2}\right) \eta \left(
+k_{3}\right) \eta \left( k_{4}\right) }a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{k_{2}}^{\dagger }a_{l_{3}}a_{k_{4}}a_{k_{3}}  \notag
+\\
+& +\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r \\ 1\leq l_{3}<l_{4}\leq r \\ %
+1\leq l\leq \nu }}\lambda _{2l_{1}l_{2}l_{3}l_{4}}a_{l_{1}}^{\dagger
+}a_{l_{2}}^{\dagger }a_{l}^{\dagger }a_{l}a_{l_{4}}a_{l_{3}}\left. =\right. 0
+\notag
+\end{align}%
+\begin{subequations}
+\begin{align}
+& \Lambda _{224}=36\sum_{\substack{ 1\leq l_{1}<l_{2}<k_{1}<k_{2}\leq r \\ %
+1\leq l_{3}<l_{4}<k_{3}<k_{4}\leq r \\ \sigma ,\eta \in S_{4}}}\left(
+-1\right) ^{\pi \left( \sigma \right) }\left( -1\right) ^{\pi \left( \eta
+\right) }\lambda _{2\sigma \left( l_{1}\right) \sigma \left( l_{2}\right)
+\eta \left( l_{3}\right) \eta \left( l_{4}\right) }\lambda _{2\sigma \left(
+k_{1}\right) \sigma \left( k_{2}\right) \eta \left( k_{3}\right) \eta \left(
+k_{4}\right) }a_{l_{1}}^{\dagger }a_{l_{2}}^{\dagger }a_{k_{1}}^{\dagger
+}a_{k_{2}}^{\dagger }a_{l_{4}}a_{l_{3}}a_{k_{4}}a_{k_{3}}  \notag \\
+& =0.
+\end{align}
+\end{subequations}
+
+\end{document}

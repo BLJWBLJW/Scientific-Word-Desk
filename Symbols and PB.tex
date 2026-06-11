@@ -1,0 +1,565 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, December 19, 2003 09:46:11}
+%TCIDATA{LastRevised=Sunday, December 21, 2003 20:51:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Poisson Brackets and Symbols}
+
+The Poisson Brackets $\left\{  f,g\right\}  $ between two complex valued
+functions $\left(  f,g\right)  $ on the curved phase space $\mathcal{M}$ is a
+complex valued bilinear map from the tangent bundle $\mathfrak{T}$ of
+$\mathcal{M}$
+\begin{equation}
+\left\{  ,\right\}  :\mathfrak{T}\times\mathfrak{T}\rightarrow\mathbb{C},
+\end{equation}
+defined on each tangent space as
+\begin{align}
+\left\{  f\left(  \mathbf{z}\right)  ,g\left(  \mathbf{z}\right)  \right\}
+& =\omega\left(  \mathbf{z}\right)  ^{-1}\left(  X_{f}\left(  \mathbf{z}%
+\right)  ,X_{g}\left(  \mathbf{z}\right)  \right)  \nonumber\\
+& =\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial f\left(  \mathbf{z}\right)  }{\partial\mathbf{\bar{z}}} &
+\frac{\partial f\left(  \mathbf{z}\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\overline{\mathbf{C}\left(  \mathbf{\bar{z},z}\right)  }^{-1}\\
+-i\mathbf{C}\left(  \mathbf{\bar{z},z}\right)  ^{-1} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\partial g\left(  \mathbf{z}\right)  }{\partial\mathbf{\bar{z}}}\\
+\frac{\partial g\left(  \mathbf{z}\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  .\label{PB}%
+\end{align}
+Real valued classical observables $f_{\mathcal{O}}\left(  \mathbf{\bar{z}%
+,z}\right)  $ that are the symbols of quantum observables are defined in
+general by
+\begin{equation}
+f_{\mathcal{O}}\left(  \mathbf{\bar{z},z}\right)  =\frac{\left\langle \left.
+\Phi\left(  \mathbf{z}\right)  \right\vert \mathcal{O}\Phi\left(
+\mathbf{z}\right)  \right\rangle }{\left\langle \left.  \Phi\left(
+\mathbf{z}\right)  \right\vert \Phi\left(  \mathbf{z}\right)  \right\rangle
+}=\frac{\mathcal{O}_{u}\left(  \mathbf{\bar{z},z}\right)  }{\mathcal{S}\left(
+\mathbf{\bar{z},z}\right)  }.
+\end{equation}
+In the special case of $SU\left(  \mathcal{H}^{N}\right)  /U\left(  1\right)
+$-CS's these symbols and the metric matrix become%
+\begin{equation}
+f_{\mathcal{O}}\left(  \mathbf{\bar{z},z}\right)  =\frac{\mathbf{z}^{\dagger
+}\mathbb{O}\mathbf{z}}{\mathbf{z}^{\dagger}\mathbf{z}}%
+\end{equation}
+and
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\overline{\mathbf{C}\left(  \mathbf{\bar{z},z}\right)  }^{-1}\\
+-i\mathbf{C}\left(  \mathbf{\bar{z},z}\right)  ^{-1} & \mathbf{0}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\mathbf{P}_{\mathbf{\bar{z}}}^{\bot}\\
+-i\mathbf{P}_{\mathbf{z}}^{\bot} & \mathbf{0}%
+\end{array}
+\right)  .
+\end{equation}
+The 1$^{\text{st }}$Derivatives of the symbols are
+\begin{equation}
+\frac{\partial\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }{\partial
+\mathbf{x}}=\frac{1}{\mathcal{S}\left(  \mathbf{\bar{z},z}\right)  }\left\{
+\frac{\partial\mathcal{O}_{u}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{x}}-\mathcal{O}\left(  \mathbf{\bar{z},z}\right)
+\frac{\partial\mathcal{S}\left(  \mathbf{\bar{z},z}\right)  }{\partial
+\mathbf{x}}\right\}  ,
+\end{equation}
+which for $SU\left(  \mathcal{H}^{N}\right)  /U\left(  1\right)  $-CS's gives%
+\begin{equation}
+D^{1}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  =\left(
+\begin{array}
+[c]{c}%
+\frac{\partial\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }{\partial
+\mathbf{\bar{z}}}\\
+\frac{\partial\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }{\partial
+\mathbf{z}}%
+\end{array}
+\right)  =\frac{1}{\mathbf{z}^{\dagger}\mathbf{z}}\left(
+\begin{array}
+[c]{c}%
+\left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z},z}\right)
+\mathbb{I}\right\}  \mathbf{z}\\
+\mathbf{z}^{\dagger}\left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z}%
+,z}\right)  \mathbb{I}\right\}
+\end{array}
+\right)  .
+\end{equation}
+The 2$^{\text{nd }}$Derivatives of the symbols are
+\begin{align}
+\frac{\partial^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{x}\partial\mathbf{y}} &  =\frac{1}{\mathcal{S}\left(
+\mathbf{\bar{z},z}\right)  }\left\{  \frac{\partial^{2}\mathcal{O}_{u}\left(
+\mathbf{\bar{z},z}\right)  }{\partial\mathbf{x}\partial\mathbf{y}}%
+-\mathcal{O}_{u}\left(  \mathbf{\bar{z},z}\right)  \frac{\partial
+^{2}\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }%
+{\partial\mathbf{x}\partial\mathbf{y}}\right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad-\left.  \left(  \frac
+{\partial\mathcal{S}\left(  \mathbf{\bar{z},z}\right)  }{\partial\mathbf{x}%
+}\frac{\partial\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }{\partial
+\mathbf{y}}+\frac{\partial\mathcal{O}\left(  \mathbf{\bar{z},z}\right)
+}{\partial\mathbf{x}}\frac{\partial\mathcal{S}\left(  \mathbf{\bar{z}%
+,z}\right)  }{\partial\mathbf{y}}\right)  \right\}  ,
+\end{align}
+which for $SU\left(  \mathcal{H}^{N}\right)  /U\left(  1\right)  $-CS's
+produces
+\begin{align}
+&  D^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  =\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{\bar{z}}\partial\mathbf{\bar{z}}} & \frac{\partial
+^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }{\partial\mathbf{\bar{z}%
+}\partial\mathbf{z}}\\
+\frac{\partial^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{z}\partial\mathbf{\bar{z}}} & \frac{\partial^{2}%
+\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }{\partial\mathbf{z}%
+\partial\mathbf{z}}%
+\end{array}
+\right)  =\\
+&  \frac{1}{\mathbf{z}^{\dagger}\mathbf{z}}\left(
+\begin{array}
+[c]{cc}%
+\begin{array}
+[c]{c}%
+-\frac{1}{\mathbf{z}^{\dagger}\mathbf{z}}\left(  \mathbf{z\otimes}\left\{
+\mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  \mathbb{I}\right\}
+\mathbf{z}+\right.  \\
+\qquad\qquad\left.  \left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z}%
+,z}\right)  \mathbb{I}\right\}  \mathbf{z\otimes z}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z},z}\right)
+\mathbb{I}\right\}  -\qquad\qquad\qquad\qquad\\
+\frac{1}{\mathbf{z}^{\dagger}\mathbf{z}}\left(  \mathbf{z\otimes z}^{\dagger
+}\left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z},z}\right)
+\mathbb{I}\right\}  +\right.  \\
+\qquad\qquad\left.  \left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z}%
+,z}\right)  \mathbb{I}\right\}  \mathbf{z\otimes\mathbf{\mathbf{z}^{\dagger}}%
+}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\left\{  \mathbb{O}^{t}-\mathcal{O}\left(  \mathbf{\bar{z},z}\right)
+\mathbb{I}\right\}  -\qquad\qquad\qquad\qquad\\
+\frac{1}{\mathbf{z}^{\dagger}\mathbf{z}}\left(  \mathbf{\mathbf{\mathbf{z}%
+^{\dagger}}\otimes}\left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z}%
+,z}\right)  \mathbb{I}\right\}  \mathbf{z}+\right.  \\
+\qquad\qquad\left.  \mathbf{z}^{\dagger}\left\{  \mathbb{O}-\mathcal{O}\left(
+\mathbf{\bar{z},z}\right)  \mathbb{I}\right\}  \mathbf{\otimes z}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+-\frac{1}{\mathbf{z}^{\dagger}\mathbf{z}}\left(  \mathbf{\mathbf{z}^{\dagger
+}\otimes z}^{\dagger}\left\{  \mathbb{O}-\mathcal{O}\left(  \mathbf{\bar{z}%
+,z}\right)  \mathbb{I}\right\}  +\right.  \\
+\qquad\qquad\left.  \mathbf{z}^{\dagger}\left\{  \mathbb{O}-\mathcal{O}\left(
+\mathbf{\bar{z},z}\right)  \mathbb{I}\right\}  \mathbf{\otimes\mathbf{z}%
+^{\dagger}}\right)
+\end{array}
+\end{array}
+\right)
+\end{align}
+after noting that
+\begin{subequations}
+\begin{align}
+\frac{\partial\mathcal{S}\left(  \mathbf{\bar{z},z}\right)  }{\partial
+\mathbf{\bar{z}}} &  =\mathbf{z;}\frac{\partial\mathcal{S}\left(
+\mathbf{\bar{z},z}\right)  }{\partial\mathbf{z}}=\mathbf{z}^{\dagger}\\
+\frac{\partial^{2}\mathcal{S}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{\bar{z}}\partial\mathbf{z}} &  =\mathbb{I=}\frac{\partial
+^{2}\mathcal{S}\left(  \mathbf{\bar{z},z}\right)  }{\partial\mathbf{z}%
+\partial\mathbf{\bar{z}}};\frac{\partial^{2}\mathcal{S}\left(  \mathbf{\bar
+{z},z}\right)  }{\partial\mathbf{\bar{z}}\partial\mathbf{\bar{z}}}%
+=\frac{\partial^{2}\mathcal{S}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{z}\partial\mathbf{z}}=\mathbf{0}\\
+\frac{\partial\mathcal{O}_{u}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{\bar{z}}} &  =\mathbb{O}\mathbf{z;}\frac{\partial
+\mathcal{O}_{u}\left(  \mathbf{\bar{z},z}\right)  }{\partial\mathbf{z}%
+}=\mathbf{z}^{\dagger}\mathbb{O};\\
+\frac{\partial^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{\bar{z}}\partial\mathbf{z}} &  =\mathbb{O};\frac{\partial
+^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }{\partial\mathbf{z}%
+\partial\mathbf{\bar{z}}}=\mathbb{O}^{t};\frac{\partial^{2}\mathcal{O}\left(
+\mathbf{\bar{z},z}\right)  }{\partial\mathbf{\bar{z}}\partial\mathbf{\bar{z}}%
+}=\frac{\partial^{2}\mathcal{O}\left(  \mathbf{\bar{z},z}\right)  }%
+{\partial\mathbf{z}\partial\mathbf{z}}=\mathbf{0}%
+\end{align}
+
+
+\subsection{Time Evolution}
+
+One can evaluate the PB\ along time dependent paths $\mathrm{z}\left(
+t\right)  $ by
+\end{subequations}
+\begin{align}
+\left\{  f\left(  \mathrm{z}\left(  t\right)  \right)  ,g\left(
+\mathrm{z}\left(  t\right)  \right)  \right\}    & =\omega\left(
+\mathrm{z}\left(  t\right)  \right)  ^{-1}\left(  X_{f}\left(  \mathrm{z}%
+\left(  t\right)  \right)  ,X_{g}\left(  \mathrm{z}\left(  t\right)  \right)
+\right)  \nonumber\\
+& =\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial f\left(  \mathrm{z}\left(  t\right)  \right)  }{\partial
+\mathbf{\bar{z}}} & \frac{\partial f\left(  \mathrm{z}\left(  t\right)
+\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\overline{\mathbf{C}\left(  \mathrm{\bar{z}}\left(  t\right)
+\mathbf{,}\mathrm{z}\left(  t\right)  \right)  }^{-1}\\
+-i\mathbf{C}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathbf{,}%
+\mathrm{z}\left(  t\right)  \right)  ^{-1} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\partial g\left(  \mathrm{z}\left(  t\right)  \right)  }{\partial
+\mathbf{\bar{z}}}\\
+\frac{\partial g\left(  \mathrm{z}\left(  t\right)  \right)  }{\partial
+\mathbf{z}}%
+\end{array}
+\right)  ,
+\end{align}
+where all the derivatives are evaluated at the point $\mathrm{z}\left(
+t\right)  .$
+
+Time evolution for $SU\left(  \mathcal{H}^{N}\right)  /U\left(  1\right)
+$-CS's symbols are determined from the classical EOM\ and phase equation by
+the solution paths
+\begin{equation}
+\mathrm{z}\left(  t\right)  =e^{-i\mathbb{H}t}\mathbf{z}_{i}%
+\end{equation}
+and are given by
+\begin{equation}
+f_{\mathcal{O}}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  =\frac{\mathrm{z}\left(  t\right)  ^{\dagger}%
+\mathbb{O}\mathrm{z}\left(  t\right)  }{\mathrm{z}\left(  t\right)  ^{\dagger
+}\mathrm{z}\left(  t\right)  }=\frac{\left[  e^{-i\mathbb{H}t}\mathbf{z}%
+_{i}\right]  ^{\dagger}\mathbb{O}\left[  e^{-i\mathbb{H}t}\mathbf{z}%
+_{i}\right]  }{\left[  e^{-i\mathbb{H}t}\mathbf{z}_{i}\right]  ^{\dagger
+}\left[  e^{-i\mathbb{H}t}\mathbf{z}_{i}\right]  }=\frac{\mathbf{z}%
+_{i}^{\dagger}\left(  e^{i\mathbb{H}t}\mathbb{O}e^{-i\mathbb{H}t}\right)
+\mathbf{z}_{i}}{\mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}}=\frac{\mathbf{z}%
+_{i}^{\dagger}\mathbb{O}\left(  t\right)  \mathbf{z}_{i}}{\mathbf{z}%
+_{i}^{\dagger}\mathbf{z}_{i}}.
+\end{equation}
+In this case the action of the Poisson Bracket is defined in terms of
+derivatives \emph{with respect to an initial point}.\emph{ }We can extended
+the PB to \emph{different} paths and different times by
+\begin{align}
+& \left\{  f\left(  \mathrm{\bar{z}}\left(  t_{1}\right)  \mathrm{,z}\left(
+t_{1}\right)  \right)  ,g\left(  \mathrm{\bar{z}}\left(  t_{2}\right)
+\mathrm{,z}\left(  t_{2}\right)  \right)  \right\}  =\omega_{\left(
+\mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)  }%
+{}^{-1}\left(  X_{f}\left(  t_{1}\right)  ,X_{g}\left(  t_{2}\right)  \right)
+\nonumber\\
+& =\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial f\left(  \mathrm{\bar{z}}\left(  t_{1}\right)  \mathrm{,z}%
+\left(  t_{1}\right)  \right)  }{\partial\mathbf{\bar{z}}_{i}} &
+\frac{\partial f\left(  \mathrm{\bar{z}}\left(  t_{1}\right)  \mathrm{,z}%
+\left(  t_{1}\right)  \right)  }{\partial\mathbf{z}_{i}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\mathbf{P}_{\mathrm{\bar{z}}\left(  t\right)  }^{\bot}\\
+-i\mathbf{P}_{\mathrm{z}\left(  t\right)  }^{\bot} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\partial g\left(  \mathrm{\bar{z}}\left(  t_{2}\right)  \mathrm{,z}%
+\left(  t_{2}\right)  \right)  }{\partial\mathbf{\bar{z}}_{i}}\\
+\frac{\partial g\left(  \mathrm{\bar{z}}\left(  t_{2}\right)  \mathrm{,z}%
+\left(  t_{2}\right)  \right)  }{\partial\mathbf{z}_{i}}%
+\end{array}
+\right)
+\end{align}
+gives for $SU\left(  \mathcal{H}^{N}\right)  /U\left(  1\right)  $-CS's%
+\begin{align}
+&  \left\{  f\left(  \mathrm{\bar{z}}\left(  t_{1}\right)  \mathrm{,z}\left(
+t_{1}\right)  \right)  ,g\left(  \mathrm{\bar{z}}\left(  t_{2}\right)
+\mathrm{,z}\left(  t_{2}\right)  \right)  \right\}  =\nonumber\\
+&  \qquad\frac{1}{\left(  \mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\right)  ^{3}%
+}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{\bar{z}}_{i}^{\dagger}\left\{  \mathbb{\bar{F}}\left(  t\right)
+-\mathcal{F}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  \mathbb{I}\right\}   & \mathbf{z}_{i}^{\dagger}\left\{
+\mathbb{F}\left(  t\right)  -\mathcal{F}\left(  \mathrm{\bar{z}}\left(
+t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{I}\right\}
+\end{array}
+\right)  \nonumber\\
+&  \qquad\qquad\qquad\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\mathbf{P}_{\mathrm{\bar{z}}\left(  t\right)  }^{\bot}\\
+-i\mathbf{P}_{\mathrm{z}\left(  t\right)  }^{\bot} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\{  \mathbb{G}\left(  t\right)  -\mathcal{G}\left(  \mathrm{\bar{z}%
+}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{I}\right\}
+\mathbf{z}\\
+\left\{  \mathbb{\bar{G}}\left(  t\right)  -\mathcal{G}\left(  \mathrm{\bar
+{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{I}%
+\right\}  \mathbf{\bar{z}}%
+\end{array}
+\right)
+\end{align}
+which gives
+\begin{align}
+& \left\{  f\left(  t\right)  ,g\left(  t\right)  \right\}  =\quad\frac
+{1}{\left(  \mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\right)  ^{3}}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{\bar{z}}_{i}^{\dagger}\left\{  \mathbb{\bar{F}}\left(  t\right)
+-\mathcal{F}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  \mathbb{I}\right\}   & \mathbf{z}_{i}^{\dagger}\left\{
+\mathbb{F}\left(  t\right)  -\mathcal{F}\left(  \mathrm{\bar{z}}\left(
+t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{I}\right\}
+\end{array}
+\right)  \nonumber\\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\times\left(
+\begin{array}
+[c]{c}%
+i\mathbf{P}_{\mathrm{\bar{z}}\left(  t\right)  }^{\bot}\left\{  \mathbb{\bar
+{G}}\left(  t\right)  -\mathcal{G}\left(  \mathrm{\bar{z}}\left(  t\right)
+\mathrm{,z}\left(  t\right)  \right)  \mathbb{I}\right\}  \mathbf{\bar{z}}%
+_{i}\\
+-i\mathbf{P}_{\mathrm{z}\left(  t\right)  }^{\bot}\left\{  \mathbb{G}\left(
+t\right)  -\mathcal{G}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}%
+\left(  t\right)  \right)  \mathbb{I}\right\}  \mathbf{z}_{i}%
+\end{array}
+\right)  .
+\end{align}
+Noting that
+\begin{equation}
+\mathbf{z}_{i}^{\dagger}\left\{  \mathbb{X}\left(  t\right)  -\mathcal{X}%
+\left(  t\right)  \right\}  \mathbf{z}_{i}\mathbf{=z}_{i}^{\dagger}%
+\mathbb{X}\left(  t\right)  \mathbf{z}_{i}\mathbf{-}\mathcal{X}\left(
+t\right)  \mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}=\mathcal{X}\left(  t\right)
+\mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\mathbf{-}\mathcal{X}\left(  t\right)
+\mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\mathbf{=0}%
+\end{equation}
+showing that $\left\{  \mathbb{X}\left(  t\right)  -\mathcal{X}\left(
+t\right)  \right\}  \mathbf{z}_{i}\mathbf{\,\bot\,z}_{i}$ and $\left\{
+\mathbb{\bar{X}}\left(  t\right)  -\mathcal{X}\left(  t\right)  \right\}
+\mathbf{\bar{z}}_{i}\mathbf{\,\bot\,\bar{z}}_{i}$ we obtain
+\begin{align}
+& \left\{  f\left(  t\right)  ,g\left(  t\right)  \right\}  =\frac{1}{\left(
+\mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\right)  ^{3}}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{\bar{z}}_{i}^{\dagger}\left\{  \mathbb{\bar{F}}\left(  t\right)
+-\mathcal{F}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  \mathbb{I}\right\}   & \mathbf{z}_{i}^{\dagger}\left\{
+\mathbb{F}\left(  t\right)  -\mathcal{F}\left(  \mathrm{\bar{z}}\left(
+t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{I}\right\}
+\end{array}
+\right)  \nonumber\\
+& \quad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\times\left(
+\begin{array}
+[c]{c}%
+i\left\{  \mathbb{\bar{G}}\left(  t\right)  -\mathcal{G}\left(  \mathrm{\bar
+{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{I}%
+\right\}  \mathbf{\bar{z}}_{i}\\
+-i\left\{  \mathbb{G}\left(  t\right)  -\mathcal{G}\left(  \mathrm{\bar{z}%
+}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{I}\right\}
+\mathbf{z}_{i}%
+\end{array}
+\right)  ,
+\end{align}
+which gives
+\begin{align}
+&  \left\{  f\left(  t\right)  ,g\left(  t\right)  \right\}  =\frac{1}{\left(
+\mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\right)  ^{3}}\left\{  i\mathbf{\bar{z}%
+}_{i}^{\dagger}\left\{  \mathbb{\bar{F}}\left(  t\right)  -\mathcal{F}\left(
+\mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)
+\mathbb{I}\right\}  \left\{  \mathbb{\bar{G}}\left(  t\right)  -\mathcal{G}%
+\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)
+\right)  \mathbb{I}\right\}  \mathbf{\bar{z}}_{i}\right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+-i\mathbf{z}_{i}^{\dagger}\left\{  \mathbb{F}\left(  t\right)  -\mathcal{F}%
+\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)
+\right)  \mathbb{I}\right\}  \left\{  \mathbb{G}\left(  t\right)
+-\mathcal{G}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  \mathbb{I}\right\}  \mathbf{z}_{i}\right\}  \nonumber\\
+&  =\left\{  i\mathbf{\bar{z}}_{i}^{\dagger}\left\{  \mathbb{\bar{F}}\left(
+t\right)  \mathbb{\bar{G}}\left(  t\right)  -\mathcal{G}\left(  \mathrm{\bar
+{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{\bar{F}%
+}\left(  t\right)  -\mathcal{F}\left(  \mathrm{\bar{z}}\left(  t\right)
+\mathrm{,z}\left(  t\right)  \right)  \mathbb{\bar{G}}\left(  t\right)
++\mathcal{F}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  \mathcal{G}\left(  \mathrm{\bar{z}}\left(  t\right)
+\mathrm{,z}\left(  t\right)  \right)  \mathbb{I}\right\}  \mathbf{\bar{z}}%
+_{i}\right.  \nonumber\\
+&  \qquad\qquad-\left.  i\mathbf{z}_{i}^{\dagger}\left\{  \mathbb{F}\left(
+t\right)  \mathbb{G}\left(  t\right)  -\mathcal{G}\left(  \mathrm{\bar{z}%
+}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)  \mathbb{F}\left(
+t\right)  -\mathcal{F}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}%
+\left(  t\right)  \right)  \mathbb{G}\left(  t\right)  +\mathcal{F}\left(
+\mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(  t\right)  \right)
+\mathcal{G}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  \mathbb{I}\right\}  \right\}  \mathbf{z}_{i}.
+\end{align}
+As the matrices $\mathbb{F}\left(  t\right)  $ and $\mathbb{G}\left(
+t\right)  $ are hermitian
+\begin{align}
+\mathbf{\bar{z}}_{i}^{\dagger}\mathbb{\bar{X}}\left(  t\right)  \mathbf{\bar
+{z}}_{i}  & =\sum_{jk}z_{ij}\bar{X}_{jk}\left(  t\right)  \bar{z}%
+_{ik}\nonumber\\
+\mathbf{z}_{i}^{\dagger}\mathbb{X}\left(  t\right)  \mathbf{z}_{i}  &
+=\sum_{jk}\bar{z}_{ij}X_{jk}\left(  t\right)  z_{ik}=\sum_{jk}\bar{z}_{ij}%
+\bar{X}_{kj}\left(  t\right)  z_{ik}\nonumber\\
+& =\sum_{jk}\bar{z}_{ik}\bar{X}_{jk}\left(  t\right)  z_{ij}=\sum_{jk}%
+z_{ij}\bar{X}_{jk}\left(  t\right)  \bar{z}_{ik}%
+\end{align}
+this leads to
+\begin{equation}
+\left\{  f\left(  t_{1}\right)  ,g\left(  t_{2}\right)  \right\}  =\frac
+{i}{\left(  \mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\right)  ^{3}}\left\{
+\mathbf{\bar{z}}_{i}^{\dagger}\mathbb{\bar{F}}\left(  t\right)  \mathbb{\bar
+{G}}\left(  t\right)  \mathbf{\bar{z}}_{i}-\mathbf{z}_{i}^{\dagger}%
+\mathbb{F}\left(  t\right)  \mathbb{G}\left(  t\right)  \mathbf{z}%
+_{i}\right\}  .
+\end{equation}
+Noting that
+\begin{equation}
+\sum_{jkl}z_{ij}\bar{F}_{jk}\left(  t\right)  \bar{G}_{kl}\left(  t\right)
+\bar{z}_{il}=\sum_{jkl}z_{ij}F_{kj}\left(  t\right)  G_{lk}\left(  t\right)
+\bar{z}_{il}=\sum_{jkl}\bar{z}_{il}G_{lk}\left(  t\right)  F_{kj}\left(
+t\right)  z_{ij}%
+\end{equation}
+this gives
+\begin{equation}
+\left\{  f\left(  t_{1}\right)  ,g\left(  t_{2}\right)  \right\}  =-\frac
+{i}{\left(  \mathbf{z}_{i}^{\dagger}\mathbf{z}_{i}\right)  }\left[
+\mathbb{F}\left(  t\right)  ,\mathbb{G}\left(  t\right)  \right]  ,
+\end{equation}
+which can be compared to the general form%
+\begin{align}
+\left\{  f\left(  t_{1}\right)  ,g\left(  t_{2}\right)  \right\}    & =\left(
+%
+\begin{array}
+[c]{cc}%
+\frac{\partial f\left(  t\right)  }{\partial\mathbf{\bar{z}}} & \frac{\partial
+f\left(  t\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & i\overline{\mathbf{C}\left(  \mathrm{\bar{z}}\left(  t\right)
+\mathrm{,z}\left(  t\right)  \right)  }^{-1}\\
+-i\mathbf{C}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  ^{-1} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\frac{\partial g\left(  t\right)  }{\partial\mathbf{\bar{z}}}\\
+\frac{\partial g\left(  t\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  \nonumber\\
+& =i\left\{  \frac{\partial f\left(  t\right)  }{\partial\mathbf{\bar{z}}%
+}\overline{\mathbf{C}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}%
+\left(  t\right)  \right)  }^{-1}\frac{\partial g\left(  t\right)  }%
+{\partial\mathbf{z}}-\frac{\partial f\left(  t\right)  }{\partial\mathbf{z}%
+}\mathbf{C}\left(  \mathrm{\bar{z}}\left(  t\right)  \mathrm{,z}\left(
+t\right)  \right)  ^{-1}\frac{\partial g\left(  t\right)  }{\partial
+\mathbf{\bar{z}}}\right\}  .
+\end{align}
+
+
+
+\end{document}

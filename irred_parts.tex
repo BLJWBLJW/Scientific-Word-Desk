@@ -1,0 +1,206 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, December 01, 2002 18:14:35}
+%TCIDATA{LastRevised=Tuesday, December 17, 2002 12:54:24}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+A $p$-particle operator component, $T_{p}^{N}$, of $T$ is in general a sum of
+all possible forms of $p$-particle operators i.e. products and sums of lower
+order ones as well as irreducible components. The concept of an irreducible
+part of an operator is defined as one that cannot be expressed in terms of
+lower order parts in the following way:
+
+\begin{enumerate}
+\item[1] We define a one particle part to be irreducible
+
+\item[2] A two particle part is irreducible if it cannot be expressed in terms
+of a one particle part as
+\begin{equation}
+T_{2}\left(  \mathsf{z}_{1},\mathsf{z}_{2}\right)  \neq T_{1}\left(
+\mathsf{z}_{1}\right)  T_{1}\left(  \mathsf{z}_{2}\right)
+\end{equation}
+nor
+\begin{equation}
+T_{2}\left(  \mathsf{z}_{1},\mathsf{z}_{2}\right)  \neq T_{1}\left(
+\mathsf{z}_{1}\right)  \delta\left(  \mathsf{z}_{2}\right)  +\delta\left(
+\mathsf{z}_{1}\right)  T_{1}\left(  \mathsf{z}_{2}\right)
+\end{equation}
+
+\end{enumerate}
+
+In general a $p$-particle part is irreducible if it cannot be expressed in
+terms of a $p-1$ parts as
+\begin{equation}
+T_{p}\left(  \mathsf{z}_{1},\cdots,\mathsf{z}_{p}\right)  \neq T_{q}\left(
+\mathsf{z}_{1},\cdots,\mathsf{z}_{q}\right)  \cdots T_{q}\left(
+\mathsf{z}_{p-q},\cdots,\mathsf{z}_{p}\right)  \text{ for some }q
+\end{equation}
+nor
+\begin{equation}
+T_{p}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\cdots,\mathsf{z}%
+_{\sigma\left(  p\right)  }\right)  \neq%
+%TCIMACRO{\dsum \limits_{\sigma\in\mathcal{S}_{p}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma\in\mathcal{S}_{p}}}
+%EndExpansion
+T_{p-1}\left(  \mathsf{z}_{\sigma\left(  1\right)  }\cdots\mathsf{z}%
+_{\sigma\left(  p-1\right)  }\right)  \delta\left(  \mathsf{z}_{\sigma\left(
+p\right)  }\right)
+\end{equation}
+A component is irreducible if it is composed of irreducible parts e.g.
+$T_{p}^{N}$ is irreducible where
+\begin{equation}
+T_{p}^{N}=%
+%TCIMACRO{\dsum \limits_{\sigma\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma\in\mathcal{S}_{N}}}
+%EndExpansion
+T_{p}\left(  \mathsf{z}_{\sigma\left(  1\right)  }\cdots\mathsf{z}%
+_{\sigma\left(  p\right)  }\right)  \delta\left(  \mathsf{z}_{\sigma\left(
+N-p\right)  }\right)
+\end{equation}
+if
+\begin{equation}
+T_{p}\left(  \mathsf{z}_{1},\cdots,\mathsf{z}_{p}\right)  \neq T_{q}\left(
+\mathsf{z}_{1},\cdots,\mathsf{z}_{q}\right)  \cdots T_{q}\left(
+\mathsf{z}_{p-q},\cdots,\mathsf{z}_{p}\right)  \text{ for some }q
+\end{equation}
+nor%
+\begin{equation}
+T_{p}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\cdots,\mathsf{z}%
+_{\sigma\left(  p\right)  }\right)  \neq%
+%TCIMACRO{\dsum \limits_{\sigma\in\mathcal{S}_{p}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma\in\mathcal{S}_{p}}}
+%EndExpansion
+T_{p-1}\left(  \mathsf{z}_{\sigma\left(  1\right)  }\cdots\mathsf{z}%
+_{\sigma\left(  p-1\right)  }\right)  \delta\left(  \mathsf{z}_{\sigma\left(
+p\right)  }\right)  .
+\end{equation}
+
+
+From these classes we can also define subclasses of the form $\left\{
+T_{n_{1}}\left(  \mathsf{z}_{1}^{n_{1}}\right)  \vee\delta^{N-n_{1}}\left(
+\mathsf{z}_{n_{1}+1}^{N-n_{1}}\right)  \right\}  $ for $1\leq n_{1}\leq N-1$
+where $T_{n_{j}}\left(  \mathsf{z}_{j}^{n_{j}}\right)  \in F^{n_{j}}$.
+
+Developing eq. $\left(  \ref{gso}\right)  $ we get
+\begin{align}
+&
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left(  \Phi\left(  \mathsf{z}_{1},\mathsf{z}^{N-1}\right)  \Phi\left(
+\mathsf{z}_{1}^{\prime},\mathsf{z}^{N-1}\right)  ^{\ast}+\Phi\left(
+\mathsf{z}_{1},\mathsf{z}^{N-1}\right)  +\Phi\left(  \mathsf{z}_{1}^{\prime
+},\mathsf{z}^{N-1}\right)  ^{\ast}\right)  D_{0_{F}}^{N}\left[  \rho\right]
+\left(  \mathsf{z}_{1},\mathsf{z}^{N-1},\mathsf{z}_{1}^{\prime},\mathsf{z}%
+^{N-1}\right)  d\mathsf{z}^{N-1}\overset{a.e}{=}0\nonumber\\
+&  \Rightarrow\int\Phi\left(  \mathsf{z}_{1},\mathsf{z}^{N-1}\right)
+D_{0_{F}}^{N}\left[  \rho\right]  \left(  \mathsf{z}_{1},\mathsf{z}%
+^{N-1},\mathsf{z}_{1}^{\prime},\mathsf{z}^{N-1}\right)  \Phi\left(
+\mathsf{z}_{1}^{\prime},\mathsf{z}^{N-1}\right)  ^{\ast}d\mathsf{z}%
+^{N-1}\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  =\right.  -\int\left\{  \Phi\left(
+\mathsf{z}_{1},\mathsf{z}^{N-1}\right)  D_{0_{F}}^{N}\left[  \rho\right]
+\left(  \mathsf{z}_{1},\mathsf{z}^{N-1},\mathsf{z}_{1}^{\prime},\mathsf{z}%
+^{N-1}\right)  +D_{0_{F}}^{N}\left[  \rho\right]  \left(  \mathsf{z}%
+_{1},\mathsf{z}^{N-1},\mathsf{z}_{1}^{\prime},\mathsf{z}^{N-1}\right)
+\Phi\left(  \mathsf{z}_{1}^{\prime},\mathsf{z}^{N-1}\right)  ^{\ast}\right\}
+d\mathsf{z}^{N-1}%
+\end{align}
+
+
+\bigskip%
+
+\begin{align*}
+&  -\left\langle \left(  \mathbf{\nabla}_{j}-\mathbf{\nabla}_{j}\omega\right)
+\nu_{N}\Psi|\left(  \mathbf{\nabla}_{j}-\mathbf{\nabla}_{j}\omega\right)
+\nu_{N}\Psi\right\rangle \\
+&  =\left\langle \left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu
+_{N}\mathbf{\nabla}_{j}-\nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\right\}  \Psi|\left\{  \left(  \mathbf{\nabla}_{j}\nu_{N}\right)  +\nu
+_{N}\mathbf{\nabla}_{j}-\nu_{N}\left(  \mathbf{\nabla}_{j}\omega_{N}\right)
+\right\}  \Psi\right\rangle \\
+&  =\left\langle \Psi|\left\{  \mathbf{\nabla}_{j}\nu_{N}\bullet
+\mathbf{\nabla}_{j}\nu_{N}+\nu_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)
+\bullet\mathbf{\nabla}_{j}-\nu_{N}\mathbf{\nabla}_{j}\nu_{N}\bullet
+\mathbf{\nabla}_{j}\omega\right.  \right.  \\
+&  +\nu_{N}\left(  \mathbf{\nabla}_{j}\nu_{N}\right)  \bullet\mathbf{\nabla
+}_{j}+\left(  \nu_{N}\right)  ^{2}\mathbf{\nabla}_{j}^{2}-\nu_{N}%
+\mathbf{\nabla}_{j}\nu_{N}\bullet\mathbf{\nabla}_{j}\omega-\left(  \nu
+_{N}\right)  ^{2}\left(  \mathbf{\nabla}_{j}^{2}\omega\right)  -\nu
+_{N}\mathbf{\nabla}_{j}\omega\bullet\mathbf{\nabla}_{j}\\
+&  \left.  -\nu_{N}\mathbf{\nabla}_{j}\omega_{N}\bullet\mathbf{\nabla}_{j}%
+\nu_{N}-\left(  \nu_{N}\right)  ^{2}\mathbf{\nabla}_{j}\omega_{N}%
+\bullet\mathbf{\nabla}_{j}+\nu_{N}^{2}\mathbf{\nabla}_{j}\omega_{N}%
+\bullet\mathbf{\nabla}_{j}\omega_{N}\right\}  \left.  \Psi\right\rangle
+\end{align*}
+
+
+
+\end{document}

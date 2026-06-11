@@ -1,0 +1,2387 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, February 12, 2008 13:42:22}
+%TCIDATA{LastRevised=Saturday, January 17, 2009 11:26:42}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\title[TDDFT]{Time-dependent density functional theory (In progress)}
+\author{Brian Weiner}
+\affiliation{The Pennsylvania State University, Department of Physics, University Park, PA 16802}
+\author{S.B. Trickey}
+\affiliation{Quantum Theory Project Department of Physics University of Florida
+Gainesville, FL 32611-8435, U.S.A.}
+
+\pacs{PACS number}
+
+\begin{abstract}
+
+
+\end{abstract}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Overview and Motivation}
+
+\noindent Time-dependent density functional theory (TDDFT) is growing in
+importance. Diverse examples of its use and development include Refs.
+\cite{Teil92,Stener95,Saalmann96,Tong97,Serra97a,Ullrich97,AG97,Vignale97,Calvayrac98,Reinhard98,Ullrich98,Telnov98,Tong98,Campillo99,Vasiliev99,Knospe99,Hessler}
+as well as papers cited in surveys such as Refs. \citenum{Gross96,Casida95}.
+To date less attention has gone to the coupled motions of electrons and nuclei
+than to electron excitations and response with static nuclei.
+
+Though a TDDFT for temporally periodic potentials was formulated earlier
+\cite{Bartolotti81,DebGhosh82}, the now-conventional form was introduced by
+Runge and Gross \cite{RG84}, hereafter RG. As with the original ground state
+Hohenberg-Kohn argument \cite{HK}, RG proceeded by reductio ad absurdum to the
+result that, for a $v$-representable time-dependent density, under certain
+assumptions the map between the time-dependent external potential and that
+density is invertible. For those assumptions, this invertibility establishes
+the existence, though not the structure, of a TDDFT. Issues of boundary
+conditions on the potentials and densities and implicit assumptions for which
+the RG proof is valid arose shortly \cite{Xu85,Dhara87}.
+
+A Levy-Lieb constrained search \cite{Levy79,LevyPerdew85,Lieb} formulation of
+the density-potential mapping was given by Kohl and Dreizler \cite{KD86}.
+Posed in the context of scattering problems, it did not provide a procedure
+for constructing solutions. Then the RG logic was extended to include
+time-dependent forces on spatially fixed nuclei \cite{KD86,Raj94A,RajBuot94B}.
+However, coupled electronic and nuclear motion usually is treated via Li and
+Tong's extension \cite{LiTong86} to multi-species systems. There is a
+considerable variety of other work on the RG logic that, while of general
+relevance, is not specific to the issues treated here \cite{Qian98,Chermyak00}.
+
+For explicitly wave-function-based theory, a general approach to
+non-Born-Oppenheimer dynamics has been given by Deumens, \"Ohrn, and
+collaborators \cite{DeumensA,DeumensB}. They use a parameterization via group
+coherent states to obtain solutions to the time-dependent Schr\"odinger
+equation (TDSE). Here we take up the non-BO problem via extension of our DFT
+analogue \cite{BLWSBT99a,BLWSBT00a} of the Deumens-\"Ohrn scheme. Our
+formulation involves a generalization to parameterization of the TDSE by
+spatially varying functions (in contrast with the time-dependent complex
+scalars that they use).
+
+Specifically, the parameterizing functions are the physical densities that
+label the density operators via equivalence classes. Density operators are
+emphasized in order to exploit the structure of the constrained search
+procedure \cite{Levy79,LevyPerdew85}. The most general form of constrained
+search must include both pure states and ensembles corresponding to a
+specified physical density. For density operators the distinction between
+states and ensembles is not a barrier. Furthermore, the search is linear in
+the density operators but nonlinear in the states. The density operator
+formulation therefore provides a unified way to expose the internal structure
+of constrained search in forms exploitable for both analysis and
+approximation. See anticipatory remarks along these lines in Refs. \cite{Lieb}
+(see p.~263) and \cite{KD86} (just after eq. (5)).
+
+Ref. \citenum{BLWSBT99a} noted that our formulation implicitly is applicable
+to the non-BO case. The explicit form is developed in three papers. This one
+gives the formal extension as a time-dependent constrained search. First we
+generalize Ref. \citenum{BLWSBT99a,BLWSBT00a} from $N$-fermion operators (and
+corresponding Hilbert spaces) alone to explicit inclusion of the nuclear
+dynamics. Then we develop transformations that constitute the basis for
+constructive realizations of constrained search. We give two such
+realizations. Both exploit properties of the contraction map from the $N$-body
+density operator to the density. That map confers a density-labeled fiber
+bundle structure on the density operators. The kernel of that map plays a
+central role in parameterizing density evolution paths. The more
+straightforward parameterization is by reference states in each fiber plus
+linear combinations of elements of the kernel. The result is an explicit set
+of dynamical equations for TDDFT that, however, depends on a constraint which
+is difficult to implement. Therefore we develop an alternative
+parameterization of the dynamics by constructing Lie groups that map
+intra-fiber (i.e. amongst operators with the same density) and Lie groups that
+map inter-fiber (one density to another). Application of the Time-dependent
+Variational Principle (TDVP) provides equations of motion for the density in
+terms of those Lie group parameters that, in the exact case, is equivalent to
+the TDSE.
+
+In the second paper, we obtain practical single-particle equations by
+restricting the invariance transformations to one- and two-body contributions
+in order to produce approximate time-dependent functionals by systematic
+refinement. In the limit of $N$-body contributions, the functionals would be
+exact. The results are different from the familiar TDDFT Kohn-Sham equations
+but play a corresponding role. By a suitable further approximation the
+conventional TDDFT equations are recovered in the static nucleus limit. The
+third paper uses the invariance transformations to formulate a path integral
+version of TDDFT. That provides a convenient means to treat causality issues,
+to analyze DFT linear response, and to treat the relationship of the
+stationary phase approximation to the TDVP used in the first two papers.
+
+\section{Runge-Gross TDDFT - Limitations and Counterexamples}
+
+\noindent Some prior results that illuminate our objectives are summarized here.
+
+First, the Kohl-Dreizler argument \cite{KD86} has limited value for coupled
+nuclear and electron motion because of two assumptions the electron sub-system
+is assumed to be in a non-degenerate ground state initially. Non-degeneracy is
+not a trivial requirement, while the restriction to an initial ground-state is
+essential to their use of a minimum principle and associated infima.
+
+Next, motivation for the Li-Tong multi-component RG TDDFT comes from
+considering the original one-component RG TDDFT. For simplicity take $N_{n}$
+nuclei of one species and $N_{e}$ electrons. RG TDDFT depends on the
+assumption that the external dynamic potential
+\begin{equation}
+\hat V = \sum_{i}^{N_{e}} v(\mathbf{r}_{i},t) \label{VextofT}%
+\end{equation}
+has a temporal Taylor series expansion about the initial time $t=t_{0}$. Let
+the initial spatial density be $n(\mathbf{r}, t=t_{0}) \equiv n_{0}%
+(\mathbf{r})$. Then invertibility of the potential-density map is demonstrated
+under this assumption by considering the contrary, to wit, two external
+potentials $v^{\prime}(\mathbf{r},t)$, $v(\mathbf{r},t)$ that yield the same
+$n$ and differ by more than a function of time alone. Nonexistence of such
+duplicate potentials requires that a certain surface integral vanish. RG
+argued that it vanishes for any physically meaningful potential, though they
+noted that the Taylor series assumption disqualifies adiabatically switched-on
+potentials. van Leeuwen provided an extension of that original argument,
+which, however, does not address the issues raised below \cite{Leeuwen99}.
+
+Xu and Rajagopal gave counterexamples in which the surface integral is not
+zero \cite{Xu85}. Though Dhara and Ghosh \cite{Dhara87} concluded that those
+counterexamples might not be physically realizable, they also pointed out that
+the RG proof is not valid for two important categories of systems, the
+homogeneous electron gas \cite{HEGexample} and systems with moving bare
+nuclei. For the latter, the temporal Taylor series has singularities of
+arbitrarily high order \cite{bareTaylor}. The coefficients of the highly
+singular terms are time derivatives of $X(t)$ evaluated at $t_{0}$. Those all
+vanish for stationary nuclei and the most singular terms in the Taylor series
+in that case go as the ordinary nuclear-electron potential. This problem is
+ignored in Ref. \citenum{Saalmann96} [at their equation (12)] but see below.
+
+For the surface integral issue, Gross and Kohn introduced two requirements on
+the RG scheme, one physical, the other formal \cite{GrossKohn90}. The formal
+constraint concerns the asymptotic behavior, with respect to $r$, of the
+Taylor series coefficients of $v(\mathbf{r}_{i},t)$ and is not relevant to the
+present discussion. The physical requirement is that ``experimentally
+realizable potentials are always produced by \emph{real} (this means, in
+particular, normalizable) external charge densities $\rho_{ext}(\mathbf{r}t)$
+\ldots.'' Clearly this requirement does not address the case of moving bare
+nuclei as the external charge densities, even though such delta-function
+charges are normalizable in the usual sense. It might be argued that
+non-singular distributions were intended. For nuclear motion this means
+screening, in practice, a pseudopotential. This is what Refs.
+\citenum{Teil92,Fois88} do in the BO approximation. Refs.
+\citenum{Saalmann96,Knospe99} do the same in practice, hence avoid the error
+just noted. Non-singular distributions are fine practically, but do not solve
+the basic problem. Restriction to such distributions would force TDDFT with
+nuclear motion never to be all-electron. In turn that would lead to the odd
+outcome that the time-independent limit of TDDFT would not recover normal
+all-electron time-independent DFT (because of the mandatory nuclear screening).
+
+Thus one arrives at treatment of the nuclei plus electrons via the Li-Tong
+\cite{LiTong86} multi-component plasma version of RG TDDFT. No full DFT
+dynamics (i.e., non-Kohn-Sham, even if purely formal) for the Li-Tong scheme
+has, to our knowledge, ever been given. Though in principle general, the
+nuclear motion in the Li-Tong approach in practice is purely at the KS level.
+See for example Gross, Dobson, and Petersilka \cite{Gross96}. Since KS
+dynamics is for the \emph{model} nuclear system, there is a challenge to
+demonstrate correspondence to the dynamics of the \emph{physical} system. In
+the classical limit, Gross et al.~obtain the correspondence from the Ehrenfest
+theorem, with forces on the nuclei from gradients of the TDKS potentials.
+Unexplored, as far as we are aware, is the correspondence for either narrow
+wavepackets or full-quantum nuclei.\cite{Xchneglect} The difficulty in
+analyzing the dynamics lies in the invertibility arguments, which provide no
+insight into the structure of the space of time-dependent densities. Note also
+that, by construction, the Li-Tong scheme has the same dependence on
+convergence of temporal Taylor series expansions as the original RG scheme,
+hence cannot include adiabatically switched external potentials.
+
+Keep in mind that the development given below does not appeal to the existence
+of a 1-1 map between external potentials and allowable densities as a route to
+functionals of the density. Instead our analysis proceeds by classification of
+states according to densities, just as in constrained search for stationary
+states. We then use the densities as parameters to label states in the spirit
+of coherent state theory. The result is functionals of the density that have a
+unique value associated to each of these classes of states for all times.
+Equations of motion for the density follow from the TDVP.\cite{KramSar}
+
+\section{Density Mappings and Fiber Bundles}
+
+\noindent The objective of this section is to show how the densities at any
+time can be used to classify density operators into a fiber bundle structure
+and to develop exploitable properties of the bundle. The benefit of this
+approach shows up in the following sections, where constrained search as a
+function of time is converted into well-characterized, explicit
+transformations along and among fibers. Systematic approximation of those
+transformations then provides a constructive route to approximate functionals,
+the topic of paper II.
+
+Without loss of generality we simplify to a single nuclear species (except
+when multi-species aspects need to be noted). Let the generic electron and
+nuclear coordinates be $\mathbf{r}$ and $\mathbf{R}$ respectively and
+similarly $s$, $S$ for the spins. The composite coordinates then will be
+written as
+\begin{align}
+\mathbf{x}  &  \equiv(\mathbf{r},s)\nonumber\\
+\mathbf{X}  &  \equiv(\mathbf{R}\,,S)\nonumber\\
+\mathbf{z}  &  \equiv(\mathbf{x}\,,\mathbf{X})
+\end{align}
+The manifolds of $N_{e}$ electronic coordinates (space and spin) and $N_{n}$
+nuclei will be denoted as
+\begin{align}
+\mathsf{x}  &  =\{\mathbf{x}_{1},\mathbf{x}_{2},\ldots\mathbf{x}_{N_{e}%
+}\}\nonumber\\
+\mathsf{X}  &  =\{\mathbf{X}_{1},\mathbf{X}_{2},\ldots\mathbf{X}_{N_{n}}\}
+\label{manifdef}%
+\end{align}
+
+
+To treat the electronic and nuclear degrees of freedom in a balanced fashion
+and, as well, avoid problems inherent in a formulation that decouples electron
+space and spin coordinates from the outset (e.g. symmetry breakings, spin
+contamination \cite{PerdewSavin,BLWSBT98,SavinSem2}), we work with the full
+space-spin electron and nuclear density
+\begin{equation}
+\gamma(\mathbf{x},\mathbf{X},t)\equiv\gamma(\mathbf{z},t) \label{gammadef}%
+\end{equation}
+rather than the more familiar spatial density $n(\mathbf{r},\mathbf{\ R},t)$
+or spin-polarized spatial densities. Note that $\gamma$ integrates to the
+product $N_{e}N_{n}$, not their sum. $\gamma(\mathbf{x},\mathbf{X},t)$ can be
+interpreted as the joint probability for the simultaneous occurrence at $t$ of
+an electron at position $\mathbf{x}$ and a nucleus at position $\mathbf{X}$.
+BWBW This has the further benefit of avoiding possible problems introduced by
+the translational invariance of isolated systems \cite{KreibGross}.BWBW The
+single species space-spin densities can be recovered by integration
+\begin{align}
+\gamma_{e}(\mathbf{x},t)  &  =\frac{1}{N_{n}}\int\gamma(\mathbf{x}%
+,\mathbf{X},t)d\,\mathbf{X}\nonumber\\
+\gamma_{n}(\mathbf{X},t)  &  =\frac{1}{N_{e}}\int\gamma(\mathbf{x}%
+,\mathbf{X},t)d\,\mathbf{x}%
+\end{align}
+
+
+With two species, it is easiest to formulate the problem in second
+quantization. The field operators are
+\begin{align}
+\Phi^{\dagger}_{e}(\mathbf{x})  &  = \sum_{i} \phi^{*}_{i}(\mathbf{x}%
+)a_{i}^{\dagger}\nonumber\\
+\Phi^{\dagger}_{n}(\mathbf{X})  &  = \sum_{j} \phi_{n,j}^{*}(\mathbf{X}%
+)b_{j}^{\dagger} \label{fieldop}%
+\end{align}
+where the $\phi_{i}(\mathbf{x})$, $\phi_{n,j}(\mathbf{X})$ are elements of
+complete one-particle basis sets for electrons and nuclei respectively and
+$a_{i}^{\dagger}$, $b_{j}^{\dagger}$ are electron and nuclear creation
+operators respectively, with commutation relations
+\begin{align}
+\left[  a_{i}^{\dagger}, a_{j} \right]  _{+}  &  = \delta_{ij}\nonumber\\
+\left[  a_{i}^{\dagger}, a^{\dagger}_{j} \right]  _{+}  &  = \left[  a_{i},
+a_{j} \right]  _{+} = 0\nonumber\\
+\left[  b_{i}^{\dagger}, b_{j} \right]  _{\pm}  &  = \delta_{ij}\nonumber\\
+\left[  b_{i}^{\dagger}, b^{\dagger}_{j} \right]  _{\pm}  &  = \left[
+b_{i},b_{j} \right]  _{\pm} = 0
+\end{align}
+Commutation or anti-commutation depends on the nuclear species (of course) and
+all inter-species commutators are zero. Frequently products of these operators
+for both an electron and a nucleus occur. A compressed notation for such
+products
+\begin{equation}
+\Phi^{\dagger}(\mathbf{z})\Phi(\mathbf{z}) \equiv\Phi^{\dagger}_{e}%
+(\mathbf{x}) \Phi_{e}(\mathbf{x})\Phi^{\dagger}_{n}(\mathbf{X}) \Phi
+_{n}(\mathbf{X}) \label{fieldopprod}%
+\end{equation}
+will be used.
+
+Generalizing Refs.~\citenum{BLWSBT99a,BLWSBT00a}, the total system density
+operator $D^{N}(t)$ is defined in the tensor product Hilbert space of the
+$N_{e}$ electrons and $N_{n}$ nuclei, with $N=N_{e}+N_{n}$. The time-dependent
+density then is
+\begin{equation}
+\gamma(\mathbf{z},t)=Tr\left\{  \Phi^{\dagger}(\mathbf{z})\Phi(\mathbf{z}%
+)D^{N}(t)\right\}  =\gamma(\mathbf{x},\mathbf{X},t)
+\end{equation}
+In the coordinate representation, the total system wave function
+$\Psi(\mathsf{x},\mathsf{X},t)$ can be expressed in terms of the vacuum state
+$|0\rangle$ as
+\begin{align}
+\Psi(\mathsf{x},\mathsf{X},t)  &  =\langle\mathbf{x}_{1},\ldots,\mathbf{x}%
+_{N_{e}},\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}}|\Psi(t)\rangle\nonumber\\
+&  =\langle0|\Phi_{e}(\mathbf{x}_{1})\ldots\Phi_{e}(\mathbf{x}_{N_{e}}%
+)\Phi_{n}(\mathbf{X}_{1})\ldots\Phi_{n}(\mathbf{X}_{N_{n}})\Psi(t)\rangle
+\end{align}
+where $|\Psi(t)\rangle\in\mathcal{H}^{N_{e}}\otimes\mathcal{H}^{N_{n}}$ and
+the associated $N$-body density operator integral kernels are
+\begin{align}
+&  D^{N}(\mathbf{x}_{1}^{\prime},\ldots\mathbf{x}_{N_{e}}^{\prime}%
+,\mathbf{X}_{1}^{\prime},\ldots\mathbf{X}_{N_{n}}^{\prime};\mathbf{x}%
+_{1},\ldots\mathbf{x}_{N_{e}},\mathbf{X}_{1},\ldots\mathbf{X}_{N_{n}%
+},t)\nonumber\\
+&  =\Psi^{\ast}(\mathbf{x}_{1}^{\prime},\ldots\mathbf{x}_{N_{e}}^{\prime
+},\mathbf{X}_{1}^{\prime},\ldots\mathbf{X}_{N_{n}}^{\prime},t)\Psi
+(\mathbf{x}_{1},\ldots\mathbf{x}_{N_{e}},\mathbf{X}_{1},\ldots\mathbf{X}%
+_{N_{n}},t)
+\end{align}
+(Remark that these objects are called density matrices in the theoretical
+chemistry literature, terminology that is inconvenient here.) The one-electron
+density operator kernel $D_{e}^{1}(\mathbf{x}^{\prime},\mathbf{x},t)$ arises
+from integrating out all the other electron coordinates \emph{and all} the
+nuclear coordinates. The converse holds for the nuclear density operator
+kernel. In the BO approximation, the electron density operator kernel is a
+conditional probability relative to the nuclear positions. A relevant
+discussion is in Sj\"{o}qvist and Hedstr\"{o}m \cite{Sjoqvist}.
+
+With one substantive alteration, the previous formulation in
+Refs.~\citenum{BLWSBT99a,BLWSBT00a}, involving trace class operators,
+Hilbert-Schmidt operators, and contraction maps to one-particle function
+spaces goes through essentially unchanged (except for obvious nuclear spin
+symmetry details). The alteration arises because it is useful to formulate the
+TDVP in terms of unnormalized states and handle the normalization explicitly.
+
+The central quantity is the contraction map that yields the combined density
+from the density operators
+\begin{align}
+\Xi &  :D^{N}(t)\rightarrow\gamma(\mathbf{z},t)\nonumber\\
+\gamma(\mathbf{z},t)  &  =Tr\{\Phi^{\dagger}(\mathbf{z})\Phi(\mathbf{z}%
+)D^{N}(t)\} \label{Xidefn}%
+\end{align}
+Here
+\begin{align}
+Tr\{D^{N}(t)\}  &  =1\;\;\forall\;t\nonumber\\
+\int\gamma(\mathbf{z},t)d\mathbf{z}  &  =N_{e}N_{n}\;\forall\;t
+\end{align}
+$\Xi$ itself is a linear map from the space $\mathcal{B}_{1}(\mathcal{H}^{N})$
+of trace class operators on $N$-particle Hilbert space to absolute integrable
+functions on $\mathbb{R}^{6}\times\mathbb{C}^{4}$.
+
+The density labels equivalence classes $[\gamma]_{N}$ of positive trace-class
+operators $Y$ and $W$ by
+\begin{equation}
+Y\,,W\in\lbrack\gamma]_{N}\Leftrightarrow\Xi(Y)=\Xi(W)=\gamma
+\end{equation}
+These equivalence classes are elements of a bundle \cite{Bruhat}. By
+inspection it is a fiber bundle (specifically an affine bundle)
+\cite{affinebundleref}; see below. Denote it as $\mathfrak{B}_{aff}$. The base
+of the bundle is the set of densities, which belong to $L_{1}(\mathbb{R}%
+^{6}\times\mathbb{C}^{4})$. The elements of a fiber are the members of an
+equivalence class which form an affine space; see below. The identification follows.
+
+If restricted to normalized, positive, trace-class operators, this
+classification is physically equivalent to the original constrained search
+scheme states are grouped by the density they yield. There are analytical
+advantages to working with the density operators instead of the states (the
+problem is linear in the density operators but nonlinear in the states). To
+gain those advantages it helps to extend consideration, temporarily, to all
+trace class operators. Doing so has two consequences that must be addressed
+eventually (i) not all the quantities $f$ generated by the contraction map
+$\Xi$ are physical densities $\gamma$ (everywhere positive), (ii) for a
+genuine physical density $\gamma$ not every trace-class operator that
+contracts to it is positive. With these caveats in mind, the extended
+equivalence class is
+\begin{equation}
+\lbrack f]_{N}=\left\{  Y\in\mathcal{B}_{1}(\mathcal{H}^{N});\Xi(Y)=f\right\}
+\label{genequiv}%
+\end{equation}
+(Aside different $f$'s do not necessarily have the same norm.) The advantage
+gained is that the kernel of $\Xi$
+\begin{equation}
+\ker\{\Xi\}=\{Y;Tr\,[\Phi^{\dagger}\Phi Y]=0\}\equiv\left\{  U-W;\Xi\left(
+U\right)  =\Xi\left(  W\right)  \right\}  \label{kerdef}%
+\end{equation}
+is a linear subspace of $\mathcal{B}_{1}(\mathcal{H}^{N})$. Then every element
+in a given equivalence class is expressible as
+\begin{equation}
+Y=\sum_{i=1}^{d}\alpha_{i}W_{i}\qquad;\qquad\sum_{i=1}^{d}\alpha_{i}=1
+\label{YexpandW}%
+\end{equation}
+BWBW which shows that $[f]_{N}$ is an affine space, and BWBW where
+\begin{equation}
+W_{i}=Y_{ref}+\xi_{i};\;\;i>0 \label{WifromYref}%
+\end{equation}
+Here $Y_{ref}$ is a fixed, arbitrary element of the particular $[f]_{N}$ (i.e.
+is not in $\ker\{\Xi\}$) and the $\{\xi_{i}\}$ constitute a basis for $\ker
+\Xi$ \cite{Yref}. Each fiber thus is identified by a reference element in
+$[f]_{N}$, while its internal structure is characterized by the kernel via
+eqs. (\ref{YexpandW}, \ref{WifromYref}). Eq. (\ref{YexpandW}) can be recast
+as
+\begin{align}
+Y  &  =Y_{ref}+U\nonumber\\
+U  &  =\sum_{i=1}^{d}\alpha_{i}\xi_{i} \label{YYref}%
+\end{align}
+and the bundle is affine \cite{diffbundle}. It follows that the orthogonal
+projector onto any pure $N$-particle state $|\Psi_{N}\rangle$ with density
+$\gamma$ can be written as
+\begin{equation}
+\frac{\left|  \Psi_{N}(\mathbf{c})\right\rangle \left\langle \Psi
+_{N}(\mathbf{c})\right|  }{\left\langle \Psi_{N}(\mathbf{c})|\Psi
+_{N}(\mathbf{c})\right\rangle }=Y_{ref}(\gamma)+\sum_{i=1}^{d}c_{i}\xi_{i}
+\label{Psicxi}%
+\end{equation}
+This expression is key to pure-state constrained search. Changes in values of
+the $\{c_{i}\}$ move within a fiber, i.e. search over all system density
+operators corresponding to a fixed density. Changing to another fiber means
+another density has been selected. Both TDDFT and ground state DFT result by
+combination with the appropriate variation principle (stationary action for
+TDDFT, Rayleigh-Ritz variation principle for ground state).
+
+\section{Explicit Implementation of Time-dependent Constrained Search}
+
+\noindent The next task is to implement the search along and between fibers at
+any time to determine the solution of the time-dependent Schr\"odinger
+equation (TDSE). Refs.~\citenum{BLWSBT99a,BLWSBT00a} extended the work of
+Kramer and Sarceno \cite{KramSar} (``K\&S'' to distinguish from Kohn and Sham,
+commonly denoted ``KS'') to include parameterization of the TDSE via the
+density as a function of time and electronic coordinate $\mathbf{x}$. This
+section gives the extension to the density for coupled electron and nuclei as
+functions of the coordinate $\mathbf{z}$ and time $t$ and the resulting
+dynamics in terms of the coefficients $\mathbf{c}$ in eq. (\ref{Psicxi}) and
+the density $\gamma$. To exploit the fiber bundle properties the argument here
+differs a bit from that of Ref. \citenum{BLWSBT99a}.
+
+A straightforward extension of the original K\&S analysis of the TDSE can be
+made for the manifold of states $\left|  \Psi(\lambda(t))\right\rangle $
+parameterized by real, time-dependent functions $\lambda(t,\mathbf{z})$. For
+these states, the solutions of the TDSE, denoted $\left|  \Psi(\lambda
+_{\#}(t))\right\rangle $, are characterized by parameterizing functions that
+satisfy
+\begin{equation}
+\int\eta(t,\,\mathbf{y},\,\mathbf{y}^{\prime})\frac{d\lambda(\mathbf{y}%
+^{\prime})}{dt}d\mathbf{y}^{\prime}=\frac{\delta\mathcal{E}(t)}{\delta
+\lambda(\mathbf{y})}\qquad\qquad\forall\;\mathbf{y} \label{dEdlambda}%
+\end{equation}
+where
+\begin{equation}
+\eta(t,\,\mathbf{y},\,\mathbf{y}^{\prime})=i\left\{  \frac{\delta}%
+{\delta\,\tilde{\lambda}(\mathbf{y})}\frac{\delta}{\delta\,\lambda
+(\mathbf{y}^{\prime})}\,-\,\frac{\delta}{\delta\,\lambda(\mathbf{y})}%
+\frac{\delta}{\delta\,\tilde{\lambda}(\mathbf{y}^{\prime})}\right\}
+\ln\left\langle \Psi(\tilde{\lambda}(t))|\Psi(\lambda(t))\right\rangle
+\,|_{\tilde{\lambda}=\lambda} \label{eta}%
+\end{equation}
+and
+\begin{equation}
+\mathcal{E}(t)=\frac{\left\langle \Psi(\lambda(t))|H|\Psi(\lambda
+(t))\right\rangle }{\left\langle \Psi(\lambda(t))|\Psi(\lambda
+(t))\right\rangle } \label{Eoft}%
+\end{equation}
+Note the explicit norm. The metric (in the space of parameterizing functions)
+satisfies
+\begin{equation}
+\eta(t,\,\mathbf{y},\,\mathbf{y}^{\prime})=-\eta(t,\,\mathbf{y}^{\prime
+},\,\mathbf{y})
+\end{equation}
+
+
+Eq. (\ref{dEdlambda}) can be cast in a form analogous with classical
+mechanics, to wit
+\begin{align}
+\frac{d\lambda(\mathbf{y}^{\prime})}{dt}  &  =\int\,\eta(t,\,\mathbf{y}%
+^{\prime},\,\mathbf{y})^{-1}\frac{\delta\mathcal{E}(t)}{\delta\lambda
+(\mathbf{y})}\,d\mathbf{y}\quad\forall\;\mathbf{y}^{\prime}\nonumber\\
+\dot{\lambda}(\mathbf{y}^{\prime})  &  =\{\lambda(\mathbf{y}),\mathcal{E}\}
+\label{genEOM}%
+\end{align}
+with the generalized Poisson bracket
+\begin{equation}
+\{f(t),g(t)\}\equiv\int\frac{\delta f(t)}{\delta\,\lambda(\mathbf{y})}%
+\zeta(t,\,\mathbf{y},\,\mathbf{y}^{\prime})\frac{\delta g(t)}{\delta
+\,\lambda(\mathbf{y}^{\prime})}d\mathbf{y}\,d\mathbf{y}^{\prime}
+\label{genPoisson}%
+\end{equation}
+and the definition
+\begin{equation}
+\zeta(t,\,\mathbf{y},\,\mathbf{y}^{\prime})\equiv\eta^{-1}(t,\,\mathbf{y}%
+,\,\mathbf{y}^{\prime}) \label{etainverse}%
+\end{equation}
+all under the assumption that $\eta^{-1}$ exists. This is not a strongly
+restrictive assumption \cite{etainv}.
+
+\emph{If} the manifold of states $\left|  \Psi(\lambda(t))\right\rangle $ is
+all of $\mathcal{H}^{N}$, \emph{then} solutions of Eqs. (\ref{genEOM}),
+(\ref{genPoisson}) are equivalent to solutions of the full TDSE except for an
+overall phase that also can be determined within the parameterization
+\cite{KramSar,BLW94}. It follows from eq. (\ref{Psicxi}) that, indeed
+\begin{equation}
+\mathcal{H}^{N}=\left\{  \left|  \Psi_{N}(\mathbf{c},\gamma)\right\rangle
+\right\}
+\end{equation}
+with an obvious change in notation to account for the $\gamma$ dependence.
+Note that the set of coefficients $\mathbf{c}$ must be constrained such that
+the result in eq. (\ref{Psicxi}) is a pure-state projector, in symbols
+\begin{equation}
+\{c_{i}\}\subset\Lambda_{Y_{ref}(\gamma)}\ni Y=\mathrm{pure \, state\, density
+\,operator} \label{posconstraint}%
+\end{equation}
+The problem of characterizing the set $\Lambda$ (or finding an alternative) is
+deferred to the next section. Proceeding, the equation of motion
+(\ref{genEOM}) that is fully equivalent to the TDSE becomes
+\begin{equation}
+\{(\mathbf{c,}\gamma),\mathcal{E}\}=(\dot{\mathbf{c,}}\dot{\gamma})
+\label{cgammaeom}%
+\end{equation}
+Since all the quantities involved are functionals of $\gamma$, this equation
+demonstrates the existence of a TDDFT independent of the RG logic. The claim
+becomes evident upon partitioning eq. (\ref{cgammaeom}) between the
+$\mathbf{c}(t)$ and $\gamma(t)$. Details are in Appendix A. The outcome is
+that the density dynamics can be displayed explicitly, at least formally, with
+the $c_{i}$ as functionals of $\gamma$. In terms of them, the exact temporal
+path for the density is the solution of
+\begin{equation}
+\dot{\gamma}(t)=\tilde{\mathcal{N}_{1}}(\gamma(t))\left[  \nabla_{\gamma
+}\,\mathcal{E}(\gamma(t))-\tilde{\mathcal{N}_{2}}(\gamma(t))\right]
+\label{gammadot1}%
+\end{equation}
+where $\tilde{\mathcal{N}_{1}}(\gamma(t))$, $\tilde{\mathcal{N}_{2}}%
+(\gamma(t))$ are density functionals determined by the solutions of the
+equation of motion for the coefficients $\mathbf{c}$, hence self-consistently.
+See Appendix A.
+
+\section{Dynamics Parameterized by Group Properties of the Fiber Bundle}
+
+Parameterization via the $\mathbf{c}$ coefficients has the merit of a clear,
+straightforward linkage to the structure of constrained search. There seems to
+be no straightforward way, however, to implement the constraint eq.
+(\ref{posconstraint}) requiring the $c_{i}$ to preserve positivity of the
+operator $Y$ in eq. (\ref{YYref}). Observe that this constraint is in addition
+to having to select an approximation to model the states $\left|  \Psi
+_{N}(\mathbf{c},\gamma)\right\rangle $. A suggestive aspect of the
+$\mathbf{c}$ parameterization is that it is not complex analytic in general. A
+complex analytic parameterization is technically useful for dealing with the
+positivity constraint, as shown in this Section. Such a parameterization with
+independent real and imaginary parts always is equivalent to a real
+parameterization, hence does not violate the assumptions that give eqs.
+(\ref{dEdlambda}) - (\ref{Eoft}).
+
+Thus we develop an alternative parameterization based on group properties of
+transformations of a vector bundle, $\mathfrak{B}_{vect}$, that is isomorphic
+to the affine bundle, $\mathfrak{B}_{aff}$, constructed in Section 3. This
+does lead to a complex analytic description. Use of this vector bundle also
+makes the group theoretic analysis less demanding because we only need to
+consider transformations of vector spaces rather than affine spaces. The
+vector bundle $\mathfrak{B}_{vect}$ is based on the direct sum decomposition
+of $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ given by
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =\ker\Xi\oplus\ker\Xi^{c}
+\label{directsum}%
+\end{equation}
+It has a base space $\ker\Xi^{c}$, the vector space complement of $\ker\Xi$ in
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $, which is isomorphic to
+$L_{1}(\mathbb{R}^{6}\times\mathbb{C}^{4})$, and fibers $\ker\Xi$ that are all
+identical. Note therefore that the base of $\mathfrak{B}_{vect}$ is isomorphic
+with the set of absolutely integrable functions that contain the set of
+densities and that each equivalence class $[f]_{N}$ is comprised of the fiber
+plus a particular base element. Both the fibers and the base are vector spaces.
+
+Transformations of $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ that are
+block-triangular with respect to bases adapted to this decomposition, that is,
+are of the form
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\left|  \ker\Xi\right)  \left(  \ker\Xi\right|  & \left|  \ker\Xi\right)
+\left(  \ker\Xi^{c}\right| \\
+0 & \left|  \ker\Xi^{c}\right)  \left(  \ker\Xi^{c}\right|
+\end{array}
+\right)  \label{blockxform}%
+\end{equation}
+induce vector bundle maps $\mathfrak{B}_{vect}\rightarrow\mathfrak{B}_{vect}$
+and form the group, $\mathfrak{G}_{\Xi}$, of automorphisms of $\mathfrak{B}%
+_{vect}$ \cite{Bruhat}. Here $\left|  A\right)  \left(  B\right|  $ denotes
+mappings from the subspace $B$ to the subspace $A$ and the lower block of eq.
+(\ref{blockxform}) is zero because mappings from the fiber to the base destroy
+the vector bundle properties.
+
+Usually invariance groups characterizing a property of a class of states are
+constructed from unitary transformations. In the present case there is no
+unitary group of transformations that operates homogeneously, (i.e. produces
+all pure states from any given reference pure state), both in $\mathcal{H}%
+^{N}$ and the set of pure states contained in each equivalence class $\left[
+\gamma\right]  _{N}$ and also preserves the vector bundle structure of
+$\mathfrak{B}_{vect}$. However one can construct a commutative, but non
+unitary, Lie group, $\mathfrak{G}_{\ker}$, of transformations contained in the
+general linear group, $GL\left(  \mathcal{H}^{N}\right)  $, of $\mathcal{H}%
+^{N}$ that does have these properties. This group induces positive congruence
+maps of $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \mapsto\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $, hence maps states to states (see
+Appendix B for details). The group $\mathfrak{G}_{\ker}$ contains subgroups
+$\mathfrak{G}_{den}$ and $\mathfrak{G}_{fib}$ that can be used to give
+parameterizations of $\ker\Xi^{c}$ and $\ker\Xi$ respectively.
+
+The parameterization of the base $\ker\Xi^{c}$ that we produce is non
+redundant (i.e. one set of parameters corresponds to one element and one
+element only) and is given in terms of the group $\mathfrak{G}_{den}%
+\subset\mathfrak{G}_{\ker}$ which is represented by transformations of the
+form
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+t\left(  T_{B}\right)  & 0\\
+0 & T_{B}%
+\end{array}
+\right)
+\end{equation}
+acting on a reference element in $\ker\Xi^{c}$, where the top block is
+determined by the bottom one. In the case of the fibers, $\ker\Xi$, we produce
+a non redundant parameterization of \textit{pure states }given in terms of the
+group $\mathfrak{G}_{fib}$ of transformations
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+T_{F} & 0\\
+0 & I_{B}%
+\end{array}
+\right)
+\end{equation}
+acting on a pure state reference, where the bottom block is the identity
+operation on the base. A more detailed discussion of the properties of these
+transformations, which are determined by integral kernels of operators acting
+in $\mathcal{H}^{N}$, that are diagonal in the coordinate representation, are
+given later in this section and in the Appendices.
+
+States (pure or ensemble) of a physical system correspond to positive trace
+class operators. In the case of pure states, these operators correspond to
+elements of $\ \mathcal{H}^{N}$. As we are interested in mappings between
+states, positive maps of such operators are critical. Since all physical
+densities can be associated with pure states, we focus on them. Relevant
+details of positive operators and maps are summarized in Appendix C. In
+particular, the only two possibilities for mappings between pure states are
+unitary transformations and the more general congruence
+transformations\cite{congruence} of $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $. To incorporate both types, we therefore consider the most
+general possible invertible transformations on $\mathcal{H}^{N}$, namely those
+of the General Linear group $GL(\mathcal{H}^{N})$
+\begin{equation}
+T\,\in\,GL(\mathcal{H}^{N})\ni T|\Psi\rangle=|\chi\rangle\text{ and }%
+T^{-1}|\chi\rangle=|\Psi\rangle\quad\forall|\Psi\rangle,|\chi\rangle
+\in\mathcal{H}^{N}%
+\end{equation}
+Because norms appear explicitly in the TDVP, the non-unitarity of these maps
+is not a difficulty. It follows that
+\begin{equation}
+T=e^{A}\,e^{iB} \label{eAeiB}%
+\end{equation}
+with $A^{\dagger}=A$ and $B^{\dagger}=B$ (see Appendix C). All pure state
+density operators are mapped to one another by such transformations; see
+Appendix D on this point as well as for the basis of a systematic extension of
+the present analysis to ensemble density operators.
+
+The most general group, $\mathfrak{G}_{\ker}\subset\mathfrak{G}_{\Xi}\subset
+GL\left(  \mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \right)  $, of
+positive transformations of $\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $
+that both preserve the fiber bundle structure of $\mathfrak{B}_{vect}$ and
+also are congruence transformations then has the following property
+\begin{equation}
+\mathfrak{G}_{\ker}=\left\{  T\in GL(\mathcal{H}^{N});Tr\left\{  \Phi
+^{\dagger}\Phi TYT^{\dagger}\right\}  =0\;\forall Y\,\in\ker\Xi\text{
+}\right\}  \label{GLkerXi}%
+\end{equation}
+By resort to the coordinate eigenfunction representation, we show in
+Appendices E and F that only certain subgroups of the commutative subgroup
+$\mathcal{C}(\mathcal{H}^{N})$ of diagonal coordinate multi-particle
+transformations $T(\Upsilon)$ have this property. In terms of the field
+operators $\left\{  \Phi^{\dagger}\left(  \kappa\right)  ,\Phi\left(
+\kappa\right)  ;\kappa=\left(  \mathbf{x},\mathbf{X}\right)  \right\}  $,
+these diagonal transformations are
+\begin{align}
+\mathcal{C}(\mathcal{H}^{N})  &  =\left\{  T(\Upsilon);T(\Upsilon)YT^{\dagger
+}(\Upsilon)\equiv\widehat{T}(\Upsilon)(Y)\right.  \,;\nonumber\\
+T(\Upsilon)  &  =\left.  e^{\int\Upsilon(\kappa_{1},\ldots,\kappa_{N}%
+)\Phi^{\dagger}(\kappa_{1})\Phi(\kappa_{1})\ldots\Phi^{\dagger}(\kappa
+_{N})\Phi(\kappa_{N})}d\kappa_{1}\ldots d\kappa_{N}\right\} \nonumber\\
+&  \Upsilon(\kappa_{1},\ldots,\kappa_{N})\in\mathbb{C}%
+\end{align}
+Here and in the Appendices the coordinate strings are in the compressed
+notation
+\begin{equation}
+\kappa_{1}\ldots\kappa_{N_{e}},\kappa_{N_{e}+1}\ldots\kappa_{N}\equiv
+\mathbf{x}_{1}\ldots\mathbf{x}_{N_{e}},\mathbf{X}_{1}\ldots\mathbf{X}_{N_{n}}
+\label{compressed}%
+\end{equation}
+By construction $\mathcal{C}(\mathcal{H}^{N})$ has the property
+\begin{equation}
+\left[  T(\Upsilon),\Phi^{\dagger}\Phi\right]  =0
+\end{equation}
+Note that \emph{all} states (unnormalized in general) belonging to
+$\mathcal{H}^{N}$ can be expressed as
+\begin{equation}
+|\Psi(\Upsilon)\rangle=T(\Upsilon)|\Psi\rangle
+\end{equation}
+for any fixed reference state $|\Psi\rangle\in\mathcal{H}^{N}$; see Appendix
+H. Separation of $\Upsilon$ into real and imaginary parts as in eq.
+(\ref{eAeiB}) gives
+\begin{align}
+T(\Upsilon)  &  =e^{\int\mathcal{V}(\kappa_{1},\ldots,\kappa_{N})\Phi
+^{\dagger}(\kappa_{1})\Phi(\kappa_{1})\ldots\Phi^{\dagger}(\kappa_{N}%
+)\Phi(\kappa_{N})d\kappa_{1}\ldots d\kappa_{N}}\nonumber\\
+&  \times e^{i\int\omega(\kappa_{1},\ldots,\kappa_{N})\Phi^{\dagger}%
+(\kappa_{1})\Phi(\kappa_{1})\ldots\Phi^{\dagger}(\kappa_{N})\Phi(\kappa
+_{N})d\kappa_{1}\ldots d\kappa_{N}}\nonumber\\
+&  \equiv e^{\breve{\mathcal{V}}}e^{i\breve{\omega}} \label{TVomega}%
+\end{align}
+
+
+The group of transformations, $\mathcal{G}_{\Xi}$, generated by the imaginary
+part of $T$ is a unitary subgroup of $\mathcal{C}(\mathcal{H}^{N})$ that
+leaves $\ker\Xi$ invariant
+\begin{align}
+\!\mathcal{G}_{\Xi}  &  =\left\{  U(\omega);\hat{U}(\omega)(Y)\equiv
+U(\omega)YU^{\dagger}(\omega);\right.  \omega(\kappa_{1},\ldots,\kappa_{N}%
+)\in\mathbb{R}\nonumber\\
+U(\omega)  &  =\left.  e^{i\,\int\omega(\kappa_{1},\ldots,\kappa_{N}%
+)\Phi^{\dagger}(\kappa_{1})\Phi(\kappa_{1})\ldots\Phi^{\dagger}(\kappa
+_{N})\Phi(\kappa_{N})d\kappa_{1}\ldots d\kappa_{N}}\right\}  \label{GXidefn1}%
+\end{align}
+Elements of this subgroup map each fiber to itself i.e. are intra fiber maps
+\begin{equation}
+Tr\{\Phi^{\dagger}\Phi U(\omega)YU^{\dagger}(\omega)\}=Tr\{\Phi^{\dagger}\Phi
+Y\}\quad\forall\,Y\in\mathcal{B}_{1}(\mathcal{H}^{N})
+\end{equation}
+In fact $\mathcal{G}_{\Xi}$ is a subgroup of \emph{the} invariance group of
+the contraction map $\Xi$, since
+\begin{equation}
+\Xi\left(  U(\omega)YU^{\dagger}(\omega)\right)  =\Xi\left(  Y\right)  \text{
+}\forall Y\in\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)
+\end{equation}
+The group $\mathfrak{G}_{\ker}$ can be expressed as the direct product
+$\mathcal{G}_{\ker}\times\mathcal{G}_{\Xi}$, where the subgroup,
+$\mathcal{G}_{\ker}$, is generated by $\mathcal{V}$ (the real part of
+$\Upsilon$).
+
+To construct a representation of this subgroup, which contains both inter and
+intra fiber maps, restrictions must be imposed upon $\mathcal{V}(\kappa
+_{1},\ldots,,\kappa_{N})$ so that eq. $\left(  \ref{GLkerXi}\right)  $ is
+satisfied. In Appendix F we show that the diagonal integral kernel $T_{d}$ of
+this transformation may be written as
+\begin{equation}
+|T_{d}(\kappa_{1},\ldots\kappa_{N})|^{2}=1+\phi(\kappa_{1},\ldots\kappa
+_{N})=e^{2\mathcal{V}(\kappa_{1},\ldots,,\kappa_{N})}%
+\end{equation}
+(note Appendix F, eq. (\ref{phidef})), i.e., $T_{d}=e^{\breve{\mathcal{V}}%
+}=\left(  1+\breve{\phi}\right)  ^{\frac{1}{2}}$. This decomposition is
+significant because of the requirement (see Appendix F) that $\breve{\phi}$
+needs to be strongly orthogonal to $K_{D}$, the diagonal part of $\ker\Xi$ in
+the coordinate representation. In other words, the integral kernel
+$\phi(\kappa_{1},\ldots\kappa_{N})$ of $\breve{\phi}$ must be strongly
+orthogonal to the integral kernels of all diagonal operators that lie in
+$\ker\Xi$. This condition is obtained, (see Appendix F), by considering the
+decomposition of $Y\in\mathcal{B}_{1}(\mathcal{H}^{N})$ as
+\begin{equation}
+Y=Y_{K_{OD}}+Y_{K_{D}}+\Gamma\left(  \gamma\right)
+\end{equation}
+where we decompose $\ker\Xi$ into off diagonal and diagonal parts, i.e.
+$\ker\Xi$ $=K_{OD}\oplus K_{D}$, and $Y_{K_{OD}}\in K_{OD}$, $Y_{K_{D}}\in
+K_{D}$, and $\Gamma\left(  \gamma\right)  \in\ker\Xi^{c}$. Observe that the
+transformed diagonal part $\left(  1+\breve{\phi}\right)  ^{\frac{1}{2}%
+}Y_{K_{D}}\left(  1+\breve{\phi}\right)  ^{\frac{1}{2}}=\left(  1+\breve{\phi
+}\right)  Y_{K_{D}}$ only belongs to $Y_{K_{D}}$ if $\phi\left(  \kappa
+_{1},\ldots\kappa_{N}\right)  $ is strongly orthogonal to $Y_{K_{D}}\left(
+\kappa_{1},\ldots\kappa_{N}\right)  $, while $\left(  1+\breve{\phi}\right)
+^{\frac{1}{2}}Y_{K_{OD}}\left(  1+\breve{\phi}\right)  ^{\frac{1}{2}\dagger}$
+always belongs to $K_{OD}$ (note that $\left(  1+\breve{\phi}\right)
+^{\frac{1}{2}}$ does not commute with $Y_{K_{OD}}$) and $\left(  1+\breve
+{\phi}\right)  \Gamma\left(  \gamma\right)  $ belongs to $\ker\Xi^{c\text{ }}$
+both in the case when $\breve{\phi}$ is strongly orthogonal to $\Gamma\left(
+\gamma\right)  $ and when it is not. Clearly this map maintains the vector
+bundle structure of $\mathfrak{B}_{vect}$ as it does not send elements of the
+fibers to the base $\ker\Xi^{c}$.
+
+Not all elements of $\mathcal{G}_{ker}$ are intra-fiber maps, as in general
+$\left(  1+\breve{\phi}\right)  \Gamma\left(  \gamma\right)  =\Gamma\left(
+\gamma^{\prime}\right)  +Y_{K_{D}}^{\prime}$, and thus $\left(  1+\breve{\phi
+}\right)  $ is an intra-fiber map only if $\gamma^{\prime}=\gamma$. In terms
+of eq. (\ref{YYref}), the issue is that elements of $\mathcal{G}_{ker}$ may
+change $Y_{ref}\rightarrow Y_{ref}^{\prime}$, where $Y_{ref}^{\prime}$ is in a
+different fiber to $Y_{ref}$. However, $\mathcal{G}_{ker}$ does contain a
+subgroup, $\mathcal{G}_{fib\text{,}}$ of intra fiber maps. They are treated in
+Appendix F also. An essential result is that the $\mathcal{\breve{V}}_{fib}$
+that generate this group are expressed in terms of $\breve{\phi}$ that are
+strongly orthogonal to $K_{D}$ and act as the zero operator on $S_{D}$.
+Together with the group $\mathcal{G}_{\Xi}$ the group $\mathcal{G}_{fib}$
+forms, via direct product, the group $\mathfrak{G}_{fib}$ of intra fiber super
+multiplication operators, acting in $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $ mapping $\ker\Xi\mapsto\ker\Xi,$ generated by multiplication
+operators (in the coordinate representation) acting in $\mathcal{H}^{N}$ i.e.
+$\mathfrak{G}_{fib}=\mathcal{G}_{fib}\times$ $\mathcal{G}_{\Xi}$. This group
+can be used to give a non redundant parameterization of $\ker\Xi$, as we show
+in Appendix G.
+
+A representation of the group, $\mathfrak{G}_{den}$, of maps between fibers,
+that is contained in $\mathcal{G}_{ker}$, can be constructed (see Appendix F)
+using $\mathcal{\breve{V}}_{den}$ based on $\breve{\phi}$ that are strongly
+orthogonal to all diagonal operators that lie in $\ker\Xi$ but are not
+strongly orthogonal to $S_{D}$. A non redundant parameterization of $S_{D}$
+based on a specific (but arbitrary) reference state $D_{ref}^{N}\left(
+\gamma_{0}\right)  $ can be formed using this representation (see Appendix G).
+It is possible to choose the reference state $D_{ref}^{N}\left(  \gamma
+_{0}\right)  $ and all the states generated from it, (one for each fiber), to
+be Independent Particle States or to be states of any prescribed form.
+
+As a result, a non redundant parameterization of the set of pure states in
+$\mathfrak{B}_{vec}$ can be given in terms of the action of the product
+$\mathfrak{G}_{fib}\times\mathfrak{G}_{den}=\mathcal{G}_{fib}\times
+\mathcal{G}_{\Xi}\times\mathfrak{G}_{den}$ $\equiv\mathfrak{G}_{pure}$ on a
+pure state reference element. Elements of $\mathcal{G}_{fib}\times
+\mathcal{G}_{\Xi}$ are intra-fiber maps, while elements of $\mathfrak{G}%
+_{den}$ are inter-fiber maps. The state $D_{ref}^{N}\left(  \mathcal{V}%
+_{den}\right)  \equiv D_{ref}^{N}\left(  \mathcal{\gamma}\right)  $ obtained
+through the non redundant action of $\mathfrak{G}_{den}$ on $D_{ref}%
+^{N}\left(  \gamma_{0}\right)  $ can be used as the reference state for the
+non redundant parameterization of the pure states contained in $\left[
+\gamma\right]  _{N}$ through the action of $\mathfrak{G}_{fib}$ on
+$D_{ref}^{N}\left(  \mathcal{\gamma}\right)  $, that gives $D^{N}\left(
+\mathcal{V}_{fib}\left(  \gamma\right)  ,\mathcal{\omega}\right)  $. Note that
+these maps are rank-preserving. The physical significance is that while these
+maps do \emph{not} explore all elements of every fiber, they \emph{do} explore
+all pure-state elements of every fiber if the initial reference is a pure
+state. Technical details are in Appendices F and G. In the following diagram,
+we collect the primary relationships described in this section. The top line
+is the domain, the bottom line the range of the mappings shown in the middle.%
+
+\begin{gather}
+\underbrace{\mathfrak{B}_{aff}\backsimeq\mathfrak{B}_{vect}\backsimeq
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \equiv\ker\Xi\oplus\ker\Xi^{c}%
+}\mathstrut\medskip\nonumber\\
+\left\downarrow
+\begin{array}
+[c]{c}%
+\mathfrak{G}_{\Xi}\subset GL\left(  \mathfrak{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  \right) \\
+\cup\\
+\mathfrak{G}_{\ker}=\mathcal{G}_{\ker}\times\mathcal{G}_{\Xi}\\
+\cup\\
+\mathfrak{G}_{pure}=\mathfrak{G}_{fib}\times\mathfrak{G}_{den}\\
+{\LARGE \parallel}\\
+\mathcal{G}_{fib}\times\mathcal{G}_{\Xi}\times\mathfrak{G}_{den}%
+\end{array}
+\right\downarrow \nonumber\\
+\overbrace{\mathfrak{B}_{aff}\backsimeq\mathfrak{B}_{vect}\backsimeq
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \equiv\ker\Xi\oplus\ker\Xi^{c}%
+}\nonumber\\
+\mathfrak{G}_{\ker}\subset\mathcal{C}(\mathcal{H}^{N})\cap\text{Congruence
+Transforms of }\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)
+\end{gather}
+
+
+\section{Equations of Motion}
+
+Now we use the parameterization of pure states in $\mathcal{H}^{N}$ provided
+by the factorization of $\mathfrak{G}_{pure}$ in terms of $\mathcal{G}_{\Xi}$,
+$\mathcal{G}_{fib}$, and $\mathcal{G}_{den}$ to express the TDVP in terms of
+functionals of the physical density in a form amenable to sequential
+approximation. First a reference state $|\Psi_{0}\rangle\in\mathcal{H}^{N}$
+must be selected. Such a state could be of a simple form (e.g. an Independent
+Particle State) that leads to straightforward expressions for expectation
+values. Or, it could be a correlated state (e.g., the product of an electronic
+Antisymmetrized Geminal Power State \cite{Ortiz81} and a variable width wave
+packet for nuclear positions) that provides a better basis for approximations
+- though at the expense of more complicated expressions for expectation
+values. Given such a reference state $|\Psi_{0}\rangle$ and its associated
+density $\gamma_{0}$, \emph{any} pure state (in general, unnormalized) in
+$\mathcal{H}^{N}$ can be parameterized in terms of the foregoing group
+factorization as
+\begin{equation}
+|\Psi(\mathcal{V}_{fib}(\gamma),\omega,\mathcal{V}_{den}\rangle
+=e^{_{\mathcal{\breve{V}}_{fib}(\gamma)}}\,e^{i\breve{\omega}}e^{\breve
+{\mathcal{V}}_{den}}|\Psi_{0}\rangle\label{vv1omega1}%
+\end{equation}
+where
+\begin{align}
+e^{_{\mathcal{\breve{V}}_{fib}(\gamma)}}  &  \in\mathcal{G}_{fib}\nonumber\\
+e^{\breve{\mathcal{V}}_{den}}  &  \in\mathfrak{G}_{den}\nonumber\\
+e^{i\breve{\omega}}  &  \in\mathcal{G}_{\Xi} \label{vv1omega2}%
+\end{align}
+$\gamma_{0}$ is the density of the state $|\Psi_{0}\rangle$, $e^{\breve
+{\mathcal{V}}_{den}}$ produces states of different density,
+$e^{_{\mathcal{\breve{V}}_{fib}(\gamma)}}$ produces states with the same
+density as $e^{\breve{\mathcal{V}}_{den}}|\Psi_{0}\rangle$ and the shorthand
+notation for exponentiated integral operators was introduced at
+eq.~(\ref{TVomega}).
+
+Equations (\ref{vv1omega1}), (\ref{vv1omega2}) make clear the distinction
+between the time propagation of the density $\gamma(t)$ and the states. In
+particular, it is vital that different $\breve{\mathcal{V}}_{den}$'s produce
+states with different densities and that all possible densities $\gamma$
+associated with pure states can be generated by varying $\mathcal{V}%
+_{d}(\gamma_{0})$ such that there is a 1-1 correspondence between
+$\breve{\mathcal{V}}_{den}$ and $\gamma$. That is, for each $\gamma$ there is
+a unique transformation $e^{\breve{\mathcal{V}}_{den}}\in\mathfrak{G}_{den}$
+that maps $|\Psi_{0}\rangle\mapsto|\Psi_{\gamma}\rangle$, where $|\Psi
+_{\gamma}\rangle$ is \emph{some} state that yields $\gamma$. Details are in
+Appendices D and G. Parameterization by $\breve{\mathcal{V}}_{den}$ therefore
+is equivalent to parameterization with respect to $\gamma$. Equivalently
+\begin{equation}
+|\Psi(\mathcal{V}_{fib}(\gamma),\omega,\gamma)\rangle\equiv|\Psi
+(\mathcal{V}_{fib}(\gamma),\omega,\mathcal{V}_{den}\rangle
+\end{equation}
+Notice in this last expression that the roles of $\mathcal{V}_{fib}(\gamma)$
+and $\omega$ are to determine the time propagation of the states (hence also
+the density operators) associated with $\gamma$. The ``fiber factor''
+\begin{equation}
+e^{_{\mathcal{\breve{V}}_{fib}(\gamma)}}\,e^{i\breve{\omega}}\equiv
+e^{\breve{\Upsilon}} \label{fiberfactor}%
+\end{equation}
+selects among elements of the fiber, while $e^{\breve{\mathcal{V}}_{den}}$ is
+the ``base factor'' that determines which $\gamma$ will be reached from the
+initial one. From this perspective, the task of constructing density
+functionals is equivalent to the task of finding the optimal $\mathcal{V}%
+_{fib}(\gamma)$ and $\omega$ for the particular $\gamma$. By comparison with
+the development leading to eq. (\ref{genEOM}), the equation of motion in terms
+of this parameterization is
+\begin{equation}
+\{(\mathcal{V}_{fib}(\gamma),\omega,\gamma),\mathcal{E}\}=(\mathcal{\dot{V}%
+}_{fib}(\gamma),\dot{\omega},\dot{\gamma}) \label{Vomegagammaeom}%
+\end{equation}
+
+
+In Appendix I we show how to utilize the $\left(  \mathcal{V}_{fib}%
+(\gamma),\omega\right)  $ parameterization in a form which emphasizes the
+complex analytic character of the fiber parameterization via use of the
+complex fiber parameter
+\begin{equation}
+\Upsilon=\mathcal{V}_{fib}(\gamma)+i\omega\label{Ffactor}%
+\end{equation}
+The result of this parameterization is a different EOM, again a pure density
+functional dynamical expression, of the same form as eq. (\ref{gammadot1})
+\begin{equation}
+\dot{\gamma}(t)=\mathcal{N}_{1}(\gamma(t))\left[  \nabla_{\gamma}%
+\,\mathcal{E}(\gamma(t))-\mathcal{N}_{2}(\gamma(t))\right]  \label{gammadot2}%
+\end{equation}
+but with different functionals and with the positivity constraint built in.
+Here $\mathcal{N}_{i}(\gamma(t))$, $1\leq i\leq2$, and $\mathcal{E}%
+(\gamma(t))$ are density functionals determined by the solutions of the
+equations of motion for the parameterizing functions $\mathcal{V}_{fib}%
+(\gamma,t)$ and $\omega(t)$. Appendix I gives their detailed structure.
+
+The $\mathcal{N}_{i}(\gamma(t))$ in eq. (\ref{gammadot2}) are fiber quantities
+that provide information on intra-fiber searches and their propagation in
+time. Thus they act as time-dependent and density-dependent potentials.
+$\mathcal{E}(\gamma(t))$ also is an implicit function of fiber factors but an
+explicit function of $\gamma$, hence may be decomposed in conventional KS
+fashion into kinetic, coulombic, and exchange-correlation parts if that proves useful.
+
+\section{Summary and Conclusions}
+
+We summarize what has been shown. First, to understand the details of
+constrained search in the most general way, we established that the space of
+trace class operators $\mathcal{B}_{1}(\mathcal{H}^{N})$ can be sorted into
+equivalence classes
+\begin{equation}
+\left\{  \lbrack f]_{N};\quad f\in L_{1}(\mathtt{Z})\right\}
+\label{summequiv}%
+\end{equation}
+This classification endows $\mathcal{B}_{1}(\mathcal{H}^{N})$ with two fiber
+bundle structures, one affine $\mathfrak{B}_{aff}$, the other vector
+$\mathfrak{B}_{vect}$. In $\mathfrak{B}_{aff}$, the fibers are the $[f]_{N}$
+and the base of the bundle is $L_{1}(\mathtt{Z})$, while in $\mathfrak{B}%
+_{vect}$ the fibers are $\ker\Xi$ and the base is $\ker\Xi^{c}$. The
+projection map from the fiber to the base in the affine case is the
+contraction map $\Xi$ defined in eq. (\ref{Xidefn})
+\begin{equation}
+\Xi(Y)=Tr\{\Phi^{\dagger}\Phi Y\}=f;\quad Y\in\mathcal{B}_{1}(\mathcal{H}%
+^{N});\quad f\in L_{1}(\mathtt{Z}) \label{summXidefn}%
+\end{equation}
+and the product of field operators is as in eq. (\ref{fieldopprod}). In the
+vector bundle the corresponding projection map is the projection onto the
+unique element $\Gamma\left(  f\right)  $ of $\ker\Xi^{c}$ that corresponds to
+$f$ \ under the mapping $\Xi$. The fibers of the affine bundle (the
+equivalence classes $[f]_{N}$ ) correspond to $\left\{  \ker\Xi\right\}
+\times\left\{  \Gamma\left(  f\right)  \right\}  $ i.e. the set $\left\{
+\left(  k,\Gamma\left(  f\right)  \right)  ;k\in\ker\Xi,\text{ fixed }%
+\Gamma\left(  f\right)  \in\ker\Xi^{c}\right\}  $ which is a fiber and base
+point of the vector bundle $\mathfrak{B}_{vect}$.
+
+Second, because $\Xi$ is a linear map, its kernel is a linear subspace of
+$\mathcal{B}_{1}(\mathcal{H}^{N})$. Because of the fiber bundle structures,
+the kernel plays a central role in executing the part of constrained search
+that corresponds to searching at a specified density. Detailed knowledge of
+the structure of the kernel, in particular its invariances, therefore provides
+an entirely new route to construction of functionals.
+
+Third, because physical systems are characterized by density operators, i.e.
+positive trace class operators $Y\in\mathcal{B}_{1}(\mathcal{H}^{N})_{+}%
+\equiv\left\{  Y\in\mathcal{B}_{1}(\mathcal{H}^{N}),Y\geq0\right\}  $, we
+focused upon fibers corresponding to $\left\{  [\gamma]_{N},\;\gamma
+\geq0\right\}  $. Then we demonstrated [Appendix E, eq. (\ref{decomp})] that,
+for pure states (and all physical densities correspond to pure states, though
+not necessarily ground states), any density operator can be decomposed as
+\begin{equation}
+D^{N}=D_{K_{OD}}^{N}+D_{K_{D}}^{N}+\Gamma\left(  \gamma\right)
+\end{equation}
+
+
+Fourth, each of these three contributions has specific invariance properties
+related to whether the operators are diagonal or off-diagonal in the
+coordinate eigenfunction representation and to whether they lie in $\ker\Xi$
+or not; see Appendices E and F. For time-dependent DFT, these invariances
+provide a Lie group structure that can be used to parameterize the dynamics
+via the TDVP. For both time-dependent and time-independent DFT, the
+invariances provide a new set of tools for constructing functionals. We
+distinguish ``constructing'' from ``devising'' because Appendices G and I
+comprise a \emph{systematic} way to execute intra- and inter-fiber searches
+via Lie groups of transformations. In both time-dependent and time-independent
+forms of the theory, explicit knowledge of the optimal result of the
+intra-fiber search is identical with determination of the exact functional for
+the density which labels that particular fiber. When restricted to a
+particular form of pure state, such knowledge is equivalent to determination
+of the proper functional to associate with that type of state.
+
+The analytic form of those Lie group transformations is suggestive of certain
+well-known cluster expansions.\cite{Blaizot86} This aspect is taken up in Part
+II (following paper) as one of several means to obtain workable systematic
+approximations. Also treated there are the related issues of the various
+classical approximations for the nuclear motion (clamped nucleus, adiabatic
+motion on electronic potential, narrow wave-packet, etc.). On that topic we
+remark here only that an effort to extract one of those results simply as the
+limiting case of the exact dynamical equations must be treated with care
+because such a limit requires imposition of a constraint on the Hamiltonian
+(or action), hence amounts to invoking a different Hamiltonian to derive the
+dynamical equations.
+
+Finally, the challenge of constructing physically realistic, yet tractable
+time-dependent functionals is evident from the intricate structure of the
+$\mathcal{N}_{i} (\gamma(t))$ in eq. (\ref{gammadot2}). Further, because that
+structure is related directly to the metric functions $\eta$, it is clear that
+approximate functionals constructed on physical grounds or by generalization
+from functionals used successfully in the time-independent case actually must
+involve some implicit, unanalyzed assumptions about that metric.
+
+\section{Acknowledgements}
+
+We thank Evaert Jan Baerends, Kieron Burke, Erik Deumens, Yngve \"{O}hrn,
+A.K.~Rajagopal, and Robert van Leeuwen for informative and helpful
+discussions. SBT was supported in part by the U.S. National Science Foundation
+(DMR-KDI 9980015).
+
+\appendix
+
+
+\section{Partitioned Equation of Motion in the $\mathbf{c}$ Parameterization}
+
+Eq. (\ref{cgammaeom}), when rewritten in a form analogous with eq.
+(\ref{dEdlambda}), has the obvious matrix partitioning
+\begin{equation}
+\left[
+\begin{array}
+[c]{cc}%
+\eta_{\mathbf{cc}}\left(  t\right)  & \eta_{\mathbf{c}\gamma}\left(  t\right)
+\\
+\eta_{\gamma\mathbf{c}}\left(  t\right)  & \eta_{\gamma\gamma}\left(
+t\right)
+\end{array}
+\right]  \left[
+\begin{array}
+[c]{c}%
+\mathbf{\dot{c}}\\
+\dot{\gamma}%
+\end{array}
+\right]  =\left[
+\begin{array}
+[c]{c}%
+\nabla_{\mathbf{c}}\mathcal{E}\left(  t\right) \\
+\nabla_{\gamma}\mathcal{E}\left(  t\right)
+\end{array}
+\right]  \label{partmat1}%
+\end{equation}
+This is an operator notation and $\nabla_{\lambda}\mathcal{E}\left(  t\right)
+=\delta\mathcal{E}/\delta\lambda$. With $\lambda_{i}=\mathbf{c}\,${\ or
+}$\gamma$, the components of the metric matrix $\eta$ are
+\begin{equation}
+\eta_{\lambda_{1},\lambda_{2}}(t,\mathbf{y},\mathbf{y}^{\prime})=i\left\{
+\frac{\delta}{\delta\tilde{\lambda}_{1}(\mathbf{y})}\frac{\delta}%
+{\delta\lambda_{2}(\mathbf{y}^{\prime})}-\frac{\delta}{\delta\lambda
+_{2}(\mathbf{y})}\frac{\delta}{\delta\tilde{\lambda}_{1}(\mathbf{y}^{\prime}%
+)}\right\}  \ln S| _{\substack{\tilde{\lambda}_{1}=\lambda_{1} \\\tilde
+{\lambda}_{2}=\lambda_{2} }} \label{etamat}%
+\end{equation}
+Here
+\begin{equation}
+S\equiv\left\langle \Psi(\tilde{\mathbf{c}}(t),\tilde{\gamma}(t))|\Psi
+(\mathbf{c}(t),\gamma(t))\right\rangle
+\end{equation}
+and the analogue to the classical Hamiltonian (recall eq. (\ref{Eoft})) is
+\begin{equation}
+\mathcal{E}(t)=\frac{\left\langle \Psi(\mathbf{c}(t),\gamma(t))|H|\Psi
+(\mathbf{c}(t),\gamma(t))\right\rangle }{\left\langle \Psi(\mathbf{c}%
+(t),\gamma(t))|\Psi(\mathbf{c}(t),\gamma(t))\right\rangle } \label{Eofcgammat}%
+\end{equation}
+Coupled equations of motion follow
+\begin{align}
+\dot{\mathbf{c}}(t)  &  =\eta_{\mathbf{c\,c}}^{-1}(t)\left[  \nabla
+_{\mathbf{c}}\mathcal{E}(t)-\eta_{\mathbf{c}\gamma}(t)\dot{\gamma}\right]
+\nonumber\\
+\dot{\gamma}(t)  &  =\left[  \eta_{\gamma\gamma}(t)-\eta_{\gamma\mathbf{c}%
+}(t)\eta_{\mathbf{cc}}^{-1}(t)\eta_{\mathbf{c}\,\gamma}(t)\right]
+^{-1}\nonumber\\
+&  \times\left[  \nabla_{\gamma}\mathcal{E}(t)-\eta_{\gamma\mathbf{c}}%
+(t)\eta_{\mathbf{cc}}^{-1}(t)\nabla_{\mathbf{c}}\mathcal{E}(t)\right]
+\label{cdotgammadot}%
+\end{align}
+Under the assumption that $\eta_{\mathbf{cc}}^{-1}(t)$ exists, denote by
+$\mathbf{c}_{\#}(t)$ the solution of the first of these for the correct
+density $\gamma_{\#}(t)$. Then the exact equation of motion for the temporal
+development of the density is
+\begin{equation}
+\dot{\gamma}(t)=\tilde{\mathcal{N}_{1}}(\gamma(t))\left[  \nabla_{\gamma
+}\mathcal{E}(\gamma(t))-\tilde{\mathcal{N}_{2}}(\gamma(t))\right]
+\label{Appgammadot}%
+\end{equation}
+The functionals are defined as
+\begin{align}
+\tilde{\mathcal{N}_{1}}(\gamma(t))  &  =\left[  \eta_{\gamma\gamma}%
+(\mathbf{c}_{\#}(t),\gamma(t))-\eta_{\gamma\mathbf{c}}(\mathbf{c}%
+_{\#}(t),\gamma(t))\eta_{\mathbf{cc}}^{-1}(\mathbf{c}_{\#}(t),\gamma
+(t))\right.  \times\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+\eta_{\mathbf{c}\gamma}(\mathbf{c}_{\#}(t),\gamma(t))\right]  ^{-1}\nonumber\\
+\tilde{\mathcal{N}_{2}}(\gamma(t))  &  =\eta_{\gamma\mathbf{c}}(\mathbf{c}%
+_{\#}(t),\gamma(t))\eta_{\mathbf{cc}}^{-1}(\mathbf{c}_{\#}(t),\gamma
+(t))\nabla_{\mathbf{c}}\mathcal{E}(\mathbf{c}_{\#}(t),\gamma(t)).\quad
+\end{align}
+Any singularities are associated with bifurcation points of the time evolution
+of the system.
+
+\section{Unitary Groups and Invariances of the Kernel}
+
+\noindent Here we give details as to why it is necessary to use the general
+linear group rather than the unitary group to describe the invariances of the
+kernel. The time-dependence is inconsequential to the discussion, so is suppressed.
+
+If consideration were restricted to unitary operators, the invariance group of
+the kernel would be
+\begin{equation}
+\mathcal{G}_{\ker}^{U}=\left\{  U\in\mathcal{U}(\mathcal{H}^{N});\mathrm{Tr}%
+\{\Phi^{\dagger}\Phi UYU^{\dagger}\}=\mathrm{Tr}\{\Phi^{\dagger}\Phi
+Y\}=0\,\forall Y\in\ker\Xi\right\}  \label{Gkerdefn}%
+\end{equation}
+where $\mathcal{U}(\mathcal{H}^{N})$ is the group of unitary operators on
+$N$-particle space. The condition expressed in eq. $\left(  \ref{Gkerdefn}%
+\right)  $ does not imply that transformations belonging to $\mathcal{G}%
+_{\ker}^{U}$ send elements of an equivalence class to itself
+\begin{equation}
+\mathcal{G}_{\ker}^{U}:\left[  f\right]  _{N}\rightarrow\left[  f^{\prime
+}\right]  _{N};\quad\text{in general }f\neq f^{\prime}%
+\end{equation}
+On the other hand the condition that defines the unitary group
+\begin{equation}
+\mathcal{G}_{\Xi}:\ker\Xi\rightarrow\ker\Xi
+\end{equation}
+that does send equivalence classes to equivalence classes is given by
+\begin{equation}
+\mathcal{G}_{\Xi}=\left\{  U\in\mathcal{U}(\mathcal{H}^{N});\mathrm{Tr}%
+\{\Phi^{\dagger}\Phi UYU^{\dagger}\}=\mathrm{Tr}\{\Phi^{\dagger}\Phi
+Y\}\quad\,\forall Y\in\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \right\}
+\label{GXi}%
+\end{equation}
+Evidently from eq. $\left(  \ref{GXi}\right)  $
+\begin{equation}
+\left[  U(\omega),\Phi^{\dagger}\Phi\right]  =0
+\end{equation}
+and $\mathcal{G}_{\Xi}$ is obviously a subgroup of $\mathcal{G}_{\ker}^{U}$
+and can be represented by transformations of the form
+\begin{align}
+\mathcal{G}_{\Xi}  &  \subset\mathcal{G}_{\ker}^{U}=\{U(\omega);\hat{U}%
+(\omega)(Y)\equiv U(\omega)YU^{\dagger}(\omega);\nonumber\\
+U(\omega)  &  =e^{i\,\int\omega(\kappa_{1},\ldots,\kappa_{N})\Phi^{\dagger
+}(\kappa_{1})\Phi(\kappa_{1})\ldots\Phi^{\dagger}(\kappa_{N})\Phi(\kappa
+_{N})d\kappa_{1}\ldots d\kappa_{N}};\nonumber\\
+&  \qquad\qquad\qquad\qquad\quad\omega(\kappa_{1},\ldots,\kappa_{N}%
+)\in\mathbb{R}\} \label{GXidefn}%
+\end{align}
+One can see that $\mathcal{G}_{\Xi}$ is the largest commutative unitary
+subgroup of $\mathcal{G}_{\ker}^{U}$ with these properties. Because of eq.
+(\ref{WifromYref}), it follows that fibers associated with states are mapped
+into themselves by $\hat{U}(\omega)$
+\begin{equation}
+Y\in\lbrack\gamma]_{N}\Leftrightarrow\hat{U}(\omega)Y\in\lbrack\gamma]_{N}%
+\end{equation}
+However, given a reference element $Y_{ref}\in\lbrack\gamma]_{N}$
+corresponding to a pure state $|\Psi_{ref}\rangle$ in the fiber $[\gamma]_{N}%
+$, it is \emph{not} the case that all the rest of the pure-state segment of
+the fiber is generated by application of elements of $\mathcal{G}_{\Xi}$, (see
+Appendix F), i.e. this group does \emph{not }act homogeneously on the set of
+pure states in $[\gamma]_{N}$. This also shows that\emph{\ there is no intra
+fiber unitary subgroup of }$\mathcal{G}_{\ker}^{U}$ \emph{that acts
+homogeneously on the set of pure states contained within a fiber}.\emph{\ }The
+physical insight is that a transformation such as eq. (\ref{GXidefn}) never
+can generate the equivalent of a Jastrow or Hylleras factor in the Hilbert
+space of pure states. If one drops the unitary requirement in eq. $\left(
+\ref{Gkerdefn}\right)  $ \textit{it is} possible find transformations, that
+are diagonal in the coordinate representation (like those of $\mathcal{G}%
+_{\Xi}$)\textit{, }which produce all pure states with a given density,
+$\gamma$, from a pure reference state $\left|  \Psi\right\rangle $ of that
+density\textit{. }These transformations are of the form%
+\begin{equation}
+T\left(  \mathcal{V},\omega\right)  =e^{\int\left\{  \mathcal{V}(\kappa
+_{1},\ldots,\kappa_{N})+i\omega(\kappa_{1},\ldots,\kappa_{N})\right\}
+\Phi^{\dagger}(\kappa_{1})\Phi(\kappa_{1})\ldots\Phi^{\dagger}(\kappa_{N}%
+)\Phi(\kappa_{N})d\kappa_{1}\ldots d\kappa_{N}}%
+\end{equation}
+where there are certain restriction placed on $\mathcal{V}(\kappa_{1}%
+,\ldots,\kappa_{N})$ (see Appendix F). We denote the group formed by these
+intra fiber transformations $\mathfrak{G}_{fib}$ in the main body of this
+article. With a weaker set of restrictions, (see Appendix F), such maps also
+transform $\ker\Xi\rightarrow\ker\Xi$, and form a subgroup $\mathfrak{G}%
+_{\ker}\subset\mathfrak{G}_{\Xi}$, and with a third set of restrictions, one
+forms a group of inter fiber transformations $\mathfrak{G}_{den}$ (see
+Appendix F).
+
+\section{Positive Maps of Trace Class Operators}
+
+\noindent Recall that a trace class operator $Y \; \in\mathcal{B}_{1} (
+\mathcal{H})$, with $\mathcal{H}$ any Hilbert space, is positive $Y \ge0$ if
+\begin{equation}
+\langle v | Y v \rangle\ge0 \qquad\forall\, v \in\mathcal{H}%
+\end{equation}
+which is true if and only if all the eigenvalues of $Y \ge0$. In turn this
+requirement is true if and only if
+\begin{equation}
+Y = Q Q^{\dagger} \, , Q\in\mathcal{B}_{2} ( \mathcal{H})
+\end{equation}
+and $\mathcal{B}_{2} ( \mathcal{H})$ is the space of Hilbert-Schmidt operators.
+
+A linear map of trace class operators $\hat{T}:\mathcal{B}_{1}(\mathcal{H}%
+)\mapsto\mathcal{B}_{1}(\mathcal{H})$ is positive if $\hat{T}(Y)\geq0$ for
+$Y\geq0$. In particular, $\hat{T}(Y)=TYT^{\dagger}$ is a positive map
+$\mathcal{B}_{1}(\mathcal{H})\mapsto\mathcal{B}_{1}(\mathcal{H})$ for any
+bounded operator $T$, i.e., for such a $T$
+\begin{equation}
+\hat{T}(Y)\in\mathcal{B}_{1}(\mathcal{H})_{+}\,\,\text{{\ if }}\,Y\in
+\mathcal{B}_{1}(\mathcal{H})_{+}%
+\end{equation}
+where $\mathcal{B}_{1}(\mathcal{H})_{+}$ is the cone of positive trace class
+operators \cite{Kummer}. Cones facilitate analysis because they define order
+relationships. That is, $A>B$ if $A-B\in\mathcal{B}_{1}(\mathcal{H})_{+}$. The
+set of positive operators is a cone, not just a convex set, as normalization
+does not have to be constant.
+
+If $T$ is an invertible bounded operator, i.e. $T\in GL(\mathcal{H})$, then
+\begin{equation}
+T=e^{A}\,e^{iB}%
+\end{equation}
+with $A^{\dagger}=A$ and $B^{\dagger}=B$. Clearly $e^{iB}$ is unitary while
+$e^{A}$ is invertible and positive. The set $\{e^{iB}\}$ forms the unitary
+subgroup $\mathcal{U}(\mathcal{H})$ of $GL(\mathcal{H})$, while the set $\{
+e^{A}\}$ comprises the left coset $GL(\mathcal{H})/\mathcal{U}(\mathcal{H})$
+of $\mathcal{U}(\mathcal{H})$ in $GL(\mathcal{H})$. Denote the maps $\hat{T}$
+generated by $T\in GL(\mathcal{H})$ as $\widehat{GL(\mathcal{H})}$ and observe
+that they map $\mathcal{B}_{1}(\mathcal{H})\mapsto\mathcal{B}_{1}%
+(\mathcal{H})$ and $\mathcal{B}_{2}(\mathcal{H})\mapsto\mathcal{B}%
+_{2}(\mathcal{H}).$ These are used in the next Appendix.
+
+\section{Group Orbits of Density Operators}
+
+\noindent Once again the time-dependence appears only as a parameterization
+that is inconsequential to the discussion, so is omitted. The transformation
+\begin{align}
+\hat{T}  &  :\mathcal{B}_{1}(\mathcal{H})\mapsto\mathcal{B}_{1}\left(
+\mathcal{H}\right) \nonumber\\
+&  \hat{T}(Y)=TYT^{\dagger}%
+\end{align}
+maintains the rank of the operator $Y$, that is $\hat{T}(Y)$ has the same
+number of non-zero eigenvalues as $Y$ itself. Particularizing to density
+operators $D$, their cone $\mathcal{B}_{1}(\mathcal{H})_{+}$ can be classified
+by the rank of $D\in\mathcal{B}_{1}(\mathcal{H})_{+}$. Operators for pure
+states have unit rank and correspond to vectors in $\mathcal{H}$
+\begin{equation}
+\mathop{\rm rank}\nolimits(D)=1\,\,\Leftrightarrow D=\frac{|\Psi\rangle
+\langle\Psi|}{\langle\Psi|\Psi\rangle}\,;|\Psi\rangle\in\mathcal{H}%
+\end{equation}
+
+
+All rank 1 density operators lie in the same orbit of $\widehat{GL(\mathcal{H}%
+)} $ (see Appendix C for definition) in $\mathcal{B}_{1}(\mathcal{H})$. That
+is, if $D_{0}$ is an arbitrary, specified pure state density operator, then
+all other pure state density operators $D$ are generated by
+\begin{equation}
+D=\hat{T}(D_{0});\quad\hat{T}\in\widehat{GL(\mathcal{H})}\,;\quad
+\mathop{\rm rank}\nolimits(D_{0})=1
+\end{equation}
+
+
+Ensemble states correspond to density operators with rank greater than unity.
+As in the pure state case, ensemble density operators of a given rank all lie
+on one orbit of $\widehat{GL(\mathcal{H})}$. Thus, if $D_{p,0}$ is an
+arbitrary, specified ensemble state density operator of rank $p$, then all
+other ensemble state density operators of the same rank $D_{p}$ are generated
+by
+\begin{equation}
+D_{p}=\hat{T}(D_{p,0});\quad\hat{T}\in\widehat{GL(\mathcal{H})}\,;\quad
+\mathop{\rm rank}\nolimits(D_{p,0})=p
+\end{equation}
+
+
+\section{Analytical Structure of the Kernel}
+
+\noindent This Appendix treats characteristics of $Y\in\ker\Xi$. As before,
+the time-dependence appears only as a parameterization that is inconsequential
+to the discussion, so is omitted. It is useful for present purposes to begin
+by expressing all operators belonging to $\mathcal{B}_{1}(\mathcal{H}^{N})$
+(recall $N=N_{e}+N_{n}$) in terms of the ordered generalized operator basis
+\cite{BerezinShubin}
+\begin{equation}
+\left\{  |\mathbf{x}_{1}\ldots\mathbf{x}_{N_{e}}\rangle_{ord}\langle
+\mathbf{x}_{1}^{\prime}\ldots\mathbf{x}_{N_{e}}^{\prime}|_{ord}\otimes
+|\mathbf{X}_{1}\ldots\mathbf{X}_{N_{n}}\rangle_{ord}\langle\mathbf{X}%
+_{1}^{\prime}\ldots\mathbf{X}_{N_{n}}^{\prime}|_{ord}\right\}
+\end{equation}
+with
+\begin{equation}
+\mathbf{x},\mathbf{x}^{\prime},\mathbf{X},\mathbf{X}^{\prime}\in\mathbb{F}%
+\end{equation}
+where $\mathbb{F}=\mathbb{R}^{3}\otimes\mathbb{C}^{2}$ if the space-spin
+analysis is pursued and $\mathbb{F}=\mathbb{R}^{3}$ if spin is suppressed
+(whence the states are coordinate eigenfunctions). The subscript ``$ord$''
+denotes the ordered basis
+\begin{equation}
+\mathbf{x}_{1}\leq\mathbf{x}_{2}\leq\mathbf{x}_{3}\leq\ldots
+\end{equation}
+with the understanding that strict inequality holds only for each species of
+fermions. Shortly a shift to the unordered basis will be advantageous. For
+either basis, a compressed notation, analogous with eq.~(\ref{compressed}), is
+convenient
+\begin{align}
+&  |\mathbf{x}_{1}\ldots\mathbf{x}_{N_{e}}\rangle\langle\mathbf{x}_{1}%
+^{\prime}\ldots\mathbf{x}_{N_{e}}^{\prime}|\otimes|\mathbf{X}_{1}%
+\ldots\mathbf{X}_{N_{n}}\rangle\langle\mathbf{X}_{1}^{\prime}\ldots
+\mathbf{X}_{N_{n}}^{\prime}|\nonumber\\
+&  \equiv|\kappa_{1}\ldots\kappa_{N_{e}},\kappa_{N_{e}+1}\ldots\kappa
+_{N}\rangle\langle\kappa_{1}^{\prime}\ldots\kappa_{N_{e}}^{\prime}%
+,\kappa_{N_{e}+1}^{\prime}\ldots\kappa_{N}^{\prime}|\nonumber\\
+&  \equiv|\mathsf{x},\mathsf{X}\rangle\langle\mathsf{x}^{\prime}%
+,\mathsf{X}^{\prime}|,
+\end{align}
+The last form (recall eq. (\ref{manifdef})) will be used only when there is no ambiguity.
+
+Any operator $Y\,\in\mathcal{B}_{1}(\mathcal{H}^{N})$ can be expanded in terms
+of the ordered basis as
+\begin{align}
+Y  &  =\int\,d\kappa_{1},\ldots,d\kappa_{N},d\kappa_{1}^{\prime}%
+,\ldots,d\kappa_{N}^{\prime}\tilde{Y}(\kappa_{1},\ldots,\kappa_{N};\kappa
+_{1}^{\prime},\ldots,\kappa_{N}^{\prime})\nonumber\\
+&  \times|\kappa_{1}\ldots\kappa_{N}\rangle_{ord}\langle\kappa_{1}^{\prime
+}\ldots\kappa_{N}^{\prime}|_{ord}%
+\end{align}
+The operator integral kernel with respect to the ordered basis can be expanded
+\cite{Richtmyer} as
+\begin{align}
+\tilde{Y}(\kappa_{1},\ldots,\kappa_{N},\kappa_{1}^{\prime},\ldots,\kappa
+_{N}^{\prime})  &  =\sum_{i=1}^{\infty}\alpha_{i}\bar{\varphi}_{i}(\kappa
+_{1},\ldots,\kappa_{N})\psi_{i}(\kappa_{1}^{\prime},\ldots,\kappa_{N}^{\prime
+});\nonumber\\
+\alpha_{i}  &  \geq0; \qquad\sum_{i=1}^{\infty}\alpha_{i}<\infty
+\end{align}
+where the basis functions $\left\{  \varphi_{i},\psi_{i}\right\}  $ are
+specific to the operator $Y$ in the sense of spanning its range and domain and
+satisfying
+\begin{align}
+\int\,d\kappa_{1},\ldots,d\kappa_{N},\bar{\varphi}_{i}(\kappa_{1}%
+,\ldots,\kappa_{N})\varphi_{j}(\kappa_{1},\ldots,\kappa_{N})  &  =\delta
+_{ij}\nonumber\\
+\int\,d\kappa_{1},\ldots,d\kappa_{N},\bar{\psi}_{i}(\kappa_{1},\ldots
+,\kappa_{N})\psi_{j}(\kappa_{1},\ldots,\kappa_{N})  &  =\delta_{ij}%
+\end{align}
+
+
+It is easier to consider the contraction map, the central quantity, in the
+\emph{unordered} basis. In it, the operator integral kernel is
+\begin{equation}
+Y(\kappa_{1},\ldots,\kappa_{N},\kappa_{1}^{\prime},\ldots,\kappa_{N}^{\prime
+})=\frac{(-1)^{(P_{e}+P_{n})}}{(N_{e}!N_{n}!)^{2}}\mathcal{P}\tilde{Y}%
+(\kappa_{1},\ldots,\kappa_{N},\kappa_{1}^{\prime},\ldots,\kappa_{N}^{\prime})
+\end{equation}
+where $\mathcal{P}^{-1}$ is the permutation operator that generates the
+ordered strings from the unordered ones
+\begin{align}
+\mathcal{P}^{-1}\{\kappa_{1},\ldots,\kappa_{N}\}  &  =\{\kappa_{1}%
+,\ldots,\kappa_{N}\}_{ord}\nonumber\\
+\mathcal{P}^{-1}\{\kappa_{1}^{\prime},\ldots,\kappa_{N}^{\prime}\}  &
+=\{\kappa_{1}^{\prime},\ldots,\kappa_{N}^{\prime}\}_{ord}%
+\end{align}
+$P_{e}$ is the number of permutations of the electron coordinates, and $P_{n}
+$ is either the number of permutations of the nuclear coordinates if the
+nuclei are fermions or $0$ if they are bosons.
+
+In the unordered basis the contraction map $\Xi$ eq. (\ref{Xidefn}) on any
+operator $Y$ is
+\begin{align}
+&  \!\!\!\!\!Tr\{\Phi^{\dagger}(\mathbf{x})\Phi(\mathbf{x})\Phi^{\dagger
+}(\mathbf{X})\Phi(\mathbf{X})Y\}\nonumber\\
+&  =\int\,d\kappa_{1},\ldots,d\kappa_{N}d\kappa_{1}^{\prime},\ldots
+,d\kappa_{N}^{\prime}d\kappa_{1}^{\prime\prime},\ldots,d\kappa_{N}%
+^{\prime\prime}\nonumber\\
+&  \qquad\times\langle\kappa_{1}^{\prime\prime},\ldots,\kappa_{N}%
+^{\prime\prime}|\Phi^{\dagger}(\mathbf{x})\Phi(\mathbf{x})\Phi^{\dagger
+}(\mathbf{X})\Phi(\mathbf{X})|\kappa_{1},\ldots,\kappa_{N}\rangle\nonumber\\
+&  \qquad\times\langle\kappa_{1}^{\prime},\ldots,\kappa_{N}^{\prime}%
+|\kappa_{1}^{\prime\prime},\ldots,\kappa_{N}^{\prime\prime}\rangle
+\;Y(\kappa_{1},\ldots,\kappa_{N};\kappa_{1}^{\prime},\ldots,\kappa_{N}%
+^{\prime})\nonumber\\
+&  =N_{e}N_{n}\,\int d\mathbf{x}_{2}^{\prime}\ldots,d\mathbf{x}_{N_{e}%
+}^{\prime}d\mathbf{X}_{2}^{\prime},\ldots,d\mathbf{X}_{N_{n}}^{\prime
+}\nonumber\\
+&  \times Y(\mathbf{x},\mathbf{x}_{2}\ldots,\mathbf{x}_{N_{e}}\mathbf{X}%
+,\mathbf{X}_{2}\ldots,\mathbf{X}_{N_{n}};\mathbf{x},\mathbf{x}_{2}^{\prime
+}\ldots,\mathbf{x}_{N_{e}}^{\prime}\mathbf{X},\mathbf{X}_{2}^{\prime}%
+\ldots,\mathbf{X}_{N_{n}}^{\prime}) \label{TrphiphiphiphiY}%
+\end{align}
+
+
+The elements of $\ker\Xi$ become evident by writing
+\begin{align}
+Y(\kappa_{1},\ldots,\kappa_{N};\kappa_{1}^{\prime},\ldots,\kappa_{N}^{\prime
+})  &  =Y_{d}(\kappa_{1},\ldots,\kappa_{N})\prod_{j=1}^{N}\delta(\kappa
+_{j}-\kappa_{j}^{\prime})\nonumber\\
+&  +Y_{OD}(\kappa_{1},\ldots,\kappa_{N};\kappa_{1}^{\prime},\ldots,\kappa
+_{N}^{\prime}) \label{YYdYod}%
+\end{align}%
+\begin{align}
+Y_{OD}(\kappa_{1},\ldots,\kappa_{N};\kappa_{1},\ldots,\kappa_{N})  &
+=0\nonumber\\
+Y_{d}(\kappa_{1},\ldots,\kappa_{N})  &  \equiv Y(\kappa_{1},\ldots,\kappa
+_{N};\kappa_{1},\ldots,\kappa_{N})
+\end{align}
+and the caveat that the product of delta functions in eq. (\ref{YYdYod})
+implicitly includes all the permutations of coordinates (because of working in
+the unordered basis). Note that $Y_{d}$ is symmetric with respect to
+interchange among the electron coordinates themselves and similarly for the
+nuclear coordinates. Substitution of (\ref{YYdYod}) in (\ref{TrphiphiphiphiY})
+gives
+\begin{gather}
+Tr\!\{\Phi^{\dagger}(\mathbf{x})\Phi(\mathbf{x})\Phi^{\dagger}(\mathbf{X}%
+)\Phi(\mathbf{X})Y\}=\nonumber\\
+N_{e}N_{n}\,\int d\mathbf{x}_{2}^{\prime}\ldots,d\mathbf{x}_{N_{e}}^{\prime
+}d\mathbf{X}_{2}^{\prime},\ldots,d\mathbf{X}_{N_{n}}^{\prime}Y_{d}%
+(\mathbf{x},\mathbf{x}_{2}\ldots,\mathbf{x}_{N_{e}}\mathbf{X},\mathbf{X}%
+_{2}\ldots,\mathbf{X}_{N_{n}}) \label{ContrYtoYd}%
+\end{gather}
+An alternative way to state this is that the contraction map sends all
+off-diagonal basis operators to zero
+\begin{align}
+&  \Xi\left\{  |\kappa_{1}\ldots\kappa_{N}\rangle\langle\kappa_{1}^{\prime
+}\ldots\kappa_{N}^{\prime}|\right\}  =0\nonumber\\
+&  \;\text{{for }}\left\{  \kappa_{1}\ldots\kappa_{N_{e}}\right\}
+\neq\left\{  \kappa_{1}^{\prime}\ldots\kappa_{N_{e}}^{\prime}\right\}  \text{
+or }\left\{  \kappa_{1}\ldots\kappa_{N_{n}}\right\}  \neq\left\{  \kappa
+_{1}^{\prime}\ldots\kappa_{N_{n}}^{\prime}\right\}  \label{zeroeta}%
+\end{align}
+
+
+Three cases are obvious immediately from eq. (\ref{ContrYtoYd}); two belong to
+$\ker\Xi$, one does not. First, there are pure off-diagonal operators
+\begin{equation}
+Y=Y_{OD}\,\,;\,\,(Y_{d}=0)\,\Rightarrow Y\in\ker\Xi\label{Ycase1}%
+\end{equation}
+Then there are diagonal operators with a special property
+\begin{gather}
+Y=Y_{d};\,\,(Y_{OD}=0)\nonumber\\
+\int d\mathbf{x}_{2}\ldots,d\mathbf{x}_{N_{e}}d\mathbf{X}_{2},\ldots
+,d\mathbf{X}_{N_{n}}Y_{d}(\mathbf{x},\mathbf{x}_{2}\ldots,\mathbf{x}_{N_{e}%
+}\mathbf{X},\mathbf{X}_{2}\ldots,\mathbf{X}_{N_{n}})=0\nonumber\\
+\Rightarrow Y\in\ker\Xi\label{Ycase2}%
+\end{gather}
+Finally, there are diagonal operators that do not belong to $\ker\Xi$
+\begin{gather}
+Y=Y_{d};\,\,(Y_{OD}=0)\nonumber\\
+0\neq\int d\mathbf{x}_{2}\ldots,d\mathbf{x}_{N_{e}}d\mathbf{X}_{2}%
+,\ldots,d\mathbf{X}_{N_{n}}Y_{d}(\mathbf{x},\mathbf{x}_{2}\ldots
+,\mathbf{x}_{N_{e}}\mathbf{X},\mathbf{X}_{2}\ldots,\mathbf{X}_{N_{n}%
+})\nonumber\\
+\Rightarrow Y\notin\ker\Xi\label{Ycase3}%
+\end{gather}
+
+
+The space $K_{OD}$ generated by operators satisfying (\ref{Ycase1}) is a
+subspace of $\ker\{\Xi\}$
+\begin{align}
+K_{OD}  &  \subset\ker\{\Xi\}\nonumber\\
+K_{OD}  &  =\mathrm{linear\,span}\left\{  Y=Y_{OD},Y_{d}=0\right\}
+\label{koddefn}%
+\end{align}
+The remaining part $K_{D}$ of $\ker\{\Xi\}$ is comprised of diagonal operators
+that satisfy eq. (\ref{Ycase2})
+\begin{align}
+K_{D}  &  \subset\ker\{\Xi\};\text{ where }K_{D}=\mathrm{linear\,span}\left\{
+Y=Y_{d},Y_{OD}=0;\right. \nonumber\\
+&  \left.  0=\int d\mathbf{x}_{2},\ldots d\mathbf{x}_{N_{e}}d\mathbf{X}%
+_{2},\ldots d\mathbf{X}_{N_{n}}Y_{d}(\mathbf{x},\mathbf{x}_{2},\ldots
+\mathbf{x}_{N_{e}}\mathbf{X},\mathbf{X}_{2},\ldots\mathbf{X}_{N_{n}})\right\}
+\nonumber\\
+&  \label{kddefn}%
+\end{align}
+In detail, for $K_{D}$, $Y_{d}$ obeys at least one of the two conditions
+\begin{align}
+0  &  =\int\,d\mathbf{x}_{i_{1}},\ldots,d\mathbf{x}_{i_{N_{e}-1}}%
+,Y_{d}(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1},\ldots
+,\mathbf{X}_{N_{n}})\nonumber\\
+0  &  =\int\,d\mathbf{X}_{j_{1}},\ldots,d\mathbf{X}_{j_{N_{n}-1}}%
+,Y_{d}(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1},\ldots
+,\mathbf{X}_{N_{n}}) \label{kddefn1}%
+\end{align}
+with
+\begin{align}
+\left\{  i_{1}\ldots i_{N_{e}-1}\right\}   &  \subset\left\{  1\ldots
+N_{e}\right\} \nonumber\\
+\left\{  j_{1}\ldots j_{N_{n}-1}\right\}   &  \subset\left\{  1\ldots
+N_{n}\right\}  \label{indices}%
+\end{align}
+
+
+Thus the kernel of $\Xi$ can be expressed as
+\begin{equation}
+\ker\{\Xi\}=K_{OD}\oplus K_{D}%
+\end{equation}
+with the two components orthogonal with respect to the Hilbert-Schmidt inner
+product
+\begin{equation}
+Tr\{k_{OD}^{\dagger}k_{D}\}=0\;\mathrm{or}\,\,k_{OD}\in K_{OD},\,\,k_{d}\in
+K_{D}%
+\end{equation}
+This result follows from
+\begin{align}
+Tr\{|\kappa_{1}\ldots\kappa_{N}\rangle\langle\kappa_{1}\ldots\kappa
+_{N}||\kappa_{1}^{\prime}\ldots\kappa_{N}^{\prime}\rangle\langle\kappa
+_{1}^{\prime\prime}\ldots\kappa_{N}^{\prime\prime}|\}  &  =\nonumber\\
+\langle\kappa_{1}\ldots\kappa_{N}|\kappa_{1}^{\prime}\ldots\kappa_{N}^{\prime
+}\rangle\langle\kappa_{1}^{\prime\prime}\ldots\kappa_{N}^{\prime\prime}%
+|\kappa_{1}\ldots\kappa_{N}\rangle &  =0
+\end{align}
+which holds when both
+\begin{equation}
+\{\kappa_{1}^{\prime}\ldots\kappa_{N_{e}}^{\prime}\}\neq\{\kappa_{1}%
+^{\prime\prime}\ldots\kappa_{N_{e}}^{\prime\prime}\}
+\end{equation}
+\emph{and}
+\begin{equation}
+\{\kappa_{N_{e}+1}^{\prime}\ldots\kappa_{N}^{\prime}\}\neq\{\kappa_{N_{e}%
++1}^{\prime\prime}\ldots\kappa_{N}^{\prime\prime}\}
+\end{equation}
+In either case the primed and double primed sets of coordinates have at least
+one difference, hence both cannot be equal to $\{\kappa_{1}\ldots\kappa_{N}\}$.
+
+Eq. (\ref{Ycase3}) makes clear that the only operators $Y\in\mathcal{B}%
+_{1}(\mathcal{H}^{N})$ that do not lie in $\ker\Xi$ are diagonal operators
+that do not belong to $K_{D}$. These form the subspace (of $\mathcal{B}%
+_{1}(\mathcal{H}^{N})$)
+\begin{align}
+S_{D}  &  =\mathrm{linear\,span}\big\{Y=Y_{d},Y_{OD}=0;\big.\qquad\nonumber\\
+&  \big.0\neq\!\!\!\int d\mathbf{x}_{2}\ldots,d\mathbf{x}_{N_{e}}%
+d\mathbf{X}_{2},\ldots,d\mathbf{X}_{N_{n}}Y_{d}(\mathbf{x},\mathbf{x}%
+_{2}\ldots,\mathbf{x}_{N_{e}}\mathbf{X},\mathbf{X}_{2}\ldots,\mathbf{X}%
+_{N_{n}})\!\big\}\nonumber\\
+&  \label{sddefn}%
+\end{align}
+Therefore the space of trace class operators has the direct sum decomposition
+\begin{equation}
+\mathcal{B}_{1}(\mathcal{H}^{N})=K_{OD}\oplus K_{D}\oplus S_{D} \label{decomp}%
+\end{equation}
+
+
+\section{Vector Bundle Transformations}
+
+\noindent This Appendix develops pertinent properties of transformations
+$TYT^{\dagger}$ of trace class operators $Y$ in $K_{OD}\oplus K_{D}$ $\oplus$
+$S_{D}$ by elements $T$ of the General Linear Group $GL\left(  \mathcal{H}%
+^{N}\right)  $ of $\mathcal{H}^{N}$. In the coordinate eigenfunction basis,
+the transformation $TYT^{\dagger}$ reads
+\begin{equation}
+TYT^{\dagger}\equiv\hat{T}Y=\int d\mathsf{z}d\mathsf{z}^{\prime}\left[
+\,TYT^{\dagger}(\mathsf{z},\mathsf{z}^{\prime})\,\right]  |\mathsf{z}%
+\rangle\langle\mathsf{z}^{\prime}| \label{TYT}%
+\end{equation}
+where the transformed integral kernel is
+\begin{equation}
+TYT^{\dagger}(\mathsf{z},\mathsf{z}^{\prime})=\int d\mathsf{z}^{\prime\prime
+}d\mathsf{z}^{\prime\prime\prime}T(\mathsf{z},\mathsf{z}^{\prime\prime
+})Y(\mathsf{z}^{\prime\prime},\mathsf{z}^{\prime\prime\prime})T^{\ast
+}(\mathsf{z}^{\prime\prime\prime},\mathsf{z}^{\prime}) \label{TYTkernel}%
+\end{equation}
+Clearly the only transforms that can preserve the structure described by eqs.
+(\ref{koddefn}), (\ref{kddefn}), (\ref{sddefn}) have diagonal representations
+\begin{align}
+T(\mathsf{z},\mathsf{z}^{\prime})  &  =\delta(\mathsf{z}-\mathsf{z}^{\prime
+})\,T(\mathsf{z})\nonumber\\
+T(\mathsf{z})  &  =T(\mathsf{x},\mathsf{X}) \label{Tddefn}%
+\end{align}
+with $T(\mathsf{z})$ a species symmetric function with respect to interchange
+among electronic coordinates and similarly for nuclear coordinates (within
+each species).
+
+The explicit form of the diagonal operator is
+\begin{align}
+T  &  =e^{\int\mathcal{V}(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}%
+\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})\prod\limits_{j=1}^{N_{e}}\Phi
+_{e}^{\dagger}(x_{j})\Phi_{e}(x_{j})\prod\limits_{k=1}^{N_{n}}\Phi
+_{n}^{\dagger}(X_{k})\Phi_{n}(X_{k})\prod\limits_{l=1}^{N_{e}}dx_{l}%
+\prod_{m=1}^{N_{n}}dX_{m}}\nonumber\\
+&  \;\times e^{i\int\omega(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}%
+\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})\prod\limits_{q=1}^{N_{e}}\Phi
+_{e}^{\dagger}(x_{q})\Phi_{e}(x_{q})\prod\limits_{r=1}^{N_{n}}\Phi
+_{n}^{\dagger}(X_{r})\Phi_{n}(X_{r})\prod\limits_{s=1}^{N_{e}}dx_{s}%
+\prod_{t=1}^{N_{n}}dX_{t}} \label{Tdexplicit}%
+\end{align}
+When $T$ operates upon an element of the basis of many-body coordinate
+eigenfunctions, the result is
+\begin{align}
+&  T\left|  y_{1}\ldots y_{N_{e}}Y_{1}\ldots Y_{N_{n}}\right\rangle
+\nonumber\\
+&  \quad=e^{\mathcal{V}(y_{1}\ldots y_{N_{e}}Y_{1}\ldots Y_{N_{n}})}%
+e^{i\omega(y_{1}\ldots y_{N_{e}}Y_{1}\ldots Y_{N_{n}})}\left|  y_{1}\ldots
+y_{N_{e}}Y_{1}\ldots Y_{N_{n}}\right\rangle \label{Tdcoord}%
+\end{align}
+because
+\begin{align}
+\Phi_{e}^{\dagger}(x_{j})\Phi_{e}(x_{j})\left|  y_{1}\ldots y_{N_{e}}%
+Y_{1}\ldots Y_{N_{n}}\right\rangle  &  =\left|  y_{1}\ldots y_{N_{e}}%
+Y_{1}\ldots Y_{N_{n}}\right\rangle \nonumber\\
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\text{{for}}\;x_{j}  &
+\in\{y_{1}\ldots y_{N_{e}}\}\nonumber\\
+&  =0\,\,\text{o{therwise}}%
+\end{align}
+and the corresponding relationship for $\Phi_{n}^{\dagger}(X_{k})\Phi
+_{n}(X_{k})$.
+
+For $Y=Y_{K_{OD}}\,\in K_{OD}$, diagonal transformations $\hat{T}$ map
+$K_{OD}\mapsto K_{OD}$ with the explicit form of the transformed integral
+kernel
+\begin{equation}
+TY_{K_{OD}}T^{\dagger}(\mathsf{z},\mathsf{z}^{\prime})=T(\mathsf{z})Y_{K_{OD}%
+}(\mathsf{z},\mathsf{z}^{\prime})T^{\ast}(\mathsf{z}^{\prime})\in K_{OD}
+\label{TYodTkernel}%
+\end{equation}
+Diagonal transformations that map $K_{D}\mapsto K_{D}$ provided that the
+transformed integral kernel satisfies eq. (\ref{Ycase2}), which is in fact the
+defining property for maps that maintain the vector bundle structure of
+$\mathfrak{B}_{vec}$. This can be written as
+\begin{align}
+\hat{T}  &  :Y_{K_{D}}\mapsto TY_{K_{D}}T^{\dagger};\quad Y_{K_{D}}\in
+K_{D}\nonumber\\
+&  TY_{K_{D}}T^{\dagger}(\mathsf{z})=|T(\mathsf{z})|^{2}Y_{K_{D}}(\mathsf{z})
+\end{align}
+\emph{provided} that
+\begin{equation}
+|T(\mathsf{z})|^{2}=1+\phi(\mathsf{z}) \label{phidef}%
+\end{equation}
+and the species symmetric functions $\phi$ have the property
+\begin{align}
+0  &  =\int\,d\mathbf{x}_{i_{1}},\ldots,d\mathbf{x}_{i_{N_{e}-1}}%
+,d\mathbf{X}_{j_{1}},\ldots,d\mathbf{X}_{j_{N_{n}-1}}\nonumber\\
+&  \times\phi(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1}%
+,\ldots,\mathbf{X}_{N_{n}})Y_{d}(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}%
+}\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\forall
+Y_{K_{D}}\in K_{D} \label{strongorthog}%
+\end{align}
+and the indices on the variables of integration obey eq. (\ref{indices}).
+These conditions follow directly from eqs. (\ref{Ycase2}). and
+(\ref{strongorthog}) and expresses the property of strong orthogonality,
+denoted by $\breve{\phi}\perp_{S}K_{D}$, or equivalently,
+\begin{equation}
+\breve{\phi}\perp_{S}\forall Y_{K_{D}}\in K_{D}%
+\end{equation}
+where $\breve{\phi}$ is the operator defined by the integral kernel $\phi$. In
+particular, eq. (\ref{strongorthog}) implies that the pointwise product
+function $\phi Y_{d}\in L_{1}(\mathtt{Z})$, which in turn implies that
+$\phi\in L_{\infty}(\mathtt{Z})$ since $Y(\mathsf{z})\in L_{1}(\mathtt{Z})$.
+Here
+\begin{equation}
+\mathtt{Z}=\mathbb{R}^{3N_{e}}\times\mathbb{R}^{3N_{n}}\times\mathbb{C}%
+^{2N_{e}}\times\mathbb{C}^{2N_{n}}%
+\end{equation}
+
+
+Vector bundle transformations built from $\phi$ satisfy
+\begin{gather}
+\phi\in L_{\infty}(\mathtt{Z})\nonumber\\
+\phi\perp_{S}K_{D} \label{phiprop}%
+\end{gather}
+and have the property of mapping $K_{D}\mapsto K_{D}$, $S_{D}\mapsto
+K_{D}\oplus S_{D}$ and form the group $\mathcal{G}_{\ker}$. This group
+together with the unitary group $\mathcal{G}_{\Xi}$ forms the group
+$\mathfrak{G}_{\ker}=\mathcal{G}_{\ker}\times\mathcal{G}_{\Xi}$, which is a
+subgroup of the commutative subgroup $\mathcal{C}(\mathcal{H}^{N})\subset
+GL(\mathcal{H}^{N})$. The elements of $\mathcal{C}(\mathcal{H}^{N})$ are given
+by
+\begin{equation}
+T=e^{\left\{  \mathcal{\breve{V}}+i\breve{\omega}\right\}  }=T_{d}%
+e^{i\breve{\omega}}%
+\end{equation}
+where the operator $T_{d}$ is defined by the integral kernel
+\begin{equation}
+T_{d}(\kappa_{1}\ldots\kappa_{N})=\exp[\mathcal{V}(\kappa_{1}\ldots\kappa
+_{N})]=(1+\phi(\kappa_{1}\ldots\kappa_{N}))^{\frac{1}{2}}%
+\end{equation}
+with no restrictions on $\phi$. The integral kernel of $\mathcal{\breve{V}}$
+is given by
+\begin{equation}
+\mathcal{V}(\kappa_{1},\ldots,\kappa_{N})\equiv\frac{1}{2}\ln(1+\phi
+(\kappa_{1},\ldots,\kappa_{N})) \label{Vhalfln}%
+\end{equation}
+The transformations $\hat{T}:K_{OD}\mapsto K_{OD}$ are determined by elements
+of $\mathfrak{G}_{\ker}$ and act according to eq. $\left(  \ref{TYodTkernel}%
+\right)  $.
+
+We now develop the conditions $\phi$ must satisfy to determine the subgroups
+$\mathfrak{G}_{den}$ and $\mathfrak{G}_{fib}$ of inter-fiber and intra-fiber
+maps respectively contained in $\mathfrak{G}_{\ker}$. Once this is
+accomplished we can construct a non redundant parameterizations of pure states
+in the equivalence classes $\left[  \gamma\right]  _{N}$ which can be utilized
+in the constrained search procedure.
+
+First consider transformations, $\hat{T}_{den}\left(  \phi\right)  $, between
+fibers that produce the subgroup $\mathfrak{G}_{den}$, eqs. (\ref{phidef}),
+(\ref{phiprop}) give the conditions for $\phi(\kappa_{1},\ldots,\kappa_{N})$
+to map $S_{D}\mapsto S_{D}$. In that case
+\begin{align}
+&  \int\phi(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1}%
+,\ldots,\mathbf{X}_{N_{n}})Y_{d}(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}%
+}\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})\nonumber\\
+&  \qquad\qquad\qquad\qquad\times d\mathbf{x}_{2},\ldots,d\mathbf{x}_{N_{e}%
+},d\mathbf{X}_{2},\ldots,d\mathbf{X}_{N_{n}}\nonumber\\
+&  =\int\phi(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1}%
+,\ldots,\mathbf{X}_{N_{n}})Y_{S_{D}}(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}%
+}\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})\nonumber\\
+&  \qquad\qquad\qquad\qquad\times d\mathbf{x}_{2},\ldots,d\mathbf{x}_{N_{e}%
+},d\mathbf{X}_{2},\ldots,d\mathbf{X}_{N_{n}}\neq0
+\end{align}
+with%
+\begin{equation}
+Y_{d}=Y_{K_{D}}+Y_{S_{D}} \label{YKdYSd}%
+\end{equation}
+This corresponds to
+\begin{equation}
+\Phi_{S_{D}}\left(  \mathsf{z}_{1},\mathsf{z}_{2}\right)  =\int P_{S_{D}%
+}\left(  \mathsf{z}_{1},\mathsf{z}_{1}^{\prime}\right)  \phi\left(
+\mathsf{z}_{1}^{\prime}\right)  P_{S_{D}}\left(  \mathsf{z}_{1}^{\prime
+},\mathsf{z}_{2}\right)  d\mathsf{z}_{1}^{\prime}\neq0\quad\forall
+\mathsf{z}_{1},\mathsf{z}_{2} \label{projS}%
+\end{equation}
+and hence $\phi$ is not strongly orthogonal to $Y_{d}$, where $P_{S_{D}}$ is
+the integral kernel of the projector onto the subspace $S_{D}$. In order to
+obtain the defining representation of $\mathfrak{G}_{den}$ on $K_{D}\oplus
+S_{D}$, the functions $\phi$ should have zero effect on $K_{D}$ thus need to
+satisfy
+\begin{equation}
+\Phi_{K_{D}}\left(  \mathsf{z}_{1},\mathsf{z}_{2}\right)  =\int P_{K_{D}%
+}\left(  \mathsf{z}_{1},\mathsf{z}_{1}^{\prime}\right)  \phi\left(
+\mathsf{z}_{1}^{\prime}\right)  P_{K_{D}}\left(  \mathsf{z}_{1}^{\prime
+},\mathsf{z}_{2}\right)  d\mathsf{z}_{1}^{\prime}=0\quad\forall\mathsf{z}%
+_{1},\mathsf{z}_{2} \label{projK}%
+\end{equation}
+and
+\begin{equation}
+\Phi_{K_{D}S_{D}}\left(  \mathsf{z}_{1},\mathsf{z}_{2}\right)  =\int P_{K_{D}%
+}\left(  \mathsf{z}_{1},\mathsf{z}_{1}^{\prime}\right)  \phi\left(
+\mathsf{z}_{1}^{\prime}\right)  P_{S_{D}}\left(  \mathsf{z}_{1}^{\prime
+},\mathsf{z}_{2}\right)  d\mathsf{z}_{1}^{\prime}=0\quad\forall\mathsf{z}%
+_{1},\mathsf{z}_{2} \label{projKS}%
+\end{equation}
+The effect of these transformations on the off diagonal part of $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $, are given by elements of $\mathcal{G}%
+_{\Xi}$ that act according to eq. $\left(  \ref{TYodTkernel}\right)  $ and is
+given by
+\begin{equation}
+\hat{T}_{den}\left(  \phi\right)  Y_{K_{OD}}=e^{\mathcal{\breve{V}}%
+_{den}\left(  \phi\right)  }Y_{K_{OD}}e^{\mathcal{\breve{V}}_{den}\left(
+\phi\right)  }%
+\end{equation}
+
+
+In order to produce intra-fiber transformations, $\hat{T}_{fib}\left(
+\phi\right)  :K_{D}\mapsto K_{D}$, that form the subgroup $\mathcal{G}_{fib}$
+the functions $\phi$ must satisfy the condition
+\begin{equation}
+\Phi_{S_{D}}\left(  \mathsf{z}_{1},\mathsf{z}_{2}\right)  =\int P_{S_{D}%
+}\left(  \mathsf{z}_{1},\mathsf{z}_{1}^{\prime}\right)  \phi\left(
+\mathsf{z}_{1}^{\prime}\right)  P_{S_{D}}\left(  \mathsf{z}_{1}^{\prime
+},\mathsf{z}_{2}\right)  d\mathsf{z}_{1}^{\prime}=0\quad\forall\mathsf{z}%
+_{1},\mathsf{z}_{2}%
+\end{equation}
+The defining representation of $\mathcal{G}_{fib}$ on $K_{D}\oplus S_{D}$, is
+obtained when the functions further satisfy
+\begin{equation}
+\Phi_{K_{D}S_{D}}\left(  \mathsf{z}_{1},\mathsf{z}_{2}\right)  =\int P_{K_{D}%
+}\left(  \mathsf{z}_{1},\mathsf{z}_{1}^{\prime}\right)  \phi\left(
+\mathsf{z}_{1}^{\prime}\right)  P_{S_{D}}\left(  \mathsf{z}_{1}^{\prime
+},\mathsf{z}_{2}\right)  d\mathsf{z}_{1}^{\prime}=0\quad\forall\mathsf{z}%
+_{1},\mathsf{z}_{2}%
+\end{equation}
+The effect of these transformations on the off diagonal subspace $K_{OD}$ and
+is given by
+\begin{equation}
+\hat{T}_{fib}\left(  \phi\right)  Y_{K_{OD}}=e^{\mathcal{\breve{V}}%
+_{fib}\left(  \phi\right)  }Y_{K_{OD}}e^{\mathcal{\breve{V}}_{fib}\left(
+\phi\right)  }%
+\end{equation}
+The group of intra fiber transformations that acts homogeneously on the set of
+pure states within a fiber is $\mathfrak{G}_{fib}=\mathcal{G}_{fib}%
+\times\mathcal{G}_{\Xi}$ i.e is constructed from transformations of the form
+$e^{\mathcal{\breve{V}}_{fib}\left(  \phi\right)  }e^{i\breve{\omega}}$
+
+\section{Non Redundant Parameterization of Pure States Adapted to
+$\mathfrak{B}_{vec}$}
+
+In order to produce non redundant parameterizations of pure states in
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ by the groups $\mathfrak{G}%
+_{fib}$ and $\mathfrak{G}_{den}$ one needs to introduce biorthogonal bases for
+$K_{OD},K_{D}$ and $S_{D}$. (The space of trace class operators $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $ is not a Hilbert space thus is not self
+dual, its dual space is the space of bounded operators $\mathcal{B}\left(
+\mathcal{H}^{N}\right)  )$.The basis for $K_{OD},K_{D}$ and $S_{D}$ are
+\begin{align}
+&  K_{OD}=\mathrm{linear\,span}\left\{  \breve{h}_{\iota}:\breve{h}_{\iota
+}=\int h_{\iota}\left(  \mathsf{z}\mathbf{,}\mathsf{z}^{\prime}\right)
+\left|  \mathsf{z}\right\rangle \left\langle \mathsf{z}^{\prime}\right|
+d\mathsf{z}d\mathsf{z}^{\prime};\mathsf{z}\mathbf{\neq}\mathsf{z}^{\prime
+}\right\} \\
+&  K_{D}=\mathrm{linear\,span}\left\{  \breve{k}_{\iota}:\breve{k}_{\iota
+}=\int k_{\iota}\left(  \mathsf{z}\right)  \left|  \mathsf{z}\right\rangle
+\left\langle \mathsf{z}\right|  d\mathsf{z}\right. \nonumber\\
+&  \left.  \int k_{\iota}\left(  \kappa_{2,}..,\kappa_{N_{e}},\kappa_{N_{e}%
++1},..\kappa_{N}\right)  d\kappa_{2}\ldots d\kappa_{N_{e}}d\kappa_{N_{e}%
++2}\ldots d\kappa_{N}\mathbf{=0}\text{ }\mathbf{a.e.}\right\} \label{kbasis}\\
+&  S_{D}=\mathrm{linear\,span}\left\{  \breve{s}_{\iota}:\breve{s}_{\iota
+}=\int s_{\iota}\left(  \mathsf{z}\right)  \left|  \mathsf{z}\right\rangle
+\left\langle \mathsf{z}\right|  d\mathsf{z}\right.  ;\nonumber\\
+&  \left.  \int s_{\iota}\left(  \kappa_{2,}..,\kappa_{N_{e}},\kappa_{N_{e}%
++1},..\kappa_{N}\right)  d\kappa_{2}\ldots d\kappa_{N_{e}}d\kappa_{N_{e}%
++2}\ldots d\kappa_{N}\mathbf{\neq0\,a.e.}\right\}  \label{sbasis}%
+\end{align}
+where $\mathbf{a.e.\equiv}$ ''almost everywhere'' i.e. except on sets of
+measure zero. These bases are biothorgonal to the bases $\left\{  \breve
+{k}_{\kappa}^{d},\breve{s}_{\kappa}^{d};1\leq\kappa\leq\infty\right\}  $ of
+$\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ i.e
+\begin{align}
+\left(  \breve{h}_{\kappa}^{d}|\breve{h}_{\iota}\right)   &  =\left(
+\breve{k}_{\kappa}^{d}|\breve{k}_{\iota}\right)  =\left(  \breve{s}_{\kappa
+}^{d}|\breve{s}_{\iota}\right)  =\delta_{\kappa\iota}\nonumber\\
+\left(  \breve{k}_{\kappa}^{d}|\breve{s}_{\iota}\right)   &  =\left(
+\breve{s}_{\kappa}^{d}|\breve{k}_{\iota}\right)  =\left(  \breve{h}_{\kappa
+}^{d}|\breve{s}_{\iota}\right) \nonumber\\
+&  =\left(  \breve{h}_{\kappa}^{d}|\breve{k}_{\iota}\right)  =\left(
+\breve{k}_{\kappa}^{d}|\breve{h}_{\iota}\right)  =\left(  \breve{s}_{\kappa
+}^{d}|\breve{h}_{\iota}\right)  =0
+\end{align}
+and we have introduced the super operator scalar product $\left(  A|B\right)
+=Tr\left\{  A^{\dagger}B\right\}  $.
+
+If we are given a reference pure state $D_{ref}$ that has a density $\gamma$
+then it can be decomposed as
+\begin{equation}
+D_{ref}^{N}{}_{K_{OD}}+D_{ref}^{N}{}_{K_{D}}+\Gamma\left(  \gamma\right)
+\end{equation}
+and we can define
+\begin{align}
+\breve{h}_{1}  &  =D_{ref}^{N}{}_{K_{OD}}\nonumber\\
+\breve{k}_{1}  &  =D_{ref}^{N}{}_{K_{D}}\nonumber\\
+\breve{s}_{1}  &  =\Gamma\left(  \gamma\right)
+\end{align}
+Then transformations that parameterize all other pure states in the fiber
+$\left[  \gamma\right]  _{N}$ in terms of this reference and $\mathfrak{G}%
+_{fib}$ in a non redundant fashion can be produced from functions $\phi_{fib}$
+defined as
+\begin{align}
+\phi_{fib}\left(  \mathsf{z}\right)   &  =\sum_{1\leq\kappa\leq\infty}%
+\phi_{fib\kappa}\left(  \left|  \mathsf{z}\right\rangle \left\langle
+\mathsf{z}\right|  |\breve{k}_{\kappa}\right)  \left(  D_{refK_{D}}%
+^{Nd}|\left|  \mathsf{z}\right\rangle \left\langle \mathsf{z}\right|  \right)
+\nonumber\\
+\phi_{fib\kappa}  &  =\int k_{\kappa}^{d\ast}\left(  \mathsf{z}\right)
+\phi_{fib}\left(  \mathsf{z}\right)  D_{ref}^{N}{}_{K_{D}}\left(
+\mathsf{z}\right)  d\mathsf{z};\quad1\leq\kappa\leq\infty\label{refkd}%
+\end{align}
+where they also satisfy
+\begin{align}
+\int s_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{fib}\left(
+\mathsf{z}\right)  s_{\kappa}\left(  \mathsf{z}\right)  d\mathsf{z}  &
+=0\quad\forall\iota,\kappa\nonumber\\
+\int k_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{fib}\left(
+\mathsf{z}\right)  s_{\kappa}\left(  \mathsf{z}\right)  d\mathsf{z}  &
+=0\quad\forall\iota,\kappa\nonumber\\
+\int s_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{fib}\left(
+\mathsf{z}\right)  k_{\kappa}\left(  \mathsf{z}\right)  d\mathsf{z}  &
+=0\quad\forall\iota,\kappa\nonumber\\
+\int k_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{fib}\left(
+\mathsf{z}\right)  k_{1}\left(  \mathsf{z}\right)  d\mathsf{z}  &  \neq
+0\quad\text{for some }\iota\label{phicond}%
+\end{align}
+The conditions in eq. $\left(  \ref{phicond}\right)  $ are needed to ensure
+that the transformation induced by $\phi_{fib}\left(  \mathsf{z}\right)  $
+belong to the defining representation of $\mathcal{G}_{fib}$ on $K_{D}$. We
+can the use the diagonal operators $T\left(  \phi_{fib},\omega\right)
+=\int\phi_{fib}\left(  \mathsf{z}\right)  e^{i\omega\left(  \mathsf{z}\right)
+}\left|  \mathsf{z}\right\rangle \left\langle \mathsf{z}\right|  d\mathsf{z}$,
+to define congruence transformations belonging to $\mathfrak{G}_{fib}$ as
+\begin{align}
+&  \hat{T}_{fib}\left(  \phi_{fib},\omega\right)  Y=T\left(  \phi_{fib}%
+,\omega\right)  YT\left(  \phi_{fib},\omega\right)  ^{\dagger}%
+=e^{\mathcal{\breve{V}}\left(  \phi_{fib}\right)  +i\breve{\omega}%
+}Ye^{\mathcal{\breve{V}}\left(  \phi_{fib}\right)  -i\breve{\omega}%
+}\nonumber\\
+&  =\left(  1+\breve{\phi}_{fib}\right)  ^{\frac{1}{2}}e^{i\breve{\omega}%
+}Y\left(  1+\breve{\phi}_{fib}\right)  ^{\frac{1}{2}}e^{-i\breve{\omega}%
+}=\left(  1+\hat{\Phi}_{fib}\right)  \widehat{e^{i\breve{\omega}}}Y
+\end{align}
+where the integral kernel of $\hat{\Phi}_{fibK_{D}}$ of the projection
+$\hat{P}_{K_{D}}\hat{\Phi}_{fib}\hat{P}_{K_{D}}$ of $\hat{\Phi}_{fibK_{D}}$ on
+$K_{D}$ is defined as $\Phi_{fibK_{D}}\left(  \mathsf{z}_{1}\mathsf{,z}%
+_{2}\right)  =\phi_{fib}\left(  \mathsf{z}_{1}\right)  \delta\left(
+\mathsf{z}_{1}-\mathsf{z}_{2}\right)  $. On diagonal operators $Y_{d}%
+=Y_{K_{D}}+\Gamma\left(  \gamma\right)  $ the action of these transformations
+are
+\begin{equation}
+\hat{T}_{fib}\left(  \phi_{fib},\omega\right)  Y_{d}=\left(  1+\hat{\Phi
+}_{fib}\right)  Y_{d}=Y_{d}+\hat{\Phi}_{fibK_{D}}Y_{K_{D}}=Y_{d}+\breve{\phi
+}_{fib}Y_{K_{D}}%
+\end{equation}
+as $\hat{P}_{S_{D}}\hat{\Phi}_{fib}\hat{P}_{S_{D}}=\hat{P}_{K_{D}}\hat{\Phi
+}_{fib}\hat{P}_{S_{D}}=0$. The full intra fiber transformation can thus be
+expressed as
+\begin{equation}
+\hat{T}_{fib}\left(  \phi_{fib},\omega\right)  =e^{\sum_{1\leq\kappa\leq
+\infty}\left\{  \Upsilon_{K_{OD}\kappa}\left|  \breve{h}_{\kappa}\right)
+\left(  D_{refK_{OD}}^{Nd}\right|  +\Upsilon_{K_{D}\kappa}\left|  \breve
+{k}_{\kappa}\right)  \left(  D_{refK_{D}}^{Nd}\right|  \right\}  }
+\label{parker}%
+\end{equation}
+where the coefficients $\Upsilon_{K_{D}\kappa}$ are determined by $\phi_{fib}$
+and $\omega$ by the following relationships%
+\begin{align}
+\mathcal{V}\left(  \phi_{fib}\right)  \left(  \mathsf{z}\right)   &  =\left(
+1+\phi_{fib}\left(  \mathsf{z}\right)  \right)  ^{\frac{1}{2}}\nonumber\\
+\Upsilon\left(  \mathsf{z}\right)   &  =\mathcal{V}\left(  \phi_{fib}\right)
+\left(  \mathsf{z}\right)  +i\omega\left(  \mathsf{z}\right) \nonumber\\
+\Upsilon\left(  \mathsf{z}\right)   &  =\sum_{1\leq\kappa\leq\infty}%
+\Upsilon_{K_{D}\kappa}\left(  \left|  \mathsf{z}\right\rangle \left\langle
+\mathsf{z}\right|  |\breve{k}_{\kappa}\right)  \left(  D_{refK_{D}}%
+^{Nd}|\left|  \mathsf{z}\right\rangle \left\langle \mathsf{z}\right|  \right)
+\nonumber\\
+\Upsilon_{K_{D}\kappa}  &  =\int k_{\kappa}^{d\ast}\left(  \mathsf{z}\right)
+\Upsilon\left(  \mathsf{z}\right)  D_{ref}^{N}{}_{K_{D}}\left(  \mathsf{z}%
+\right)  d\mathsf{z}%
+\end{align}
+and the coefficients $\Upsilon_{K_{OD}\kappa}$ are determined by $\phi_{fib}$
+and $\omega$. When acting on $D_{ref}^{N}$ the transformation $\hat{T}%
+_{fib}\left(  \phi_{fib},\omega\right)  $ produces all other pure states in
+$\left[  \gamma\right]  _{N}$ in a unique fashion and thus parameterizes the
+pure states in $\left[  \gamma\right]  _{N}$ in a non redundant manner in
+terms of $\left\{  \phi_{fib},\omega\right\}  $. Note that transformations
+belonging to $\mathfrak{G}_{fib}$ never change the norm of density operators
+as they leave $\Gamma\left(  \gamma\right)  $ unchanged.
+
+The transformations that parameterize $S_{D}$ in a non redundant fashion from
+a reference pure state $D_{ref}^{N}$ can always be constructed from selected
+elements of $\mathfrak{G}_{den}$ acting on $Y_{ref}$. A complete
+parameterization of $S_{D}$ can be achieved in terms of pure states, as given
+an arbitrary density $\gamma$ there is \emph{always at least one} pure state
+that contracts to that density. If we define $\phi_{den}$ as
+\begin{align}
+\phi_{den}\left(  \mathsf{z}\right)   &  =\sum_{1\leq\kappa\leq\infty}%
+\phi_{den\kappa}\left(  \left|  \mathsf{z}\right\rangle \left\langle
+\mathsf{z}\right|  |\breve{s}_{\kappa}\right)  \left(  \Gamma\left(
+\gamma\right)  ^{d}|\left|  \mathsf{z}\right\rangle \left\langle
+\mathsf{z}\right|  \right) \nonumber\\
+\phi_{den\kappa}  &  =\int s_{\kappa}^{d\ast}\left(  \mathsf{z}\right)
+\phi_{den}\left(  \mathsf{z}\right)  \Gamma\left(  \gamma\right)  \left(
+\mathsf{z}\right)  d\mathsf{z};\quad1\leq\kappa\leq\infty
+\end{align}
+where they also satisfy
+\begin{align}
+\int s_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{den}\left(
+\mathsf{z}\right)  s_{1}\left(  \mathsf{z}\right)  d\mathsf{z}  &  \neq
+0\quad\text{for some }\iota\nonumber\\
+\int k_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{den}\left(
+\mathsf{z}\right)  s_{\kappa}\left(  \mathsf{z}\right)  d\mathsf{z}  &
+=0\quad\forall\iota,\kappa\nonumber\\
+\int s_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{den}\left(
+\mathsf{z}\right)  k_{\kappa}\left(  \mathsf{z}\right)  d\mathsf{z}  &
+=0\quad\forall\iota,\kappa\nonumber\\
+\int k_{\iota}^{d\ast}\left(  \mathsf{z}\right)  \phi_{den}\left(
+\mathsf{z}\right)  k_{1}\left(  \mathsf{z}\right)  d\mathsf{z}  &
+=0\quad\forall\iota,\kappa
+\end{align}
+We can the use the diagonal operators $T\left(  \phi_{den}\right)  =\int
+\phi_{den}\left(  \mathsf{z}\right)  \left|  \mathsf{z}\right\rangle
+\left\langle \mathsf{z}\right|  d\mathsf{z}$, to define congruence
+transformations%
+\begin{align}
+\hat{T}_{den}\left(  \phi_{den}\right)  Y  &  =T\left(  \phi_{den}\right)
+YT\left(  \phi_{den}\right)  ^{\dagger}=e^{\mathcal{\breve{V}}\left(
+\phi_{den}\right)  }Ye^{\mathcal{\breve{V}}\left(  \phi_{den}\right)
+}\nonumber\\
+&  =\left(  1+\breve{\phi}_{den}\right)  ^{\frac{1}{2}}Y\left(  1+\breve{\phi
+}_{den}\right)  ^{\frac{1}{2}}=\left(  1+\hat{\Phi}_{den}\right)  Y
+\end{align}
+where the integral kernel of $\hat{\Phi}_{denS_{D}}$ of the projection
+$\hat{P}_{S_{D}}\hat{\Phi}_{den}\hat{P}_{S_{D}}$ of $\hat{\Phi}_{den}$ on
+$S_{D}$ is defined as $\Phi_{den}\left(  \mathsf{z}_{1}\mathsf{,z}_{2}\right)
+=\phi_{den}\left(  \mathsf{z}_{1}\right)  \delta\left(  \mathsf{z}%
+_{1}-\mathsf{z}_{2}\right)  $. On diagonal operators $Y_{d}=Y_{K_{D}}%
++\Gamma\left(  \gamma\right)  $ this transformation becomes
+\begin{equation}
+\hat{T}_{den}\left(  \phi_{den}\right)  Y_{d}=\left(  1+\hat{\Phi}%
+_{den}\right)  Y_{d}=Y_{d}+\hat{\Phi}_{denS_{D}}\Gamma\left(  \gamma\right)
+=Y_{d}+\breve{\phi}_{den}\Gamma\left(  \gamma\right)
+\end{equation}
+as $\hat{P}_{K_{D}}\hat{\Phi}_{den}\hat{P}_{K_{D}}=\hat{P}_{K_{D}}\hat{\Phi
+}_{den}\hat{P}_{S_{D}}=0.$The full intra fiber transformation can thus be
+expressed as
+\begin{equation}
+\hat{T}_{den}\left(  \phi_{den},\omega\right)  =e^{\sum_{1\leq\kappa\leq
+\infty}\left\{  \Upsilon_{K_{OD}\kappa}\left|  \breve{h}_{\kappa}\right)
+\left(  \breve{Y}_{refK_{OD}}^{d}\right|  +\Upsilon_{S_{D}\kappa}\left|
+\breve{s}_{\kappa}\right)  \left(  \Gamma\left(  \gamma\right)  ^{d}\right|
+\right\}  } \label{refden}%
+\end{equation}
+where the coefficients $\Upsilon_{S_{D}\kappa}$ by the following relationships%
+\begin{align}
+\mathcal{V}\left(  \phi_{den}\right)  \left(  \mathsf{z}\right)   &  =\left(
+1+\phi_{den}\left(  \mathsf{z}\right)  \right)  ^{\frac{1}{2}}\nonumber\\
+\Upsilon\left(  \mathsf{z}\right)   &  =\mathcal{V}\left(  \phi_{den}\right)
+\left(  \mathsf{z}\right) \nonumber\\
+\Upsilon\left(  \mathsf{z}\right)   &  =\sum_{1\leq\kappa\leq\infty}%
+\Upsilon_{S_{D}\kappa}\left(  \left|  \mathsf{z}\right\rangle \left\langle
+\mathsf{z}\right|  |\breve{s}_{\kappa}\right)  \left(  \Gamma\left(
+\gamma\right)  ^{d}|\left|  \mathsf{z}\right\rangle \left\langle
+\mathsf{z}\right|  \right) \nonumber\\
+\Upsilon_{K_{D}\kappa}  &  =\int\breve{s}_{\kappa}^{d\ast}\left(
+\mathsf{z}\right)  \Upsilon\left(  \mathsf{z}\right)  \Gamma\left(
+\gamma\right)  \left(  \mathsf{z}\right)  d\mathsf{z}%
+\end{align}
+and the coefficients $\Upsilon_{K_{OD}\kappa}$ are determined by $\phi_{den}$.
+When acting on $D_{ref}^{N}$ the transformation $\hat{T}_{den}\left(
+\phi_{den}\right)  $ produces a unique set of pure states, one in each
+equivalence class. Thus $\hat{T}_{den}\left(  \phi_{den}\right)  $ acting on
+the reference pure state $D_{ref}^{N}$ parameterizes $S_{D}$ in a non
+redundant manner in terms of $\left\{  \phi_{den}\right\}  $. It is possible
+by left multiplying $\hat{T}_{den}\left(  \phi_{den}\right)  $ by a
+transformation $\hat{T}_{fib}\left(  \phi_{fib}\left(  \phi_{den}\right)
+,\omega\left(  \phi_{den}\right)  \right)  $ uniquely determined by $\hat
+{T}_{den}\left(  \phi_{den}\right)  $, that a path of pure reference states
+$D_{ref}^{N}\left(  \gamma\right)  $ of a particular type (i.e. Independent
+Particle, Antisymmetrized Geminal Power etc..) and obtain a more specific non
+redundant parameterization of $S_{D}$.
+
+It is further possible to choose a subset of the transformations given in eq.
+$\left(  \ref{refden}\right)  $ that produce normalized pure states, (even
+from an unnormalized $D_{ref}^{N}$), by letting $\Upsilon_{S_{D}1}$ depend on
+$\left\{  \Upsilon_{S_{D}\kappa};2\leq\kappa\leq\infty\right\}  $
+
+\section{Production of Arbitrary Pure States from a Reference Pure State}
+
+\noindent Here we prove that diagonal transformations, in the sense of
+Appendix F, can produce any pure state from a reference pure state. The
+equivalent mathematical statement is that such transformations are transitive
+on the set of pure states.
+
+Associated with any arbitrarily chosen pure state $|\Psi\rangle\,\in
+\,\mathcal{H}^{N}\,=\,\mathcal{H}^{N_{e}}\otimes\mathcal{H}^{N_{n}}$ there is
+a wavefunction
+\begin{gather}
+\Psi(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1},\ldots
+,\mathbf{X}_{N_{n}})=\langle\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}%
+\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}}|\Psi\rangle\nonumber\\
+=|\Psi(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1},\ldots
+,\mathbf{X}_{N_{n}})|e^{i\theta_{\Psi}(\mathbf{x}_{1},\ldots,\mathbf{x}%
+_{N_{e}}\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})}\nonumber\\
+\equiv e^{\mathcal{V}_{\Psi}(\mathbf{x}_{1},\ldots,\mathbf{x}_{N_{e}%
+}\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})}e^{i\theta_{\Psi}(\mathbf{x}%
+_{1},\ldots,\mathbf{x}_{N_{e}}\mathbf{X}_{1},\ldots,\mathbf{X}_{N_{n}})}
+\label{psipolar}%
+\end{gather}
+
+
+Consider $T_{d}\in\mathcal{C}(\mathcal{H}^{N})$, a diagonal transformation in
+the sense of Appendix F. Its integral kernel can be written as in eq.
+(\ref{Tdexplicit}) which leads to eq. (\ref{Tdcoord}). The latter equation in
+combination with the last RHS of (\ref{psipolar}) gives
+\begin{equation}
+\langle\mathsf{x},\mathsf{X}|T_{d}\Psi\rangle=e^{(\mathcal{V}_{\Psi}+
+\mathcal{V})}e^{i(\theta_{\Psi}+\omega)}%
+\end{equation}
+with the obvious string of arguments in compressed notation or surpressed for clarity.
+
+If one chooses an arbitrary $|\chi\rangle\,\in\,\mathcal{H}^{N}$, then the
+choice
+\begin{align}
+\mathcal{V}  &  =\mathcal{V}_{\chi}-\mathcal{V}_{\Psi}\nonumber\\
+\omega &  =\theta_{\chi}-\theta_{\Psi} \label{VTthetaT}%
+\end{align}
+generates that $|\chi\rangle$ from the initial $|\Psi\rangle$, itself
+arbitrarily chosen, via the transformation $T_{d}$. Since all physical
+densities correspond to pure states \cite{Harriman81}, the result
+(\ref{VTthetaT}) means that all densities (fibers) can be reached given a pure
+state corresponding to a reference density (fiber) via transformations of the
+type developed in Appendix F.
+
+\section{Partitioned Equation of Motion in the $\Upsilon$ Parameterization}
+
+This Appendix tracks the reasoning given in Appendix A but for the complex
+analytic parameterization, $\Upsilon=\mathcal{V}+i\omega$ of the fibers, eq.
+(\ref{Ffactor}). In this parameterization, the equations of motion that follow
+from eq. (\ref{dEdlambda}) - (\ref{Eoft}) can be written in matrix partitioned
+form as
+\begin{equation}
+\left[
+\begin{array}
+[c]{ccc}%
+\eta_{\mathcal{\Upsilon}\,\mathcal{\Upsilon}}(t) & \eta_{\mathcal{\Upsilon
+\Upsilon}^{\ast}}(t) & \eta_{\mathcal{\Upsilon}\gamma}(t)\\
+\eta_{\mathcal{\Upsilon}^{\ast}\mathcal{\Upsilon}}(t) & \eta
+_{\mathcal{\Upsilon}^{\ast}\mathcal{\Upsilon}^{\ast}}(t) & \eta
+_{\mathcal{\Upsilon}^{\ast}\gamma}(t)\\
+\eta_{\gamma\mathcal{\Upsilon}}(t) & \eta_{\gamma\mathcal{\Upsilon}^{\ast}%
+}(t) & \eta_{\gamma\gamma}(t)
+\end{array}
+\right]  \left[
+\begin{array}
+[c]{c}%
+\mathcal{\Upsilon}\\
+\mathcal{\Upsilon}^{\ast}\\
+\dot{\gamma}%
+\end{array}
+\right]  =\left[
+\begin{array}
+[c]{c}%
+\nabla_{\mathcal{\Upsilon}}\mathcal{E}\left(  t\right) \\
+\nabla_{\mathcal{\Upsilon}^{\ast}}\mathcal{E}\left(  t\right) \\
+\nabla_{\gamma}\mathcal{E}\left(  t\right)
+\end{array}
+\right]  \label{3x3partmat}%
+\end{equation}
+where $^{\ast}$ denotes complex conjugation. These equations may be written
+more compactly as
+\begin{equation}
+\left[
+\begin{array}
+[c]{cc}%
+\eta_{\mathbf{\digamma\digamma}}\left(  t\right)  & \eta_{\mathbf{\digamma
+}\gamma}\left(  t\right) \\
+\eta_{\gamma\mathbf{\digamma}}\left(  t\right)  & \eta_{\gamma\gamma}\left(
+t\right)
+\end{array}
+\right]  \left[
+\begin{array}
+[c]{c}%
+\mathbf{\dot{\digamma}}\\
+\dot{\gamma}%
+\end{array}
+\right]  =\left[
+\begin{array}
+[c]{c}%
+\nabla_{\mathbf{\digamma}}\mathcal{E}\left(  t\right) \\
+\nabla_{\gamma}\mathcal{E}\left(  t\right)
+\end{array}
+\right]  \label{partmat2}%
+\end{equation}
+with
+\begin{align}
+&  \mathbf{\digamma}=\left(
+\begin{array}
+[c]{c}%
+\mathcal{\Upsilon}\\
+\mathcal{\Upsilon}^{\ast}%
+\end{array}
+\right)  \,;\;\eta_{\digamma\digamma}\left(  t\right)  =\left(
+\begin{array}
+[c]{cc}%
+\eta_{\mathcal{\Upsilon\Upsilon}} & \eta_{\mathcal{\Upsilon\Upsilon}^{\ast}}\\
+\eta_{\mathcal{\Upsilon}^{\ast}\mathcal{\Upsilon}} & \eta_{\mathcal{\Upsilon
+}^{\ast}\mathcal{\Upsilon}^{\ast}}%
+\end{array}
+\right)  \,;\;\eta_{\mathbf{\digamma}\gamma}\left(  t\right)  =\left(
+\begin{array}
+[c]{c}%
+\eta_{\mathcal{\Upsilon}^{\ast}\gamma}\\
+\eta_{\mathcal{\Upsilon}^{\ast}\gamma}%
+\end{array}
+\right) \nonumber\\
+&  \eta_{\gamma\mathbf{\digamma}}\left(  t\right)  =\left(
+\begin{array}
+[c]{cc}%
+\eta_{\gamma\mathcal{\Upsilon}} & \eta_{\gamma\mathcal{\Upsilon}^{\ast}}%
+\end{array}
+\right)  \,;\;\nabla_{\digamma}\mathcal{E}\left(  t\right)  =\left(
+\begin{array}
+[c]{c}%
+\nabla_{\mathcal{\Upsilon}}\mathcal{E}\left(  t\right) \\
+\nabla_{\mathcal{\Upsilon}^{\ast}}\mathcal{E}\left(  t\right)
+\end{array}
+\right)
+\end{align}
+
+
+In this $\mathbf{{\digamma}}$, $\gamma$ notation the formal structure of the
+EOM eq. (\ref{partmat2}) is exactly as in eq. (\ref{partmat1}) of Appendix A
+with corresponding definitions for $S$ and $\mathcal{E}$. In parallel with the
+development leading to eq. (\ref{cdotgammadot}), it follows that
+\begin{align}
+\dot{\mathbf{\digamma}}(t)  &  =\eta_{\mathbf{\digamma\,\digamma}}%
+^{-1}(t)\left[  \nabla_{\mathbf{\digamma}}\mathcal{E}(t)-\eta
+_{\mathbf{\digamma}\,\gamma}(t)\dot{\gamma}\right] \nonumber\\
+\dot{\gamma}(t)  &  =\left[  \eta_{\gamma\,\gamma}(t)-\eta_{\gamma
+\,\mathbf{\digamma}}(t)\eta_{\mathbf{\digamma}\,\mathbf{\digamma}}^{-1}%
+(t)\eta_{\mathbf{\digamma}\,\gamma}(t)\right]  ^{-1}\nonumber\\
+&  \times\left[  \nabla_{\gamma}\mathcal{E}(t)-\eta_{\gamma\,\mathbf{\digamma
+}}(t)\eta_{\mathbf{\digamma}\,\mathbf{\digamma}}^{-1}(t)\nabla
+_{\mathbf{\digamma}}\mathcal{E}(t)\right]
+\end{align}
+Under the assumption that $\eta_{\mathbf{\digamma\digamma}}^{-1}(t)$ exists,
+denote the solution of the first of these for the correct density $\gamma
+_{\#}(t)$ by $\mathbf{\digamma}_{\#}(t)$. Then the exact equation of motion
+for the temporal development of the density is
+\begin{equation}
+\dot{\gamma}(t)=\mathcal{N}_{1}(\gamma(t))\left[  \nabla_{\gamma}%
+\mathcal{E}(\gamma(t))-\mathcal{N}_{2}(\gamma(t))\right]
+\end{equation}
+The functionals are defined as
+\begin{align}
+\mathcal{N}_{1}(\gamma(t))  &  =\left[  \eta_{\gamma\,\gamma}(\mathbf{\zeta
+}_{\#}(t)\,,\gamma(t))-\eta_{\gamma\,\mathbf{\digamma}}(\mathbf{\zeta}%
+_{\#}(t)\,,\gamma(t))\eta_{\mathbf{\digamma}\,\mathbf{\digamma}}%
+^{-1}(\mathbf{\zeta}_{\#}(t)\,,\gamma(t))\right.  \times\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+\eta_{\mathbf{\digamma}\,\gamma}(\mathbf{\zeta}_{\#}(t)\,,\gamma(t))\right]
+^{-1}\\
+\mathcal{N}_{2}\left(  \gamma(t)\right)   &  =\eta_{\gamma\,\mathbf{\digamma}%
+}(\mathbf{\zeta}_{\#}(t)\,,\gamma(t))\eta_{\mathbf{\digamma}\,\mathbf{\digamma
+}}^{-1}(\mathbf{\zeta}_{\#}(t)\,,\gamma(t))\nabla_{\mathbf{\digamma}%
+}\mathcal{E}(\gamma(t)).\quad\\
+\mathcal{E}(\gamma(t))  &  =\frac{\left\langle \Psi(\mathbf{\zeta}%
+_{\#}(t),\gamma(t))|H|\Psi(\mathbf{\zeta}_{\#}(t),\gamma(t))\right\rangle
+}{\left\langle \Psi(\mathbf{\zeta}_{\#}(t),\gamma(t))|\Psi(\mathbf{\zeta}%
+_{\#}(t),\gamma(t))\right\rangle }%
+\end{align}
+
+
+\begin{thebibliography}{99}                                                                                               %
+
+
+\bibitem {Teil92}J.~Teilhaber, Phys. Rev. B \textbf{46}, 12990 (1992).
+
+\bibitem {Stener95}M.~Stener, P.~Decleva, and A.~Lisini, J. Phys. B [At. Mol.
+Opt. Phys.] \textbf{28}, 4973 (1995).
+
+\bibitem {Saalmann96}U.~Saalmann and R.~Schmidt, Z. Phys. D \textbf{38}, 153 (1996).
+
+\bibitem {Tong97}X.M.~Tong and S-I.~Chu, Phys. Rev. A \textbf{55}, 3406 (1997).
+
+\bibitem {Serra97a}L.~Serra and A.~Rubio, Z. Physik D \textbf{40}, 262 (1997).
+
+\bibitem {Ullrich97}C.A.~Ullrich, P.G.~Reinhard, and E.~Suraud, J. Phys.B [At.
+Mol. Optical Phys.] \textbf{30}, 5043 (1997).
+
+\bibitem {AG97}A.~G\"orling, Phys. Rev. B \textbf{55}, 2630 (1997).
+
+\bibitem {Vignale97}G.~Vignale, C.A.~Ullrich, and S.~Conti, Phys. Rev. Lett.
+\textbf{79}, 4878 (1997).
+
+\bibitem {Calvayrac98}F.~Calvayrac, A.~Domps, P.G.~Reinhard, E.~Suraud, and
+C.A.~Ullrich, Euro. Phys. J. \textbf{4}, 207 (1998).
+
+\bibitem {Reinhard98}P.G.~Reinhard, E.~Suraud, and C.A.~Ullrich, Euro. Phys.
+J. \textbf{1}, 303 (1998).
+
+\bibitem {Ullrich98}C.A.~Ullrich, P.G.~Reinhard, and E.~Suraud, Phys. Rev. A
+\textbf{57}, 1938 (1998).
+
+\bibitem {Telnov98}D.A.~Telnov and S-I.~Chu, Phys. Rev. A \textbf{58}, 4749 (1998).
+
+\bibitem {Tong98}X.-M.~Tong and S.-I.~Chu, Phys. Rev. A \textbf{57}, 452 (1998).
+
+\bibitem {Campillo99}I.~Campillo, A.~Rubio, and J.M.~Pitarke, Phys. Rev.B
+\textbf{59}, 12188 (1999).
+
+\bibitem {Vasiliev99}I.~Vasiliev, S.~Ogut, and J.R.~Chelikowsky, Phys. Rev.
+Lett. \textbf{82}, 1919 (1999).
+
+\bibitem {Knospe99}O.~Knospe, J.~Jellinek, U.~Saalmann, and R.~Schmidt, Eur.
+Phys. J. D \textbf{5}, 1 (1999) and references therein.
+
+\bibitem {Hessler}P.~Hessler, J.~Park, and K.~Burke, Phys. Rev. Lett.
+\textbf{82}, 378 (1999).
+
+\bibitem {Gross96}E.K.U.~Gross, J.F.~Dobson, and M.~Petersilka, in
+\textit{Density Functional Theory II - Topics in Current Chemistry 181}, R.F.
+Nalewajski ed. (Springer, Berlin and Heidelberg, 1996), 81.
+
+\bibitem {Casida95}M.~Casida in D.P. Chong ed., \textit{Recent Advances in
+Density Functional Methods} (World Scientific, Singapore, 1995), 155.
+
+\bibitem {Bartolotti81}L.J.~Bartolotti, Phys. Rev. A \textbf{24}, 1661 (1981).
+
+\bibitem {DebGhosh82}B.M.~Deb and S.K.~Ghosh, J. Chem. Phys. \textbf{77}, 342 (1982).
+
+\bibitem {RG84}E.~Runge and E.K.U.~Gross, Phys. Rev. Lett. \textbf{52}, 997 (1984).
+
+\bibitem {HK}P.~Hohenberg and W.~Kohn, Phys. Rev. \textbf{136}, B864 (1964).
+
+\bibitem {Xu85}B-X.~Xu and A.K.~Rajagopal, Phys. Rev. A \textbf{31}, 2682 (1985).
+
+\bibitem {Dhara87}A.K.~Dhara and S.K.~Ghosh, Phys. Rev. A \textbf{35}, 442 (1987).
+
+\bibitem {Levy79}M.~Levy, Proc. Natl. Acad. Sci. USA \textbf{76}, 6062 (1979).
+
+\bibitem {LevyPerdew85}M.~Levy and J.P.~Perdew in R.M.~Dreizler and J.~da
+Providencia eds., \textit{Density Functional Methods in Physics} (Plenum,
+N.Y., 1985), 11.
+
+\bibitem {Lieb}E.H.~Lieb, Internat. J. Quantum. Chem. \textbf{24}, 243 (1983).
+
+\bibitem {KD86}H.~Kohl and R.M.~Dreizler, Phys. Rev. Lett. \textbf{56}, 1993 (1986).
+
+\bibitem {Raj94A}A.K.~Rajagopal, Phys. Lett. A \textbf{193}, 363 (1994).
+
+\bibitem {RajBuot94B}A.K.~Rajagopal and F.A.~Buot, Phys. Rev. E \textbf{50},
+721 (1994).
+
+\bibitem {LiTong86}T-C.~Li and P-q. Tong, Phys. Rev. A \textbf{34}, 529 (1986).
+
+\bibitem {Qian98}A.~Qian and V.~Sahni, Phys. Lett. A \textbf{247}, 303 (1998).
+
+\bibitem {Chermyak00}V.~Chernyak and S.~Mukamel J. Chem. Phys. \textbf{112},
+3572 (2000).
+
+\bibitem {DeumensA}E.~Deumens, A.~Diz, R.~Longo, and Y.~{\"O}hrn, Rev. Mod.
+Phys. \textbf{66}, 917 (1994).
+
+\bibitem {DeumensB}E.~Deumens and Y.~{\"O}hrn, J. Chem. Soc., Faraday Trans.
+\textbf{93}, 919 (1997) and refs.~therein.
+
+\bibitem {BLWSBT99a}B.~Weiner and S.B.~Trickey, Adv. Quantum Chemistry
+\textbf{35} (Academic, San Diego, 1999), 217.
+
+\bibitem {BLWSBT00a}B.~Weiner and S.B.~Trickey, J. Molec. Struct. (Theochem)
+\textbf{501}-\textbf{02}, 65 (2000).
+
+\bibitem {Leeuwen99}R.~van Leeuwen, Phys. Rev. Lett. \textbf{82}, 3863 (1999).
+\end{thebibliography}
+
+
+\end{document}

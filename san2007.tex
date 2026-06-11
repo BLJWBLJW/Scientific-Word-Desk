@@ -1,0 +1,652 @@
+\documentclass[prl,twocolumn]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, January 11, 2007 19:35:53}
+%TCIDATA{LastRevised=Saturday, February 10, 2007 22:06:52}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{}%
+
+\[
+\rho\left(  \mathbf{r}\right)  =\left\langle \left.  \Psi\right\vert
+\Phi^{\dagger}\left(  \mathbf{r}\right)  \Phi\left(  \mathbf{r}\right)
+\Psi\right\rangle ;\quad\mathbf{r\in}\mathbb{R}^{3}%
+\]%
+\begin{align*}
+&  \left[  \rho\right]  _{N}=\left\{  \left.  \overset{}{\Psi}\right\vert
+\Xi\left(  \Psi\right)  =\rho,\left\langle \left.  \Psi\right\vert
+\Psi\right\rangle =1,\Psi\in\mathcal{H}^{N}\right. \\
+&  \qquad\qquad\left.  \rho\in L_{1}\left(  \mathbb{R}^{3}\right)  \underset
+{}{}\right\}  ;
+\end{align*}
+%
+
+\[
+\left[  \Xi\left(  \Psi\right)  \right]  \left(  \mathbf{r}\right)
+=\left\langle \left.  \Psi\right\vert \Phi^{\dagger}\left(  \mathbf{r}\right)
+\Phi\left(  \mathbf{r}\right)  \Psi\right\rangle ;\quad\mathbf{r\in}%
+\mathbb{R}^{3}%
+\]
+%
+
+\[
+\left\langle \cdot|\cdot\right\rangle :L_{\infty}\left(  \mathbb{R}%
+^{3}\right)  \times L_{1}\left(  \mathbb{R}^{3}\right)  \rightarrow\mathbb{R}%
+\]
+%
+
+\begin{align*}
+\int\rho\left(  \mathbf{r}\right)  d\mathbf{r}  &  =\left\langle \left.
+\Psi\right\vert \int\Phi^{\dagger}\left(  \mathbf{r}\right)  \Phi\left(
+\mathbf{r}\right)  d\mathbf{r}\Psi\right\rangle \\
+&  =\left\langle \left.  \Psi\right\vert \mathcal{N}\Psi\right\rangle
+=N\left\langle \left.  \Psi\right\vert \Psi\right\rangle
+\end{align*}
+%
+
+\begin{align*}
+&  \left[  \rho\right]  _{N}=\left\{  \left.  \overset{}{\Psi}\right\vert
+\Xi\left(  \Psi\right)  =\rho,\left\langle \left.  \Psi\right\vert
+\Psi\right\rangle =1,\Psi\in\mathcal{H}^{N}\right. \\
+&  \qquad\qquad\left.  \rho\in L_{1}\left(  \mathbb{R}^{3}\right)  \cap
+L_{3}\left(  \mathbb{R}^{3}\right)  \underset{}{}\right\}  ;
+\end{align*}%
+\[
+\left\langle \cdot|\cdot\right\rangle :\left[  L_{\infty}\left(
+\mathbb{R}^{3}\right)  \oplus L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)
+\right]  \times\left[  L_{1}\left(  \mathbb{R}^{3}\right)  \cap L_{3}\left(
+\mathbb{R}^{3}\right)  \right]  \rightarrow\mathbb{R}%
+\]%
+\[
+\rho\in L_{1}\left(  \mathbb{R}^{3}\right)  \cap L_{3}\left(  \mathbb{R}%
+^{3}\right)  \equiv\mathcal{D}_{1}%
+\]
+%
+
+\begin{align*}
+\int\rho\left(  \mathbf{r}\right)  d\mathbf{r}  &  =\left\langle
+\Psi\left\vert \int\Phi^{\dagger}\left(  \mathbf{r}\right)  \Phi\left(
+\mathbf{r}\right)  d\mathbf{r}\Psi\right.  \right\rangle \\
+&  =\left\langle \left.  \Psi\right\vert \mathcal{N}\Psi\right\rangle
+=N\left\langle \left.  \Psi\right\vert \Psi\right\rangle
+\end{align*}
+%
+
+\[
+\nabla_{\eta}\mathcal{L}\left(  \Psi,\lambda,\gamma\right)  =0\equiv
+\left\langle \eta\left\vert \gamma\right.  \right\rangle -\left\langle \left.
+\Psi\right\vert \Omega\left(  \eta\right)  \Psi\right\rangle =0
+\]%
+\[
+\forall\eta\in L_{\infty}\left(  \mathbb{R}^{3}\right)  \oplus L_{\frac{3}{2}%
+}\left(  \mathbb{R}^{3}\right)
+\]
+
+
+$\Psi\in$ Domain of $H_{U}$ $\Leftrightarrow$ $\Psi\in$ Domain of
+$\Omega\left(  \lambda\right)  $
+\begin{align*}
+\nabla_{\eta\Phi}^{2}\mathcal{L}\left(  \Psi\left(  \rho\right)
+,\lambda\left(  \rho\right)  ,\rho\right)   &  =0\,\forall\eta\in L_{\infty
+}\left(  \mathbb{R}^{3}\right)  \oplus L_{\frac{3}{2}}\left(  \mathbb{R}%
+^{3}\right) \\
+&  \Updownarrow\\
+\left\langle \left.  \Psi\right\vert \Omega\left(  \eta\right)  \Phi
+\right\rangle  &  =0\,\forall\eta\in L_{\infty}\left(  \mathbb{R}^{3}\right)
+\oplus L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)
+\end{align*}
+%
+
+\[
+\left\{  \left.  \left\vert \Psi_{\kappa}\left(  \rho\right)  \right\rangle
+\right\vert \quad1\leq\kappa\leq\tau\right\}
+\]%
+\begin{align*}
+\mathcal{F}_{HK}\left(  \rho\right)   &  =\left\langle \Psi_{\kappa}\left(
+\rho\right)  \left\vert H_{U}\right.  \Psi_{\kappa}\left(  \rho\right)
+\right\rangle \\
+\left\vert \Psi_{\mathbf{c}}\left(  \rho\right)  \right\rangle  &
+\in\text{linear span}\left\{  \left.  \left\vert \Psi_{\kappa}\left(
+\rho\right)  \right\rangle \right\vert \quad1\leq\kappa\leq\tau\right\}
+\end{align*}%
+\[
+\left\{  \left.  \left\vert \Psi_{\kappa}\left(  \rho\right)  \right\rangle
+\right\vert \quad1\leq\kappa\leq\tau\right\}
+\]%
+\[
+\rho\in L_{1}\left(  \mathbb{R}^{3}\right)  \cap L_{3}\left(  \mathbb{R}%
+^{3}\right)  \equiv\mathcal{D}_{1}%
+\]%
+\[
+\left\langle \cdot|\cdot\right\rangle :\mathcal{D}_{1}^{\ast}\times
+\mathcal{D}_{1}\rightarrow\mathbb{R}%
+\]%
+\[
+\mathcal{D}_{1}^{\ast}=\left[  L_{\infty}\left(  \mathbb{R}^{3}\right)  \oplus
+L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)  \right]
+\]%
+\[
+\mathcal{D}\left(  H_{U}\right)
+\]%
+\[
+\mathcal{D}_{1}^{\ast}=\left[  L_{\infty}\left(  \mathbb{R}^{3}\right)  \oplus
+L_{\frac{3}{2}}\left(  \mathbb{R}^{3}\right)  \right]
+\]%
+\[
+\mathcal{L}\left(  \Psi\left(  \rho\right)  ,\lambda\left(  \rho\right)
+\right)  =\inf_{\Psi\in\mathcal{D}\left(  H_{U}\right)  }\sup_{\lambda
+}\mathcal{L}\left(  \Psi,\lambda,\rho\right)
+\]%
+\[
+\left\{  \left.  \Omega\left(  \lambda\right)  \right\vert \lambda
+\in\mathcal{D}_{1}^{\ast}\right\}
+\]%
+\[
+H_{U}%
+\]%
+\[
+=\left\langle \left.  \Psi\left(  \rho\right)  \right\vert \Omega\left(
+\lambda\right)  \Psi\left(  \rho\right)  \right\rangle
+\]
+1%
+\[
+H\left(  \lambda\right)  =\sum_{1\leq j\leq\kappa}E_{\kappa}\left\vert
+\Lambda_{\kappa}\right\rangle \left\langle \Lambda_{\kappa}\right\vert
++\int_{\sigma_{c}\left(  H\left(  \lambda\right)  \right)  }E\left\vert
+\Lambda\left(  E\right)  \right\rangle \left\langle \Lambda\left(  E\right)
+\right\vert dE
+\]
+2%
+\[
+\mathcal{P}_{d}\left(  H\left(  \lambda\right)  \right)  =\sum_{1\leq
+j\leq\kappa}\left\vert \Lambda_{\kappa}\right\rangle \left\langle
+\Lambda_{\kappa}\right\vert
+\]
+3%
+\[
+\mathcal{P}_{c}\left(  H\left(  \lambda\right)  \right)  =\int_{\sigma
+_{c}\left(  H\left(  \lambda\right)  \right)  }\left\vert \Lambda\left(
+E\right)  \right\rangle \left\langle \Lambda\left(  E\right)  \right\vert dE
+\]
+4%
+\[
+\mathcal{H}^{N}=\mathcal{H}_{d}^{N}\oplus\mathcal{H}_{c}^{N}%
+\]
+5%
+\[
+\mathcal{H}_{d}^{N}=\mathcal{P}_{d}\left(  H\left(  \lambda\right)  \right)
+\mathcal{H}^{N};\qquad\mathcal{H}_{c}^{N}=\mathcal{P}_{c}\left(  H\left(
+\lambda\right)  \right)  \mathcal{H}^{N}%
+\]
+6%
+\[
+H\left(  \lambda\right)
+\]
+7%
+\[
+H_{U}%
+\]%
+\begin{align*}
+&  \left.  \qquad\right.  \left.  \qquad\right.  \mathcal{L}\left(  \Psi
++\Phi,\lambda+\eta,\rho\right) \\
+&  \left.  \qquad\right.  \left.  \qquad\right.  \left.  \qquad\right.
+\parallel\\
+&  \left\langle \left(  \Psi+\Phi\right)  \left\vert H\left(  \lambda\right)
+\right.  \left(  \Psi+\Phi\right)  \right\rangle +\left\langle \left(
+\lambda+\eta\right)  \left\vert \rho\right.  \right\rangle \\
+&  \left.  \qquad\right.  \left.  \qquad\right.  \left.  \qquad\right.
+\parallel\\
+&  \quad\left\langle \Psi\left\vert H\left(  \lambda\right)  \right.
+\Psi\right\rangle +\left\langle \lambda\left\vert \rho\right.  \right\rangle
++\left\langle \Phi\left\vert H\left(  \lambda\right)  \right.  \Psi
+\right\rangle \\
+&  +\left\langle \Psi\left\vert H\left(  \lambda\right)  \right.
+\Phi\right\rangle +\left\langle \Phi\left\vert H\left(  \lambda\right)
+\right.  \Phi\right\rangle +\left\langle \eta\left\vert \rho\right.
+\right\rangle
+\end{align*}%
+\[
+\left(  \Psi,\lambda\right)
+\]%
+\[
+\frac{\sigma_{\inf}\left(  \rho\right)  }{N}\int\Phi^{\dagger}\left(
+\mathbf{r}\right)  \Phi\left(  \mathbf{r}\right)  d\mathbf{r}%
+\]%
+\[
+\sigma_{\inf}\left(  \rho\right)  =\inf\limits_{\Psi}\left\{  \left\langle
+\Psi\left\vert H\left(  \lambda\right)  \right.  \Psi\right\rangle \right\}
+\]%
+\[
+\Omega\left(  \lambda\right)  \rightarrow\Omega\left(  \tilde{\lambda}\right)
+=\int\tilde{\lambda}\left(  \mathbf{r}\right)  \Phi^{\dagger}\left(
+\mathbf{r}\right)  \Phi\left(  \mathbf{r}\right)  d\mathbf{r=}\int\left(
+\lambda\left(  \mathbf{r}\right)  -\sigma_{\inf}\left(  \rho\right)  \right)
+\Phi^{\dagger}\left(  \mathbf{r}\right)  \Phi\left(  \mathbf{r}\right)
+d\mathbf{r}%
+\]
+Normalization constraint%
+\[
+\mathfrak{N}\left(  \Psi\right)  =\int\left\langle \left.  \Psi\right\vert
+\Phi^{\dagger}\left(  \mathbf{r}\right)  \Phi\left(  \mathbf{r}\right)
+\Psi\right\rangle d\mathbf{r}=\int\rho\left(  \mathbf{r}\right)
+d\mathbf{r}=N
+\]%
+\[
+\mathfrak{N}\left(  \Psi\right)  =\int\left\langle \left.  \Psi\right\vert
+\Phi^{\dagger}\left(  \mathbf{r}\right)  \Phi\left(  \mathbf{r}\right)
+\Psi\right\rangle d\mathbf{r}%
+\]%
+\[
+\mathfrak{N}\left(  \Psi\right)  =N
+\]
+%
+
+\[
+\mathcal{L}\left(  \Psi,\lambda,\rho\right)  =\left\langle \left.
+\Psi\right\vert H_{U}\Psi\right\rangle -\left\langle \lambda\left\vert
+\left\{  \overset{}{\Xi\left(  \Psi\right)  -\rho}\right\}  \right.
+\right\rangle -\beta\left(  \mathfrak{N}\left(  \Psi\right)  -N\right)
+\]
+leading to
+\[
+\nabla\mathcal{L}\left(  \bar{\Psi},\Psi,\lambda,\rho\right)  =0=\nabla
+E_{U}\left(  \bar{\Psi},\Psi\right)  -\int\lambda\left(  \mathbf{r}\right)
+\nabla\Xi\left(  \mathbf{r}\right)  \left(  \bar{\Psi},\Psi\right)
+d\mathbf{r-}\beta\nabla\mathfrak{N}\left(  \Psi\right)
+\]%
+\[
+\mathcal{L}\left(  \Psi,\lambda,\rho\right)  =\left\langle \left.
+\Psi\right\vert H\left(  \lambda+\beta\right)  \Psi\right\rangle +\left\langle
+\left.  \lambda\right\vert \rho\right\rangle +\beta N
+\]%
+\[
+\int\left\langle \left.  \Psi\right\vert \Phi^{\dagger}\left(  \mathbf{r}%
+\right)  \Phi\left(  \mathbf{r}\right)  \Psi\right\rangle d\mathbf{r}=N
+\]%
+\[
+\sum_{1\leq j\leq m}\left\langle \left.  \Psi\right\vert \Phi_{j}^{\dagger
+}\Phi_{j}\Psi\right\rangle =N
+\]%
+\begin{equation}
+\Xi\left(  \Psi\right)  =\left(  \Xi_{1}\left(  \Psi\right)  ,\cdots,\Xi
+_{r}\left(  \Psi\right)  \right)
+\end{equation}%
+\begin{equation}
+\Xi_{j}\left(  \Psi\right)  =\left\langle \left.  \Psi\right\vert \Phi
+_{j}^{\dagger}\Phi_{j}\Psi\right\rangle
+\end{equation}%
+\begin{equation}
+\left\langle \left.  \Psi\right\vert H_{U}\Psi\right\rangle =\sum
+_{\substack{1\leq j_{1}<\cdots<j_{n}\leq m\\1\leq k_{1}<\cdots<k_{n}\leq
+m}}\bar{c}_{j_{1}\cdots j_{n}}c_{k_{1}\cdots k_{n}}\left[  H_{U}\right]
+_{j_{1}\cdots j_{n}k_{1}\cdots k_{n}}%
+\end{equation}%
+\begin{equation}
+\nabla_{\bar{\Psi}\Psi}\mathcal{L}\left(  \bar{\Psi},\Psi,\lambda,\rho\right)
+\equiv\nabla_{\bar{\Psi}\Psi}\mathcal{L}\left(  \mathbf{\bar{C}}%
+,\mathbf{C},\lambda,\rho\right)  \equiv\left(  \nabla_{\mathbf{\bar{C}}%
+}\mathcal{L}\left(  \mathbf{\bar{C}},\mathbf{C},\lambda,\rho\right)
+,\nabla_{\mathbf{C}}\mathcal{L}\left(  \mathbf{\bar{C}},\mathbf{C}%
+,\lambda,\rho\right)  \right)
+\end{equation}%
+\begin{equation}
+\nabla_{\mathbf{C}}\mathcal{L}\left(  \mathbf{\bar{C}},\mathbf{C},\lambda
+,\rho\right)  =\left(  \frac{\partial\mathcal{L}\left(  \mathbf{\bar{C}%
+},\mathbf{C},\lambda,\rho\right)  }{\partial c_{1\cdots n}},\cdots
+,\frac{\partial\mathcal{L}\left(  \mathbf{\bar{C}},\mathbf{C},\lambda
+,\rho\right)  }{\partial c_{m-n\cdots m}}\right)
+\end{equation}%
+\begin{equation}
+\nabla_{\mathbf{\Psi}}\Xi_{1}\left(  \bar{\Psi},\Psi\right)  \equiv\nabla
+\Xi_{1}\left(  \mathbf{\bar{C}},\mathbf{C}\right)  =\left(  \frac{\partial
+\Xi_{1}\left(  \mathbf{\bar{C}},\mathbf{C}\right)  }{\partial c_{1\cdots n}%
+},\cdots,\frac{\partial\Xi_{1}\left(  \mathbf{\bar{C}},\mathbf{C}\right)
+}{\partial c_{m-n\cdots m}}\right)
+\end{equation}%
+\begin{equation}
+\nabla_{\mathbf{\Psi}}\mathfrak{N}\left(  \bar{\Psi},\Psi\right)  \equiv
+\nabla\mathfrak{N}\left(  \mathbf{\bar{C}},\mathbf{C}\right)  =\left(
+\frac{\partial\mathfrak{N}\left(  \mathbf{\bar{C}},\mathbf{C}\right)
+}{\partial c_{1\cdots n}},\cdots,\frac{\partial\mathfrak{N}\left(
+\mathbf{\bar{C}},\mathbf{C}\right)  }{\partial c_{m-n\cdots m}}\right)
+\end{equation}%
+\begin{equation}
+\nabla_{\bar{\Psi}}\mathcal{L}\left(  \bar{\Psi},\Psi,\mathbf{\lambda}%
+,\rho\right)  =0=\left\langle \left.  {}\right\vert H\left(  \mathbf{\lambda
+}+\beta\right)  \Psi\right\rangle
+\end{equation}%
+\begin{equation}
+\nabla_{\left(  \mathbf{\lambda},\beta\right)  }\mathcal{L}\left(  \bar{\Psi
+},\Psi,\mathbf{\lambda},\rho\right)  =0=\left\langle \left.  {}\right\vert
+\rho\right\rangle +N
+\end{equation}
+Find $\left(  \mathbf{\lambda},\beta\right)  $ such that one can find
+solutions $\left(  \bar{\Psi},\Psi\right)  .$
+\begin{equation}
+\left\{  H_{U}-\Omega\left(  \lambda+\beta\right)  \right\}  \left\vert
+\Psi\right\rangle =0
+\end{equation}
+%
+
+\[
+\mathcal{L}\left(  \Psi,\lambda,\rho\right)  =\left\langle \left.
+\Psi\right\vert H_{U}\Psi\right\rangle -\left\langle \lambda\left\vert
+\left\{  \overset{}{\Xi\left(  \Psi\right)  -\rho}\right\}  \right.
+\right\rangle -\beta\left\{  \mathfrak{N}\left(  \Psi\right)  -N\right\}
+\]%
+\[
+\rho
+\]%
+\begin{align*}
+&  \left\langle \lambda\left\vert \overset{}{\left\{  \Xi\left(  \Psi\right)
+-\rho\right\}  }\right.  \right\rangle +\beta\left\{  \mathfrak{N}\left(
+\Psi\right)  -N\right\} \\
+&  \qquad\qquad\qquad\qquad\left.  \shortparallel\right. \\
+&  \left\langle \left.  \Psi\right\vert \Omega\left(  \lambda+\beta\right)
+\Psi\right\rangle -\left\langle \lambda\left\vert \rho\right.  \right\rangle
+-\beta N
+\end{align*}
+%
+
+\[
+\Omega\left(  \lambda\right)  =\int\left\{  \lambda\left(  \mathbf{r}\right)
++\beta\right\}  \mathbf{\Phi}\left(  \mathbf{r}\right)  ^{\dagger}%
+\mathbf{\Phi}\left(  \mathbf{r}\right)  d\mathbf{r}%
+\]
+%
+
+\begin{align*}
+&  \qquad\qquad\qquad\qquad\mathcal{L}\left(  \Psi,\lambda,\rho\right) \\
+&  \qquad\qquad\qquad\qquad\qquad\left.  \shortparallel\right. \\
+&  \left\langle \left.  \Psi\right\vert \left\{  K+V_{2}-\Omega\left(
+\lambda+\beta\right)  \right\}  \Psi\right\rangle +\left\langle \lambda
+\left\vert \rho\right.  \right\rangle +\beta N
+\end{align*}
+%
+
+\[
+\left\{  \left.  \Omega\left(  \lambda+\beta\right)  \right\vert \lambda
+\in\mathcal{D}_{1}^{\ast};\beta\in\mathbb{R}\right\}
+\]
+%
+
+\[
+H\left(  \lambda\right)  =K+V_{2}-\Omega\left(  \lambda+\beta\right)
+\]
+%
+
+\[
+H\left(  \lambda\right)  =K+V_{2}-\Omega\left(  \lambda+\beta\right)
+\]%
+\begin{align*}
+&  \qquad\qquad\qquad\qquad\mathcal{L}\left(  \Psi,\lambda,\beta,\rho\right)
+\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  \shortparallel\right. \\
+&  \left\langle \left.  \Psi\right\vert H_{U}\Psi\right\rangle -\left\langle
+\lambda\left\vert \left\{  \overset{}{\Xi\left(  \Psi\right)  -\rho}\right\}
+\right.  \right\rangle -\beta\left\{  \mathfrak{N}\left(  \Psi\right)
+-N\right\}
+\end{align*}
+%
+
+\begin{align*}
+&  \left[  \rho\right]  _{N}=\left\{  \left.  \overset{}{\Psi}\right\vert
+\Xi\left(  \Psi\right)  =\rho,\mathfrak{N}\left(  \Psi\right)  =N,\Psi
+\in\mathcal{H}^{N}\right. \\
+&  \qquad\qquad\left.  \rho\in L_{1}\left(  \mathbb{R}^{3}\right)  \cap
+L_{3}\left(  \mathbb{R}^{3}\right)  \underset{}{}\right\}  ;
+\end{align*}%
+\[
+\mathcal{L}\left(  \Psi\left(  \rho\right)  ,\lambda\left(  \rho\right)
+\right)  =\inf_{\Psi\in\mathcal{D}\left(  H_{U}\right)  }\sup_{\lambda,\beta
+}\mathcal{L}\left(  \Psi,\lambda,\rho\right)
+\]
+%
+
+\[
+\mathcal{L}\left(  \Psi\left(  \rho\right)  ,\lambda\left(  \rho\right)
+\right)  =\inf_{\Psi\in\mathcal{D}\left(  H_{U}\right)  }\sup_{\lambda,\beta
+}\mathcal{L}\left(  \Psi,\lambda,\rho\right)
+\]
+
+
+$\beta\in\mathbb{R}$ is a free parameter, while $\lambda\in\mathcal{D}%
+_{1}^{\ast}$ is not
+
+i.e. one must find specific optimal values for $\lambda$ in
+
+order to find a constrained inf w.r.t $\Psi$, while any
+
+value of $\beta$ suffices. Thus one can always shift the
+
+optimal value of $\lambda$ by a constant and still obtain the
+
+the same inf over $\Psi$%
+
+\[
+H\left(  \lambda\right)  =K+V_{2}-\Omega\left(  \lambda\right)
+\]
+%
+
+\[
+\mathcal{L}\left(  \Psi\left(  \rho\right)  ,\lambda\left(  \rho\right)
+\right)  =\inf_{\Psi\in\mathcal{D}\left(  H_{U}\right)  }\sup_{\lambda
+}\mathcal{L}\left(  \Psi,\lambda,\rho\right)
+\]%
+\begin{align*}
+\left.
+\begin{array}
+[c]{c}%
+\lambda\left(  \rho\right) \\
+\Psi\left(  \rho\right)
+\end{array}
+\right\}  \text{ exist }  &  \Longleftrightarrow\text{V-representability}\\
+\lambda\left(  \rho\right)  \text{ is unique }  &  \Longleftrightarrow
+\text{Differentialbility}\\
+\Psi\left(  \rho\right)  \text{ is unique }  &  \Longleftrightarrow
+\text{Degeneracy}%
+\end{align*}
+
+
+\quad If for a given $\rho$ there exists a Hamiltonian $H\left(
+\tilde{\lambda}\left(  \rho\right)  \right)  $
+
+that has at least one eigen value that is lower than the
+
+infinum of its continuous spectra then there exists a
+
+state $\left\vert \Psi\left(  \rho\right)  \right\rangle $ that satisfies the
+First Order Necessary
+
+$\qquad$Conditions for a local potential $\Omega\left(  \lambda\left(
+\rho\right)  \right)  ,$
+
+\qquad$\qquad\qquad$where $\lambda\left(  \rho\right)  -\tilde{\lambda}\left(
+\rho\right)  =const.$
+
+$\left\vert \Psi\left(  \rho\right)  \right\rangle $
+\begin{align*}
+&  \text{Let }\Phi\left(  \mathbf{r}\right)  ^{\dagger}\Phi\left(
+\mathbf{r}\right)  \left\vert \Psi\right\rangle \overset{a.e}{\neq
+}0;\,\mathbf{r\in}\operatorname*{supp}\nolimits_{1}\left\{  \Psi\right\}
+\mathbf{\subseteq}\mathbb{R}^{3}\\
+&  \qquad\qquad\text{then }\Omega\left(  \lambda\right)  \left\vert
+\Psi\right\rangle =0\Leftrightarrow\lambda\overset{a.e}{=}0.
+\end{align*}
+
+
+%
+
+\begin{align*}
+&  \text{By a.e. we mean almost every where in}\operatorname*{supp}%
+\nolimits_{1}\left\{  \Psi\right\}  \text{, where}\\
+&  \operatorname*{supp}\nolimits_{1}\left\{  \Psi\right\}
+=\operatorname*{closure}\left\{  \mathbf{r}\left\vert \Psi\left(
+\mathbf{r},\mathbf{r}_{2},\cdots,\mathbf{r}_{N}\right)  \neq0;\right.
+\right.  \\
+&  \qquad\qquad\qquad\qquad\qquad\left.  \mathbf{r\neq r}_{j}\neq
+\mathbf{r}_{k}\in\mathbb{R}^{3},2\leq j\neq k\leq N\right\}
+\end{align*}
+1
+
+$\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  $ is the space of Trace Class
+operators
+\[
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =\left\{  X\left\vert
+\operatorname{Tr}\left\{  \left(  X^{\dagger}X\right)  ^{\frac{1}{2}}\right\}
+<\infty\right.  \right\}
+\]
+2
+
+$\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  $ is the space of Hilbert
+Schimdt operators
+
+3%
+\[
+\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  =\left\{  X\left\vert \left\{
+\operatorname{Tr}\left\{  X^{\dagger}X\right\}  \right\}  ^{\frac{1}{2}%
+}<\infty\right.  \right\}
+\]
+4%
+\[
+\mathcal{B}_{2}\left(  \mathcal{H}^{N}\right)  \text{is a Hilbert Space with
+inner product }\left(  X\left\vert Y\right.  \right)  =\operatorname{Tr}%
+\left\{  X^{\dagger}Y\right\}
+\]
+5%
+\begin{align*}
+\mathcal{B}_{\kappa}\left(  \mathcal{H}^{N}\right)    & =\mathcal{B}_{\kappa
+sa}\left(  \mathcal{H}^{N}\right)  \oplus\mathcal{B}_{\kappa asa}\left(
+\mathcal{H}^{N}\right)  \\
+\mathcal{B}_{\kappa sa}\left(  \mathcal{H}^{N}\right)    & =\left\{  \left.
+X=X^{\dagger}\right\vert X\in\mathcal{B}_{\kappa}\left(  \mathcal{H}%
+^{N}\right)  \right\}  \\
+\mathcal{B}_{\kappa asa}\left(  \mathcal{H}^{N}\right)    & =\left\{  \left.
+X=-X^{\dagger}\right\vert X\in\mathcal{B}_{\kappa}\left(  \mathcal{H}%
+^{N}\right)  \right\}  \\
+\kappa & =1,2
+\end{align*}
+
+
+6%
+\begin{align*}
+& \quad\quad\quad\quad\text{The set of }N\text{-electron Density Operators
+}D^{N}\\
+& S_{N}\subset\mathcal{B}_{1sa+}\left(  \mathcal{H}^{N}\right)  \equiv
+\text{The positive elemements of }\mathcal{B}_{1sa}\left(  \mathcal{H}%
+^{N}\right)
+\end{align*}
+7%
+\[
+D^{N}=A^{2};A\in\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)
+\]
+8%
+\[
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \text{ is a real Hilbert
+Space with symmetric inner product}%
+\]
+9%
+\begin{align*}
+& \quad\text{Define Super Operators }\\
+& \hat{T}:\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathcal{B}_{2sa}\left(  \mathcal{H}^{N}\right)  \text{ }\\
+& \widehat{T}\left\vert A\right)  =\left\vert \frac{\left[  T,A\right]  _{+}%
+}{2}\right)  \\
+& \left[  T,Y\right]  _{+}=TA+AT
+\end{align*}
+10%
+\begin{align*}
+\Xi\left(  A\right)    & =\left(  A\left\vert \widehat{\Phi^{\dagger}\Phi
+}A\right.  \right)  =\rho\\
+\mathfrak{N}\left(  A\right)    & =\int\left\langle \left.  A\right\vert
+\widehat{\Phi^{\dagger}\left(  \mathbf{r}\right)  \Phi\left(  \mathbf{r}%
+\right)  }A\right\rangle d\mathbf{r=}N
+\end{align*}
+12%
+\[
+\mathcal{F}_{HK}\left(  \rho\right)  =\inf_{A\in\mathcal{B}_{2sa}\left(
+\mathcal{H}^{N}\right)  }\operatorname{Tr}\left\{  A\overset{}{\left(
+K+V_{2}\right)  A}\right\}  =\left(  A\left(  \rho\right)  \left\vert
+\widehat{\left(  K+V_{2}\right)  }A\left(  \rho\right)  \right.  \right)
+\]
+13%
+\[
+\mathcal{L}\left(  A,\lambda,\gamma,\beta\right)  =\left(  A\left\vert
+\widehat{\left(  K+V_{2}-\Omega\left(  \lambda+\beta\right)  \right)
+}A\right.  \right)  +\left\langle \lambda\left\vert \gamma\right.
+\right\rangle +\beta N
+\]
+
+begin{align*}
+&  \qquad\qquad\qquad\qquad\mathcal{L}\left(  \Psi,\lambda,\beta,\rho\right)
+\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  \shortparallel\right.  \\
+&  \left\langle \left.  \Psi\right\vert H_{U}\Psi\right\rangle -\left\langle
+\lambda\left\vert \left\{  \overset{}{\Xi\left(  \Psi\right)  -\rho}\right\}
+\right.  \right\rangle -\beta\left\{  \mathfrak{N}\left(  \Psi\right)
+-N\right\}
+\end{align*}
+
+\end{document} 

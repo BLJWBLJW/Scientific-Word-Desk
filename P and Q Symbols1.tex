@@ -1,0 +1,971 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Saturday, July 31, 2010 09:28:33}
+%TCIDATA{LastRevised=Friday, October 29, 2010 11:03:14}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title{Berezin Transform}
+\author{Brian Weiner}
+\affiliation{Penn State Univ}
+
+\begin{abstract}
+
+
+\end{abstract}
+\date{08/29/2010}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Operator Kernels}
+
+Using
+\begin{equation}
+I=\int\left\vert \mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert
+d\mu\left(  \mathbf{z}\right)  =\int\frac{\left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert }{\left\langle \mathbf{z}\left\vert
+\mathbf{z}\right.  \right\rangle }d\tilde{\mu}\left(  \mathbf{z}\right)  ,
+\end{equation}
+where
+\begin{equation}
+d\tilde{\mu}\left(  \mathbf{z}\right)  =\left\langle \mathbf{z}\left\vert
+\mathbf{z}\right.  \right\rangle d\mu\left(  \mathbf{z}\right)
+\end{equation}
+and
+\begin{equation}
+A=IAI
+\end{equation}
+one can construct a biholomorphic representations of an operator $A$ wrt to
+the measures $\mu$ and $\tilde{\mu}$ by
+\begin{align}
+A &  =\int\left\vert \mathbf{z}_{1}\right\rangle \left\langle \mathbf{z}%
+_{1}\right\vert A\left\vert \mathbf{z}_{2}\right\rangle \left\langle
+\mathbf{z}_{2}\right\vert d\mu\left(  \mathbf{z}_{1}\right)  d\mu\left(
+\mathbf{z}_{2}\right)  \nonumber\\
+&  =\int\frac{\left\vert \mathbf{z}_{1}\right\rangle }{\sqrt{\left\langle
+\mathbf{z}_{1}\left\vert \mathbf{z}_{1}\right.  \right\rangle }}%
+\frac{\left\langle \mathbf{z}_{1}\left\vert A\mathbf{z}_{2}\right.
+\right\rangle }{\sqrt{\left\langle \mathbf{z}_{1}\left\vert \mathbf{z}%
+_{1}\right.  \right\rangle \left\langle \mathbf{z}_{2}\left\vert
+\mathbf{z}_{2}\right.  \right\rangle }}\frac{\left\langle \mathbf{z}%
+_{2}\right\vert }{\sqrt{\left\langle \mathbf{z}_{2}\left\vert \mathbf{z}%
+_{2}\right.  \right\rangle }}d\tilde{\mu}\left(  \mathbf{z}_{1}\right)
+d\tilde{\mu}\left(  \mathbf{z}_{2}\right)  \nonumber\\
+&  =\int A\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  \left\vert
+\mathbf{z}_{1}\right\rangle \left\langle \mathbf{z}_{2}\right\vert d\mu\left(
+\mathbf{z}_{1}\right)  d\mu\left(  \mathbf{z}_{2}\right)  \nonumber\\
+&  =\int\tilde{A}\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)
+\frac{\left\vert \mathbf{z}_{1}\right\rangle \left\langle \mathbf{z}%
+_{2}\right\vert }{\sqrt{\left\langle \mathbf{z}_{1}\left\vert \mathbf{z}%
+_{1}\right.  \right\rangle \left\langle \mathbf{z}_{2}\left\vert
+\mathbf{z}_{2}\right.  \right\rangle }}d\tilde{\mu}\left(  \mathbf{z}%
+_{1}\right)  d\tilde{\mu}\left(  \mathbf{z}_{2}\right)  ,
+\end{align}
+where
+\begin{subequations}
+\label{Q-Symbols}%
+\begin{align}
+A\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)   &  =\left\langle
+\mathbf{z}_{1}\left\vert A\mathbf{z}_{2}\right.  \right\rangle \nonumber\\
+\tilde{A}\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)   &
+=\frac{\left\langle \mathbf{z}_{1}\left\vert A\mathbf{z}_{2}\right.
+\right\rangle }{\sqrt{\left\langle \mathbf{z}_{1}\left\vert \mathbf{z}%
+_{1}\right.  \right\rangle \left\langle \mathbf{z}_{2}\left\vert
+\mathbf{z}_{2}\right.  \right\rangle }}.
+\end{align}
+These representations have the following action on a holomorphic wavefunction
+\end{subequations}
+\begin{align}
+A\left\vert g\right\rangle  &  =\left\vert Ag\right\rangle =\nonumber\\
+\int\left\vert \mathbf{z}_{1}\right\rangle \left\langle \mathbf{z}%
+_{1}\right\vert A\left\vert \mathbf{z}_{2}\right\rangle \left\langle
+\mathbf{z}_{2}\right\vert \left\vert g\right\rangle d\mu\left(  \mathbf{z}%
+_{1}\right)  d\mu\left(  \mathbf{z}_{2}\right)   &  =\int A\left(
+\mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  \left\vert \mathbf{z}%
+_{1}\right\rangle \left\langle \mathbf{z}_{2}\right\vert \left\vert
+g\right\rangle d\mu\left(  \mathbf{z}_{1}\right)  d\mu\left(  \mathbf{z}%
+_{2}\right)  \nonumber\\
+&  =\int\left(  A\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)
+\left\langle \mathbf{z}_{2}\right\vert \left\vert g\right\rangle d\mu\left(
+\mathbf{z}_{2}\right)  \right)  \left\vert \mathbf{z}_{1}\right\rangle
+d\mu\left(  \mathbf{z}_{1}\right)  \nonumber\\
+&  =\int\left(  A\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  g\left(
+\mathbf{\bar{z}}_{2}\right)  d\mu\left(  \mathbf{z}_{2}\right)  \right)
+\left\vert \mathbf{z}_{1}\right\rangle d\mu\left(  \mathbf{z}_{1}\right)
+\nonumber\\
+\left[  Ag\right]  \left(  \mathbf{\bar{z}}_{1}\right)   &  =\int\left(
+A\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  g\left(  \mathbf{\bar{z}%
+}_{2}\right)  d\mu\left(  \mathbf{z}_{2}\right)  \right)
+\end{align}
+and%
+\begin{align}
+A\left\vert g\right\rangle = &  \int\frac{\left\vert \mathbf{z}_{1}%
+\right\rangle }{\sqrt{\left\langle \mathbf{z}_{1}\left\vert \mathbf{z}%
+_{1}\right.  \right\rangle }}\frac{\left\langle \mathbf{z}_{1}\left\vert
+A\mathbf{z}_{2}\right.  \right\rangle }{\sqrt{\left\langle \mathbf{z}%
+_{1}\left\vert \mathbf{z}_{1}\right.  \right\rangle \left\langle
+\mathbf{z}_{2}\left\vert \mathbf{z}_{2}\right.  \right\rangle }}%
+\frac{\left\langle \mathbf{z}_{2}\right\vert }{\sqrt{\left\langle
+\mathbf{z}_{2}\left\vert \mathbf{z}_{2}\right.  \right\rangle }}\left\vert
+g\right\rangle d\tilde{\mu}\left(  \mathbf{z}_{1}\right)  d\tilde{\mu}\left(
+\mathbf{z}_{2}\right)  \nonumber\\
+&  =\int\left(  \tilde{A}\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)
+\tilde{g}\left(  \mathbf{\bar{z}}_{2}\right)  d\tilde{\mu}\left(
+\mathbf{z}_{2}\right)  \right)  \frac{\left\vert \mathbf{z}_{1}\right\rangle
+}{\sqrt{\left\langle \mathbf{z}_{1}\left\vert \mathbf{z}_{1}\right.
+\right\rangle }}d\tilde{\mu}\left(  \mathbf{z}_{1}\right)  \nonumber\\
+\widetilde{\left[  Ag\right]  }\left(  \mathbf{\bar{z}}_{1}\right)   &
+=\int\tilde{A}\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  \tilde
+{g}\left(  \mathbf{\bar{z}}_{2}\right)  d\tilde{\mu}\left(  \mathbf{z}%
+_{2}\right)  .
+\end{align}
+
+
+The ket-bra expansion of an operator $A$ in the reference basis $\left\{
+\left.  \left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert \right\vert 1\leq j_{1}<j_{2}%
+,k_{1}<k_{2}\leq r\right\}  $ is
+\begin{align}
+A  &  =\sum_{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r}\left\vert \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\vert A\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+\left\langle \varphi_{k_{1}}\varphi_{k_{2}}\right\vert \nonumber\\
+&  =\sum_{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}%
+}\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert ,
+\end{align}
+where
+\begin{equation}
+A_{j_{1}j_{2}k_{1}k_{2}}=\operatorname*{Tr}\left\{  \left\vert \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\vert A\right\}  =\operatorname*{Tr}\left\{  \left\vert \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\rangle \left\langle \varphi_{k_{1}}\varphi_{k_{2}%
+}\right\vert ^{\dagger}A\right\}  .
+\end{equation}
+The biholomorphic integral kernel $A$ can thus be expanded as
+\begin{align}
+A\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)   &  =\sum_{1\leq
+j_{1}<j_{2},k_{1}<k_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}}\left\langle
+\mathbf{z}_{1}\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right.  \right\rangle
+\left\langle \varphi_{k_{1}}\varphi_{k_{2}}\left\vert \mathbf{z}_{2}\right.
+\right\rangle \nonumber\\
+&  =\sum_{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}%
+}\mathcal{T}_{k_{1}k_{2}j_{1}j_{2}}\left(  \mathbf{\bar{z}}_{1},\mathbf{z}%
+_{2}\right) \nonumber\\
+&  =\sum_{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}%
+}\mathcal{\tilde{T}}_{k_{1}k_{2}j_{1}j_{2}}\left(  \mathbf{\bar{z}}%
+_{1},\mathbf{z}_{2}\right)  \sqrt{\left\langle \mathbf{z}_{1}\left\vert
+\mathbf{z}_{1}\right.  \right\rangle \left\langle \mathbf{z}_{2}\left\vert
+\mathbf{z}_{2}\right.  \right\rangle },
+\end{align}
+where the biholomorphic integral kernels of the bases are related by
+\begin{equation}
+\mathcal{T}_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{\bar{z}}_{1},\mathbf{z}%
+_{2}\right)  =\mathcal{\tilde{T}}_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{\bar
+{z}}_{1},\mathbf{z}_{2}\right)  \sqrt{\left\langle \mathbf{z}_{1}\left\vert
+\mathbf{z}_{1}\right.  \right\rangle \left\langle \mathbf{z}_{2}\left\vert
+\mathbf{z}_{2}\right.  \right\rangle }%
+\end{equation}
+and
+\begin{subequations}
+\label{Q-Sym}%
+\begin{align}
+\mathcal{\tilde{T}}_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{\bar{z}}%
+_{1},\mathbf{z}_{2}\right)   &  =\frac{\operatorname*{Tr}\left\{  \left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\vert \left\vert \mathbf{z}_{2}\right\rangle
+\left\langle \mathbf{z}_{1}\right\vert \right\}  }{\sqrt{\left\langle
+\mathbf{z}_{1}\left\vert \mathbf{z}_{1}\right.  \right\rangle \left\langle
+\mathbf{z}_{2}\left\vert \mathbf{z}_{2}\right.  \right\rangle }}\nonumber\\
+\mathcal{T}_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{\bar{z}}_{1},\mathbf{z}%
+_{2}\right)   &  =\operatorname*{Tr}\left\{  \left\vert \varphi_{k_{1}}%
+\varphi_{k_{2}}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\vert \left\vert \mathbf{z}_{2}\right\rangle \left\langle
+\mathbf{z}_{1}\right\vert \right\}  .
+\end{align}
+
+
+The kernels $\left\{  \left.  \mathcal{T}_{j_{1}j_{2}k_{1}k_{2}}\left(
+\mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  \right\vert 1\leq j_{1}%
+<j_{2},k_{1}<k_{2}\leq r\right\}  $ form a biholomorphic conb for
+$\mathfrak{F}_{op}=\mathcal{R}_{hol}\left(  \mathcal{B}_{2}\left(
+\mathcal{H}^{2}\right)  \right)  \subset L_{2}\left(  \mathbb{C}^{4\left(
+r-2\right)  },\mu\right)  $ as%
+\end{subequations}
+\begin{align}
+&  \int\overline{\mathcal{T}_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{\bar{z}%
+}_{1},\mathbf{z}_{2}\right)  }\mathcal{T}_{p_{1}p_{2}q_{1}q_{2}}\left(
+\mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  d\mu\left(  \mathbf{z}_{1}\right)
+d\mu\left(  \mathbf{z}_{2}\right) \nonumber\\
+&  =\int\overline{\left\langle \mathbf{z}_{1}\left\vert \varphi_{j_{1}}%
+\varphi_{j_{2}}\right.  \right\rangle \left\langle \varphi_{k_{1}}%
+\varphi_{k_{2}}\left\vert \mathbf{z}_{2}\right.  \right\rangle }\left\langle
+\mathbf{z}_{1}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right.  \right\rangle
+\left\langle \varphi_{q_{1}}\varphi_{q_{2}}\left\vert \mathbf{z}_{2}\right.
+\right\rangle d\mu\left(  \mathbf{z}_{1}\right)  d\mu\left(  \mathbf{z}%
+_{2}\right) \nonumber\\
+&  =\int\left\langle \varphi_{q_{1}}\varphi_{q_{2}}\left\vert \mathbf{z}%
+_{2}\right.  \right\rangle \left\langle \mathbf{z}_{2}\left\vert
+\varphi_{k_{1}}\varphi_{k_{2}}\right.  \right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{2}}\left\vert \mathbf{z}_{1}\right.  \right\rangle
+\left\langle \mathbf{z}_{1}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right.
+\right\rangle d\mu\left(  \mathbf{z}_{1}\right)  d\mu\left(  \mathbf{z}%
+_{2}\right) \nonumber\\
+&  =\left\langle \varphi_{q_{1}}\varphi_{q_{2}}\left\vert \varphi_{k_{1}%
+}\varphi_{k_{2}}\right.  \right\rangle \left\langle \varphi_{j_{1}}%
+\varphi_{j_{2}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right.  \right\rangle
+=\delta_{\left(  q_{1}q_{2}\right)  \left(  k_{1}k_{2}\right)  }%
+\delta_{\left(  j_{1}j_{2}\right)  \left(  p_{1}p_{2}\right)  }.
+\end{align}
+
+
+\subsection{Q-Symbols}
+
+The Q-symbols, $\left\{  Q_{j_{1}j_{2}k_{1}k_{2}}\right\}  $ and $\left\{
+\tilde{Q}_{j_{1}j_{2}k_{1}k_{2}}\right\}  ,$ wrt the measures $\mu$ and
+$\tilde{\mu}$ of the ket-bra basis elements are given by
+\begin{equation}
+Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  =\operatorname*{Tr}\left\{
+\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{2}}\right\vert \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert \right\}  =\tilde{Q}_{j_{1}j_{2}k_{1}k_{2}%
+}\left(  \mathbf{z}\right)  \left\langle \mathbf{z}\left\vert \mathbf{z}%
+\right.  \right\rangle
+\end{equation}
+and thus the Q-symbol, $Q_{A}\left(  \mathbf{z}\right)  $ and $\tilde{Q}%
+_{A}\left(  \mathbf{z}\right)  ,$ of the operator $A$ by
+\begin{equation}
+Q_{A}\left(  \mathbf{z}\right)  =\tilde{Q}_{A}\left(  \mathbf{z}\right)
+\left\langle \mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle
+=\sum_{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}}\tilde
+{Q}_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  \left\langle
+\mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle .
+\end{equation}
+
+
+The set $\left\{  \left.  Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)
+\right\vert 1\leq j_{1}<j_{2}\leq r,1\leq k_{1}<k_{2}\leq r\right\}  $ is
+linearly independent and forms a basis for the space, $\mathfrak{F}\subset
+L_{2}\left(  \mathbb{C}^{2\left(  r-2\right)  },\mu\right)  ,$ of Q-symbols,
+whose dimension is $\binom{r}{2}^{2}$. However, in general these functions are
+not holomorphic, biholomorphic, normalized nor orthogonal and their metric
+matrix is given by
+\begin{align}
+&  \Delta_{l_{1}l_{2}m_{1}m_{2}j_{1}j_{2}k_{1}k_{2}}=\left(  Q_{l_{1}%
+l_{2}m_{1}m_{2}}\left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.  \right)
+_{\mathfrak{F}}=\nonumber\\
+&  =\int\overline{\operatorname*{Tr}\left\{  \left\vert \mathbf{z}%
+\right\rangle \left\langle \mathbf{z}\right\vert \left\vert \varphi_{l_{1}%
+}\varphi_{l_{2}}\right\rangle \left\langle \varphi_{m_{1}}\varphi_{m_{2}%
+}\right\vert \right\}  }\operatorname*{Tr}\left\{  \left\vert \mathbf{z}%
+\right\rangle \left\langle \mathbf{z}\right\vert \left\vert \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\rangle \left\langle \varphi_{k_{1}}\varphi_{k_{2}%
+}\right\vert \right\}  d\mu\left(  \mathbf{z}\right) \nonumber\\
+&  =\int_{\mathbb{C}^{2\left(  r-2\right)  }}\overline{\gamma_{2}\left(
+\mathbf{z}\right)  }_{m_{1}m_{2}l_{1}l_{2}}\gamma_{2}\left(  \mathbf{z}%
+\right)  _{j_{1}j_{2}k_{1}k_{2}}d\mu\left(  \mathbf{z}\right)  .
+\end{align}
+
+
+\subsection{P-Symbols}
+
+One can form a (in general non unique) biorthogonal basis $\left\{  \left.
+P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  \right\vert 1\leq
+j_{1}<j_{2},k_{1}<k_{2}\leq r\right\}  $ to $\left\{  \left.  Q_{j_{1}%
+j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  \right\vert 1\leq j_{1}<j_{2}%
+,k_{1}<k_{2}\leq r\right\}  $ that also spans $\mathfrak{F},$ i.e.
+\begin{align}
+\left(  P_{j_{1}j_{2}k_{1}k_{2}}\left\vert Q_{l_{1}l_{2}m_{1}m_{2}}\right.
+\right)  _{\mathfrak{F}}  &  =\int\overline{P_{j_{1}j_{2}k_{1}k_{2}}\left(
+\mathbf{z}\right)  }Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)
+d\mu\left(  \mathbf{z}\right) \nonumber\\
+&  =\delta_{\left(  l_{1}l_{2}\right)  \left(  j_{1}j_{2}\right)  }%
+\delta_{\left(  m_{1}m_{2}\right)  \left(  k_{1}k_{2}\right)  }.
+\end{align}
+The $\left\{  P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  \right\}  $
+basis can be expanded in terms of the $\left\{  Q_{j_{1}j_{2}k_{1}k_{2}%
+}\left(  \mathbf{z}\right)  \right\}  $ basis as
+\begin{align}
+P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)   &  =\sum_{1\leq
+p_{1}<p_{2},q_{1}<q_{2}\leq r}Q_{p_{1}p_{2}q_{1}q_{2}}\left(  \mathbf{z}%
+\right)  \Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}k_{1}k_{2}}^{-1}\nonumber\\
+&  =\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq r}\gamma_{2}\left(  \mathbf{z}%
+\right)  _{p_{1}p_{2}q_{1}q_{2}}\Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}%
+k_{1}k_{2}}^{-1},
+\end{align}
+i.e.
+\begin{equation}
+\left\vert P\right)  =\left\vert Q\right)  \Delta^{-1}.
+\end{equation}
+This leads to
+\begin{equation}
+\left(  \left.  P\right\vert P\right)  =\Delta^{-1}\left(  \left.
+Q\right\vert Q\right)  \Delta^{-1}=\Delta^{-1},
+\end{equation}%
+\begin{align}
+\left\vert Q\right)   &  =\left\vert P\right)  \Delta,\nonumber\\
+\left\vert P\right)   &  =\left\vert Q\right)  \Delta^{-1},
+\end{align}
+and%
+\begin{equation}
+I_{\mathfrak{F}}=\left\vert Q\right)  \Delta^{-1}\left(  Q\right\vert
+=\left\vert P\right)  \Delta\left(  P\right\vert =\left\vert P\right)  \left(
+Q\right\vert =\left\vert Q\right)  \left(  P\right\vert .
+\end{equation}
+
+
+One can also observe that
+\begin{equation}
+I_{\mathfrak{F}}=\int\left\vert \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert \right)  \left(  \left\vert \mathbf{z}%
+\right\rangle \left\langle \mathbf{z}\right\vert \right\vert d\mu\left(
+\mathbf{z}\right)  ,
+\end{equation}
+which comes directly from
+\begin{align}
+&  \Delta_{l_{1}l_{2}m_{1}m_{2}j_{1}j_{2}k_{1}k_{2}}=\left(  Q_{l_{1}%
+l_{2}m_{1}m_{2}}\left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.  \right)
+=\nonumber\\
+&  =\int_{\mathbb{C}^{2\left(  r-2\right)  }}\overline{\operatorname*{Tr}%
+\left\{  \left\vert \mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert
+\left\vert \varphi_{l_{1}}\varphi_{l_{2}}\right\rangle \left\langle
+\varphi_{m_{1}}\varphi_{m_{2}}\right\vert \right\}  }\operatorname*{Tr}%
+\left\{  \left\vert \mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert
+\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert \right\}  d\mu\left(  \mathbf{z}%
+\right) \nonumber\\
+&  =\int_{\mathbb{C}^{2\left(  r-2\right)  }}\left(  \left.  Q_{l_{1}%
+l_{2}m_{1}m_{2}}\right\vert \left\vert \mathbf{z}\right\rangle \left\langle
+\mathbf{z}\right\vert \right)  \left(  \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert \left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.
+\right)  d\mu\left(  \mathbf{z}\right)  .
+\end{align}
+This orthogonality condition can be reexpressed as
+\begin{align}
+\delta_{\left(  l_{1}l_{2}\right)  \left(  j_{1}j_{2}\right)  }\delta_{\left(
+m_{1}m_{2}\right)  \left(  k_{1}k_{2}\right)  }  &  =\int P_{j_{1}j_{2}%
+k_{1}k_{2}}\left(  \mathbf{z}\right)  Q_{l_{1}l_{2}m_{1}m_{2}}\left(
+\mathbf{z}\right)  d\mu\left(  \mathbf{z}\right) \nonumber\\
+&  =\int P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  \overline
+{\operatorname*{Tr}\left\{  \left\vert \mathbf{z}\right\rangle \left\langle
+\mathbf{z}\right\vert \left\vert \varphi_{l_{1}}\varphi_{l_{2}}\right\rangle
+\left\langle \varphi_{m_{1}}\varphi_{m_{2}}\right\vert \right\}  }d\mu\left(
+\mathbf{z}\right) \nonumber\\
+&  =\operatorname*{Tr}\left\{  \left(  \int\left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert P_{j_{1}j_{2}k_{1}k_{2}}\left(
+\mathbf{z}\right)  d\mu\left(  \mathbf{z}\right)  \right)  \left\vert
+\varphi_{m_{1}}\varphi_{m_{2}}\right\rangle \left\langle \varphi_{l_{1}%
+}\varphi_{l_{2}}\right\vert \right\}  ,
+\end{align}
+which shows that the integral can be interpreted as the following operator
+\begin{equation}
+\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert \equiv\int P_{j_{1}j_{2}k_{1}k_{2}%
+}\left(  \mathbf{z}\right)  \left\vert \mathbf{z}\right\rangle \left\langle
+\mathbf{z}\right\vert d\mu\left(  \mathbf{z}\right)
+\end{equation}
+and $P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  $ as its P-symbol ,
+i.e
+\begin{equation}
+P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  =P_{j_{1}j_{2}k_{1}k_{2}%
+}\left(  \mathbf{z}\right)  ,
+\end{equation}
+note that P-symbols are not unique.
+
+The P-symbol, $P_{A}\left(  \mathbf{z}\right)  ,$ of any operator $A$ can then
+be expressed as%
+\begin{equation}
+P_{A}\left(  \mathbf{z}\right)  =\sum_{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq
+r}A_{j_{1}j_{2}k_{1}k_{2}}P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  ,
+\end{equation}
+in particular
+\begin{align}
+P_{\mathcal{H}^{2}} &  =\sum_{1\leq j_{1}<j_{2}\leq r}\left\vert
+\varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{1}%
+}\varphi_{j_{2}}\right\vert =\sum_{1\leq j_{1}<j_{2}\leq r}\int P_{j_{1}%
+j_{2}j_{1}j_{2}}\left(  \mathbf{z}\right)  \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert d\mu\left(  \mathbf{z}\right)  \nonumber\\
+&  =\int\sum_{1\leq j_{1}<j_{2}\leq r}P_{j_{1}j_{2}j_{1}j_{2}}\left(
+\mathbf{z}\right)  \left\vert \mathbf{z}\right\rangle \left\langle
+\mathbf{z}\right\vert d\mu\left(  \mathbf{z}\right)  =\int P_{P_{\mathcal{H}%
+^{2}}}\left(  \mathbf{z}\right)  \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert d\mu\left(  \mathbf{z}\right)  ,
+\end{align}
+thus%
+\begin{equation}
+P_{P_{\mathcal{H}^{2}}}\left(  \mathbf{z}\right)  \equiv P_{\mathcal{H}^{2}%
+}\left(  \mathbf{z}\right)  =\sum_{1\leq j_{1}<j_{2}\leq r}P_{j_{1}j_{2}%
+j_{1}j_{2}}\left(  \mathbf{z}\right)  =1.
+\end{equation}
+This gives%
+\begin{equation}
+\left\langle \mathbf{z}^{\prime\prime}\left\vert \mathbf{z}^{\prime}\right.
+\right\rangle =\int\left\langle \mathbf{z}^{\prime\prime}\left\vert
+\mathbf{z}\right.  \right\rangle \left\langle \mathbf{z}\left\vert
+\mathbf{z}^{\prime}\right.  \right\rangle d\mu\left(  \mathbf{z}\right)
+\end{equation}
+and
+\begin{equation}
+Q_{P_{\mathcal{H}^{2}}}\left(  \mathbf{z}^{\prime}\right)  =\int\left\vert
+\left\langle \mathbf{z}^{\prime}\left\vert \mathbf{z}\right.  \right\rangle
+\right\vert ^{2}d\mu\left(  \mathbf{z}\right)  .
+\end{equation}
+
+
+\subsection{Reproducing Kernel and Berezin Transform}
+
+The reproducing kernel of $\mathcal{B}_{2}\left(  \mathfrak{F}\right)  $ is
+\begin{align}
+M\left(  \mathbf{z,z}^{\prime}\right)   &  =\sum_{1\leq j_{1}<j_{2}%
+,k_{1}<k_{2}\leq r}\left(  \left\vert \mathbf{z}\right\rangle \left\langle
+\mathbf{z}\right\vert \left\vert P_{j_{1}j_{2}k_{1}k_{2}}\right.  \right)
+\left(  \left.  Q_{j_{1}j_{2}k_{1}k_{2}}\right\vert \left\vert \mathbf{z}%
+^{\prime}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert \right)
+\nonumber\\
+&  =\sum_{\substack{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r\\1\leq p_{1}%
+<p_{2},q_{1}<q_{2}\leq r}}\left(  \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert \left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.
+\right)  \Delta_{j_{1}j_{2}k_{1}k_{2}p_{1}p_{2}q_{1}q_{2}}^{-1}\left(  \left.
+Q_{p_{1}p_{2}q_{1}q_{2}}\right\vert \left\vert \mathbf{z}^{\prime
+}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert \right) \nonumber\\
+&  =\sum_{\substack{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r\\1\leq p_{1}%
+<p_{2},q_{1}<q_{2}\leq r}}\left(  \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert \left\vert P_{j_{1}j_{2}k_{1}k_{2}}\right.
+\right)  \Delta_{j_{1}j_{2}k_{1}k_{2}p_{1}p_{2}q_{1}q_{2}}\left(  \left.
+P_{p_{1}p_{2}q_{1}q_{2}}\right\vert \left\vert \mathbf{z}^{\prime
+}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert \right)  .
+\end{align}
+
+
+The Kernel of the Berezin Transformation that transform P-symbols to
+Q-symbols
+\begin{equation}
+\mathfrak{Be}:\mathfrak{F}\rightarrow\mathfrak{F}%
+\end{equation}
+can be obtained by using the identity
+\begin{equation}
+\left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right)  =\mathfrak{Be}\left(
+P_{j_{1}j_{2}k_{1}k_{2}}\right)  =\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq
+r}\left\vert Q_{p_{1}p_{2}q_{1}q_{2}}\right)  \left(  \left.  Q_{p_{1}%
+p_{2}q_{1}q_{2}}\right\vert P_{j_{1}j_{2}k_{1}k_{2}}\right)  ,\nonumber
+\end{equation}
+which leads to%
+\begin{align}
+&  Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  =\left[  \mathfrak{Be}%
+\left(  P_{j_{1}j_{2}k_{1}k_{2}}\right)  \right]  \left(  \mathbf{z}\right)
+=\nonumber\\
+&  \int\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq r}\left(  \left\vert
+\mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert \left\vert
+Q_{p_{1}p_{2}q_{1}q_{2}}\right.  \right)  \left(  Q_{p_{1}p_{2}q_{1}q_{2}%
+}\left\vert \left\vert \mathbf{z}^{\prime}\right\rangle \left\langle
+\mathbf{z}^{\prime}\right\vert \right.  \right)  \left(  \left.  \left\vert
+\mathbf{z}^{\prime}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert
+\right\vert P_{j_{1}j_{2}k_{1}k_{2}}\right)  d\mu\left(  \mathbf{z}^{\prime
+}\right) \nonumber\\
+&  =\int\mathfrak{Be}\left(  \mathbf{z,z}^{\prime}\right)  \left(  \left\vert
+\mathbf{z}^{\prime}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert
+\left\vert P_{j_{1}j_{2}k_{1}k_{2}}\right.  \right)  d\mu\left(
+\mathbf{z}^{\prime}\right)  .
+\end{align}
+Thus
+\begin{equation}
+\mathfrak{Be}\left(  \mathbf{z,z}^{\prime}\right)  =\sum_{1\leq p_{1}%
+<p_{2},q_{1}<q_{2}\leq r}\left(  \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert \left\vert Q_{p_{1}p_{2}q_{1}q_{2}}\right.
+\right)  \left(  \left.  Q_{p_{1}p_{2}q_{1}q_{2}}\right\vert \left\vert
+\mathbf{z}^{\prime}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert
+\right)  =\left\vert \left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime
+}\right.  \right\rangle \right\vert ^{2}.
+\end{equation}
+
+
+The Kernel of the inverse Berezin Transformation that transform P-symbols to
+Q-symbols
+\begin{equation}
+\mathfrak{Be}^{-1}:\mathfrak{F}\rightarrow\mathfrak{F}%
+\end{equation}
+can be obtained by using the identity
+\begin{equation}
+\left\vert P_{j_{1}j_{2}k_{1}k_{2}}\right)  =\mathfrak{Be}^{-1}\left(
+Q_{j_{1}j_{2}k_{1}k_{2}}\right)  =\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq
+r}\left\vert P_{p_{1}p_{2}q_{1}q_{2}}\right)  \left(  \left.  P_{p_{1}%
+p_{2}q_{1}q_{2}}\right\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right)
+\end{equation}
+to give%
+\begin{align}
+&  P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  =\left[  \mathfrak{Be}%
+^{-1}\left(  Q_{j_{1}j_{2}k_{1}k_{2}}\right)  \right]  \left(  \mathbf{z}%
+\right)  =\nonumber\\
+&  \int\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq r}\left(  \left\vert
+\mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert \left\vert
+P_{p_{1}p_{2}q_{1}q_{2}}\right.  \right)  \left(  \left.  P_{p_{1}p_{2}%
+q_{1}q_{2}}\right\vert \left\vert \mathbf{z}^{\prime}\right\rangle
+\left\langle \mathbf{z}^{\prime}\right\vert \right)  \left(  \left\vert
+\mathbf{z}^{\prime}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert
+\left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.  \right)  d\mu\left(
+\mathbf{z}^{\prime}\right) \nonumber\\
+&  =\int\sum_{\substack{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r\\1\leq p_{1}%
+<p_{2},q_{1}<q_{2}\leq r}}\left(  \left\vert \mathbf{z}\right\rangle
+\left\langle \mathbf{z}\right\vert \left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.
+\right)  \Delta_{j_{1}j_{2}k_{1}k_{2}p_{1}p_{2}q_{1}q_{2}}^{-2}\left(  \left.
+Q_{p_{1}p_{2}q_{1}q_{2}}\right\vert \left\vert \mathbf{z}^{\prime
+}\right\rangle \left\langle \mathbf{z}^{\prime}\right\vert \right) \nonumber\\
+&  \times\left(  \left\vert \mathbf{z}^{\prime}\right\rangle \left\langle
+\mathbf{z}^{\prime}\right\vert \left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.
+\right)  d\mu\left(  \mathbf{z}^{\prime}\right) \nonumber\\
+&  =\int\mathfrak{Be}^{-1}\left(  \mathbf{z,z}^{\prime}\right)  \left(
+\left\vert \mathbf{z}^{\prime}\right\rangle \left\langle \mathbf{z}^{\prime
+}\right\vert \left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.  \right)  d\mu\left(
+\mathbf{z}^{\prime}\right)  ,
+\end{align}
+where
+\begin{equation}
+\mathfrak{Be}^{-1}\left(  \mathbf{z,z}^{\prime}\right)  =\sum_{\substack{1\leq
+j_{1}<j_{2},k_{1}<k_{2}\leq r\\1\leq p_{1}<p_{2},q_{1}<q_{2}\leq r}}\left(
+\left\vert \mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert
+\left\vert Q_{j_{1}j_{2}k_{1}k_{2}}\right.  \right)  \Delta_{j_{1}j_{2}%
+k_{1}k_{2}p_{1}p_{2}q_{1}q_{2}}^{-2}\left(  \left.  Q_{p_{1}p_{2}q_{1}q_{2}%
+}\right\vert \left\vert \mathbf{z}^{\prime}\right\rangle \left\langle
+\mathbf{z}^{\prime}\right\vert \right)  .
+\end{equation}
+
+
+$\lceil$The Berezin Transform gives
+\begin{equation}
+Q_{p_{1}p_{2}q_{1}q_{2}}\left(  \mathbf{z}\right)  =\int P_{p_{1}p_{2}%
+q_{1}q_{2}}\left(  \mathbf{z}^{\prime}\right)  \left\vert \left\langle
+\mathbf{z}\left\vert \mathbf{z}^{\prime}\right.  \right\rangle \right\vert
+^{2}d\mu\left(  \mathbf{z}^{\prime}\right)  ,
+\end{equation}
+which leads to (using the biorthogonality relationships)
+\begin{align}
+&  \sum_{1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r}P_{j_{1}j_{2}k_{1}k_{2}}\left(
+\mathbf{z}\right)  \Delta_{j_{1}j_{2}k_{1}k_{2}p_{1}p_{2}q_{1}q_{2}}=\int
+P_{p_{1}p_{2}q_{1}q_{2}}\left(  \mathbf{z}^{\prime}\right)  \left\vert
+\left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.  \right\rangle
+\right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right) \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  \Downarrow\right.
+\nonumber\\
+&  P_{l_{1}l_{2}m_{1}m_{2}}\left(  \mathbf{z}\right)  =\int\sum_{1\leq
+j_{1}<j_{2},k_{1}<k_{2}\leq r}Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}%
+^{\prime}\right)  \Delta_{j_{1}j_{2}k_{1}k_{2}l_{1}l_{2}m_{1}m_{2}}%
+^{-2}\left\vert \left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.
+\right\rangle \right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right)
+\end{align}
+and
+\begin{equation}
+Q_{p_{1}p_{2}q_{1}q_{2}}\left(  \mathbf{z}\right)  =\int\sum_{1\leq
+j_{1}<j_{2},k_{1}<k_{2}\leq r}Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}%
+^{\prime}\right)  \Delta_{j_{1}j_{2}k_{1}k_{2}p_{1}p_{2}q_{1}q_{2}}%
+^{-1}\left\vert \left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.
+\right\rangle \right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right)  .
+\end{equation}
+$\rfloor$
+
+The Q and P-symols of any operator are
+\begin{equation}
+Q_{A}\left(  \mathbf{z}\right)  =\sum_{1\leq j_{1}<j_{2}\leq r,1\leq
+k_{1}<k_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}}Q_{j_{1}j_{2}k_{1}k_{2}}\left(
+\mathbf{z}\right)  ,
+\end{equation}%
+\begin{equation}
+P_{A}\left(  \mathbf{z}\right)  =\sum_{1\leq j_{1}<j_{2}\leq r,1\leq
+k_{1}<k_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}}P_{j_{1}j_{2}k_{1}k_{2}}\left(
+\mathbf{z}\right)  ,
+\end{equation}
+where
+\begin{equation}
+A_{j_{1}j_{2}k_{1}k_{2}}=\int P_{A}\left(  \mathbf{z}\right)  Q_{j_{1}%
+j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  d\mu\left(  \mathbf{z}\right)
+=\int P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  Q_{A}\left(
+\mathbf{z}\right)  d\mu\left(  \mathbf{z}\right)  .
+\end{equation}
+
+
+\subsection{Dual Spaces of P and Q-Symbols}
+
+In finite dimensions the space $\mathfrak{F}$ is spanned by both $\left\{
+Q_{j_{1}j_{2}k_{1}k_{2}}\right\}  $ and $\left\{  P_{j_{1}j_{2}k_{1}k_{2}%
+}\right\}  $ and is complete in the norms $\left\Vert {}\right\Vert _{\infty
+},\left\Vert {}\right\Vert _{1}$ and $\left\Vert {}\right\Vert _{2}$ where
+\begin{subequations}
+\begin{align}
+\left\Vert Q_{A}\right\Vert _{\infty} &  =\sup\left\{  \left\vert Q\left(
+\mathbf{z}\right)  \right\vert \right\}  =\sup\left\{  \left\vert \left\langle
+\mathbf{z}\left\vert A\mathbf{z}\right.  \right\rangle \right\vert \right\}
+,\nonumber\\
+\left\Vert Q_{A}\right\Vert _{1} &  =\int\left\vert Q\left(  \mathbf{z}%
+\right)  \right\vert d\mu\left(  \mathbf{z}\right)  =\int\left\vert
+\left\langle \mathbf{z}\left\vert A\mathbf{z}\right.  \right\rangle
+\right\vert d\mu\left(  \mathbf{z}\right)  ,\nonumber\\
+\left\Vert Q_{A}\right\Vert _{2} &  =\left\{  \int\left\vert Q\left(
+\mathbf{z}\right)  \right\vert ^{2}d\mu\left(  \mathbf{z}\right)  \right\}
+^{\frac{1}{2}}=\left\{  \int\left\vert \left\langle \mathbf{z}\left\vert
+A\mathbf{z}\right.  \right\rangle \right\vert ^{2}d\mu\left(  \mathbf{z}%
+\right)  \right\}  ^{\frac{1}{2}}.
+\end{align}
+If $A\geq0$ then
+\end{subequations}
+\begin{equation}
+\left\Vert Q_{A}\right\Vert _{1}=\int\left\langle \mathbf{z}\left\vert
+A\mathbf{z}\right.  \right\rangle d\mu\left(  \mathbf{z}\right)
+=\operatorname*{Tr}\left\{  A\right\}  .
+\end{equation}
+$\lceil$%
+\begin{equation}
+\operatorname*{Tr}\left\{  A^{\dagger}A\right\}  =\int\left\langle
+\mathbf{z}\left\vert A^{\dagger}A\mathbf{z}\right.  \right\rangle d\mu\left(
+\mathbf{z}\right)  \rfloor
+\end{equation}
+
+
+\subsection{Algebraic Structure}
+
+\paragraph{P-Symbol products}%
+
+\begin{align}
+&  \int P_{A}\left(  \mathbf{z}_{1}\right)  \left\vert \mathbf{z}%
+_{1}\right\rangle \left\langle \mathbf{z}_{1}\right\vert d\mu\left(
+\mathbf{z}_{1}\right)  \int P_{A}\left(  \mathbf{z}_{1}\right)  \left\vert
+\mathbf{z}_{2}\right\rangle \left\langle \mathbf{z}_{2}\right\vert d\mu\left(
+\mathbf{z}_{2}\right) \\
+&  =\int P_{A}\left(  \mathbf{z}_{1}\right)  P_{B}\left(  \mathbf{z}%
+_{2}\right)  S\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  \left\vert
+\mathbf{z}_{1}\right\rangle \left\langle \mathbf{z}_{2}\right\vert d\mu\left(
+\mathbf{z}_{1}\right)  d\mu\left(  \mathbf{z}_{2}\right) \\
+&  =\int P_{AB}\left(  \mathbf{z}_{1}\right)  \left\vert \mathbf{z}%
+_{1}\right\rangle \left\langle \mathbf{z}_{1}\right\vert d\mu\left(
+\mathbf{z}_{1}\right) \\
+P_{AB}\left(  \mathbf{z}_{1}\right)   &  =\int P_{A}\left(  \mathbf{z}%
+_{1}\right)  S\left(  \mathbf{\bar{z}}_{1},\mathbf{z}_{2}\right)  P_{B}\left(
+\mathbf{z}_{2}\right)
+\end{align}
+
+
+\paragraph{Q-Symbol products}
+
+Pointwise product produces a commutative $w^{\ast}$- algebra
+\begin{equation}
+Q_{A\cdot B}\left(  \mathbf{\bar{z}},\mathbf{z}\right)  =Q_{A}\left(
+\mathbf{\bar{z}},\mathbf{z}\right)  Q_{B}\left(  \mathbf{\bar{z}}%
+,\mathbf{z}\right)
+\end{equation}
+this product is distinct from non commutative products such as
+\begin{equation}
+Q_{A\circ B}\left(  \mathbf{\bar{z}},\mathbf{z}\right)  =\left\langle
+\mathbf{z}\left\vert AB\mathbf{z}\right.  \right\rangle ,
+\end{equation}%
+\begin{equation}
+Q_{AB_{+}}\left(  \mathbf{\bar{z}},\mathbf{z}\right)  =\frac{1}{2}\left\langle
+\mathbf{z}\left\vert \left(  AB+BA\right)  \mathbf{z}\right.  \right\rangle
+=\frac{1}{2}\left(  Q_{A\circ B}\left(  \mathbf{\bar{z}},\mathbf{z}\right)
++Q_{B\circ A}\left(  \mathbf{\bar{z}},\mathbf{z}\right)  \right)  .
+\end{equation}
+
+
+\subsection{Independent Particle Example}
+
+Let the ground state of a non interacting two particle system be
+\begin{equation}
+D_{IPS}^{2}=\left\vert \varphi_{1}\varphi_{2}\right\rangle \left\langle
+\varphi_{1}\varphi_{2}\right\vert
+\end{equation}
+then%
+
+\begin{align}
+Q_{\gamma_{2\varphi}}\left(  \mathbf{z}\right)   &  =\left\langle
+\mathbf{z}\left\vert \left\vert \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert \right.  \mathbf{z}%
+\right\rangle =\left\langle \varphi_{1}\varphi_{2}\left\vert \left\vert
+\mathbf{z}\right\rangle \left\langle \mathbf{z}\right\vert \right.
+\varphi_{1}\varphi_{2}\right\rangle =\gamma_{2\varphi}\left(  \mathbf{z}%
+\right)  _{1212}\left\langle \mathbf{z}\left\vert \mathbf{z}\right.
+\right\rangle \equiv\gamma_{2}\left(  \mathbf{z}\right)  _{1212}\left\langle
+\mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle \nonumber\\
+&  =\left\{  \gamma_{1}\left(  \mathbf{z}\right)  _{11}\gamma_{1}\left(
+\mathbf{z}\right)  _{22}-\gamma_{1}\left(  \mathbf{z}\right)  _{12}\gamma
+_{1}\left(  \mathbf{z}\right)  _{21}\right\}  \left\langle \mathbf{z}%
+\left\vert \mathbf{z}\right.  \right\rangle =\left\vert
+\begin{array}
+[c]{cc}%
+\gamma_{1}\left(  \mathbf{z}\right)  _{11} & \gamma_{1}\left(  \mathbf{z}%
+\right)  _{12}\\
+\gamma_{1}\left(  \mathbf{z}\right)  _{21} & \gamma_{1}\left(  \mathbf{z}%
+\right)  _{22}%
+\end{array}
+\right\vert \left\langle \mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle
+\nonumber\\
+&  =\left\vert
+\begin{array}
+[c]{cc}%
+\left[  \left(  \mathbb{I}_{2}+\mathbf{z}^{\dagger}\mathbf{z}\right)
+^{-1}\right]  _{11} & \left[  \left(  \mathbb{I}_{2}+\mathbf{z}^{\dagger
+}\mathbf{z}\right)  ^{-1}\right]  _{12}\\
+\left[  \left(  \mathbb{I}_{2}+\mathbf{z}^{\dagger}\mathbf{z}\right)
+^{-1}\right]  _{21} & \left[  \left(  \mathbb{I}_{2}+\mathbf{z}^{\dagger
+}\mathbf{z}\right)  ^{-1}\right]  _{22}%
+\end{array}
+\right\vert \left\langle \mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle
+=\det\left(  \mathbb{I}_{2}+\mathbf{z}^{\dagger}\mathbf{z}\right)
+^{-1}\left\langle \mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle =1
+\end{align}
+and%
+\begin{align}
+\left\langle \varphi_{1}\varphi_{2}\left\vert \left\vert \mathbf{z}%
+\right\rangle \left\langle \mathbf{z}\right\vert \right.  \varphi_{1}%
+\varphi_{2}\right\rangle  &  =\left\langle \varphi_{1}\varphi_{2}\left\vert
+\left\vert c\left(  \mathbf{z}\right)  \varphi_{1}\varphi_{2}\right\rangle
+\left\langle \varphi_{1}\varphi_{2}\right\vert \right.  c\left(
+\mathbf{z}\right)  ^{\dagger}\varphi_{1}\varphi_{2}\right\rangle \nonumber\\
+&  =\left\vert \left\langle \varphi_{1}\varphi_{2}\left\vert c\left(
+\mathbf{z}\right)  \varphi_{1}\varphi_{2}\right.  \right\rangle \right\vert
+^{2}=1.
+\end{align}
+Note that%
+\begin{equation}
+\det\left(  \mathbb{I}_{2}+\mathbf{z}^{\dagger}\mathbf{z}\right)  =\det\left(
+%
+\begin{array}
+[c]{cc}%
+1+\left(  \mathbf{z}^{\dagger}\mathbf{z}\right)  _{11} & \left(
+\mathbf{z}^{\dagger}\mathbf{z}\right)  _{12}\\
+\left(  \mathbf{z}^{\dagger}\mathbf{z}\right)  _{21} & 1+\left(
+\mathbf{z}^{\dagger}\mathbf{z}\right)  _{22}%
+\end{array}
+\right)  ,
+\end{equation}%
+\begin{equation}
+\gamma_{1}\left(  \mathbf{z}\right)  _{hh^{\prime}}=\left[  \left(
+\mathbb{I}_{2}+\mathbf{z}^{\dagger}\mathbf{z}\right)  ^{-1}\right]
+_{hh^{\prime}}%
+\end{equation}
+and
+\begin{align}
+1 &  =\left\langle \mathbf{z}\left\vert \left\vert \varphi_{1}\varphi
+_{2}\right\rangle \left\langle \varphi_{1}\varphi_{2}\right\vert \right.
+\mathbf{z}\right\rangle =\left\vert \left\langle \left.  \mathbf{z}\right\vert
+\varphi_{1}\varphi_{2}\right\rangle \right\vert ^{2}=\left\vert \left\langle
+\left.  \varphi_{1}\varphi_{2}\right\vert c\left(  \mathbf{z}\right)
+\varphi_{1}\varphi_{2}\right\rangle \right\vert ^{2}\nonumber\\
+&  =\left\vert \left\langle \varphi_{1}\varphi_{2}\left\vert \exp\left\{
+\sum\limits_{\substack{1\leq h\leq2\\3\leq p\leq r}}z_{ph}a_{p}^{\dagger}%
+a_{h}\right\}  \varphi_{1}\varphi_{2}\right.  \right\rangle \right\vert ^{2},
+\end{align}
+thus
+\begin{equation}
+Q_{\gamma_{2\varphi}}\left(  \mathbf{z}\right)  =1\quad\forall\mathbf{z\in
+}\mathbb{C}^{2\left(  r-2\right)  }.
+\end{equation}
+In this case
+\begin{align}
+&  1=\int Q_{\gamma_{2\varphi}}\left(  \mathbf{z}\right)  d\mu\left(
+\mathbf{z}\right)  =\operatorname*{Tr}\left\{  \left\vert \varphi_{1}%
+\varphi_{2}\right\rangle \left\langle \varphi_{1}\varphi_{2}\right\vert
+\right\}  \nonumber\\
+&  =\int d\mu\left(  \mathbf{z}\right)  =\int\det\left(  \mathbb{I}%
+_{2}+\mathbf{z}^{\dagger}\mathbf{z}\right)  ^{-\left(  r+1\right)  }\left(
+-2\pi i\right)  ^{-2\left(  r-2\right)  }d\mathbf{\bar{z}}d\mathbf{z.}%
+\end{align}
+The energy functional is
+\begin{equation}
+E_{N}\left(  D^{2}\right)  =\int P_{K_{2N}}\left(  \mathbf{z}\right)
+Q_{D^{2}}\left(  \mathbf{z}\right)  d\mu\left(  \mathbf{z}\right)  =\int
+Q_{K_{2N}}\left(  \mathbf{z}\right)  P_{D^{2}}\left(  \mathbf{z}\right)
+d\mu\left(  \mathbf{z}\right)
+\end{equation}
+$\lceil$%
+\begin{equation}
+\operatorname*{Tr}\left\{  K_{2N}D\right\}  =\int P_{K_{2N}}\left(
+\mathbf{z}\right)  \operatorname*{Tr}\left\{  \left\vert \mathbf{z}%
+\right\rangle \left\langle \mathbf{z}\right\vert D\right\}  d\mu\left(
+\mathbf{z}\right)  =\int P_{K_{2N}}\left(  \mathbf{z}\right)  Q_{D^{2}}\left(
+\mathbf{z}\right)  d\mu\left(  \mathbf{z}\right)  \rfloor
+\end{equation}
+and the minimum value is%
+\begin{equation}
+E_{N}\left(  D_{\ast}^{2}\right)  =K_{\varphi1212}=\int P_{K_{22}}\left(
+\mathbf{z}\right)  Q_{D_{\ast}^{2}}\left(  \mathbf{z}\right)  d\mu\left(
+\mathbf{z}\right)  ,
+\end{equation}
+where the Q-symbol of the Reduced hamiltonian is given by
+\begin{align}
+&  Q_{K_{22}}\left(  \mathbf{\bar{z}},\mathbf{z}\right)  =\frac{1}{2}%
+\sum_{1\leq j_{1},j_{2},k_{1},k_{2}\leq r}K_{\varphi j_{1}j_{2}k_{1}k_{2}%
+}\frac{{}}{\left\langle \mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle
+}\frac{{}}{\left\langle \mathbf{z}\left\vert \mathbf{z}\right.  \right\rangle
+}\nonumber\\
+&  =\frac{1}{2}\sum_{1\leq j_{1},j_{2},k_{1},k_{2}\leq r}\left\{  \eta\left(
+\delta_{j_{1}k_{1}}\delta_{j_{2}k_{2}}-\delta_{j_{1}k_{2}}\delta_{j_{2}k_{1}%
+}\right)  +\left(  h_{1jk}\delta_{lm}+h_{1lm}\delta_{jk}\right)  \right\}
+\nonumber\\
+&  \times K_{\varphi j_{1}j_{2}k_{1}k_{2}}\left\{  \gamma_{1}\left(
+\mathbf{z}\right)  _{j_{1}k_{1}}\gamma_{1}\left(  \mathbf{z}\right)
+_{j_{2}k_{2}}-\gamma_{1}\left(  \mathbf{z}\right)  _{j_{1}k_{2}}\gamma
+_{1}\left(  \mathbf{z}\right)  _{j_{2}k_{1}}\right\}  ,
+\end{align}
+and its P-symbol $P_{K_{22}}\left(  \mathbf{z}\right)  $ has to be found via
+the inverse Berezin transform
+\begin{equation}
+P_{K_{22}}\left(  \mathbf{z}\right)  =\left[  \mathfrak{Be}^{-1}\left(
+Q_{K_{22}}\left(  \mathbf{z}\right)  \right)  \right]  \left(  \mathbf{z}%
+\right)  =\int\mathfrak{Be}^{-1}\left(  \mathbf{\bar{z},z}^{\prime}\right)
+Q_{K_{22}}\left(  \mathbf{z}^{\prime}\right)  d\mu\left(  \mathbf{z}^{\prime
+}\right)  ,
+\end{equation}
+and%
+\begin{align}
+Q_{D_{\ast}^{2}}\left(  \mathbf{z}\right)   &  =\left[  D_{\ast2}\right]
+_{1212}\gamma_{2}\left(  \mathbf{z}\right)  _{1212}\nonumber\\
+&  =\left[  D_{\ast2}\right]  _{1212}\left\{  \gamma_{1}\left(  \mathbf{z}%
+\right)  _{11}\gamma_{1}\left(  \mathbf{z}\right)  _{22}-\gamma_{1}\left(
+\mathbf{z}\right)  _{12}\gamma_{1}\left(  \mathbf{z}\right)  _{21}\right\}
+\nonumber\\
+&  =\gamma_{1}\left(  \mathbf{z}\right)  _{11}\gamma_{1}\left(  \mathbf{z}%
+\right)  _{22}-\gamma_{1}\left(  \mathbf{z}\right)  _{12}\gamma_{1}\left(
+\mathbf{z}\right)  _{21}=\det\left(  \mathbb{I}_{2}+\mathbf{z}^{\dagger
+}\mathbf{z}\right)  ^{-1}.
+\end{align}
+The energy is given as
+\begin{align}
+E\left(  D_{\ast}^{2}\right)   &  =\inf_{D^{2}\in S_{22}=S_{2}}%
+\operatorname*{Tr}\left\{  K_{22}D^{2}\right\}  \nonumber\\
+&  \parallel\nonumber\\
+E\left(  Q_{D_{\ast}^{2}}\right)   &  =\inf_{Q\in\mathfrak{Q}_{12}}\left\{
+\int P_{K_{22}}\left(  \mathbf{z}\right)  d\mu\left(  \mathbf{z}\right)
+\right\}  \nonumber\\
+&  =K_{\varphi1212},
+\end{align}
+where%
+\begin{equation}
+K_{22}=\int P_{K_{22}\varphi}\left(  \mathbf{z}\right)  \left\vert c\left(
+\mathbf{z}\right)  \varphi_{1}\varphi_{2}\right\rangle \left\langle c\left(
+\mathbf{z}\right)  \varphi_{1}\varphi_{2}\right\vert d\mu\left(
+\mathbf{z}\right)  .
+\end{equation}
+
+
+\subsection{BiOrthogonal Basis}%
+
+\begin{align}
+A\left\vert \mathbf{\varphi}\right\rangle  &  =\left\vert \mathbf{\varphi
+}\right\rangle \mathbb{A}\\
+\left\langle \left.  \mathbf{\psi}\right\vert \mathbf{\varphi}\right\rangle
+&  =\mathbb{I}\\
+\Delta_{\psi}  &  =\left\langle \left.  \mathbf{\psi}\right\vert \mathbf{\psi
+}\right\rangle \Rightarrow\left\langle \left.  \mathbf{\psi}\right\vert
+\mathbf{\psi}\right\rangle \mathbf{\Delta}_{\psi}^{-1}=\left\langle \left.
+\mathbf{\psi}\right\vert \Delta_{\psi}^{-1}\mathbf{\psi}\right\rangle
+=\mathbb{I}\Rightarrow\left\vert \mathbf{\varphi}\right\rangle =\left\vert
+\Delta_{\psi}^{-1}\mathbf{\psi}\right\rangle \\
+P  &  =\left\vert \mathbf{\varphi}\right\rangle \mathbf{\Delta}_{\varphi}%
+^{-1}\left\langle \mathbf{\varphi}\right\vert =\left\vert \mathbf{\psi
+}\right\rangle \mathbf{\Delta}_{\psi}^{-1}\left\langle \mathbf{\psi
+}\right\vert =\left\vert \mathbf{\varphi}\right\rangle \left\langle
+\mathbf{\psi}\right\vert =\left\vert \mathbf{\varphi}\right\rangle
+\left\langle \mathbf{\psi}\right\vert
+\end{align}
+
+
+\section{Extra}%
+
+\begin{equation}
+\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq r}P_{p_{1}p_{2}q_{1}q_{2}}\left(
+\mathbf{z}^{\prime}\right)  \Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}k_{1}k_{2}%
+}^{-1}%
+\end{equation}
+%
+
+\begin{align}
+&  =\int\Upsilon_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}^{\prime}\right)
+\left\vert \left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.
+\right\rangle \right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right)
+\nonumber\\
+\Upsilon_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}^{\prime}\right)   &
+=\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq r}P_{p_{1}p_{2}q_{1}q_{2}}\left(
+\mathbf{z}^{\prime}\right)  \Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}k_{1}k_{2}%
+}^{-1}.
+\end{align}
+this gives%
+\begin{equation}
+\Upsilon_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}^{\prime}\right)
+=\sum_{1\leq p_{1}<p_{2},q_{1}<q_{2}\leq r}Q_{p_{1}p_{2}q_{1}q_{2}}\left(
+\mathbf{z}\right)  \Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}k_{1}k_{2}}^{-2}%
+\end{equation}
+and
+\begin{equation}
+P_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)  =\int\sum_{1\leq
+p_{1}<p_{2},q_{1}<q_{2}\leq r}Q_{p_{1}p_{2}q_{1}q_{2}}\left(  \mathbf{z}%
+\right)  \Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}k_{1}k_{2}}^{-2}\left\vert
+\left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.  \right\rangle
+\right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right)  .
+\end{equation}
+As%
+\begin{equation}
+Q_{A}\left(  \mathbf{z}\right)  =\int P_{A}\left(  \mathbf{z}^{\prime}\right)
+\left\vert \left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.
+\right\rangle \right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right)
+\end{equation}
+one obtains%
+\begin{align}
+P_{A}\left(  \mathbf{z}\right)   &  =\int\sum_{1\leq p_{1}<p_{2},q_{1}%
+<q_{2}\leq r}A_{j_{1}j_{2}k_{1}k_{2}}P_{p_{1}p_{2}q_{1}q_{2}}\left(
+\mathbf{z}^{\prime}\right)  \Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}k_{1}k_{2}%
+}^{-1}\left\vert \left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.
+\right\rangle \right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right)
+\nonumber\\
+&  =\int\Upsilon_{A}\left(  \mathbf{z}^{\prime}\right)  \left\vert
+\left\langle \mathbf{z}\left\vert \mathbf{z}^{\prime}\right.  \right\rangle
+\right\vert ^{2}d\mu\left(  \mathbf{z}^{\prime}\right) \nonumber\\
+\Upsilon_{A}\left(  \mathbf{z}^{\prime}\right)   &  =\sum_{\substack{1\leq
+p_{1}<p_{2},q_{1}<q_{2}\leq r\\1\leq j_{1}<j_{2},k_{1}<k_{2}\leq r}%
+}A_{j_{1}j_{2}k_{1}k_{2}}P_{p_{1}p_{2}q_{1}q_{2}}\left(  \mathbf{z}^{\prime
+}\right)  \Delta_{p_{1}p_{2}q_{1}q_{2}j_{1}j_{2}k_{1}k_{2}}^{-1}.\rfloor
+\end{align}
+As%
+\begin{equation}
+P_{p_{1}p_{2}q_{1}q_{2}}\left(  \mathbf{z}\right)  =\sum_{1\leq j_{1}%
+<j_{2},k_{1}<k_{2}\leq r}Q_{j_{1}j_{2}k_{1}k_{2}}\left(  \mathbf{z}\right)
+\Delta_{j_{1}j_{2}k_{1}k_{2}p_{1}p_{2}q_{1}q_{2}}^{-1}\nonumber
+\end{equation}
+
+
+\subsection{}
+
+
+\end{document}

@@ -1,0 +1,92 @@
+\begin{thebibliography}{12}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Kummel and Kronik}(2008)}]{Kummel2008}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Kummel}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Kronik}},
+  \bibinfo{journal}{Reviews of Modern Physics} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{eid}{3} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Weiner and Ortiz}(2005)}]{OrtizWeiner2006}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Ortiz}},
+  \bibinfo{journal}{Int. J. Quantum Chem.} \textbf{\bibinfo{volume}{104}},
+  \bibinfo{pages}{299 } (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Levy}(1979)}]{Levy1979}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Levy}},
+  \bibinfo{journal}{Proceedings of the National Academy of Sciences of the
+  United States of America} \textbf{\bibinfo{volume}{76}},
+  \bibinfo{pages}{6062} (\bibinfo{year}{1979}).
+
+\bibitem[{\citenamefont{Lieb}(1983)}]{Lieb1983}
+\bibinfo{author}{\bibfnamefont{E.~H.} \bibnamefont{Lieb}},
+  \bibinfo{journal}{Int. J. Quantum Chem.} \textbf{\bibinfo{volume}{24}},
+  \bibinfo{pages}{243} (\bibinfo{year}{1983}).
+
+\bibitem[{\citenamefont{Cooper}(1956)}]{Cooper1956}
+\bibinfo{author}{\bibfnamefont{L.~N.} \bibnamefont{Cooper}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{104}},
+  \bibinfo{pages}{1189} (\bibinfo{year}{1956}).
+
+\bibitem[{\citenamefont{Bardeen
+  et~al.}(1957{\natexlab{a}})\citenamefont{Bardeen, Cooper, and
+  Schrieffer}}]{BCS1957}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Bardeen}},
+  \bibinfo{author}{\bibfnamefont{L.~N.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~R.}
+  \bibnamefont{Schrieffer}}, \bibinfo{journal}{Phys. Rev.}
+  \textbf{\bibinfo{volume}{106}}, \bibinfo{pages}{162}
+  (\bibinfo{year}{1957}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Bardeen
+  et~al.}(1957{\natexlab{b}})\citenamefont{Bardeen, Cooper, and
+  Schrieffer}}]{BCS2_1957}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Bardeen}},
+  \bibinfo{author}{\bibfnamefont{L.~N.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~R.}
+  \bibnamefont{Schrieffer}}, \bibinfo{journal}{Phys. Rev.}
+  \textbf{\bibinfo{volume}{108}}, \bibinfo{pages}{1175}
+  (\bibinfo{year}{1957}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Coleman and Yukalov}(2000)}]{Yukalov00}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Coleman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{V.~I.} \bibnamefont{Yukalov}},
+  \emph{\bibinfo{title}{Reduced Density Matrices}}
+  (\bibinfo{publisher}{Springer}, \bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Coleman}(Sept. 1965)}]{1966A03263}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Coleman}},
+  \bibinfo{journal}{Journal of Mathematical Physics}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{1425 } (\bibinfo{year}{Sept.
+  1965}).
+
+\bibitem[{\citenamefont{Weiner and Goscinski}(1983)}]{Weiner83a}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Goscinski}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{27}},
+  \bibinfo{pages}{57} (\bibinfo{year}{1983}).
+
+\bibitem[{\citenamefont{Weiner}(2004)}]{AGPCoherent}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Weiner}},
+  \bibinfo{journal}{Adv. Quant. Chem.} \textbf{\bibinfo{volume}{47}},
+  \bibinfo{pages}{107} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Gilmore}(1974)}]{Gilmore_book}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Gilmore}},
+  \emph{\bibinfo{title}{Lie Groups, Lie Algebras, and Some of their
+  Applications.}} (\bibinfo{publisher}{John Wiley and Sons},
+  \bibinfo{year}{1974}).
+
+\end{thebibliography}

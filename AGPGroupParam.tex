@@ -1,0 +1,3103 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, March 14, 2010 09:37:54}
+%TCIDATA{LastRevised=Monday, June 15, 2015 10:20:46}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[ ]{REV\TeX4}
+\author{Brian Weiner}
+\affiliation{}
+\author{}
+\affiliation{Penn State}
+\author{}
+\startpage{1}
+\endpage{ }
+\maketitle
+\tableofcontents
+
+
+\section{Procedure}
+
+\begin{itemize}
+\item Start with a geminal on an arbitary basis
+
+\item Symmetrically orthonormalize the basis (Not unique if eigenvalues of
+metric matrix is degenerate)
+
+\item Form the geminal FORDO
+
+\item Diagonalize this operator
+
+\item Create the antisymmetric operator (The geminal is invariant to
+$USp\left(  2s,\mathbb{C}\right)  $ and this group will generate all possible
+conb representations)
+
+\item Find canonical form (Invariant to $SU(1,1)^{s}$ for non degenerate
+geminals and $SU(1,1)^{s-p}\times SU(p_{1},p_{1})\times\cdots\times
+SU(p_{\kappa},p_{\kappa})$ for degenerate ones)
+\end{itemize}
+
+\section{Geminals}
+
+Every geminal $\left\vert g\right\rangle \in\mathcal{H}^{2}$ defines a
+symplectic form on $\mathcal{H}^{1}$ given by
+\begin{equation}
+g\left(  \varphi_{1},\varphi_{2}\right)  =\left\langle \left.  g\right\vert
+\varphi_{1}\wedge\varphi_{2}\right\rangle =-g\left(  \varphi_{2},\varphi
+_{1}\right)  ;\left\vert \varphi_{1}\right\rangle ,\left\vert \varphi
+_{2}\right\rangle \in\mathcal{H}^{1}%
+\end{equation}
+that can be expressed in canonical form as
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}c_{j}\left\vert \psi_{j}%
+\psi_{-j}\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}\left\vert
+\psi_{j}\psi_{-j}\right\rangle =\sum_{1\leq j\leq s}\left\vert c_{j}^{\frac
+{1}{2}}\psi_{j}c_{j}^{\frac{1}{2}}\psi_{-j}\right\rangle =\sum_{1\leq j\leq
+s}\left\vert \eta_{j}\eta_{-j}\right\rangle ,
+\end{equation}
+where $\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert -s\leq
+j\leq s\right\}  $ is a complete orthonormal basis for $\mathcal{H}^{1}$ and
+$c_{j}\geq0,1\leq j\leq s.$(The pairs of GSO's $\left\vert \psi_{j}%
+\right\rangle ,\left\vert \psi_{-j}\right\rangle $ are not unique as
+$\left\vert \psi_{j}\psi_{-j}\right\rangle $ are invariant under $SU(2)$).
+
+The resolution of the identity on $\mathcal{H}^{2}$ can be expressed as
+\begin{align}
+I_{2}  &  =\sum_{\substack{1\leq j<k\leq r\\1\leq l<m\leq r}}\left\vert
+\varphi_{j}\varphi_{k}\right\rangle \left[  \mathbf{\Lambda}^{\left(
+2\right)  }\left(  \Delta_{\varphi}\right)  \right]  _{jklm}^{-1}\left\langle
+\varphi_{l}\varphi_{m}\right\vert \nonumber\\
+&  =\sum_{\substack{1\leq j<k\leq r\\1\leq l<m\leq r\\1\leq p<q\leq
+r}}\left\vert \varphi_{j}\varphi_{k}\right\rangle \left[  \mathbf{\Lambda
+}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]  _{jklm}%
+^{-\frac{1}{2}}\left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(
+\Delta_{\varphi}\right)  \right]  _{lmpq}^{-\frac{1}{2}}\left\langle
+\varphi_{p}\varphi_{q}\right\vert ,\nonumber\\
+&  =\sum_{1\leq j<k\leq r}\left\vert \tilde{\varphi}_{j}\tilde{\varphi}%
+_{k}\right\rangle \left\langle \tilde{\varphi}_{j}\tilde{\varphi}%
+_{k}\right\vert
+\end{align}
+producing
+\begin{equation}
+\sum_{1\leq j<k\leq r}\left\vert \varphi_{j}\varphi_{k}\right\rangle \left[
+\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]
+_{jklm}^{-1}\left\langle \left.  \varphi_{l}\varphi_{m}\right\vert
+g\right\rangle =\sum_{1\leq j<k\leq s}\left\vert \varphi_{j}\varphi
+_{k}\right\rangle \left(  \left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(
+\Delta_{\varphi}\right)  \right]  ^{-1}\mathbf{g}_{2\varphi}\right)  _{jk}%
+\end{equation}
+and
+\begin{equation}
+\sum_{1\leq j<k\leq r}\left\vert \tilde{\varphi}_{j}\tilde{\varphi}%
+_{k}\right\rangle \left\langle \left.  \tilde{\varphi}_{j}\tilde{\varphi}%
+_{k}\right\vert g\right\rangle =\sum_{1\leq j<k\leq r}\left\vert
+\tilde{\varphi}_{j}\tilde{\varphi}_{k}\right\rangle \mathbf{g}_{2\tilde
+{\varphi}jk}.
+\end{equation}
+This gives that
+\begin{equation}
+\mathbf{g}_{2\tilde{\varphi}}=\left[  \mathbf{\Lambda}^{\left(  2\right)
+}\left(  \Delta_{\varphi}\right)  \right]  ^{-\frac{1}{2}}\mathbf{g}%
+_{2\varphi}.
+\end{equation}
+Thus the expansion of a geminal wrt a general basis $\left\{  \left.
+\left\vert \varphi_{j}\right\rangle \right\vert 1\leq j\leq2s=r\right\}  $ is
+\begin{align}
+\left\vert g\right\rangle  &  =\frac{1}{2}\sum_{1\leq j,k\leq s}\left\vert
+\varphi_{j}\varphi_{k}\right\rangle \mathcal{R}_{2\varphi}\left(  g\right)
+_{jk}\nonumber\\
+&  =\frac{1}{2}\sum_{1\leq j,k\leq s}\left\vert \varphi_{j}\varphi
+_{k}\right\rangle \left(  \left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(
+\Delta_{\varphi}\right)  \right]  ^{-1}\mathbf{g}_{2\varphi}\right)  _{jk},
+\end{align}
+$\lceil$%
+\begin{align}
+\mathcal{R}_{2\varphi}\left(  g\right)  _{jk}  &  =-\mathcal{R}_{2\varphi
+}\left(  g\right)  _{kj}\nonumber\\
+\left(  \left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi
+}\right)  \right]  ^{-1}\mathbf{g}_{2\varphi}\right)  _{jk}  &  =-\left(
+\left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)
+\right]  ^{-1}\mathbf{g}_{2\varphi}\right)  _{kj}\rfloor
+\end{align}
+where
+\begin{equation}
+\left\vert g\right\rangle =\left(  \left\vert \varphi_{1}\wedge\varphi
+_{2}\right\rangle ,\cdots,\left\vert \varphi_{r-1}\wedge\varphi_{r}%
+\right\rangle \right)  \mathcal{R}_{2\varphi}\left(  g\right)
+\end{equation}
+and
+\begin{align}
+\mathbf{g}_{2\varphi}  &  =\left\langle \left.  \left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\wedge\varphi_{2}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r-1}\wedge\varphi_{r}\right\vert
+\end{array}
+\right)  \right\vert g\right\rangle \\
+&  =\left\langle \left.  \left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\wedge\varphi_{2}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r-1}\wedge\varphi_{r}\right\vert
+\end{array}
+\right)  \right\vert \left(  \left\vert \varphi_{1}\wedge\varphi
+_{2}\right\rangle ,\cdots,\left\vert \varphi_{r-1}\wedge\varphi_{r}%
+\right\rangle \right)  \right\rangle \mathcal{R}_{2\varphi}\left(  g\right) \\
+&  =\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)
+\mathcal{R}_{2\varphi}\left(  g\right)  .
+\end{align}
+In the orthonormalized basis
+\begin{equation}
+\mathcal{R}_{2\tilde{\varphi}}\left(  g\right)  =\mathbf{g}_{2\tilde{\varphi}}%
+\end{equation}
+and in the general basis
+\begin{equation}
+\mathcal{R}_{2\varphi}\left(  g\right)  =\left[  \mathbf{\Lambda}^{\left(
+2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{-1}\mathbf{g}%
+_{2\varphi}%
+\end{equation}
+thus
+\begin{equation}
+\mathcal{R}_{2\tilde{\varphi}}\left(  g\right)  =\left[  \mathbf{\Lambda
+}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{\frac{1}{2}%
+}\mathcal{R}_{2\varphi}\left(  g\right)
+\end{equation}
+as%
+\begin{equation}
+\mathcal{R}_{2\tilde{\varphi}}\left(  g\right)  =\mathbf{g}_{2\tilde{\varphi}%
+}=\left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi
+}\right)  \right]  ^{-\frac{1}{2}}\mathbf{g}_{2\varphi}.
+\end{equation}
+
+
+\subsubsection{Geminal FORDO}
+
+Each set $\left\{  e^{i\theta}\left\vert g\right\rangle \right\}  $ of
+normalized geminals can be associated with a projection operator $\left\vert
+g\right\rangle \left\langle g\right\vert ,$ that has the representation%
+\begin{align}
+&  \left\vert g\right\rangle \left\langle g\right\vert =\\
+&  \sum_{\substack{1\leq j_{1}<k_{1}\leq r\\1\leq l_{1}<m_{1}\leq r\\1\leq
+j_{2}<k_{2}\leq r\\1\leq l_{2}<m_{2}\leq r}}\left\vert \varphi_{j_{1}}%
+\varphi_{k_{1}}\right\rangle \left[  \mathbf{\Lambda}^{\left(  2\right)
+}\left(  \Delta_{\varphi}\right)  \right]  _{j_{1}k_{1}l_{1}m_{1}}%
+^{-1}\left\langle \varphi_{l_{1}}\varphi_{m_{1}}\right\vert \left\vert
+g\right\rangle \left\langle g\right\vert \left\vert \varphi_{j_{2}}%
+\varphi_{k_{2}}\right\rangle \left[  \mathbf{\Lambda}^{\left(  2\right)
+}\left(  \Delta_{\varphi}\right)  \right]  _{j_{2}k_{2}l_{2}m_{2}}%
+^{-1}\left\langle \varphi_{l_{2}}\varphi_{m_{2}}\right\vert \\
+&  \sum_{\substack{1\leq j_{1}<k_{1}\leq r\\1\leq l_{1}<m_{1}\leq r\\1\leq
+j_{2}<k_{2}\leq r\\1\leq l_{2}<m_{2}\leq r}}\left\vert \varphi_{j_{1}}%
+\varphi_{k_{1}}\right\rangle \left[  \mathbf{\Lambda}^{\left(  2\right)
+}\left(  \Delta_{\varphi}\right)  \right]  _{j_{1}k_{1}l_{1}m_{1}}%
+^{-1}g_{2\varphi l_{1}m_{1}}\bar{g}_{2\varphi j_{2}k_{2}}\left[
+\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]
+_{j_{2}k_{2}l_{2}m_{2}}^{-1}\left\langle \varphi_{l_{2}}\varphi_{m_{2}%
+}\right\vert \\
+&  \sum_{\substack{1\leq j_{1}<k_{1}\leq r\\1\leq l_{2}<m_{2}\leq
+r}}\left\vert \varphi_{j_{1}}\varphi_{k_{1}}\right\rangle \left(  \left[
+\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]
+^{-1}\mathbf{g}_{2\varphi}\otimes\mathbf{g}_{2\varphi}^{\dagger}\left[
+\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]
+^{-1}\right)  _{j_{1}k_{1}l_{2}m_{2}}\left\langle \varphi_{l_{2}}%
+\varphi_{m_{2}}\right\vert \\
+&  \sum_{\substack{1\leq j_{1}<k_{1}\leq r\\1\leq l_{2}<m_{2}\leq
+r}}\left\vert \varphi_{j_{1}}\varphi_{k_{1}}\right\rangle \left(
+\mathcal{R}_{2\varphi}\left(  \left\vert g\right\rangle \left\langle
+g\right\vert \right)  \otimes\mathcal{R}_{2\varphi}\left(  \left\vert
+g\right\rangle \left\langle g\right\vert \right)  ^{\dagger}\right)
+_{j_{1}k_{1}l_{2}m_{2}}\left\langle \varphi_{l_{2}}\varphi_{m_{2}}\right\vert
+\end{align}
+the contraction of this projection operator is the FORDO of the geminal given
+by
+\begin{equation}
+2L_{2}^{1}\left(  \left\vert g\right\rangle \left\langle g\right\vert \right)
+=D^{1}\left(  g\right)  ,
+\end{equation}
+which has the representation%
+\begin{align}
+&  \frac{1}{4}\sum_{\substack{1\leq j_{1},k_{1}\leq r\\1\leq l_{2},m_{2}\leq
+r}}\left\vert \varphi_{j_{1}}\varphi_{k_{1}}\right\rangle \left(  \left[
+\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]
+^{-\frac{1}{2}}\left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(
+\Delta_{\varphi}\right)  \right]  ^{-\frac{1}{2}}\mathbf{g}_{2\varphi}%
+\otimes\mathbf{g}_{2\varphi}^{\dagger}\left[  \mathbf{\Lambda}^{\left(
+2\right)  }\left(  \Delta_{\varphi}\right)  \right]  \right.  ^{-\frac{1}{2}%
+}\\
+&  \left.  \left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta
+_{\varphi}\right)  \right]  ^{-\frac{1}{2}}\right)  _{j_{1}k_{1}l_{2}m_{2}%
+}\left\langle \varphi_{l_{2}}\varphi_{m_{2}}\right\vert \\
+&  =\frac{1}{4}\sum_{\substack{1\leq j_{1},k_{1}\leq r\\1\leq l_{2},m_{2}\leq
+r}}\left\vert \left(  \Delta_{\varphi}^{-\frac{1}{2}}\varphi\right)  _{j_{1}%
+}\left(  \Delta_{\varphi}^{-\frac{1}{2}}\varphi\right)  _{k_{1}}\right\rangle
+\left(  \left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi
+}\right)  \right]  ^{-\frac{1}{2}}\mathbf{g}_{2\varphi}\right. \\
+&  \left.  \otimes\mathbf{g}_{2\varphi}^{\dagger}\left[  \mathbf{\Lambda
+}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{-\frac{1}%
+{2}}\right)  _{j_{1}k_{1}l_{2}m_{2}}\left\langle \left(  \Delta_{\varphi
+}^{-\frac{1}{2}}\varphi\right)  _{l_{2}}\left(  \Delta_{\varphi}^{-\frac{1}%
+{2}}\varphi\right)  _{m_{2}}\right\vert
+\end{align}
+
+
+The contraction operator is defined by%
+\begin{align}
+L_{2}^{1}\left(  \left\vert w\wedge x\right\rangle \left\langle y\wedge
+z\right\vert \right)   &  =\frac{1}{4}\left\{  \left\vert w\otimes x-x\otimes
+w\right\rangle \left\langle y\otimes z-z\otimes y\right\vert \right\}
+\nonumber\\
+&  =\frac{1}{4}\left\{  \left\vert w\right\rangle \left\langle y\right\vert
+\left\langle \left.  z\right\vert x\right\rangle -\left\vert w\right\rangle
+\left\langle z\right\vert \left\langle \left.  y\right\vert x\right\rangle
+-\left\vert x\right\rangle \left\langle y\right\vert \left\langle \left.
+z\right\vert w\right\rangle +\left\vert x\right\rangle \left\langle
+z\right\vert \left\langle \left.  y\right\vert w\right\rangle \right\}
+\end{align}
+In particular%
+\begin{equation}
+L_{2}^{1}\left(  \left\vert w\wedge x\right\rangle \left\langle w\wedge
+x\right\vert \right)  =\frac{1}{4}\left\{  \left\vert w\right\rangle
+\left\langle w\right\vert \left\langle \left.  x\right\vert x\right\rangle
+-\left\vert w\right\rangle \left\langle x\right\vert \left\langle \left.
+x\right\vert w\right\rangle -\left\vert x\right\rangle \left\langle
+w\right\vert \left\langle \left.  w\right\vert x\right\rangle +\left\vert
+x\right\rangle \left\langle x\right\vert \left\langle \left.  w\right\vert
+w\right\rangle \right\}
+\end{equation}
+and if $\left\vert w\right\rangle $ and $\left\vert x\right\rangle $ are part
+of an on basis then
+\begin{equation}
+L_{2}^{1}\left(  \left\vert w\wedge x\right\rangle \left\langle w\wedge
+x\right\vert \right)  =\frac{1}{2}\left\{  \left\vert w\right\rangle
+\left\langle w\right\vert +\left\vert x\right\rangle \left\langle x\right\vert
+\right\}  .
+\end{equation}%
+\begin{align}
+&  L_{2}^{1}\left(  \left\vert g\right\rangle \left\langle g\right\vert
+\right)  =L_{2}^{1}\left(  \frac{1}{4}\sum_{\substack{1\leq j,k\leq r\\1\leq
+l,m\leq r}}g_{jk}\bar{g}_{lm}\left\vert \varphi_{j}\varphi_{k}\right\rangle
+\left\langle \varphi_{l}\varphi_{m}\right\vert \right) \\
+&  =\frac{1}{16}\sum_{\substack{1\leq j,k\leq r\\1\leq l,m\leq r}}g_{jk}%
+\bar{g}_{lm}\left\{  \left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{l}\right\vert \delta_{km}-\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{m}\right\vert \delta_{kl}-\left\vert \varphi
+_{k}\right\rangle \left\langle \varphi_{l}\right\vert \delta_{jm}+\left\vert
+\varphi_{k}\right\rangle \left\langle \varphi_{m}\right\vert \delta
+_{jl}\right\} \\
+&  =\frac{1}{16}\sum_{\substack{1\leq j,k\leq r\\1\leq l,m\leq r}}\left\{
+\left\vert \varphi_{j}\right\rangle \left\langle \varphi_{l}\right\vert
+g_{jk}\bar{g}_{lk}+\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{m}\right\vert g_{jk}\bar{g}_{mk}+\left\vert \varphi_{k}\right\rangle
+\left\langle \varphi_{l}\right\vert g_{jk}\bar{g}_{jl}+\left\vert \varphi
+_{k}\right\rangle \left\langle \varphi_{m}\right\vert g_{jk}\bar{g}%
+_{jm}\right\} \\
+&  =\frac{1}{4}\sum_{\substack{1\leq j,k\leq r\\1\leq l,m\leq r}}g_{jk}\bar
+{g}_{lm}\left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{l}\right\vert =\frac{1}{4}\sum_{1\leq j,l\leq r}L_{2}^{1}\left(  \left\vert
+g\right\rangle \left\langle g\right\vert \right)  _{jl}\left\vert \varphi
+_{j}\right\rangle \left\langle \varphi_{l}\right\vert \\
+&  L_{2}^{1}\left(  \left\vert g\right\rangle \left\langle g\right\vert
+\right)  _{jl}=\frac{1}{4}\sum_{1\leq k\leq r}g_{jk}\bar{g}_{lk}%
+\end{align}
+%
+
+\begin{align}
+L_{2}^{1}\left(  \left\vert g\right\rangle \left\langle g\right\vert \right)
+_{\varphi j_{1}l_{2}}  &  =\sum_{\substack{1\leq j_{1},k_{1}\leq r\\1\leq
+l_{2},m_{2}\leq r}}\left\vert \left(  \Delta_{\varphi}^{-\frac{1}{2}}%
+\varphi\right)  _{j_{1}}\right\rangle \left(  \left[  \mathbf{\Lambda
+}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{-\frac{1}%
+{2}}\mathbf{g}_{2\varphi}\otimes\mathbf{g}_{2\varphi}^{\dagger}\left[
+\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]
+^{-\frac{1}{2}}\right)  _{j_{1}k_{1}l_{2}m_{2}}\\
+&  \left\langle \left(  \Delta_{\varphi}^{-\frac{1}{2}}\varphi\right)
+_{l_{2}}\right\vert \delta_{k_{1}m_{2}}%
+\end{align}
+
+
+\subsubsection{Antisymmetric operator}
+
+This expansion of $\left\vert g\right\rangle $ defines an antisymmetric
+operator in the orthonormalized basis
+\begin{align}
+\Upsilon_{\tilde{\varphi}}\left(  g\right)   &  =\frac{1}{2}\sum_{1\leq
+j,k\leq r}\mathcal{R}_{2\tilde{\varphi}}\left(  g\right)  _{jk}\left\vert
+\tilde{\varphi}_{j}\right\rangle \left\langle \tilde{\varphi}_{k}\right\vert
+\equiv\frac{1}{2}\sum_{1\leq j,k\leq r}\mathcal{R}_{\tilde{\varphi}}\left(
+g\right)  _{jk}\left\vert \tilde{\varphi}_{j}\right\rangle \left\langle
+\tilde{\varphi}_{k}\right\vert \nonumber\\
+&  =\frac{1}{2}\sum_{1\leq j,k\leq r}\mathbf{g}_{\tilde{\varphi}jk}\left\vert
+\tilde{\varphi}_{j}\right\rangle \left\langle \tilde{\varphi}_{k}\right\vert ,
+\end{align}
+that can be expressed in the general basis as%
+\begin{align}
+&  \Upsilon_{\tilde{\varphi}}\left(  g\right)  =\frac{1}{2}\sum_{1\leq j,k\leq
+r}\left(  \Delta_{\varphi}^{-\frac{1}{2}}\left(  \left[  \mathbf{\Lambda
+}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{\frac{1}{2}%
+}\mathcal{R}_{2\varphi}\left(  g\right)  \right)  \Delta_{\varphi}^{-\frac
+{1}{2}}\right)  _{jk}\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert \nonumber\\
+&  \equiv\frac{1}{2}\sum_{1\leq j,k\leq r}\left(  \Delta_{\varphi}^{-\frac
+{1}{2}}\mathcal{R}_{\tilde{\varphi}}\left(  g\right)  \Delta_{\varphi}%
+^{-\frac{1}{2}}\right)  _{jk}\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert \nonumber\\
+&  =\frac{1}{2}\sum_{1\leq j,k\leq r}\mathbf{g}_{\tilde{\varphi}jk}\left\vert
+\tilde{\varphi}_{j}\right\rangle \left\langle \tilde{\varphi}_{k}\right\vert
+=\frac{1}{2}\sum_{1\leq j,k\leq r}\left(  \Delta_{\varphi}^{-\frac{1}{2}%
+}\left[  \mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)
+\right]  ^{-\frac{1}{2}}\mathbf{g}_{2\varphi}\Delta_{\varphi}^{-\frac{1}{2}%
+}\right)  _{jk}\left\vert \varphi_{j}\right\rangle \left\langle \varphi
+_{k}\right\vert ,
+\end{align}
+$\lceil$which is consistent with the relationships%
+\begin{align*}
+\mathcal{R}_{2\tilde{\varphi}}\left(  g\right)   &  =\left[  \mathbf{\Lambda
+}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{-\frac{1}%
+{2}}\mathcal{R}_{2\varphi}\left(  g\right) \\
+\mathcal{R}_{2\varphi}\left(  g\right)   &  =\left[  \mathbf{\Lambda}^{\left(
+2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{-1}\mathbf{g}%
+_{2\varphi}\\
+\mathbf{g}_{2\tilde{\varphi}}  &  =\left[  \mathbf{\Lambda}^{\left(  2\right)
+}\left(  \Delta_{\varphi}\right)  \right]  ^{-\frac{1}{2}}\mathbf{g}%
+_{2\varphi}.
+\end{align*}
+$\lceil$%
+\begin{align}
+\mathbf{g}_{\varphi}  &  =\Delta_{\varphi}\mathcal{R}_{\varphi}\left(
+\Upsilon_{\varphi}\left(  g\right)  \right)  \equiv\Delta_{\varphi}%
+\mathcal{R}_{\varphi}\left(  g\right) \nonumber\\
+\mathbf{g}_{2\varphi}  &  =\mathbf{\Lambda}^{\left(  2\right)  }\left(
+\Delta_{\varphi}\right)  \mathcal{R}_{2\varphi}\left(  g\right) \nonumber\\
+\mathcal{R}_{\varphi}\left(  g\right)   &  =\Delta_{\varphi}^{-\frac{1}{2}%
+}\mathcal{R}_{\tilde{\varphi}}\left(  g\right)  \Delta_{\varphi}^{-\frac{1}%
+{2}}=\Delta_{\varphi}^{-\frac{1}{2}}\left[  \mathbf{\Lambda}^{\left(
+2\right)  }\left(  \Delta_{\varphi}\right)  \right]  ^{-\frac{1}{2}}%
+\mathbf{g}_{2\varphi}\Delta_{\varphi}^{-\frac{1}{2}}\\
+&  =\Delta_{\varphi}^{-\frac{1}{2}}\left[  \mathbf{\Lambda}^{\left(  2\right)
+}\left(  \Delta_{\varphi}\right)  \right]  ^{\frac{1}{2}}\mathcal{R}%
+_{2\varphi}\left(  g\right)  \Delta_{\varphi}^{-\frac{1}{2}}\\
+\Upsilon_{\varphi}\left(  g\right)   &  =\left(  \left\vert \varphi
+_{1}\right\rangle \left\langle \varphi_{1}\right\vert \cdots\left\vert
+\varphi_{r}\right\rangle \left\langle \varphi_{r}\right\vert \right)
+\mathcal{R}_{\varphi}\left(  g\right) \nonumber\\
+\left\vert g\right\rangle  &  =\left(  \left\vert \varphi_{1}\varphi
+_{1}\right\rangle \cdots\left\vert \varphi_{r}\varphi_{r}\right\rangle
+\right)  \mathcal{R}_{\varphi}\left(  \Upsilon_{\varphi}\left(  g\right)
+\right)  \rfloor
+\end{align}
+
+
+where
+\begin{equation}
+\mathbf{g}_{\varphi}=\left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r}\right\vert
+\end{array}
+\right)  \Upsilon_{\varphi}\left(  g\right)  \left(  \left\vert \varphi
+_{1}\right\rangle ,\cdots,\left\vert \varphi_{r}\right\rangle \right)
+\end{equation}
+and the metric matrix
+\begin{equation}
+\Delta_{\varphi}=\left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r}\right\vert
+\end{array}
+\right)  \left(  \left\vert \varphi_{1}\right\rangle ,\cdots,\left\vert
+\varphi_{r}\right\rangle \right)  .
+\end{equation}
+The norm of $\left\vert g\right\rangle $ is
+\begin{align}
+\left\Vert g\right\Vert _{\mathcal{H}^{2}}  &  =\left\langle \left.
+g\right\vert g\right\rangle ^{\frac{1}{2}}=\frac{1}{2}\left(  \sum
+_{\substack{1\leq j,k\leq s\\1\leq l,m\leq s}}\overline{\mathcal{R}_{2\varphi
+}\left(  g\right)  }_{jk}\mathcal{R}_{2\varphi}\left(  g\right)
+_{lm}\left\langle \left.  \varphi_{j}\wedge\varphi_{k}\right\vert \varphi
+_{l}\wedge\varphi_{m}\right\rangle \right)  ^{\frac{1}{2}}\\
+&  =\frac{1}{2\sqrt{2}}\left(  \sum_{\substack{1\leq j,k\leq s\\1\leq l,m\leq
+s}}\overline{\mathcal{R}_{2\varphi}\left(  g\right)  }_{jk}\mathbf{\Lambda
+}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)  _{jklm}\mathcal{R}%
+_{2\varphi}\left(  g\right)  _{lm}\right)  ^{\frac{1}{2}},
+\end{align}
+while the HS norm of $\Upsilon_{\varphi}\left(  g\right)  $ is
+\begin{align}
+\left\Vert \Upsilon_{\varphi}\left(  g\right)  \right\Vert _{\mathcal{B}%
+_{2}\left(  \mathcal{H}^{1}\right)  }  &  =\left(  \operatorname*{Tr}\left\{
+\Upsilon_{\varphi}\left(  g\right)  ^{\dagger}\Upsilon_{\varphi}\left(
+g\right)  \right\}  \right)  ^{\frac{1}{2}}\\
+&  =\left\{  \frac{1}{4}\sum_{\substack{1\leq j,k\leq r\\1\leq l,m\leq
+r}}\overline{\mathcal{R}_{\varphi}\left(  g\right)  _{jk}}\mathcal{R}%
+_{\varphi}\left(  g\right)  _{lm}\left\langle \left.  \varphi_{j}\right\vert
+\varphi_{l}\right\rangle \left\langle \left.  \varphi_{m}\right\vert
+\varphi_{k}\right\rangle \right\}  ^{\frac{1}{2}}\\
+&  =\frac{1}{2}\left\{  \sum_{\substack{1\leq j,k\leq r\\1\leq l,m\leq
+r}}\mathcal{R}_{\varphi}\left(  g\right)  _{kj}^{\dagger}\Delta_{\varphi
+jl}\mathcal{R}_{\varphi}\left(  g\right)  _{lm}\Delta_{\varphi mk}\right\}
+^{\frac{1}{2}}\\
+&  =\frac{1}{2}\left(  \operatorname*{Tr}\left\{  \mathcal{R}_{\varphi}\left(
+g\right)  ^{\dagger}\Delta_{\varphi}\mathcal{R}_{\varphi}\left(  g\right)
+\Delta_{\varphi}\right\}  \right)  ^{\frac{1}{2}}%
+\end{align}%
+\begin{align}
+\mathcal{R}_{\varphi}\left(  g\right)   &  =\Delta_{\varphi}^{-1}%
+\mathbf{g}_{\varphi},\\
+\mathcal{R}_{\varphi}\left(  g\right)  ^{\dagger}  &  =\mathbf{g}_{\varphi
+}^{\dagger}\Delta_{\varphi}^{-1}%
+\end{align}%
+\begin{equation}
+\frac{1}{2}\left(  \operatorname*{Tr}\left\{  \mathbf{g}_{\varphi}^{\dagger
+}\Delta_{\varphi}^{-1}\Delta_{\varphi}\Delta_{\varphi}^{-1}\mathbf{g}%
+_{\varphi}\Delta_{\varphi}\right\}  \right)  ^{\frac{1}{2}}=\frac{1}{2}\left(
+\operatorname*{Tr}\left\{  \mathbf{g}_{\varphi}^{\dagger}\Delta_{\varphi}%
+^{-1}\mathbf{g}_{\varphi}\Delta_{\varphi}\right\}  \right)  ^{\frac{1}{2}}%
+\end{equation}
+
+
+The matrix, $\mathbb{G}_{\varphi},$ of the symplectic form wrt the conb
+$\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq2s=r\right\}  $ of $\mathcal{H}^{1}$ is defined as
+\begin{equation}
+\mathbb{G}_{\varphi jk}=g\left(  \varphi_{j},\varphi_{k}\right)  =\left\langle
+\left.  g\right\vert \varphi_{j}\wedge\varphi_{k}\right\rangle .
+\end{equation}
+The value of this form does not depend on the way it is expressed so wlog one
+can express $g\left(  \varphi_{j},\varphi_{k}\right)  $ as
+\begin{align}
+g\left(  \varphi_{l},\varphi_{m}\right)   &  =\frac{1}{2}\sum_{1\leq j,k\leq
+s}\mathcal{R}_{2\varphi}\left(  g\right)  _{jk}\left\langle \left.
+\varphi_{j}\wedge\varphi_{k}\right\vert \varphi_{l}\wedge\varphi
+_{m}\right\rangle \\
+&  =\frac{1}{4}\sum_{1\leq j,k\leq s}\mathcal{R}_{2\varphi}\left(  g\right)
+_{jk}\det\left(
+\begin{array}
+[c]{cc}%
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{l}\right\rangle  &
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{m}\right\rangle \\
+\left\langle \left.  \varphi_{k}\right\vert \varphi_{l}\right\rangle  &
+\left\langle \left.  \varphi_{k}\right\vert \varphi_{m}\right\rangle
+\end{array}
+\right) \\
+&  =\frac{1}{4}\sum_{1\leq j,k\leq s}\mathcal{R}_{2\varphi}\left(  g\right)
+_{jk}\det\left(
+\begin{array}
+[c]{cc}%
+\Delta_{\varphi jl} & \Delta_{\varphi jm}\\
+\Delta_{\varphi kl} & \Delta_{\varphi km}%
+\end{array}
+\right) \\
+&  =\frac{1}{4}\sum_{1\leq j,k\leq s}\mathcal{R}_{2\varphi}\left(  g\right)
+_{jk}\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)
+_{jklm}%
+\end{align}
+$\lceil$Note that
+\begin{align}
+u\wedge v  &  =\frac{1}{2}\left(  u\otimes v-v\otimes u\right) \\
+\left\langle \left.  a\wedge b\right\vert u\wedge v\right\rangle  &  =\frac
+{1}{4}\left\{  \left\langle \left.  a\otimes b\right\vert u\otimes
+v\right\rangle -\left\langle \left.  a\otimes b\right\vert v\otimes
+u\right\rangle \right. \\
+&  \left.  -\left\langle \left.  b\otimes a\right\vert u\otimes v\right\rangle
++\left\langle \left.  b\otimes a\right\vert v\otimes u\right\rangle \right\}
+\\
+&  =\frac{1}{2}\left\{  \left\langle \left.  a\right\vert u\right\rangle
+\left\langle \left.  b\right\vert v\right\rangle -\left\langle \left.
+a\right\vert v\right\rangle \left\langle \left.  b\right\vert u\right\rangle
+\right\} \\
+&  =\frac{1}{2}\det\left\{
+\begin{array}
+[c]{cc}%
+\left\langle \left.  a\right\vert u\right\rangle  & \left\langle \left.
+a\right\vert v\right\rangle \\
+\left\langle \left.  b\right\vert u\right\rangle  & \left\langle \left.
+b\right\vert v\right\rangle
+\end{array}
+\right\}  \rfloor
+\end{align}
+This should be compared to
+\begin{equation}
+\left\vert g\right\rangle =\left(  \left\vert \varphi_{1}\wedge\varphi
+_{2}\right\rangle ,\cdots,\left\vert \varphi_{r-1}\wedge\varphi_{r}%
+\right\rangle \right)  \mathcal{R}_{2\varphi}\left(  g\right)
+\end{equation}%
+\begin{align}
+\mathbf{g}_{2\varphi}  &  =\left\langle \left.  \left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\wedge\varphi_{2}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r-1}\wedge\varphi_{r}\right\vert
+\end{array}
+\right)  \right\vert g\right\rangle \\
+&  =\left\langle \left.  \left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\wedge\varphi_{2}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r-1}\wedge\varphi_{r}\right\vert
+\end{array}
+\right)  \right\vert \left(  \left\vert \varphi_{1}\wedge\varphi
+_{2}\right\rangle ,\cdots,\left\vert \varphi_{r-1}\wedge\varphi_{r}%
+\right\rangle \right)  \right\rangle \mathcal{R}_{2\varphi}\left(  g\right) \\
+&  =\mathbf{\Lambda}^{\left(  2\right)  }\left(  \Delta_{\varphi}\right)
+\mathcal{R}_{2\varphi}\left(  g\right)  ,
+\end{align}
+
+
+As discussed in the following the transformation properties of $\mathcal{R}%
+_{\varphi}\left(  \Lambda\left(  g\right)  \right)  ,$ $\mathbf{g}_{\varphi},$
+$\mathbf{g}_{2\varphi},\mathbb{G}_{\varphi},$ and $\mathcal{R}_{2\varphi
+}\left(  g\right)  $ are not the same wrt a change of basis of $\mathcal{H}%
+^{1},$ where
+\begin{align}
+\Lambda\left(  g\right)   &  =\Lambda\left(  g\right)  \left(  \left\vert
+\varphi_{1}\right\rangle ,\cdots,\left\vert \varphi_{r}\right\rangle \right)
+\Delta_{\varphi}^{-1}\left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r}\right\vert
+\end{array}
+\right) \\
+&  =\left(  \left\vert \varphi_{1}\right\rangle ,\cdots,\left\vert \varphi
+_{r}\right\rangle \right)  \mathcal{R}_{\varphi}\left(  \Lambda\left(
+g\right)  \right)  \Delta_{\varphi}^{-1}\left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r}\right\vert
+\end{array}
+\right)  ,\\
+\mathbf{g}_{\varphi}  &  =\mathcal{R}_{\varphi}\left(  \Lambda\left(
+g\right)  \right)  \Delta_{\varphi}^{-1}=\left(
+\begin{array}
+[c]{c}%
+\left\langle \varphi_{1}\right\vert \\
+\vdots\\
+\left\langle \varphi_{r}\right\vert
+\end{array}
+\right)  \Lambda\left(  g\right)  \left(  \left\vert \varphi_{1}\right\rangle
+,\cdots,\left\vert \varphi_{r}\right\rangle \right)  ,
+\end{align}
+The symplectic group $Sp\left(  2s,\mathbb{C}\right)  $ has a representation
+on $\mathcal{H}^{1}$ given by
+\begin{equation}
+Sp\left(  2s,\mathbb{C}\right)  _{\mathcal{H}^{1}}=\left\{  \left.
+T\right\vert g\left(  T\varphi_{1},T\varphi_{2}\right)  =g\left(  \varphi
+_{1},\varphi_{2}\right)  \forall\left\vert \varphi_{1}\right\rangle
+,\left\vert \varphi_{2}\right\rangle \in\mathcal{H}^{1}\right\}
+\end{equation}
+which induces the representations $\mathcal{R}_{\varphi}\left(  Sp\left(
+2s,\mathbb{C}\right)  \right)  $ (the basis $\left\{  \left.  \left\vert
+\varphi_{j}\right\rangle \right\vert 1\leq j\leq2s=r\right\}  $ does not have
+to be orthonormal).
+
+\subsection{Antisymmetric Operators and Geminals}
+
+The space of antisymmetric Hilbert-Schmidt operators, $\mathcal{B}_{2a}\left(
+\mathcal{H}^{1}\right)  $ can be defined as
+\begin{align}
+\mathcal{B}_{2a}\left(  \mathcal{H}^{1}\right)   &  =\left\{  \left.
+A=\sum_{1\leq j,k\leq r}A_{\psi jk}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{k}\right\vert \right\vert A_{\psi jk}=-A_{\psi kj},1\leq
+j,k\leq r,A_{\psi jk}\in\mathbb{C},\right. \nonumber\\
+&  \left.  \left\{  \left\vert \left\vert \psi_{j}\right\rangle \right.  1\leq
+j\leq r\right\}  \text{ a fixed conb for }\mathcal{H}^{1}\right\} \nonumber\\
+&  =\left\{  \mathbb{T}_{\psi}\mathbb{A}_{\psi}\mathbb{T}_{\psi}^{t}\left\vert
+T\in\frac{GL\left(  2s,\mathbb{C}\right)  _{\mathcal{H}^{1}}}{Sp\left(
+2s,\mathbb{C}\right)  _{\mathcal{H}^{1}}}\right.  \right\}  .
+\end{align}
+
+
+\subsubsection{Change of Basis of Operators}
+
+Let $\left\{  \left\vert \left\vert \chi_{j}\right\rangle \right.  1\leq j\leq
+r\right\}  $ be a basis of $\mathcal{H}^{1}$ that is not in general normalized
+nor orthogonal then it produces the following resolution of identity
+\begin{equation}
+I=\sum_{1\leq j,k\leq r}\left\vert \chi_{j}\right\rangle \Delta_{\chi jk}%
+^{-1}\left\langle \chi_{k}\right\vert
+\end{equation}
+$\lceil$ This can be seen from%
+\begin{equation}
+\sum_{1\leq j,k\leq r}\left\vert \chi_{j}\right\rangle \Delta_{\chi jk}%
+^{-1}\left\langle \chi_{k}\right\vert \left\vert \chi_{m}\right\rangle
+=\sum_{1\leq j,k\leq r}\left\vert \chi_{j}\right\rangle \Delta_{\chi jk}%
+^{-1}\Delta_{\chi km}=\sum_{1\leq j\leq r}\left\vert \chi_{j}\right\rangle
+\delta_{jm}=\left\vert \chi_{m}\right\rangle
+\end{equation}
+$\rfloor$
+
+leading to
+\begin{equation}
+I=\left(  \left\vert \chi_{1}\right\rangle ,\cdots,\left\vert \chi
+_{r}\right\rangle \right)  \Delta_{\chi}^{-1}\left(
+\begin{array}
+[c]{c}%
+\left\langle \chi_{1}\right\vert \\
+\vdots\\
+\left\langle \chi_{r}\right\vert
+\end{array}
+\right)  .
+\end{equation}
+The operator $\Lambda\left(  g\right)  $ can then be expanded as
+\begin{equation}
+\Lambda\left(  g\right)  =\Lambda\left(  g\right)  \left(  \left\vert \chi
+_{1}\right\rangle ,\cdots,\left\vert \chi_{r}\right\rangle \right)
+\Delta_{\chi}^{-1}\left(
+\begin{array}
+[c]{c}%
+\left\langle \chi_{1}\right\vert \\
+\vdots\\
+\left\langle \chi_{r}\right\vert
+\end{array}
+\right)  =\left(  \left\vert \chi_{1}\right\rangle ,\cdots,\left\vert \chi
+_{r}\right\rangle \right)  \mathcal{R}_{\chi}\left(  g\right)  \Delta_{\chi
+}^{-1}\left(
+\begin{array}
+[c]{c}%
+\left\langle \chi_{1}\right\vert \\
+\vdots\\
+\left\langle \chi_{r}\right\vert
+\end{array}
+\right)  ,
+\end{equation}
+i.e.
+\begin{equation}
+\Lambda\left(  g\right)  =\sum_{1\leq j,k\leq r}\left\vert \chi_{j}%
+\right\rangle \left(  \mathcal{R}_{\chi}\left(  g\right)  \Delta_{\chi}%
+^{-1}\right)  _{jk}\left\langle \chi_{k}\right\vert .
+\end{equation}
+The above expansion gives that
+\begin{equation}
+\mathbf{g}_{\chi}=\Delta_{\chi}\mathcal{R}_{\chi}\left(  g\right)
+\equiv\mathcal{R}_{\chi}\left(  g\right)  =\Delta_{\chi}^{-1}\mathbf{g}_{\chi
+},
+\end{equation}
+where the matrix of $g$ wrt the basis $\left\vert \mathbf{\chi}\right\rangle $
+is given as
+\begin{equation}
+\mathbf{g}_{\chi}=\left(
+\begin{array}
+[c]{c}%
+\left\langle \chi_{1}\right\vert \\
+\vdots\\
+\left\langle \chi_{r}\right\vert
+\end{array}
+\right)  g\left(  \left\vert \chi_{1}\right\rangle ,\cdots,\left\vert \chi
+_{r}\right\rangle \right)  .
+\end{equation}
+This leads to
+\begin{equation}
+\Delta_{\chi}^{-1}\mathbf{g}_{\chi}\Delta_{\chi}^{-1}=\mathcal{R}_{\chi
+}\left(  g\right)  \Delta_{\chi}^{-1}%
+\end{equation}
+and
+\begin{equation}
+\Lambda\left(  g\right)  =\sum_{1\leq j,k\leq r}\left\vert \chi_{j}%
+\right\rangle \left(  \Delta_{\chi}^{-1}\mathbf{g}_{\chi}\Delta_{\chi}%
+^{-1}\right)  _{jk}\left\langle \chi_{k}\right\vert .
+\end{equation}
+
+
+$\lceil$%
+\begin{equation}
+\mathbf{g}_{\chi}=\left(
+\begin{array}
+[c]{c}%
+\left\langle \chi_{1}\right\vert \\
+\vdots\\
+\left\langle \chi_{r}\right\vert
+\end{array}
+\right)  g\left(  \left\vert \chi_{1}\right\rangle ,\cdots,\left\vert \chi
+_{r}\right\rangle \right)  =\Delta_{\chi}\Delta_{\chi}^{-1}\mathbf{g}_{\chi
+}\Delta_{\chi}^{-1}\Delta_{\chi}=\mathbf{g}_{\chi}.
+\end{equation}
+$\rfloor$
+
+A change of basis in $\mathcal{H}^{1}$ produces the following effect on the
+matrices $\Delta_{\chi}$ and $\mathbf{g}_{\chi}$
+\begin{align}
+\Delta_{\chi}  &  =\mathbb{S}_{\chi\psi}^{\dagger}\Delta_{\psi}\mathbb{S}%
+_{\chi\psi}\nonumber\\
+\mathbf{g}_{\chi}  &  =\mathbb{S}_{\chi\psi}^{\dagger}\mathbf{g}_{\psi
+}\mathbb{S}_{\chi\psi},
+\end{align}
+as can be seen from
+\begin{align}
+\Delta_{\chi}  &  =\mathbb{S}_{\chi\psi}^{\dagger}\left(
+\begin{array}
+[c]{c}%
+\left\langle \psi_{1}\right\vert \\
+\vdots\\
+\left\langle \psi_{r}\right\vert
+\end{array}
+\right)  \left(  \left\vert \psi_{1}\right\rangle ,\cdots,\left\vert \psi
+_{r}\right\rangle \right)  \mathbb{S}_{\chi\psi}\nonumber\\
+&  =\mathbb{S}_{\chi\psi}^{\dagger}\Delta_{\psi}\mathbb{S}_{\chi\psi}.
+\end{align}
+This is consistent with
+\begin{align}
+\Lambda_{\chi}\left(  g\right)   &  =\sum_{1\leq j,k\leq r}\left\vert \chi
+_{j}\right\rangle \left(  \Delta_{\chi}^{-1}\mathbf{g}_{\chi}\Delta_{\chi
+}^{-1}\right)  _{jk}\left\langle \chi_{k}\right\vert \nonumber\\
+&  =\sum_{1\leq j,k\leq r}\left\vert S_{\chi\psi}\psi_{j}\right\rangle \left(
+\mathbb{S}_{\chi\psi}^{-1}\Delta_{\psi}^{-1}\mathbb{S}_{\chi\psi}^{-\dagger
+}\mathbb{S}_{\chi\psi}^{\dagger}\mathbf{g}_{\psi}\mathbb{S}_{\chi\psi
+}\mathbb{S}_{\chi\psi}^{-1}\Delta_{\psi}^{-1}\mathbb{S}_{\chi\psi}^{-\dagger
+}\right)  _{jk}\left\langle S_{\chi\psi}\psi_{k}\right\vert \nonumber\\
+&  =\sum_{1\leq j,k\leq r}\left\vert \psi_{j}\right\rangle \left(
+\mathbb{S}_{\chi\psi}\mathbb{S}_{\chi\psi}^{-1}\Delta_{\psi}^{-1}%
+\mathbb{S}_{\chi\psi}^{-\dagger}\mathbb{S}_{\chi\psi}^{\dagger}\mathbf{g}%
+_{\psi}\mathbb{S}_{\chi\psi}\mathbb{S}_{\chi\psi}\Delta_{\psi}^{-1}%
+\mathbb{S}_{\chi\psi}^{-\dagger}\mathbb{S}_{\chi\psi}^{\dagger}\right)
+_{jk}\left\langle \psi_{k}\right\vert \nonumber\\
+&  =\sum_{1\leq j,k\leq r}\left\vert \psi_{j}\right\rangle \left(
+\Delta_{\psi}^{-1}\mathbf{g}_{\psi}\Delta_{\psi}^{-1}\right)  _{jk}%
+\left\langle \psi_{k}\right\vert .
+\end{align}
+As
+\begin{equation}
+\mathbf{g}_{\chi}=\mathbb{S}_{\chi\psi}^{\dagger}\mathbf{g}_{\psi}%
+\mathbb{S}_{\chi\psi}%
+\end{equation}
+the antisymmetry
+\begin{equation}
+\mathbf{g}_{\chi}=-\mathbf{g}_{\chi}^{t}\text{ }%
+\end{equation}
+is conserved if and only if
+\begin{equation}
+\mathbb{S}_{\chi\psi}=\mathbb{\bar{S}}_{\chi\psi}%
+\end{equation}
+i.e. $\mathbb{S}_{\chi\psi}$ is a real matrix.
+
+In the following we will reorder the canonical basis so that the
+representation of $g$ is given by
+\begin{equation}
+\Lambda\left(  g\right)  \left(  \left\vert \psi_{1}\right\rangle
+,\cdots,\left\vert \psi_{s}\right\rangle ,\left\vert \psi_{-1}\right\rangle
+,\cdots,\left\vert \psi_{-s}\right\rangle \right)  =\left(  \left\vert
+\psi_{1}\right\rangle ,\cdots,\left\vert \psi_{s}\right\rangle ,\left\vert
+\psi_{-1}\right\rangle ,\cdots,\left\vert \psi_{-s}\right\rangle \right)
+\mathcal{R}_{\psi}\left(  g\right)  ,
+\end{equation}
+i.e.
+\begin{equation}
+\Lambda\left(  g\right)  \left\vert \psi_{j}\right\rangle =\sum_{s\geq
+k\geq-s}\left\vert \psi_{k}\right\rangle \mathcal{R}_{\psi}\left(  g\right)
+_{kj},
+\end{equation}
+thus
+\begin{equation}
+\mathbf{g}_{\psi}=\Delta_{\psi}\mathcal{R}_{\psi}\left(  g\right)
+\end{equation}
+and
+\begin{equation}
+\mathcal{R}_{\psi}\left(  g\right)  =\Delta_{\psi}^{-1}\mathbf{g}_{\psi},
+\end{equation}
+where the matrix of $g$ is given by
+\begin{equation}
+\mathbf{g}_{\psi}=\left(
+\begin{array}
+[c]{c}%
+\left\langle \psi_{1}\right\vert \\
+\vdots\\
+\left\langle \psi_{s}\right\vert \\
+\left\langle \psi_{-1}\right\vert \\
+\vdots\\
+\left\langle \psi_{-s}\right\vert
+\end{array}
+\right)  g\left(  \left\vert \psi_{1}\right\rangle ,\cdots,\left\vert \psi
+_{s}\right\rangle ,\left\vert \psi_{-1}\right\rangle ,\cdots,\left\vert
+\psi_{-s}\right\rangle \right)
+\end{equation}
+and the metric matrix
+\begin{equation}
+\Delta_{\psi}=\left(
+\begin{array}
+[c]{c}%
+\left\langle \psi_{1}\right\vert \\
+\vdots\\
+\left\langle \psi_{s}\right\vert \\
+\left\langle \psi_{-1}\right\vert \\
+\vdots\\
+\left\langle \psi_{-s}\right\vert
+\end{array}
+\right)  \left(  \left\vert \psi_{1}\right\rangle ,\cdots,\left\vert \psi
+_{s}\right\rangle ,\left\vert \psi_{-1}\right\rangle ,\cdots,\left\vert
+\psi_{-s}\right\rangle \right)  .
+\end{equation}
+
+
+In the cannonical representation the preceding leads to
+\begin{align}
+\mathcal{R}_{\psi}\left(  g\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{C}\\
+-\mathbb{C} & \mathbb{O}%
+\end{array}
+\right) \\
+\Delta_{\psi}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}%
+\end{array}
+\right) \\
+\mathbf{g}_{\psi}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{C}\\
+-\mathbb{C} & \mathbb{O}%
+\end{array}
+\right)
+\end{align}
+and
+\begin{align}
+\mathcal{R}_{\eta}\left(  g\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right) \\
+\Delta_{\eta}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{C} & \mathbb{O}\\
+\mathbb{O} & \mathbb{C}%
+\end{array}
+\right) \\
+\mathbf{g}_{\eta}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{C}\\
+-\mathbb{C} & \mathbb{O}%
+\end{array}
+\right)  .
+\end{align}
+
+
+\subsubsection{Change of Basis of Geminals}
+
+The matrix $\mathbb{G}_{\varphi}=$ $\left\{  \left.  g\left(  \varphi
+_{i},\varphi_{j}\right)  \right\vert -1\leq i,j\leq s\right\}  $ of the
+antisymmetric form $g$ wrt to the conb $\left\{  \left.  \varphi
+_{j}\right\vert -1\leq j\leq s\right\}  $ given by
+\begin{equation}
+g\left(  \varphi_{i},\varphi_{j}\right)  =\left\langle \left.  g\right\vert
+\varphi_{i}\wedge\varphi_{j}\right\rangle .
+\end{equation}
+The effect produced in $\mathcal{H}^{2}$ by a change of basis in
+$\mathcal{H}^{1}$ on this matrix is
+\begin{equation}
+\mathbb{G}_{\varphi}=\mathbb{S}_{\chi\psi}^{t}\mathbb{G}_{\chi}\mathbb{S}%
+_{\chi\psi}%
+\end{equation}
+in contrast to effect in $\mathcal{B}_{2a}\left(  \mathcal{H}^{1}\right)  .$
+The matrices $\mathbb{G}_{\psi},$ $\mathbb{G}_{\eta}$ in normalized and
+unnormalized cannonical basis are
+\begin{equation}
+\mathbb{G}_{\psi}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{C}\\
+-\mathbb{C} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+In general
+\begin{equation}
+g\left(  u,v\right)  =\left\langle \left.  g\right\vert u\wedge v\right\rangle
+=\mathbf{u}_{\varphi}^{t}\mathbb{G}_{\varphi}\mathbf{v}_{\varphi}\mathbf{,}%
+\end{equation}
+where
+\begin{align}
+\left\vert v\right\rangle  &  =\left(  \left\vert \varphi_{1}\right\rangle
+,\cdots,\left\vert \varphi_{s}\right\rangle ,\left\vert \varphi_{-1}%
+\right\rangle ,\cdots,\left\vert \varphi_{-s}\right\rangle \right)
+\mathbf{v}_{\varphi}\\
+\left\vert u\right\rangle  &  =\left(  \left\vert \varphi_{1}\right\rangle
+,\cdots,\left\vert \varphi_{s}\right\rangle ,\left\vert \varphi_{-1}%
+\right\rangle ,\cdots,\left\vert \varphi_{-s}\right\rangle \right)
+\mathbf{u}_{\varphi}.
+\end{align}
+
+
+\subsubsection{Mapping between the Spaces}
+
+Consider the map $M_{a}$ between $\mathcal{H}^{2}$ and the space of
+antisymmetric Hilbert-Schmidt operators, $\mathcal{B}_{2a}\left(
+\mathcal{H}^{1}\right)  ,$ i.e.
+\begin{equation}
+M_{a}:\mathcal{H}^{2}\rightarrow\mathcal{B}_{2a}\left(  \mathcal{H}%
+^{1}\right)
+\end{equation}
+given by%
+\begin{equation}
+M_{a}\left(  \left\vert g\right\rangle \right)  =M_{a}\left(  \sum_{1\leq
+j\leq s}c_{j}\left\vert \psi_{j}\psi_{-j}\right\rangle \right)  =\sum_{1\leq
+j\leq s}c_{j}\left\{  \left\vert \psi_{j}\right\rangle \left\langle \psi
+_{-j}\right\vert -\left\vert \psi_{-j}\right\rangle \left\langle \psi
+_{j}\right\vert \right\}  .
+\end{equation}
+One can then observe that
+\begin{align}
+&  M_{a}\left(  \sum_{1\leq j\leq s}c_{j}\left\vert \psi_{j}\psi
+_{-j}\right\rangle \right)  =M_{a}\left(  \sum_{1\leq j\leq s}c_{j}\left\vert
+e^{i\theta_{j}}\psi_{j}e^{-i\theta_{j}}\psi_{-j}\right\rangle \right)
+\nonumber\\
+&  =\sum_{1\leq j\leq s}c_{j}\left\{  e^{2i\theta_{j}}\left\vert \psi
+_{j}\right\rangle \left\langle \psi_{-j}\right\vert -e^{-2i\theta_{j}%
+}\left\vert \psi_{-j}\right\rangle \left\langle \psi_{j}\right\vert \right\}
+\end{align}
+thus $M_{a}$ is multivalued. This can also be expressed using
+\begin{align}
+\left\vert \chi_{j}\left(  \theta_{j}\right)  \right\rangle  &  =\left\vert
+e^{i\theta_{j}}\psi_{j}\right\rangle \nonumber\\
+\left\vert \chi_{-j}\left(  \theta_{j}\right)  \right\rangle  &  =\left\vert
+e^{-i\theta_{j}}\psi_{-j}\right\rangle
+\end{align}
+producing the antisymmetric operator
+\begin{equation}
+\sum_{1\leq j\leq s}c_{j}\left\{  \left\vert \chi_{j}\left(  \theta
+_{j1}\right)  \right\rangle \left\langle \chi_{-j}\left(  \theta_{j1}\right)
+\right\vert -\left\vert \chi_{-j}\left(  \theta_{j1}\right)  \right\rangle
+\left\langle \chi_{j}\left(  \theta_{j1}\right)  \right\vert \right\}  .
+\end{equation}
+This transformation corresponds to the one parameter subgroup $SU\left(
+1,1\right)  $ of $SU(2)$ generated by
+\begin{equation}
+u\left(  \theta\right)  =e^{i\theta_{j}\left(  \left\vert \psi_{j}%
+\right\rangle \left\langle \psi_{j}\right\vert -\left\vert \psi_{-j}%
+\right\rangle \left\langle \psi_{-j}\right\vert \right)  }.
+\end{equation}
+
+
+If we consider the "inverse" map $M_{b}$ defined as
+\begin{equation}
+M_{b}\left(  \sum_{1\leq j\leq s}c_{j}\left\{  \left\vert \psi_{j}%
+\right\rangle \left\langle \psi_{-j}\right\vert -\left\vert \psi
+_{-j}\right\rangle \left\langle \psi_{j}\right\vert \right\}  \right)
+=\sum_{1\leq j\leq s}c_{j}\left\vert \psi_{j}\psi_{-j}\right\rangle
+=\left\vert g\right\rangle
+\end{equation}
+then
+\begin{align}
+&  M_{b}\left(  e^{i\theta_{j}\left(  \left\vert \psi_{j}\right\rangle
+\left\langle \psi_{j}\right\vert -\left\vert \psi_{-j}\right\rangle
+\left\langle \psi_{-j}\right\vert \right)  }\sum_{1\leq j\leq s}c_{j}\left\{
+\left\vert \psi_{j}\right\rangle \left\langle \psi_{-j}\right\vert -\left\vert
+\psi_{-j}\right\rangle \left\langle \psi_{j}\right\vert \right\}  \right)
+\nonumber\\
+&  =M_{b}\left(  \sum_{1\leq j\leq s}c_{j}\left\{  e^{2i\theta_{j}}\left\vert
+\psi_{j}\right\rangle \left\langle \psi_{-j}\right\vert -e^{-2i\theta_{j}%
+}\left\vert \psi_{-j}\right\rangle \left\langle \psi_{j}\right\vert \right\}
+\right) \nonumber\\
+&  =\sum_{1\leq j\leq s}c_{j}\left\vert \psi_{j}\psi_{-j}\right\rangle .
+\end{align}
+The phase factor can be absorbed into the GSO's as
+\begin{align}
+A  &  =\sum_{1\leq j\leq s}c_{j}\left\{  e^{2i\theta_{j}}\left\vert \psi
+_{j}\right\rangle \left\langle \psi_{-j}\right\vert -e^{-2i\theta_{j}%
+}\left\vert \psi_{-j}\right\rangle \left\langle \psi_{j}\right\vert \right\}
+\nonumber\\
+&  =\sum_{1\leq j\leq s}c_{j}\left\{  \left\vert e^{i\theta_{j}}\psi
+_{j}\right\rangle \left\langle e^{-i\theta_{j}}\psi_{-j}\right\vert
+-\left\vert e^{-i\theta_{j}}\psi_{-j}\right\rangle \left\langle e^{i\theta
+_{j}}\psi_{j}\right\vert \right\}  .
+\end{align}
+
+
+In general
+\begin{align}
+M_{b}\left(  \mathcal{R}_{\mathcal{H}^{1}}\left(  u\left(  \theta\right)
+\right)  A\right)   &  =M_{b}\left(  A\right)  ,\quad A\in\mathcal{B}%
+_{2a}\left(  \mathcal{H}^{1}\right)  ,u\left(  \theta\right)  \in SU\left(
+1,1\right)  ^{s}\nonumber\\
+u\left(  \theta\right)   &  :\ker\left\{  M_{b}\right\}  \rightarrow
+\ker\left\{  M_{b}\right\} \nonumber\\
+\mathcal{R}_{\mathcal{H}^{2}}\left(  u\left(  \theta\right)  \right)
+M_{b}\left(  A\right)   &  \neq M_{b}\left(  \mathcal{R}_{\mathcal{H}^{1}%
+}\left(  u\left(  \theta\right)  \right)  A\right)  ,u\left(  \theta\right)
+\in SU\left(  1,1\right)  ^{s},
+\end{align}
+but
+\begin{equation}
+\mathcal{R}_{\mathcal{H}^{2}}\left(  u\left(  \theta\right)  \right)
+M_{b}\left(  A\right)  =M_{b}\left(  \mathcal{R}_{\mathcal{H}^{1}}\left(
+u\left(  \theta\right)  \right)  A\right)  ,u\left(  \theta\right)  \in
+SU\left(  2\right)  ^{s}%
+\end{equation}
+and $M_{b}$ is singular (it is surjective but not injective). This gives
+\begin{equation}
+M_{b}\left(  \sum_{1\leq j\leq s}c_{j}\left\{  \left(  e^{2i\theta_{1j}%
+}-e^{2i\theta_{2j}}\right)  \left\vert \psi_{j}\right\rangle \left\langle
+\psi_{-j}\right\vert -\left(  e^{-2i\theta_{1j}}-e^{-2i\theta_{2j}}\right)
+\left\vert \psi_{-j}\right\rangle \left\langle \psi_{j}\right\vert \right\}
+\right)  =0.
+\end{equation}
+
+
+\subsubsection{Invariance Groups}
+
+One should note that if $\left\vert g\right\rangle $ is non degenerate the
+maximal compact invariance group is the special unitary group $SU\left(
+2\right)  ^{s},$ whose complexification is $SL\left(  2,\mathbb{C}\right)
+^{s}$ i.e.
+\begin{align}
+&  \sum_{1\leq j\leq s}c_{j}\left\vert u\psi_{j}u\psi_{-j}\right\rangle
+=\sum_{1\leq j\leq s}c_{j}\left\vert \psi_{j}\psi_{-j}\right\rangle ,u\in
+SU\left(  2\right)  ^{s},\nonumber\\
+&  \sum_{1\leq j\leq s}c_{j}\left\vert v\psi_{j}v\psi_{-j}\right\rangle
+=\sum_{1\leq j\leq s}c_{j}\left\vert \psi_{j}\psi_{-j}\right\rangle ,v\in
+SL\left(  2,\mathbb{C}\right)  ^{s},
+\end{align}
+while if the degeneracy is twofold then the maximal compact invariance group
+is $SU\left(  2\right)  ^{s-2}\times USp\left(  4\right)  $, while the non
+compact one is $SL\left(  2,\mathbb{C}\right)  ^{s-2}\times Sp\left(
+4,\mathbb{C}\right)  $ etc until one has an $s$-fold degeneracy then the
+maximal invariance are groups $USp\left(  2s\right)  $ and $Sp\left(
+2s,\mathbb{C}\right)  .$
+
+The invariance group for a non degenerate antisymmetric operator is $SU\left(
+1,1\right)  ^{s},$ which changes with degeneracy from $SU\left(  1,1\right)
+^{s-2}\times$ $SU\left(  2,2\right)  $ to $SU\left(  s,s\right)  .$ The
+complexification of $SU\left(  1,1\right)  $ is $Sp\left(  2,\mathbb{C}%
+\right)  .$
+
+\subsubsection{Transpose and Complex Conjugation}
+
+The transpose operation
+\begin{align}
+\tau &  :\mathcal{B}\left(  \mathcal{H}^{1}\right)  \rightarrow\mathcal{B}%
+\left(  \mathcal{H}^{1}\right) \nonumber\\
+A^{t}  &  =\tau\left(  A\right)  ,\quad A\in\mathcal{B}\left(  \mathcal{H}%
+^{1}\right)
+\end{align}
+is defined in terms of a complex conjugation map, $K_{\mathfrak{b}},$ that is
+an isometric antilinear involutive
+\begin{align}
+K_{\mathfrak{b}}  &  :\mathcal{H}^{1}\rightarrow\mathcal{H}^{1},\nonumber\\
+K_{\mathfrak{b}}\left(  \nu\right)   &  =K_{\mathfrak{b}}\left\vert
+\nu\right\rangle =\left\vert \nu^{\ast}\right\rangle ,
+\end{align}
+that is associated with an equivalence of bases, $\mathfrak{b},$ of
+$\mathcal{H}^{1}.$The antilinear property gives
+\begin{equation}
+K_{\mathfrak{b}}\left(  i\right)  =-i,
+\end{equation}
+the isometric property
+\begin{align}
+\left\langle \left.  K_{\mathfrak{b}}\varphi\right\vert K_{\mathfrak{b}}%
+\chi\right\rangle  &  =\overline{\left\langle \left.  \varphi\right\vert
+\chi\right\rangle }=\left\langle \left.  \chi\right\vert \varphi\right\rangle
+\\
+&  \Leftrightarrow\left\Vert \varphi\right\Vert =\left\Vert K_{\mathfrak{b}%
+}\varphi\right\Vert ,
+\end{align}
+the involutive property that
+\begin{equation}
+K_{\mathfrak{b}}^{2}\left\vert \nu\right\rangle =\left\vert \nu\right\rangle ,
+\end{equation}
+thus
+\begin{align}
+K_{\mathfrak{b}}\left\vert b_{j}\right\rangle  &  =\left\vert b_{j}%
+\right\rangle \nonumber\\
+K_{\mathfrak{b}}\left\vert b_{-j}\right\rangle  &  =-\left\vert b_{-j}%
+\right\rangle
+\end{align}
+and
+\begin{equation}
+\left(  \mathcal{H}^{1}\right)  _{\mathbb{R}}=V_{\mathfrak{b}}\oplus
+V_{-\mathfrak{b}}.
+\end{equation}
+The subspaces $V_{\mathfrak{b}},V_{-\mathfrak{b}}$ are \emph{real }eigenspaces
+of $K_{\mathfrak{b}}$.
+
+$\lceil$The adjoint of $K_{\mathfrak{b}}$ is defined as
+\begin{equation}
+\left\langle \left.  K_{\mathfrak{b}}^{\dagger}\varphi\right\vert
+\chi\right\rangle =\left\langle \left.  \varphi\right\vert K_{\mathfrak{b}%
+}\chi\right\rangle \quad\forall\left\vert \chi\right\rangle \in\mathcal{H}^{1}%
+\end{equation}
+$\rfloor$
+
+The matrix representation of an element of $\mathcal{H}^{1}$ and its
+$K_{\mathfrak{b}}$-complex conjugate are
+\begin{align}
+\left\vert v\right\rangle  &  =\left(  \left\vert \lambda_{1}\right\rangle
+,\cdots,\left\vert \lambda_{s}\right\rangle ,\left\vert \lambda_{-1}%
+\right\rangle ,\cdots,\left\vert \lambda_{-s}\right\rangle \right)
+\mathbf{v}\nonumber\\
+\left\vert \nu^{\ast}\right\rangle  &  =\left(  \left\vert \lambda
+_{1}\right\rangle ,\cdots,\left\vert \lambda_{s}\right\rangle ,\left\vert
+\lambda_{-1}\right\rangle ,\cdots,\left\vert \lambda_{-s}\right\rangle
+\right)  \mathbf{\bar{v}.}%
+\end{align}
+If
+\begin{equation}
+K_{\mathfrak{b}}\left\vert v\right\rangle =\left\vert v\right\rangle
+\end{equation}
+then $\mathbf{v\in}\mathbb{R}.$
+
+The complex conjugation map, $K_{\mathfrak{b}},$ also defines a non degenerate
+symmetric bilinear form on $\mathcal{H}^{1}$ given by
+\begin{equation}
+\left(  \left.  \varphi\right\vert \chi\right)  _{\mathfrak{b}}=\left(
+\left.  \chi\right\vert \varphi\right)  _{\mathfrak{b}}=\left\langle \left.
+K_{\mathfrak{b}}\varphi\right\vert \chi\right\rangle =\left\langle \left.
+K_{\mathfrak{b}}\chi\right\vert \varphi\right\rangle ;\quad\left\vert
+\varphi\right\rangle ,\left\vert \chi\right\rangle \in\mathcal{H}^{1},
+\end{equation}
+which allows one to define the transpose of an operator as
+\begin{equation}
+\left\{  \left(  \left.  A^{t}\varphi\right\vert \chi\right)  _{\mathfrak{b}%
+}=\left(  \left.  \varphi\right\vert A\chi\right)  _{\mathfrak{b}}\quad
+\forall\left\vert \chi\right\rangle \in\mathcal{H}^{1}\right\}  \quad
+\forall\left\vert \varphi\right\rangle \in\mathcal{H}^{1},
+\end{equation}
+hence
+\begin{equation}
+\left\{  \left(  \left.  A\varphi\right\vert \chi\right)  _{\mathfrak{b}%
+}=\left(  \left.  \varphi\right\vert A^{t}\chi\right)  _{\mathfrak{b}}%
+\quad\forall\left\vert \chi\right\rangle \in\mathcal{H}^{1}\right\}
+\quad\forall\left\vert \varphi\right\rangle \in\mathcal{H}^{1}.
+\end{equation}
+In particular
+\begin{equation}
+\left(  \left.  K_{\mathfrak{b}}^{t}\varphi\right\vert \chi\right)
+_{\mathfrak{b}}=\left(  \left.  \varphi\right\vert K_{\mathfrak{b}}%
+\chi\right)  _{\mathfrak{b}}=\left\langle \left.  K_{\mathfrak{b}}%
+\varphi\right\vert K_{\mathfrak{b}}\chi\right\rangle =\overline{\left\langle
+\left.  \varphi\right\vert \chi\right\rangle }=\left\langle \left.
+\chi\right\vert \varphi\right\rangle ;\quad\left\vert \varphi\right\rangle
+,\left\vert \chi\right\rangle \in\mathcal{H}^{1}.
+\end{equation}
+In terms of the inner product in $\mathcal{H}^{1}$ the transpose definition
+can be written as
+\begin{equation}
+\left\{  \left\langle \left.  K_{\mathfrak{b}}A^{t}K_{\mathfrak{b}%
+}K_{\mathfrak{b}}\varphi\right\vert \chi\right\rangle =\left\langle \left.
+K_{\mathfrak{b}}\varphi\right\vert A\chi\right\rangle =\left\langle \left.
+A^{\dagger}K_{\mathfrak{b}}\varphi\right\vert \chi\right\rangle \quad
+\forall\left\vert \chi\right\rangle \in\mathcal{H}^{1}\right\}  \quad
+\forall\left\vert \varphi\right\rangle \in\mathcal{H}^{1}%
+\end{equation}
+which shows that
+\begin{equation}
+A^{\dagger}=K_{\mathfrak{b}}A^{t}K_{\mathfrak{b}}%
+\end{equation}
+and
+\begin{equation}
+K_{\mathfrak{b}}A^{\dagger}K_{\mathfrak{b}}=A^{t}%
+\end{equation}
+$A$ is $K_{\mathfrak{b}}$-symmetric%
+\begin{equation}
+\left\{  \left(  \left.  A\varphi\right\vert \chi\right)  _{\mathfrak{b}%
+}=\left(  \left.  \varphi\right\vert A\chi\right)  _{\mathfrak{b}}\quad
+\forall\left\vert \chi\right\rangle \in\mathcal{H}^{1}\right\}  \quad
+\forall\left\vert \varphi\right\rangle \in\mathcal{H}^{1},
+\end{equation}
+if
+\begin{equation}
+K_{\mathfrak{b}}A^{\dagger}K_{\mathfrak{b}}=A^{t}=A.
+\end{equation}
+The change of basis
+\begin{align}
+S\left(  \left\vert \lambda_{1}\right\rangle ,\cdots,\left\vert \lambda
+_{s}\right\rangle ,\left\vert \lambda_{-1}\right\rangle ,\cdots,\left\vert
+\lambda_{-s}\right\rangle \right)   &  =\left(  \left\vert \lambda
+_{1}\right\rangle ,\cdots,\left\vert \lambda_{s}\right\rangle ,\left\vert
+\lambda_{-1}\right\rangle ,\cdots,\left\vert \lambda_{-s}\right\rangle
+\right)  \mathbb{S}\nonumber\\
+&  =\left(  \left\vert \eta_{1}\right\rangle ,\cdots,\left\vert \eta
+_{s}\right\rangle ,\left\vert \eta_{-1}\right\rangle ,\cdots,\left\vert
+\eta_{-s}\right\rangle \right)
+\end{align}
+has real representation matrix $\mathbb{S}$ if $\left\vert \mathbf{\lambda
+}\right\rangle $ and $\left\vert \mathbf{\eta}\right\rangle $ belong to the
+same $K_{\mathfrak{b}}$-equivalence class i.e. $K_{\lambda}=K_{\eta},$ if they
+do not then $\mathbb{S}$ has complex entries.
+
+The complex conjugate of an operator is defined as
+\begin{equation}
+A^{\ast}=K_{\mathfrak{b}}AK_{\mathfrak{b}},\quad A\in\mathcal{B}\left(
+\mathcal{H}^{1}\right)
+\end{equation}
+and the transpose is then given as
+\begin{equation}
+A^{t}=\left(  A^{\ast}\right)  ^{\dagger},
+\end{equation}
+which gives that
+\begin{equation}
+A^{\dagger}=\left(  A^{t}\right)  ^{\ast}=\left(  A^{\ast}\right)  ^{t}.
+\end{equation}
+$\lceil$It is possible to show that complex conjugation, transpose and adjoint
+operations are associative$\rfloor$ In particular if
+\begin{equation}
+A=-A^{t}%
+\end{equation}
+then
+\begin{equation}
+\left(  iA\right)  ^{\dagger}=-i
+\end{equation}
+
+
+The matrix representation of $A^{\ast}$ on a real $K_{\mathfrak{b}}$-basis is
+\begin{equation}
+K_{\mathfrak{b}}AK_{\mathfrak{b}}\left(  \left\vert \lambda_{1}\right\rangle
+,\cdots,\left\vert \lambda_{s}\right\rangle ,\left\vert \lambda_{-1}%
+\right\rangle ,\cdots,\left\vert \lambda_{-s}\right\rangle \right)  =\left(
+\left\vert \lambda_{1}\right\rangle ,\cdots,\left\vert \lambda_{s}%
+\right\rangle ,\left\vert \lambda_{-1}\right\rangle ,\cdots,\left\vert
+\lambda_{-s}\right\rangle \right)  \overline{\mathbb{A}}%
+\end{equation}%
+\begin{equation}
+A^{\ast}=\left\vert \mathbf{\chi}\right\rangle \left\langle \mathbf{\chi
+}\left.  A^{\ast}\right\vert \mathbf{\chi}\right\rangle \left\langle
+\mathbf{\chi}\right\vert =\left\vert \mathbf{\chi}\right\rangle \left\langle
+K_{\mathfrak{b}}\mathbf{\chi}\left.  A\right\vert K_{\mathfrak{b}}%
+\mathbf{\chi}\right\rangle \left\langle \mathbf{\chi}\right\vert =\left\vert
+\mathbf{\chi}\right\rangle \overline{\mathbb{A}}_{\chi}\left\langle
+\mathbf{\chi}\right\vert
+\end{equation}
+and the representation of $A^{t}$ on such a basis is
+\begin{equation}
+A^{t}\left(  \left\vert \lambda_{1}\right\rangle ,\cdots,\left\vert
+\lambda_{s}\right\rangle ,\left\vert \lambda_{-1}\right\rangle ,\cdots
+,\left\vert \lambda_{-s}\right\rangle \right)  =\left(  \left\vert \lambda
+_{1}\right\rangle ,\cdots,\left\vert \lambda_{s}\right\rangle ,\left\vert
+\lambda_{-1}\right\rangle ,\cdots,\left\vert \lambda_{-s}\right\rangle
+\right)  \mathbb{A}^{t}.
+\end{equation}
+
+
+\subsection{Transformations of Symplectic Forms}
+
+The value of the symplectic form $g$ does not depend on its representation i.e.%
+
+\begin{align}
+g\left(  \varphi_{1},\varphi_{2}\right)   &  =\left\langle \left.
+g\right\vert \varphi_{1}\wedge\varphi_{2}\right\rangle =\left\langle \left.
+\sum_{-s\leq k,l\leq s}g_{\chi kl}\left\vert \chi_{k}\chi_{l}\right\rangle
+\right\vert \varphi_{1}\wedge\varphi_{2}\right\rangle \nonumber\\
+&  =\left\langle \left.  \sum_{1\leq j\leq s}\left\vert c_{j}^{\frac{1}{2}%
+}\psi_{j}c_{j}^{\frac{1}{2}}\psi_{-j}\right\rangle \right\vert \varphi
+_{1}\wedge\varphi_{2}\right\rangle \nonumber\\
+&  =\left\langle \left.  \sum_{1\leq j\leq s}\left\vert \eta_{j}\eta
+_{-j}\right\rangle \right\vert \varphi_{1}\wedge\varphi_{2}\right\rangle
+;\left\vert \varphi_{1}\right\rangle ,\left\vert \varphi_{2}\right\rangle
+\in\mathcal{H}^{1}.
+\end{align}
+
+
+\subsubsection{Discrete Basis}
+
+The canonical form can be obtained by transformations of the one particle,
+$\left(  \left\vert \varphi_{1}\right\rangle ,\cdots,\left\vert \varphi
+_{s}\right\rangle ,\left\vert \varphi_{-1}\right\rangle ,\cdots,\left\vert
+\varphi_{-s}\right\rangle \right)  ,$ of $\mathcal{H}^{1}$ which have the
+general effect%
+\begin{align}
+\left\vert g\right\rangle  &  =\sum_{-s\leq k,l\leq s}g_{\chi kl}\left\vert
+\chi_{k}\chi_{l}\right\rangle =\sum_{-s\leq k,l\leq s}g_{\chi kl}\left\vert
+T\varphi_{k}T\varphi_{l}\right\rangle =\sum_{-s\leq k,l,k^{\prime},l^{\prime
+}\leq s}T_{kk^{\prime}}T_{ll^{\prime}}g_{_{\chi}kl}\left\vert \varphi
+_{k}\varphi_{l}\right\rangle \nonumber\\
+&  =\sum_{-s\leq k^{\prime},l^{\prime}\leq s}\left\vert \varphi_{k^{\prime}%
+}\varphi_{l^{\prime}}\right\rangle \left(  T^{t}\mathbb{G}_{\chi}T\right)
+_{k^{\prime}l^{\prime}},
+\end{align}
+thus
+\begin{equation}
+\mathbb{T}_{\chi\varphi}^{t}\mathbb{G}_{\varphi}\mathbb{T}_{\chi\varphi
+}=\mathbb{G}_{\chi}.
+\end{equation}
+One also has
+\begin{equation}
+\mathbb{T}_{\varphi\chi}^{t}\mathbb{G}_{\chi}\mathbb{T}_{\varphi\chi
+}=\mathbb{G}_{\varphi}%
+\end{equation}
+thus
+\begin{equation}
+\mathbb{T}_{\chi\varphi}^{t}\mathbb{T}_{\varphi\chi}^{t}\mathbb{G}_{\chi
+}\mathbb{T}_{\varphi\chi}\mathbb{T}_{\chi\varphi}=\mathbb{G}_{\chi},
+\end{equation}
+where%
+\begin{equation}
+\mathbb{G}_{\psi jk}=g\left(  \psi_{j},\psi_{k}\right)  ;j,k=1,\cdots
+,s,-1,\cdots,-s.
+\end{equation}
+The transformation between the canonical and the standard basis is%
+\begin{align}
+&  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{C}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{C}^{-\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{C}\\
+-\mathbb{C} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{C}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{C}^{-\frac{1}{2}}%
+\end{array}
+\right)  =\\
+&  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{C}^{\frac{1}{2}}\\
+-\mathbb{C}^{\frac{1}{2}} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{C}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{C}^{-\frac{1}{2}}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}_{s}\\
+-\mathbb{I}_{s} & \mathbb{O}%
+\end{array}
+\right)
+\end{align}
+thus%
+\begin{equation}
+\mathbb{T}_{\eta\psi}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{C}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{C}^{-\frac{1}{2}}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+\subsubsection{Continuous Basis}
+
+The wavefunction associated with $\left\vert g\right\rangle $ is given by
+\begin{align}
+g\left(  \mathbf{x}_{1},\mathbf{x}_{2}\right)   &  =\left\langle \left.
+\mathbf{x}_{1}\mathbf{x}_{2}\right\vert g\right\rangle =\sum_{1\leq j\leq
+s}\left\langle \left.  \mathbf{x}_{1}\mathbf{x}_{2}\right\vert \eta_{j}%
+\eta_{-j}\right\rangle \\
+&  =\sum_{1\leq j\leq s}\left\vert \eta_{j}\left(  \mathbf{x}_{1}\right)
+\eta_{-j}\left(  \mathbf{x}_{2}\right)  \right\rangle =\sum_{1\leq j\leq
+s}c_{j}\left\vert \psi_{j}\left(  \mathbf{x}_{1}\right)  \psi_{-j}\left(
+\mathbf{x}_{2}\right)  \right\rangle ,
+\end{align}
+thus%
+\begin{equation}
+c_{j}=\frac{1}{\sqrt{2}}\int\overline{\left\{  \psi_{j}\left(  \mathbf{x}%
+_{1}\right)  \psi_{-j}\left(  \mathbf{x}_{2}\right)  -\psi_{j}\left(
+\mathbf{x}_{2}\right)  \psi_{-j}\left(  \mathbf{x}_{1}\right)  \right\}
+}g\left(  \mathbf{x}_{1},\mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}%
+\end{equation}
+and
+\begin{equation}
+\int\varphi_{a}\left(  \mathbf{x}_{1}\right)  g\left(  \mathbf{x}%
+_{1},\mathbf{x}_{2}\right)  \varphi_{b}\left(  \mathbf{x}_{2}\right)
+d\mathbf{x}_{1}d\mathbf{x}_{2}=g\left(  \varphi_{a},\varphi_{b}\right)  ,
+\end{equation}
+while basis transformations give%
+\begin{equation}
+g\left(  \mathbf{x}_{1}\mathbf{x}_{2}\right)  =\sum_{-s\leq j\leq s}%
+c_{j}\left\vert T\varphi_{j}\left(  \mathbf{x}_{1}\right)  T\varphi
+_{-j}\left(  \mathbf{x}_{2}\right)  \right\rangle =\sum_{-s\leq j,k,l\leq
+s}T_{jk}T_{-jl}c_{j}\left\vert \varphi_{k}\left(  \mathbf{x}_{1}\right)
+\varphi_{l}\left(  \mathbf{x}_{2}\right)  \right\rangle .\nonumber
+\end{equation}
+The amplitudes, $\left\langle \left.  \mathbf{x}_{1}\right\vert \varphi
+_{j}\right\rangle ,$ of the basis elements $\left\vert \varphi_{j}%
+\right\rangle $ are the "matrix elements" of the transformation $\Upsilon
+:\left(  \left\vert \mathbf{x}_{1}\right\rangle \right)  \rightarrow\left(
+\left\vert \varphi_{1}\right\rangle \cdots\left\vert \varphi_{s}\right\rangle
+\left\vert \varphi_{-1}\right\rangle \left\vert \varphi_{1}\right\rangle
+\left\vert \varphi_{-s}\right\rangle \right)  $ from a discrete basis to a
+continuous generalized one i.e.%
+\begin{equation}
+\left\vert \mathbf{x}_{1}\right\rangle =\sum_{-s\leq j\leq s}\left\vert
+\varphi_{j}\right\rangle \left\langle \left.  \varphi_{j}\right\vert
+\mathbf{x}_{1}\right\rangle \equiv\sum_{-s\leq j\leq s}\left\vert \varphi
+_{j}\right\rangle \overline{\Upsilon_{j}\left(  \mathbf{x}_{1}\right)  }%
+\end{equation}
+giving
+\begin{equation}
+\left(  \Upsilon^{\dagger}g\bar{\Upsilon}\right)  \left(  \mathbf{x}%
+_{1},\mathbf{x}_{2}\right)  =g\left(  \mathbf{x}_{1},\mathbf{x}_{2}\right)
+=\sum_{-s\leq j,k\leq s}\overline{\Upsilon_{j}\left(  \mathbf{x}_{1}\right)
+}g_{jk}\overline{\Upsilon_{k}\left(  \mathbf{x}_{2}\right)  }.
+\end{equation}
+The inverse transformation is given by%
+\begin{equation}
+\left\vert \varphi_{j}\right\rangle =\int\left\vert \mathbf{x}_{1}%
+\right\rangle \left\langle \left.  \mathbf{x}_{1}\right\vert \varphi
+_{j}\right\rangle d\mathbf{x}_{1}\equiv\int\left\vert \mathbf{x}%
+_{1}\right\rangle \Upsilon_{j}\left(  \mathbf{x}_{1}\right)  d\mathbf{x}_{1}%
+\end{equation}
+leading to%
+\begin{equation}
+\left(  \Upsilon^{t}g\Upsilon\right)  _{jk}=\int\Upsilon_{j}\left(
+\mathbf{x}_{1}\right)  g\left(  \mathbf{x}_{1}\mathbf{x}_{2}\right)
+\Upsilon_{k}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}.
+\end{equation}
+
+
+\subsection{Symplectic Group}
+
+The symplectic group $Sp\left(  \mathcal{H}^{1}\right)  \equiv Sp\left(
+2s,\mathbb{C}\right)  $ is defined as the set of invertible tranformations $S$
+that satisfy
+\begin{equation}
+g\left(  S\varphi_{1},S\varphi_{2}\right)  =g\left(  \varphi_{1},\varphi
+_{2}\right)  \forall\varphi_{1},\varphi_{2}\in\mathcal{H}^{1}%
+\end{equation}
+if
+\begin{equation}
+\operatorname*{rank}\left\{  g\right\}  =s.
+\end{equation}
+If
+\begin{equation}
+\operatorname*{rank}\left\{  g\right\}  =\rho<s
+\end{equation}
+then this defines the subgroup $Sp\left(  2\rho,\mathbb{C}\right)  $ of
+$Sp\left(  2s,\mathbb{C}\right)  .$
+
+As
+\begin{equation}
+g\left(  \varphi_{1},\varphi_{2}\right)  =\mathbf{v}_{1\lambda}^{t}%
+\mathbb{G}_{\lambda}\mathbf{v}_{2\lambda},
+\end{equation}
+where
+\begin{equation}
+\left\vert v\right\rangle =\left(  \left\vert \lambda_{1}\right\rangle
+,\cdots,\left\vert \lambda_{s}\right\rangle ,\left\vert \lambda_{-1}%
+\right\rangle ,\cdots,\left\vert \lambda_{-s}\right\rangle \right)  \mathbf{v}%
+\end{equation}
+one has%
+\begin{equation}
+g\left(  S\varphi_{1},S\varphi_{2}\right)  =\mathbf{v}_{1\lambda}%
+^{t}\mathbb{S}_{\lambda}^{t}\mathbb{G}_{\lambda}\mathbb{S}_{\lambda}%
+\mathbf{v}_{2\lambda}=\mathbf{v}_{1\lambda}^{t}\mathbb{G}_{\lambda}%
+\mathbf{v}_{2\lambda}\quad\forall\mathbf{v}_{1\lambda},\mathbf{v}_{2\lambda
+}\in l_{2},
+\end{equation}
+which shows that%
+\begin{equation}
+\mathbb{S}_{\lambda}^{t}\mathbb{G}_{\lambda}\mathbb{S}_{\lambda}%
+=\mathbb{G}_{\lambda}%
+\end{equation}
+and
+\begin{equation}
+\mathbb{S}_{\lambda}^{t}\mathbb{T}_{\lambda\eta}^{t}\mathbb{G}_{\eta
+}\mathbb{T}_{\lambda\eta}\mathbb{S}_{\lambda}=\mathbb{G}_{\lambda}%
+=\mathbb{T}_{\lambda\eta}^{t}\mathbb{G}_{\eta}\mathbb{T}_{\lambda\eta},
+\end{equation}
+giving
+\begin{align}
+&  \mathbb{T}_{\lambda\eta}^{-t}\mathbb{S}_{\lambda}^{t}\mathbb{T}%
+_{\eta\lambda}^{t}\mathbb{G}_{\eta}\mathbb{T}_{\eta\lambda}\mathbb{S}%
+_{\lambda}\mathbb{T}_{\lambda\eta}^{-1}=\mathbb{G}_{\eta}\nonumber\\
+&  \equiv\left[  \mathbb{T}_{\eta\lambda}\mathbb{S}_{\lambda}\mathbb{T}%
+_{\lambda\eta}^{-1}\right]  ^{t}\mathbb{G}_{\eta}^{t}\left[  \mathbb{T}%
+_{\eta\lambda}\mathbb{S}_{\lambda}\mathbb{T}_{\lambda\eta}^{-1}\right]
+=\mathbb{G}_{\eta},
+\end{align}
+which shows that $\mathbb{S}_{\lambda}$ and $\mathbb{S}_{\eta}$ are conjugate
+representations of $Sp\left(  2s,\mathbb{C}\right)  $.
+
+In particular one can choose the biorthogonal dual cannonical basis $\left\{
+\left\vert \eta_{j}^{d}\right\rangle ,\left\vert \eta_{-j}^{d}\right\rangle
+;1\leq j\leq s\right\}  $ given by
+\begin{equation}
+\left\vert \eta_{j}^{d}\right\rangle =\left\vert c_{j}^{-\frac{1}{2}}\psi
+_{j}\right\rangle ;-s\leq j\leq s
+\end{equation}
+that produces the form matrix
+\begin{equation}
+\mathbb{G}_{\eta^{d}}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+and the group
+\begin{equation}
+\mathbb{S}_{\eta^{d}}^{t}\mathbb{G}_{\eta^{d}}\mathbb{S}_{\eta^{d}}%
+=\mathbb{G}_{\eta^{d}}\equiv\mathbb{S}_{\eta^{d}}^{t}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{S}_{\eta^{d}}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  .
+\end{equation}
+This shows that the invariance group of the general symplectic form is
+$Sp\left(  2\rho,\mathbb{C}\right)  .$
+
+\subsection{Invariance Groups}
+
+One can observe from the preceding that the invariance group of $\left\vert
+g\right\rangle $ is $Sp\left(  2\rho,\mathbb{C}\right)  ,$ which is a subgroup
+of $GL\left(  \mathcal{H}^{1}\right)  $ that has an irreducible representation
+on $\mathcal{H}^{2}.$ The hilbert space $\mathcal{H}^{2}$ is not a homogeneous
+space for $GL\left(  \mathcal{H}^{1}\right)  ,$ but each orbit does generate
+$\mathcal{H}^{2}$ and each vector in $\mathcal{H}^{2}$ is cyclic for this
+group and thus all elements of $\mathcal{H}^{2}$ i.e. geminals are generated
+by $GL\left(  \mathcal{H}^{1}\right)  $ acting on a reference geminal by the
+taking closed linear span of the orbit produced by the action of the coset%
+\begin{equation}
+\frac{GL\left(  \mathcal{H}^{1}\right)  }{Sp\left(  2\rho,\mathbb{C}\right)
+}\equiv\frac{GL\left(  2s,\mathbb{C}\right)  }{Sp\left(  2\rho,\mathbb{C}%
+\right)  }%
+\end{equation}
+on the reference geminal
+\begin{equation}
+\left\vert g_{\rho}\right\rangle =\sum_{1\leq j\leq s}c_{\rho j}\left\vert
+\psi_{\rho j}\psi_{\rho-j}\right\rangle .
+\end{equation}
+In detail this orbit is given by
+\begin{align}
+&  \frac{GL\left(  2s,\mathbb{C}\right)  }{Sp\left(  2\rho,\mathbb{C}\right)
+}Sp\left(  2\rho,\mathbb{C}\right)  \left\vert g_{\rho}\right\rangle =\left\{
+\left.  \left\vert g_{\rho}\left(  \gamma\right)  \right\rangle =\gamma
+\left\vert g_{\rho}\right\rangle \right\vert \gamma\in GL\left(
+2s,\mathbb{C}\right)  \right\} \nonumber\\
+&  =\left\{  \left\vert g_{\rho}\left(  c\right)  \right\rangle =ch\left\vert
+g_{\rho}\right\rangle \left\vert c\in\frac{GL\left(  2s,\mathbb{C}\right)
+}{Sp\left(  2\rho,\mathbb{C}\right)  },h\in Sp\left(  2\rho,\mathbb{C}\right)
+\right.  \right\}  .
+\end{align}
+The set $\left\{  \left\vert g_{\rho}\left(  c\right)  \right\rangle \right\}
+$ is a representation of the homogeneous coset space $\frac{GL\left(
+2s,\mathbb{C}\right)  }{Sp\left(  2\rho,\mathbb{C}\right)  }$ as a non linear
+manifold contained in $\mathcal{H}^{2}.$
+
+\subsection{Lie Algebra}
+
+The Lie algebra of $Sp\left(  2\rho,\mathbb{C}\right)  $ is generated by
+considering one parameter subgroups $\left\{  \left.  S\left(  \tau\right)
+\right\vert \tau\in\left(  -\infty,\infty\right)  \right\}  $ of $Sp\left(
+2\rho,\mathbb{C}\right)  $
+\begin{equation}
+S^{t}\left(  \tau\right)  gS\left(  \tau\right)  =g\equiv gS\left(
+\tau\right)  =S\left(  \tau\right)  ^{-t}g
+\end{equation}
+then
+\begin{equation}
+S\left(  \tau\right)  =e^{s\tau}=I+s\tau+\cdots
+\end{equation}
+and to first order
+\begin{equation}
+gs=-s^{t}g=\left(  gs\right)  ^{t}.
+\end{equation}
+In the standard representation one can find the form of the group matrices $S$
+by considering%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+W^{t} & Y^{t}\\
+X^{t} & Z^{t}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+W & X\\
+Y & Z
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+which leads to%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+-Y^{t} & W^{t}\\
+-Z^{t} & X^{t}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+W & X\\
+Y & Z
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+-Y^{t}W+W^{t}Y & -Y^{t}X+W^{t}Z\\
+-Z^{t}W+X^{t}Y & -Z^{t}X+X^{t}Z
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+and
+\begin{align}
+Y^{t}W  &  =\left(  Y^{t}W\right)  ^{t},\\
+Z^{t}X  &  =\left(  Z^{t}X\right)  ^{t},\\
+-Z^{t}W+X^{t}Y  &  =\mathbb{I}.
+\end{align}
+The Lie algebra matrices in the standard representation have the following
+properties
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & d
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+c & d\\
+-a & -b
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+c^{t} & -a^{t}\\
+d^{t} & -b^{t}%
+\end{array}
+\right)
+\end{equation}
+thus%
+\begin{equation}
+s=\left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  ;b=b^{t},c=c^{t}.
+\end{equation}%
+\begin{equation}
+gs=-s^{t}g=\left(  gs\right)  ^{t}.
+\end{equation}
+One can observe that%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+c & -a^{t}\\
+-a & -b
+\end{array}
+\right)  ,
+\end{equation}
+which is a complex symmetric matrix. The inverse of this transformation is
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{-I}\\
+\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}%
+\end{array}
+\right)
+\end{equation}
+and%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+-c & a^{t}\\
+a & b
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+-a^{t} & -c\\
+-b & a
+\end{array}
+\right)  =-\left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  ^{t}%
+\end{equation}
+i.e.
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{-I}\\
+\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  =-\left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  ^{t}.
+\end{equation}
+Observing that
+\begin{align}
+\exp\left\{  TAT^{-1}\right\}   &  =I+TAT^{-1}+\frac{1}{2}TAT^{-1}%
+TAT^{-1}+\cdots\\
+&  =T\exp\left\{  A\right\}  T^{-1}%
+\end{align}
+one obtains that
+\begin{align}
+&  \exp\left\{  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{-I}\\
+\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \right\} \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{-I}\\
+\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)  \exp\left\{  \left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  \right\}  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)
+\end{align}
+
+
+The canonical representation also has the same structure i.e.
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{C}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{C}^{\frac{1}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{C}^{-\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \mathbb{C}^{-\frac{1}{2}}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+a & b\\
+c & -a^{t}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+\subsubsection{Fock Space and Fock Algebra}
+
+The second quantisation map $\Phi:\mathcal{H}^{1}\rightarrow$ $\mathcal{B}%
+\left(  \mathcal{H}_{F}\right)  $ is defined as%
+\begin{equation}
+\Phi\left(  \sum_{1\leq j\leq r}c_{j}\varphi_{j}\right)  =\sum_{1\leq j\leq
+r}\bar{c}_{j}\Phi\left(  \varphi_{j}\right)
+\end{equation}
+and the creators and annihilators associated with the basis $\left\{
+\varphi_{j}\right\}  $ as
+\begin{align}
+a_{j}^{\dagger}  &  =\Phi\left(  \varphi_{j}\right)  ^{\dagger}\nonumber\\
+a_{j}  &  =\Phi\left(  \varphi_{j}\right)  .
+\end{align}
+The space-spin field operators are defined in terms of distributions as
+\begin{align}
+\Phi\left(  \mathbf{x}\right)   &  =\Phi\left(  \delta_{\mathbf{x}}\right)
+=\sum_{1\leq j\leq r}\overline{\varphi_{j}\left(  \mathbf{x}\right)  }%
+a_{j}\nonumber\\
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}  &  =\Phi\left(  \delta_{\mathbf{x}%
+}\right)  ^{\dagger}=\sum_{1\leq j\leq r}\varphi_{j}\left(  \mathbf{x}\right)
+a_{j}^{\dagger}%
+\end{align}
+leading to the geminal expressions%
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}c_{j}a_{j}^{\dagger}%
+a_{-j}^{\dagger}\left\vert \phi\right\rangle =\sum_{1\leq j\leq s}\Phi\left(
+\eta_{j}\right)  ^{\dagger}\Phi\left(  \eta_{-j}\right)  ^{\dagger}\left\vert
+\phi\right\rangle .
+\end{equation}
+and%
+\begin{equation}
+\left\vert g\right\rangle =\int g\left(  \mathbf{x}_{1},\mathbf{x}_{2}\right)
+\Phi\left(  \mathbf{x}_{1}\right)  ^{\dagger}\Phi\left(  \mathbf{x}%
+_{2}\right)  ^{\dagger}d\mathbf{x}_{1}d\mathbf{x}_{2}\left\vert \phi
+\right\rangle
+\end{equation}
+
+
+\subsubsection{Representations}
+
+The Lie algebra generated by
+\begin{align}
+q_{jk}  &  =c_{j}a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)  \sigma\left(
+k\right)  c_{k}a_{-k}^{\dagger}a_{-j};1\leq\left\vert j\right\vert <\left\vert
+k\right\vert \leq s,j\neq-k\\
+q_{jj}  &  =c_{j}\left(  a_{j}^{\dagger}a_{j}-a_{-j}^{\dagger}a_{-j}\right)
+;-s\leq j\leq s\\
+q_{j-j}  &  =c_{j}a_{j}^{\dagger}a_{-j};1\leq j\leq s
+\end{align}
+form a reducible representation $R\left(  sp\left(  2s,\mathbb{C}\right)
+\right)  $ of the Lie algebra $sp\left(  2s,\mathbb{C}\right)  $ on the Fock
+space, $\mathcal{H}_{F},$ that can be decomposed into the direct sum of
+irreps
+\begin{equation}
+R\left(  sp\left(  2s,\mathbb{C}\right)  \right)  =\bigoplus\limits_{0\leq
+N\leq2s}R_{N}\left(  sp\left(  2s,\mathbb{C}\right)  \right)  ,
+\end{equation}
+where $\left\{  \left.  R_{N}\left(  sp\left(  2s,\mathbb{C}\right)  \right)
+\right\vert 0\leq N\leq r\right\}  $ are the irreducible representations
+carried by $\mathcal{H}^{N}.$
+
+In general%
+\begin{equation}
+\Phi\left(  T\varphi_{j}\right)  ^{\dagger}=\Phi\left(  \sum_{1\leq j^{\prime
+}\leq r}T_{jj^{\prime}}\varphi_{j^{\prime}}\right)  ^{\dagger}=\sum_{1\leq
+j^{\prime}\leq r}T_{jj^{\prime}}\Phi\left(  \varphi_{j^{\prime}}\right)
+^{\dagger}=\sum_{1\leq j^{\prime}\leq r}T_{jj^{\prime}}a_{j^{\prime}}%
+^{\dagger}%
+\end{equation}
+leading to
+\begin{equation}
+\Phi\left(  T\varphi_{j}\right)  ^{\dagger}\Phi\left(  T\varphi_{k}\right)
+=\sum_{1\leq j^{\prime},k^{\prime}\leq r}T_{jj^{\prime}}\bar{T}_{kk^{\prime}%
+}a_{j^{\prime}}^{\dagger}a_{k^{\prime}}=\sum_{1\leq j^{\prime},k^{\prime}\leq
+r}\left(  T\otimes\bar{T}\right)  _{jkj^{\prime}k^{\prime}}a_{j^{\prime}%
+}^{\dagger}a_{k^{\prime}}%
+\end{equation}
+and%
+\begin{equation}
+Ta_{j}^{\dagger}a_{k}T^{\dagger}=\Phi\left(  T\varphi_{j}\right)  ^{\dagger
+}\Phi\left(  T\varphi_{k}\right)  =\sum_{1\leq j^{\prime},k^{\prime}\leq
+r}T_{jj^{\prime}}a_{j^{\prime}}^{\dagger}a_{k^{\prime}}T_{k^{\prime}%
+k}^{\dagger}.
+\end{equation}
+
+
+\subsection{Lie Algebra Bases}
+
+\subsubsection{Gauss Decomposition Basis}
+
+If the geminal is non degenerate i.e. $c_{j}\neq c_{k}$ the Lie algebra,
+$gl\left(  2s,\mathbb{C}\right)  ,$ of $GL\left(  2s,\mathbb{C}\right)  $ is
+spanned by the basis elements
+\begin{align}
+q_{jk}^{\dagger}  &  =\left(  c_{j}a_{k}^{\dagger}a_{j}-\sigma\left(
+j\right)  \sigma\left(  k\right)  c_{k}a_{-j}^{\dagger}a_{-k}\right)  ;-s\leq
+j<k\leq s,\left\vert j\right\vert \neq\left\vert k\right\vert \nonumber\\
+\mathfrak{n}_{j}  &  =c_{j}\left(  a_{j}^{\dagger}a_{j}+a_{-j}^{\dagger}%
+a_{-j}\right)  ;1\leq j\leq s\nonumber\\
+q_{jk}  &  =\left(  c_{j}a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)
+\sigma\left(  k\right)  c_{k}a_{-k}^{\dagger}a_{-j}\right)  ;-s\leq j<k\leq
+s;j\neq-k\nonumber\\
+q_{j-j}  &  =a_{j}^{\dagger}a_{-j};-s\leq j\leq s,
+\end{align}
+\emph{which satisfy the indexing symmetry}%
+\begin{equation}
+q_{jk}=-\sigma\left(  j\right)  \sigma\left(  k\right)  q_{-k-j};1\leq j,k\leq
+s.
+\end{equation}
+In particular
+\begin{equation}
+q_{jj}=c_{j}\left(  a_{j}^{\dagger}a_{j}-a_{-j}^{\dagger}a_{-j}\right)  ;1\leq
+j\leq s\nonumber
+\end{equation}
+and one has the adjoint relationships%
+\begin{align}
+q_{j-j}  &  =q_{-jj}^{\dagger},-s\leq j\leq s\nonumber\\
+q_{jj}  &  =q_{jj}^{\dagger},\mathfrak{n}_{j}^{\dagger}=\mathfrak{n}_{j},1\leq
+j\leq s.
+\end{align}
+The transformation between the "off diagonal" q operators and the "a"
+operators can be succintly displayed for $-s\leq j<k\leq s,\left\vert
+k\right\vert \neq\left\vert j\right\vert $ as
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+q_{jk}\\
+q_{j-k}\\
+q_{-jk}\\
+q_{-j-k}\\
+q_{jk}^{\dagger}\\
+q_{j-k}^{\dagger}\\
+q_{-jk}^{\dagger}\\
+q_{-j-k}^{\dagger}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cccccccc}%
+c_{j} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & -c_{k}\\
+0 & c_{j} & 0 & \cdots & \cdots & 0 & c_{k} & 0\\
+\vdots & 0 & c_{j} & 0 & 0 & c_{k} & 0 & \vdots\\
+\vdots & \vdots & 0 & c_{j} & -c_{k} & 0 & \vdots & \vdots\\
+\vdots & \vdots & 0 & -c_{k} & c_{j} & 0 & \vdots & \vdots\\
+\vdots & 0 & c_{k} & 0 & 0 & c_{j} & 0 & \vdots\\
+0 & c_{k} & 0 & \cdots & \cdots & 0 & c_{j} & 0\\
+-c_{k} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & c_{j}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+a_{j}^{\dagger}a_{k}\\
+a_{j}^{\dagger}a_{-k}\\
+a_{-j}^{\dagger}a_{k}\\
+a_{-j}^{\dagger}a_{-k}\\
+a_{k}^{\dagger}a_{j}\\
+a_{-k}^{\dagger}a_{j}\\
+a_{k}^{\dagger}a_{-j}\\
+a_{-k}^{\dagger}a_{-j}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+\subsubsection{Commutation Relationships}
+
+This basis produces a Gauss Decomposition
+\begin{equation}
+L_{-1}\oplus L_{0}\oplus L_{+1}%
+\end{equation}
+where
+\begin{equation}
+L_{+1}=\operatorname*{linspan}\left\{  q_{jk}^{\dagger}=\left(  c_{j}%
+a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)  \sigma\left(  k\right)
+c_{k}a_{-j}^{\dagger}a_{-k}\right)  ;-s\leq j<k\leq s,\left\vert j\right\vert
+\neq\left\vert k\right\vert \right\}
+\end{equation}%
+\begin{equation}
+L_{0}=\operatorname*{linspan}\left\{  q_{j-j}=a_{j}^{\dagger}a_{-j};-s\leq
+j\leq s;a_{j}^{\dagger}a_{j}-a_{-j}^{\dagger}a_{-j},1\leq j\leq s\right\}
+\end{equation}%
+\begin{equation}
+L_{-1}=\operatorname*{linspan}\left\{  q_{jk}=\left(  c_{j}a_{j}^{\dagger
+}a_{k}-\sigma\left(  j\right)  \sigma\left(  k\right)  c_{k}a_{-k}^{\dagger
+}a_{-j}\right)  ;-s\leq j<k\leq s;\left\vert j\right\vert \neq\left\vert
+k\right\vert \right\}
+\end{equation}
+as
+\begin{align}
+\left[  \mathbf{q},\mathbf{q}\right]   &  \subset L_{-1}\oplus L_{0}\\
+\left[  \mathbf{q}^{\dagger},\mathbf{q}^{\dagger}\right]   &  \subset
+L_{+1}\oplus L_{0}\\
+\left[  \mathbf{q},\mathbf{q}_{0}\right]   &  \subset L_{-1}\\
+\left[  \mathbf{q}^{\dagger},\mathbf{q}_{0}\right]   &  \subset L_{+1}\\
+\left[  \mathbf{q}_{0},\mathbf{q}_{0}\right]   &  \subset L_{0}%
+\end{align}
+
+
+\subsubsection{Action on Geminal}
+
+The action of these operators on a canonical GSO is%
+\begin{equation}
+\sum_{1\leq k<l<s}\left\{  z_{kl}q_{kl}^{\dagger}+z_{-kl}q_{-kl}^{\dagger
+}+z_{k-l}q_{k-l}^{\dagger}+z_{-k-l}q_{-k-l}^{\dagger}\right\}  \left\vert
+\psi_{j}\right\rangle
+\end{equation}%
+\begin{equation}
+z_{kl}=-\sigma\left(  k\right)  \sigma\left(  l\right)  z_{-l-k};-s\leq
+k,l\leq s,z_{kl}=0,\left\vert k\right\vert =\left\vert l\right\vert
+\end{equation}
+
+
+The general linear group $GL\left(  \mathcal{H}^{1}\right)  $ and can thus be
+parameterized by
+\begin{equation}
+\gamma\left(  \mathbf{\alpha,z,\beta},\mathbf{w}\right)  =c\left(
+\mathbf{\alpha,z}\right)  h\left(  \mathbf{\beta},\mathbf{w}\right)
+=c_{1}\left(  \mathbf{\alpha}_{\mathrm{re}},\mathbf{\alpha}_{\mathrm{im}%
+}\right)  \tau_{+}\left(  \mathbf{z}\right)  \tau_{-}\left(  \mathbf{w}%
+\right)  h_{1}\left(  \mathbf{\beta}\right)
+\end{equation}
+where
+\begin{align}
+c\left(  \mathbf{\alpha,z}\right)   &  =c_{1}\left(  \mathbf{\alpha
+}_{\mathrm{re}},\mathbf{\alpha}_{\mathrm{im}}\right)  \tau_{+}\left(
+\mathbf{z}\right) \nonumber\\
+h\left(  \mathbf{\beta},\mathbf{w}\right)   &  =\tau_{-}\left(  \mathbf{w}%
+\right)  h_{1}\left(  \mathbf{\beta}\right)
+\end{align}
+and the parameterization is produced by the coset representatives
+\begin{align}
+&  \tau_{+}\left(  \mathbf{z}\right)  =\exp\left\{  \sum
+\limits_{_{\substack{-s\leq j<k\leq s\\\left\vert j\right\vert \neq\left\vert
+k\right\vert }}}z_{jk}q_{jk}^{\dagger}\right\}  ;-s\leq j<k\leq s,z_{jk}%
+\in\mathbb{C}\\
+&  c_{1i}\left(  \mathbf{\alpha}_{\mathrm{im}}\right)  =\exp\left\{
+i\sum\limits_{_{1\leq j\leq s}}\alpha_{\mathrm{im}j}\mathfrak{n}_{j}\right\}
+;1\leq j\leq s,\alpha_{\mathrm{im}j}\in\mathbb{R}\\
+&  c_{1r}\left(  \mathbf{\alpha}_{\mathrm{re}}\right)  =\exp\left\{
+\sum\limits_{_{1\leq j\leq s}}\alpha_{\mathrm{re}j}\mathfrak{n}_{j}\right\}
+;1\leq j\leq s,\alpha_{\mathrm{re}j}\in\mathbb{R},
+\end{align}
+where
+\begin{equation}
+c_{1}\left(  \mathbf{\alpha}_{\mathrm{re}},\mathbf{\alpha}_{\mathrm{im}%
+}\right)  =c_{1i}\left(  \mathbf{\alpha}_{\mathrm{im}}\right)  c_{1r}\left(
+\mathbf{\alpha}_{\mathrm{re}}\right)
+\end{equation}
+and the invariant subgroup
+\begin{align}
+\tau_{-}\left(  \mathbf{w}\right)   &  =\exp\left\{  \sum
+\limits_{_{\substack{-s\leq j<k\leq s\\\left\vert j\right\vert \neq\left\vert
+k\right\vert }}}w_{jk}q_{jk}\right\}  ;-s\leq j<k\leq s,w_{jk}\in\mathbb{C}\\
+h_{1}\left(  \mathbf{\beta}\right)   &  =\exp\left\{  \sum\limits_{_{1\leq
+j\leq s}}\left(  \beta_{jj}\left(  \hat{n}_{j}-\hat{n}_{-j}\right)
++\beta_{j-j}a_{j}^{\dagger}a_{-j}+\beta_{-jj}a_{-j}^{\dagger}a_{j}\right)
+\right\}  ,\beta_{jk}\in\mathbb{C}.
+\end{align}
+The basis $\left\{  \left.  \mathfrak{n}_{j}\right\vert 1\leq j\leq s\right\}
+$ for the coset representatives $c_{1}\left(  \mathbf{\alpha}_{\mathrm{re}%
+},\mathbf{\alpha}_{\mathrm{im}}\right)  $ can be transformed to
+\begin{equation}
+\left\{  \left.  \mathcal{N}_{1},\mathfrak{m}_{j}=\mathfrak{n}_{j}%
+-\mathfrak{n}_{j+1}\right\vert 1\leq j\leq s-1\right\}  ,
+\end{equation}
+which allows one to perform the factorization
+\begin{equation}
+GL\left(  2s,\mathbb{C}\right)  =GL\left(  1,\mathbb{C}\right)  \times
+SL\left(  2s,\mathbb{C}\right)
+\end{equation}
+and set $c\left(  \mathbf{\alpha,z}\right)  $ to
+\begin{equation}
+c\left(  \mathbf{\tilde{\alpha},z}\right)  =\mathit{s}\left(  \tilde{\alpha
+}_{1r}\right)  \mathit{p}\left(  \tilde{\alpha}_{1i}\right)  d\left(
+\mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(  \mathbf{z}\right)  ,
+\end{equation}
+where
+\begin{align}
+\mathit{s}\left(  \tilde{\alpha}_{1r}\right)  \mathit{p}\left(  \tilde{\alpha
+}_{1i}\right)  d\left(  \mathbf{\tilde{\alpha}}\right)   &  =e^{\tilde{\alpha
+}_{1r}\mathcal{N}_{1}}e^{i\tilde{\alpha}_{1i}\mathcal{N}_{1}}\exp\left\{
+\sum\limits_{_{1\leq j\leq s-1}}\tilde{\alpha}_{j}\mathfrak{m}_{j}\right\} \\
+&  \equiv\mathit{s}\left(  \tilde{\alpha}_{1r}\right)  \mathit{p}\left(
+\tilde{\alpha}_{1i}\right)  d\left(  \mathbf{\tilde{\alpha}}\right)  ;2\leq
+j\leq s,\tilde{\alpha}_{j}\in\mathbb{C},\tilde{\alpha}_{1r},\tilde{\alpha
+}_{1i}\in\mathbb{R}%
+\end{align}
+and $e^{\tilde{\alpha}_{1r}\mathcal{N}_{1}}$ and $e^{i\tilde{\alpha}%
+_{1i}\mathcal{N}_{1}}$ are overall scaling and phase factors.
+\begin{equation}
+\exp\left\{  \sum\limits_{_{1\leq j\leq s-1}}\tilde{\alpha}_{j}\mathfrak{m}%
+_{j}\right\}  \exp\left\{  \sum\limits_{_{\substack{-s\leq j<k\leq
+s\\\left\vert j\right\vert \neq\left\vert k\right\vert }}}z_{jk}%
+q_{jk}^{\dagger}\right\}  \left\vert g_{\rho}\right\rangle =\sum_{1\leq j\leq
+s}\left\vert \Upsilon\eta_{\rho j}\Upsilon\eta_{-\rho j}\right\rangle
+,\Upsilon\in\frac{SL\left(  2s,\mathbb{C}\right)  }{Sp\left(  2\rho
+,\mathbb{C}\right)  }%
+\end{equation}
+
+
+The operators $\left\{  \left.  q_{jk}^{\dagger}\right\vert -s\leq j<k\leq
+s,\left\vert j\right\vert \neq\left\vert k\right\vert \right\}  $ and
+$\left\{  \left.  q_{jk}\right\vert -s\leq j<k\leq s,\left\vert j\right\vert
+\neq\left\vert k\right\vert \right\}  $ satisfy the same commutation
+relationships and are representatives of the coset $\frac{Sp\left(
+2s,\mathbb{C}\right)  }{SL\left(  2\right)  ^{s}}$ where
+\begin{equation}
+Sp\left(  2s,\mathbb{C}\right)  =\frac{Sp\left(  2s,\mathbb{C}\right)
+}{SL\left(  2\right)  ^{s}}SL\left(  2\right)  ^{s}.
+\end{equation}
+(It is important to note that in the representation produced by the non
+degenerate $q$ operators there is \emph{no} representation of the subgroup
+$Sp\left(  2s,\mathbb{C}\right)  ).$ One can observe from the preceeding that
+\begin{equation}
+SL\left(  2s,\mathbb{C}\right)  =\frac{Sp\left(  2s,\mathbb{C}\right)
+}{SL\left(  2\right)  ^{s}}\frac{Sp\left(  2s,\mathbb{C}\right)  }{SL\left(
+2\right)  ^{s}}SL\left(  2\right)  ^{s}\cong\frac{Sp\left(  2s,\mathbb{C}%
+\right)  }{SL\left(  2\right)  ^{s}}SL\left(  2\right)  ^{s}\frac{Sp\left(
+2s,\mathbb{C}\right)  }{SL\left(  2\right)  ^{s}}.
+\end{equation}
+One thus also has that
+\begin{equation}
+SL\left(  2s,\mathbb{C}\right)  =Sp\left(  2s,\mathbb{C}\right)  SL\left(
+2\right)  ^{s}Sp\left(  2s,\mathbb{C}\right)  ,
+\end{equation}
+which is the complexification of
+\begin{equation}
+SU^{\ast}\left(  2s\right)  SU\left(  2\right)  ^{s}SU^{\ast}\left(
+2s\right)  .
+\end{equation}%
+\begin{align}
+\lceil\mathfrak{B}_{1}\left(  \mathbb{H}^{1}\right)   &  \cong SU\left(
+2\right)  \equiv SU\left(  2,\mathbb{C}\right)  \\
+\mathbb{H}^{1} &  =\left\{  \left.  \left(
+\begin{array}
+[c]{cc}%
+x & y\\
+-\bar{y} & \overline{x}%
+\end{array}
+\right)  \right\vert x,y\in\mathbb{C}\right\}  \rfloor
+\end{align}
+
+
+Hence%
+\begin{align}
+&  \exp\left\{  \sum\limits_{_{\substack{-s\leq j<k\leq s\\\left\vert
+j\right\vert \neq\left\vert k\right\vert }}}z_{jk}q_{jk}^{\dagger}\right\}
+\left(  \left\vert \psi_{1}\right\rangle \cdots\left\vert \psi_{s}%
+\right\rangle ,\left\vert \psi_{-1}\right\rangle \cdots\left\vert \psi
+_{-s}\right\rangle \right) \\
+&  =\left(  \left\vert \psi_{1}\right\rangle \cdots\left\vert \psi
+_{s}\right\rangle ,\left\vert \psi_{-1}\right\rangle \cdots\left\vert
+\psi_{-s}\right\rangle \right)  \mathbb{W}\left(  \mathbb{Z}\right)  ,
+\end{align}
+where $\mathbb{W}\left(  \mathbb{Z}\right)  $ is a matrix representative of
+$\frac{Sp\left(  2s,\mathbb{C}\right)  }{SL\left(  2\right)  ^{s}}$ wrt the
+basis $\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert -s\leq
+j\leq s\right\}  $ that depends on $\mathbb{Z}.$
+
+\subsubsection{Cartan Decomposition}
+
+In order to obtain the Cartan decomposition of the Lie algebra one considers
+the basis
+\begin{align}
+u_{jk}  &  =c_{k}a_{j}^{\dagger}a_{k}+\sigma\left(  j\right)  \sigma\left(
+k\right)  c_{j}a_{-k}^{\dagger}a_{-j};-s\leq j<k\leq s,\left\vert j\right\vert
+\neq\left\vert k\right\vert \\
+\mathfrak{m}_{j}  &  =c_{j}\left(  a_{j}^{\dagger}a_{j}+a_{-j}^{\dagger}%
+a_{-j}\right)  -c_{j+1}\left(  a_{j+1}^{\dagger}a_{j+1}+a_{-\left(
+j+1\right)  }^{\dagger}a_{-\left(  j+1\right)  }\right)  ;1\leq j\leq s-1\\
+v_{jk}  &  =c_{k}a_{-k}^{\dagger}a_{-j}-\sigma\left(  j\right)  \sigma\left(
+k\right)  c_{j}a_{j}^{\dagger}a_{k};\\
+v_{j-j}  &  =a_{j}^{\dagger}a_{-j};-s\leq j\leq s\\
+v_{jj}  &  =c_{j}\left(  a_{j}^{\dagger}a_{j}-a_{-j}^{\dagger}a_{-j}\right)
+;1\leq j\leq s
+\end{align}
+The transformation between the "off diagonal" $\left(  q,u\right)  $ operators
+and the "a" operators can be succintly displayed for $-s\leq j<k\leq
+s,\left\vert k\right\vert \neq\left\vert j\right\vert $ as%
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+q_{jk}\\
+q_{j-k}\\
+q_{-jk}\\
+q_{-j-k}\\
+u_{jk}\\
+u_{j-k}\\
+u_{-jk}\\
+u_{-j-k}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cccccccc}%
+c_{j} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & -c_{k}\\
+0 & c_{j} & 0 & \cdots & \cdots & 0 & c_{k} & 0\\
+\vdots & 0 & c_{j} & 0 & 0 & c_{k} & 0 & \vdots\\
+\vdots & \vdots & 0 & c_{j} & -c_{k} & 0 & \vdots & \vdots\\
+\vdots & \vdots & 0 & c_{k} & c_{j} & 0 & \vdots & \vdots\\
+\vdots & 0 & -c_{k} & 0 & 0 & c_{j} & 0 & \vdots\\
+0 & -c_{k} & 0 & \cdots & \cdots & 0 & c_{j} & 0\\
+c_{k} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & c_{j}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+a_{j}^{\dagger}a_{k}\\
+a_{j}^{\dagger}a_{-k}\\
+a_{-j}^{\dagger}a_{k}\\
+a_{-j}^{\dagger}a_{-k}\\
+a_{k}^{\dagger}a_{j}\\
+a_{-k}^{\dagger}a_{j}\\
+a_{k}^{\dagger}a_{-j}\\
+a_{-k}^{\dagger}a_{-j}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+\subsubsection{Action on Geminal}%
+
+\begin{equation}
+u_{kl}\left\vert g\right\rangle =\left(  c_{k}a_{l}^{\dagger}a_{k}+c_{l}%
+a_{-k}^{\dagger}a_{-l}\right)  \sum_{1\leq j\leq s}c_{j}\left\vert \psi
+_{j}\psi_{-j}\right\rangle =\left(  n_{k}+n_{l}\right)  \left\vert \psi
+_{l}\psi_{-k}\right\rangle
+\end{equation}%
+\begin{equation}
+u_{k-l}\left\vert g\right\rangle =\left(  c_{k}a_{-l}^{\dagger}a_{k}%
+-c_{l}a_{-k}^{\dagger}a_{l}\right)  \sum_{1\leq j\leq s}c_{j}\left\vert
+\psi_{j}\psi_{-j}\right\rangle =\left(  n_{k}+n_{l}\right)  \left\vert
+\psi_{-l}\psi_{-k}\right\rangle
+\end{equation}%
+\begin{equation}
+u_{-k-l}\left\vert g\right\rangle =\left(  c_{k}a_{l}^{\dagger}a_{-k}%
+-c_{l}a_{k}^{\dagger}a_{-l}\right)  \sum_{1\leq j\leq s}c_{j}\left\vert
+\psi_{j}\psi_{-j}\right\rangle =\left(  n_{k}+n_{l}\right)  \left\vert
+\psi_{k}\psi_{l}\right\rangle
+\end{equation}%
+\begin{equation}
+u_{-k-l}\left\vert g\right\rangle =\left(  c_{k}a_{-l}^{\dagger}a_{-k}%
++c_{l}a_{k}^{\dagger}a_{l}\right)  \sum_{1\leq j\leq s}c_{j}\left\vert
+\psi_{j}\psi_{-j}\right\rangle =\left(  n_{k}+n_{l}\right)  \left\vert
+\psi_{k}\psi_{-l}\right\rangle
+\end{equation}
+
+
+\subsubsection{Orbits of $GL\left(  2s,\mathbb{C}\right)  $ generated by
+$\left\vert g_{\rho}\right\rangle $}
+
+The orbits of $GL\left(  2s,\mathbb{C}\right)  $ generated by $\left\vert
+g_{\rho}\right\rangle $ are given by
+\begin{align}
+\gamma\left(  \mathbf{\alpha,z,\beta},\mathbf{w}\right)  \left\vert g_{\rho
+}\right\rangle  &  =c\left(  \mathbf{\alpha,z}\right)  h\left(  \mathbf{\beta
+},\mathbf{w}\right)  \left\vert g_{\rho}\right\rangle =c_{1}\left(
+\mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(  \mathbf{z}\right)  \tau
+_{-}\left(  \mathbf{w}\right)  h_{1}\left(  \mathbf{\beta}\right)  \left\vert
+g_{\rho}\right\rangle \nonumber\\
+&  =c_{1}\left(  \mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(
+\mathbf{z}\right)  \left\vert g_{\rho}\right\rangle
+\end{align}
+which gives a representation of the coset space $\frac{GL\left(
+1,\mathbb{C}\right)  \times SL\left(  2s,\mathbb{C}\right)  }{sp\left(
+2s,\mathbb{C}\right)  }$ as the nonlinear manifold
+\begin{equation}
+\left\vert g_{\rho}\left(  \mathbf{\tilde{\alpha},z}\right)  \right\rangle
+=c_{1}\left(  \mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(  \mathbf{z}%
+\right)  \left\vert g_{\rho}\right\rangle =\mathit{s}\left(  \tilde{\alpha
+}_{1r}\right)  \mathit{p}\left(  \tilde{\alpha}_{1i}\right)  d\left(
+\mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(  \mathbf{z}\right)  \left\vert
+g_{\rho}\right\rangle .
+\end{equation}
+One can restrict the orbit to lie in unit ball of $\mathcal{H}^{2}$ if
+$\left\Vert \left\vert g_{\rho}\right\rangle \right\Vert =1$ by setting
+\begin{equation}
+\tilde{\alpha}_{1r}\left(  \mathbf{\tilde{\alpha},z}\right)  =-\frac{1}{4}%
+\ln\left\{  \left\langle g_{\rho}\left(  \mathbf{\tilde{\alpha},z}\right)
+\left\vert g_{\rho}\left(  \mathbf{\tilde{\alpha},z}\right)  \right.
+\right\rangle \right\}  =-\frac{1}{4}\ln\left\{  \left\langle g_{\rho
+}\left\vert d\left(  \mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(
+\mathbf{z}\right)  ^{\dagger}\tau_{+}\left(  \mathbf{z}\right)  d\left(
+\mathbf{\tilde{\alpha}}\right)  g_{\rho}\right.  \right\rangle \right\}
+\end{equation}
+
+
+\section{Antisymmetrized Geminal Powers (AGP's)}
+
+A reference $2N$-electron AGP\ state in $\mathcal{H}^{2N}$ is defined by
+\begin{equation}
+\left\vert g_{\rho}^{N}\right\rangle =\sum_{1\leq j_{1}<j_{2}<\cdots<j_{N}\leq
+s}c_{\rho j_{1}}\cdots c_{\rho j_{N}}\left\vert \psi_{j_{1}}\psi_{-j_{1}%
+}\cdots\psi_{j_{N}\,}\psi_{-j_{N}}\right\rangle \label{canexp}%
+\end{equation}
+and the wavefunction associated with this state is
+\begin{equation}
+g_{\rho}^{N}\left(  \mathbf{x}_{1}\cdots\mathbf{x}_{2N}\right)  =\left\langle
+\mathbf{x}_{1}\cdots\mathbf{x}_{2N}\left\vert g_{\rho}^{N}\right.
+\right\rangle =Pf\left(  g_{\rho}\right)  \left(  \mathbf{x}_{1}%
+\cdots\mathbf{x}_{2N}\right)  .
+\end{equation}
+The CI expansion is given by
+\begin{equation}
+\operatorname*{Pf}\left(  \Upsilon^{\dagger}g\bar{\Upsilon}\right)  =\sum
+\det\left(  \bar{\Upsilon}\right)  _{P}\operatorname*{Pf}\left(  g_{\rho
+}\right)  _{P}%
+\end{equation}
+This reference state can be expressed in operator form as
+\begin{align}
+\left\vert g_{\rho}^{N}\right\rangle  &  =\sum_{1\leq j_{1}<j_{2}<\cdots
+<j_{N}\leq s}c_{\rho j_{1}}\cdots c_{\rho j_{N}}a_{j_{1}}^{\dagger}a_{-j_{1}%
+}^{\dagger}\cdots a_{j_{N}}^{\dagger}a_{-j_{N}}^{\dagger}\left\vert
+\phi\right\rangle \nonumber\\
+&  =\frac{1}{2^{N}N!}\int g_{\rho}\left(  \mathbf{x}_{1},\mathbf{x}%
+_{2}\right)  \cdots g_{\rho}\left(  \mathbf{x}_{2N-1},\mathbf{x}_{\not 2
+N}\right)  \Phi\left(  \mathbf{x}_{1}\right)  ^{\dagger}\cdots\Phi\left(
+\mathbf{x}_{2N}\right)  ^{\dagger}d\mathbf{x}_{1}\cdots d\mathbf{x}%
+_{2N}\left\vert \phi\right\rangle \nonumber\\
+&  =\frac{1}{2^{N}N!}\int Pf\left(  g_{\rho}\right)  \left(  \mathbf{x}%
+_{1}\cdots\mathbf{x}_{2N}\right)  \Phi\left(  \mathbf{x}_{1}\right)
+^{\dagger}\cdots\Phi\left(  \mathbf{x}_{2N}\right)  ^{\dagger}d\mathbf{x}%
+_{1}\cdots d\mathbf{x}_{2N}\left\vert \phi\right\rangle .
+\end{align}
+The norm squared of this state is
+\begin{align}
+\left\langle g_{\rho}^{N}\left\vert g_{\rho}^{N}\right.  \right\rangle  &
+=\left(  \frac{1}{2^{N}N!}\right)  ^{2}\int\overline{Pf\left(  g_{\rho
+}\right)  \left(  \mathbf{x}_{1}\cdots\mathbf{x}_{2N}\right)  }Pf\left(
+g_{\rho}\right)  \left(  \mathbf{x}_{1}\cdots\mathbf{x}_{2N}\right)
+d\mathbf{x}_{1}\cdots d\mathbf{x}_{2N}\nonumber\\
+&  =\left(  \frac{1}{2^{N}N!}\right)  ^{2}\int\left\vert Pf\left(  g_{\rho
+}\right)  \left(  \mathbf{x}_{1}\cdots\mathbf{x}_{2N}\right)  \right\vert
+^{2}d\mathbf{x}_{1}\cdots d\mathbf{x}_{2N}\nonumber\\
+&  =\left(  \frac{1}{2^{N}N!}\right)  ^{2}\int\left\vert \det\left(  g_{\rho
+}\right)  \left(  \mathbf{x}_{1}\cdots\mathbf{x}_{2N}\right)  \right\vert
+d\mathbf{x}_{1}\cdots d\mathbf{x}_{2N},
+\end{align}
+where%
+\begin{equation}
+\det\left(  g_{\rho}\right)  \left(  \mathbf{x}_{1}\cdots\mathbf{x}%
+_{2N}\right)  =\det\left(
+\begin{array}
+[c]{ccc}%
+g_{\rho}\left(  \mathbf{x}_{1},\mathbf{x}_{1}\right)  & \cdots & g_{\rho
+}\left(  \mathbf{x}_{1},\mathbf{x}_{2N}\right) \\
+\vdots & \ddots & \vdots\\
+g_{\rho}\left(  \mathbf{x}_{2N},\mathbf{x}_{1}\right)  & \cdots & g_{\rho
+}\left(  \mathbf{x}_{2N},\mathbf{x}_{2N}\right)
+\end{array}
+\right)  .
+\end{equation}
+This should be compared to
+\begin{equation}
+\Phi\left(  \mathbf{x}_{1}\cdots\mathbf{x}_{2N}\right)  =\det\left(
+\begin{array}
+[c]{ccc}%
+\varphi_{1}\left(  \mathbf{x}_{1}\right)  & \cdots & \varphi_{2N}\left(
+\mathbf{x}_{1}\right) \\
+\vdots & \ddots & \vdots\\
+\varphi_{1}\left(  \mathbf{x}_{2N}\right)  & \cdots & \varphi_{2N}\left(
+\mathbf{x}_{2N}\right)
+\end{array}
+\right)
+\end{equation}
+and%
+\begin{align}
+&  \left\langle \Phi\left\vert \Phi\right.  \right\rangle =\\
+&  \int\overline{\det\left(
+\begin{array}
+[c]{ccc}%
+\varphi_{1}\left(  \mathbf{x}_{1}\right)  & \cdots & \varphi_{2N}\left(
+\mathbf{x}_{1}\right) \\
+\vdots & \ddots & \vdots\\
+\varphi_{1}\left(  \mathbf{x}_{2N}\right)  & \cdots & \varphi_{2N}\left(
+\mathbf{x}_{2N}\right)
+\end{array}
+\right)  }\det\left(
+\begin{array}
+[c]{ccc}%
+\varphi_{1}\left(  \mathbf{x}_{1}\right)  & \cdots & \varphi_{2N}\left(
+\mathbf{x}_{1}\right) \\
+\vdots & \ddots & \vdots\\
+\varphi_{1}\left(  \mathbf{x}_{2N}\right)  & \cdots & \varphi_{2N}\left(
+\mathbf{x}_{2N}\right)
+\end{array}
+\right)  d\mathbf{x}_{1}\cdots d\mathbf{x}_{2N}\\
+&  =\det\left(
+\begin{array}
+[c]{ccc}%
+\left\langle \varphi_{1}\left\vert \varphi_{1}\right.  \right\rangle  & \cdots
+& \left\langle \varphi_{1}\left\vert \varphi_{2N}\right.  \right\rangle \\
+\vdots & \ddots & \vdots\\
+\left\langle \varphi_{2N}\left\vert \varphi_{1}\right.  \right\rangle  &
+\cdots & \left\langle \varphi_{2N}\left\vert \varphi_{2N}\right.
+\right\rangle
+\end{array}
+\right)  .
+\end{align}
+
+
+The invariance group of $\left\vert g_{\rho}^{N}\right\rangle $ is again
+$sp\left(  2s,\mathbb{C}\right)  $ and the orbit of $\left\vert g_{\rho}%
+^{N}\right\rangle $ under $GL\left(  2s,\mathbb{C}\right)  $ produces a
+representation of the coset $\frac{GL\left(  1,\mathbb{C}\right)  \times
+SL\left(  2s,\mathbb{C}\right)  }{sp\left(  2s,\mathbb{C}\right)  }$ in
+$\mathcal{H}^{2N}$ by the manifold
+\begin{equation}
+\left\vert g_{\rho}\left(  \mathbf{\tilde{\alpha},z}\right)  ^{N}\right\rangle
+=c_{1}\left(  \mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(  \mathbf{z}%
+\right)  \left\vert g_{\rho}^{N}\right\rangle
+\end{equation}
+which is parameterized by $\left\{  \mathbf{\tilde{\alpha},z}\right\}  .$ One
+can consider the manifold of normalized AGP's by restricting%
+\begin{align}
+\tilde{\alpha}_{1r}\left(  \mathbf{\tilde{\alpha},z}\right)   &  =-\frac
+{1}{4N}\ln\left\{  \left\langle g_{\rho}\left(  \mathbf{\tilde{\alpha}%
+,z}\right)  ^{N}\left\vert g_{\rho}\left(  \mathbf{\tilde{\alpha},z}\right)
+^{N}\right.  \right\rangle \right\} \nonumber\\
+&  =-\frac{1}{4N}\ln\left\{  \left\langle g_{\rho}^{N}\left\vert c\left(
+\mathbf{\tilde{\alpha}}\right)  \tau_{+}\left(  \mathbf{z}\right)  ^{\dagger
+}\tau_{+}\left(  \mathbf{z}\right)  c\left(  \mathbf{\tilde{\alpha}}\right)
+g_{\rho}^{N}\right.  \right\rangle \right\} \nonumber\\
+&  =-\frac{1}{4N}\ln\left\{  S_{N}\left(  \mathbf{\tilde{\alpha}}\right)
+\right\}  .
+\end{align}
+
+
+The manifold generated by a reference AGP state of a given rank is an orbit of
+the group $GL\left(  2s,\mathbb{C}\right)  $ and the group is transitive on
+that orbit (we can take $\rho$ to label rank). The linear span of any such
+orbit is the whole space $\mathcal{H}^{2N}$ thus any reference AGP vector in
+$\mathcal{H}^{2N}$ is cyclic for $GL\left(  2s,\mathbb{C}\right)  $.
+
+\section{Action of the group on GSO's}%
+
+\begin{equation}
+\gamma\left\vert g\right\rangle =\gamma\sum_{1\leq j\leq s}c_{j}\left\vert
+\eta_{-j}\eta_{j}\right\rangle =\sum_{1\leq j\leq s}c_{j}\left\{  \left\vert
+\left(  \gamma\eta_{-j}\right)  \eta_{j}\right\rangle +\left\vert \eta
+_{-j}\left(  \gamma\eta_{j}\right)  \right\rangle \right\}
+\end{equation}%
+\begin{equation}
+\gamma\left\vert \eta_{j}\right\rangle =\gamma\left(  \mathbf{z,\eta
+,w}\right)  \left\vert \eta_{j}\right\rangle =c\left(  \mathbf{\eta
+}_{\mathrm{re}}\right)  c\left(  \mathbf{\eta}_{\mathrm{im}}\right)  \tau
+_{+}\left(  \mathbf{z}\right)  \left\vert \eta_{j}\right\rangle
+\end{equation}%
+\begin{align}
+\tau_{+}\left(  \mathbf{z}\right)  \left\vert \eta_{j}\right\rangle  &
+=\exp\left\{  \sum\limits_{_{\substack{-s\leq k<l\leq s\\\left\vert
+k\right\vert \neq\left\vert l\right\vert }}}z_{kl}q_{jl}^{\dagger}\right\}
+\left\vert \eta_{j}\right\rangle \\
+&  =\exp\left\{  \sum\limits_{_{\substack{-s\leq k<l\leq s\\\left\vert
+k\right\vert \neq\left\vert l\right\vert }}}a_{p}^{\dagger}a_{q}T_{pqkl}%
+z_{kl}\right\}  \left\vert \eta_{j}\right\rangle
+\end{align}
+
+
+\section{Example of Indexing}
+
+The operators are indexed as%
+
+\begin{equation}
+q_{jk}=\left(  c_{j}a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)  \sigma\left(
+k\right)  c_{k}a_{-k}^{\dagger}a_{-j}\right)  ;-s\leq j<k\leq s;-s\leq
+\left\vert j\right\vert \neq\left\vert k\right\vert \leq s
+\end{equation}
+with the symmetry%
+\begin{align}
+q_{jk}  &  =\left(  c_{j}a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)
+\sigma\left(  k\right)  c_{k}a_{-k}^{\dagger}a_{-j}\right)  =\\
+-\sigma\left(  jk\right)  q_{-k-j}  &  =-\sigma\left(  jk\right)  \left(
+c_{k}a_{-k}^{\dagger}a_{-j}-\sigma\left(  j\right)  \sigma\left(  k\right)
+c_{j}a_{j}^{\dagger}a_{k}\right)
+\end{align}
+and
+\begin{equation}
+q_{jk}^{\dagger}=\left(  c_{j}a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)
+\sigma\left(  k\right)  c_{k}a_{-j}^{\dagger}a_{-k}\right)  ;-s\leq j<k\leq
+s;-s\leq\left\vert j\right\vert \neq\left\vert k\right\vert \leq s.
+\end{equation}
+The diagonal blocks are given by
+\begin{align}
+q_{j-j}  &  =a_{j}^{\dagger}a_{-j}=q_{-jj}^{\dagger}\\
+q_{jj}  &  =-q_{-j-j}=c_{j}\left(  a_{j}^{\dagger}a_{j}-a_{-j}^{\dagger}%
+a_{-j}\right)  =q_{jj}^{\dagger}=-q_{-j-j}^{\dagger}.
+\end{align}
+for $1\leq j\leq s.$
+
+\subsection{$sp(4,\mathbb{C)}$}
+
+The following example demonstrates the indexing for $sp(4,\mathbb{C)}.$ The
+basic pattern is%
+\begin{equation}
+\left(  \left\vert \psi_{1}\right\rangle \left\vert \psi_{2}\right\rangle
+\left\vert \psi_{-1}\right\rangle \left\vert \psi_{-2}\right\rangle \right)
+\left(
+\begin{array}
+[c]{cccc}%
+a & b & e & f\\
+c & d & f & g\\
+h & j & -a & -c\\
+j & k & -b & -d
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\langle \psi_{1}\right\vert \\
+\left\langle \psi_{2}\right\vert \\
+\left\langle \psi_{-1}\right\vert \\
+\left\langle \psi_{-2}\right\vert
+\end{array}
+\right)  .
+\end{equation}
+The off diagonal "block" elements are
+\begin{equation}
+q_{-22},q_{2-2},q_{-11},q_{1-1},
+\end{equation}
+where
+\begin{align}
+q_{-22}  &  =c_{2}a_{2}^{\dagger}a_{-2},q_{2-2}=c_{2}a_{-2}^{\dagger}%
+a_{2}\nonumber\\
+q_{-11}  &  =c_{1}a_{1}^{\dagger}a_{-1},q_{1-1}=c_{1}a_{-1}^{\dagger}a_{1}%
+\end{align}
+and the diagonal ones are
+\begin{align}
+q_{-2-2}  &  =c_{2}\left(  a_{-2}^{\dagger}a_{-2}-a_{2}^{\dagger}a_{2}\right)
+=-q_{22}\nonumber\\
+q_{-1-1}  &  =c_{1}\left(  a_{-1}^{\dagger}a_{-1}-a_{1}^{\dagger}a_{1}\right)
+=-q_{11}.
+\end{align}
+The inter block basis elements are
+\begin{align}
+q_{12}  &  =c_{1}a_{1}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{-1}%
+=-q_{-2-1}\nonumber\\
+q_{-12}  &  =c_{1}a_{-1}^{\dagger}a_{2}+c_{2}a_{-2}^{\dagger}a_{1}%
+=q_{-21}\nonumber\\
+q_{1-2}  &  =c_{1}a_{1}^{\dagger}a_{-2}+c_{2}a_{2}^{\dagger}a_{-1}%
+=q_{2-1}\nonumber\\
+q_{-1-2}  &  =c_{1}a_{-1}^{\dagger}a_{-2}-c_{2}a_{2}^{\dagger}a_{1}=-q_{21}.
+\end{align}
+
+
+The commutation relationships based on
+\begin{align}
+\left[  q_{ij},q_{kl}\right]   &  =\sigma\left(  jk\right)  \left\{
+c_{j}c_{k}q_{il}\delta_{kj}+c_{i}c_{l}q_{-j-k}\delta_{il}+c_{j}c_{l}%
+q_{i-k}\delta_{-jl}+c_{i}c_{k}q_{-jl}\delta_{k-i}\right\}  ;\\
+-s  &  \leq i,j\leq s;-s\leq k,l\leq s.
+\end{align}
+Between inter block elements they are given by%
+\begin{align}
+&  \left[  q_{12},q_{-12}\right]  =\left[  q_{-21},q_{12}\right]  =\left[
+\left(  c_{1}a_{1}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{-1}\right)  ,\left(
+c_{1}a_{-1}^{\dagger}a_{2}+c_{2}a_{-2}^{\dagger}a_{1}\right)  \right]  =\\
+&  =-2c_{1}c_{2}a_{-2}^{\dagger}a_{2}=2c_{1}c_{2}q_{-22}\\
+&  \left[  q_{12},q_{1-2}\right]  =\left[  \left(  c_{1}a_{1}^{\dagger}%
+a_{2}-c_{2}a_{-2}^{\dagger}a_{-1}\right)  ,\left(  c_{1}a_{1}^{\dagger}%
+a_{-2}+c_{2}a_{2}^{\dagger}a_{-1}\right)  \right]  =\\
+&  =2c_{1}c_{2}a_{1}^{\dagger}a_{-1}=2c_{1}c_{2}q_{1-1}\\
+&  \left[  q_{12},q_{-1-2}\right]  =-\left[  q_{12},q_{21}\right]  =\left[
+\left(  c_{1}a_{1}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{-1}\right)  ,\left(
+c_{1}a_{-1}^{\dagger}a_{-2}-c_{2}a_{2}^{\dagger}a_{1}\right)  \right]  =\\
+&  =c_{1}c_{2}\left\{  a_{2}^{\dagger}a_{2}-a_{-2}^{\dagger}a_{-2}%
++a_{-1}^{\dagger}a_{-1}-a_{1}^{\dagger}a_{1}\right\}  =c_{1}c_{2}\left\{
+q_{22}-q_{11}\right\}
+\end{align}%
+\begin{align}
+&  \left[  q_{-21},q_{1-2}\right]  =\left[  \left(  c_{2}a_{-2}^{\dagger}%
+a_{1}+c_{1}a_{-1}^{\dagger}a_{2}\right)  ,\left(  c_{1}a_{1}^{\dagger}%
+a_{-2}+c_{2}a_{2}^{\dagger}a_{-1}\right)  \right]  =\nonumber\\
+&  c_{1}c_{2}a_{-2}^{\dagger}a_{-2}-c_{1}c_{2}a_{-1}^{\dagger}a_{-1}%
++c_{1}c_{2}a_{-1}^{\dagger}a_{-1}-c_{1}c_{2}a_{-2}^{\dagger}a_{-2}%
+=0\nonumber\\
+&  \left[  q_{-21},q_{-1-2}\right]  =\left[  \left(  c_{2}a_{-2}^{\dagger
+}a_{1}+c_{1}a_{-1}^{\dagger}a_{2}\right)  ,\left(  c_{1}a_{-1}^{\dagger}%
+a_{-2}-c_{2}a_{2}^{\dagger}a_{1}\right)  \right]  =\nonumber\\
+&  c_{2}c_{1}a_{-1}^{\dagger}a_{1}-c_{2}c_{1}a_{-1}^{\dagger}a_{1}=0
+\end{align}%
+\begin{align}
+&  \left[  q_{1-2},q_{-1-2}\right]  =\left[  q_{21},q_{1-2}\right]  =\left[
+\left(  c_{1}a_{1}^{\dagger}a_{-2}+c_{2}a_{2}^{\dagger}a_{-1}\right)  ,\left(
+c_{1}a_{-1}^{\dagger}a_{-2}-c_{2}a_{2}^{\dagger}a_{1}\right)  \right]
+=\nonumber\\
+&  \left.  =\right.  2c_{1}c_{2}a_{2}^{\dagger}a_{-2}=2c_{1}c_{2}q_{2-2}%
+\end{align}%
+\begin{align}
+\left[  q_{12},a_{2}^{\dagger}a_{-2}\right]   &  =\left[  q_{12}%
+,q_{2-2}\right]  =\left[  \left(  c_{1}a_{1}^{\dagger}a_{2}-c_{2}%
+a_{-2}^{\dagger}a_{-1}\right)  ,a_{2}^{\dagger}a_{-2}\right]  =\nonumber\\
+c_{1}a_{1}^{\dagger}a_{-2}+c_{2}a_{2}^{\dagger}a_{-1}  &  =q_{1-2}\nonumber\\
+\left[  q_{12},a_{1}^{\dagger}a_{-1}\right]   &  =\left[  q_{12}%
+,q_{1-1}\right]  =\left[  \left(  c_{1}a_{1}^{\dagger}a_{2}-c_{2}%
+a_{-2}^{\dagger}a_{-1}\right)  ,a_{1}^{\dagger}a_{-1}\right]  =0\nonumber\\
+\left[  q_{12},\left(  a_{1}^{\dagger}a_{1}-a_{-1}^{\dagger}a_{-1}\right)
+\right]   &  =\left[  \left(  c_{1}a_{1}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger
+}a_{-1}\right)  ,\left(  a_{1}^{\dagger}a_{1}-a_{-1}^{\dagger}a_{-1}\right)
+\right]  =0\nonumber\\
+\left[  q_{12},\left(  a_{2}^{\dagger}a_{2}-a_{-2}^{\dagger}a_{-2}\right)
+\right]   &  =\left[  q_{12},q_{22}\right]  =\left[  \left(  c_{1}%
+a_{1}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{-1}\right)  ,\left(
+a_{2}^{\dagger}a_{2}-a_{-2}^{\dagger}a_{-2}\right)  \right] \nonumber\\
+&  =c_{1}a_{1}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{-1}=q_{12}%
+\end{align}%
+\begin{align}
+\left[  a_{1}^{\dagger}a_{-1},\left(  a_{1}^{\dagger}a_{1}-a_{-1}^{\dagger
+}a_{-1}\right)  \right]   &  =-2a_{1}^{\dagger}a_{-1}\\
+\left[  a_{2}^{\dagger}a_{-2},\left(  a_{2}^{\dagger}a_{2}-a_{-2}^{\dagger
+}a_{-2}\right)  \right]   &  =-2a_{2}^{\dagger}a_{-2}%
+\end{align}
+
+
+\subsection{$sp(6,\mathbb{C)}$}
+
+The following example demonstrates the indexing for $sp(6,\mathbb{C)}$%
+\begin{equation}%
+\begin{array}
+[c]{ccccccc}
+& 1 & 2 & 3 & -1 & -2 & -3\\
+1 & a & b & c & m & n & o\\
+2 & d & e & f & n & p & q\\
+3 & j & k & l & o & q & r\\
+-1 & \alpha & \beta & \gamma & -a & -d & -j\\
+-2 & \beta & \delta & \varepsilon & -b & -e & -k\\
+-3 & \gamma & \varepsilon & \zeta & -c & -f & -l
+\end{array}
+\end{equation}
+The "block diagonal" operators are
+\begin{equation}
+q_{-3-3},q_{-2-2},q_{-1-1};
+\end{equation}
+where
+\begin{align}
+q_{-3-3}  &  =c_{3}\left(  a_{-3}^{\dagger}a_{-3}-a_{3}^{\dagger}a_{3}\right)
+\nonumber\\
+q_{-2-2}  &  =c_{2}\left(  a_{-2}^{\dagger}a_{-2}-a_{2}^{\dagger}a_{2}\right)
+\nonumber\\
+q_{-1-1}  &  =c_{1}\left(  a_{-1}^{\dagger}a_{-1}-a_{1}^{\dagger}a_{1}\right)
+\end{align}
+and the off diagonal operators are
+\begin{equation}
+q_{-33},q_{3-3},q_{-22},q_{2-2},q_{-11},q_{1-1},
+\end{equation}
+where%
+\begin{align}
+q_{-33}  &  =a_{3}^{\dagger}a_{-3};q_{3-3}=a_{-3}^{\dagger}a_{3}\nonumber\\
+q_{-22}  &  =a_{2}^{\dagger}a_{-2};q_{2-2}=a_{-2}^{\dagger}a_{2}\nonumber\\
+q_{-11}  &  =a_{1}^{\dagger}a_{-1};q_{1-1}=a_{-1}^{\dagger}a_{1}.
+\end{align}%
+\begin{align}
+\left[  q_{ij},q_{kl}\right]   &  =\sigma\left(  jk\right)  \left\{
+c_{i}q_{il}\delta_{kj}+c_{i}c_{i}q_{-j-k}\delta_{il}+c_{i}c_{i}q_{i-k}%
+\delta_{-jl}+c_{i}c_{i}q_{-jl}\delta_{k-i}\right\}  ;\\
+-s  &  \leq i<j\leq s;-s\leq k<l\leq s
+\end{align}
+The commutation relationships between the block operators are
+\begin{align}
+\left[  q_{-3-3},q_{-33}\right]   &  =-\left[  c_{3}\left(  a_{3}^{\dagger
+}a_{3}-a_{-3}^{\dagger}a_{-3}\right)  ,a_{3}^{\dagger}a_{-3}\right]
+=-c_{3}\left(  a_{3}^{\dagger}a_{3}a_{3}^{\dagger}a_{-3}+a_{3}^{\dagger}%
+a_{-3}a_{3}^{\dagger}a_{3}\right) \nonumber\\
+&  =-c_{3}a_{3}^{\dagger}a_{-3}=c_{3}q_{-33},
+\end{align}%
+\begin{align}
+&  \left[  q_{2-3},q_{-3-3}\right]  =\nonumber\\
+&  -\left[  c_{3}\left(  a_{3}^{\dagger}a_{3}-a_{-3}^{\dagger}a_{-3}\right)
+,\left(  c_{3}a_{-3}^{\dagger}a_{2}-\sigma\left(  -3\right)  \sigma\left(
+2\right)  c_{2}a_{-2}^{\dagger}a_{3}\right)  \right] \nonumber\\
+&  =c_{3}^{2}a_{-2}^{\dagger}a_{3}-c_{2}c_{3}a_{-3}^{\dagger}a_{2}%
+=c_{3}q_{2-3}.
+\end{align}
+The off block operators are
+\begin{equation}
+q_{12},q_{1-2},q_{13},q_{1-3},q_{-12},q_{-1-2},q_{-13},q_{-13},q_{23}%
+,q_{2-3},q_{-23},q_{-2-3}%
+\end{equation}
+are indexed by%
+\begin{equation}
+\left\{  q_{jk}\left\vert 1\leq\left\vert j\right\vert <\left\vert
+k\right\vert \leq s\right.  -s\leq j,k\leq s\right\}  ,
+\end{equation}
+where
+\begin{align}
+q_{12}  &  =c_{1}a_{1}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{-1}\nonumber\\
+q_{1-2}  &  =c_{1}a_{1}^{\dagger}a_{-2}+c_{2}a_{2}^{\dagger}a_{-1}\nonumber\\
+q_{-12}  &  =c_{1}a_{-1}^{\dagger}a_{2}+c_{2}a_{-2}^{\dagger}a_{1}\nonumber\\
+q_{-1-2}  &  =c_{1}a_{-1}^{\dagger}a_{-2}-c_{2}a_{2}^{\dagger}a_{1}\nonumber\\
+q_{13}  &  =c_{1}a_{1}^{\dagger}a_{3}-c_{3}a_{-3}^{\dagger}a_{-1}\nonumber\\
+q_{1-3}  &  =c_{1}a_{1}^{\dagger}a_{-3}+c_{3}a_{3}^{\dagger}a_{-1}\nonumber\\
+q_{-13}  &  =c_{1}a_{-1}^{\dagger}a_{3}+c_{3}a_{-3}^{\dagger}a_{1}\nonumber\\
+q_{-1-3}  &  =c_{1}a_{-1}^{\dagger}a_{-3}-c_{3}a_{3}^{\dagger}a_{1}\nonumber\\
+q_{23}  &  =c_{2}a_{2}^{\dagger}a_{3}-c_{3}a_{3}^{\dagger}a_{2}\nonumber\\
+q_{2-3}  &  =c_{2}a_{2}^{\dagger}a_{-3}+c_{3}a_{3}^{\dagger}a_{-2}\nonumber\\
+q_{-23}  &  =c_{2}a_{-2}^{\dagger}a_{3}+c_{3}a_{-3}^{\dagger}a_{2}\nonumber\\
+q_{-2-3}  &  =c_{2}a_{-2}^{\dagger}a_{-3}-c_{3}a_{3}^{\dagger}a_{2}%
+\end{align}
+The commutation relationships are based on%
+\begin{equation}
+\left[  a_{r}^{\dagger}a_{s},a_{p}^{\dagger}a_{q}\right]  =a_{r}^{\dagger
+}a_{q}\delta_{sp}-a_{p}^{\dagger}a_{s}\delta_{rq}%
+\end{equation}
+and are given by%
+\begin{align}
+&  \left[  q_{12},q_{13}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{1}a_{1}^{\dagger}a_{3}-c_{3}a_{-3}^{\dagger
+}a_{-1}\right]  =0\nonumber\\
+&  \left[  q_{12},q_{1-3}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{1}a_{1}^{\dagger}a_{-3}+c_{3}a_{3}^{\dagger
+}a_{-1}\right]  =0\nonumber\\
+&  \left[  q_{12},q_{-13}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{1}a_{-1}^{\dagger}a_{3}-c_{3}a_{-3}^{\dagger
+}a_{1}\right]  =\nonumber\\
+&  c_{1}c_{3}a_{-3}^{\dagger}a_{2}-c_{2}c_{1}a_{-2}^{\dagger}a_{3}%
+=c_{1}\left(  c_{3}a_{-3}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{3}\right)
+=c_{1}q_{-32}\nonumber\\
+&  \left[  q_{12},q_{-1-3}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{1}a_{-1}^{\dagger}a_{-3}-c_{3}a_{3}^{\dagger
+}a_{1}\right]  =\nonumber\\
+&  c_{1}c_{3}a_{3}^{\dagger}a_{2}-c_{1}c_{2}a_{-2}^{\dagger}a_{-3}%
+=c_{1}\left(  c_{3}a_{3}^{\dagger}a_{2}-c_{2}a_{-2}^{\dagger}a_{-3}\right)
+=c_{1}q_{32}\nonumber\\
+&  \left[  q_{12},q_{23}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{2}a_{2}^{\dagger}a_{3}-c_{3}a_{-3}^{\dagger
+}a_{-2}\right]  =\nonumber\\
+&  c_{2}\left(  c_{1}a_{1}^{\dagger}a_{3}-c_{3}a_{-3}^{\dagger}a_{-1}\right)
+=c_{2}q_{13}\nonumber\\
+&  \left[  q_{12},q_{2-3}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{2}a_{2}^{\dagger}a_{-3}-c_{3}a_{3}^{\dagger
+}a_{-2}\right]  =\nonumber\\
+&  -c_{2}\left(  c_{1}a_{1}^{\dagger}a_{-3}+c_{3}a_{3}^{\dagger}a_{-1}\right)
+=-c_{2}q_{1-3}\nonumber\\
+&  \left[  q_{12},q_{-23}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{2}a_{-2}^{\dagger}a_{3}-c_{3}a_{-3}^{\dagger
+}a_{2}\right]  =0\nonumber\\
+&  \left[  q_{12},q_{-2-3}\right]  =\left[  c_{1}a_{1}^{\dagger}a_{2}%
+-c_{2}a_{-2}^{\dagger}a_{-1},c_{2}a_{-2}^{\dagger}a_{-3}-c_{3}a_{3}^{\dagger
+}a_{2}\right]  =0
+\end{align}
+
+
+which covers and corresponds to $-3\leq j\leq k\leq3.$
+
+\subsection{Lie Algebra Generators}
+
+A reducible represenation $R\left(  gl\left(  2s,\mathbb{C}\right)  \right)  $
+of the Lie algebra $gl\left(  2s,\mathbb{C}\right)  $ on $\mathcal{H}_{F}$ is
+generated by%
+
+\begin{align}
+q_{jk}^{\dagger}  &  =c_{j}a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)
+\sigma\left(  k\right)  c_{k}a_{-j}^{\dagger}a_{-k};1\leq j<k\leq s;\left\vert
+j\right\vert \neq\left\vert k\right\vert \nonumber\\
+q_{jk}  &  =c_{j}a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)  \sigma\left(
+k\right)  c_{k}a_{-k}^{\dagger}a_{-j};1\leq j<k\leq s;\left\vert j\right\vert
+\neq\left\vert k\right\vert \nonumber\\
+a_{j}^{\dagger}a_{k};\left\vert j\right\vert  &  =\left\vert k\right\vert
+;1\leq j\leq s.
+\end{align}
+In line with Gilmore (where $q\equiv Z$ ) one defines
+\begin{align}
+q_{j-j}  &  =a_{j}^{\dagger}a_{-j}\nonumber\\
+q_{-jj}  &  =a_{-j}^{\dagger}a_{j}=q_{j-j}^{\dagger}.
+\end{align}
+The number of $q$ generators these generators is
+\begin{equation}
+2s(2s-1)-2=4s^{2}-4s
+\end{equation}
+and the number of subblock generators is%
+
+\begin{equation}
+4s
+\end{equation}
+giving a total number
+\begin{equation}
+4s^{2},
+\end{equation}
+which equals the number of generators $\left\{  \left.  a_{j}^{\dagger}%
+a_{k}\right\vert -s\leq j,k\leq s\right\}  .$ The representation is the sum of
+the irreps
+\begin{equation}
+R\left(  gl\left(  2s,\mathbb{C}\right)  \right)  =\bigoplus\limits_{0\leq
+N\leq2s}R_{N}\left(  gl\left(  2s,\mathbb{C}\right)  \right)  ,
+\end{equation}
+where $\left\{  \left.  R_{N}\left(  gl\left(  2s,\mathbb{C}\right)  \right)
+\right\vert 0\leq N\leq r\right\}  $ are the irreducible representions carried
+by $\mathcal{H}^{N}.$
+
+The $\left\{  q_{jk},q_{jk}^{\dagger}\left\vert 1\leq j<k\leq s;\left\vert
+j\right\vert \neq\left\vert k\right\vert \right.  \right\}  $ generators can
+be expressed in terms of $\left\{  \left.  a_{j}^{\dagger}a_{k}\right\vert
+-s\leq j<k\leq s;\left\vert j\right\vert \neq\left\vert k\right\vert \right\}
+,$ when $c_{j}\neq c_{k},$ as
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+q_{-j-k}^{\dagger}\\
+q_{j-k}^{\dagger}\\
+q_{-jk}^{\dagger}\\
+q_{jk}^{\dagger}\\
+q_{-j-k}\\
+q_{j-k}\\
+q_{-jk}\\
+q_{jk}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cccccccc}%
+c_{k} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & -c_{j}\\
+0 & c_{k} & 0 & \cdots & \cdots & 0 & c_{j} & 0\\
+\vdots & 0 & c_{k} & 0 & 0 & c_{j} & 0 & \vdots\\
+\vdots & \vdots & 0 & c_{k} & -c_{j} & 0 & \vdots & \vdots\\
+\vdots & \vdots & 0 & -c_{j} & c_{k} & 0 & \vdots & \vdots\\
+\vdots & 0 & c_{j} & 0 & 0 & c_{k} & 0 & \vdots\\
+0 & c_{j} & 0 & \cdots & \cdots & 0 & c_{k} & 0\\
+-c_{j} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & c_{k}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+a_{-j}^{\dagger}a_{-k}\\
+a_{-j}^{\dagger}a_{k}\\
+a_{j}^{\dagger}a_{-k}\\
+a_{j}^{\dagger}a_{k}\\
+a_{-k}^{\dagger}a_{-j}\\
+a_{k}^{\dagger}a_{-j}\\
+a_{-k}^{\dagger}a_{j}\\
+a_{k}^{\dagger}a_{j}%
+\end{array}
+\right)  .
+\end{equation}%
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+u_{jk}\\
+u_{j+sk}\\
+u_{jk+s}\\
+u_{j+sk+s}\\
+v_{jk}\\
+v_{j+sk}\\
+v_{jk+s}\\
+v_{j+sk+s}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cccccccc}%
+c_{k} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & c_{j}\\
+0 & c_{k} & 0 & \cdots & \cdots & 0 & -c_{j} & 0\\
+\vdots & 0 & c_{k} & 0 & 0 & -c_{j} & 0 & \vdots\\
+\vdots & \vdots & 0 & c_{k} & c_{j} & 0 & \vdots & \vdots\\
+\vdots & \vdots & 0 & -c_{j} & c_{k} & 0 & \vdots & \vdots\\
+\vdots & 0 & c_{j} & 0 & 0 & c_{k} & 0 & \vdots\\
+0 & c_{j} & 0 & \cdots & \cdots & 0 & c_{k} & 0\\
+-c_{j} & 0 & \cdots & \cdots & \cdots & \cdots & 0 & c_{k}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+a_{j}^{\dagger}a_{k}\\
+a_{j}^{\dagger}a_{k+s}\\
+a_{j+s}^{\dagger}a_{k}\\
+a_{j+s}^{\dagger}a_{k+s}\\
+a_{k}^{\dagger}a_{j}\\
+a_{k}^{\dagger}a_{j+s}\\
+a_{k+s}^{\dagger}a_{j}\\
+a_{k+s}^{\dagger}a_{j+s}%
+\end{array}
+\right)  ,
+\end{equation}%
+\begin{align}
+\left[  \varkappa_{jk},\varkappa_{lm}\right]   &  =\left[  \sum
+_{\substack{-s\leq j,k\leq s,\left\vert j\right\vert \neq\left\vert
+k\right\vert \\1\leq\alpha,\beta\leq8}}c_{jk\alpha\beta}a_{\alpha}^{\dagger
+}a_{\beta},\sum_{\substack{-s\leq l,m\leq s,\left\vert l\right\vert
+\neq\left\vert m\right\vert \\1\leq\gamma,\delta\leq8}}c_{lm\gamma\delta
+}a_{\gamma}^{\dagger}a_{\delta}\right] \\
+&  =\sum_{\substack{-s\leq j,k\leq s,\left\vert j\right\vert \neq\left\vert
+k\right\vert \\1\leq\alpha,\beta\leq8\\-s\leq l,m\leq s,\left\vert
+l\right\vert \neq\left\vert m\right\vert \\1\leq\gamma,\delta\leq
+8}}c_{jk\alpha\beta}c_{lm\gamma\delta}\left[  a_{\alpha}^{\dagger}a_{\beta
+},a_{\gamma}^{\dagger}a_{\delta}\right]
+\end{align}
+
+
+\section{Commutation Relationships}
+
+The commutation relations for $sp\left(  2s,\mathbb{C}\right)  $ are
+\begin{align}
+\left[  q_{ij},q_{kl}\right]   &  =\sigma\left(  jk\right)  \left\{
+q_{il}\delta_{kj}+q_{-j-k}\delta_{il}+q_{i-k}\delta_{-jl}+q_{-jl}\delta
+_{k-i}\right\}  ;\\
+-s  &  \leq i<j\leq s;-s\leq k<l\leq s
+\end{align}
+and the symmetry relationships
+\begin{equation}
+q_{ij}=-\sigma\left(  ij\right)  q_{-j-i}%
+\end{equation}
+are satisfied.%
+
+\begin{equation}
+\left[  a_{r}^{\dagger}a_{s},a_{p}^{\dagger}a_{q}\right]  =a_{r}^{\dagger
+}a_{q}\delta_{sp}-a_{p}^{\dagger}a_{s}\delta_{rq}%
+\end{equation}%
+\begin{align}
+\left[  a_{r}^{\dagger}a_{s},a_{p}^{\dagger}a_{p}\right]   &  =a_{r}^{\dagger
+}a_{p}\delta_{sp}-a_{p}^{\dagger}a_{s}\delta_{rp}\\
+&  =\left\{
+\begin{array}
+[c]{c}%
+a_{r}^{\dagger}a_{p},s=p,r\neq s\\
+-a_{p}^{\dagger}a_{s},r=p,r\neq s
+\end{array}
+\right.
+\end{align}%
+\begin{align}
+&  \left[  \left(  c_{j}a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)
+\sigma\left(  k\right)  c_{k}a_{-j}^{\dagger}a_{-k}\right)  ,a_{l}^{\dagger
+}a_{m}\right]  =\\
+&  c_{j}\left(  a_{k}^{\dagger}a_{m}\delta_{jl}-a_{l}^{\dagger}a_{j}%
+\delta_{km}\right)  -c_{k}\sigma\left(  j\right)  \sigma\left(  k\right)
+\left(  a_{-j}^{\dagger}a_{m}\delta_{-kl}-a_{l}^{\dagger}a_{-k}\delta
+_{-jm}\right)
+\end{align}%
+\begin{equation}
+m=l=j:\left[  ,\right]  =c_{j}a_{k}^{\dagger}a_{m}-c_{k}\sigma\left(
+j\right)  \sigma\left(  k\right)
+\end{equation}
+
+
+If one shifts the indexing by
+\begin{align}
+\upsilon\left(  j\right)   &  =2j,1\leq j\leq s\\
+\upsilon\left(  j\right)   &  =-\left(  2j+1\right)  ,-s\leq j\leq-1
+\end{align}
+then%
+\begin{equation}
+\left[  q_{ij},q_{jk}\right]  =q_{ik};1\leq i<j<k\leq2s
+\end{equation}
+and
+\begin{equation}
+\left[  q_{jk}^{\dagger},q_{ij}^{\dagger}\right]  =-\left[  q_{ij}^{\dagger
+},q_{jk}^{\dagger}\right]  =q_{ik}^{\dagger};1\leq i<j<k\leq2s.
+\end{equation}
+The general linear group $GL\left(  \mathcal{H}^{1}\right)  $ can be factored
+into the product%
+\begin{equation}
+GL\left(  \mathcal{H}^{1}\right)  =GL\left(  1\right)  \times SL\left(
+\mathcal{H}^{1}\right)  ,
+\end{equation}
+such that
+\begin{equation}
+\mathrm{g}=\left(  \mathrm{\det g}\right)  \mathrm{h}=e^{Tr\left\{
+\mathrm{g}\right\}  }\mathrm{h,h\in}SL\left(  \mathcal{H}\right)  .
+\end{equation}
+where
+\begin{equation}
+\eta_{j}=Tr\left\{  \mathbf{\lambda}_{j}\right\}
+\end{equation}
+
+
+\section{}
+\end{document}

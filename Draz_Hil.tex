@@ -1,0 +1,466 @@
+%_ **************************************************************************
+%_ * The TeX source for AMS journal articles is the publishers TeX code     *
+%_ * which may contain special commands defined for the AMS production      *
+%_ * environment.  Therefore, it may not be possible to process these files *
+%_ * through TeX without errors.  To display a typeset version of a journal *
+%_ * article easily, we suggest that you retrieve the article in DVI,       *
+%_ * PostScript, or PDF format.                                             *
+%_ **************************************************************************
+%  Author Package
+%% Translation via Omnimark script a2l, October 5, 1999 (all in one day!)
+%% Declarations:
+%% User definitions:
+
+
+\documentclass{proc-l}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{LastRevised=Thursday, July 12, 2001 07:52:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\controldates{20-OCT-2000,20-OCT-2000,20-OCT-2000,23-OCT-2000}
+\issueinfo{129}{06}{June}{2001}
+\pagespan{1727}{1731}
+\dateposted{October 31, 2000}
+\PII{S 0002-9939(00)05701-4}
+\copyrightinfo{2000}{American Mathematical Society}
+\theoremstyle{plain}
+\newtheorem*{theorem1}{Theorem 1}
+\newtheorem*{theorem2}{Theorem 3}
+\newtheorem*{theorem3}{Theorem 5}
+\theoremstyle{remark}
+\newtheorem*{remark1}{Remark 2}
+\theoremstyle{definition}
+\newtheorem*{definition1}{Example 4}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\myL}{\mathcal{L}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\ind}{\operatorname {ind}}
+\newcommand{\dplus}{\overset \bullet \to {+}}
+\newcommand{\ov}[1]{\overline {#1}}
+
+\input{tcilatex}
+
+\begin{document}
+\title{Products of EP operators on Hilbert spaces}
+\author{Dragan S. Djordjevi\'{c}}
+\address{Department of Mathematics, Faculty of Philosophy, University of Ni%
+\v{s}, \'{C}irila i\break Metodija 2, 18000 Ni\v{s}, Yugoslavia}
+\email{dragan@archimed.filfak.ni.ac.yu}
+\email{dragan@filfak.filfak.ni.ac.yu}
+\date{May 4, 1999 and, in revised form, September 17, 1999}
+\subjclass[2000]{Primary 47A05, 15A09}
+\keywords{EP operators, generalized inverses}
+
+\begin{abstract}
+A Hilbert space operator $A$ is called the EP operator if the range of $A$
+is equal to the range of its adjoint $A^{*}$. In this article necessary and
+sufficient conditions are given for a product of two EP operators with
+closed ranges to be an EP operator with a closed range. Thus, a
+generalization of the well-known result of Hartwig and Katz (Linear Algebra
+Appl. \textbf{252 } (1997), 339--345) is given.
+\end{abstract}
+
+\maketitle
+
+\commby{Joseph A. Ball}
+
+\section*{1. Introduction and preliminaries}
+
+Let $H,H_{1},H_{2}$ be arbitrary Hilbert spaces, $\mathcal{L} (H_{1},H_{2})$
+the set of all  bounded operators from $H_{1}$ into $H_{2}$ and $\mathcal{L}
+(H,H)=\mathcal{L} (H)$.  For $A\in \mathcal{L} (H_{1},H_{2})$ we use $A^{*}$%
+, $\mathcal{R} (A)$ and $\mathcal{N} (A)$, respectively, to denote the
+adjoint operator, range and kernel of $A$.
+
+If $\mathcal{R} (A)$ is closed, then $A^{\dag }\in \mathcal{L} (H_{2},H_{1})$
+is defined as the unique operator in $\mathcal{L} (H_{2},H_{1})$ which
+satisfies the equations: 
+\begin{equation*}
+AA^{\dag }A=A,\quad A^{\dag }AA^{\dag }=A^{\dag },\quad (AA^{\dag
+})^{*}=AA^{\dag },\quad (A^{\dag }A)^{*}=A^{\dag }A.
+\end{equation*}
+$A^{\dag }$ is known as the Moore-Penrose inverse of $A$ \cite{2}, \cite{4}.
+
+For $A\in \mathcal{L} (H)$ consider the following inclusions: $\{0\}\subset%
+\mathcal{N} (A)\subset\mathcal{N} (A^{2})\subset\cdots $ and $H\supset 
+\mathcal{R} (A)\supset \mathcal{R} (A^{2})\supset \cdots $. The ascent of $A$
+is defined as the least $k$ (if it exists) for which the following holds: $%
+\mathcal{N} (A^{k})=\mathcal{N} (A^{k+1})$. If such $k$ does not exist, we
+say that the ascent of $A$ is equal to infinity. The descent of $A$ is
+defined as the least $k$ (if it exists) for which the following is
+satisfied: $\mathcal{R} (A^{k})=\mathcal{R} (A^{k+1})$. If such $k$ does not
+exist, we say that the descent of $A$ is equal to infinity. If the ascent
+and the descent of $A$ are finite, then they are equal, and this common
+value is known as the Drazin index of $A$, denoted by $\func{ind} (A)$. If $%
+\func{ind} (A)=k$, then there exists the unique operator $A^{D}\in \mathcal{L%
+} (H)$, which satisfies 
+\begin{equation*}
+A^{k+1}A^{D}=A^{k},\quad A^{D} AA^{D}=A^{D},\quad AA^{D}=A^{D}A.
+\end{equation*}
+$A^{D}$ is known as the Drazin inverse of $A$. If $\func{ind} (A)=0$, then $A
+$ is invertible. If $\func{ind} (A)\leq 1$, then $A^{D}$ is known as the
+group inverse of $A$, denoted by $A^{\#}$ \cite{2}, \cite{4}.
+
+In this article we shall consider operators which satisfy $A^{D}=A^{\dag }$.
+Notice that the last condition implies $\func{ind} (A)\leq 1$; hence we
+shall consider operators which satisfy $A^{\#}=A^{\dag }$.
+
+Recall that an operator $A\in \mathcal{L} (H)$ is called the EP operator if $%
+\mathcal{R} (A)=\mathcal{R} (A^{*})$ \cite{1}, \cite{5}, \cite{6}.
+
+If $A\in \mathcal{L} (H)$ has a closed range, then it is easy to see that $A$
+is an EP operator if and only if $A^{\dag }=A^{\#}$. Also, if $A$ is an EP
+operator, then $\mathcal{N} (A)=\mathcal{N} (A^{*})$.
+
+If $A$ and $B$ are two EP operators, it is a question when $AB$ is the EP
+operator. This problem for complex square matrices was open for twenty-five
+years (see \cite{1}, \cite{5}). In \cite{5} Hartwig and Katz found necessary
+and sufficient conditions for a product of two square EP matrices to also be
+the EP matrix. Their method cannot be applied to arbitrary Hilbert space
+operators.
+
+In this paper we give necessary and sufficient conditions for a product of
+two EP operators with closed ranges to be the EP operator with a closed
+range. Thus, using a different method, we generalize the result from \cite{5}%
+.
+
+We shall mention the matrix decompositions of $A^{\dag }$ and $A^{\#}$. If $M
+$ and $N$ are subspaces of $H$, then $M\overset{\bullet}{+} N$ denotes the
+direct (not necessary orthogonal) sum of $M$ and $N$. However, $M\oplus N$
+denotes the orthogonal sum of $M$ and $N$.
+
+If $A\in \mathcal{L} (H)$ has the group inverse, then $H=\mathcal{R} (A)%
+\overset{\bullet}{+} \mathcal{N} (A)$ and $A$ has the following matrix
+decomposition: 
+\begin{equation*}
+A=%
+\begin{bmatrix}
+A_{1} & 0 \\ 
+0 & 0%
+\end{bmatrix}
+:%
+\begin{bmatrix}
+\mathcal{R} (A) \\ 
+\mathcal{N} (A)%
+\end{bmatrix}
+\to 
+\begin{bmatrix}
+\mathcal{R} (A) \\ 
+\mathcal{N} (A)%
+\end{bmatrix}
+,  \tag{1}
+\end{equation*}
+where $A_{1}=A|_{\mathcal{R} (A)}:\mathcal{R} (A)\to \mathcal{R} (A)$ is
+invertible. In this case the group inverse of $A$ has the form 
+\begin{equation*}
+A^{\#}=%
+\begin{bmatrix}
+A_{1}^{-1} & 0 \\ 
+0 & 0%
+\end{bmatrix}
+.
+\end{equation*}
+
+If $A\in \mathcal{L} (H_{1},H_{2})$ and $\mathcal{R} (A)$ is closed, then $A$
+has the following matrix decomposition with  respect to the orthogonal sums
+of subspaces of $H_{1}$ and $H_{2}$: 
+\begin{equation*}
+A=\left[%
+\begin{matrix}
+{}\,\overline {A} & 0 \\ 
+0 & 0%
+\end{matrix}%
+\right] :H_{1}=%
+\begin{bmatrix}
+\mathcal{R} (A^{*}) \\ 
+\mathcal{N} (A)%
+\end{bmatrix}
+\to 
+\begin{bmatrix}
+\mathcal{R} (A) \\ 
+\mathcal{N} (A^{*})%
+\end{bmatrix}
+=H_{2},
+\end{equation*}
+where $\overline {A}=A|_{\mathcal{R} (A^{*})}:\mathcal{R} (A^{*})\to 
+\mathcal{R} (A)$ is invertible. The Moore-Penrose inverse of $A$ is given as 
+\begin{equation*}
+A^{\dag }=\left[%
+\begin{matrix}
+{}\,\overline {A}\,^{-1} & 0 \\ 
+0 & 0%
+\end{matrix}%
+\right] :%
+\begin{bmatrix}
+\mathcal{R} (A) \\ 
+\mathcal{N} (A^{*})%
+\end{bmatrix}
+\to 
+\begin{bmatrix}
+\mathcal{R} (A^{*}) \\ 
+\mathcal{N} (A)%
+\end{bmatrix}%
+.
+\end{equation*}
+
+If $A\in \mathcal{L} (H)$ is an EP operator with a closed range, then (1)
+becomes the decomposition of $A$ with respect to the orthogonal sum of
+subspaces.
+
+\section*{2. Results}
+
+Now, we state the main result of this paper.
+
+\begin{theorem1}
+Let $A,B\in \mathcal{L} (H)$ be EP operators with closed ranges.  Then the
+following statements are equivalent.
+
+\begin{itemize}
+\item[(a)] $AB$ is an EP operator with a closed range.
+
+\item[(b)] $\mathcal{R} (AB)=\mathcal{R} (A)\cap \mathcal{R} (B)$ and $%
+\mathcal{N} (AB)=\mathcal{N} (A)+\mathcal{N} (B)$.
+
+\item[(c)] $\mathcal{R} (AB)=\mathcal{R} (A)\cap \mathcal{R} (B)$ and $%
+\mathcal{N} (AB)=\overline{\mathcal{N} (A)+ \mathcal{N} (B)}$.
+\end{itemize}
+\end{theorem1}
+
+\begin{proof} (a)$\implies $(b): Suppose that $AB$ is an EP operator 
+with a
+closed range.
+Since $A$ is
+an EP operator,  we get that the decomposition of $A$,
+\begin{equation*}A=\begin{bmatrix}A_{1}&0\\0&0\end{bmatrix}
+:\begin{bmatrix}\R (A)\\\N (A)\end{bmatrix}
+\to \begin{bmatrix}\R (A)\\\N (A)\end{bmatrix},
+\end{equation*}
+is a decomposition with respect to the orthogonal sum of subspaces.
+Since $B$ is an EP operator,  it follows that $B$ has the following
+orthogonal decomposition:
+\begin{equation*}B=\begin{bmatrix}B_{1}&0\\ B_{2}&0\end{bmatrix}
+:\begin{bmatrix}\R (B)\\\N (B)\end{bmatrix}
+\to \begin{bmatrix}\R (A)\\\N (A)\end{bmatrix}
+.\end{equation*}
+We can write $\R (B)=\N (B_{1})\oplus \N (B_{1})^{\bot }$.
+It is easy to see $\N (AB)=\N (B)\oplus \N (B_{1})$, so
+\begin{equation*}\R ((AB)^{*})=\N (AB)^{\bot }=\N (B_{1})^{\bot }\subset\R 
+(B).\end{equation*}
+Also, $\R (AB)=\R (A_{1}B_{1})=A_{1}(\R (B_{1}))$. Since $AB$ is an EP 
+operator we
+get $\N (B_{1})^{\bot }=\R (AB)$.
+
+First, we prove $\R (AB)=\R (A)\cap \R (B)$. From
+$\R (AB)=\N (B_{1})^{\bot }\subset\R (B)$ and $\R (AB)\subset\R (A)$, it 
+follows that
+$\N (B_{1})^{\bot }=\R (AB)\subset\R (A)\cap \R (B)\subset\R (B_{1})$.
+
+Let $Q$ be a projection from $H$ onto $\R (A)$ parallel to $\N (A)$ and
+let $P$ be a projection from $H$ onto $\R (B)$. By \cite[Theorem 1, 
+p.~127]{4}, we know that $\R (QP)$ is closed if and only if
+$\R (AB)$ is closed. Hence,  $\R (QP)=Q(\R (B))=\R (B_{1})$ is closed.
+
+Suppose that there exists a closed subspace $S$ of $\R (B_{1})$, such 
+that
+\begin{equation*}\N (B_{1})^{\bot }\oplus S=\R (B_{1}).\end{equation*}
+We conclude  $S\subset\N (B_{1})\oplus \N (B)$.
+
+Define an operator $\ov {B_{1}}\in \myL (H)$ in the following way:
+$\ov {B_{1}}|_{\R (B)}=B_{1}$ and $\ov {B_{1}}|_{\N (B)}\linebreak
+=0$. Then
+$\R (\ov {B_{1}})=\R (B_{1})$ and $\N (\ov {B_{1}})=\N (B)\oplus \N 
+(B_{1})$.
+
+Notice the following:
+\begin{equation*}\R (\ov {B_{1}}^{2})=\ov {B_{1}}(\R (B_{1}))=B_{1}(\N 
+(B_{1})^{\bot })=\R (B_{1})=
+\R (\ov {B_{1}})\end{equation*}
+and
+\begin{equation*}\N (\ov {B_{1}}^{2})=[\N (B)\oplus \N (B_{1})]+S=\N 
+(\ov {B_{1}}).\end{equation*}
+It follows that the Drazin index of $\ov {B_{1}}$ is equal to
+zero or one; hence
+\begin{equation*}H=\N (\ov {B_{1}})\overset{\bullet}{+} \R (\ov {B_{1}})=[\N 
+(B)\oplus \N (B_{1})]\overset{\bullet}{+} \R (B_{1}).\end{equation*}
+On the other hand, since $S\subset[\N (B)\oplus \N (B_{1})]\cap \R (B_{1})$
+we conclude
+$S=\{0\}$. Finally, $\N (B_{1})^{\bot }=\R (A)\cap \R (B)=\R (B_{1})$ and
+$\R (AB)=\R (A)\cap \R (B)$.
+
+To prove $\N (AB)=\N (A)+\N (B)$, consider the following decompositions:
+\begin{equation*}H=\N (B_{1})^{\bot }\oplus \N (B_{1})\oplus \N (B)=\R 
+(B_{1})\oplus \R (B_{1})^{\bot }\oplus \N (A).\tag{2}\end{equation*}
+We conclude
+\begin{equation*}\N (AB)=\N (B)\oplus \N (B_{1})=\N (A)\oplus \R 
+(B_{1})^{\bot }.\end{equation*}
+From $\R (B)\subset\R (B_{1})\oplus \R (B_{2})$ we get
+that $\R (B_{1})^{\bot 
+}\subset\N (B)$, and
+ it follows  $\N (AB)=\N (A)+\N (B)$.
+
+(b)$\implies $(c): This part of the proof is obvious.
+
+(c)$\implies $(a): Suppose that $\R (AB)=\R (A)\cap \R (B)$ and
+$\N (AB)=\overline{\N (A)+\N (B)}$. Immediately we get that $\R (AB)$ is 
+closed.
+If $M$ and $N$ are subspaces of $H$, then\linebreak
+$(M\cap N)^{\bot 
+}=\overline{M^{\bot }+N^{\bot }}$.
+Now we find
+\begin{equation*}\begin{split}
+\R (AB)&=(\R (A)\cap \R (B)){^{\bot }}{^{\bot }}=(\overline{(\R 
+(A)^{\bot }+\R (B)^{\bot })}^{\bot }\\
+&= (\overline{\N (A)+\N (B)})^{\bot }=\N (AB)^{\bot }=\R (AB)^{*},
+\end{split}\end{equation*}
+and finally,  $AB$ is an EP operator with a closed range.\end{proof}
+
+Our Theorem 1 is a generalization of the main result of Hartwig and Katz %
+\cite{5}.
+
+\begin{remark1}
+The statements (b) and (c) of Theorem 1 illustrate the difference between
+the finite and infinite dimensional Hilbert spaces. If $H$ is a finite
+dimensional Hilbert space, then the statement (b) is the same as the
+statement (c) of Theorem 1. In general Hilbert spaces, the statement (b) is
+a stronger condition than the statement (c) of Theorem 1.
+\end{remark1}
+
+It is well-known that the product of two selfadjoint operators $A,B$ is a
+selfadjoint operator if and only if $AB=BA$. In \cite{6} it is shown that
+the product of two commuting EP matrices is again the EP matrix. For EP
+operators on an arbitrary Hilbert space the following result holds.
+
+\begin{theorem2}
+If $A,B\in \mathcal{L} (H)$ are EP operators with closed ranges and $AB=BA$,
+then $AB$ is the EP operator with a closed range also.
+\end{theorem2}
+
+\begin{proof} It is well-known that the group inverse $A^{\#}$ of $A$
+ commutes with every operator that commutes with $A$ \cite{4}, so
+we conclude that operators $A,B, A^{\#}, B^{\#}$ mutually commute.
+Obviously, $(AB)^{\#}=B^{\#}A^{\#}=B^{\dag }A^{\dag }$. Notice also
+\begin{equation*}\begin{split}
+(ABB^{\#}A^{\#})^{*}&=(BB^{\#}AA^{\#})^{*}=(BB^{\dag }AA^{\dag 
+})^{*}=(AA^{\dag })^{*}(BB^{\dag })^{*}=AA^{\dag }BB^{\dag }\\
+&=ABB^{\#} A^{\#}.
+\end{split}\end{equation*}
+The equality $(B^{\#}A^{\#} AB)^{*}=B^{\#}A^{\#} AB$ can be proved 
+analogously. We
+have just proved
+\begin{equation*}(AB)^{\#}=B^{\#}A^{\#}=B^{\dag }A^{\dag }=(AB)^{\dag 
+};\end{equation*}
+hence $AB$ is an EP operator with a closed range.\end{proof}
+
+We can construct two noncommuting EP operators whose product is also an EP
+operator. Let $P$ be any orthogonal projection and let $A$ be any invertible
+operator which satisfies $A(\mathcal{N} (P))=\mathcal{N} (P)$ and $A(%
+\mathcal{R} (P))\nsubseteq \mathcal{R} (P)$. Then $P=P^{\dag }=P^{\#}$ and $%
+A^{-1}=A^{\dag }=A^{\#}$. Also, 
+\begin{equation*}
+\mathcal{R} (P)\cap \mathcal{R} (A)=\mathcal{R} (P)=\mathcal{R} (PA),\quad 
+\mathcal{N} (P)+\mathcal{N} (A)=\mathcal{N} (P)=\mathcal{N} (PA).
+\end{equation*}
+By Theorem 1 it follows that $PA$ is an EP operator. On the other hand, $A$
+and $P$ commute if and only if the decomposition $H=\mathcal{R} (P)\oplus 
+\mathcal{N} (P)$ reduces $A$, i.e. $A(\mathcal{R} (P))\subset\mathcal{R} (P)$
+and $A(\mathcal{N} (P))\subset\mathcal{N} (P)$. According to our
+construction we get $AP\neq PA$.
+
+For a concrete realization of the preceding situation, consider the
+following example.
+
+\begin{definition1}
+Let us take $H=\mathbb{C} ^{2}$, $P=%
+\begin{bmatrix}
+1 & 0 \\ 
+0 & 0%
+\end{bmatrix}
+$ and $A=%
+\begin{bmatrix}
+1 & 0 \\ 
+1 & 1%
+\end{bmatrix}
+$. Then $P=P^{\dag }=P^{\#}$ and $A^{-1}=A^{\dag }=A^{\#}=%
+\begin{bmatrix}
+1 & 0 \\ 
+-1 & 1%
+\end{bmatrix}
+$; hence $P$ and $A$ are EP operators. Notice 
+\begin{equation*}
+PA=P\neq 
+\begin{bmatrix}
+1 & 0 \\ 
+1 & 0%
+\end{bmatrix}
+=AP.
+\end{equation*}
+Now, $P$, $A$ and $PA$ are EP operators, but $AP\neq PA$.
+\end{definition1}
+
+If $\mathcal{R} (A)$, $\mathcal{R} (B)$ and $\mathcal{R} (AB)$ are closed,
+then the rule $(AB)^{\dag }=B^{\dag }A^{\dag }$ is called the reverse order
+rule for the Moore-Penrose inverse (and it does not hold in general). In %
+\cite{3} it is shown that if $\mathcal{R} (A)$, $\mathcal{R} (B)$ and $%
+\mathcal{R} (AB)$ are closed, then the following statements are equivalent:
+
+\begin{itemize}
+\item[(a)] $(AB)^{\dag }=B^{\dag }A^{\dag }$;
+
+\item[(b)] $\mathcal{R} (A^{*}AB)\subset\mathcal{R} (B)$ and $\mathcal{R}
+(BB^{*}A^{*})\subset \mathcal{R} (A^{*})$.
+\end{itemize}
+
+In \cite{1} Baskett and Katz considered the connection between the EP
+matrices and the reverse order rule for the Moore-Penrose inverse of
+matrices. To illustrate this connection, we formulate the following result.
+
+\begin{theorem3}
+If $A,B\in \mathcal{L} (H)$ are EP operators with closed ranges and $%
+\mathcal{R} (A)=\mathcal{R} (B)$, then $(AB)^{\dag }=B^{\dag }A^{\dag }$.
+\end{theorem3}
+
+\begin{proof} From $\R (A^{*})=\R (A)=\R (B)=\R (B^{*})$ we get
+\begin{equation*}\R (A^{*}AB)=A^{*}A(\R (A^{*}))=A^{*}(\R (A))=\R 
+(A^{*})=\R (B)\end{equation*}
+and
+\begin{equation*}\R (BB^{*}A^{*})=BB^{*}(\R (B))=\R (B)=\R 
+(A^{*}).\end{equation*}
+Hence, the reverse order rule $(AB)^{\dag }=B^{\dag }A^{\dag }$ 
+holds.\end{proof}
+
+Some other similar and interesting results can be found in \cite{1}.
+
+\section*{Acknowledgement}
+
+I am grateful to the referee for helpful comments and suggestions concerning
+the paper.
+
+\begin{thebibliography}{1}
+\bibitem[1]{1} T.~S.~Baskett and I.~J.~Katz, \emph{Theorems on products of $%
+EP_{r}$ matrices}, Linear Algebra Appl. \textbf{2} (1969), 87--103. %
+\MR{40:4280}
+
+\bibitem[2]{2} A.~Ben-Israel and T.~N.~E.~Greville, \emph{Generalized
+inverses: theory and applications}, Wiley-In\-ter\-sci\-en\-ce, New York,
+1974. \MR{53:469}
+
+\bibitem[3]{3} R. H. Bouldin, \emph{Generalized inverses and factorizations}%
+, Recent applications of generalized inverses, Pitman Ser. Res. Notes in
+Math., vol.~66, 1982, pp.~233--249. \MR{83j:47001}
+
+\bibitem[4]{4} S.~R.~Caradus, \emph{Generalized inverses and operator theory}%
+, Queen's paper in pure and applied mathematics, Queen's University,
+Kingston, Ontario, 1978. \MR{81m:47003}
+
+\bibitem[5]{5} R.~E.~Hartwig and I.~J.~Katz, \emph{On products of EP matrices%
+}, Linear Algebra Appl. \textbf{252} (1997), 339--345. \MR{98a:15050}
+
+\bibitem[6]{6} I.~J.~Katz, \emph{Weigmann type theorems for $EP_{r}$ matrices%
+}, Duke Math. J. \textbf{32} (1965), 423--427. \MR{31:4804}
+\end{thebibliography}
+
+\end{document}

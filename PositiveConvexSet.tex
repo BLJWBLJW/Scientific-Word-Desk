@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Answers to Questions on \( C^* \)-Algebras and Extensions}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Answer to: If a linear function is defined and is positive on a self adjoint subspace of a \( C^* \)-algebra, what are the conditions it needs to be satisfied so that it can be extended to a state defined on the whole \( C^* \)-algebra?}
+
+For a positive linear functional \( \phi \) defined on a self-adjoint subspace \( S \) of a \( C^* \)-algebra \( A \) to be extendable to a state on \( A \), the following conditions must be satisfied:
+
+1. \textbf{Positivity}: \( \phi(a) \geq 0 \) for all \( a \in S \) with \( a \geq 0 \).
+
+2. \textbf{Boundedness}: \( \phi \) must be bounded on \( S \), i.e., there exists \( C > 0 \) such that \( |\phi(a)| \leq C \|a\| \) for all \( a \in S \).
+
+3. \textbf{Norm Condition}: If \( S \) contains the identity \( 1 \), then \( \phi(1) = 1 \). If \( S \) does not contain \( 1 \), then \( \phi \) must satisfy \( \phi(a) \leq \|a\| \) for all \( a \in S \).
+
+These conditions ensure that \( \phi \) can be extended to a state \( \tilde{\phi} \) on \( A \).
+
+---
+
+\section*{Answer to: Doesn't the linear combination of \( p \) and \( q \) belong to the subspace by definition of a subspace, thus the subspace contains the identity, which contradicts the original assumption?}
+
+You are correct! If \( p \) and \( q \) are projectors in \( S \) such that \( p + q = I \), then \( S \) contains the identity \( I \). This contradicts the assumption that \( S \) does not contain the identity. Therefore, the earlier example was flawed. Let me provide a corrected analysis.
+
+---
+
+\section*{Answer to: Is \( \phi(p) \leq 1 \) for all projectors \( p \in S \), when \( S \) does not contain the identity, the necessary and sufficient condition for \( \phi \) to be extended to a state on all of \( A \)?}
+
+The condition \( \phi(p) \leq 1 \) for all projectors \( p \in S \) is \textbf{necessary} but \textbf{not sufficient} for \( \phi \) to be extended to a state on \( A \). Here’s why:
+
+1. \textbf{Necessary Condition}: If \( \phi \) can be extended to a state \( \tilde{\phi} \) on \( A \), then \( \phi(p) = \tilde{\phi}(p) \leq 1 \) for all projectors \( p \in S \).
+
+2. \textbf{Not Sufficient}: The condition \( \phi(p) \leq 1 \) does not guarantee that \( \phi \) is positive or bounded on all of \( S \). For example, \( \phi \) could grow arbitrarily large on other elements of \( S \), violating the boundedness condition.
+
+Thus, while \( \phi(p) \leq 1 \) is necessary, it is not sufficient for extension to a state.
+
+---
+
+\section*{Answer to: Is the set of positive elements \( a \in S \) a convex set?}
+
+Yes, the set of positive elements \( S_+ = \{ a \in S \mid a \geq 0 \} \) is a \textbf{convex set}. This is because:
+
+1. If \( a, b \in S_+ \), then \( \lambda a + (1 - \lambda) b \in S_+ \) for all \( \lambda \in [0, 1] \).
+
+2. The convex combination of positive elements is positive, as the set of positive elements in a \( C^* \)-algebra is a convex cone.
+
+---
+
+\section*{Answer to: What are the extreme points of the convex set of positive elements of \( S \)?}
+
+The \textbf{extreme points} of the convex set \( S_+ \) are the positive elements in \( S \) that cannot be written as non-trivial convex combinations of other positive elements in \( S \). These extreme points are closely related to \textbf{minimal projections} in \( S \):
+
+1. If \( S \) contains minimal projections, they are extreme points of \( S_+ \).
+
+2. If \( S \) does not contain minimal projections, the extreme points may correspond to other indecomposable positive elements.
+
+---
+
+\section*{Answer to: If the \( C^* \)-algebra is a W\(^*\)-algebra, does this change anything?}
+
+If \( A \) is a W\(^*\)-algebra (von Neumann algebra), the analysis of \( S_+ \) and its extreme points is influenced by the additional structure of the W\(^*\)-algebra:
+
+1. The weak operator topology allows us to study limits of nets of positive elements.
+
+2. Minimal projections in \( S \) (if they exist) are extreme points of \( S_+ \).
+
+3. The type of the W\(^*\)-algebra (Type I, II, or III) affects the structure of extreme points.
+
+---
+
+\section*{Answer to: If \( S \) is a self-adjoint subspace of a W\(^*\)-algebra, how does this affect the preceding answers?}
+
+If \( S \) is a self-adjoint subspace of a W\(^*\)-algebra \( A \), the analysis of \( S_+ \) and its extreme points is influenced by the W\(^*\)-algebra structure:
+
+1. Minimal projections in \( S \) (if they exist) are extreme points of \( S_+ \).
+
+2. The weak operator topology and the type of the W\(^*\)-algebra affect the structure of extreme points.
+
+3. If \( S \) contains the identity, the extreme points of the set of normal states on \( S \) are related to the extreme points of \( S_+ \).
+
+---
+
+\section*{Answer to: Do the inf and sup values of \( \phi \) on \( S_+ \) correspond to extreme points of \( S_+ \)?}
+
+The \textbf{supremum} of \( \phi \) on \( S_+ \) is often achieved at an extreme point of \( S_+ \), especially if \( S_+ \) is compact. However, the \textbf{infimum} of \( \phi \) on \( S_+ \) is less directly tied to extreme points:
+
+1. The supremum is often achieved at an extreme point.
+
+2. The infimum may or may not be achieved at an extreme point, particularly if \( \phi \) is positive (in which case the infimum is \( 0 \)).
+
+---
+
+\section*{Answer to: If \( S_+ \) in a W\(^*\)-algebra is weakly compact, are its extreme points minimal projectors?}
+
+If \( S_+ \) is weakly compact in a W\(^*\)-algebra:
+
+1. \textbf{Minimal projections} in \( S \) are always \textbf{extreme points} of \( S_+ \).
+
+2. Whether \textbf{all extreme points} of \( S_+ \) are minimal projections depends on the structure of \( S \):
+   - If \( S \) contains all minimal projections or is a face of the positive cone, then the extreme points of \( S_+ \) are precisely the minimal projections.
+   - Otherwise, the extreme points may include other indecomposable positive elements.
+
+\end{document}

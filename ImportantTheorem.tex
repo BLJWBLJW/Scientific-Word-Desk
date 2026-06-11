@@ -1,0 +1,470 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, July 18, 2008 09:51:28}
+%TCIDATA{LastRevised=Friday, August 08, 2008 14:06:56}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+The position-spin field operators are defined by
+\begin{equation}
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}=\sum_{1\leq j\leq r_{1}}\varphi
+_{j}\left(  \mathbf{x}\right)  a_{j}^{\dagger}%
+\end{equation}
+giving the inverse relationship%
+\begin{equation}
+\int\varphi_{k}^{\ast}\left(  \mathbf{x}\right)  \Phi\left(  \mathbf{x}%
+\right)  ^{\dagger}d\mathbf{x}=\sum_{1\leq j\leq r_{1}}\int\varphi_{k}^{\ast
+}\left(  \mathbf{x}\right)  \varphi_{j}\left(  \mathbf{x}\right)
+d\mathbf{x}a_{j}^{\dagger}=a_{k}^{\dagger}.
+\end{equation}
+Thus any local operator can be expressed as%
+\begin{equation}
+\int\lambda\left(  \mathbf{x}\right)  \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}\right)  d\mathbf{x}=\sum_{1\leq j,k\leq
+r_{1}}\left\{  \int\lambda\left(  \mathbf{x}\right)  \varphi_{j}\left(
+\mathbf{x}\right)  \varphi_{k}^{\ast}\left(  \mathbf{x}\right)  d\mathbf{x}%
+\right\}  a_{j}^{\dagger}a_{k}=\sum_{1\leq j,k\leq r_{1}}\lambda_{kj}%
+a_{j}^{\dagger}a_{k}%
+\end{equation}
+where there are certain conditions on $\left\{  \lambda_{kj}\right\}  $ apart
+from $\lambda_{kj}=\lambda_{jk}^{\ast}.$%
+\begin{align}
+\lambda & =\sum_{1\leq j,k\leq r_{1}}\left\vert \varphi_{j}\right\rangle
+\lambda_{jk}\left\langle \varphi_{k}\right\vert =\int\left\vert \mathbf{x}%
+\right\rangle \lambda\left(  \mathbf{x,x}^{\prime}\right)  \left\langle
+\mathbf{x}^{\prime}\right\vert d\mathbf{x}d\mathbf{x}^{\prime}=\int\left\vert
+\mathbf{x}\right\rangle \lambda\left(  \mathbf{x}\right)  \delta\left(
+\mathbf{x-x}^{\prime}\right)  \left\langle \mathbf{x}^{\prime}\right\vert
+d\mathbf{x}d\mathbf{x}^{\prime}\nonumber\\
+& \Rightarrow\left\langle \mathbf{x}\left\vert \lambda\right.  \mathbf{x}%
+^{\prime}\right\rangle =\left\langle \mathbf{x}\left\vert \sum_{1\leq j,k\leq
+r_{1}}\left\vert \varphi_{j}\right\rangle \lambda_{jk}\left\langle \varphi
+_{k}\right\vert \right.  \mathbf{x}^{\prime}\right\rangle =\sum_{1\leq j,k\leq
+r_{1}}\left\langle \mathbf{x}\left\vert \varphi_{j}\right.  \right\rangle
+\lambda_{jk}\left\langle \varphi_{k}\left\vert \mathbf{x}^{\prime}\right.
+\right\rangle \nonumber\\
+& =\sum_{1\leq j,k\leq r_{1}}\left\langle \mathbf{x}\left\vert \varphi
+_{j}\right.  \right\rangle \lambda_{jk}\left\langle \varphi_{k}\left\vert
+\mathbf{x}^{\prime}\right.  \right\rangle =\lambda\left(  \mathbf{x}\right)
+\delta\left(  \mathbf{x-x}^{\prime}\right)
+\end{align}
+
+
+$\lceil$%
+\[
+\int\lambda\left(  \mathbf{x}\right)  \varphi_{j}\left(  \mathbf{x}\right)
+\varphi_{k}^{\ast}\left(  \mathbf{x}\right)  d\mathbf{x=}\int\lambda\left(
+\mathbf{x,x}^{\prime}\right)  \varphi_{j}\left(  \mathbf{x}^{\prime}\right)
+\varphi_{k}^{\ast}\left(  \mathbf{x}\right)  d\mathbf{x}d\mathbf{x}^{\prime
+}=\int\eta\left(  \mathbf{x}\right)  \varphi_{k}^{\ast}\left(  \mathbf{x}%
+\right)  d\mathbf{x}%
+\]
+where%
+\[
+\eta_{j}\left(  \mathbf{x}\right)  =\int\lambda\left(  \mathbf{x,x}^{\prime
+}\right)  \varphi_{j}\left(  \mathbf{x}^{\prime}\right)  d\mathbf{x}^{\prime}.
+\]
+Let
+\[
+\zeta_{j}\left(  \mathbf{x}\right)  =\left\{
+\begin{array}
+[c]{c}%
+\frac{\eta\left(  \mathbf{x}\right)  }{\varphi_{j}\left(  \mathbf{x}\right)
+};\varphi_{j}\left(  \mathbf{x}\right)  \neq0\\
+0;\varphi_{j}\left(  \mathbf{x}\right)  =0
+\end{array}
+\right.
+\]
+then
+\[
+\int\lambda\left(  \mathbf{x,x}^{\prime}\right)  \varphi_{j}\left(
+\mathbf{x}^{\prime}\right)  \varphi_{k}^{\ast}\left(  \mathbf{x}\right)
+d\mathbf{x}d\mathbf{x}^{\prime}=\int\zeta_{j}\left(  \mathbf{x}\right)
+\varphi_{j}\left(  \mathbf{x}\right)  \varphi_{k}^{\ast}\left(  \mathbf{x}%
+\right)  d\mathbf{x.\rfloor}%
+\]
+The effect of the components of the density operator is given by
+\begin{align*}
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+\left\vert \psi_{1}\cdots\psi_{N}\right\rangle  &  =\sum_{1\leq j,k\leq r_{1}%
+}\varphi_{j}\left(  \mathbf{x}\right)  \varphi_{k}^{\ast}\left(
+\mathbf{x}\right)  a_{j}^{\dagger}a_{k}\left\vert \psi_{1}\cdots\psi
+_{N}\right\rangle \\
+&  =\sum_{1\leq h,h^{\prime}\leq N}\varphi_{h}\left(  \mathbf{x}\right)
+\varphi_{h^{\prime}}^{\ast}\left(  \mathbf{x}\right)  a_{h}^{\dagger
+}a_{h^{\prime}}\left\vert \psi_{1}\cdots\psi_{N}\right\rangle +\sum
+_{\substack{1\leq h\leq N\\N+1\leq p\leq r_{1}}}\varphi_{p}\left(
+\mathbf{x}\right)  \varphi_{h}^{\ast}\left(  \mathbf{x}\right)  a_{p}%
+^{\dagger}a_{h}\left\vert \psi_{1}\cdots\psi_{N}\right\rangle \\
+&  =\left\{  \sum_{1\leq h\leq N}\varphi_{h}\left(  \mathbf{x}\right)
+\varphi_{h}^{\ast}\left(  \mathbf{x}\right)  \right\}  \left\vert \psi
+_{1}\cdots\psi_{N}\right\rangle +\sum_{\substack{1\leq h\leq N\\N+1\leq p\leq
+r_{1}}}\varphi_{p}\left(  \mathbf{x}\right)  \varphi_{h}^{\ast}\left(
+\mathbf{x}\right)  \left\vert \psi_{1}\cdots\psi_{p}\widehat{\psi}_{h}%
+\cdots\psi_{N}\right\rangle
+\end{align*}
+leading to%
+\begin{align*}
+\int\lambda\left(  \mathbf{x}\right)  \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}\right)  d\mathbf{x}\left\vert \psi_{1}%
+\cdots\psi_{N}\right\rangle  &  =\sum_{1\leq j,k\leq r_{1}}\lambda_{kj}%
+a_{j}^{\dagger}a_{k}\left\vert \psi_{1}\cdots\psi_{N}\right\rangle \\
+&  =\left\{  \sum_{1\leq h\leq N}\lambda_{hh}\right\}  \left\vert \psi
+_{1}\cdots\psi_{N}\right\rangle +\sum_{\substack{1\leq h\leq N\\N+1\leq p\leq
+r_{1}}}\lambda_{ph}\left\vert \psi_{1}\cdots\psi_{p}\widehat{\psi}_{h}%
+\cdots\psi_{N}\right\rangle .
+\end{align*}
+Thus%
+\[
+\int\lambda\left(  \mathbf{x}\right)  \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}\right)  d\mathbf{x}\left\vert \psi_{1}%
+\cdots\psi_{N}\right\rangle =0\Leftrightarrow\sum_{1\leq h\leq N}\lambda
+_{hh}=0\text{ and }\lambda_{ph},\lambda_{hp}=0;1\leq h\leq N,N+1\leq p\leq
+r_{1}%
+\]
+and the local potential operator can be expanded as
+\begin{align*}
+\Omega\left(  \lambda\right)   &  =\sum_{1\leq h\neq h^{\prime}\leq N}%
+\lambda_{hh^{\prime}}a_{h}^{\dagger}a_{h^{\prime}}+\sum_{N+1\leq p,p^{\prime
+}\leq N}\lambda_{pp^{\prime}}a_{p}^{\dagger}a_{p^{\prime}}\\
+&  =\int\left\{  \sum_{1\leq h\neq h^{\prime}\leq N}\varphi_{h}^{\ast}\left(
+\mathbf{x}\right)  \lambda_{hh^{\prime}}\varphi_{h^{\prime}}\left(
+\mathbf{x}^{\prime}\right)  +\sum_{N+1\leq p,p^{\prime}\leq N}\varphi
+_{p}^{\ast}\left(  \mathbf{x}\right)  \lambda_{pp^{\prime}}\varphi_{p^{\prime
+}}\left(  \mathbf{x}^{\prime}\right)  \right\}  \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}^{\prime}\right)  d\mathbf{x}d\mathbf{x}%
+^{\prime},
+\end{align*}
+showing that%
+\[
+\lambda\left(  \mathbf{x}\right)  =\lambda\left(  \mathbf{x}\right)
+\delta\left(  \mathbf{x-x}^{\prime}\right)  =\sum_{1\leq h\neq h^{\prime}\leq
+N}\varphi_{h}^{\ast}\left(  \mathbf{x}\right)  \lambda_{hh^{\prime}}%
+\varphi_{h^{\prime}}\left(  \mathbf{x}^{\prime}\right)  +\sum_{N+1\leq
+p,p^{\prime}\leq N}\varphi_{p}^{\ast}\left(  \mathbf{x}\right)  \lambda
+_{pp^{\prime}}\varphi_{p^{\prime}}\left(  \mathbf{x}^{\prime}\right)  .
+\]
+
+
+\begin{theorem}
+Let
+\begin{equation}
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+\left\vert \psi_{1}\cdots\psi_{N}\right\rangle \overset{a.e}{\neq
+}0;\,\mathbf{x\in\mathbf{\Delta}\left(  \psi_{1}\cdots\psi_{N}\right)
+\subseteq}\mathbb{X}%
+\end{equation}
+then
+\begin{equation}
+\Omega\left(  \lambda\right)  \left\vert \psi_{1}\cdots\psi_{N}\right\rangle
+=\left\vert \Omega\left(  \lambda\right)  \psi_{1}\cdots\psi_{N}\right\rangle
++\cdots+\left\vert \psi_{1}\cdots\Omega\left(  \lambda\right)  \psi
+_{N}\right\rangle =0\Leftrightarrow\lambda\overset{a.e}{=}0.
+\end{equation}
+(By a.e. we mean almost everywhere in $\mathbf{\mathbf{\Delta}\left(  \psi
+_{1}\cdots\psi_{N}\right)  )}$
+\end{theorem}
+
+\begin{proof}%
+\begin{align}
+&  \Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+\left\vert \psi_{1}\cdots\psi_{N}\right\rangle \overset{a.e}{\neq
+}0;\,\mathbf{x\in}\Delta\left(  \psi_{1}\cdots\psi_{N}\right)
+\mathbf{\subseteq}\mathbb{X}\nonumber\\
+&  \left.  \Rightarrow\right.  \left\langle \left.  \mathbf{x}_{1}%
+\cdots\mathbf{x}_{N}\right\vert \Phi\left(  \mathbf{x}\right)  ^{\dagger}%
+\Phi\left(  \mathbf{x}\right)  \psi_{1}\cdots\psi_{N}\right\rangle
+\overset{a.e}{\neq}0
+\end{align}
+If
+\begin{equation}
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+\left\vert \psi_{1}\cdots\psi_{N}\right\rangle \neq0
+\end{equation}
+then
+\begin{equation}
+\left\langle \left.  \mathbf{xx}_{2}\cdots\mathbf{x}_{N}\right\vert
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+\psi_{1}\cdots\psi_{N}\right\rangle =\left\langle \left.  \mathbf{xx}%
+_{2}\cdots\mathbf{x}_{N}\right\vert \psi_{1}\cdots\psi_{N}\right\rangle
+\overset{a.e}{\neq}0.
+\end{equation}
+Hence in particular
+\begin{equation}
+\left\langle \left.  \mathbf{x}_{1}\cdots\mathbf{x}_{N}\right\vert \psi
+_{1}\cdots\psi_{N}\right\rangle \overset{a.e}{\neq}0;\quad\mathbf{x}_{j}%
+\in\Delta\left(  \psi_{1}\cdots\psi_{N}\right)  \mathbf{;}1\mathbf{\leq}j\leq
+N.
+\end{equation}
+%
+
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =\left\langle \psi_{1}\cdots\psi_{N}\left.
+\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)
+\right\vert \psi_{1}\cdots\psi_{N}\right\rangle \overset{a.e}{\neq
+}0\Longleftrightarrow\Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(
+\mathbf{x}\right)  \left\vert \psi_{1}\cdots\psi_{N}\right\rangle
+\overset{a.e}{\neq}0
+\end{equation}
+In the case $N=1$ one has%
+\begin{align}
+\int\lambda\left(  \mathbf{x}\right)  \Phi\left(  \mathbf{x}\right)
+^{\dagger}\Phi\left(  \mathbf{x}\right)  \left\vert \psi_{j}\right\rangle
+d\mathbf{x}  &  =\int\lambda\left(  \mathbf{x}\right)  \Phi\left(
+\mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}\right)  \left\vert
+\mathbf{x}^{\prime}\right\rangle \left\langle \left.  \mathbf{x}^{\prime
+}\right\vert \psi_{j}\right\rangle d\mathbf{x}d\mathbf{x}^{\prime}=\int
+\lambda\left(  \mathbf{x}\right)  \left\vert \mathbf{x}\right\rangle
+\left\langle \left.  \mathbf{x}\right\vert \psi_{j}\right\rangle
+d\mathbf{x}=0\nonumber\\
+&  \equiv\int\lambda\left(  \mathbf{x}\right)  \psi_{j}\left(  \mathbf{x}%
+\right)  \left\vert \mathbf{x}\right\rangle d\mathbf{x=0\Rightarrow}%
+\lambda\left(  \mathbf{x}\right)  \psi_{j}\left(  \mathbf{x}\right)
+\overset{a.e}{=}0\Rightarrow\lambda\left(  \mathbf{x}\right)  \overset{a.e}%
+{=}0.
+\end{align}
+In the case $N=2$
+\begin{equation}
+\left\langle \left.  \mathbf{xx}^{\prime}\right\vert \psi_{1}\psi
+_{2}\right\rangle =\frac{1}{\sqrt{2}}\left\{  \psi_{1}\left(  \mathbf{x}%
+\right)  \psi_{2}\left(  \mathbf{x}^{\prime}\right)  -\psi_{2}\left(
+\mathbf{x}\right)  \psi_{1}\left(  \mathbf{x}^{\prime}\right)  \right\}
+\end{equation}
+and%
+\begin{align}
+&  \left\langle \left.  \mathbf{xx}^{\prime}\right\vert \Omega\left(
+\lambda\right)  \psi_{1}\psi_{2}\right\rangle +\left\langle \left.
+\mathbf{xx}^{\prime}\right\vert \psi_{1}\Omega\left(  \lambda\right)  \psi
+_{2}\right\rangle \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \lambda\left(  \mathbf{x}\right)  \psi
+_{1}\left(  \mathbf{x}\right)  \psi_{2}\left(  \mathbf{x}^{\prime}\right)
+-\psi_{2}\left(  \mathbf{x}\right)  \lambda\left(  \mathbf{x}^{\prime}\right)
+\psi_{1}\left(  \mathbf{x}^{\prime}\right)  +\psi_{1}\left(  \mathbf{x}%
+\right)  \lambda\left(  \mathbf{x}^{\prime}\right)  \psi_{2}\left(
+\mathbf{x}^{\prime}\right)  -\lambda\left(  \mathbf{x}\right)  \psi_{2}\left(
+\mathbf{x}\right)  \psi_{1}\left(  \mathbf{x}^{\prime}\right)  \right\}
+\nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \lambda\left(  \mathbf{x}\right)  \left\{
+\psi_{1}\left(  \mathbf{x}\right)  \psi_{2}\left(  \mathbf{x}^{\prime}\right)
+-\psi_{2}\left(  \mathbf{x}\right)  \psi_{1}\left(  \mathbf{x}^{\prime
+}\right)  \right\}  +\lambda\left(  \mathbf{x}^{\prime}\right)  \left\{
+\psi_{1}\left(  \mathbf{x}\right)  \psi_{2}\left(  \mathbf{x}^{\prime}\right)
+-\psi_{2}\left(  \mathbf{x}\right)  \psi_{1}\left(  \mathbf{x}^{\prime
+}\right)  \right\}  \right\} \nonumber\\
+&  =\frac{1}{\sqrt{2}}\left\{  \lambda\left(  \mathbf{x}\right)
++\lambda\left(  \mathbf{x}^{\prime}\right)  \right\}  \left\{  \psi_{1}\left(
+\mathbf{x}\right)  \psi_{2}\left(  \mathbf{x}^{\prime}\right)  -\psi
+_{2}\left(  \mathbf{x}\right)  \psi_{1}\left(  \mathbf{x}^{\prime}\right)
+\right\}  =\left\{  \lambda\left(  \mathbf{x}\right)  +\lambda\left(
+\mathbf{x}^{\prime}\right)  \right\}  \left\langle \left.  \mathbf{xx}%
+^{\prime}\right\vert \psi_{1}\psi_{2}\right\rangle .
+\end{align}
+Hence if
+\begin{equation}
+\left\langle \left.  \mathbf{xx}^{\prime}\right\vert \Omega\left(
+\lambda\right)  \psi_{1}\psi_{2}\right\rangle +\left\langle \left.
+\mathbf{xx}^{\prime}\right\vert \psi_{1}\Omega\left(  \lambda\right)  \psi
+_{2}\right\rangle \overset{ae}{=}0
+\end{equation}
+then either
+\begin{equation}
+\left\langle \left.  \mathbf{xx}^{\prime}\right\vert \psi_{1}\psi
+_{2}\right\rangle \overset{ae}{=}0
+\end{equation}
+or
+\begin{equation}
+\lambda\left(  \mathbf{x}\right)  +\lambda\left(  \mathbf{x}^{\prime}\right)
+\overset{ae}{=}0\quad\mathbf{x\neq x}^{\prime}.
+\end{equation}
+If
+\begin{equation}
+\left\langle \left.  \mathbf{xx}^{\prime}\right\vert \psi_{1}\psi
+_{2}\right\rangle \overset{ae}{=}0
+\end{equation}
+then
+\begin{equation}
+\gamma\left(  \mathbf{x}\right)  =2\int\left\langle \psi_{1}\psi_{2}\left\vert
+\mathbf{xx}^{\prime}\right.  \right\rangle \left\langle \left.  \mathbf{xx}%
+^{\prime}\right\vert \psi_{1}\psi_{2}\right\rangle d\mathbf{x}^{\prime
+}\overset{ae}{=}0
+\end{equation}
+which is a contradiction. Thus $\left\langle \left.  \mathbf{uv}\right\vert
+\psi_{1}\psi_{2}\right\rangle \overset{ae}{\neq}0$ for any $\mathbf{u\neq
+v}\in\Delta\left(  \psi_{1}\psi_{2}\right)  $ and implies that
+\begin{equation}
+\lambda\left(  \mathbf{u}\right)  +\lambda\left(  \mathbf{v}\right)
+\overset{a.e}{=}0\quad\mathbf{u\neq v}\in\Delta\left(  \psi_{1}\psi
+_{2}\right)
+\end{equation}
+choosing pairs $\left\{  \mathbf{x,x}^{\prime}\right\}  ,\left\{
+\mathbf{x}^{\prime}\mathbf{,x}^{\prime\prime}\right\}  $ and $\left\{
+\mathbf{x,x}^{\prime\prime}\right\}  $
+\begin{align}
+&  \lambda\left(  \mathbf{x}\right)  =-\lambda\left(  \mathbf{x}^{\prime
+}\right)  =-\lambda\left(  \mathbf{x}^{\prime\prime}\right) \nonumber\\
+&  \lambda\left(  \mathbf{x}^{\prime}\right)  =-\lambda\left(  \mathbf{x}%
+^{\prime\prime}\right)  \Rightarrow\lambda\left(  \mathbf{x}^{\prime}\right)
+=-\lambda\left(  \mathbf{x}^{\prime}\right)
+\end{align}
+and hence%
+\begin{equation}
+\lambda\left(  \mathbf{x}^{\prime}\right)  \overset{ae}{=}0.
+\end{equation}
+In the case $N=3$%
+\begin{equation}
+\lambda\left(  \mathbf{x}_{1}\right)  +\lambda\left(  \mathbf{x}_{2}\right)
++\lambda\left(  \mathbf{x}_{3}\right)  \overset{ae}{=}0;\mathbf{x}%
+_{1}\mathbf{\neq\mathbf{x}_{2}\neq x}_{3}%
+\end{equation}
+and we can choose triples $\left\{  \mathbf{x,x}^{\prime},\mathbf{x}%
+^{\prime\prime}\right\}  ,\left\{  \mathbf{x,x}^{\prime}\mathbf{,x}%
+^{\prime\prime\prime}\right\}  ,\left\{  \mathbf{x,\mathbf{x}^{\prime\prime
+},x}^{\prime\prime\prime}\right\}  $and$\left\{  \mathbf{x}^{\prime
+}\mathbf{,x}^{\prime\prime},\mathbf{x}^{\prime\prime\prime}\right\}  $ so that%
+\begin{equation}
+\mathbb{A}\mathbf{\lambda=}\left(
+\begin{array}
+[c]{cccc}%
+0 & 1 & 1 & 1\\
+1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1\\
+1 & 1 & 1 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\lambda\left(  \mathbf{x}\right) \\
+\lambda\left(  \mathbf{x}^{\prime}\right) \\
+\lambda\left(  \mathbf{x}^{\prime\prime}\right) \\
+\lambda\left(  \mathbf{x}^{\prime\prime\prime}\right)
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0\\
+0\\
+0\\
+0
+\end{array}
+\right)
+\end{equation}
+and $\det$ $\mathbb{A}$ $\neq0$ Hence $\mathbf{\lambda=0}$ In the general
+case
+\begin{equation}
+\lambda\left(  \mathbf{x}_{1}\right)  +\cdots+\lambda\left(  \mathbf{x}%
+_{N}\right)  \overset{ae}{=}0;\mathbf{x}_{1}\mathbf{\neq\cdots\neq x}_{N}%
+\end{equation}
+and we can choose $N+1$ points $\left\{  \mathbf{y}_{1},\cdots,\mathbf{y}%
+_{N+1}\right\}  $ to obtain
+\begin{equation}
+\mathbb{A}\mathbf{\lambda=}\left(
+\begin{array}
+[c]{cccc}%
+0 & 1 & \cdots & 1\\
+1 & 0 & \cdots & 1\\
+\vdots & \vdots & 0 & \vdots\\
+1 & \cdots & 1 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\lambda\left(  \mathbf{y}_{1}\right) \\
+\lambda\left(  \mathbf{y}_{2}\right) \\
+\vdots\\
+\lambda\left(  \mathbf{y}_{N+1}\right)
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0\\
+0\\
+\vdots\\
+0
+\end{array}
+\right)  .
+\end{equation}
+One can see that the columns of $\mathbb{A}$ for linearly independent vectors
+thus $\mathbb{A}$ is nonsingular.
+
+\begin{corollary}
+$\left\{  \Phi\left(  \mathbf{x}\right)  ^{\dagger}\Phi\left(  \mathbf{x}%
+\right)  \left\vert \psi_{1}\cdots\psi_{N}\right\rangle ;\,\mathbf{x\in
+\mathbf{\Delta}\left(  \psi_{1}\cdots\psi_{N}\right)  \subseteq}%
+\mathbb{X}\right\}  $ is a generalized basis for $W\subset\mathcal{H}^{N}$
+\end{corollary}
+
+\begin{corollary}
+$\left\{  \Omega\left(  \lambda\right)  \left\vert \psi_{j}\right\rangle
+=0;\,1\leq j\leq N\right\}  \Rightarrow?$
+\end{corollary}
+\end{proof}
+
+
+\end{document}

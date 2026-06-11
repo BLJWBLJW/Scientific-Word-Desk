@@ -1,0 +1,1121 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Saturday, August 13, 2011 19:18:41}
+%TCIDATA{LastRevised=Wednesday, August 17, 2011 23:08:07}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[ ]{REV\TeX4}
+\author{Brian Weiner}
+\affiliation{}
+
+\begin{abstract}
+
+
+\end{abstract}
+\volumeyear{ }
+\date{aug 2011}
+\received{}
+
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+Note
+\begin{equation}
+\Gamma_{1}^{N}\left(  P_{1\nu}\right)  =\,P_{N1\nu},
+\end{equation}
+where
+\begin{align}
+P_{1\nu}  & =\sum_{1\leq j\leq\nu}\left\vert \psi_{j}\right\rangle
+\left\langle \psi_{j}\right\vert \\
+P_{N1\nu}  & =\sum_{1\leq j\leq\nu}\sum_{1\leq j_{1}<\cdots<j_{N-1\leq r}%
+}\left\vert \psi_{j}\psi_{j_{1}}\cdots\psi_{j_{N-1}}\right\rangle \left\langle
+\psi_{j}\psi_{j_{1}}\cdots\psi_{j_{N-1}}\right\vert .
+\end{align}
+
+
+\bigskip%
+
+\begin{equation}
+\Gamma_{2}^{N}\left(  P_{2\nu}\right)  =P_{N2\nu},
+\end{equation}
+where
+\begin{align}
+P_{2\nu}  & =\sum_{1\leq j<k\leq\nu}\left\vert \psi_{j}\psi_{k}\right\rangle
+\left\langle \psi_{j}\psi_{k}\right\vert \\
+P_{N2\nu}  & =\sum_{1\leq j<k\leq\nu}\sum_{1\leq j_{1}<\cdots<j_{N-1\leq r}%
+}\left\vert \psi_{j}\psi_{k}\psi_{j_{1}}\cdots\psi_{j_{N-2}}\right\rangle
+\left\langle \psi_{j}\psi_{k}\psi_{j_{1}}\cdots\psi_{j_{N-2}}\right\vert .
+\end{align}
+
+
+\bigskip
+
+r=3: The SQ of $\hat{\lambda}_{1}$
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{1}\right)    & =\sum_{0\leq N\leq r}\Gamma
+_{N}\left(  \hat{\lambda}_{1}\right)  =\sum_{1\leq N\leq r}\sum_{1\leq P\leq
+N}\binom{N}{P}\Gamma_{P}^{N}\left(  \hat{\lambda}_{1}\right)  \nonumber\\
+& =\sum_{1\leq N\leq3}\binom{N}{1}\Gamma_{1}^{N}\left(  \hat{\lambda}%
+_{1}\right)  =\hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(  \hat{\lambda}%
+_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)
+\end{align}%
+\begin{align}
+a_{1}^{\dagger}a_{1}  & =\Gamma\left(  \left\vert 1\right\rangle \left\langle
+1\right\vert \right)  =\left\vert 1\right\rangle \left\langle 1\right\vert
++2\Gamma_{1}^{2}\left(  \left\vert 1\right\rangle \left\langle 1\right\vert
+\right)  +3\Gamma_{1}^{3}\left(  \left\vert 1\right\rangle \left\langle
+1\right\vert \right)  \nonumber\\
+& =\left\vert 1\right\rangle \left\langle 1\right\vert +2\left(  \left\vert
+12\right\rangle \left\langle 12\right\vert +\left\vert 13\right\rangle
+\left\langle 13\right\vert \right)  +3\left\vert 123\right\rangle \left\langle
+123\right\vert
+\end{align}%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \lambda_{111}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\right\rangle \left\langle
+\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}\right\rangle
+\left\langle \psi_{3}\right\vert \nonumber\\
+& +\lambda_{111}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi
+_{1}\psi_{2}\right\vert +\lambda_{111}\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert \nonumber\\
+& +\lambda_{122}\left\vert \psi_{2}\psi_{1}\right\rangle \left\langle \psi
+_{2}\psi_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{133}\left\vert \psi_{3}%
+\psi_{1}\right\rangle \left\langle \psi_{3}\psi_{1}\right\vert +\lambda
+_{133}\left\vert \psi_{3}\psi_{2}\right\rangle \left\langle \psi_{3}\psi
+_{2}\right\vert \nonumber\\
+& +\lambda_{111}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert +\lambda_{122}\left\vert \psi_{1}\psi
+_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{3}\right\vert
++\lambda_{133}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert
+\end{align}%
+\[
+\parallel
+\]%
+\begin{align}
+& \lambda_{111}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\right\rangle \left\langle
+\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}\right\rangle
+\left\langle \psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}\right)  \left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{111}+\lambda_{133}\right)  \left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{122}+\lambda
+_{133}\right)  \left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi
+_{2}\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+
+
+\bigskip%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{2}\right)    & =\sum_{0\leq N\leq r}\Gamma
+_{N}\left(  \hat{\lambda}_{2}\right)  =\sum_{1\leq N\leq r}\sum_{1\leq P\leq
+N}\binom{N}{P}\Gamma_{P}^{N}\left(  \hat{\lambda}_{2}\right)  \nonumber\\
+& =\sum_{2\leq N\leq3}\binom{N}{2}\Gamma_{2}^{N}\left(  \hat{\lambda}%
+_{2}\right)  =\hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(  \hat{\lambda}%
+_{2}\right)
+\end{align}%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \lambda_{21212}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21213}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21223}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{21312}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21313}\left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21323}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{22312}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{22313}\left\vert \psi_{2}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{22323}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+
+
+\bigskip The square of the SQ of $\hat{\lambda}_{1}$ %
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{1}\right)  \Gamma\left(  \hat{\lambda}%
+_{1}\right)    & =\left(  \hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(
+\hat{\lambda}_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)
+\right)  \left(  \hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(  \hat{\lambda}%
+_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \right)
+\nonumber\\
+& =\left(  \hat{\lambda}_{1}\right)  ^{2}+4\Gamma_{1}^{2}\left(  \hat{\lambda
+}_{1}\right)  ^{2}+9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  ^{2}%
+\end{align}
+$\lceil$ consider $\lambda_{1}=a_{1}^{\dagger}a_{1}$ then
+\begin{align}
+a_{1}^{\dagger}a_{1}  & =\Gamma\left(  \left\vert 1\right\rangle \left\langle
+1\right\vert \right)  =\left\vert 1\right\rangle \left\langle 1\right\vert
++2\Gamma_{1}^{2}\left(  \left\vert 1\right\rangle \left\langle 1\right\vert
+\right)  +3\Gamma_{1}^{3}\left(  \left\vert 1\right\rangle \left\langle
+1\right\vert \right)  \nonumber\\
+& =\left\vert 1\right\rangle \left\langle 1\right\vert +\left\vert
+12\right\rangle \left\langle 12\right\vert +\left\vert 13\right\rangle
+\left\langle 13\right\vert +\left\vert 123\right\rangle \left\langle
+123\right\vert
+\end{align}
+so
+\begin{equation}
+P_{213}=\left\vert 12\right\rangle \left\langle 12\right\vert +\left\vert
+13\right\rangle \left\langle 13\right\vert =\frac{1}{2}\Gamma_{1}^{2}\left(
+P_{13}\right)
+\end{equation}
+and
+\begin{align}
+\lambda_{1}^{2}  & =\left(  \left\vert 1\right\rangle \left\langle
+1\right\vert +\left\vert 12\right\rangle \left\langle 12\right\vert
++\left\vert 13\right\rangle \left\langle 13\right\vert +\left\vert
+123\right\rangle \left\langle 123\right\vert \right)  \left(  \left\vert
+1\right\rangle \left\langle 1\right\vert +\left\vert 12\right\rangle
+\left\langle 12\right\vert +\left\vert 13\right\rangle \left\langle
+13\right\vert +\left\vert 123\right\rangle \left\langle 123\right\vert
+\right)  \nonumber\\
+& =\left\vert 1\right\rangle \left\langle 1\right\vert +\left\vert
+12\right\rangle \left\langle 12\right\vert +\left\vert 13\right\rangle
+\left\langle 13\right\vert +\left\vert 123\right\rangle \left\langle
+123\right\vert =\lambda_{1}%
+\end{align}
+$\rfloor$%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \lambda_{111}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\right\rangle \left\langle
+\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}\right\rangle
+\left\langle \psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}\right)  \left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{111}+\lambda_{133}\right)  \left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{122}+\lambda
+_{133}\right)  \left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi
+_{2}\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+%
+
+\[
+\times
+\]%
+\begin{align}
+& \lambda_{111}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\right\rangle \left\langle
+\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}\right\rangle
+\left\langle \psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}\right)  \left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{111}+\lambda_{133}\right)  \left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{122}+\lambda
+_{133}\right)  \left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi
+_{2}\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+%
+
+\[
+\parallel
+\]%
+\begin{align}
+& \lambda_{111}^{2}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}^{2}\left\vert \psi_{2}\right\rangle
+\left\langle \psi_{2}\right\vert +\lambda_{133}^{2}\left\vert \psi
+_{3}\right\rangle \left\langle \psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}\right)  ^{2}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{111}+\lambda_{133}\right)  ^{2}\left\vert \psi_{1}\psi_{3}%
+\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda
+_{122}+\lambda_{133}\right)  ^{2}\left\vert \psi_{2}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  ^{2}\left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+
+
+
+
+\bigskip The product of the SQ's of $\hat{\lambda}_{1}$ and $\hat{\lambda}%
+_{2}$%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{1}\right)  \Gamma\left(  \hat{\lambda}%
+_{2}\right)    & =\left(  \hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(
+\hat{\lambda}_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)
+\right)  \left(  \hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(  \hat{\lambda}%
+_{2}\right)  \right)  \nonumber\\
+& =2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)  \hat{\lambda}_{2}%
++9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)
+\end{align}%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \lambda_{111}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\right\rangle \left\langle
+\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}\right\rangle
+\left\langle \psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}\right)  \left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{111}+\lambda_{133}\right)  \left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{122}+\lambda
+_{133}\right)  \left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi
+_{2}\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+%
+
+\[
+\times
+\]%
+\begin{align}
+& \lambda_{21212}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21213}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21223}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{21312}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21313}\left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21323}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{22312}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{22313}\left\vert \psi_{2}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{22323}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21212}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21213}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21223}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21312}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21313}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21323}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22312}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22313}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22323}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left(
+\lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert \psi
+_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{2}\right)  \Gamma\left(  \hat{\lambda}%
+_{1}\right)    & =\left(  \Gamma\left(  \hat{\lambda}_{1}\right)
+\Gamma\left(  \hat{\lambda}_{2}\right)  \right)  ^{\dagger}=\left(
+\hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)  \right)
+\left(  \hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)
++3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \right)  \nonumber\\
+& =2\hat{\lambda}_{2}\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)
++9\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)  \Gamma_{1}^{3}\left(
+\hat{\lambda}_{1}\right)
+\end{align}%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21212}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21312}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{22312}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
+\nonumber\\
+& +\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21213}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21313}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{22313}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{21223}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{21323}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22323}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left(
+\lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert \psi
+_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}
+
+
+\bigskip
+
+The square of the SQ of $\hat{\lambda}_{2}$ %
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{2}\right)  \Gamma\left(  \hat{\lambda}%
+_{2}\right)    & =\left(  \hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  \right)  \left(  \hat{\lambda}_{2}+3\Gamma_{2}%
+^{3}\left(  \hat{\lambda}_{2}\right)  \right)  \nonumber\\
+& =\left(  \hat{\lambda}_{2}\right)  ^{2}+9\Gamma_{2}^{3}\left(  \hat{\lambda
+}_{2}\right)  ^{2}%
+\end{align}%
+\[
+\parallel
+\]%
+\begin{align}
+& \lambda_{21212}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21213}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21223}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{21312}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21313}\left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21323}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{22312}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{22313}\left\vert \psi_{2}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{22323}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}%
+\[
+\times
+\]%
+\begin{align}
+& \lambda_{21212}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21213}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21223}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{21312}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21313}\left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21323}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\lambda_{22312}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{22313}\left\vert \psi_{2}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{22323}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \left(  \lambda_{2}\right)  _{1212}^{2}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{2}\right)  _{1213}^{2}\left\vert \psi_{1}\psi_{2}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{2}\right)
+_{1223}^{2}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}%
+\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{2}\right)  _{1312}^{2}\left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{2}\right)  _{1313}^{2}\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{2}\right)
+_{1323}^{2}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}%
+\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{2}\right)  _{2312}^{2}\left\vert \psi_{2}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{2}\right)  _{2313}^{2}\left\vert \psi_{2}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{2}\right)
+_{2323}^{2}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}%
+\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)
+^{2}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}%
+\psi_{2}\psi_{3}\right\vert
+\end{align}
+
+
+\bigskip
+
+The square of \quad$\lambda_{1}+\lambda_{2}$%
+\begin{align}
+& \Gamma\left(  \hat{\lambda}_{1}+\hat{\lambda}_{2}\right)  \Gamma\left(
+\hat{\lambda}_{1}+\hat{\lambda}_{2}\right)  =\Gamma\left(  \hat{\lambda}%
+_{1}\right)  ^{2}+\Gamma\left(  \hat{\lambda}_{1}\right)  \Gamma\left(
+\hat{\lambda}_{2}\right)  +\Gamma\left(  \hat{\lambda}_{2}\right)
+\Gamma\left(  \hat{\lambda}_{1}\right)  +\Gamma\left(  \hat{\lambda}%
+_{2}\right)  ^{2}\nonumber\\
+& =\left(  \hat{\lambda}_{1}\right)  ^{2}+4\Gamma_{1}^{2}\left(  \hat{\lambda
+}_{1}\right)  ^{2}+2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)
+\hat{\lambda}_{2}+2\hat{\lambda}_{2}\Gamma_{1}^{2}\left(  \hat{\lambda}%
+_{1}\right)  +\left(  \hat{\lambda}_{2}\right)  ^{2}\nonumber\\
+& +9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  ^{2}+9\Gamma_{1}%
+^{3}\left(  \hat{\lambda}_{1}\right)  \Gamma_{2}^{3}\left(  \hat{\lambda}%
+_{2}\right)  +9\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)  \Gamma_{1}%
+^{3}\left(  \hat{\lambda}_{1}\right)  +9\Gamma_{2}^{3}\left(  \hat{\lambda
+}_{2}\right)  ^{2}%
+\end{align}%
+\[
+\parallel
+\]%
+\begin{align}
+& \lambda_{111}^{2}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}^{2}\left\vert \psi_{2}\right\rangle
+\left\langle \psi_{2}\right\vert +\lambda_{133}^{2}\left\vert \psi
+_{3}\right\rangle \left\langle \psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}\right)  ^{2}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{111}+\lambda_{133}\right)  ^{2}\left\vert \psi_{1}\psi_{3}%
+\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda
+_{122}+\lambda_{133}\right)  ^{2}\left\vert \psi_{2}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  ^{2}\left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}%
+\[
++
+\]%
+\begin{align}
+& \left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21212}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21213}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21223}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21312}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21313}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21323}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22312}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22313}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22323}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\end{align}
+%
+
+\[
++
+\]
+%
+
+\begin{align}
+& \left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left(
+\lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert \psi
+_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert \nonumber\\
+& \left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21212}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{21312}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
++\left(  \lambda_{111}+\lambda_{122}\right)  \lambda_{22312}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert
+\nonumber\\
+& +\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21213}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{21313}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
++\left(  \lambda_{111}+\lambda_{133}\right)  \lambda_{22313}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{21223}\left\vert
+\psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{21323}\left\vert
+\psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
++\left(  \lambda_{122}+\lambda_{133}\right)  \lambda_{22323}\left\vert
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\right\vert
+\nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left(
+\lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert \psi
+_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert
+\end{align}%
+\[
++
+\]%
+\begin{align}
+& \left(  \lambda_{2}\right)  _{1212}^{2}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{2}\right)  _{1213}^{2}\left\vert \psi_{1}\psi_{2}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{2}\right)
+_{1223}^{2}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi_{2}%
+\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{2}\right)  _{1312}^{2}\left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{2}\right)  _{1313}^{2}\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{2}\right)
+_{1323}^{2}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi_{2}%
+\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{2}\right)  _{2312}^{2}\left\vert \psi_{2}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{2}\right)  _{2313}^{2}\left\vert \psi_{2}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{2}\right)
+_{2323}^{2}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}%
+\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)
+^{2}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}%
+\psi_{2}\psi_{3}\right\vert
+\end{align}
+
+
+The difference operator, $\Delta,$ is
+\begin{align}
+\Delta=  & \Gamma\left(  \hat{\lambda}_{1}+\hat{\lambda}_{2}\right)
+^{2}-\Gamma\left(  \hat{\lambda}_{1}+\hat{\lambda}_{2}\right)  =\Gamma\left(
+\hat{\lambda}_{1}\right)  ^{2}+\Gamma\left(  \hat{\lambda}_{1}\right)
+\Gamma\left(  \hat{\lambda}_{2}\right)  +\Gamma\left(  \hat{\lambda}%
+_{2}\right)  \Gamma\left(  \hat{\lambda}_{1}\right)  +\Gamma\left(
+\hat{\lambda}_{2}\right)  ^{2}-\Gamma\left(  \hat{\lambda}_{1}\right)
+-\Gamma\left(  \hat{\lambda}_{2}\right)  \nonumber\\
+& =\left(  \hat{\lambda}_{1}\right)  ^{2}+4\Gamma_{1}^{2}\left(  \hat{\lambda
+}_{1}\right)  ^{2}+9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)
+^{2}+2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)  \hat{\lambda}%
+_{2}+9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  +2\hat{\lambda}_{2}\Gamma_{1}^{2}\left(
+\hat{\lambda}_{1}\right)  +9\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
+\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \nonumber\\
+& +\left(  \hat{\lambda}_{2}\right)  ^{2}+9\Gamma_{2}^{3}\left(  \hat{\lambda
+}_{2}\right)  ^{2}-\hat{\lambda}_{1}-2\Gamma_{1}^{2}\left(  \hat{\lambda}%
+_{1}\right)  -3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  -\hat{\lambda
+}_{2}-3\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
+\end{align}%
+\begin{align}
+\Delta & =\left(  \hat{\lambda}_{1}\right)  ^{2}-\hat{\lambda}_{1}\nonumber\\
+& +\left(  \hat{\lambda}_{2}\right)  ^{2}+4\Gamma_{1}^{2}\left(  \hat{\lambda
+}_{1}\right)  ^{2}+2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)
+\hat{\lambda}_{2}+2\hat{\lambda}_{2}\Gamma_{1}^{2}\left(  \hat{\lambda}%
+_{1}\right)  -2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)  -\hat{\lambda
+}_{2}\nonumber\\
+& +9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  +9\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
+\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  +9\Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  ^{2}-3\Gamma_{1}^{3}\left(  \hat{\lambda}%
+_{1}\right)  -3\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
+\end{align}
+
+
+\bigskip%
+
+\begin{equation}
+\Delta_{1}=0\Rightarrow\hat{\lambda}_{1}=P_{1\nu}%
+\end{equation}%
+\begin{align}
+\Delta_{2}  & =0\Rightarrow\nonumber\\
+\left(  \hat{\lambda}_{2}\right)  ^{2}+P_{21\nu}+P_{21\nu}\hat{\lambda}%
+_{2}+\hat{\lambda}_{2}P_{21\nu}-P_{21\nu}-\hat{\lambda}_{2}  & =\nonumber\\
+\left(  \hat{\lambda}_{2}\right)  ^{2}+P_{21\nu}\hat{\lambda}_{2}+\hat
+{\lambda}_{2}P_{21\nu}-\hat{\lambda}_{2}  & =0\Rightarrow\nonumber\\
+P_{21\nu}\left(  \hat{\lambda}_{2}\right)  ^{2}P_{21\nu}+P_{21\nu}\hat
+{\lambda}_{2}P_{21\nu}  & =0;\\
+P_{21\nu}^{\perp}\left(  \hat{\lambda}_{2}\right)  ^{2}P_{21\nu}^{\perp
+}-P_{21\nu}^{\perp}\left(  \hat{\lambda}_{2}\right)  P_{21\nu}^{\perp}  &
+=0;\\
+P_{21\nu}^{\perp}\left(  \hat{\lambda}_{2}\right)  ^{2}P_{21\nu}+P_{21\nu
+}^{\perp}\hat{\lambda}_{2}P_{21\nu}  & =0
+\end{align}
+as%
+\begin{equation}
+P_{21\nu}=\frac{1}{2}\Gamma_{1}^{2}\left(  P_{1\nu}\right)
+\end{equation}%
+\begin{equation}
+9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  +9\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
+\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  +9\Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  ^{2}-3\Gamma_{1}^{3}\left(  \hat{\lambda}%
+_{1}\right)  -3\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
+\end{equation}%
+\begin{align}
+\Delta_{3}  & =0\Rightarrow\nonumber\\
+P_{31\nu}\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)  +\Gamma_{2}%
+^{3}\left(  \hat{\lambda}_{2}\right)  P_{31\nu}+3\Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  ^{2}-\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
+-P_{31\nu}  & =0\Rightarrow\nonumber
+\end{align}
+
+
+\bigskip r=4***************************************************************************************************************
+
+\bigskip%
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{1}\right)    & =\sum_{0\leq N\leq r}\Gamma
+_{N}\left(  \hat{\lambda}_{1}\right)  =\sum_{1\leq N\leq r}\sum_{1\leq P\leq
+N}\binom{N}{P}\Gamma_{P}^{N}\left(  \hat{\lambda}_{1}\right)  \nonumber\\
+& =\sum_{1\leq N\leq4}\binom{N}{1}\Gamma_{1}^{N}\left(  \hat{\lambda}%
+_{1}\right)  =\hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(  \hat{\lambda}%
+_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  +4\Gamma
+_{1}^{4}\left(  \hat{\lambda}_{1}\right)
+\end{align}%
+\[
+\parallel
+\]
+%
+
+\begin{align}
+& \lambda_{111}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\right\rangle \left\langle
+\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}\right\rangle
+\left\langle \psi_{3}\right\vert +\lambda_{144}\left\vert \psi_{4}%
+\right\rangle \left\langle \psi_{4}\right\vert \nonumber\\
+& +\lambda_{111}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi
+_{1}\psi_{2}\right\vert +\lambda_{111}\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\lambda_{111}\left\vert \psi_{1}%
+\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{4}\right\vert \nonumber\\
+& +\lambda_{122}\left\vert \psi_{2}\psi_{1}\right\rangle \left\langle \psi
+_{2}\psi_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{122}\left\vert \psi_{2}%
+\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert \nonumber\\
+& +\lambda_{133}\left\vert \psi_{3}\psi_{1}\right\rangle \left\langle \psi
+_{3}\psi_{1}\right\vert +\lambda_{133}\left\vert \psi_{3}\psi_{2}\right\rangle
+\left\langle \psi_{3}\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}%
+\psi_{4}\right\rangle \left\langle \psi_{3}\psi_{4}\right\vert \nonumber\\
+& +\lambda_{144}\left\vert \psi_{4}\psi_{1}\right\rangle \left\langle \psi
+_{4}\psi_{1}\right\vert +\lambda_{144}\left\vert \psi_{4}\psi_{2}\right\rangle
+\left\langle \psi_{4}\psi_{2}\right\vert +\lambda_{144}\left\vert \psi_{4}%
+\psi_{3}\right\rangle \left\langle \psi_{4}\psi_{3}\right\vert \nonumber\\
+& +\lambda_{111}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert +\lambda_{111}\left\vert \psi_{1}\psi
+_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{4}\right\vert
++\lambda_{111}\left\vert \psi_{1}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{3}\psi_{4}\right\vert \nonumber\\
+& +\lambda_{122}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert +\lambda_{122}\left\vert \psi_{1}\psi
+_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{4}\right\vert
++\lambda_{122}\left\vert \psi_{1}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{3}\psi_{4}\right\vert \nonumber\\
+& +\lambda_{133}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert +\lambda_{133}\left\vert \psi_{1}\psi
+_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{4}\right\vert
++\lambda_{133}\left\vert \psi_{2}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{3}\psi_{4}\right\vert \nonumber\\
+& +\lambda_{144}\left\vert \psi_{1}\psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{4}\right\vert +\lambda_{144}\left\vert \psi_{1}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{4}\right\vert
++\lambda_{144}\left\vert \psi_{2}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{3}\psi_{4}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}+\lambda_{144}\right)
+\left\vert \psi_{1}\psi_{2}\psi_{3}\psi_{4}\right\rangle \left\langle \psi
+_{1}\psi_{2}\psi_{3}\psi_{4}\right\vert
+\end{align}%
+\[
+\parallel
+\]%
+\begin{align}
+& \lambda_{111}\left\vert \psi_{1}\right\rangle \left\langle \psi
+_{1}\right\vert +\lambda_{122}\left\vert \psi_{2}\right\rangle \left\langle
+\psi_{2}\right\vert +\lambda_{133}\left\vert \psi_{3}\right\rangle
+\left\langle \psi_{3}\right\vert +\lambda_{144}\left\vert \psi_{4}%
+\right\rangle \left\langle \psi_{4}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}\right)  \left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{2}\right\vert +\left(
+\lambda_{111}+\lambda_{133}\right)  \left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{1}\psi_{3}\right\vert +\left(  \lambda_{122}+\lambda
+_{133}\right)  \left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi
+_{2}\psi_{3}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{144}\right)  \left\vert \psi_{1}\psi
+_{4}\right\rangle \left\langle \psi_{1}\psi_{4}\right\vert +\left(
+\lambda_{122}+\lambda_{144}\right)  \left\vert \psi_{2}\psi_{4}\right\rangle
+\left\langle \psi_{2}\psi_{4}\right\vert +\left(  \lambda_{133}+\lambda
+_{144}\right)  \left\vert \psi_{3}\psi_{4}\right\rangle \left\langle \psi
+_{3}\psi_{4}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert +\left(  \lambda_{111}+\lambda_{122}+\lambda_{144}\right)
+\left\vert \psi_{1}\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{2}\psi_{4}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{133}+\lambda_{144}\right)  \left\vert
+\psi_{1}\psi_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\psi
+_{4}\right\vert +\left(  \lambda_{122}+\lambda_{133}+\lambda_{144}\right)
+\left\vert \psi_{2}\psi_{3}\psi_{4}\right\rangle \left\langle \psi_{2}\psi
+_{3}\psi_{4}\right\vert \nonumber\\
+& +\left(  \lambda_{111}+\lambda_{122}+\lambda_{133}+\lambda_{144}\right)
+\left\vert \psi_{1}\psi_{2}\psi_{3}\psi_{4}\right\rangle \left\langle \psi
+_{1}\psi_{2}\psi_{3}\psi_{4}\right\vert
+\end{align}
+
+
+\bigskip%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{2}\right)    & =\sum_{0\leq N\leq r}\Gamma
+_{N}\left(  \hat{\lambda}_{2}\right)  =\sum_{1\leq N\leq r}\sum_{1\leq P\leq
+N}\binom{N}{P}\Gamma_{P}^{N}\left(  \hat{\lambda}_{2}\right)  \nonumber\\
+& =\sum_{2\leq N\leq4}\binom{N}{2}\Gamma_{2}^{N}\left(  \hat{\lambda}%
+_{2}\right)  =\hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(  \hat{\lambda}%
+_{2}\right)  +6\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)
+\end{align}
+%
+
+\begin{equation}
+\parallel\nonumber
+\end{equation}
+%
+
+\begin{align}
+& \lambda_{21212}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21213}\left\vert \psi_{1}\psi
+_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21214}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi_{1}\psi
+_{4}\right\vert +\lambda_{21223}\left\vert \psi_{1}\psi_{2}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{21224}\left\vert \psi
+_{1}\psi_{2}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\lambda_{21234}\left\vert \psi_{1}\psi_{2}\right\rangle \left\langle \psi
+_{3}\psi_{4}\right\vert \nonumber\\
+& \lambda_{21312}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21313}\left\vert \psi_{1}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21314}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi_{1}\psi
+_{4}\right\vert +\lambda_{21323}\left\vert \psi_{1}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{21324}\left\vert \psi
+_{1}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\lambda_{21334}\left\vert \psi_{1}\psi_{3}\right\rangle \left\langle \psi
+_{3}\psi_{4}\right\vert \nonumber\\
+& \lambda_{21412}\left\vert \psi_{1}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{21413}\left\vert \psi_{1}\psi
+_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{21414}\left\vert \psi_{1}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{4}\right\vert +\lambda_{21423}\left\vert \psi_{1}\psi_{4}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{21424}\left\vert \psi
+_{1}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\lambda_{21434}\left\vert \psi_{1}\psi_{4}\right\rangle \left\langle \psi
+_{3}\psi_{4}\right\vert \nonumber\\
+& \lambda_{22312}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{22313}\left\vert \psi_{2}\psi
+_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{22314}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi
+_{4}\right\vert +\lambda_{22323}\left\vert \psi_{2}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{22324}\left\vert \psi
+_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\lambda_{22334}\left\vert \psi_{2}\psi_{3}\right\rangle \left\langle \psi
+_{3}\psi_{4}\right\vert \nonumber\\
+& \lambda_{22412}\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{22413}\left\vert \psi_{2}\psi
+_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{22414}\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{4}\right\vert +\lambda_{22423}\left\vert \psi_{2}\psi_{4}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{22424}\left\vert \psi
+_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\lambda_{22434}\left\vert \psi_{2}\psi_{4}\right\rangle \left\langle \psi
+_{3}\psi_{4}\right\vert \nonumber\\
+& \lambda_{23412}\left\vert \psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{2}\right\vert +\lambda_{23413}\left\vert \psi_{3}\psi
+_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\right\vert +\lambda
+_{23414}\left\vert \psi_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi
+_{4}\right\vert +\lambda_{23423}\left\vert \psi_{3}\psi_{4}\right\rangle
+\left\langle \psi_{2}\psi_{3}\right\vert +\lambda_{23424}\left\vert \psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{4}\right\vert
++\lambda_{23434}\left\vert \psi_{3}\psi_{4}\right\rangle \left\langle \psi
+_{3}\psi_{4}\right\vert
+\end{align}
+%
+
+\begin{equation}
++
+\end{equation}
+%
+
+\begin{align}
+& \lambda_{21212}\left\vert \psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert +\lambda_{21212}\left\vert \psi_{1}%
+\psi_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{4}\right\vert
++\lambda_{21213}\left\vert \psi_{1}\psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{3}\psi_{4}\right\vert +\lambda_{21214}\left\vert \psi_{1}%
+\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{4}\psi_{3}\right\vert
+\\
+& +\lambda_{21223}\left\vert \psi_{1}\psi_{2}\psi_{4}\right\rangle
+\left\langle \psi_{2}\psi_{3}\psi_{4}\right\vert +\lambda_{21224}\left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\psi
+_{3}\right\vert
+\end{align}%
+\begin{align*}
+& \lambda_{21312}\left\vert \psi_{1}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{4}\right\vert +\lambda_{21313}\left\vert \psi_{1}%
+\psi_{3}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{2}\right\vert
++\lambda_{21313}\left\vert \psi_{1}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{3}\psi_{4}\right\vert +\lambda_{21314}\left\vert \psi_{1}%
+\psi_{3}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{4}\psi_{2}\right\vert
+\\
+& +\lambda_{21323}\left\vert \psi_{1}\psi_{3}\psi_{4}\right\rangle
+\left\langle \psi_{2}\psi_{3}\psi_{4}\right\vert +\lambda_{21334}\left\vert
+\psi_{1}\psi_{3}\psi_{2}\right\rangle \left\langle \psi_{3}\psi_{4}\psi
+_{2}\right\vert
+\end{align*}%
+\begin{align*}
+& \lambda_{21412}\left\vert \psi_{1}\psi_{4}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert +\lambda_{21413}\left\vert \psi_{1}%
+\psi_{4}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{2}\right\vert
++\lambda_{21414}\left\vert \psi_{1}\psi_{4}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{4}\psi_{3}\right\vert +\lambda_{21414}\left\vert \psi_{1}%
+\psi_{4}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{4}\psi_{2}\right\vert
+\\
+& +\lambda_{21424}\left\vert \psi_{1}\psi_{4}\psi_{3}\right\rangle
+\left\langle \psi_{2}\psi_{4}\psi_{3}\right\vert +\lambda_{21434}\left\vert
+\psi_{1}\psi_{4}\psi_{2}\right\rangle \left\langle \psi_{3}\psi_{4}\psi
+_{2}\right\vert
+\end{align*}%
+\begin{align*}
+& \lambda_{22312}\left\vert \psi_{2}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{4}\right\vert +\lambda_{22313}\left\vert \psi_{2}%
+\psi_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{4}\right\vert
++\lambda_{22323}\left\vert \psi_{2}\psi_{3}\psi_{1}\right\rangle \left\langle
+\psi_{2}\psi_{3}\psi_{1}\right\vert +\lambda_{22323}\left\vert \psi_{2}%
+\psi_{3}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{3}\psi_{4}\right\vert
+\\
+& +\lambda_{22324}\left\vert \psi_{2}\psi_{3}\psi_{1}\right\rangle
+\left\langle \psi_{2}\psi_{4}\psi_{1}\right\vert +\lambda_{22334}\left\vert
+\psi_{2}\psi_{3}\psi_{1}\right\rangle \left\langle \psi_{3}\psi_{4}\psi
+_{1}\right\vert
+\end{align*}%
+\begin{align*}
+& \lambda_{22412}\left\vert \psi_{2}\psi_{4}\psi_{3}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{3}\right\vert +\lambda_{22414}\left\vert \psi_{2}%
+\psi_{4}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{4}\psi_{3}\right\vert
++\lambda_{22423}\left\vert \psi_{2}\psi_{4}\psi_{1}\right\rangle \left\langle
+\psi_{2}\psi_{3}\psi_{1}\right\vert +\lambda_{22424}\left\vert \psi_{2}%
+\psi_{4}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{4}\psi_{3}\right\vert
+\\
+& +\lambda_{22424}\left\vert \psi_{2}\psi_{4}\psi_{1}\right\rangle
+\left\langle \psi_{2}\psi_{4}\psi_{1}\right\vert +\lambda_{22434}\left\vert
+\psi_{2}\psi_{4}\psi_{1}\right\rangle \left\langle \psi_{3}\psi_{4}\psi
+_{1}\right\vert
+\end{align*}%
+\begin{align}
+& \lambda_{23412}\left\vert \psi_{3}\psi_{4}\psi_{1}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{1}\right\vert +\lambda_{23413}\left\vert \psi_{3}%
+\psi_{4}\psi_{2}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{2}\right\vert
++\lambda_{23423}\left\vert \psi_{3}\psi_{4}\psi_{1}\right\rangle \left\langle
+\psi_{2}\psi_{3}\psi_{1}\right\vert +\lambda_{23424}\left\vert \psi_{3}%
+\psi_{4}\psi_{1}\right\rangle \left\langle \psi_{2}\psi_{4}\psi_{1}\right\vert
+\nonumber\\
+& +\lambda_{22434}\left\vert \psi_{3}\psi_{4}\psi_{1}\right\rangle
+\left\langle \psi_{3}\psi_{4}\psi_{1}\right\vert +\lambda_{22434}\left\vert
+\psi_{3}\psi_{4}\psi_{2}\right\rangle \left\langle \psi_{3}\psi_{4}\psi
+_{2}\right\vert
+\end{align}
+%
+
+\begin{equation}
+\parallel
+\end{equation}
+%
+
+\begin{align*}
+& \left(  \lambda_{21212}+\lambda_{21313}+\lambda_{22323}\right)  \left\vert
+\psi_{1}\psi_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi
+_{3}\right\vert +\left(  \lambda_{21212}+\lambda_{21414}+\lambda
+_{22424}\right)  \left\vert \psi_{1}\psi_{2}\psi_{4}\right\rangle \left\langle
+\psi_{1}\psi_{2}\psi_{4}\right\vert +\\
+& \left(  \lambda_{21313}+\lambda_{21414}+\lambda_{22434}\right)  \left\vert
+\psi_{1}\psi_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\psi
+_{4}\right\vert +\left(  \lambda_{22323}+\lambda_{22424}+\lambda
+_{22434}\right)  \left\vert \psi_{2}\psi_{3}\psi_{4}\right\rangle \left\langle
+\psi_{2}\psi_{3}\psi_{4}\right\vert +
+\end{align*}%
+\begin{align*}
+& \left(  \lambda_{21213}+\lambda_{22434}\right)  \left\vert \psi_{1}\psi
+_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{4}\right\vert
++\left(  \lambda_{22334}-\lambda_{21214}\right)  \left\vert \psi_{1}\psi
+_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{4}\right\vert
++\\
+& \left(  \lambda_{21223}-\lambda_{21434}\right)  \left\vert \psi_{1}\psi
+_{2}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{3}\psi_{4}\right\vert
++\left(  \lambda_{21224}-\lambda_{21334}\right)  \left\vert \psi_{1}\psi
+_{2}\psi_{3}\right\rangle \left\langle \psi_{2}\psi_{3}\psi_{4}\right\vert
++\\
+& \left(  \lambda_{21312}+\lambda_{23424}\right)  \left\vert \psi_{1}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{4}\right\vert
++\left(  \lambda_{21314}+\lambda_{22324}\right)  \left\vert \psi_{1}\psi
+_{2}\psi_{3}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{4}\right\vert
++\\
+& \left(  \lambda_{21323}+\lambda_{21424}\right)  \left\vert \psi_{1}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{2}\psi_{3}\psi_{4}\right\vert
++\left(  \lambda_{23423}-\lambda_{21412}\right)  \left\vert \psi_{1}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{3}\right\vert +
+\end{align*}%
+\begin{align}
+& \left(  \lambda_{22312}-\lambda_{23414}\right)  \left\vert \psi_{2}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{4}\right\vert
++\left(  \lambda_{22414}-\lambda_{22313}\right)  \left\vert \psi_{2}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{3}\psi_{4}\right\vert
++\nonumber\\
+& \left(  \lambda_{22412}+\lambda_{23413}\right)  \left\vert \psi_{2}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{3}\right\vert
++\left(  \lambda_{22423}+\lambda_{21413}\right)  \left\vert \psi_{1}\psi
+_{2}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{3}\right\vert
+\end{align}
+%
+
+\begin{equation}
++
+\end{equation}
+%
+
+\begin{equation}
+\left(  \lambda_{21212}+\lambda_{21313}+\lambda_{21414}+\lambda_{22323}%
++\lambda_{22424}+\lambda_{23434}\right)  \left\vert \psi_{1}\psi_{2}\psi
+_{3}\psi_{4}\right\rangle \left\langle \psi_{1}\psi_{2}\psi_{3}\psi
+_{4}\right\vert
+\end{equation}
+
+
+\bigskip%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{1}\right)  \Gamma\left(  \hat{\lambda}%
+_{1}\right)    & =\left(  \hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(
+\hat{\lambda}_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)
++4\Gamma_{1}^{4}\left(  \hat{\lambda}_{1}\right)  \right)  \left(
+\hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)
++3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  +4\Gamma_{1}^{4}\left(
+\hat{\lambda}_{1}\right)  \right)  \nonumber\\
+& =\left(  \hat{\lambda}_{1}\right)  ^{2}+4\Gamma_{1}^{2}\left(  \hat{\lambda
+}_{1}\right)  ^{2}+9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)
+^{2}+16\Gamma_{1}^{4}\left(  \hat{\lambda}_{1}\right)  ^{2}%
+\end{align}%
+\[
+\parallel
+\]
+
+
+\bigskip%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{1}\right)  \Gamma\left(  \hat{\lambda}%
+_{2}\right)    & =\left(  \hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(
+\hat{\lambda}_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)
++4\Gamma_{1}^{4}\left(  \hat{\lambda}_{1}\right)  \right)  \left(
+\hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)
++6\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)  \right)  \nonumber\\
+& =2\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)  \hat{\lambda}_{2}%
++9\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  \Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  +24\Gamma_{1}^{4}\left(  \hat{\lambda}_{1}\right)
+\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)
+\end{align}
+
+
+\bigskip%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{2}\right)  \Gamma\left(  \hat{\lambda}%
+_{1}\right)    & =\left(  \hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  +6\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)
+\right)  \left(  \hat{\lambda}_{1}+2\Gamma_{1}^{2}\left(  \hat{\lambda}%
+_{1}\right)  +3\Gamma_{1}^{3}\left(  \hat{\lambda}_{1}\right)  +4\Gamma
+_{1}^{4}\left(  \hat{\lambda}_{1}\right)  \right)  \nonumber\\
+& =2\hat{\lambda}_{2}\Gamma_{1}^{2}\left(  \hat{\lambda}_{1}\right)
++9\Gamma_{2}^{3}\left(  \hat{\lambda}_{2}\right)  \Gamma_{1}^{3}\left(
+\hat{\lambda}_{1}\right)  +24\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)
+\Gamma_{1}^{4}\left(  \hat{\lambda}_{1}\right)
+\end{align}
+
+
+\bigskip%
+
+\begin{align}
+\Gamma\left(  \hat{\lambda}_{2}\right)  \Gamma\left(  \hat{\lambda}%
+_{2}\right)    & =\left(  \hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(
+\hat{\lambda}_{2}\right)  +6\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)
+\right)  \left(  \hat{\lambda}_{2}+3\Gamma_{2}^{3}\left(  \hat{\lambda}%
+_{2}\right)  +6\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)  \right)
+\nonumber\\
+& =\left(  \hat{\lambda}_{2}\right)  ^{2}+9\Gamma_{2}^{3}\left(  \hat{\lambda
+}_{2}\right)  ^{2}+36\Gamma_{2}^{4}\left(  \hat{\lambda}_{2}\right)  ^{2}%
+\end{align}
+
+
+
+\end{document}

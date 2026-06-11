@@ -1,0 +1,250 @@
+
+\documentstyle[preprint,aps]{revtex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Saturday, July 28, 2001 19:23:57}
+%TCIDATA{LastRevised=Sunday, July 29, 2001 17:10:48}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX - APS and AIP Article">}
+%TCIDATA{CSTFile=revtxtci.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\begin{document}
+\title{Energy Expressions}
+\author{B.Weiner}
+\address{ÿ}
+\date{7/29/01}
+\maketitle
+\pacs{}
+
+\section{Energy of AGP}
+
+The Hamiltonian in the canonical basis can be written as  
+\begin{equation}
+H=h_{0}+\sum_{i,j}^{r}h_{ij}b_{i}^{\dagger }b_{j}+\frac{1}{4}%
+\sum_{i,j,k,l}^{r}V_{ijkl}b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}
+\end{equation}%
+giving the 2N-electron AGP state energy\ 
+\begin{equation}
+\left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi \right\rangle
+=\left\langle G^{\dagger N}\phi |\left\{
+h_{0}+\sum_{i,j}^{r}h_{ij}b_{i}^{\dagger }b_{j}+\frac{1}{4}%
+\sum_{i,j,k,l}^{r}V_{ijkl}b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\right\}
+G^{\dagger N}\phi \right\rangle 
+\end{equation}%
+that can be expanded as 
+\begin{eqnarray*}
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{1}}\cdots \zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\right.  \\
+&&\qquad \left| \left\{ h_{0}+\sum_{i,j}^{r}h_{ij}b_{i}^{\dagger }b_{j}+%
+\frac{1}{4}\sum_{i,j,k,l}^{r}V_{ijkl}b_{i}^{\dagger }b_{j}^{\dagger
+}b_{l}b_{k}\right\} \eta _{k_{1}}\eta _{k_{1}+s}\cdots \eta _{k_{N}\,}\eta
+_{k_{N}+s}\right\rangle 
+\end{eqnarray*}%
+the first term is easy --all paired indices must match, as they are
+unordered we pick up a factor $N!$ from each side to get 
+\begin{eqnarray}
+&&h_{0}\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{1}}\cdots \zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\right. \left| \eta _{k_{1}}\eta
+_{k_{1}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right\rangle   \nonumber \\
+&=&h_{0}\left( N!\right) ^{2}S_{N}
+\end{eqnarray}%
+The one electron terms are obtained by noting that $b_{i}^{\dagger }b_{j}$
+must annihilate the same GSO from the bra and the ket 
+\begin{eqnarray*}
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{1}}\cdots \zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\right. \left|
+\sum_{i,j}^{r}h_{ij}b_{i}^{\dagger }b_{j}\eta _{k_{1}}\eta _{k_{1}+s}\cdots
+\eta _{k_{N}\,}\eta _{k_{N}+s}\right\rangle  \\
+&=&\sum_{i}^{s}\left\{ h_{ii}+h_{i+si+s}\right\} \left( N!\right)
+^{2}n_{i}S_{N-1}\left( \hat{\imath}\right) 
+\end{eqnarray*}%
+With the two electron term 
+\begin{equation}
+\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta _{k_{1}}\cdots
+\zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\right. \left| \frac{1}{4}%
+\sum_{i,j,k,l}^{r}V_{ijkl}b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\eta
+_{k_{1}}\eta _{k_{1}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right\rangle 
+\end{equation}%
+we have more choices, we can have split the two electron operator in the
+following fashion 
+\begin{eqnarray}
+&&\sum_{i,j,k,l}^{r}V_{ijkl}b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k} 
+\nonumber \\
+&=&\sum_{i}^{s}V_{ii+sii+s}\left\{ b_{i}^{\dagger }b_{i+s}^{\dagger
+}b_{i+s}b_{i}-b_{i}^{\dagger }b_{i+s}^{\dagger
+}b_{i}b_{i+s}-b_{i+s}^{\dagger }b_{i}^{\dagger
+}b_{i+s}b_{i}+b_{i+s}^{\dagger }b_{i}^{\dagger }b_{i}b_{i+s}\right\}  
+\nonumber \\
+&&+\sum_{i\neq l}^{s}V_{ii+sll+s}\left\{ b_{i}^{\dagger }b_{i+s}^{\dagger
+}b_{l+s}b_{l}-b_{i}^{\dagger }b_{i+s}^{\dagger
+}b_{l}b_{l+s}-b_{i+s}^{\dagger }b_{i}^{\dagger
+}b_{l+s}b_{l}+b_{i+s}^{\dagger }b_{i}^{\dagger }b_{l}b_{l+s}\right\} 
+\label{twoel1} \\
+&&+\sum_{i,j}^{s}V_{ijij}\left\{ b_{i}^{\dagger }b_{j}^{\dagger
+}b_{j}b_{i}-b_{i}^{\dagger }b_{j}^{\dagger }b_{i}b_{j}-b_{j}^{\dagger
+}b_{i}^{\dagger }b_{j}b_{i}+b_{j}^{\dagger }b_{i}^{\dagger
+}b_{i}b_{j}\right\}   \nonumber \\
+&&+\sum_{i,j}^{s}V_{i+sji+sj}\left\{ b_{i+s}^{\dagger }b_{j}^{\dagger
+}b_{j}b_{i+s}-b_{i+s}^{\dagger }b_{j}^{\dagger }b_{i+s}b_{j}-b_{j}^{\dagger
+}b_{i+s}^{\dagger }b_{j}b_{i+s}+b_{j}^{\dagger }b_{i+s}^{\dagger
+}b_{i+s}b_{j}\right\}   \nonumber \\
+&&+\sum_{i,j}^{s}V_{ij+sij+s}\left\{ b_{i}^{\dagger }b_{j+s}^{\dagger
+}b_{j+s}b_{i}-b_{i}^{\dagger }b_{j+s}^{\dagger
+}b_{i}b_{j+s}-b_{j+s}^{\dagger }b_{i}^{\dagger
+}b_{j+s}b_{i}+b_{j+s}^{\dagger }b_{i}^{\dagger }b_{i}b_{j+s}\right\}  
+\nonumber \\
+&&+\sum_{i,j}^{s}V_{i+sj+si+sj+s}\left\{ b_{i+s}^{\dagger }b_{j+s}^{\dagger
+}b_{j+s}b_{i+s}-b_{i+s}^{\dagger }b_{j+s}^{\dagger }b_{i+s}b_{j+s}\right.  
+\nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \left. -b_{j+s}^{\dagger
+}b_{i+s}^{\dagger }b_{j+s}b_{i+s}+b_{j+s}^{\dagger }b_{i+s}^{\dagger
+}b_{i+s}b_{j+s}\right\}   \nonumber \\
+&&+\text{ other terms}  \label{twoel2}
+\end{eqnarray}%
+\begin{eqnarray}
+&=&\sum_{i}^{s}\left\langle ii+s||ii+s\right\rangle \left( N!\right)
+^{2}n_{i}S_{N-1}\left( \hat{\imath}\right) +\frac{1}{2}\sum_{i\neq
+j}^{s}\left\langle ii+s||jj+s\right\rangle \left( N!\right) ^{2}\zeta
+_{i}^{\ast }\zeta _{j}S_{N-1}\left( \hat{\imath}\hat{\jmath}\right)  
+\nonumber \\
+&&+\frac{1}{2}\sum_{i\neq j}^{s}\left\langle ij|||ij\right\rangle
+n_{i}n_{j}S_{N-2}\left( \hat{\imath}\hat{\jmath}\right) 
+\end{eqnarray}%
+which gives the full expression 
+\begin{eqnarray}
+{\cal H}\left( {\bf \zeta }^{\ast },{\bf \zeta }\right)  &=&h_{0}{\cal N}%
+\left( g^{N}\right) +\left( N\right) !^{2}\left\{ \sum_{1\leq i\leq
+s}n_{i}S_{N-1}\left( \hat{\imath}\right) \left\{
+h_{ii}+h_{i+si+s}+\left\langle ii+s||ii+s\right\rangle \right\} \right.  \\
+&&+\frac{1}{2}\sum_{1\leq i,j\leq s}\zeta _{i}^{\ast }\zeta
+_{j}S_{N-1}\left( \hat{\imath}\hat{\jmath}\right) \left\langle
+ii+s||jj+s\right\rangle \left. +\sum_{1\leq i<j\leq
+s}n_{i}n_{j}S_{N-2}\left( \hat{\imath}\hat{\jmath}\right) \left\langle
+ij|||ij\right\rangle \right\} 
+\end{eqnarray}%
+The 2N-electron AGP state energy derivative wrt $\gamma _{a}$ needs the
+matrix elements \ 
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{a}^{\dagger }b_{a+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle \quad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad  \\
+&&=\left\langle G^{\dagger N}\phi |\left\{
+h_{0}+\sum_{i,j}^{r}h_{ij}b_{i}^{\dagger }b_{j}+\frac{1}{4}%
+\sum_{i,j,k,l}^{r}V_{ijkl}b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\right\}
+b_{a}^{\dagger }b_{a+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle 
+\end{eqnarray*}%
+\begin{eqnarray}
+&&=\sum_{1\leq l\leq s}\zeta _{l}^{\ast }\zeta _{j_{1}}^{\ast }\cdots \zeta
+_{j_{N-1}}^{\ast }\zeta _{k_{1}}\cdots \zeta _{k_{N-1}}  \nonumber \\
+&&\qquad \qquad \qquad \qquad \quad \langle \eta _{l\,}\eta _{l+s}\eta
+_{j_{1}}\eta _{j_{1}+s}\cdots \eta _{j_{N-1}\,}\eta _{j_{N-1}+s}\left| H\eta
+_{a}\eta _{a+s}\eta _{k_{1}}\eta _{k_{1}+s}\cdots \eta _{k_{N-1}\,}\eta
+_{k_{N-1}+s}\right\rangle 
+\end{eqnarray}%
+The first term produces 
+\begin{eqnarray}
+&&h_{0}\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{1}}\cdots \zeta _{k_{N}-1}\left\langle \eta _{j_{1}}\eta
+_{j_{1}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\right. \left| \eta _{a}\eta
+_{a+s}\eta _{k_{1}}\eta _{k_{1}+s}\cdots \eta _{k_{N-1}\,}\eta
+_{k_{N-1}+s}\right\rangle   \nonumber \\
+&=&h_{0}\left( N-1!\right) ^{2}S_{N}\zeta _{a}^{\ast }S_{N-1}\left( \hat{a}%
+\right) 
+\end{eqnarray}%
+The one electron terms are obtained by noting that $b_{i}^{\dagger }b_{j}$
+must annihilate the same GSO from the bra and the ket 
+\begin{eqnarray}
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{1}}\cdots \zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\right. \left|
+\sum_{i,j}^{r}h_{ij}b_{i}^{\dagger }b_{j}\eta _{a}\eta _{a+s}\eta
+_{k_{1}}\eta _{k_{1}+s}\cdots \eta _{k_{N-1}\,}\eta
+_{k_{N-1}+s}\right\rangle   \nonumber \\
+&=&\left\{ h_{aa}+h_{a+sa+s}\right\} \left( N-1!\right) ^{2}\zeta _{a}^{\ast
+}S_{N-1}\left( \hat{a}\right) +\sum_{i\neq a}^{s}\left\{
+h_{ii}+h_{i+si+s}\right\} \left( N-1!\right) ^{2}\zeta _{a}^{\ast
+}n_{j}S_{N-2}\left( \hat{\imath}\hat{a}\right) 
+\end{eqnarray}%
+With the two electron term 
+\begin{equation}
+\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta _{k_{1}}\cdots
+\zeta _{k_{N-1}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\right. \left| \frac{1}{4}%
+\sum_{i,j,k,l}^{r}V_{ijkl}b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\eta
+_{a}\eta _{a+s}\cdots \eta _{k_{N-1}\,}\eta _{k_{N-1}+s}\right\rangle 
+\end{equation}%
+we have the same choices as before and we can have split the two electron
+operator in the following fashion as eq. $\left( \ref{twoel1}\right) $ and $%
+\left( \ref{twoel2}\right) $ and from eq. $\left( \ref{twoel1}\right) $ we
+obtain 
+\begin{eqnarray}
+&&\left( N-1!\right) ^{2}\zeta _{a}^{\ast }S_{N-1}\left( \hat{a}\right)
+\left\langle aa+s||aa+s\right\rangle +\left( N-1!\right) ^{2}\frac{1}{2}%
+\sum_{i\neq j\neq a}\zeta _{a}^{\ast }\zeta _{i}^{\ast }\zeta
+_{j}S_{N-3}\left( \hat{a}\hat{\imath}\hat{\jmath}\right) \left\langle
+ii+s||jj+s\right\rangle   \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad +\left(
+N-1!\right) ^{2}\frac{1}{2}\sum_{i\neq a}\zeta _{a}^{\ast
+}n_{i}S_{N-2}\left( \hat{a}\hat{\imath}\right) \left\langle
+ii+s||ii+s\right\rangle   \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad +\left(
+N-1!\right) ^{2}\frac{1}{2}\sum_{i\neq a}\zeta _{i}^{\ast }S_{N-2}\left( 
+\hat{a}\hat{\imath}\right) \left\langle ii+s||aa+s\right\rangle 
+\end{eqnarray}%
+and from eq. $\left( \ref{twoel2}\right) $%
+\begin{equation}
+\left( N-1!\right) ^{2}\sum_{i<j\neq a}\zeta _{a}^{\ast
+}n_{i}n_{j}S_{N-3}\left( \hat{a}\hat{\imath}\hat{\jmath}\right) \left\langle
+ij|||ij\right\rangle +\left( N-1!\right) ^{2}\frac{1}{2}\sum_{i\neq
+a}n_{i}\zeta _{a}^{\ast }S_{N-2}\left( \hat{a}\hat{\imath}\right)
+\left\langle ia|||ia\right\rangle 
+\end{equation}%
+to get the final result%
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{a}^{\dagger }b_{a+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\left( N-1!\right) ^{2}\left\{
+h_{0}S_{N}\zeta _{a}^{\ast }S_{N-1}\left( \hat{a}\right) +\right.  \\
+&&\left\{ h_{aa}+h_{a+sa+s}\right\} \zeta _{a}^{\ast }S_{N-1}\left( \hat{a}%
+\right) +\sum_{i\neq a}^{s}\left\{ h_{ii}+h_{i+si+s}\right\} \zeta
+_{a}^{\ast }n_{j}S_{N-2}\left( \hat{\imath}\hat{a}\right)  \\
+&&+\zeta _{a}^{\ast }S_{N-1}\left( \hat{a}\right) \left\langle
+aa+s||aa+s\right\rangle +\frac{1}{2}\sum_{i,j\neq a}\zeta _{a}^{\ast }\zeta
+_{i}^{\ast }\zeta _{j}S_{N-3}\left( \hat{a}\hat{\imath}\hat{\jmath}\right)
+\left\langle ii+s||jj+s\right\rangle   \nonumber \\
+&&+\frac{1}{2}\sum_{i\neq a}\zeta _{a}^{\ast }n_{i}S_{N-2}\left( \hat{a}%
+\hat{\imath}\right) \left\langle ii+s||ii+s\right\rangle +\frac{1}{2}%
+\sum_{i\neq a}\zeta _{i}^{\ast }S_{N-2}\left( \hat{a}\hat{\imath}\right)
+\left\langle ii+s||aa+s\right\rangle  \\
+&&+\left. \sum_{i<j\neq a}\zeta _{a}^{\ast }n_{i}n_{j}S_{N-3}\left( \hat{a}%
+\hat{\imath}\hat{\jmath}\right) \left\langle ij|||ij\right\rangle +\left(
+N-1!\right) ^{2}\frac{1}{2}\sum_{i\neq a}n_{i}\zeta _{a}^{\ast
+}S_{N-2}\left( \hat{a}\hat{\imath}\right) \left\langle ia|||ia\right\rangle
+\right\} 
+\end{eqnarray}
+
+\end{document}

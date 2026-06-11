@@ -1,0 +1,44 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{LastRevised=Saturday, March 16, 2002 13:30:21}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\input{tcilatex}
+
+\begin{document}
+
+
+\pagestyle{empty} %Take out the page numbers
+\thispagestyle{empty}
+
+%Fit more figures on a page
+\renewcommand{\topfraction}{.99} \renewcommand{\bottomfraction}{.99} %
+\renewcommand{\textfraction}{.01} \renewcommand{\floatpagefraction}{.99}
+
+\begin{figure}[tbp]
+\centering \includegraphics{agpfig.rtf}
+\caption{The caption.}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering \includegraphics[width=4in]{agpfig.eps}
+\caption{Four inches wide.}
+\end{figure}
+
+\clearpage 
+\begin{figure}[tbp]
+\centering \includegraphics[angle=90]{dallas.eps}
+\caption{Rotated 90$^{\circ }$.}
+\end{figure}
+\clearpage
+
+\begin{figure}[tbp]
+\centering \includegraphics[width=3in,angle=70]{dallas.eps}
+\caption{Three inches wide and rotated 70$^{\circ }$.}
+\end{figure}
+
+\end{document}

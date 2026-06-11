@@ -1,0 +1,124 @@
+@import url("resource://app/res/css/latex_internal.css");
+@import url("resource://app/res/css/baselatex.css");
+@import url("resource://app/res/css/latex.css");
+@import url("resource://app/res/css/article.css");
+
+body{}
+sectiontitle{}
+part>sectiontitle{}
+part>sectiontitle:before{}
+chapter>sectiontitle{}
+chapter>sectiontitle:before{}
+section>sectiontitle{}
+section>sectiontitle:before{}
+subsection>sectiontitle{}
+subsection>sectiontitle:before{}
+subsubsection>sectiontitle{}
+subsubsection>sectiontitle:before{}
+paragraph>sectiontitle{}
+paragraph>sectiontitle:before{}
+bodyMath{}
+bodyText{}
+caption{}
+epigraph{}
+flushleft{}
+flushright{}
+frontmatter{}
+longQuotation{}
+plotcaption{}
+preface{}
+rtlBodyText{}
+shortQuote{}
+table{}
+verbatim{}
+blackboardBold{}
+bold{}
+calligraphic{}
+emphasized{}
+footnotesize{}
+fraktur{}
+Huge{}
+huge{}
+italics{}
+LARGE{}
+Large{}
+large{}
+phantom{}
+pre{}
+roman{}
+rtl{}
+sansSerif{}
+scriptsize{}
+slanted{}
+smallCaps{}
+small{}
+tiny{}
+typewriter{}
+bulletlist bulletlistItem{}
+bulletlist bulletlist bulletlistItem{}
+bulletlist bulletlist bulletlist bulletlistItem{}
+bulletlist bulletlist bulletlist bulletlist bulletlistItem{}
+numberedlist numberedlistItem{}
+numberedlist numberedlist numberedlistItem{}
+numberedlist numberedlist numberedlist numberedlistItem{}
+numberedlist numberedlist numberedlist numberedlist bulletlistItem{}
+numberedlist numberedlistItem:before{}
+numberedlist numberedlist numberedlistItem:before{}
+numberedlist numberedlist numberedlist numberedlistItem:before{}
+numberedlist numberedlist numberedlist numberedlist numberedlistItem:before{}
+address{}
+author{}
+date{}
+title{}
+acknowledgement{}
+algorithm{}
+assertion{}
+assumption{}
+axiom{}
+case{}
+claim{}
+conclusion{}
+condition{}
+conjecture{}
+corollary{}
+criterion{}
+definition{}
+example{}
+exercise{}
+hypothesis{}
+lemma{}
+notation{}
+problem{}
+proof{}
+property{}
+proposition{}
+question{}
+remark{}
+summary{}
+theorem{}
+acknowledgement>*:first-child:before{}
+algorithm>*:first-child:before{}
+assertion>*:first-child:before{}
+assumption>*:first-child:before{}
+axiom>*:first-child:before{}
+case>*:first-child:before{}
+claim>*:first-child:before{}
+conclusion>*:first-child:before{}
+condition>*:first-child:before{}
+conjecture>*:first-child:before{}
+corollary>*:first-child:before{}
+criterion>*:first-child:before{}
+definition>*:first-child:before{}
+example>*:first-child:before{}
+exercise>*:first-child:before{}
+hypothesis>*:first-child:before{}
+lemma>*:first-child:before{}
+notation>*:first-child:before{}
+problem>*:first-child:before{}
+proof>*:first-child:before{}
+property>*:first-child:before{}
+proposition>*:first-child:before{}
+question>*:first-child:before{}
+remark>*:first-child:before{}
+summary>*:first-child:before{}
+theorem>*:first-child:before{}

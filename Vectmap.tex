@@ -1,0 +1,136 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, June 19, 2011 09:20:15}
+%TCIDATA{LastRevised=Thursday, June 23, 2011 10:33:03}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{align}
+M\left(  \mathbf{x}\right)    & =M\left(
+%TCIMACRO{\tsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+e_{j}x_{j}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+M\left(  e_{j}\right)  x_{j}=%
+%TCIMACRO{\tsum \limits_{1\leq j,k\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j,k\leq N}}
+%EndExpansion
+e_{k}M_{kj}x_{j}\\
+M\left(  e_{j}\right)    & =%
+%TCIMACRO{\tsum \limits_{1\leq k\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq r}}
+%EndExpansion
+e_{k}M_{kj}=f_{j}\\
+M_{j}\left(  \mathbf{x}\right)    & =%
+%TCIMACRO{\tsum \limits_{1\leq k\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq r}}
+%EndExpansion
+M_{kj}x_{j}%
+\end{align}%
+\begin{align}
+F  & :\mathbb{R}^{N}\rightarrow\mathbb{R}^{M}\\
+\mathbf{y}  & \mathbf{=}F\left(  \mathbf{x}\right)  =\left(  F_{1}\left(
+\mathbf{x}\right)  \cdots F_{M}\left(  \mathbf{x}\right)  \right)
+\end{align}
+If $F$ is linear
+\begin{align}
+\mathbf{y}  & =F\left(  \mathbf{x}\right)  =\left(  \sum_{1\leq j\leq N}%
+x_{j}F_{j1},\cdots,\sum_{1\leq j\leq N}x_{j}F_{jM}\right)  =F\left(
+%TCIMACRO{\tsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+e_{j}x_{j}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+F\left(  e_{j}\right)  x_{j}\\
+& =\sum_{1\leq k\leq M}F_{k}\left(  \mathbf{x}\right)  f_{k}\\
+F_{k}\left(  \mathbf{x}\right)    & =\sum_{1\leq j\leq N}x_{j}F_{jk}%
+\end{align}%
+\begin{align}
+F\left(  e_{j}\right)    & =\left(  F_{1}\left(  e_{j}\right)  \cdots
+F_{M}\left(  e_{j}\right)  \right)  =F\left(  e_{j}\right)  =\sum_{1\leq k\leq
+M}F_{k}\left(  e_{j}\right)  f_{k}\\
+F_{k}\left(  e_{j}\right)    & =F_{jk}%
+\end{align}
+
+
+
+\end{document}

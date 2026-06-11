@@ -1,0 +1,2266 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Saturday, February 08, 2003 17:49:29}
+%TCIDATA{LastRevised=Thursday, February 13, 2003 21:23:41}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section*{$H=\sum_{1\leq j<k\leq M}\frac{Z_{j}Z_{k}}{\left\Vert \mathbf{R}%
+_{j}-\mathbf{R}_{k}\right\Vert }%
+%TCIMACRO{\FRAME{itbpF}{3.0147in}{0.6123in}{0.0104in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.0147in;  height 0.6123in;  depth 0.0104in;  original-width 2.9706in;
+%original-height 0.5812in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA6E3F00.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\protect\raisebox{-0.0104in}{\protect\includegraphics[
+natheight=0.581200in,
+natwidth=2.970600in,
+height=0.6123in,
+width=3.0147in
+]%
+{HA6E3F00.wmf}%
+}%
+%EndExpansion
+$}
+
+$+\int\left\{  \sum_{1\leq j\leq N}V_{ext}\left(  \mathbf{r}_{j}\right)
++\sum_{1\leq j<k\leq N}\frac{1}{\left\Vert \mathbf{r}_{j}-\mathbf{r}%
+_{k}\right\Vert }-\right.  $%
+%TCIMACRO{\FRAME{ftbpF}{3.8657in}{0.4999in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.8657in;  height 0.4999in;  depth 0pt;  original-width 3.8164in;
+%original-height 0.4696in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA6E4501.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.469600in,
+natwidth=3.816400in,
+height=0.4999in,
+width=3.8657in
+]%
+{HA6E4501.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\left.  \sum_{\substack{1\leq j\leq M\\1\leq k\leq N}}\frac{Z_{j}}{\left\Vert
+\mathbf{R}_{j}-\mathbf{r}_{k}\right\Vert }-\sum_{1\leq j\leq N}\left\Vert
+\mathbf{p}_{j}\left(  \mathbf{r}_{j}\right)  \right\Vert ^{2}\right\}
+\left\vert \mathbf{r}^{N}\right\rangle \left\langle \mathbf{r}^{N}\right\vert
+d\mathbf{r}^{N}%
+%TCIMACRO{\FRAME{itbpF}{4.7089in}{0.8233in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.7089in;  height 0.8233in;  depth 0in;  original-width 4.6561in;
+%original-height 0.7904in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA6E5I02.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.790400in,
+natwidth=4.656100in,
+height=0.8233in,
+width=4.7089in
+]%
+{HA6E5I02.wmf}%
+}%
+%EndExpansion
+$%
+
+%TCIMACRO{\FRAME{ftbpF}{3.9998in}{0.614in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.9998in;  height 0.614in;  depth 0pt;  original-width 8.9543in;
+%original-height 1.3214in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IX20E.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=1.321400in,
+natwidth=8.954300in,
+height=0.614in,
+width=3.9998in
+]%
+{HA4IX20E.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{4.0006in}{0.8899in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.0006in;  height 0.8899in;  depth 0pt;  original-width 6.0857in;
+%original-height 1.3214in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IWD0D.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptb]
+\begin{center}
+\includegraphics[
+natheight=1.321400in,
+natwidth=6.085700in,
+height=0.8899in,
+width=4.0006in
+]%
+{HA4IWD0D.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{4.9061in}{0.8726in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.9061in;  height 0.8726in;  depth 0pt;  original-width 4.8525in;
+%original-height 0.8397in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IVP0C.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptbptb]
+\begin{center}
+\includegraphics[
+natheight=0.839700in,
+natwidth=4.852500in,
+height=0.8726in,
+width=4.9061in
+]%
+{HA4IVP0C.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{3.9989in}{0.7213in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.9989in;  height 0.7213in;  depth 0pt;  original-width 5.2356in;
+%original-height 0.9141in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IV00B.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptbptbptb]
+\begin{center}
+\includegraphics[
+natheight=0.914100in,
+natwidth=5.235600in,
+height=0.7213in,
+width=3.9989in
+]%
+{HA4IV00B.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{4.6406in}{0.9098in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.6406in;  height 0.9098in;  depth 0pt;  original-width 4.5887in;
+%original-height 0.8769in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IU509.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptbptbptbptb]
+\begin{center}
+\includegraphics[
+natheight=0.876900in,
+natwidth=4.588700in,
+height=0.9098in,
+width=4.6406in
+]%
+{HA4IU509.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+$E\left(  \Omega\right)  =\frac{\left\langle \Omega\Phi|H\Omega\Phi
+\right\rangle }{\left\langle \Omega\Phi|\Omega\Phi\right\rangle }%
+=\frac{\left\langle \Phi|\Omega^{\dagger}H\Omega\Phi\right\rangle
+}{\left\langle \Phi|\Omega^{\dagger}\Omega\Phi\right\rangle }$%
+
+%TCIMACRO{\FRAME{ftbpF}{2.7948in}{0.462in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.7948in;  height 0.462in;  depth 0in;  original-width 2.8715in;
+%original-height 0.4512in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7AOP05.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.451200in,
+natwidth=2.871500in,
+height=0.462in,
+width=2.7948in
+]%
+{HA7AOP05.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+Reference State $\Phi%
+%TCIMACRO{\FRAME{itbpF}{1.6668in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.6668in;  height 0.2752in;  depth 0in;  original-width 1.7011in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7AQU06.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=1.701100in,
+height=0.2752in,
+width=1.6668in
+]%
+{HA7AQU06.wmf}%
+}%
+%EndExpansion
+$%
+%TCIMACRO{\FRAME{ftbpF}{3.9998in}{0.6123in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";  display "USEDEF";
+%valid_file "T";  width 3.9998in;  height 0.6123in;  depth 0pt;
+%original-width 6.7948in;  original-height 0.9997in;  cropleft "0";
+%croptop "1";  cropright "1";  cropbottom "0";
+%tempfilename 'HA4IQC03.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptb]
+\begin{center}
+\includegraphics[
+natheight=0.999700in,
+natwidth=6.794800in,
+height=0.6123in,
+width=3.9998in
+]%
+{HA4IQC03.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{3.4627in}{0.6616in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.4627in;  height 0.6616in;  depth 0pt;  original-width 3.4169in;
+%original-height 0.6304in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IQQ04.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptbptb]
+\begin{center}
+\includegraphics[
+natheight=0.630400in,
+natwidth=3.416900in,
+height=0.6616in,
+width=3.4627in
+]%
+{HA4IQQ04.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+\section{%
+%TCIMACRO{\FRAME{ftbpF}{2.3601in}{0.6486in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.3601in;  height 0.6486in;  depth 0in;  original-width 2.3194in;
+%original-height 0.6183in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IR805.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\protect\includegraphics[
+natheight=0.618300in,
+natwidth=2.319400in,
+height=0.6486in,
+width=2.3601in
+]%
+{HA4IR805.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{2.5823in}{0.6486in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.5823in;  height 0.6486in;  depth 0in;  original-width 2.5408in;
+%original-height 0.6183in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IRR06.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptb]
+\begin{center}
+\protect\includegraphics[
+natheight=0.618300in,
+natwidth=2.540800in,
+height=0.6486in,
+width=2.5823in
+]%
+{HA4IRR06.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{2.5823in}{0.6486in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.5823in;  height 0.6486in;  depth 0in;  original-width 2.5408in;
+%original-height 0.6183in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4IS107.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptbptb]
+\begin{center}
+\protect\includegraphics[
+natheight=0.618300in,
+natwidth=2.540800in,
+height=0.6486in,
+width=2.5823in
+]%
+{HA4IS107.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+%TCIMACRO{\FRAME{ftbpF}{2.6195in}{0.6616in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.6195in;  height 0.6616in;  depth 0in;  original-width 2.578in;
+%original-height 0.6304in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA4ISD08.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptbptbptbptb]
+\begin{center}
+\protect\includegraphics[
+natheight=0.630400in,
+natwidth=2.578000in,
+height=0.6616in,
+width=2.6195in
+]%
+{HA4ISD08.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+}
+
+$%
+%TCIMACRO{\FRAME{itbpF}{2.2546in}{0.4869in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.2546in;  height 0.4869in;  depth 0in;  original-width 2.2148in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5EQO01.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.457500in,
+natwidth=2.214800in,
+height=0.4869in,
+width=2.2546in
+]%
+{HA5EQO01.wmf}%
+}%
+%EndExpansion
+$
+
+$\Omega\in U\left(  \mathcal{H}^{N}\right)
+%TCIMACRO{\FRAME{itbpF}{2.0306in}{0.4869in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.0306in;  height 0.4869in;  depth 0in;  original-width 1.9925in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5F8906.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.457500in,
+natwidth=1.992500in,
+height=0.4869in,
+width=2.0306in
+]%
+{HA5F8906.wmf}%
+}%
+%EndExpansion
+$
+
+%
+
+%TCIMACRO{\FRAME{ftbpF}{0.3381in}{0.4756in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 0.3381in;  height 0.4756in;  depth 0in;  original-width 0.3087in;
+%original-height 0.4454in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5FB707.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.445400in,
+natwidth=0.308700in,
+height=0.4756in,
+width=0.3381in
+]%
+{HA5FB707.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\Omega\in\mathcal{B}\left(  \mathcal{H}^{N}\right)
+%TCIMACRO{\FRAME{itbpF}{1.1736in}{0.4869in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.1736in;  height 0.4869in;  depth 0in;  original-width 1.1398in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5F6T05.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.457500in,
+natwidth=1.139800in,
+height=0.4869in,
+width=1.1736in
+]%
+{HA5F6T05.wmf}%
+}%
+%EndExpansion
+$%
+
+%TCIMACRO{\FRAME{ftbpF}{2.0064in}{0.4869in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.0064in;  height 0.4869in;  depth 0in;  original-width 1.9666in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5EXR03.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.457500in,
+natwidth=1.966600in,
+height=0.4869in,
+width=2.0064in
+]%
+{HA5EXR03.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+$U\left(  \mathcal{H}^{N}\right)  =$ Unitary Group of $\mathcal{H}^{N}$
+
+$%
+%TCIMACRO{\FRAME{itbpF}{4.0015in}{0.3918in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.0015in;  height 0.3918in;  depth 0in;  original-width 4.9865in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5FQ409.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.457500in,
+natwidth=4.986500in,
+height=0.3918in,
+width=4.0015in
+]%
+{HA5FQ409.wmf}%
+}%
+%EndExpansion
+$
+
+$GL\left(  \mathcal{H}^{N}\right)  =$ General Linear Group of $\mathcal{H}%
+^{N}$%
+
+%TCIMACRO{\FRAME{ftbpF}{3.9998in}{0.3113in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.9998in;  height 0.3113in;  depth 0in;  original-width 6.3815in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5FQQ0A.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.457500in,
+natwidth=6.381500in,
+height=0.3113in,
+width=3.9998in
+]%
+{HA5FQQ0A.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\mathcal{B}\left(  \mathcal{H}^{N}\right)  =$ Bounded Operators Acting in
+$\mathcal{H}^{N}$%
+
+%TCIMACRO{\FRAME{ftbpF}{3.998in}{0.2923in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.998in;  height 0.2923in;  depth 0in;  original-width 6.8389in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5EZJ04.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.457500in,
+natwidth=6.838900in,
+height=0.2923in,
+width=3.998in
+]%
+{HA5EZJ04.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+%
+
+%TCIMACRO{\FRAME{ftbpF}{3.9989in}{0.3831in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.9989in;  height 0.3831in;  depth 0pt;  original-width 4.983in;
+%original-height 0.4454in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5ETJ02.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.445400in,
+natwidth=4.983000in,
+height=0.3831in,
+width=3.9989in
+]%
+{HA5ETJ02.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$I=\int\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{N}\right\vert d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{2.7363in}{0.5993in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.7363in;  height 0.5993in;  depth 0in;  original-width 2.6939in;
+%original-height 0.5682in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5HHW0B.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.568200in,
+natwidth=2.693900in,
+height=0.5993in,
+width=2.7363in
+]%
+{HA5HHW0B.wmf}%
+}%
+%EndExpansion
+$
+
+$\Psi\left(  \mathsf{z}^{N}\right)  =\left\langle \mathsf{z}^{N}%
+|\Psi\right\rangle
+%TCIMACRO{\FRAME{itbpF}{2.7051in}{0.4869in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.7051in;  height 0.4869in;  depth 0in;  original-width 2.6628in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5HJ80C.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.457500in,
+natwidth=2.662800in,
+height=0.4869in,
+width=2.7051in
+]%
+{HA5HJ80C.wmf}%
+}%
+%EndExpansion
+$
+
+$\left\vert \mathsf{z}^{N}\right\rangle =\left\vert \mathsf{z}_{1}%
+\cdots\mathsf{z}_{N}\right\rangle
+%TCIMACRO{\FRAME{itbpF}{2.5867in}{0.4869in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.5867in;  height 0.4869in;  depth 0in;  original-width 2.5452in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5HK10D.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.457500in,
+natwidth=2.545200in,
+height=0.4869in,
+width=2.5867in
+]%
+{HA5HK10D.wmf}%
+}%
+%EndExpansion
+$
+
+one particle generalized eigenvectors
+
+$\left\{  \left\vert \mathsf{z}_{j}\right\rangle |1\leq j\leq N\right\}  $;
+$\mathsf{z}_{j}\equiv\left(  \mathbf{r}_{j},\xi_{j}\right)  $
+
+spatial position $\mathbf{r}_{j}$ spin vector $\xi_{j}$%
+
+%TCIMACRO{\FRAME{ftbpF}{4.0006in}{0.8631in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.0006in;  height 0.8631in;  depth 0pt;  original-width 6.4576in;
+%original-height 1.3586in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5HNX0F.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=1.358600in,
+natwidth=6.457600in,
+height=0.8631in,
+width=4.0006in
+]%
+{HA5HNX0F.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\Omega\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  =\left\langle
+\left.  \mathsf{z}^{N}\right\vert \Omega\mathsf{z}^{\prime N}\right\rangle
+%TCIMACRO{\FRAME{itbpF}{3.8329in}{0.4869in}{0.0208in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.8329in;  height 0.4869in;  depth 0.0208in;  original-width 3.7836in;
+%original-height 0.4575in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5I1P0H.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\raisebox{-0.0208in}{\includegraphics[
+natheight=0.457500in,
+natwidth=3.783600in,
+height=0.4869in,
+width=3.8329in
+]%
+{HA5I1P0H.wmf}%
+}%
+%EndExpansion
+$
+
+$\left\vert \Psi\right\rangle =\int\left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{N}|\Psi\right\rangle d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{2.7588in}{0.4627in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.7588in;  height 0.4627in;  depth 0in;  original-width 2.7164in;
+%original-height 0.4324in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5MEI0I.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.432400in,
+natwidth=2.716400in,
+height=0.4627in,
+width=2.7588in
+]%
+{HA5MEI0I.wmf}%
+}%
+%EndExpansion
+$
+
+$\Omega=\int\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{N}|\Omega\mathsf{z}^{\prime N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert d\mathsf{z}^{N}d\mathsf{z}^{\prime N}%
+%TCIMACRO{\FRAME{itbpF}{3.9877in}{0.4627in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.9877in;  height 0.4627in;  depth 0in;  original-width 3.9384in;
+%original-height 0.4324in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA5MI10J.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.432400in,
+natwidth=3.938400in,
+height=0.4627in,
+width=3.9877in
+]%
+{HA5MI10J.wmf}%
+}%
+%EndExpansion
+$
+
+$\Omega^{\dagger}H\Omega%
+%TCIMACRO{\FRAME{itbpF}{0.6236in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 0.6236in;  height 0.2752in;  depth 0in;  original-width 0.6191in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7BU10D.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=0.619100in,
+height=0.2752in,
+width=0.6236in
+]%
+{HA7BU10D.wmf}%
+}%
+%EndExpansion
+$
+
+$=\int H\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}d\mathsf{z}^{\prime N}$
+
+$H\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  =\int\Omega\left(
+\mathsf{z}^{\prime N},\mathsf{z}^{N}\right)  ^{\ast}\left\{  {}\right\}  $
+
+nuclei $j$ has atomic number $Z_{j}$
+
+and is at the position $\mathbf{R}_{j}$,
+
+$\mathbf{r}_{j}$ is the position of electron $j$
+
+that has momentum $\mathbf{p}_{j}\left(  \mathbf{r}_{j}\right)  =\nabla
+_{\mathbf{r}_{j}}-\mathbf{A}_{ext\,j}\left(  \mathbf{r}_{j}\right)  ,$
+
+where $\mathbf{A}_{ext\,j}\left(  \mathbf{r}_{j}\right)  $ is the sum of all external
+
+vector potentials acting on particle $j$
+
+$V_{ext}$ $\left(  \mathbf{r}_{j}\right)  $ is the sum of all external scalar potentials
+
+%
+
+%TCIMACRO{\FRAME{ftbpF}{4.0473in}{2.4984in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.0473in;  height 2.4984in;  depth 0pt;  original-width 3.998in;
+%original-height 2.4578in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA78JD02.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=2.457800in,
+natwidth=3.998000in,
+height=2.4984in,
+width=4.0473in
+]%
+{HA78JD02.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\frac{d}{dx}:\psi\left(  x\right)  \rightarrow\varphi\left(  x\right)  $
+
+$\left(  \text{pointwise map}\right)  $
+
+$\varphi\left(  x\right)  =\frac{d\psi\left(  x\right)  }{dx}$
+
+$=\lim\limits_{\delta\rightarrow0}\left\{  \frac{\psi\left(  x+\delta\right)
+-\psi\left(  \delta\right)  }{\delta}\right\}  $
+
+constructed using
+
+nonlocal information
+
+\bigskip%
+
+%TCIMACRO{\FRAME{ftbpF}{2.2073in}{1.8653in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.2073in;  height 1.8653in;  depth 0pt;  original-width 2.2633in;
+%original-height 1.9068in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7AAY04.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=1.906800in,
+natwidth=2.263300in,
+height=1.8653in,
+width=2.2073in
+]%
+{HA7AAY04.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$V_{1}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\sum\limits_{\substack{1\leq j\leq M\\1\leq k\leq N}}\left\{  \frac{-Z_{j}%
+}{\left\Vert \mathbf{R}_{j}-\mathbf{r}_{k}\right\Vert }+V_{ext}\left(
+\mathbf{r}_{k}\right)  \right\}  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}$
+%TCIMACRO{\FRAME{ftbpF}{4.5396in}{0.8975in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.5396in;  height 0.8975in;  depth 0in;  original-width 4.3072in;
+%original-height 0.8302in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA9L650J.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.830200in,
+natwidth=4.307200in,
+height=0.8975in,
+width=4.5396in
+]%
+{HA9L650J.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$V_{2}=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \sum\limits_{1\leq j<k\leq N}\frac{1}{\left\Vert \mathbf{r}%
+_{j}-\mathbf{r}_{k}\right\Vert }\right\}  \left\vert \mathsf{z}^{N}%
+\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{3.5766in}{0.724in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.5766in;  height 0.724in;  depth 0in;  original-width 3.3881in;
+%original-height 0.6642in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA9L0T0I.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.664200in,
+natwidth=3.388100in,
+height=0.724in,
+width=3.5766in
+]%
+{HA9L0T0I.wmf}%
+}%
+%EndExpansion
+$
+
+$H_{0}=\sum_{1\leq j<k\leq M}\frac{Z_{j}Z_{k}}{\left\Vert \mathbf{R}%
+_{j}-\mathbf{R}_{k}\right\Vert }%
+%TCIMACRO{\FRAME{itbpF}{2.155in}{0.425in}{0.1724in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.155in;  height 0.425in;  depth 0.1724in;  original-width 2.2082in;
+%original-height 0.4133in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7B3R09.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\raisebox{-0.1724in}{\includegraphics[
+natheight=0.413300in,
+natwidth=2.208200in,
+height=0.425in,
+width=2.155in
+]%
+{HA7B3R09.wmf}%
+}%
+%EndExpansion
+$
+
+$K=-%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\sum\limits_{1\leq j\leq N}\left\Vert \mathbf{p}_{j}\left(  \mathbf{r}%
+_{j}\right)  \right\Vert ^{2}\left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{3.4637in}{0.5878in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.4637in;  height 0.5878in;  depth 0in;  original-width 3.2802in;
+%original-height 0.5338in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA9KBE0F.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.533800in,
+natwidth=3.280200in,
+height=0.5878in,
+width=3.4637in
+]%
+{HA9KBE0F.wmf}%
+}%
+%EndExpansion
+$%
+
+\begin{align*}
+\left\vert \Psi\left(  \nu,\omega\right)  \right\rangle  &  =\breve{T}\left(
+\nu,\omega\right)  \left\vert \Psi_{ref}\right\rangle \\
+&  =\breve{\nu}_{N}e^{i\breve{\omega}_{N}}\left\vert \Psi_{ref}\right\rangle
+\end{align*}
+
+
+$\left\vert \Psi\left(  \nu,\omega\right)  \right\rangle =\breve{T}\left(
+\nu,\omega\right)  \left\vert \Psi_{ref}\right\rangle $
+
+$\qquad\quad\quad=\breve{\nu}_{N}e^{i\breve{\omega}_{N}}\left\vert \Psi
+_{ref}\right\rangle
+%TCIMACRO{\FRAME{itbpF}{2.7154in}{0.573in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.7154in;  height 0.573in;  depth 0in;  original-width 2.7903in;
+%original-height 0.5667in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7C9A0H.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.566700in,
+natwidth=2.790300in,
+height=0.573in,
+width=2.7154in
+]%
+{HA7C9A0H.wmf}%
+}%
+%EndExpansion
+$
+
+$\breve{\nu}_{N}=\int\nu\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{2.2416in}{0.3501in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.2416in;  height 0.3501in;  depth 0in;  original-width 2.2994in;
+%original-height 0.3357in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7CFU0J.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.335700in,
+natwidth=2.299400in,
+height=0.3501in,
+width=2.2416in
+]%
+{HA7CFU0J.wmf}%
+}%
+%EndExpansion
+$
+
+$\breve{\omega}_{N}=\int\omega\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{2.3174in}{0.3501in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.3174in;  height 0.3501in;  depth 0in;  original-width 2.377in;
+%original-height 0.3357in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7CG40K.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.335700in,
+natwidth=2.377000in,
+height=0.3501in,
+width=2.3174in
+]%
+{HA7CG40K.wmf}%
+}%
+%EndExpansion
+$
+
+$\breve{T}=\int T\left(  \mathsf{z}^{N}\right)  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{2.1432in}{0.3501in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.1432in;  height 0.3501in;  depth 0in;  original-width 2.1965in;
+%original-height 0.3357in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7F5A0O.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.335700in,
+natwidth=2.196500in,
+height=0.3501in,
+width=2.1432in
+]%
+{HA7F5A0O.wmf}%
+}%
+%EndExpansion
+$
+
+$\left\langle \mathsf{z}^{N}|\Psi\left(  \nu,\omega\right)  \right\rangle
+=\nu\left(  \mathsf{z}^{N}\right)  e^{i\omega\left(  \mathsf{z}^{N}\right)
+}\varrho\left(  \mathsf{z}^{N}\right)  e^{iS\left(  \mathsf{z}^{N}\right)  }%
+%TCIMACRO{\FRAME{itbpF}{2.1649in}{0.3131in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.1649in;  height 0.3131in;  depth 0in;  original-width 2.219in;
+%original-height 0.2969in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7CIY0L.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.296900in,
+natwidth=2.219000in,
+height=0.3131in,
+width=2.1649in
+]%
+{HA7CIY0L.wmf}%
+}%
+%EndExpansion
+$%
+
+%TCIMACRO{\FRAME{ftbpF}{3.5889in}{0.3131in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.5889in;  height 0.3131in;  depth 0in;  original-width 3.6963in;
+%original-height 0.2969in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7FBB0Q.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.296900in,
+natwidth=3.696300in,
+height=0.3131in,
+width=3.5889in
+]%
+{HA7FBB0Q.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\varrho\left(  \mathsf{z}^{N}\right)  \overset{a.e}{\neq}0%
+%TCIMACRO{\FRAME{itbpF}{1.0197in}{0.3628in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.0197in;  height 0.3628in;  depth 0in;  original-width 1.0306in;
+%original-height 0.3474in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7CPT0N.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.347400in,
+natwidth=1.030600in,
+height=0.3628in,
+width=1.0197in
+]%
+{HA7CPT0N.wmf}%
+}%
+%EndExpansion
+$
+
+$\left\{  \breve{T}\right\}  $ form an abelian semigroup
+%TCIMACRO{\FRAME{ftbpF}{2.821in}{0.3131in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.821in;  height 0.3131in;  depth 0in;  original-width 2.8995in;
+%original-height 0.2969in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7F880P.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.296900in,
+natwidth=2.899500in,
+height=0.3131in,
+width=2.821in
+]%
+{HA7F880P.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+$\mathcal{\breve{D}}^{N}\left(  \nu,\omega\right)  =\hat{T}\left(
+\mathcal{\breve{D}}_{ref}^{N}\right)  $
+
+$\quad\quad\quad=\breve{T}\left(  \nu,\omega\right)  \mathcal{\breve{D}}%
+_{ref}^{N}\breve{T}\left(  \nu,\omega\right)  ^{\dagger}%
+%TCIMACRO{\FRAME{itbpF}{3.0511in}{0.6858in}{-0.0271in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.0511in;  height 0.6858in;  depth -0.0271in;  original-width 3.1386in;
+%original-height 0.6831in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7FJ50R.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\raisebox{--0.0271in}{\includegraphics[
+natheight=0.683100in,
+natwidth=3.138600in,
+height=0.6858in,
+width=3.0511in
+]%
+{HA7FJ50R.wmf}%
+}%
+%EndExpansion
+$
+
+$\mathcal{\breve{D}}_{ref}^{N}=\left\vert \Psi_{ref}\right\rangle \left\langle
+\Psi_{ref}\right\vert
+%TCIMACRO{\FRAME{itbpF}{1.7642in}{0.3375in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.7642in;  height 0.3375in;  depth 0in;  original-width 1.803in;
+%original-height 0.3222in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7FQZ0T.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.322200in,
+natwidth=1.803000in,
+height=0.3375in,
+width=1.7642in
+]%
+{HA7FQZ0T.wmf}%
+}%
+%EndExpansion
+$
+
+$\qquad\left\vert \Psi_{ref}\right\rangle $ NOT
+
+in general normalized%
+%TCIMACRO{\FRAME{ftbpF}{2.2696in}{0.5487in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.2696in;  height 0.5487in;  depth 0in;  original-width 2.3273in;
+%original-height 0.5415in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7FQ70S.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.541500in,
+natwidth=2.327300in,
+height=0.5487in,
+width=2.2696in
+]%
+{HA7FQ70S.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+Energy Expectation Value $E\left(  \nu,\omega\right)
+%TCIMACRO{\FRAME{itbpF}{3.0745in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.0745in;  height 0.2752in;  depth 0in;  original-width 3.163in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7JJ00W.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=3.163000in,
+height=0.2752in,
+width=3.0745in
+]%
+{HA7JJ00W.wmf}%
+}%
+%EndExpansion
+$
+
+$E\left(  \nu,\omega\right)  =\frac{Tr\left\{  H\mathcal{\breve{D}}^{N}\left(
+\nu,\omega\right)  \right\}  }{Tr\left\{  \mathcal{\breve{D}}^{N}\left(
+\nu,\omega\right)  \right\}  }$
+
+
+
+$\qquad\quad=\frac{Tr\left\{  H\breve{T}\left(  \nu,\omega\right)
+\mathcal{\breve{D}}_{ref}^{N}\breve{T}\left(  \nu,\omega\right)  ^{\dagger
+}\right\}  }{Tr\left\{  \breve{T}\left(  \nu,\omega\right)  \mathcal{\breve
+{D}}_{ref}^{N}\breve{T}\left(  \nu,\omega\right)  ^{\dagger}\right\}  }$
+
+
+
+$\qquad\quad=\frac{Tr\left\{  \breve{T}\left(  \nu,\omega\right)  ^{\dagger
+}H\breve{T}\left(  \nu,\omega\right)  \mathcal{\breve{D}}_{ref}^{N}\right\}
+}{Tr\left\{  \breve{T}\left(  \nu,\omega\right)  \mathcal{\breve{D}}_{ref}%
+^{N}\breve{T}\left(  \nu,\omega\right)  ^{\dagger}\right\}  }$
+
+$%
+%TCIMACRO{\FRAME{itbpF}{3.2611in}{2.3246in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.2611in;  height 2.3246in;  depth 0in;  original-width 3.0867in;
+%original-height 2.1934in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA9LXV0K.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=2.193400in,
+natwidth=3.086700in,
+height=2.3246in,
+width=3.2611in
+]%
+{HA9LXV0K.wmf}%
+}%
+%EndExpansion
+$
+
+$H_{eff}\left(  \nu,\omega\right)  =\breve{T}\left(  \nu,\omega\right)
+^{\dagger}H\breve{T}\left(  \nu,\omega\right)
+%TCIMACRO{\FRAME{itbpF}{3.0087in}{0.3263in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.0087in;  height 0.3263in;  depth 0in;  original-width 2.8452in;
+%original-height 0.2848in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7V6020.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.284800in,
+natwidth=2.845200in,
+height=0.3263in,
+width=3.0087in
+]%
+{HA7V6020.wmf}%
+}%
+%EndExpansion
+$
+
+$E\left(  \nu,\omega\right)  =\frac{Tr\left\{  H\left(  \nu,\omega\right)
+\mathcal{\breve{D}}_{ref}^{N}\right\}  }{Tr\left\{  \mathcal{\breve{D}}%
+_{ref}^{N}\left(  \breve{\nu}_{N}\right)  ^{2}\right\}  }%
+%TCIMACRO{\FRAME{itbpF}{2.3827in}{0.6127in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.3827in;  height 0.6127in;  depth 0in;  original-width 2.2482in;
+%original-height 0.5579in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7VJB24.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.557900in,
+natwidth=2.248200in,
+height=0.6127in,
+width=2.3827in
+]%
+{HA7VJB24.wmf}%
+}%
+%EndExpansion
+$
+
+$=\frac{\left\langle \Phi|H\left(  \nu,\omega\right)  \Phi\right\rangle
+}{\left\langle \Phi|\left(  \breve{\nu}_{N}\right)  ^{2}\Phi\right\rangle }%
+%TCIMACRO{\FRAME{itbpF}{1.2702in}{0.4998in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.2702in;  height 0.4998in;  depth 0in;  original-width 1.1855in;
+%original-height 0.4508in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7VJM25.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.450800in,
+natwidth=1.185500in,
+height=0.4998in,
+width=1.2702in
+]%
+{HA7VJM25.wmf}%
+}%
+%EndExpansion
+$
+
+Effective Hamiltonian $H\left(  \nu,\omega\right)
+%TCIMACRO{\FRAME{itbpF}{2.7397in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.7397in;  height 0.2752in;  depth 0in;  original-width 2.8155in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7JRU0Z.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=2.815500in,
+height=0.2752in,
+width=2.7397in
+]%
+{HA7JRU0Z.wmf}%
+}%
+%EndExpansion
+$
+
+The effective Hamiltonian
+
+$\qquad\qquad H\left(  \nu,\omega\right)  $
+
+\qquad is STILL\ \emph{LOCAL!}
+
+\emph{%
+%TCIMACRO{\FRAME{ftbpF}{2.7659in}{0.7725in}{0pt}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.7659in;  height 0.7725in;  depth 0pt;  original-width 2.8426in;
+%original-height 0.7734in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7JYA10.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.773400in,
+natwidth=2.842600in,
+height=0.7725in,
+width=2.7659in
+]%
+{HA7JYA10.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+}
+
+$H=H_{0}-\mathbf{P\bullet P}+V_{1}+V_{2}%
+%TCIMACRO{\FRAME{itbpF}{2.46in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.46in;  height 0.2752in;  depth 0in;  original-width 2.5241in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N6717.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=2.524100in,
+height=0.2752in,
+width=2.46in
+]%
+{HA7N6717.wmf}%
+}%
+%EndExpansion
+$
+
+$\breve{T}\left(  \nu,\omega\right)  ^{\dagger}H\breve{T}\left(  \nu
+,\omega\right)  $
+
+$=\breve{T}\left(  \nu,\omega\right)  ^{\dagger}\left\{  H_{0}%
+-\mathbf{P\bullet P}+V\right\}  \breve{T}\left(  \nu,\omega\right)
+%TCIMACRO{\FRAME{itbpF}{3.6151in}{0.7725in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.6151in;  height 0.7725in;  depth 0in;  original-width 3.7234in;
+%original-height 0.7734in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7T4S1O.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.773400in,
+natwidth=3.723400in,
+height=0.7725in,
+width=3.6151in
+]%
+{HA7T4S1O.wmf}%
+}%
+%EndExpansion
+$
+
+$=\breve{\nu}_{N}e^{-i\breve{\omega}_{N}}\left\{  H_{0}-\mathbf{P\bullet
+P}+V\right\}  \breve{\nu}_{N}e^{i\breve{\omega}_{N}}%
+%TCIMACRO{\FRAME{itbpF}{3.1242in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.1242in;  height 0.2752in;  depth 0in;  original-width 3.2135in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7T3Y1N.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=3.213500in,
+height=0.2752in,
+width=3.1242in
+]%
+{HA7T3Y1N.wmf}%
+}%
+%EndExpansion
+$
+
+$=\left(  \breve{\nu}_{N}\right)  ^{2}H_{0}-$
+
+$\quad\breve{\nu}_{N}e^{-i\breve{\omega}_{N}}\mathbf{P}e^{i\breve{\omega}_{N}%
+}\mathbf{\bullet}e^{-i\breve{\omega}_{N}}\mathbf{\mathbf{P}}e^{i\breve{\omega
+}_{N}}\breve{\nu}_{N}+\left(  \breve{\nu}_{N}\right)  ^{2}V%
+%TCIMACRO{\FRAME{itbpF}{3.8948in}{0.5487in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.8948in;  height 0.5487in;  depth 0in;  original-width 4.0149in;
+%original-height 0.5415in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7TCL1Q.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.541500in,
+natwidth=4.014900in,
+height=0.5487in,
+width=3.8948in
+]%
+{HA7TCL1Q.wmf}%
+}%
+%EndExpansion
+$
+
+$V=V_{1}+V_{2}%
+%TCIMACRO{\FRAME{itbpF}{1.1939in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.1939in;  height 0.2752in;  depth 0in;  original-width 1.211in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N7J1B.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=1.211000in,
+height=0.2752in,
+width=1.1939in
+]%
+{HA7N7J1B.wmf}%
+}%
+%EndExpansion
+$
+
+$\mathbf{P=}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\mathbf{p}_{j}%
+%TCIMACRO{\FRAME{itbpF}{1.0387in}{0.5983in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.0387in;  height 0.5983in;  depth 0in;  original-width 1.0495in;
+%original-height 0.5929in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N6E18.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.592900in,
+natwidth=1.049500in,
+height=0.5983in,
+width=1.0387in
+]%
+{HA7N6E18.wmf}%
+}%
+%EndExpansion
+$
+
+$\mathbf{p}_{j}=-i\mathbf{\nabla}_{j}-\mathbf{A%
+%TCIMACRO{\FRAME{itbpF}{1.3311in}{0.3249in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.3311in;  height 0.3249in;  depth 0in;  original-width 1.3527in;
+%original-height 0.3095in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N6N19.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.309500in,
+natwidth=1.352700in,
+height=0.3249in,
+width=1.3311in
+]%
+{HA7N6N19.wmf}%
+}%
+%EndExpansion
+}$
+
+$-i\mathbf{\nabla}_{j}=-i\left(
+\begin{array}
+[c]{c}%
+\frac{\partial}{\partial x_{j}}\\
+\frac{\partial}{\partial y_{j}}\\
+\frac{\partial}{\partial z_{j}}%
+\end{array}
+\right)  ;\quad\mathbf{A}_{j}=\left(
+\begin{array}
+[c]{c}%
+A_{jx}\\
+A_{jy}\\
+A_{jz}%
+\end{array}
+\right)
+%TCIMACRO{\FRAME{itbpF}{3.4851in}{1.3563in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.4851in;  height 1.3563in;  depth 0in;  original-width 3.5898in;
+%original-height 1.3789in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N6V1A.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=1.378900in,
+natwidth=3.589800in,
+height=1.3563in,
+width=3.4851in
+]%
+{HA7N6V1A.wmf}%
+}%
+%EndExpansion
+$%
+
+%TCIMACRO{\FRAME{ftbpF}{1.9122in}{1.3563in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.9122in;  height 1.3563in;  depth 0in;  original-width 1.9555in;
+%original-height 1.3789in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7NKY1F.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=1.378900in,
+natwidth=1.955500in,
+height=1.3563in,
+width=1.9122in
+]%
+{HA7NKY1F.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\breve{T}\left(  \nu,\omega\right)  ^{\dagger}V\breve{T}\left(  \nu
+,\omega\right)  =\breve{\nu}_{N}e^{-i\breve{\omega}_{N}}V\breve{\nu}%
+_{N}e^{i\breve{\omega}_{N}}=\left(  \breve{\nu}_{N}\right)  ^{2}V%
+%TCIMACRO{\FRAME{itbpF}{4.2585in}{0.2879in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.2585in;  height 0.2879in;  depth 0in;  original-width 4.3912in;
+%original-height 0.2707in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7NAQ1C.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.270700in,
+natwidth=4.391200in,
+height=0.2879in,
+width=4.2585in
+]%
+{HA7NAQ1C.wmf}%
+}%
+%EndExpansion
+$
+
+$\breve{T}\left(  \nu,\omega\right)  ^{\dagger}\mathbf{A}_{j}\breve{T}\left(
+\nu,\omega\right)  =\breve{\nu}_{N}e^{-i\breve{\omega}_{N}}\mathbf{A}%
+_{j}\breve{\nu}_{N}e^{i\breve{\omega}_{N}}=\left(  \breve{\nu}_{N}\right)
+^{2}\mathbf{A}_{j}%
+%TCIMACRO{\FRAME{itbpF}{4.5193in}{0.3131in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.5193in;  height 0.3131in;  depth 0in;  original-width 4.6619in;
+%original-height 0.2969in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N0612.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.296900in,
+natwidth=4.661900in,
+height=0.3131in,
+width=4.5193in
+]%
+{HA7N0612.wmf}%
+}%
+%EndExpansion
+$
+
+$\left(  \breve{\nu}_{N}\right)  ^{2}V=\int\nu\left(  \mathsf{z}^{N}\right)
+^{2}V\left(  \mathsf{z}^{N}\right)  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+%TCIMACRO{\FRAME{itbpF}{3.3101in}{0.3628in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.3101in;  height 0.3628in;  depth 0in;  original-width 3.4075in;
+%original-height 0.3474in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N0G13.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.347400in,
+natwidth=3.407500in,
+height=0.3628in,
+width=3.3101in
+]%
+{HA7N0G13.wmf}%
+}%
+%EndExpansion
+$
+
+$\left(  \breve{\nu}_{N}\right)  ^{2}A_{j\kappa}=\int\nu\left(  \mathsf{z}%
+^{N}\right)  ^{2}A_{j\kappa}\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N};\qquad\kappa=x,y,z%
+%TCIMACRO{\FRAME{itbpF}{5.0039in}{0.3628in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 5.0039in;  height 0.3628in;  depth 0in;  original-width 5.1636in;
+%original-height 0.3474in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N0T14.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.347400in,
+natwidth=5.163600in,
+height=0.3628in,
+width=5.0039in
+]%
+{HA7N0T14.wmf}%
+}%
+%EndExpansion
+$
+
+\bigskip
+
+It is \emph{important }to note that while the Hamiltonian $H$
+
+only contains potentials describing up to two
+
+particle interactions, the integral kernels $\left\{  \nu\left(
+\mathsf{z}^{N}\right)  \right\}  $
+
+are in general \emph{multiparticle} functions and thus
+
+produce multiparticle potentials $\left\{  \nu\left(  \mathsf{z}^{N}\right)
+^{2}V\left(  \mathsf{z}^{N}\right)  \right\}  $
+
+describing up to pointwise simultaneous $N$-particle
+
+interactions.
+%TCIMACRO{\FRAME{ftbpF}{4.9759in}{1.8897in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.9759in;  height 1.8897in;  depth 0in;  original-width 5.1357in;
+%original-height 1.933in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N1715.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=1.933000in,
+natwidth=5.135700in,
+height=1.8897in,
+width=4.9759in
+]%
+{HA7N1715.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+\bigskip
+
+Furthermore the $N$-particle local scaling factors
+
+$\nu\left(  \mathsf{z}^{N}\right)  $ contain phase information pertaining to
+
+$1,2,\cdots,M<N$ particle interactions and the
+
+$N$-particle local phase also $\omega\left(  \mathsf{z}^{N}\right)  $ contains local
+
+scaling information pertaining to $1,2,\cdots,M<N$
+
+particle interactions as will shown in the example%
+%TCIMACRO{\FRAME{ftbpF}{4.7206in}{1.5666in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.7206in;  height 1.5666in;  depth 0in;  original-width 4.8703in;
+%original-height 1.5982in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7N1M16.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=1.598200in,
+natwidth=4.870300in,
+height=1.5666in,
+width=4.7206in
+]%
+{HA7N1M16.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+$e^{-i\breve{\omega}_{N}}\left(  -i\nabla_{j}\right)  e^{i\breve{\omega}_{N}%
+}=-i\nabla_{j}+\nabla_{j}\breve{\omega}_{N}%
+%TCIMACRO{\FRAME{itbpF}{2.8327in}{0.3005in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.8327in;  height 0.3005in;  depth 0in;  original-width 2.9112in;
+%original-height 0.2834in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7NTA1G.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.283400in,
+natwidth=2.911200in,
+height=0.3005in,
+width=2.8327in
+]%
+{HA7NTA1G.wmf}%
+}%
+%EndExpansion
+$
+
+$\left(  -i\nabla_{j}+\nabla_{j}\breve{\omega}_{N}\right)  \breve{\nu}_{N}$
+
+$\qquad=-i\breve{\nu}_{N}\nabla_{j}-i\left(  \nabla_{j}\breve{\nu}_{N}\right)
++\breve{\nu}_{N}\left(  \nabla_{j}\breve{\omega}_{N}\right)
+%TCIMACRO{\FRAME{itbpF}{3.7965in}{0.573in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.7965in;  height 0.573in;  depth 0in;  original-width 3.9111in;
+%original-height 0.5667in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7NZO1H.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.566700in,
+natwidth=3.911100in,
+height=0.573in,
+width=3.7965in
+]%
+{HA7NZO1H.wmf}%
+}%
+%EndExpansion
+$
+
+$\breve{\nu}_{N}e^{-i\breve{\omega}_{N}}\left(  -i\nabla_{j}\right)
+\breve{\nu}_{N}e^{i\breve{\omega}_{N}}=$
+
+$K\left(  \nu,\omega\right)  =\breve{T}\left(  \nu,\omega\right)  ^{\dagger
+}\left(  \mathbf{P\bullet P}\right)  \breve{T}\left(  \nu,\omega\right)
+%TCIMACRO{\FRAME{itbpF}{3.1115in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.1115in;  height 0.2752in;  depth 0in;  original-width 3.2009in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7U561R.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=3.200900in,
+height=0.2752in,
+width=3.1115in
+]%
+{HA7U561R.wmf}%
+}%
+%EndExpansion
+$
+
+$=-\nabla\bullet\left(  \breve{\nu}^{2}\right)  \mathbb{I}\bullet\nabla%
+%TCIMACRO{\FRAME{itbpF}{1.5477in}{0.3005in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.5477in;  height 0.3005in;  depth 0in;  original-width 1.5792in;
+%original-height 0.2834in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7U5O1S.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.283400in,
+natwidth=1.579200in,
+height=0.3005in,
+width=1.5477in
+]%
+{HA7U5O1S.wmf}%
+}%
+%EndExpansion
+$
+
+$\quad-\nabla\bullet\left(  \breve{\nu}_{N}^{2}\nabla\breve{\omega}%
+_{N}-i\breve{\nu}_{N}\nabla\breve{\nu}_{N}\right)
+%TCIMACRO{\FRAME{itbpF}{2.5854in}{0.3005in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.5854in;  height 0.3005in;  depth 0in;  original-width 2.6549in;
+%original-height 0.2834in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7U661T.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.283400in,
+natwidth=2.654900in,
+height=0.3005in,
+width=2.5854in
+]%
+{HA7U661T.wmf}%
+}%
+%EndExpansion
+$
+
+$-\left(  \breve{\nu}_{N}^{2}\nabla\breve{\omega}_{N}-i\breve{\nu}_{N}%
+\nabla\breve{\nu}_{N}\right)  \bullet\nabla+%
+%TCIMACRO{\FRAME{itbpF}{2.4483in}{0.3005in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.4483in;  height 0.3005in;  depth 0in;  original-width 2.5123in;
+%original-height 0.2834in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7U6P1U.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.283400in,
+natwidth=2.512300in,
+height=0.3005in,
+width=2.4483in
+]%
+{HA7U6P1U.wmf}%
+}%
+%EndExpansion
+$
+
+$\left(  \breve{\nu}_{N}\nabla\breve{\omega}_{N}-i\nabla\breve{\nu}%
+_{N}\right)  \bullet\mathbb{I}\bullet\left(  \breve{\nu}_{N}\nabla
+\breve{\omega}_{N}-i\nabla\breve{\nu}_{N}\right)
+%TCIMACRO{\FRAME{itbpF}{3.5898in}{0.2752in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.5898in;  height 0.2752in;  depth 0in;  original-width 3.6972in;
+%original-height 0.2581in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7U701V.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.258100in,
+natwidth=3.697200in,
+height=0.2752in,
+width=3.5898in
+]%
+{HA7U701V.wmf}%
+}%
+%EndExpansion
+$
+
+$H\left(  \nu,\omega\right)  =H_{0}+K\left(  \nu,\omega\right)  +\left(
+\breve{\nu}_{N}\right)  ^{2}V%
+%TCIMACRO{\FRAME{itbpF}{3.3898in}{0.3138in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.3898in;  height 0.3138in;  depth 0in;  original-width 3.2088in;
+%original-height 0.2731in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7VHC23.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.273100in,
+natwidth=3.208800in,
+height=0.3138in,
+width=3.3898in
+]%
+{HA7VHC23.wmf}%
+}%
+%EndExpansion
+$
+
+$\varphi_{1}\cdots\varphi_{N}=\frac{\left\langle \varphi_{1}\cdots\varphi
+_{N}|H\left(  \nu,\omega\right)  \varphi_{1}\cdots\varphi_{N}\right\rangle
+}{\left\langle \varphi_{1}\cdots\varphi_{N}|\left(  \breve{\nu}_{N}\right)
+^{2}\varphi_{1}\cdots\varphi_{N}\right\rangle }%
+%TCIMACRO{\FRAME{itbpF}{2.1162in}{0.4998in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 2.1162in;  height 0.4998in;  depth 0in;  original-width 1.9933in;
+%original-height 0.4508in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7VMQ26.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.450800in,
+natwidth=1.993300in,
+height=0.4998in,
+width=2.1162in
+]%
+{HA7VMQ26.wmf}%
+}%
+%EndExpansion
+$
+
+$\left\langle \mathsf{z}^{N}|\varphi_{1}\cdots\varphi_{N}\right\rangle
+%TCIMACRO{\FRAME{itbpF}{1.291in}{0.3138in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.291in;  height 0.3138in;  depth 0in;  original-width 1.2047in;
+%original-height 0.2731in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7VQ427.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.273100in,
+natwidth=1.204700in,
+height=0.3138in,
+width=1.291in
+]%
+{HA7VQ427.wmf}%
+}%
+%EndExpansion
+$
+
+$\breve{T}\left(  \nu,\omega\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq m\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq m\leq N}}
+%EndExpansion
+\,%
+%TCIMACRO{\dsum \limits_{\left\{  n_{1},\ldots,n_{m}\right\}  }}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\left\{  n_{1},\ldots,n_{m}\right\}  }}
+%EndExpansion
+c_{n_{1}\ldots n_{m}}\breve{T}_{n_{1}}\left(  \nu_{n_{1}},\omega_{n_{1}%
+}\right)  \wedge\cdots\wedge\breve{T}_{n_{m}}\left(  \nu_{n_{m}},\omega
+_{n_{m}}\right)  $
+
+$\breve{T}_{n_{j}}\left(  \nu_{n_{j}},\omega_{n_{j}}\right)
+%TCIMACRO{\FRAME{itbpF}{1.2669in}{0.3396in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 1.2669in;  height 0.3396in;  depth 0in;  original-width 1.1822in;
+%original-height 0.2964in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA90BF03.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.296400in,
+natwidth=1.182200in,
+height=0.3396in,
+width=1.2669in
+]%
+{HA90BF03.wmf}%
+}%
+%EndExpansion
+$
+
+$%
+%TCIMACRO{\FRAME{itbpF}{6.6384in}{0.6368in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 6.6384in;  height 0.6368in;  depth 0in;  original-width 6.3105in;
+%original-height 0.5811in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA7WSC28.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.581100in,
+natwidth=6.310500in,
+height=0.6368in,
+width=6.6384in
+]%
+{HA7WSC28.wmf}%
+}%
+%EndExpansion
+$
+
+$=\sum\limits_{\sigma\in S_{N}}T_{n_{1}}\left(  \mathsf{z}_{\sigma\left(
+1\right)  },\ldots,\mathsf{z}_{\sigma\left(  n_{1}\right)  }\right)  \cdots
+T_{n_{m}}\left(  \mathsf{z}_{\sigma\left(  N-n_{m}+1\right)  },\ldots
+,\mathsf{z}_{\sigma\left(  N\right)  }\right)  $
+
+$%
+%TCIMACRO{\FRAME{itbpF}{5.3574in}{0.5247in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 5.3574in;  height 0.5247in;  depth 0in;  original-width 5.0892in;
+%original-height 0.4741in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA89C729.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.474100in,
+natwidth=5.089200in,
+height=0.5247in,
+width=5.3574in
+]%
+{HA89C729.wmf}%
+}%
+%EndExpansion
+$
+
+$=\sum\limits_{\sigma\in S_{N}}\nu_{n_{1}}\left(  \mathsf{z}_{\sigma\left(
+1\right)  },\ldots,\mathsf{z}_{\sigma\left(  n_{1}\right)  }\right)  \cdots
+\nu_{n_{m}}\left(  \mathsf{z}_{\sigma\left(  N-n_{m}+1\right)  }%
+,\ldots,\mathsf{z}_{\sigma\left(  N\right)  }\right)  e^{i\omega_{n_{1}%
+}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\ldots,\mathsf{z}%
+_{\sigma\left(  n_{1}\right)  }\right)  }\cdots e^{i\omega_{n_{m}}\left(
+\mathsf{z}_{\sigma\left(  N-n_{m}+1\right)  },\ldots,\mathsf{z}_{\sigma\left(
+N\right)  }\right)  }$
+
+$=\sum\limits_{\sigma\in S_{N}}\nu_{n_{1}}\left(  \mathsf{z}_{\sigma\left(
+1\right)  },\ldots,\mathsf{z}_{\sigma\left(  n_{1}\right)  }\right)  \cdots
+\nu_{n_{m}}\left(  \mathsf{z}_{\sigma\left(  N-n_{m}+1\right)  }%
+,\ldots,\mathsf{z}_{\sigma\left(  N\right)  }\right)  $
+
+$\qquad\qquad\times e^{i\left\{  \omega_{n_{1}}\left(  \mathsf{z}%
+_{\sigma\left(  1\right)  },\ldots,\mathsf{z}_{\sigma\left(  n_{1}\right)
+}\right)  +\cdots+\omega_{n_{m}}\left(  \mathsf{z}_{\sigma\left(
+N-n_{m}+1\right)  },\ldots,\mathsf{z}_{\sigma\left(  N\right)  }\right)
+\right\}  }$%
+
+%TCIMACRO{\FRAME{ftbpF}{5.7052in}{0.8975in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 5.7052in;  height 0.8975in;  depth 0in;  original-width 5.4205in;
+%original-height 0.8302in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA90HH04.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.830200in,
+natwidth=5.420500in,
+height=0.8975in,
+width=5.7052in
+]%
+{HA90HH04.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+
+
+
+
+$S_{N}$ is the symmetric group of order $N%
+%TCIMACRO{\FRAME{itbpF}{3.643in}{0.3014in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.643in;  height 0.3014in;  depth 0in;  original-width 3.452in;
+%original-height 0.2607in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA908702.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+{\includegraphics[
+natheight=0.260700in,
+natwidth=3.452000in,
+height=0.3014in,
+width=3.643in
+]%
+{HA908702.wmf}%
+}%
+%EndExpansion
+$%
+
+\begin{align}
+\nu &  =\nu\left(  \nu_{n_{1}},\ldots,\nu_{n_{m}},\omega_{n_{1}},\ldots
+,\omega_{n_{m}}\right)  \nonumber\\
+\omega &  =\omega\left(  \nu_{n_{1}},\ldots,\nu_{n_{m}},\omega_{n_{1}}%
+,\ldots,\omega_{n_{m}}\right)
+\end{align}
+
+
+\quad which shows that the 
+
+$N$ -particle integral kernels 
+
+
+
+$\qquad\qquad\nu,\omega$ 
+
+
+
+\qquad are each functions of 
+
+
+
+$\left\{  \nu_{n_{1}},\ldots,\nu_{n_{m}},\omega_{n_{1}},\ldots,\omega_{n_{m}%
+}\right\}  $
+
+
+
+for allowable partitions 
+
+
+
+$\qquad\left\{  n_{1},\cdots,n_{m}\right\}  $%
+
+%TCIMACRO{\FRAME{ftbpF}{3.1075in}{3.3059in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.1075in;  height 3.3059in;  depth 0in;  original-width 2.9398in;
+%original-height 3.1291in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA912007.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=3.129100in,
+natwidth=2.939800in,
+height=3.3059in,
+width=3.1075in
+]%
+{HA912007.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+
+
+$\breve{T}_{1}\wedge\cdots\wedge\breve{T}_{\frac{N}{2}}\left\vert \varphi
+_{1}\cdots\varphi_{N}\right\rangle =$
+
+$\bigskip%
+%TCIMACRO{\dsum \limits_{\sigma\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma\in\mathcal{S}_{N}}}
+%EndExpansion
+\left\vert \breve{T}_{1}\left(  \varphi_{\sigma\left(  1\right)  }%
+\varphi_{\sigma\left(  2\right)  }\right)  \cdots\breve{T}_{\frac{N}{2}%
+}\left(  \varphi_{\sigma\left(  N-1\right)  }\varphi_{\sigma\left(  N\right)
+}\right)  \right\rangle $
+
+integral kernels of $\breve{T}_{1}\wedge\cdots\wedge\breve{T}_{\frac{N}{2}}$
+are%
+%TCIMACRO{\FRAME{ftbpF}{3.5948in}{0.4135in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 3.5948in;  height 0.4135in;  depth 0in;  original-width 3.4047in;
+%original-height 0.3678in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA91FB08.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.367800in,
+natwidth=3.404700in,
+height=0.4135in,
+width=3.5948in
+]%
+{HA91FB08.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$\sum_{\sigma\in\mathcal{S}_{N}}\nu_{1}\left(  \mathsf{z}_{\sigma\left(
+1\right)  },\mathsf{z}_{\sigma\left(  2\right)  }\right)  \cdots\nu_{\frac
+{N}{2}}\left(  \mathsf{z}_{\sigma\left(  N-1\right)  },\mathsf{z}%
+_{\sigma\left(  2N\right)  }\right)  $
+
+$\qquad\qquad\times e^{i\left\{  \omega_{1}\left(  \mathsf{z}_{\sigma\left(
+1\right)  },\mathsf{z}_{\sigma\left(  2\right)  }\right)  +\cdots
++\omega_{\frac{N}{2}}\left(  \mathsf{z}_{\sigma\left(  N-1\right)
+,}\mathsf{z}_{\sigma\left(  N\right)  }\right)  \right\}  }$%
+
+%TCIMACRO{\FRAME{ftbpF}{4.8302in}{0.9099in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.8302in;  height 0.9099in;  depth 0in;  original-width 4.5845in;
+%original-height 0.8418in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA91IQ09.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.841800in,
+natwidth=4.584500in,
+height=0.9099in,
+width=4.8302in
+]%
+{HA91IQ09.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+$E\left(  \nu_{1},\ldots,\nu_{\frac{N}{2}},\omega_{1},\ldots,\omega_{\frac
+{N}{2}}\right)  =\frac{\mathcal{E}\left(  \nu_{1},\ldots,\nu_{\frac{N}{2}%
+},\omega_{1},\ldots,\omega_{\frac{N}{2}}\right)  }{\mathcal{S}\left(  \nu
+_{1},\ldots,\nu_{\frac{N}{2}},\omega_{1},\ldots,\omega_{\frac{N}{2}}\right)
+}$%
+
+%TCIMACRO{\FRAME{ftbpF}{4.9223in}{0.9348in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.9223in;  height 0.9348in;  depth 0in;  original-width 4.6733in;
+%original-height 0.8659in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA91QT0A.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.865900in,
+natwidth=4.673300in,
+height=0.9348in,
+width=4.9223in
+]%
+{HA91QT0A.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+
+Normalization $\mathcal{S}\left(  \nu_{1},\ldots,\nu_{\frac{N}{2}},\omega
+_{1},\ldots,\omega_{\frac{N}{2}}\right)  $:%
+%TCIMACRO{\FRAME{ftbpF}{4.2133in}{0.4757in}{0in}{}{}{Figure}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "T";
+%width 4.2133in;  height 0.4757in;  depth 0in;  original-width 3.9958in;
+%original-height 0.4276in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  tempfilename 'HA91TE0B.wmf';tempfile-properties "XPR";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+natheight=0.427600in,
+natwidth=3.995800in,
+height=0.4757in,
+width=4.2133in
+]%
+{HA91TE0B.wmf}%
+\end{center}
+\end{figure}
+%EndExpansion%
+\begin{align}
+S\left(  \nu,\omega\right)   &  =\int\left\{
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+T_{1}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\mathsf{z}_{\sigma\left(
+2\right)  }\right)  ^{\ast}\cdots T_{\frac{N}{2}}\left(  \mathsf{z}%
+_{\sigma\left(  N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)  }\right)
+^{\ast}\right.  \nonumber\\
+&  \left.  T_{1}\left(  \mathsf{z}_{\sigma^{\prime}\left(  1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2\right)  }\right)  \cdots T_{\frac{N}%
+{2}}\left(  \mathsf{z}_{\sigma^{\prime}\left(  N-1\right)  ,}\mathsf{z}%
+_{\sigma^{\prime}\left(  N\right)  }\right)  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert \right\}
+d\mathsf{z}^{N}%
+\end{align}
+
+
+
+
+
+\end{document}

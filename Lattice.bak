@@ -1,0 +1,290 @@
+
+\documentclass{conm-p-l}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Thursday, February 25, 2021 13:05:24}
+%TCIDATA{LastRevised=Friday, February 26, 2021 08:44:02}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Author Packages for AMS\Contemporary Mathematics (Proceedings)">}
+%TCIDATA{CSTFile=conm-p-l.cst}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\theoremstyle{plain}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{exercise}{Exercise}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\copyrightinfo{2001}{enter name of copyright holder}
+
+\input{tcilatex}
+
+\begin{document}
+\title[Short Title]{Contemporary Mathematics (Proceedings)}
+\author{Author One}
+\address[A. One and A. Two]{Author OneTwo address line 1\\
+Author OneTwo address line 2}
+\email[A. One]{aone@aoneinst.edu}
+\urladdr{http://www.authorone.oneuniv.edu}
+\thanks{Thanks for Author One.}
+\author{Author Two}
+\curraddr[A. Two]{Author Two current address line 1\\
+Author Two current address line 2}
+\email[A.~Two]{atwo@atwoinst.edu}
+\urladdr{http://www.authortwo.twouniv.edu}
+\thanks{Thanks for Author Two.}
+\author{Author Three}
+\address[A. Three]{Author Three address line 1\\
+Author Three address line 2}
+\urladdr{http://www.authorthree.threeuniv.edu}
+\thanks{This paper is in final form and no version of it will be submitted
+for publication elsewhere.}
+\subjclass[2000]{Primary 05C38, 15A15; Secondary 05A15, 15A18}
+\date{July 27, 2001}
+\keywords{Keyword one, keyword two, keyword three}
+\dedicatory{Dedicated to the memory of S. Bach.}
+
+\begin{abstract}
+Replace this text with your own abstract.
+\end{abstract}
+
+\maketitle
+
+\section{Lattices as partially ordered sets}
+
+If $\left\{ L,\leq \right\} $ is a partially ordered set \emph{(poset)}, and 
+$S\subseteq L$ is an arbitrary subset, then an element $u\in L$ is said to
+be an \emph{upper bound} of $S$ if 
+\begin{equation}
+s\leq u\text{ for each }s\in S.
+\end{equation}
+\emph{A set may have many upper bounds, or none at all}. An upper bound $u$
+of $S$ is said to be its \emph{least upper bound}, or \emph{join}, or \emph{%
+supremum}, if $u\leq x$ for each upper bound $x$ of $S$. \emph{A set need
+not have a least upper bound}, but it cannot have more than one. Dually, $%
+l\in L$ is said to be a lower bound of $S$ if $l\leq s$ for each $s\in S$. A
+lower bound $l$ of $S$ is said to be its \emph{greatest lower bound}, or 
+\emph{meet}, or \emph{infimum}, if$x$ $\leq l$ for each lower bound $x$ of $S
+$. \emph{A set may have many lower bounds, or none at all}, but can have at
+most one greatest lower bound.
+
+A partially ordered set $(L,\leq )$ is called a \emph{join-semilattic}e if
+each two-element subset $\{a,b\}\subseteq L$ has a join (i.e. least upper
+bound), and is called a\emph{\ meet-semilattice} if each two-element subset
+has a meet (i.e. greatest lower bound), denoted by $a\vee b$ and $a\wedge b$
+respectively. $\left\{ L,\leq \right\} $ is called a \emph{lattice} if it is 
+\emph{both a join- and a meet-semilattice.} This definition makes $\vee $
+and $\wedge $ binary operations. Both operations are monotone with respect
+to the given order:%
+\begin{equation}
+a1\leq a2\quad \&\quad b1\leq b2\Rightarrow a1\vee b1\leq a2\vee b2\quad
+\&\quad a1\wedge b1\leq a2\wedge b2.
+\end{equation}
+It follows by an induction argument that every non-empty finite subset of a
+lattice has a \emph{least upper bound} and a \emph{greatest lower bound}. 
+
+A \emph{bounded lattice} is a lattice that \emph{additionally} has a \emph{%
+greatest element (also called maximum, or top) element}, and denoted by $1$,
+or by $\U{22a4} $  and a \emph{least element (also called minimum, or
+bottom),} denoted by $0$ or by $\perp $, which satisfy%
+\begin{equation}
+0\leq x\leq 1\forall x\in L.
+\end{equation}
+
+Every lattice can be embedded into a bounded lattice by adding an artificial
+greatest and least element, and every non-empty finite lattice is bounded,
+by taking the join (respectively, meet) of all elements, denoted by%
+\begin{equation}
+\U{22c1} L=a_{1}\vee \cdots \vee a_{n}
+\end{equation}%
+and 
+\begin{equation}
+\U{22c0} L=a_{1}\wedge \cdots \wedge a_{n}.
+\end{equation}
+where%
+\begin{equation}
+L=\{a_{1},\ldots \ ,a_{n}\}.
+\end{equation}
+
+A partially ordered set is a bounded lattice if and only if every finite set
+of elements (including the empty set) has a join and a meet. For every
+element $x$ of a poset it is trivially true that%
+\begin{eqnarray}
+\forall a &\in &\emptyset :x\leq a \\
+\forall a &\in &\emptyset :x\geq a
+\end{eqnarray}
+therefore every element of a poset is both an upper bound and a lower bound
+of the empty set. This implies that the join of an empty set is the least
+element 
+\begin{equation}
+\U{22c1} \emptyset =0
+\end{equation}
+and the meet of the empty set is the greatest element 
+\begin{equation}
+\U{22c0} \emptyset =1
+\end{equation}%
+This is consistent with the associativity and commutativity of meet and
+join: the join of a union of finite sets is equal to the join of the joins
+of the sets, and dually, the meet of a union of finite sets is equal to the
+meet of the meets of the sets, i.e., for finite subsets $A$ and $B$ of a
+poset $L$,
+
+\begin{equation}
+\U{22c1} (A\cup B)=(\U{22c1} A)\vee (\U{22c1} B)
+\end{equation}
+
+and
+
+\begin{equation}
+\U{22c0} (A\cup B)=(\U{22c0} A)\wedge (\U{22c0} B)
+\end{equation}
+
+hold. Taking $B$ to be the empty set,%
+\begin{equation}
+\U{22c1} (A\cup \emptyset )=(\U{22c1} A)\vee (\U{22c1} \emptyset )=(\U{22c1}
+A)\vee 0=\U{22c1} A
+\end{equation}
+
+and%
+\begin{equation}
+\U{22c0} (A\cup \emptyset )=(\U{22c0} A)\wedge (\U{22c0} \emptyset )=(%
+\U{22c0} A)\wedge 1=\U{22c0} A,
+\end{equation}
+
+which is consistent with the fact that 
+\begin{equation}
+A\cup \emptyset =A.
+\end{equation}
+
+A lattice element $y$ is said to cover another element $x$, if $y>x$, but
+there does not exist a $z$ such that $y>z>x$. Here, $y>x$ means $x\leq y$
+and $x\neq y.$
+
+A lattice $\left\{ L,\leq \right\} $ is called \emph{graded}, sometimes 
+\emph{ranked}, if it can be equipped with a rank function $r$ from $L$ to $%
+%TCIMACRO{\U{2115} }%
+%BeginExpansion
+\mathbb{N}
+%EndExpansion
+$, sometimes to $%
+%TCIMACRO{\U{2124} }%
+%BeginExpansion
+\mathbb{Z}
+%EndExpansion
+$, compatible with the ordering (so $r(x)<r(y)$ whenever $x<y$) such that
+whenever $y$ covers $x$, then $r(y)=r(x)+1$. The value of the rank function
+for a lattice element is called its \emph{rank}.
+
+Given a subset of a lattice, $H\subseteq L$, meet and join restrict to
+partial functions -- they are undefined if their value is not in the subset $%
+H$. The resulting structure on $H$is called a \emph{partial lattice}. In
+addition to this extrinsic definition as a subset of some other algebraic
+structure (a lattice), a partial lattice can also be\emph{\ intrinsically
+defined} as a set with two partial binary operations satisfying certain
+axioms.
+
+\section{Lattices as algebraic structures}
+
+\subsection{General lattice}
+
+An algebraic structure $\left\{ L,\vee ,\wedge \right\} $, consisting of a
+set $L$  and two binary, commutative and associative operations $\vee $  ,
+and $\wedge $ $L$ is a \emph{lattice} if the following axiomatic identities
+hold for all elements $a,b\in L$, sometimes called absorption laws.
+
+\begin{enumerate}
+\item $a\vee (a\wedge b)=a$ 
+
+\item $a\wedge (a\vee b)=a$ 
+
+The following two identities are also usually regarded as axioms, even
+though they follow from the two absorption laws taken together. Those are
+called idempotent laws.
+
+\item $a\vee a=a$
+
+\item $a\wedge a=a$
+\end{enumerate}
+
+These axioms assert that both $\left\{ L,\vee \right\} $ and $\left\{
+(L,\wedge )\right\} $ are semilattices. The absorption laws, the only axioms
+above in which both meet and join appear, distinguish a lattice from an
+arbitrary pair of semilattice structures and assure that the two
+semilattices interact appropriately. In particular, each semilattice is the
+dual of the other.
+
+\subsubsection{Bounded lattice}
+
+A bounded lattice is an algebraic structure of the form $\left\{ (L,\vee
+,\wedge ,0,1)\right\} $ such that $\left\{ (L,\vee ,\wedge )\right\} $is a
+lattice, $0$ (the lattice's bottom) is the identity element for the join
+operation  , and $1$ (the lattice's top) is the identity element for the
+meet operation $\wedge $
+
+\begin{enumerate}
+\item $a\vee 0=a$
+
+\item $a\wedge 1=a$
+\end{enumerate}
+
+\subsubsection{Connection between the two definitions}
+
+An order-theoretic lattice gives rise to the two binary operations $\vee $
+and $\wedge $. Since the commutative, associative and absorption laws can
+easily be verified for these operations, they make $\left\{ L,\vee ,\wedge
+\right\} $ into a lattice in the algebraic sense.
+
+The converse is also true. Given an algebraically defined lattice$\left\{
+L,\vee ,\wedge \right\} $, one can define a partial order$\leq $ on $L$ by
+setting
+
+\begin{equation}
+a\leq bifa=a\wedge b,
+\end{equation}
+or%
+\begin{equation}
+a\leq bifb=a\vee b
+\end{equation}
+
+for all elements $\forall a,b\in L$. The laws of absorption ensure that both
+definitions are equivalent:
+
+\begin{equation}
+a=a\wedge b\Rightarrow b=b\vee (b\wedge a)=(a\wedge b)\vee b=a\vee b
+\end{equation}
+
+and dually for the other direction.
+
+One can now check that the relation $\leq $ introduced in this way defines a
+partial ordering within which binary meets and joins are given through the
+original operations $\vee $ and $\wedge $.
+
+Since the two definitions of a lattice are equivalent, one may freely invoke
+aspects of either definition in any way that suits the purpose at hand. 
+
+\end{document}

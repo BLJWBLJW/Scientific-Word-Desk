@@ -1,0 +1,639 @@
+
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mitpress}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, November 25, 2011 14:25:16}
+%TCIDATA{LastRevised=Monday, March 05, 2012 11:37:03}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\A Simple MIT Press Article">}
+%TCIDATA{CSTFile=LaTeX Article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newdimen\dummy
+\dummy=\oddsidemargin
+\addtolength{\dummy}{72pt}
+\marginparwidth=.5\dummy
+\marginparsep=.1\dummy
+\input{tcilatex}
+\begin{document}
+
+\title{The Title of A Simple MIT Press Style}
+\author{A. U. Thor \\
+%EndAName
+At this Address}
+\maketitle
+
+\begin{abstract}
+Replace this text with the text of your own abstract.
+\end{abstract}
+
+\section{Two Particle Operator Idempotency}
+
+Idempotency of a two particle operator leads to 
+\begin{eqnarray*}
+&&\Gamma \left( \hat{\lambda}_{2}\right) ^{2}-\Gamma \left( \hat{\lambda}%
+_{2}\right) =\left( \sum_{1\leq N\leq r}\Gamma _{N}\left( \hat{\lambda}%
+_{2}\right) \right) ^{2}-\Gamma \left( \hat{\lambda}_{2}\right) \\
+&=&\left( \sum_{2\leq N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \hat{\lambda}%
+_{2}\right) \right) ^{2}-\sum_{2\leq N\leq r}\binom{N}{2}\Gamma
+_{2}^{N}\left( \hat{\lambda}_{2}\right) \\
+&=&\sum_{2\leq N\leq r}\binom{N}{2}\Gamma _{2}^{N}\left( \hat{\lambda}%
+_{2}\right) \left( \binom{N}{2}\Gamma _{2}^{N}\left( \hat{\lambda}%
+_{2}\right) -P_{\mathcal{H}^{N}}\right) \\
+&=&\quad \Gamma _{2}^{2}\left( \hat{\lambda}_{2}\right) ^{2}+9\Gamma
+_{2}^{3}\left( \hat{\lambda}_{2}\right) ^{2}+36\Gamma _{2}^{4}\left( \hat{%
+\lambda}_{2}\right) ^{2}+\cdots +\binom{r}{2}^{2}\Gamma _{2}^{r}\left( \hat{%
+\lambda}_{2}\right) ^{2} \\
+&&-\left( \Gamma _{2}^{2}\left( \hat{\lambda}_{2}\right) +3\Gamma
+_{2}^{3}\left( \hat{\lambda}_{2}\right) +6\Gamma _{2}^{4}\left( \hat{\lambda}%
+_{2}\right) +\cdots +\binom{r}{2}\Gamma _{2}^{r}\left( \hat{\lambda}%
+_{2}\right) \right) =0
+\end{eqnarray*}
+
+\subsection{The two particle condition}
+
+is 
+\begin{equation*}
+\hat{\lambda}_{2}^{2}-\hat{\lambda}_{2},
+\end{equation*}%
+which shows that $\hat{\lambda}_{2}$ is a projector, thus 
+\begin{equation*}
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}=1\text{ or }0.
+\end{equation*}%
+This does not have to be wrt a decomposable basis. 
+
+\subsection{The three particle}
+
+expansion for a diagonal decomposable gives 
+\begin{eqnarray*}
+&&\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) =\hat{\lambda}_{2}\wedge P_{%
+\mathcal{H}^{1}}=\sum_{\substack{ 1\leq j_{1}<j_{2}\leq 4 \\ 1\leq j_{3}\leq
+4}}\lambda _{2j_{1}j_{2}j_{1}j_{2}}\left\vert \varphi _{j_{1}}\varphi
+_{j_{2}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\right\vert \wedge \left\vert \varphi _{j_{3}}\right\rangle
+\left\langle \varphi _{j_{3}}\right\vert  \\
+&=&\sum_{1\leq j_{1},j_{2},j_{3}\leq 4}\lambda
+_{2j_{1}j_{2}j_{1}j_{2}}\left\vert \varphi _{j_{1}}\wedge \varphi
+_{j_{2}}\wedge \varphi _{j_{3}}\right\rangle \left\langle \varphi
+_{j_{1}}\wedge \varphi _{j_{2}}\wedge \varphi _{j_{3}}\right\vert  \\
+&=&\frac{1}{6}\sum_{1\leq j_{1},j_{2},j_{3}\leq 4}\lambda
+_{2j_{1}j_{2}j_{1}j_{2}}\left\vert \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\right\rangle \left\langle \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\right\vert  \\
+&=&\frac{1}{3}\sum_{1\leq j_{1}<j_{2}<j_{3}\leq 4}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) \left\vert \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\vert 
+\end{eqnarray*}%
+$\lceil $ Note 
+\begin{eqnarray*}
+&&\left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\right\vert \wedge \left\vert \varphi _{3}\right\rangle
+\left\langle \varphi _{3}\right\vert =2\left\vert \varphi _{1}\wedge \varphi
+_{2}\right\rangle \left\langle \varphi _{1}\wedge \varphi _{2}\right\vert
+\wedge \left\vert \varphi _{3}\right\rangle \left\langle \varphi
+_{3}\right\vert  \\
+&=&2\left\vert \varphi _{1}\wedge \varphi _{2}\wedge \varphi
+_{3}\right\rangle \left\langle \varphi _{1}\wedge \varphi _{2}\wedge \varphi
+_{3}\right\vert =\frac{1}{3}\left\vert \varphi _{1}\varphi _{2}\varphi
+_{3}\right\rangle \left\langle \varphi _{1}\varphi _{2}\varphi
+_{3}\right\vert 
+\end{eqnarray*}%
+$\rfloor $
+
+$\lceil $In the case $r=4$ one has 
+\begin{align*}
+\hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}& =\frac{1}{6}\left\{ \lambda
+_{21212}\left( \left\vert \varphi _{1}\varphi _{2}\varphi _{3}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\varphi _{3}\right\vert +\left\vert
+\varphi _{1}\varphi _{2}\varphi _{4}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\varphi _{4}\right\vert \right) \right. \\
+& +\lambda _{21313}\left( \left\vert \varphi _{1}\varphi _{3}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{3}\varphi
+_{2}\right\vert +\left\vert \varphi _{1}\varphi _{3}\varphi
+_{4}\right\rangle \left\langle \varphi _{1}\varphi _{3}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{21414}\left( \left\vert \varphi _{1}\varphi _{4}\varphi
+_{3}\right\rangle \left\langle \varphi _{1}\varphi _{4}\varphi
+_{3}\right\vert +\left\vert \varphi _{1}\varphi _{4}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{4}\varphi
+_{2}\right\vert \right) \\
+& +\lambda _{22323}\left( \left\vert \varphi _{2}\varphi _{3}\varphi
+_{1}\right\rangle \left\langle \varphi _{2}\varphi _{3}\varphi
+_{1}\right\vert +\left\vert \varphi _{2}\varphi _{3}\varphi
+_{4}\right\rangle \left\langle \varphi _{2}\varphi _{3}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{22424}\left( \left\vert \varphi _{2}\varphi _{4}\varphi
+_{1}\right\rangle \left\langle \varphi _{2}\varphi _{4}\varphi
+_{1}\right\vert +\left\vert \varphi _{2}\varphi _{4}\varphi
+_{3}\right\rangle \left\langle \varphi _{2}\varphi _{4}\varphi
+_{3}\right\vert \right) \\
+& +\lambda _{23434}\left( \left\vert \varphi _{3}\varphi _{4}\varphi
+_{2}\right\rangle \left\langle \varphi _{3}\varphi _{4}\varphi
+_{2}\right\vert +\left\vert \varphi _{3}\varphi _{4}\varphi
+_{1}\right\rangle \left\langle \varphi _{3}\varphi _{4}\varphi
+_{1}\right\vert \right) \\
+& +\lambda _{22121}\left( \left\vert \varphi _{2}\varphi _{1}\varphi
+_{3}\right\rangle \left\langle \varphi _{2}\varphi _{1}\varphi
+_{3}\right\vert +\left\vert \varphi _{2}\varphi _{1}\varphi
+_{4}\right\rangle \left\langle \varphi _{2}\varphi _{1}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{23131}\left( \left\vert \varphi _{3}\varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{3}\varphi _{1}\varphi
+_{2}\right\vert +\left\vert \varphi _{3}\varphi _{1}\varphi
+_{4}\right\rangle \left\langle \varphi _{3}\varphi _{1}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{24141}\left( \left\vert \varphi _{4}\varphi _{1}\varphi
+_{3}\right\rangle \left\langle \varphi _{4}\varphi _{1}\varphi
+_{3}\right\vert +\left\vert \varphi _{4}\varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{4}\varphi _{1}\varphi
+_{2}\right\vert \right) \\
+& +\lambda _{23232}\left( \left\vert \varphi _{3}\varphi _{2}\varphi
+_{1}\right\rangle \left\langle \varphi _{3}\varphi _{2}\varphi
+_{1}\right\vert +\left\vert \varphi _{3}\varphi _{2}\varphi
+_{4}\right\rangle \left\langle \varphi _{3}\varphi _{2}\varphi
+_{4}\right\vert \right) \\
+& +\lambda _{24242}\left( \left\vert \varphi _{4}\varphi _{2}\varphi
+_{3}\right\rangle \left\langle \varphi _{4}\varphi _{2}\varphi
+_{3}\right\vert +\left\vert \varphi _{4}\varphi _{2}\varphi
+_{1}\right\rangle \left\langle \varphi _{4}\varphi _{2}\varphi
+_{1}\right\vert \right) \\
+& +\left. \lambda _{24343}\left( \left\vert \varphi _{4}\varphi _{3}\varphi
+_{1}\right\rangle \left\langle \varphi _{4}\varphi _{3}\varphi
+_{1}\right\vert +\left\vert \varphi _{4}\varphi _{3}\varphi
+_{2}\right\rangle \left\langle \varphi _{4}\varphi _{3}\varphi
+_{2}\right\vert \right) \right\}
+\end{align*}%
+giving%
+\begin{align*}
+& \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}=\frac{1}{3}\left\{ \left(
+\lambda _{21212}+\lambda _{21313}+\lambda _{22323}\right) \left\vert \varphi
+_{1}\varphi _{2}\varphi _{3}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\varphi _{3}\right\vert \right. \\
+& +\left( \lambda _{21212}+\lambda _{21414}+\lambda _{22424}\right)
+\left\vert \varphi _{1}\varphi _{2}\varphi _{4}\right\rangle \left\langle
+\varphi _{1}\varphi _{2}\varphi _{4}\right\vert +\left( \lambda
+_{21313}+\lambda _{21414}+\lambda _{23434}\right) \left\vert \varphi
+_{1}\varphi _{3}\varphi _{4}\right\rangle \left\langle \varphi _{1}\varphi
+_{3}\varphi _{4}\right\vert \\
+& +\left. \left( \lambda _{22323}+\lambda _{22424}+\lambda _{23434}\right)
+\left\vert \varphi _{2}\varphi _{3}\varphi _{4}\right\rangle \left\langle
+\varphi _{2}\varphi _{3}\varphi _{4}\right\vert \right\}
+\end{align*}%
+hence 
+\begin{align*}
+P_{\mathcal{H}^{2}}\wedge P_{\mathcal{H}^{1}}& =\left\vert \varphi
+_{1}\varphi _{2}\varphi _{3}\right\rangle \left\langle \varphi _{1}\varphi
+_{2}\varphi _{3}\right\vert +\left\vert \varphi _{1}\varphi _{2}\varphi
+_{4}\right\rangle \left\langle \varphi _{1}\varphi _{2}\varphi
+_{4}\right\vert \\
+& +\left\vert \varphi _{1}\varphi _{3}\varphi _{4}\right\rangle \left\langle
+\varphi _{1}\varphi _{3}\varphi _{4}\right\vert +\left\vert \varphi
+_{2}\varphi _{3}\varphi _{4}\right\rangle \left\langle \varphi _{2}\varphi
+_{3}\varphi _{4}\right\vert =P_{\mathcal{H}^{3}}
+\end{align*}%
+$\rfloor $
+
+and its square is 
+\begin{eqnarray*}
+&&\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) ^{2}=\Gamma _{2}^{3}\left( 
+\hat{\lambda}_{2}\right) \circ \Gamma _{2}^{3}\left( \hat{\lambda}%
+_{2}\right) =\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}\right) \circ
+\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{1}}\right) \\
+&=&\frac{1}{9}\sum_{1\leq j_{1}<j_{2}\leq r}\left\{ \left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}^{2}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}^{2}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}^{2}\right) \right. + \\
+&&+\left. 2\left( \lambda _{1j_{1}j_{2}j_{1}j_{2}}\lambda
+_{1j_{1}j_{3}j_{1}j_{3}}+\lambda _{1j_{1}j_{2}j_{1}j_{2}}\lambda
+_{1j_{2}j_{3}j_{2}j_{3}}+\lambda _{1j_{1}j_{3}j_{1}j_{3}}\lambda
+_{1j_{2}j_{3}j_{2}j_{3}}\right) \right\} \left\vert \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\vert \\
+&=&\frac{1}{9}\sum_{1\leq j_{1}<j_{2}<j_{3}\leq r}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) ^{2}\left\vert \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\varphi _{j_{3}}\right\vert .
+\end{eqnarray*}%
+$\rfloor $
+
+This gives the three particle conditions%
+\begin{eqnarray*}
+9\Gamma _{2}^{3}\left( \hat{\lambda}_{2}\right) ^{2} &=&3\Gamma
+_{2}^{3}\left( \hat{\lambda}_{2}\right) \\
+\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right) ^{2}-\left(
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}\right) &=&0,\,1\leq j_{1}<j_{2}<j_{3}\leq r
+\end{eqnarray*}%
+i.e. the matrix 
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) ^{2}=\mathfrak{S}_{3}\left( 
+\hat{\lambda}_{2}\right) ,
+\end{equation*}%
+where 
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}=\lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}},\,1\leq
+j_{1}<j_{2}<j_{3}\leq r.
+\end{equation*}%
+\emph{This condition shows that }$\hat{\lambda}_{2}$\emph{\ is a one
+dimensional projector }as it gives\emph{\ }%
+\begin{equation*}
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}=1,\,1\leq j_{1}<j_{2}<j_{3}\leq 4.
+\end{equation*}
+
+One can define 
+\begin{eqnarray*}
+C_{3}\left( \exp \hat{\lambda}_{2}\right) _{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}
+&=&\det_{j_{1}j_{2}j_{3}}\left\{ \exp \lambda _{2}\right\} =\exp \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}\exp \lambda _{2j_{1}j_{3}j_{1}j_{3}}\exp \lambda
+_{2j_{2}j_{3}j_{2}j_{3}} \\
+&=&\exp \left\{ \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}\right\} ;1\leq
+j_{1}<j_{2}<j_{3}\leq r
+\end{eqnarray*}%
+so that%
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}=\ln \left\{ C_{3}\left( \exp \hat{\lambda}%
+_{2}\right) \right\} _{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}};1\leq
+j_{1}<j_{2}<j_{3}\leq r
+\end{equation*}%
+and 
+\begin{equation*}
+\exp \left\{ \mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}}\right\} =C_{3}\left( \exp \hat{\lambda}%
+_{2}\right) _{j_{1}j_{2}j_{3}j_{1}j_{2}j_{3}};1\leq j_{1}<j_{2}<j_{3}\leq r.
+\end{equation*}%
+Thus 
+\begin{equation*}
+\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{3}\left(
+\exp \hat{\lambda}_{2}\right) \right\}
+\end{equation*}%
+and 
+\begin{equation*}
+\exp \left\{ \mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) \right\}
+=C_{3}\left( \exp \hat{\lambda}_{2}\right) \text{ if }C_{3}\left( \exp \hat{%
+\lambda}_{2}\right) \geq 0.
+\end{equation*}%
+Thus $\mathfrak{S}_{3}\left( \hat{\lambda}_{2}\right) $\ is like a cumulant,
+while the RHS\ is like a characteristic function.
+
+\subsection{The four particle}
+
+The expansion map gives 
+\begin{eqnarray*}
+&&\Gamma _{2}^{4}\left( \hat{\lambda}_{2}\right) =\hat{\lambda}_{2}\wedge P_{%
+\mathcal{H}^{2}}=\sum_{\substack{ 1\leq j_{1}<j_{2}\leq r  \\ 1\leq
+j_{3}<j_{4}\leq r}}\lambda _{2j_{1}j_{2}j_{1}j_{2}}\left\vert \varphi
+_{j_{1}}\varphi _{j_{2}}\right\rangle \left\langle \varphi _{j_{1}}\varphi
+_{j_{2}}\right\vert \wedge \left\vert \varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{3}}\varphi
+_{j_{4}}\right\vert \\
+&=&\frac{1}{6}\sum_{1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq r}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{1}j_{4}j_{1}j_{4}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}+\lambda
+_{2j_{2}j_{4}j_{2}j_{4}}+\lambda _{2j_{3}j_{4}j_{3}j_{4}}\right) \left\vert
+\varphi _{j_{1}}\varphi _{j_{2}}\varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\varphi _{j_{4}}\right\vert
+\end{eqnarray*}%
+and its square is 
+\begin{eqnarray*}
+&&\Gamma _{2}^{4}\left( \hat{\lambda}_{2}\right) ^{2}=\Gamma _{2}^{4}\left( 
+\hat{\lambda}_{2}\right) \circ \Gamma _{2}^{4}\left( \hat{\lambda}%
+_{2}\right) =\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{2}}\right) \circ
+\left( \hat{\lambda}_{2}\wedge P_{\mathcal{H}^{2}}\right) \\
+&=&\frac{1}{36}\sum_{1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq r}\left\{ \left(
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}^{2}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}^{2}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}^{2}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}^{2}\right) \right. \\
+&&+2\left( \lambda _{2j_{1}j_{1}}\lambda _{2j_{2}j_{2}}+\lambda
+_{2j_{1}j_{1}}\lambda _{2j_{3}j_{3}}+\lambda _{2j_{1}j_{1}}\lambda
+_{2j_{4}j_{4}}+\lambda _{2j_{2}j_{2}}\lambda _{2j_{3}j_{3}}+\lambda
+_{2j_{2}j_{2}}\lambda _{2j_{4}j_{4}}\right. + \\
+&&\left. \left. \lambda _{2j_{3}j_{3}}\lambda _{2j_{4}j_{4}}\right) \right\}
+\left\vert \varphi _{j_{1}}\varphi _{j_{2}}\varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\varphi _{j_{4}}\right\vert \\
+&=&\frac{1}{36}\sum_{1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq r}\left( \lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{1}j_{4}j_{1}j_{4}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}+\lambda
+_{2j_{2}j_{4}j_{2}j_{4}}+\lambda _{2j_{3}j_{4}j_{3}j_{4}}\right)
+^{2}\left\vert \varphi _{j_{1}}\varphi _{j_{2}}\varphi _{j_{3}}\varphi
+_{j_{4}}\right\rangle \left\langle \varphi _{j_{1}}\varphi _{j_{2}}\varphi
+_{j_{3}}\varphi _{j_{4}}\right\vert
+\end{eqnarray*}%
+This gives the four particle conditions%
+\begin{eqnarray*}
+&&\left\{ \frac{1}{6}\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{1}j_{4}j_{1}j_{4}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}+\lambda _{2j_{2}j_{4}j_{2}j_{4}}+\lambda
+_{2j_{3}j_{4}j_{3}j_{4}}\right) \right\} ^{2}- \\
+\frac{1}{6} &&\left( \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{1}j_{4}j_{1}j_{4}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}+\lambda _{2j_{2}j_{4}j_{2}j_{4}}+\lambda
+_{2j_{3}j_{4}j_{3}j_{4}}\right) =0,\,1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq r
+\end{eqnarray*}%
+i.e. the matrix 
+\begin{equation*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right) ^{2}=\mathfrak{S}_{4}\left( 
+\hat{\lambda}_{2}\right) ,
+\end{equation*}%
+where 
+\begin{equation*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}}=\lambda
+_{2j_{1}j_{2}j_{1}j_{2}}+\lambda _{2j_{1}j_{3}j_{1}j_{3}}+\lambda
+_{2j_{1}j_{4}j_{1}j_{4}}+\lambda _{2j_{2}j_{3}j_{2}j_{3}}+\lambda
+_{2j_{2}j_{4}j_{2}j_{4}}+\lambda _{2j_{3}j_{4}j_{3}j_{4}},\,1\leq
+j_{1}<j_{2}<j_{3}<j_{4}\leq r.
+\end{equation*}%
+\emph{This condition again shows that }$\hat{\lambda}_{2}$\emph{\ is a one
+dimensional projector}.
+
+This should be compared to the SQ formulation for diagonal decomposable
+operators 
+\begin{align}
+\left( \lambda _{2}\right) ^{2}-\lambda _{2}& =2\sum_{\substack{ 1\leq
+l_{1}<l_{2}<l_{3}<l_{4}\leq r}}\left\{ \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{3}l_{4}l_{3}l_{4}}+\lambda
+_{2l_{1}l_{3}l_{1}l_{3}}\lambda _{2l_{2}l_{4}l_{2}l_{4}}+\lambda
+_{2l_{1}l_{4}l_{1}l_{4}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}\right\}
+n_{l_{1}}n_{l_{2}}n_{l_{3}}n_{l_{4}}  \notag \\
+& +2\sum_{\substack{ 1\leq l_{1}<l_{2}<l_{3}\leq r}}\left\{ \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{1}l_{3}l_{1}l_{3}}+\lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}+\lambda
+_{2l_{1}l_{3}l_{1}l_{3}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}\right\}
+n_{l_{1}}n_{l_{2}}n_{l_{3}}  \notag \\
+& +\sum_{\substack{ 1\leq l_{1}<l_{2}\leq r}}\left\{ \left( \lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\right) ^{2}-\lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\right\} n_{l_{1}}n_{l_{2}}=0.  \notag
+\end{align}
+
+One can define 
+\begin{eqnarray*}
+C_{4}\left( \exp \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}}
+&=&\det_{j_{1}j_{2}j_{3}j_{4}}\left\{ \exp \lambda _{2}\right\} =\exp
+\lambda _{2j_{1}j_{2}j_{1}j_{2}}\exp \lambda _{2j_{1}j_{3}j_{1}j_{3}}\exp
+\lambda _{2j_{1}j_{4}j_{1}j_{4}}\exp \lambda _{2j_{2}j_{3}j_{2}j_{3}}\exp
+\lambda _{2j_{2}j_{4}j_{2}j_{4}}\exp \lambda _{2j_{3}j_{4}j_{3}j_{4}} \\
+&=&\exp \left\{ \lambda _{2j_{1}j_{2}j_{1}j_{2}}+\lambda
+_{2j_{1}j_{3}j_{1}j_{3}}+\lambda _{2j_{1}j_{4}j_{1}j_{4}}+\lambda
+_{2j_{2}j_{3}j_{2}j_{3}}+\lambda _{2j_{2}j_{4}j_{2}j_{4}}+\lambda
+_{2j_{3}j_{4}j_{3}j_{4}}\right\} ;1\leq j_{1}<j_{2}<j_{3}<j_{4}\leq r
+\end{eqnarray*}%
+so that%
+\begin{equation*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right)
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}}=\ln \left\{ C_{4}\left( \exp 
+\hat{\lambda}_{2}\right) \right\}
+_{j_{1}j_{2}j_{3}j_{4}j_{1}j_{2}j_{3}j_{4}};1\leq
+j_{1}<j_{2}<j_{3}<j_{4}\leq r.
+\end{equation*}%
+Thus 
+\begin{equation*}
+\mathfrak{S}_{4}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{4}\left(
+\exp \hat{\lambda}_{2}\right) \right\}
+\end{equation*}%
+and in general 
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{N}\left(
+\exp \hat{\lambda}_{2}\right) \right\} ,
+\end{equation*}%
+where 
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{1}\right) _{j_{1}j_{2}\cdots
+j_{N-1}j_{N}jj_{1}j_{2}\cdots j_{N-1}j_{N}}=\sum_{1\leq \kappa <\mu \leq
+N}\lambda _{2j_{\kappa }j_{\mu }j_{\kappa }j_{\mu }}.
+\end{equation*}%
+One also has%
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{2}\right) =\ln \left\{ C_{N}\left( 
+\hat{\lambda}_{2}\right) \right\}
+\end{equation*}%
+and the general condition 
+\begin{equation*}
+\mathfrak{S}_{N}\left( \hat{\lambda}_{2}\right) ^{2}=\mathfrak{S}_{N}\left( 
+\hat{\lambda}_{2}\right) .
+\end{equation*}
+
+\section{Proof of Rank 1 for General Case}
+
+In general if $\hat{\lambda}_{2}$ is a compact operator and a projector (two
+particle condition) then 
+\begin{equation}
+\hat{\lambda}_{2}=\sum_{1\leq j\leq \nu }\left\vert g_{j}\right\rangle
+\left\langle g_{j}\right\vert ,
+\end{equation}%
+where 
+\begin{equation}
+\left\langle \left. g_{j}\right\vert g_{k}\right\rangle =\delta _{jk}.
+\end{equation}%
+$\lceil $such geminals can be weakly orthogonal e.g. 
+\begin{equation}
+\left\langle \varphi _{1}\varphi _{2}\left\vert \varphi _{1}\varphi
+_{3}\right. \right\rangle =0
+\end{equation}%
+or strongly orthogonal e.g. 
+\begin{equation}
+\left\langle \varphi _{1}\varphi _{2}\left\vert \varphi _{3}\varphi
+_{4}\right. \right\rangle =0\rfloor
+\end{equation}%
+The wedge square of $\hat{\lambda}_{2}$ is 
+\begin{eqnarray}
+\hat{\lambda}_{2}\wedge \hat{\lambda}_{2} &=&\sum_{1\leq i,j\leq \nu
+}\left\vert g_{j}\wedge g_{k}\right\rangle \left\langle g_{j}\wedge
+g_{k}\right\vert  \notag \\
+&=&\sum_{1\leq j\leq \nu }\left\vert g_{j}^{2}\right\rangle \left\langle
+g_{j}^{2}\right\vert +2\sum_{1\leq j<k\leq \nu }\left\vert g_{j}\wedge
+g_{k}\right\rangle \left\langle g_{j}\wedge g_{k}\right\vert
+\end{eqnarray}%
+and if (four particle condition) 
+\begin{equation}
+\hat{\lambda}_{2}\wedge \hat{\lambda}_{2}=0
+\end{equation}%
+then 
+\begin{equation}
+\left\vert g_{j}^{2}\right\rangle \left\langle g_{j}^{2}\right\vert =0,1\leq
+j\leq \nu
+\end{equation}%
+and%
+\begin{equation}
+\left\vert g_{j}\wedge g_{k}\right\rangle \left\langle g_{j}\wedge
+g_{k}\right\vert =0,1\leq j<k\leq \nu .
+\end{equation}%
+This follows from the fact that $\hat{\lambda}_{2}\wedge \hat{\lambda}_{2}$
+is a sum of positive operators i.e.
+
+\begin{equation}
+\hat{\lambda}_{2}\wedge \hat{\lambda}_{2}=\sum_{\alpha }A_{\alpha }
+\end{equation}%
+and 
+\begin{eqnarray}
+\left\langle v\left\vert \sum_{\alpha }A_{\alpha }\right. v\right\rangle 
+&=&0\forall v \\
+&\Rightarrow &\left\langle v\left\vert A_{\alpha }\right. v\right\rangle
+=0\forall \alpha ,v,
+\end{eqnarray}%
+thus 
+\begin{equation}
+A_{\alpha }=0\forall \alpha 
+\end{equation}%
+\emph{even if }$A_{\alpha }$ are linearly dependent. Hence 
+\begin{equation}
+\left\vert g_{j}\wedge g_{k}\right\rangle =0,1\leq j\leq k\leq \nu .
+\end{equation}%
+and in particular 
+\begin{equation}
+\left\vert g_{j}^{2}\right\rangle =0,1\leq j\leq \nu .
+\end{equation}%
+Using the canonical expansion of $\left\vert g_{j}\right\rangle $ gives 
+\begin{gather}
+\sum_{1\leq l,m\leq r}c_{jl}c_{jm}\left\vert \varphi _{jl}\varphi
+_{jl+s}\varphi _{jm}\varphi _{jm+s}\right\rangle =\sum_{1\leq l,m\leq
+r}c_{jl}^{2}\left\vert \varphi _{jl}\varphi _{jl+s}\varphi _{jl}\varphi
+_{jl+s}\right\rangle +2\sum_{1\leq l<m\leq r}c_{jl}c_{jm}\left\vert \varphi
+_{jl}\varphi _{jl+s}\varphi _{jm}\varphi _{jm+s}\right\rangle =0  \notag \\
+\Downarrow   \notag \\
+\sum_{1\leq l<m\leq r}c_{jl}c_{jm}\left\vert \varphi _{jl}\varphi
+_{jl+s}\varphi _{jm}\varphi _{jm+s}\right\rangle =0
+\end{gather}%
+giving 
+\begin{equation}
+c_{jl}c_{jm}=0\text{ and/or }\left\vert \varphi _{jl}\varphi _{jl+s}\varphi
+_{jm}\varphi _{jm+s}\right\rangle =0;\quad \quad 1\leq l<m\leq \nu .
+\end{equation}%
+As $\left\{ \left. \left\vert \varphi _{jk}\right\rangle \right\vert 1\leq
+k\leq r\right\} $ are orthonormal sets and $\left\{ \varphi _{jl},\varphi
+_{jl+s}\right\} \bot \left\{ \varphi _{jm},\varphi _{jm+s}\right\} $ one has
+that 
+\begin{equation}
+\left\vert \varphi _{jl}\varphi _{jl+s}\varphi _{jm}\varphi
+_{jm+s}\right\rangle \neq 0,l\neq m
+\end{equation}%
+and the geminals must be of rank one i.e. 
+\begin{equation}
+c_{jm}=0;2\leq m\leq s.
+\end{equation}%
+and 
+\begin{equation}
+\left\vert g_{j}\right\rangle =\left\vert \varphi _{j1}\varphi
+_{j1+s}\right\rangle ,1\leq j\leq \nu .
+\end{equation}%
+This \emph{does not}, however, imply 
+\begin{equation}
+\left\vert g_{j}\right\rangle =0;\quad 2\leq j\leq \nu ,
+\end{equation}%
+consider 
+\begin{eqnarray}
+\hat{\lambda}_{2} &=&\left\vert \varphi _{1}\varphi _{2}\right\rangle
+\left\langle \varphi _{1}\varphi _{2}\right\vert +\left\vert \varphi
+_{1}\varphi _{3}\right\rangle \left\langle \varphi _{1}\varphi
+_{3}\right\vert ,  \notag \\
+\hat{\lambda}_{2} &=&\left( \hat{\lambda}_{2}\right) ^{2}  \notag \\
+\hat{\lambda}_{2}\wedge \hat{\lambda}_{2} &=&\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \wedge
+\left\vert \varphi _{1}\varphi _{2}\right\rangle \left\langle \varphi
+_{1}\varphi _{2}\right\vert +2\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert \wedge
+\left\vert \varphi _{1}\varphi _{3}\right\rangle \left\langle \varphi
+_{1}\varphi _{3}\right\vert   \notag \\
+&&+\left\vert \varphi _{1}\varphi _{3}\right\rangle \left\langle \varphi
+_{1}\varphi _{3}\right\vert \wedge \left\vert \varphi _{1}\varphi
+_{3}\right\rangle \left. =\right. 0  \notag \\
+\left\langle \varphi _{1}\varphi _{2}\left\vert \varphi _{1}\varphi
+_{3}\right. \right\rangle  &=&\frac{1}{2}\det \left( 
+\begin{array}{cc}
+\left\langle \varphi _{1}\left\vert \varphi _{1}\right. \right\rangle  & 
+\left\langle \varphi _{1}\left\vert \varphi _{3}\right. \right\rangle  \\ 
+\left\langle \varphi _{2}\left\vert \varphi _{1}\right. \right\rangle  & 
+\left\langle \varphi _{2}\left\vert \varphi _{3}\right. \right\rangle 
+\end{array}%
+\right) =0.
+\end{eqnarray}%
+The preceding does show that $\hat{\lambda}_{2}$ must be a decomposable
+diagonal operator (which implies $\lambda _{2}$ must also be decomposable
+diagonal) i.e. 
+\begin{equation}
+\hat{\lambda}_{2}=\sum_{1\leq j\leq \nu }\left\vert \varphi _{j1}\varphi
+_{j1+s}\right\rangle \left\langle \varphi _{j1}\varphi _{j1+s}\right\vert ,
+\end{equation}%
+where each of the decomposable products has one GSO\ in common, thus $\hat{%
+\lambda}_{2}$ \emph{must} be of the form 
+\begin{equation}
+\hat{\lambda}_{2}=\lambda _{1212}\left\vert \varphi _{1}\varphi
+_{2}\right\rangle \left\langle \varphi _{1}\varphi _{2}\right\vert +\lambda
+_{1313}\left\vert \varphi _{1}\varphi _{3}\right\rangle \left\langle \varphi
+_{1}\varphi _{3}\right\vert +\lambda _{2323}\left\vert \varphi _{2}\varphi
+_{3}\right\rangle \left\langle \varphi _{2}\varphi _{3}\right\vert ,
+\end{equation}%
+where 
+\begin{equation}
+\lambda _{jkjk}=\left\{ 
+\begin{array}{c}
+1 \\ 
+0%
+\end{array}%
+\right. ,1<j<k\leq 3.
+\end{equation}
+
+The three particle condition for decomposable diagonal $\lambda _{2}$ is 
+\begin{equation}
+\lambda _{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{1}l_{3}l_{1}l_{3}}+\lambda
+_{2l_{1}l_{2}l_{1}l_{2}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}+\lambda
+_{2l_{1}l_{3}l_{1}l_{3}}\lambda _{2l_{2}l_{3}l_{2}l_{3}}=0;1\leq
+l_{1}<l_{2}<l_{3}\leq r
+\end{equation}%
+which shows that 
+\begin{equation}
+\lambda _{21212}\lambda _{21313}+\lambda _{21212}\lambda _{22323}+\lambda
+_{21313}\lambda _{22323}=0.
+\end{equation}%
+The only solutions for this condition are 
+\begin{equation}
+\left\{ \left\{ \lambda _{21212},\lambda _{21313},\lambda _{22323}\right\}
+\right\} =\left\{ \left\{ 0,0,0\right\} ,\left\{ 1,0,0\right\} ,\left\{
+0,1,0\right\} ,\left\{ 0,0,1\right\} \right\} 
+\end{equation}%
+giving that $\hat{\lambda}_{2}$ must be of rank one i.e. 
+\begin{equation}
+\hat{\lambda}_{2}=\left\vert \varphi \psi \right\rangle \left\langle \varphi
+\psi \right\vert .
+\end{equation}
+
+\end{document}

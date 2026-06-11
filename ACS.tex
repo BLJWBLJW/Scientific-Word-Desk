@@ -1,0 +1,786 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{achemso}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{Created=Wednesday, November 03, 2004 11:56:22}
+%TCIDATA{LastRevised=Wednesday, November 03, 2004 11:57:00}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\American Chemical Society">}
+%TCIDATA{CSTFile=LaTeX Article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{\texttt{achemso}\\
+-- A BibTeX style for Chemistry Publications\thanks{%
+This document describes \textsf{achemso} v.1.0{} and was last updated on
+1998/06/01 .}}
+\author{Mats Dahlgren \\
+%EndAName
+(\texttt{matsd@homenet.se})}
+\date{1998/06/01}
+\maketitle
+
+\begin{abstract}
+The \textsf{achemso} package provides a BibTeX style in accordance with the
+requirements of the journals of The American Chemical Society. It consists
+of both a BibTeX style file and a LaTeX package file. Also provided, is a
+BibTeX style file to be used for bibliography data base listings via an
+option to the LaTeX package \textsf{achemso}. \newline
+Package: Copyright \copyright\ 1995-1998 by Mats Dahlgren. All rights
+reserved.
+\end{abstract}
+
+\section{About This Shell}
+
+This shell document provides a sample layout of an American Chemical Society
+article.
+
+The front matter has a number of sample entries that you should replace with
+your own. Replace this text with your own. You may delete all of the text in
+this document to start with a blank document.
+
+Further instructions and information about the typesetting specification
+used by this shell document can be found starting at Section \ref{achemsodoc}%
+, which is included in this shell document from the original documentation
+file included with the typesetting specification.
+
+Changes to the typeset format of this shell and its associated \LaTeX{}
+formatting file (\texttt{article.cls }and \texttt{achemso.sty}) are not
+supported by MacKichan Software, Inc. If you wish to make such changes,
+please consult the \LaTeX{} manuals or a local \LaTeX{} expert.
+
+If you modify this document and save it as ``American Chemical Society.shl''
+in the \texttt{Shells\TEXTsymbol{\backslash}Articles\TEXTsymbol{\backslash}SW%
+} directory, it will become your new American Chemical Society shell.
+
+The typesetting specification selected by this shell document uses the
+default class options. There are a number of class options supported by this
+typesetting specification. The available options include setting the paper
+size and the point size of the font used in the body of the document. Select 
+\textsf{Typeset, Options and Packages}, the \textsf{Class Options} tab and
+then click the \textsf{Modify} button to see the class options that are
+available for this typesetting specification.
+
+\section{Features of This Shell}
+
+\subsection{Subsection}
+
+Use the Section tag for major sections, and the Subsection tag for
+subsections.
+
+\subsubsection{Subsubsection}
+
+This is just some harmless text under a subsubsection.
+
+\paragraph{Subsubsubsection}
+
+This is just some harmless text under a subsubsubsection.
+
+\subparagraph{Subsubsubsubsection}
+
+This is just some harmless text under a subsubsubsubsection.
+
+\subsection{Tags}
+
+You can apply the logical markup tag \emph{Emphasized}.
+
+You can apply the visual markup tags \textbf{Bold}, \textit{Italics}, 
+\textrm{Roman}, \textsf{Sans Serif}, \textsl{Slanted}, \textsc{Small Caps},
+and \texttt{Typewriter}.
+
+You can apply the special, mathematics only, tags $\mathbb{BLACKBOARD}$ $%
+\mathbb{BOLD}$, $\mathcal{CALLIGRAPHIC}$, and $\mathfrak{fraktur}$. Note
+that blackboard bold and calligraphic are correct only when applied to
+uppercase letters A through Z.
+
+You can apply the size tags {\tiny tiny}, {\scriptsize scriptsize}, 
+{\footnotesize footnotesize}, {\small small}, {\normalsize normalsize}, 
+{\large large}, {\Large Large}, {\LARGE LARGE}, {\huge huge} and {\Huge Huge}%
+.
+
+\QTP{Body Math}
+This is a Body Math paragraph. Each time you press the Enter key, Scientific
+WorkPlace switches to mathematics mode. This is convenient for carrying out
+``scratchpad'' computations.
+
+Following is a group of paragraphs marked as Body Quote. This environment is
+appropriate for a short quotation or a sequence of short quotations.
+
+\begin{quote}
+The buck stops here. \emph{Harry Truman}
+
+Ask not what your country can do for you; ask what you can do for your
+country. \emph{John F Kennedy}
+
+I am not a crook. \emph{Richard Nixon}
+
+It's no exaggeration to say the undecideds could go one way or another. 
+\emph{George Bush}
+
+I did not have sexual relations with that woman, Miss Lewinsky. \emph{Bill
+Clinton}
+\end{quote}
+
+The Quotation tag is used for quotations of more than one paragraph.
+Following is the beginning of \emph{Alice's Adventures in Wonderland }by
+Lewis Carroll:
+
+\begin{quotation}
+Alice was beginning to get very tired of sitting by her sister on the bank,
+and of having nothing to do: once or twice she had peeped into the book her
+sister was reading, but it had no pictures or conversations in it, 'and what
+is the use of a book,' thought Alice 'without pictures or conversation?'
+
+So she was considering in her own mind (as well as she could, for the hot
+day made her feel very sleepy and stupid), whether the pleasure of making a
+daisy-chain would be worth the trouble of getting up and picking the
+daisies, when suddenly a White Rabbit with pink eyes ran close by her.
+
+There was nothing so very remarkable in that; nor did Alice think it so very
+much out of the way to hear the Rabbit say to itself, 'Oh dear! Oh dear! I
+shall be late!' (when she thought it over afterwards, it occurred to her
+that she ought to have wondered at this, but at the time it all seemed quite
+natural); but when the Rabbit actually took a watch out of its
+waistcoat-pocket, and looked at it, and then hurried on, Alice started to
+her feet, for it flashed across her mind that she had never before seen a
+rabbit with either a waistcoat-pocket, or a watch to take out of it, and
+burning with curiosity, she ran across the field after it, and fortunately
+was just in time to see it pop down a large rabbit-hole under the hedge.
+
+In another moment down went Alice after it, never once considering how in
+the world she was to get out again.
+\end{quotation}
+
+Use the Verbatim tag when you want \LaTeX{} to preserve spacing, perhaps
+when including a fragment from a program such as:
+\begin{verbatim}
+#include <iostream>        // < > is used for standard libraries.
+void main(void)            // "main" method always called first.
+{
+  cout << "Hello World.";  // Send to output stream.
+}
+\end{verbatim}
+
+\subsection{Mathematics and Text}
+
+Let $H$ be a Hilbert space, $C$ be a closed bounded convex subset of $H$, $T$
+a nonexpansive self map of $C$. Suppose that as $n\rightarrow \infty $, $%
+a_{n,k}\rightarrow 0$ for each $k$, and $\gamma _{n}=\sum_{k=0}^{\infty
+}\left( a_{n,k+1}-a_{n,k}\right) ^{+}\rightarrow 0$. Then for each $x$ in $C$%
+, $A_{n}x=\sum_{k=0}^{\infty }a_{n,k}T^{k}x$ converges weakly to a fixed
+point of $T$ .
+
+The numbered equation 
+\begin{equation}
+u_{tt}-\Delta u+u^{5}+u\left| u\right| ^{p-2}=0\text{ in }\mathbf{R}%
+^{3}\times \left[ 0,\infty \right[  \label{eqn1}
+\end{equation}
+is automatically numbered as equation \ref{eqn1}.
+
+\subsection{List Environments}
+
+You can create numbered, bulleted, and description lists using the Item Tag
+popup list on the Tag toolbar.
+
+\begin{enumerate}
+\item List item 1
+
+\item List item 2
+
+\begin{enumerate}
+\item A list item under a list item.
+
+The typeset style for this level is different than the screen style. The
+screen shows a lower case alphabetic character followed by a period while
+the typeset style uses a lower case alphabetic character surrounded by
+parentheses.
+
+\item Just another list item under a list item.
+
+\begin{enumerate}
+\item Third level list item under a list item.
+
+\begin{enumerate}
+\item Fourth and final level of list items allowed.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\begin{itemize}
+\item Bullet item 1
+
+\item Bullet item 2
+
+\begin{itemize}
+\item Second level bullet item.
+
+\begin{itemize}
+\item Third level bullet item.
+
+\begin{itemize}
+\item Fourth (and final) level bullet item.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\begin{description}
+\item[Description List] Each description list item has a term followed by
+the description of that term. Double click the term box to enter the term,
+or to change it.
+
+\item[Bunyip] Mythical beast of Australian Aboriginal legends.
+\end{description}
+
+\subsection{Theorem-like Environments}
+
+The following theorem-like environments (in alphabetical order) are
+available in this style.
+
+\begin{acknowledgement}
+This is an acknowledgement
+\end{acknowledgement}
+
+\begin{algorithm}
+This is an algorithm
+\end{algorithm}
+
+\begin{axiom}
+This is an axiom
+\end{axiom}
+
+\begin{case}
+This is a case
+\end{case}
+
+\begin{claim}
+This is a claim
+\end{claim}
+
+\begin{conclusion}
+This is a conclusion
+\end{conclusion}
+
+\begin{condition}
+This is a condition
+\end{condition}
+
+\begin{conjecture}
+This is a conjecture
+\end{conjecture}
+
+\begin{corollary}
+This is a corollary
+\end{corollary}
+
+\begin{criterion}
+This is a criterion
+\end{criterion}
+
+\begin{definition}
+This is a definition
+\end{definition}
+
+\begin{example}
+This is an example
+\end{example}
+
+\begin{exercise}
+This is an exercise
+\end{exercise}
+
+\begin{lemma}
+This is a lemma
+\end{lemma}
+
+\begin{proof}
+This is the proof of the lemma.
+\end{proof}
+
+\begin{notation}
+This is notation
+\end{notation}
+
+\begin{problem}
+This is a problem
+\end{problem}
+
+\begin{proposition}
+This is a proposition
+\end{proposition}
+
+\begin{remark}
+This is a remark
+\end{remark}
+
+\begin{solution}
+This is a solution
+\end{solution}
+
+\begin{summary}
+This is a summary
+\end{summary}
+
+\begin{theorem}
+This is a theorem
+\end{theorem}
+
+\begin{proof}[Proof of the Main Theorem]
+This is the proof.
+\end{proof}
+
+\subsection{Compiling a Bibliography}
+
+\begin{enumerate}
+\item Save this document using a name of your choosing.
+
+\item Choose \textsf{Typeset, Compile.}
+
+\item Check \textsf{Generate a Bibliography.}
+
+\item Choose \textsf{OK.}
+
+\item Choose \textsf{Typeset, Preview.}
+\end{enumerate}
+
+\subsection{Sample Citations and Bibliography}
+
+BibTeX has been selected for the bibliography choice in this shell document.
+One of the sample BibTeX databases included with SW has been selected and
+some citations added in the next sentence. This sentence refers to the
+article \cite{article-full}, the book \cite{book-full}, the booklet \cite%
+{booklet-full}, the article \cite{incollection-full} in a collection, the
+article \cite{inproceedings-full} in a proceedings, and to the thesis \cite%
+{phdthesis-full}. The bibliography section for these citations comes next.
+
+\bibliographystyle{achemso}
+\bibliography{xampl}
+
+\section{Introduction}
+
+\label{achemsodoc}Author: Mats Dahlgren
+
+Since the journals of The American Chemical Society (ACS) do not accept
+manuscripts which are using the standard BibTeX formats, the need for such a
+style package has been around for a while. I do sincerely hope that what I
+have accomplished with this package is $(i)$~that using \LaTeX{} and BibTeX
+should be as easy as any other manuscript preparation system when preparing
+manuscripts for an ACS journal; $(ii)$~that the package is doing this
+correctly. The reference handeling in the reference list and in the text is
+aimed to be in accordance with the requirements of \textit{Accounts of
+Chemical Research, Chemical Reviews, Inorganic Chemistry, Journal of the
+American Chemical Society, Journal of Chemical Information and Computer
+Sciences, Journal of Medicinal Chemistry, Journal of Organic Chemistry, The
+Journal of Physical Chemistry, Langmuir, Macromolecules,} and \textit{%
+Organometallics}. (All these journals use the same reference format.)
+
+There is already a LaTeX 2.09 and BibTeX style package called \textsf{%
+acsarticle} and \texttt{acs.bst}, which are not ``ACS'' as in `American
+Chemical Society' (rather, this package is formatting the output according
+to the instructions of \textit{Advances in Control Systems}). Hence, \textit{%
+this} new package had to be given another name. The name of choice was then 
+\textsf{achemso}, which is made from the words ``\textit{A}merican \textit{%
+Chem}ical \textit{So}ciety''.
+
+The \textsf{achemso} package has been tested with \LaTeX{} of 1997/12/01
+patch level 1 running \TeX{} 3.14159 using MiK\TeX{} 1.09 containing BibTeX
+version 0.99c, all under Windows 95. Please send bug reports (see below),
+corrections, additions, suggestions, \textit{etc.}\ to me at \texttt{%
+matsd@sssk.se}.
+
+The present version of the package is~0.99{}, of 1997/02/22 . It differs
+from previous versions in a change of the handeling of \texttt{phdthesis}, 
+\texttt{mastersthesis}, and \texttt{book}. Version~0.1 produced an error for
+these entry types if the optional field \texttt{institution} was empty. This
+bug has been removed.\footnote{%
+Thanks to Johan Fr\"{o}berg (\texttt{emgion@physchem.kth.se}) for bringing
+my attention to the problem.} In the \texttt{book} entry type, there was a
+comma which should be a semicolon. With version~0.3, Donald Arsenau's
+package \textsf{overcite} is loaded, making collapsing and sorting of
+references automatic. Version~0.4 was modified to work better with the
+December 1995 release of \LaTeX{}; it also has the \texttt{.bst} files
+incorporated in \texttt{achemso.dtx}. Version~1.0 was issued due to some new
+pre-defined journal named and enhanced documentation.
+
+This userguide is also available in \TEXTsymbol{\backslash}%
+texttt\{.pdf\}-format on the internet. It is found from my \LaTeX{} web
+page: 
+%TCIMACRO{%
+%\hyperref{http://www.homenet.se/matsd/latex/}{http://www.homenet.se/matsd/latex/}{}{http://www.homenet.se/matsd/latex/} }%
+%BeginExpansion
+\msihyperref{http://www.homenet.se/matsd/latex/}{http://www.homenet.se/matsd/latex/}{}{http://www.homenet.se/matsd/latex/}
+%EndExpansion
+(use Ctrl+Click to follow the link).
+
+\subsection{Note}
+
+This is not an official American Chemical Society package. Therefore, some
+items in the reference list may not come out perfectly according to the ACS
+style. There is no guarantee that the predefined journal abbreviations are
+correct.
+
+\section{The LaTeX Package}
+
+To work properly, a call to the \textsf{achemso} package must be done in a 
+\texttt{usepackge} command in the LaTeX input file. The \textsf{achemso}
+package can take three options, namely \texttt{note}, \texttt{list}, and 
+\texttt{number}. The \texttt{bibliographystyle} command required for a
+document with a bibliography is included in the LaTeX package file. The
+package options can be used together in any combination. Also, the \textsf{%
+overcite} package must be installed on the system for \textsf{achemso} to
+work properly.
+
+The \textsf{achemso} package redefines the \texttt{bibliography} environment
+to start a new page. If the \texttt{note} option is used, the heading of the
+reference list will read ``References and Notes'' instead of ``References'',
+which is the default. (If used together with the \textsf{babel} package,
+there may be strange results. This is a minor problem since the ACS only
+accepts manuscripts in English.)
+
+In the text, references are printed as superscripts with numbers. If there
+are more than two consecutive numbers at one occurence, the numbers will
+appear ``collapsed'', that is like this$^{11-14}$ rather than.$%
+^{11,12,13,14} $ The citations can be given in any order, thanks to the
+sorting done by the \textsf{overcite} package, which is loaded by the 
+\textsf{achemso} package. If only the reference number is desired, such as
+in ``\ldots{} see reference 13.'', the command \texttt{citenum\{\}\textit{key%
+}} can be used. \texttt{citenum} emits only the numeral of the reference
+without any formatting.
+
+\subsection{The \texttt{note} option}
+
+\label{noteoption}
+
+The option \texttt{note} is to be used when there are notes (of
+footnote-type) in the text. The text of these notes have to be placed in a
+BibTeX entry of the kind \texttt{remark}\footnote{%
+The term ``\texttt{note}'' is already used for an entry field in BibTeX .}
+(see also below). I recommend a seperate \texttt{.bib}-file for the notes,
+which is then called for in the \texttt{bibliography}-command. In this way,
+the notes will be sorted in automatically in the proper place in the
+reference list, while they still are easily kept out of the listings of the
+entire BibTeX data base. Also, the heading of the bibliography will read
+``References and Notes'' and not only ``References''.
+
+\subsection{The \texttt{list} option}
+
+To produce a listing of the entire BibTeX data base, use the \texttt{list}
+option for the \textsf{achemso} package. It makes use of another \texttt{.bst%
+}-file, called \texttt{achemsol.bst}, which is also included in the \textsf{%
+achemso} package distribution. It only differs from \texttt{achemso.bst} in
+that it adds the information of the field \texttt{annotate} to every item in
+the list when present. \texttt{annotate} is an optional field for all entry
+types.
+
+When usnig the \texttt{list} option, the BibTeX keys will be typesetted in a
+framed box in the left margin. This feature is adapted from \texttt{%
+showtags.sty} by Nelson H.\ F.\ Beebe (\texttt{beebe@math.utah.edu}).%
+\footnote{%
+Many thanks to Nelson H.\ F.\ Beebe for letting me incorporate his code into 
+\textsf{achemso}.}
+
+For use in the \texttt{annotate} field is a LaTeX macro \texttt{refin}
+defined by \texttt{achemso.bst} and \texttt{achemsol.bst}. This command
+takes one argument (normally text) which is preceeded by the text ``\textbf{%
+Referenced in: }''. \texttt{refin} is meant to facilitate in keeping track
+of in which publication(s) the bibliography item has been cited. Personally,
+I keep information in my data-base on in which of my own publications I have
+cited the article (or whatever) in question. It is for this purpouse the 
+\texttt{refin} command exsists.
+
+\subsection{The \texttt{number} option}
+
+If a section number is desired for the bibliography in a document, the 
+\texttt{number} option should be used with the \textsf{achemso} package. The
+only difference with respect to the default version is the adding of a
+section number to the heading. (It makes use of \texttt{section} rather than 
+\texttt{section*} as the default.)
+
+\section{The BibTeX listing file}
+
+To obtain a listing of a BibTeX data base in an easy way, only very minor
+changes are needed to the file \texttt{acslist.tex}.\footnote{%
+You must specify the name(s) of your \texttt{.bib}-file(s).} When running
+LaTeX on this file, you will be provided with a complete listing of the data
+base as the output, with the labels used in framed boxes to the left of the
+data base entries. \texttt{acslist.tex} uses the \texttt{list} option of the
+package file (surprise!). To get rid of the sectioning heading in the data
+base listing, you can include the following line in \texttt{acslist.tex}:%
+\newline
+\texttt{\ renewcommand\{refname\}\{ \}}\newline
+
+\section{The BibTeX style}
+
+The \texttt{.bst}-files in the \textsf{achemso} package are based on the
+standard BibTeX style \texttt{unsrt.bst}.
+
+\subsection{Extra Entry Types}
+
+The BibTeX style \texttt{achemso} defines three non-standard entry types, 
+\texttt{inpress}, \texttt{submitted}, and \texttt{remark}. The \texttt{%
+inpress} and \texttt{submitted} entries are intended for journal articles
+which have not yet been published, but are ``in press'' or ``submitted'',
+respectively. The \texttt{remark} entry type is to be used to obtain notes
+intermixed in the reference list (see also section~\ref{noteoption} above).
+
+\subsection{The Data Base Entries}
+
+This section explains which data base entry types are recognized by \texttt{%
+achemso} and which fields are required, optional, and ignored for the
+different entries. Note that \texttt{achemso} is not as robust as many other
+BibTeX styles, and may in some cases not warn that a required field is
+missing. The only way to detect this is to look in the final bibliography
+listing, which for the incomplete entries is likely to look strange. The
+following entries are recognized:\\[\baselineskip]
+\hfill 
+\begin{tabular}{|ll|}
+\hline
+\textbf{Entry type} & \textbf{Entry fields} \\ \hline
+\texttt{article} & \textsf{R:}~\texttt{author}, \texttt{journal}, \texttt{%
+year}, \texttt{volume}, \texttt{pages} \\ 
+& \textsf{O:}~\texttt{note} \\ \hline
+\texttt{book} & \textsf{R:}~\texttt{author} or \texttt{editor}, \texttt{title%
+} or \texttt{booktitle}, \texttt{publisher}, \texttt{address}, \texttt{year}
+\\ 
+& \textsf{O:}~\texttt{volume}, \texttt{series}, \texttt{edition}, \texttt{%
+note} \\ \hline
+\texttt{booklet} & \textsf{R:}~\texttt{author}, \texttt{title}, \texttt{year}
+\\ 
+& \textsf{O:}~\texttt{howpublished}, \texttt{address}, \texttt{note} \\ 
+\hline
+\texttt{conference} & \textsf{R:}~\texttt{author}, \texttt{title}, \texttt{%
+booktitle}, \texttt{editor}, \texttt{publisher}, \texttt{address}, \texttt{%
+year} \\ 
+& \textsf{O:}~\texttt{volume}, \texttt{edition}, \texttt{type}, \texttt{%
+chapter}, \texttt{pages}, \texttt{note} \\ \hline
+\texttt{inbook} & \textsf{R:}~\texttt{author}, \texttt{title}, \texttt{%
+booktitle}, \texttt{editor}, \texttt{publisher}, \texttt{address}, \texttt{%
+year} \\ 
+& \textsf{O:}~\texttt{volume}, \texttt{edition}, \texttt{type}, \texttt{%
+chapter}, \texttt{pages}, \texttt{note} \\ \hline
+\texttt{incollection} & \textsf{R:}~\texttt{author}, \texttt{title}, \texttt{%
+booktitle}, \texttt{editor}, \texttt{publisher}, \texttt{address}, \texttt{%
+year} \\ 
+& \textsf{O:}~\texttt{volume}, \texttt{edition}, \texttt{note} \\ \hline
+\texttt{inpress} & \textsf{R:}~\texttt{author}, \texttt{journal} \\ 
+& \textsf{O:}~\texttt{note} \\ \hline
+\texttt{inproceedings} & \textsf{R:}~\texttt{author}, \texttt{title}, 
+\texttt{booktitle}, \texttt{editor}, \texttt{publisher}, \texttt{address}, 
+\texttt{year} \\ 
+& \textsf{O:}~\texttt{volume}, \texttt{edition}, \texttt{type}, \texttt{%
+chapter}, \texttt{pages}, \texttt{note} \\ \hline
+\texttt{manual} & \textsf{R:}~\texttt{title} \\ 
+& \textsf{O:}~\texttt{author}, \texttt{organization}, \texttt{address}, 
+\texttt{edition}, \texttt{year}, \texttt{note} \\ \hline
+\texttt{mastersthesis} & \textsf{R:}~\texttt{author}, \texttt{title}, 
+\texttt{school}, \texttt{year} \\ 
+& \textsf{O:}~\texttt{institution}, \texttt{note} \\ \hline
+\texttt{misc} & \textsf{R:}~none \\ 
+& \textsf{O:}~\texttt{author}, \texttt{title}, \texttt{howpublished}, 
+\texttt{year}, \texttt{note} \\ \hline
+\texttt{phdthesis} & \textsf{R:}~\texttt{author}, \texttt{title}, \texttt{%
+school}, \texttt{year} \\ 
+& \textsf{O:}~\texttt{type}, \texttt{institution}, \texttt{note} \\ \hline
+\texttt{proceedings} & \textsf{R:}~\texttt{editor} or \texttt{organization}, 
+\texttt{title} or \texttt{booktitle}, \texttt{year} \\ 
+& \textsf{O:}~\texttt{volume}, \texttt{edition}, \texttt{publisher}, \texttt{%
+address}, \texttt{note} \\ \hline
+\texttt{remark} & \textsf{R:}~\texttt{note} \\ 
+& \textsf{O:}~none \\ \hline
+\texttt{submitted} & \textsf{R:}~\texttt{author}, \texttt{journal} \\ 
+& \textsf{O:}~\texttt{note} \\ \hline
+\texttt{techreport} & \textsf{R:}~\texttt{author}, \texttt{title}, \texttt{%
+institution} \\ 
+& \textsf{O:}~\texttt{type}, \texttt{number}, \texttt{address}, \texttt{note}
+\\ \hline
+\texttt{unpublished} & \textsf{R:}~\texttt{author } \\ 
+& \textsf{O:}~\texttt{year}, \texttt{note} \\ \hline
+\end{tabular}
+\hfill\newline
+\textsf{R:}~denotes required fields; \textsf{O:}~denotes optional filelds.\\[%
+\baselineskip]
+The following fields are avaliable: \texttt{address}, \texttt{author}, 
+\texttt{booktitle}, \texttt{chapter}, \texttt{edition}, \texttt{editor}, 
+\texttt{howpublished}, \texttt{institution}, \texttt{journal}, \texttt{key}, 
+\texttt{month}, \texttt{note}, \texttt{number}, \texttt{organization}, 
+\texttt{pages}, \texttt{publisher}, \texttt{school}, \texttt{series}, 
+\texttt{title}, \texttt{type}, \texttt{volume}, \texttt{year}, and \texttt{%
+annotate}. All the fields have their general meanings. All fields not
+specified above are ignored for that entry type.
+
+\subsection{Predefined Journal Abbriviations}
+
+In the \textsf{achemso} package, some journal names are defined. These
+journals are the journals of ACS, some other frequently cited in Physical
+Chemsitry, and the ten most cited according to \textit{Chemical Abstracs}.
+The predefined ACS journal names are:\\[\baselineskip]
+\begin{tabular}{|lll|}
+\hline
+Abbreviation & Appearance in list & Full journal name \\ \hline
+\texttt{acchemr} & \textit{Acc.\ Chem.\ Res.} & Accounts of Chemical Research
+\\ 
+\texttt{aacsa} & \textit{Adv.\ {ACS} Abstr.} & Advance ACS Abstracts \\ 
+\texttt{anchem} & \textit{Anal.\ Chem.} & Analytical Chemistry \\ 
+\texttt{bioch} & \textit{Biochemistry} & Biochemistry \\ 
+\texttt{bicoc} & \textit{Bioconj.\ Chem.} & (?) Bioconjugate Chemistry \\ 
+\texttt{bitech} & \textit{Biotechnol.\ Progr.} & (?) Biotechnology Progress
+\\ 
+\texttt{chemeng} & \textit{Chem.\ Eng.\ News} & Chemical \&{} Engineering
+News \\ 
+\texttt{chs} & \textit{Chem.\ Health Safety} & (?) Chemical Health \&{}
+Safety \\ 
+\texttt{crt} & \textit{Chem.\ Res.\ Tox.} & (?) Chemical Research in
+toxicology \\ 
+\texttt{chemrev} & \textit{Chem.\ Rev.} & Chemical Reviews \\ 
+\texttt{cmat} & \textit{Chem.\ Mater.} & Chemistry of Materials \\ 
+\texttt{chemtech} & \textit{CHEMTECH} & CHEMTECH \\ 
+\texttt{enfu} & \textit{Energy \&{} Fuels} & (?) Energy \&{} Fuels \\ 
+\texttt{envst} & \textit{Environ.\ Sci.\ Technol.} & Environmental Science
+and Technology \\ 
+\texttt{iecf} & \textit{Ind.\ Eng.\ Chem.\ Fundam.} & Industrial \&{}
+Engineering Chemistry \\ 
+&  & \hfill Fundamentals \\ 
+\texttt{iecpdd} & \textit{Ind.\ Eng.\ Chem.\ Proc.} & Industrial \&{}
+Engineering Chemistry \\ 
+& \hfill\textit{Des.\ Dev.} & \hfill Process Design and Development \\ 
+\texttt{iecprd} & \textit{Ind.\ Eng.\ Chem.\ Prod.} & Industrial \&{}
+Engineering Chemistry \\ 
+& \hfill\textit{Res.\ Dev.} & \hfill Product Research and Development \\ 
+\texttt{iecr} & \textit{Ind.\ Eng.\ Chem.\ Res.} & Industrial \&{}
+Engineering Chemistry \\ 
+&  & \hfill Research \\ 
+\texttt{inor} & \textit{Inorg.\ Chem.} & Inorganic Chemistry \\ 
+\texttt{jafc} & \textit{J.~Agric.\ Food Chem.} & Journal of Agricultural and
+Food Chemistry \\ 
+\texttt{jacs} & \textit{J.~Am.\ Chem.\ Soc.} & Journal of the American
+Chemical Society \\ 
+\texttt{jced} & \textit{J.~Chem.\ Eng.\ Data} & Journal of Chemical and
+Engineering Data \\ 
+\texttt{jcics} & \textit{J.~Chem.\ Inf.\ Comput.\ Sci.} & Journal of
+Chemical Information and \\ 
+&  & \hfill Computer Sciences \\ 
+\texttt{jmc} & \textit{J.~Med.\ Chem.} & Journal of Medicinal Chemistry \\ 
+\texttt{joc} & \textit{J.~Org.\ Chem.} & Journal of Organic Chemistry \\ 
+\texttt{jps} & \textit{J.~Pharm.\ Sci.} & Journal of Pharmaceutical Sciences
+\\ 
+\texttt{jpcrd} & \textit{J.~Phys.\ Chem.\ Ref.\ Data} & Journal of Physical
+and Chemical \\ 
+&  & \hfill Reference Data \\ 
+\texttt{jpc} & \textit{J.~Phys.\ Chem.} & The Journal of Physical Chemistry
+\\ 
+\texttt{lang} & \textit{Langmuir} & Langmuir \\ 
+\texttt{macro} & \textit{Macromolecules} & Macromolecules \\ 
+\texttt{orgmet} & \textit{Organometallics} & Organometallics \\ \hline
+\end{tabular}
+
+\noindent Other predefined journal names are:\newline
+\begin{tabular}{|lll|}
+\hline
+Abbreviation & Appearance in list & Full journal name \\ \hline
+\texttt{jft} & \textit{J.~Chem.\ Soc., Faraday Trans.} & Journal of the
+Chemical Society, \\ 
+&  & \hfill Faraday Transactions \\ 
+\texttt{jft1} & \textit{J.~Chem.\ Soc., Faraday Trans. 1} & Journal of the
+Chemical Society, \\ 
+&  & \hfill Faraday Transactions 1 \\ 
+\texttt{jft2} & \textit{J.~Chem.\ Soc., Faraday Trans. 2} & Journal of the
+Chemical Society, \\ 
+&  & \hfill Faraday Transactions 2 \\ 
+\texttt{tfs} & \textit{Trans.\ Faraday Soc.} & Transactions of the Faraday
+Society \\ 
+\texttt{jcis} & \textit{J.~Colloid Interface Sci.} & Journal of Colloid and
+Interface Science \\ 
+\texttt{acis} & \textit{Adv.~Colloid Interface Sci.} & Advances in Colloid
+and Interface Science \\ 
+\texttt{cs} & \textit{Colloids Surf.} & Colloid and Surfaces \\ 
+\texttt{csa} & \textit{Colloids Surf.\ A:\ Physiochem.} & Colloid and
+Surfaces A:\ Physiochemical \\ 
+& \hfill \textit{Eng.\ Aspects} & and Engineering Aspects \\ 
+\texttt{csb} & \textit{Colloids Surf.\ B:\ Biointerfaces} & Colloid and
+Surfaces B:\ Biointerfaces \\ 
+\texttt{pcps} & \textit{Progr.\ Colloid Polym.\ Sci.} & Progress in Colloid
+and Polymer Science \\ 
+\texttt{jmr} & \textit{J.~Magn.\ Reson.} & Journal of Magnetic Resonance \\ 
+\texttt{jmra} & \textit{J.~Magn.\ Reson.\ A} & Journal of Magnetic
+Resonance, Series A \\ 
+\texttt{jmrb} & \textit{J.~Magn.\ Reson.\ B} & Journal of Magnetic
+Resonance, Series B \\ 
+\texttt{sci} & \textit{Science} & Science \\ 
+\texttt{nat} & \textit{Nature (London)} & Nature \\ 
+\texttt{jcch} & \textit{J.~Comput.\ Chem.} & Journal of Computational
+Chemistry \\ 
+\texttt{cca} & \textit{Croat.\ Chem.\ Acta} & Croatica Chemica Acta \\ 
+\texttt{poly} & \textit{Polymer} & Polymer \\ 
+\texttt{ajp} & \textit{Am.\ J.\ Phys.} & American Journal of Physics \\ 
+\texttt{rsi} & \textit{Rev.\ Sci.\ Instrum.} & Review of Scientific
+Instruments \\ 
+\texttt{jcp} & \textit{J.~Chem.\ Phys.} & Journal of Chemical Physics \\ 
+\texttt{cpl} & \textit{Chem.\ Phys.\ Lett.} & Chemical Physics Letters \\ 
+\texttt{molph} & \textit{Mol.\ Phys.} & Molecular Physics \\ 
+\texttt{pac} & \textit{Pure Appl.\ Chem.} & Pure and Applied Chemistry \\ 
+\texttt{jbc} & \textit{J.~Biol.\ Chem.} & Journal of Biological Chemistry \\ 
+\texttt{tl} & \textit{Tetrahedron Lett.} & Tetrahedron Letters \\ 
+\texttt{psisoe} & \textit{Proc.\ SPIE-Int.\ Soc.\ Opt.\ Eng.} & (?) \\ 
+\texttt{prb} & \textit{Phys.\ Rev.\ B:\ Condens.\ Matter} & Physics Review
+B:\ Condensed Matter \\ 
+\texttt{jap} & \textit{J.~Appl.\ Phys.} & Journal of Applied Physics \\ 
+\texttt{pnac} & \textit{Proc.\ Natl.\ Acad.\ Sci.\ U.~S.~A.} & Proceedings
+of the National Academy \\ 
+&  & \hfill of Sciences of the U.~S.~A. \\ 
+\texttt{bba} & \textit{Biochim.\ Biophys.\ Acta} & Biochimica et Boiphysica
+Acta \\ 
+\texttt{nar} & \textit{Nucleic Acid Res.} & Nucleic Acid Research (?) \\ 
+\hline
+\end{tabular}
+\newpage
+
+\section{Known Problems and Limitations}
+
+At the present (1997/02/22), the following problems are known:
+
+\begin{itemize}
+\item When printing a data base listing using the \texttt{list} option (such
+as when type-setting \texttt{acslist.tex}), there may on rare occations
+occur a page-break between the framed box of the label and the BibTeX entry
+itself.
+
+\item Some of the pre-defined journal abbreviations may not be entirely
+correct, I have not been able to check some of them (since those journals
+are not avaliable at our library). If someone finds an error in the journal
+names, I'll be most grateful to be informed on how the correct abbreviation
+is.
+
+\item Compatibility with other LaTeX packages, both standard and
+non-standard, may be poor.
+\end{itemize}
+
+\end{document}

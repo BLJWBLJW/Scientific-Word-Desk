@@ -1,0 +1,699 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sunday, December 30, 2001 12:27:31}
+%TCIDATA{LastRevised=Saturday, July 03, 2010 09:52:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+\preprint{Zuminos' Theorem}
+\title[Zuminos' Theorem]{Zuminos' Theorem}
+\author{Brian Weiner}
+\affiliation{PSU}
+\date{06/17/2003}
+\startpage{1}
+\endpage{2}
+\maketitle
+\tableofcontents
+
+\section{Canonical Coordinates}
+
+\begin{theorem}
+If $\mathbf{c}$ is a $2s\times 2s$ complex antisymmetric matrix then there
+exists a unitary matrix $\mathbb{T}$ such that 
+\begin{equation}
+\mathbb{T}\mathbf{c}\mathbb{T}^{t}\mathbb{=}\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta } \\ 
+-\mathbf{\zeta } & \mathbf{0}%
+\end{array}%
+\right)
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{\zeta =}\left( 
+\begin{array}{ccc}
+\zeta _{1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \zeta _{s}%
+\end{array}%
+\right) ;\qquad \zeta _{j}\in \mathbb{C},\quad 1\leq j\leq s
+\end{equation}
+
+\begin{proof}
+We first note some relationships implied by the antisymmetry of $\mathbf{c}$%
+\begin{equation}
+\mathbf{c}^{\dagger }\mathbf{c\,=-c}^{\ast }\mathbf{c}=\left( \mathbf{cc}%
+^{\dagger }\right) ^{t}=\mathbf{\,}\left( \mathbf{cc}^{\dagger }\right)
+^{\ast }  \label{cc}
+\end{equation}%
+(so $\mathbf{c}$ is not a normal operator in general) and one by the
+associativity of matrix product 
+\begin{equation}
+\mathbf{c}\left( \mathbf{c}^{\dagger }\mathbf{c}\right) =\left( \mathbf{cc}%
+^{\dagger }\right) \mathbf{c}
+\end{equation}%
+which by using eq. $\left( \ref{cc}\right) $ gives 
+\begin{equation}
+\left( \mathbf{cc}^{\dagger }\right) \mathbf{c=c}\left( \mathbf{cc}^{\dagger
+}\right) ^{\ast }  \label{cr}
+\end{equation}%
+Then we introduce $\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger }$ through the
+definition 
+\begin{eqnarray}
+\mathbf{c} &=&\mathbb{U}\mathbf{c}_{U}\mathbb{U}^{t} \\
+\mathbf{c}_{U} &=&\mathbb{U}^{\dagger }\mathbf{c}\mathbb{U}^{\ast }
+\end{eqnarray}%
+where $\mathbb{U}$ is any unitary matrix and obtain that 
+\begin{eqnarray}
+\mathbf{cc}^{\dagger } &=&\mathbb{U}\mathbf{c}_{U}\mathbb{U}^{t}\mathbb{U}%
+^{\ast }\mathbf{c}_{U}^{\dagger }\mathbb{U}^{\dagger }=\mathbb{U}\mathbf{c}%
+_{U}\mathbf{c}_{U}^{\dagger }\mathbb{U}^{\dagger }  \nonumber \\
+\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger } &=&\mathbb{U}^{\dagger }\mathbf{cc}%
+^{\dagger }\mathbb{U}
+\end{eqnarray}%
+and as $\mathbf{c}_{U}$ is also antisymmetric 
+\begin{equation}
+\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger }=-\mathbf{c}_{U}\mathbf{c}_{U}^{\ast
+}=\left( \mathbf{c}_{U}^{\dagger }\mathbf{c}_{U}\right) ^{t}=\mathbf{\,}%
+\left( \mathbf{c}_{U}^{\dagger }\mathbf{c}_{U}\right) ^{\ast }.
+\end{equation}%
+Hence we have that 
+\begin{equation}
+\left( \mathbf{cc}^{\dagger }\right) \mathbf{c-c}\left( \mathbf{cc}^{\dagger
+}\right) ^{\ast }=\left( \mathbf{c}_{U}\mathbf{c}_{U}^{\dagger }\right) 
+\mathbf{c}_{U}-\mathbf{c}_{U}\left( \mathbf{c}_{U}\mathbf{c}_{U}^{\dagger
+}\right) ^{\ast }=0  \label{cu}
+\end{equation}%
+We can choose $\mathbb{U}$ to diagonalize the hermitian matrix $\mathbf{cc}%
+^{\dagger }$ i.e.%
+\begin{equation}
+\mathbb{U}^{\dagger }\mathbf{cc}\mathbb{^{\dagger }U}=\left( 
+\begin{array}{ccc}
+n_{1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & n_{r}%
+\end{array}%
+\right) =\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger };\qquad n_{j}\geq 0\quad
+1\leq j\leq r=2s.
+\end{equation}%
+$\lceil $The eigenvalues $\left\{ n_{j}\right\} $ are at least doubly
+degenerate.$\rfloor $ Now using the relationships in eq. $\left( \ref{cu}%
+\right) $ for this $\mathbf{c}_{U}$ we obtain%
+\begin{equation}
+\sum_{1\leq j\leq r}\left\{ n_{i}\delta _{ij}c_{Ujk}-c_{Uij}n_{j}\delta
+_{jk}\right\} =0\Rightarrow \left( n_{i}-n_{k}\right) c_{Uik}=0;\qquad 1\leq
+i,k\leq r
+\end{equation}%
+which shows that 
+\begin{equation}
+n_{k}\neq n_{i}\Rightarrow c_{Uik}=0;\qquad \qquad 1\leq i,k\leq r
+\end{equation}%
+Thus the matrix $\mathbf{c}_{U}$ breaks into submatrices $\left\{ \mathbb{C}%
+_{\kappa };1\leq \kappa \leq p\right\} $ corresponding to groups of $%
+n^{\prime }s$ that are equal. Consider the partitioning of $\left\{ 1,\ldots
+,r\right\} $ into $p$ groups that correspond to equal $n^{\prime }s$ i.e. $%
+\left\{ \left\{ \sigma \left( 1\right) ,\ldots ,\sigma \left( m_{1}\right)
+\right\} ,\cdots ,\left\{ \sigma \left( m_{p-1}+1\right) ,\ldots \sigma
+\left( r\right) \right\} \right\} $ where $\sigma $ is a permutation of $%
+\left\{ 1,\ldots ,r\right\} $ and 
+\begin{eqnarray}
+n_{\sigma \left( 1\right) } &=&n_{\sigma \left( 2\right) }=\cdots =n_{\sigma
+\left( m_{1}\right) }=\eta _{1}  \nonumber \\
+&&\vdots  \nonumber \\
+n_{\sigma \left( m_{p-1}+1\right) } &=&n_{\sigma \left( m_{p-1}+2\right)
+}=\cdots =n_{\sigma \left( r\right) }=\eta _{p}
+\end{eqnarray}%
+then the matrix $\mathbf{c}_{U}$ has the block diagonal form 
+\begin{equation}
+\mathbf{c}_{U}=\left( 
+\begin{array}{cccc}
+\mathbb{C}_{1} & \mathbb{O} & \cdots & \mathbb{O} \\ 
+\mathbb{O} & \ddots & \mathbb{O} & \vdots \\ 
+\vdots & \mathbb{O} & \ddots & \mathbb{O} \\ 
+\mathbb{O} & \cdots & \mathbb{O} & \mathbb{C}_{p}%
+\end{array}%
+\right)
+\end{equation}%
+and 
+\begin{equation}
+\mathbb{C}_{\kappa }\mathbb{C}_{\kappa }^{\dagger }=\eta _{\kappa }\mathbb{I}%
+_{d\left( \kappa \right) };\quad 1\leq \kappa \leq p
+\end{equation}%
+where $d\left( \kappa \right) $ is the dimension of $\kappa ^{th}$-block.
+
+If $\eta _{\kappa }=0$ then 
+\begin{equation}
+\sum_{k\in \left\{ \sigma \left( m_{\kappa -1}+1\right) ,\ldots \sigma
+\left( m_{\kappa }\right) \right\} }c_{\kappa ik}c_{\kappa jk}^{\ast
+}=0\qquad \forall i,j\in \left\{ \sigma \left( m_{\kappa -1}+1\right)
+,\ldots ,\sigma \left( m_{\kappa }\right) \right\}
+\end{equation}%
+so in particular 
+\begin{equation}
+\sum_{k\in \left\{ \sigma \left( m_{\kappa -1}+1\right) ,\ldots \sigma
+\left( m_{\kappa }\right) \right\} }\left| c_{\kappa jk}\right| ^{2}=0\qquad
+\forall j\in \left\{ \sigma \left( m_{\kappa -1}+1\right) ,\ldots ,\sigma
+\left( m_{\kappa }\right) \right\}
+\end{equation}%
+which implies that $c_{\kappa jk}=0\quad \forall j,k\in \left\{ \sigma
+\left( m_{\kappa -1}+1\right) ,\ldots ,\sigma \left( m_{\kappa }\right)
+\right\} $.
+
+If $\eta _{\kappa }\neq 0$ then $\mathbb{B}_{\kappa }=\frac{1}{\sqrt{\eta
+_{\kappa }}}\mathbb{C}_{\kappa }$ is a $d\left( \kappa \right) \times
+d\left( \kappa \right) $ antisymmetric unitary matrix and 
+\begin{eqnarray}
+\mathbb{B}_{\kappa }^{\dagger }\mathbb{B}_{\kappa } &=&\mathbb{B}_{\kappa }%
+\mathbb{B}_{\kappa }^{\dagger }=\mathbb{I}_{d\left( \kappa \right) } 
+\nonumber \\
+&\Rightarrow &\mathbb{B}_{\kappa }^{\ast }\mathbb{B}_{\kappa }=\mathbb{B}%
+_{\kappa }\mathbb{B}_{\kappa }^{\ast }
+\end{eqnarray}%
+i.e. $\left[ \mathbb{B}_{\kappa },\mathbb{B}_{\kappa }^{\ast }\right] =0$
+thus the matrices (\emph{not in general} self adjoint) 
+\begin{eqnarray}
+\mathbb{N}_{\kappa } &=&\frac{1}{2}\left\{ \mathbb{B}_{\kappa }+\mathbb{B}%
+_{\kappa }^{\ast }\right\}  \nonumber \\
+\mathbb{M}_{\kappa } &=&\frac{-i}{2}\left\{ \mathbb{B}_{\kappa }-\mathbb{B}%
+_{\kappa }^{\ast }\right\}
+\end{eqnarray}%
+are real antisymmetric and \emph{commute }with each other so that 
+\begin{equation}
+\mathbb{B}_{\kappa }=\func{Re}\mathbb{B}_{\kappa }+i\func{Im}\mathbb{B}%
+_{\kappa }.
+\end{equation}
+These matrices can be simultaneously transformed into the canonical forms 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\alpha }_{\kappa } \\ 
+-\mathbf{\alpha }_{\kappa } & \mathbf{0}%
+\end{array}%
+\right) \text{ and }\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\beta }_{\kappa } \\ 
+-\mathbf{\beta }_{\kappa } & \mathbf{0}%
+\end{array}%
+\right)
+\end{equation}%
+by a real orthogonal transformation $\mathbb{O}_{\kappa }$, where 
+\begin{equation}
+\mathbf{\alpha }_{\kappa }=\left( 
+\begin{array}{ccc}
+\alpha _{\kappa 1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \alpha _{\kappa d\left( \kappa \right) }%
+\end{array}%
+\right) \text{ and }\mathbf{\beta }_{\kappa }=\left( 
+\begin{array}{ccc}
+\beta _{\kappa 1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \beta _{\kappa d\left( \kappa \right) }%
+\end{array}%
+\right)
+\end{equation}%
+The same transformation thus acts on $\mathbb{B}_{\kappa }$ to produce 
+\begin{equation}
+\mathbb{O}_{\kappa }^{t}\mathbb{B}_{\kappa }\mathbb{O}_{\kappa }=\mathbb{O}%
+_{\kappa }^{t}\left\{ \mathbb{N}_{\kappa }+i\mathbb{M}_{\kappa }\right\} 
+\mathbb{O}_{\kappa }=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\alpha }_{\kappa }+i\mathbf{\beta }_{\kappa } \\ 
+-\left( \mathbf{\alpha }_{\kappa }+i\mathbf{\beta }_{\kappa }\right) & 
+\mathbf{0}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\mathbf{0} & e^{i\mathbf{\theta }_{\kappa }} \\ 
+-e^{i\mathbf{\theta }_{\kappa }} & \mathbf{0}%
+\end{array}%
+\right)
+\end{equation}%
+and thus%
+\begin{equation}
+\mathbb{O}_{\kappa }^{t}\mathbb{C}_{\kappa }\mathbb{O}_{\kappa }=\eta
+_{\kappa }^{\frac{1}{2}}\left( 
+\begin{array}{cc}
+\mathbf{0} & e^{i\mathbf{\theta }_{\kappa }} \\ 
+-e^{i\mathbf{\theta }_{\kappa }} & \mathbf{0}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\mathbf{0} & \eta _{\kappa }^{\frac{1}{2}}e^{i\mathbf{\theta }_{\kappa }} \\ 
+-\eta _{\kappa }^{\frac{1}{2}}e^{i\mathbf{\theta }_{\kappa }} & \mathbf{0}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta }_{\kappa } \\ 
+-\mathbf{\zeta }_{\kappa } & \mathbf{0}%
+\end{array}%
+\right)
+\end{equation}%
+(which is valid even when $\eta _{\kappa }=0$) $\lceil $Note that $\mathbf{%
+\theta }_{\kappa }\equiv \left( \theta _{\kappa 1},\ldots ,\theta _{\kappa
+d\left( \kappa \right) }\right) $ and $\theta _{\kappa i}\neq \theta
+_{\kappa j}$ in general$\rfloor $ where 
+\begin{equation}
+\mathbf{\zeta }_{\kappa }=\left( 
+\begin{array}{ccc}
+\zeta _{\kappa 1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \zeta _{\kappa d\left( \kappa \right) }%
+\end{array}%
+\right) .
+\end{equation}%
+This allows us to define 
+\begin{equation}
+\mathbb{O=}\left( 
+\begin{array}{ccc}
+\mathbb{O}_{1} & \mathbf{0} & \mathbf{0} \\ 
+\mathbf{0} & \ddots & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{0} & \mathbb{O}_{p}%
+\end{array}%
+\right)
+\end{equation}%
+and see that 
+\begin{equation}
+\mathbb{O}^{t}\mathbf{c}_{U}\mathbb{O}=\left( 
+\begin{array}{ccc}
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta }_{1} \\ 
+-\mathbf{\zeta }_{1} & \mathbf{0}%
+\end{array}
+& \mathbf{0} & \mathbf{0} \\ 
+\mathbf{0} & \ddots & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{0} & 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta }_{p} \\ 
+-\mathbf{\zeta }_{p} & \mathbf{0}%
+\end{array}%
+\end{array}%
+\right)  \label{cor1}
+\end{equation}%
+and by rearranging the columns of $\mathbb{O}$ to produce $\widetilde{%
+\mathbb{O}}$ we obtain 
+\begin{equation}
+\widetilde{\mathbb{O}}^{t}\mathbf{c}_{U}\widetilde{\mathbb{O}}=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta } \\ 
+-\mathbf{\zeta } & \mathbf{0}%
+\end{array}%
+\right)
+\end{equation}%
+and hence using $\mathbf{c}_{U}=\mathbb{U}^{\dagger }\mathbf{c}\mathbb{U}%
+^{\ast }$ we conclude that 
+\begin{equation}
+\mathbb{T}\mathbf{c}\mathbb{T}^{t}=\widetilde{\mathbb{O}}^{t}\mathbb{U}%
+^{\dagger }\mathbf{c}\mathbb{U}^{\ast }\widetilde{\mathbb{O}}=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta } \\ 
+-\mathbf{\zeta } & \mathbf{0}%
+\end{array}%
+\right)
+\end{equation}%
+and define $\mathbb{T}$ as the unitary matrix 
+\begin{equation}
+\mathbb{T}=\widetilde{\mathbb{O}}^{t}\mathbb{U}^{\dagger }
+\end{equation}%
+where $\mathbb{TT}^{\dagger }=\mathbb{T^{\dagger }T=I}_{r}$.
+
+\begin{corollary}
+If $\mathbf{c}$ is a $2s\times 2s$ complex antisymmetric matrix then there
+exists a unitary matrix $\mathbb{W}$ such that 
+\begin{equation}
+\mathbb{W}\mathbf{c}\mathbb{W}^{t}\mathbb{=}\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+-\mathbf{n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right)
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{n}^{\frac{1}{2}}=\left( 
+\begin{array}{ccc}
+n_{1}^{\frac{1}{2}} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & n_{s}^{\frac{1}{2}}%
+\end{array}%
+\right) ;\qquad n_{j}^{\frac{1}{2}}\in \mathbb{R},\quad 1\leq j\leq s
+\end{equation}%
+and $\left\{ n_{j}\right\} $ are the eigenvalues of $\mathbf{cc}^{\dagger }$.
+\end{corollary}
+\end{proof}
+\end{theorem}
+
+\begin{proof}
+Using eq. $\left( \ref{cor1}\right) $ we can define $\mathbb{W}$ as 
+\begin{equation}
+\mathbb{W=}\left( 
+\begin{array}{cc}
+\mathbf{0} & e^{-i\frac{\mathbf{\theta }}{2}} \\ 
+e^{-i\frac{\mathbf{\theta }}{2}} & \mathbf{0}%
+\end{array}%
+\right) \mathbb{T}
+\end{equation}%
+where 
+\begin{equation}
+\mathbb{W}^{\dagger }\mathbb{W=WW}^{\dagger }\mathbb{=I}_{2s}
+\end{equation}%
+and 
+\begin{equation}
+\mathbf{c}=\mathbb{W}^{\dagger }\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+-\mathbf{n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right) \mathbb{W}^{\ast }=\mathbb{T}^{\dagger }\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta } \\ 
+-\mathbf{\zeta } & \mathbf{0}%
+\end{array}%
+\right) \mathbb{T}^{\ast }  \label{cex}
+\end{equation}
+\end{proof}
+
+Eq $\left( \ref{cex}\right) $ shows that the canonical NGSOs $\left\{
+\left\vert \psi _{k}\right\rangle \right\} $ are represented by the columns
+of the matrix $\mathbb{W}^{\dagger }$ in the basis $\left\{ \left\vert
+\varphi _{k}\right\rangle \right\} $ giving 
+\begin{eqnarray}
+W\left( \left\vert \mathbf{\psi }\right\rangle \right) &=&\left( \left\vert 
+\mathbf{\varphi }\right\rangle \right)  \nonumber \\
+W^{\dagger }\left( \left\vert \mathbf{\varphi }\right\rangle \right)
+&=&\left( \left\vert \mathbf{\varphi }\right\rangle \right) \mathbb{W}%
+^{\dagger }=\left( \left\vert \mathbf{\psi }\right\rangle \right)  \nonumber
+\\
+W^{\dagger }\left( \left\vert \mathbf{\varphi }\right\rangle \right)
+&=&\left( \left\vert \mathbf{\varphi }\right\rangle \right) \left( 
+\begin{array}{ccc}
+\mathbf{w}_{1}^{\dagger } & \cdots & \mathbf{w}_{2s}^{\dagger }%
+\end{array}%
+\right)
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+\left\vert g\right\rangle &=&\frac{1}{2}\sum_{1\leq k_{1},k_{2}\leq
+r}c_{k_{1}k_{2}}\left\vert \varphi _{k_{1}}\varphi _{k_{2}}\right\rangle =%
+\frac{1}{2}\sum_{1\leq k_{1},k_{2}\leq r}\left( \mathbb{W}^{\dagger }\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}} \\ 
+-\mathbf{n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}%
+\right) \mathbb{W}^{\ast }\right) _{k_{1}k_{2}}\left\vert \varphi
+_{k_{1}}\varphi _{k_{2}}\right\rangle  \nonumber \\
+&=&\sum_{1\leq k_{1}\leq s}n_{k_{1}}^{\frac{1}{2}}\left\vert W^{\dagger
+}\varphi _{k_{1}}W^{\dagger }\varphi _{k_{1}+s}\right\rangle =\sum_{1\leq
+k_{1}\leq s}n_{k_{1}}^{\frac{1}{2}}\left\vert \psi _{k_{1}}\psi
+_{k_{1}+s}\right\rangle  \nonumber \\
+&=&\sum_{1\leq k_{1}\leq s}n_{k_{1}}^{\frac{1}{2}}\left\vert e^{i\frac{%
+\mathbf{\theta }_{k_{1}}}{2}}T^{\dagger }\varphi _{k_{1}}e^{i\frac{\mathbf{%
+\theta }_{k_{1}}}{2}}T^{\dagger }\varphi _{k_{1}+s}\right\rangle
+=\sum_{1\leq k_{1}\leq s}n_{k_{1}}^{\frac{1}{2}}e^{i\theta }\left\vert
+T^{\dagger }\varphi _{k_{1}}T^{\dagger }\varphi _{k_{1}+s}\right\rangle
+=\sum_{1\leq k_{1}\leq s}n_{k_{1}}^{\frac{1}{2}}e^{i\theta }\left\vert \chi
+_{k_{1}}\chi _{k_{1}+s}\right\rangle
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+T\left( \left\vert \mathbf{\chi }\right\rangle \right) &=&\left( \left\vert 
+\mathbf{\varphi }\right\rangle \right)  \nonumber \\
+T^{\dagger }\left( \left\vert \mathbf{\chi }\right\rangle \right) &=&\left(
+\left\vert \mathbf{\varphi }\right\rangle \right) \mathbb{T}^{\dagger
+}=\left( \left\vert \mathbf{\chi }\right\rangle \right)  \nonumber \\
+T^{\dagger }\left( \left\vert \mathbf{\varphi }\right\rangle \right)
+&=&\left( \left\vert \mathbf{\varphi }\right\rangle \right) \left( 
+\begin{array}{ccc}
+\mathbf{t}_{1}^{\dagger } & \cdots & \mathbf{t}_{2s}^{\dagger }%
+\end{array}%
+\right)
+\end{eqnarray}
+
+\section{Construction of $\mathbb{O}_{\protect\kappa }$ and Phase Factors}
+
+We first form the self adjoint real and imaginary parts of $\mathbb{B}$ 
+\begin{eqnarray}
+\mathbb{B}_{R} &=&\func{Re}\mathbb{B}=\frac{1}{2}\left\{ \mathbb{B+B}%
+^{\dagger }\right\}   \nonumber \\
+\mathbb{B}_{I} &=&\func{Im}\mathbb{B}=-\frac{i}{2}\left\{ \mathbb{B-B}%
+^{\dagger }\right\} 
+\end{eqnarray}%
+where we drop the subscript $\kappa $ which plays no role in the
+considerations of this section. We know that 
+\begin{equation}
+\mathbb{B}_{R}=-\mathbb{B}_{R}^{t}\text{ and }\mathbb{B}_{I}=-\mathbb{B}%
+_{I}^{t}
+\end{equation}%
+and 
+\begin{eqnarray}
+\mathbb{BB}^{\dagger } &=&\mathbb{B}^{\dagger }\mathbb{B=I}  \nonumber \\
+\mathbb{BB}^{\ast } &=&\mathbb{B^{\ast }B}=-\mathbb{I}  \nonumber \\
+\mathbb{B}^{-1} &=&-\mathbb{B^{\ast }}\text{ }
+\end{eqnarray}%
+so that 
+\begin{equation}
+\left[ \mathbb{B},\mathbb{B}^{\dagger }\right] =\mathbb{O}
+\end{equation}%
+and $\mathbb{B}$ is a \emph{normal }operator, thus its self adjoint real and
+imaginary parts $\left\{ \mathbb{B}_{R},\mathbb{B}_{I}\right\} $ commute
+(that are in general complex) and can be simultaneously diagonalized to
+bring $\mathbb{B}$  to diagonal form. One can show that 
+\begin{eqnarray}
+\mathbb{B}_{R} &=&i\mathbb{M}  \nonumber \\
+\mathbb{B}_{I} &=&-i\mathbb{N}
+\end{eqnarray}%
+where $\mathbb{N}$ and $\mathbb{M}$ are the real and imaginary parts of $%
+\mathbb{B}$ (that are real) i.e. 
+\begin{eqnarray}
+\mathbb{N} &=&\frac{1}{2}\left\{ \mathbb{B+B}^{\ast }\right\}   \nonumber \\
+\mathbb{M} &=&-\frac{i}{2}\left\{ \mathbb{B-B}^{\ast }\right\} 
+\end{eqnarray}%
+which also commute with each other 
+\begin{equation}
+\left[ \mathbb{M},\mathbb{N}\right] =\mathbb{O}
+\end{equation}%
+so that 
+\begin{equation}
+\mathbb{B=B}_{R}+i\mathbb{B}_{I}=\mathbb{N}+i\mathbb{M}
+\end{equation}%
+We can simultaneously diagonalize the (in general complex) antisymmetric
+self adjoint matrices $\mathbb{B}_{R}$ and $\mathbb{B}_{I}$ and hence $%
+\mathbb{B}$ with a unitary matrix $\mathbb{V}$ to obtain 
+\begin{equation}
+\mathbb{B}=\left( \mathbf{v}_{1}\mathbf{v}_{1}^{\ast }\mathbf{\cdots v}%
+_{s^{\prime }}\mathbf{v}_{s^{\prime }}^{\ast }\right) \left( 
+\begin{array}{ccccc}
+-ie^{i\theta _{1}} & 0 & 0 & 0 & 0 \\ 
+0 & ie^{i\theta _{1}} & 0 & 0 & 0 \\ 
+0 & 0 & \ddots  & 0 & 0 \\ 
+0 & 0 & 0 & -ie^{i\theta _{s^{\prime }}} & 0 \\ 
+0 & 0 & 0 & 0 & ie^{i\theta _{s^{\prime }}}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathbf{v}_{1}^{\ast } \\ 
+\mathbf{v}_{1} \\ 
+\mathbf{\vdots } \\ 
+\mathbf{v}_{s^{\prime }}^{\ast } \\ 
+\mathbf{v}_{s^{\prime }}%
+\end{array}%
+\right) 
+\end{equation}%
+$\lceil $In eigen vector form%
+\begin{eqnarray}
+\mathbb{B}\mathbf{v}_{1}^{\ast } &=&-ie^{i\theta _{1}}\mathbf{v}_{1}^{\ast }
+\\
+\mathbb{B}\mathbf{v}_{1} &=&ie^{i\theta _{1}}\mathbf{v}_{1}
+\end{eqnarray}%
+\begin{eqnarray}
+\mathbb{B} &=&\left( 
+\begin{array}{cc}
+\mathbf{v} & \overline{\mathbf{v}}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+ie^{i\mathbf{\theta }} & 0 \\ 
+0 & -ie^{i\mathbf{\theta }}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\overline{\mathbf{v}} \\ 
+\mathbf{v}%
+\end{array}%
+\right)  \\
+&=&i\left( 
+\begin{array}{cc}
+e^{i\frac{\mathbf{\theta }}{2}}\mathbf{v} & e^{i\frac{\mathbf{\theta }}{2}}%
+\overline{\mathbf{v}}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+I & 0 \\ 
+0 & -I%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+e^{i\frac{\mathbf{\theta }}{2}}\overline{\mathbf{v}} \\ 
+e^{i\frac{\mathbf{\theta }}{2}}\mathbf{v}%
+\end{array}%
+\right) ,
+\end{eqnarray}
+
+which is not a unitary transformation of the basis$\rfloor $
+
+and hence the \emph{real} orthogonal matrix $\mathbb{O}$ by defining 
+\begin{eqnarray}
+\mathbf{o}_{j} &=&\frac{1}{\sqrt{2}}\left( \mathbf{v}_{j}+\mathbf{v}%
+_{j}^{\ast }\right) =\sqrt{2}\func{Re}\mathbf{v}_{j}  \nonumber \\
+\mathbf{o}_{j+s^{\prime }} &=&\frac{-i}{\sqrt{2}}\left( \mathbf{v}_{j}-%
+\mathbf{v}_{j}^{\ast }\right) =\sqrt{2}\func{Im}\mathbf{v}_{j}
+\end{eqnarray}%
+so that 
+\begin{eqnarray}
+\mathbb{B} &=&\left( \mathbf{o}_{1}\mathbf{o}_{1+s^{\prime }}\mathbf{\cdots o%
+}_{s^{\prime }}\mathbf{o}_{s^{\prime }+s^{\prime }}\right) \left( 
+\begin{array}{ccccc}
+0 & e^{i\theta _{1}} & 0 & 0 & 0 \\ 
+-e^{i\theta _{1}} & 0 & 0 & 0 & 0 \\ 
+0 & 0 & \ddots  & 0 & 0 \\ 
+0 & 0 & 0 & 0 & e^{i\theta _{s^{\prime }}} \\ 
+0 & 0 & 0 & -e^{i\theta _{s^{\prime }}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathbf{o}_{1} \\ 
+\mathbf{o}_{1+s^{\prime }} \\ 
+\mathbf{\vdots } \\ 
+\mathbf{o}_{s^{\prime }} \\ 
+\mathbf{o}_{s^{\prime }+s^{\prime }}%
+\end{array}%
+\right)   \nonumber \\
+\mathbb{B} &=&\left( \mathbf{\tilde{o}}_{1}\mathbf{\tilde{o}}_{1+s^{\prime }}%
+\mathbf{\cdots \tilde{o}}_{\mathbf{s^{\prime }}}\mathbf{\tilde{o}}%
+_{s^{\prime }+s^{\prime }}\right) \left( 
+\begin{array}{ccccc}
+0 & 1 & 0 & 0 & 0 \\ 
+-1 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & \ddots  & 0 & 0 \\ 
+0 & 0 & 0 & 0 & 1 \\ 
+0 & 0 & 0 & -1 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathbf{\tilde{o}} \\ 
+\mathbf{\tilde{o}}_{1+s^{\prime }} \\ 
+\mathbf{\vdots } \\ 
+\mathbf{\tilde{o}}_{s^{\prime }} \\ 
+\mathbf{\tilde{o}}_{s^{\prime }+s^{\prime }}%
+\end{array}%
+\right)   \label{reex}
+\end{eqnarray}%
+where 
+\begin{equation}
+\left( \mathbf{\tilde{o}}_{1}\mathbf{\tilde{o}}_{1+s^{\prime }}\mathbf{%
+\cdots \tilde{o}}_{\mathbf{s^{\prime }}}\mathbf{\tilde{o}}_{s^{\prime
+}+s^{\prime }}\right) =\left( \mathbf{o}_{1}\mathbf{o}_{1+s^{\prime }}%
+\mathbf{\cdots o}_{s^{\prime }}\mathbf{o}_{s^{\prime }+s^{\prime }}\right)
+\left( 
+\begin{array}{ccccc}
+0 & e^{i\frac{\theta _{1}}{2}} & 0 & 0 & 0 \\ 
+-e^{i\frac{\theta _{1}}{2}} & 0 & 0 & 0 & 0 \\ 
+0 & 0 & \ddots  & 0 & 0 \\ 
+0 & 0 & 0 & 0 & e^{i\frac{\theta _{s^{\prime }}}{2}} \\ 
+0 & 0 & 0 & -e^{i\frac{\theta _{s^{\prime }}}{2}} & 0%
+\end{array}%
+\right) .
+\end{equation}%
+This last relationship gives 
+\begin{equation}
+\mathbb{B}=\mathbf{\hat{o}}\left( 
+\begin{array}{ccccc}
+0 & 1 & 0 & 0 & 0 \\ 
+-1 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & \ddots  & 0 & 0 \\ 
+0 & 0 & 0 & 0 & 1 \\ 
+0 & 0 & 0 & -1 & 0%
+\end{array}%
+\right) \mathbf{\hat{o}}^{t}=\mathbf{\hat{o}}\left( 
+\begin{array}{cc}
+\mathbb{O} & \mathbb{I} \\ 
+-\mathbb{I} & \mathbb{O}%
+\end{array}%
+\right) \mathbf{\hat{o}}^{t}.
+\end{equation}%
+Thus 
+\begin{equation}
+\mathbb{B}=\sum_{1\leq j\leq s^{\prime }}e^{i\theta _{j}}\left( \left\vert 
+\mathbf{o}_{j}\right\rangle \left\langle \mathbf{o}_{j+s^{\prime
+}}\right\vert -\left\vert \mathbf{o}_{j+s^{\prime }}\right\rangle
+\left\langle \mathbf{o}_{j}\right\vert \right) 
+\end{equation}%
+and 
+\begin{eqnarray}
+\mathbb{B} &=&i\sum_{1\leq j\leq s^{\prime }}\left( \left\vert e^{i\frac{%
+\theta _{j}}{2}}\mathbf{o}_{j}\right\rangle \left\langle e^{-i\frac{\theta
+_{j}}{2}}\mathbf{o}_{j+s^{\prime }}\right\vert -\left\vert e^{i\frac{\theta
+_{j}}{2}}\mathbf{o}_{j+s^{\prime }}\right\rangle \left\langle e^{-i\frac{%
+\theta _{j}}{2}}\mathbf{o}_{j}\right\vert \right)  \\
+&=&i\sum_{1\leq j\leq s^{\prime }}\left( \left\vert \mathbf{\tilde{o}}%
+_{j}\right\rangle \left\langle \mathbf{\tilde{o}}_{j+s^{\prime }}\right\vert
+-\left\vert \mathbf{\tilde{o}}_{j+s^{\prime }}\right\rangle \left\langle 
+\mathbf{\tilde{o}}_{j}\right\vert \right) .
+\end{eqnarray}%
+It should be noted that 
+\begin{equation}
+\mathbb{B}=\left( 
+\begin{array}{cc}
+\mathbf{w} & \overline{\mathbf{w}}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\mathbb{I} & 0 \\ 
+0 & -\mathbb{I}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\overline{\mathbf{w}} \\ 
+\mathbf{w}%
+\end{array}%
+\right) ,
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{w}=e^{-i\left( \mathbf{\theta }+\frac{\pi }{2}\right) }\mathbf{v.}
+\end{equation}
+
+\end{document}

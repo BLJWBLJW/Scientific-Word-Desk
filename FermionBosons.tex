@@ -1,0 +1,388 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, July 15, 2016 18:54:29}
+%TCIDATA{LastRevised=Friday, July 22, 2016 13:42:05}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Bosons Created by Fermion Operators}
+
+These are the components of the Centre of Mass position operator%
+\begin{align}
+Q_{x_{1}}\varphi\left(  x_{1},x_{2},x_{3}\right)   &  =x_{1}\varphi\left(
+x_{1},x_{2},x_{3}\right) \\
+Q_{x_{2}}\varphi\left(  x_{1},x_{2},x_{3}\right)   &  =x_{2}\varphi\left(
+x_{1},x_{2},x_{3}\right) \\
+Q_{x_{3}}\varphi\left(  x_{1},x_{2},x_{3}\right)   &  =x_{3}\varphi\left(
+x_{1},x_{2},x_{3}\right) \\
+\left[  Q_{x_{j}},Q_{x_{k}}\right]   &  =0\quad1\leq j,k\leq3
+\end{align}
+and these are these are the components of the Total Momentum operator%
+\begin{align}
+P_{x_{1}}\varphi\left(  x_{1},x_{2},x_{3}\right)   &  =-i\frac{\partial
+}{\partial x_{1}}\varphi\left(  x_{1},x_{2},x_{3}\right) \\
+P_{x_{2}}\varphi\left(  x_{1},x_{2},x_{3}\right)   &  =-i\frac{\partial
+}{\partial x_{2}}\varphi\left(  x_{1},x_{2},x_{3}\right) \\
+P_{x_{3}}\varphi\left(  x_{1},x_{2},x_{3}\right)   &  =-i\frac{\partial
+}{\partial x_{3}}\varphi\left(  x_{1},x_{2},x_{3}\right) \\
+\left[  P_{x_{j}},P_{x_{k}}\right]   &  =0\quad1\leq j,k\leq3.
+\end{align}
+These satisfy the Heisenberg commutation relationships
+\begin{equation}
+\left[  Q_{x_{j}},P_{x_{k}}\right]  =iI\delta_{jk}\quad1\leq j,k\leq3.
+\end{equation}%
+\begin{align}
+Q_{x_{j}}  &  =\int\left\langle \left.  \mathbf{x}_{1}\right\vert Q_{x_{j}%
+}\mathbf{x}_{2}\right\rangle a^{\dagger}\left(  \mathbf{x}_{1}\right)
+a\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}\\
+P_{x_{j}}  &  =\int\left\langle \mathbf{x}_{1}\left\vert -i\frac{\partial
+}{\partial x_{j}}\mathbf{x}_{2}\right.  \right\rangle a^{\dagger}\left(
+\mathbf{x}_{1}\right)  a\left(  \mathbf{x}_{2}\right)  d\mathbf{x}%
+_{1}d\mathbf{x}_{2}=\int\left\langle \left.  \mathbf{k}_{1}\right\vert
+Q_{x_{j}}\mathbf{k}_{2}\right\rangle a^{\dagger}\left(  \mathbf{k}_{1}\right)
+a\left(  \mathbf{k}_{2}\right)  d\mathbf{k}_{1}d\mathbf{k}_{2}%
+\end{align}%
+\begin{align}
+\left\langle \left.  \mathbf{x}_{1}\right\vert Q_{x_{j}}\mathbf{x}%
+_{2}\right\rangle  &  =\int\delta_{\mathbf{x}_{1}}\left(  \mathbf{x}\right)
+\left(  Q_{x_{j}}\delta_{\mathbf{x}_{2}}\right)  \left(  \mathbf{x}\right)
+d\mathbf{x}=\int\delta_{\mathbf{x}_{1}}\left(  \mathbf{x}\right)  \left(
+x_{j}\delta_{\mathbf{x}_{2}}\right)  \left(  \mathbf{x}\right)
+d\mathbf{x=\delta}\left(  \mathbf{x}_{1}-\mathbf{x}_{2}\right)  \int
+x_{j}\delta_{\mathbf{x}_{1}}\left(  \mathbf{x}\right)  \delta_{\mathbf{x}_{1}%
+}\left(  \mathbf{x}\right)  d\mathbf{x}=x_{1j}\mathbf{\delta}\left(
+\mathbf{x}_{1}-\mathbf{x}_{2}\right) \\
+\left\langle \mathbf{x}_{1}\left\vert -i\frac{\partial}{\partial x_{j}%
+}\mathbf{x}_{2}\right.  \right\rangle  &  =\int\delta_{\mathbf{x}_{1}}\left(
+\mathbf{x}\right)  \left(  -i\frac{\partial}{\partial x_{j}}\delta
+_{\mathbf{x}_{2}}\right)  \left(  \mathbf{x}\right)  d\mathbf{x}=-i\int%
+\delta_{\mathbf{x}_{1}}\left(  \mathbf{x}\right)  \frac{\partial
+\delta_{\mathbf{x}_{2}}\left(  \mathbf{x}\right)  }{\partial x_{j}}d\mathbf{x}%
+\end{align}%
+\begin{align}
+Q_{x_{j}}  &  =\int x_{1j}\mathbf{\delta}\left(  \mathbf{x}_{1}-\mathbf{x}%
+_{2}\right)  a^{\dagger}\left(  \mathbf{x}_{1}\right)  a\left(  \mathbf{x}%
+_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}=\int x_{1j}a^{\dagger}\left(
+\mathbf{x}_{1}\right)  a\left(  \mathbf{x}_{1}\right)  d\mathbf{x}_{1}%
+=\sum_{1\leq l,m\leq r}\left\langle \left.  \varphi_{l}\right\vert Q_{x_{j}%
+}\varphi_{m}\right\rangle a^{\dagger}\left(  \varphi_{l}\right)  a\left(
+\varphi_{m}\right) \\
+P_{x_{j}}  &  =\int k_{1j}a^{\dagger}\left(  \mathbf{k}_{1}\right)  a\left(
+\mathbf{k}_{1}\right)  d\mathbf{k}_{1}=\sum_{1\leq l,m\leq r}\left\langle
+\left.  \varphi_{l}\right\vert P_{x_{j}}\varphi_{m}\right\rangle a^{\dagger
+}\left(  \varphi_{l}\right)  a\left(  \varphi_{m}\right)
+\end{align}%
+\begin{align}
+B_{j}  &  =\frac{1}{\sqrt{2}}\left(  Q_{x_{j}}+iP_{x_{j}}\right)  =\frac
+{1}{\sqrt{2}}\sum_{1\leq l,m\leq r}\left\langle \left.  \varphi_{l}\right\vert
+\left(  Q_{x_{j}}+iP_{x_{j}}\right)  \varphi_{m}\right\rangle a^{\dagger
+}\left(  \varphi_{l}\right)  a\left(  \varphi_{m}\right) \\
+B_{j}^{\dagger}  &  =\frac{1}{\sqrt{2}}\left(  Q_{x_{j}}-iP_{x_{j}}\right)
+=\frac{1}{\sqrt{2}}\sum_{1\leq l,m\leq r}\left\langle \left.  \varphi
+_{l}\right\vert \left(  Q_{x_{j}}-iP_{x_{j}}\right)  \varphi_{m}\right\rangle
+a^{\dagger}\left(  \varphi_{l}\right)  a\left(  \varphi_{m}\right) \\
+1  &  \leq j\leq3
+\end{align}%
+\begin{align}
+\left[  B_{j}^{\dagger},B_{j}\right]   &  =\frac{1}{2}\left[  \left(
+Q_{x_{j}}-iP_{x_{j}}\right)  ,\left(  Q_{x_{j}}+iP_{x_{j}}\right)  \right] \\
+&  =\frac{1}{2}\left[  Q_{x_{j}},Q_{x_{j}}\right]  +\frac{i}{2}\left[
+Q_{x_{j}},P_{x_{j}}\right]  +\frac{-i}{2}\left[  P_{x_{j}},Q_{x_{j}}\right]
++\frac{1}{2}\left[  P_{x_{j}},P_{x_{j}}\right] \\
+&  =i\left[  Q_{x_{j}},P_{x_{j}}\right]  =-I\\
+\left[  B_{j},B_{j}^{\dagger}\right]   &  =I=\frac{1}{2}\left[  \sum_{1\leq
+l,m\leq r}\left\langle \left.  \varphi_{l}\right\vert \left(  Q_{x_{j}%
+}+iP_{x_{j}}\right)  \varphi_{m}\right\rangle a^{\dagger}\left(  \varphi
+_{l}\right)  a\left(  \varphi_{m}\right)  ,\sum_{1\leq l,m\leq r}\left\langle
+\left.  \varphi_{l}\right\vert \left(  Q_{x_{j}}-iP_{x_{j}}\right)
+\varphi_{m}\right\rangle a^{\dagger}\left(  \varphi_{l}\right)  a\left(
+\varphi_{m}\right)  \right]
+\end{align}%
+\begin{align}
+Q_{x_{j}}  &  =\sqrt{2}\left(  B_{j}^{\dagger}+B_{j}\right) \\
+P_{x_{j}}  &  =-i\sqrt{2}\left(  B_{j}^{\dagger}-B_{j}\right) \\
+1  &  \leq j\leq3
+\end{align}
+%
+
+\begin{equation}
+\left(  B_{j}\right)  ^{n}=\frac{1}{2^{\frac{n}{2}}}\left(  \sum_{1\leq
+l,m\leq r}\left\langle \left.  \varphi_{l}\right\vert \left(  Q_{x_{j}%
+}+iP_{x_{j}}\right)  \varphi_{m}\right\rangle a^{\dagger}\left(  \varphi
+_{l}\right)  a\left(  \varphi_{m}\right)  \right)  ^{n}%
+\end{equation}
+
+
+\subsection{Questions}
+
+\begin{enumerate}
+\item Is there a vacuum for $\left\{  B_{j}\right\}  ?$
+
+\item How many linearly independent $\left\{  B_{j}\right\}  ^{\prime}s$ are there?
+
+For each component in the tensor product there are 3 boson operators based on
+3D space. One could consider $3\beta$ boson operators i.e. associated with
+$\beta$ different bosons.
+\end{enumerate}
+
+\section{Example}
+
+Let $r=2$ then
+\begin{align}
+Q_{j}  & =\sum_{1\leq l,m\leq2}Q_{jlm}a^{\dagger}\left(  \varphi_{l}\right)
+a\left(  \varphi_{m}\right)  ;Q_{jlm}=\int x_{j}\overline{\varphi}_{l}\left(
+\mathbf{x}\right)  \varphi_{m}\left(  \mathbf{x}\right)  d\mathbf{x}\\
+P_{j}  & =\sum_{1\leq l,m\leq2}P_{jlm}a^{\dagger}\left(  \varphi_{l}\right)
+a\left(  \varphi_{m}\right)  ;P_{jlm}=-i\int\overline{\varphi}_{l}\left(
+\mathbf{x}\right)  \frac{\partial}{\partial x_{j}}\varphi_{m}\left(
+\mathbf{x}\right)  d\mathbf{x}%
+\end{align}
+\begin{align}
+h  & =\sum_{1\leq l,m\leq r}h_{lm}a^{\dagger}\left(  \varphi_{l}\right)
+a\left(  \varphi_{m}\right)  =\int\left\langle \left.  \mathbf{x}%
+_{1}\right\vert h\mathbf{x}_{2}\right\rangle a^{\dagger}\left(  \mathbf{x}%
+_{1}\right)  a\left(  \mathbf{x}_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}%
+_{2}=\int h\left(  \mathbf{x}_{1},\mathbf{x}_{2}\right)  a^{\dagger}\left(
+\mathbf{x}_{1}\right)  a\left(  \mathbf{x}_{2}\right)  d\mathbf{x}%
+_{1}d\mathbf{x}_{2}\\
+h_{lm}  & =\int\overline{\varphi}_{l}\left(  \mathbf{x}_{1}\right)  h\left(
+\mathbf{x}_{1},\mathbf{x}_{2}\right)  \varphi_{m}\left(  \mathbf{x}%
+_{2}\right)  d\mathbf{x}_{1}d\mathbf{x}_{2}%
+\end{align}%
+\begin{align}
+\left\langle \left.  \Psi_{2}\right\vert h\Psi_{2}\right\rangle  &  =\frac
+{1}{2}\int\overline{\Psi_{2}}\left(  \mathbf{y}_{1}^{\prime},\mathbf{y}%
+_{2}^{\prime}\right)  \left(  h\left(  \mathbf{y}_{1}^{\prime},\mathbf{y}%
+_{1}\right)  \delta\left(  \mathbf{y}_{2}^{\prime}-\mathbf{y}_{2}\right)
++h\left(  \mathbf{y}_{2}^{\prime},\mathbf{y}_{2}\right)  \delta\left(
+\mathbf{y}_{1}^{\prime}-\mathbf{y}_{1}\right)  \right)  \Psi_{2}\left(
+\mathbf{y}_{1},\mathbf{y}_{2}\right)  d\mathbf{y}_{1}^{\prime}d\mathbf{y}%
+_{2}^{\prime}d\mathbf{y}_{1}d\mathbf{y}_{2}\\
+&  =\frac{1}{2}\left\{  \int\overline{\Psi_{2}}\left(  \mathbf{y}_{1}^{\prime
+},\mathbf{y}_{2}\right)  \left(  h\left(  \mathbf{y}_{1}^{\prime}%
+,\mathbf{y}_{1}\right)  \right)  \Psi_{2}\left(  \mathbf{y}_{1},\mathbf{y}%
+_{2}\right)  d\mathbf{y}_{1}^{\prime}d\mathbf{y}_{1}d\mathbf{y}_{2}\right.  \\
+&  \left.  +\int\overline{\Psi_{2}}\left(  \mathbf{y}_{1},\mathbf{y}%
+_{2}^{\prime}\right)  \left(  h\left(  \mathbf{y}_{2}^{\prime},\mathbf{y}%
+_{2}\right)  \right)  \Psi_{2}\left(  \mathbf{y}_{1},\mathbf{y}_{2}\right)
+d\mathbf{y}_{2}^{\prime}d\mathbf{y}_{1}d\mathbf{y}_{2}\right\}  \\
+&  =\frac{1}{2}\left\{  \int\overline{\Psi_{2}}\left(  \mathbf{y}_{1}^{\prime
+},\mathbf{y}_{2}\right)  \Psi_{2}\left(  \mathbf{y}_{1},\mathbf{y}_{2}\right)
+\left(  h\left(  \mathbf{y}_{1}^{\prime},\mathbf{y}_{1}\right)  \right)
+d\mathbf{y}_{1}^{\prime}d\mathbf{y}_{1}d\mathbf{y}_{2}+\int\overline{\Psi_{2}%
+}\left(  \mathbf{y}_{1},\mathbf{y}_{2}^{\prime}\right)  \Psi_{2}\left(
+\mathbf{y}_{1},\mathbf{y}_{2}\right)  \left(  h\left(  \mathbf{y}_{2}^{\prime
+},\mathbf{y}_{2}\right)  \right)  d\mathbf{y}_{2}^{\prime}d\mathbf{y}%
+_{1}d\mathbf{y}_{2}\right\}  \\
+&  =\int\overline{\Psi_{2}}\left(  \mathbf{y}_{1}^{\prime},\mathbf{y}%
+_{2}\right)  \Psi_{2}\left(  \mathbf{y}_{1},\mathbf{y}_{2}\right)  h\left(
+\mathbf{y}_{1}^{\prime},\mathbf{y}_{1}\right)  d\mathbf{y}_{1}^{\prime
+}d\mathbf{y}_{1}d\mathbf{y}_{2}=2\int\left(  \int\overline{\Psi_{2}}\left(
+\mathbf{y}_{1}^{\prime},\mathbf{y}_{2}\right)  \Psi_{2}\left(  \mathbf{y}%
+_{1},\mathbf{y}_{2}\right)  d\mathbf{y}_{2}\right)  h\left(  \mathbf{y}%
+_{1}^{\prime},\mathbf{y}_{1}\right)  d\mathbf{y}_{1}^{\prime}d\mathbf{y}_{1}\\
+&  =\int D_{1}\left(  \mathbf{y}_{1}^{\prime},\mathbf{y}_{1}\right)  h\left(
+\mathbf{y}_{1}^{\prime},\mathbf{y}_{1}\right)  d\mathbf{y}_{1}^{\prime
+}d\mathbf{y}_{1}\\
+&  =\int h\left(  \mathbf{x}_{1},\mathbf{x}_{2}\right)  \left\langle \left.
+\Psi_{2}\right\vert a^{\dagger}\left(  \mathbf{x}_{1}\right)  a\left(
+\mathbf{x}_{2}\right)  \Psi_{2}\right\rangle d\mathbf{x}_{1}d\mathbf{x}_{2}%
+\end{align}%
+\begin{equation}
+h\left(  \mathbf{x}_{1}^{\prime},\mathbf{x}_{2}^{\prime},\mathbf{x}%
+_{1},\mathbf{x}_{2}\right)  =\frac{1}{2}\left(  h\left(  \mathbf{x}%
+_{1}^{\prime},\mathbf{x}_{1}\right)  \delta\left(  \mathbf{x}_{2}^{\prime
+}-\mathbf{x}_{2}\right)  +\delta\left(  \mathbf{x}_{1}^{\prime}-\mathbf{x}%
+_{1}\right)  h\left(  \mathbf{x}_{2}^{\prime},\mathbf{x}_{2}\right)  \right)
+\end{equation}%
+\begin{align}
+\left\langle \left.  \Psi_{2}\right\vert a^{\dagger}\left(  \mathbf{x}%
+_{1}\right)  a\left(  \mathbf{x}_{2}\right)  \Psi_{2}\right\rangle  &
+=\left\langle \left.  \Psi_{2}\right\vert P_{2}a^{\dagger}\left(
+\mathbf{x}_{1}\right)  a\left(  \mathbf{x}_{2}\right)  P_{2}\Psi
+_{2}\right\rangle =\int\left\langle \left.  \Psi_{2}\right\vert \left\vert
+\mathbf{y}_{1}^{\prime},\mathbf{y}_{2}^{\prime}\right\rangle \left\langle
+\mathbf{y}_{1}^{\prime},\mathbf{y}_{2}^{\prime}\right\vert a^{\dagger}\left(
+\mathbf{x}_{1}\right)  a\left(  \mathbf{x}_{2}\right)  \left\vert
+\mathbf{y}_{1},\mathbf{y}_{2}\right\rangle \left\langle \mathbf{y}%
+_{1},\mathbf{y}_{2}\right\vert \Psi_{2}\right\rangle d\mathbf{y}_{1}^{\prime
+}d\mathbf{y}_{2}^{\prime}d\mathbf{y}_{1}d\mathbf{y}_{2}\\
+&  =\int\overline{\Psi_{2}}\left(  \mathbf{y}_{1}^{\prime},\mathbf{y}%
+_{2}^{\prime}\right)  a^{\dagger}\left(  \mathbf{x}_{1}\right)  a\left(
+\mathbf{x}_{2}\right)  \left(  \mathbf{y}_{1}^{\prime},\mathbf{y}_{2}^{\prime
+},\mathbf{y}_{1},\mathbf{y}_{2}\right)  \Psi_{2}\left(  \mathbf{y}%
+_{1},\mathbf{y}_{2}\right)
+\end{align}%
+\begin{equation}
+\left\langle \mathbf{y}_{1}^{\prime},\mathbf{y}_{2}^{\prime}\right\vert
+a^{\dagger}\left(  \mathbf{x}_{1}\right)  a\left(  \mathbf{x}_{2}\right)
+\left\vert \mathbf{y}_{1},\mathbf{y}_{2}\right\rangle =a^{\dagger}\left(
+\mathbf{x}_{1}\right)  a\left(  \mathbf{x}_{2}\right)  \left(  \mathbf{y}%
+_{1}^{\prime},\mathbf{y}_{2}^{\prime},\mathbf{y}_{1},\mathbf{y}_{2}\right)
+\end{equation}%
+\begin{equation}
+P_{2}=\int\left\vert \mathbf{y}_{1},\mathbf{y}_{2}\right\rangle \left\langle
+\mathbf{y}_{1},\mathbf{y}_{2}\right\vert d\mathbf{y}_{1}d\mathbf{y}_{2}%
+\end{equation}%
+\begin{align}
+\Psi_{2}\left(  \mathbf{y}_{1},\mathbf{y}_{2}\right)   &  =\left\langle
+\left.  \mathbf{y}_{1},\mathbf{y}_{2}\right\vert \Psi_{2}\right\rangle \\
+\left\vert \Psi_{2}\right\rangle  &  =\int\left\vert \mathbf{y}_{1}%
+,\mathbf{y}_{2}\right\rangle \left\langle \left.  \mathbf{y}_{1}%
+,\mathbf{y}_{2}\right\vert \Psi_{2}\right\rangle d\mathbf{y}_{1}%
+d\mathbf{y}_{2}=\int\left\langle \left.  \mathbf{y}_{1},\mathbf{y}%
+_{2}\right\vert \Psi_{2}\right\rangle \left\vert \mathbf{y}_{1},\mathbf{y}%
+_{2}\right\rangle d\mathbf{y}_{1}d\mathbf{y}_{2}=\int\Psi_{2}\left(
+\mathbf{y}_{1},\mathbf{y}_{2}\right)  \left\vert \mathbf{y}_{1},\mathbf{y}%
+_{2}\right\rangle d\mathbf{y}_{1}d\mathbf{y}_{2}%
+\end{align}
+How many solutions to the equations
+\begin{align}
+&  \left[  \sum_{1\leq l,m\leq r}\alpha_{lm}a^{\dagger}\left(  \varphi
+_{l}\right)  a\left(  \varphi_{m}\right)  ,\sum_{1\leq l,m\leq r}\beta
+_{lm}a^{\dagger}\left(  \varphi_{l}\right)  a\left(  \varphi_{m}\right)
+\right]  =iI\\
+&  \overline{\alpha}_{lm}=\alpha_{ml};\overline{\beta}_{lm}=\beta_{ml}%
+\end{align}%
+\begin{align}
+&  \left[  \sum_{1\leq l,m\leq r}\left(  \alpha_{lm}+i\beta_{lm}\right)
+a^{\dagger}\left(  \varphi_{l}\right)  a\left(  \varphi_{m}\right)
+,\sum_{1\leq l,m\leq r}\left(  \alpha_{lm}-i\beta_{lm}\right)  a^{\dagger
+}\left(  \varphi_{l}\right)  a\left(  \varphi_{m}\right)  \right]  =I\\
+&  \overline{\alpha}_{lm}=\alpha_{ml};\overline{\beta}_{lm}=\beta_{ml}%
+\end{align}%
+\begin{align}
+& \left[  z_{11}a_{1}^{\dagger}a_{1}+z_{12}a_{1}^{\dagger}a_{2}+z_{21}%
+a_{2}^{\dagger}a_{1}+z_{22}a_{2}^{\dagger}a_{2},\overline{z}_{11}%
+a_{1}^{\dagger}a_{1}+\overline{z}_{12}a_{2}^{\dagger}a_{1}+\overline{z}%
+_{21}a_{1}^{\dagger}a_{2}+\overline{z}_{22}a_{2}^{\dagger}a_{2}\right]  =\\
+& +z_{11}\left\{  \overline{z}_{12}\left[  a_{1}^{\dagger}a_{1},a_{2}%
+^{\dagger}a_{1}\right]  +\overline{z}_{21}\left[  a_{1}^{\dagger}a_{1}%
+,a_{1}^{\dagger}a_{2}\right]  \right\}  \\
+& +z_{12}\left\{  \overline{z}_{11}\left[  a_{1}^{\dagger}a_{2},a_{1}%
+^{\dagger}a_{1}\right]  +\overline{z}_{12}\left[  a_{1}^{\dagger}a_{2}%
+,a_{2}^{\dagger}a_{1}\right]  +\overline{z}_{22}\left[  a_{1}^{\dagger}%
+a_{2},a_{2}^{\dagger}a_{2}\right]  \right\}  \\
+& +z_{21}\left\{  \overline{z}_{11}\left[  a_{2}^{\dagger}a_{1},a_{1}%
+^{\dagger}a_{1}\right]  +\overline{z}_{21}\left[  a_{2}^{\dagger}a_{1}%
+,a_{1}^{\dagger}a_{2}\right]  +\overline{z}_{22}\left[  a_{2}^{\dagger}%
+a_{1},a_{2}^{\dagger}a_{2}\right]  \right\}  \\
+& +z_{22}\left\{  \overline{z}_{12}\left[  a_{2}^{\dagger}a_{2},a_{2}%
+^{\dagger}a_{1}\right]  +\overline{z}_{21}\left[  a_{2}^{\dagger}a_{2}%
+,a_{1}^{\dagger}a_{2}\right]  \right\}
+\end{align}%
+\begin{align}
+& \left[  z_{11}a_{1}^{\dagger}a_{1}+z_{12}a_{1}^{\dagger}a_{2}+z_{21}%
+a_{2}^{\dagger}a_{1}+z_{22}a_{2}^{\dagger}a_{2},\overline{z}_{11}%
+a_{1}^{\dagger}a_{1}+\overline{z}_{12}a_{2}^{\dagger}a_{1}+\overline{z}%
+_{21}a_{1}^{\dagger}a_{2}+\overline{z}_{22}a_{2}^{\dagger}a_{2}\right]  =\\
+& -z_{11}\overline{z}_{12}a_{2}^{\dagger}a_{1}+z_{11}\overline{z}_{21}%
+a_{1}^{\dagger}a_{2}\\
+& +z_{12}\overline{z}_{11}a_{1}^{\dagger}a_{2}+z_{12}\overline{z}_{12}\left[
+a_{1}^{\dagger}a_{1}-a_{2}^{\dagger}a_{2}\right]  +z_{12}\overline{z}%
+_{22}a_{1}^{\dagger}a_{2}\\
+& +z_{21}\overline{z}_{11}a_{2}^{\dagger}a_{1}-z_{21}\overline{z}_{21}\left[
+a_{1}^{\dagger}a_{1}-a_{2}^{\dagger}a_{2}\right]  -z_{21}\overline{z}%
+_{22}a_{2}^{\dagger}a_{1}\\
+& +z_{22}\overline{z}_{12}a_{2}^{\dagger}a_{1}-z_{22}\overline{z}_{21}%
+a_{1}^{\dagger}a_{2}%
+\end{align}%
+\begin{align}
+& \left[  z_{11}a_{1}^{\dagger}a_{1}+z_{12}a_{1}^{\dagger}a_{2}+z_{21}%
+a_{2}^{\dagger}a_{1}+z_{22}a_{2}^{\dagger}a_{2},\overline{z}_{11}%
+a_{1}^{\dagger}a_{1}+\overline{z}_{12}a_{2}^{\dagger}a_{1}+\overline{z}%
+_{21}a_{1}^{\dagger}a_{2}+\overline{z}_{22}a_{2}^{\dagger}a_{2}\right]  =\\
+& -\left(  z_{11}\overline{z}_{12}+z_{21}\overline{z}_{11}-z_{21}\overline
+{z}_{22}+z_{22}\overline{z}_{12}\right)  a_{2}^{\dagger}a_{1}\\
+& +\left(  z_{12}\overline{z}_{11}+z_{12}\overline{z}_{22}+z_{11}\overline
+{z}_{21}-z_{22}\overline{z}_{21}\right)  a_{1}^{\dagger}a_{2}\\
+& +\left(  z_{12}\overline{z}_{12}-z_{21}\overline{z}_{21}\right)  \left[
+a_{1}^{\dagger}a_{1}-a_{2}^{\dagger}a_{2}\right]
+\end{align}%
+\begin{align}
+\left[  a_{1}^{\dagger}a_{1},a_{2}^{\dagger}a_{1}\right]    & =a_{1}^{\dagger
+}a_{1}a_{2}^{\dagger}a_{1}-a_{2}^{\dagger}a_{1}a_{1}^{\dagger}a_{1}%
+=-a_{2}^{\dagger}\left(  1-a_{1}^{\dagger}a_{1}\right)  a_{1}=-a_{2}^{\dagger
+}a_{1}\\
+\left[  a_{1}^{\dagger}a_{1},a_{1}^{\dagger}a_{2}\right]    & =a_{1}^{\dagger
+}a_{1}a_{1}^{\dagger}a_{2}-a_{1}^{\dagger}a_{2}a_{1}^{\dagger}a_{1}%
+=a_{1}^{\dagger}\left(  1-a_{1}^{\dagger}a_{1}\right)  a_{2}=a_{1}^{\dagger
+}a_{2}\\
+\left[  a_{1}^{\dagger}a_{2},a_{2}^{\dagger}a_{1}\right]    & =a_{1}^{\dagger
+}a_{2}a_{2}^{\dagger}a_{1}-a_{2}^{\dagger}a_{1}a_{1}^{\dagger}a_{2}%
+=a_{1}^{\dagger}\left(  1-a_{2}^{\dagger}a_{2}\right)  a_{1}-a_{2}^{\dagger
+}\left(  1-a_{1}^{\dagger}a_{1}\right)  a_{2}=a_{1}^{\dagger}a_{1}%
+-a_{1}^{\dagger}a_{1}a_{2}^{\dagger}a_{2}-a_{2}^{\dagger}a_{2}+a_{1}^{\dagger
+}a_{1}a_{2}^{\dagger}a_{2}=a_{1}^{\dagger}a_{1}-a_{2}^{\dagger}a_{2}%
+\end{align}
+
+
+
+\end{document}

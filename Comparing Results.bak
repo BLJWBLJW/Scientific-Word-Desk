@@ -1,0 +1,130 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, December 30, 2011 10:23:52}
+%TCIDATA{LastRevised=Friday, December 30, 2011 15:16:33}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Comparisons}%
+
+\begin{align}
+\lambda_{2}^{2} &  =\frac{1}{16}\sum_{\substack{1\leq l_{1},l_{2}\leq r\\1\leq
+l_{3},l_{4}\leq r\\1\leq k_{1},k_{2}\leq r\\1\leq k_{3},k_{4}\leq r}}\left\{
+\lambda_{2l_{1}l_{2}l_{3}l_{4}}\lambda_{2k_{1}k_{2}k_{3}k_{4}}a_{l_{1}%
+}^{\dagger}a_{l_{2}}^{\dagger}a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{4}%
+}a_{l_{3}}a_{k_{4}}a_{k_{3}}\right.  \nonumber\\
+&  \left.  +\,4\lambda_{2l_{1}l_{2}l_{3}\mathrm{l}_{4}}\lambda_{2\mathrm{l}%
+_{4}k_{2}k_{3}k_{4}}a_{l_{1}}^{\dagger}a_{l_{2}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{l_{3}}a_{k_{4}}a_{k_{3}}+2\lambda_{2l_{1}l_{2}l_{3}\mathrm{l}_{4}}%
+\lambda_{2l_{3}\mathrm{l}_{4}k_{3}k_{4}}a_{l_{1}}^{\dagger}a_{l_{2}}^{\dagger
+}a_{k_{4}}a_{k_{3}}\right\}  .
+\end{align}%
+\begin{align}
+&  \sum_{\substack{1\leq l_{1}<l_{2}\leq r\\1\leq l_{3}<l_{4}\leq r\\1\leq
+k_{1}<k_{2}\leq r\\1\leq k_{3}<k_{4}\leq r}}\left\{  \lambda_{2l_{1}l_{2}%
+l_{3}l_{4}}\lambda_{2k_{1}k_{2}k_{3}k_{4}}a_{l_{1}}^{\dagger}a_{l_{2}%
+}^{\dagger}a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{4}}a_{l_{3}}a_{k_{4}%
+}a_{k_{3}}\right.  \nonumber\\
+&  \left.  \,+\,4\lambda_{2l_{1}l_{2}l_{3}\mathrm{l}_{4}}\lambda
+_{2\mathrm{l}_{4}k_{2}k_{3}k_{4}}a_{l_{1}}^{\dagger}a_{l_{2}}^{\dagger
+}a_{k_{2}}^{\dagger}a_{l_{3}}a_{k_{4}}a_{k_{3}}+2\lambda_{2l_{1}l_{2}%
+l_{3}\mathrm{l}_{4}}\lambda_{2l_{3}\mathrm{l}_{4}k_{3}k_{4}}a_{l_{1}}%
+^{\dagger}a_{l_{2}}^{\dagger}a_{k_{4}}a_{k_{3}}\right\}  .
+\end{align}
+gives the diagonal part%
+\begin{align}
+&  \sum_{\substack{1\leq l_{1}<l_{2}\leq r\\1\leq k_{1}<k_{2}\leq r}}\left\{
+\lambda_{2l_{1}l_{2}l_{1}l_{2}}\lambda_{2k_{1}k_{2}k_{1}k_{2}}a_{l_{1}%
+}^{\dagger}a_{l_{2}}^{\dagger}a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{l_{2}%
+}a_{l_{1}}a_{k_{2}}a_{k_{1}}\right.  \nonumber\\
+&  \left.  +\,4\lambda_{2l_{1}l_{2}l_{3}\mathrm{l}_{4}}\lambda_{2\mathrm{l}%
+_{4}k_{2}k_{3}k_{4}}a_{l_{1}}^{\dagger}a_{l_{2}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{l_{3}}a_{k_{4}}a_{k_{3}}+2\lambda_{2l_{1}l_{2}l_{3}\mathrm{l}_{4}}%
+\lambda_{2l_{3}\mathrm{l}_{4}k_{3}k_{4}}a_{l_{1}}^{\dagger}a_{l_{2}}^{\dagger
+}a_{k_{4}}a_{k_{3}}\right\}  .
+\end{align}%
+\begin{align}
+& \sum_{\substack{1\leq j_{1}<k_{1}\leq r\\1\leq j_{2}<k_{2}\leq r}%
+}\lambda_{2j_{1}k_{1}j_{1}k_{1}}\lambda_{2j_{2}k_{2}j_{2}k_{2}}n_{j_{1}%
+}n_{k_{1}}n_{j_{2}}n_{k_{2}}=\sum_{1\leq j_{1}<k_{1}\leq r}\lambda
+_{2j_{2}k_{2}j_{2}k_{2}}^{2}n_{j_{1}}n_{k_{1}}\nonumber\\
+& +2\sum_{1\leq i_{1}<i_{2}<i_{3}\leq r}\left(  \lambda_{2i_{1}i_{2}i_{1}%
+i_{2}}\lambda_{2i_{1}i_{3}i_{1}i_{3}}+\lambda_{2i_{1}i_{2}i_{1}i_{2}}%
+\lambda_{2i_{2}i_{3}i_{2}i_{3}}+\lambda_{2i_{1}i_{3}i_{1}i_{3}}\lambda
+_{2i_{2}i_{3}i_{2}i_{3}}\right)  n_{i_{1}}n_{i_{2}}n_{i_{3}}\nonumber\\
+& +2\sum_{1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r}\left(  \lambda_{2i_{1}%
+i_{2}i_{1}i_{2}}\lambda_{2i_{3}i_{4}i_{3}i_{4}}+\lambda_{2i_{1}i_{3}i_{1}%
+i_{3}}\lambda_{2i_{2}i_{4}i_{2}i_{4}}+\lambda_{2i_{1}i_{4}i_{1}i_{4}}%
+\lambda_{2i_{2}i_{3}i_{2}i_{3}}\right)  n_{i_{1}}n_{i_{2}}n_{i_{3}}n_{i_{4}}.
+\end{align}
+
+
+
+\end{document}

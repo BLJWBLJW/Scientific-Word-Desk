@@ -1,0 +1,1445 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[tcidvi]{graphicx}
+\usepackage{amsbsy}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, June 20, 2003 15:09:06}
+%TCIDATA{LastRevised=Wednesday, June 25, 2003 21:43:12}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Antisym. Mat]{Canonical Form of Antisymmetric Matrices}
+\author{B. Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+\author{J. V. Ortiz}
+\affiliation{Department of Chemistry, Kansas State University, Manhattan, KS 66506-3701}
+\pacs{}
+
+\begin{abstract}
+The canonical geminal coefficients often advertised as "canonical" for a given
+geminal are in fact very non unique. In this paper we show by carefully
+examining a Theorem by B. Zumino how to construct unique canonical
+coefficients for a geminal. This result leads to expansions of Antisymmetrised
+Geminal Power States solely in terms of Natural Generalized Spin Orbitals and
+geminal occupation numbers.
+
+\end{abstract}
+\date{06/26/2003}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction\label{intro}}
+
+Antisymmetric Geminal Power (AGP) states provide an unbiased way to treat
+correlation for both strongly and weakly correlated systems. This has been
+displayed by their use as a reference state for the polarization propagator
+\cite{weiner87}\cite{Weiner85}\cite{Weiner84a}\cite{Kurtz83}\cite{Jorgen83} in
+the simultaneous production of dissociation curves for several low lying
+excited states of light diatomic molecules which were in good agreement with
+experimental results. Although AGP states are rarely the exact solutions of
+the Schr\"{o}dinger equation they can serve as an unbiased approximation
+ansatz generalizing the Independent Particle State (IPS) approach by including
+a better description of electron - electron interaction, while at the same
+time maintaining a balanced and physically interpretable model of both
+molecular and extended systems. In this paper we in fact show that an
+$2N$-electron AGP\ state is completely determined by geminal occupation
+numbers and Natural General Spin Orbitals (NGSOs), two quantities that have a
+clear physical significance. A $2N$-electron AGP\ state is the antisymmetrized
+product of $N$ identical $2$-electron geminals thus the properties and form of
+the geminal determine the characteristics of the product\ state, e.g. the
+expectation value expressions, and the various reduced density operators and
+will form the focus of this paper.
+
+The methods used to energy optimize an AGP state in the previously cited
+references were not numerically robust nor easily extendable to large systems.
+Recently we have \cite{Weiner&Ortiz02} described a method that overcomes these
+numerical difficulties and can be applied to molecules of various sizes. A
+salient feature of this procedure is that the geminal parameters always refer
+to a \emph{fixed} localized atomic orbital basis, which allows one to
+visualize the AGP state in a chemical intuitive manner and introduce
+approximations to the integral matrix in a natural way. At the same time the
+various expressions for the energy and its gradient are more conveniently
+formulated in terms of the canonical form (canonical orbitals and
+coefficients) of the geminal, which was first discussed in a quantum chemical
+context in the works of \cite{Coleman63},\cite{Lowdin56}.
+
+The standard canonical form for the geminal is
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq k\leq s}\zeta_{k}\left\vert \chi
+_{k}\chi_{k+s}\right\rangle \label{gstate}%
+\end{equation}
+where $\left\{  \zeta_{k}\right\}  $ are complex canonical coefficients,
+$\left\{  \chi_{k}\right\}  $ a set of canonical NGSOs and $r=2s$ is the size
+of the basis set. One can view the expansion eq. $\left(  \ref{gstate}\right)
+$ in the coordinate representation in terms of normalized $2\times2$ Slater
+determinants as%
+
+\begin{equation}
+g\left(  \mathbf{r}_{1},\mathbf{r}_{2}\right)  =\left\langle \mathbf{r}%
+_{1}\mathbf{r}_{2}|g\right\rangle =\sum_{1\leq k\leq s}\zeta_{k}\frac{1}%
+{\sqrt{2}}\det\left[  \chi_{k}\left(  \mathbf{r}_{1}\right)  \chi_{k+s}\left(
+\mathbf{r}_{2}\right)  \right]  \label{gslat}%
+\end{equation}
+which clearly shows that any $2\times2$ special unitary transformation mixes
+the canonical NGSOs $\left\{  \chi_{k},\chi_{k+s}\right\}  $ to another
+equivalent pair $\left\{  \tilde{\chi}_{k},\tilde{\chi}_{k+s}\right\}  $ of
+canonical NGSOs, a non uniqueness that is common in quantum chemistry amongst
+eigenfunctions that are degenerate. A non uniqueness that has not be broadly
+recognized is that of the canonical coefficients $\left\{  \zeta_{k}\right\}
+$ which are defined only up to a phase factor as
+\begin{equation}
+g\left(  \mathbf{r}_{1},\mathbf{r}_{2}\right)  =\sum_{1\leq k\leq s}\zeta
+_{k}e^{-i\nu}\frac{1}{\sqrt{2}}\det\left[  e^{i\frac{\nu}{2}}\chi_{k}\left(
+\mathbf{r}_{1}\right)  e^{i\frac{\nu}{2}}\chi_{k+s}\left(  \mathbf{r}%
+_{2}\right)  \right]
+\end{equation}
+is also a valid canonical expansion. In this paper we show by invoking a
+theorem and corollary due to Zumino \cite{Zumino62}, that without loss of
+generality one can express the geminal $\left\vert g\right\rangle $ in terms
+of a unique set of positive canonical coefficients $\left\{  n_{k}^{\frac
+{1}{2}}\right\}  $ and canonical NGSOs $\left\{  \psi_{k}\right\}  $ that are
+unique up to $2\times2$ special unitary transformation as
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq k\leq s}n_{k}^{\frac{1}{2}}\left\vert
+\psi_{k}\psi_{k+s}\right\rangle \label{gpos}%
+\end{equation}
+The canonical coefficients $\left\{  n_{k}^{\frac{1}{2}}\right\}  $ are the
+positive square roots of the eigenvalues of the First Order Reduced Density
+Operator (FORDO) of the geminal $\left\vert g\right\rangle ,$ but as shown in
+section \ref{zumino} the NGSOs of this FORDO are \emph{not} necessarily
+canonical NGSOs that can be used in the expansion eq. $\left(  \ref{gpos}%
+\right)  $.
+
+These unique coefficients have physical significance as they determine the
+eigenvalues i.e. occupation numbers of the FORDO of the $2N$-particle
+AGP\ state \emph{and} the full Configurational Interaction (CI)\ expansion. A
+rather remarkable consequence of this, is that the energy the of $2N$-electron
+AGP\ state, and its various reduced density operators, can solely be expressed
+in terms of the one electron canonical orbitals and the occupation numbers of
+the geminal. Hence the AGP\ ansatz produces a one electron theory of
+correlated particles.
+
+After the introduction (section \ref{intro}) we define in section
+\ref{geminal} the geminal and reduced density operator associated with this
+$2$ -particle state and we also review some aspects of tensor product
+expansions that can lead to some ambiguity in the normalization of the geminal
+expansion coefficients, in section \ref{zumino} we develop Zumino's theorem
+and two corollaries in detail, while in section \ref{numerical} we describe a
+procedure for producing the physically significant canonical coefficients and
+orbitals and examine the subtleties of numerically implementing this
+procedure, in section \ref{discussion} we comment on the ramifications of our
+analysis and results and we present a conclusion in section \ref{conclusion}.
+
+\section{Geminals and Antisymmetric Complex Matrices\label{geminal}}
+
+In this section we describe how one forms the matrix of Natural Generalized
+Spin Orbitals (NGSO) that brings the complex antisymmetric matrix of geminal
+coefficients $\mathbf{c}$\textbf{ }to block diagonal form (see section
+\ref{zumino}). It is important to note the significance of the term
+"Generalized" which means that the orbitals have both alpha and beta spin
+components. This is necessary on two fronts, one mathematical in order to
+obtain the correct pairing associated with antisymmetry and one practical in
+order to form the most flexible approximation ansatz. In order to produce the
+NGSOs one needs to construct the FORDO of the $2$ -particle geminal state
+$\left\vert g\right\rangle $ and then sum the indices relating to one of the
+particles.\textbf{ }This operation is straightforward in terms of a general
+tensor product basis $\left(  \text{see Appendix \ref{tensor}}\right)  $, but
+introduces some subtleties of normalization when one uses the standard
+expression of the geminal in terms of an antisymmetrized tensor product basis.
+For the purposes of clarity we compare the use of these two expansions.
+
+A normalized geminal $\left\vert g\right\rangle $ can be expanded in terms of
+a general tensor product orthonormal basis $\left\{  \left\vert \varphi
+_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle ;1\leq j_{1},j_{2}\leq r\right\}
+$ as
+\begin{equation}
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}%
+c_{j_{1}j_{2}}\left\vert \varphi_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle
+;\quad c_{j_{1}j_{2}}=-c_{j_{2}j_{1}},\quad c_{j_{1}j_{2}}\in\mathbb{C}%
+\end{equation}
+where $\left\{  \left\vert \varphi_{j}\right\rangle ;1\leq j\leq r\right\}  $
+is a complete orthonormal basis for the one particle Hilbert space
+$\mathcal{H}^{1},$ and $\mathbb{C}$ denotes the complex numbers. The
+associated density operator of the state $\left\vert g\right\rangle $ is
+\begin{equation}
+\left\vert g\right\rangle \left\langle g\right\vert =\frac{1}{4}%
+\sum_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq k_{1},k_{2}\leq r}%
+}c_{j_{1}j_{2}}c_{k_{1}k_{2}}^{\ast}\left\vert \varphi_{j_{1}}\otimes
+\varphi_{j_{2}}\right\rangle \left\langle \varphi_{k_{1}}\otimes\varphi
+_{k_{2}}\right\vert
+\end{equation}
+As $\left\langle g|g\right\rangle =1$ one observes that
+\begin{equation}
+\operatorname{Tr}\left\{  \mathbf{cc}^{\dagger}\right\}  =4
+\end{equation}
+The expansion in terms of the tensor product basis $\left\{  \left\vert
+\varphi_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle \right\}  $ can be compared
+to
+\begin{equation}
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}\tilde
+{c}_{j_{1}j_{2}}\left\vert \varphi_{j_{1}}\wedge\varphi_{j_{2}}\right\rangle
+;\quad\tilde{c}_{j_{1}j_{2}}=-\tilde{c}_{j_{2}j_{1}}%
+\end{equation}
+in terms of the antisymmetrized tensor product basis $\left\{  \left\vert
+\varphi_{j_{1}}\wedge\varphi_{j_{2}}\right\rangle ;1\leq j_{1}<j_{2}\leq
+r\right\}  $ where
+\begin{equation}
+\left\vert \varphi_{j_{1}}\wedge\varphi_{j_{2}}\right\rangle =\frac{1}%
+{\sqrt{2}}\left(  \left\vert \varphi_{j_{1}}\otimes\varphi_{j_{2}%
+}\right\rangle -\left\vert \varphi_{j_{2}}\otimes\varphi_{j_{1}}\right\rangle
+\right)
+\end{equation}
+Expressing the antisymmetric expansion in terms of the general one we obtain
+\begin{align}
+\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}_{j_{1}j_{2}}\left\vert
+\varphi_{j_{1}}\wedge\varphi_{j_{2}}\right\rangle  &  =\frac{1}{2}\sum_{1\leq
+j_{1},j_{2}\leq r}\tilde{c}_{j_{1}j_{2}}\frac{1}{\sqrt{2}}\left(  \left\vert
+\varphi_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle -\left\vert \varphi_{j_{2}%
+}\otimes\varphi_{j_{1}}\right\rangle \right) \nonumber\\
+&  =\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde
+{c}_{j_{1}j_{2}}\left\vert \varphi_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle
+-\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \varphi_{j_{2}}\otimes\varphi_{j_{1}}\right\rangle
+\nonumber\\
+&  =\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde
+{c}_{j_{1}j_{2}}\left\vert \varphi_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle
++\frac{1}{2}\frac{1}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}%
+_{j_{1}j_{2}}\left\vert \varphi_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle
+\nonumber\\
+&  =\frac{2}{\sqrt{2}}\sum_{1\leq j_{1},j_{2}\leq r}\tilde{c}_{j_{1}j_{2}%
+}\left\vert \varphi_{j_{1}}\otimes\varphi_{j_{2}}\right\rangle
+\end{align}
+which shows that
+\begin{equation}
+c_{j_{1}j_{2}}=\sqrt{2}\tilde{c}_{j_{1}j_{2}}%
+\end{equation}
+
+
+The contraction map \textrm{L}$_{2}^{1}$ \cite{Weiner84}\cite{kummar70}%
+\cite{Lowdin:1955:QTMa} acting on $\left\vert g\right\rangle \left\langle
+g\right\vert $ produces
+\begin{align}
+\mathrm{L}_{2}^{1}\left(  \left\vert g\right\rangle \left\langle g\right\vert
+\right)   &  =\frac{1}{4}\sum_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq
+k_{1},k_{2}\leq r}}c_{j_{1}j_{2}}c_{k_{1}k_{2}}^{\ast}\left\langle
+\varphi_{k_{2}}|\varphi_{j_{2}}\right\rangle \left\vert \varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{k_{1}}\right\vert =\frac{1}{4}%
+\sum_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq k_{1},k_{2}\leq r}%
+}c_{j_{1}j_{2}}c_{k_{1}k_{2}}^{\ast}\delta_{k_{2}j_{2}}\left\vert
+\varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}}\right\vert
+\nonumber\\
+&  =\frac{1}{4}\sum_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq k_{1}\leq
+r}}c_{j_{1}j_{2}}c_{k_{1}j_{2}}^{\ast}\left\vert \varphi_{j_{1}}\right\rangle
+\left\langle \varphi_{k_{1}}\right\vert =\frac{1}{4}\sum_{1\leq j_{1}%
+,j_{2}\leq r}\left(  \mathbf{cc}^{\dagger}\right)  _{j_{1}k_{1}}\left\vert
+\varphi_{j_{1}}\right\rangle \left\langle \varphi_{k_{1}}\right\vert
+\end{align}
+The First Order Reduced Density Operator (FORDO) $D^{1}\left(  g\right)  $
+normalized to the number of electrons in the system, (in this case $2)$, is
+then given by
+\begin{equation}
+D^{1}\left(  g\right)  =2\mathrm{L}_{2}^{1}\left(  \left\vert g\right\rangle
+\left\langle g\right\vert \right)
+\end{equation}
+and the First Order Reduced Density Matrix (FORDM), $\mathbb{D}_{\varphi}%
+^{1}\left(  g\right)  ,$ which is the \emph{representation} of $D^{1}\left(
+g\right)  $ in the $\left\{  \mathbf{\varphi}\right\}  $ basis by
+\begin{equation}
+\mathbb{D}_{\varphi}^{1}\left(  g\right)  =\frac{1}{2}\mathbf{cc}^{\dagger
+}=\mathbf{\tilde{c}\tilde{c}}^{\dagger}%
+\end{equation}
+both of which have trace equal to $2$ i.e.
+\begin{equation}
+\operatorname{Tr}\left\{  D^{1}\left(  g\right)  \right\}  =\frac{1}%
+{2}\operatorname{Tr}\left\{  \mathbf{cc}^{\dagger}\right\}  =\operatorname{Tr}%
+\left\{  \mathbf{\tilde{c}\tilde{c}}^{\dagger}\right\}  =2
+\end{equation}
+One can also observe that
+\begin{equation}
+\mathbb{D}_{\varphi}^{1}\left(  g\right)  ^{\ast}=\frac{1}{2}\mathbf{c}%
+^{\dagger}\mathbf{c}%
+\end{equation}
+and as $\mathbf{c}$ is antisymmetric
+\begin{equation}
+\mathbb{D}_{\varphi}^{1}\left(  g\right)  =\frac{1}{2}\mathbf{cc}^{\dagger
+}=-\frac{1}{2}\mathbf{cc}^{\ast}=\frac{1}{2}\mathbf{c}^{t}\mathbf{c}^{\ast}%
+\end{equation}
+The NGSO's $\left\{  \left\vert y_{j}\right\rangle ;1\leq j\leq r\right\}  $
+of $D^{1}\left(  g\right)  $ have expansion coefficients $\left\{
+\mathbf{y}_{j};1\leq j\leq r\right\}  $ in the $\left\{  \mathbf{\varphi
+}\right\}  $ basis that are the eigenvectors of $\mathbb{D}_{\varphi}%
+^{1}\left(  g\right)  $ given by
+\begin{equation}
+\mathbb{D}_{\varphi}^{1}\left(  g\right)  \mathbf{y}_{j}=n_{j}\mathbf{y}_{j}%
+\end{equation}
+leading to
+\begin{equation}
+\mathbb{Y}^{\dagger}\mathbb{D}_{\varphi}^{1}\left(  g\right)  \mathbb{Y=}%
+\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbf{0}\\
+\mathbf{0} & \mathbf{n}%
+\end{array}
+\right)
+\end{equation}
+where
+\begin{equation}
+\mathbf{n=}\left(
+\begin{array}
+[c]{ccc}%
+n_{1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & n_{s}%
+\end{array}
+\right)  ;\qquad n_{j}\geq0,\quad r=2s
+\end{equation}
+and
+\begin{equation}
+\mathbb{Y}^{\dagger}\mathbb{Y}=\mathbb{YY}^{\dagger}=\mathbb{I}_{r}%
+\end{equation}
+Although this transformation brings $\mathbb{D}_{\varphi}^{1}\left(  g\right)
+$ to diagonal form it does $\emph{not}$ in general bring $\mathbf{c}$ to a
+canonical form. In the next section we show, how using a theorem due to Zumino
+\cite{Zumino62} one can achieve this result.
+
+\section{Zumino's Theorem\label{zumino}}
+
+In this section we first describe Zumino's theorem and its proof in detail and
+then discuss an important corollary that leads to the definition of a unique,
+physically meaningful, canonical form of $\mathbf{c.}$
+
+\begin{theorem}
+If $\mathbf{c}$ is a $2s\times2s$ complex antisymmetric matrix then there
+exists a unitary matrix $\mathbb{T}$ such that
+\begin{equation}
+\mathbb{T}\mathbf{c}\mathbb{T}^{t}\mathbb{=}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\zeta}\\
+-\boldsymbol{\zeta} & \mathbf{0}%
+\end{array}
+\right)
+\end{equation}
+where
+\begin{equation}
+\boldsymbol{\zeta}=\left(
+\begin{array}
+[c]{ccc}%
+\zeta_{1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & \zeta_{s}%
+\end{array}
+\right)  ;\qquad\zeta_{j}\in\mathbb{C},\quad1\leq j\leq s
+\end{equation}
+
+
+\begin{proof}
+We first note some relationships implied by the antisymmetry of $\mathbf{c}$%
+\begin{equation}
+\mathbf{c}^{\dagger}\mathbf{c\,=-c}^{\ast}\mathbf{c}=\left(  \mathbf{cc}%
+^{\dagger}\right)  ^{t}=\mathbf{\,}\left(  \mathbf{cc}^{\dagger}\right)
+^{\ast}\label{cc}%
+\end{equation}
+(so $\mathbf{c}$ is not a normal operator in general) and one by the
+associativity of matrix product
+\begin{equation}
+\mathbf{c}\left(  \mathbf{c}^{\dagger}\mathbf{c}\right)  =\left(
+\mathbf{cc}^{\dagger}\right)  \mathbf{c}%
+\end{equation}
+which by using eq. $\left(  \ref{cc}\right)  $ gives
+\begin{equation}
+\left(  \mathbf{cc}^{\dagger}\right)  \mathbf{c=c}\left(  \mathbf{cc}%
+^{\dagger}\right)  ^{\ast}\label{cr}%
+\end{equation}
+Then we introduce $\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger}$ through the
+definition
+\begin{align}
+\mathbf{c}_{U} &  =\mathbb{U}^{\dagger}\mathbf{c}\mathbb{U}^{\ast}\nonumber\\
+\mathbf{c} &  =\mathbb{U}\mathbf{c}_{U}\mathbb{U}^{t}%
+\end{align}
+where $\mathbb{U}$ is \textbf{any} unitary matrix and obtain that
+\begin{align}
+\mathbf{cc}^{\dagger} &  =\mathbb{U}\mathbf{c}_{U}\mathbb{U}^{t}%
+\mathbb{U}^{\ast}\mathbf{c}_{U}^{\dagger}\mathbb{U}^{\dagger}=\mathbb{U}%
+\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger}\mathbb{U}^{\dagger}\nonumber\\
+\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger} &  =\mathbb{U}^{\dagger}\mathbf{cc}%
+^{\dagger}\mathbb{U}%
+\end{align}
+and as $\mathbf{c}_{U}$ is also antisymmetric
+\begin{equation}
+\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger}=-\mathbf{c}_{U}\mathbf{c}_{U}^{\ast
+}=\left(  \mathbf{c}_{U}^{\dagger}\mathbf{c}_{U}\right)  ^{t}=\mathbf{\,}%
+\left(  \mathbf{c}_{U}^{\dagger}\mathbf{c}_{U}\right)  ^{\ast}.
+\end{equation}
+Hence we have the important relationship
+\begin{equation}
+\left(  \mathbf{cc}^{\dagger}\right)  \mathbf{c-c}\left(  \mathbf{cc}%
+^{\dagger}\right)  ^{\ast}=\left(  \mathbf{c}_{U}\mathbf{c}_{U}^{\dagger
+}\right)  \mathbf{c}_{U}-\mathbf{c}_{U}\left(  \mathbf{c}_{U}\mathbf{c}%
+_{U}^{\dagger}\right)  ^{\ast}=0\label{cu}%
+\end{equation}
+We can \textbf{choose} $\mathbb{U}$ to diagonalize the hermitian matrix
+$\mathbf{cc}^{\dagger}$ i.e.%
+\begin{equation}
+\mathbb{U}^{\dagger}\mathbf{cc}\mathbb{^{\dagger}U}=\left(
+\begin{array}
+[c]{ccc}%
+n_{1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & n_{r}%
+\end{array}
+\right)  =\mathbf{c}_{U}\mathbf{c}_{U}^{\dagger};\qquad n_{r}\geq n_{r-1}%
+\geq\cdots\geq n_{1}\geq0.
+\end{equation}
+Now using the relationships in eq. $\left(  \ref{cu}\right)  $ for this
+$\mathbf{c}_{U}$ we obtain%
+\begin{equation}
+\sum_{1\leq j\leq r}\left\{  n_{i}\delta_{ij}c_{Ujk}-c_{Uij}n_{j}\delta
+_{jk}\right\}  =0\Rightarrow\left(  n_{i}-n_{k}\right)  c_{Uik}=0;\qquad1\leq
+i,k\leq r\label{dub1}%
+\end{equation}
+which shows that
+\begin{equation}
+n_{k}\neq n_{i}\Rightarrow c_{Uik}=0;\qquad\qquad1\leq i\neq k\leq r
+\end{equation}
+The diagonal elements $\left\{  c_{Uii},1\leq i\leq r\right\}  $ are always
+zero as $\mathbf{c}_{U}$ is antisymmetric. Thus the matrix $\mathbf{c}_{U}$
+breaks into submatrices $\left\{  \mathbf{c}_{\kappa};1\leq\kappa\leq
+p\right\}  $ corresponding to groups of $n^{\prime}s$ that are equal. Consider
+the partitioning of $\left\{  1,\ldots,r\right\}  $ into $p$ groups that
+correspond to equal $n^{\prime}s$ i.e. $\left\{  \left\{  1,\ldots
+,m_{1}\right\}  ,\cdots,\left\{  m_{p-1}+1,\ldots r\right\}  \right\}  $
+where
+\begin{align}
+n_{1} &  =n_{2}=\cdots=n_{m_{1}}=\eta_{1}\nonumber\\
+&  \vdots\nonumber\\
+n_{m_{p-1}+1} &  =n_{m_{p-1}+2}=\cdots=n_{r}=\eta_{p}%
+\end{align}
+then the matrix $\mathbf{c}_{U}$ has the block diagonal form
+\begin{equation}
+\mathbf{c}_{U}=\left(
+\begin{array}
+[c]{cccc}%
+\mathbf{c}_{1} & \mathbb{O} & \cdots & \mathbb{O}\\
+\mathbb{O} & \ddots & \mathbb{O} & \vdots\\
+\vdots & \mathbb{O} & \ddots & \mathbb{O}\\
+\mathbb{O} & \cdots & \mathbb{O} & \mathbf{c}_{p}%
+\end{array}
+\right)
+\end{equation}
+and
+\begin{equation}
+\mathbf{c_{\kappa}^{\dagger}c_{\kappa}}=\eta_{\kappa}\mathbb{I}_{d_{\kappa}%
+};\quad1\leq\kappa\leq p\label{dub2}%
+\end{equation}
+where $d_{\kappa}$ is the dimension of $\kappa^{th}$-block.
+
+If $\eta_{\kappa}=0$ then
+\begin{equation}
+\sum_{k\in\left\{  m_{\kappa-1}+1,\ldots m_{\kappa}\right\}  }c_{\kappa
+ik}c_{\kappa jk}^{\ast}=0\qquad\forall i,j\in\left\{  m_{\kappa-1}%
++1,\ldots,m_{\kappa}\right\}  \label{cprod}%
+\end{equation}
+so in particular choosing $i=j$ in eq. $\left(  \ref{cprod}\right)  $ we
+obtain
+\begin{equation}
+\sum_{k\in\left\{  m_{\kappa-1}+1,\ldots m_{\kappa}\right\}  }\left\vert
+c_{\kappa jk}\right\vert ^{2}=0\qquad\forall j\in\left\{  m_{\kappa
+-1}+1,\ldots,m_{\kappa}\right\}
+\end{equation}
+which implies that $c_{\kappa jk}=0\quad\forall j,k\in\left\{  m_{\kappa
+-1}+1,\ldots,m_{\kappa}\right\}  $.
+
+If $\eta_{\kappa}\neq0$ then $\mathbb{B}_{\kappa}=\frac{1}{\sqrt{\eta_{\kappa
+}}}\mathbf{c}_{\kappa}$ is a $d_{\kappa}\times d_{\kappa}$ antisymmetric
+unitary matrix
+\begin{align}
+&  \quad\,\,\,\mathbb{B}_{\kappa}^{\dagger}\mathbb{B}_{\kappa}=\mathbb{B}%
+_{\kappa}\mathbb{B}_{\kappa}^{\dagger}=\mathbb{I}_{d_{\kappa}}\nonumber\\
+&  \Rightarrow\mathbb{B}_{\kappa}^{\ast}\mathbb{B}_{\kappa}=\mathbb{B}%
+_{\kappa}\mathbb{B}_{\kappa}^{\ast}%
+\end{align}
+i.e. $\left[  \mathbb{B}_{\kappa},\mathbb{B}_{\kappa}^{\dagger}\right]
+=\left[  \mathbb{B}_{\kappa},\mathbb{B}_{\kappa}^{\ast}\right]  =0$ showing
+that $\mathbb{B}_{\kappa}$ is a normal matrix. One can then define the
+matrices
+\begin{align}
+\mathbb{N}_{\kappa} &  =\frac{1}{2}\left\{  \mathbb{B}_{\kappa}+\mathbb{B}%
+_{\kappa}^{\ast}\right\}  \nonumber\\
+\mathbb{M}_{\kappa} &  =\frac{-i}{2}\left\{  \mathbb{B}_{\kappa}%
+-\mathbb{B}_{\kappa}^{\ast}\right\}
+\end{align}
+which are not in general self adjoint but are real antisymmetric and
+\textbf{commute}\emph{ }with each other, so that
+\begin{equation}
+\mathbb{B}_{\kappa}=\mathbb{N}_{\kappa}+i\mathbb{M}_{\kappa}.
+\end{equation}
+These matrices can be simultaneously transformed into the canonical forms
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\alpha}_{\kappa}\\
+-\boldsymbol{\alpha}_{\kappa} & \mathbf{0}%
+\end{array}
+\right)  \text{ and }\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\beta}_{\kappa}\\
+-\boldsymbol{\beta}_{\kappa} & \mathbf{0}%
+\end{array}
+\right)  \label{alphabeta}%
+\end{equation}
+by a real orthogonal transformation $\mathbb{O}_{\kappa}$, where
+\begin{equation}
+\boldsymbol{\alpha}_{\kappa}=\left(
+\begin{array}
+[c]{ccc}%
+\alpha_{\kappa1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & \alpha_{\kappa d_{\kappa}}%
+\end{array}
+\right)  \text{ and\quad}\boldsymbol{\beta}_{\kappa}=\left(
+\begin{array}
+[c]{ccc}%
+\beta_{\kappa1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & \beta_{\kappa d_{\kappa}}%
+\end{array}
+\right)  \label{alphabeta1}%
+\end{equation}
+as shown in Appendix \ref{realanti}.
+
+The same transformation thus acts on $\mathbb{B}_{\kappa}$ to produce
+\begin{equation}
+\mathbb{O}_{\kappa}^{t}\mathbb{B}_{\kappa}\mathbb{O}_{\kappa}=\mathbb{O}%
+_{\kappa}^{t}\left\{  \mathbb{N}_{\kappa}+i\mathbb{M}_{\kappa}\right\}
+\mathbb{O}_{\kappa}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\alpha}_{\kappa}+i\boldsymbol{\beta}_{\kappa}\\
+-\left(  \boldsymbol{\alpha}_{\kappa}+i\boldsymbol{\beta}_{\kappa}\right)   &
+\mathbf{0}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & e^{i\boldsymbol{\theta}_{\kappa}}\\
+-e^{i\boldsymbol{\theta}_{\kappa}} & \mathbf{0}%
+\end{array}
+\right)
+\end{equation}
+and thus%
+\begin{equation}
+\mathbb{O}_{\kappa}^{t}\mathbf{c}_{\kappa}\mathbb{O}_{\kappa}=\eta_{\kappa
+}^{\frac{1}{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & e^{i\boldsymbol{\theta}_{\kappa}}\\
+-e^{i\boldsymbol{\theta}_{\kappa}} & \mathbf{0}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \eta_{\kappa}^{\frac{1}{2}}e^{i\boldsymbol{\theta}_{\kappa}}\\
+-\eta_{\kappa}^{\frac{1}{2}}e^{i\boldsymbol{\theta}_{\kappa}} & \mathbf{0}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\zeta}_{\kappa}\\
+-\boldsymbol{\zeta}_{\kappa} & \mathbf{0}%
+\end{array}
+\right)
+\end{equation}
+(which is valid even when $\eta_{\kappa}=0$) $\lceil$Note that
+$\boldsymbol{\theta
+}_{\kappa}\equiv\left(  \theta_{\kappa1},\ldots,\theta_{\kappa d_{\kappa}%
+}\right)  $ and $\theta_{\kappa i}\neq\theta_{\kappa j}$ in general$\rfloor$
+where
+\begin{equation}
+\boldsymbol{\zeta}_{\kappa}=\left(
+\begin{array}
+[c]{ccc}%
+\zeta_{\kappa1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & \zeta_{\kappa d_{\kappa}}%
+\end{array}
+\right)  .
+\end{equation}
+This allows us to define
+\begin{equation}
+\mathbb{O=}\left(
+\begin{array}
+[c]{ccc}%
+\mathbb{O}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \mathbb{O}_{p}%
+\end{array}
+\right)
+\end{equation}
+and see that
+\begin{equation}
+\mathbb{O}^{t}\mathbf{c}_{U}\mathbb{O}=\left(
+\begin{array}
+[c]{ccc}%
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\zeta}_{1}\\
+-\boldsymbol{\zeta}_{1} & \mathbf{0}%
+\end{array}
+& \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} &
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\zeta}_{p}\\
+-\boldsymbol{\zeta}_{p} & \mathbf{0}%
+\end{array}
+\end{array}
+\right)  \label{smallblock}%
+\end{equation}
+by rearranging the columns of $\mathbb{O}$ to produce $\widehat{\mathbb{O}}$
+we obtain
+\begin{equation}
+\widehat{\mathbb{O}}^{t}\mathbf{c}_{U}\widehat{\mathbb{O}}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\zeta}\\
+-\boldsymbol{\zeta} & \mathbf{0}%
+\end{array}
+\right)
+\end{equation}
+and hence using $\mathbf{c}_{U}=\mathbb{U}^{\dagger}\mathbf{c}\mathbb{U}%
+^{\ast}$ we conclude that
+\begin{equation}
+\mathbb{T}\mathbf{c}\mathbb{T}^{t}=\widetilde{\mathbb{O}}^{t}\mathbb{U}%
+^{\dagger}\mathbf{c}\mathbb{U}^{\ast}\widetilde{\mathbb{O}}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\zeta}\\
+-\boldsymbol{\zeta} & \mathbf{0}%
+\end{array}
+\right)  \label{cor1}%
+\end{equation}
+and define $\mathbb{T}$ as the unitary matrix
+\begin{equation}
+\mathbb{T}=\widehat{\mathbb{O}}^{t}\mathbb{U}^{\dagger}%
+\end{equation}
+where $\mathbb{TT}^{\dagger}=\mathbb{T^{\dagger}T=I}_{r}$.
+\end{proof}
+\end{theorem}
+
+We now derive an important corollary that will be very useful in the physical
+interpretation of the density operators and expectation value expressions of AGP\ states:
+
+\begin{corollary}
+If $\mathbf{c}$ is a $2s\times2s$ complex antisymmetric matrix then there
+exists a unitary matrix $\mathbb{W}$ such that
+\begin{equation}
+\mathbb{W}\mathbf{c}\mathbb{W}^{t}\mathbb{=}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}}\\
+-\mathbf{n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}
+\right)
+\end{equation}
+where
+\begin{equation}
+\mathbf{n}^{\frac{1}{2}}=\left(
+\begin{array}
+[c]{ccc}%
+n_{1}^{\frac{1}{2}} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & n_{s}^{\frac{1}{2}}%
+\end{array}
+\right)  ;\qquad n_{j}^{\frac{1}{2}}\in\mathbb{R},\quad1\leq j\leq s
+\end{equation}
+and $\left\{  n_{j}\right\}  $ are the eigenvalues of $\mathbf{cc}^{\dagger}$.
+\end{corollary}
+
+\begin{proof}
+Using eq. $\left(  \ref{cor1}\right)  $ we can define $\mathbb{W}$ as%
+\begin{equation}
+\mathbb{W=}\left(
+\begin{array}
+[c]{cccccc}%
+e^{-i\frac{\boldsymbol{\theta}_{1}}{2}} & \mathbf{\cdots} & \mathbf{0} &
+\mathbf{0} & \mathbf{\cdots} & \mathbf{0}\\
+\mathbf{\vdots} & \mathbf{\ddots} & \mathbf{\vdots} & \mathbf{\vdots} &
+\mathbf{\vdots} & \mathbf{\vdots}\\
+\mathbf{0} & \mathbf{\cdots} & e^{-i\frac{\boldsymbol{\theta}_{p}}{2}} &
+\mathbf{0} & \mathbf{\cdots} & \mathbf{0}\\
+\mathbf{0} & \mathbf{\cdots} & \mathbf{0} & e^{-i\frac{\boldsymbol{\theta}_{1}%
+}{2}} & \mathbf{\cdots} & \mathbf{0}\\
+\mathbf{\vdots} & \mathbf{\vdots} & \mathbf{\vdots} & \mathbf{\vdots} &
+\mathbf{\ddots} & \mathbf{\vdots}\\
+\mathbf{0} & \mathbf{\cdots} & \mathbf{0} & \mathbf{0} & \mathbf{\cdots} &
+e^{-i\frac{\boldsymbol{\theta}_{p}}{2}}%
+\end{array}
+\right)  \mathbb{T}%
+\end{equation}
+where
+\begin{equation}
+\mathbb{W}^{\dagger}\mathbb{W=WW}^{\dagger}\mathbb{=I}_{2s}%
+\end{equation}
+and
+\begin{equation}
+\mathbf{c}=\mathbb{W}^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}}\\
+-\mathbf{n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}
+\right)  \mathbb{W}^{\ast}=\mathbb{T}^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \boldsymbol{\zeta}\\
+-\boldsymbol{\zeta} & \mathbf{0}%
+\end{array}
+\right)  \mathbb{T}^{\ast}\label{cex}%
+\end{equation}
+
+\end{proof}
+
+Eq. $\left(  \ref{cex}\right)  $ shows that the canonical NGSOs $\left\{
+\left\vert \psi_{k}\right\rangle \right\}  $ are represented by the columns of
+the matrix $\mathbb{W}^{\dagger}$ in the basis $\left\{  \left\vert
+\varphi_{k}\right\rangle \right\}  $ giving
+\begin{align}
+W\left(  \left\vert \underline{\psi}\right\rangle \right)   &  =\left(
+\left\vert \underline{\varphi}\right\rangle \right)  \nonumber\\
+W^{\dagger}\left(  \left\vert \underline{\varphi}\right\rangle \right)   &
+=\left(  \left\vert \underline{\varphi}\right\rangle \right)  \mathbb{W}%
+^{\dagger}=\left(  \left\vert \underline{\psi}\right\rangle \right)
+\nonumber\\
+W^{\dagger}\left(  \left\vert \underline{\varphi}\right\rangle \right)   &
+=\left(  \left\vert \underline{\varphi}\right\rangle \right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathbf{w}_{1}^{\dagger} & \cdots & \mathbf{w}_{2s}^{\dagger}%
+\end{array}
+\right)
+\end{align}
+where we have used L\"{o}wdin notation \cite{Lowdinbook} relating operators
+and their matrix representations, $\left(  \left\vert \underline{\psi
+}\right\rangle \right)  $ denoting a row vector of basis vectors. Comparing
+the expansions of the geminal in these bases we see that
+\begin{align}
+\left\vert g\right\rangle  &  =\frac{1}{2}\sum_{1\leq k_{1},k_{2}\leq
+r}c_{k_{1}k_{2}}\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\right\rangle
+=\frac{1}{2}\sum_{1\leq k_{1},k_{2}\leq r}\left(  \mathbb{W}^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \mathbf{n}^{\frac{1}{2}}\\
+-\mathbf{n}^{\frac{1}{2}} & \mathbf{0}%
+\end{array}
+\right)  \mathbb{W}^{\ast}\right)  _{k_{1}k_{2}}\left\vert \varphi_{k_{1}%
+}\varphi_{k_{2}}\right\rangle \nonumber\\
+&  =\sum_{1\leq k\leq s}n_{k}^{\frac{1}{2}}\left\vert W^{\dagger}\varphi
+_{k}W^{\dagger}\varphi_{k+s}\right\rangle =\sum_{1\leq k\leq s}n_{k}^{\frac
+{1}{2}}\left\vert \psi_{k}\psi_{k+s}\right\rangle
+\end{align}
+One can obtain a non unique canonical expansion by setting
+\begin{align}
+&  \left\vert g\right\rangle =\sum_{1\leq k\leq s}n_{k}^{\frac{1}{2}%
+}\left\vert e^{i\frac{\boldsymbol{\theta}_{k_{1}}}{2}}T^{\dagger}\varphi
+_{k}e^{i\frac{\boldsymbol{\theta}_{k_{1}}}{2}}T^{\dagger}\varphi
+_{k+s}\right\rangle =\sum_{1\leq k\leq s}n_{k}^{\frac{1}{2}}e^{i\theta_{k}%
+}\left\vert T^{\dagger}\varphi_{k}T^{\dagger}\varphi_{k+s}\right\rangle
+\nonumber\\
+&  \left.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\right.
+=\sum_{1\leq k\leq s}n_{k}^{\frac{1}{2}}e^{i\theta_{k}}\left\vert \chi_{k}%
+\chi_{k+s}\right\rangle
+\end{align}
+so that
+\begin{align}
+T\left(  \left\vert \underline{\chi}\right\rangle \right)   &  =\left(
+\left\vert \underline{\varphi}\right\rangle \right)  \nonumber\\
+T^{\dagger}\left(  \left\vert \underline{\chi}\right\rangle \right)   &
+=\left(  \left\vert \underline{\varphi}\right\rangle \right)  \mathbb{T}%
+^{\dagger}=\left(  \left\vert \underline{\chi}\right\rangle \right)
+\end{align}
+The non uniqueness of the complex canonical coefficients is then easily seen
+by noting that
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq k\leq s}n_{k}^{\frac{1}{2}}%
+e^{i\theta_{k}}e^{-i\nu_{k}}\left\vert e^{i\frac{\nu_{k}}{2}}\chi_{k}%
+e^{i\frac{\nu_{k}}{2}}\chi_{k+s}\right\rangle =\sum_{1\leq k\leq s}%
+n_{k}^{\frac{1}{2}}e^{i\left(  \theta_{k}-\nu_{k}\right)  }\left\vert
+\tilde{\chi}_{k}\tilde{\chi}_{k+s}\right\rangle
+\end{equation}
+where
+\begin{equation}
+\left\vert \tilde{\chi}_{k}\right\rangle =\left\vert e^{i\frac{\nu_{k}}{2}%
+}\chi_{k}\right\rangle
+\end{equation}
+for \emph{any }$\left\{  \nu_{k};1\leq k\leq s\right\}  $
+
+We now prove the often stated fact that the eigenvalues of $\mathbb{D}%
+_{\varphi}^{1}\left(  g\right)  $ are at least doubly degenerate
+
+\begin{corollary}
+The matrix $\mathbf{cc}^{\dagger}$ has eigenvalues that are degenerate of
+degree $2m;$ $1\leq m\leq s$.
+
+\begin{proof}
+Eq. $\left(  \ref{dub1}\right)  $ shows that if the eigenvalue $n_{j}$ is non
+degenerate then $c_{Ujk}=0;1\leq k\leq r$. Eq. $\left(  \ref{dub2}\right)  $
+shows in particular that for such non degenerate eigenvalues $\left\vert
+c_{Ujj}\right\vert ^{2}=n_{j}=0$, thus all non degenerate eigenvalues must be
+equal to $0.$
+
+If an eigenvalue is doubly degenerate then the associated unitary
+antisymmetric block $\mathbb{B}$ is $2\times2$ and it is unitary and
+antisymmetric, requirements that can easily be satisfied by non zero
+$\mathbb{B}$'s. This is true for all evenly degenerate eigenvalues.
+
+If an eigenvalue is triply degenerate then the associated unitary
+antisymmetric block $\mathbb{B}$ is $3\times3$. As it is antisymmetric one or
+all three of its eigenvalues must be $0$ (as by Appendix \ref{pairing} the
+eigenvalues must be +/- pairs or zero) which is a contradiction as the matrix
+$\mathbb{B}$ is also unitary so cannot have zero eigenvalues. Thus the block
+cannot be $3\times3,$ the same argument holds for any odd dimensioned block
+hence only even dimensional blocks can exist.
+\end{proof}
+\end{corollary}
+
+\section{Numerical Construction of Canonical NGSO\label{numerical}}
+
+The first step is to construct the FORDM $\mathbb{D}_{\varphi}^{1}\left(
+g\right)  =\frac{1}{2}\mathbf{cc}^{\dagger}$ then diagonalize it by a unitary
+transformation $\mathbb{Y}$. One then transforms $\mathbf{c}$ by
+$\mathbb{Y}^{\dagger}\mathbf{c}\mathbb{Y}^{\ast}$ into block diagonal form
+with blocks $\left\{  \mathbf{c}_{\kappa}\right\}  $ each associated with a
+degenerate eigenvalue $\eta_{\kappa}$ of $\mathbb{D}_{\varphi}^{1}\left(
+g\right)  .$ A unitary antisymmetric matrix $\mathbb{B}_{\kappa}$ is then
+produced from each block $\mathbf{c}_{\kappa}$ associated with a non zero
+eigenvalue by
+\begin{equation}
+\mathbb{B}_{\kappa}=\frac{1}{\sqrt{\eta_{\kappa}}}\mathbf{c}_{\kappa}%
+\end{equation}
+The next step is to produce a unitary transformation that diagonalizes
+$\mathbb{B}_{\kappa}$. One procedure to achieve this would be to
+simultaneously diagonalize the self adjoint real and imaginary parts of
+$\mathbb{B}$
+\begin{align}
+\mathbb{B}_{R} &  =\operatorname{Re}\mathbb{B}=\frac{1}{2}\left\{
+\mathbb{B+B}^{\dagger}\right\}  \nonumber\\
+\mathbb{B}_{I} &  =\operatorname{Im}\mathbb{B}=-\frac{i}{2}\left\{
+\mathbb{B-B}^{\dagger}\right\}
+\end{align}
+which are both antisymmetric
+\begin{equation}
+\mathbb{B}_{R}=-\mathbb{B}_{R}^{t}\text{ and }\mathbb{B}_{I}=-\mathbb{B}%
+_{I}^{t}%
+\end{equation}
+and commute with each other
+\begin{equation}
+\left[  \mathbb{B}_{R},\mathbb{B}_{I}\right]  =0
+\end{equation}
+where we have dropped the subscript $\kappa$. As neither matrix is positive
+definite the standard way to do this is to first diagonalize one, then
+diagonalize the other in the eigen basis of the first. However if the
+dimensions of the nonzero blocks $\left\{  \mathbb{B}_{R},\mathbb{B}%
+_{I}\right\}  $ are greater than $2$ e.g. $4,6,$ $\cdots,$ etc., there are
+more than $1$ positive and $1$ negative eigenvalues (there are always equal
+numbers of positive and negative eigenvalues as $\left\{  \mathbb{B}%
+_{R},\mathbb{B}_{I}\right\}  $ are antisymmetric), and numerical
+diagonalization routines will order these positive and negative sets in some
+predetermined sequence. We know from eqs. $\left(  \ref{alphabeta}\right)  $
+and $\left(  \ref{alphabeta1}\right)  $ and Appendix \ref{realanti} that in
+order to obtain a single unitary transformation that produces a single
+orthogonal transformation $\mathbb{O}$ that simultaneously brings $\left\{
+\mathbb{B}_{R},\mathbb{B}_{I}\right\}  $ to a canonical form, the eigenvalues
+$\left\{  \mp i\alpha_{j},\mp i\beta_{j};1\leq j\leq d\right\}  $ of
+$\mathbb{B}_{R}$ and $\mathbb{B}_{I}$ must correspond in a very precise
+manner. Therefore one would need to find and apply some principle of
+correspondence and a computational procedure to accomplish this.
+
+One can avoid this problem by directly diagonalizing the antisymmetric, normal
+\cite{Encyclo} (therefore diagonalizable), unitary matrix $\mathbb{B}$ with a
+unitary matrix $\mathbb{V}$ to obtain
+\begin{equation}
+\mathbb{B}=\left(  \mathbf{v}_{1}\cdots\mathbf{v}_{d}\mathbf{v}_{1}^{\ast
+}\mathbf{\cdots v}_{d}^{\ast}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+-ie^{i\theta_{1}} & 0 & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \cdots & 0\\
+0 & \cdots & -ie^{i\theta_{d}} & 0 & \cdots & 0\\
+0 & \cdots & 0 & ie^{i\theta_{1}} & \cdots & 0\\
+0 & \cdots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & ie^{i\theta_{d}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{v}_{1}\\
+\vdots\\
+\mathbf{v}_{d}\\
+\mathbf{v}_{1}^{\ast}\\
+\vdots\\
+\mathbf{v}_{d}^{\ast}%
+\end{array}
+\right)
+\end{equation}
+The disadvantage in choosing this route is that one must use a diagonalization
+routine for general complex matrices instead of complex self adjoint ones,
+which of course incurs more computer costs. A further numerical problem now
+becomes apparent. Although one can prove that if $\mathbf{v}$ is an
+eigenvector of $\mathbb{B}$ with eigenvalue $-ie^{i\theta}$ then
+$\mathbf{v}^{\ast}$ is an eigenvector with eigenvalue $ie^{i\theta}$ (see
+Appendix \ref{pairing}), the eigenvectors, even in absence of degeneracies,
+are only unique up to an overall phase factor. Thus, they do not have to be
+produced in such complex conjugate pairs in standard general complex matrix
+diagonalization routines. Furthermore, if there are degeneracies, the
+eigenvectors corresponding to the degenerate eigenvalue do not have to be
+orthogonal, though it is still true that for normal matrices, eigenvectors
+corresponding to different eigenvalues are, like the hermitian case,
+orthogonal. The way to overcome this non orthogonality and pairing problem is
+to first symmetrically orthogonalize \cite{SymOrth} the degenerate
+eigenvectors corresponding to the eigenvalue that has a negative real part and
+then \emph{define }the eigenvectors associated with the negative of this
+eigenvalue as the complex conjugates of these eigenvectors.
+
+Once a paired unitary matrix $\mathbb{V}$ has been produced one can form a
+real orthogonal $2d\times2d$ matrix $\mathbb{O}$ by defining its columns by
+\begin{align}
+\mathbf{o}_{j} &  =\frac{1}{\sqrt{2}}\left(  \mathbf{v}_{j}+\mathbf{v}%
+_{j}^{\ast}\right)  =\sqrt{2}\operatorname{Re}\mathbf{v}_{j}\nonumber\\
+\mathbf{o}_{j+d} &  =\frac{-i}{\sqrt{2}}\left(  \mathbf{v}_{j}-\mathbf{v}%
+_{j}^{\ast}\right)  =\sqrt{2}\operatorname{Im}\mathbf{v}_{j}%
+\end{align}
+which brings the complex antisymmetric unitary matrix $\mathbb{B}$ to a
+canonical form, allowing one to express $\mathbb{B}$ as
+\begin{equation}
+\mathbb{B}=\left(  \mathbf{o}_{1}\cdots\mathbf{o}_{d}\mathbf{o}_{d+1}%
+\mathbf{\cdots o}_{2d}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+0 & 0 & 0 & e^{i\theta_{1}} & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & e^{i\theta_{d}}\\
+-e^{i\theta_{1}} & \cdots & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & -e^{i\theta_{d}} & 0 & \cdots & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{o}_{1}\\
+\vdots\\
+\mathbf{o}_{d}\\
+\mathbf{o}_{d+1}\\
+\vdots\\
+\mathbf{o}_{2d}%
+\end{array}
+\right)  \label{reex1}%
+\end{equation}
+This allows us to construct a unitary matrix $\widetilde{\mathbb{O}}$ that
+brings $\mathbb{B}$ to a unique canonical form by defining
+\begin{equation}
+\left(  \mathbf{\tilde{o}}_{1}\cdots\mathbf{\tilde{o}}_{d}\mathbf{\tilde{o}%
+}_{d+1}\mathbf{\cdots\tilde{o}}_{2d}\right)  =\left(  \mathbf{o}_{1}%
+\cdots\mathbf{o}_{d}\mathbf{o}_{d+1}\mathbf{\cdots o}_{2d}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+e^{\frac{i\theta_{1}}{2}} & 0 & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \cdots & 0\\
+0 & \cdots & e^{\frac{i\theta_{d}}{2}} & 0 & \cdots & 0\\
+0 & \cdots & 0 & e^{\frac{i\theta_{1}}{2}} & \cdots & 0\\
+0 & \cdots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & e^{\frac{i\theta_{d}}{2}}%
+\end{array}
+\right)
+\end{equation}
+which leads to
+\begin{equation}
+\mathbb{B}=\left(  \mathbf{\tilde{o}}_{1}\cdots\mathbf{\tilde{o}}%
+_{d}\mathbf{\tilde{o}}_{d+1}\mathbf{\cdots\tilde{o}}_{2d}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+0 & 0 & 0 & 1 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & 1\\
+-1 & \cdots & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & -1 & 0 & \cdots & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\tilde{o}}_{1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{d}\\
+\mathbf{\tilde{o}}_{d+1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{2d}%
+\end{array}
+\right)
+\end{equation}
+and hence%
+\begin{equation}
+\mathbf{c}_{\kappa}=\left(  \mathbf{\tilde{o}}_{1}\cdots\mathbf{\tilde{o}%
+}_{d_{\kappa}}\mathbf{\tilde{o}}_{d_{\kappa}+1}\mathbf{\cdots\tilde{o}%
+}_{2d_{\kappa}}\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \eta_{\kappa}^{\frac{1}{2}}\mathbb{I}_{d_{\kappa}}\\
+-\eta_{\kappa}^{\frac{1}{2}}\mathbb{I}_{d_{\kappa}} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\tilde{o}}_{1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{d_{\kappa}}\\
+\mathbf{\tilde{o}}_{d_{\kappa}+1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{2d_{\kappa}}%
+\end{array}
+\right)
+\end{equation}
+and the full blocked diagonal $\mathbf{c}$ matrix
+\begin{align}
+\mathbb{Y}^{\dagger}\mathbf{c}\mathbb{Y}^{\ast} &  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbf{c}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \mathbf{c}_{p}%
+\end{array}
+\right)  \nonumber\\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\widetilde{\mathbb{O}}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \widetilde{\mathbb{O}}_{p}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\eta_{1}^{\frac{1}{2}}\mathbb{J}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \eta_{p}^{\frac{1}{2}}\mathbb{J}_{p}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\widetilde{\mathbb{O}}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \widetilde{\mathbb{O}}_{p}%
+\end{array}
+\right)  ^{t}%
+\end{align}
+where
+\begin{equation}
+\mathbb{J}_{\kappa}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \mathbb{I}_{d_{\kappa}}\\
+-\mathbb{I}_{d_{\kappa}} & \mathbf{0}%
+\end{array}
+\right)
+\end{equation}
+This leads to
+\begin{equation}
+\mathbf{c}=\mathbb{Y}\widetilde{\mathbb{O}}\left(
+\begin{array}
+[c]{ccc}%
+\eta_{1}^{\frac{1}{2}}\mathbb{J}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \eta_{p}^{\frac{1}{2}}\mathbb{J}_{p}%
+\end{array}
+\right)  \widetilde{\mathbb{O}}^{t}\mathbb{Y}^{\ast}%
+\end{equation}
+and hence the unitary matrix $\mathbb{W}^{\dagger}$ whose columns are the
+NGSOs by
+\begin{equation}
+\mathbb{W}^{\dagger}=\mathbb{Y}\widetilde{\mathbb{O}}%
+\end{equation}
+One should note that we have used the canonical form corresponding to eq.
+$\left(  \ref{smallblock}\right)  $ in the proof of Zumino's theorem.
+
+\section{Discussion\label{discussion}}
+
+Producing the canonical form of a geminal is equivalent to bringing an
+antisymmetric \emph{complex} matrix to a canonical form. This however is not a
+straightforward task as such matrices are \emph{not }normal (therefore one
+cannot assume they are diagonalizable) and the methods used for real
+antisymmetric matrices have to be carefully modified. However, we have shown
+in the preceding that one can form unique canonical coefficients for a
+geminal, but one must be very careful in the numerical implementation of the
+constructions contained in Zumino's Theorem, i.e. one must constrain the
+computed quantities to correspond to the desired mathematical ones.
+
+In nearly all discussions of the properties of a geminal various subtleties of
+the canonical form have been missed or not focused on, in particular it has
+not been widely advertised that the canonical coefficients of the canonical
+forms usually displayed are not uniquely defined. As we have shown in this
+paper it is, however, possible to construct a unique set of canonical
+coefficients, by using a corollary in the Zumino paper. As stated in the
+introduction; the energy the of $2N$-electron AGP\ state, and its various
+reduced density operators, can solely be expressed in terms of the one
+electron canonical orbitals and the occupation numbers of the geminal. Hence
+the AGP\ ansatz produces a one electron theory of correlated particles and as
+such allows one to build conceptual models in the vein of the Independent
+Particle ansatz but now including explicit interactions between the particles.
+
+\section{Conclusion\label{conclusion}}
+
+We have shown how a geminal can be expanded in terms of a unique set of
+positive canonical coefficients and NGSOs without any loss of generality and
+how this unique form is related to the standard canonical forms discussed previously.
+
+\section{Acknowledgements}
+
+We would like thank the support of the Petroleum Research Foundation through a
+grant PRF 34859-AC6.
+
+\appendix
+
+\section{Tensor Products\label{tensor}}
+
+In order to use familiar terms we will use the coordinate representation of
+one particle states $\left\{  \left\vert \varphi\right\rangle \right\}  $ in
+terms of wavefunctions $\varphi\left(  \mathbf{r}\right)  $ to describe the
+various tensor products. The coordinate representation is based on the
+generalized eigenvectors $\left\{  \left\vert \mathbf{r}\right\rangle
+\right\}  $ of the position operator that produce the resolution of the
+identity
+\begin{equation}
+I=\int\left\vert \mathbf{r}\right\rangle \left\langle \mathbf{r}\right\vert
+d\mathbf{r}%
+\end{equation}
+by%
+\begin{equation}
+\left\vert \varphi\right\rangle =\int\left\vert \mathbf{r}\right\rangle
+\left\langle \mathbf{r}|\varphi\right\rangle d\mathbf{r=}\int\left\vert
+\mathbf{r}\right\rangle \varphi\left(  \mathbf{r}\right)  d\mathbf{r}%
+\end{equation}
+The tensor product $\varphi_{1}\otimes\varphi_{2}\left(  \mathbf{r}%
+_{1},\mathbf{r}_{2}\right)  $ of two one particle state wavefunctions
+$\left\{  \varphi_{1}\left(  \mathbf{r}\right)  ,\varphi_{2}\left(
+\mathbf{r}\right)  \right\}  $ is the pointwise product
+\begin{equation}
+\varphi_{1}\otimes\varphi_{2}\left(  \mathbf{r}_{1},\mathbf{r}_{2}\right)
+=\varphi_{1}\left(  \mathbf{r}_{1}\right)  \otimes\varphi_{2}\left(
+\mathbf{r}_{2}\right)  =\varphi_{1}\left(  \mathbf{r}_{1}\right)  \varphi
+_{2}\left(  \mathbf{r}_{2}\right)
+\end{equation}
+this product has no particle symmetry but is the easiest to perform
+computations such as contractions in. If $\varphi_{1}$ and $\varphi_{2}$ are
+normalized than so is $\varphi_{1}\otimes\varphi_{2}$. The two particle state
+wavefunction that is the antisymmetric tensor product $\varphi_{1}%
+\wedge\varphi_{2}\left(  \mathbf{r}_{1},\mathbf{r}_{2}\right)  $ of two one
+particle state wavefunctions $\left\{  \varphi_{1}\left(  \mathbf{r}\right)
+,\varphi_{2}\left(  \mathbf{r}\right)  \right\}  $ is given by
+\begin{equation}
+\varphi_{1}\wedge\varphi_{2}\left(  \mathbf{r}_{1},\mathbf{r}_{2}\right)
+=\frac{1}{\sqrt{2}}\left\{  \varphi_{1}\left(  \mathbf{r}_{1}\right)
+\otimes\varphi_{2}\left(  \mathbf{r}_{2}\right)  -\varphi_{2}\left(
+\mathbf{r}_{1}\right)  \otimes\varphi_{1}\left(  \mathbf{r}_{2}\right)
+\right\}  \label{aten}%
+\end{equation}
+where the factor $\frac{1}{\sqrt{2}}$ has been introduced to maintain
+normalization and the RHS of eq. $\left(  \ref{aten}\right)  $ is recognized
+as a normalized Slater determinant of the two one particle wavefunctions
+$\left\{  \varphi_{1}\left(  \mathbf{r}\right)  ,\varphi_{2}\left(
+\mathbf{r}\right)  \right\}  $ i.e.%
+\begin{equation}
+\varphi_{1}\wedge\varphi_{2}\left(  \mathbf{r}_{1},\mathbf{r}_{2}\right)
+=\frac{1}{\sqrt{2}}\left\vert
+\begin{array}
+[c]{cc}%
+\varphi_{1}\left(  \mathbf{r}_{1}\right)  & \varphi_{1}\left(  \mathbf{r}%
+_{2}\right) \\
+\varphi_{2}\left(  \mathbf{r}_{1}\right)  & \varphi_{2}\left(  \mathbf{r}%
+_{2}\right)
+\end{array}
+\right\vert
+\end{equation}
+
+
+\section{Canonical Form of a Real Antisymmetric Matrix\label{realanti}}
+
+The commuting \emph{real }antisymmetric\emph{ }matrices\emph{ }$\mathbb{N}$
+and $\mathbb{M}$ define hermitian matrices
+\begin{align}
+\mathbb{H}_{N}  &  =i\mathbb{N}\nonumber\\
+\mathbb{H}_{M}  &  =i\mathbb{M}%
+\end{align}
+which can be seen from
+\begin{align}
+\mathbb{H}_{N}^{\dagger}  &  =\left(  i\mathbb{N}\right)  ^{t\ast}=\left(
+i\mathbb{N}^{t}\right)  ^{\ast}=\left(  -i\mathbb{N}\right)  ^{\ast
+}=i\mathbb{N=H}_{N}\nonumber\\
+\mathbb{H}_{M}^{\dagger}  &  =\left(  i\mathbb{M}\right)  ^{t\ast}=\left(
+i\mathbb{M}^{t}\right)  ^{\ast}=\left(  -i\mathbb{M}\right)  ^{\ast
+}=i\mathbb{M=H}_{M}%
+\end{align}
+The hermitian matrices $\mathbb{H}_{N}$ and $\mathbb{H}_{M}$ commute and thus
+can be simultaneously diagonalized into real diagonal forms by the same
+unitary transformation and hence we show in the following that $\mathbb{N}$
+and $\mathbb{M}$ can simultaneously be brought to a canonical antisymmetric
+form by using the same real orthogonal transformation that is constructed
+according to the following:
+
+Consider the real antisymmetric\emph{ }matrix $\mathbb{A}=\mathbb{A}^{\ast}$
+it can be converted into a hermitian purely imaginary matrix, $\mathbb{H}$,
+with the properties
+\begin{align}
+\mathbb{H}  &  =i\mathbb{A}\nonumber\\
+\mathbb{H}^{\dagger}  &  =-i\mathbb{A}^{t}=i\mathbb{A}=\mathbb{H}\nonumber\\
+\mathbb{H}^{\ast}  &  =-i\mathbb{A}=i\mathbb{A}^{t}\,=\mathbb{H}^{t}%
+\end{align}
+and
+\begin{equation}
+\mathbb{H}=i\mathbb{A}=\sum_{1\leq j\leq s}\alpha_{j}\left\{  \left\vert
+\mathbf{v}_{j}\right\rangle \left\langle \mathbf{v}_{j}\right\vert -\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \left\langle \mathbf{v}_{j}^{\ast
+}\right\vert \right\}  ;\qquad\alpha_{j}\in\mathbb{R} \label{sa}%
+\end{equation}
+where $\left\{  \left\vert \mathbf{v}_{j}\right\rangle ,\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle ;1\leq j\leq r\right\}  $ is a complete
+orthonormal basis. Eq. $\left(  \ref{sa}\right)  $ is seen by observing that
+\begin{equation}
+\mathbb{H}\left\vert \mathbf{v}\right\rangle =\alpha\left\vert \mathbf{v}%
+\right\rangle \Rightarrow\mathbb{H}^{\ast}\left\vert \mathbf{v}^{\ast
+}\right\rangle =\alpha\left\vert \mathbf{v}^{\ast}\right\rangle \Rightarrow
+\mathbb{H}^{t}\left\vert \mathbf{v}^{\ast}\right\rangle =\alpha\left\vert
+\mathbf{v}^{\ast}\right\rangle \Rightarrow\mathbb{H}\left\vert \mathbf{v}%
+^{\ast}\right\rangle =-\alpha\left\vert \mathbf{v}^{\ast}\right\rangle
+\end{equation}
+It is important to note that the orthonormal basis eigenvectors of
+$\mathbb{H}$ are only defined up to an overall phase factors $e^{i\varphi_{j}%
+}$ which \emph{do not} preserve the complex conjugate relationship between
+eigenvectors associated with paired eigenvalues of opposite sign, however one
+can always find complex conjugate eigenvector pairs. These different bases are
+related to each other by
+\begin{equation}
+\left(  \left\vert \mathbf{v}_{1}^{\prime}\right\rangle \cdots\left\vert
+\mathbf{v}_{2s}^{\prime}\right\rangle \right)  =\left(  \left\vert
+\mathbf{v}_{1}\right\rangle \cdots\left\vert \mathbf{v}_{2s}\right\rangle
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+e^{i\varphi_{1}} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & e^{i\varphi_{2s}}%
+\end{array}
+\right)
+\end{equation}
+Using a basis with complex conjugate symmetry we obtain
+\begin{equation}
+\mathbb{A}=-\sum_{1\leq j\leq s}i\alpha_{j}\left\{  \left\vert \mathbf{v}%
+_{j}\right\rangle \left\langle \mathbf{v}_{j}\right\vert -\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \left\langle \mathbf{v}_{j}^{\ast
+}\right\vert \right\}  ;\qquad\alpha_{i}\in\mathbb{R}%
+\end{equation}
+We can then define a \emph{real} basis $\left\{  \left\vert \mathbf{s}%
+_{j}\right\rangle ;1\leq j\leq r\right\}  $ i.e. $\left\vert \mathbf{s}%
+_{j}\right\rangle =\left\vert \mathbf{s}_{j}^{\ast}\right\rangle $ as
+\begin{align}
+\left\vert \mathbf{s}_{j}\right\rangle  &  =\frac{1}{\sqrt{2}}\left(
+\left\vert \mathbf{v}_{j}\right\rangle +\left\vert \mathbf{v}_{j}^{\ast
+}\right\rangle \right)  =\sqrt{2}\operatorname{Re}\left\vert \mathbf{v}%
+_{j}\right\rangle \nonumber\\
+\left\vert \mathbf{s}_{j+\mathbf{s}}\right\rangle  &  =\frac{-i}{\sqrt{2}%
+}\left(  \left(  \left\vert \mathbf{v}_{j}\right\rangle -\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \right)  \right)  =\sqrt{2}%
+\operatorname{Im}\left\vert \mathbf{v}_{j}\right\rangle
+\end{align}
+so that
+\begin{align}
+\mathbb{A}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{j}\right\rangle +\left\vert \mathbf{v}_{j}^{\ast}\right\rangle \right)
+\right\}   &  =-i\alpha_{j}\frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{j}\right\rangle -\left\vert \mathbf{v}_{j}^{\ast}\right\rangle \right)
+\nonumber\\
+&  =\alpha_{j}\left\{  \frac{-i}{\sqrt{2}}\left(  \left(  \left\vert
+\mathbf{v}_{j}\right\rangle -\left\vert \mathbf{v}_{j}^{\ast}\right\rangle
+\right)  \right)  \right\}
+\end{align}
+and
+\begin{align}
+\mathbb{A}\left\{  \frac{-i}{\sqrt{2}}\left(  \left(  \left\vert
+\mathbf{v}_{j}\right\rangle -\left\vert \mathbf{v}_{j}^{\ast}\right\rangle
+\right)  \right)  \right\}   &  =\frac{-\alpha_{j}}{\sqrt{2}}\left\vert
+\mathbf{v}_{j}\right\rangle -\frac{\alpha_{j}}{\sqrt{2}}\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle \nonumber\\
+&  =-\alpha_{j}\left\{  \frac{1}{\sqrt{2}}\left(  \left\vert \mathbf{v}%
+_{j}\right\rangle +\left\vert \mathbf{v}_{j}^{\ast}\right\rangle \right)
+\right\}
+\end{align}
+thus
+\begin{equation}
+\mathbb{A=}\sum_{1\leq j\leq\mathbf{s}}\alpha_{j}\left\{  \left\vert
+\mathbf{s}_{j}\right\rangle \left\langle \mathbf{s}_{j+\mathbf{s}}\right\vert
+-\left\vert \mathbf{s}_{_{j+\mathbf{s}}}\right\rangle \left\langle
+\mathbf{s}_{j}\right\vert \right\}
+\end{equation}
+which displays the desired result. Using the bases $\left\{  \left\vert
+\mathbf{s}_{j}\right\rangle ;1\leq j\leq r\right\}  $ we can produce the
+canonical matrix representation of $\mathbb{A}$
+\begin{equation}
+\mathbb{A}\left(  \left\vert \mathbf{s}\right\rangle \right)  =\left\vert
+\mathbf{s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+where
+\begin{equation}
+\boldsymbol{\alpha}=\left(
+\begin{array}
+[c]{ccc}%
+\alpha_{1} & \mathbb{O} & \mathbb{O}\\
+\mathbb{O} & \ddots & \mathbb{O}\\
+\mathbb{O} & \mathbb{O} & \alpha_{\mathbf{s}}%
+\end{array}
+\right)
+\end{equation}
+and we have the expansion
+\begin{equation}
+\mathbb{A}=\left\vert \mathbf{s}\right\rangle \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \boldsymbol{\alpha}\\
+-\boldsymbol{\alpha} & \mathbb{O}%
+\end{array}
+\right)  \left\langle \mathbf{s}\right\vert \label{reex}%
+\end{equation}
+The row vector of basis vectors, $\left(  \left\vert \mathbf{s}_{1}%
+\right\rangle \cdots\left\vert \mathbf{s}_{\mathbf{s}}\right\rangle \left\vert
+\mathbf{s}_{\mathbf{s}+1}\right\rangle \cdots\left\vert \mathbf{s}%
+_{\mathbf{s}+\mathbf{s}}\right\rangle \right)  $, can be viewed as a real
+orthogonal matrix whose columns are the real basis vectors $\left\{
+\left\vert \mathbf{s}_{1}\right\rangle ,\cdots\left\vert \mathbf{s}%
+_{\mathbf{s}}\right\rangle ,\left\vert \mathbf{s}_{\mathbf{s}+1}\right\rangle
+,\cdots\left\vert \mathbf{s}_{\mathbf{s}+\mathbf{s}}\right\rangle \right\}  $.
+
+The complex basis $\left\{  \left\vert \mathbf{v}_{j}\right\rangle ,\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle ;1\leq j\leq r\right\}  $ diagonalizes
+$\mathbb{A}$ to give
+\begin{equation}
+\mathbb{A}\left(  \left\vert \mathbf{v}\right\rangle ,\left\vert
+\mathbf{v}^{\ast}\right\rangle \right)  =\left(  \left\vert \mathbf{v}%
+\right\rangle ,\left\vert \mathbf{v}^{\ast}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+-i\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & i\boldsymbol{\alpha}
+\end{array}
+\right)
+\end{equation}
+and produces the expansion%
+\begin{equation}
+A=\left(  \left\vert \mathbf{v}\right\rangle ,\left\vert \mathbf{v}^{\ast
+}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+-i\boldsymbol{\alpha} & \mathbb{O}\\
+\mathbb{O} & i\boldsymbol{\alpha}
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\langle \mathbf{v}\right\vert \\
+\left\langle \mathbf{v}^{\ast}\right\vert
+\end{array}
+\right)  \label{ccex}%
+\end{equation}
+The row vector of basis vectors, $\left(  \left\vert \mathbf{v}_{1}%
+\right\rangle \cdots\left\vert \mathbf{v}_{\mathbf{s}}\right\rangle \left\vert
+\mathbf{v}_{1}^{\ast}\right\rangle \cdots\left\vert \mathbf{v}_{\mathbf{s}%
+}^{\ast}\right\rangle \right)  $, can be viewed as an unitary matrix whose
+columns are the basis vectors $\left\{  \left\vert \mathbf{v}_{1}\right\rangle
+\cdots\left\vert \mathbf{v}_{\mathbf{s}}\right\rangle \left\vert
+\mathbf{v}_{1}^{\ast}\right\rangle \cdots\left\vert \mathbf{v}_{\mathbf{s}%
+}^{\ast}\right\rangle \right\}  $. Note that the expansions of eqs. $\left(
+\ref{reex}\right)  $ and $\left(  \ref{ccex}\right)  $ both give $\mathbb{A}$
+thus in eq. $\left(  \ref{reex}\right)  $ all the imaginary terms cancel.
+
+\section{Complex Conjugate Pairing\label{pairing}}
+
+Let $\mathbb{A}$ be a complex antisymmetric matrix that is normal then
+\begin{equation}
+\left[  \mathbb{A},\mathbb{A}^{\dagger}\right]  =0
+\end{equation}
+and $\mathbb{A}$ and $\mathbb{A}^{\dagger}$ are simultaneously diagonalizable
+and the spectral resolution gives
+\begin{subequations}
+\begin{align}
+\mathbb{A}  &  =\sum_{1\leq j\leq r}\alpha_{j}\left\vert \mathbf{v}%
+_{j}\right\rangle \left\langle \mathbf{v}_{j}\right\vert \\
+\mathbb{A}^{\dagger}  &  =\sum_{1\leq j\leq r}\alpha_{j}^{\ast}\left\vert
+\mathbf{v}_{j}\right\rangle \left\langle \mathbf{v}_{j}\right\vert
+\label{adag}%
+\end{align}
+so there exist simultaneous eigenvectors $\left\{  \mathbf{v}_{j}\right\}  $
+to $\mathbb{A}$ and $\mathbb{A}^{\dagger}$ corresponding to complex conjugate
+eigenvalues $\left\{  \alpha,\alpha^{\ast}\right\}  $ i.e.%
+\end{subequations}
+\begin{subequations}
+\begin{align}
+\mathbb{A}\left\vert \mathbf{v}_{j}\right\rangle  &  =\alpha\left\vert
+\mathbf{v}_{j}\right\rangle \nonumber\\
+\mathbb{A}^{\dagger}\left\vert \mathbf{v}_{j}\right\rangle  &  =\alpha
+_{j}^{\ast}\left\vert \mathbf{v}_{j}\right\rangle
+\end{align}
+as $\mathbb{A}$ is antisymmetric we obtain from eq. $\left(  \ref{adag}%
+\right)  $ that
+\end{subequations}
+\begin{equation}
+\mathbb{A}^{\ast}\left\vert \mathbf{v}_{j}\right\rangle =-\alpha_{j}^{\ast
+}\left\vert \mathbf{v}_{j}\right\rangle
+\end{equation}
+which gives by complex conjugation that%
+\begin{equation}
+\mathbb{A}\left\vert \mathbf{v}_{j}^{\ast}\right\rangle =-\alpha_{j}\left\vert
+\mathbf{v}_{j}^{\ast}\right\rangle
+\end{equation}
+\bibliographystyle{apsrev}
+\bibliography{agpopt,bibrefs,bw,lowdin-per-olov,novel}
+
+
+
+\end{document}

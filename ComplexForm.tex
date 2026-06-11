@@ -1,0 +1,620 @@
+%TCIDATA{LaTeXparent=0,0,EOMN.tex}
+                      
+
+\section{Complex forms of the EOM}
+
+In order to write the EOM in a complex analytic form that explicitly refers
+to vector bundle structure one must rearrange the order of the variables in
+eq. $\left( \ref{EOMVW}\right) $and introduce an explicit pairing of the $%
+\omega $ variables into $\omega _{fib}({\cal V}_{den})$ and $\omega _{den}(%
+{\cal V}_{den})$ to obtain 
+\begin{eqnarray}
+&&{\Bbb J}\left( 
+\begin{array}{cccc}
+0 & \eta _{{\cal V}_{fib}\omega _{fib}} & 0 & \eta _{{\cal V}_{fib}\omega
+_{den}} \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0 & \eta _{\omega _{fib}{\cal V}_{den}}
+& 0 \\ 
+0 & \eta _{{\cal V}_{den}\omega _{fib}} & 0 & \eta _{{\cal V}_{den}\omega
+_{den}} \\ 
+\eta _{\omega _{den}{\cal V}_{fib}} & 0 & \eta _{\omega _{den}{\cal V}_{den}}
+& 0%
+\end{array}%
+\right) {\Bbb J}^{\dagger }{\Bbb J}\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{fib} \\ 
+{\cal \dot{V}}_{den} \\ 
+\dot{\omega}_{den}%
+\end{array}%
+\right) ={\Bbb J}\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E} \\ 
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}%
+\end{array}%
+\right) \\
+&\equiv &\left( 
+\begin{array}{cccc}
+0 & \eta _{{\cal T}_{fib}{\cal T}_{fib}^{\ast }} & 0 & \eta _{{\cal T}_{fib}%
+{\cal T}_{den}^{\ast }} \\ 
+\eta _{{\cal T}_{fib}^{\ast }{\cal T}_{fib}} & 0 & \eta _{{\cal T}%
+_{fib}^{\ast }{\cal T}_{den}} & 0 \\ 
+0 & \eta _{{\cal T}_{den}{\cal T}_{fib}^{\ast }} & 0 & \eta _{{\cal T}_{den}%
+{\cal T}_{den}^{\ast }} \\ 
+\eta _{{\cal T}_{den}^{\ast }{\cal T}_{fib}} & 0 & \eta _{{\cal T}%
+_{den}^{\ast }{\cal T}_{den}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{T}}_{fib} \\ 
+{\cal \dot{T}}_{fib}^{\ast } \\ 
+{\cal \dot{T}}_{den} \\ 
+{\cal \dot{T}}_{den}^{\ast }%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla {\cal E}_{{\cal T}_{fib}} \\ 
+\nabla {\cal E}_{{\cal T}_{fib}^{\ast }} \\ 
+\nabla {\cal E}_{{\cal T}_{den}} \\ 
+\nabla {\cal E}_{{\cal T}_{den}^{\ast }}%
+\end{array}%
+\right)
+\end{eqnarray}%
+where 
+\begin{equation}
+{\Bbb J}=\frac{1}{\sqrt{2}}\left( 
+\begin{array}{cc}
+\left( 
+\begin{array}{cc}
+{\Bbb I}_{fib} & i{\Bbb I}_{fib} \\ 
+{\Bbb I}_{fib} & -i{\Bbb I}_{fib}%
+\end{array}%
+\right) & 0 \\ 
+0 & \left( 
+\begin{array}{cc}
+{\Bbb I}_{den} & i{\Bbb I}_{den} \\ 
+{\Bbb I}_{den} & -i{\Bbb I}_{den}%
+\end{array}%
+\right)%
+\end{array}%
+\right)
+\end{equation}%
+and 
+\begin{eqnarray}
+\left( 
+\begin{array}{cc}
+\left( 
+\begin{array}{cc}
+{\Bbb I}_{fib} & i{\Bbb I}_{fib} \\ 
+{\Bbb I}_{fib} & -i{\Bbb I}_{fib}%
+\end{array}%
+\right) & 0 \\ 
+0 & \left( 
+\begin{array}{cc}
+{\Bbb I}_{den} & i{\Bbb I}_{den} \\ 
+{\Bbb I}_{den} & -i{\Bbb I}_{den}%
+\end{array}%
+\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal V}_{fib} \\ 
+\omega _{fib} \\ 
+{\cal V}_{den} \\ 
+\omega _{den}%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{c}
+{\cal T}_{fib} \\ 
+{\cal T}_{fib}^{\ast } \\ 
+{\cal T}_{den} \\ 
+{\cal T}_{den}^{\ast }%
+\end{array}%
+\right) \\
+\frac{1}{2}\left( 
+\begin{array}{cc}
+\left( 
+\begin{array}{cc}
+{\Bbb I}_{fib} & i{\Bbb I}_{fib} \\ 
+{\Bbb I}_{fib} & -i{\Bbb I}_{fib}%
+\end{array}%
+\right) & 0 \\ 
+0 & \left( 
+\begin{array}{cc}
+{\Bbb I}_{den} & i{\Bbb I}_{den} \\ 
+{\Bbb I}_{den} & -i{\Bbb I}_{den}%
+\end{array}%
+\right)%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{c}
+{\cal T}_{fib} \\ 
+{\cal T}_{fib}^{\ast } \\ 
+{\cal T}_{den} \\ 
+{\cal T}_{den}^{\ast }%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{c}
+{\cal V}_{fib} \\ 
+\omega _{fib} \\ 
+{\cal V}_{den} \\ 
+\omega _{den}%
+\end{array}%
+\right)
+\end{eqnarray}%
+One can also express the full EOM eq. $\left( \ref{FullEOM}\right) $ in
+complex analytic form by 
+\begin{equation}
+{\Bbb J}\left( 
+\begin{array}{ccc}
+0 & 0 & \eta _{{\cal V}_{den}\omega } \\ 
+0 & 0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{den}} & \eta _{{\cal V}_{den}\omega } & 0%
+\end{array}%
+\right) {\Bbb J}^{\dagger }{\Bbb J}\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) ={\Bbb J}\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}%
+\end{array}%
+\right)
+\end{equation}%
+where 
+\begin{equation}
+{\Bbb J}=\frac{1}{\sqrt{2}}\left( 
+\begin{array}{cccc}
+{\Bbb I}_{den} & 0 & i{\Bbb I}_{den} & 0 \\ 
+0 & {\Bbb I}_{fib} & 0 & i{\Bbb I}_{fib} \\ 
+{\Bbb I}_{den} & 0 & -i{\Bbb I}_{den} & 0 \\ 
+0 & {\Bbb I}_{fib} & 0 & -i{\Bbb I}_{fib}%
+\end{array}%
+\right)
+\end{equation}%
+and 
+\begin{eqnarray}
+\left( 
+\begin{array}{cccc}
+{\Bbb I}_{den} & 0 & i{\Bbb I}_{den} & 0 \\ 
+0 & {\Bbb I}_{fib} & 0 & i{\Bbb I}_{fib} \\ 
+{\Bbb I}_{den} & 0 & -i{\Bbb I}_{den} & 0 \\ 
+0 & {\Bbb I}_{fib} & 0 & -i{\Bbb I}_{fib}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal V}_{den} \\ 
+{\cal V}_{fib} \\ 
+{\cal \omega }_{den} \\ 
+{\cal \omega }_{fib}%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{c}
+{\cal T} \\ 
+{\cal T}^{\ast }%
+\end{array}%
+\right) \\
+\frac{1}{2}\left( 
+\begin{array}{cccc}
+{\Bbb I}_{den} & 0 & i{\Bbb I}_{den} & 0 \\ 
+0 & {\Bbb I}_{fib} & 0 & i{\Bbb I}_{fib} \\ 
+{\Bbb I}_{den} & 0 & -i{\Bbb I}_{den} & 0 \\ 
+0 & {\Bbb I}_{fib} & 0 & -i{\Bbb I}_{fib}%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{c}
+{\cal T} \\ 
+{\cal T}^{\ast }%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{c}
+{\cal V}_{den} \\ 
+{\cal V}_{fib} \\ 
+{\cal \omega }_{den} \\ 
+{\cal \omega }_{fib}%
+\end{array}%
+\right)
+\end{eqnarray}
+
+\subsection{Partitioning of the EOM wrt ${\cal V}_{fib}({\cal V}_{den})$, $%
+\protect\omega _{fib}({\cal V}_{den})$ and ${\cal V}_{den},$ $\protect\omega %
+_{den}({\cal V}_{den})$}
+
+We can partition these EOM 
+\begin{equation}
+\left( 
+\begin{array}{cccc}
+0 & \eta _{{\cal V}_{den}\omega _{den}} & 0 & \eta _{{\cal V}_{den}\omega
+_{fib}} \\ 
+\eta _{\omega _{den}{\cal V}_{den}} & 0 & \eta _{\omega _{den}{\cal V}_{fib}}
+& 0 \\ 
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & 0 & \eta _{{\cal V}_{fib}\omega
+_{fib}} \\ 
+\eta _{\omega _{fib}{\cal V}_{den}} & 0 & \eta _{\omega _{fib}{\cal V}_{fib}}
+& 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+\dot{\omega}_{den} \\ 
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right)
+\end{equation}%
+between the ''$fib$'' variables ${\cal V}_{fib}({\cal V}_{den})$, $\omega
+_{fib}({\cal V}_{den})$ and the ''$den$'' variables to obtain equations for
+fiber variable trajectories in the fixed time dependent effective fields
+produced by the fixed density trajectory as 
+\begin{equation}
+\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega _{fib}} \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0%
+\end{array}%
+\right) ^{-1}\left[ \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right) -\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}{\cal \omega }_{den}} \\ 
+\eta _{{\cal \omega }_{fib}{\cal V}_{den}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+\dot{\omega}_{den}%
+\end{array}%
+\right) \right]
+\end{equation}%
+These equations can be further simplified to give 
+\begin{eqnarray}
+{\cal \dot{V}}_{fib} &=&\eta _{{\cal V}_{fib}\omega _{fib}}^{-1}\left[
+\nabla _{\omega _{fib}}{\cal E}-\eta _{{\cal \omega }_{fib}{\cal V}_{den}}%
+{\cal \dot{V}}_{den}\right]  \nonumber \\
+\dot{\omega}_{fib} &=&\eta _{\omega _{fib}{\cal V}_{fib}}^{-1}\left[ \nabla
+_{{\cal V}_{fib}}{\cal E}-\eta _{{\cal V}_{fib}{\cal \omega }_{den}}\dot{%
+\omega}_{den}\right]  \label{FEOM}
+\end{eqnarray}%
+Using the real variable trajectories $\left\{ {\cal V}_{fib}\left( t\right)
+,\omega _{fib}\left( t\right) ,{\cal V}_{den}\left( t\right) ,\omega
+_{den}\left( t\right) \right\} $ we can obtain the following equations for $%
+``den"$ variable trajectories in the fixed time dependent effective fields
+produced by the $``fib"$ variable trajectories 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+\dot{\omega}_{den}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{den}\omega _{den}} \\ 
+\eta _{\omega _{den}{\cal V}_{den}} & 0%
+\end{array}%
+\right) -\right.  \nonumber \\
+&&\left. \left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{den}\omega _{fib}} \\ 
+\eta _{\omega _{den}{\cal V}_{fib}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega _{fib}} \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0%
+\end{array}%
+\right) ^{-1}\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} \\ 
+\eta _{\omega _{fib}{\cal V}_{den}} & 0%
+\end{array}%
+\right) \right] ^{-1}\times  \nonumber \\
+&&\left[ \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}%
+\end{array}%
+\right) -\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{den}\omega _{fib}} \\ 
+\eta _{\omega _{den}{\cal V}_{fib}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega _{fib}} \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0%
+\end{array}%
+\right) ^{-1}\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right) \right]
+\end{eqnarray}%
+which can be further simplified to give 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+\dot{\omega}_{den}%
+\end{array}%
+\right) =\left[ \left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{den}\omega _{den}} \\ 
+\eta _{\omega _{den}{\cal V}_{den}} & 0%
+\end{array}%
+\right) \right.  \nonumber \\
+&&\left. -\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{den}\omega _{fib}}\eta _{\omega _{fib}{\cal V}%
+_{fib}}^{-1}\eta _{{\cal V}_{fib}\omega _{den}} \\ 
+\eta _{\omega _{den}{\cal V}_{fib}}\eta _{{\cal V}_{fib}\omega
+_{fib}}^{-1}\eta _{\omega _{fib}{\cal V}_{den}} & 0%
+\end{array}%
+\right) \right] ^{-1}\times  \nonumber \\
+&&\left[ \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}%
+\end{array}%
+\right) -\left( 
+\begin{array}{cc}
+\eta _{{\cal V}_{den}\omega _{fib}}\eta _{\omega _{fib}{\cal V}_{fib}}^{-1}
+& 0 \\ 
+0 & \eta _{\omega _{den}{\cal V}_{fib}}\eta _{{\cal V}_{fib}\omega
+_{fib}}^{-1}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right) \right]
+\end{eqnarray}%
+and finally 
+\begin{eqnarray}
+\dot{\omega}_{den} &=&\left[ \eta _{\omega _{den}{\cal V}_{den}}-\eta _{%
+{\cal V}_{den}\omega _{fib}}\eta _{\omega _{fib}{\cal V}_{fib}}^{-1}\eta _{%
+{\cal V}_{fib}\omega _{den}}\right] ^{-1}\left[ \nabla _{{\cal V}_{den}}%
+{\cal E}-\eta _{{\cal V}_{den}\omega _{fib}}\eta _{\omega _{fib}{\cal V}%
+_{fib}}^{-1}\nabla _{{\cal V}_{fib}}{\cal E}\right]  \label{OEOM} \\
+{\cal \dot{V}}_{den} &=&\left[ \eta _{{\cal V}_{den}\omega _{den}}-\eta
+_{\omega _{den}{\cal V}_{fib}}\eta _{{\cal V}_{fib}\omega _{fib}}^{-1}\eta
+_{\omega _{fib}{\cal V}_{den}}\right] ^{-1}\left[ \nabla _{\omega _{den}}%
+{\cal E}-\eta _{\omega _{den}{\cal V}_{fib}}\eta _{{\cal V}_{fib}\omega
+_{fib}}^{-1}\nabla _{\omega _{fib}}{\cal E}\right]  \label{VEOM1}
+\end{eqnarray}
+
+\begin{enumerate}
+\item We start with $\left( {\cal V}_{den},\omega _{den}^{0},{\cal V}%
+_{fib}^{0},\omega _{fib}^{0}\right) $ then from eq. $\left( \ref{FEOM}%
+\right) $
+
+\item we obtain $\left( {\cal V}_{fib}^{\omega ^{0}},\omega _{fib}^{\omega
+^{0}}\right) $ which is a self consistent solution for $\left( {\cal V}%
+_{den},\omega _{den}^{0}\right) $ then from eq. $\left( \ref{OEOM}\right) $
+
+\item we obtain $\omega _{den}^{1}$ which is a self consistent solution for $%
+\left( {\cal V}_{den},{\cal V}_{fib}^{\omega ^{0}},\omega _{fib}^{\omega
+^{0}}\right) $ then from eq. $\left( \ref{FEOM}\right) $
+
+\item we obtain $\left( {\cal V}_{fib}^{\omega ^{1}},\omega _{fib}^{\omega
+^{1}}\right) $ which is a self consistent solution for $\left( {\cal V}%
+_{den},\omega _{den}^{1}\right) $ then
+
+\item we continue finding solutions first to eq. $\left( \ref{FEOM}\right) $
+and then from eq. $\left( \ref{OEOM}\right) $ to produce 
+\begin{eqnarray}
+\left( {\cal V}_{fib}^{\omega ^{0}},\omega _{fib}^{\omega ^{0}}\right) ,
+&\ldots &,\left( {\cal V}_{fib}^{\omega ^{\#}},\omega _{fib}^{\omega
+^{\#}}\right) \\
+\omega _{den}^{1} &,\ldots &,\omega _{den}^{\#}
+\end{eqnarray}%
+where $\omega _{den}^{\#}$ gives $\left( {\cal V}_{fib}^{\omega
+^{\#}},\omega _{fib}^{\omega ^{\#}}\right) $ and $\left( {\cal V}%
+_{fib}^{\omega ^{\#}},\omega _{fib}^{\omega ^{\#}}\right) $ gives $\omega
+_{den}^{\#}$ self consistently. We then
+\end{enumerate}
+
+change ${\cal V}_{den}$ to an arbitrary ${\cal V}_{den}^{\prime }$ and go
+through steps 1-5 again (after choosing arbitrary/convenient new $\left(
+\omega _{den}^{0},{\cal V}_{fib}^{0},\omega _{fib}^{0}\right) $ or determine
+a ${\cal V}_{den}^{1}$ by solving eq. $\left( \ref{VEOM1}\right) $ and then
+through steps 1-5 again, but starting with $\left( \omega _{den}^{\#},{\cal V%
+}_{fib}^{\omega ^{\#}},\omega _{fib}^{\omega ^{\#}}\right) $. However this
+partitioning {\bf does }not lead to constrained solutions to the full
+equation of motion. Instead we must use the partitioning described in the
+following section.
+
+{\bf However this form of partitioning and solution process does not give a
+solution of the constrained action problem. }
+
+\subsection{Partitioning of the EOM wrt ${\cal V}_{den},{\cal V}_{fib}({\cal %
+V}_{den})$ and $\protect\omega _{den}({\cal V}_{den}),$ $\protect\omega %
+_{fib}({\cal V}_{den})$}
+
+We expand the EOM 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\begin{array}{cc}
+0 & 0 \\ 
+0 & 0%
+\end{array}
+& 
+\begin{array}{cc}
+\eta _{{\cal V}_{den}\omega _{den}} & \eta _{{\cal V}_{den}\omega _{fib}} \\ 
+\eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}%
+\end{array}
+\\ 
+\begin{array}{cc}
+-\eta _{{\cal V}_{den}\omega _{den}}^{t} & -\eta _{{\cal V}_{fib}\omega
+_{den}}^{t} \\ 
+-\eta _{{\cal V}_{den}\omega _{fib}}^{t} & -\eta _{{\cal V}_{fib}\omega
+_{fib}}^{t}%
+\end{array}
+& 
+\begin{array}{cc}
+0 & 0 \\ 
+0 & 0%
+\end{array}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right)
+\end{equation}%
+to obtain 
+\begin{equation}
+\left( 
+\begin{array}{c}
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\eta _{{\cal V}_{den}\omega _{den}} & \eta _{{\cal V}_{den}\omega _{fib}} \\ 
+\eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}%
+\end{array}%
+\right) ^{-1}\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E}%
+\end{array}%
+\right)  \label{w}
+\end{equation}%
+and 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+-\eta _{{\cal V}_{den}\omega _{den}}^{t} & -\eta _{{\cal V}_{fib}\omega
+_{den}}^{t} \\ 
+-\eta _{{\cal V}_{den}\omega _{fib}}^{t} & -\eta _{{\cal V}_{fib}\omega
+_{fib}}^{t}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{\omega _{den}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right)  \label{VFD}
+\end{equation}%
+We then partition eq. $\left( \ref{VFD}\right) $ to obtain 
+\begin{equation}
+{\cal \dot{V}}_{fib}=-\eta _{{\cal V}_{fib}\omega _{fib}}^{-t}\left\{ \nabla
+_{\omega _{fib}}{\cal E+}\eta _{{\cal V}_{den}\omega _{fib}}^{t}{\cal \dot{V}%
+}_{den}\right\}  \label{vfib}
+\end{equation}%
+and 
+\begin{equation}
+{\cal \dot{V}}_{den}=-\eta _{{\cal V}_{den}\omega _{den}}^{-t}\left\{ \nabla
+_{\omega _{den}}{\cal E+}\eta _{{\cal V}_{fib}\omega _{den}}^{t}{\cal \dot{V}%
+}_{fib}\right\}  \label{vden}
+\end{equation}%
+We then solve eqs. $\left( \ref{w}\right) ,\left( \ref{VFD}\right) $, and $%
+\left( \ref{vden}\right) $ for a fixed trajectory ${\cal V}_{den}$ by
+
+\begin{enumerate}
+\item Starting with $\left( {\cal V}_{den},{\cal V}_{fib}^{0},\omega
+_{den}^{0},\omega _{fib}^{0}\right) $ we use eq. $\left( \ref{w}\right) $
+
+\item to obtain $\left( {\cal \omega }_{fib}^{{\cal V}_{fib}^{0}},\omega
+_{den}^{{\cal V}_{fib}^{0}}\right) $ which is a self consistent solution for 
+$\left( {\cal V}_{den},{\cal V}_{fib}^{0}\right) $ then from eq. $\left( \ref%
+{vfib}\right) $
+
+\item we obtain ${\cal V}_{fib}^{1}$ which is a self consistent solution for 
+$\left( {\cal V}_{den},{\cal \omega }_{fib}^{{\cal V}_{fib}^{0}},\omega
+_{den}^{{\cal V}_{fib}^{0}}\right) $ then from eq. $\left( \ref{w}\right) $
+
+\item we obtain $\left( {\cal \omega }_{fib}^{{\cal V}_{fib}^{1}},\omega
+_{den}^{{\cal V}_{fib}^{1}}\right) $ which is a self consistent solution for 
+$\left( {\cal V}_{den},{\cal V}_{fib}^{1}\right) $ then
+
+\item we continue finding solutions first to eq. $\left( \ref{w}\right) $
+and then from eq. $\left( \ref{vfib}\right) $ to produce 
+\begin{eqnarray}
+\left( {\cal \omega }_{fib}^{{\cal V}_{fib}^{0}},\omega _{den}^{{\cal V}%
+_{fib}^{0}}\right) , &\ldots &,\left( {\cal \omega }_{fib}^{{\cal V}%
+_{fib}^{\#}},\omega _{den}^{{\cal V}_{fib}^{\#}}\right) \\
+{\cal V}_{fib}^{0} &,\ldots &,{\cal V}_{fib}^{\#}
+\end{eqnarray}%
+where ${\cal V}_{fib}^{\#}$ gives $\left( {\cal \omega }_{fib}^{{\cal V}%
+_{fib}^{\#}},\omega _{den}^{{\cal V}_{fib}^{\#}}\right) $ and $\left( {\cal %
+\omega }_{fib}^{{\cal V}_{fib}^{\#}},\omega _{den}^{{\cal V}%
+_{fib}^{\#}}\right) $ gives ${\cal V}_{fib}^{\#}$ self consistently. We then
+\end{enumerate}
+
+change ${\cal V}_{den}$ to an arbitrary ${\cal V}_{den}^{\prime }$ and go
+through steps 1-5 again (after choosing arbitrary/convenient new $\left( 
+{\cal V}_{fib}^{0},\omega _{den}^{0},\omega _{fib}^{0}\right) $ or determine
+a ${\cal V}_{den}^{1}$ by solving eq. $\left( \ref{vden}\right) $ and then
+through steps 1-5 again, but starting with $\left( {\cal V}_{fib}^{\#},{\cal %
+\omega }_{fib}^{{\cal V}_{fib}^{\#}},\omega _{den}^{{\cal V}%
+_{fib}^{\#}}\right) $.
+
+Thus eqs. $\left( \ref{w}\right) $ and $\left( \ref{vfib}\right) $ determine
+time dependent functionals of the density, while eq. $\left( \ref{vden}%
+\right) $ restricted to functionals that are solutions to eqs. $\left( \ref%
+{vfib}\right) $ and $\left( \ref{w}\right) $ are {\em the exact }EOM for the
+density trajectory. The sequence described above can be displayed as 
+\begin{eqnarray}
+&&\left( {\cal V}_{den},{\cal V}_{fib}^{0},\omega _{den}^{0},\omega
+_{fib}^{0}\right) \longrightarrow \left( {\cal V}_{den},{\cal V}_{fib}^{0},%
+{\cal \omega }_{fib}^{{\cal V}_{fib}^{0}},\omega _{den}^{{\cal V}%
+_{fib}^{0}}\right) \longrightarrow \left( {\cal V}_{den},{\cal V}_{fib}^{1},%
+{\cal \omega }_{fib}^{{\cal V}_{fib}^{0}},\omega _{den}^{{\cal V}%
+_{fib}^{0}}\right) \longrightarrow  \nonumber \\
+&&\left( {\cal V}_{den},{\cal V}_{fib}^{1},{\cal \omega }_{fib}^{{\cal V}%
+_{fib}^{1}},\omega _{den}^{{\cal V}_{fib}^{1}}\right) \longrightarrow \cdots
+\nonumber \\
+&&\left( {\cal V}_{den},{\cal V}_{fib}^{k},{\cal \omega }_{fib}^{{\cal V}%
+_{fib}^{k-1}},\omega _{den}^{{\cal V}_{fib}^{k-1}}\right) \longrightarrow
+\left( {\cal V}_{den},{\cal V}_{fib}^{k},{\cal \omega }_{fib}^{{\cal V}%
+_{fib}^{k}},\omega _{den}^{{\cal V}_{fib}^{k}}\right) \longrightarrow \left( 
+{\cal V}_{den},{\cal V}_{fib}^{k+1},{\cal \omega }_{fib}^{{\cal V}%
+_{fib}^{k}},\omega _{den}^{{\cal V}_{fib}^{k}}\right) \longrightarrow 
+\nonumber \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \cdots \longrightarrow \left( {\cal V}_{den},{\cal V}%
+_{fib}^{\#},{\cal \omega }_{fib}^{{\cal V}_{fib}^{\#}},\omega _{den}^{{\cal V%
+}_{fib}^{\#}}\right)
+\end{eqnarray}%
+{\bf However this form of partitioning and solution process does not give a
+solution of the constrained action problem. }

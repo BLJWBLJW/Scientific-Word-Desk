@@ -1,0 +1,397 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, June 10, 2002 12:05:14}
+%TCIDATA{LastRevised=Wednesday, June 19, 2002 09:32:30}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{State Generation}
+\title[State Generation]{The Generation of the Convex Set of Quantum States from a Reference State by a
+Commutative Semi Group }
+\author{B. Weiner}
+\affiliation{My Institution}
+\keywords{}
+\pacs{}
+
+\begin{abstract}
+
+
+\end{abstract}
+\date{06/10/2002}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+
+In this article we describe how all states, pure and ensemble can be generated
+from a reference state by the action of abelian semi groups, which allows one
+to express the expectation value of all observable in any state in terms of
+"dressed" observables in the reference state. Utilizing this construction and
+considering inclusive sequences of semi groups we develope an approximation
+theory in the spirit of coherent state approximations. Our construction is
+based on the properties of generalized bases, in particular the bases formed
+by the generalized eigenvectors of the coordinate operator. Thus in section 2
+we review the properties of these bases, in section 3 we describe the abelian
+semi groups associated with these bases, in section 4 we describe the
+generation of \emph{all} states from a reference state using these semi groups
+and in section 6 an approximation theory based on this construction.
+
+\section{Generalized Bases}
+
+Generalized bases of Hilbert spaces have been a cornerstone of quantum
+mechanics since their introduction by Dirac \cite{Dirac}, since their
+inception they have been given a  firm mathematical foundation in the context
+of Distrubution theory, Group theory and Topological Vector Spaces. In this
+section we review some of the salient features of their properties.
+
+\section{Coordinate Representation}
+
+If we consider the coordinate representation, all states (unnormalized) in
+$\mathcal{H}^{N}$ can be produced in the following manner from a reference
+state, $\left\vert \Psi_{ref}\right\rangle $, that is nonzero $a.e.$
+\begin{equation}
+\left\vert \Psi\left(  \nu,\omega\right)  \right\rangle =\breve{T}\left(
+\nu,\omega\right)  \left\vert \Psi_{ref}\right\rangle =\breve{\nu}%
+_{N}e^{i\breve{\omega}_{N}}\left\vert \Psi_{ref}\right\rangle
+\end{equation}
+where
+\begin{align}
+\left\langle \mathsf{z}^{N}|\Psi_{ref}\right\rangle  &  =\varrho\left(
+\mathsf{z}^{N}\right)  e^{iS\left(  \mathsf{z}^{N}\right)  }\nonumber\\
+\breve{\nu}_{N}  &  =\int\nu\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}\in\mathcal{B}\left(  \mathcal{H}^{N}\right) \\
+\breve{\omega}_{N}  &  =\int\omega\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}\in\mathcal{B}\left(  \mathcal{H}^{N}\right)
+\end{align}
+and
+\begin{equation}
+\left\vert \mathsf{z}^{N}\right\rangle =\left\vert \mathsf{z}_{1}%
+\cdots\mathsf{z}_{N}\right\rangle ;\quad\mathsf{z}_{i}\neq\mathsf{z}_{j}%
+,\quad1\leq i<j\leq N
+\end{equation}
+$\lceil$In this formulation it does not matter if the coordinates are equal or
+not as for any $N$-particle operator $\breve{\varsigma}_{N}$
+\begin{equation}
+\breve{\varsigma}_{N}=\int\varsigma\left(  \mathsf{z}^{N}\right)  \prod_{1\leq
+i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}=\int\varsigma\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}%
+\end{equation}
+where $\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  =1-\delta
+\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  $, as $\left\vert \mathsf{z}%
+_{1}\cdots\mathsf{z}_{N}\right\rangle =0$ if $\mathsf{z}_{i}\neq\mathsf{z}%
+_{j}$ for any $i\neq j$.$\rfloor$ Then clearly
+\begin{equation}
+I_{N}=\int\left\vert \Psi\left(  \nu,\omega\right)  \right\rangle \left\langle
+\Psi\left(  \nu,\omega\right)  \right\vert d\mu\left(  \nu,\omega\right)
+=\int\breve{T}\left(  \nu,\omega\right)  \left\vert \Psi_{ref}\right\rangle
+\left\langle \Psi_{ref}\right\vert \breve{T}\left(  \nu,\omega\right)
+^{^{\dagger}}d\mu\left(  \nu,\omega\right)
+\end{equation}
+where
+\begin{equation}
+d\mu\left(  \nu,\omega\right)  =\frac{1}{\left\langle \Psi\left(  \nu
+,\omega\right)  |\Psi\left(  \nu,\omega\right)  \right\rangle }d\mu_{r}\left(
+\nu\right)  d\mu_{i}\left(  \omega\right)
+\end{equation}
+\qquad\qquad
+
+The strong closure of the space of diagonal integral operators that map
+$\mathcal{H}^{N}\rightarrow\mathcal{H}^{N}$ is the space of integral operators
+with symmetric integral kernels $T\left(  \mathsf{z}^{N}\right)  $ $\in
+L_{\infty}\left(  \mathsf{Z}^{N}\right)  $ /Walter Thirring, \textit{Quantum
+Mechanics of Atoms and Molecules -A course in Mathematical Physics 3, pp
+50-51; }Springer Verlag , New York 1981/. The space $L_{\infty}\left(
+\mathsf{Z}^{N}\right)  $ is a $w^{\ast}$-algebra. The following extract from
+Thirring should be noted:
+
+\begin{quotation}
+$L_{\infty}\left(  \mathsf{Z}^{N}\right)  ,$\textit{considered as
+multiplication operators on} $L_{2}\left(  \mathsf{Z}^{N}\right)  $ \textit{is
+maximally abelian. Every function in }$L_{2}\left(  \mathsf{Z}^{N}\right)  $
+\textit{that is nonzero} $a.e.$ \textit{is a cyclic vector. Functions that
+vanish on some set} $\left[  \Omega^{N}\right]  ^{C}=\mathsf{Z}^{N}-\Omega
+^{N}\subset\mathsf{Z}^{N}$ \textit{form invariant subspaces. Thus} $L_{\infty
+}\left(  \mathsf{Z}^{N}\right)  $ \textit{is reducible and not a
+factor.}\emph{\ Every function in }$L_{2}\left(  \mathsf{Z}^{N}\right)
+$\emph{\ that is non zero }$a.e.$\emph{\ is a cyclic vector.}
+\end{quotation}
+
+One can see that $T\left(  \nu,\omega\right)  $ (the integral kernel of
+$\breve{T}\left(  \nu,\omega\right)  )$ is a parameterization of a
+representation of an abelian $w^{\ast}$-algebra, $\mathfrak{A}$, on
+$L_{2}\left(  \mathsf{Z}^{N}\right)  $ by $L_{\infty}\left(  \mathsf{Z}%
+^{N}\right)  $. This representation is reducible as $L_{2}\left(
+\mathsf{Z}^{N}\right)  $ contains the following invariant subspaces
+\begin{equation}
+L_{2}\left(  \Omega^{N}\right)  =\left\{  \Psi|\Psi\left(  \mathsf{z}%
+^{N}\right)  =0\,\text{if \thinspace}\mathsf{z}^{N}\notin\Omega^{N}%
+\,\text{,\thinspace}\int_{\Omega^{N}}d\mathsf{z}^{N}\neq0\,\text{and\thinspace
+}\Omega^{N}\subset\mathsf{Z}^{N}\right\}
+\end{equation}
+The operator $\breve{T}\left(  \nu,\omega\right)  $ produces elements that
+have amplitudes that belong to $L_{2}\left(  \Omega^{N}\right)  $ when
+Support$\left(  \nu\right)  =$ $\Omega^{N}$.
+
+The set of invertible diagonal operators in $\mathfrak{A}$ form a group,
+$\mathfrak{G}_{pos}$, that also has a reducible representation on $L_{\infty
+}\left(  \mathsf{Z}^{N}\right)  $, as clearly $L_{2}\left(  \Omega^{N}\right)
+$ are also invariant subspaces of $\mathfrak{G}_{pos}$. However \emph{it is
+not true} that every function in $L_{2}\left(  \mathsf{Z}^{N}\right)  $\ that
+is nonzero $a.e.$\ is a cyclic vector for $\mathfrak{G}_{pos}$.
+
+$\lceil$This observation also holds in the discrete case, consider the abelian
+algebra generated by $\left\{
+%TCIMACRO{\tsum \limits_{1\leq i\leq\infty}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq i\leq\infty}}
+%EndExpansion
+\lambda_{i}\left\vert e_{i}\right\rangle \left\langle e_{i}\right\vert
+\right\}  $ acting on a vector $a=%
+%TCIMACRO{\tsum \limits_{1\leq i\leq\infty}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq i\leq\infty}}
+%EndExpansion
+\alpha_{i}\left\vert e_{i}\right\rangle $ that such that $\alpha_{i}%
+\neq0\forall i\rfloor$
+
+From the preceding we have that $L_{\infty}\left(  \mathsf{Z}^{N}\right)  $
+acting on an $a.e.$ nonzero amplitude produces all (unnormalized) vector
+states, the question thus arrises on whether $L_{\infty}\left(  \mathsf{Z}%
+^{N}\right)  $ can produce all unnormalized states by acting on an a
+$a.e.$nonzero positive kernel $D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}%
+^{\prime N}\right)  $ of an operator $\in\mathcal{B}_{1+}\left(
+\mathcal{H}^{N}\right)  $ in the following manner%
+\begin{equation}
+D\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  =T\left(  \mathsf{z}%
+^{N}\right)  D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)
+T\left(  \mathsf{z}^{\prime N}\right)  ^{\ast}%
+\end{equation}
+One can start by examining the diagonal elements to obtain
+\begin{align}
+D\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)   &  =\left\vert T\left(
+\mathsf{z}^{N}\right)  \right\vert ^{2}D_{ref}\left(  \mathsf{z}%
+^{N},\mathsf{z}^{N}\right) \nonumber\\
+&  \Rightarrow\left\vert T\left(  \mathsf{z}^{N}\right)  \right\vert =\left\{
+%
+\begin{array}
+[c]{c}%
+\left(  \frac{D\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  }{D_{ref}\left(
+\mathsf{z}^{N},\mathsf{z}^{N}\right)  }\right)  ^{\frac{1}{2}};\quad
+D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  \neq0\\
+0;\qquad\qquad\qquad\quad\quad D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}%
+^{N}\right)  =0\text{ }%
+\end{array}
+\right.  \text{ }%
+\end{align}
+which is well defined $a.e.$ The off diagonal elements will "determine" the
+phase of the transformation $T\left(  \mathsf{z}^{N}\right)  $ $=\left\vert
+T\left(  \mathsf{z}^{N}\right)  \right\vert e^{i\theta\left(  \mathsf{z}%
+^{N}\right)  }$ by
+\begin{align}
+D\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)   &  =\left\vert T\left(
+\mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime N}\right)  \right\vert
+e^{i\left(  \theta\left(  \mathsf{z}^{N}\right)  -\theta\left(  \mathsf{z}%
+^{\prime N}\right)  \right)  }D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right) \nonumber\\
+&  \Rightarrow e^{i\left(  \theta\left(  \mathsf{z}^{N}\right)  -\theta\left(
+\mathsf{z}^{\prime N}\right)  \right)  }=\frac{D\left(  \mathsf{z}%
+^{N},\mathsf{z}^{\prime N}\right)  }{D_{ref}\left(  \mathsf{z}^{N}%
+,\mathsf{z}^{\prime N}\right)  \left\vert T\left(  \mathsf{z}^{N}\right)
+T\left(  \mathsf{z}^{\prime N}\right)  \right\vert }%
+\end{align}
+which is well defined as long as
+\begin{equation}
+\left\vert T\left(  \mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime
+N}\right)  \right\vert =0\Longleftrightarrow D\left(  \mathsf{z}%
+^{N},\mathsf{z}^{\prime N}\right)  =0
+\end{equation}
+which means that
+\begin{equation}
+D\left(  \mathsf{z}^{\prime N},\mathsf{z}^{\prime N}\right)  =0\text{ or
+}D\left(  \mathsf{z}^{N},\mathsf{z}^{N}\right)  =0\Longrightarrow D\left(
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  =0
+\end{equation}
+when $D\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \geq0$. First we
+see if is true for proper vectors, in that case
+\begin{align}
+D\left(  \mathsf{v}^{N},\mathsf{v}^{N}\right)   &  =\left\langle
+\mathsf{v}^{N}|\breve{D}\mathsf{v}^{N}\right\rangle =\left\langle
+\mathsf{v}^{N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{v}^{N}\right\rangle
+=0\nonumber\\
+&  \Rightarrow\breve{Q}\left\vert \mathsf{v}^{N}\right\rangle =0 \label{c1}%
+\end{align}
+and
+\begin{align}
+D\left(  \mathsf{v}^{\prime N},\mathsf{v}^{\prime N}\right)   &  =\left\langle
+\mathsf{v}^{\prime N}|\breve{D}\mathsf{v}^{\prime N}\right\rangle
+=\left\langle \mathsf{v}^{\prime N}|\breve{Q}^{\dagger}\breve{Q}%
+\mathsf{v}^{\prime N}\right\rangle =0\nonumber\\
+&  \Rightarrow\breve{Q}\left\vert \mathsf{v}^{\prime N}\right\rangle =0
+\label{c2}%
+\end{align}
+so either condition eq. $\left(  \ref{c1}\right)  $ or eq. $\left(
+\ref{c2}\right)  $ clearly implies that
+\begin{equation}
+\left\langle \mathsf{v}^{N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{v}^{\prime
+N}\right\rangle =D\left(  \mathsf{v}^{N},\mathsf{v}^{\prime N}\right)  =0
+\end{equation}
+To see if this true for the generalized basis we must see if
+\begin{equation}
+\left\langle \mathsf{z}^{N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{z}%
+^{N}\right\rangle =0\Rightarrow\breve{Q}\left\vert \mathsf{z}^{N}\right\rangle
+=0
+\end{equation}
+is true in a rigged Hilbert space. $\lceil\mathcal{V}_{L}\supset
+\mathcal{H\supset}\mathcal{V}_{S};$ $\mathcal{V}_{L}$ and $\mathcal{V}_{S}$
+are Banach spaces and $\mathcal{V}_{S}$ is dense in $\mathcal{H}$; $\breve{Q}$
+acting on $\mathcal{V}_{L}$ is defined by
+\begin{equation}
+\left(  \breve{Q}^{\ddagger}\mathsf{z}|\varphi\right)  =\left(  \mathsf{z}%
+|\breve{Q}\varphi\right)  \forall\left\vert \varphi\right\rangle
+\in\mathcal{V}_{S}%
+\end{equation}
+and $\breve{Q}^{\ddagger}$ is an unique extension of $\breve{Q}$. Note that
+$\breve{Q}\left\vert \mathsf{z}^{N}\right\rangle =0$ means
+\begin{equation}
+\left(  \mathsf{z}|\breve{Q}\varphi\right)  =0\forall\left\vert \varphi
+\right\rangle \in\mathcal{V}_{S}%
+\end{equation}
+which implies that $\breve{Q}^{\ddagger}\left\vert \mathsf{z}^{N}\right\rangle
+$ is the zero vector in $\mathcal{V}_{L}$.$\rfloor$ Thus $\left\langle
+\mathsf{z}^{N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{z}^{N}\right\rangle =0$ or
+$\left\langle \mathsf{z}^{\prime N}|\breve{Q}^{\dagger}\breve{Q}%
+\mathsf{z}^{\prime N}\right\rangle =0\Rightarrow\left\langle \mathsf{z}%
+^{\prime N}|\breve{Q}^{\dagger}\breve{Q}\mathsf{z}^{N}\right\rangle =0$. Thus
+we have that
+\begin{equation}
+\left\vert T\left(  \mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime
+N}\right)  \right\vert =0\Longleftrightarrow D\left(  \mathsf{z}%
+^{N},\mathsf{z}^{\prime N}\right)  =0
+\end{equation}
+and we can define phase differences as
+\begin{equation}
+e^{i\left(  \theta\left(  \mathsf{z}^{N}\right)  -\theta\left(  \mathsf{z}%
+^{\prime N}\right)  \right)  }=\left\{
+\begin{array}
+[c]{c}%
+\frac{D\left(  \mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  }{D_{ref}\left(
+\mathsf{z}^{N},\mathsf{z}^{\prime N}\right)  \left\vert T\left(
+\mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime N}\right)  \right\vert
+};\left\vert T\left(  \mathsf{z}^{N}\right)  T\left(  \mathsf{z}^{\prime
+N}\right)  \right\vert \neq0,D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right)  \neq0\\
+\text{\qquad\qquad}0\qquad\text{\qquad\qquad\qquad otherwise\qquad\qquad
+\qquad\qquad\qquad}%
+\end{array}
+\right.
+\end{equation}
+which is sufficient to define the transformation $D_{ref}\rightarrow D$
+\emph{for any }$D$ as long as $D_{ref}\neq0\,a.e.$
+
+The transformations $\hat{T}$ can either decrease or leave invariant the rank
+of $\breve{D}^{N}$, thus only if $\breve{D}_{ref}$ has maximal rank will all
+density operators be generated by such transformations ($D_{ref}$ need not be
+a density operator kernel associated with a fixed number of particles, all
+that is needed is that $D_{ref}$ $\in\mathcal{B}_{1+}\left(  \mathcal{H}%
+^{N}\right)  $ with $rank\left(  D_{ref}\right)  =\infty$ and thus could be
+the kernel of any density operator, including ones describing indeterminate
+number of particles.)
+
+\subsection{Second Quantized form of Diagonal Operators}
+
+The operator
+\begin{equation}
+\breve{T}_{N}=\int T\left(  \mathsf{z}^{N}\right)  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+\end{equation}
+is the restriction of the second quantized operator%
+\begin{equation}
+\breve{T}=\int T\left(  \mathsf{z}^{N}\right)  \Phi\left(  \mathsf{z}%
+^{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}^{N}\right)  d\mathsf{z}^{N}%
+\end{equation}
+to $\mathcal{H}^{N}$, where
+\begin{equation}
+\Phi\left(  \mathsf{z}^{N}\right)  =\Phi\left(  \mathsf{z}_{N}\right)
+\cdots\Phi\left(  \mathsf{z}_{1}\right)
+\end{equation}
+and
+\begin{equation}
+\Phi\left(  \mathsf{z}\right)  ^{\dagger}\left\vert \phi\right\rangle
+=\left\vert \mathsf{z}\right\rangle
+\end{equation}
+As%
+\begin{align}
+\Phi\left(  \mathsf{z}^{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+^{N}\right)   &  =\Phi\left(  \mathsf{z}_{1}\right)  ^{\dagger}\cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  \cdots\Phi\left(  \mathsf{z}_{1}\right) \nonumber\\
+&  =\prod_{1\leq i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}%
+_{j}\right)  \Phi\left(  \mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(
+\mathsf{z}_{1}\right)  \cdots\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}%
+\Phi\left(  \mathsf{z}_{N}\right)
+\end{align}
+we have that%
+\begin{align}
+\breve{T}  &  =\int T\left(  \mathsf{z}^{N}\right)  \prod_{1\leq i<j\leq
+N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  \Phi\left(
+\mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{1}\right)  \cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  d\mathsf{z}^{N}\nonumber\\
+&  =\int\sum_{k=0}^{N}\left\{  T_{k}\left(  \mathsf{z}^{N}\right)  \right\}
+\prod_{1\leq i<j\leq N}\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)
+\Phi\left(  \mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{1}\right)  \cdots\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(
+\mathsf{z}_{N}\right)  d\mathsf{z}^{N}%
+\end{align}
+where
+\begin{equation}
+T_{k}\left(  \mathsf{z}^{N}\right)  =\sum_{1\leq i_{1}<i_{2}\cdots<i_{k}\leq
+N}T_{k}\left(  \mathsf{z}_{i_{1}}\mathsf{z}_{i_{2}}\cdots\mathsf{z}_{i_{k}%
+}\right)
+\end{equation}
+and all the functions are symmetric.
+
+\section{Pure States \label{pure}}
+
+All pure states can be generated from a reference pure state by the action of
+a commutative semi group of operators
+
+\section{Ensemble States \label{mixed}}
+
+
+\end{document}

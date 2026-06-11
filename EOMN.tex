@@ -1,0 +1,1989 @@
+
+\documentstyle[amstex,amssymb,preprint,tighten,aps]{revtex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Wednesday, May 16, 2001 14:30:46}
+%TCIDATA{LastRevised=Friday, November 23, 2001 10:41:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX - APS and AIP Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtxtci.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\begin{document}
+\title{Equations of Motion}
+\author{Brian Weiner}
+\date{11/13/01}
+\maketitle
+
+\section{Parameterization}
+
+\subsection{Equivalence Classes}
+
+Operators belonging to ${\cal B}_{1}\left( {\cal H}^{N}\right) $ can be
+classified into equivalence classes $\left[ f\right] _{N\text{ }}$by the
+action of the contraction map $\Xi :{\cal B}_{1}\left( {\cal H}^{N}\right)
+\rightarrow L_{1}\left( {\rm Z}\right) $. The equivalence classes are affine
+spaces and this class structure of ${\cal B}_{1}\left( {\cal H}^{N}\right) $
+can be viewed in terms of an affine bundle ${\frak B}_{aff}$ with fibers $%
+\left[ f\right] _{N\text{ }}$ and base $L_{1}\left( {\rm Z}\right) $,
+elements of this fiber bundle can be denoted by $\left( Y,f\right) $ where $%
+Y\in \left[ f\right] _{N\text{ }}$ and $f\in L_{1}\left( {\rm Z}\right) $.
+
+The space of trace class operators ${\cal B}_{1}\left( {\cal H}^{N}\right) $
+has the natural decomposition wrt to the linear map $\Xi $ as 
+\begin{equation}
+{\cal B}_{1}\left( {\cal H}^{N}\right) =\ker \Xi \oplus \ker \Xi ^{c}.
+\end{equation}%
+$\lceil $Note that the compliment of a subspace is {\bf not }unique (see %
+\cite{Geroch}) and leads to different representations of the base, as we
+discuss in the following. The non uniqueness is expressed in 
+\begin{eqnarray}
+\left[ \ker \Xi ^{c}\right] _{\mu } &=&\left\{ u+\varphi _{\mu }\left(
+u\right) ;u\in \ker \Xi ^{c}\right\}  \nonumber \\
+\varphi _{\mu } &:&\ker \Xi ^{c}\longrightarrow \ker \Xi
+\end{eqnarray}%
+with $\left[ \ker \Xi ^{c}\right] _{\mu }$ also being a compliment when $%
+\ker \Xi ^{c}$ is a given compliment. We take $\ker \Xi ^{c}$ to be the {\em %
+canonical }compliment made up of vectors that have {\bf no }components in $%
+\ker \Xi $ and in the following the term compliment will refer to the
+canonical compliment unless otherwise stated$\rfloor $. As $\Xi $ is a
+linear map the compliment of its kernel is isomorphic to its range i.e. $%
+\ker \Xi ^{c}$ $\cong L_{1}\left( {\rm Z}\right) $ $\lceil $assuming that $%
+\Xi $ is onto $L_{1}\left( {\rm Z}\right) \rfloor $ and we will describe
+this isomorphism by 
+\begin{equation}
+\Gamma :L_{1}\left( {\rm Z}\right) \longrightarrow \ker \Xi ^{c}.
+\end{equation}%
+Using $\Gamma $ the equivalence class $\left[ f\right] _{N\text{ }}$ can be
+expressed as 
+\begin{equation}
+\left[ f\right] _{N\text{ }}=\left\{ Y:Y=\Gamma \left( f\right) +k,\quad
+k\in \ker \Xi \right\}
+\end{equation}%
+and we call $\Gamma \left( f\right) $ the irreducible part of the operator $%
+Y $ (obviously $\Gamma \left( f\right) \in \left[ f\right] _{N\text{ }}$ and
+all operators belonging to a given equivalence class have the same
+irreducible part). The class structure of ${\cal B}_{1}\left( {\cal H}%
+^{N}\right) $ can thus also be viewed in terms of a vector bundle ${\frak B}%
+_{vec}$ with fibers $\ker \Xi $ and base $\ker \Xi ^{c}$ and hence the
+vector bundle ${\frak B}_{vec}$ is equivalent to the affine bundle ${\frak B}%
+_{aff}$ in the preceding manner and can be thought of as a
+''representation'' of it. The elements of this vector bundle can be denoted
+by $\left( k,\Gamma \left( f\right) \right) $ where $k\in \ker \Xi $ and $%
+\Gamma \left( f\right) \in \ker \Xi ^{c}$.
+
+We can more generally introduce an injective map 
+\begin{equation}
+Y_{ref}:L_{1}\left( {\rm Z}\right) \longrightarrow {\cal B}_{1}\left( {\cal H%
+}^{N}\right)
+\end{equation}%
+where $Y_{ref}\left( f\right) \in \left[ f\right] _{N}$, (this implies that $%
+Y_{ref}\left( f_{1}\right) $ and $Y_{ref}\left( f_{2}\right) $ belong to
+different equivalence classes when $f_{1}\neq f_{2}$ even if they are just
+scalar multiples of each other), then the equivalence class $\left[ f\right]
+_{N\text{ }}$ can be expressed as 
+\begin{equation}
+\left[ f\right] _{N\text{ }}=\left\{ Y:Y=Y_{ref}\left( f\right) +k,\quad
+k\in \ker \Xi \right\}
+\end{equation}%
+and the elements of ${\frak B}_{vec}$ can also be denoted by $\left(
+k,Y_{ref}\left( f\right) \right) $ where $k\in \ker \Xi $ and $Y_{ref}\left(
+f\right) \in \left[ f\right] _{N}$ (clearly $Y_{ref}\left( f\right) -\Gamma
+\left( f\right) \in \ker \Xi $). We can think of $\left\{ \left( k,\Gamma
+\left( f\right) \right) \right\} $ and $\left\{ \left( k,Y_{ref}\left(
+f\right) \right) \right\} $ as equivalent representations of ${\frak B}%
+_{vec} $, with $\left\{ \left( k,\Gamma \left( f\right) \right) \right\} $
+being the defining representation. Note it is the base which has different
+representations, and these representations are related by the super operator 
+$\hat{T}_{Y_{ref}}$ 
+\begin{equation}
+\left( k,Y_{ref}\left( f\right) \right) =\left( k,\hat{T}_{Y_{ref}}\left(
+\Gamma \left( f\right) \right) \right)
+\end{equation}%
+where the composition $\hat{T}_{Y_{ref}}\circ \Gamma $ is an injection from $%
+L_{1}\left( {\rm Z}\right) $ to ${\cal B}_{1}\left( {\cal H}^{N}\right) $
+and 
+\begin{eqnarray}
+Y_{ref}\left( f\right) &=&\hat{T}_{Y_{ref}}\left( \Gamma \left( f\right)
+\right) =\Gamma \left( f\right) +\varphi _{Y_{ref}}\left( \Gamma \left(
+f\right) \right)  \label{newbase} \\
+\varphi _{Y_{ref}} &:&\ker \Xi ^{c}\longrightarrow \ker \Xi  \nonumber
+\end{eqnarray}%
+$\lceil $Note that $\varphi _{Y_{ref}}$ does not have to be injective$%
+\rfloor $.
+
+\subsection{Cosets}
+
+The pure states of ${\cal H}^{N}$ can be parameterized non redundantly by
+the action of representations, (which we will not explicitly signify and
+correspond to the different representations of ${\frak B}_{vec}$ described
+in the preceding), of ${\frak G}_{den}$ and ${\frak G}_{fib}$ on a pure
+reference state in the following manner 
+\begin{equation}
+|\Psi ({\cal V}_{fib}({\cal V}_{den}),\omega ,{\cal V}_{den}\rangle =e^{%
+{\cal \breve{V}}_{fib}\left[ {\cal V}_{den}\right] }e^{i\breve{\omega}}e^{%
+{\cal \breve{\beta}}\left( {\cal V}_{den}\right) }e^{{\cal \breve{V}}%
+_{den}}|\Psi _{ref}\left( \gamma _{0}\right) \rangle  \label{param}
+\end{equation}%
+where ${\cal \breve{V}}_{fib}\left[ {\cal V}_{den}\right] $ denotes a
+coordinate diagonal operator belonging to ${\cal B}\left( {\cal H}%
+^{N}\right) $ that maps $\left[ \gamma \right] _{N}$ $\equiv \left[ {\cal V}%
+_{den}\right] $ to itself i.e. 
+\begin{eqnarray}
+&&\Xi \left( e^{{\cal \breve{V}}_{fib}\left[ {\cal V}_{den}\right]
+}D^{N}\left( \gamma \right) e^{{\cal \breve{V}}_{fib}\left[ {\cal V}_{den}%
+\right] }\right) \equiv \Xi \left( \widehat{e^{{\cal \breve{V}}_{fib}\left[ 
+{\cal V}_{den}\right] }}D^{N}\left( \gamma \right) \right) =\gamma  \nonumber
+\\
+&&D^{N}\left( \gamma \right) =e^{{\cal \breve{V}}_{den}}|\Psi _{ref}\left(
+\gamma _{0}\right) \rangle \left\langle \Psi _{ref}\left( \gamma _{0}\right)
+\right| e^{{\cal \breve{V}}_{den}}\equiv \widehat{e^{{\cal \breve{V}}_{den}}}%
+\left( |\Psi _{ref}\left( \gamma _{0}\right) \rangle \left\langle \Psi
+_{ref}\left( \gamma _{0}\right) \right| \right)
+\end{eqnarray}%
+and ${\cal \breve{\beta}}\left( {\cal V}_{den}\right) =$ ${\cal \breve{V}}%
+_{fib}({\cal V}_{den})+i{\cal \breve{\omega}}({\cal V}_{den})$, where ${\cal 
+\breve{V}}_{fib}({\cal V}_{den})$ and ${\cal \breve{\omega}}({\cal V}_{den})$
+are fixed paths of intra equivalence class maps and $\widehat{e^{\breve{X}}}$
+denotes the super operator induced by $e^{\breve{X}}$. ({\em Note} the
+difference in meaning between ${\cal \breve{V}}_{fib}({\cal V}_{den})$ and $%
+{\cal \breve{V}}_{fib}\left[ {\cal V}_{den}\right] $). It should be observed
+that the map $\widehat{e^{{\cal \breve{V}}_{den}}}$ does not change the $%
+\ker \Xi $ component of $D^{N}\left( \gamma _{0}\right) =|\Psi _{ref}\left(
+\gamma _{0}\right) \rangle \left\langle \Psi _{ref}\left( \gamma _{0}\right)
+\right| $, while $\widehat{e^{{\cal \breve{\beta}}\left( {\cal V}%
+_{den}\right) }}$ does and corresponds to the map $\hat{T}_{Y_{ref}}\left(
+\gamma \right) $ described for the general case in Eq. $\left( \ref{newbase}%
+\right) $.
+
+$\lceil ${\em Note}: If a reference state with density $\gamma _{0}$ is
+given then the constructions described below and in Appendix A show that $%
+\left[ \gamma \right] _{N}\equiv \left[ {\cal V}_{den}\right] _{N}$ in a $%
+1-1 $ unique fashion$\rfloor $.
+
+$\lceil ${\em Note}: In the following that $\left| \breve{Y}\right) $
+denotes the operator $\breve{Y}$ when viewed as an element of the Banach
+space ${\frak B}_{1}\left( {\cal H}^{N}\right) \rfloor $.
+
+The factor $e^{{\cal \breve{V}}_{den}}$ in the transformation Eq. $\left( %
+\ref{param}\right) $ belongs to the coset decomposition of ${\frak G}_{den}$%
+, (in the representation by super operators: ${\frak B}_{1}\left( {\cal H}%
+^{N}\right) \rightarrow {\frak B}_{1}\left( {\cal H}^{N}\right) )$, given by 
+\begin{eqnarray}
+&&{\frak G}_{\gamma _{0}}=\left\{ \hat{T}\in {\frak G}_{den}{\frak ;\,}\hat{T%
+}\left| D_{ref}^{N}\left( \gamma _{0}\right) \right) =\left|
+D_{ref}^{N}\left( \gamma _{0}\right) \right) \right\}  \nonumber \\
+&&{\frak Co}_{den}={\frak G}_{den}/{\frak G}_{\gamma _{0}};\quad \widehat{e^{%
+{\cal \breve{V}}_{den}}}\in {\frak Co}_{den}
+\end{eqnarray}%
+where 
+\begin{equation}
+\left| D_{ref}^{N}\left( \gamma _{0}\right) \right) \equiv \left| \left|
+\Psi _{ref}\left( \gamma _{0}\right) \right\rangle \left\langle \Psi
+_{ref}\left( \gamma _{0}\right) \right| \right) ,
+\end{equation}%
+and produces the following orbit of pure states 
+\begin{eqnarray}
+\hat{T}\left| D_{ref}^{N}\left( \gamma _{0}\right) \right) &=&\left|
+D_{0}^{N}\left( \gamma \right) \right) ;\,\hat{T}\in {\frak Co}_{den} 
+\nonumber \\
+\left| D_{0}^{N}\left( \gamma \right) \right) &\equiv &\left| \left| \Psi
+_{0}\left( \gamma \right) \right\rangle \left\langle \Psi _{0}\left( \gamma
+\right) \right| \right) .
+\end{eqnarray}%
+The factor $e^{{\cal \breve{\beta}}\left( {\cal V}_{den}\right) }$ produces
+a representation of the base 
+\begin{equation}
+\left| D_{ref}^{N}\left( \gamma \right) \right) =\widehat{e^{{\cal \breve{%
+\beta}}\left( {\cal V}_{den}\right) }}\left| D_{0}^{N}\left( \gamma \right)
+\right) \equiv e^{{\cal \breve{\beta}}\left( {\cal V}_{den}\right) }\left|
+\Psi _{0}\left( \gamma \right) \right\rangle \left\langle \Psi _{0}\left(
+\gamma \right) \right| e^{{\cal \breve{\beta}}\left( {\cal V}_{den}\right)
+^{\dagger }}
+\end{equation}%
+The factor $e^{{\cal \breve{V}}_{fib}\left[ {\cal V}_{den}\right] }e^{i%
+\breve{\omega}}$ belongs to the coset decomposition of ${\frak G}_{fib}$
+given by 
+\begin{eqnarray}
+&&{\frak G}_{\gamma }=\left\{ \hat{T}\in {\frak G}_{fib}{\frak ;\,}\hat{T}%
+\left| D_{ref}^{N}\left( \gamma \right) \right) =\left| D_{ref}^{N}\left(
+\gamma \right) \right) \right\}  \nonumber \\
+&&{\frak Co}_{fib}={\frak G}_{fib}/{\frak G}_{\gamma };\quad \widehat{e^{%
+{\cal \breve{V}}_{fib}({\cal V}_{den})+i\breve{\omega}}}\in {\frak Co}_{fib}
+\end{eqnarray}%
+where 
+\begin{equation}
+\left| D_{ref}^{N}\left( \gamma \right) \right) \equiv \left| \left| \Psi
+_{ref}\left( \gamma \right) \right\rangle \left\langle \Psi _{ref}\left(
+\gamma \right) \right| \right) ,
+\end{equation}%
+and produces the following orbit of pure states%
+\begin{eqnarray}
+\hat{T}\left| D_{ref}^{N}\left( \gamma \right) \right) &=&\left| D^{N}\left(
+\gamma \right) \right) ;\,\hat{T}\in {\frak Co}_{fib}  \nonumber \\
+\left| D^{N}\left( \gamma \right) \right) &\equiv &\left| \left| \Psi \left(
+\gamma \right) \right\rangle \left\langle \Psi \left( \gamma \right) \right|
+\right) .
+\end{eqnarray}%
+The transformations appearing in Eq. $\left( \ref{param}\right) $ are
+representations of the cosets, different $\gamma _{0}$ give equivalent
+representations. Most often we start from a reference $\left| \Psi
+_{0}\left( \gamma \right) \right\rangle \left\langle \Psi _{0}\left( \gamma
+\right) \right| $ and act on it with the cosets ${\frak Co}_{den}$ and $%
+{\frak Co}_{fib}$, as represented above, and set ${\cal \breve{\beta}}\left( 
+{\cal V}_{den}\right) =0$ and thus use the representation of the base
+induced by $\left| \Psi _{0}\left( \gamma \right) \right\rangle \left\langle
+\Psi _{0}\left( \gamma \right) \right| $.
+
+It is possible to combine the factors $e^{{\cal \breve{\beta}}\left( {\cal V}%
+_{den}\right) }$ and $e^{{\cal \breve{V}}_{den}}$ together as coset
+representatives of another but equivalent representation of ${\frak Co}%
+_{den}\subset {\frak G}_{den}$ as we do in the section after next.
+
+\subsection{Complex Analytic Parameterization}
+
+In this section we set ${\cal \breve{\beta}}\left( {\cal V}_{den}\right) =0$%
+, but all of the proceeding is valid when ${\cal \breve{\beta}}\left( {\cal V%
+}_{den}\right) \neq 0$. We can introduce a complex analytic parameterization
+by partitioning the unitary part of the transformation into parts conjugate
+to $e^{{\cal \breve{V}}_{fib}({\cal V}_{den})}$ and $e^{{\cal \breve{V}}%
+_{den}}$ respectively in the following way 
+\begin{eqnarray}
+|\Psi ({\cal V}_{fib}({\cal V}_{den}),\omega ,{\cal V}_{den}\rangle &\equiv
+&|\Psi ({\cal V}_{fib}({\cal V}_{den}),\omega _{fib}({\cal V}_{den}),{\cal V}%
+_{den},\omega \left( {\cal V}_{den}\right) \rangle  \nonumber \\
+&\equiv &e^{{\cal \breve{T}}_{fib}({\cal V}_{den})}e^{{\cal \breve{T}}_{den}(%
+{\cal V}_{den})}|\Psi _{ref}\left( \gamma _{0}\right) \rangle  \nonumber \\
+{\cal \breve{T}}_{fib}({\cal V}_{den}) &=&{\cal \breve{V}}_{fib}({\cal V}%
+_{den})+i\breve{\omega}_{fib}({\cal V}_{den})  \nonumber \\
+{\cal \breve{T}}_{den}({\cal V}_{den}) &=&{\cal \breve{V}}_{den}+i\breve{%
+\omega}_{den}({\cal V}_{den})
+\end{eqnarray}%
+We can also introduce an overall complex analytic parameterization by
+setting 
+\begin{eqnarray}
+{\cal \breve{T}} &{\cal =}&{\cal \breve{T}}_{fib}({\cal V}_{den})+{\cal 
+\breve{T}}_{den}({\cal V}_{den})  \nonumber \\
+{\cal \breve{V}} &{\cal =}&{\cal \breve{V}}_{fib}({\cal V}_{den})+{\cal 
+\breve{V}}_{den}  \nonumber \\
+\breve{\omega} &=&\breve{\omega}_{fib}({\cal V}_{den})+\breve{\omega}_{den}(%
+{\cal V}_{den})
+\end{eqnarray}%
+so that 
+\begin{equation}
+|\Psi ({\cal V}_{fib}({\cal V}_{den}),\omega ,{\cal V}_{den}\rangle =e^{%
+{\cal \breve{T}}}|\Psi _{ref}\left( \gamma _{0}\right) \rangle
+\end{equation}%
+In order to obtain a complex analytic parameterization that explicitly
+refers to the vector bundle structure we must have equal degrees of freedom
+for ${\cal \breve{V}}_{fib}({\cal V}_{den})$ and $\breve{\omega}_{fib}({\cal %
+V}_{den})$ i.e. ${\cal V}_{fib}({\cal V}_{den})$ and $\omega _{fib}({\cal V}%
+_{den})$ must belong to vector spaces of the same dimension, otherwise it is
+not possible to define ${\cal \breve{T}}_{fib}({\cal V}_{den})$. The same
+holds for ${\cal V}_{den}$ and $\omega _{den}({\cal V}_{den})$ in order that 
+${\cal \breve{T}}_{den}({\cal V}_{den})$ can be defined. It should be noted
+that $\breve{\omega}_{den}({\cal V}_{den})$ produces an intra fiber
+transformation not an inter fiber one.
+
+\subsection{Representations of ${\frak G}_{den}$ and ${\frak G}_{fib}$}
+
+We can incorporate the effect of ${\cal \breve{\beta}}\left( {\cal V}%
+_{den}\right) $ in the action of ${\frak G}_{den}$ then each ${\cal \breve{%
+\beta}}\left( {\cal V}_{den}\right) ={\cal \breve{V}}_{fib}({\cal V}_{den})+i%
+\breve{\omega}\left( {\cal V}_{den}\right) $ (i.e. a specific fixed path of $%
+{\cal \breve{V}}_{fib}$ and $\breve{\omega}$'s) determines different, but
+equivalent, representations of ${\frak G}_{den}$ as super operators mapping $%
+{\cal B}_{1}\left( {\cal H}^{N}\right) \rightarrow {\cal B}_{1}\left( {\cal H%
+}^{N}\right) $ 
+\begin{equation}
+{\frak R}\left( {\frak G}_{den}\right) =\left( 
+\begin{array}{ccc}
+\hat{t}_{K_{OD}}\left( \hat{T}_{S_{D}}\right) & 0 & 0 \\ 
+0 & \hat{t}_{K_{D}}\left( \hat{T}_{S_{D}}\right) & 0 \\ 
+0 & 0 & \hat{T}_{S_{D}}%
+\end{array}%
+\right)
+\end{equation}%
+where%
+\begin{equation}
+\hat{T}_{S_{D}}\equiv \hat{T}\left( {\cal V}_{den}\right) =e^{{\cal \hat{V}}%
+_{den}};\qquad \hat{t}_{K_{D}}\left( \hat{T}_{S_{D}}\right) \equiv \hat{t}%
+_{K_{D}}\left( {\cal V}_{den}\right) =\widehat{e^{{\cal \breve{V}}_{fib}(%
+{\cal V}_{den})+i\check{\omega}\left( {\cal V}_{den}\right) }}
+\end{equation}%
+On the other hand the representation of the group ${\frak G}_{fib}$ involves
+all possible $\hat{\omega}$'s. 
+\begin{equation}
+{\frak R}\left( {\frak G}_{fib}\right) =\left( 
+\begin{array}{ccc}
+\hat{t}_{K_{OD}}^{\prime }\left( \hat{T}_{K_{D}}\right) & 0 & 0 \\ 
+0 & \hat{T}_{K_{D}} & 0 \\ 
+0 & 0 & \hat{P}_{K_{S}}%
+\end{array}%
+\right)
+\end{equation}%
+where%
+\begin{equation}
+\hat{T}_{K_{D}}\equiv \hat{T}\left( {\cal V}_{fib}({\cal V}_{den}),\omega
+\right) =\widehat{e^{{\cal \breve{V}}_{fib}\left[ {\cal V}_{den}\right] +i%
+\check{\omega}}}
+\end{equation}
+
+\section{Equation of Motion}
+
+\subsection{Single Functional variable}
+
+The Lagrangian 
+\begin{eqnarray}
+{\cal L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right)  &=&%
+\frac{i}{2}\frac{\left( \left\langle \Psi \left( t\right) |\dot{\Psi}\left(
+t\right) \right\rangle -\left\langle \dot{\Psi}\left( t\right) |\Psi \left(
+t\right) \right\rangle \right) }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }-\frac{\left\langle \Psi \left( t\right)
+|H\Psi \left( t\right) \right\rangle }{\left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle }  \nonumber \\
+&\equiv &\frac{1}{{\cal N}\left( \Psi \left( t\right) \right) }\left\{ {\cal %
+T}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) {\cal -H}%
+\left( \Psi \left( t\right) \right) \right\} ={\cal K}\left( \Psi \left(
+t\right) ,\dot{\Psi}\left( t\right) \right) -{\cal E}\left( \Psi \left(
+t\right) \right)   \nonumber \\
+&\equiv &{\cal K}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right)
+\right) -{\cal E}\left( \Psi \left( t\right) \right)   \label{La}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+{\cal N}\left( \Psi \left( t\right) \right)  &=&\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle   \nonumber \\
+{\cal T}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) 
+&=&\left\langle \Psi \left( t\right) |\dot{\Psi}\left( t\right)
+\right\rangle -\left\langle \dot{\Psi}\left( t\right) |\Psi \left( t\right)
+\right\rangle   \nonumber \\
+{\cal H}\left( \Psi \left( t\right) \right)  &=&\left\langle \Psi \left(
+t\right) |H\Psi \left( t\right) \right\rangle   \nonumber \\
+{\cal K}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right)  &=&%
+\frac{{\cal T}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) 
+}{{\cal N}\left( \Psi \left( t\right) \right) }  \nonumber \\
+{\cal E}\left( \Psi \left( t\right) \right)  &=&\frac{{\cal H}\left( \Psi
+\left( t\right) \right) }{{\cal N}\left( \Psi \left( t\right) \right) }
+\end{eqnarray}%
+can be expressed in terms of the preceding {\em real }parameters and their
+time derivative by using the chain rule on eq. $\left( \ref{La}\right) $ as 
+\begin{equation}
+{\cal L}\left( \Psi \left( {\cal \varkappa }\left( t\right) \right) ,\dot{%
+\Psi}\left( {\cal \varkappa }\left( t\right) \right) \right) ={\cal L}\left( 
+{\cal \varkappa }\left( t\right) ,{\cal \dot{\varkappa}}\left( t\right)
+\right) =\int {\cal \dot{\varkappa}}\left( {\sf z},t\right) {\cal Z}\left( 
+{\sf z},t\right) d{\sf z}-{\cal E}\left( {\cal \varkappa }\left( t\right)
+\right)   \label{ladef}
+\end{equation}%
+where ${\cal \varkappa }\equiv \left( {\cal V},\omega \right) \equiv \left( 
+{\cal V}_{den},{\cal V}_{fib}({\cal V}_{den}),\omega \right) ,$ ${\sf z}%
+=\kappa _{1},\ldots ,\kappa _{N}={\bf x}_{1},\ldots ,{\bf x}_{N_{e}},{\bf X}%
+_{1},\ldots ,{\bf X}_{N_{n}}$ and 
+\begin{equation}
+{\cal Z}\left( {\sf z},t\right) =\frac{i}{2}\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle ^{-1}\left\{ \left\langle \Psi
+\left( t\right) \left| \frac{\delta \Psi \left( t\right) }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }\right. \right\rangle -\left\langle \left. 
+\frac{\delta \Psi \left( t\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+\right) }\right| \Psi \left( t\right) \right\rangle \right\} 
+\end{equation}%
+The Euler-Lagrange equation for the trajectory ${\cal \varkappa }\left(
+t\right) $ that produces a stationary action, $\delta ^{\left( 1\right) }%
+{\cal A}\left( {\cal \varkappa },\tau \right) =0$, is then 
+\begin{equation}
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta {\cal \varkappa }\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{%
+\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{%
+\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) }\right\} \stackrel{a.e.}{%
+=}0  \label{EL}
+\end{equation}%
+($a.e.$ with respect to ${\sf z}$ not $t$, this is implied in all following
+equations${\sf )}$. This is a second ODE\ which is made clearer if one
+evaluates the time derrivative term to obtain 
+\begin{eqnarray}
+&&\int \frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa%
+}}\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) \delta {\cal 
+\dot{\varkappa}}\left( {\sf z}^{\prime }\right) }\frac{d^{2}{\cal \varkappa }%
+\left( {\sf z}^{\prime }\right) }{dt^{2}\quad }d{\sf z}^{\prime }+\int \frac{%
+\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{%
+\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) \delta {\cal \varkappa }%
+\left( {\sf z}^{\prime }\right) }\frac{d{\cal \varkappa }\left( {\sf z}%
+^{\prime }\right) }{dt\quad }d{\sf z}^{\prime }-\frac{\delta {\cal L}\left( 
+{\cal \varkappa },{\cal \dot{\varkappa}}\right) }{\delta {\cal \varkappa }%
+\left( {\sf z}\right) }=0  \nonumber \\
+&\equiv &\int \frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{%
+\varkappa}}\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}\right)
+\delta {\cal \dot{\varkappa}}\left( {\sf z}^{\prime }\right) }{\cal \ddot{%
+\varkappa}}\left( {\sf z}^{\prime }\right) d{\sf z}^{\prime }+\int \frac{%
+\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{%
+\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) \delta {\cal \varkappa }%
+\left( {\sf z}^{\prime }\right) }{\cal \dot{\varkappa}}\left( {\sf z}%
+^{\prime }\right) d{\sf z}^{\prime }-\frac{\delta {\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}}\right) }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }=0  \label{Lexpand}
+\end{eqnarray}%
+The Lagrangian eq. $\left( \ref{ladef}\right) $is first order in ${\cal \dot{%
+\varkappa}}$ thus is degenerate (in fact it is suffcient that $\det \left\{ 
+\frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}%
+\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) \delta {\cal 
+\dot{\varkappa}}\left( {\sf z}^{\prime }\right) }\right\} =0$ for degeneracy
+thus our Lagrangian is {\em very }degenerate!). Evaluating all the terms eq. 
+$\left( \ref{Lexpand}\right) $ becomes 
+\begin{eqnarray}
+&&\int \frac{\delta ^{2}{\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa%
+}}\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) \delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }{\cal \dot{\varkappa}}\left( 
+{\sf z}^{\prime }\right) d{\sf z}^{\prime }-\frac{\delta {\cal L}\left( 
+{\cal \varkappa },{\cal \dot{\varkappa}}\right) }{\delta {\cal \varkappa }%
+\left( {\sf z}\right) }=0  \nonumber \\
+&\Longleftrightarrow &\int {\cal \dot{\varkappa}}\left( {\sf z}^{\prime
+},t\right) \frac{\delta {\cal Z}\left( {\sf z}\right) }{\delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }d{\sf z}^{\prime }-\int {\cal 
+\dot{\varkappa}}\left( {\sf z}^{\prime },t\right) \frac{\delta {\cal Z}%
+\left( {\sf z}^{\prime }\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+\right) }d{\sf z}^{\prime }+\frac{\delta {\cal E}\left( {\cal \varkappa }%
+\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }=0  \nonumber \\
+&\Longleftrightarrow &\int \left\{ \frac{\delta {\cal Z}\left( {\sf z}%
+,t\right) }{\delta {\cal \varkappa }\left( {\sf z}^{\prime }\right) }-\frac{%
+\delta {\cal Z}\left( {\sf z}^{\prime },t\right) }{\delta {\cal \varkappa }%
+\left( {\sf z}\right) }\right\} {\cal \dot{\varkappa}}\left( {\sf z}^{\prime
+},t\right) d{\sf z}^{\prime }+\frac{\delta {\cal E}\left( {\cal \varkappa }%
+\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }=0
+\end{eqnarray}%
+$\lceil $Degeneracy of the Lagrangian implies singularity of the Legendre
+transformation (which transforms velocities to generalized momenta)\ and
+thus makes it impossible to obtain a standard Hamiltonian form for the
+equations of motion. If the Lagrangian were not degenerate one could produce
+a Hamiltonian form of Lagranges' equation in terms of Hamiltons equations 
+\begin{equation}
+\left. 
+\begin{array}{c}
+\frac{d{\cal \varkappa }\left( {\sf z}\right) }{dt}=\frac{\delta {\cal H}%
+\left( {\cal \varkappa },{\cal Z}\right) }{\delta {\cal Z}\left( {\sf z}%
+\right) } \\ 
+\frac{d{\cal Z}\left( {\sf z}\right) }{dt}=-\frac{\delta {\cal H}\left( 
+{\cal \varkappa },{\cal Z}\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+\right) }%
+\end{array}%
+\right\}   \label{HE}
+\end{equation}%
+where the Hamiltonian ${\cal H}\left( {\cal \varkappa },{\cal Z}\right) $ is
+given by the Legendre transformation of the Lagrangian 
+\begin{equation}
+{\cal H}\left( {\cal \varkappa },{\cal Z}\right) ={\frak L}\left( {\cal L}%
+\left( {\cal \varkappa },{\cal \dot{\varkappa}}\left( {\cal Z}\right)
+\right) \right) =\int {\cal \dot{\varkappa}}\left( {\cal Z}\right) \left( 
+{\sf z}\right) {\cal Z}\left( {\sf z}\right) d{\sf z-}{\cal L}\left( {\cal %
+\varkappa },{\cal \dot{\varkappa}}\left( {\cal Z}\right) \right) .
+\label{Legend}
+\end{equation}%
+where the value ${\cal \dot{\varkappa}}\left( {\cal Z}\right) \left( {\sf z}%
+\right) $ of ${\cal \dot{\varkappa}}\left( {\sf z}\right) $ is determined
+through the following relationship that defines the conjugate momenta ${\cal %
+Z}$ 
+\begin{equation}
+{\cal Z\left( {\sf z}\right) }=\frac{\delta {\cal L}\left( {\cal \varkappa },%
+{\cal \dot{\varkappa}}\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}%
+\right) }  \label{conjmom}
+\end{equation}%
+The correspondence between Hamiltons and Lagranges EOM\ is then given by
+considering 
+\begin{equation}
+d{\cal H=}\int \left\{ \frac{\delta {\cal H}}{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }\delta {\cal \varkappa }\left( {\sf z}\right) +\frac{\delta 
+{\cal H}}{\delta {\cal Z}\left( {\sf z}\right) }\delta {\cal Z}\left( {\sf z}%
+\right) \right\} d{\sf z}
+\end{equation}%
+and the differential of the expression eq. $\left( \ref{Legend}\right) $ 
+\begin{equation}
+d{\cal H=}\int \left\{ -\frac{\delta {\cal L}}{\delta {\cal \varkappa }%
+\left( {\sf z}\right) }\delta {\cal \varkappa }\left( {\sf z}\right) +{\cal 
+\dot{\varkappa}}\left( {\sf z}\right) \delta {\cal Z}\left( {\sf z}\right)
+\right\} d{\sf z}
+\end{equation}%
+then equating coefficients of $\delta {\cal \varkappa }\left( {\sf z}\right) 
+$ and $\delta {\cal Z}\left( {\sf z}\right) $ to give 
+\begin{eqnarray}
+\frac{\delta {\cal H}}{\delta {\cal \varkappa }\left( {\sf z}\right) } &=&-%
+\frac{\delta {\cal L}}{\delta {\cal \varkappa }\left( {\sf z}\right) }
+\label{HE1} \\
+\frac{\delta {\cal H}}{\delta {\cal Z}\left( {\sf z}\right) } &=&{\cal \dot{%
+\varkappa}}\left( {\sf z}\right)   \label{HE2}
+\end{eqnarray}%
+then by using Lagranges equation eq. $\left( \ref{EL}\right) $for a
+stationary point and the definition of the conjugate momenta eq. $\left( \ref%
+{conjmom}\right) $one can see that eq.$\left( \ref{HE1}\right) $ becomes 
+\begin{equation}
+\frac{\delta {\cal H}}{\delta {\cal \varkappa }\left( {\sf z}\right) }=-%
+\frac{\delta {\cal L}}{\delta {\cal \varkappa }\left( {\sf z}\right) }=\frac{%
+d{\cal Z}\left( {\sf z}\right) }{dt}=\,-\stackrel{\cdot }{{\cal Z}}\left( 
+{\sf z}\right) 
+\end{equation}%
+thus leading to Hamiltons equations 
+\begin{equation}
+\frac{\delta {\cal H}}{\delta {\cal Z}\left( {\sf z}\right) }={\cal \dot{%
+\varkappa}}\left( {\sf z}\right) ;\qquad \frac{\delta {\cal H}}{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }=\,-\stackrel{\cdot }{{\cal Z}}\left( {\sf %
+z}\right) 
+\end{equation}%
+which can be written in matrix form as 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+{\Bbb O} & -{\Bbb I} \\ 
+{\Bbb I} & {\Bbb O}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{\varkappa}} \\ 
+\stackrel{\cdot }{{\cal Z}}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\frac{\delta {\cal H}}{\delta {\cal Z}\left( {\sf z}\right) } \\ 
+\frac{\delta {\cal H}}{\delta {\cal \varkappa }}%
+\end{array}%
+\right) 
+\end{equation}%
+In our case the Lagrangian defined by eq. $\left( \ref{La}\right) $ produces
+a Hamiltonian 
+\begin{equation}
+{\cal H}\left( {\cal \varkappa },{\cal Z}\right) ={\cal E}\left( {\cal %
+\varkappa }\right) 
+\end{equation}%
+which is conjugate momentum independent. Hamiltons equations eq. $\left( \ref%
+{HE}\right) $ are equivalent to Lagranges equation eq. $\left( \ref{EL}%
+\right) $ {\em when} the conjugate momenta is well defined and corresponds
+in a 1-1 fashion with ${\cal \dot{\varkappa}}$. This occurs {\em only} when
+the Legendre transformation ${\frak L}:$ ${\cal L\longrightarrow H}$ is non
+singular. If ${\frak L}$ is non singular then Lagranges equations can be
+formulated as Hamiltons equations in terms of ${\cal \varkappa }$ and ${\cal %
+Z}$ and the Euler-Lagrange equation eq. $\left( \ref{EL}\right) $ can be
+written is terms of the conjugate momenta as 
+\begin{equation}
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta {\cal \varkappa }\left( {\sf z}\right) }-\frac{d{\cal Z\left( {\sf z%
+}\right) }}{dt}\stackrel{a.e.}{=}0\rfloor .
+\end{equation}%
+The Euler-Lagrange equation eq. $\left( \ref{EL}\right) $ gives 
+\begin{eqnarray}
+&&\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}%
+\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }=\int {\cal \dot{%
+\varkappa}}\left( {\sf z}^{\prime }\right) \frac{\delta {\cal Z}\left( {\sf z%
+}^{\prime }\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }d{\sf z}%
+^{\prime }-\frac{\delta {\cal E}\left( {\cal \varkappa }\right) }{\delta 
+{\cal \varkappa }\left( {\sf z}\right) } \\
+&&\frac{d}{dt}\left\{ \frac{\delta {\cal L}\left( {\cal \varkappa },{\cal 
+\dot{\varkappa}}\right) }{\delta {\cal \dot{\varkappa}}\left( {\sf z}\right) 
+}\right\} =\frac{d{\cal Z}\left( {\sf z}\right) }{dt}=\int \frac{\delta 
+{\cal Z}\left( {\sf z}\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+^{\prime }\right) }{\cal \dot{\varkappa}}\left( {\sf z}^{\prime }\right) d%
+{\sf z}^{\prime }
+\end{eqnarray}%
+the Euler-Lagrange equation eq. $\left( \ref{EL}\right) ${\em \ for} ${\cal %
+\varkappa }\left( {\sf z}\right) $ becomes 
+\begin{eqnarray}
+&&\int {\cal \dot{\varkappa}}\left( {\sf z}^{\prime }\right) \frac{\delta 
+{\cal Z}\left( {\sf z}^{\prime }\right) }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }d{\sf z}^{\prime }-\frac{\delta {\cal E}\left( {\cal %
+\varkappa }\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }-\int 
+\frac{\delta {\cal Z}\left( {\sf z}\right) }{\delta {\cal \varkappa }\left( 
+{\sf z}^{\prime }\right) }{\cal \dot{\varkappa}}\left( {\sf z}^{\prime
+}\right) d{\sf z}^{\prime }=0 \\
+&\Rightarrow &\int \left\{ \left( \frac{\delta {\cal Z}\left( {\sf z}%
+^{\prime }\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }-\frac{%
+\delta {\cal Z}\left( {\sf z}\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+^{\prime }\right) }\right) {\cal \dot{\varkappa}}\left( {\sf z}^{\prime
+}\right) \right\} d{\sf z}^{\prime }-\frac{\delta {\cal E}\left( {\cal %
+\varkappa }\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }=0
+\end{eqnarray}%
+An antisymmetric metric tensor $\eta $ can be defined in terms of ${\cal Z}$
+as%
+\begin{equation}
+\eta \left( {\sf z,z}^{\prime }\right) =\frac{\delta {\cal Z}\left( {\sf z}%
+^{\prime }\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }-\frac{%
+\delta {\cal Z}\left( {\sf z}\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+^{\prime }\right) }  \label{metric}
+\end{equation}%
+leading to the equation of motion for ${\cal \varkappa }\left( {\sf z}%
+\right) $ 
+\begin{equation}
+\int \eta \left( {\sf z,z}^{\prime }\right) {\cal \dot{\varkappa}}\left( 
+{\sf z}^{\prime }\right) d{\sf z}^{\prime }=\frac{\delta {\cal E}\left( 
+{\cal \varkappa }\right) }{\delta {\cal \varkappa }\left( {\sf z}\right) }
+\label{EOM}
+\end{equation}
+
+The metric term $\eta \left( {\sf z,z}^{\prime }\right) $ is antisymmetric
+wrt to interchange of ${\sf z}$ and ${\sf z}^{\prime }$, i.e. $\eta \left( 
+{\sf z,z}^{\prime }\right) =-\eta \left( {\sf z}^{\prime }{\sf ,z}\right) $
+and thus $\eta =-\eta ^{t}$ and can be further developed as 
+\begin{eqnarray}
+&&\frac{\delta {\cal Z}\left( {\sf z}^{\prime }\right) }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }=\frac{i}{2}\left\langle \Psi |\Psi
+\right\rangle ^{-1}\left\{ \left\langle \frac{\delta \Psi }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }\left| \frac{\delta \Psi }{\delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }\right. \right\rangle
++\left\langle \Psi \left| \frac{\delta ^{2}\Psi }{\delta {\cal \varkappa }%
+\left( {\sf z}\right) \delta {\cal \varkappa }\left( {\sf z}^{\prime
+}\right) }\right. \right\rangle \right.  \nonumber \\
+&&\left. -\left\langle \frac{\delta \Psi }{\delta {\cal \varkappa }\left( 
+{\sf z}^{\prime }\right) }\left| \frac{\delta \Psi }{\delta {\cal \varkappa }%
+\left( {\sf z}\right) }\right. \right\rangle -\left\langle \frac{\delta
+^{2}\Psi }{\delta {\cal \varkappa }\left( {\sf z}\right) \delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }\left| \Psi \right.
+\right\rangle -\frac{\left\{ \left\langle \Psi \left| \frac{\delta \Psi }{%
+\delta {\cal \varkappa }\left( {\sf z}\right) }\right. \right\rangle \right.
++\left. \left\langle \left. \frac{\delta \Psi }{\delta {\cal \varkappa }%
+\left( {\sf z}\right) }\right| \Psi \right\rangle \right\} }{\left\langle
+\Psi |\Psi \right\rangle }\right\} \\
+&&  \nonumber \\
+&&\frac{\delta {\cal Z}\left( {\sf z}\right) }{\delta {\cal \varkappa }%
+\left( {\sf z}^{\prime }\right) }=\frac{i}{2}\left\langle \Psi |\Psi
+\right\rangle ^{-1}\left\{ \left\langle \frac{\delta \Psi }{\delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }\left| \frac{\delta \Psi }{%
+\delta {\cal \varkappa }\left( {\sf z}\right) }\right. \right\rangle
++\left\langle \Psi \left| \frac{\delta ^{2}\Psi }{\delta {\cal \varkappa }%
+\left( {\sf z}^{\prime }\right) \delta {\cal \varkappa }\left( {\sf z}%
+\right) }\right. \right\rangle \right.  \nonumber \\
+&&\left. -\left\langle \frac{\delta \Psi }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }\left| \frac{\delta \Psi }{\delta {\cal \varkappa }\left( 
+{\sf z}^{\prime }\right) }\right. \right\rangle -\left\langle \frac{\delta
+^{2}\Psi }{\delta {\cal \varkappa }\left( {\sf z}^{\prime }\right) \delta 
+{\cal \varkappa }\left( {\sf z}\right) }\left| \Psi \right. \right\rangle -%
+\frac{\left\{ \left\langle \Psi \left| \frac{\delta \Psi }{\delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }\right. \right\rangle \right.
++\left. \left\langle \left. \frac{\delta \Psi }{\delta {\cal \varkappa }%
+\left( {\sf z}^{\prime }\right) }\right| \Psi \right\rangle \right\} }{%
+\left\langle \Psi |\Psi \right\rangle }\right\} \\
+&&  \nonumber \\
+&&\frac{\delta {\cal Z}\left( {\sf z}^{\prime }\right) }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }-\frac{\delta {\cal Z}\left( {\sf z}%
+\right) }{\delta {\cal \varkappa }\left( {\sf z}^{\prime }\right) }%
+=i\left\langle \Psi |\Psi \right\rangle ^{-1}\left\{ \left\langle \frac{%
+\delta \Psi }{\delta {\cal \varkappa }\left( {\sf z}\right) }\left| \frac{%
+\delta \Psi }{\delta {\cal \varkappa }\left( {\sf z}^{\prime }\right) }%
+\right. \right\rangle -\left\langle \frac{\delta \Psi }{\delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }\left| \frac{\delta \Psi }{%
+\delta {\cal \varkappa }\left( {\sf z}\right) }\right. \right\rangle \right.
+\nonumber \\
+&&+\frac{1}{2}\left. \frac{\left\{ \left\langle \Psi \left| \frac{\delta
+\Psi }{\delta {\cal \varkappa }\left( {\sf z}^{\prime }\right) }\right.
+\right\rangle \right. +\left. \left\langle \left. \frac{\delta \Psi }{\delta 
+{\cal \varkappa }\left( {\sf z}^{\prime }\right) }\right| \Psi \right\rangle
+-\left\langle \Psi \left| \frac{\delta \Psi }{\delta {\cal \varkappa }\left( 
+{\sf z}\right) }\right. \right\rangle -\left\langle \left. \frac{\delta \Psi 
+}{\delta {\cal \varkappa }\left( {\sf z}\right) }\right| \Psi \right\rangle
+\right\} }{\left\langle \Psi |\Psi \right\rangle }\right\} =  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad i\left\{ \frac{\delta }{\delta 
+{\cal \tilde{\varkappa}}\left( {\sf z}^{\prime }\right) }\frac{\delta }{%
+\delta {\cal \varkappa }\left( {\sf z}\right) }-\frac{\delta }{\delta {\cal 
+\tilde{\varkappa}}\left( {\sf z}\right) }\frac{\delta }{\delta {\cal %
+\varkappa }\left( {\sf z}^{\prime }\right) }\right\} \left. \ln \left\langle
+\Psi \left( {\cal \tilde{\varkappa}}\right) |\Psi \left( {\cal \varkappa }%
+\right) \right\rangle \right| _{{\cal \tilde{\varkappa}=\varkappa }}
+\end{eqnarray}
+
+\subsection{Many Functional Variables}
+
+The Lagrangian eq. $\left( \ref{La}\right) $ can be explicitly expressed in
+terms of more than one functional parameter $\left( {\cal V},\omega \right) $
+as 
+\begin{equation}
+{\cal L}\left( {\cal V},\omega ,{\cal \dot{V}},\dot{\omega}\right) =\int
+\left\{ {\cal \dot{V}}\left( {\sf z}\right) {\cal Z}\left( {\cal V}\right)
+\left( {\sf z}\right) +{\cal \dot{\omega}}\left( {\sf z}\right) {\cal Z}%
+\left( {\cal \omega }\right) \left( {\sf z}\right) \right\} d{\sf z}-{\cal E}%
+\left( {\cal V},\omega \right)
+\end{equation}%
+where 
+\begin{equation}
+{\cal Z}\left( f\right) \left( {\sf z}\right) =\frac{i}{2}\left\langle \Psi
+|\Psi \right\rangle ^{-1}\left\{ \left\langle \Psi \left| \frac{\delta \Psi 
+}{\delta f\left( {\sf z}\right) }\right. \right\rangle \right. -\left.
+\left\langle \left. \frac{\delta \Psi }{\delta f\left( {\sf z}\right) }%
+\right| \Psi \right\rangle \right\} ;\quad f={\cal V}\text{ or }\omega
+\end{equation}%
+The term ${\cal Z}\left( f\right) $ is the {\em conjugate momentum}
+associated with the variable $f$ as 
+\begin{equation}
+{\cal Z}\left( f\right) =\frac{\delta {\cal L}}{\delta \dot{f}}
+\end{equation}%
+The Euler-Lagrange equation for stationary action for each variable $f\left( 
+{\sf z}\right) $ is then 
+\begin{equation}
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta f\left( {\sf z}\right) }-\frac{d}{dt}\left\{ \frac{\delta {\cal L}%
+\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) }{\delta \dot{f}%
+\left( {\sf z}\right) }\right\} =0
+\end{equation}%
+noting that 
+\begin{equation}
+\frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}\right) 
+}{\delta {\cal V}\left( {\sf z}\right) }=\int \left\{ {\cal \dot{V}}\left( 
+{\sf z}^{\prime }\right) \frac{\delta {\cal Z}\left( {\cal V}\right) \left( 
+{\sf z}^{\prime }\right) }{\delta {\cal V}\left( {\sf z}\right) }+{\cal \dot{%
+\omega}}\left( {\sf z}^{\prime }\right) \frac{\delta {\cal Z}\left( {\cal %
+\omega }\right) \left( {\sf z}^{\prime }\right) }{\delta {\cal V}\left( {\sf %
+z}\right) }\right\} d{\sf z}^{\prime }-\frac{\delta {\cal E}\left( {\cal V}%
+,\omega \right) }{\delta {\cal V}\left( {\sf z}\right) }
+\end{equation}%
+and%
+\begin{equation}
+\frac{d}{dt}\left\{ \frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{%
+\varkappa}}\right) }{\delta {\cal \dot{V}}\left( {\sf z}\right) }\right\} =%
+\frac{d{\cal Z}\left( {\cal V}\right) \left( {\sf z}\right) }{dt}=\int
+\left\{ \frac{\delta {\cal Z}\left( {\cal V}\right) \left( {\sf z}\right) }{%
+\delta {\cal V}\left( {\sf z}^{\prime }\right) }{\cal \dot{V}}\left( {\sf z}%
+^{\prime }\right) +\frac{\delta {\cal Z}\left( {\cal V}\right) \left( {\sf z}%
+\right) }{\delta {\cal \omega }\left( {\sf z}^{\prime }\right) }{\cal \dot{%
+\omega}}\left( {\sf z}^{\prime }\right) \right\} d{\sf z}^{\prime }
+\end{equation}%
+the Euler-Lagrange equation eq.$\left( \ref{EL}\right) ${\em \ for} ${\cal V}%
+\left( {\sf z}\right) $ becomes 
+\begin{eqnarray}
+&&\int \left\{ {\cal \dot{V}}\left( {\sf z}^{\prime }\right) \frac{\delta 
+{\cal Z}\left( {\cal V}\right) \left( {\sf z}^{\prime }\right) }{\delta 
+{\cal V}\left( {\sf z}\right) }+{\cal \dot{\omega}}\left( {\sf z}^{\prime
+}\right) \frac{\delta {\cal Z}\left( {\cal \omega }\right) \left( {\sf z}%
+^{\prime }\right) }{\delta {\cal V}\left( {\sf z}\right) }\right\} d{\sf z}%
+^{\prime }-\frac{\delta {\cal E}\left( {\cal V},\omega \right) }{\delta 
+{\cal V}\left( {\sf z}\right) }-  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \int \left\{ \frac{\delta {\cal Z%
+}\left( {\cal V}\right) \left( {\sf z}\right) }{\delta {\cal V}\left( {\sf z}%
+^{\prime }\right) }{\cal \dot{V}}\left( {\sf z}^{\prime }\right) +\frac{%
+\delta {\cal Z}\left( {\cal V}\right) \left( {\sf z}\right) }{\delta {\cal %
+\omega }\left( {\sf z}^{\prime }\right) }{\cal \dot{\omega}}\left( {\sf z}%
+^{\prime }\right) \right\} d{\sf z}^{\prime }=0\Rightarrow  \nonumber \\
+&\quad &\int \left\{ \frac{\delta {\cal Z}\left( {\cal V}\right) \left( {\sf %
+z}^{\prime }\right) }{\delta {\cal V}\left( {\sf z}\right) }-\frac{\delta 
+{\cal Z}\left( {\cal V}\right) \left( {\sf z}\right) }{\delta {\cal V}\left( 
+{\sf z}^{\prime }\right) }\right\} {\cal \dot{V}}\left( {\sf z}^{\prime
+}\right) d{\sf z}^{\prime }+  \nonumber \\
+&&\qquad \qquad \qquad \quad \qquad \quad \int \left\{ \frac{\delta {\cal Z}%
+\left( {\cal \omega }\right) \left( {\sf z}^{\prime }\right) }{\delta {\cal V%
+}\left( {\sf z}\right) }-\frac{\delta {\cal Z}\left( {\cal V}\right) \left( 
+{\sf z}\right) }{\delta {\cal \omega }\left( {\sf z}^{\prime }\right) }%
+\right\} {\cal \dot{\omega}}\left( {\sf z}^{\prime }\right) d{\sf z}^{\prime
+}-\frac{\delta {\cal E}\left( {\cal \varkappa }\right) }{\delta {\cal V}%
+\left( {\sf z}\right) }=0
+\end{eqnarray}%
+defining metric tensor components 
+\begin{eqnarray}
+\eta _{{\cal VV}}\left( {\sf z,z}^{\prime }\right) &=&\frac{\delta {\cal Z}%
+\left( {\cal V}\right) \left( {\sf z}^{\prime }\right) }{\delta {\cal V}%
+\left( {\sf z}\right) }-\frac{\delta {\cal Z}\left( {\cal V}\right) \left( 
+{\sf z}\right) }{\delta {\cal V}\left( {\sf z}^{\prime }\right) }  \nonumber
+\\
+\eta _{{\cal V\omega }}\left( {\sf z,z}^{\prime }\right) &=&\frac{\delta 
+{\cal Z}\left( {\cal \omega }\right) \left( {\sf z}^{\prime }\right) }{%
+\delta {\cal V}\left( {\sf z}\right) }-\frac{\delta {\cal Z}\left( {\cal V}%
+\right) \left( {\sf z}\right) }{\delta {\cal \omega }\left( {\sf z}^{\prime
+}\right) }  \label{mt}
+\end{eqnarray}%
+this becomes 
+\begin{equation}
+\int \left\{ \eta _{{\cal VV}}\left( {\sf z,z}^{\prime }\right) {\cal \dot{V}%
+}\left( {\sf z}^{\prime }\right) +\eta _{{\cal V\omega }}\left( {\sf z,z}%
+^{\prime }\right) {\cal \dot{\omega}}\left( {\sf z}^{\prime }\right)
+\right\} d{\sf z}^{\prime }=\frac{\delta {\cal E}\left( {\cal \varkappa }%
+\right) }{\delta {\cal V}\left( {\sf z}\right) }
+\end{equation}%
+In an analogous fashion the Euler-Lagrange equation eq.$\left( \ref{EL}%
+\right) ${\em \ for} ${\cal \omega }\left( {\sf z}\right) $ becomes 
+\begin{equation}
+\int \left\{ \eta _{{\cal \omega \omega }}\left( {\sf z,z}^{\prime }\right) 
+{\cal \dot{\omega}}\left( {\sf z}^{\prime }\right) +\eta _{\omega {\cal V}%
+}\left( {\sf z,z}^{\prime }\right) {\cal \dot{V}}\left( {\sf z}^{\prime
+}\right) \right\} d{\sf z}^{\prime }=\frac{\delta {\cal E}\left( {\cal %
+\varkappa }\right) }{\delta {\cal \omega }\left( {\sf z}\right) }%
+\Leftrightarrow \frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{%
+\varkappa}}\right) }{\delta \omega \left( {\sf z}\right) }-\frac{d}{dt}%
+\left\{ \frac{\delta {\cal L}\left( {\cal \varkappa },{\cal \dot{\varkappa}}%
+\right) }{\delta \dot{\omega}\left( {\sf z}\right) }\right\} =0
+\end{equation}%
+leading to the equation of motion 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\eta _{{\cal VV}} & \eta _{{\cal V\omega }} \\ 
+\eta _{\omega {\cal V}} & \eta _{\omega \omega }%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}} \\ 
+{\cal \dot{\omega}}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}%
+\end{array}%
+\right)
+\end{equation}%
+The metric tensor components have the property $\eta _{{\cal V\omega }%
+}\left( {\sf z,z}^{\prime }\right) =-\eta _{{\cal \omega V}}\left( {\sf z}%
+^{\prime },{\sf z}\right) $, $\eta _{{\cal VV}}\left( {\sf z,z}^{\prime
+}\right) =-\eta _{{\cal VV}}\left( {\sf z}^{\prime },{\sf z}\right) $ and $%
+\eta _{{\cal \omega \omega }}\left( {\sf z,z}^{\prime }\right) =-\eta _{%
+{\cal \omega \omega }}\left( {\sf z}^{\prime },{\sf z}\right) $ thus $\eta _{%
+{\cal V\omega }}=-\eta _{{\cal \omega V}}^{t}$, $\eta _{{\cal VV}}=-\eta _{%
+{\cal VV}}^{t}$ and $\eta _{{\cal \omega \omega }}=-\eta _{{\cal \omega
+\omega }}^{t}$. In our case $\eta _{{\cal VV}}=\eta _{{\cal \omega \omega }%
+}=0$ and even ${\cal Z}\left( {\cal V}\right) =0$ i.e. the generalized
+momentum conjugate to ${\cal V}$ is {\em identically zero} for all $t$. The
+metric tensor expressions in our case become 
+\begin{eqnarray}
+\eta _{{\cal VV}}\left( {\sf z,z}^{\prime }\right) &=&\eta _{{\cal \omega
+\omega }}=0  \nonumber \\
+\eta _{{\cal V\omega }}\left( {\sf z,z}^{\prime }\right) &=&\frac{\delta 
+{\cal Z}\left( \omega \right) \left( {\sf z}^{\prime }\right) }{\delta {\cal %
+V}\left( {\sf z}\right) }  \nonumber \\
+\eta _{\omega {\cal V}}\left( {\sf z,z}^{\prime }\right) &=&-\frac{\delta 
+{\cal Z}\left( \omega \right) \left( {\sf z}\right) }{\delta {\cal V}\left( 
+{\sf z}^{\prime }\right) }
+\end{eqnarray}%
+If $\xi =\eta ^{-1}$ exists then the Lagrangian is said to be {\em non
+degenerate }if it does not exist it is {\em degenerate}.
+
+The condition 
+\begin{equation}
+\delta _{\omega }^{\left( 1\right) }{\cal A}\left( {\cal V},\omega \right) =0
+\label{eomw}
+\end{equation}
+determines equations 
+\begin{equation}
+\eta _{\omega {\cal V}}{\cal \dot{V}+}\eta _{\omega \omega }{\cal \dot{\omega%
+}}=\nabla _{\omega }{\cal E}
+\end{equation}%
+which in our case become 
+\begin{equation}
+\eta _{\omega {\cal V}}{\cal \dot{V}}=\nabla _{\omega }{\cal E}  \label{elw}
+\end{equation}%
+for values of ${\cal V}$ and $\omega $ that produce stationary action with
+respect to small variations {\em of }$\omega .$ These can be solved in many
+ways and are in general combinations of algebraic and differential
+equations. At one extreme purely {\em algebraic} equations for $\omega $ 
+\begin{equation}
+\delta _{\omega }^{\left( 1\right) }{\cal A}\left( {\cal V}_{0},\omega
+\right) =0
+\end{equation}%
+are obtained by fixing ${\cal V}={\cal V}_{0}$. Solving this algebraic
+equation gives a solution $\omega _{\#}\left( {\cal V}_{0}\right) $ which
+satisfies the Euler-Lagrange equation for $\omega $ for the fixed trajectory 
+${\cal V}_{0}$. At the other extreme the equation eq. $\left( \ref{eomw}%
+\right) $ can be viewed as an ordinary differential equation for ${\cal V}$
+for a fixed value of $\omega =\omega _{0}$ i.e. viewed as 
+\begin{equation}
+\delta _{\omega }^{\left( 1\right) }{\cal A}\left( {\cal V},\omega
+_{0}\right) =0
+\end{equation}%
+If one finds a solution ${\cal V}_{\#}\left( \omega _{0}\right) $ for this
+ODE for ${\cal V}$ so that ${\cal \dot{V}}_{\#}=\eta _{\omega {\cal V}%
+}^{-1}\nabla _{\omega }{\cal E}$ then 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V\omega }} \\ 
+\eta _{\omega {\cal V}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\eta _{\omega {\cal V}}^{-1}\nabla _{\omega }{\cal E} \\ 
+{\cal \dot{\omega}}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+\nabla _{{\cal V}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\eta _{{\cal V\omega }}{\cal \dot{\omega}-}\nabla _{{\cal V}}{\cal E} \\ 
+0%
+\end{array}%
+\right)
+\end{equation}%
+which shows that for the trajectory ${\cal V}_{\#}\left( \omega _{0}\right) $
+the action is stationary with respect to small variations $\delta \omega $
+about the fixed trajectory $\omega _{0}$, i.e. $\delta _{\omega }{\cal A}%
+\left( {\cal V}_{\#}\left( \omega _{0}\right) ,\omega _{0}\right) =0.$ This
+is a surprising result since this means that $\omega _{0}$ is a solution for
+the Euler-Lagrange equations for $\omega $ for the fixed value ${\cal V}%
+_{\#}\left( \omega _{0}\right) $, i.e. $\omega _{0}=\omega _{\#}\left( {\cal %
+V}_{\#}\left( \omega _{0}\right) \right) $ and we have found a trajectory $%
+{\cal V}_{\#}\left( \omega _{0}\right) $ that makes $\omega _{0}$ a solution
+by solving an ODE for ${\cal V}$! Eq. $\left( \ref{elw}\right) $ can also be
+solved by simultaneously varying ${\cal V}$ and $\omega $, resulting in
+mixed algebraic and ODE's.
+
+In a similar fashion the condition that gives equations for values of ${\cal %
+V}$ and $\omega $ that produce stationary action with respect to small
+variations {\em of } ${\cal V}$%
+\begin{equation}
+\delta _{{\cal V}}^{\left( 1\right) }{\cal A}\left( {\cal V},\omega \right)
+=0
+\end{equation}%
+which in our case are 
+\begin{equation}
+\eta _{{\cal V\omega }}{\cal \dot{\omega}}=\nabla _{{\cal V}}{\cal E}
+\end{equation}%
+can also be solved as purely algebraic equations 
+\begin{equation}
+\delta _{{\cal V}}^{\left( 1\right) }{\cal A}\left( {\cal V},\omega
+_{0}\right) =0
+\end{equation}%
+that determine a stationary trajectory ${\cal V}_{\#}\left( \omega
+_{0}\right) $ for any fixed trajectory $\omega _{0}$ or can be considered as
+an ordinary differential equations for ${\cal \omega }$, i.e. 
+\begin{equation}
+\delta _{{\cal V}}^{\left( 1\right) }{\cal A}\left( {\cal V}_{0},\omega
+\right) =0
+\end{equation}%
+with a solution $\omega _{\#}\left( {\cal V}_{0}\right) $, that makes ${\cal %
+V}_{0}$ a solution of the Euler-Lagrange equation for ${\cal V}$ for a fixed
+a trajectory $\omega _{\#}\left( {\cal V}_{0}\right) $ i.e. ${\cal V}_{0}=%
+{\cal V}_{\#}\left( \omega _{\#}\left( {\cal V}_{0}\right) \right) $ or by
+simultaneously varying ${\cal V}$ and $\omega $ in mixed algebraic and ODE's.
+
+The above analysis shows a type of duality between the two extreme
+strategies of solving the stationarity problem, one either finds a
+trajectory ${\cal V}_{\#}\left( \omega _{0}\right) $ that makes the action
+stationary wrt to small variations of $\omega $ about $\left( {\cal V}%
+_{\#}\left( \omega _{0}\right) ,\omega _{0}\right) $ or one finds a
+trajectory $\omega _{\#}\left( {\cal V}_{0}\right) $ that makes the action
+stationary wrt to small variations of $\omega $ about $\left( {\cal V}%
+_{0},\omega _{\#}\left( {\cal V}_{0}\right) \right) $. The corresponding
+situation holds for small ${\cal V}$ variations. Of course when one iterates
+between the equations for ${\cal V}$ and $\omega $ and finds a self
+consistent solution by either solving the algebraic equations or the ODE's
+one arrives at a stationary point of the action wrt to small variations of $%
+{\cal V}$ and $\omega $.
+
+\subsection{EOM for ${\cal V}_{den},{\cal V}_{fib},\protect\omega _{den}$
+and $\protect\omega _{fib}$}
+
+The complete EOM eq. $\left( \ref{EOM}\right) $ in matrix integral form for
+all the variables is 
+\begin{equation}
+\left( 
+\begin{array}{cccc}
+0 & 0 & \eta _{{\cal V}_{den}\omega _{den}} & \eta _{{\cal V}_{den}\omega
+_{fib}} \\ 
+0 & 0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega
+_{fib}} \\ 
+\eta _{\omega _{den}{\cal V}_{den}} & \eta _{\omega _{den}{\cal V}_{fib}} & 0
+& 0 \\ 
+\eta _{\omega _{fib}{\cal V}_{den}} & \eta _{\omega _{fib}{\cal V}_{fib}} & 0
+& 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+0 \\ 
+0 \\ 
+0 \\ 
+0%
+\end{array}%
+\right)
+\end{equation}%
+This equation can be written in terms of $\left\{ {\cal V}_{den},{\cal V}%
+_{fib}({\cal V}_{den}),\omega \right\} $ as%
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+0 & 0 & \eta _{{\cal V}_{den}\omega } \\ 
+0 & 0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{den}} & \eta _{\omega {\cal V}_{fib}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal \tilde{L}} \\ 
+\nabla _{{\cal V}_{fib}}{\cal \tilde{L}} \\ 
+\nabla _{\omega }{\cal \tilde{L}}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+0 \\ 
+0 \\ 
+0%
+\end{array}%
+\right)  \label{FullEOM}
+\end{equation}%
+where $\omega =\left( \omega _{den},\omega _{fib}\right) $ and ${\cal \tilde{%
+L}}$ is defined in Appendix F. Using the relationships between the second
+derivatives the metric matrix can be expressed in fewer terms as 
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+0 & 0 & \eta _{{\cal V}_{den}\omega } \\ 
+0 & 0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{den}} & \eta _{\omega {\cal V}_{fib}} & 0%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+0 & 0 & \eta _{{\cal V}_{den}\omega } \\ 
+0 & 0 & \eta _{{\cal V}_{fib}\omega } \\ 
+-\eta _{{\cal V}_{den}\omega }^{t} & -\eta _{{\cal V}_{fib}\omega }^{t} & 0%
+\end{array}%
+\right)  \label{EOMVW}
+\end{equation}%
+If one finds a vector for eq. $\left( \ref{FullEOM}\right) $ such that 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal \tilde{L}} \\ 
+\nabla _{{\cal V}_{fib}}{\cal \tilde{L}} \\ 
+\nabla _{\omega }{\cal \tilde{L}}%
+\end{array}%
+\right) =  \nonumber \\
+&&\left( 
+\begin{array}{ccc}
+0 & 0 & \eta _{{\cal V}_{den}\omega } \\ 
+0 & 0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{den}} & \eta _{\omega {\cal V}_{fib}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib}^{\#} \\ 
+\dot{\omega}^{\#}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\eta _{{\cal V}_{den}\omega }\dot{\omega}^{\#}-\nabla _{{\cal V}_{den}}{\cal %
+E} \\ 
+0 \\ 
+0%
+\end{array}%
+\right)  \label{res}
+\end{eqnarray}%
+for a given ${\cal V}_{den}$ (we can think of the RHS\ of eq. $\left( \ref%
+{res}\right) $ as a residue vector). Then ${\cal A}$ is stationary wrt
+variations of ${\cal V}_{fib}$ and $\omega $ around the trajectories ${\cal V%
+}_{fib}^{\#}$ and $\omega ^{\#}$ for the fixed trajectory ${\cal V}_{den}$
+and we have found the values of the time dependent density functional along
+the trajectory $\gamma \left( t\right) \equiv {\cal V}_{den}\left( t\right) $%
+. This is equivalent to solving the algebraic equation 
+\begin{equation}
+\eta _{{\cal V}_{fib}\omega }\dot{\omega}-\nabla _{{\cal V}_{fib}}{\cal E}=0
+\label{vfibeq}
+\end{equation}%
+self consistently for ${\cal V}_{fib}$, with fixed $\omega $, and 
+\begin{equation}
+\eta _{\omega {\cal V}_{den}}{\cal \dot{V}}_{den}+\eta _{\omega {\cal V}%
+_{fib}}{\cal \dot{V}}_{fib}-\nabla _{\omega }{\cal E}=0  \label{omegaeq}
+\end{equation}%
+self consistently for $\omega $, with fixed ${\cal V}_{fib}$, or treating
+them as coupled ODEs for $\omega $ and ${\cal V}_{fib}$%
+\begin{equation}
+\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{fib}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E-}\eta _{\omega {\cal V}_{den}}{\cal \dot{V}}_{den}%
+\end{array}%
+\right) =0.
+\end{equation}%
+If one has found solutions $\left( {\cal V}_{fib}^{\#}\left( {\cal V}%
+_{den}\right) ,\omega ^{\#}\left( {\cal V}_{den}\right) \right) $ for all $%
+{\cal V}_{den}$ the equation 
+\begin{equation}
+\eta _{{\cal V}_{den}\omega }\dot{\omega}^{\#}-\nabla _{{\cal V}_{den}}{\cal %
+E}=0  \label{gammaeq}
+\end{equation}%
+can be used to obtain the solution trajectory ${\cal V}_{den}^{\#}$. This is
+all discussed in more detail later.
+
+\section{Partitioning of the EOM}
+
+\subsection{Holding the trajectory ${\cal V}_{den}$ constant}
+
+First we consider the case when the trajectory ${\cal V}_{den}\left(
+t\right) $ is constant (i.e. so that ${\cal V}_{den}\left( t\right) $ is no
+longer a variational parameter) then the stationary action condition 
+\begin{eqnarray}
+&&\delta _{{\cal V}_{fib}({\cal V}_{den}),\omega }^{\left( 1\right) }{\cal A}%
+\left( {\cal V}_{den},{\cal V}_{fib}({\cal V}_{den}),\omega \right) =0 
+\nonumber \\
+&&{\cal V}_{den}=fixed\,\,trajectory
+\end{eqnarray}%
+leads to the following Euler-Lagrange equations associated with a {\em %
+degenerate }Lagrangian 
+\begin{eqnarray}
+\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{fib}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}%
+\end{array}%
+\right) \equiv  \nonumber \\
+\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}
+\\ 
+\eta _{\omega _{den}{\cal V}_{fib}} & 0 & 0 \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right)
+\end{eqnarray}%
+The same equation is obtained if the metric tensor is constant with respect
+to variations in ${\cal V}_{den}$ which implies that the parameterization of 
+$\Psi $ is linear in ${\cal V}_{den}.$
+
+In order to solve this non linear ODE one must find a special solution and
+solutions to the homogeneous equation 
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}
+\\ 
+\eta _{\omega _{den}{\cal V}_{fib}} & 0 & 0 \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =0
+\end{equation}%
+This is the same as finding the generalized inverse of metric matrix on the
+compliment of its kernel and then adding to the solution vector the subspace
+of vectors belonging to the kernel. The ''driving vector'' on the RHS must
+be in the range of the metric matrix for a solution to exist (a subsidiary
+conditions must be invoked as shown below). The kernel of the fiber metric
+matrix is spanned by eigen vectors of this matrix of the form%
+\begin{equation}
+\left( 
+\begin{array}{c}
+0 \\ 
+k_{den} \\ 
+k_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+0 \\ 
+k_{den} \\ 
+-\eta _{{\cal V}_{fib}\omega _{den}}^{-1}\eta _{{\cal V}_{fib}\omega
+_{den}}k_{den}%
+\end{array}%
+\right)
+\end{equation}%
+as 
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}
+\\ 
+\eta _{\omega _{den}{\cal V}_{fib}} & 0 & 0 \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+0 \\ 
+k_{den} \\ 
+k_{fib}%
+\end{array}%
+\right) =0
+\end{equation}%
+implies that 
+\begin{equation}
+\eta _{{\cal V}_{fib}\omega _{den}}k_{den}+\eta _{{\cal V}_{fib}\omega
+_{fib}}k_{fib}=0\Rightarrow k_{fib}=-\eta _{{\cal V}_{fib}\omega
+_{fib}}^{-1}\eta _{{\cal V}_{fib}\omega _{den}}k_{den}
+\end{equation}%
+The dimension of the kernel of the metric matrix is equal to $\dim \left\{
+\ker \eta \right\} $, while the dimension of the domain and range of the
+metric matrix is $\dim \left\{ \ker \eta ^{c}\right\} =\dim \left\{ {\bf W}%
+_{den}\right\} $ where ${\bf W}_{den}$ is the space of $\omega _{den}$
+vectors.
+
+\subsection{Partitioning of the EOM wrt ${\cal V}_{den}$ and ${\cal V}_{fib}(%
+{\cal V}_{den}),$ $\protect\omega _{den}({\cal V}_{den}),$ $\protect\omega %
+_{fib}({\cal V}_{den})$}
+
+The condition for the stationarity of the Action is 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+0 & 
+\begin{array}{ccc}
+\qquad 0\qquad & \eta _{{\cal V}_{den}\omega _{den}} & \eta _{{\cal V}%
+_{den}\omega _{fib}}%
+\end{array}
+\\ 
+\begin{array}{c}
+0 \\ 
+-\eta _{{\cal V}_{den}\omega _{den}}^{t} \\ 
+-\eta _{{\cal V}_{den}\omega _{fib}}^{t}%
+\end{array}
+& 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}
+\\ 
+-\eta _{{\cal V}_{fib}\omega _{den}}^{t} & 0 & 0 \\ 
+-\eta _{{\cal V}_{fib}\omega _{fib}}^{t} & 0 & 0%
+\end{array}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right)
+\end{equation}%
+which can also be written as 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{ccc}
+0 & 0 & \eta _{{\cal V}_{den}\omega } \\ 
+0 & 0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{den}} & \eta _{\omega {\cal V}_{fib}} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{den} \\ 
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{den}}{\cal E} \\ 
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}%
+\end{array}%
+\right)  \label{reom} \\
+&&  \nonumber \\
+&\equiv &\qquad \qquad \qquad \left( 
+\begin{array}{cc}
+0 & {\Bbb A}_{12} \\ 
+{\Bbb A}_{21} & {\Bbb A}_{22}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\bf x}_{1} \\ 
+{\bf x}_{2}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+{\bf y}_{1} \\ 
+{\bf y}_{2}%
+\end{array}%
+\right)
+\end{eqnarray}%
+where we introduce the shorthand notation ${\Bbb A},{\bf x}$, and ${\bf y}$
+that was utilized in the preceding section. Eq. $\left( \ref{reom}\right) $.
+This equation can be solved by first obtaining the partial solution 
+\begin{equation}
+\frame{$%
+%TCIMACRO{
+%\underset{}{\stackrel{}{{\Bbb A}_{22}\left( {\bf x}_{1},{\bf x}_{2}\right) {\bf x}_{2}={\bf y}_{2}\left( {\bf x}_{1},{\bf x}_{2}\right) -{\Bbb A}_{21}\left( {\bf x}_{1},{\bf x}_{2}\right) {\bf x}}_{1}}}%
+%BeginExpansion
+\mathrel{\mathop{\stackrel{}{{\Bbb A}_{22}\left( {\bf x}_{1},{\bf x}_{2}\right) {\bf x}_{2}={\bf y}_{2}\left( {\bf x}_{1},{\bf x}_{2}\right) -{\Bbb A}_{21}\left( {\bf x}_{1},{\bf x}_{2}\right) {\bf x}}_{1}}\limits_{}}%
+%EndExpansion
+$}
+\end{equation}%
+as described previously, which leads to the following equation for ${\cal V}%
+_{fib}({\cal V}_{den}),$ $\omega _{den}({\cal V}_{den}),$ and $\omega _{fib}(%
+{\cal V}_{den})$ for a fixed ${\cal V}_{den}$ 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}
+\\ 
+-\eta _{{\cal V}_{fib}\omega _{den}}^{t} & 0 & 0 \\ 
+-\eta _{{\cal V}_{fib}\omega _{fib}}^{t} & 0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =  \nonumber \\
+&&\qquad \quad \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E} \\ 
+\nabla _{\omega _{fib}}{\cal E}%
+\end{array}%
+\right) -\left( 
+\begin{array}{c}
+0 \\ 
+-\eta _{{\cal V}_{den}\omega _{den}}^{t} \\ 
+-\eta _{{\cal V}_{den}\omega _{fib}}^{t}%
+\end{array}%
+\right) \left( {\cal \dot{V}}_{den}\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}+\eta _{{\cal V}_{den}\omega _{den}}^{t}{\cal 
+\dot{V}}_{den} \\ 
+\nabla _{\omega _{fib}}{\cal E}+\eta _{{\cal V}_{den}\omega _{fib}}^{t}{\cal 
+\dot{V}}_{den}%
+\end{array}%
+\right)  \label{feom}
+\end{eqnarray}%
+i.e. 
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}
+\\ 
+-\eta _{{\cal V}_{fib}\omega _{den}}^{t} & 0 & 0 \\ 
+-\eta _{{\cal V}_{fib}\omega _{fib}}^{t} & 0 & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}+\eta _{{\cal V}_{den}\omega _{den}}^{t}{\cal 
+\dot{V}}_{den} \\ 
+\nabla _{\omega _{fib}}{\cal E}+\eta _{{\cal V}_{den}\omega _{fib}}^{t}{\cal 
+\dot{V}}_{den}%
+\end{array}%
+\right)
+\end{equation}%
+This equation is singular and shows that the Lagrangian associated with the
+constrained Action corresponding to a fixed trajectory ${\cal V}_{den}$ is
+degenerate. The kernel of the metric tensor is spanned by vectors of the
+form 
+\begin{equation}
+\left( 
+\begin{array}{c}
+0 \\ 
+k_{di}\left( {\cal V}_{den}\right) \\ 
+k_{fi}\left( {\cal V}_{den}\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+0 \\ 
+k_{den\,i} \\ 
+-\eta _{{\cal V}_{fib}\omega _{den}}^{-1}\eta _{{\cal V}_{fib}\omega
+_{den}}k_{den\,i}%
+\end{array}%
+\right) \equiv k_{i}\left( {\cal V}_{den}\right) ;1\leq i\leq \dim \left\{
+\ker \eta \left( {\cal V}_{den}\right) \right\}
+\end{equation}%
+The dimension of $\ker \eta \left( {\cal V}_{den}\right) $ can be seen to be
+at least equal to $d_{den}$ where 
+\begin{eqnarray}
+\dim \left\{ {\bf V}_{den}\right\} &=&\dim \left\{ {\bf W}_{den}\right\}
+=d_{den}  \nonumber \\
+\dim \left\{ {\bf V}_{fib}\right\} &=&\dim \left\{ {\bf W}_{fib}\right\}
+=d_{fib}
+\end{eqnarray}%
+and thus at most the dimension of $\ker \eta \left( {\cal V}_{den}\right)
+^{c}$ is 
+\begin{equation}
+\dim \left\{ \ker \eta \left( {\cal V}_{den}\right) ^{c}\right\} =2d_{fib}
+\end{equation}%
+The generalized inverse of $\eta \left( {\cal V}_{den}\right) $ is then 
+\begin{equation}
+\eta \left( {\cal V}_{den}\right) ^{-1}=\sum_{1\leq i\leq d_{fib}}\beta
+_{i}^{-1}\left( {\cal V}_{den}\right) \left\{ \left| s_{i}\left( {\cal V}%
+_{den}\right) \right\rangle \left\langle s_{i+d_{fib}}^{d}\left( {\cal V}%
+_{den}\right) \right| -\left| s_{i+d_{fib}}\left( {\cal V}_{den}\right)
+\right\rangle \left\langle s_{i}^{d}\left( {\cal V}_{den}\right) \right|
+\right\}
+\end{equation}%
+where the bases$\left\{ s_{i}\left( {\cal V}_{den}\right) \right\} $ spans
+the complement of the kernel of $\eta \left( {\cal V}_{den}\right) $, (it
+can be shown that $s_{i+d_{fib}}\left( {\cal V}_{den}\right) =s_{i}\left( 
+{\cal V}_{den}\right) ^{\ast }$ since the tensor is real). The solution of
+eq. $\left( \ref{feom}\right) $ is then the self consistent solution of 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}_{den} \\ 
+\dot{\omega}_{fib}%
+\end{array}%
+\right) =\eta \left( {\cal V}_{den}\right) ^{-1}\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}+\eta _{{\cal V}_{den}\omega _{den}}^{t}{\cal 
+\dot{V}}_{den} \\ 
+\nabla _{\omega _{fib}}{\cal E}+\eta _{{\cal V}_{den}\omega _{fib}}^{t}{\cal 
+\dot{V}}_{den}%
+\end{array}%
+\right) +\sum_{1\leq i\leq m_{1}}\lambda _{i}\left( {\cal V}_{den}\right)
+\left| k_{i}\left( {\cal V}_{den}\right) \right\rangle  \nonumber \\
+&&  \nonumber \\
+&=&\sum \beta _{i}^{-1}\left( {\cal V}_{den}\right) \left\{ \left|
+s_{i}\left( {\cal V}_{den}\right) \right\rangle \left\langle s_{i}^{\ast
+d}\left( {\cal V}_{den}\right) \right| \left. \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}+\eta _{{\cal V}_{den}\omega _{den}}^{t}{\cal 
+\dot{V}}_{den} \\ 
+\nabla _{\omega _{fib}}{\cal E}+\eta _{{\cal V}_{den}\omega _{fib}}^{t}{\cal 
+\dot{V}}_{den}%
+\end{array}%
+\right) \right\rangle -\right.  \nonumber \\
+&&\left. \left| s_{i}^{\ast }\left( {\cal V}_{den}\right) \right\rangle
+\left\langle s_{i}^{d}\left( {\cal V}_{den}\right) \right| \left. \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega _{den}}{\cal E}+\eta _{{\cal V}_{den}\omega _{den}}^{t}{\cal 
+\dot{V}}_{den} \\ 
+\nabla _{\omega _{fib}}{\cal E}+\eta _{{\cal V}_{den}\omega _{fib}}^{t}{\cal 
+\dot{V}}_{den}%
+\end{array}%
+\right) \right\rangle \right\} +\sum_{1\leq i\leq m_{1}}\lambda _{i}\left( 
+{\cal V}_{den}\right) \left| k_{i}\left( {\cal V}_{den}\right) \right\rangle
+\nonumber \\
+&\Longleftrightarrow &  \nonumber \\
+&&\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) =\sum \beta _{i}^{-1}\left( {\cal V}_{den}\right) \left\{ \left|
+s_{i}\left( {\cal V}_{den}\right) \right\rangle \left\langle s_{i}^{\ast
+d}\left( {\cal V}_{den}\right) \right| \left. \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}+\eta _{{\cal V}_{den}\omega }^{t}{\cal \dot{V}}%
+_{den}%
+\end{array}%
+\right) \right\rangle -\right.  \nonumber \\
+&&\qquad \left. \left| s_{i}^{\ast }\left( {\cal V}_{den}\right)
+\right\rangle \left\langle s_{i}^{d}\left( {\cal V}_{den}\right) \right|
+\left. \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}+\eta _{{\cal V}_{den}\omega }^{t}{\cal \dot{V}}%
+_{den}%
+\end{array}%
+\right) \right\rangle \right\} +\sum_{1\leq i\leq m_{1}}\lambda _{i}\left( 
+{\cal V}_{den}\right) \left| k_{i}\left( {\cal V}_{den}\right) \right\rangle
+\end{eqnarray}%
+with the constraint%
+\begin{eqnarray}
+&&\sum_{1\leq i\leq m_{1}}\left\{ \left| k_{di}\left( {\cal V}_{den}\right)
+\right\rangle \left\langle k_{i}^{d}\left( {\cal V}_{den}\right) \right|
+\left. \nabla _{\omega _{den}}{\cal E}+\eta _{{\cal V}_{den}\omega
+_{den}}^{t}{\cal \dot{V}}_{den}\right\rangle \right. +  \nonumber \\
+&&\quad \left. \left| k_{di}\left( {\cal V}_{den}\right) \right\rangle
+\left\langle k_{i}^{d}\left( {\cal V}_{den}\right) \right| \left. \nabla
+_{\omega _{fib}}{\cal E}+\eta _{{\cal V}_{den}\omega _{fib}}^{t}{\cal \dot{V}%
+}_{den}\right\rangle \right\} =0  \nonumber \\
+&\equiv &\sum_{1\leq i\leq m_{1}}\left\{ \left| k_{di}\left( {\cal V}%
+_{den}\right) \right\rangle \left\langle k_{i}^{d}\left( {\cal V}%
+_{den}\right) \right| \left. \nabla _{\omega }{\cal E}+\eta _{{\cal V}%
+_{den}\omega }^{t}{\cal \dot{V}}_{den}\right\rangle \right\} =0  \nonumber \\
+&\Rightarrow &\frame{$%
+%TCIMACRO{
+%\underset{}{\stackrel{}{\left\langle k_{i}^{d}\left( {\cal V}_{den}\right) |\nabla _{\omega }{\cal E}\left( {\cal V}_{den}\right) \right\rangle =-\left\langle k_{i}^{d}\left( {\cal V}_{den}\right) |\eta _{{\cal V}_{den}\omega }^{t}{\cal \dot{V}}_{den}\right\rangle \quad \forall i}}}%
+%BeginExpansion
+\mathrel{\mathop{\stackrel{}{\left\langle k_{i}^{d}\left( {\cal V}_{den}\right) |\nabla _{\omega }{\cal E}\left( {\cal V}_{den}\right) \right\rangle =-\left\langle k_{i}^{d}\left( {\cal V}_{den}\right) |\eta _{{\cal V}_{den}\omega }^{t}{\cal \dot{V}}_{den}\right\rangle \quad \forall i}}\limits_{}}%
+%EndExpansion
+$}
+\end{eqnarray}%
+where $\left\{ \lambda _{i}\left( {\cal V}_{den}\right) ;1\leq i\leq
+m_{1}\right\} $ are arbitrary complex coefficients. In order to obtain $%
+\left( 
+\begin{array}{c}
+{\cal V}_{fib}\left( {\cal V}_{den},\lambda \right) \\ 
+\omega \left( {\cal V}_{den},\lambda \right)%
+\end{array}%
+\right) $ one must integrate this solution, which we discuss in depth later.
+
+The self consistent solution for ${\cal \dot{V}}_{den}$ is obtained by using
+eq. $\left( \ref{scx1}\right) $ 
+\begin{equation}
+\frame{$%
+%TCIMACRO{
+%\underset{}{\stackrel{}{{\Bbb A}_{12}{\Bbb A}_{22}^{-1}{\Bbb A}_{21}{\bf x}_{1\#\left( k+1\right) }={\Bbb A}_{12}{\Bbb A}_{22}^{-1}{\bf y}_{2}-{\bf y}_{1}+{\Bbb A}_{12}{\bf k}}}}%
+%BeginExpansion
+\mathrel{\mathop{\stackrel{}{{\Bbb A}_{12}{\Bbb A}_{22}^{-1}{\Bbb A}_{21}{\bf x}_{1\#\left( k+1\right) }={\Bbb A}_{12}{\Bbb A}_{22}^{-1}{\bf y}_{2}-{\bf y}_{1}+{\Bbb A}_{12}{\bf k}}}\limits_{}}%
+%EndExpansion
+$}
+\end{equation}%
+(which is equivalent to eq. $\left( \ref{gammaeq}\right) $ that implicitly
+depends on ${\cal \dot{V}}_{den})$, and the notation 
+\begin{equation}
+{\cal V}_{d}={\cal V}_{den};\,{\cal V}_{f}={\cal V}_{fib};\,{\cal \omega }%
+_{d}={\cal \omega }_{den};\,{\cal \omega }_{f}={\cal \omega }_{fib}
+\end{equation}%
+to arrive at 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{d}\omega _{d}} & \eta _{{\cal V}_{d}\omega _{f}}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \eta ^{-1}\right) _{{\cal V}_{f}{\cal V}_{f}} & \left( \eta
+^{-1}\right) _{{\cal V}_{f}{\cal \omega }d} & \left( \eta ^{-1}\right) _{%
+{\cal V}_{f}{\cal \omega }_{f}} \\ 
+\left( \eta ^{-1}\right) _{{\cal \omega }_{d}{\cal V}_{f}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }_{d}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }_{f}} \\ 
+\left( \eta ^{-1}\right) _{{\cal \omega }_{f}{\cal V}_{f}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }_{d}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }_{f}}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+0 \\ 
+-\eta _{{\cal V}_{d}\omega _{d}}^{t} \\ 
+-\eta _{{\cal V}_{d}\omega _{f}}^{t}%
+\end{array}%
+\right) \left| {\cal \dot{V}}_{d}\right\rangle =  \nonumber \\
+&&  \nonumber \\
+&&\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{d}\omega _{d}} & \eta _{{\cal V}_{d}\omega _{f}}%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+\left( \eta ^{-1}\right) _{{\cal V}_{f}{\cal V}_{f}} & \left( \eta
+^{-1}\right) _{{\cal V}_{f}{\cal \omega }d} & \left( \eta ^{-1}\right) _{%
+{\cal V}_{f}{\cal \omega }_{f}} \\ 
+\left( \eta ^{-1}\right) _{{\cal \omega }_{d}{\cal V}_{f}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }_{d}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }_{f}} \\ 
+\left( \eta ^{-1}\right) _{{\cal \omega }_{f}{\cal V}_{f}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }_{d}} & \left( \eta
+^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }_{f}}%
+\end{array}%
+\right) \left| \left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{f}}{\cal E} \\ 
+\nabla _{\omega _{f}}{\cal E} \\ 
+\nabla _{\omega _{d}}{\cal E}%
+\end{array}%
+\right) \right\rangle  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad -\nabla _{{\cal V}_{d}}{\cal E+\,%
+}\sum_{1\leq i\leq m_{1}}\lambda _{i}\left( {\cal V}_{d}\right) \left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{d}\omega _{d}} & \eta _{{\cal V}_{d}\omega _{f}}%
+\end{array}%
+\right) \left| \left( 
+\begin{array}{c}
+0 \\ 
+k_{d\,i} \\ 
+k_{f\,i}%
+\end{array}%
+\right) \right\rangle
+\end{eqnarray}%
+which can be developed to give 
+\begin{eqnarray}
+&&\left\{ \eta _{{\cal V}_{d}\omega _{d}}\left( \eta ^{-1}\right) _{{\cal %
+\omega }_{d}{\cal \omega }_{d}}\eta _{{\cal V}_{d}\omega _{d}}^{t}+\eta _{%
+{\cal V}_{d}\omega _{d}}\left( \eta ^{-1}\right) _{{\cal \omega }_{d}{\cal %
+\omega }_{f}}\eta _{{\cal V}_{d}\omega _{f}}^{t}\right. +\eta _{{\cal V}%
+_{d}\omega _{f}}\left( \eta ^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }%
+_{d}}\eta _{{\cal V}_{d}\omega _{d}}^{t}+  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \left. +\eta _{{\cal V}_{d}\omega _{f}}\left( \eta ^{-1}\right) _{%
+{\cal \omega }_{f}{\cal \omega }_{f}}\eta _{{\cal V}_{d}\omega
+_{f}}^{t}\right\} \left| {\cal \dot{V}}_{d}\right\rangle =  \nonumber \\
+&&  \nonumber \\
+&&-\left\{ \eta _{{\cal V}_{d}\omega _{d}}\left( \eta ^{-1}\right) _{{\cal %
+\omega }_{d}{\cal V}_{f}}+\eta _{{\cal V}_{d}\omega _{f}}\left( \eta
+^{-1}\right) _{{\cal \omega }_{f}{\cal V}_{f}}\right\} \nabla _{{\cal V}%
+_{fib}}{\cal E+}\left\{ \eta _{{\cal V}_{d}\omega _{d}}\left( \eta
+^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }_{d}}+\eta _{{\cal V}%
+_{d}\omega _{f}}\left( \eta ^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }%
+_{d}}\right\} \nabla _{\omega _{f}}{\cal E}  \nonumber \\
+&&\quad \qquad \quad \qquad \quad \qquad \quad \qquad \quad \qquad \quad
+\quad +\left\{ \eta _{{\cal V}_{d}\omega _{d}}\left( \eta ^{-1}\right) _{%
+{\cal \omega }_{f}{\cal \omega }_{d}}+\eta _{{\cal V}_{d}\omega _{f}}\left(
+\eta ^{-1}\right) _{{\cal V}_{f}{\cal \omega }_{f}}\right\} \nabla _{\omega
+_{d}}{\cal E}-\nabla _{{\cal V}_{d}}{\cal E}  \nonumber \\
+&&\quad \quad \qquad \quad \qquad \quad \qquad \quad \qquad \quad \qquad
+\quad \,{\cal +}\sum_{1\leq i\leq m_{1}}\lambda _{i}\left( {\cal V}%
+_{d}\right) \left\{ \eta _{{\cal V}_{d}\omega _{d}}\left|
+k_{d\,i}\right\rangle +\eta _{{\cal V}_{d}\omega _{f}}\left|
+k_{f\,i}\right\rangle \right\}
+\end{eqnarray}%
+which can be written in a very concise form as 
+\begin{equation}
+{\frak M}\left( {\cal V}_{d},t\right) \left| {\cal \dot{V}}_{d}\right\rangle
+={\frak R}\left( {\cal V}_{d},t\right)
+\end{equation}%
+where 
+\begin{eqnarray}
+{\frak M}_{1}\left( {\cal V}_{d},t\right) &=&\eta _{{\cal V}_{d}\omega
+_{d}}\left( \eta ^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }_{d}}\eta _{%
+{\cal V}_{d}\omega _{d}}^{t}  \nonumber \\
+{\frak M}_{2}\left( {\cal V}_{d},t\right) &=&\eta _{{\cal V}_{d}\omega
+_{d}}\left( \eta ^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }_{f}}\eta _{%
+{\cal V}_{d}\omega _{f}}^{t}  \nonumber \\
+{\frak M}_{3}\left( {\cal V}_{d},t\right) &=&\eta _{{\cal V}_{d}\omega
+_{f}}\left( \eta ^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }_{d}}\eta _{%
+{\cal V}_{d}\omega _{d}}^{t}  \nonumber \\
+{\frak M}_{4}\left( {\cal V}_{d},t\right) &=&\eta _{{\cal V}_{d}\omega
+_{f}}\left( \eta ^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }_{f}}\eta _{%
+{\cal V}_{d}\omega _{f}}^{t}  \nonumber \\
+{\frak M}\left( {\cal V}_{d},t\right) &=&{\frak M}_{1}\left( {\cal V}%
+_{d},t\right) +{\frak M}_{2}\left( {\cal V}_{d},t\right) +{\frak M}%
+_{3}\left( {\cal V}_{d},t\right) +{\frak M}_{4}\left( {\cal V}_{d},t\right)
+\end{eqnarray}%
+and the matrices $\left\{ {\frak M}_{j}\left( {\cal V}_{d},t\right) ;1\leq
+j\leq 4\right\} $ all are $\dim \left\{ {\bf V}_{d}\right\} \times \dim
+\left\{ {\bf V}_{d}\right\} $. In a similar fashion we decompose ${\frak R}%
+\left( {\cal V}_{d},t\right) $ as 
+\begin{eqnarray}
+{\frak R}_{1}\left( {\cal V}_{d},t\right) &=&\left\{ \eta _{{\cal V}%
+_{d}\omega _{d}}\left( \eta ^{-1}\right) _{{\cal \omega }_{d}{\cal V}%
+_{f}}+\eta _{{\cal V}_{d}\omega _{f}}\left( \eta ^{-1}\right) _{{\cal \omega 
+}_{f}{\cal V}_{f}}\right\} \nabla _{{\cal V}_{fib}}{\cal E}  \nonumber \\
+{\frak R}_{2}\left( {\cal V}_{d},t\right) &=&\left\{ \eta _{{\cal V}%
+_{d}\omega _{d}}\left( \eta ^{-1}\right) _{{\cal \omega }_{d}{\cal \omega }%
+_{f}}+\eta _{{\cal V}_{d}\omega _{f}}\left( \eta ^{-1}\right) _{{\cal V}_{f}%
+{\cal \omega }_{f}}\right\} \nabla _{\omega _{f}}{\cal E}  \nonumber \\
+{\frak R}_{3}\left( {\cal V}_{d},t\right) &=&\left\{ \eta _{{\cal V}%
+_{d}\omega _{f}}\left( \eta ^{-1}\right) _{{\cal \omega }_{f}{\cal \omega }%
+_{d}}+\eta _{{\cal V}_{d}\omega _{f}}\left( \eta ^{-1}\right) _{{\cal V}_{f}%
+{\cal \omega }_{d}}\right\} \nabla _{\omega _{d}}{\cal E}  \nonumber \\
+{\frak R}_{4}\left( {\cal V}_{d},t\right) &=&\sum_{1\leq i\leq m_{1}}\lambda
+_{i}\left( {\cal V}_{d}\right) \left\{ \eta _{{\cal V}_{d}\omega _{d}}\left|
+k_{d\,i}\right\rangle +\eta _{{\cal V}_{d}\omega _{f}}\left|
+k_{f\,i}\right\rangle \right\}  \nonumber \\
+{\frak R}\left( {\cal V}_{d},t\right) &=&{\frak R}_{1}\left( {\cal V}%
+_{d},t\right) +{\frak R}_{2}\left( {\cal V}_{d},t\right) +{\frak R}%
+_{3}\left( {\cal V}_{d},t\right) +{\frak R}_{4}\left( {\cal V}_{d},t\right)
+-\nabla _{{\cal V}_{d}}{\cal E}
+\end{eqnarray}
+
+\section{Solutions of Nonlinear Ordinary Differential Equations}
+
+If eq. $\left( \ref{nl}\right) $ is a nonlinear ODE of the form 
+\begin{equation}
+{\cal A}\left( x\left( t\right) \right) \left| \dot{x}\left( t\right)
+\right\rangle =\left| \nabla {\cal E}\left( x\left( t\right) \right)
+\right\rangle ;\quad \ t\in \left[ t_{i},t_{f}\right]
+\end{equation}%
+we can first use the Taylor series expansion of the force about an arbitrary
+trajectory $x_{0}$ to obtain a first order approximation of $x$ about $x_{0}$
+\begin{equation}
+\nabla {\cal E}\left( x\left( t\right) \right) =\nabla {\cal E}\left(
+x_{0}\left( t\right) +y\left( t\right) \right) \simeq \nabla {\cal E}\left(
+x_{0}\left( t\right) \right) +D_{x}^{2}{\cal E}\left( x_{0}\left( t\right)
+\right) \left| y\left( t\right) \right\rangle  \label{gradexpan}
+\end{equation}%
+where 
+\begin{equation}
+D_{x}^{2}{\cal E}\left( x_{0}\left( t\right) \right) =D_{y}\nabla {\cal E}%
+\left( x_{0}\left( t\right) \right)
+\end{equation}%
+which can be seen from%
+\[
+\nabla {\cal E}\left( x_{0}\left( t\right) \right) \left( \delta x\left(
+t\right) \right) =\nabla {\cal E}\left( x_{0}\left( t\right) \right) \left(
+y\left( t\right) \right) =\int \frac{\delta {\cal E}\left( x_{0}\left(
+t\right) \right) }{\delta x\left( {\sf z}\right) }y\left( t,{\sf z}\right) d%
+{\sf z} 
+\]%
+\[
+\frac{\delta }{\delta x\left( {\sf z}\right) }=\frac{\delta }{\delta y\left( 
+{\sf z}\right) }\text{ }\qquad \text{when }x\left( {\sf z}\right) =y\left( 
+{\sf z}\right) +x_{0}\left( {\sf z}\right) \Rightarrow \qquad \qquad 
+\]%
+\begin{eqnarray}
+D_{y}\nabla {\cal E}\left( x_{0}\left( t\right) \right) \left( y\left(
+t\right) ,y\left( t\right) \right) &=&\int \frac{\delta ^{2}{\cal E}\left(
+x_{0}\left( t\right) \right) }{\delta x\left( {\sf z}^{\prime }\right)
+\delta x\left( {\sf z}\right) }y\left( t,{\sf z}\right) y\left( t,{\sf z}%
+^{\prime }\right) d{\sf z}d{\sf z}^{\prime }  \nonumber \\
+&=&D_{x}^{2}{\cal E}\left( x_{0}\left( t\right) \right) \left( y\left(
+t\right) \otimes y\left( t\right) \right)
+\end{eqnarray}%
+Eq. $\left( \ref{gradexpan}\right) $gives us the linearized equation 
+\begin{equation}
+{\cal A}\left( x_{0}\left( t\right) \right) \left| \dot{y}\left( t\right)
+\right\rangle =\nabla {\cal E}\left( x_{0}\left( t\right) \right) +D_{x}^{2}%
+{\cal E}\left( x_{0}\left( t\right) \right) \left| y\left( t\right)
+\right\rangle
+\end{equation}%
+which gives using the generalized inverse of ${\cal A}\left( x_{0}\left(
+t\right) \right) $ 
+\begin{eqnarray}
+\left| \dot{y}\left( t\right) \right\rangle &=&{\cal A}\left( x_{0}\left(
+t\right) \right) ^{-1}D_{x}^{2}{\cal E}\left( x_{0}\left( t\right) \right)
+\left| y\left( t\right) \right\rangle +{\cal A}\left( x_{0}\left( t\right)
+\right) ^{-1}\nabla {\cal E}\left( x_{0}\left( t\right) \right) +\left|
+\lambda \left( t\right) \right\rangle  \nonumber \\
+&\equiv &\left| \dot{y}\left( t\right) \right\rangle ={\frak H}\left(
+t\right) \left| y\left( t\right) \right\rangle +\left| {\frak f}\left(
+t\right) \right\rangle  \label{ODE}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+{\frak H}\left( t\right) &=&{\cal A}\left( x_{0}\left( t\right) \right)
+^{-1}D_{x}^{2}{\cal E}\left( x_{0}\left( t\right) \right)  \nonumber \\
+\left| {\frak f}\left( t\right) \right\rangle &=&{\cal A}\left( x_{0}\left(
+t\right) \right) ^{-1}\nabla {\cal E}\left( x_{0}\left( t\right) \right)
++\left| \lambda \left( t\right) \right\rangle
+\end{eqnarray}%
+where 
+\begin{equation}
+\left| \lambda \left( t\right) \right\rangle =\sum_{1\leq i\leq
+m_{1}}\lambda _{i}\left| k_{i}\left( x_{0}\left( t\right) \right)
+\right\rangle \quad \in \ker \left\{ {\cal A}\left( x_{0}\left( t\right)
+\right) \right\}
+\end{equation}%
+After finding a solution $y_{\#}\left( t\right) $ we start at a new
+trajectory $x_{0}\left( t\right) +y_{\#}\left( t\right) $ and continue until
+we have self consistency. One way to obtain a solution to the ODE\ eq. $%
+\left( \ref{ODE}\right) $ is use the short time expansion 
+\begin{equation}
+\left| y\left( t_{k+1}\right) \right\rangle =\left| y\left( t_{k}\right)
+\right\rangle +\left\{ {\frak H}\left( t_{k}\right) \left| y\left(
+t_{k}\right) \right\rangle +{\frak f}\left( t_{k}\right) \right\} \Delta t
+\end{equation}%
+then iterate 
+\begin{eqnarray}
+\left| y\left( t_{k+2}\right) \right\rangle &=&\left| y\left( t_{k+1}\right)
+\right\rangle +\left\{ {\frak H}\left( t_{k+1}\right) \left| y\left(
+t_{k+1}\right) \right\rangle +{\frak f}\left( t_{k+1}\right) \right\} \Delta
+t\qquad \qquad \qquad \qquad \qquad \qquad \qquad \,  \nonumber \\
+&=&\left| y\left( t_{k}\right) \right\rangle +\left\{ {\frak H}\left(
+t_{k}\right) \left| y\left( t_{k}\right) \right\rangle +{\frak f}\left(
+t_{k}\right) \right\} \Delta t+  \nonumber \\
+&&\left\{ {\frak H}\left( t_{k+1}\right) \left\{ \left| y\left( t_{k}\right)
+\right\rangle +\left\{ {\frak H}\left( t_{k}\right) \left| y\left(
+t_{k}\right) \right\rangle +{\frak f}\left( t_{k}\right) \right\} \Delta
+t\right\} +{\frak f}\left( t_{k+1}\right) \right\} \Delta t  \nonumber \\
+&=&\left| y\left( t_{k}\right) \right\rangle +\left\{ {\frak H}\left(
+t_{k}\right) \left| y\left( t_{k}\right) \right\rangle +{\frak f}\left(
+t_{k}\right) \right\} \Delta t  \nonumber \\
+&&+{\frak H}\left( t_{k+1}\right) \left| y\left( t_{k}\right) \right\rangle
+\Delta t+{\frak H}\left( t_{k+1}\right) {\frak H}\left( t_{k}\right) \left|
+y\left( t_{k}\right) \right\rangle \Delta t\Delta t  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad +{\frak H}\left( t_{k+1}\right) 
+{\frak f}\left( t_{k}\right) \Delta t\Delta t+{\frak f}\left( t_{k+1}\right)
+\Delta t  \nonumber \\
+&=&\left| y\left( t_{k}\right) \right\rangle +\left( {\frak H}\left(
+t_{k}\right) +{\frak H}\left( t_{k+1}\right) \right) \left| y\left(
+t_{k}\right) \right\rangle \Delta t+\left( {\frak f}\left( t_{k}\right) +%
+{\frak f}\left( t_{k+1}\right) \right) \Delta t  \nonumber \\
+&&+{\frak H}\left( t_{k+1}\right) {\frak H}\left( t_{k}\right) \left|
+y\left( t_{k}\right) \right\rangle \Delta t\Delta t+{\frak H}\left(
+t_{k+1}\right) {\frak f}\left( t_{k}\right) \Delta t\Delta t
+\end{eqnarray}%
+\begin{eqnarray}
+\left| y\left( t_{k+3}\right) \right\rangle &=&\left| y\left( t_{k+2}\right)
+\right\rangle +\left\{ {\frak H}\left( t_{k+2}\right) \left| y\left(
+t_{k+2}\right) \right\rangle +{\frak f}\left( t_{k+2}\right) \right\} \Delta
+t  \nonumber \\
+&=&\left| y\left( t_{k}\right) \right\rangle +\left( {\frak H}\left(
+t_{k}\right) +{\frak H}\left( t_{k+1}\right) \right) \left| y\left(
+t_{k}\right) \right\rangle \Delta t+\left( {\frak f}\left( t_{k}\right) +%
+{\frak f}\left( t_{k+1}\right) \right) \Delta t  \nonumber \\
+&&+{\frak H}\left( t_{k+1}\right) {\frak H}\left( t_{k}\right) \left|
+y\left( t_{k}\right) \right\rangle \Delta t\Delta t+{\frak H}\left(
+t_{k+1}\right) {\frak f}\left( t_{k}\right) \Delta t\Delta t  \nonumber \\
+&&+\left\{ {\frak H}\left( t_{k+2}\right) \left\{ \left| y\left(
+t_{k}\right) \right\rangle +\left( {\frak H}\left( t_{k}\right) +{\frak H}%
+\left( t_{k+1}\right) \right) \left| y\left( t_{k}\right) \right\rangle
+\Delta t+\left( {\frak f}\left( t_{k}\right) +{\frak f}\left( t_{k+1}\right)
+\right) \Delta t\right. \right.  \nonumber \\
+&&\left. \left. +{\frak H}\left( t_{k+1}\right) {\frak H}\left( t_{k}\right)
+\left| y\left( t_{k}\right) \right\rangle \Delta t\Delta t+{\frak H}\left(
+t_{k+1}\right) {\frak f}\left( t_{k}\right) \Delta t\Delta t\right\} +{\frak %
+f}\left( t_{k+2}\right) \right\} \Delta t  \nonumber \\
+&=&\left| y\left( t_{k}\right) \right\rangle +\left( {\frak H}\left(
+t_{k}\right) +{\frak H}\left( t_{k+1}\right) +{\frak H}\left( t_{k+2}\right)
+\right) \left| y\left( t_{k}\right) \right\rangle \Delta t  \nonumber \\
+&&+\left( {\frak H}\left( t_{k+1}\right) {\frak H}\left( t_{k}\right) +%
+{\frak H}\left( t_{k+2}\right) {\frak H}\left( t_{k+1}\right) +{\frak H}%
+\left( t_{k+2}\right) {\frak H}\left( t_{k}\right) \right) \left| y\left(
+t_{k}\right) \right\rangle \Delta t\Delta t  \nonumber \\
+&&+{\frak H}\left( t_{k+2}\right) {\frak H}\left( t_{k+1}\right) {\frak H}%
+\left( t_{k}\right) \left| y\left( t_{k}\right) \right\rangle \Delta t\Delta
+t\Delta t  \nonumber \\
+&&+\left( {\frak f}\left( t_{k}\right) +{\frak f}\left( t_{k+1}\right) +%
+{\frak f}\left( t_{k+2}\right) \right) \Delta t+{\frak H}\left(
+t_{k+2}\right) \left( {\frak f}\left( t_{k}\right) +{\frak f}\left(
+t_{k+1}\right) \right) \Delta t\Delta t  \nonumber \\
+&&+{\frak H}\left( t_{k+1}\right) {\frak f}\left( t_{k}\right) \Delta
+t\Delta t+{\frak H}\left( t_{k+2}\right) {\frak H}\left( t_{k+1}\right) 
+{\frak f}\left( t_{k}\right) \Delta t\Delta t\Delta t
+\end{eqnarray}%
+Thus 
+\begin{eqnarray}
+&&\left| y\left( t_{k+r}\right) \right\rangle =\left| y\left( t_{k}\right)
+\right\rangle +\sum_{1\leq i\leq r}{\frak f}\left( t_{k+i}\right) \Delta
++\sum_{1\leq i\leq r}{\frak H}\left( t_{k+i}\right) \Delta t\left| y\left(
+t_{k}\right) \right\rangle  \nonumber \\
+&&+\sum_{1\leq i_{1}<i_{2}\leq r}{\frak H}\left( t_{k+i_{2}}\right) {\frak H}%
+\left( t_{k+i_{1}}\right) \Delta t\Delta t\left| y\left( t_{k}\right)
+\right\rangle +\cdots +{\frak H}\left( t_{k+i_{r}}\right) \cdots {\frak H}%
+\left( t_{k+i_{1}}\right) \Delta t\cdots \Delta t\left| y\left( t_{k}\right)
+\right\rangle t  \nonumber \\
+&&+\sum_{1\leq i_{1}<i_{2}\leq r}{\frak H}\left( t_{k+i_{2}}\right) {\frak f}%
+\left( t_{k+i_{1}}\right) \Delta t\Delta t+\cdots +{\frak H}\left(
+t_{k+i_{r}}\right) \cdots {\frak H}\left( t_{k+i_{2}}\right) {\frak f}\left(
+t_{k+i_{1}}\right) \Delta t\cdots \Delta t
+\end{eqnarray}%
+which gives in the limit 
+\begin{eqnarray}
+&&\left| y_{\#}\left( t\right) \right\rangle ={\LARGE T}e^{\int_{t_{i}}^{t}%
+{\frak H}\left( t^{\prime }\right) dt^{\prime }}\left| y\left( t_{i}\right)
+\right\rangle +\int_{t_{i}}^{t}{\LARGE T}e^{\int_{t_{i}}^{t}{\frak H}\left(
+t^{\prime }-s\right) dt^{\prime }}{\frak f}\left( s\right) ds  \nonumber \\
+&\equiv &{\LARGE T}e^{\int_{t_{i}}^{t}{\cal A}\left( x_{0}\left( t^{\prime
+}\right) \right) ^{-1}D_{y}\nabla {\cal E}\left( x_{0}\left( t^{\prime
+}\right) \right) dt^{\prime }}\left| y\left( t_{i}\right) \right\rangle 
+\nonumber \\
+&&+\int_{t_{i}}^{t}{\LARGE T}e^{\int_{t_{i}}^{t}{\cal A}\left( x_{0}\left(
+t^{\prime }-s\right) \right) ^{-1}D_{y}\nabla {\cal E}\left( x_{0}\left(
+t^{\prime }-s\right) \right) dt^{\prime }}{\cal A}\left( x_{0}\left(
+s\right) \right) ^{-1}\nabla {\cal E}\left( x_{0}\left( s\right) \right)
+ds+\int_{t_{i}}^{t}\left| \lambda \left( s\right) \right\rangle ds
+\end{eqnarray}%
+where we use the generalized inverse ${\cal A}\left( x\left( t\right)
+\right) ^{-1}$ and invoked ''tractability conditions'' 
+\begin{equation}
+{\cal A}\left( x\left( t\right) \right) ^{-1}{\cal A}\left( x\left( t\right)
+\right) \left| \nabla {\cal E}\left( x\left( t\right) \right) \right\rangle
+=P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ {\cal A}\left( x\left( t\right) \right) \right\} ^{c}}\left| \nabla 
+{\cal E}\left( x\left( t\right) \right) \right\rangle =0\quad \forall t
+\end{equation}%
+which in a linearized form are 
+\begin{equation}
+P_{%
+%TCIMACRO{\func{range}}%
+%BeginExpansion
+\mathop{\rm range}%
+%EndExpansion
+\left\{ {\cal A}\left( x\left( t\right) \right) \right\} ^{c}}\left( \nabla 
+{\cal E}\left( x_{0}\left( t\right) \right) +D_{x}^{2}{\cal E}\left(
+x_{0}\left( t\right) \right) \left| y\left( t\right) \right\rangle \right)
+=0\quad \forall t
+\end{equation}
+
+\appendix
+
+\QSubDoc{Include Part}{\input{Part.tex}}
+
+\QSubDoc{Include VecBun}{\input{VecBun.tex}}
+
+\QSubDoc{Include DualOp}{\input{DualOp.tex}}
+
+\QSubDoc{Include DualPair}{\input{DualPair.tex}}
+
+\QSubDoc{Include SolODE}{\input{SolODE.tex}}
+
+\QSubDoc{Include TaySer}{\input{TaySer.tex}}
+
+\QSubDoc{Include ComplexForm}{\input{ComplexForm.tex}}
+
+\QSubDoc{Include Antisym}{\input{Antisym.tex}}
+
+\QSubDoc{Include Group}{\input{Group.tex}}
+
+\begin{references}
+\bibitem{Geroch} Robert Geroch, {\it Mathematical Physics, p57} (University
+of Chicago Press 1985).
+\end{references}
+
+\end{document}

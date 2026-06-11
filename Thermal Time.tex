@@ -1,0 +1,183 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Wednesday, September 19, 2018 13:00:03}
+%TCIDATA{LastRevised=Saturday, September 22, 2018 13:32:22}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Thermal Time}
+
+First, get the algebra $\mathcal{A}$ acting on a Hilbert space $\mathcal{H}$,
+with a cyclic vector $\Phi_{\U{3c9} }\left(  I_{\mathcal{A}}\right)  $ (i.e.
+such that $\Pi_{\omega}(\mathcal{A})\Phi_{\U{3c9} }\left(  I_{\mathcal{A}%
+}\right)  $ is dense in $\mathcal{H}$ -- one way to get this is by the GNS
+representation, so that the state $\U{3c9} $ just acts on an operator $A$ by
+the expectation value at $\Phi_{\U{3c9} }\left(  I_{\mathcal{A}}\right)  $, as
+above, so that the vector $\Phi_{\U{3c9} }\left(  I_{\mathcal{A}}\right)  $ is
+standing in, in the Hilbert space picture, for the state $\U{3c9} $). Then one
+can define an operator $S$ by the fact that, for any $A$ in $\mathcal{A}$, one
+has%
+\begin{equation}
+S\left(  \Pi_{\U{3c9} }\left(  A\right)  \right)  \Phi_{\U{3c9} }\left(
+I_{\mathcal{A}}\right)  =\Pi_{\U{3c9} }\left(  A\right)  ^{\dagger}%
+\Phi_{\U{3c9} }\left(  I_{\mathcal{A}}\right)
+\end{equation}
+
+
+That is, $S$ acts like the conjugation operation on operators at
+$\Phi_{\U{3c9} }\left(  I_{\mathcal{A}}\right)  $, which is enough to define
+$S$ since $\Phi_{\U{3c9} }\left(  I_{\mathcal{A}}\right)  $ is cyclic. This
+$S$ has a polar decomposition (analogous for operators to the polar form for
+complex numbers) of
+\begin{equation}
+S=\mathcal{J\Delta}^{\frac{1}{2}},
+\end{equation}
+where$\mathcal{J}$ is antiunitary (this is conjugation, after all) and
+$\mathcal{\Delta}$ is self-adjoint. We need the self-adjoint part, because the
+Tomita flow is a one-parameter family of automorphisms given by:%
+\begin{equation}
+\widehat{\alpha\left(  t\right)  }\Pi_{\U{3c9} }\left(  A\right)
+=\mathcal{\Delta}^{-it}\Pi_{\U{3c9} }\left(  A\right)  \mathcal{\Delta}^{it}.
+\end{equation}
+
+
+This leads to the definition of the funddamental Hamiltonian $\mathfrak{h}$
+\begin{align}
+\mathcal{\Delta}^{-it}  & =\exp\left\{  -i\mathfrak{h}t\right\}  \\
+i\ln\left\{  \mathcal{\Delta}^{-i}\right\}    & =\mathfrak{h}\\
+\mathfrak{h}  & \mathfrak{=}\ln\left\{  \mathcal{\Delta}\right\}  .
+\end{align}
+
+
+An important fact for Connes' classification of von Neumann algebras is that
+the Tomita flow is basically unique -- that is, it's unique up to an inner
+automorphism (i.e. a conjugation by some unitary operator -- so in particular,
+if we're talking about a relativistic physical theory, a change of coordinates
+giving a different $t$ parameter would be an example). So while there are
+different flows, they're all \textquotedblleft essentially\textquotedblright%
+\ the same. \emph{There's a unique notion of time flow if we reduce the
+algebra }$\mathcal{A}$\emph{ to its cosets modulo inner automorphism i.e.}%
+\begin{equation}
+\operatorname*{Out}\left\{  \mathcal{A}\right\}  =\left.  \operatorname{Aut}%
+\left\{  \mathcal{A}\right\}  \right/  \operatorname*{Inn}\left\{
+\mathcal{A}\right\}  .
+\end{equation}
+Now, in some cases, the Tomita flow consists entirely of inner automorphisms,
+and this reduction makes it disappear entirely (this happens in the
+finite-dimensional case, for instance). But in the general case this doesn't
+happen, and the Connes-Rovelli paper summarizes this by saying that von
+Neumann algebras are \textquotedblleft intrinsically dynamic
+objects\textquotedblright. So this is one interesting thing about the quantum
+view of states: there is a somewhat canonical notion of dynamics present just
+by virtue of the way states are described. In the classical world, this isn't
+the case.
+
+Now, Rovelli's \textquotedblleft Thermal Time\textquotedblright\ hypothesis
+is, basically, that the notion of time is a state-dependent one: instead of an
+independent variable, with respect to which other variables change, quantum
+mechanics (per Rovelli) makes predictions about correlations between different
+observed variables. More precisely, the hypothesis is that, given that we
+observe the world in some state, the right notion of time should just be the
+Tomita flow for that state. They claim that checking this for certain
+cosmological models, like the Friedman model, they get the usual notion of
+time flow. I have to admit, I have trouble grokking this idea as fundamental
+physics, because it seems like it's implying that the universe (or any system
+in it we look at) is always, a priori, in thermal equilibrium, which seems
+wrong to me since it evidently isn't. The Friedman model does assume an
+expanding universe in thermal equilibrium, but clearly we're not in exactly
+that world. On the other hand, the Tomita flow is definitely there in the von
+Neumann algebra view of quantum mechanics and states, so possibly I'm
+misinterpreting the nature of the claim. Also, as applied to quantum gravity,
+a \textquotedblleft state\textquotedblright\ perhaps should be read as a state
+for the whole spacetime geometry of the universe -- which is presumably static
+-- and then the apparent \textquotedblleft time change\textquotedblright%
+\ would then be a result of the Tomita flow on operators describing actual
+physical observables. But on this view, I'm not sure how to understand
+\textquotedblleft thermal equilibrium\textquotedblright. So in the end, I
+don't really know how to take the \textquotedblleft Thermal Time
+Hypothesis\textquotedblright\ as physics.
+
+In any case, the idea that the right notion of time should be state-dependent
+does make some intuitive sense. The only physically, empirically accessible
+referent for time is \textquotedblleft what a clock measures\textquotedblright%
+: in other words, there is some chosen system which we refer to whenever we
+say we're \textquotedblleft measuring time\textquotedblright. Different
+choices of system (that is, different clocks) will give different readings
+even if they happen to be moving together in an inertial frame -- atomic
+clocks sitting side by side will still gradually drift out of sync. Even if
+\textquotedblleft the system\textquotedblright\ means the whole universe, or
+just the gravitational field, clearly the notion of time even in General
+Relativity depends on the state of this system. If there is a
+non-state-dependent \textquotedblleft god's-eye view\textquotedblright\ of
+which variable is time, we don't have empirical access to it. So while I can't
+really assess this idea confidently, it does seem to be getting at something important.
+
+
+\end{document}

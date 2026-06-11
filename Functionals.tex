@@ -1,0 +1,184 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Wednesday, June 05, 2002 11:05:27}
+%TCIDATA{LastRevised=Thursday, June 06, 2002 21:19:29}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Functionals]{Functionals}
+\author{Brian Weiner}
+\affiliation{PSU}
+\date{06/06/2002}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Functionals}
+
+Let us compare functions, $f,l$, of discrete vectors to those, $F,L$, of
+functions i.e. functions of vectors expressed in the basis $\left\{
+\left\vert e_{j}\right\rangle \equiv\left\vert j\right\rangle ,\,j\in
+\mathbb{N}\right\}  $ to those expressed in the basis $\left\{  \left\vert
+t\right\rangle ,\,t\in\left[  0,\infty\right]  \right\}  $. The discrete case
+is
+\begin{align}
+f\left(  \mathbf{x},n\right)   &  =\sum_{1\leq j\leq n}l\left(  x_{j}%
+,j\right)  =\sum_{1\leq j\leq n}f_{0j}+\sum_{1\leq j\leq n}f_{1j}x_{j}%
++\sum_{1\leq j,k\leq n}f_{2jk}x_{j}x_{k}+\cdots\nonumber\\
+&  =f_{0}+\mathbf{f}_{1}\cdot\mathbf{x+f}_{2}\cdot\mathbf{x\otimes x}%
++\cdots\nonumber\\
+&  =f_{0}+\left\langle \mathbf{f}_{1}|\mathbf{x}\right\rangle +\left\langle
+\mathbf{f}_{2}|\mathbf{x\otimes x}\right\rangle +\cdots
+\end{align}
+where%
+\begin{equation}
+l\left(  x_{j},j\right)  =f_{0j}+f_{1j}x_{j}+\sum_{1\leq k\leq n}f_{2jk}%
+x_{j}x_{k}+\cdots
+\end{equation}
+We can take derivatives wrt the coordinates of the basis vectors $\left\{
+\left\vert e_{j}\right\rangle \right\}  $ so that we have%
+\begin{equation}
+df\left(  \mathbf{x},n\right)  \left(  \delta\mathbf{x}\right)  =\sum_{1\leq
+j\leq n}\frac{\partial f\left(  \mathbf{x},n\right)  }{\partial x_{j}}\delta
+x_{j}%
+\end{equation}
+If the differential $df\left(  \mathbf{x},n\right)  $ exists then the
+derivative is of the Fr\u{e}chet type
+\begin{align}
+\frac{\partial f\left(  \mathbf{x},n\right)  }{\partial x_{r}}  &
+=f_{1r}+\sum_{1\leq j\leq n}\left\{  f_{2jr}+f_{2rj}\right\}  x_{j}%
++\cdots\nonumber\\
+&  =\left\langle \mathbf{f}_{1}|e_{r}\right\rangle +\left\langle
+\mathbf{f}_{2}|\mathbf{x\otimes}e_{r}+e_{r}\mathbf{\otimes x}\right\rangle
++\cdots\nonumber\\
+\frac{\partial l\left(  x_{j},j\right)  }{\partial x_{r}}  &  =f_{1j}%
+\delta_{jr}+f_{2rj}x_{j}+\sum_{1\leq k\leq n}f_{2jk}x_{k}\delta_{jr}+\cdots
+\end{align}
+and the consistency check gives
+\begin{align}
+\frac{\partial f\left(  \mathbf{x},n\right)  }{\partial x_{r}}  &
+=\frac{\partial}{\partial x_{r}}\sum_{1\leq j\leq n}l\left(  x_{j},j\right)
+=\sum_{1\leq j\leq n}\frac{\partial l\left(  x_{j},j\right)  }{\partial x_{r}%
+}\nonumber\\
+&  =f_{1r}+\sum_{1\leq j\leq n}\left\{  f_{2rj}+f_{2rj}\right\}  x_{j}+\cdots
+\end{align}
+
+
+Compare this to the continuous case
+\begin{align}
+&  F\left(  x,\tau\right)  =\int_{0}^{\tau}L\left(  x,t\right)  dt\nonumber\\
+&  =\int_{0}^{\tau}F_{0}\left(  t\right)  dt+\int_{0}^{\tau}F_{1}\left(
+t_{1}\right)  x\left(  t_{1}\right)  dt_{1}+\int_{0}^{\tau}F_{2}\left(
+t_{1},t_{2}\right)  x\left(  t_{1}\right)  x\left(  t_{2}\right)  dt_{1}%
+dt_{2}+\cdots\nonumber\\
+&  =\int_{0}^{\tau}F_{0}\left(  t\right)  dt+\left\langle \mathbf{F}%
+_{1}|\mathbf{x}\right\rangle +\left\langle \mathbf{F}_{2}|\mathbf{x\otimes
+x}\right\rangle +\cdots\nonumber\\
+&  L\left(  x,t\right)  =F_{0}\left(  t\right)  +F_{1}\left(  t\right)
+x\left(  t\right)  +\int_{0}^{\tau}F_{2}\left(  t,t_{2}\right)  x\left(
+t\right)  x\left(  t_{2}\right)  dt_{2}+\cdots
+\end{align}
+From the fundamental theorem of calculus
+\begin{equation}
+L\left(  x,\tau\right)  =\frac{\partial F\left(  x,\tau\right)  }{\partial
+\tau}\Leftrightarrow L\left(  x,t\right)  =\frac{\partial F\left(  x,t\right)
+}{\partial t}\forall t\in\left[  0,\tau\right]
+\end{equation}
+We can take derivatives wrt the coordinates of the basis vectors $\left\{
+\left\vert t\right\rangle \right\}  $
+\begin{align}
+&  \frac{\delta F\left(  x,\tau\right)  }{\delta x\left(  t\right)  }%
+=F_{1}\left(  t\right)  +\int_{0}^{\tau}\left\{  F_{2}\left(  t_{1},t\right)
++F_{2}\left(  t,t_{1}\right)  \right\}  x\left(  t_{1}\right)  dt_{1}%
++\cdots\nonumber\\
+&  =\left\langle \mathbf{F}_{1}|t\right\rangle +\left\langle \mathbf{F}%
+_{2}|\mathbf{x\otimes}t\right\rangle +\left\langle \mathbf{F}_{2}%
+|t\mathbf{\otimes x}\right\rangle +\cdots\nonumber\\
+&  dF\left(  x,\tau\right)  \left(  \delta x,\delta\tau\right)  =\int
+_{0}^{\tau}\frac{\delta F\left(  x,\tau\right)  }{\delta x\left(  t\right)
+}\delta x\left(  t\right)  dt+\frac{\partial F\left(  x,\tau\right)
+}{\partial\tau}\delta\tau\nonumber\\
+&  \frac{\delta L\left(  x,t^{\prime}\right)  }{\delta x\left(  t\right)
+}=F_{1}\left(  t\right)  \delta\left(  t-t^{\prime}\right)  +F_{2}\left(
+t,t^{\prime}\right)  x\left(  t^{\prime}\right)  +\int_{0}^{\tau}F_{2}\left(
+t,t_{2}\right)  \delta\left(  t-t^{\prime}\right)  x\left(  t_{2}\right)
+dt_{2}+\cdots
+\end{align}
+The time duration derivatives are
+\begin{equation}
+\frac{\partial F\left(  x,\tau\right)  }{\partial\tau}=\int_{0}^{\tau}%
+\frac{\partial L\left(  x,t\right)  }{\partial t}dt=L\left(  x,\tau\right)
+\end{equation}
+when $L\left(  x,0\right)  =0.$ Which in detail gives
+\begin{equation}
+\frac{\partial L\left(  x,t\right)  }{\partial t}=\frac{\partial}{\partial
+t}\left\{  F_{0}\left(  t\right)  +F_{1}\left(  t\right)  x\left(  t\right)
++\int_{0}^{\tau}F_{2}\left(  t,t_{2}\right)  x\left(  t\right)  x\left(
+t_{2}\right)  dt_{2}+\cdots\right\}
+\end{equation}
+Clearly
+\begin{equation}
+\frac{\delta F\left(  x,\tau\right)  }{\delta x\left(  t\right)  }=\int
+_{0}^{\tau}\frac{\delta L\left(  x,t^{\prime}\right)  }{\delta x\left(
+t\right)  }dt^{\prime}%
+\end{equation}
+and
+\begin{equation}
+\frac{\partial}{\partial t}\left\{  \frac{\delta F\left(  x,\tau\right)
+}{\delta x\left(  t\right)  }\right\}  =\frac{\delta L\left(  x,t^{\prime
+}\right)  }{\delta x\left(  t\right)  }%
+\end{equation}
+The differential $dF$ of $F$ is then given by
+\begin{align}
+&  dF\left(  x,\tau\right)  \left(  \delta x,\delta\tau\right)  =\int
+_{0}^{\tau}dL\left(  x,t\right)  \left(  \delta x,\delta t\right)
+dt\nonumber\\
+&  =\int_{0}^{\tau}\left\{  \frac{\partial L\left(  x,t\right)  }{\partial
+x\left(  t\right)  }\delta x\left(  t\right)  +\frac{\partial L\left(
+x,t\right)  }{\partial t}\delta t\right\}  dt\nonumber\\
+&  =\int_{0}^{\tau}\frac{\partial L\left(  x,t\right)  }{\partial x\left(
+t\right)  }\delta x\left(  t\right)  dt+\frac{\partial F\left(  x,\tau\right)
+}{\partial\tau}\delta\tau\nonumber\\
+&  =\int_{0}^{\tau}\frac{\partial L\left(  x,t\right)  }{\partial x\left(
+t\right)  }\delta x\left(  t\right)  dt+L\left(  x,\tau\right)  \delta\tau
+\end{align}
+and
+\begin{equation}
+\delta^{\left(  1\right)  }F\left(  x,\tau\right)  =dF\left(  x,\tau\right)
+\left(  \delta x,\delta\tau\right)
+\end{equation}
+
+
+
+\end{document}

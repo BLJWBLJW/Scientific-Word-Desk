@@ -1,0 +1,1572 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{Created=Friday, May 24, 2002 09:27:08}
+%TCIDATA{LastRevised=Friday, September 12, 2003 14:13:51}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\preprint{HamJac}
+\title[HamJac]{Hamitlon-Jacobi Approach}
+\author{Brian Weiner}
+\affiliation{PSU}
+\keywords{05/26}
+\pacs{}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+\end{abstract}
+
+\startpage{1}
+\endpage{1}
+\maketitle
+\tableofcontents
+
+\section{ Details of Lagrangian and EOM}
+
+\subsection{Parameterization of State Vectors}
+
+$\mathcal{\breve{V}}\left( t\right) $The time dependence of a pure $N$ body
+state can be described in terms of the non compact abelian semi group formed
+by the elements 
+\begin{equation}
+\mathcal{\breve{V}}\left( t\right) e^{i\breve{\omega}\left( t\right)
+}\equiv\int\mathcal{V}\left( \mathsf{z,}t\right) \breve{\Omega}_{N}\left( 
+\mathsf{z}\right) d\mathsf{z}e^{i\int\omega\left( \mathsf{z,}t\right) \breve{%
+\Omega}_{N}\left( \mathsf{z}\right) d\mathsf{z}}
+\end{equation}
+acting on a reference state $\left\vert \Psi_{ref}\right\rangle $ 
+\begin{subequations}
+\begin{align}
+\left\vert \Psi\left( t\right) \right\rangle & =\mathcal{\breve{V}}\left(
+t\right) e^{i\breve{\omega}\left( t\right) }\left\vert
+\Psi_{ref}\right\rangle \\
+\mathcal{\breve{V}}\left( t\right) & =\int\mathcal{V}\left( \mathsf{z,}%
+t\right) \breve{\Omega}_{N}\left( \mathsf{z}\right) d\mathsf{z} \\
+\breve{\omega}\left( t\right) & =\int\omega\left( \mathsf{z,}t\right) \breve{%
+\Omega}_{N}\left( \mathsf{z}\right) d\mathsf{z} \\
+\Psi\left( \mathsf{z,}t\right) & =\left\langle \mathsf{z}|\Psi\left(
+t\right) \right\rangle =\left\langle \mathsf{z}|\mathcal{\breve{V}}\left(
+t\right) e^{i\breve{\omega}\left( t\right) }\Psi_{ref}\right\rangle \\
+\Psi\left( \mathsf{z,}t\right) & =\Psi\left( \mathcal{\varkappa}\left( 
+\mathsf{z,}t\right) \right) =\Psi\left( \mathcal{V}\left( \mathsf{z,}%
+t\right) ,\omega\left( \mathsf{z,}t\right) \right) =\mathcal{V}\left( 
+\mathsf{z,}t\right) e^{i\omega\left( \mathsf{z,}t\right) }\Psi_{ref}\left( 
+\mathsf{z}\right)
+\end{align}
+where $\mathcal{\varkappa}\left( \mathsf{z,}t\right) \equiv\left( \mathcal{V}%
+\left( \mathsf{z,}t\right) ,\omega\left( \mathsf{z,}t\right) \right) $.
+
+\subsection{Density Operators}
+
+The density operators associated with these states are 
+\end{subequations}
+\begin{equation}
+D_{\Psi}^{N}\left( t\right) =\frac{\left\vert \Psi\left( t\right)
+\right\rangle \left\langle \Psi\left( t\right) \right\vert }{\left\langle
+\Psi\left( t\right) |\Psi\left( t\right) \right\rangle }
+\end{equation}
+this trajectory of density operators is clearly invariant to complex scaling
+of the vector $\left\vert \Psi\left( t\right) \right\rangle $ i.e. 
+\begin{equation}
+D_{\Psi}^{N}\left( t\right) =\frac{\left\vert \eta\left( t\right) \Psi\left(
+t\right) \right\rangle \left\langle \eta\left( t\right) \Psi\left( t\right)
+\right\vert }{\left\langle \eta\left( t\right) \Psi\left( t\right)
+|\eta\left( t\right) \Psi\left( t\right) \right\rangle }\qquad\forall\eta%
+\left( t\right) \in\mathbb{C}
+\end{equation}
+where $\eta\left( t\right) $ is a purely time dependent $\lceil$i.e. $\frac{%
+\partial\eta\left( t\right) }{_{\partial\mathsf{z}}}=0;\frac {%
+\partial\eta\left( t\right) }{_{\partial t}}\neq0\rfloor$ complex valued
+function. This of course is consistent with the postulates of quantum
+mechanics where the pure states correspond to lines (i.e. one dimensional
+subspaces) in a complex Hilbert space. A pure state then corresponds to an
+equivalence class of vectors that is formed by the vectors that belong to a
+given line. Any vector belonging to that line is a representative of the
+equivalence class and can be said to be a \emph{representative pure state
+vector} which we will shorten to \emph{state vector }where the words
+\textquotedblright representative\textquotedblright\ and \textquotedblright
+pure\textquotedblright\ are to be implicitly understood.\emph{\ }The initial
+and final pure state density operators of a quantum process are only
+uniquely defined in terms of lines belonging to a complex Hilbert space i.e.
+lines generated by initial and final state vectors. Hence a necessary
+component of the action principle that determines quantum trajectories in
+terms of \emph{state vectors} corresponds to a calculus of variation problem
+with initial and final state vectors belonging to lines in a complex Hilbert
+space. The solution of such problems is found by finding stationary
+processes for the fixed endpoint problem between a fixed initial and a fixed
+final point on these lines then fixing the position on these lines by
+applying \emph{tranversality constraints}. However in order to obtain the
+Time Dependent Schr\"{o}dinger Equation (TDSE) it turns out this is not a
+sufficient condition and one must consider stationary process that take
+different lengths of time while proceeding between the initial and final
+state vectors i.e. the time duration of the process is allowed to vary and
+one must select trajectories that are stationary for the fixed end point
+problem, lie on the given initial and final lines belonging to $\mathcal{H}%
+^{N}$ \emph{and are also stationary with respect to the duration of the
+process.}
+
+The action is defined as%
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{i}+\tau }\mathcal{L}%
+\left( \Psi ,\dot{\Psi},t\right) dt
+\end{equation}%
+where 
+\begin{equation}
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right) =\frac{\left\langle \Psi \left(
+t\right) |\left( i\frac{\partial }{\partial t}-H\right) \Psi \left( t\right)
+\right\rangle }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }
+\end{equation}%
+The possible boundary conditions on the action are come from considering:
+
+\begin{description}
+\item[$\bullet $] What are the properties of the paths $\left\vert \Psi
+\right\rangle :\left[ t_{i},t_{i}+\tau \right] \equiv \left[ t_{i},t_{f}%
+\right] \rightarrow \mathcal{H}^{N}$ i.e. are they continuous, bounded ...?
+
+\item[$\bullet $] Are the end points $\left\vert \Psi \left( t_{i}\right)
+\right\rangle =\left\vert \Phi _{1}\right\rangle ;\left\vert \Psi \left(
+t_{f}\right) \right\rangle =\left\vert \Phi _{2}\right\rangle $ fixed,
+constrained to lie in a given manifold of $\mathcal{H}^{N}$ or unconstrained?
+
+\item[$\bullet $] Is the time interval $\tau $ fixed, variable or
+constrained in any manner?
+\end{description}
+
+We resolve these questions in the following manner:
+
+\begin{description}
+\item[$\bullet $] In standard quantum mechanics the paths should be strongly
+continuous i.e. for each $t\in \left[ t_{i},t_{i}+\tau \right] \equiv \bar{%
+\Upsilon}$ and for every $\epsilon $ there exists a $\delta $ such that 
+\begin{equation}
+\left\vert t^{\prime }-t\right\vert <\delta \Rightarrow \left\Vert
+\left\vert \Psi \left( t^{\prime }\right) \right\rangle -\left\vert \Psi
+\left( t\right) \right\rangle \right\Vert <\epsilon
+\end{equation}%
+for all $t^{\prime }\in \left[ t_{i},t_{i}+\tau \right] $, which also
+implies 
+\begin{equation}
+s-\lim_{t_{k}\rightarrow t}\left\vert \Psi \left( t_{k}\right) \right\rangle
+=\left\vert \Psi \left( t\right) \right\rangle
+\end{equation}%
+for all sequences $\left\{ t_{k}\right\} $ converging to $t$.
+
+\item[$\bullet $] The initial point is fixed i.e. 
+\begin{equation}
+\left\vert \Psi \left( t_{i}\right) \right\rangle =\left\vert \Phi
+_{1}\right\rangle
+\end{equation}%
+while the end point is constrained to lie on a fixed ray in $\mathcal{H}^{N}$
+i.e.%
+\begin{equation}
+\left\vert \Psi \left( t_{f}\right) \right\rangle =\eta \left\vert \Phi
+_{2}\right\rangle ;\quad \Phi _{2}\text{ is fixed, }\eta =\rho e^{i\sigma
+}\in \mathbb{C}
+\end{equation}
+
+\item[$\bullet $] The time interval is unconstrained, but finite i.e. $\bar{%
+\Upsilon}$ is compact.
+
+\item The arguments of the action can be partitioned into the independent
+variables 
+\begin{eqnarray}
+\left\vert \Psi \left( t\right) \right\rangle \text{ for }t &\in &\Upsilon
+\equiv \left( t_{i},t_{i}+\tau \right) ;\,\left\vert \Psi \left(
+t_{i}\right) \right\rangle \equiv \left\vert \Phi _{1}\right\rangle ;  \notag
+\\
+\,\left\vert \Psi \left( t_{i}+\tau \right) \right\rangle &\equiv &\eta
+\left\vert \Phi _{2}\right\rangle \text{ and }\tau  \label{part}
+\end{eqnarray}%
+and one obtains that 
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\mathcal{A}\left( \left. \Psi
+\right\vert _{\Upsilon },\Phi _{1},\Phi _{2},\eta ,\tau \right)
+\end{equation}%
+$\lceil $If we want the paths $\left\vert \Psi \left( t\right) \right\rangle 
+$ to be strongly continuous then we must consider spaces of paths, $\mathcal{%
+P}\left( \left\vert \Phi _{1}\right\rangle ,\eta \left\vert \Phi
+_{2}\right\rangle \right) $, that are strongly continuous that have end
+point values $\left\vert \Phi _{1}\right\rangle $ and $\eta \left\vert \Phi
+_{2}\right\rangle $. For a fixed $t\in \Upsilon $ every point in $\mathcal{H}
+$ lies on a path $\left\vert \Psi \left( t\right) \right\rangle $ belonging
+to a fixed $\mathcal{P}\left( \left\vert \Phi _{1}\right\rangle ,\eta
+\left\vert \Phi _{2}\right\rangle \right) $ thus varying over the values, $%
+\left\vert \delta \Psi \left( t\right) \right\rangle $, of every strongly
+continuous increment path, $\left\vert \delta \Psi \right\rangle $ at a
+fixed $t$ is the same as varying over all vectors in $\mathcal{H}$. At the
+end points the only allowable variaotions are 
+\begin{eqnarray}
+\left\vert \delta \Psi \left( t_{i}\right) \right\rangle &=&0  \notag \\
+\left\vert \delta \Psi \left( t_{f}\right) \right\rangle &=&\eta ^{\prime
+}\left\vert \Phi _{2}\right\rangle
+\end{eqnarray}%
+$\rfloor $
+\end{description}
+
+Eq. $\left( \ref{part}\right) $ leads to the following expression for the
+first order variation%
+\begin{align}
+\delta ^{\left( 1\right) }\mathcal{A}& =\int \frac{\delta \mathcal{A}\left(
+\Psi ,\tau \right) }{\delta \left. \Psi \right\vert _{\Upsilon }\left( 
+\mathsf{z}\right) }\delta \Psi \left( t^{\prime },\mathsf{z}\right) d\mathsf{%
+z}dt^{\prime }+\int \frac{\delta \mathcal{A}\left( \Psi ,\tau \right) }{%
+\delta \Psi _{i}\left( \mathsf{z}\right) }\delta \Psi _{i}\left( \mathsf{z}%
+\right) d\mathsf{z}  \notag \\
+& \qquad \qquad \qquad +\int \frac{\delta \mathcal{A}\left( \Psi ,\tau
+\right) }{\delta \Psi _{f}\left( \mathsf{z}\right) }\delta \Psi _{f}\left( 
+\mathsf{z}\right) d\mathsf{z}+\frac{\partial \mathcal{A}\left( \Psi ,\tau
+\right) }{\partial \tau }\delta \tau  \label{DA}
+\end{align}%
+The condition for \emph{complete }stationary action is then 
+\begin{equation}
+\frac{\delta \mathcal{A}\left( \Psi ,\tau \right) }{\delta \left. \Psi
+\right\vert _{\Upsilon }\left( \mathsf{z}\right) }=0;\frac{\delta \mathcal{A}%
+\left( \Psi ,\tau \right) }{\delta \Psi _{i}\left( \mathsf{z}\right) }=0;%
+\frac{\delta \mathcal{A}\left( \Psi ,\tau \right) }{\delta \Psi _{f}\left( 
+\mathsf{z}\right) }=0;\frac{\partial \mathcal{A}\left( \Psi ,\tau \right) }{%
+\partial t}=0
+\end{equation}%
+$\lceil $Note that 
+\begin{equation}
+\frac{\partial \mathcal{A}}{\partial \tau }=\frac{\partial \mathcal{A}}{%
+\partial t}
+\end{equation}%
+$\rfloor $. The first two conditions can be replaced by $\frac{\delta 
+\mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta \Psi \left( 
+\mathsf{z}\right) }=0$ as described below.
+
+One can also observe that the total rate of change of the complete action is 
+\begin{equation}
+\frac{d\mathcal{A}}{dt}=\int \frac{\delta \mathcal{A}\left( \Psi ,\tau
+\right) }{\delta \left. \Psi \right\vert _{\Upsilon }\left( \mathsf{z}%
+\right) }\delta \Psi \left( t,\mathsf{z}\right) d\mathsf{z}+\frac{\partial 
+\mathcal{A}\left( \Psi ,\tau \right) }{\partial t}
+\end{equation}
+
+\subsection{Variational Derivative}
+
+In terms of the Lagragian the complete first order variation is 
+\begin{equation}
+\delta ^{\left( 1\right) }\mathcal{A}=\int_{t_{i}}^{t_{i}+\tau }\left\{ 
+\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta \Psi
+\left( \mathsf{z}\right) }\delta \Psi \left( t,\mathsf{z}\right) +\frac{%
+\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta \dot{\Psi}\left( 
+\mathsf{z}\right) }\delta \dot{\Psi}\left( t,\mathsf{z}\right) \right\} d%
+\mathsf{z}dt+\frac{\partial \mathcal{A}\left( \Psi ,\tau \right) }{\partial
+\tau }\delta \tau
+\end{equation}%
+giving 
+\begin{align}
+\delta ^{\left( 1\right) }\mathcal{A}& =\int_{t_{i}}^{t_{i}+\tau }\left\{ 
+\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},\tau \right) }{\delta \Psi
+\left( \mathsf{z}\right) }-\frac{d}{dt}\frac{\delta \mathcal{L}\left( \Psi ,%
+\dot{\Psi},\tau \right) }{\delta \dot{\Psi}\left( \mathsf{z}\right) }%
+\right\} \delta \Psi \left( \mathsf{z}\right) d\mathsf{z}dt  \notag \\
+& +\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t_{i}+\tau \right) }{%
+\delta \dot{\Psi}\left( \mathsf{z}\right) }\delta \Psi _{f}\left( \mathsf{z}%
+\right) -\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t_{i}\right) }{%
+\delta \dot{\Psi}\left( \mathsf{z}\right) }\delta \Psi _{i}\left( \mathsf{z}%
+\right)  \notag \\
+& \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad +\frac{%
+\partial \mathcal{A}\left( \Psi ,\tau \right) }{\partial \tau }\delta \tau
+\end{align}%
+and hence 
+\begin{align}
+\delta ^{\left( 1\right) }\mathcal{A}& =\int_{t_{i}}^{t_{i}+\tau }\frac{%
+\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta \Psi
+\left( \mathsf{z}\right) }\delta \Psi \left( \mathsf{z}\right) d\mathsf{z}dt
+\notag \\
+& +\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t_{i}+\tau \right) }{%
+\delta \dot{\Psi}\left( \mathsf{z}\right) }\delta \Psi _{f}\left( \mathsf{z}%
+\right) -\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t_{i}\right) }{%
+\delta \dot{\Psi}\left( \mathsf{z}\right) }\delta \Psi _{i}\left( \mathsf{z}%
+\right)  \notag \\
+& \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad +\frac{%
+\partial \mathcal{A}\left( \Psi ,\tau \right) }{\partial \tau }\delta \tau
+\end{align}%
+where the \textit{variational derivative }is defined as 
+\begin{equation}
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi \left( \mathsf{z}\right) }=\frac{\delta \mathcal{L}\left( \Psi ,\dot{%
+\Psi},t\right) }{\delta \Psi \left( \mathsf{z}\right) }-\frac{d}{dt}\left\{ 
+\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta \dot{\Psi}%
+\left( \mathsf{z}\right) }\right\}
+\end{equation}
+
+\subsection{Fixed End Point Problem}
+
+We first then consider the fixed end point problem. A stationary time
+evolution of a state vector is determined by the fixed end point equation of
+motion obtained when the variational derivative $\frac{\delta \mathcal{\dot{A%
+}}\left( \Psi \left( t\right) \right) }{\delta \Psi \left( \mathsf{z}\right) 
+}$ is set equal to zero 
+\begin{equation}
+\frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right) \right) }{\delta
+\Psi \left( \mathsf{z}\right) }=\frac{\delta \mathcal{L}\left( \Psi ,\dot{%
+\Psi},t\right) }{\delta \Psi \left( \mathsf{z}\right) }-\frac{d}{dt}\left\{ 
+\frac{\delta \mathcal{L}\left( \Psi ,\dot{\Psi},t\right) }{\delta \dot{\Psi}%
+\left( \mathsf{z}\right) }\right\} =0  \label{eom1}
+\end{equation}%
+which is obtained from the stationarity condition plus the boundary
+condition of fixed end points 
+\begin{align}
+\delta ^{\left( 1\right) }\mathcal{A}\left( \Psi ,\tau \right) &
+=\int_{t_{i}}^{t_{f}}\delta ^{\left( 1\right) }\mathcal{\dot{A}}\left( \Psi
+\left( t\right) \right) dt=\int_{t_{i}}^{t_{f}}\delta ^{\left( 1\right) }%
+\mathcal{L}\left( \Psi ,\dot{\Psi},t\right) dt=0  \notag \\
+& \left. {}\right. \qquad \qquad \qquad \qquad \forall \delta \Psi \left(
+t\right) ;\quad \delta \Psi \left( t_{f}\right) =\delta \Psi \left(
+t_{i}\right) =0
+\end{align}%
+for the action%
+\begin{equation}
+\mathcal{A}\left( \Psi ,\tau \right) =\int_{t_{i}}^{t_{f}}\mathcal{\dot{A}}%
+\left( \Psi \left( t\right) \right) dt=\int_{t_{i}}^{t_{f}}\mathcal{L}\left(
+\Psi ,\dot{\Psi},t\right) dt
+\end{equation}%
+where 
+\begin{equation}
+\delta ^{\left( 1\right) }\mathcal{\dot{A}}\left( \Psi \left( t\right)
+\right) =\int \frac{\delta \mathcal{\dot{A}}\left( \Psi \left( t\right)
+\right) }{\delta \Psi \left( \mathsf{z}\right) }\delta \Psi \left( \mathsf{z,%
+}t\right) d\mathsf{z}=\left\langle \left. \left[ \frac{\delta \mathcal{\dot{A%
+}}\left( \Psi \left( t\right) \right) }{\delta \Psi }\right] ^{\ast
+}\right\vert \delta \Psi \left( t\right) \right\rangle
+\end{equation}%
+$\lceil $In group parameterized form eq. $\left( \ref{eom1}\right) $ is 
+\begin{equation}
+\frac{\delta \mathcal{\dot{A}}\left( \varkappa \left( t\right) \right) }{%
+\delta \varkappa \left( \mathsf{z}\right) }=\frac{\delta \mathcal{L}\left( 
+\mathcal{\varkappa },\mathcal{\dot{\varkappa}},t\right) }{\delta \mathcal{%
+\varkappa }\left( \mathsf{z}\right) }-\frac{d}{dt}\left\{ \frac{\delta 
+\mathcal{L}\left( \mathcal{\varkappa },\mathcal{\dot{\varkappa}},t\right) }{%
+\delta \mathcal{\dot{\varkappa}}\left( \mathsf{z}\right) }\right\} =0
+\label{eom2}
+\end{equation}%
+$\rfloor $
+
+\subsection{Lagrangian}
+
+We consider a Lagrangian $\mathcal{L}$ given by 
+\begin{align}
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) & =i%
+\frac{\left\langle \Psi\left( t\right) |\dot{\Psi}\left( t\right)
+\right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }-\frac{\left\langle \Psi\left( t\right) |H\Psi\left( t\right)
+\right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }  \notag \\
+& =\frac{\left\langle \Psi\left( t\right) |\left( i\frac{\partial}{\partial t%
+}-H\right) \Psi\left( t\right) \right\rangle }{\left\langle \Psi\left(
+t\right) |\Psi\left( t\right) \right\rangle }  \notag \\
+& =\frac{\int\left\{ i\Psi^{\ast}\left( \mathsf{z,}t\right) \dot{\Psi }%
+\left( \mathsf{z,}t\right) -\Psi^{\ast}\left( \mathsf{z,}t\right) \left[
+H\Psi\right] \left( \mathsf{z,}t\right) \right\} }{\left\langle \Psi\left(
+t\right) |\Psi\left( t\right) \right\rangle }d\mathsf{z}  \label{Lar}
+\end{align}
+Note that there is a many to one relationship between Lagrangians and a EOM.
+A class (but not all) of Lagrangians that produce the same equation of
+motion can be obtained from 
+\begin{equation}
+\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right)
+=\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) +%
+\frac{dF\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{dt}
+\label{LF}
+\end{equation}
+as then 
+\begin{align}
+& \mathcal{A}_{F}\left( \Psi,\tau\right) =  \notag \\
+& \qquad\qquad\qquad\int_{t_{i}}^{t_{f}}\mathcal{L}_{F}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) dt=\int_{t_{i}}^{t_{f}}\mathcal{L%
+}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) dt  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+F\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) -F\left( \Psi\left(
+t_{i}\right) ,\dot{\Psi}\left( t_{i}\right) \right)
+\end{align}
+and 
+\begin{equation}
+\delta^{\left( 1\right) }\mathcal{A}_{F}\left( \Psi,\tau\right)
+=\int_{t_{i}}^{t_{f}}\delta^{\left( 1\right) }\mathcal{L}\left( \Psi ,\dot{%
+\Psi},t\right) dt=\int_{t_{i}}^{t_{f}}\delta^{\left( 1\right) }\mathcal{\dot{%
+A}}\left( \Psi\left( t\right) \right) dt=\delta^{\left( 1\right) }\mathcal{A}%
+\left( \Psi,\tau\right)
+\end{equation}
+since $F\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left( t_{f}\right)
+\right) $ and $F\left( \Psi\left( t_{i}\right) ,\dot{\Psi}\left(
+t_{i}\right) \right) $ are constant as the end points are fixed.
+
+We can define $F$ as 
+\begin{equation}
+F\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) =-\frac{i}{2}%
+\ln\left\{ \frac{\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }{\left\langle \Psi\left( t_{i}\right) |\Psi\left(
+t_{i}\right) \right\rangle }\right\} =-\frac{i}{2}\int_{t_{i}}^{t}\frac {%
+d\ln\left\langle \Psi\left( t^{\prime}\right) |\Psi\left( t^{\prime }\right)
+\right\rangle }{dt^{\prime}}dt^{\prime}
+\end{equation}
+and thus obtain the modified action 
+\begin{equation}
+\mathcal{A}_{F}\left( \Psi,\tau\right) =\int_{t_{i}}^{t_{f}}\mathcal{L}%
+_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) dt=%
+\mathcal{A}\left( \Psi,\tau\right) -\frac{i}{2}\ln\left\{ \frac {%
+\left\langle \Psi\left( t_{f}\right) |\Psi\left( t_{f}\right) \right\rangle 
+}{\left\langle \Psi\left( t_{i}\right) |\Psi\left( t_{i}\right)
+\right\rangle }\right\}  \label{AF}
+\end{equation}
+where 
+\begin{align}
+& \mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) =\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) -\frac{i}{2}\frac{d\ln\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }{dt}  \notag \\
+& \left. {}\right. =i\frac{\left\langle \Psi\left( t\right) |\dot{\Psi }%
+\left( t\right) \right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }-\frac{\left\langle \Psi\left( t\right) |H\Psi\left(
+t\right) \right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }-\frac{i}{2}\left\{ \frac{\left\langle \Psi\left(
+t\right) |\dot{\Psi}\left( t\right) \right\rangle +\left\langle \dot{\Psi}%
+\left( t\right) |\Psi\left( t\right) \right\rangle }{\left\langle \Psi\left(
+t\right) |\Psi\left( t\right) \right\rangle }\right\}  \notag \\
+& \left. {}\right. \qquad\qquad\qquad\qquad=\frac{i}{2}\frac{\left\{
+\left\langle \Psi\left( t\right) |\dot{\Psi}\left( t\right) \right\rangle
+-\left\langle \dot{\Psi}\left( t\right) |\Psi\left( t\right) \right\rangle
+\right\} }{\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }-\frac{\left\langle \Psi\left( t\right) |H\Psi\left( t\right)
+\right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }  \label{LF1}
+\end{align}
+One can further develop eq. $\left( \ref{LF1}\right) $ to obtain 
+\begin{equation}
+\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right)
+=-\left\{ \frac{\func{Im}\left\langle \Psi\left( t\right) |\dot{\Psi}\left(
+t\right) \right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }+\frac{\left\langle \Psi\left( t\right) |H\Psi\left(
+t\right) \right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }\right\} =\func{Re}\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right)
+\end{equation}
+and thus observe that 
+\begin{equation}
+\mathcal{A}_{F}\left( \Psi,\tau\right) =\int_{t_{i}}^{t_{f}}\func{Re}%
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) dt=%
+\func{Re}\mathcal{A}\left( \Psi,\tau\right)
+\end{equation}
+and deduce that 
+\begin{equation}
+\func{Im}\mathcal{A}\left( \Psi,\tau\right) =\frac{1}{2}\ln\left\{ \frac{%
+\left\langle \Psi\left( t_{f}\right) |\Psi\left( t_{f}\right) \right\rangle 
+}{\left\langle \Psi\left( t_{i}\right) |\Psi\left( t_{i}\right)
+\right\rangle }\right\}
+\end{equation}
+Obviously 
+\begin{equation}
+\delta^{\left( 1\right) }\mathcal{A}_{F}\left( \Psi,\tau\right)
+=0\Longleftrightarrow\delta^{\left( 1\right) }\mathcal{A}\left( \Psi
+,\tau\right) =0
+\end{equation}
+since the extra terms in eq. $\left( \ref{AF}\right) $ are constant as the
+paths have fixed end points. Thus $\left| \Psi_{s}\right\rangle $ is a
+stationary point of $\mathcal{A}\left( \Psi,\tau\right) $ iff it is a
+stationary point of $\mathcal{A}_{F}\left( \Psi,\tau\right) $ if the
+constraint of fixed endpoints is invoked. We can summarize these
+relationships by 
+\begin{align}
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) & =%
+\func{Re}\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi }\left( t\right)
+\right) +i\func{Im}\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right)  \notag \\
+& =-\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ \func{Im}%
+\left\langle \Psi\left( t\right) |\dot{\Psi}\left( t\right) \right\rangle
++\left\langle \Psi\left( t\right) |H\Psi\left( t\right) \right\rangle
+\right\} +\frac{i}{2}\frac{d\ln\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }{dt}  \notag \\
+& =\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) +\frac{i}{2}\frac{d\ln\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }{dt}
+\end{align}
+and 
+\begin{align}
+\mathcal{A}\left( \Psi,\tau\right) & =\func{Re}\mathcal{A}\left(
+\Psi,\tau\right) +i\func{Im}\mathcal{A}\left( \Psi,\tau\right)
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  \notag \\
+& =\int_{t_{i}}^{t_{f}}\func{Re}\mathcal{L}\left( \Psi\left( t\right) ,\dot{%
+\Psi}\left( t\right) \right) dt+\frac{i}{2}\ln\left\{ \frac{\left\langle
+\Psi\left( t_{f}\right) |\Psi\left( t_{f}\right) \right\rangle }{%
+\left\langle \Psi\left( t_{i}\right) |\Psi\left( t_{i}\right) \right\rangle }%
+\right\}  \notag \\
+& =\mathcal{A}_{F}\left( \Psi,\tau\right) +\frac{i}{2}\ln\left\{ \frac{%
+\left\langle \Psi\left( t_{f}\right) |\Psi\left( t_{f}\right) \right\rangle 
+}{\left\langle \Psi\left( t_{i}\right) |\Psi\left( t_{i}\right)
+\right\rangle }\right\}
+\end{align}
+
+\subsection{Computation of Variational Derivatives}
+
+In order to calculate the variational derivative of $\mathcal{A}\left(
+\Psi,\tau\right) $ we first tabulate the following definitions and
+derivatives 
+\begin{align}
+\mathcal{T}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) &
+=i\left\langle \Psi\left( t\right) |\dot{\Psi}\left( t\right) \right\rangle 
+\notag \\
+\mathcal{T}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right)
+& =\frac{i}{2}\left\{ \left\langle \Psi\left( t\right) |\dot {\Psi}\left(
+t\right) \right\rangle -\left\langle \dot{\Psi}\left( t\right) |\Psi\left(
+t\right) \right\rangle \right\}  \notag \\
+\mathcal{H}\left( \Psi\left( t\right) \right) & =\left\langle \Psi\left(
+t\right) |H\Psi\left( t\right) \right\rangle  \notag \\
+\mathcal{N}\left( \Psi\left( t\right) \right) & =\left\langle \Psi\left(
+t\right) |\Psi\left( t\right) \right\rangle  \notag \\
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) & =%
+\frac{\mathcal{T}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) -\mathcal{H}\left( \Psi\left( t\right) \right) }{\mathcal{N}\left(
+\Psi\left( t\right) \right) }  \notag \\
+\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right)
+& =\frac{\mathcal{T}_{F}\left( \Psi\left( t\right) ,\dot{\Psi }\left(
+t\right) \right) -\mathcal{H}\left( \Psi\left( t\right) \right) }{\mathcal{N}%
+\left( \Psi\left( t\right) \right) }
+\end{align}
+which give the following derivatives 
+\begin{align}
+\frac{\delta\mathcal{N}\left( \Psi\left( t\right) \right) }{\delta
+\Psi\left( \mathsf{z}\right) } & =\Psi^{\ast}\left( \mathsf{z,}t\right) 
+\notag \\
+& \equiv\frac{\delta\mathcal{N}\left( \Psi\left( t\right) \right) }{%
+\delta\left| \Psi\right\rangle }=\left\langle \Psi\left( t\right) \right| \\
+\frac{\delta\mathcal{T}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) } & =-\frac{i}{2}\dot{%
+\Psi}^{\ast}\left( \mathsf{z,}t\right)  \notag \\
+& \equiv\frac{\delta\mathcal{T}_{F}\left( \Psi\left( t\right) ,\dot{\Psi }%
+\left( t\right) \right) }{\delta\left| \Psi\right\rangle }=-\frac{i}{2}%
+\left\langle \dot{\Psi}\left( t\right) \right| \\
+\frac{\delta\mathcal{T}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) }{\delta\dot{\Psi}\left( \mathsf{z}\right) } & =\frac {i}{2}%
+\Psi^{\ast}\left( \mathsf{z,}t\right)  \notag \\
+& \equiv\frac{i}{2}\left\langle \Psi\left( t\right) \right| \\
+\frac{\delta\mathcal{H}\left( \Psi\left( t\right) \right) }{\delta
+\Psi\left( \mathsf{z}\right) } & =\int\Psi^{\ast}\left( \mathsf{z}^{\prime}%
+\mathsf{,}t\right) H\left( \mathsf{z}^{\prime},\mathsf{z}\right) d\mathsf{z}%
+^{\prime}\equiv\left\langle H\Psi\left( t\right) |\mathsf{z}\right\rangle =%
+\left[ H\Psi\right] ^{\ast}\left( \mathsf{z,}t\right)  \notag \\
+& \equiv\frac{\delta\mathcal{H}\left( \Psi\left( t\right) \right) }{%
+\delta\left| \Psi\right\rangle }=\left\langle H\Psi\left( t\right) \right|
+=\left\langle \Psi\left( t\right) \right| H \\
+\frac{\delta\mathcal{T}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) }{\delta\Psi\left( \mathsf{z}\right) } & =0  \notag \\
+& \equiv\frac{\delta\mathcal{T}\left( \Psi\left( t\right) ,\dot{\Psi }\left(
+t\right) \right) }{\delta\left| \Psi\right\rangle } \\
+\frac{\delta\mathcal{T}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) }{\delta\dot{\Psi}\left( \mathsf{z}\right) } & =i\Psi^{\ast}\left( 
+\mathsf{z,}t\right)  \notag \\
+& \equiv i\left\langle \Psi\left( t\right) \right|
+\end{align}
+Initially consider the first term of eq.$\left( \ref{eom1}\right) $ using
+the Lagrangian eq. $\left( \ref{Lar}\right) $ and obtain 
+\begin{align}
+& \frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) }=  \notag \\
+& \qquad\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ 
+\frac{\delta\left\{ \mathcal{T}\left( \Psi\left( t\right) ,\dot{\Psi }\left(
+t\right) \right) \mathcal{-H}\left( \Psi\left( t\right) \right) \right\} }{%
+\delta\Psi\left( \mathsf{z}\right) }-\mathcal{L}\left( \Psi\left( t\right) ,%
+\dot{\Psi}\left( t\right) \right) \frac {\delta\mathcal{N}\left( \Psi\left(
+t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) }\right\}
+\end{align}
+where%
+\begin{align}
+\frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) }{\delta\dot{\Psi}\left( \mathsf{z}\right) } & =\frac{%
+i\Psi^{\ast}\left( \mathsf{z,}t\right) }{2\mathcal{N}\left( \Psi\left(
+t\right) \right) }  \notag \\
+& \equiv\frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi }%
+\left( t\right) \right) }{\delta\left| \dot{\Psi}\right\rangle }=\frac {i}{2%
+\mathcal{N}\left( \Psi\left( t\right) \right) }\left\langle \Psi\left(
+t\right) \right| \\
+\frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) }{\delta\dot{\Psi}\left( \mathsf{z}\right) } & =i\frac{%
+\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left( \Psi\left(
+t\right) \right) }  \notag \\
+& \equiv\frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi }\left(
+t\right) \right) }{\delta\left| \dot{\Psi}\right\rangle }=\frac {i}{\mathcal{%
+N}\left( \Psi\left( t\right) \right) }\left\langle \Psi\left( t\right)
+\right| \\
+\frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) } & =-\frac {1}{%
+\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ \frac{i}{2}\dot{\Psi}%
+\left( \mathsf{z,}t\right) ^{\ast}+\left[ H\Psi\right] ^{\ast}\left( \mathsf{%
+z,}t\right) +\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) \Psi^{\ast}\left( \mathsf{z,}t\right) \right\}  \notag \\
+\left. \equiv\right. \frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,%
+\dot{\Psi}\left( t\right) \right) }{\delta\left| \Psi \right\rangle } & =-%
+\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ \frac{i}{2}%
+\left\langle \dot{\Psi}\right| +\left\langle \Psi\right| H+\mathcal{L}%
+_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right)
+\left\langle \Psi\right| \right\} \\
+\frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) }{\delta\Psi\left( \mathsf{z}\right) } & =-\frac {1}{\mathcal{N}%
+\left( \Psi\left( t\right) \right) }\left\{ \left[ H\Psi\right]
+^{\ast}\left( \mathsf{z,}t\right) +\mathcal{L}\left( \Psi\left( t\right) ,%
+\dot{\Psi}\left( t\right) \right) \Psi^{\ast}\left( \mathsf{z,}t\right)
+\right\}  \notag \\
+& \equiv\frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi }\left(
+t\right) \right) }{\delta\left| \Psi\right\rangle }=-\frac {1}{\mathcal{N}%
+\left( \Psi\left( t\right) \right) }\left\langle \Psi\right| \left\{ H+%
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi }\left( t\right) \right)
+I\right\}
+\end{align}
+In order to calculate $\frac{\delta\mathcal{\dot{A}}\left( \Psi\left(
+t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) }$ we need only to
+observe that 
+\begin{equation}
+\frac{d}{dt}\left\{ \frac{\delta\mathcal{L}\left( \Psi,\dot{\Psi},t\right) }{%
+\delta\dot{\Psi}\left( \mathsf{z}\right) }\right\} =\frac{i}{\mathcal{N}%
+\left( \Psi\left( t\right) \right) }\left\{ \dot{\Psi}^{\ast }\left( \mathsf{%
+z,}t\right) -\frac{\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left(
+\Psi\left( t\right) \right) }\frac{d\mathcal{N}\left( \Psi\left( t\right)
+\right) }{dt}\right\}
+\end{equation}
+which is \ equivalent to 
+\begin{equation}
+\frac{d}{dt}\left\{ \frac{\delta\mathcal{L}\left( \Psi,\dot{\Psi},t\right) }{%
+\delta\left| \dot{\Psi}\right\rangle }\right\} =\frac{i}{\mathcal{N}\left(
+\Psi\left( t\right) \right) }\left\{ \left\langle \dot{\Psi }\right| -\frac{%
+\left\langle \Psi\right| }{\mathcal{N}\left( \Psi\left( t\right) \right) }%
+\frac{d\mathcal{N}\left( \Psi\left( t\right) \right) }{dt}\right\}
+\end{equation}
+which produces 
+\begin{align}
+& \frac{\delta\mathcal{\dot{A}}\left( \Psi\left( t\right) \right) }{%
+\delta\Psi\left( \mathsf{z}\right) }=  \notag \\
+& \frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ \frac{%
+\delta\mathcal{T}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) }{\delta\Psi\left( \mathsf{z}\right) }-\left[ H\Psi\right]
+^{\ast}\left( \mathsf{z,}t\right) -\mathcal{L}\left( \Psi\left( t\right) ,%
+\dot{\Psi}\left( t\right) \right) \Psi^{\ast}\left( \mathsf{z,}t\right)
+\right\}  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \qquad-%
+\frac{d}{dt}\left\{ \frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{%
+\Psi}\left( t\right) \right) }{\delta\dot{\Psi}\left( \mathsf{z}\right) }%
+\right\}  \notag \\
+&  \notag \\
+& =-\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ \left[
+H\Psi\right] ^{\ast}\left( \mathsf{z,}t\right) +\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) \Psi^{\ast}\left( \mathsf{z,}%
+t\right) \right\}  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad-\frac{i}{\mathcal{N}\left(
+\Psi\left( t\right) \right) }\left\{ \dot{\Psi}^{\ast}\left( \mathsf{z,}%
+t\right) -\frac{\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left(
+\Psi\left( t\right) \right) }\frac{d\mathcal{N}\left( \Psi\left( t\right)
+\right) }{dt}\right\}  \notag \\
+&  \notag \\
+& =-\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ i\dot{%
+\Psi}^{\ast}\left( \mathsf{z,}t\right) \right. +\left[ H\Psi\right]
+^{\ast}\left( \mathsf{z,}t\right)  \notag \\
+& \qquad\left. +\left\{ \frac{i\left\langle \Psi\left( t\right) |\dot {\Psi}%
+\left( t\right) \right\rangle -\left\langle \Psi\left( t\right) |H\Psi\left(
+t\right) \right\rangle -i\left\langle \Psi\left( t\right) |\dot{\Psi}\left(
+t\right) \right\rangle -i\left\langle \dot{\Psi}\left( t\right) |\Psi\left(
+t\right) \right\rangle }{\mathcal{N}\left( \Psi\left( t\right) \right) }%
+\right\} \Psi^{\ast}\left( \mathsf{z,}t\right) \right\}  \notag \\
+&  \notag \\
+& =-\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ i\dot{%
+\Psi}^{\ast}\left( \mathsf{z,}t\right) +\left[ H\Psi\right] ^{\ast }\left( 
+\mathsf{z,}t\right) -\frac{\left\{ i\left\langle \dot{\Psi}\left( t\right)
+|\Psi\left( t\right) \right\rangle +\left\langle \Psi\left( t\right)
+|H\Psi\left( t\right) \right\rangle \Psi^{\ast}\left( \mathsf{z,}t\right)
+\right\} }{\mathcal{N}\left( \Psi\left( t\right) \right) }\right\}  \notag \\
+& =-\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ i\frac{%
+\partial\Psi^{\ast}\left( \mathsf{z,}t\right) }{\partial t}+\int H\left( 
+\mathsf{z,z}^{\prime}\right) ^{\ast}\Psi^{\ast}\left( \mathsf{z}^{\prime}%
+\mathsf{,}t\right) d\mathsf{z}^{\prime}-\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) ^{\ast}\Psi^{\ast }\left( 
+\mathsf{z,}t\right) \right\}
+\end{align}
+which is equivalent to 
+\begin{equation}
+\frame{$\frac{\delta\mathcal{\dot{A}}\left( \Psi\left( t\right) \right) }{%
+\delta\left| \Psi\right\rangle }$=-$\frac{1}{\mathcal{N}\left( \Psi\left(
+t\right) \right) }\left\{ i\left\langle \dot{\Psi}\right| +\left\langle
+H\Psi\right| +\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) ^\ast\left\langle \Psi\right| \right\} $}
+\end{equation}
+In order to evaluate the variational derivative $\frac{\delta\mathcal{\dot{A}%
+}_{F}\left( \Psi\left( t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) 
+} $ we first consider 
+\begin{align}
+& \frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) }  \notag \\
+& \qquad\left. =\right. -\frac{1}{\mathcal{N}\left( \Psi\left( t\right)
+\right) }\left\{ \frac{i}{2}\dot{\Psi}^{\ast}\left( \mathsf{z,}t\right) +%
+\left[ H\Psi\right] ^{\ast}\left( \mathsf{z,}t\right) +\mathcal{L}_{F}\left(
+\Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) \Psi^{\ast}\left( 
+\mathsf{z,}t\right) \right\}  \label{a} \\
+& \equiv\frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi }%
+\left( t\right) \right) }{\delta\left| \Psi\right\rangle }  \notag \\
+& \qquad\left. =\right. -\frac{1}{\mathcal{N}\left( \Psi\left( t\right)
+\right) }\left\{ \frac{i}{2}\left\langle \dot{\Psi}\left( t\right) \right|
++\left\langle H\Psi\left( t\right) \right| +\mathcal{L}_{F}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) \left\langle \Psi\left( t\right)
+\right| \right\}
+\end{align}
+The we consider the second term of eq.$\left( \ref{eom1}\right) $ and
+observe that 
+\begin{align}
+& \frac{d}{dt}\left\{ \frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,%
+\dot{\Psi}\left( t\right) \right) }{\delta\dot{\Psi}\left( \mathsf{z}\right) 
+}\right\} =\frac{i}{2}\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) 
+}\left\{ \dot{\Psi}^{\ast}\left( \mathsf{z,}t\right) -\frac{%
+\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left( \Psi\left(
+t\right) \right) }\frac{d\mathcal{N}\left( \Psi\left( t\right) \right) }{dt}%
+\right\}  \label{b} \\
+& \equiv\frac{d}{dt}\left\{ \frac{\delta\mathcal{L}_{F}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\left| \dot{\Psi }%
+\right\rangle }\right\} =\frac{i}{2}\frac{1}{\mathcal{N}\left( \Psi\left(
+t\right) \right) }\left\{ \left\langle \Psi\left( t\right) \right| -\frac{%
+\left\langle \Psi\left( t\right) \right| }{\mathcal{N}\left( \Psi\left(
+t\right) \right) }\frac{d\mathcal{N}\left( \Psi\left( t\right) \right) }{dt}%
+\right\}
+\end{align}
+combining eqs. $\left( \ref{a}\right) $ and $\left( \ref{b}\right) $ we
+produce 
+\begin{align}
+& \frac{\delta\mathcal{\dot{A}}_{F}\left( \Psi\left( t\right) \right) }{%
+\delta\Psi\left( \mathsf{z}\right) }=  \notag \\
+& -\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }\left\{ \frac{%
+\delta\mathcal{T}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) }{\delta\Psi\left( \mathsf{z}\right) }+\left[ H\Psi\right]
+^{\ast}\left( \mathsf{z,}t\right) +\mathcal{L}_{F}\left( \Psi\left( t\right)
+,\dot{\Psi}\left( t\right) \right) \Psi^{\ast}\left( \mathsf{z,}t\right)
+\right\}  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad-\frac {d%
+}{dt}\left\{ \frac{\delta\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi%
+}\left( t\right) \right) }{\delta\dot{\Psi}\left( \mathsf{z}\right) }\right\}
+\notag \\
+& \left. =\right. -\frac{1}{\mathcal{N}\left( \Psi\left( t\right) \right) }%
+\left\{ \frac{i}{2}\dot{\Psi}^{\ast}\left( \mathsf{z,}t\right) +\left[ H\Psi%
+\right] ^{\ast}\left( \mathsf{z,}t\right) +\mathcal{L}_{F}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) \Psi^{\ast}\left( \mathsf{z,}%
+t\right) \right\}  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad-\frac{i}{2}\frac{1}{\mathcal{N}\left(
+\Psi\left( t\right) \right) }\left\{ \dot{\Psi}^{\ast}\left( \mathsf{z,}%
+t\right) -\frac{\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left(
+\Psi\left( t\right) \right) }\frac{d\mathcal{N}\left( \Psi\left( t\right)
+\right) }{dt}\right\}
+\end{align}
+After noting that 
+\begin{align}
+& \frac{\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) \Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left( \Psi\left(
+t\right) \right) }  \notag \\
+& \left. =\right. \frac{i}{2}\frac{\left\{ \left\langle \Psi\left( t\right) |%
+\dot{\Psi}\left( t\right) \right\rangle -\left\langle \dot{\Psi }\left(
+t\right) |\Psi\left( t\right) \right\rangle \right\} \Psi^{\ast }\left( 
+\mathsf{z,}t\right) }{\mathcal{N}\left( \Psi\left( t\right) \right) ^{2}}-%
+\frac{\left\langle \Psi\left( t\right) |H\Psi\left( t\right) \right\rangle
+\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left( \Psi\left(
+t\right) \right) ^{2}}
+\end{align}
+and 
+\begin{equation}
+\frac{i}{2}\frac{\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left(
+\Psi\left( t\right) \right) }\frac{d\mathcal{N}\left( \Psi\left( t\right)
+\right) }{dt}=\frac{i}{2}\frac{\left\{ \left\langle \Psi\left( t\right) |%
+\dot{\Psi}\left( t\right) \right\rangle +\left\langle \dot{\Psi }\left(
+t\right) |\Psi\left( t\right) \right\rangle \right\} \Psi^{\ast }\left( 
+\mathsf{z,}t\right) }{\mathcal{N}\left( \Psi\left( t\right) \right) ^{2}}
+\end{equation}
+we obtain that 
+\begin{align}
+& -\frac{\mathcal{L}_{F}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) \Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left(
+\Psi\left( t\right) \right) }+\frac{i}{2}\frac{\Psi^{\ast}\left( \mathsf{z,}%
+t\right) }{\mathcal{N}\left( \Psi\left( t\right) \right) ^{2}}\frac{d%
+\mathcal{N}\left( \Psi\left( t\right) \right) }{dt}  \notag \\
+& \qquad\qquad\left. =\right. \frac{1}{\mathcal{N}\left( \Psi\left( t\right)
+\right) }\left\{ \frac{i\left\langle \dot{\Psi}\left( t\right) |\Psi\left(
+t\right) \right\rangle }{\mathcal{N}\left( \Psi\left( t\right) \right) }+%
+\frac{\left\langle \Psi\left( t\right) |H\Psi\left( t\right) \right\rangle }{%
+\mathcal{N}\left( \Psi\left( t\right) \right) }\right\} \Psi^{\ast}\left( 
+\mathsf{z,}t\right)  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\quad\qquad\qquad\qquad\qquad\left. =\right.
+-\frac{\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) ^{\ast}\Psi^{\ast}\left( \mathsf{z,}t\right) }{\mathcal{N}\left(
+\Psi\left( t\right) \right) }
+\end{align}
+and collecting all terms together we get the following expression for the
+variational derivatives of $\mathcal{A}_{F}$ 
+\begin{equation}
+\frac{\delta\mathcal{\dot{A}}_{F}\left( \Psi\left( t\right) \right) }{%
+\delta\Psi\left( \mathsf{z}\right) }=-\frac{1}{\mathcal{N}\left( \Psi\left(
+t\right) \right) }\left\{ i\dot{\Psi}^{\ast}\left( \mathsf{z,}t\right) +%
+\left[ H\Psi\right] ^{\ast}\left( \mathsf{z,}t\right) +\mathcal{L}\left(
+\Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right)
+^{\ast}\Psi^{\ast}\left( \mathsf{z,}t\right) \right\}
+\end{equation}
+which is equivalent to 
+\begin{equation}
+\frame{$\frac{\delta\mathcal{\dot{A}}_F\left( \Psi\left( t\right) \right) }{%
+\delta\left| \Psi\right\rangle }$=-$\frac{1}{\mathcal{N}\left( \Psi\left(
+t\right) \right) }\left\{ i\left\langle \dot{\Psi}\right| +\left\langle
+H\Psi\right| +\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left(
+t\right) \right) ^\ast\left\langle \Psi\right| \right\} $}
+\end{equation}
+We have thus shown explicitly that 
+\begin{equation}
+\frac{\delta\mathcal{\dot{A}}\left( \Psi\left( t\right) \right) }{%
+\delta\Psi\left( \mathsf{z}\right) }=\frac{\delta\mathcal{\dot{A}}_{F}\left(
+\Psi\left( t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) }\equiv%
+\frac{\delta\mathcal{\dot{A}}\left( \Psi\left( t\right) \right) }{%
+\delta\left| \Psi\right\rangle }=\frac{\delta\mathcal{\dot{A}}_{F}\left(
+\Psi\left( t\right) \right) }{\delta\left| \Psi\right\rangle }.
+\end{equation}
+
+\subsection{Stationarity Condition}
+
+Stationary points of the action wrt variation of the trajectories \emph{and}
+the boundary conditions of fixed time duration, $\tau$, and endpoints $%
+\left\{ \left| \Lambda_{i}\right\rangle ,\left| \Lambda_{f}\right\rangle
+\right\} $ occur at trajectories where the variational derivative is zero
+i.e. 
+\begin{align}
+& \frac{\delta\mathcal{\dot{A}}\left( \Psi\left( t\right) \right) }{%
+\delta\Psi\left( \mathsf{z}\right) }=\frac{\delta\mathcal{\dot{A}}_{F}\left(
+\Psi\left( t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) }=0  \notag
+\\
+& \left. \Rightarrow\right. -i\dot{\Psi}^{\ast}\left( \mathsf{z,}t\right) -%
+\left[ H\Psi\right] ^{\ast}\left( \mathsf{z,}t\right) =\mathcal{L}\left(
+\Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) ^{\ast}\Psi^{\ast
+}\left( \mathsf{z,}t\right)  \notag \\
+& \left. \equiv\right. i\frac{\partial\Psi^{\ast}\left( \mathsf{z,}t\right) 
+}{\partial t}+\int H\left( \mathsf{z,z}^{\prime}\right) ^{\ast
+}\Psi^{\ast}\left( \mathsf{z}^{\prime}\mathsf{,}t\right) d\mathsf{z}%
+^{\prime}=-\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) ^{\ast}\Psi^{\ast}\left( \mathsf{z,}t\right)  \notag \\
+& \left. \equiv\right. i\frac{\partial\Psi\left( \mathsf{z,}t\right) }{%
+\partial t}-\int H\left( \mathsf{z,z}^{\prime}\right) \Psi\left( \mathsf{z}%
+^{\prime}\mathsf{,}t\right) d\mathsf{z}^{\prime}=\mathcal{L}\left(
+\Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) \Psi\left( \mathsf{z,}%
+t\right)  \label{preSEden}
+\end{align}
+which is equivalent to 
+\begin{align}
+& \left\langle \left( i\frac{\partial}{\partial t}-H\right) \Psi\left(
+t\right) \right| =\left\langle \mathcal{L}\left( \Psi\left( t\right) ,\dot{%
+\Psi}\left( t\right) \right) \Psi\left( t\right) \right|  \notag \\
+& \Rightarrow\left( i\frac{\partial}{\partial t}-H\right) \left| \Psi\left(
+t\right) \right\rangle =\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}%
+\left( t\right) \right) \left| \Psi\left( t\right) \right\rangle  \notag \\
+& \Rightarrow i\frac{\partial}{\partial t}\left| \Psi\left( t\right)
+\right\rangle =\left( H+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi }%
+\left( t\right) \right) \right) \left| \Psi\left( t\right) \right\rangle
+\label{preSE}
+\end{align}
+We can write explicitly write down the solution to eq. $\left( \ref{preSE}%
+\right) $ 
+\begin{align}
+\left| \Psi\left( t\right) \right\rangle & =e^{-i\left\{ Ht\,+\,\int
+_{t_{i}}^{t}\mathcal{L}\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi }%
+\left( t^{\prime}\right) \right) dt^{\prime}\right\} }\left| \Psi\left(
+t_{i}\right) \right\rangle  \notag \\
+& =e^{-i\left\{ Ht\,+\,\mathcal{A}\left( \Psi,\left[ t_{i},t\right] \right)
+\right\} }\left| \Psi\left( t_{i}\right) \right\rangle  \notag \\
+& =e^{-i\left\{ Ht\,+\,\mathcal{A}_{F}\left( \Psi,\left[ t_{i},t\right]
+\right) +\frac{i}{2}\ln\left\{ \frac{\left\langle \Psi\left( t\right)
+|\Psi\left( t\right) \right\rangle }{\left\langle \Psi\left( t_{i}\right)
+|\Psi\left( t_{i}\right) \right\rangle }\right\} \right\} }\left| \Psi\left(
+t_{i}\right) \right\rangle  \label{solution}
+\end{align}
+Note that $\left| \Psi\left( t_{i}\right) \right\rangle =\left|
+\Lambda_{i}\right\rangle $ and $\left| \Psi\left( t\right) \right\rangle
+=\left| \Lambda_{t}\right\rangle $ are arbitrary but fixed vectors.
+
+\subsection{The Schr\"{o}dinger Equation}
+
+The stationary action conditions $\delta\mathcal{A}\left( \Psi,\tau\right)
+=0 $ for the boundary conditions of fixed time duration, $\tau$, and
+endpoints $\left\{ \left| \Lambda_{i}\right\rangle ,\left|
+\Lambda_{f}\right\rangle \right\} $ or even for the boundary conditions of
+fixed time duration, $\tau $, and variable endpoints belonging to the lines $%
+\left\{ \eta\left( t_{i}\right) \left| \Lambda_{i}\right\rangle ,\eta\left(
+t_{f}\right) \left| \Lambda_{f}\right\rangle \right\} $ do not produce
+solutions to the TDSE. In this section we display how to obtain solutions
+from the from the fixed end point solutions by complex scaling of the
+trajectories. If we define 
+\begin{align}
+\Phi\left( \mathsf{z,}t\right) & =\Psi\left( \mathsf{z,}t\right)
+e^{i\int_{t_{i}}^{t}\mathcal{L}\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi%
+}\left( t^{\prime}\right) \right) dt^{\prime}}  \notag \\
+& =\Psi\left( \mathsf{z,}t\right) e^{i\int_{t_{i}}^{t}\mathcal{L}\left(
+\Psi\left( t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right) \right)
+dt^{\prime}}  \notag \\
+& =\Psi\left( \mathsf{z,}t\right) e^{i\int_{t_{i}}^{t}\left\{ \func{Re}%
+\mathcal{L}\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi }\left(
+t^{\prime}\right) \right) +i\func{Im}\mathcal{L}\left( \Psi\left(
+t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right) \right) \right\}
+dt^{\prime}}  \notag \\
+& =\Psi\left( \mathsf{z,}t\right) e^{i\int_{t_{i}}^{t}\func{Re}\mathcal{L}%
+\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right)
+\right) dt^{\prime}}e^{-\int_{t_{i}}^{t}\func{Im}\mathcal{L}\left(
+\Psi\left( t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right) \right)
+dt^{\prime}}  \notag \\
+& =\Psi\left( \mathsf{z,}t\right) e^{i\int_{t_{i}}^{t}\func{Re}\mathcal{L}%
+\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right)
+\right) dt^{\prime}}e^{\ln\left\{ \sqrt{\frac {\left\langle \Psi\left(
+t_{i}\right) |\Psi\left( t_{i}\right) \right\rangle }{\left\langle
+\Psi\left( t\right) |\Psi\left( t\right) \right\rangle }}\right\} }  \notag
+\\
+& =\Psi\left( \mathsf{z,}t\right) e^{i\mathcal{A}\left( \Psi,\left[ t_{i},t%
+\right] \right) }
+\end{align}
+then 
+\begin{equation}
+\dot{\Phi}\left( \mathsf{z,}t\right) =\dot{\Psi}\left( \mathsf{z,}t\right)
+e^{i\int_{t_{i}}^{t}\mathcal{L}\left( \Psi,\dot{\Psi},t^{\prime}\right)
+dt^{\prime}}+i\Psi\left( \mathsf{z,}t\right) \mathcal{L}\left( \Psi ,\dot{%
+\Psi},t\right) e^{i\int_{t_{i}}^{t}\mathcal{L}\left( \Psi,\dot{\Psi }%
+,t^{\prime}\right) dt^{\prime}}
+\end{equation}
+leading to%
+\begin{align}
+& =\dot{\Psi}\left( \mathsf{z,}t\right) e^{i\int_{t_{i}}^{t}\mathcal{L}%
+\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right)
+\right) dt^{\prime}}  \notag \\
+& +i\left\{ i\frac{\partial\Psi\left( \mathsf{z,}t\right) }{\partial t}-\int
+H\left( \mathsf{z,z}^{\prime}\right) \Psi\left( \mathsf{z}^{\prime }\mathsf{,%
+}t\right) d\mathsf{z}^{\prime}\right\} e^{i\int_{t_{i}}^{t}\mathcal{L}\left(
+\Psi\left( t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right) \right)
+dt^{\prime}}  \notag \\
+& =-i\left[ H\Psi\right] \left( \mathsf{z,}t\right) e^{-i\int_{t_{i}}^{t}%
+\mathcal{L}\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi}\left(
+t^{\prime}\right) \right) dt^{\prime}}  \notag \\
+& \Rightarrow\dot{\Phi}\left( \mathsf{z,}t\right) =-iH\Phi\left( \mathsf{z,}%
+t\right) \equiv i\frac{\partial\Phi\left( \mathsf{z,}t\right) }{\partial t}%
+=H\Phi\left( \mathsf{z,}t\right) \equiv\left( i\frac {\partial\Phi\left( 
+\mathsf{z,}t\right) }{\partial t}-H\Phi\left( \mathsf{z,}t\right) \right) =0
+\notag \\
+& \equiv\left\{ i\frac{\partial}{\partial t}-H\right\} \left| \Phi\left(
+t\right) \right\rangle =0  \label{SE}
+\end{align}
+which is the Time Dependent Schr\"{o}dinger Equation.
+
+One can also note that eq.$\left( \ref{SE}\right) $ implies that 
+\begin{equation}
+\mathcal{L}\left( \Phi\left( t\right) ,\dot{\Phi}\left( t\right) \right) =0%
+\text{ }
+\end{equation}
+$\lceil$In fact $\mathcal{L}\left( \Phi\left( t\right) ,\dot{\Phi}\left(
+t\right) \right) =0$ plus stationarity for paths of fixed end points implies
+the TDSE$\rfloor$ and that the norm of $\left| \Phi\left( t\right)
+\right\rangle $ is constant as 
+\begin{align}
+\int\Phi^{\ast}\left( \mathsf{z,}t\right) \Phi\left( \mathsf{z,}t\right) d%
+\mathsf{z} & \mathsf{=}\int\Psi^{\ast}\left( \mathsf{z,}t\right) \Psi\left( 
+\mathsf{z,}t\right) e^{i\int_{t_{i}}^{t}\left\{ \mathcal{L}\left( \Psi\left(
+t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right) \right) -\mathcal{L}%
+\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right)
+\right) ^{\ast}\right\} di}d\mathsf{z}  \notag \\
+& =\int\Psi^{\ast}\left( \mathsf{z,}t\right) \Psi\left( \mathsf{z,}t\right)
+e^{-\int_{t_{i}}^{t}\frac{d\ln\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }{dt}di}d\mathsf{z}  \notag \\
+& =\int\Psi^{\ast}\left( \mathsf{z,}t\right) \Psi\left( \mathsf{z,}t\right)
+e^{-\ln\left\{ \frac{\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }{\left\langle \Psi\left( t_{i}\right) |\Psi\left(
+t_{i}\right) \right\rangle }\right\} }d\mathsf{z}  \notag \\
+& =\int\Psi^{\ast}\left( \mathsf{z,}t\right) \Psi\left( \mathsf{z,}t\right) d%
+\mathsf{z}\frac{\left\langle \Psi\left( t_{i}\right) |\Psi\left(
+t_{i}\right) \right\rangle }{\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }  \notag \\
+& =\left\langle \Psi\left( t_{i}\right) |\Psi\left( t_{i}\right)
+\right\rangle
+\end{align}
+However clearly 
+\begin{equation}
+\Phi\left( \mathsf{z,}t_{f}\right) \neq\Psi\left( \mathsf{z,}t_{f}\right)
+\equiv\left| \Phi\left( t_{f}\right) \right\rangle \neq\left| \Psi\left(
+t_{f}\right) \right\rangle
+\end{equation}
+since 
+\begin{align}
+& \Phi\left( \mathsf{z,}t_{f}\right) =\Psi\left( \mathsf{z,}t_{f}\right)
+e^{i\int_{t_{i}}^{t_{f}}\mathcal{L}\left( \Psi\left( t^{\prime}\right) ,\dot{%
+\Psi}\left( t^{\prime}\right) \right) dt^{\prime}} \\
+& \left. \equiv\right. \left| \Phi\left( t_{f}\right) \right\rangle =\left|
+\Psi\left( t_{f}\right) \right\rangle e^{i\mathcal{A}\left( \Psi,\tau\right)
+}=\left( \frac{\left\langle \Psi\left( t_{i}\right) |\Psi\left( t_{i}\right)
+\right\rangle }{\left\langle \Psi\left( t_{f}\right) |\Psi\left(
+t_{f}\right) \right\rangle }\right) ^{\frac{1}{2}}\left| \Psi\left(
+t_{f}\right) \right\rangle e^{i\func{Re}\mathcal{A}\left( \Psi,\tau\right) }
+\end{align}
+which we can see from 
+\begin{align}
+& i\int_{t_{i}}^{t_{f}}\mathcal{L}\left( \Psi\left( t^{\prime}\right) ,\dot{%
+\Psi}\left( t^{\prime}\right) \right)
+dt^{\prime}=i\int_{t_{i}}^{t_{f}}\left\{ \func{Re}\mathcal{L}\left(
+\Psi\left( t^{\prime }\right) ,\dot{\Psi}\left( t^{\prime}\right) \right) +i%
+\func{Im}\mathcal{L}\left( \Psi\left( t^{\prime}\right) ,\dot{\Psi}\left(
+t^{\prime}\right) \right) \right\}  \notag \\
+& =i\int_{t_{i}}^{t_{f}}\left\{ -\left\{ \frac{\func{Im}\left\langle
+\Psi\left( t^{\prime}\right) |\dot{\Psi}\left( t^{\prime}\right)
+\right\rangle }{\left\langle \Psi\left( t^{\prime}\right) |\Psi\left(
+t^{\prime}\right) \right\rangle }+\frac{\left\langle \Psi\left( t^{\prime
+}\right) |H\Psi\left( t^{\prime}\right) \right\rangle }{\left\langle
+\Psi\left( t^{\prime}\right) |\Psi\left( t^{\prime}\right) \right\rangle }%
+\right\} +\frac{i}{2}\frac{d\ln\left\langle \Psi\left( t^{\prime}\right)
+|\Psi\left( t^{\prime}\right) \right\rangle }{dt^{\prime}}\right\}
+dt^{\prime}  \notag \\
+& =-i\int_{t_{i}}^{t_{f}}\left\{ \frac{\func{Im}\left\langle \Psi\left(
+t^{\prime}\right) |\dot{\Psi}\left( t^{\prime}\right) \right\rangle }{%
+\left\langle \Psi\left( t^{\prime}\right) |\Psi\left( t^{\prime}\right)
+\right\rangle }+\frac{\left\langle \Psi\left( t^{\prime }\right)
+|H\Psi\left( t^{\prime}\right) \right\rangle }{\left\langle \Psi\left(
+t^{\prime}\right) |\Psi\left( t^{\prime}\right) \right\rangle }\right\}
+dt^{\prime}-\frac{1}{2}\int_{t_{i}}^{t_{f}}\frac{d\ln\left\langle \Psi\left(
+t^{\prime}\right) |\Psi\left( t^{\prime}\right) \right\rangle }{dt^{\prime}}%
+dt^{\prime}  \notag \\
+& =i\int_{t_{i}}^{t_{f}}\func{Re}\mathcal{L}\left( \Psi\left(
+t^{\prime}\right) ,\dot{\Psi}\left( t^{\prime}\right) \right) dt^{\prime
+}+\ln\left\{ \sqrt{\frac{\left\langle \Psi\left( t_{i}\right) |\Psi\left(
+t_{i}\right) \right\rangle }{\left\langle \Psi\left( t_{f}\right)
+|\Psi\left( t_{f}\right) \right\rangle }}\right\} =i\mathcal{A}\left(
+\Psi,\tau\right)
+\end{align}
+thus 
+\begin{equation}
+\Phi\left( \mathsf{z,}t_{f}\right) =\left( \frac{\left\langle \Psi\left(
+t_{i}\right) |\Psi\left( t_{i}\right) \right\rangle }{\left\langle
+\Psi\left( t_{f}\right) |\Psi\left( t_{f}\right) \right\rangle }\right) ^{%
+\frac{1}{2}}\Psi\left( \mathsf{z,}t_{f}\right) e^{i\func{Re}\mathcal{A}%
+\left( \Psi,\tau\right) }  \label{phi}
+\end{equation}
+and in general 
+\begin{equation}
+\func{Re}\mathcal{A}\left( \Psi,\tau\right) \neq0
+\end{equation}
+We can see from eq. $\left( \ref{phi}\right) $ that the norm of the final
+state is fixed by the choice of initial ''state'' but the phase is not. The
+equation that determines the final phase is 
+\begin{equation}
+\frac{d\sigma}{dt}=-i\left\{ \frac{\func{Im}\left\langle \Psi\left( t\right)
+|\dot{\Psi}\left( t\right) \right\rangle }{\left\langle \Psi\left( t\right)
+|\Psi\left( t\right) \right\rangle }+\frac {\left\langle \Psi\left( t\right)
+|H\Psi\left( t\right) \right\rangle }{\left\langle \Psi\left( t\right)
+|\Psi\left( t\right) \right\rangle }\right\} =\func{Re}\mathcal{L}\left(
+\Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) ;\sigma\left(
+t_{i}\right) =0  \label{phase}
+\end{equation}
+where $\left| \Psi\left( t\right) \right\rangle $ is a solution of eq. $%
+\left( \ref{preSE}\right) $ and the solution of eq. $\left( \ref{phase}%
+\right) $ is 
+\begin{equation}
+\sigma\left( t\right) =\func{Re}\mathcal{A}\left( \Psi,\left[ t_{i},t\right]
+\right)
+\end{equation}
+
+\subsection{Complex Scaling of the Action}
+
+Transformations of the action 
+\begin{equation}
+\mathcal{A\longrightarrow A}_{F}
+\end{equation}
+and the substitution carried out to obtain the TDSE\ are special cases of
+complex scaling of the trajectory, which we now consider in general. The
+action is \emph{not invariant }to complex scaling (and therefore \emph{not}
+a state function) and changes in the following manner%
+\begin{align}
+\mathcal{A}\left( \eta\Psi,\tau\right) & =\int_{t_{i}}^{t_{f}}\mathcal{\dot{A%
+}}\left( \eta\left( t\right) \Psi\left( t\right) \right) dt  \notag \\
+& =\int_{t_{i}}^{t_{f}}\left\{ \mathcal{\dot{A}}\left( \Psi\left( t\right)
+\right) +i\frac{d\ln\eta\left( t\right) }{dt}\right\} dt=\mathcal{A}\left(
+\Psi,\tau\right) +i\ln\left\{ \frac{\eta\left( t_{f}\right) }{\eta\left(
+t_{i}\right) }\right\}
+\end{align}
+This property is deduced by first recalling 
+\begin{equation}
+\func{Re}\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) =\frac{i}{2}\frac{\left\{ \left\langle \Psi\left( t\right) |\dot{\Psi%
+}\left( t\right) \right\rangle -\left\langle \dot{\Psi }\left( t\right)
+|\Psi\left( t\right) \right\rangle \right\} }{\left\langle \Psi\left(
+t\right) |\Psi\left( t\right) \right\rangle }-\frac{\left\langle \Psi\left(
+t\right) |H\Psi\left( t\right) \right\rangle }{\left\langle \Psi\left(
+t\right) |\Psi\left( t\right) \right\rangle }
+\end{equation}
+which under the transformation of the paths 
+\begin{equation}
+\Phi\left( \mathsf{z,}t\right) =\eta\left( t\right) \Psi\left( \mathsf{z,}%
+t\right)
+\end{equation}
+with 
+\begin{equation}
+\eta\left( t\right) =\left| \eta\left( t\right) \right| e^{i\sigma \left(
+t\right) }=e^{\rho\left( t\right) }e^{i\sigma\left( t\right) }
+\end{equation}
+transforms as 
+\begin{align}
+& \func{Re}\mathcal{L}\left( \eta\left( t\right) \Psi\left( t\right) ,%
+\overset{\bullet}{\overbrace{\eta\left( t\right) \Psi\left( t\right) }}%
+\right)  \notag \\
+& \left. =\right. \frac{i}{2}\frac{\left\{ \left\langle \Psi\left( t\right) |%
+\frac{\partial}{\partial t}\left\{ \eta\left( t\right) \Psi\left( t\right)
+\right\} \right\rangle -\left\langle \frac{\partial }{\partial t}\left\{
+\eta\left( t\right) \Psi\left( t\right) \right\} |\Psi\left( t\right)
+\right\rangle \right\} }{\left| \eta\left( t\right) \right| ^{2}\left\langle
+\Psi\left( t\right) |\Psi\left( t\right) \right\rangle }-\frac{\left\langle
+\Psi\left( t\right) |H\Psi\left( t\right) \right\rangle }{\left\langle
+\Psi\left( t\right) |\Psi\left( t\right) \right\rangle }  \notag \\
+& \left. {}\right. \qquad\qquad\qquad\lceil\frac{\partial}{\partial t}%
+\left\{ \eta\left( t\right) \Psi\left( t\right) \right\} =\dot{\eta }\left(
+t\right) \Psi\left( t\right) +\eta\left( t\right) \dot{\Psi }\left( t\right)
+\rfloor  \notag \\
+& \left. =\right. \frac{i}{2\left| \eta\left( t\right) \right|
+^{2}\left\langle \Psi\left( t\right) |\Psi\left( t\right) \right\rangle }%
+\left\{ \left\langle \Psi\left( t\right) |\Psi\left( t\right) \right\rangle
+\eta\left( t\right) ^{\ast}\dot{\eta}\left( t\right) +\left\langle
+\Psi\left( t\right) |\dot{\Psi}\left( t\right) \right\rangle \left|
+\eta\left( t\right) \right| ^{2}\right.  \notag \\
+& \qquad\qquad\qquad\left. -\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle \dot{\eta}\left( t\right) ^{\ast}\eta\left( t\right)
+-\left\langle \dot{\Psi}\left( t\right) |\Psi\left( t\right) \right\rangle
+\left| \eta\left( t\right) \right| ^{2}\right\} -\frac{\left\langle
+\Psi\left( t\right) |H\Psi\left( t\right) \right\rangle }{\left\langle
+\Psi\left( t\right) |\Psi\left( t\right) \right\rangle }  \notag \\
+& \qquad\qquad\qquad\left. =\right. \func{Re}\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) -\frac{i}{2\left| \eta\left(
+t\right) \right| ^{2}}\left\{ \eta\left( t\right) ^{\ast}\dot{\eta}\left(
+t\right) -\dot{\eta}\left( t\right) ^{\ast}\eta\left( t\right) \right\} 
+\notag \\
+& \left. {}\right. \lceil\frac{i}{2\left| \eta\left( t\right) \right| ^{2}}%
+\left\{ \eta\left( t\right) ^{\ast}\dot{\eta}\left( t\right) -\dot{\eta}%
+\left( t\right) ^{\ast}\eta\left( t\right) \right\} =\frac {i}{2}\left\{ 
+\frac{\eta\left( t\right) ^{\ast}\dot{\eta}\left( t\right) }{\eta\left(
+t\right) ^{\ast}\eta\left( t\right) }-\frac{\dot{\eta}\left( t\right)
+^{\ast}\eta\left( t\right) }{\eta\left( t\right) ^{\ast}\eta\left( t\right) }%
+\right\}  \notag \\
+& \left. =\right. \frac{i}{2}\left\{ \frac{\dot{\eta}\left( t\right) }{%
+\eta\left( t\right) }-\frac{\dot{\eta}\left( t\right) ^{\ast}}{\eta\left(
+t\right) ^{\ast}}\right\} =\frac{i}{2}\frac{d}{dt}\left\{ \ln\eta\left(
+t\right) -\ln\eta\left( t\right) ^{\ast}\right\} =\frac {i}{2}\frac{d}{dt}%
+\ln\left\{ \frac{\eta\left( t\right) }{\eta\left( t\right) ^{\ast}}\right\} 
+\notag \\
+& =\frac{i}{2}\frac{d}{dt}\ln\left\{ \frac{e^{\rho\left( t\right)
+}e^{i\sigma\left( t\right) }}{e^{\rho\left( t\right) }e^{-i\sigma\left(
+t\right) }}\right\} =\frac{i}{2}\frac{d}{dt}\ln\left\{ \frac{e^{i\sigma
+\left( t\right) }}{e^{-i\sigma\left( t\right) }}\right\} =\frac{i}{2}\frac{d%
+}{dt}\ln e^{2i\sigma\left( t\right) }=-\frac{d\sigma\left( t\right) }{dt}%
+\rfloor  \notag \\
+& \Rightarrow\func{Re}\mathcal{L}\left( \eta\left( t\right) \Psi\left(
+t\right) ,\overset{\bullet}{\overbrace{\eta\left( t\right) \Psi\left(
+t\right) }}\right) =\func{Re}\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi%
+}\left( t\right) \right) -\frac {d\sigma\left( t\right) }{dt}
+\end{align}
+Now 
+\begin{equation}
+\func{Im}\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) =\frac{i}{2}\frac{d\ln\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }{dt}
+\end{equation}
+and 
+\begin{align}
+& \frac{d\ln\left\langle \eta\left( t\right) \Psi\left( t\right) |\eta\left(
+t\right) \Psi\left( t\right) \right\rangle }{dt}=\frac {1}{\left\langle
+\eta\left( t\right) \Psi\left( t\right) |\eta\left( t\right) \Psi\left(
+t\right) \right\rangle }\frac{d\left\langle \eta\left( t\right) \Psi\left(
+t\right) |\eta\left( t\right) \Psi\left( t\right) \right\rangle }{dt}  \notag
+\\
+& =\frac{1}{\left| \eta\left( t\right) \right| ^{2}\left\langle \Psi\left(
+t\right) |\Psi\left( t\right) \right\rangle }\left\{ \frac{\left| \eta\left(
+t\right) \right| ^{2}d\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }{dt}+\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle \left\{ \dot{\eta}\left( t\right) ^{\ast}\eta\left( t\right)
++\eta\left( t\right) ^{\ast}\dot {\eta}\left( t\right) \right\} \right\} 
+\notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+=\right. \frac{d\ln\left\langle \Psi\left( t\right) |\Psi\left( t\right)
+\right\rangle }{dt}+\frac{d\ln\left| \eta\left( t\right) \right| ^{2}}{dt}
+\end{align}
+hence%
+\begin{align}
+& \mathcal{L}\left( \eta\left( t\right) \Psi\left( t\right) ,\overset{\bullet%
+}{\overbrace{\eta\left( t\right) \Psi\left( t\right) }}\right) =\func{Re}%
+\mathcal{L}\left( \eta\left( t\right) \Psi\left( t\right) ,\overset{\bullet}{%
+\overbrace{\eta\left( t\right) \Psi\left( t\right) }}\right) +i\func{Im}%
+\mathcal{L}\left( \eta\left( t\right) \Psi\left( t\right) ,\overset{\bullet}{%
+\overbrace {\eta\left( t\right) \Psi\left( t\right) }}\right)  \notag \\
+& \qquad\qquad\left. =\right. \func{Re}\mathcal{L}\left( \Psi\left( t\right)
+,\dot{\Psi}\left( t\right) \right) -\frac {d\sigma\left( t\right) }{dt}+%
+\frac{i}{2}\left\{ \frac{d\ln\left\langle \Psi\left( t\right) |\Psi\left(
+t\right) \right\rangle }{dt}+\frac {d\ln\left| \eta\left( t\right) \right|
+^{2}}{dt}\right\}  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left. =\right. 
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) -%
+\frac{d\sigma\left( t\right) }{dt}+i\frac{d\ln\left| \eta\left( t\right)
+\right| }{dt}
+\end{align}
+If we let 
+\begin{equation}
+\left| \eta\left( t\right) \right| =e^{\rho\left( t\right) }
+\end{equation}
+one gets the more symmetric transformation%
+\begin{align}
+\mathcal{L}\left( \eta\left( t\right) \Psi\left( t\right) ,\overset{\bullet}{%
+\overbrace{\eta\left( t\right) \Psi\left( t\right) }}\right) & =\mathcal{L}%
+\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) -\frac{%
+d\sigma\left( t\right) }{dt}+i\frac{d\rho\left( t\right) }{dt}  \notag \\
+& =\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right)
++i\frac{d\ln\eta\left( t\right) }{dt}  \label{Ltrans}
+\end{align}
+If $\eta\left( t\right) $ is fixed for $t\in\left( t_{i},t_{f}\right) $ then 
+\begin{equation}
+\frac{\delta}{\delta\eta}\mathcal{L}\left( \eta\left( t\right) \Psi\left(
+t\right) ,\overset{\bullet}{\overbrace{\eta\left( t\right) \Psi\left(
+t\right) }}\right) =0\quad\forall t\in\left( t_{i},t_{f}\right)
+\end{equation}
+and 
+\begin{equation}
+\frac{\delta}{\delta\Psi}\mathcal{L}\left( \eta\left( t\right) \Psi\left(
+t\right) ,\overset{\bullet}{\overbrace{\eta\left( t\right) \Psi\left(
+t\right) }}\right) =\frac{\delta}{\delta\Psi}\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) \quad\forall t\in\left(
+t_{i},t_{f}\right)  \label{inv}
+\end{equation}
+This transformation of the Lagrangian induces the following change in the
+action%
+\begin{equation}
+\mathcal{A}\left( \eta\Psi,\tau\right) =\mathcal{A}\left( \Psi,\tau\right)
++i\ln\left\{ \frac{\eta\left( t_{f}\right) }{\eta\left( t_{i}\right) }%
+\right\}
+\end{equation}
+and we note that $\eta\left( t_{i}\right) $ and $\eta\left( t_{f}\right) $
+are complex variables and \emph{not} constant.
+
+\subsection{Variable End Points and the Hamilton-Jacobi Equation}
+
+The general principle of stationary action is obtained by setting the first
+order variation 
+\begin{align}
+& \delta^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) =\int
+_{t_{i}}^{t_{f}}\left\{ \frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,%
+\dot{\Psi}\left( t\right) \right) }{\delta\Psi\left( \mathsf{z}\right) }%
+\delta\Psi\left( \mathsf{z}\right) +\frac{\delta\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\dot{\Psi }\left( 
+\mathsf{z}\right) }\delta\dot{\Psi}\left( \mathsf{z}\right) \right\} d%
+\mathsf{z}dt  \notag \\
+& =\int_{t_{i}}^{t_{f}}\left\{ \left\langle \left. \left[ \frac {\delta%
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{%
+\delta\Psi}\right] ^{\ast}\right| \delta\Psi\left( t\right) \right\rangle
++\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\dot{\Psi }}\right]
+^{\ast}\right| \delta\dot{\Psi}\left( t\right) \right\rangle \right\} dt
+\end{align}
+equal to zero for all incremental changes, $\left| \delta\Psi\left( t\right)
+\right\rangle $, of the trajectories $\left| \Psi\left( t\right)
+\right\rangle $ \emph{and }changes of the time duration $\tau$ i.e. 
+\begin{equation}
+\delta^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) =\delta_{\Psi
+}^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) +\delta_{\tau
+}^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) =0
+\end{equation}
+As the initial and final state density operators are invariant to complex
+scaling of the state vectors the initial and final state vectors are only
+constrained to lie on the lines 
+\begin{equation}
+\left| \Psi\left( t_{\kappa}\right) \right\rangle =\eta\left( t_{\kappa
+}\right) \left| \Lambda_{\kappa}\right\rangle ;\qquad\kappa=i,f;\quad
+\eta\left( t_{\kappa}\right) \in\mathbb{C}  \label{const}
+\end{equation}
+where $\left| \Lambda_{\kappa}\right\rangle $ are fixed chosen end points
+for $\kappa=i,f$. $\lceil$The amplitudes $\Lambda_{\kappa}\left( \mathsf{z}%
+\right) =\left\langle \mathsf{z}|\Lambda_{\kappa}\right\rangle $ are fixed
+functions of $\mathsf{z}$ which are in general different from each other$%
+\rfloor$. For $t\in\left( t_{i},t_{f}\right) $ there are no constraints on
+the state vectors. The scalar trajectories $\eta\left( t\right) \in\mathbb{C}
+$ are arbitrary twice differentiable complex valued functions $\forall t\in%
+\left[ t_{i},t_{f}\right] $. We have two families of spaces of $\mathcal{H}%
+^{N}- $ valued incremental trajectories 
+\begin{align}
+\mathcal{S}_{0}\left( t_{f}\right) & =\left\{ \left| \delta\Psi\left(
+t\right) \right\rangle \right\} ;\quad\left| \delta\Psi\left( t\right)
+\right\rangle =0,\quad\kappa=i,f;\quad t\in\left[ t_{i},t_{f}\right] \\
+\mathcal{S}_{1}\left( t_{f}\right) & =\left\{ \left| \delta\Psi\left(
+t\right) \right\rangle \right\} ;\quad\left| \delta\Psi\left( t_{\kappa
+}\right) \right\rangle =\eta\left( t_{\kappa}\right) \left| \Lambda
+_{\kappa}\right\rangle ,\,\eta\left( t\right) \in\mathbb{C},\,\kappa
+=i,f;\quad t\in\left[ t_{i},t_{f}\right]
+\end{align}
+clearly $\mathcal{S}_{1}\left( t_{f}\right) \supset\mathcal{S}_{0}\left(
+t_{f}\right) $ as $\eta\left( t_{\kappa}\right) =0$ is always a possible
+choice for the complex scaling parameter. The Lagrangian becomes a function
+of $\eta\left( t_{\kappa}\right) $ on these lines given by 
+\begin{align}
+& \mathcal{L}\left( \Psi\left( \eta,t_{\kappa}\right) ,\dot{\Psi}\left(
+\eta,t_{\kappa}\right) \right) =\mathcal{L}\left( \eta\left( t_{\kappa
+}\right) ,\dot{\eta}\left( t_{\kappa}\right) ,\Lambda_{\kappa}\right)  \notag
+\\
+& =\frac{1}{\left| \eta\left( t_{\kappa}\right) \right| ^{2}\left\langle
+\Lambda_{\kappa}|\Lambda_{\kappa}\right\rangle }\left\{ i\eta\left(
+t_{\kappa}\right) ^{\ast}\left\langle \Lambda_{\kappa}\left| \overset{\cdot }%
+{\overbrace{\eta\left( t_{\kappa}\right) \Psi\left( t_{\kappa}\right) }}%
+\right. \right\rangle -\left| \eta\left( t_{\kappa}\right) \right|
+^{2}\left\langle \Lambda_{\kappa}|H\Lambda_{\kappa}\right\rangle \right\} 
+\notag \\
+& =\frac{1}{\left| \eta\left( t_{\kappa}\right) \right| ^{2}\left\langle
+\Lambda_{\kappa}|\Lambda_{\kappa}\right\rangle }\left\{ i\eta\left(
+t_{\kappa}\right) ^{\ast}\left\langle \Lambda_{\kappa}\left| \left\{
+\eta\left( t_{\kappa}\right) \dot{\Psi}\left( t_{\kappa}\right) +\dot {\eta}%
+\left( t_{\kappa}\right) \Psi\left( t_{\kappa}\right) \right\} \right.
+\right\rangle -\left| \eta\left( t_{\kappa}\right) \right| ^{2}\left\langle
+\Lambda_{\kappa}|H\Lambda_{\kappa}\right\rangle \right\}  \notag \\
+& =\frac{1}{\left| \eta\left( t_{\kappa}\right) \right| ^{2}\left\langle
+\Lambda_{\kappa}|\Lambda_{\kappa}\right\rangle }\left\{ i\eta\left(
+t_{\kappa}\right) ^{\ast}\left\{ \eta\left( t_{\kappa}\right) \left\langle
+\Lambda_{\kappa}|\dot{\Psi}\left( t_{\kappa}\right) \right\rangle +\dot {\eta%
+}\left( t_{\kappa}\right) \left\langle \Lambda_{\kappa}|\Psi\left(
+t_{\kappa}\right) \right\rangle \right\} -\left| \eta\left( t_{\kappa
+}\right) \right| ^{2}\left\langle \Lambda_{\kappa}|H\Lambda_{\kappa
+}\right\rangle \right\}  \notag \\
+& =\frac{1}{\left| \eta\left( t_{\kappa}\right) \right| ^{2}\left\langle
+\Lambda_{\kappa}|\Lambda_{\kappa}\right\rangle }\left\{ i\eta\left(
+t_{\kappa}\right) ^{\ast}\left\{ \eta\left( t_{\kappa}\right) \left\langle
+\Lambda_{\kappa}|\dot{\Psi}\left( t_{\kappa}\right) \right\rangle +\dot {\eta%
+}\left( t_{\kappa}\right) \eta\left( t_{\kappa}\right) \left\langle
+\Lambda_{\kappa}|\Lambda_{\kappa}\right\rangle \right\} -\left| \eta\left(
+t_{\kappa}\right) \right| ^{2}\left\langle \Lambda_{\kappa}|H\Lambda
+_{\kappa}\right\rangle \right\}  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left. =\right. 
+\mathcal{L}\left( \Psi\left( t_{\kappa}\right) ,\dot{\Psi}\left(
+t_{\kappa}\right) \right) +i\frac{d\ln\eta\left( t_{\kappa}\right) }{dt}
+\end{align}
+The stationarity condition for fixed a length of time process produces the
+following equations for $\Psi\left( t\right) ,\,t\in\left[ t_{i},t_{f}\right]
+$ 
+\begin{align}
+& \left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\Psi}\right] ^{\ast
+}\right| \delta\Psi\left( t\right) \right\rangle +\left\langle \left. \left[ 
+\frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi }\left(
+t\right) \right) }{\delta\dot{\Psi}}\right] ^{\ast}\right| \delta\dot{\Psi}%
+\left( t\right) \right\rangle =0  \notag \\
+& \left. {}\right. \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\forall\left| \delta\Psi\left( t\right) \right\rangle \in%
+\mathcal{H}^{N}\,\forall t\in\left( t_{i},t_{f}\right)  \label{s1}
+\end{align}
+and more generally 
+\begin{align}
+& \int_{t_{i}}^{t_{f}}\left\{ \left\langle \left. \left[ \frac {\delta%
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{%
+\delta\Psi}\right] ^{\ast}\right| \delta\Psi\left( t\right) \right\rangle
++\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\dot{\Psi }}\right]
+^{\ast}\right| \delta\dot{\Psi}\left( t\right) \right\rangle \right\} dt=0 
+\notag \\
+& \left. {}\right. \qquad\qquad\qquad\forall\left| \delta\Psi\left( t\right)
+\right\rangle \in\mathcal{H}^{N}\,\forall t\in\left( t_{i},t_{f}\right)
+;\qquad\left| \delta\Psi\left( t_{\kappa}\right) \right\rangle \in\mathcal{%
+\eta}\left( t_{\kappa}\right) \left| \Lambda_{\kappa}\right\rangle
+\,,\quad\kappa=i,f  \label{s2}
+\end{align}
+Eq. $\left( \ref{s1}\right) $ does not depend on $\left| \Psi\left(
+t_{\kappa}\right) \right\rangle =$ $\left| \Lambda_{\kappa}\right\rangle $
+(except as a fixed boundary condition) so it is sufficient to consider
+incremental trajectories that belong to the subspace $\mathcal{S}_{0}$ that
+have any values for $t\in\left( t_{i},t_{f}\right) $, i.e. $\left|
+\delta\Psi\left( t\right) \right\rangle $ can be any vector belonging to $%
+\mathcal{H}^{N}$ for $t\in\left( t_{i},t_{f}\right) $, and thus obtain the
+usual Euler-Lagrange equations for $\left| \Psi\left( t\right) \right\rangle 
+$ for the fixed end point conditions 
+\begin{equation}
+\left| \Psi\left( t_{\kappa}\right) \right\rangle =\left| \Lambda_{\kappa
+}\right\rangle \quad\kappa=i,f.
+\end{equation}
+$\lceil$\textbf{Note }that these equations are $\emph{independent}$ of the
+length of time duration $\tau$ i.e. the solutions only depend on the initial
+and final points and the Hamiltonian of the process.$\rfloor$ Solutions to
+the general problem must satisfy both eqs. $\left( \ref{s1}\right) $ and $%
+\left( \ref{s2}\right) $ for variable time durations $\tau$. Noting that the
+change of action induced by complex scaling of the initial and final point
+is a function of the relative scaling of these two points one can regard the
+action for the general problem as a function of the final position, $%
+\eta\left( t_{f}\right) \left| \Lambda_{f}\right\rangle $, the time
+interval, $\tau$, a \emph{fixed} initial point, $\Lambda_{\kappa}$, and of
+stationary trajectories for the fixed end point problem.
+
+The general equations are obtained by observing that the first order
+variation $\delta_{\Psi}^{\left( 1\right) }\mathcal{A}$ of the action wrt
+changes in stationary fixed point end point trajectories is 
+\begin{align}
+& \int_{t_{i}}^{t_{f}}\left\{ \left\langle \left. \left[ \frac {\delta%
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{%
+\delta\Psi}\right] ^{\ast}\right\vert \delta\Psi\left( t\right)
+\right\rangle +\left\langle \left. \left[ \frac{\delta\mathcal{L}\left(
+\Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\dot{\Psi }}%
+\right] ^{\ast}\right\vert \delta\dot{\Psi}\left( t\right) \right\rangle
+\right\} dt  \notag \\
+& \left. =\right. \int_{t_{i}}^{t_{f}}\left\{ \left\langle \left. \left[ 
+\frac{d}{dt}\left\{ \frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{%
+\Psi}\left( t\right) \right) }{\delta\dot{\Psi}}\right\} \right]
+^{\ast}\right\vert \delta\Psi\left( t\right) \right\rangle \right.  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+\left. \left\langle
+\left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}%
+\left( t\right) \right) }{\delta\dot{\Psi}}\right] ^{\ast }\right\vert \delta%
+\dot{\Psi}\left( t\right) \right\rangle dt\right\}  \label{HJ1}
+\end{align}
+as the trajectories $\left\vert \Psi\left( t\right) \right\rangle $ satisfy
+the Euler-Lagrange equation 
+\begin{equation}
+\frac{\delta\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right)
+\right) }{\delta\Psi}=\frac{d}{dt}\left\{ \frac{\delta \mathcal{L}\left(
+\Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\dot{\Psi}}%
+\right\} \quad\forall t\in\left[ t_{i},t_{f}\right] .
+\end{equation}
+Noting that as $\left\vert \delta\Psi\left( t_{i}\right) \right\rangle =0$
+the second term of eq. $\left( \ref{HJ1}\right) $ produces 
+\begin{align}
+& \int_{t_{i}}^{t_{f}}\left\langle \left. \left[ \frac{\delta\mathcal{L}%
+\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta\dot{%
+\Psi}}\right] ^{\ast}\right\vert \delta\dot{\Psi}\left( t\right)
+\right\rangle dt=\int_{t_{i}}^{t_{f}}\left\langle \left. \left[ \frac{\delta%
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{%
+\delta\dot{\Psi}}\right] ^{\ast}\right\vert \frac{d\delta\Psi\left( t\right) 
+}{dt}\right\rangle dt  \notag \\
+& =\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \delta\Psi\left( t_{f}\right) \right\rangle
+-\int_{t_{i}}^{t_{f}}\left\langle \left. \frac{d}{dt}\left\{ \frac {\delta%
+\mathcal{L}\left( \Psi\left( t\right) ,\dot{\Psi}\left( t\right) \right) }{%
+\delta\dot{\Psi}}\right\} ^{\ast}\right\vert \delta\Psi\left( t\right)
+\right\rangle dt
+\end{align}
+Eq.$\left( \ref{HJ1}\right) $ then simplifies to 
+\begin{equation}
+\delta_{\Psi}^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right)
+=\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \delta\Psi\left( t_{f}\right) \right\rangle
+\end{equation}
+The variations with respect to $t_{f}$ need to be done carefully. When we
+fix the end point of the motion $\left\vert \Lambda_{f}\right\rangle $ but
+change the arrival time $t_{f}$ to $t_{f}+\delta t_{f}$, we need to change $%
+\left\vert \Psi\left( t_{f}\right) \right\rangle $ to $\left\vert \Psi\left(
+t_{f}\right) \right\rangle -\left\vert \dot{\Psi}\left( t_{f}\right)
+\right\rangle \delta t$ so that it arrives at $\left\vert
+\Lambda_{f}\right\rangle $ at time $t_{f}+\delta t_{f}$ i.e. 
+\begin{equation}
+\delta_{\tau}\Psi\left( t_{f}\right) =-\left\vert \dot{\Psi}\left(
+t_{f}\right) \right\rangle \delta t
+\end{equation}
+producing the change in the action 
+\begin{equation}
+-\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \dot{\Psi}\left( t_{f}\right) \delta
+t\right\rangle
+\end{equation}
+which must be added to the change induced by the change of length of process 
+\begin{equation}
+\mathcal{L}\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left( t_{f}\right)
+\right) \delta t
+\end{equation}
+Adding these two together we obtain that the first order variation of the
+action wrt time durations $\tau$ is 
+\begin{equation}
+\delta_{\tau}^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) =\mathcal{%
+L}\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right)
+\delta t-\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \dot{\Psi}\left( t_{f}\right) \delta
+t\right\rangle
+\end{equation}
+The total first order change in the generalized stationary expression is
+then given by 
+\begin{align}
+\delta^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) & =\left\langle
+\left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left( t_{f}\right) ,\dot{%
+\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}\right]
+^{\ast}\right\vert \delta\Psi\left( t_{f}\right) \right\rangle +\mathcal{L}%
+\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) \delta
+t  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad-\left\langle \left. \left[ \frac{%
+\delta\mathcal{L}\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left(
+t_{f}\right) \right) }{\delta\dot{\Psi}}\right] ^{\ast}\right\vert \dot{\Psi}%
+\left( t_{f}\right) \delta t\right\rangle  \notag \\
+& =\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \delta\Psi\left( t_{f}\right) \right\rangle
+-\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \frac{d\Psi\left( t_{f}\right) }{dt}\delta
+t\right\rangle  \notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \qquad+%
+\mathcal{L}\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left( t_{f}\right)
+\right) \delta t  \notag \\
+& =\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \delta\Psi\left( t_{f}\right) \right\rangle
+-\left\langle \left. \left[ \frac{\delta\mathcal{L}\left( \Psi\left(
+t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) }{\delta\dot{\Psi}}%
+\right] ^{\ast}\right\vert \delta\Psi\left( t_{f}\right) \right\rangle 
+\notag \\
+& \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \qquad+%
+\mathcal{L}\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left( t_{f}\right)
+\right) \delta t
+\end{align}
+leading to 
+\begin{equation}
+\delta^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) =\mathcal{L}%
+\left( \Psi\left( t_{f}\right) ,\dot{\Psi}\left( t_{f}\right) \right) \delta
+t
+\end{equation}
+Now using the constraint $\left\vert \Psi\left( t_{f}\right) \right\rangle
+=\eta\left( t_{f}\right) \left\vert \Lambda_{f}\right\rangle $ gives 
+\begin{equation}
+\delta^{\left( 1\right) }\mathcal{A}\left( \Psi,\tau\right) =\mathcal{L}%
+\left( \eta\left( t_{f}\right) \left\vert \Lambda_{f}\right\rangle ,\left.
+\left\vert \dot{\Psi}\left( t_{f}\right) \right\rangle \right\vert
+_{\left\vert \Psi\left( t_{f}\right) \right\rangle =\eta\left( t_{f}\right)
+\left\vert \Lambda_{f}\right\rangle }\right) +i\frac{d\ln \eta\left(
+t_{\kappa}\right) }{dt}
+\end{equation}
+which on invoking stationary action produces the equation for the scaling
+factor 
+\begin{equation}
+\frame{$\mathcal{L}\left( \left\vert \Lambda_f\right\rangle ,\left.
+\left\vert \dot{\Psi}\left( t_f\right) \right\rangle \right\vert _\left\vert
+\Psi\left( t_f\right) \right\rangle =\left\vert \Lambda_f\right\rangle
+\right) +i\frac{d\ln\eta\left( t_\kappa\right) }{dt}$=0}
+\end{equation}
+that leads to the TDSE.
+
+\end{document}

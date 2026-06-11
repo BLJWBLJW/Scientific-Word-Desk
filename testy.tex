@@ -1,0 +1,69 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{achemso}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{Created=Tuesday, November 02, 2004 10:40:36}
+%TCIDATA{LastRevised=Wednesday, November 03, 2004 11:58:58}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\American Chemical Society">}
+%TCIDATA{CSTFile=article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{\texttt{achemso}\\
+-- A BibTeX style for Chemistry Publications\thanks{%
+This document describes \textsf{achemso} v.1.0{} and was last updated on
+1998/06/01 .}}
+\author{Mats Dahlgren}
+\date{1998/06/01}
+\maketitle
+
+\begin{abstract}
+The \textsf{achemso} package provides a BibTeX style in accordance with the
+requirements of the journals of The American Chemical Society. It consists
+of both a BibTeX style file and a LaTeX package file. Also provided, is a
+BibTeX style file to be used for bibliography data base listings via an
+option to the LaTeX package \textsf{achemso}. \newline
+Package: Copyright \copyright\ 1995-1998 by Mats Dahlgren. All rights
+reserved.
+\end{abstract}
+
+interesting $\cite{AGPCoherent}$, $\cite{Weiner98}$ 
+\bibliographystyle{achemso}
+\bibliography{agpopt,bw}
+
+\end{document}

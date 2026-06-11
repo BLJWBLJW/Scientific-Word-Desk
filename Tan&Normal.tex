@@ -1,0 +1,439 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                     %
+%              Scientific Word   Wrap/Unwrap  Version 2.5             %
+%                                                                     %
+% If you are separating the files in this message by hand, you will   %
+% need to identify the file type and place it in the appropriate      %
+% directory.  The possible types are: Document, DocAssoc, Other,      %
+% Macro, Style, Graphic, PastedPict, and PlotPict. Extract files      %
+% tagged as Document, DocAssoc, or Other into your TeX source file    %
+% directory.  Macro files go into your TeX macros directory. Style    %
+% files are used by Scientific Word and do not need to be extracted.  %
+% Graphic, PastedPict, and PlotPict files should be placed in a       %
+% graphics directory.                                                 %
+%                                                                     %
+% Graphic files need to be converted from the text format (this is    %
+% done for e-mail compatability) to the original 8-bit binary format. %
+%                                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                     %
+% Files included:                                                     %
+%                                                                     %
+% "/document/chap19.tex", Document, 12432, 4/14/1999, 23:02:56, ""    %
+%                                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%% Start /document/chap19.tex %%%%%%%%%%%%%%%%%%%%%
+
+%% This document created by Scientific Notebook (R) Version 3.0
+
+
+\documentclass[12pt,thmsa]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sw20jart}
+
+%TCIDATA{TCIstyle=article/art4.lat,jart,sw20jart}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Created=Mon Aug 19 14:52:24 1996}
+%TCIDATA{LastRevised=Wed Apr 14 16:02:55 1999}
+%TCIDATA{CSTFile=Lab Report.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\input{tcilatex}
+\begin{document}
+
+
+\vspace{1pt}Lagrange Multipliers
+
+Chapter 19 \ Chong/Zak
+
+Author: Robert Beezer
+
+History:
+
+1999/04/07\qquad First version.
+
+\vspace{1pt}
+
+\subsubsection{Problems}
+
+\vspace{1pt}
+
+\begin{enumerate}
+\item  min $f(x)$, subject to \ $h_{i}(x)=0$, \ $1\leq i\leq m$, \ $%
+g_{j}(x)=0$, \ $1\leq j\leq p$. \ \ We can ``roll-up'' the \ $h$'s and the \
+$g$'s into vector-valued functions and compare them to the zero vector. \ \
+\ Note that this problem formulation encompasses a wide variety of problems,
+including linear programming. \ At first we'll stick with the equality
+constraints only.\bigskip
+
+\item  Example (Edwards and Penney, 4e, Sec 14.9):
+
+min $\ \ x^{2}+y^{2},\ $subject to $\ \ xy=1$.
+
+Solve graphically with circles as level curves, touching up to a rotated
+hyperbola at points like $(1,1)$ \ and \ $(-1,-1)$.\bigskip
+
+\item  Example (Edwards and Penney, 4e, Example 14.9.4):
+
+Three variables, two equality constraints.
+
+The plane \ $x+y+z=12$ \ intersects \ $z=x^{2}+y^{2}$ \ to form an ellipse.
+\ Where is the lowest point on this intersection?
+
+min $z$, \ subject to \ \ $(x+y+z-12,$\ $x^{2}+y^{2}-z)=(0,0)$. \ Draw a
+picture - $(2,2,8)$ \ is the low point.\bigskip
+
+\item  Example (Uhl/Peressini/Sullivan, Problem 7.4):
+
+Three variables, two equality constraints.
+
+min \ $\frac{1}{x^{2}+y^{2}+z^{2}}$, \ subject to $x^{2}+2y^{2}+3z^{2}=1$, \
+$x+y+z=0$.
+
+\emph{Discuss} the appropriate picture.
+\end{enumerate}
+
+\vspace{1pt}
+
+\subsubsection{Theory}
+
+\vspace{1pt}
+
+\begin{enumerate}
+\item  Definition: \ A point \ $x^{\ast }$ is \emph{feasible} if \ $%
+h(x^{\ast })=0$.\bigskip
+
+\item  Definition: \ Given \ $h(x)=(h_{1}(x),h_{2}(x),\ldots h_{m}(x))$ \
+where \ $x$ \ is an \ $n$-slot vector, the Jacobian is the \ $m\times n$ \
+matrix whose rows are the gradients \ $\nabla h_{i}(x)$. \ The notation is \
+$Dh(x)$. \ \ Illustrate with last example above \ (U/P/S 7.4).
+\[
+Dh(x)=\left(
+\begin{array}{lll}
+2x & 4y & 6z \\
+1 & 1 & 1
+\end{array}
+\right)
+\]
+\bigskip
+
+\item  Definition: \ A feasible point \ $x^{\ast }$ is \emph{regular} if the
+set of gradients \ $\{$\ $\nabla h_{i}(x)\mid $\ $1\leq i\leq m\}$ \ is
+linearly independent. \ \ (Which would imply that \ $m<n$, so we often
+assume this is the case). \ This says that the Jacobian is a matrix of full
+rank.\bigskip
+
+\item  Definition: \ The tangent space at a point \ $x^{\ast }$ \ on the
+surface \ $\{x\mid h(x)=0\}$ \ \ is the set
+\[
+T(x^{\ast })=\{y\mid Dh(x^{\ast })y=0\}
+\]
+
+the null space of the Jacobian.\bigskip
+
+\item  Example: \ (last example above U/P/S 7.4) at \ $x^{\ast
+}=(5/10,-6/10,1/10)$
+
+Check feasibility: \ EZ
+
+Check regularity: $\ \ \ Dh((5/10,-6/10,1/10))=\left(
+\begin{array}{lll}
+1 & \frac{-24}{10} & \frac{6}{10} \\
+1 & 1 & 1
+\end{array}
+\right) $. \ The rows are linearly indpendent. \ The only time they wouldn't
+be is if \ \ $x^{\ast }=\alpha (\frac{1}{2},\frac{1}{4},\frac{1}{6})$. \ \
+The linear constraint would then force \ $\alpha =0$, but then \ $x^{\ast }=0
+$ \ and the quadratic constraint is not satisfied. \ This means that every
+feasible point is also regular.
+
+Check the tangent space:$\left(
+\begin{array}{lll}
+1 & \frac{-24}{10} & \frac{6}{10} \\
+1 & 1 & 1
+\end{array}
+\right) \bigskip $, nullspace basis: $\left\{ \left(
+\begin{array}{c}
+\frac{15}{2} \\
+1 \\
+-\frac{17}{2}
+\end{array}
+\right) \right\} $
+
+\item  Definition: \ the tangent plane is formed by shifting the tangent
+space to \ $x^{\ast }$
+\[
+TP(x^{\ast })=x^{\ast }+T(x^{\ast })=\{x^{\ast }+y\mid y\in T(x^{\ast })\}
+\]
+\bigskip
+
+\item  In the prior example this would be:$(5/10,-6/10,-1/10)+\alpha \left(
+\begin{array}{ccc}
+\frac{15}{2} & 1 & -\frac{17}{2}
+\end{array}
+\right) $, transpose:  \ for \ all \ $\alpha $. \ Visualize this as a line
+perpendicular to the set at \ \ $x^{\ast }$.\bigskip
+
+\item  Definition: \ The normal space at \ $x^{\ast }$ \ is:
+\[
+N(\ x^{\ast })=\{Dh(x^{\ast })^{T}z\mid z\in R^{m}\}
+\]
+
+Note carefully that this involves the transpose of the Jacobian, and is the
+range of this matrix. \ It is all linear combinations of the rows of the
+Jacobian, which are gradients of the constraint vector. \ Again, we can
+shift this to the point \ $\ x^{\ast }$ \ to form what is called the normal
+plane. \ Illustrate this some with the above example, writing linear
+combinations of the rows of the Jacobian, translated to $\ x^{\ast }$.
+
+\item  Fact: \ If \ $x\in N(\ x^{\ast })$ \ and \ $y\in T(\ x^{\ast })$ \ \
+then \ they are orthogonal vectors. \ So these \emph{sets} are orthogonal -
+each is precisely the set of vectors perpendicular to everything in the
+other (which is not exactly what is shown below).
+
+Proof:
+\[
+y^{T}x=y^{T}Dh(x^{\ast })^{T}z=(Dh(x^{\ast })y)^{T}z=0z=0
+\]
+
+\item  Fact: $\ \ N(\ x^{\ast })\cap T(\ x^{\ast })=\{0\}$
+
+Proof: \ Presume \ $x$ \ is in the intersection, then by viewing it as being
+in one or the other of the two sets, the above result shows that \ $xx=0$,
+implying that \ $x$ \ is the zero vector.\bigskip
+
+\item  Check the dimensions of these two spaces, and consider a basis for
+each. \ Together they must span all of \ $R^{n}$. \ So any vector at all can
+be written (uniquely) as a vector from $N(\ x^{\ast })$ \ added to a vector
+from \ $T(\ x^{\ast })$.
+\end{enumerate}
+
+\vspace{1pt}
+
+\subsubsection{Lagrange's Theorem}
+
+\vspace{1pt}
+
+\begin{enumerate}
+\item  Read Theorem 19.2 (and the \emph{preceding} text) for a prrof in the
+2-D, one constraint case.\bigskip
+
+\item  Theorem: \ Suppose that \ $x^{\ast }$ \ is a regular point and a
+local minimizer for \ $f(x)$ \ when subject to the constraint that \ $h(x)=0$%
+. \ Then there exists a vector\ $\lambda ^{\ast }$ \ such that
+\[
+Df(x^{\ast })+\lambda ^{\ast }Dh(x^{\ast })=0
+\]
+
+\item  Notes: \ (1) \ Check the sizes and types of the objects above. \ \
+(2) \ This is a necessary condition, but not sufficient. \ It will narrow
+our search for minimizers, but not say anything about if these points are
+definitely minimizers (some will be maximizers, some will be neither).
+
+\item  Proof: \ Choose any tangent vector to the constraint surface: \ $y\in
+T(x^{\ast })$. \ Theorem 19.1 (which we have not discussed) provides a
+parametrized curve on the constraint surface that passes through \ $x^{\ast }
+$ \ and has a derivative equal to the tangent there. \ That is, there exists
+\ $x(t)$, \ \ differentiable curve such that \ \ $h(x(t))=0$ \ and at some
+point \ $t^{\ast }$ \ we have \
+\[
+x(t^{\ast })=x^{\ast }\text{, \ \ \ \ }\left( \frac{dx}{dt}\right)
+_{t=t^{\ast }}=y
+\]
+
+Define \ $\phi (t)=f(x(t))$. \ \ \ If \ $x^{\ast }$ \ is a local minimizer
+of \ $f(x)$, \ then \ $t^{\ast }$ \ is a local minimizer of \ $\phi (t)$. \
+\ Then
+\[
+\frac{d}{dt}\phi (t)=Df(x(t))\cdot \frac{dx}{dt}
+\]
+
+Evaluating at \ $x=t^{\ast }$ \ and using the FONC for a minimizer yields
+\[
+0=\frac{d}{dt}\phi (t^{\ast })=Df(x(t^{\ast }))\cdot \left( \frac{dx}{dt}%
+\right) _{t=t^{\ast }}=\nabla f(x(t^{\ast }))\cdot y=\nabla f(x^{\ast
+})\cdot y
+\]
+
+So any \ $y\in T(x^{\ast })$ \ satisfies \ $\nabla f(x^{\ast })\cdot y=0$.
+
+So \ $\nabla f(x^{\ast })$ \ is an element of the set orthogonal to $%
+T(x^{\ast })$, \ namely $N(\ x^{\ast })$. \ \ So \ $\nabla f(x^{\ast
+})=Dh(x^{\ast })^{T}z$ \ for some \ $z$. \ Rearranged this becomes
+\[
+\nabla f(x^{\ast })-Dh(x^{\ast })^{T}z=0
+\]
+
+so the vector described by the statement of the theorem is \ $-z$, \ that is
+\ $\lambda ^{\ast }=-z$.
+\end{enumerate}
+
+\vspace{1pt}
+
+\vspace{1pt}Problems Again
+
+\vspace{1pt}
+
+\begin{enumerate}
+\item  Example (Edwards and Penney, 4e, Sec 14.9):
+
+min $\ \ x^{2}+y^{2},\ $subject to $\ \ xy=1$.
+\[
+(2x,2y)-\lambda (y,x)=(0,0)\Rightarrow \frac{\lambda }{2}=\frac{y}{x}=\frac{x%
+}{y}
+\]
+
+So
+\[
+x^{2}=y^{2}\text{ \ and thus \ }x=y=\pm 1
+\]
+
+Discuss why these two points, \ $(1,1)$ \ and \ $(-1,-1)$, \ must be
+minimizers.\bigskip
+
+\item  Example (Edwards and Penney, 4e, Example 14.9.4):
+
+The plane \ $x+y+z=12$ \ intersects \ $z=x^{2}+y^{2}$ \ to form an ellipse.
+\ Where is the lowest point on this intersection?
+
+min $z$, \ subject to \ \ $(x+y+z-12,$\ $x^{2}+y^{2}-z)=(0,0)$.
+\[
+\left(
+\begin{array}{r}
+0 \\
+0 \\
+1
+\end{array}
+\right) -\left(
+\begin{array}{rr}
+1 & 2x \\
+1 & 2y \\
+1 & -2z
+\end{array}
+\right) \left(
+\begin{array}{r}
+\lambda _{1} \\
+\lambda _{2}
+\end{array}
+\right) =\left(
+\begin{array}{r}
+0 \\
+0 \\
+0
+\end{array}
+\right)
+\]
+
+First two slots together yield that
+\[
+x=y=\frac{\lambda _{1}}{2\lambda _{2}}
+\]
+
+This is enough to convert the two constraints to
+\[
+2x+z=12\text{ \ and \ }z=2x^{2}
+\]
+
+which together yield \ $x=2$ \ and \ $x=-3$. \ These two solutions lead
+(respectiveley) to \ $z=8$ \ and \ $z=9$, ostensibly a max and a min. \
+These solution techniques are typical - try not to determine the $\lambda $%
+'s if you can avoid it, work on the variables of the problem.\bigskip
+
+\item  Example (Uhl/Peressini/Sullivan, Problem 7.4):
+
+Three variables, two equality constraints.
+
+min \ $\frac{1}{x^{2}+y^{2}+z^{2}}$, \ subject to $x^{2}+2y^{2}+3z^{2}=1$, \
+$x+y+z=0$.
+\[
+\left(
+\begin{array}{r}
+\frac{-2x}{\left( x^{2}+y^{2}+z^{2}\right) ^{2}} \\
+\frac{-2y}{\left( x^{2}+y^{2}+z^{2}\right) ^{2}} \\
+\frac{-2z}{\left( x^{2}+y^{2}+z^{2}\right) ^{2}}
+\end{array}
+\right) -\left(
+\begin{array}{rr}
+2x & 1 \\
+4y & 1 \\
+6z & 1
+\end{array}
+\right) \left(
+\begin{array}{r}
+\lambda _{1} \\
+\lambda _{2}
+\end{array}
+\right) =\left(
+\begin{array}{r}
+0 \\
+0 \\
+0
+\end{array}
+\right)
+\]
+
+Multiply through by $\left( x^{2}+y^{2}+z^{2}\right) ^{2}$ \ which is like
+doing a maximum problem on the reciprocal of the objective function. \ The
+equations that result are
+\[
+-2x-2x\lambda _{1}=\lambda _{2}\text{ \ and \ }-2y-4y\lambda _{1}=\lambda
+_{2}\text{\ \ and }-2z-6z\lambda _{1}=\lambda _{2}
+\]
+
+Setting these expressions for $\lambda _{2}$ \ equal to each other yields
+\[
+y=\frac{1+\lambda _{1}}{1+2\lambda _{1}}x\text{ \ \ and \ }z=\frac{1+\lambda
+_{1}}{1+3\lambda _{1}}x
+\]
+
+Substituting into \ $x+y+z=0$ \ creates the equation
+\[
+\left( 1+\frac{1+\lambda _{1}}{1+2\lambda _{1}}+\frac{1+\lambda _{1}}{%
+1+3\lambda _{1}}\right) x=0\Rightarrow \left( \frac{3+12\lambda
+_{1}+11\lambda _{1}^{2}}{\left( 1+2\lambda _{1}\right) \left( 1+3\lambda
+_{1}\right) }\right) =0\text{ \ or \ }x=0
+\]
+
+Two solutions are \ \ $\lambda _{1}=\frac{-6\pm \sqrt{3}}{11}$. \ These can
+be plugged into the expressions above for \ $y$ \ and \ $z$, and then into
+the quadratic constraint \ to get a single equation in \ $x$. \ With \ \ $x$
+\ and \ $\lambda _{1}$ \ we can determine \ \ $y$ \ and \ $z$, and evaluate
+the function. \ \ These computations, from Mathematica, follow:
+
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\lambda _{1}$ & $x$ & $y$ & $z$ & $\frac{1}{x^{2}+y^{2}+z^{2}}$ \\ \hline
+$\frac{-6+\sqrt{3}}{11}$ & $0.131633$ & $0.359627$ & $-0.49126$ & $2.57735$
+\\ \hline
+$\frac{-6+\sqrt{3}}{11}$ & $-0.131633$ & $-0.359627$ & $0.49126$ & $2.57735$
+\\ \hline
+$\frac{-6-\sqrt{3}}{11}$ & $0.661225$ & $-0.48405$ & $-0.177175$ & $1.42265$
+\\ \hline
+$\frac{-6-\sqrt{3}}{11}$ & $-0.661225$ & $0.48405$ & $0.177175$ & $1.42265$
+\\ \hline
+\end{tabular}
+
+The actual minimum value is $\frac{11(746+425\sqrt{3})}{(5751+3296\sqrt{3})}%
+=\allowbreak 1.\,\allowbreak 422\,649\,731$
+
+In the case where \ $x=0$ \ we get all zeros, and an undefined functional
+value.
+\end{enumerate}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+Problems: \ \ Chong/Zak \ \ Page 349 \ \ 1ab, 2a, 6
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%% End /document/chap19.tex %%%%%%%%%%%%%%%%%%%%%%

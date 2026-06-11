@@ -1,0 +1,520 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, July 21, 2003 20:57:35}
+%TCIDATA{LastRevised=Thursday, July 24, 2003 22:22:27}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Occupation Number Functions}
+
+\subsection{First Order Reduced Density Operator in Terms of Geminal
+Occupation Numbers}%
+
+\begin{equation}
+N_{j}=\frac{n_{j}S_{N-1}\left(  \widehat{n_{j}}\right)  }{S_{N}\left(
+\mathbf{n}\right)  }%
+\end{equation}
+defines a positive map
+\begin{equation}
+\mathbf{N}:\mathbb{R}^{s}\rightarrow\mathbb{R}^{s}%
+\end{equation}
+such that
+\begin{equation}
+\mathbf{N=}\left(
+\begin{array}
+[c]{c}%
+N_{1}\\
+\vdots\\
+N_{s}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+N_{1}\left(  \mathbf{n}\right) \\
+\vdots\\
+N_{s}\left(  \mathbf{n}\right)
+\end{array}
+\right)  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left(
+\begin{array}
+[c]{c}%
+n_{1}S_{N-1}\left(  \widehat{n_{1}}\right) \\
+\vdots\\
+n_{s}S_{N-1}\left(  \widehat{n_{s}}\right)
+\end{array}
+\right)
+\end{equation}
+where
+\begin{equation}
+S_{N}\left(  \mathbf{n}\right)  =\sum_{1\leq j_{1}<\cdots j_{s}\leq s}%
+n_{j_{1}}\cdots n_{j_{N}}%
+\end{equation}
+and
+\begin{equation}
+S_{N-q}\left(  \widehat{n_{1}}\cdots\widehat{n_{q}}\right)  =\sum
+_{\substack{1\leq j_{1}<\cdots j_{N-q}\leq s\\j_{1},\cdots,j_{N-q}\neq
+k_{1},\cdots,k_{q}}}n_{j_{1}}\cdots n_{j_{N-q}}%
+\end{equation}
+One should observe that if $0\leq n_{j}\leq1$ then $0\leq N_{j}\leq1;1\leq
+j\leq s$. The functions $\left\{  N_{j}\left(  \mathbf{n}\right)  \right\}  $
+are analytic and have Taylor series expansion
+\begin{align}
+N_{j}\left(  \mathbf{n}_{0}+\delta\mathbf{n}\right)   &  =\sum_{k=0}^{\infty
+}\frac{1}{k!}\left\langle D^{k}N_{j}\left(  \mathbf{n}_{0}\right)  \left\vert
+\overset{k}{\overbrace{\delta\mathbf{n}\otimes\cdots\otimes\delta\mathbf{n}}%
+}\right.  \right\rangle \\
+&  =\sum_{k=0}^{\infty}\sum_{1\leq j_{1},\ldots,j_{k}\leq s}\frac{1}{k!}%
+D^{k}N_{j}\left(  \mathbf{n}_{0}\right)  _{j_{1}\cdots j_{k}}\delta n_{j_{1}%
+}\cdots\delta n_{j_{k}}%
+\end{align}
+where
+\begin{equation}
+\left[  D^{k}N_{j}\left(  \mathbf{n}_{0}\right)  \right]  _{j_{1}\cdots j_{k}%
+}=\frac{\partial^{k}N_{j}\left(  \mathbf{n}_{0}\right)  }{\partial n_{j_{1}%
+}\cdots\partial n_{j_{k}}};\quad1\leq j_{1},\ldots,j_{k}\leq s
+\end{equation}%
+\begin{equation}
+\delta\mathbf{n}=\mathbf{n}-\mathbf{n}_{0}%
+\end{equation}
+and
+\begin{equation}
+D^{0}N_{j}\left(  \mathbf{n}_{0}\right)  =N_{j}\left(  \mathbf{n}_{0}\right)
+\end{equation}
+The full vector map is then
+\begin{equation}
+\mathbf{N}\left(  \mathbf{n}_{0}+\delta\mathbf{n}\right)  =\sum_{k=0}^{\infty
+}\frac{1}{k!}D^{k}\mathbf{N}\left(  \mathbf{n}_{0}\right)  \left(
+\delta\mathbf{n}\otimes\cdots\otimes\delta\mathbf{n}\right)
+\end{equation}
+In particular
+\begin{align}
+\frac{\partial N_{j}\left(  \mathbf{n}_{0}\right)  }{\partial n_{l}}  &
+=\frac{\partial}{\partial n_{l}}\left\{  \frac{n_{j}S_{N}\left(
+\widehat{n_{j}}\right)  }{S_{N}\left(  \mathbf{n}\right)  }\right\}
+\nonumber\\
+&  =\left.  -\frac{1}{S_{N}\left(  \mathbf{n}\right)  ^{2}}\frac{\partial
+S_{N}}{\partial n_{l}}n_{j}S_{N}\left(  \widehat{n_{j}}\right)  +\frac
+{1}{S_{N}\left(  \mathbf{n}\right)  }S_{N}\left(  \widehat{n_{j}}\right)
+\delta_{jl}+\frac{1}{S_{N}\left(  \mathbf{n}\right)  }n_{j}\frac{\partial
+S_{N}\left(  \widehat{n_{j}}\right)  }{\partial n_{l}}\right\vert
+_{\mathbf{n=n}_{0}}\nonumber\\
+&  =\left.  \frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  S_{N}\left(
+\widehat{n_{j}}\right)  \delta_{jl}+n_{j}S_{N}\left(  \widehat{n_{j}}%
+\widehat{n_{l}}\right)  -n_{j}S_{N}\left(  \widehat{n_{l}}\right)
+S_{N}\left(  \widehat{n_{j}}\right)  \right\}  \right\vert _{\mathbf{n=n}_{0}}%
+\end{align}
+One can make the substitution
+\begin{equation}
+n_{j}=e^{\eta_{j}}\Leftrightarrow\ln n_{j}=\eta_{j}\quad-\infty\leq\eta
+_{j}\leq\infty
+\end{equation}
+then
+\begin{equation}
+N_{j}=\frac{\mathcal{S}_{N-1}\left(  \widehat{\eta_{j}}\right)  }%
+{\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }=\frac{\partial\ln
+\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }{\partial\eta_{j}}%
+\end{equation}
+where
+\begin{align}
+\mathcal{S}_{N}\left(  \mathbf{\eta}\right)   &  =\sum_{1\leq j_{1}<\cdots
+j_{s}\leq s}e^{\eta_{j_{1}}+\cdots+\eta_{j_{N}}}\\
+\mathcal{S}_{N-q}\left(  \widehat{\eta_{1}}\cdots\widehat{\eta_{q}}\right)
+&  =\sum_{\substack{1\leq j_{1}<\cdots j_{N-q}\leq s\\j_{1},\cdots,j_{N-q}\neq
+k_{1},\cdots,k_{q}}}e^{\eta_{j_{1}}+\cdots+\eta_{j_{N-q}}}%
+\end{align}
+We then obtain the Taylor expansion
+\begin{equation}
+\mathbf{N}\left(  \mathbf{\eta}_{0}+\delta\mathbf{\eta}\right)  =\sum
+_{k=0}^{\infty}\frac{1}{k!}D^{k}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)
+\left(  \delta\mathbf{\eta}\otimes\cdots\otimes\delta\mathbf{\eta}\right)
+\end{equation}
+where
+\begin{equation}
+\delta\mathbf{\eta}=\mathbf{\eta}-\mathbf{\eta}_{0}%
+\end{equation}
+A natural point to expand about would be
+\begin{equation}
+\mathbf{n}_{0}=\left(
+\begin{array}
+[c]{c}%
+\left.
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right\}  N\\
+\qquad\left.
+\begin{array}
+[c]{c}%
+0\\
+\vdots\\
+0
+\end{array}
+\right\}  s-N
+\end{array}
+\right)  \leftrightarrow\mathbf{\eta}_{0}=\left(
+\begin{array}
+[c]{c}%
+\left.
+\begin{array}
+[c]{c}%
+0\\
+\vdots\\
+0
+\end{array}
+\right\}  N\\
+\qquad\left.
+\begin{array}
+[c]{c}%
+-\infty\\
+\vdots\\
+-\infty
+\end{array}
+\right\}  s-N
+\end{array}
+\right)
+\end{equation}
+which corresponds to a $2N$-particle IPS, however numerically this is not very
+satisfactory. Another point could be (as long as $s<\infty$)
+\begin{equation}
+\mathbf{n}_{0}=\left(  \left.
+\begin{array}
+[c]{c}%
+1\\
+\vdots\\
+1
+\end{array}
+\right\}  s\right)  \leftrightarrow\mathbf{\eta}_{0}=\left(  \left.
+\begin{array}
+[c]{c}%
+0\\
+\vdots\\
+0
+\end{array}
+\right\}  s\right)
+\end{equation}
+
+
+The first derrivatives are then
+\begin{align}
+\frac{\partial N_{j}\left(  \mathbf{\eta}\right)  }{\partial\eta_{l}} &
+=\frac{\partial}{\partial\eta_{l}}\left\{  \frac{\partial\ln\mathcal{S}%
+_{N}\left(  \mathbf{\eta}\right)  }{\partial\eta_{j}}\right\}  =\frac
+{1}{\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }\left\{  \frac
+{\partial\mathcal{S}_{N-1}\left(  \widehat{\eta_{j}}\right)  }{\partial
+\eta_{l}}-\frac{1}{\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }%
+\frac{\partial\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }{\partial\eta_{l}%
+}\frac{\partial\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }{\partial\eta
+_{j}}\right\}  \nonumber\\
+&  =\frac{1}{\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }\left\{
+\frac{\partial^{2}\mathcal{S}_{N}\left(  \widehat{\eta_{j}}\right)  }%
+{\partial\eta_{l}\partial\eta_{j}}-\frac{1}{\mathcal{S}_{N}\left(
+\mathbf{\eta}\right)  }\frac{\partial\mathcal{S}_{N}\left(  \mathbf{\eta
+}\right)  }{\partial\eta_{l}}\frac{\partial\mathcal{S}_{N}\left(
+\mathbf{\eta}\right)  }{\partial\eta_{j}}\right\}  \nonumber\\
+&  =\frac{1}{\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }\left\{
+\mathcal{S}_{N-2}\left(  \widehat{\eta_{j}}\widehat{\eta_{l}}\right)
+-\frac{1}{\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }\mathcal{S}%
+_{N-1}\left(  \widehat{\eta_{j}}\right)  \mathcal{S}_{N-1}\left(
+\widehat{\eta_{l}}\right)  \right\}
+\end{align}
+This can also be expressed in vector notation as
+\begin{equation}
+D^{1}\mathbf{N}\left(  \mathbf{\eta}\right)  =\frac{1}{\mathcal{S}_{N}\left(
+\mathbf{\eta}\right)  }\left\{  D^{2}\mathcal{S}_{N}\left(  \mathbf{\eta
+}\right)  -\frac{1}{\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  }%
+D^{1}\mathcal{S}_{N}\left(  \mathbf{\eta}\right)  \otimes D^{1}\mathcal{S}%
+_{N}\left(  \mathbf{\eta}\right)  \right\}
+\end{equation}
+If one evaluates $D^{1}\mathbf{N}\left(  \mathbf{\eta}\right)  $ at
+$\mathbf{\eta}=0$ $\leftrightarrow\mathbf{n}=1$ then
+\begin{equation}
+\frac{\partial N_{j}\left(  \mathbf{0}\right)  }{\partial\eta_{l}}%
+=\frac{\partial N_{j}\left(  \mathbf{1}\right)  }{\partial n_{l}}=\left.
+\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  S_{N}\left(  \widehat
+{n_{j}}\right)  \delta_{jl}+n_{j}S_{N}\left(  \widehat{n_{j}}\widehat{n_{l}%
+}\right)  -n_{j}S_{N}\left(  \widehat{n_{l}}\right)  S_{N}\left(
+\widehat{n_{j}}\right)  \right\}  \right\vert _{\mathbf{n=1}}%
+\end{equation}
+which gives
+\begin{align}
+S_{N}\left(  \mathbf{1}\right)   &  =\binom{s}{N}\\
+S_{N}\left(  \widehat{n_{j}}\right)   &  =\binom{s-1}{N-1}\\
+S_{N}\left(  \widehat{n_{j}}\widehat{n_{l}}\right)   &  =\binom{s-2}{N-2}%
+\end{align}
+hence%
+\begin{align}
+\frac{\partial N_{j}\left(  \mathbf{0}\right)  }{\partial\eta_{l}} &
+=\frac{N!\left(  s-N\right)  !}{s!}\left\{  \frac{\left(  s-1\right)
+!}{\left(  N-1\right)  !\left(  s-N\right)  !}\delta_{jl}+\frac{\left(
+s-2\right)  !}{\left(  N-2\right)  !\left(  s-N\right)  !}-\left(
+\frac{\left(  s-1\right)  !}{\left(  N-1\right)  !\left(  s-N\right)
+!}\right)  ^{2}\right\}  \\
+&  =\frac{N}{s}\delta_{jl}-\frac{N\left(  N-1\right)  }{s\left(  s-1\right)
+}-\frac{\left(  s-1\right)  !}{\left(  N-1\right)  !\left(  s-N\right)
+!}\frac{N}{s}%
+\end{align}
+
+
+\subsection{Fixed AGP Normalization}
+
+Let us consider the hypersurface
+\begin{equation}
+S_{N}\left(  \mathbf{\eta}\right)  =1
+\end{equation}
+then
+\begin{equation}
+\mathbf{N}\left(  \mathbf{\eta}\right)  =\nabla S_{N}\left(  \mathbf{\eta
+}\right)
+\end{equation}
+and
+\begin{equation}
+\mathbf{N}\left(  \mathbf{\eta}\right)  ^{t}\cdot\delta\mathbf{\eta}=0
+\end{equation}
+where $\delta\mathbf{\eta\in}T_{S_{N}\left(  \mathbf{\eta}\right)  }\equiv$
+the tangent space of $S_{N}\left(  \mathbf{\eta}\right)  -1$ at the point
+$\mathbf{\eta}$, i.e $\mathbf{N}\left(  \mathbf{\eta}\right)  $ is the normal
+vector to $T_{S_{N}\left(  \mathbf{\eta}\right)  }^{\prime}$ 
+
+\subsection{Geminal Occupation Numbers in Terms of First Order Reduced Density
+Operator Occupation Numbers (The Inverse Map)}
+
+The Geminal Occupation Number maps are also a positive map%
+
+\begin{align}
+\mathbf{n}  &  :\mathbb{R}^{s}\rightarrow\mathbb{R}^{s}\\
+\mathbf{\eta}  &  :\mathbb{R}^{s}\rightarrow\mathbb{R}^{s}%
+\end{align}
+where
+\begin{align}
+\mathbf{n}\left(  \mathbf{N}\left(  \mathbf{n}\right)  \right)   &  =\left(
+\mathbf{n\circ N}\right)  \left(  \mathbf{n}\right)  =\mathbf{n}\\
+\mathbf{\eta}\left(  \mathbf{N}\left(  \mathbf{\eta}\right)  \right)   &
+=\left(  \mathbf{\eta\circ N}\right)  \left(  \mathbf{\eta}\right)
+=\mathbf{\eta}%
+\end{align}
+so that both
+\begin{align}
+\mathbf{n}  &  =\mathbf{N}^{-1}\\
+\mathbf{\eta}  &  =\mathbf{N}^{-1}%
+\end{align}
+but in different coordinate systems. The inverse map has Taylor series
+expansion
+\begin{equation}
+\mathbf{\eta}\left(  \mathbf{N}_{0}+\delta\mathbf{N}\right)  =\sum
+_{k=0}^{\infty}\frac{1}{k!}D^{k}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)
+\left(  \delta\mathbf{N}\otimes\cdots\otimes\delta\mathbf{N}\right)
+\end{equation}
+The composition map, which is the identity map, has a Taylor series expansion
+\begin{equation}
+\left(  \mathbf{\eta\circ N}\right)  \left(  \mathbf{\eta}_{0}+\delta
+\mathbf{\eta}\right)  =\mathbf{\eta}_{0}+\delta\mathbf{\eta}%
+\end{equation}
+which implies that
+\begin{equation}
+D^{k}\left(  \mathbf{\eta\circ N}\right)  \left(  \mathbf{\eta}_{0}\right)
+=\mathbf{0,\quad}k>1
+\end{equation}
+and
+\begin{equation}
+D^{1}\left(  \mathbf{\eta\circ N}\right)  \left(  \mathbf{\eta}_{0}\right)
+=D^{1}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ}%
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  =\mathbf{I}%
+\end{equation}
+where
+\begin{align}
+\mathbf{N}_{0}  &  =\mathbf{N}\left(  \mathbf{\eta}_{0}\right) \\
+\mathbf{\eta}_{0}  &  =\mathbf{\eta}\left(  \mathbf{N}_{0}\right)
+\end{align}
+Hence%
+\begin{equation}
+D^{1}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  =\left[  D^{1}\mathbf{N}%
+\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-1}%
+\end{equation}
+Now
+\begin{align}
+D^{2}\left(  \mathbf{\eta\circ N}\right)  \left(  \mathbf{\eta}_{0}\right)
+&  =D^{1}\left(  D^{1}\left(  \mathbf{\eta\circ N}\right)  \left(
+\mathbf{\eta}_{0}\right)  \right)  =D^{1}\left(  D^{1}\mathbf{\eta}\left(
+\mathbf{N}_{0}\right)  \mathbf{\circ}D^{1}\mathbf{N}\left(  \mathbf{\eta}%
+_{0}\right)  \right) \nonumber\\
+&  =D^{2}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ}%
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \circ D^{1}\mathbf{N}\left(
+\mathbf{\eta}_{0}\right)  +D^{1}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)
+\mathbf{\circ}D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right) \nonumber\\
+&  =D^{2}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ}\left(
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right)  ^{2}+\left[
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-1}\mathbf{\circ
+}D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  =0
+\end{align}%
+\begin{equation}
+\Rightarrow D^{2}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  =-\left[
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-1}\mathbf{\circ
+}D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \circ\left[  D^{1}%
+\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-2}\qquad\qquad
+\qquad\quad
+\end{equation}
+and
+\begin{align}
+&  D^{3}\left(  \mathbf{\eta\circ N}\right)  \left(  \mathbf{\eta}_{0}\right)
+=D^{1}\left(  D^{2}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ
+}\left[  D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{2}%
++D^{1}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ}%
+D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right) \nonumber\\
+&  =D^{3}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ}\left[
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{3}+3D^{2}%
+\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ}D^{1}\mathbf{N}%
+\left(  \mathbf{\eta}_{0}\right)  \mathbf{\circ}D^{2}\mathbf{N}\left(
+\mathbf{\eta}_{0}\right)  +D^{1}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)
+\mathbf{\circ}D^{3}\mathbf{N}\left(  \mathbf{\eta}_{0}\right) \nonumber\\
+&  =D^{3}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  \mathbf{\circ}\left[
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{3}-3\left[
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-1}\mathbf{\circ
+}D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \circ\left[  D^{1}%
+\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-1}\mathbf{\circ}%
+D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right) \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad+\left[  D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]
+^{-1}\mathbf{\circ}D^{3}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  =0
+\end{align}%
+\begin{align}
+&  \Rightarrow D^{3}\mathbf{\eta}\left(  \mathbf{N}_{0}\right)  =\left\{
+3\left[  D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]
+^{-1}\mathbf{\circ}D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)
+\circ\left[  D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]
+^{-1}\mathbf{\circ}D^{2}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right.
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  -\left[  D^{1}%
+\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-1}\mathbf{\circ}%
+D^{3}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right\}  \left[
+D^{1}\mathbf{N}\left(  \mathbf{\eta}_{0}\right)  \right]  ^{-3}%
+\end{align}
+
+
+\section{Scalar Case}%
+
+\begin{align}
+\left(  f\circ g\right)  \left(  x+\delta x\right)   &  =\sum\limits_{k=0}%
+^{\infty}\frac{1}{k!}D^{k}\left(  f\circ g\right)  \left(  x\right)  \left(
+\delta x\right)  ^{k}=x+\delta x\nonumber\\
+&  \Rightarrow D^{k}\left(  f\circ g\right)  \left(  x\right)  =0\quad
+k>1\nonumber\\
+&  \Rightarrow D^{1}\left(  f\circ g\right)  \left(  x\right)  =1
+\end{align}%
+\begin{equation}
+D^{0}\left(  f\circ g\right)  \left(  x\right)  =\left(  f\circ g\right)
+\left(  x\right)
+\end{equation}%
+\begin{align}
+D^{1}\left(  f\circ g\right)  \left(  x\right)   &  =\frac{d}{dx}\left(
+f\circ g\right)  \left(  x\right)  =\frac{df\left(  g\right)  }{dg}%
+\frac{dg\left(  x\right)  }{dx}\nonumber\\
+&  \Rightarrow\frac{df\left(  g\right)  }{dg}=\left(  \frac{dg\left(
+x\right)  }{dx}\right)  ^{-1}%
+\end{align}
+%
+
+\begin{align}
+D^{2}\left(  f\circ g\right)  \left(  x\right)   &  =\frac{d}{dx}\left\{
+\frac{df\left(  g\right)  }{dg}\frac{dg\left(  x\right)  }{dx}\right\}
+=\frac{d^{2}f\left(  g\right)  }{dg^{2}}\left(  \frac{dg\left(  x\right)
+}{dx}\right)  ^{2}+\frac{df\left(  g\right)  }{dg}\frac{d^{2}g\left(
+x\right)  }{dx^{2}}=0\nonumber\\
+&  \Rightarrow\frac{d^{2}f\left(  g\right)  }{dg^{2}}=-\frac{df\left(
+g\right)  }{dg}\frac{d^{2}g\left(  x\right)  }{dx^{2}}\left(  \frac{dg\left(
+x\right)  }{dx}\right)  ^{-2}=-\left(  \frac{dg\left(  x\right)  }{dx}\right)
+^{-1}\frac{d^{2}g\left(  x\right)  }{dx^{2}}\left(  \frac{dg\left(  x\right)
+}{dx}\right)  ^{-2}%
+\end{align}%
+\begin{align}
+&  D^{3}\left(  f\circ g\right)  \left(  x\right)  =\frac{d}{dx}\left\{
+\frac{d^{2}f\left(  g\right)  }{dg^{2}}\left(  \frac{dg\left(  x\right)  }%
+{dx}\right)  ^{2}+\frac{df\left(  g\right)  }{dg}\frac{d^{2}g\left(  x\right)
+}{dx^{2}}\right\} \nonumber\\
+&  =\frac{d^{3}f\left(  g\right)  }{dg^{3}}\left(  \frac{dg\left(  x\right)
+}{dx}\right)  ^{3}+3\frac{d^{2}f\left(  g\right)  }{dg^{2}}\frac{dg\left(
+x\right)  }{dx}\frac{d^{2}g\left(  x\right)  }{dx^{2}}+\frac{df\left(
+g\right)  }{dg}\frac{d^{3}g\left(  x\right)  }{dx^{3}}\nonumber\\
+&  =\frac{d^{3}f\left(  g\right)  }{dg^{3}}\left(  \frac{dg\left(  x\right)
+}{dx}\right)  ^{3}-3\left\{  \left(  \frac{dg\left(  x\right)  }{dx}\right)
+^{-1}\frac{d^{2}g\left(  x\right)  }{dx^{2}}\left(  \frac{dg\left(  x\right)
+}{dx}\right)  ^{-2}\right\}  \frac{dg\left(  x\right)  }{dx}\frac
+{d^{2}g\left(  x\right)  }{dx^{2}}\nonumber\\
+&  +\left(  \frac{dg\left(  x\right)  }{dx}\right)  ^{-1}\frac{d^{3}g\left(
+x\right)  }{dx^{3}}\nonumber\\
+&  \Rightarrow\frac{d^{3}f\left(  g\right)  }{dg^{3}}=\left(  \frac{dg\left(
+x\right)  }{dx}\right)  ^{-3}\left\{  3\left\{  \left(  \frac{dg\left(
+x\right)  }{dx}\right)  ^{-1}\frac{d^{2}g\left(  x\right)  }{dx^{2}}\left(
+\frac{dg\left(  x\right)  }{dx}\right)  ^{-1}\right\}  \frac{d^{2}g\left(
+x\right)  }{dx^{2}}\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\left.  -\left(  \frac{dg\left(  x\right)  }{dx}\right)  ^{-1}%
+\frac{d^{3}g\left(  x\right)  }{dx^{3}}\right\}
+\end{align}
+
+
+
+\end{document}

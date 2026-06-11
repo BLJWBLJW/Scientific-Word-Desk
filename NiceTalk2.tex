@@ -1,0 +1,1864 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, July 29, 2007 10:19:12}
+%TCIDATA{LastRevised=Wednesday, October 10, 2007 09:03:24}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+0%
+\begin{align}
+W\left\vert \mathbf{\varphi}\right\rangle  &  =\left\vert \mathbf{\varphi
+}\right\rangle \mathbb{W}_{\varphi}=\left\vert \mathbf{\psi}\right\rangle \\
+A\left\vert \mathbf{\varphi}\right\rangle  &  =\left\vert \mathbf{\varphi
+}\right\rangle \mathbb{A}_{\varphi}\\
+A\left\vert \mathbf{\psi}\right\rangle  &  =\left\vert \mathbf{\psi
+}\right\rangle \mathbb{A}_{\psi}\\
+A\left\vert \mathbf{\psi}\right\rangle  &  =\left\vert \mathbf{\psi
+}\right\rangle \mathbb{A}_{\psi}=W\left\vert \mathbf{\varphi}\right\rangle
+\mathbb{A}_{\psi}=\left\vert \mathbf{\varphi}\right\rangle \mathbb{W}%
+_{\varphi}\mathbb{A}_{\psi}\\
+A\left\vert \mathbf{\psi}\right\rangle \mathbb{W}_{\varphi}^{-1} &
+=\left\vert \mathbf{\varphi}\right\rangle \mathbb{W}_{\varphi}%
+\mathbb{\mathbb{A}_{\psi}W}_{\mathbb{\varphi}}^{-1}=A\left\vert W^{-1}%
+\mathbf{\psi}\right\rangle =A\left\vert \mathbf{\varphi}\right\rangle
+=\left\vert \mathbf{\varphi}\right\rangle \mathbb{A}_{\varphi}%
+\end{align}
+0a%
+\[
+W\left\vert \mathbf{\varphi}\right\rangle =\left\vert \mathbf{\varphi
+}\right\rangle \mathbb{W}=\left\vert \mathbf{\psi}\right\rangle
+\]%
+\begin{align}
+\mathbb{A}_{\varphi} &  =\mathbb{W}_{\varphi}\mathbb{\mathbb{A}_{\psi}%
+W}_{\mathbb{\varphi}}^{-1}\\
+\mathbb{A}_{\psi} &  =\mathbb{W}_{\mathbb{\varphi}}^{-1}\mathbb{\mathbb{A}%
+_{\varphi}W}_{\varphi}%
+\end{align}%
+\begin{equation}
+AB\left\vert \varphi_{j}\right\rangle =\sum_{j_{1}}A\left\vert \varphi_{j_{1}%
+}\right\rangle B_{j_{1}j}=\sum_{j_{1}}\sum_{j_{2}}\left\vert \varphi_{j_{2}%
+}\right\rangle A_{j_{2}j_{1}}B_{j_{1}j}%
+\end{equation}%
+\begin{equation}
+A\left\vert B\varphi_{j}\right\rangle =\sum_{j_{1}}\left\vert B\varphi_{j_{1}%
+}\right\rangle A_{B\varphi j_{1}j}=\sum_{j_{1}}\sum_{j_{2}}\left\vert
+\varphi_{j_{2}}\right\rangle B_{j_{2}j_{1}}A_{B\varphi j_{1}j}%
+\end{equation}%
+\[
+S^{-\frac{1}{2}}\left\vert \mathbf{\varphi}\right\rangle =\left\vert
+\mathbf{\tilde{\varphi}}\right\rangle =\left\vert \mathbf{\varphi
+}\right\rangle \mathbb{S}_{\varphi}^{-\frac{1}{2}}%
+\]%
+\begin{equation}
+\mathbb{W}\mathbb{=S}_{\varphi}^{-\frac{1}{2}}\mathbb{U}%
+\end{equation}
+1%
+\[
+\left\langle \left.  \mathbf{\psi}\right\vert \mathbf{\psi}\right\rangle
+=\left\langle \left.  W\mathbf{\varphi}\right\vert W\mathbf{\varphi
+}\right\rangle =\mathbb{I}_{2s}=\mathbb{W}^{\dagger}\left\langle \left.
+\mathbf{\varphi}\right\vert \mathbf{\varphi}\right\rangle \mathbb{W}%
+=\mathbb{W}^{\dagger}\mathbb{S}_{f}\mathbb{W}%
+\]%
+\[
+\mathbb{W}^{\dagger}\mathbb{S}_{f}\mathbb{W}=\left(  \mathbb{S}_{\varphi
+}^{-\frac{1}{2}}\mathbb{U}\right)  ^{\dagger}\mathbb{S}_{\varphi}%
+\mathbb{S}_{\varphi}^{-\frac{1}{2}}\mathbb{U}=\mathbb{U}^{\dagger}%
+\mathbb{S}_{\varphi}^{-\frac{1}{2}}\mathbb{S}_{\varphi}\mathbb{S}_{\varphi
+}^{-\frac{1}{2}}\mathbb{US}_{\varphi}^{-\frac{1}{2}}=\mathbb{I}_{2s}%
+\]
+3%
+\[
+\mathbb{W=}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{\alpha\alpha} & \mathbb{W}_{\alpha\beta}\\
+\mathbb{W}_{\beta\alpha} & \mathbb{W}_{\beta\beta}%
+\end{array}
+\right)
+\]
+4%
+\[
+\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}
+\]
+5%
+\[
+\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}
+\]
+6%
+\[
+\left\vert \varphi_{j}\right\rangle =\left\{
+\begin{array}
+[c]{c}%
+\left\vert \omega_{j}\right\rangle \left\vert \alpha\right\rangle ;\quad1\leq
+j\leq s\quad\\
+\left\vert \omega_{j}\right\rangle \left\vert \beta\right\rangle ;s+1\leq
+j\leq2s
+\end{array}
+\right.
+\]
+7%
+\[
+\left\{  \left.  \left\vert \omega_{j}\right\rangle \right\vert 1\leq j\leq
+s\right\}
+\]
+8***************************************************%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{\alpha\alpha} & \mathbb{W}_{\alpha\beta}\\
+\mathbb{W}_{\beta\alpha} & \mathbb{W}_{\beta\beta}%
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{S} & \mathbb{O}\\
+\mathbb{O} & \mathbb{S}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{\alpha\alpha} & \mathbb{W}_{\alpha\beta}\\
+\mathbb{W}_{\beta\alpha} & \mathbb{W}_{\beta\beta}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{O}\\
+\mathbb{O} & \mathbb{I}_{s}%
+\end{array}
+\right)  ,
+\]
+8a%
+\[
+\mathbb{W}^{-1}=\mathbb{W}^{\dagger}\mathbb{S}_{f}%
+\]
+8b%
+\[
+\mathbb{S}_{f}=\mathbb{W}^{-\dagger}\mathbb{W}^{-1}=\left(  \mathbb{WW}%
+^{\dagger}\right)  ^{-1}%
+\]
+9%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{\alpha\alpha} & \mathbb{W}_{\alpha\beta}\\
+\mathbb{W}_{\beta\alpha} & \mathbb{W}_{\beta\beta}%
+\end{array}
+\right)  ^{-\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{\alpha\alpha} & \mathbb{W}_{\alpha\beta}\\
+\mathbb{W}_{\beta\alpha} & \mathbb{W}_{\beta\beta}%
+\end{array}
+\right)  ^{-1}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{S} & \mathbb{O}\\
+\mathbb{O} & \mathbb{S}%
+\end{array}
+\right)
+\]
+10%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{\alpha\alpha} & \mathbb{W}_{\alpha\beta}\\
+\mathbb{W}_{\beta\alpha} & \mathbb{W}_{\beta\beta}%
+\end{array}
+\right)  ^{-1}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{\alpha\alpha} & \mathbb{W}_{\alpha\beta}\\
+\mathbb{W}_{\beta\alpha} & \mathbb{W}_{\beta\beta}%
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{S} & \mathbb{O}\\
+\mathbb{O} & \mathbb{S}%
+\end{array}
+\right)
+\]
+12*************************************************************%
+\begin{align*}
+&  \mathcal{H}\left(  \mathbf{n,\psi}\right)  =\sum_{j_{1,}j_{2}=1}^{r}%
+\sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \hat{\jmath}\right)  \left\{
+W_{\,j_{1}j}^{\ast}W_{\,j_{2}j}+W_{\,j_{1}j+s}^{\ast}W_{\,j_{2}j+s}\right\}
+h_{j_{1}j_{2}}^{a}\\
+&  \qquad\qquad+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \overset
+{}{\underset{}{}}\sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \hat{\jmath}\right)
+W_{\,j_{1}j}^{\ast}W_{\,j_{2}j+s}^{\ast}W_{\,j_{3}j}W_{\,j_{4}j+s}\right.  \\
+&  \qquad\qquad\qquad+\sum_{1\leq j,k\leq s}c_{j}c_{k}S_{N-1}\left(
+\hat{\jmath}\hat{k}\right)  W_{\,j_{1}j}^{\ast}W_{\,j_{2}j+s}^{\ast}%
+W_{\,j_{3}k}W_{\,j_{4}k+s}\\
+&  \left.  {}\right.  \left.  +\sum_{1\leq j,k\leq r}n_{j}n_{k}S_{N-2}\left(
+\hat{\jmath}\hat{k}\right)  W_{\,j_{1}j}^{\ast}W_{\,j_{2}k}^{\ast}W_{\,j_{3}%
+j}W_{\,j_{4}k}\right\}  \left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}%
+\end{align*}
+13%
+\[
+\mathcal{E}\left(  \mathbf{n,\psi}\right)  =\frac{\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }%
+\]
+14***********************%
+\[
+\left\langle G^{\dagger N}\phi|Ha_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger
+}G^{\dagger N-1}\phi\right\rangle =\sum_{p,q=1}^{r}W_{\,j_{1}p}W_{\,j_{2}%
+q}\left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
+N-1}\phi\right\rangle
+\]
+15*************************%
+\begin{align*}
+&  \left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{p+s}^{\dagger}G^{\dagger
+N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\\
+&  \left\{  \sum_{j_{1,}j_{2}=1}^{r}\left\{  \underset{}{\overset{}{}}%
+S_{N-1}\left(  \hat{p}\right)  c_{p}\left\{  W_{\,j_{1}p}^{\ast}W_{\,j_{2}%
+p}+W_{\,j_{1}p+s}^{\ast}W_{\,j_{2}p+s}\right\}  h_{j_{1}j_{2}}^{a}\right.
+\right.  \\
+&  \qquad\qquad\qquad\qquad\qquad\quad\left.  +\right.  \left.  \sum_{j\neq
+p}^{s}S_{N-2}\left(  \hat{p}\hat{\jmath}\right)  c_{p}n_{j}\left\{
+W_{\,j_{1}j}^{\ast}W_{\,j_{2}j}+W_{\,j_{1}j+s}^{\ast}W_{\,j_{2}j+s}\right\}
+h_{j_{1}j_{2}}^{a}\right\}
+\end{align*}
+16%
+\begin{align*}
+&  \left.  +\right.  \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \underset
+{}{\overset{}{\left.  {}\right.  }}S_{N-1}\left(  \hat{p}\right)
+c_{p}W_{\,j_{1}p}^{\ast}W_{\,j_{2}p+s}^{\ast}W_{\,j_{3}p}W_{\,j_{4}%
+p+s}\right.  \\
+&  \qquad+\sum_{j\neq p}^{s}S_{N-2}\left(  \hat{p}\hat{\jmath}\right)
+\left\{  c_{p}n_{j}\left\{  W_{\,j_{1}j}^{\ast}W_{\,j_{2}j+s}^{\ast}%
+W_{\,j_{3}j}W_{\,j_{4}j+s}+W_{\,j_{1}j}^{\ast}W_{\,j_{2}p}^{\ast}W_{\,j_{3}%
+p}W_{\,j_{4}j}\right.  \right.  \\
+&  \qquad\qquad\qquad+W_{\,j_{1}j}^{\ast}W_{\,j_{2}p+s}^{\ast}W_{\,j_{3}%
+p+s}W_{\,j_{4}j}+W_{\,j_{1}j+s}^{\ast}W_{\,j_{2}p}^{\ast}W_{\,j_{3}%
+p}W_{\,j_{4}j+s}\\
+&  \qquad\qquad\qquad\qquad\left.  +W_{\,j_{1}j+s}^{\ast}W_{\,j_{2}p+s}^{\ast
+}W_{\,j_{3}p+s}W_{\,j_{4}j+s}\right\}  \left.  +\,c_{j}W_{\,j_{1}j}^{\ast
+}W_{\,j_{2}j+s}^{\ast}W_{\,j_{3}p}W_{\,j_{4}p+s}\underset{}{\overset{}{}%
+}\right\}
+\end{align*}
+17%
+\begin{align*}
+&  +\sum_{j\neq k\neq p}^{s}S_{N-2}\left(  \hat{p}\hat{\jmath}\hat{k}\right)
+c_{p}c_{j}c_{k}W_{\,j_{1}j}^{\ast}W_{\,j_{2}j+s}^{\ast}W_{\,j_{3}k}%
+W_{\,j_{4}k+s}\qquad\qquad\qquad\\
+&  \qquad\quad+\frac{1}{2}c_{p}\sum_{j,k\neq p}^{s}S_{N-3}\left(  \hat{p}%
+\hat{\jmath}\hat{k}\right)  n_{j}n_{k}\left\{  W_{\,j_{1}j}^{\ast}W_{\,j_{2}%
+k}^{\ast}W_{\,j_{3}k}W_{\,j_{4}pj}\right.  \\
+&  \qquad\qquad\qquad+W_{\,j_{1}j}^{\ast}W_{\,j_{2}k+s}^{\ast}W_{\,j_{3}%
+k+s}W_{\,j_{4}pj}+W_{\,j_{1}j+s}^{\ast}W_{\,j_{2}k}^{\ast}W_{\,j_{3}%
+k}W_{\,j_{4}pj+s}\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  \left.  \left.  \left.
++W_{\,j_{1}j+s}^{\ast}W_{\,j_{2}k+s}^{\ast}W_{\,j_{3}k+s}W_{\,j_{4}%
+pj+s}\right\}  \underset{}{\overset{}{}}\right\}  \right\}  \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\underset{}{\overset{\underset
+{}{\overset{}{}}}{}}\right\}
+\end{align*}
+and the unpaired term gives
+
+18**********************************************************%
+\begin{align*}
+&  \left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
+N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\\
+&  \left\{  S_{N-1}\left(  \hat{p}\hat{q}\right)  \sum_{j_{1},j_{2}=1}%
+^{r}\left\{  W_{\,j_{1}\bar{q}}^{\ast}W_{\,j_{2}p}c_{q}+W_{\,j_{1}\bar{p}%
+}^{\ast}W_{\,j_{2}q}c_{p}\right\}  h_{j_{1}j_{2}}^{a}\right. \\
+&  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \sum_{\kappa\neq\left\vert
+p\right\vert \neq\left\vert q\right\vert }^{s}S_{N-1}\left(  \hat{\kappa}%
+\hat{p}\hat{q}\right)  \left\{  W_{\,j_{1}\kappa}^{\ast}W_{\,j_{2}\kappa
++s}^{\ast}W_{\,j_{3}p}W_{\,j_{4}q}c_{\kappa}\right.  \right. \\
+&  \qquad\qquad\qquad\qquad+W_{\,j_{1}\bar{p}}^{\ast}W_{\,j_{2}\bar{q}}^{\ast
+}W_{\,j_{3}\kappa}W_{\,j_{4}\kappa+s}c_{p}c_{q}c_{\kappa}+W_{\,j_{1}\bar{q}%
+}^{\ast}W_{\,j_{2}\kappa}^{\ast}W_{\,j_{3}p}W_{\,j_{4}\kappa}n_{\kappa}c_{q}\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\left.  +W_{\,j_{1}\bar{p}}^{\ast}W_{\,j_{2}\kappa}^{\ast}W_{\,j_{3}%
+q}W_{\,j_{4}\kappa}n_{\kappa}c_{p}\right\} \\
+&  +S_{N-1}\left(  \hat{p}\hat{q}\right)  \left\{  c_{p}W_{\,j_{1}p}^{\ast
+}W_{\,j_{2}p+s}^{\ast}W_{\,j_{3}p}W_{\,j_{4}q}+c_{q}W_{\,j_{1}q}^{\ast
+}W_{\,j_{2}q+s}^{\ast}W_{\,j_{3}p}W_{\,j_{4}q}\right\}  \left.  \left.
+\underset{}{\overset{}{}}\right\}  \left\langle j_{1}j_{2}||j_{3}%
+j_{4}\right\rangle ^{a}\underset{}{\overset{\underset{}{\overset{}{}}}{}%
+}\right\}
+\end{align*}
+18aa******************************%
+\begin{align*}
+\frac{\partial\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  }{\partial
+\gamma_{jk}}  &  =\frac{1}{\mathcal{S}_{N}\left(  \mathbf{\gamma}\right)
+}\left\{  \frac{\partial\mathcal{H}_{N}\left(  \mathbf{\gamma}\right)
+}{\partial\gamma_{jk}}-\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)
+\frac{\partial\mathcal{S}_{N}\left(  \mathbf{\gamma}\right)  }{\partial
+\gamma_{jk}}\right\} \\
+\frac{\partial\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  }{\partial
+\gamma_{jk}^{\ast}}  &  =\frac{1}{\mathcal{S}_{N}\left(  \mathbf{\gamma
+}\right)  }\left\{  \frac{\partial\mathcal{H}_{N}\left(  \mathbf{\gamma
+}\right)  }{\partial\gamma_{jk}^{\ast}}-\mathcal{E}_{N}\left(  \mathbf{\gamma
+}\right)  \frac{\partial\mathcal{S}_{N}\left(  \mathbf{\gamma}\right)
+}{\partial\gamma_{jk}^{\ast}}\right\}
+\end{align*}
+18a*********************************************************%
+\[
+\left\langle G^{\dagger N}\phi|Ha_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger
+}G^{\dagger N-1}\phi\right\rangle =\sum_{p,q=1}^{r}W_{\,j_{1}p}W_{\,j_{2}%
+q}\left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
+N-1}\phi\right\rangle
+\]%
+\[
+\frac{\partial\mathcal{H}_{N}\left(  \mathbf{\gamma}\right)  }{\partial
+\gamma_{jk}}=\left\langle G^{\dagger N}\phi|Ha_{j}^{\dagger}a_{k}^{\dagger
+}G^{\dagger N-1}\phi\right\rangle
+\]%
+\[
+\frac{\partial\mathcal{S}_{N}\left(  \mathbf{\gamma}\right)  }{\partial
+\gamma_{jk}}=\left\langle G^{\dagger N}\phi|a_{j}^{\dagger}a_{k}^{\dagger
+}G^{\dagger N-1}\phi\right\rangle
+\]
+18b**********************************************************************%
+\begin{align*}
+\frac{\delta\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  }{\delta\gamma
+_{jk}}  &  =\frac{N}{\mathcal{S}_{N}\left(  \mathbf{\gamma}\right)  }\left\{
+\left\langle G^{\dagger N}\phi|Ha_{j}^{\dagger}a_{k}^{\dagger}G^{\dagger
+N-1}\phi\right\rangle \right. \\
+&  \left.  -\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  \left\langle
+G^{\dagger N}\phi|a_{j}^{\dagger}a_{k}^{\dagger}G^{\dagger N-1}\phi
+\right\rangle \right\} \\
+\frac{\delta\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  }{\delta\gamma
+_{jk}^{\ast}}  &  =\frac{N}{\mathcal{S}_{N}\left(  \mathbf{\gamma}\right)
+}\left\{  \left\langle a_{j}^{\dagger}a_{k}^{\dagger}G^{\dagger N-1}%
+\phi|HG^{\dagger N}\phi\right\rangle \right. \\
+&  \left.  -\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  \left\langle
+a_{j}^{\dagger}a_{k}^{\dagger}G^{\dagger N-1}\phi|G^{\dagger N}\phi
+\right\rangle \right\}
+\end{align*}
+19%
+\begin{align*}
+\delta^{\left(  1\right)  }\mathcal{E}_{N}  &  =\left[  \partial_{\gamma
+}\mathcal{E}_{N}\right]  ^{t}\cdot\delta\mathbf{\gamma}+\left[  \partial
+_{\gamma}\mathcal{E}_{N}\right]  ^{\dagger}\cdot\delta\mathbf{\gamma}^{\ast}\\
+&  =\left[  \partial_{\gamma^{\ast}}\mathcal{E}_{N}\right]  ^{\dagger}%
+\cdot\delta\mathbf{\gamma}+\left[  \partial_{\gamma}\mathcal{E}_{N}\right]
+^{\dagger}\cdot\delta\mathbf{\gamma}^{\ast}\\
+&  =\left(
+\begin{array}
+[c]{c}%
+\partial_{\gamma^{\ast}}\mathcal{E}_{N}\\
+\partial_{\gamma}\mathcal{E}_{N}%
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\gamma}\\
+\delta\mathbf{\gamma}^{\ast}%
+\end{array}
+\right) \\
+&  \equiv\left[  d\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  \right]
+\left(  \delta\mathbf{\gamma}\right)
+\end{align*}%
+\[
+\left[  \partial_{\gamma}\mathcal{E}_{N}\right]  ^{t}\cdot\mathbf{\gamma
+}=0\Leftrightarrow\left[  \partial_{\gamma}\mathcal{E}_{N}\right]  ^{\dagger
+}\cdot\mathbf{\gamma}^{\ast}=0
+\]
+20%
+\[
+\partial_{\gamma}\mathcal{E}_{N}=\left(
+\begin{array}
+[c]{c}%
+\frac{\delta\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  }{\delta\gamma
+_{12}}\\
+\vdots\\
+\frac{\delta\mathcal{E}_{N}\left(  \mathbf{\gamma}\right)  }{\delta
+\gamma_{r-1r}}%
+\end{array}
+\right)  =\frac{1}{\mathcal{N}_{N}\left(  \mathbf{\gamma}\right)  }\left\{
+\partial_{\gamma}\mathcal{H}_{N}-\mathcal{E}_{N}\left(  \mathbf{\gamma
+}\right)  \partial_{\gamma}\mathcal{N}_{N}\right\}
+\]
+21%
+\begin{align*}
+\mathcal{E}\left(  \mathbf{\gamma}\right)   &  =\frac{\mathcal{H}\left(
+\mathbf{\gamma}\right)  }{S_{N}\left(  \mathbf{\gamma}\right)  }%
+=\mathcal{E}\left(  \mathbf{n\left(  \mathbf{\gamma}\right)  ,\psi}\left(
+\mathbf{\gamma}\right)  \right) \\
+&  =\frac{\mathcal{H}\left(  \mathbf{n\left(  \mathbf{\gamma}\right)  ,\psi
+}\left(  \mathbf{\gamma}\right)  \right)  }{S_{N}\left(  \mathbf{n}\left(
+\mathbf{\gamma}\right)  \right)  }%
+\end{align*}
+22%
+\begin{align*}
+\mathcal{E}\left(  \mathbf{n,\psi}\right)   &  =\frac{\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left\langle \psi_{j}\left\vert
+h_{1}\psi_{j}\right.  \right\rangle +\left\langle \psi_{j+s}\left\vert
+h_{1}\psi_{j+s}\right.  \right\rangle +\left\langle \psi_{j}\psi_{j+s}%
+||\psi_{j}\psi_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\jmath k\right)  \left\langle \psi_{j}\psi_{j+s}||\psi_{k}\psi_{k+s}%
+\right\rangle \left.  +\frac{1}{2}\sum_{1\leq j,k\leq2s}n_{i}n_{j}%
+S_{N-2}\left(  \jmath k\right)  \left\langle \psi_{j}\psi_{k}||\psi_{j}%
+\psi_{k}\right\rangle \right\}
+\end{align*}
+24%
+\[
+S_{N-2}\left(  \jmath k\right)  =S_{N-2}\left(  \jmath+sk\right)
+=S_{N-2}\left(  \jmath k+s\right)  =S_{N-2}\left(  \jmath+sk+s\right)
+\]
+25%
+\[
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}c_{jk}\left\vert
+W\varphi_{j}W\varphi_{k}\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}%
+\gamma_{jk}\left\vert \varphi_{j}\varphi_{k}\right\rangle
+\]%
+\[
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}c_{jj+s}\left\vert \psi_{j}%
+\psi_{j+s}\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}\gamma
+_{jk}\left\vert \varphi_{j}\varphi_{k}\right\rangle
+\]
+26%
+\[
+\left\vert g\right\rangle =\sum_{1\leq j<k\leq r}\sum_{j_{1}}\sum_{k_{1}%
+}\mathbb{W}_{j_{1}j}c_{jk}\mathbb{W}_{kk_{1}}^{t}\left\vert \varphi_{j_{1}%
+}\varphi_{k_{1}}\right\rangle =\sum\gamma_{j_{1}k_{1}}\left\vert
+\varphi_{j_{1}}\varphi_{k_{1}}\right\rangle
+\]
+26a%
+\[
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}c_{jk}\left\vert
+\psi_{j}\psi_{k}\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}\gamma
+_{jk}\left\vert \varphi_{j}\varphi_{k}\right\rangle
+\]
+26b************%
+\[
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}\left(
+\mathbb{W}\mathbf{c}_{f}\mathbb{W}^{t}\right)  _{jk}\left\vert \varphi
+_{j}\varphi_{k}\right\rangle
+\]%
+\begin{align*}
+\left\vert g\right\rangle  &  =\frac{1}{2}\sum_{1\leq j,k\leq r}c_{j_{1}k_{1}%
+}\left\vert W\varphi_{j_{1}}W\varphi_{k_{1}}\right\rangle =\frac{1}{2}%
+\sum_{1\leq j,k\leq r}\gamma_{jk}\left\vert \varphi_{j}\varphi_{k}%
+\right\rangle \\
+&  =\frac{1}{2}\sum_{1\leq j_{1},k_{1}\leq r}c_{j_{1}k_{1}}\left\vert
+\sum_{j,k}\varphi_{j}W_{jj_{1}}\varphi_{k}W_{kk_{1}}\right\rangle \\
+&  =\frac{1}{2}\sum_{1\leq j,k,j_{1},k_{1}\leq r}W_{jj_{1}}c_{j_{1}k_{1}%
+}W_{kk_{1}}\left\vert \varphi_{j}\varphi_{k}\right\rangle \\
+&  =\frac{1}{2}\sum_{1\leq j,k,j_{1},k_{1}\leq r}W_{jj_{1}}c_{j_{1}k_{1}%
+}W_{k_{1}k}^{t}\left\vert \varphi_{j}\varphi_{k}\right\rangle \\
+&  =\frac{1}{2}\sum_{1\leq j,k\leq r}\left(  \mathbb{W}\mathbf{c}%
+_{f}\mathbb{W}^{t}\right)  _{jk}\left\vert \varphi_{j}\varphi_{k}%
+\right\rangle
+\end{align*}
+27*************%
+\[
+\left\vert g\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}\left(
+\mathbb{W}\mathbf{c}_{f}\mathbb{W}^{t}\right)  _{jk}\left\vert \varphi
+_{j}\varphi_{k}\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}\gamma
+_{jk}\left\vert \varphi_{j}\varphi_{k}\right\rangle
+\]
+27a%
+\[
+\mathbf{\gamma}=\mathbb{W}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}\\
+-\mathbf{c} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{W}^{t}%
+\]%
+\[
+\mathbf{c}=\left(
+\begin{array}
+[c]{cccc}%
+c_{1s+1} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & c_{s2s}%
+\end{array}
+\right)
+\]
+27b%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}\\
+-\mathbf{c} & \mathbb{O}%
+\end{array}
+\right)  =\mathbb{W}^{-1}\mathbf{\gamma}\mathbb{W}^{-t}%
+\]%
+\[
+\mathbf{c}_{f}=\mathbb{W}^{-1}\mathbf{\gamma}\mathbb{W}^{-t}%
+\]%
+\begin{align*}
+\mathbb{W}^{-1}\mathbf{\gamma}\mathbb{W}^{-t}\left[  \mathbb{W}^{-1}%
+\mathbf{\gamma}\mathbb{W}^{-t}\right]  ^{\dagger}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}\\
+-\mathbf{c} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}\\
+-\mathbf{c} & \mathbb{O}%
+\end{array}
+\right)  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right) \\
+\mathbb{W}^{-1}\mathbf{\gamma}\mathbb{W}^{-t}\mathbb{W}^{\ast-1}%
+\mathbf{\gamma}^{\dagger}\mathbb{W}^{-\dagger}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right) \\
+\mathbb{U}^{\dagger}\mathbb{S}_{\varphi}^{\frac{1}{2}}\mathbf{\gamma
+}\mathbb{S}_{\varphi}^{\ast\frac{1}{2}}\mathbb{U}^{\ast}\mathbb{U}%
+^{t}\mathbb{S}_{\varphi}^{\ast\frac{1}{2}}\mathbf{\gamma}^{\dagger}%
+\mathbb{S}_{\varphi}^{\frac{1}{2}}\mathbb{U}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right) \\
+\mathbb{U}^{\dagger}\left[  \mathbb{S}_{\varphi}^{\frac{1}{2}}\mathbf{\gamma
+}\mathbb{S}_{\varphi}^{t}\mathbf{\gamma}^{\dagger}\mathbb{S}_{\varphi}%
+^{\frac{1}{2}}\right]  \mathbb{U}  &  =\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right) \\
+\mathbb{W}  &  =\mathbb{S}_{\varphi}^{-\frac{1}{2}}\mathbb{U}%
+\end{align*}
+27c*****************************%
+\[
+\mathbb{W}=\mathbb{S}_{f}^{-\frac{1}{2}}\mathbb{U}\mathbf{O}%
+\]
+28%
+\[
+\left\vert \psi_{j}\right\rangle =\sum_{1\leq k\leq r}\left\vert \varphi
+_{k}\right\rangle W_{kj}=W\left\vert \varphi_{j}\right\rangle
+\]
+29%
+\[
+W:\text{Atomic}\rightarrow\text{Canonical}%
+\]
+30%
+\[
+\left[  \mathbb{S}_{\varphi}^{\frac{1}{2}}\mathbf{\gamma}\mathbb{S}_{\varphi
+}^{t}\mathbf{\gamma}^{\dagger}\mathbb{S}_{\varphi}^{\frac{1}{2}}\right]
+=\mathbb{U}\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right)  \mathbb{U}^{\dagger}%
+\]
+30a%
+\[
+\mathbb{U}^{\dagger}\left[  \mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma
+}\mathbb{S}_{f}^{t}\mathbf{\gamma}^{\dagger}\mathbb{S}_{f}^{\frac{1}{2}%
+}\right]  \mathbb{U}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right)
+\]
+and hence the following hermitian eigenvalue equation for the columns
+$\left\{  u_{j}\right\}  $ and the eigenvalues $\left\{  n_{j}\right\}  $
+\[
+\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma}\mathbb{S}_{f}^{t}\mathbf{\gamma
+}^{\dagger}\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\,}u_{j}=n_{j}\,u_{j}%
+;\qquad1\leq j\leq r
+\]
+which produces the unitary transformation $\mathbb{U}$ that has the properties
+
+31 **********************%
+\[
+\mathbb{U}^{\dagger}\,\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma}%
+\mathbb{S}_{f}^{t}\mathbf{\gamma}^{\dagger}\mathbb{S}_{f}^{\frac{1}{2}%
+}\mathbf{\,}\mathbb{U}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right)  .
+\]
+31a **************************%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right)  =\mathbf{c}_{f}\mathbf{c}_{f}^{\dagger}%
+\]%
+\[
+\left[  \mathbb{U}^{\dagger}\,\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma
+}\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}^{\ast}\right]  \left[  \mathbb{U}%
+^{\dagger}\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma}\mathbb{S}_{f}^{\frac
+{1}{2}t}\mathbf{\,}\mathbb{U}^{\ast}\right]  ^{\dagger}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}%
+\end{array}
+\right)  .
+\]
+31b *****************************%
+\[
+\mathbf{c}_{U}=\mathbb{U}^{\dagger}\,\mathbb{S}_{f}^{\frac{1}{2}%
+}\mathbf{\gamma}\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}^{\ast}%
+\]
+32 *****************************%
+\[
+\mathbf{c}_{block}=T_{block}\mathbf{c}_{Uf}T_{block}^{t}=\left(
+\begin{array}
+[c]{ccc}%
+\mathbf{c}_{U1} & \cdots & \mathbb{O}\\
+\vdots & \ddots & \vdots\\
+\mathbb{O} & \cdots & \mathbf{c}_{Up}%
+\end{array}
+\right)
+\]%
+\[
+\mathbf{c}_{pair}=T_{pair}\mathbf{c}_{Uf}T_{pair}^{t}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)
+\]
+32a%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cccccc}%
+0 & a & b & d & 0 & 0\\
+-a & 0 & c & 0 & 0 & 0\\
+-b & -c & 0 & e & 0 & 0\\
+-d & 0 & -e & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & f\\
+0 & 0 & 0 & 0 & -f & 0
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+A  &  =a\left\vert 1\right\rangle \left\langle 2\right\vert -a\left\vert
+2\right\rangle \left\langle 1\right\vert +b\left\vert 1\right\rangle
+\left\langle 3\right\vert -b\left\vert 3\right\rangle \left\langle
+1\right\vert +d\left\vert 1\right\rangle \left\langle 4\right\vert
+-d\left\vert 4\right\rangle \left\langle 1\right\vert +e\left\vert
+3\right\rangle \left\langle 4\right\vert -e\left\vert 3\right\rangle
+\left\langle 4\right\vert \\
+&  +f\left\vert 5\right\rangle \left\langle 6\right\vert -f\left\vert
+6\right\rangle \left\langle 5\right\vert
+\end{align}%
+\begin{equation}
+=\left(  \left\vert 1\right\rangle ,\cdots,\left\vert 6\right\rangle \right)
+\left(
+\begin{array}
+[c]{cccccc}%
+0 & a & b & d & 0 & 0\\
+-a & 0 & c & 0 & 0 & 0\\
+-b & -c & 0 & e & 0 & 0\\
+-d & 0 & -e & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & f\\
+0 & 0 & 0 & 0 & -f & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\vert 1\right\rangle \\
+\vdots\\
+\left\vert 6\right\rangle
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cccccc}%
+0 & a & b & 0 & d & 0\\
+-a & 0 & c & 0 & 0 & 0\\
+-b & -c & 0 & 0 & e & 0\\
+0 & 0 & 0 & 0 & 0 & f\\
+-d & 0 & -e & 0 & 0 & 0\\
+0 & 0 & 0 & -f & 0 & 0
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+A  &  =a\left\vert 1\right\rangle \left\langle 2\right\vert -a\left\vert
+2\right\rangle \left\langle 1\right\vert +b\left\vert 1\right\rangle
+\left\langle 3\right\vert -b\left\vert 3\right\rangle \left\langle
+1\right\vert +d\left\vert 1\right\rangle \left\langle \tilde{5}\right\vert
+-d\left\vert \tilde{5}\right\rangle \left\langle 1\right\vert \\
+&  +e\left\vert 3\right\rangle \left\langle \tilde{5}\right\vert -e\left\vert
+\tilde{5}\right\rangle \left\langle 3\right\vert +f\left\vert \tilde
+{4}\right\rangle \left\langle 6\right\vert -f\left\vert 6\right\rangle
+\left\langle \tilde{4}\right\vert
+\end{align}%
+\begin{equation}
+=\left(  \left\vert 1\right\rangle ,\cdots\left\vert \tilde{4}\right\rangle
+,\left\vert \tilde{5}\right\rangle ,\left\vert 6\right\rangle \right)  \left(
+%
+\begin{array}
+[c]{cccccc}%
+0 & a & b & d & 0 & 0\\
+-a & 0 & c & 0 & 0 & 0\\
+-b & -c & 0 & e & 0 & 0\\
+-d & 0 & -e & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & f\\
+0 & 0 & 0 & 0 & -f & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left\vert 1\right\rangle \\
+\\
+\left\vert \tilde{4}\right\rangle \\
+\left\vert \tilde{5}\right\rangle \\
+\left\vert 6\right\rangle
+\end{array}
+\right)
+\end{equation}
+Rearranging basis%
+\begin{equation}
+T=E_{j_{1}k_{1}}\cdots E_{j_{q}k_{q}};\quad j_{l}\neq j_{m};k_{l}\neq
+k_{m};1\leq l,m\leq q
+\end{equation}
+
+
+32 a ********************%
+\[
+\mathbf{c}_{f\kappa}=-\mathbf{c}_{f\kappa}^{t};\quad1\leq\kappa\leq p
+\]
+32 b*******************%
+\[
+\mathbf{c}_{U\kappa}^{\dagger}\mathbf{c}_{U\kappa}=\eta_{\kappa}%
+\mathbb{I}_{d_{\kappa}};\quad1\leq\kappa\leq p
+\]
+bbbbbb****************************%
+\[
+\mathbf{c}_{U\kappa}=-\mathbf{c}_{U\kappa}^{t}%
+\]
+If $\eta_{\kappa}\neq0$ then $\mathbb{B}_{\kappa}=\frac{1}{\sqrt{\eta_{\kappa
+}}}\mathbf{c}_{U\kappa}$ is a $d_{\kappa}\times d_{\kappa}$ antisymmetric
+unitary matrix
+
+32c%
+\[
+\mathbb{B}_{\kappa}=-\mathbb{B}_{\kappa}^{t}%
+\]%
+\[
+\left\{  \left.  \mathbb{B}_{\kappa}\right\vert 1\leq\kappa\leq p\right\}
+\]%
+\[
+\mathbb{B}_{\kappa}=\frac{1}{\sqrt{\eta_{\kappa}}}\mathbf{c}_{U\kappa}%
+;\quad\eta_{\kappa}\neq0
+\]%
+\[
+\sqrt{\eta_{\kappa}}\mathbb{B}_{\kappa}=\mathbf{c}_{U\kappa};
+\]%
+\[
+\text{distinct eigenvalues: }\left\{  \left.  \eta_{\kappa}\right\vert
+1\leq\kappa\leq p\right\}
+\]
+
+
+33 ***************************
+\[
+\mathbb{B}_{\kappa}^{\dagger}\mathbb{B}_{\kappa}=\mathbb{B}_{\kappa}%
+\mathbb{B}_{\kappa}^{\dagger}=\mathbb{I}_{d_{\kappa}}%
+\]%
+\begin{align*}
+\mathbf{O}_{\kappa}\mathbf{c}_{U\kappa}\mathbf{O}_{\kappa}^{t}  &
+=\eta_{\kappa}^{\frac{1}{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \left(
+\begin{array}
+[c]{ccc}%
+e^{i\mathbf{\theta}_{\kappa1}} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & e^{i\mathbf{\theta}_{\kappa d_{\kappa}}}%
+\end{array}
+\right) \\
+-\left(
+\begin{array}
+[c]{ccc}%
+e^{i\mathbf{\theta}_{\kappa1}} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & e^{i\mathbf{\theta}_{\kappa d_{\kappa}}}%
+\end{array}
+\right)  & \mathbb{O}%
+\end{array}
+\right) \\
+&  =\eta_{\kappa}^{\frac{1}{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & e^{i\mathbf{\theta}_{\kappa}}\\
+-e^{i\mathbf{\theta}_{\kappa}} & \mathbb{O}%
+\end{array}
+\right)
+\end{align*}
+(which is valid even when $\eta_{\kappa}=0$) $\lceil$Note that $\mathbf{\theta
+}_{\kappa}\equiv\left(  \theta_{\kappa1},\ldots,\theta_{\kappa d_{\kappa}%
+}\right)  $ and $\theta_{\kappa i}\neq\theta_{\kappa j}$ in general$\rfloor$
+where
+\[
+\mathbf{\zeta}_{\kappa}=\eta_{\kappa}^{\frac{1}{2}}\left(
+\begin{array}
+[c]{ccc}%
+e^{i\mathbf{\theta}_{\kappa_{1}}} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & e^{i\mathbf{\theta}_{\kappa_{d_{\kappa}}}}%
+\end{array}
+\right)  .
+\]
+33a%
+\begin{align*}
+&  \qquad\qquad\qquad\qquad\qquad\qquad\quad\widetilde{\mathbf{O}}%
+\mathbf{c}_{pair}\widetilde{\mathbf{O}}^{t}\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\parallel\\
+&  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \left(
+\begin{array}
+[c]{ccc}%
+\eta_{1}^{\frac{1}{2}}e^{i\mathbf{\theta}_{1}} & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \eta_{p}^{\frac{1}{2}}e^{i\mathbf{\theta}_{p}}%
+\end{array}
+\right) \\
+-\left(
+\begin{array}
+[c]{ccc}%
+\eta_{1}^{\frac{1}{2}}e^{i\mathbf{\theta}_{1}} & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \eta_{p}^{\frac{1}{2}}e^{i\mathbf{\theta}_{p}}%
+\end{array}
+\right)  & \mathbb{O}%
+\end{array}
+\right)
+\end{align*}
+33b**************************************************************%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+-e^{i\mathbf{\theta}_{\kappa}} & \mathbb{O}\\
+\mathbb{O} & e^{i\mathbf{\theta}_{\kappa}}%
+\end{array}
+\right)
+\]%
+\[
+-\pi\leq\mathbf{\theta}_{\kappa k}\leq\pi;1\leq k\leq d_{\kappa}%
+\]%
+\[
+e^{i\mathbf{\theta}_{\kappa}}=\left(
+\begin{array}
+[c]{ccc}%
+e^{i\mathbf{\theta}_{\kappa1}} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & e^{i\mathbf{\theta}_{\kappa d_{\kappa}}}%
+\end{array}
+\right)
+\]
+33b1******************************************************************%
+\[
+\mathbf{c}_{Uf}=\mathbb{U}^{\dagger}\,\mathbb{S}_{f}^{\frac{1}{2}%
+}\mathbf{\gamma}\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}^{\ast}%
+\]%
+\[
+\mathbf{\gamma}=\mathbb{S}_{f}^{-\frac{1}{2}}\mathbb{U}\widetilde{\mathbf{O}%
+}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}\\
+-\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  \widetilde{\mathbf{O}}^{t}\mathbb{U}^{t}\mathbb{S}_{f}^{-\frac{1}%
+{2}t}%
+\]%
+\[
+\mathbf{\gamma}=\mathbb{S}_{f}^{-\frac{1}{2}}\mathbb{U}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{U}^{t}\mathbb{S}_{f}^{-\frac{1}{2}t}%
+\]%
+\[
+\mathbf{c}_{Uf}=\mathbb{U}^{\dagger}\,\mathbb{S}_{f}^{\frac{1}{2}%
+}\mathbf{\gamma}\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}^{\ast}%
+\]
+33b2*******************************************************************%
+\[
+\mathbf{c}_{f}=\widetilde{\mathbf{O}}\mathbb{U}^{\dagger}\,\mathbb{S}%
+_{f}^{\frac{1}{2}}\mathbf{\gamma}\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}%
+^{\ast}\widetilde{\mathbf{O}}^{t}%
+\]
+************%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}\\
+-\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  =\widetilde{\mathbf{O}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \widetilde{\mathbf{O}}^{t}%
+\]
+33b3*****************************************************************%
+\begin{align*}
+\mathbb{W}  &  =\widetilde{\mathbf{O}}\mathbb{U}^{\dagger}\,\mathbb{S}%
+_{f}^{\frac{1}{2}}\\
+\mathbb{W}^{t}  &  =\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}^{\ast}%
+\widetilde{\mathbf{O}}^{t}%
+\end{align*}%
+\[
+\mathbb{B}=\left(  \mathbf{W}_{1}\cdots\mathbf{W}_{d}\mathbf{W}_{1}^{\ast
+}\mathbf{\cdots W}_{d}^{\ast}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+-e^{i\theta_{1}} & 0 & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \cdots & 0\\
+0 & \cdots & -e^{i\theta_{d}} & 0 & \cdots & 0\\
+0 & \cdots & 0 & e^{i\theta_{d+1}} & \cdots & 0\\
+0 & \cdots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & e^{i\theta_{2d}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{W}_{1}\\
+\vdots\\
+\mathbf{W}_{d}\\
+\mathbf{W}_{1}^{\ast}\\
+\vdots\\
+\mathbf{W}_{d}^{\ast}%
+\end{array}
+\right)
+\]
+33c ********************************************************%
+\[
+\mathbb{W}_{\kappa}=\left(  \mathbf{W}_{1}\cdots\mathbf{W}_{d_{\kappa}%
+}\mathbf{W}_{1}^{\ast}\mathbf{\cdots W}_{d_{\kappa}}^{\ast}\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{d_{\kappa}} & \mathbb{W}_{d_{\kappa}}^{\ast}%
+\end{array}
+\right)
+\]%
+\begin{align*}
+&  \mathbb{W}_{\kappa}^{\dagger}\sqrt{\eta_{\kappa}}\mathbb{B}_{\kappa
+}\mathbb{W}_{\kappa}=\mathbb{W}_{\kappa}^{\dagger}\mathbf{c}_{U\kappa
+}\mathbb{W}_{\kappa}\\
+&  =\left(
+\begin{array}
+[c]{cc}%
+-\sqrt{\eta_{\kappa}}e^{i\mathbf{\theta}_{\kappa}} & \mathbb{O}\\
+\mathbb{O} & \sqrt{\eta_{\kappa}}e^{i\mathbf{\theta}_{\kappa}}%
+\end{array}
+\right)
+\end{align*}%
+\begin{align*}
+&  \text{the eigenvector associated with }e^{i\mathbf{\theta}_{\kappa k}%
+}\text{ }\\
+&  \text{as }\mathbf{W}_{k}^{\ast}\text{ where }\mathbf{W}_{k}\text{ is
+associated with -}e^{i\mathbf{\theta}_{\kappa k}}%
+\end{align*}
+33d ***********************************%
+\[
+\mathbb{W}=\left(  \mathbf{W}_{1}\cdots\mathbf{W}_{s}\mathbf{W}_{1}^{\ast
+}\mathbf{\cdots W}_{s}^{\ast}\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{W}_{s} & \mathbb{W}_{s}^{\ast}%
+\end{array}
+\right)
+\]
+33e************************************%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+-\mathbf{c}_{can}e^{i\mathbf{\theta}} & \mathbb{O}\\
+\mathbb{O} & \mathbf{c}_{can}e^{i\mathbf{\theta}}%
+\end{array}
+\right)  =\mathbb{W}^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbb{W}%
+\]
+33f *****************************************%
+\[
+\mathbf{O}_{f}^{t}=\left(  \mathbf{O}_{Rs}\mathbf{O}_{Is}\right)  =\left(
+\mathbb{W}_{s}\mathbb{W}_{s}^{\ast}\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)
+\]
+33f1*******************************************************************%
+\begin{align*}
+&  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+-\mathbf{c}_{can}e^{i\mathbf{\theta}} & \mathbb{O}\\
+\mathbb{O} & \mathbf{c}_{can}e^{i\mathbf{\theta}}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  \parallel\right. \\
+&  \left[  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \mathbb{W}\right]  ^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \left[  \mathbb{W}\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  \right] \\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  \parallel\right. \\
+&  \qquad\qquad\qquad\qquad\qquad\mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbf{O}_{f}^{t}%
+\end{align*}
+and ***************************************************************%
+\begin{align*}
+&  \frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+-\mathbf{c}_{can}e^{i\mathbf{\theta}} & \mathbb{O}\\
+\mathbb{O} & \mathbf{c}_{can}e^{i\mathbf{\theta}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+-\mathbf{c}_{can}e^{i\mathbf{\theta}} & i\mathbf{c}_{can}e^{i\mathbf{\theta}%
+}\\
+\mathbf{c}_{can}e^{i\mathbf{\theta}} & i\mathbf{c}_{can}e^{i\mathbf{\theta}}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}e^{i\mathbf{\theta}}\\
+-i\mathbf{c}_{can}e^{i\mathbf{\theta}} & \mathbb{O}%
+\end{array}
+\right)
+\end{align*}
+giving ****************************************************************%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}e^{i\mathbf{\theta}}\\
+-i\mathbf{c}_{can}e^{i\mathbf{\theta}} & \mathbb{O}%
+\end{array}
+\right)  =\mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbf{O}_{f}^{t}%
+\]
+(i)%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+e^{i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}\\
+-i\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+e^{i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  =\mathbf{O}_{f}^{t}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbf{O}_{f}%
+\]
+(ii)%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}\\
+-i\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  =\left[  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{-i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  \right]  ^{t}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{-i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)
+\]%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & e^{i\frac{\mathbf{\pi}}{2}}\mathbf{c}_{can}\\
+-e^{i\frac{\mathbf{\pi}}{2}}\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  =\left[  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{-i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  \right]  ^{t}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{-i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)
+\]%
+\begin{align*}
+&  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}\\
+-\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  =\\
+&  \left[  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{-i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & e^{-i\frac{\mathbf{\pi}}{4}}\\
+e^{-i\frac{\mathbf{\pi}}{4}} & \mathbb{O}%
+\end{array}
+\right)  \right]  ^{t}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{-i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & e^{-i\frac{\mathbf{\pi}}{4}}\\
+e^{-i\frac{\mathbf{\pi}}{4}} & \mathbb{O}%
+\end{array}
+\right)
+\end{align*}%
+\begin{align*}
+&  \left(
+\begin{array}
+[c]{cc}%
+e^{i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}\\
+-i\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+e^{i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+e^{i\frac{\mathbf{\theta}}{2}} & \mathbb{O}\\
+\mathbb{O} & e^{i\frac{\mathbf{\theta}}{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}e^{i\frac{\mathbf{\theta}}{2}}\\
+-i\mathbf{c}_{can}e^{i\frac{\mathbf{\theta}}{2}} & \mathbb{O}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}e^{i\mathbf{\theta}}\\
+-i\mathbf{c}_{can}e^{i\mathbf{\theta}} & \mathbb{O}%
+\end{array}
+\right)
+\end{align*}%
+\begin{align}
+&  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & i\mathbf{c}_{can}e^{i\mathbf{\theta}}\\
+-i\mathbf{c}_{can}e^{i\mathbf{\theta}} & \mathbb{O}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}e^{i\left(  \mathbf{\theta+}\frac{\pi}{2}\right)
+}\\
+-\mathbf{c}_{can}e^{i\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  } &
+\mathbb{O}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+e^{\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  } & \mathbb{O}\\
+\mathbb{O} & e^{\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  }%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}\\
+-\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+e^{\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  } & \mathbb{O}\\
+\mathbb{O} & e^{\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  }%
+\end{array}
+\right)
+\end{align}
+(iv) **********************************************************************%
+\begin{align*}
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}\\
+-\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right) \\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+\parallel\right. \\
+&  \left[  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  } & \mathbb{O}\\
+\mathbb{O} & e^{-\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  }%
+\end{array}
+\right)  \right]  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \left[  \mathbf{O}_{f}\left(
+\begin{array}
+[c]{cc}%
+e^{-\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  } & \mathbb{O}\\
+\mathbb{O} & e^{-\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  }%
+\end{array}
+\right)  \right]  ^{t}%
+\end{align*}
+(v) ********************************************************************%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}\\
+-\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  =\mathbf{\tilde{O}}_{f}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{U}\\
+-\mathbf{c}_{U} & \mathbb{O}%
+\end{array}
+\right)  \mathbf{\tilde{O}}_{f}^{t}%
+\]%
+\[
+\mathbf{\tilde{O}}_{f}^{t}=\mathbf{O}_{f}^{t}\left(
+\begin{array}
+[c]{cc}%
+e^{-\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  } & \mathbb{O}\\
+\mathbb{O} & e^{-\frac{i}{2}\left(  \mathbf{\theta+}\frac{\pi}{2}\right)  }%
+\end{array}
+\right)
+\]%
+\[
+\mathbf{c}_{Uf}=\mathbb{U}^{\dagger}\,\mathbb{S}_{f}^{\frac{1}{2}%
+}\mathbf{\gamma}\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}^{\ast}%
+\]%
+\[
+\mathbf{c}_{f}=\mathbf{\tilde{O}}_{f}\mathbb{U}^{\dagger}\,\mathbb{S}%
+_{f}^{\frac{1}{2}}\mathbf{\gamma}\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}%
+^{\ast}\mathbf{\tilde{O}}_{f}^{t}%
+\]%
+\[
+\mathbb{S}_{f}^{-\frac{1}{2}}\mathbb{U}\mathbf{\tilde{O}}_{f}^{\dagger
+}\mathbf{c}_{f}\mathbf{\tilde{O}}_{f}^{\ast}\mathbb{U}^{t}\mathbb{S}%
+_{f}^{-\frac{1}{2}t}=\,\mathbf{\gamma}%
+\]%
+\[
+\mathbf{c}_{f}=\mathbb{W}\mathbf{\gamma}\mathbb{W}^{t}%
+\]
+wwwwww%
+\[
+\mathbb{W}=\mathbf{\tilde{O}}_{f}\mathbb{U}^{\dagger}\,\mathbb{S}_{f}%
+^{\frac{1}{2}}%
+\]%
+\[
+\mathbb{W}^{t}=\mathbb{S}_{f}^{\frac{1}{2}t}\mathbb{U}^{\ast}\mathbf{\tilde
+{O}}_{f}^{t}%
+\]
+33g**********************************************************************%
+\[
+\mathbb{B}=\left(  \mathbf{W}_{1}\cdots\mathbf{W}_{d}\mathbf{W}_{1}^{\ast
+}\mathbf{\cdots W}_{d}^{\ast}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+-e^{i\theta_{1}} & 0 & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \cdots & 0\\
+0 & \cdots & -e^{i\theta_{d}} & 0 & \cdots & 0\\
+0 & \cdots & 0 & e^{i\theta_{d+1}} & \cdots & 0\\
+0 & \cdots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & e^{i\theta_{2d}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{W}_{1}\\
+\vdots\\
+\mathbf{W}_{d}\\
+\mathbf{W}_{1}^{\ast}\\
+\vdots\\
+\mathbf{W}_{d}^{\ast}%
+\end{array}
+\right)
+\]%
+\begin{align*}
+&  \frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{c}%
+\mathbf{W}_{1}\\
+\vdots\\
+\mathbf{W}_{d}\\
+\mathbf{W}_{1}^{\ast}\\
+\vdots\\
+\mathbf{W}_{d}^{\ast}%
+\end{array}
+\right)  \mathbb{B}\left(  \mathbf{W}_{1}\cdots\mathbf{W}_{d}\mathbf{W}%
+_{1}^{\ast}\mathbf{\cdots W}_{d}^{\ast}\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)  ^{\dagger}\left(
+\begin{array}
+[c]{cc}%
+-e^{i\theta_{1}} & \mathbb{O}\\
+\mathbb{O} & e^{i\theta_{1}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right) \\
+&  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & \mathbb{I}_{s}\\
+i\mathbb{I}_{s} & -i\mathbb{I}_{s}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+-e^{i\theta_{1}} & ie^{i\theta_{1}}\\
+e^{i\theta_{1}} & ie^{i\theta_{1}}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & ie^{i\theta_{1}}\\
+-ie^{i\theta_{1}} & \mathbb{O}%
+\end{array}
+\right)
+\end{align*}%
+\[
+\left(  \mathbf{o}_{R1}\cdots\mathbf{o}_{Rs}\mathbf{o}_{I1}\mathbf{\cdots
+o}_{Is}\right)  =\left(  \mathbf{W}_{1}\cdots\mathbf{W}_{s}\mathbf{W}%
+_{1}^{\ast}\mathbf{\cdots W}_{s}^{\ast}\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{s} & -i\mathbb{I}_{s}\\
+\mathbb{I}_{s} & i\mathbb{I}_{s}%
+\end{array}
+\right)
+\]%
+\begin{align*}
+\left(  \mathbf{o}_{R1}\mathbf{o}_{I1}\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+W_{11} & W_{11}^{\ast}\\
+W_{12} & W_{12}^{\ast}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+1 & -i\\
+1 & i
+\end{array}
+\right) \\
+&  =\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+W_{11}+W_{11}^{\ast} & -i\left(  W_{11}-W_{11}^{\ast}\right) \\
+W_{12}+W_{12}^{\ast} & -i\left(  W_{12}-W_{12}^{\ast}\right)
+\end{array}
+\right) \\
+&  =\sqrt{2}\left(
+\begin{array}
+[c]{cc}%
+\operatorname{Re}W_{11} & \operatorname{Im}W_{11}\\
+\operatorname{Re}W_{12} & \operatorname{Im}W_{12}%
+\end{array}
+\right)
+\end{align*}%
+\begin{align*}
+\mathbf{o}_{Rj}  &  =\frac{1}{\sqrt{2}}\left(  \mathbf{W}_{j}+\mathbf{W}%
+_{j}^{\ast}\right)  =\sqrt{2}\operatorname{Re}\mathbf{W}_{j}\\
+\mathbf{o}_{Ij}  &  =\frac{-i}{\sqrt{2}}\left(  \mathbf{W}_{j}-\mathbf{W}%
+_{j}^{\ast}\right)  =\sqrt{2}\operatorname{Im}\mathbf{W}_{j}%
+\end{align*}%
+\[
+\mathbf{O}_{f}=\left(  \mathbf{O}_{R}\mathbf{O}_{I}\right)  =\sqrt{2}\left(
+\operatorname{Re}\mathbb{W}_{s}\operatorname{Im}\mathbb{W}_{s}\right)
+\]
+33h*****************************************************************%
+\[
+\mathbf{c}_{Uf}=\mathbb{U}^{\dagger}\,\mathbb{S}_{f}^{\frac{1}{2}%
+}\mathbf{\gamma}\mathbb{S}_{f}^{\frac{1}{2}}\mathbb{U}^{\ast}%
+\]
+33l*********************************************************************%
+\[
+\mathbb{B}=\left(  \mathbf{o}_{1}\cdots\mathbf{o}_{d}\mathbf{o}_{d+1}%
+\mathbf{\cdots o}_{2d}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+0 & 0 & 0 & ie^{i\theta_{1}} & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & ie^{i\theta_{d}}\\
+-ie^{i\theta_{1}} & \cdots & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & -ie^{i\theta_{d}} & 0 & \cdots & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{o}_{1}\\
+\vdots\\
+\mathbf{o}_{d}\\
+\mathbf{o}_{d+1}\\
+\vdots\\
+\mathbf{o}_{2d}%
+\end{array}
+\right)
+\]
+*************************************************************************%
+\[
+\left(  \mathbf{\tilde{o}}_{1}\cdots\mathbf{\tilde{o}}_{d}\mathbf{\tilde{o}%
+}_{d+1}\mathbf{\cdots\tilde{o}}_{2d}\right)  =\left(  \mathbf{o}_{1}%
+\cdots\mathbf{o}_{d}\mathbf{o}_{d+1}\mathbf{\cdots o}_{2d}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+e^{\frac{i\theta_{1}}{2}} & 0 & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \cdots & 0\\
+0 & \cdots & e^{\frac{i\theta_{d}}{2}} & 0 & \cdots & 0\\
+0 & \cdots & 0 & e^{\frac{i\theta_{d+1}}{2}} & \cdots & 0\\
+0 & \cdots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & e^{\frac{i\theta_{2d}}{2}}%
+\end{array}
+\right)
+\]%
+\[
+\mathbb{B}=\left(  \mathbf{\tilde{o}}_{1}\cdots\mathbf{\tilde{o}}%
+_{d}\mathbf{\tilde{o}}_{d+1}\mathbf{\cdots\tilde{o}}_{2d}\right)  \left(
+\begin{array}
+[c]{cccccc}%
+0 & 0 & 0 & 1 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & 0 & 0 & \cdots & 1\\
+-1 & \cdots & 0 & 0 & \cdots & 0\\
+0 & \ddots & 0 & 0 & \ddots & 0\\
+0 & \cdots & -1 & 0 & \cdots & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\tilde{o}}_{1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{d}\\
+\mathbf{\tilde{o}}_{d+1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{2d}%
+\end{array}
+\right)
+\]
+and hence%
+\[
+\mathbf{c}_{f\kappa}=\left(  \mathbf{\tilde{o}}_{1}\cdots\mathbf{\tilde{o}%
+}_{d_{\kappa}}\mathbf{\tilde{o}}_{d_{\kappa}+1}\mathbf{\cdots\tilde{o}%
+}_{2d_{\kappa}}\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \eta_{\kappa}^{\frac{1}{2}}\mathbb{I}_{d_{\kappa}}\\
+-\eta_{\kappa}^{\frac{1}{2}}\mathbb{I}_{d_{\kappa}} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{\tilde{o}}_{1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{d_{\kappa}}\\
+\mathbf{\tilde{o}}_{d_{\kappa}+1}\\
+\vdots\\
+\mathbf{\tilde{o}}_{2d_{\kappa}}%
+\end{array}
+\right)
+\]
+and the full blocked diagonal $\mathbf{c}$ matrix
+\begin{align*}
+\mathbb{Y}^{\dagger}\mathbf{c}_{f}\mathbb{Y}^{\ast}  &  =\left(
+\begin{array}
+[c]{ccc}%
+\mathbf{c}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \mathbf{c}_{p}%
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\widetilde{\mathbb{O}}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \widetilde{\mathbb{O}}_{p}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\eta_{1}^{\frac{1}{2}}\mathbb{J}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \eta_{p}^{\frac{1}{2}}\mathbb{J}_{p}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\widetilde{\mathbb{O}}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \widetilde{\mathbb{O}}_{p}%
+\end{array}
+\right)  ^{t}%
+\end{align*}%
+\[
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}_{can}\\
+-\mathbf{c}_{can} & \mathbb{O}%
+\end{array}
+\right)  =\widetilde{\mathbb{O}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbf{c}\\
+-\mathbf{c} & \mathbb{O}%
+\end{array}
+\right)  \widetilde{\mathbb{O}}^{t}%
+\]
+where
+\[
+\mathbb{J}_{\kappa}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \mathbb{I}_{d_{\kappa}}\\
+-\mathbb{I}_{d_{\kappa}} & \mathbf{0}%
+\end{array}
+\right)
+\]%
+\begin{equation}
+\mathbf{c}=\mathbb{Y}\widetilde{\mathbb{O}}\left(
+\begin{array}
+[c]{ccc}%
+\eta_{1}^{\frac{1}{2}}\mathbb{J}_{1} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \ddots & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \eta_{p}^{\frac{1}{2}}\mathbb{J}_{p}%
+\end{array}
+\right)  \widetilde{\mathbb{O}}^{t}\mathbb{Y}^{\ast}%
+\end{equation}
+and hence the unitary matrix $\mathbb{W}^{\dagger}$ whose columns are the
+NGSOs by
+\begin{equation}
+\mathbb{W}^{\dagger}=\mathbb{Y}\widetilde{\mathbb{O}}%
+\end{equation}%
+\begin{align}
+&  h_{jk}^{a}=h_{j+sk+s}^{a}=-\int\chi_{j}^{\ast}\left(  \mathbf{r}\right)
+\left\{  \sum_{_{1\leq j\leq N_{nuc}}}\frac{Z_{j}}{\left\Vert \mathbf{R}%
+_{j}-\mathbf{r}\right\Vert }+\frac{1}{2m_{e}}\nabla_{\mathbf{r}}^{2}\right\}
+\chi_{k}\left(  \mathbf{r}\right)  d\mathbf{r};\quad1\leq j,k\leq s\nonumber\\
+&  h_{jk+s}^{a}=h_{j+sk}^{a};\quad1\leq j,k\leq s\\
+& \nonumber\\
+&  \left\langle jk||lm\right\rangle ^{a}=\int\left\{  \chi_{j}^{\ast}\left(
+\mathbf{r}_{1}\right)  \chi_{k}^{\ast}\left(  \mathbf{r}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\chi_{l}\left(
+\mathbf{r}_{1}\right)  \chi_{m}\left(  \mathbf{r}_{2}\right)  \right.
+\nonumber\\
+&  \qquad-\left.  \chi_{j}^{\ast}\left(  \mathbf{r}_{1}\right)  \chi_{k}%
+^{\ast}\left(  \mathbf{r}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}%
+_{1}-\mathbf{r}_{2}\right\Vert }\chi_{l}\left(  \mathbf{r}_{2}\right)
+\chi_{m}\left(  \mathbf{r}_{1}\right)  \right\}  d\mathbf{r}_{1}%
+d\mathbf{r}_{2};\quad1\leq j,k\leq s;1\leq l,m\leq s\\
+& \nonumber\\
+&  \left\langle j+sk||lm\right\rangle ^{a}=\left\langle jk+s||lm\right\rangle
+^{a}=\left\langle jk||l+sm\right\rangle ^{a}=\left\langle
+jk||lm+s\right\rangle ^{a}=\left\langle j+sk+s||l+sm\right\rangle
+^{a}=\nonumber\\
+&  \left\langle j+sk+s||lm+s\right\rangle ^{a}=\left\langle
+j+sk||l+sm+s\right\rangle ^{a}=\left\langle jk+s||l+sm+s\right\rangle
+^{a}=0\nonumber\\
+&  \left.  {}\right.  \quad\qquad\qquad\quad\qquad\qquad\quad\qquad\qquad
+\quad\qquad\qquad\quad1\leq j,k\leq s;1\leq l,m\leq s\\
+& \nonumber\\
+&  \left\langle jk+s||l+sm\right\rangle ^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=\nonumber\\
+&  \int\chi_{j}^{\ast}\left(  \mathbf{r}_{1}\right)  \chi_{k}^{\ast}\left(
+\mathbf{r}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}%
+_{2}\right\Vert }\chi_{l}\left(  \mathbf{r}_{1}\right)  \chi_{m}\left(
+\mathbf{r}_{2}\right)  d\mathbf{r}_{1}d\mathbf{r}_{2};\quad1\leq j,k\leq
+s;1\leq l,m\leq s\\
+& \nonumber\\
+&  \left\langle jk+s||lm+s\right\rangle ^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=-\left\langle jk+s||l+sm\right\rangle
+^{a}=-\left\langle j+sk||lm+s\right\rangle ^{a}\nonumber\\
+&  \left.  {}\right.  \quad\qquad\qquad\quad\qquad\qquad\quad\quad\qquad
+\quad\qquad\qquad\qquad\quad1\leq j,k\leq s;1\leq l,m\leq s\\
+&  \left\langle jk|||jk\right\rangle ^{a}=\left\langle jk||jk\right\rangle
+^{a}+\left\langle j\,k+s||j\,k+s\right\rangle ^{a}+\left\langle
+j+s\,k||j+s\,k\right\rangle ^{a}+\left\langle j+s\,k+s||j+s\,k+s\right\rangle
+^{a}\nonumber\\
+&  \left.  {}\right.  \quad\qquad\qquad\quad\qquad\qquad=0;\quad\qquad
+\qquad\quad\qquad\qquad1\leq j,k\leq s;1\leq l,m\leq s
+\end{align}
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#$\bigskip
+$
+
+$\left(  \mathbf{n,\psi}\right)  $
+
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+
+$\left(  \mathbf{n,\psi,\theta}\right)  $%
+\[
+n_{j}\left(  \mathbf{\alpha}\right)  =e^{\alpha_{j}}n_{0j}%
+\]
+
+
+
+\end{document}

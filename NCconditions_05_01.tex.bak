@@ -1,0 +1,2111 @@
+\documentclass[aps,preprint,amsfonts,amssymb,showpacs,showkeys]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, January 07, 2011 14:59:10}
+%TCIDATA{LastRevised=Tuesday, May 03, 2011 17:52:03}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[P, Q and G Conditions]{Generalized P, Q and G Conditions}
+\author{Brian Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+\keywords{N-Representability, Fock Space, Positive Extensions}
+\pacs{31.15.A-,31.15.-p}
+
+\begin{abstract}
+The N-Representability Problem entails characterizing the set of second order
+reduced states that are contractions of N-electron states of the Fermion Fock
+algebra. These problems are formulated in the form of finding the conditions
+that a positive linear functional defined on a subspace of this algebra must
+satisfy in order to be extended to the whole algebra. As this algebra is a
+w*-algebra one can utilize a theorem by Kadison that shows it is sufficient to
+consider the values of linear functionals on projectors contained in the
+subspace in order to determine whether they have positive extensions. Thus we
+find the form of projectors belonging to the subspace of one and two particle
+operators and subsequently show that the extension conditions needed in the
+N-Representability Problem correspond to generalized P, Q and G conditions
+plus the additional constraints that the functionals be dispersion free on the
+number operator and their values on one particle operators determined by their
+values on two particle operators.
+
+\end{abstract}
+\date{03/05/2011}
+\startpage{0}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction \label{Intro}}
+
+The $N$-Representability Problem entails finding the \emph{necessary and
+sufficient conditions} that a positive trace class operator, that acts in two
+electron space, must satisfy in order to be the contraction of a $N$-electron
+state density operator and thus be a Second Order Reduced Density Operator
+(SORDO). It was first precisely formulated in quantum chemistry by Coleman
+\cite{Coleman63} as a result of Coulsons \emph{challenge }\cite{Coleman2000},
+which was inspired by work initiated by Husimi \cite{Husimi}. The significance
+of the problem derives from the realization that the properties of molecular
+systems, at a fixed geometry, are fully described by Hamiltonians that
+describe the kinetic energy of the individual electrons, interactions of the
+electrons with external and internal electric and magnetic fields and
+\emph{only }the simultaneous pair wise interactions of the electrons with each
+other. As simultaneous three, four and higher body interactions are not
+significant the $N$-electron state density operator contains redundant
+information and the energy of molecular systems can be fully expressed in
+terms of the SORDO of the system, which depends on fewer variables. Hence the
+determination of the ground state energy can be formulated as a minimization
+of a linear functional over operators that act in two electron space that are
+\emph{constrained} to be SORDO's, instead of a higher dimensional minimization
+over $N$-electron state density operators.
+
+An intrinsic solution (i.e. only in terms of properties of operators acting in
+two electron space) has not been found despite a large amount of effort
+\cite{Mazziotti2007} along many complimentary pathways. This work has,
+however, resulted in the characterization of numerous necessary conditions
+(see for instance \cite{Mazziotti2007} and the references therein), the
+innovative contracted Schr\"{o}dinger equation method \cite{Mazziotti} (and
+the references therein), \cite{Valdemoro}, the relation to complexity theory
+\cite{NPhard} and various variants of the problem i.e. electron conserving/
+electron nonconserving, pure/ensemble and finite/infinite dimensional.
+
+In a paper \cite{Weiner83} the $N$-Representability Problem was shown to be
+one of finding conditions for the existence of positive extensions of a linear
+functional from a \emph{subspace} of an algebra to the whole algebra. Thus
+placing it firmly in the area of traditional mathematical analysis and allows
+one to utilize theorems proved in this topic over the last hundred years,
+where the classical Hahn-Banach theorem \cite{Encyclo} on extensions,
+$\tilde{f},$ of unrestricted linear functionals, $f$, defined on subspaces,
+$W,$ to the whole vector space $V$ was specialized to positive linear
+functionals defined on ordered vector spaces by Krein \cite{Krein,Naimark} and
+to self-adjoint subspaces of $c^{\ast}$-algebras \cite{Encyclo} that
+\emph{might or might not }contain the identity by Segal \cite{Segal} and
+discussed in detail in \cite{KadisonRinrose}. In order for the extension to be
+a state \cite{Encyclo} i.e. a positive normalized linear functional defined on
+the whole algebra its value on the identity must be one i.e.
+\begin{equation}
+\tilde{f}\left(  I\right)  =1
+\end{equation}
+so if $I\in W$ then
+\begin{equation}
+\tilde{f}\left(  I\right)  =f\left(  I\right)  =1.
+\end{equation}
+Segal's theorem examines the implications of this normalization and shows that
+a positive normalized extension $\tilde{f}$ exists if (a)%
+
+\begin{equation}
+f\left(  X\right)  \geq0\,\forall X\in W_{+}, \label{Positivity}%
+\end{equation}
+where $W_{+}$ is the set of positive operators in $W$ i.e.
+\begin{equation}
+W_{+}=\left\{  X\in W\left\vert X\geq0\right.  \right\}  ,
+\end{equation}
+(b)%
+\begin{equation}
+\sup_{X\in W_{<}}f\left(  X\right)  \leq1, \label{Supcond}%
+\end{equation}
+where the positive part of the subspace $W$ that contains operators that are
+less than or equal to the identity operator is defined as
+\begin{equation}
+W_{<}=\left\{  X\in W\left\vert I\geq X\geq0\right.  \right\}
+\end{equation}
+and (c)
+\begin{equation}
+\inf_{X\in W_{>}}f\left(  X\right)  \geq1, \label{Infcond}%
+\end{equation}
+where the positive part of the subspace $W$ that contains operators that are
+greater than or equal to the identity operator is defined as
+\begin{equation}
+W_{>}=\left\{  X\in W\left\vert X\geq I\right.  \right\}  .
+\end{equation}
+It can easily be seen that \emph{if} $X\geq0$ then
+\begin{equation}
+\left\Vert X\right\Vert \leq1\Leftrightarrow I\geq X\geq0
+\end{equation}
+and thus
+\begin{equation}
+W_{<}=\left\{  X\in W\left\vert X\in W_{+};\left\Vert X\right\Vert
+\leq1\right.  \right\}  ,
+\end{equation}
+and $W_{<}$ is the positive part of the unit ball
+\begin{equation}
+\mathfrak{B}_{1}=\left\{  X\left\vert \left\Vert X\right\Vert \leq1\right.
+\right\}
+\end{equation}
+contained in $W$, while $W_{>}$ can be expressed as
+\begin{equation}
+W_{>}=\left\{  X\in W_{+}\left\vert \left\Vert X\right\Vert \geq1\right.
+\right\}
+\end{equation}
+and is the positive part of the annulus%
+\begin{equation}
+\mathfrak{A}_{1}=\left\{  X\left\vert \left\Vert X\right\Vert \geq1\right.
+\right\}
+\end{equation}
+contained in $W.$
+
+The unit ball is a convex set and the Krein-Millmann theorem \cite{Encyclo}
+shows that in a $w^{\ast}$-algebra \cite{Encyclo} it is equal to the closure
+of its extreme points \cite{Kummar67}, moreover the positive part of the unit
+ball in a $w^{\ast}$-algebra also forms a convex set which is also the closure
+of \emph{its} extreme points. In an important theorem Kadison \cite{Kadison},
+(also see the discussion in \cite{Takesaki}), has shown that the extreme
+points of the positive part of the unit ball in a $w^{\ast}$-algebra are
+projectors and in particular belong to the unit sphere
+\begin{equation}
+\left\Vert X\right\Vert =1.
+\end{equation}
+
+
+In this paper the subspaces we need to consider do not contain any operators
+that belong to $W_{>}$ thus we only need to take into account the conditions
+eqs. $\left(  \ref{Positivity}\right)  $ and $\left(  \ref{Supcond}\right)  .$
+The set $W_{+}$ is also a convex set and is generated by its extreme points,
+$\operatorname*{ext}\left\{  W_{+}\right\}  ,$ which is the set of projectors
+in $W.$ A functional is positive on $W$ if and only if it is positive on
+$\operatorname*{ext}\left\{  W_{+}\right\}  ,$ while the supremum of the
+values of linear functionals defined on convex sets only occur at extreme
+points of the set, thus one has only to consider the values of the functionals
+on the projectors $\operatorname*{ext}\left\{  W_{+}\right\}  $ in order to
+ascertain whether they satisfy both conditions eq. $\left(  \ref{Supcond}%
+\right)  $ and eq. $\left(  \ref{Positivity}\right)  $. The \emph{necessary
+and sufficient }conditions for the existence of a state that extends a linear
+functional defined on a subspace $W$ can thus be expressed in terms of values
+of the functional on the set of projectors, $\operatorname*{ext}\left\{
+W_{+}\right\}  ,$ as
+\begin{equation}
+1\geq f\left(  X\right)  \geq0,\quad\forall X\in\operatorname*{ext}\left\{
+W_{+}\right\}  . \label{NecSuff}%
+\end{equation}
+
+
+In the context of the $N$-Representability Problem for electrons the relevant
+$w^{\ast}$-algebra is the Fermion Fock algebra and the subspace is the one
+formed by one and two electron operators. In this paper the form of \emph{all
+}the projectors in this subspace are characterized and the lower limits in eq.
+$\left(  \ref{NecSuff}\right)  $ are shown to correspond to the well known
+\cite{PQG} \emph{necessary} P, Q and G conditions. The upper limits in eq.
+$\left(  \ref{NecSuff}\right)  $ correspond to the Krein, Segal and Kadison
+theorems, that in conjunction with the lower limits, make the conditions
+\emph{necessary and sufficient }for ensemble representability and we describe
+them as \emph{generalized }P, Q and G conditions. In addition in order for a
+linear functional to be $N$-Representable it must also be dispersion free on
+the electron number operator and its values on the space of one particle
+operators expressed in a specific manner in terms of its values on the space
+of two particle operators.
+
+In the following we discuss and examine the preceding ideas first reviewing,
+in section \ref{Math}, some mathematical concepts and notation that are
+utilized in the subsequent sections then in section
+\ref{Expansion and Contraction} the expansion and contraction maps, which are
+adjoints of each other, are considered in the context of Fock space
+\cite{Kummar67,Kummar70}, which leads to the definition of Reduced Density
+Operators (RDO's). In section \ref{Extensions} we utilize the fact that the
+Fock algebra is a concrete realization of a $w^{\ast}$-algebra and show that
+RDO's correspond to Reduced States (RS's) that are positive functionals
+defined on self adjoint subspaces of a $w^{\ast}$-algebra that can be extended
+to states of the algebra. This shows that the representability problems can be
+formulated as finding the conditions that positive linear functionals defined
+on subspaces must satisfy in order to be extended to states. Kadisons theorem
+is then used to show that \emph{necessary and sufficient }extension conditions
+can be expressed in terms of values of the functionals on projectors contained
+in the subspace. In section \ref{Projectors} the form of \emph{all }projectors
+that can be expressed as linear combinations of one and two electron operators
+is found. In section \ref{PQG} we display that the conditions found from
+Kadisons theorem lead to generalizations of the known \emph{necessary }P, Q
+and G conditions for representability and can be expressed in terms of matrix
+elements of first and second order reduced density matrices. In section
+\ref{PartPair} we discuss the condition that must be satisfied to make the
+functionals and reduced density matrices ensemble $N$-representable, which
+leads to the list of \emph{necessary and sufficient }ensemble $N$%
+-representability conditions given in section \ref{NRepCon} and we conclude
+with a discussion in section \ref{Discussion}.
+
+\section{Mathematical Essentials \label{Math}}
+
+In the following the dimension of all spaces are considered to be finite and
+can be thought of as approximations to the infinite dimensional case, which
+must be used to obtain the exact solutions of quantum mechanical equations.
+However notation that is appropriate for the infinite dimensional case will be
+used even though it becomes redundant in the finite dimensional case.
+
+\subsection{Fermion Fock Space \label{Fermi Fock Space}}
+
+We consider the Fermi Fock space, $\mathcal{H}_{\mathcal{F}},$ based on the
+one electron Hilbert space $\mathcal{H}^{1},$ defined by the direct sum
+\begin{equation}
+\mathcal{H}_{\mathcal{F}}=\underset{0\leq N\leq r}{\bigoplus}\mathcal{H}^{N}%
+\end{equation}
+of the $N$-electron Hilbert spaces
+\begin{equation}
+\mathcal{H}^{N}=\bigwedge\limits^{N}\mathcal{H}^{1},
+\end{equation}
+where $\wedge$ denotes antisymmetric tensor product and $\mathcal{H}%
+^{0}=\left\{  \left.  \lambda\left\vert \phi\right\rangle \right\vert
+\lambda\in\mathbb{C}\right\}  ,$ and $\left\vert \phi\right\rangle $ is the
+vacuum state. The inner product in the Hilbert space $\mathcal{H}%
+_{\mathcal{F}}$ is defined as
+\begin{equation}
+\left\langle \Psi\left\vert \Phi\right.  \right\rangle _{\mathcal{F}}%
+=\sum_{0\leq N\leq r}\left\langle \Psi_{N}\left\vert \Phi_{N}\right.
+\right\rangle _{\mathcal{H}^{N}}=\sum_{0\leq N\leq r}\left\langle
+\Psi\left\vert P_{\mathcal{H}^{N}}\Phi\right.  \right\rangle _{\mathcal{H}%
+^{N}},
+\end{equation}
+where $P_{\mathcal{H}^{N}}$ is the orthogonal projector onto $\mathcal{H}^{N}$
+and $\left\langle \cdot\left\vert \cdot\right.  \right\rangle _{\mathcal{H}%
+^{N}}$ is the inner product in this Hilbert space. (Notational note: If the
+domain of $\left\langle \cdot\left\vert \cdot\right.  \right\rangle
+_{\mathcal{H}^{N}}$ is obvious from the context the subscript "$\mathcal{H}%
+^{N}"$ will not be explicitly shown.)
+
+\subsection{Fermion Fock Algebra \label{Fermi Fock Alg}}
+
+The fermion Fock algebra, $\mathcal{F},$ is the space of bounded operators
+$\left(  \text{Appendix \ref{Operators}}\right)  $ acting in $\mathcal{H}%
+_{\mathcal{F}}$ i.e.
+\begin{equation}
+\mathcal{F}=\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  .
+\end{equation}
+This space can be generated by polynomials
+\begin{equation}
+X=\sum_{0\leq P,Q\leq r}\sum_{\substack{1\leq j_{1}<\cdots<j_{P}\leq r\\1\leq
+k_{1}<\cdots<k_{Q}\leq r}}X_{j_{1}\cdots j_{P}k_{1}\cdots k_{P}}a_{j_{1}%
+}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{Q}}\cdots a_{k_{1}}%
+\end{equation}
+of second quantized operators, $\left\{  \left.  a_{j}^{\dagger}\right\vert
+1\leq j\leq r\right\}  ,$ which are defined by their action on the vacuum
+vector $\left\vert \phi\right\rangle $ by
+\begin{equation}
+a_{j}^{\dagger}\left\vert \phi\right\rangle =\left\vert \varphi_{j}%
+\right\rangle ,1\leq j\leq r,
+\end{equation}
+where $\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq r\right\}  $ is a complete orthonormal basis of the one-electron space
+$\mathcal{H}^{1}$ and satisfy the anti-commutation relationships given by
+\begin{equation}
+\left[  a_{j}^{\dagger},a_{k}\right]  _{+}=a_{j}^{\dagger}a_{k}+a_{k}%
+a_{j}^{\dagger}=\delta_{jk};1\leq j,k\leq r. \label{CAR}%
+\end{equation}
+
+
+The fermion Fock algebra can be decomposed as a vector space direct sum%
+\begin{equation}
+\mathcal{F=F}_{e}\mathcal{\oplus F}_{0}%
+\end{equation}
+of a electron conserving subalgebra $\mathcal{F}_{e}$ and a electron non
+conserving subspace of operators $\mathcal{F}_{0}$. The subalgebra
+$\mathcal{F}_{e}$ can be further decomposed as a direct sum of subspaces
+\begin{equation}
+\mathcal{F}_{e}=%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{N}, \label{evenvect}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{N}=\left\{
+\sum_{\substack{1\leq j_{1}<\cdots<j_{N}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq
+r}}X_{j_{1}\cdots j_{N}k_{1}\cdots k_{N}}a_{j_{1}}^{\dagger}\cdots a_{j_{N}%
+}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}\right\}
+\end{equation}
+or as a direct sum of subalgebras
+\begin{equation}
+\mathcal{F}_{e}=%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N}\right)  , \label{evenalg}%
+\end{equation}
+where $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ is the space of bounded
+operators acting in $\mathcal{H}^{N}.$ The subspace $\mathcal{F}_{0}$ can be
+decomposed as the vector space direct sum
+\begin{equation}
+\mathcal{F}_{o}=%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\neq M\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\neq M\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{N,M}, \label{oddsecond}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{N,M}=\left\{
+\sum_{\substack{1\leq j_{1}<\cdots<j_{N}\leq r\\1\leq k_{1}<\cdots<k_{M}\leq
+r}}X_{j_{1}\cdots j_{N}k_{1}\cdots k_{M}}a_{j_{1}}^{\dagger}\cdots a_{j_{N}%
+}^{\dagger}a_{k_{M}}\cdots a_{k_{1}}\right\}
+\end{equation}
+or as the vector space direct sum
+\begin{equation}
+\mathcal{F}_{o}=%
+%TCIMACRO{\dbigoplus \limits_{0\leq N\neq M\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N\neq M\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N},\mathcal{H}^{M}\right)  , \label{oddfirst}%
+\end{equation}
+where $\mathcal{B}\left(  \mathcal{H}^{N},\mathcal{H}^{M}\right)  $ is the
+vector space of bounded linear maps from the Hilbert space $\mathcal{H}^{N}$
+to the Hilbert space $\mathcal{H}^{M}.$ The decompositions eqs. $\left(
+\ref{evenvect}\right)  $ and $\left(  \ref{oddsecond}\right)  $ express the
+fermion Fock algebra in \emph{second quantized} form as polynomials of second
+quantized operators, while the decompositions eqs. $\left(  \ref{evenalg}%
+\right)  $ and $\left(  \ref{oddfirst}\right)  $ express it in \emph{first
+quantized} form as expansions of the ket-bras
+\begin{equation}
+\left\{  \left.  \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle
+\left\langle \varphi_{k_{1}}\cdots\varphi_{k_{M}}\right\vert \right\vert 1\leq
+j_{1}<\cdots<j_{N}\leq r,1\leq k_{1}<\cdots<k_{M}\leq r;0\leq N,M\leq
+r\right\}
+\end{equation}
+
+
+\subsection{Operator Inner Product \label{Inner prod}}
+
+The Fock space trace operation is defined as
+\begin{equation}
+\operatorname*{Tr}\left\{  X\right\}  =\sum_{0\leq N\leq r}\sum_{1\leq
+j_{1}<\cdots<j_{N}\leq r}\left\langle \Psi_{Nj_{1}\cdots j_{N}}\left\vert
+X\Psi_{Nj_{1}\cdots j_{N}}\right.  \right\rangle ,
+\end{equation}
+where $\left\{  \left.  \Psi_{Nj_{1}\cdots j_{N}}\right\vert 1\leq
+j_{1}<\cdots<j_{N}\leq r;0\leq N\leq r\right\}  $ are complete orthonormal
+bases for $\mathcal{H}^{N},0\leq N\leq r.$ One can use this trace operation to
+define the space of trace class operators $\mathcal{B}_{1}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ that have finite trace for all bases and
+the space of Hilbert Schmidt operators $\mathcal{B}_{2}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  $ that form a Hilbert space with inner product
+\begin{equation}
+\left(  X\left\vert Y\right.  \right)  =\operatorname*{Tr}\left\{  X^{\dagger
+}Y\right\}  .
+\end{equation}
+In finite dimensions, i.e. $r<\infty,$ there is no distinction between these
+spaces of operators i.e. $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+=\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  =\mathcal{B}%
+_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  .$
+
+\section{Expansion and Contraction Maps \label{Expansion and Contraction}}
+
+The expansion and contraction maps relate the first and second quantization
+formulation of quantum mechanics and are defined by the following:
+
+\subsection{Contraction Map \label{Contraction}}
+
+Employing the work of \cite{Kummar70} one can define a \emph{non singular
+}generalized contraction map
+\begin{equation}
+L:\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  \rightarrow
+\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\end{equation}
+by
+\begin{equation}
+L\left(  Y\right)  =\sum_{0\leq N,M\leq r}\sum_{\substack{1\leq j_{1}%
+<\cdots<j_{M}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq r}}\left(  \left.  a_{k_{1}%
+}^{\dagger}\cdots a_{k_{N}}^{\dagger}a_{j_{M}}\cdots a_{j_{1}}\right\vert
+Y\right)  \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle
+\left\langle \varphi_{k_{1}}\cdots\varphi_{k_{N}}\right\vert . \label{CONT}%
+\end{equation}
+
+
+\subsection{Expansion Map \label{Expansion}}
+
+The expansion map
+\begin{equation}
+\Gamma:\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \rightarrow
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+\end{equation}
+is adjoint to the contraction map, i.e. $\Gamma=L^{\dagger},$ with respect to
+inner product $\left(  \cdot\left\vert \cdot\right.  \right)  $ and is defined
+by
+\begin{equation}
+\left(  \Gamma\left(  X\right)  \left\vert Y\right.  \right)  =\left(
+X\left\vert L\left(  Y\right)  \right.  \right)  \quad\forall Y\in
+\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  .
+\end{equation}
+One can show (Appendix \ref{SecQuant}) that $\Gamma$ is \emph{actually the
+second quantization map}
+\begin{equation}
+a_{j_{1}}^{\dagger}\cdots a_{j_{N}}^{\dagger}a_{k_{P}}\cdots a_{k_{M}}%
+=\Gamma\left(  \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle
+\left\langle \varphi_{k_{1}}\cdots\varphi_{k_{N}}\right\vert \right)  ,
+\end{equation}
+which can be expressed in terms of exterior multiplication by the identity
+operator in $\mathcal{F}$ as
+\begin{equation}
+\Gamma\left(  \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle
+\left\langle \varphi_{k_{1}}\cdots\varphi_{k_{N}}\right\vert \right)
+=\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle \left\langle
+\varphi_{k_{1}}\cdots\varphi_{k_{N}}\right\vert \wedge I_{\mathcal{H}%
+_{\mathcal{F}}}.
+\end{equation}
+
+
+The expansion and contraction maps transform naturally between the first and
+second quantization direct sum decompositions of $\mathcal{F}$ i.e.
+\begin{equation}
+\Gamma:%
+%TCIMACRO{\dbigoplus \limits_{0\leq N,M\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N,M\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N},\mathcal{H}^{M}\right)  \rightarrow%
+%TCIMACRO{\dbigoplus \limits_{0\leq N,M\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N,M\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{N,M}%
+\end{equation}
+and
+\begin{equation}
+L:%
+%TCIMACRO{\dbigoplus \limits_{0\leq N,M\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N,M\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{N,M}\rightarrow%
+%TCIMACRO{\dbigoplus \limits_{0\leq N,M\leq r}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{0\leq N,M\leq r}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}^{N},\mathcal{H}^{M}\right)  .
+\end{equation}
+
+
+\subsection{Reduced Density Operators \label{Reduced Density Operators}}
+
+The $P^{th}$ order reduced density operator associated with a state $D\in
+S_{\mathcal{F}}$ can be defined by using the contraction map $L$ as
+\begin{equation}
+D_{P}=P_{\mathcal{H}^{P}}L\left(  D\right)  P_{\mathcal{H}^{P}}=\sum
+_{\substack{1\leq j_{1}<\cdots<j_{P}\leq r\\1\leq k_{1}<\cdots<k_{P}\leq
+r}}\left(  \left.  a_{k_{1}}^{\dagger}\cdots a_{k_{P}}^{\dagger}a_{j_{1}%
+}\cdots a_{j_{P}}\right\vert D\right)  \left\vert \varphi_{j_{1}}\cdots
+\varphi_{j_{P}}\right\rangle \left\langle \varphi_{k_{1}}\cdots\varphi_{k_{P}%
+}\right\vert \label{PORDO}%
+\end{equation}
+and in particular the SORDO is given by
+\begin{equation}
+D_{2}=P_{\mathcal{H}^{2}}L\left(  D\right)  P_{\mathcal{H}^{2}}=\sum
+_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq k_{1}<k_{2}\leq r}}\left(  \left.
+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{j_{1}}a_{j_{2}}\right\vert D\right)
+\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert .
+\end{equation}
+If $D$ is a state describing a system of $N$ electrons then
+\begin{gather}
+D=D^{N}=P_{\mathcal{H}^{N}}DP_{\mathcal{H}^{N}}\nonumber\\
+P_{\mathcal{H}^{M}}DP_{\mathcal{H}^{M}}=0,M\neq N
+\end{gather}
+and the above construction corresponds to the normalization
+\begin{equation}
+\operatorname*{Tr}\left\{  D_{2}\right\}  =\binom{N}{2}.
+\end{equation}
+
+
+\section{Extensions of Positive Functionals \label{Extensions}}
+
+The Fermion Fock algebra is a concrete realization of a $w^{\ast}$-algebra
+\cite{Encyclo} (that contains an identity element), which is a $c^{\ast}%
+$-algebra that also has the property of being a dual space of another Banach
+space, in this case $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ is
+the dual space of $\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  $
+i.e. $\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  ^{\ast}$. The
+important property of $w^{\ast}$-algebras vis-\`{a}-vis $c^{\ast}$-algebras is
+that they are the closure of their idempotents, which in the case of
+$\mathcal{F}$ are the orthogonal projectors onto subspaces of $\mathcal{H}%
+_{\mathcal{F}}.$
+
+\subsection{States \label{States}}
+
+A state on a $w^{\ast}$-algebra is a bounded positive linear function, $f$,
+such that $f\left(  I\right)  =1$, where $I$ is the identity element of the
+algebra, it is called a normal state if it can be identified with an element
+of the predual of the algebra otherwise it is an abnormal state. In this paper
+only normal states belonging to the predual $\mathcal{B}_{1}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ of $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  $ are considered. In the Fermion Fock algebra normal
+states are in one to one correspondence with normalized density operators
+i.e.
+\begin{equation}
+f\left(  X\right)  =\operatorname*{Tr}\left\{  XD_{f}\right\}  ;\,D_{f}\in
+S_{\mathcal{F}}.
+\end{equation}
+
+
+The convex set, $S_{\mathcal{F}},$ of density operators in $\mathcal{F}$ is
+given by
+\begin{equation}
+S_{\mathcal{F}}=\left\{  D\left\vert D\in\mathcal{B}_{1}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  ;D\geq0;\operatorname{Tr}D=1\right.  \right\}  ,
+\end{equation}
+whose elements could describe any type of physical state i.e. electron
+conserving or non conserving, ensemble or pure etc.
+
+\subsection{Partial States \label{Partial States}}
+
+A \emph{partial} state is a positive linear functional defined on a self
+adjoint subspace, $\mathcal{W},$ of a $w^{\ast}$-algebra \emph{that contains}
+the identity $I$ and is a restriction of a state. It can be shown \cite{Emch,
+Krein} that the necessary and sufficient condition for a positive linear
+functional defined on such a subspace $\mathcal{W}$ to be a partial state and
+thus extended to a state is
+\begin{equation}
+\sup_{\substack{I\geq X\geq0\\X\in\mathcal{W}}}f\left(  X\right)  \leq1
+\label{LessI}%
+\end{equation}
+and%
+\begin{equation}
+\inf_{\substack{X\geq I\\X\in\mathcal{W}}}f\left(  X\right)  \geq1.
+\label{MoreI}%
+\end{equation}
+
+
+The identity element $I_{\mathcal{H}_{\mathcal{F}}}$ of $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ can be expanded as
+\begin{equation}
+I_{\mathcal{H}_{\mathcal{F}}}=\sum_{0\leq N\leq r}P_{\mathcal{H}^{N}},
+\end{equation}
+where $P_{\mathcal{H}^{N}}$ are the orthogonal projectors onto $\mathcal{H}%
+^{N},$ $0\leq N\leq r$ and in particular $P_{\mathcal{H}^{0}}=$ $\left\vert
+\phi\right\rangle \left\langle \phi\right\vert $ is the projector onto the
+vacuum state. Thus the condition eq.$\left(  \ref{MoreI}\right)  $ only
+effects operators that are non zero on the vacuum state.
+
+\subsection{Reduced States \label{Reduced States}}
+
+A \emph{reduced} state is a postive linear functional defined on a self
+adjoint subspace of a $w^{\ast}$-algebra \emph{that does not contain} the
+identity and is a restriction of a state. The necessary and sufficient
+condition \cite{Segal} for a linear functional defined on such a subspace
+$\mathcal{W}$ to be a reduced state and thus be extended to a state is
+\begin{equation}
+1\geq f\left(  X\right)  \geq0,\quad\forall X\in\mathfrak{B}_{1+}\left(
+\mathcal{W}\right)  ,
+\end{equation}
+where $\mathfrak{B}_{1+}\left(  \mathcal{W}\right)  $ is the positive part of
+the unit ball of $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $
+contained in $W$ given by%
+\begin{equation}
+\mathfrak{B}_{1+}\left(  \mathcal{W}\right)  =\left\{  \left.  X\right\vert
+X\in\mathcal{W},I\geq X\geq0\right\}  \equiv\left\{  \left.  X\right\vert
+X\in\mathcal{W}_{+},\left\Vert X\right\Vert _{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  }\geq1\right\}  \label{BallCond}%
+\end{equation}
+and
+\begin{equation}
+\inf_{X\in\mathfrak{A}_{1+}\left(  \mathcal{W}\right)  }f\left(  X\right)
+\geq1,
+\end{equation}
+where $\mathfrak{A}_{1+}\left(  \mathcal{W}\right)  $ is the positive part of
+the unit annulus of $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $
+contained in $W$ given by
+\begin{equation}
+\mathfrak{A}_{1+}\left(  \mathcal{W}\right)  =\left\{  \left.  X\right\vert
+X\in\mathcal{W},X\geq I\right\}  \equiv\left\{  \left.  X\right\vert
+X\in\mathcal{W}_{+},\left\Vert X\right\Vert _{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  }\leq1\right\}  . \label{AnnCon}%
+\end{equation}
+
+
+An extension of an important theorem of Kadison \cite{Kadison} applied to self
+adjoint subspaces of $w^{\ast}$-algebra shows that the positive extension
+condition eq.$\left(  \ref{BallCond}\right)  $ can be expressed in terms of
+projectors belonging $\mathcal{W},$ an observation that is crucial in deriving
+necessary and sufficient conditions for representability (Section
+\ref{Projectors}).
+
+In order to obtain representability conditions for SORDO's the appropriate
+subspace to consider in $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+$ is the subspace formed by one and two electron conserving operators
+\begin{equation}
+\Lambda_{2}=%
+%TCIMACRO{\dbigoplus \limits_{1\leq P\leq2}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{1\leq P\leq2}}
+%EndExpansion
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{P},
+\end{equation}
+as reduced states defined on $\Lambda_{2}$ correspond to SORDO's through%
+\begin{equation}
+D_{2}=\sum_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq k_{1}<k_{2}\leq
+r}}f\left(  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}\right)
+\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \left\langle
+\varphi_{k_{1}}\varphi_{k_{2}}\right\vert ,
+\end{equation}
+where%
+\begin{equation}
+f\left(  a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}}\right)
+=\left(  \left.  a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{j_{2}}a_{j_{1}%
+}\right\vert D\right)
+\end{equation}
+and FORDO's through
+\begin{equation}
+D_{1}=\sum_{\substack{1\leq j_{1}\leq r\\1\leq k_{1}\leq r}}f\left(  a_{j_{1}%
+}^{\dagger}a_{k_{1}}\right)  \left\vert \varphi_{j_{1}}\right\rangle
+\left\langle \varphi_{k_{1}}\right\vert ,
+\end{equation}
+where%
+
+\begin{equation}
+f\left(  a_{j_{1}}^{\dagger}a_{k_{1}}\right)  =\left(  \left.  a_{k_{1}%
+}^{\dagger}a_{j_{1}}\right\vert D\right)  .
+\end{equation}
+
+
+In $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ the condition
+eq.$\left(  \ref{AnnCon}\right)  $ only effects operators that are non zero on
+the vacuum state thus does not constrain any operators belonging to
+$\Lambda_{2}$ and one can just concentrate on the conditions given by
+eq.$\left(  \ref{BallCond}\right)  $.
+
+\section{Projectors \label{Projectors}}
+
+As we are searching for necessary and sufficient conditions for extending
+positive \emph{linear} functionals the condition eq. $\left(  \ref{Supcond}%
+\right)  $ needs only to be checked on extreme points of the positive portion
+of the unit ball $\mathfrak{B}_{1}\left(  \Lambda_{2}\right)  ,$ which are
+projection operators $\cite{Kadison}$. One should note that these conditions
+will be representability conditions and that further constraints need to
+considered (section \ref{NRepCon}) to obtain $N$-representability conditions.
+Projectors in $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ are
+postive idempotent operators, $P,$ with norm equal to one i.e.
+\begin{align}
+P  &  \geq0\nonumber\\
+P^{2}  &  =P\nonumber\\
+\left\Vert P\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{F}\right)  }  &
+=\sup_{\left\vert \Psi\right\rangle \in\mathcal{H}_{\mathcal{F}}}\left\{
+\frac{\left\langle \Psi\left\vert P\Psi\right.  \right\rangle }{\left\langle
+\Psi\left\vert \Psi\right.  \right\rangle }\right\}  =1.
+\end{align}
+We first characterize the projectors in $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{1},$ then $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{2}$ and finally $\Lambda_{2}.$
+
+\subsection{Projectors in $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{1}$}
+
+Every positive operator in $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{1}$ can be expressed as (Appendix \ref{Projection} )
+\begin{equation}
+\lambda_{1}=\sum_{1\leq j,k\leq r}\lambda_{1jk}a_{j}^{\dagger}a_{k}%
+=\sum_{1\leq l\leq r}\beta_{l}b_{l}^{\dagger}b_{l},\,\beta_{l}\geq0,1\leq
+l\leq r, \label{1par}%
+\end{equation}
+where
+\begin{equation}
+b_{l}^{\dagger}=\sum_{1\leq j\leq r}u_{lj}a_{j}^{\dagger},\,1\leq l\leq r
+\end{equation}
+and the coefficients $\left\{  u_{lj}\right\}  $ form a $r\times r$ unitary
+matrix i.e.
+\begin{equation}
+\mathbb{U}^{\dagger}\mathbb{U}=\mathbb{UU}^{\dagger}=\mathbb{I}_{r}.
+\end{equation}
+
+
+In Appendix \ref{Operators} we show that the idempotency condition
+\begin{equation}
+\left(  \sum_{1\leq l\leq r}\beta_{l}b_{l}^{\dagger}b_{l}\right)  ^{2}%
+=\sum_{1\leq l\leq r}\beta_{l}b_{l}^{\dagger}b_{l}%
+\end{equation}
+together with the norm condition
+\begin{equation}
+\left\Vert \sum_{1\leq l\leq r}\beta_{l}b_{l}^{\dagger}b_{l}\right\Vert
+_{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  }=1
+\end{equation}
+can only be satisfied by positive operators where
+\begin{equation}
+\beta_{l}=0,\,1\leq l\neq k\leq r\text{ }%
+\end{equation}
+for some fixed $k.$ Thus all projectors belonging to $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{1}$ are of the form
+\begin{equation}
+\lambda_{1}=b^{\dagger}b,
+\end{equation}
+where $b^{\dagger}$ creates a normalized General Spin Orbital (GSO)
+
+\subsection{Projectors in $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{2}$ \label{Proj2}}
+
+Every positive operator in $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{2}$ can be expressed as (Appendix \ref{Projection} )
+\begin{equation}
+\lambda_{2}=\sum_{\substack{1\leq j<k\leq r\\1\leq l<m\leq r}}\lambda
+_{2jklm}a_{j}^{\dagger}a_{k}^{\dagger}a_{m}a_{l}=\sum_{1\leq l\leq\binom{r}%
+{2}}\beta_{l}g_{l}^{\dagger}g_{l},\,\beta_{l}\geq0,1\leq l\leq\binom{r}{2},
+\end{equation}
+where the geminal creator is
+\begin{equation}
+g_{l}^{\dagger}=\sum_{1\leq j<k\leq r}u_{ljk}a_{j}^{\dagger}a_{k}^{\dagger
+},\,1\leq l\leq\binom{r}{2}%
+\end{equation}
+and the coefficients $\left\{  \left.  u_{2ljk}\right\vert 1\leq l\leq
+\binom{r}{2},1\leq j<k\leq r\right\}  $ form a $\binom{r}{2}\times\binom{r}%
+{2}$ unitary matrix i.e.
+\begin{equation}
+\mathbb{U}^{\dagger}\mathbb{U}=\mathbb{UU}^{\dagger}=\mathbb{I}_{\binom{r}{2}%
+}.
+\end{equation}
+In Appendix \ref{Projection} we show that the idempotency condition
+\begin{equation}
+\left(  \sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l}\right)
+^{2}=\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l}%
+\end{equation}
+together with the norm condition
+\begin{equation}
+\left\Vert \sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}%
+g_{l}\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  }=1
+\end{equation}
+can only be satisfied by positive operators where
+\begin{equation}
+\beta_{l}=0,\,1\leq l\neq k\leq\binom{r}{2}\text{ }%
+\end{equation}
+for some fixed $k$ and the rank of the $k^{th}$ geminal must be one. Thus in
+order that a two electron operator $\lambda_{2}$ be a projection operator it
+must be of the form
+\begin{equation}
+\lambda_{2}=a^{\dagger}b^{\dagger}ba,
+\end{equation}
+where $a^{\dagger}$ and $b^{\dagger}$ create normalized orthogonal GSO's.
+
+\subsection{Projectors in $\Lambda_{2}$ \label{Proj1&2}}
+
+\subsubsection{Projections from Two Hole Operators}
+
+By considering the positivity, idempotency and normalization relationship for
+two \emph{hole} operators
+\begin{equation}
+\eta_{2}=\sum_{\substack{1\leq j<k\leq r\\1\leq l<m\leq r}}\eta_{2jklm}%
+a_{j}a_{k}a_{m}^{\dagger}a_{l}^{\dagger}=\sum_{1\leq l\leq\binom{r}{2}}%
+\gamma_{l}h_{l}h_{l}^{\dagger},\,\gamma_{l}\geq0,1\leq l\leq\binom{r}{2},
+\end{equation}
+where the geminal annihilator is
+\begin{equation}
+g_{l}=\sum_{1\leq j<k\leq r}u_{_{2}ljk}a_{j}a_{k},\,1\leq l\leq\binom{r}{2}%
+\end{equation}
+and the coefficients $\left\{  \left.  u_{2ljk}\right\vert 1\leq l\leq
+\binom{r}{2},1\leq j<k\leq r\right\}  $ form a $\binom{r}{2}\times\binom{r}%
+{2}$ unitary matrix i.e.
+\begin{equation}
+\mathbb{U}_{2}^{\dagger}\mathbb{U}_{2}=\mathbb{U}_{2}\mathbb{U}_{2}^{\dagger
+}=\mathbb{I}_{\binom{r}{2}},
+\end{equation}
+one can carry out the same analysis as in subsection \ref{Proj2} and obtain
+(Appendix \ref{Projection}) that in order that the two hole operator $\eta
+_{2}$ be a projection operator it must be of the form
+\begin{equation}
+\eta_{2}=baa^{\dagger}b^{\dagger},
+\end{equation}
+where $a$ and $b$ annihilate normalized orthogonal GSO's. The projection
+operator $\eta_{2}$ does not belong to $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{2}$ but by using the canonical anticommutation
+relationships eq. $\left(  \ref{CAR}\right)  $ one can observe that
+\begin{equation}
+\eta_{2}=baa^{\dagger}b^{\dagger}=I_{\mathcal{H}_{\mathcal{F}}}-a^{\dagger
+}a-b^{\dagger}b+a^{\dagger}b^{\dagger}ba
+\end{equation}
+and thus
+\begin{equation}
+a^{\dagger}a+b^{\dagger}b-a^{\dagger}b^{\dagger}ba=I_{\mathcal{H}%
+_{\mathcal{F}}}-\eta_{2},
+\end{equation}
+which shows that
+\begin{equation}
+\tilde{\lambda}_{2}=a^{\dagger}a+b^{\dagger}b-a^{\dagger}b^{\dagger}ba
+\end{equation}
+is a projection operator that belongs to $\Lambda_{2}.$
+
+\subsubsection{Projections from Products of One electron Operators}
+
+By considering the positivity, idempotency and normalization relationships for
+products $\lambda_{1}\lambda_{1}^{\prime}$ of one electron operators of the
+form eq. $\left(  \ref{1par}\right)  $ one can determine (Appendix
+\ref{Projection}) that these products are projection operators when
+\begin{equation}
+\lambda_{1}\lambda_{1}^{\prime}=a^{\dagger}bb^{\dagger}a=a^{\dagger
+}a-a^{\dagger}b^{\dagger}ba\in\Lambda_{2}.
+\end{equation}
+
+
+One can prove (Appendix \ref{Projection}) that there are no other projection
+operators of the form
+\begin{equation}
+\lambda=\sum_{1\leq j,k\leq r}\lambda_{1jk}a_{j}^{\dagger}a_{k}+\sum
+_{\substack{1\leq j<k\leq r\\1\leq l<m\leq r}}\lambda_{2jklm}a_{j}^{\dagger
+}a_{k}^{\dagger}a_{m}a_{l}%
+\end{equation}
+other than
+\begin{equation}
+a^{\dagger}a,a^{\dagger}b^{\dagger}ba,a^{\dagger}a-a^{\dagger}b^{\dagger
+}ba,a^{\dagger}a+b^{\dagger}b-a^{\dagger}b^{\dagger}ba.
+\end{equation}
+
+
+\section{Generalized P, Q and G Conditions \label{PQG}}
+
+The necessary P, Q and G conditions for representability of a $\binom{r}%
+{2}\times\binom{r}{2}$ hermitian matrices were quickly discovered \cite{PQG}.
+These conditions can be expressed in terms of the basic variables of the
+ground state energy optimization problem formed by the complex matrix elements
+$\left\{  \left.  D_{2j_{1}j_{2}k_{1}k_{2}}\right\vert 1\leq j_{1}<j_{2}\leq
+r,1\leq k_{1}<k_{2}\leq r\right\}  $ of the matrix $\mathbb{D}_{2}$. In the
+notation of this paper they are:
+
+\subsection{P-Condition}
+
+A potential Second Order Reduced Density Matrix (SORDM)\ matrix $\mathbb{D}%
+_{2}$ given by
+\begin{equation}
+D_{2j_{1}j_{2}k_{1}k_{2}}=\left(  \left.  a_{k_{1}}^{\dagger}a_{k_{2}%
+}^{\dagger}a_{j_{1}}a_{j_{2}}\right\vert D\right)  =\overline{D_{2k_{1}%
+k_{2}j_{1}j_{2}}}%
+\end{equation}
+is semi definite i.e.
+\begin{equation}
+\mathbb{D}_{2}\geq0.
+\end{equation}
+
+
+\subsection{Q-Condition}
+
+The matrix $\mathbb{Q}$ given by
+\begin{equation}
+Q_{j_{1}j_{2}k_{1}k_{2}}=\left(  \left.  a_{k_{1}}^{\dagger}a_{j_{1}}a_{k_{2}%
+}^{\dagger}a_{j_{2}}\right\vert D\right)  =\overline{Q_{k_{1}k_{2}j_{1}j_{2}}}%
+\end{equation}
+is semi definite i.e.
+\begin{equation}
+\mathbb{Q}\geq0.
+\end{equation}
+If one invokes the pure $N$ condition (Section \ref{NRepCon}) this condition
+becomes a necessary $N$-representability condition and the $\mathbb{Q}$ matrix
+can be expressed in terms of the matrix $\mathbb{D}_{2}$ as
+\begin{equation}
+Q_{j_{1}j_{2}k_{1}k_{2}}=\frac{1}{\left(  N-1\right)  }\sum_{1\leq l\leq
+r}D_{2j_{2}lk_{1}l}\delta_{j_{1}k_{2}}-D_{2j_{1}j_{2}k_{1}k_{2}}.
+\end{equation}
+
+
+\subsection{G-Condition}
+
+The matrix $\mathbb{G}_{2}$ given by
+\begin{equation}
+G_{j_{1}j_{2}k_{1}k_{2}}=\left(  \left.  a_{j_{1}}a_{j_{2}}a_{k_{1}}^{\dagger
+}a_{k_{2}}^{\dagger}\right\vert D\right)  =\overline{G_{2k_{1}k_{2}j_{1}j_{2}%
+}}%
+\end{equation}
+is semi definite i.e.
+\begin{equation}
+\mathbb{G}\geq0.
+\end{equation}
+Again if one invokes the pure $N$ condition (Section \ref{NRepCon}) this
+condition becomes a necessary $N$-representability condition and the
+$\mathbb{G}$ matrix can be expressed in terms of the matrix $\mathbb{D}_{2}$
+as
+\begin{equation}
+G_{j_{1}j_{2}k_{1}k_{2}}=\frac{1}{\left(  N-1\right)  }\sum_{1\leq l\leq
+r}\left\{  D_{2j_{2}lk_{1}l}\delta_{j_{1}k_{2}}+D_{2j_{1}lk_{2}l}\delta
+_{j_{2}k_{1}}\right\}  -D_{2j_{1}j_{2}k_{1}k_{2}}.
+\end{equation}
+
+
+The following generalized P, Q and G conditions, produced by examining the
+values of the functional $f$ on projectors belonging to $\Lambda_{2},$ in
+combination with the one electron conditions
+\begin{equation}
+1\geq f\left(  b^{\dagger}b\right)  \geq0\,\forall b,
+\end{equation}
+are \emph{Necessary and Sufficient }for the existence of positive extensions
+of bounded linear functionals
+\begin{equation}
+f:\Lambda_{2}\rightarrow\mathbb{C}%
+\end{equation}
+to a state of $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ and are
+based on the theorems of Krien \cite{Krein}, Segal \cite{Segal} and Kadison
+\cite{Kadison}.
+
+\subsection{Generalized P-Condition}
+
+A linear functional $f$ can be extended to a state if
+\begin{equation}
+1\geq f\left(  a^{\dagger}b^{\dagger}ba\right)  \geq0\,\forall a,b,
+\end{equation}
+where $\left\vert a\right\rangle $ and $\left\vert b\right\rangle $ are
+normalized orthogonal GSO's belonging to $\mathcal{H}^{1}$ and $a^{\dagger}$
+and $b^{\dagger}$ are the creators of those GSO's. As
+\begin{equation}
+D_{2abab}=f\left(  a^{\dagger}b^{\dagger}ba\right)
+\end{equation}
+this is a \emph{necessary }condition for ensemble representability.
+
+\subsection{Generalized Q-Condition}
+
+A linear functional $f$ can be extended to a state if
+\begin{equation}
+1\geq f\left(  a^{\dagger}a-a^{\dagger}b^{\dagger}ba\right)  \geq0\,\forall
+a,b,
+\end{equation}
+which gives
+\begin{equation}
+1\geq D_{1aa}-D_{2abab}\geq0\,\forall a,b, \label{Q1}%
+\end{equation}
+where the diagonal elements of a possible First Order Reduced Density Matrix
+(FORDM) are defined as
+\begin{equation}
+D_{1aa}=f\left(  a^{\dagger}a\right)  .
+\end{equation}
+Again this is a \emph{necessary }condition for ensemble representability.
+
+\subsection{Generalized G-Condition}
+
+A linear functional $f$ can be extended to a state if
+\begin{equation}
+1\geq f\left(  a^{\dagger}a+b^{\dagger}b-a^{\dagger}b^{\dagger}ba\right)
+\geq0\,\forall a,b,
+\end{equation}
+which gives
+\begin{equation}
+1\geq D_{1aa}-D_{1bb}-D_{2abab}\geq0\,\forall a,b \label{G1}%
+\end{equation}
+and also a \emph{necessary }condition for ensemble representability.
+
+\section{Electron and Pair Number Conditions \label{PartPair}}
+
+In order to obtain $N$-representable extensions one must constrain the
+functional $f$ to be dispersion free on the number operator i.e.
+\begin{equation}
+f\left(  \mathcal{N}_{1}^{2}\right)  =f\left(  \mathcal{N}_{1}\right)  ^{2},
+\label{Dispfree}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{N}_{1}=\sum_{1\leq j\leq r}a_{j}^{\dagger}a_{j}.
+\end{equation}
+One can show (Appendix \ref{Number}) that eq.$\left(  \ref{Dispfree}\right)  $
+is equivalent to
+\begin{equation}
+f\left(  \mathcal{N}_{1}\right)  =N \label{NumPart}%
+\end{equation}
+and
+\begin{equation}
+f\left(  \mathcal{N}_{2}\right)  =\binom{N}{2} \label{Numpairs}%
+\end{equation}
+for some fixed $N,$ where the pair operator $\mathcal{N}_{2}$ is defined as
+\begin{equation}
+\mathcal{N}_{2}=\sum_{1\leq j<k\leq r}a_{j}^{\dagger}a_{k}^{\dagger}a_{k}%
+a_{j}.
+\end{equation}
+If $f$ is dispersion free on the number operator the values of $f$ on
+$\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{1}$ must be related to
+its values on $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{2}$ by
+\begin{equation}
+f\left(  a_{j}^{\dagger}a_{k}\right)  =\left(  N-1\right)  ^{-1}f\left(
+a_{j}^{\dagger}\mathcal{N}_{1}a_{k}\right)  =\left(  N-1\right)  ^{-1}%
+\sum_{1\leq l\leq r}f\left(  a_{j}^{\dagger}a_{l}^{\dagger}a_{l}a_{k}\right)
+, \label{Def1D}%
+\end{equation}
+thus if the functional is only defined on $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{2}$ one can define allowable extensions to
+$\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{1}$ by eq. $\left(
+\ref{Def1D}\right)  .$
+
+In terms of matrix elements the definition eq. $\left(  \ref{Def1D}\right)  $
+becomes
+\begin{equation}
+D_{1jk}=\left(  N-1\right)  ^{-1}\sum_{1\leq l\leq r}D_{2jlkl}%
+\end{equation}
+and one can see that if the value of the functional on the pair operator is
+set by eq. $\left(  \ref{Numpairs}\right)  $ then the electron number
+condition eq. $\left(  \ref{NumPart}\right)  $ is automatically ensured.
+
+\section{N-Representability Conditions \label{NRepCon}}
+
+The representability conditions in section \ref{PQG} can be complimented and
+modified by the conditions in section \ref{PartPair} to form ensemble
+\emph{Necessary and Sufficient }$N$-representability conditions which are:
+
+\begin{enumerate}
+\item Normalization%
+
+\begin{equation}
+\sum_{1\leq j<k\leq r}D_{2jkjk}=\binom{N}{2} \label{NormCon}%
+\end{equation}
+
+
+\item Generalized P-Condition%
+\begin{equation}
+1\geq D_{2abab}\geq0\,\forall a,b \label{PCond}%
+\end{equation}
+
+
+\item Generalized Q-Condition%
+\begin{equation}
+1\geq\left(  N-1\right)  ^{-1}\sum_{1\leq l\leq r}D_{2alal}-D_{2abab}%
+\geq0\,\forall a,b \label{QCond}%
+\end{equation}
+
+
+\item Generalized G-Condition%
+\begin{equation}
+1\geq\left(  N-1\right)  ^{-1}\sum_{1\leq l\leq r}\left\{  D_{2alal}%
++D_{2blbl}\right\}  -D_{2abab}\geq0\,\forall a,b. \label{GCond}%
+\end{equation}
+
+\end{enumerate}
+
+The conditions eqs. $\left(  \ref{NormCon},\ref{PCond},\ref{GCond}\right)  $
+and the lower bound in eq. $\left(  \ref{QCond}\right)  $ have been discovered
+in the study of the Diagonal Representability Problem
+\cite{DavidsonI,DavidsonII,DavidsonIII,WeinholdWilson,Erdahl78}. However,
+these conditions were not caste in terms of bounds on the extremal values of a
+linear functional on the intersection of the unit ball of the Fermion Fock
+algebra with the subspace $\Lambda_{2}$. Expressing the bounds in this context
+allows one to utilize general extension theorems from functional analysis to
+determine necessary and sufficient conditions for a linear functional to be a
+reduced state \emph{if all the projectors in this intersection are
+characterized}. The theorems in appendix \ref{Projection} characterize all
+these projections.
+
+\section{Discussion \label{Discussion}}
+
+In this paper we have described how the $N$-Representability problem entails
+finding the conditions that linear functionals belonging to the dual space,
+$\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{2}^{\ast},$ of bounded
+linear functionals defined on the subspace of second quantized two electron
+operators, $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{2},$
+contained in the Fock algebra, $\mathcal{F},$ need to satisfy in order to be
+extended to $N$-electron states and thus be reduced $N$-electron states i.e.
+restrictions of $N$-electron states.
+
+As this algebra is a $w^{\ast}$-algebra the theorems of Krein, Segal and
+Kadison were utilized to show that the positive extension conditions could be
+expressed in terms of the values of the restricted linear functionals on
+projectors contained in the subspace $\Lambda_{2}$ generated by the one and
+two electron operators, i.e. on the extreme points, $\operatorname*{ext}%
+\left\{  \Lambda_{2+}\right\}  ,$ of the cone of positive operators belonging
+to this space, which have to belong to the interval $\left[  0,1\right]  .$
+These conditions are generalizations of the known P, Q and G conditions, which
+are given by the lower bound of this interval. In addition the condition that
+these functionals be restrictions of $N$-electron states entails that they
+must be dispersion free on the number operator, $\mathcal{N}_{1},$ and that
+their values on the one electron subspace $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  _{1}$ be determined by their values on the two electron
+subspace $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{2}$.
+
+We also described how the functionals belonging to $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{2}^{\ast}$ correspond to operators
+belonging $\mathcal{B}\left(  \mathcal{H}^{2}\right)  $ that act in
+$\mathcal{H}^{2}$ and obtained their matrix representations in a natural way
+using the generalized contraction map. This map is the adjoint of the
+generalized expansion map which we display is the second quantization map.
+This correspondence shows that the $N$-electron ground state of the system can
+be determined by a constrained variation of the linear functional that
+corresponds to the reduced Hamiltonian, over operators belonging to
+$\mathcal{B}\left(  \mathcal{H}^{2}\right)  $ subject to the normalization and
+generalized P, Q and G constraints, which are all linear. This problem can be
+expressed in terms of matrix elements of operators belonging $\mathcal{B}%
+\left(  \mathcal{H}^{2}\right)  $ produced by decomposable bases of
+$\mathcal{H}^{2},$ however in order to be sufficient conditions the matrix
+elements must satisfy them in \emph{all} \emph{decomposable} bases, i.e. the
+conditions on the matrices produced by these elements must be conserved under
+the under the action of the representations, $\mathcal{R}_{\mathcal{H}^{2}%
+}\left(  U\left(  \mathcal{H}^{1}\right)  \right)  ,$ of the one electron
+unitary group $U\left(  \mathcal{H}^{1}\right)  $ on $\mathcal{H}^{2}.$ These
+observations can also be used to obtain to a more constrained form of the Semi
+Definite Programming (SDP) method successfully used by Mazziotti
+\cite{Mazziotti2011}.
+
+In a future work this variational problem will be expressed in terms of
+functions defined on the group manifold of $U\left(  \mathcal{H}^{1}\right)  $
+and shown to lead to a classical Linear Programming problem that is amenable
+to sequential approximations, that are all $N$-Representable.
+
+\appendix
+
+
+\section{Operator Spaces \label{Operators}}
+
+In the following the Fock space $\mathcal{H}_{\mathcal{F}}$ will be considered
+as the underlying Hilbert space on which the operators are defined and a few
+basic properties will be listed.
+
+\subsection{Finite Rank Operators}
+
+An operator $X$ is a finite rank operator acting $\mathcal{H}_{\mathcal{F}}$
+if
+\begin{equation}
+X=\sum_{1\leq j\leq m<\infty}\alpha_{j}\left\vert \Phi_{j}\right\rangle
+\left\langle \Psi_{j}\right\vert ,
+\end{equation}
+where $\left\{  \left.  \Phi_{j}\right\vert 1\leq j\leq m\right\}  $ and
+$\left\{  \left.  \Psi_{j}\right\vert 1\leq j\leq m\right\}  $ are orthonormal
+sets in $\mathcal{H}_{\mathcal{F}}.$ The set of finite rank operators is
+denoted $\mathcal{B}_{0}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ and is not
+closed if $\mathcal{H}^{1}$ is infinite dimensional.
+
+\subsection{Bounded Operators}
+
+The operator norm (also called the uniform norm) is defined as
+\begin{equation}
+\left\Vert X\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+}=\sup_{\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}\left\{  \left(
+\frac{\left\langle \left.  \Phi\right\vert X^{\dagger}X\Phi\right\rangle
+}{\left\langle \left.  \Phi\right\vert \Phi\right\rangle }\right)  ^{\frac
+{1}{2}}\right\}  =\sup_{\left\vert \Phi\right\rangle \in\mathcal{H}_{F}%
+}\left\{  \frac{\left\Vert X\Phi\right\Vert _{\mathcal{H}_{F}}}{\left\Vert
+\Phi\right\Vert _{\mathcal{H}_{F}}}\right\}  ,
+\end{equation}
+(where $\left\Vert {}\right\Vert _{\mathcal{H}_{F}}$ is the norm in
+$\mathcal{H}_{F}),$ and the space of bounded operators acting on the Hilbert
+space $\mathcal{H}_{\mathcal{F}}$ as
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  =\left\{  X\left\vert
+\left\Vert X\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+}<\infty\right.  \right\}  .
+\end{equation}
+If one restricts attention to self adjoint operators $X=X^{\dagger}$ then it
+can be shown that
+\begin{equation}
+\left\Vert X\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+}=\sup_{\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}\left\{  \left\vert
+\frac{\left\langle \left.  \Phi\right\vert X\Phi\right\rangle }{\left\langle
+\left.  \Phi\right\vert \Phi\right\rangle }\right\vert \right\}
+\end{equation}
+and thus for positive operators, $X\geq0$%
+\begin{equation}
+\left\Vert X\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+}=\sup_{\left\vert \Phi\right\rangle \in\mathcal{H}_{F}}\left\{
+\frac{\left\langle \left.  \Phi\right\vert X\Phi\right\rangle }{\left\langle
+\left.  \Phi\right\vert \Phi\right\rangle }\right\}  .
+\end{equation}
+The space $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ is closed in
+the operator norm topology.
+
+\subsection{Compact Operators}
+
+The space of compact operators, $\mathcal{C}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  ,$ is the closed space produced by taking the closure of the set of
+finite rank operators with respect to the operator norm topology i.e. any
+compact operator can be expressed as
+\begin{equation}
+X=\lim_{m\rightarrow\infty}\sum_{1\leq j\leq m}\alpha_{j}\left\vert \Phi
+_{j}\right\rangle \left\langle \Psi_{j}\right\vert ,
+\end{equation}
+in the sense that
+\begin{equation}
+\lim_{m\rightarrow\infty}\left\Vert X-\sum_{1\leq j\leq m}\alpha_{j}\left\vert
+\Phi_{j}\right\rangle \left\langle \Psi_{j}\right\vert \right\Vert
+_{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  }=0.
+\end{equation}
+
+
+\subsection{Trace Class Operators}
+
+The trace class norm is defined as
+\begin{equation}
+\left\Vert X\right\Vert _{1}=\operatorname*{Tr}\left\{  \left(  X^{\dagger
+}X\right)  ^{\frac{1}{2}}\right\}
+\end{equation}
+and the space of trace class operators acting on the Hilbert space
+$\mathcal{H}_{\mathcal{F}}$ as
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  =\left\{  X\left\vert
+\left\Vert X\right\Vert _{1}<\infty\right.  \right\}  .
+\end{equation}
+The space $\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ is
+closed with respect to the $\left\Vert {}\right\Vert _{1}$ norm, while the
+closure with respect to the $\left\Vert {}\right\Vert _{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  }$ norm produces $\mathcal{C}\left(
+\mathcal{H}_{\mathcal{F}}\right)  .$
+
+\subsection{Hilbert-Schmidt Operators}
+
+The Hilbert-Schmidt norm is defined as
+\begin{equation}
+\left\Vert X\right\Vert _{2}=\left(  \operatorname*{Tr}\left\{  X^{\dagger
+}X\right\}  \right)  ^{\frac{1}{2}}%
+\end{equation}
+and the space of Hilbert-Schmidt operators acting on the Hilbert space
+$\mathcal{H}_{\mathcal{F}}$ as
+\begin{equation}
+\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  =\left\{  X\left\vert
+\left\Vert X\right\Vert _{2}<\infty\right.  \right\}  .
+\end{equation}
+The space $\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ is
+closed with respect to the $\left\Vert {}\right\Vert _{2}$ norm, while the
+closure with respect to $\left\Vert {}\right\Vert _{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  }$ norm produces $\mathcal{C}\left(
+\mathcal{H}_{\mathcal{F}}\right)  .$
+
+\subsection{Relationship between the Spaces}
+
+The relationship between the spaces is
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{C}%
+\left(  \mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{B}_{2}\left(
+\mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{B}_{1}\left(
+\mathcal{H}_{\mathcal{F}}\right)  \supseteq\mathcal{B}_{0}\left(
+\mathcal{H}_{\mathcal{F}}\right)  .
+\end{equation}
+The closure of $\mathcal{B}_{0}\left(  \mathcal{H}_{\mathcal{F}}\right)  $
+(and thus of $\mathcal{C}\left(  \mathcal{H}_{\mathcal{F}}\right)  ,$
+$\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ and $\mathcal{B}%
+_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  )$ with respect to the strong
+operator operator is $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  ,$
+where these limits can be defined as
+\begin{equation}
+X=\text{\textrm{s-}}\lim_{m\rightarrow\infty}X_{m}\Leftrightarrow
+\lim_{m\rightarrow\infty}\left\Vert \left(  X-X_{m}\right)  \Phi\right\Vert
+_{\mathcal{H}_{\mathcal{F}}}=0\quad\forall\left\vert \Phi\right\rangle
+\in\mathcal{H}_{\mathcal{F}},
+\end{equation}
+in contrast to the uniform operator topology limits that are given by%
+\begin{align}
+X  &  =\lim_{m\rightarrow\infty}X_{m}\Leftrightarrow\lim_{m\rightarrow\infty
+}\left\Vert \left(  X-X_{m}\right)  \right\Vert _{\mathcal{H}_{\mathcal{F}}%
+}=0\nonumber\\
+&  =\lim_{m\rightarrow\infty}\sup_{\left\vert \Phi\right\rangle \in
+\mathcal{H}_{F}}\left\{  \left(  \frac{\left\langle \left.  \Phi\right\vert
+\left(  X-X_{m}\right)  ^{\dagger}\left(  X-X_{m}\right)  \Phi\right\rangle
+}{\left\langle \left.  \Phi\right\vert \Phi\right\rangle }\right)  ^{\frac
+{1}{2}}\right\}  .
+\end{align}
+
+
+If the dimension of $\mathcal{H}_{\mathcal{F}}$ is finite all of these spaces
+are identical and closed in all of the preceding norms and topologies.
+
+\section{Projectors \label{Projection}}
+
+A general element of $\Lambda_{2}$ can be expanded as
+\begin{equation}
+\lambda=\sum_{1\leq j,k\leq r}\lambda_{1jk}a_{j}^{\dagger}a_{k}+\sum
+_{\substack{1\leq j<k\leq r\\1\leq l<m\leq r}}\lambda_{2jklm}a_{j}^{\dagger
+}a_{k}^{\dagger}a_{m}a_{l}%
+\end{equation}
+and the condition that it is a projector i.e. idempotent is that%
+\begin{equation}
+\lambda=\lambda^{2}, \label{idem}%
+\end{equation}
+which implies
+\begin{equation}
+\lambda=\lambda^{\dagger}\text{ and }\lambda\geq0.
+\end{equation}
+In a $c^{\ast}$-algebra
+\begin{equation}
+\left\Vert X^{\dagger}X\right\Vert =\left\Vert X\right\Vert ^{2} \label{Cstar}%
+\end{equation}
+The idempotency condition eq. $\left(  \ref{idem}\right)  $ implies that
+\begin{equation}
+\left\Vert \lambda^{2}\right\Vert =\left\Vert \lambda\right\Vert
+\end{equation}
+and the $c^{\ast}$-norm property eq. $\left(  \ref{Cstar}\right)  $%
+\begin{equation}
+\left\Vert \lambda^{2}\right\Vert =\left\Vert \lambda\right\Vert ^{2}%
+\end{equation}
+gives
+\begin{equation}
+\left\Vert \lambda\right\Vert ^{2}=\left\Vert \lambda\right\Vert
+\end{equation}
+and thus
+\begin{equation}
+\left\Vert \lambda\right\Vert =1.
+\end{equation}
+
+
+\subsection{One electron case}
+
+We first consider the case $\lambda_{2}=0$ then
+\begin{equation}
+\lambda_{1}=\lambda_{1}^{2} \label{idem1}%
+\end{equation}
+and noting that $\lambda_{1}$ must be self adjoint and positive one has
+\begin{equation}
+\lambda=\lambda_{1}=\sum_{1\leq j,k\leq\infty}\lambda_{1jk}a_{j}^{\dagger
+}a_{k}=\sum_{\substack{1\leq j,k\leq r\\1\leq l\leq r}}u_{jl}\beta_{l}\bar
+{u}_{kl}a_{j}^{\dagger}a_{k}=\sum_{1\leq l\leq r}\beta_{l}b_{l}^{\dagger}%
+b_{l},
+\end{equation}
+where%
+\begin{subequations}
+\begin{align}
+1  &  \geq\beta_{l}\geq0;1\leq j\leq r\\
+b_{l}^{\dagger}  &  =\sum_{1\leq j\leq r}a_{j}^{\dagger}u_{jl}\\
+b_{l}^{\dagger}\left\vert \phi\right\rangle  &  =\left\vert \psi
+_{l}\right\rangle \\
+\mathbb{U}_{1}^{\dagger}\mathbb{U}_{1}  &  =\mathbb{U}_{1}\mathbb{U}%
+_{1}^{\dagger}=\mathbb{I}_{r},
+\end{align}
+where $\mathbb{U}_{1}$ is the matrix composed of the matrix elements $\left\{
+\left.  u_{jk}\right\vert 1\leq j,k\leq r\right\}  .$ The condition eq.
+$\left(  \ref{idem1}\right)  $ becomes
+\end{subequations}
+\begin{equation}
+\sum_{1\leq l\leq r}\beta_{l}b_{l}^{\dagger}b_{l}=\sum_{1\leq l\leq r}%
+\beta_{l}^{2}b_{l}^{\dagger}b_{l}+2\sum_{1\leq l_{1}<l_{2}\leq r}\beta_{l_{1}%
+}\beta_{l_{2}}b_{l_{1}}^{\dagger}b_{l_{1}}b_{l_{2}}^{\dagger}b_{l_{2}},
+\end{equation}
+which can be rewritten as
+\begin{equation}
+\sum_{1\leq l\leq r}\left\{  \beta_{l}\left(  1-\beta_{l}\right)  \right\}
+b_{l}^{\dagger}b_{l}=2\sum_{1\leq l_{1}<l_{2}\leq r}\beta_{l_{1}}\beta_{l_{2}%
+}b_{l_{1}}^{\dagger}b_{l_{2}}^{\dagger}b_{l_{2}}b_{l_{1}}.
+\end{equation}
+This equality must be true on all vectors in $\mathcal{H}_{\mathcal{F}}$ in
+particular on $\left\vert \psi_{\kappa}\right\rangle \in\mathcal{H}^{1}%
+,1\leq\kappa\leq r,$ i.e.%
+\begin{equation}
+\sum_{1\leq l\leq r}\left\{  \beta_{l}\left(  1-\beta_{l}\right)  \right\}
+b_{l}^{\dagger}b_{l}\left\vert \psi_{\kappa}\right\rangle =2\sum_{1\leq
+l_{1}<l_{2}\leq r}\beta_{l_{1}}\beta_{l_{2}}b_{l_{1}}^{\dagger}b_{l_{2}%
+}^{\dagger}b_{l_{2}}b_{l_{1}}\left\vert \psi_{\kappa}\right\rangle ,
+\end{equation}
+which gives
+\begin{equation}
+\beta_{\kappa}\left(  1-\beta_{\kappa}\right)  \left\vert \psi_{\kappa
+}\right\rangle =0,\quad1\leq\kappa\leq r
+\end{equation}
+i.e.
+\begin{equation}
+\beta_{\kappa}=0\text{ or }\beta_{\kappa}=1,\quad1\leq\kappa\leq r.\text{ }%
+\end{equation}
+One can see that $\beta_{\kappa}=1$ for only one value of $\kappa\in\left\{
+1,\cdots,r\right\}  ,$ for let $\left\{  n_{1},\cdots,n_{r^{\prime}}\right\}
+$ be a subset of $\left\{  1,\cdots,r\right\}  $ and
+\begin{equation}
+\lambda_{1}=\sum_{\substack{1\leq\nu\leq\kappa\leq r\\\sigma_{\nu}\in\left\{
+1,\cdots,r\right\}  }}b_{\sigma_{\nu}}^{\dagger}b_{\sigma_{\nu}}%
+\end{equation}
+then
+\begin{equation}
+\lambda_{1}^{2}=\sum_{\sigma\in\left\{  1,\cdots,r\right\}  }b_{\sigma
+}^{\dagger}b_{\sigma}+\sum_{\sigma,\sigma^{\prime}\in\left\{  1,\cdots
+,r\right\}  }b_{\sigma}^{\dagger}b_{\sigma^{\prime}}^{\dagger}b_{\sigma
+^{\prime}}b_{\sigma}=\lambda_{1}=\sum_{\sigma\in\left\{  1,\cdots,r\right\}
+}b_{\sigma}^{\dagger}b_{\sigma}%
+\end{equation}
+thus
+\begin{equation}
+\sum_{\sigma,\sigma^{\prime}\in\left\{  1,\cdots,r\right\}  }b_{\sigma
+}^{\dagger}b_{\sigma^{\prime}}^{\dagger}b_{\sigma^{\prime}}b_{\sigma}=0,
+\end{equation}
+which is only possible if $r^{\prime}=1.$ Thus if $\lambda_{1}$ is a projector
+it must be of the form
+\begin{equation}
+\lambda_{1}=b^{\dagger}b.
+\end{equation}
+
+
+\subsection{Two electron case}
+
+We consider the case $\lambda_{1}=0$ then
+\begin{equation}
+\lambda_{2}=\lambda_{2}^{2} \label{idem2}%
+\end{equation}
+and%
+\begin{align}
+\lambda &  =\lambda_{2}=\sum_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq
+k_{1}<k_{2}\leq r}}\lambda_{2j_{1}j_{2}k_{1}k_{2}}a_{j_{1}}^{\dagger}a_{j_{2}%
+}^{\dagger}a_{k_{2}}a_{k_{1}}=\sum_{\substack{1\leq j_{1}<j_{2}\leq r\\1\leq
+k_{1}<k_{2}\leq r\\1\leq l\leq\binom{r}{2}}}u_{j_{1}j_{2}l}\beta_{l}\bar
+{u}_{lk_{1}k_{2}}a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger}a_{k_{2}}a_{k_{1}%
+}\nonumber\\
+&  =\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l},
+\label{expan_lamda2}%
+\end{align}
+where the matrix that diagonalizes the matrix
+\begin{equation}
+\mathbf{\lambda}_{2}\equiv\left\{  \left.  \lambda_{2j_{1}j_{2}k_{1}k_{2}%
+}\right\vert 1\leq j_{1}<j_{2}\leq r;1\leq k_{1}<k_{2}\leq r\right\}
+\end{equation}
+is unitary i.e.
+\begin{equation}
+\mathbb{U}_{2}^{\dagger}\mathbb{U}_{2}=\mathbb{U}_{2}\mathbb{U}_{2}^{\dagger
+}=\mathbb{I}_{\binom{r}{2}},
+\end{equation}
+so that
+\begin{equation}
+\mathbf{\lambda}_{2}=\mathbb{U}_{2}\left(
+\begin{array}
+[c]{ccc}%
+\beta_{1} & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \beta_{\binom{r}{2}}%
+\end{array}
+\right)  \mathbb{U}_{2}^{\dagger}.
+\end{equation}
+The geminal creators $\left\{  \left.  g_{l}^{\dagger}\right\vert 1\leq
+l\leq\binom{r}{2}\right\}  $, geminal coefficients $\left\{  \left.
+g_{lj_{1}j_{2}}\right\vert 1\leq j_{1}<j_{2}\leq r\right\}  $ and the geminal
+coefficient matrices $\mathbb{G}_{l}$ have the properties%
+\begin{subequations}
+\begin{align}
+&  g_{l}^{\dagger}=\sum_{1\leq j_{1}<j_{2}\leq r}g_{lj_{1}j_{2}}a_{j_{1}%
+}^{\dagger}a_{j_{2}}^{\dagger}=\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq
+r}g_{lj_{1}j_{2}}a_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger};\,\,\\
+&  \mathbb{G}_{lj_{1}j_{2}}=g_{lj_{1}j_{2}}=-g_{lj_{2}j_{1}}=u_{j_{1}j_{2}l}\\
+&  g_{l}^{\dagger}\left\vert \phi\right\rangle =\left\vert g_{l}\right\rangle
+\,;1\leq l\leq\binom{r}{2}\\
+&  \left\langle g_{l_{1}}\left\vert g_{l_{2}}\right.  \right\rangle
+=\delta_{l_{1}l_{2}};1\leq l_{1},l_{2}\leq\binom{r}{2}\\
+&  \operatorname*{Tr}\left\{  \mathbb{G}_{l_{1}}^{\dagger}\mathbb{G}_{l_{2}%
+}\right\}  =2\delta_{l_{1}l_{2}};1\leq l_{1},l_{2}\leq\binom{r}{2}\text{ }\\
+&  \mathbb{G}_{l}=-\mathbb{G}_{l}^{t};1\leq l\leq\binom{r}{2}.
+\end{align}
+The values of the $\beta_{l}$'s in eq. $\left(  \ref{expan_lamda2}\right)  $
+are restricted by
+\end{subequations}
+\begin{equation}
+1\geq\beta_{l}\geq0;1\leq l\leq\binom{r}{2} \label{beta}%
+\end{equation}
+as the projection of $\lambda_{2}$ on $\mathcal{H}^{2}$ is given by
+\begin{equation}
+P_{\mathcal{H}^{2}}\lambda_{2}P_{\mathcal{H}^{2}}=\sum_{1\leq l\leq\binom
+{r}{2}}\beta_{l}\left\vert g_{l}\right\rangle \left\langle g_{l}\right\vert ,
+\end{equation}
+where $\lambda_{2}$ is the second quantization of $P_{\mathcal{H}^{2}}%
+\lambda_{2}P_{\mathcal{H}^{2}}$ i.e.%
+\begin{equation}
+\lambda_{2}=\Gamma\left(  P_{\mathcal{H}^{2}}\lambda_{2}P_{\mathcal{H}^{2}%
+}\right)  ,
+\end{equation}
+thus%
+\begin{equation}
+\lambda_{2}\geq0\Rightarrow P_{\mathcal{H}^{2}}\lambda_{2}P_{\mathcal{H}^{2}%
+}\geq0
+\end{equation}
+and%
+\begin{equation}
+\lambda_{2}-P_{\mathcal{H}^{2}}\lambda_{2}P_{\mathcal{H}^{2}}\geq0,
+\end{equation}
+as $\left\Vert \lambda_{2}\right\Vert =1$ ($\lambda_{2}$ is a projector) the
+eigenvalues of $P_{\mathcal{H}^{2}}\lambda_{2}P_{\mathcal{H}^{2}}\in\left[
+0,1\right]  .$
+
+\subsubsection{Two Electron Operator Idempotency Condition}
+
+\begin{lemma}
+If $\lambda_{2}$ is a projector then $\lambda_{2}=\sum\limits_{1\leq
+l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l},$ where $\beta_{l}=1$ or $0.$
+\end{lemma}
+
+\begin{proof}
+Using the expansion eq. $\left(  \ref{expan_lamda2}\right)  $ of the operator
+$\lambda_{2}$ the idempotency condition eq. $\left(  \ref{idem2}\right)  $
+becomes
+\begin{equation}
+\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l}=\sum_{1\leq
+l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}}g_{l_{1}}^{\dagger
+}g_{l_{1}}g_{l_{2}}^{\dagger}g_{l_{2}} \label{lam2}%
+\end{equation}
+and one must compare the left hand side of eq. $\left(  \ref{lam2}\right)  $
+to the right hand side. In order to do this one needs to bring the RHS of eq.
+$\left(  \ref{lam2}\right)  $ to normal form by sequentially using the
+canonical anti commutation relationships. The first step produces
+\begin{align}
+&  \sum_{1\leq l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}}g_{l_{1}%
+}^{\dagger}g_{l_{1}}g_{l_{2}}^{\dagger}g_{l_{2}}=\nonumber\\
+&  \sum_{1\leq l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}}\left\{
+g_{l_{1}}^{\dagger}\left[  g_{l_{1}},g_{l_{2}}^{\dagger}\right]  g_{l_{2}%
+}+g_{l_{1}}^{\dagger}g_{l_{2}}^{\dagger}g_{l_{1}}g_{l_{2}}\right\}  .
+\label{normform}%
+\end{align}
+which can be developed by noting that%
+\begin{equation}
+\left[  g_{l_{1}},g_{l_{2}}^{\dagger}\right]  =\frac{1}{4}\sum
+_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq k_{1},k_{2}\leq r}}\bar{g}%
+_{l_{1}j_{1}j_{2}}g_{l_{2}k_{1}k_{2}}\left[  a_{j_{2}}a_{j_{1}},a_{k_{1}%
+}^{\dagger}a_{k_{2}}^{\dagger}\right]  =\,-\frac{1}{4}\sum_{\substack{1\leq
+j_{1},j_{2}\leq r\\1\leq k_{1},k_{2}\leq r}}\bar{g}_{l_{1}j_{1}j_{2}}%
+g_{l_{2}k_{1}k_{2}}\left[  a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger},a_{j_{2}%
+}a_{j_{1}}\right]  ,
+\end{equation}
+and (Appendix \ref{Commutation Relationship})
+\begin{align}
+\left[  a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger},a_{j_{2}}a_{j_{1}}\right]   &
+=I_{\mathcal{H}_{\mathcal{F}}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}%
+}-I_{\mathcal{H}_{\mathcal{F}}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}%
++a_{k_{2}}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{1}}\nonumber\\
+&  -a_{k_{1}}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{2}}-a_{k_{2}}^{\dagger
+}a_{j_{1}}\delta_{j_{2}k_{1}}+a_{k_{1}}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{2}}%
+\end{align}
+to give
+\begin{align}
+&  \left[  g_{l_{1}},g_{l_{2}}^{\dagger}\right]  =-\frac{1}{4}\sum
+_{\substack{1\leq j_{1},j_{2}\leq r\\1\leq k_{1},k_{2}\leq r}}\bar{g}%
+_{l_{1}j_{1}j_{2}}g_{l_{2}k_{1}k_{2}}\left\{  I_{\mathcal{H}_{\mathcal{F}}%
+}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}}-I_{\mathcal{H}_{\mathcal{F}}}%
+\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}\right. \nonumber\\
+&  \left.  \qquad\qquad\qquad\qquad\qquad\qquad\right.  \left.  a_{k_{2}%
+}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{1}}-a_{k_{1}}^{\dagger}a_{j_{2}}%
+\delta_{j_{1}k_{2}}-a_{k_{2}}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{1}}+a_{k_{1}%
+}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{2}}\right\}  ,\nonumber\\
+&  =\frac{1}{2}\sum_{1\leq j_{1},j_{2}\leq r}\bar{g}_{l_{1}j_{1}j_{2}}%
+g_{l_{2}j_{1}j_{2}}\nonumber\\
+&  \qquad\qquad\qquad-\frac{1}{4}\sum_{\substack{1\leq j,j_{2}\leq r\\1\leq
+k_{2}\leq r}}\left\{  \bar{g}_{l_{1}jj_{2}}g_{l_{2}jk_{2}}-\bar{g}%
+_{l_{1}jj_{2}}g_{l_{2}k_{2}j}-\bar{g}_{l_{1}j_{2}j}g_{l_{2}jk_{2}}+\bar
+{g}_{l_{1}j_{2}j}g_{l_{2}k_{2}j}\right\}  a_{k_{2}}^{\dagger}a_{j_{2}},
+\end{align}
+and after using $g_{ljk}=-g_{lkj}$
+\begin{equation}
+\left[  g_{l_{1}},g_{l_{2}}^{\dagger}\right]  =\delta_{l_{1}l_{2}}+\sum_{1\leq
+j,k\leq r}\bar{g}_{l_{1}jj}g_{l_{2}jk}a_{k}^{\dagger}a_{j}=\delta_{l_{1}l_{2}%
+}-\sum_{1\leq j_{2},k_{2}\leq r}\left(  \mathbb{G}_{l_{1}}^{\dagger}%
+\mathbb{G}_{l_{2}}\right)  _{jk}a_{k}^{\dagger}a_{j}.
+\end{equation}
+The idempotency condition then becomes%
+\begin{align}
+&  \sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l}=\sum_{1\leq
+l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}}g_{l_{1}}^{\dagger
+}g_{l_{1}}g_{l_{2}}^{\dagger}g_{l_{2}}\nonumber\\
+&  =\sum_{1\leq l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}}\left\{
+g_{l_{1}}^{\dagger}\left\{  \delta_{l_{1}l_{2}}-\sum_{1\leq j_{2},k_{2}\leq
+r}\left(  \mathbb{G}_{l_{1}}^{\dagger}\mathbb{G}_{l_{2}}\right)  _{j_{2}k_{2}%
+}a_{k_{2}}^{\dagger}a_{j_{2}}\right\}  g_{l_{2}}+g_{l_{1}}^{\dagger}g_{l_{2}%
+}^{\dagger}g_{l_{1}}g_{l_{2}}\right\}  ,
+\end{align}
+which simplifies to%
+\begin{align}
+&  \sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l}=\nonumber\\
+&  =\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}^{2}g_{l}^{\dagger}g_{l}%
+-\sum_{1\leq l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}}\left\{
+\sum_{1\leq j_{2},k_{2}\leq r}\left(  \mathbb{G}_{l_{1}}^{\dagger}%
+\mathbb{G}_{l_{2}}\right)  _{j_{2}k_{2}}g_{l_{1}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{j_{2}}g_{l_{2}}+g_{l_{1}}^{\dagger}g_{l_{2}}^{\dagger}g_{l_{1}}g_{l_{2}%
+}\right\} \nonumber\\
+&  =\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}^{2}g_{l}^{\dagger}g_{l}%
+-\sum_{1\leq l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}}\sum_{1\leq
+j_{2},k_{2}\leq r}\left(  \mathbb{G}_{l_{1}}^{\dagger}\mathbb{G}_{l_{2}%
+}\right)  _{j_{2}k_{2}}g_{l_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{j_{2}}%
+g_{l_{2}}\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad-\sum_{1\leq l_{1},l_{2}\leq\binom{r}{2}}\beta_{l_{1}}\beta_{l_{2}%
+}g_{l_{1}}^{\dagger}g_{l_{2}}^{\dagger}g_{l_{1}}g_{l_{2}}. \label{work}%
+\end{align}
+The operator equality in eq. $\left(  \ref{work}\right)  $ must be true on all
+vectors thus in particular
+\begin{equation}
+\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}g_{l}^{\dagger}g_{l}\left\vert
+g_{p}\right\rangle =\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}^{2}g_{l}^{\dagger
+}g_{l}\left\vert g_{p}\right\rangle \Longleftrightarrow\beta_{p}\left(
+\beta_{p}-1\right)  =0;\quad1\leq p\leq\binom{r}{2}%
+\end{equation}
+leading to
+\begin{equation}
+\lambda_{2}=\sum_{\substack{1\leq\nu\leq\kappa\leq\binom{r}{2}\\\sigma_{\nu
+}\in\left\{  1,\cdots,\binom{r}{2}\right\}  }}g_{\sigma_{\nu}}^{\dagger
+}g_{\sigma_{\nu}};\quad\sigma_{\nu}\neq\sigma_{\nu^{\prime}}\text{ unless }%
+\nu=\nu^{\prime},
+\end{equation}
+where $\kappa$ is the number of non zero $\beta^{\prime}s.$
+\end{proof}
+
+\begin{lemma}
+If $\lambda_{2}$ is a projector then $\lambda_{2}=g^{\dagger}g,$ where
+$g^{\dagger}$ creates a normalized geminal.
+\end{lemma}
+
+\begin{proof}
+As $\lambda_{2}$ is a projection operator its eigenvalues are $1$ or $0$ and
+as $\left[  \lambda_{2},\mathcal{N}_{1}\right]  =0$ its eigenvectors can be
+chosen to simultaneously diagonalize the number operator $\mathcal{N}_{1}.$
+
+In the finite dimensional case, i.e. $r<\infty,$ the subspace $\mathcal{H}%
+^{r}$ is one dimensional and is spanned by a single normalized r-fold\emph{
+}antisymmetrized product, $\left\vert \varphi_{1}\cdots\varphi_{r}%
+\right\rangle ,$ formed from \emph{any }orthonormal basis, $\left\{  \left.
+\varphi_{j}\right\vert 1\leq j\leq r\right\}  $ of $\mathcal{H}^{1},$ i.e.
+\begin{equation}
+\left\vert \varphi_{1}\cdots\varphi_{r}\right\rangle \overset{\text{up to a
+phase factor}}{=}\left\vert \varphi_{1}^{\prime}\cdots\varphi_{r}^{\prime
+}\right\rangle ,
+\end{equation}
+where $\left\{  \left.  \varphi_{j}\right\vert 1\leq j\leq r\right\}  $ and
+$\left\{  \left.  \varphi_{j}^{\prime}\right\vert 1\leq j\leq r\right\}  $ are
+arbitrary orthonormal bases of $\mathcal{H}^{1}.$Thus any vector in
+$\mathcal{H}^{r}$ is an eigenvector of $\lambda_{2},$ as $\lambda_{2}:$
+$\mathcal{H}^{r}\rightarrow\mathcal{H}^{r}$.
+
+Any geminal creator $g_{l}^{\dagger}$ can be expressed in canonical form as
+\cite{OrtizWeiner2006,Mazziotti2001}
+\begin{equation}
+g_{l}^{\dagger}=\sum_{1\leq j\leq s}c_{lj}a_{lj}^{\dagger}a_{lj+s}^{\dagger
+};\,c_{lj}\geq0,1\leq j\leq s,
+\end{equation}
+where
+\begin{equation}
+\sum_{1\leq j\leq s}c_{lj}^{2}=1
+\end{equation}
+and the canonical general spin orbitals of $\left\vert g_{l}\right\rangle =$
+$g_{l}^{\dagger}\left\vert \phi\right\rangle $ are produced by
+\begin{equation}
+a_{lj}^{\dagger}\left\vert \phi\right\rangle =\left\vert \varphi
+_{lj}\right\rangle .
+\end{equation}
+Hence
+\begin{equation}
+g_{l}^{\dagger}g_{l}=\sum_{1\leq j,k\leq s}c_{lj}c_{lk}a_{lj}^{\dagger
+}a_{lj+s}^{\dagger}a_{lk+s}a_{lk}%
+\end{equation}
+and $\lambda_{2}$ can be expanded (noting that $\beta_{l}=1$ or $0,$ $1\leq
+l\leq\binom{r}{2}$ ) as
+\begin{align}
+&  \left\langle \varphi_{1}\cdots\varphi_{r}\left\vert \lambda_{2}\varphi
+_{1}\cdots\varphi_{r}\right.  \right\rangle =\sum_{1\leq l\leq\binom{r}{2}%
+}\beta_{l}\left\langle \varphi_{l1}\cdots\varphi_{lr}\left\vert g_{l}%
+^{\dagger}g_{l}\varphi_{l1}\cdots\varphi_{lr}\right.  \right\rangle \\
+&  =\sum_{\substack{1\leq j,k\leq s\\1\leq l\leq\binom{r}{2}}}\beta_{l}%
+c_{lj}c_{lk}\left\langle \varphi_{l1}\cdots\varphi_{lr}\left\vert
+a_{lj}^{\dagger}a_{lj+s}^{\dagger}a_{lk+s}a_{lk}\varphi_{l1}\cdots\varphi
+_{lr}\right.  \right\rangle \\
+&  =\sum_{\substack{1\leq j\leq s\\1\leq l\leq\binom{r}{2}}}\beta_{l}%
+c_{lj}^{2}=\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}.
+\end{align}
+The vector $\left\vert \varphi_{1}\cdots\varphi_{r}\right\rangle $ is an
+eigenvector of $\lambda_{2}$ with eigenvalue $1$ (as $\lambda_{2}$ is a
+projector) thus
+\begin{equation}
+\sum_{1\leq l\leq\binom{r}{2}}\beta_{l}=1,
+\end{equation}
+as $\beta_{l}=1$ or $0,$ $1\leq l\leq\binom{r}{2}$ only one $\beta_{l}$ can be
+non zero and $\lambda=g^{\dagger}g$.
+\end{proof}
+
+Thus one can prove the following theorem:
+
+\begin{theorem}
+\bigskip$\lambda_{2}\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+_{2}$ is a projector if only if it can be expressed in the form $\lambda
+_{2}=a^{\dagger}b^{\dagger}ba,$ where $a^{\dagger}$ and $b^{\dagger}$ create
+normalized orthogonal vectors in $\mathcal{H}^{1}.$
+\end{theorem}
+
+\begin{proof}
+Using the two preceding lemmas one has that if $\lambda_{2}$ is a two electron
+projector
+\begin{equation}
+\lambda_{2}=g^{\dagger}g\nonumber
+\end{equation}
+and thus
+\begin{equation}
+\lambda_{2}^{2}=g^{\dagger}gg^{\dagger}g. \label{ProjSq}%
+\end{equation}
+Using the canonical expansion of the geminal one can expand eq. $\left(
+\ref{ProjSq}\right)  $ as
+\begin{equation}
+g^{\dagger}gg^{\dagger}g=\sum_{1\leq j_{1},j_{2},j_{3},j_{4}\leq s}a_{j_{1}%
+}^{\dagger}a_{j_{1+s}}^{\dagger}a_{j_{2}}a_{j_{2+s}}a_{j_{3}}^{\dagger
+}a_{j_{3+s}}^{\dagger}a_{j_{4}}a_{j_{4+s}}c_{j_{1}}c_{j_{2}}c_{j_{3}}c_{j_{4}%
+}. \label{Projsq2}%
+\end{equation}
+and bring eq. $\left(  \ref{Projsq2}\right)  $ to normal form by observing
+that
+\begin{align}
+&  a_{j_{2}}a_{j_{2+s}}a_{j_{3}}^{\dagger}a_{j_{3+s}}^{\dagger}\nonumber\\
+&  =\delta_{j_{2}j_{3+s}}\delta_{j_{2+s}j_{3}}-\delta_{j_{2}j_{3}}%
+\delta_{j_{2+s}j_{3+s}}-a_{j_{3+s}}^{\dagger}a_{j_{2}}\delta_{j_{2+s}j_{3}%
+}+\nonumber\\
+&  \quad+a_{j_{3}}^{\dagger}a_{j_{2}}\delta_{j_{2+s}j_{3+s}}+a_{j_{3+s}%
+}^{\dagger}a_{j_{2+s}}\delta_{j_{2}j_{3}}-a_{j_{3}}^{\dagger}a_{j_{2+s}}%
+\delta_{j_{2}j_{3+s}}+a_{j_{3}}^{\dagger}a_{j_{3+s}}^{\dagger}a_{j_{2+s}%
+}a_{j_{2}}\nonumber\\
+&  =-I\delta_{j_{2}j_{3}}+a_{j_{3}}^{\dagger}a_{j_{2}}\delta_{j_{2}j_{3}%
+}+a_{j_{3}}^{\dagger}a_{j_{2}}\delta_{j_{2}j_{3}}+a_{j_{3}}^{\dagger
+}a_{j_{3+s}}^{\dagger}a_{j_{2+s}}a_{j_{2}}%
+\end{align}
+and obtaining%
+\begin{align}
+&  g^{\dagger}gg^{\dagger}g=\sum_{1\leq j_{1},j_{2},j_{3},j_{4}\leq s}%
+a_{j_{1}}^{\dagger}a_{j_{1+s}}^{\dagger}\left(  -\delta_{j_{2}j_{3}}+a_{j_{3}%
+}^{\dagger}a_{j_{2}}\delta_{j_{2}j_{3}}+a_{j_{3}+s}^{\dagger}a_{j_{2}+s}%
+\delta_{j_{2}j_{3}}+a_{j_{3}}^{\dagger}a_{j_{3+s}}^{\dagger}a_{j_{2+s}%
+}a_{j_{2}}\right) \nonumber\\
+&  \qquad\qquad\qquad\times a_{j_{4}}a_{j_{4+s}}c_{j_{1}}c_{j_{2}}c_{j_{3}%
+}c_{j_{4}}\nonumber\\
+&  =\sum_{1\leq j_{1},j_{4}\leq s}a_{j_{1}}^{\dagger}a_{j_{1+s}}^{\dagger
+}a_{j_{4+s}}a_{j_{4}}c_{j_{1}}c_{j_{4}}\left\Vert g\right\Vert _{\mathcal{H}%
+^{2}}^{2}\nonumber\\
+&  \qquad+\sum_{1\leq j_{1},j_{2},j_{4}\leq s}c_{j_{1}}a_{j_{1}}^{\dagger
+}a_{j_{1+s}}^{\dagger}n_{j_{2}}\left(  a_{j_{2}}^{\dagger}a_{j_{2}}%
++a_{j_{2}+s}^{\dagger}a_{j_{2}+s}\right)  a_{j_{4}}a_{j_{4+s}}c_{j_{4}%
+}\nonumber\\
+&  \quad\qquad+\sum_{1\leq j_{1},j_{2},j_{3},j_{4}\leq s}a_{j_{1}}^{\dagger
+}a_{j_{1+s}}^{\dagger}a_{j_{3}}^{\dagger}a_{j_{3+s}}^{\dagger}a_{j_{2+s}%
+}a_{j_{2}}a_{j_{4}}a_{j_{4+s}}c_{j_{1}}c_{j_{2}}c_{j_{3}}c_{j_{4}},
+\end{align}
+where $n_{j}=a_{j}^{\dagger}a_{j}.$ The difference between $\lambda_{2}^{2}$
+and $\lambda_{2}$ can then be expressed as
+\begin{align}
+\Xi &  =g^{\dagger}gg^{\dagger}g-g^{\dagger}g=\sum_{1\leq j_{1},j_{2}%
+,j_{4}\leq s}c_{j_{1}}a_{j_{1}}^{\dagger}a_{j_{1+s}}^{\dagger}n_{j_{2}}\left(
+a_{j_{2}}^{\dagger}a_{j_{2}}+a_{j_{2}+s}^{\dagger}a_{j_{2}+s}\right)
+a_{j_{4}}a_{j_{4+s}}c_{j_{4}}\nonumber\\
+&  +\sum_{1\leq j_{1},j_{2},j_{3},j_{4}\leq s}a_{j_{1}}^{\dagger}a_{j_{1+s}%
+}^{\dagger}a_{j_{3}}^{\dagger}a_{j_{3+s}}^{\dagger}a_{j_{2+s}}a_{j_{2}%
+}a_{j_{4}}a_{j_{4+s}}c_{j_{1}}c_{j_{2}}c_{j_{3}}c_{j_{4}}%
+\end{align}
+and one can note that
+\begin{gather}
+\Xi=g^{\dagger}gg^{\dagger}g-g^{\dagger}g=0\nonumber\\
+\Updownarrow\nonumber\\
+P_{\mathcal{H}^{m}}\Xi P_{\mathcal{H}^{m}}=0\forall m.
+\end{gather}
+Thus in particular
+\begin{align}
+\left\langle \Phi\left\vert \sum_{1\leq j_{1},j_{2},j_{4}\leq s}c_{j_{1}%
+}a_{j_{1}}^{\dagger}a_{j_{1+s}}^{\dagger}n_{j_{2}}\left(  a_{j_{2}}^{\dagger
+}a_{j_{2}}+a_{j_{2}+s}^{\dagger}a_{j_{2}+s}\right)  a_{j_{4}}a_{j_{4+s}%
+}c_{j_{4}}\right.  \Psi\right\rangle  &  =0\nonumber\\
+\forall\Phi,\Psi &  \in\mathcal{H}^{3}.
+\end{align}
+Letting
+\begin{equation}
+\left\vert \Phi\right\rangle =\left\vert \Psi\right\rangle =\left\vert
+\varphi_{j}\varphi_{j+s}\varphi_{k}\right\rangle
+\end{equation}
+one obtains
+\begin{align}
+0  &  =\left\langle \varphi_{j}\varphi_{j+s}\varphi_{k}\left\vert \sum_{1\leq
+j_{1},j_{2},j_{4}\leq s}c_{j_{1}}a_{j_{1}}^{\dagger}a_{j_{1+s}}^{\dagger
+}n_{j_{2}}\left(  a_{j_{2}}^{\dagger}a_{j_{2}}+a_{j_{2}+s}^{\dagger}%
+a_{j_{2}+s}\right)  a_{j_{4}}a_{j_{4+s}}c_{j_{4}}\varphi_{j}\varphi
+_{j+s}\varphi_{k}\right.  \right\rangle \nonumber\\
+&  =\sum_{1\leq j_{1},j_{2},j_{4}\leq s}c_{j_{1}}c_{j_{4}}n_{j_{2}}\left\{
+\left\langle \varphi_{j}\varphi_{j+s}\varphi_{k}\left\vert a_{j_{1}}^{\dagger
+}a_{j_{1+s}}^{\dagger}a_{j_{2}}^{\dagger}a_{j_{2}}a_{j_{4}}a_{j_{4+s}}%
+\varphi_{j}\varphi_{j+s}\varphi_{k}\right.  \right\rangle \right. \nonumber\\
+&  \left.  +\right.  \left.  \left\langle \varphi_{j}\varphi_{j+s}\varphi
+_{k}\left\vert a_{j_{1}}^{\dagger}a_{j_{1+s}}^{\dagger}a_{j_{2}+s}^{\dagger
+}a_{j_{2}+s}a_{j_{4}}a_{j_{4+s}}\varphi_{j}\varphi_{j+s}\varphi_{k}\right.
+\right\rangle \right\}  =n_{j}n_{k}\left(  1-\delta_{jk}-\delta_{\left(
+j+s\right)  k}\right)  .
+\end{align}
+Thus
+\begin{equation}
+n_{j}n_{\left\vert k\right\vert }=0\quad j\neq k\text{ };1\leq j\leq s,1\leq
+k\leq2s,
+\end{equation}
+i.e.
+\begin{align}
+n_{1}n_{2}  &  =n_{1}n_{3}=\cdots=n_{1}n_{s}=0\nonumber\\
+n_{2}n_{1}  &  =n_{2}n_{3}=\cdots=n_{2}n_{s}=0, \label{Proof}%
+\end{align}
+where
+\begin{equation}
+\left\vert k\right\vert =\left\{
+\begin{array}
+[c]{c}%
+k\text{ if }k\leq s\\
+k-s\text{ if }k>s
+\end{array}
+\right.  .
+\end{equation}
+One can then see from eq. $\left(  \ref{Proof}\right)  $ that all but one of
+the occupation numbers must be zero and the one that isn't must equal one,
+thus the rank of the geminal creator $g^{\dagger}$ must be $1.$
+\end{proof}
+
+\subsection{Mixed Case}
+
+The general case concerns projectors of the form
+\begin{equation}
+\lambda=\lambda_{1}+\lambda_{2},
+\end{equation}
+which is handled by considering:
+
+\subsubsection{Q Projectors}
+
+Using the particle-hole transformation
+\begin{equation}
+a^{\dagger}\rightarrow a
+\end{equation}
+of the Fock algebra and the preceding lemmas and theorem one can see that all
+projectors formed from two electron hole operators must be of the form%
+\begin{equation}
+A^{\dagger}A,
+\end{equation}
+where
+\begin{equation}
+A=b^{\dagger}a^{\dagger},
+\end{equation}
+i.e.%
+\begin{equation}
+A^{\dagger}A=abb^{\dagger}a^{\dagger},
+\end{equation}
+which is a projector as
+\begin{align}
+&  \left(  abb^{\dagger}a^{\dagger}\right)  ^{2}=abb^{\dagger}a^{\dagger
+}abb^{\dagger}a^{\dagger}=abb^{\dagger}\left(  1-aa^{\dagger}\right)
+bb^{\dagger}a^{\dagger}=\nonumber\\
+&  =abb^{\dagger}bb^{\dagger}a^{\dagger}-abb^{\dagger}aa^{\dagger}bb^{\dagger
+}a^{\dagger}=ab\left(  1-bb^{\dagger}\right)  b^{\dagger}a^{\dagger
+}=abb^{\dagger}a^{\dagger}.
+\end{align}
+Noting that
+\begin{equation}
+abb^{\dagger}a^{\dagger}=I_{\mathcal{H}_{\mathcal{F}}}-a^{\dagger}%
+a-b^{\dagger}b+a^{\dagger}b^{\dagger}ba=I_{\mathcal{H}_{\mathcal{F}}}-\Lambda,
+\end{equation}
+where
+\begin{equation}
+\Lambda=a^{\dagger}a+b^{\dagger}b-a^{\dagger}b^{\dagger}ba
+\end{equation}
+one has
+\begin{equation}
+I_{\mathcal{H}_{\mathcal{F}}}-\Lambda=\left(  I_{\mathcal{H}_{\mathcal{F}}%
+}-\Lambda\right)  ^{2}=I_{\mathcal{H}_{\mathcal{F}}}-2\Lambda+\Lambda^{2},
+\end{equation}
+which shows that
+\begin{equation}
+\Lambda^{2}=\Lambda,
+\end{equation}
+i.e.
+\begin{equation}
+\Lambda=a^{\dagger}a+b^{\dagger}b-a^{\dagger}b^{\dagger}ba
+\end{equation}
+are projectors that belong to $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  _{1}\oplus\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{2}$
+and lead to the generalized Q-conditions.
+
+\subsubsection{G Projectors}
+
+The generalized G-condition is based on the product
+\begin{equation}
+A^{\dagger}A,
+\end{equation}
+where
+\begin{equation}
+A=b^{\dagger}a,
+\end{equation}
+i.e.%
+\begin{equation}
+A^{\dagger}A=a^{\dagger}bb^{\dagger}a=a^{\dagger}\left(  I_{\mathcal{H}%
+_{\mathcal{F}}}-b^{\dagger}a\right)  a=a^{\dagger}a-a^{\dagger}b^{\dagger
+}ba=n_{a}-n_{a}n_{b}=n_{a}\left(  1-n_{b}\right)  .
+\end{equation}
+The operator $a^{\dagger}a-a^{\dagger}b^{\dagger}ba$ is a projector as
+\begin{equation}
+n_{a}\left(  1-n_{b}\right)  n_{a}\left(  1-n_{b}\right)  =n_{a}\left(
+1-n_{b}\right)  ^{2}=n_{a}\left(  1-2n_{b}+n_{b}\right)  =n_{a}\left(
+1-n_{b}\right)
+\end{equation}
+and
+\begin{equation}
+a^{\dagger}a-a^{\dagger}b^{\dagger}ba\in\Lambda_{2}.
+\end{equation}
+
+
+\section{Two Electron Commutation Relationships
+\label{Commutation Relationship}}
+
+The commutator%
+\begin{equation}
+\left[  a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger},a_{j_{2}}a_{j_{1}}\right]
+\end{equation}
+is evaluated by bringing $a_{j_{4}}a_{j_{3}}a_{j_{1}}^{\dagger}a_{j_{2}%
+}^{\dagger}$ to normal form as%
+\begin{align}
+&  a_{j_{2}}a_{j_{1}}a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}=a_{j_{2}}\left(
+\delta_{j_{1}k_{1}}-a_{k_{1}}^{\dagger}a_{j_{1}}\right)  a_{k_{2}}^{\dagger
+}=a_{j_{2}}a_{k_{2}}^{\dagger}\delta_{j_{1}k_{1}}-a_{j_{2}}a_{k_{1}}^{\dagger
+}a_{j_{1}}a_{k_{2}}^{\dagger}\nonumber\\
+&  =\left(  \delta_{j_{2}k_{2}}-a_{k_{2}}^{\dagger}a_{j_{2}}\right)
+\delta_{j_{1}k_{1}}-\left(  \delta_{j_{2}k_{1}}-a_{k_{1}}^{\dagger}a_{j_{2}%
+}\right)  \left(  \delta_{j_{1}k_{2}}-a_{k_{2}}^{\dagger}a_{j_{1}}\right)
+\nonumber\\
+&  =\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}-a_{k_{2}}^{\dagger}a_{j_{2}}%
+\delta_{j_{1}k_{1}}-\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}}+a_{k_{1}}^{\dagger
+}a_{j_{2}}\delta_{j_{1}k_{2}}+a_{k_{2}}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{1}%
+}-a_{k_{1}}^{\dagger}a_{j_{2}}a_{k_{2}}^{\dagger}a_{j_{1}}\nonumber\\
+&  =\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}-\delta_{j_{2}k_{1}}\delta
+_{j_{1}k_{2}}-a_{k_{2}}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{1}}+a_{k_{1}%
+}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{2}}+a_{k_{2}}^{\dagger}a_{j_{1}}%
+\delta_{j_{2}k_{1}}-a_{k_{1}}^{\dagger}\left(  \delta_{j_{2}k_{2}}-a_{k_{2}%
+}^{\dagger}a_{j_{2}}\right)  a_{j_{1}}\nonumber\\
+&  =\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}-\delta_{j_{2}k_{1}}\delta
+_{j_{1}k_{2}}-a_{k_{2}}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{1}}+a_{k_{1}%
+}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{2}}+a_{k_{2}}^{\dagger}a_{j_{1}}%
+\delta_{j_{2}k_{1}}-a_{k_{1}}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{2}}+a_{k_{1}%
+}^{\dagger}a_{k_{2}}^{\dagger}a_{j_{2}}a_{j_{1}}%
+\end{align}
+giving
+\begin{align}
+&  a_{j_{2}}a_{j_{1}}a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}=\nonumber\\
+I_{\mathcal{H}_{\mathcal{F}}}  &  \delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}%
+}-I_{\mathcal{H}_{\mathcal{F}}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}}%
+-a_{k_{2}}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{1}}+a_{k_{1}}^{\dagger}a_{j_{2}%
+}\delta_{j_{1}k_{2}}+a_{k_{2}}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{1}}-a_{k_{1}%
+}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{2}}+a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger
+}a_{j_{2}}a_{j_{1}},
+\end{align}
+and thus
+\begin{equation}
+\left[  a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger},a_{j_{2}}a_{j_{1}}\right]
+=I_{\mathcal{H}_{\mathcal{F}}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}%
+}-I_{\mathcal{H}_{\mathcal{F}}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}%
++a_{k_{2}}^{\dagger}a_{j_{2}}\delta_{j_{1}k_{1}}-a_{k_{1}}^{\dagger}a_{j_{2}%
+}\delta_{j_{1}k_{2}}-a_{k_{2}}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{1}}+a_{k_{1}%
+}^{\dagger}a_{j_{1}}\delta_{j_{2}k_{2}}.
+\end{equation}
+
+
+\section{Second Quantization Map \label{SecQuant}}
+
+By considering the restrictions of $a_{j}^{\dagger}$ to $\mathcal{H}^{N}$,
+i.e. $a_{j}^{\dagger}P_{\mathcal{H}^{N}},$ for $0\leq N\leq\infty$ one obtains%
+\begin{align}
+a_{j}^{\dagger}  &  =\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert +\sum_{1\leq N\leq\infty}\sum_{1\leq j_{1}<\cdots<j_{N}%
+\leq\infty}\left\vert \varphi_{j}\varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert
+\nonumber\\
+&  =\sum_{0\leq N\leq\infty}\sum_{1\leq j_{1}<\cdots<j_{N}\leq\infty
+}\left\vert \varphi_{j}\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle
+\left\langle \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert \nonumber\\
+&  =\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+\wedge\sum_{0\leq N\leq\infty}\sum_{1\leq j_{1}<\cdots<j_{N}\leq\infty
+}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert \nonumber\\
+&  =\left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+\wedge\sum_{0\leq N\leq\infty}P_{\mathcal{H}^{N}}=\left\vert \varphi
+_{j}\right\rangle \left\langle \phi\right\vert \wedge I_{\mathcal{H}%
+_{\mathcal{F}}}.
+\end{align}
+thus one can define the second quantization map $\Gamma$
+\begin{equation}
+\Gamma:\mathcal{F\rightarrow F}%
+\end{equation}
+from the Fock algebra to itself by
+\begin{equation}
+\Gamma\left(  \left\vert \varphi_{j}\right\rangle \left\langle \phi\right\vert
+\right)  =a_{j}^{\dagger}=\left\vert \varphi_{j}\right\rangle \left\langle
+\phi\right\vert \wedge I_{\mathcal{H}_{\mathcal{F}}}.
+\end{equation}
+Thus annihilators can be expressed in an analogous fashion by
+\begin{align}
+a_{j}  &  =\left\vert \phi\right\rangle \left\langle \varphi_{j}\right\vert
++\sum_{1\leq N\leq\infty}\sum_{1\leq j_{1}<\cdots<j_{N}\leq\infty}\left\vert
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi
+_{j}\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert \nonumber\\
+&  =\sum_{0\leq N\leq\infty}\sum_{1\leq j_{1}<\cdots<j_{N}\leq\infty
+}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\varphi_{j}\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert .
+\end{align}
+and%
+\begin{equation}
+a_{j}=\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
+_{j}\right\vert \right)  =\left\vert \phi\right\rangle \left\langle
+\varphi_{j}\right\vert \wedge I_{\mathcal{H}_{\mathcal{F}}}.\nonumber
+\end{equation}
+In a similar fashion
+\begin{align}
+&  a_{l_{1}}^{\dagger}a_{m_{1}}=\Gamma\left(  \left\vert \varphi_{l_{1}%
+}\right\rangle \left\langle \varphi_{m_{1}}\right\vert \right) \nonumber\\
+&  =\sum_{\substack{0\leq N,M\leq\infty\\1\leq j_{1}<\cdots<j_{N}\leq
+\infty\\1\leq k_{1}<\cdots<k_{M}\leq\infty}}\left\vert \varphi_{l_{1}}%
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle \left.
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert \varphi_{k_{1}}\cdots
+\varphi_{k_{M}}\right\rangle \left\langle \varphi_{m_{1}}\varphi_{k_{1}}%
+\cdots\varphi_{k_{M}}\right\vert \nonumber\\
+&  =\sum_{1\leq N\leq\infty}\sum_{1\leq j_{1}<\cdots<j_{N}\leq\infty
+}\left\vert \varphi_{l_{1}}\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle
+\left\langle \varphi_{m_{1}}\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert
+=\left\vert \varphi_{l_{1}}\right\rangle \left\langle \varphi_{m_{1}%
+}\right\vert \wedge I_{\mathcal{H}_{\mathcal{F}}}.
+\end{align}
+and%
+\begin{align}
+&  a_{l_{1}}^{\dagger}a_{l_{2}}^{\dagger}a_{m_{2}}a_{m_{1}}=\Gamma\left(
+\left\vert \varphi_{l_{1}}\varphi_{l_{2}}\right\rangle \left\langle
+\varphi_{m_{1}}\varphi_{m_{2}}\right\vert \right) \nonumber\\
+&  =\sum_{\substack{0\leq N,M\leq\infty\\1\leq j_{1}<\cdots<j_{N}\leq
+\infty\\1\leq k_{1}<\cdots<k_{M}\leq\infty}}\left\vert \varphi_{l_{1}}%
+\varphi_{l_{2}}\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle
+\left.  \varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert \varphi_{k_{1}}%
+\cdots\varphi_{k_{M}}\right\rangle \left\langle \varphi_{m_{1}}\varphi_{m_{2}%
+}\varphi_{k_{1}}\cdots\varphi_{k_{M}}\right\vert \nonumber\\
+&  =\sum_{1\leq N\leq\infty}\sum_{1\leq j_{1}<\cdots<j_{N}\leq\infty
+}\left\vert \varphi_{l_{1}}\varphi_{l_{2}}\varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle \left\langle \varphi_{m_{1}}\varphi_{m_{2}}\varphi_{j_{1}%
+}\cdots\varphi_{j_{N}}\right\vert =\left\vert \varphi_{l_{1}}\varphi_{l_{2}%
+}\right\rangle \left\langle \varphi_{m_{1}}\varphi_{m_{2}}\right\vert \wedge
+I_{\mathcal{H}_{\mathcal{F}}}.
+\end{align}
+One \emph{should note} that in general
+\begin{equation}
+\Gamma\left(  A\right)  \Gamma\left(  B\right)  \neq\Gamma\left(  A\wedge
+B\right)  \neq\Gamma\left(  AB\right)  ,
+\end{equation}
+so $\Gamma$ is not an algebraic map.
+
+\section{States of a Fixed Number of Electrons \label{Number}}
+
+\begin{theorem}
+A state $f$ is a $N$ electron state iff $f\left(  \mathcal{N}_{1}\right)  =N$
+and $f\left(  \mathcal{N}_{2}\right)  =\binom{N}{2}$ i.e. $f\left(
+\mathcal{N}_{1}\right)  =N$ and $f\left(  \mathcal{N}_{2}\right)  =\binom
+{N}{2}\Leftrightarrow f\left(  \left(  \mathcal{N}_{1}\right)  ^{2}\right)
+=f\left(  \mathcal{N}_{1}\right)  ^{2}=N^{2}$
+\end{theorem}
+
+\begin{proof}
+In the following we use the operator identity $\left(  \mathcal{N}_{1}\right)
+^{2}=\mathcal{N}_{1}+2\mathcal{N}_{2}.$
+
+If
+\begin{equation}
+f\left(  \mathcal{N}_{1}\right)  =N\text{ and }f\left(  \mathcal{N}%
+_{2}\right)  =\binom{N}{2}%
+\end{equation}
+then%
+\begin{equation}
+f\left(  \mathcal{N}_{1}+2\mathcal{N}_{2}\right)  =f\left(  \mathcal{N}%
+_{1}^{2}\right)  =N+\frac{2N\left(  N-1\right)  }{2}=N^{2}=f\left(
+\mathcal{N}_{1}\right)  ^{2}%
+\end{equation}
+thus $f$ is a pure $N$ -electron state. The only if part is trivial as
+$f\left(  \mathcal{N}_{1}\right)  ^{2}=N^{2}$ clearly implies that $f\left(
+\mathcal{N}_{1}\right)  =N$ and $f\left(  \mathcal{N}_{2}\right)  =\binom
+{N}{2}.$
+\end{proof}
+
+\bibliographystyle{apsrev}
+\bibliography{PQGconditions}
+
+\end{document}

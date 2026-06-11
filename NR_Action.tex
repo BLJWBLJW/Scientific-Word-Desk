@@ -1,0 +1,435 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, November 17, 2003 17:01:28}
+%TCIDATA{LastRevised=Saturday, November 22, 2003 11:45:52}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{align}
+\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)   &
+=\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},\pi},\mathbf{\bar{\pi}%
+,}t\right)  =\frac{\left\langle \mathbf{\psi}\left(  t\right)  \left\vert
+\left(  i\frac{\partial}{\partial t}-H\left(  t\right)  \right)  \mathbf{\psi
+}\left(  t\right)  \right.  \right\rangle }{\left\langle \mathbf{\psi}\left(
+t\right)  \left\vert \mathbf{\psi}\left(  t\right)  \right.  \right\rangle }\\
+&  =\frac{\mathcal{T}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }%
+=\frac{\mathcal{K}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+-\mathcal{H}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }%
+{\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }\\
+\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)   &
+=\int\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  dt
+\end{align}%
+\begin{align}
+\mathcal{A}\left(  \mathbf{\psi+}\delta\mathbf{\psi},\mathbf{\bar{\psi}%
++\delta\bar{\psi},}\tau\right)   &  =\int\mathcal{L}\left(  \mathbf{\psi
++}\delta\mathbf{\psi},\mathbf{\bar{\psi}+\delta\bar{\psi},}t\right)
+dt\nonumber\\
+&  =\int\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+dt+\int\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+dt+\int\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  dt\nonumber\\
+&  =\int\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+dt+\int\frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  }{\delta\psi}\delta\mathbf{\psi}\left(  t\right)  dt+\int
+\frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\bar{\psi}}\delta\mathbf{\bar{\psi}}\left(  t\right)  dt\nonumber\\
+&  +\frac{1}{2}\int\left\{  \frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi},}t\right)  }{\delta\psi\delta\bar{\psi}}\delta
+\mathbf{\psi}\left(  t\right)  \delta\mathbf{\bar{\psi}}\left(  t\right)
++\frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  }{\delta\bar{\psi}\delta\psi}\delta\mathbf{\bar{\psi}}\left(
+t\right)  \delta\mathbf{\psi}\left(  t\right)  \right\}  dt\label{expan}%
+\end{align}
+where the first derivatives are
+\begin{align}
+\frac{\delta\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)
+}{\delta\mathbf{\psi}\left(  t\right)  }  & =\frac{\delta\mathcal{L}\left(
+\mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }{\delta\psi}=\frac{1}%
+{\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }\left\{
+\frac{\delta\mathcal{T}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi}-\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+\frac{\delta\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi}\right\}  \\
+\frac{\delta\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)
+}{\delta\mathbf{\psi}\left(  t\right)  }  & =\frac{\delta\mathcal{L}\left(
+\mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }{\delta\psi}=\frac{1}%
+{\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }\left\{
+\frac{\delta\mathcal{T}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi}-\overline{\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  }\frac{\delta\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  }{\delta\psi}\right\}
+\end{align}
+and the second are
+\begin{align}
+& \frac{\delta^{2}\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}%
+\tau\right)  }{\delta\mathbf{\psi}\left(  t\right)  \delta\mathbf{\bar{\psi}%
+}\left(  t\right)  }=\frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi},}t\right)  }{\delta\psi\delta\bar{\psi}}=\frac
+{1}{\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }\times\\
+& \left\{  \frac{\delta^{2}\mathcal{T}\left(  \mathbf{\psi},\mathbf{\bar{\psi
+},}t\right)  }{\delta\psi\delta\bar{\psi}}-\frac{\delta\mathcal{L}\left(
+\mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }{\delta\psi}\frac{\delta
+\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }{\delta
+\bar{\psi}}-\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+\frac{\delta^{2}\mathcal{S}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi\delta\bar{\psi}}-\frac{\delta\mathcal{L}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi},}t\right)  }{\delta\bar{\psi}}\frac{\delta\mathcal{S}%
+\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }{\delta\psi}\right\}  .
+\end{align}
+Eq. $\left(  \ref{expan}\right)  $ can be written as
+\begin{align}
+&  =\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)
++\int\left(
+\begin{array}
+[c]{cc}%
+\frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi} & \frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar
+{\psi},}t\right)  }{\delta\bar{\psi}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\psi}\\
+\delta\mathbf{\bar{\psi}}%
+\end{array}
+\right)  dt\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad+\frac{1}{2}\int\left(
+\begin{array}
+[c]{cc}%
+\delta\mathbf{\psi} & \delta\mathbf{\bar{\psi}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar
+{\psi},}t\right)  }{\delta\psi\delta\bar{\psi}}\\
+\frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\bar{\psi}\delta\psi} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\psi}\\
+\delta\mathbf{\bar{\psi}}%
+\end{array}
+\right)  dt
+\end{align}%
+\begin{align}
+\mathcal{A}\left(  \mathbf{\psi+}\delta\mathbf{\psi},\mathbf{\bar{\psi}%
++\delta\bar{\psi},}\tau\right)   &  =\int\mathcal{L}\left(  \mathbf{\psi
++}\delta\mathbf{\psi},\mathbf{\bar{\psi}+\delta\bar{\psi},}t\right)
+dt\nonumber\\
+&  =\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)
++\delta\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)
++\delta^{2}\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)
+\nonumber\\
+&  =\int\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+dt+\int\frac{\delta\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  }{\delta\mathbf{\psi}\left(  t\right)  }\delta\mathbf{\psi}\left(
+t\right)  dt+\int\frac{\delta\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar
+{\psi},}t\right)  }{\delta\mathbf{\bar{\psi}}\left(  t\right)  }%
+\delta\mathbf{\bar{\psi}}\left(  t\right)  dt\nonumber\\
+&  +\frac{1}{2}\int\left\{  \frac{\delta^{2}\mathcal{A}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi},}t\right)  }{\delta\mathbf{\psi}\left(  t\right)
+\delta\mathbf{\bar{\psi}}\left(  t\right)  }\delta\mathbf{\psi}\left(
+t\right)  \delta\mathbf{\bar{\psi}}\left(  t\right)  +\frac{\delta
+^{2}\mathcal{A}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }%
+{\delta\mathbf{\bar{\psi}}\left(  t\right)  \delta\mathbf{\psi}\left(
+t\right)  }\delta\mathbf{\bar{\psi}}\left(  t\right)  \delta\mathbf{\psi
+}\left(  t\right)  \right\}  dt
+\end{align}%
+\begin{equation}
+\mathcal{A}\left(  \mathbf{\psi+}\delta\mathbf{\psi},\mathbf{\bar{\psi}%
++\delta\bar{\psi},}\tau\right)  =\int\mathcal{L}\left(  \mathbf{\psi+}%
+\delta\mathbf{\psi},\mathbf{\bar{\psi}+\delta\bar{\psi},}t\right)
+dt=\int\frac{\left\langle \mathbf{\psi}\left(  t\right)  \mathbf{+}%
+\delta\mathbf{\psi}\left(  t\right)  \left\vert \left(  i\frac{\partial
+}{\partial t}-H\left(  t\right)  \right)  \mathbf{\psi}\left(  t\right)
+\mathbf{+}\delta\mathbf{\psi}\left(  t\right)  \right.  \right\rangle
+}{\left\langle \mathbf{\psi}\left(  t\right)  \mathbf{+}\delta\mathbf{\psi
+}\left(  t\right)  \left\vert \mathbf{\psi}\left(  t\right)  \mathbf{+}%
+\delta\mathbf{\psi}\left(  t\right)  \right.  \right\rangle }dt
+\end{equation}%
+\begin{equation}
+=\int\frac{\left\langle \mathbf{\psi}\left(  t\right)  \left\vert \left(
+i\frac{\partial}{\partial t}-H\left(  t\right)  \right)  \mathbf{\psi}\left(
+t\right)  \right.  \right\rangle }{\left\langle \mathbf{\psi}\left(  t\right)
+\left\vert \mathbf{\psi}\left(  t\right)  \right.  \right\rangle }%
+dt\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad
+\end{equation}%
+\begin{align}
+&  +\int\frac{1}{\left\langle \mathbf{\psi}\left(  t\right)  \left\vert
+\mathbf{\psi}\left(  t\right)  \right.  \right\rangle }\left\{  \left\langle
+\mathbf{\psi}\left(  t\right)  \left\vert \left\{  i\frac{\partial}{\partial
+t}-H\left(  t\right)  -\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  \right\}  \delta\mathbf{\psi}\left(  t\right)  \right.
+\right\rangle \right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\mathbf{+}\left.  \left\langle \delta\mathbf{\psi}\left(  t\right)  \left\vert
+\left\{  i\frac{\partial}{\partial t}-H\left(  t\right)  -\mathcal{L}\left(
+\mathbf{\psi},\mathbf{\bar{\psi},}t\right)  \right\}  \right.  \mathbf{\psi
+}\left(  t\right)  \right\rangle \right\}  dt
+\end{align}%
+\begin{align}
+&  +\int\frac{1}{\left\langle \mathbf{\psi}\left(  t\right)  \left\vert
+\mathbf{\psi}\left(  t\right)  \right.  \right\rangle }\left\{  \left\langle
+\delta\mathbf{\psi}\left(  t\right)  \left\vert \left\{  i\frac{\partial
+}{\partial t}-H\left(  t\right)  \right\}  \right.  \delta\mathbf{\psi}\left(
+t\right)  \right\rangle \right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad-\frac{1}{\left\langle \mathbf{\psi
+}\left(  t\right)  \left\vert \mathbf{\psi}\left(  t\right)  \right.
+\right\rangle }\left\{  \left\langle \mathbf{\psi}\left(  t\right)  \left\vert
+\left\{  i\frac{\partial}{\partial t}-H\left(  t\right)  -\mathcal{L}\left(
+\mathbf{\psi},\mathbf{\bar{\psi},}t\right)  \right\}  \delta\mathbf{\psi
+}\left(  t\right)  \right.  \right\rangle \right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\mathbf{+}\left.  \left\langle
+\delta\mathbf{\psi}\left(  t\right)  \left\vert \left\{  i\frac{\partial
+}{\partial t}-H\left(  t\right)  -\mathcal{L}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi},}t\right)  \right\}  \right.  \mathbf{\psi}\left(
+t\right)  \right\rangle \right\}  \left\{
+%TCIMACRO{\QATOP{{}}{{}}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{{}}{{}}%
+%EndExpansion
+\left\langle \left.  \delta\mathbf{\psi}\left(  t\right)  \right\vert
+\mathbf{\psi}\left(  t\right)  \right\rangle \right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  \left.
++\left\langle \mathbf{\psi}\left(  t\right)  \left\vert \delta\mathbf{\psi
+}\left(  t\right)  \right.  \right\rangle
+%TCIMACRO{\QATOP{{}}{{}}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{{}}{{}}%
+%EndExpansion
+\right\}  +\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+\left\langle \delta\mathbf{\psi}\left(  t\right)  \left\vert \delta
+\mathbf{\psi}\left(  t\right)  \right.  \right\rangle \right\}  dt
+\end{align}
+Let $\left\vert \mathbf{\psi}_{0}\left(  t\right)  \right\rangle $ be a
+solution to the quantum EOM for $H_{0}$ where
+\begin{equation}
+H\left(  t\right)  =H_{0}+F\left(  t\right)
+\end{equation}
+then we can analyse the first order terms to obtain 
+
+1.
+\begin{align}
+&  \int\frac{1}{\left\langle \mathbf{\psi}\left(  t\right)  \left\vert
+\mathbf{\psi}\left(  t\right)  \right.  \right\rangle }\left\{  \left\langle
+\mathbf{\psi}_{0}\left(  t\right)  \left\vert \left\{  i\frac{\partial
+}{\partial t}-H_{0}-\mathcal{L}_{0}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+}\right)  \right\}  \delta\mathbf{\psi}\left(  t\right)  \right.
+\right\rangle \right.  \nonumber\\
+&  \mathbf{+}\left.  \left\langle \delta\mathbf{\psi}\left(  t\right)
+\left\vert \left\{  i\frac{\partial}{\partial t}-H_{0}-\mathcal{L}_{0}\left(
+\mathbf{\psi},\mathbf{\bar{\psi}}\right)  \right\}  \right.  \mathbf{\psi}%
+_{0}\left(  t\right)  \right\rangle \right\}  dt=0\quad\forall\delta
+\mathbf{\psi}\left(  t\right)
+\end{align}
+
+
+2.
+\begin{align}
+&  \left\{  \left\langle \mathbf{\psi}_{0}\left(  t\right)  \left\vert
+\left\{  i\frac{\partial}{\partial t}-H_{0}-\mathcal{L}_{0}\left(
+\mathbf{\psi},\mathbf{\bar{\psi}}\right)  \right\}  \delta\mathbf{\psi}\left(
+t\right)  \right.  \right\rangle \right.  +\nonumber\\
+&  \left.  \left\langle \delta\mathbf{\psi}\left(  t\right)  \left\vert
+\left\{  i\frac{\partial}{\partial t}-H_{0}-\mathcal{L}_{0}\left(
+\mathbf{\psi},\mathbf{\bar{\psi}}\right)  \right\}  \right.  \mathbf{\psi}%
+_{0}\left(  t\right)  \right\rangle \right\}  =0\quad\forall\delta
+\mathbf{\psi}\left(  t\right)  \text{ and }\forall t
+\end{align}
+
+
+3. This gives by using different $\delta\mathbf{\psi}$
+\begin{align}
+&  \left\langle \mathbf{\psi}_{0}\left(  t\right)  \left\vert \left\{
+i\frac{\partial}{\partial t}-H_{0}-\mathcal{L}_{0}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi}}\right)  \right\}  \delta\mathbf{\psi}\left(  t\right)
+\right.  \right\rangle =0\nonumber\\
+&  \left\langle \delta\mathbf{\psi}\left(  t\right)  \left\vert \left\{
+i\frac{\partial}{\partial t}-H_{0}-\mathcal{L}_{0}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi}}\right)  \right\}  \right.  \mathbf{\psi}_{0}\left(
+t\right)  \right\rangle =0\quad\forall\delta\mathbf{\psi}\left(  t\right)
+\text{ and }\forall t
+\end{align}
+
+
+4. The equation for the phase is satisfied so
+\begin{equation}
+\mathcal{L}_{0}\left(  \mathbf{\psi}_{0},\mathbf{\bar{\psi}}_{0}\right)
+=\overline{\mathcal{L}_{0}\left(  \mathbf{\psi}_{0},\mathbf{\bar{\psi}}%
+_{0}\right)  }=0.
+\end{equation}
+thus one has
+\begin{equation}
+\left\{  i\frac{\partial}{\partial t}-H_{0}-\mathcal{L}_{0}\left(
+\mathbf{\psi},\mathbf{\bar{\psi}}\right)  \right\}  \left\vert \mathbf{\psi
+}_{0}\left(  t\right)  \right\rangle =0
+\end{equation}
+and
+\begin{equation}
+\frac{\delta\mathcal{L}\left(  \mathbf{\psi}_{0},\mathbf{\bar{\psi}}%
+_{0}\mathbf{,}t\right)  }{\delta\bar{\psi}}=\left\{  i\frac{\partial}{\partial
+t}-H\left(  t\right)  -\mathcal{L}\left(  \mathbf{\psi}_{0},\mathbf{\bar{\psi
+}}_{0}\right)  \right\}  \left\vert \mathbf{\psi}_{0}\left(  t\right)
+\right\rangle =-\left\{  F\left(  t\right)  +\left\langle F\left(  t\right)
+\right\rangle _{\mathbf{\psi}_{0}}\right\}  \left\vert \mathbf{\psi}%
+_{0}\left(  t\right)  \right\rangle
+\end{equation}
+The second order terms
+\begin{align}
+\frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi}_{0},\mathbf{\bar{\psi}}%
+_{0}\mathbf{,}t\right)  }{\delta\psi\delta\bar{\psi}}  & =\left\{
+i\frac{\partial}{\partial t}-H_{0}-F\left(  t\right)  -\left\langle F\left(
+t\right)  \right\rangle _{\mathbf{\psi}_{0}}I\right\}  +\left\{  F\left(
+t\right)  +\left\langle F\left(  t\right)  \right\rangle _{\mathbf{\psi}_{0}%
+}\right\}  \left\vert \mathbf{\psi}_{0}\left(  t\right)  \right\rangle
+\left\langle \mathbf{\psi}_{0}\left(  t\right)  \right\vert \\
+& -\left\langle F\left(  t\right)  \right\rangle _{\mathbf{\psi}_{0}}I
+\end{align}
+If we consider the Newton Raphson approximation around $\left\vert
+\mathbf{\psi}\left(  t\right)  \right\rangle $ for $\delta\mathcal{A}%
+_{2}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right)  =0$ we obtain
+\begin{align}
+&  \mathcal{A}_{2}\left[  \mathbf{\psi},\mathbf{\bar{\psi},}\tau\right]
+\left(  \delta\mathbf{\psi,\delta\bar{\psi}}\right)  =\mathcal{A}\left(
+\mathbf{\psi},\mathbf{\bar{\psi},}t\right)  +D^{1}\mathcal{A}\left(
+\mathbf{\psi},\mathbf{\bar{\psi},}t\right)  \left(  \delta\mathbf{\psi
+,\delta\bar{\psi}}\right)  +\frac{1}{2}D^{2}\mathcal{A}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi},}t\right)  \left(  \delta\mathbf{\psi,\delta\bar{\psi}%
+}\right)  \nonumber\\
+&  \delta_{\delta\mathbf{\psi}}\mathcal{A}_{2}\left[  \mathbf{\psi
+},\mathbf{\bar{\psi},}\tau\right]  =\int\left(
+\begin{array}
+[c]{cc}%
+\frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi} & \frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar
+{\psi},}t\right)  }{\delta\bar{\psi}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\psi}\\
+\delta\mathbf{\bar{\psi}}%
+\end{array}
+\right)  dt\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad+\int\left(
+\begin{array}
+[c]{cc}%
+\delta\mathbf{\psi} & \delta\mathbf{\bar{\psi}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar
+{\psi},}t\right)  }{\delta\psi\delta\bar{\psi}}\\
+\frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\bar{\psi}\delta\psi} & \mathbf{0}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\psi}\\
+\delta\mathbf{\bar{\psi}}%
+\end{array}
+\right)  dt=0
+\end{align}%
+\begin{align}
+&  \Rightarrow\left(
+\begin{array}
+[c]{cc}%
+\frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi} & \frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar
+{\psi},}t\right)  }{\delta\bar{\psi}}%
+\end{array}
+\right)  +\left(
+\begin{array}
+[c]{cc}%
+\delta\mathbf{\psi} & \delta\mathbf{\bar{\psi}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar
+{\psi},}t\right)  }{\delta\psi\delta\bar{\psi}}\\
+\frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\bar{\psi}\delta\psi} & \mathbf{0}%
+\end{array}
+\right)  =0\\
+&  \equiv\frac{\delta\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi}%
+,}t\right)  }{\delta\psi}=\delta\mathbf{\bar{\psi}}\frac{\delta^{2}%
+\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)  }{\delta
+\bar{\psi}\delta\psi}\&\frac{\delta\mathcal{L}\left(  \mathbf{\psi
+},\mathbf{\bar{\psi},}t\right)  }{\delta\bar{\psi}}=\delta\mathbf{\psi}%
+\frac{\delta^{2}\mathcal{L}\left(  \mathbf{\psi},\mathbf{\bar{\psi},}t\right)
+}{\delta\psi\delta\bar{\psi}}%
+\end{align}
+
+
+
+\end{document}

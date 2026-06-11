@@ -1,0 +1,114 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, April 15, 2004 16:09:52}
+%TCIDATA{LastRevised=Thursday, April 15, 2004 17:50:52}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\begin{equation}
+R_{jk}\left(  \zeta\right)  =\sum_{n\neq0}\left\{  \frac{\left\langle \Psi
+_{0}\left\vert a_{j}\Psi_{n}^{N+1}\right.  \right\rangle \left\langle \Psi
+_{n}^{N+1}\left\vert a_{k}^{\dagger}\Psi_{0}\right.  \right\rangle }%
+{\zeta-\left(  E_{n}^{N+1}-E_{0}\right)  }-\frac{\left\langle \Psi
+_{0}\left\vert a_{k}^{\dagger}\Psi_{n}^{N-1}\right.  \right\rangle
+\left\langle \Psi_{n}^{N-1}\left\vert a_{j}^{\dagger}\Psi_{0}\right.
+\right\rangle }{\zeta+\left(  E_{n}^{N-1}-E_{0}\right)  }\right\}  .
+\end{equation}%
+\begin{equation}
+\tilde{R}_{KL}\left(  \zeta\right)  =g_{K}\left(  \zeta\right)  \delta
+_{KL}=\sum_{n\neq0}\left\{  \frac{\left\langle \Psi_{0}\left\vert T_{K}%
+\Psi_{n}^{N+1}\right.  \right\rangle \left\langle \Psi_{n}^{N+1}\left\vert
+T_{K}^{\dagger}\Psi_{0}\right.  \right\rangle }{\zeta-\left(  E_{n}%
+^{N+1}-E_{0}\right)  }-\frac{\left\langle \Psi_{0}\left\vert T_{K}\Psi
+_{n}^{N-1}\right.  \right\rangle \left\langle \Psi_{n}^{N-1}\left\vert
+T_{K}^{\dagger}\Psi_{0}\right.  \right\rangle }{\zeta+\left(  E_{n}%
+^{N-1}-E_{0}\right)  }\right\}  .
+\end{equation}%
+\begin{equation}
+R\left(  \zeta\right)  =\sum_{n\neq0}\left\{  \sum_{p}\frac{\left\langle
+\Psi_{0}\left\vert T_{p}\Psi_{n}^{N+1}\right.  \right\rangle \left\langle
+\Psi_{n}^{N+1}\left\vert T_{p}^{\dagger}\Psi_{0}\right.  \right\rangle }%
+{\zeta-\left(  E_{n}^{N+1}-E_{0}\right)  }-\sum_{h}\frac{\left\langle \Psi
+_{0}\left\vert T_{h}\Psi_{n}^{N-1}\right.  \right\rangle \left\langle \Psi
+_{n}^{N-1}\left\vert T_{h}^{\dagger}\Psi_{0}\right.  \right\rangle }%
+{\zeta+\left(  E_{n}^{N-1}-E_{0}\right)  }\right\}  .
+\end{equation}%
+\begin{align}
+\sum_{p}\frac{\left\vert \left\langle \Psi_{0}\left\vert T_{p}\Psi_{n}%
+^{N+1}\right.  \right\rangle \right\vert ^{2}}{\zeta-\left(  E_{n}^{N+1}%
+-E_{0}\right)  }  & \equiv\int\frac{\left\vert \left\langle \Psi_{0}\left\vert
+T\left(  \mathbf{x}\right)  \Psi_{n}^{N+1}\right.  \right\rangle \right\vert
+^{2}}{\zeta-\left(  E_{n}^{N+1}-E_{0}\right)  }d\mathbf{x=}\int\frac
+{\left\vert t_{n}\left(  \mathbf{x}\right)  \right\vert ^{2}}{\zeta-\left(
+E_{n}^{N+1}-E_{0}\right)  }d\mathbf{x}\\
+T\left(  \mathbf{x}\right)    & =\sum_{p}T_{p}\varphi_{p}\left(
+\mathbf{x}\right)  \\
+t_{n}\left(  \mathbf{x}\right)    & =\left\langle \Psi_{0}\left\vert T\left(
+\mathbf{x}\right)  \Psi_{n}^{N+1}\right.  \right\rangle
+\end{align}
+
+
+
+\end{document}

@@ -1,0 +1,1795 @@
+%TCIDATA{LaTeXparent=0,0,EOMN.tex}
+                      
+
+\section{Dual Operator Spaces}
+
+\subsection{Operators mapping ${\cal B}_{1}\left( {\cal H}^{N}\right)
+\longrightarrow {\cal B}_{1}\left( {\cal H}^{N}\right) $}
+
+The dual space of the Banach space, ${\cal B}_{1}\left( {\cal H}^{N}\right) $%
+, of operators formed by the set of trace class operators equipped with the
+norm%
+\begin{equation}
+\left\| Y\right\| _{1}=Tr\left\{ \left( Y^{\dagger }Y\right) ^{\frac{1}{2}%
+}\right\}
+\end{equation}%
+is the Banach space of bounded operators ${\cal B}\left( {\cal H}^{N}\right) 
+$ equipped with the norm%
+\begin{equation}
+\left\| X\right\| =%
+%TCIMACRO{
+%\underset{\left\| \left| \Psi \right\rangle \right\| _{{\cal H}^{N}}=1}{\sup }}%
+%BeginExpansion
+\mathrel{\mathop{\sup }\limits_{\left\| \left| \Psi \right\rangle \right\| _{{\cal H}^{N}}=1}}%
+%EndExpansion
+\left\| X\left| \Psi \right\rangle \right\| _{{\cal H}^{N}};\quad \left|
+\Psi \right\rangle \in {\cal H}^{N}
+\end{equation}%
+where $\left\| \left| \Psi \right\rangle \right\| _{{\cal H}^{N}}=\left(
+\left\langle \Psi |\Psi \right\rangle \right) ^{\frac{1}{2}}$. The duality
+is expressed by%
+\begin{equation}
+f_{X}\left( Y\right) =Tr\left\{ \left( X^{\dagger }Y\right) \right\} \equiv
+\left( X|Y\right) \quad \forall Y\in {\cal B}_{1}\left( {\cal H}^{N}\right)
+\end{equation}%
+Bases for these two spaces can be constructed from bases of ${\cal H}^{N}$
+so that 
+\begin{equation}
+{\cal B}_{1}\left( {\cal H}^{N}\right) ={\rm cls}\left\{ \sum\limits_{1\leq
+i,j\leq \infty }\lambda _{ij}\left| \Psi _{i}\right\rangle \left\langle \Psi
+_{j}\right| \right\}  \label{TCBasis}
+\end{equation}%
+\begin{equation}
+{\cal B}\left( {\cal H}^{N}\right) ={\rm cls}\left\{ \sum_{1\leq i,j\leq
+\infty }\lambda _{ij}\left| \Psi _{i}\right\rangle \left\langle \Psi
+_{j}\right| \right\}  \label{BoundBasis}
+\end{equation}%
+where ${\rm cls\equiv closed\,linear\,span,}$ $\left\{ \Psi _{i}:1\leq i\leq
+\infty \right\} $ is a complete orthonormal basis for ${\cal H}^{N}$ and the
+closures are taken wrt the norms $\left\| {}\right\| _{1}$ and $\left\|
+{}\right\| $ respectively. The space$\ {\cal B}_{1}\left( {\cal H}%
+^{N}\right) $ forms a two-sided ideal in ${\cal B}\left( {\cal H}^{N}\right) %
+\cite{ideal}$. We can also introduce the common overcomplete basis $\left\{
+\left| {\sf z}\right\rangle \left\langle {\sf z}^{\prime }\right| \right\} $
+formed by the generalized eigenvectors of the combined coordinate operator
+(nuclear space-spin and electron space-spin). Any bounded operator can be
+expanded in this basis as 
+\begin{equation}
+X=\int X\left( {\sf z}{\bf ,}{\sf z}^{\prime }\right) \left| {\sf z}%
+\right\rangle \left\langle {\sf z}^{\prime }\right| d{\sf z}d{\sf z}^{\prime
+}  \label{overcomplete}
+\end{equation}%
+where {\sf z}${\bf \equiv }\kappa _{1,}\ldots ,\kappa _{N_{e}},\kappa
+_{N_{e}+1,}\ldots ,\kappa _{N}$, and $X\left( {\sf z}{\bf ,}{\sf z}^{\prime
+}\right) $ is the integral kernel of $X$ which can be a distribution or even
+more singular. As we are dealing with dual spaces the equality sign in Eq.(%
+\ref{overcomplete}) needs some discussion, in this expansion it means that%
+\begin{equation}
+\lim_{\Delta \rightarrow {\Bbb K{\Large \times }K}}\left\| X-\int_{\Delta
+}X\left( {\sf z}{\bf ,}{\sf z}^{\prime }\right) \left| {\sf z}\right\rangle
+\left\langle {\sf z}^{\prime }\right| d{\sf z}d{\sf z}^{\prime }\right\| =0
+\end{equation}%
+where ${\Bbb K}$ $=\left\{ {\sf z}\right\} $, i.e. the set of all
+coordinates. As $\left\| X\right\| \leq \left\| X\right\| _{1}$ convergence
+in the trace class topology implies convergence in the operator topology,
+but obviously not vice-versa, which is consistent with ${\cal B}_{1}\left( 
+{\cal H}^{N}\right) \subseteq {\cal B}\left( {\cal H}^{N}\right) $. Hence if
+a trace class operator is expanded in the basis $\left\{ \left| {\sf z}%
+\right\rangle \left\langle {\sf z}^{\prime }\right| \right\} $ as an element
+of ${\cal B}_{1}\left( {\cal H}^{N}\right) $ it has the same expansion
+coefficients, i.e. integral kernel, when considered as an element of ${\cal B%
+}\left( {\cal H}^{N}\right) $ i.e. as a bounded operator and its integral
+kernel is absolute integrable i.e. $\int \left| X\left( {\sf z}{\bf ,}{\sf z}%
+^{\prime }\right) \right| d$\underline{$\kappa $}$d$\underline{$\kappa $}$%
+^{\prime }{\bf <\infty }$. Those elements of \ ${\cal B}\left( {\cal H}%
+^{N}\right) $\ that do not belong to ${\cal B}_{1}\left( {\cal H}^{N}\right) 
+$ have integral expansions in terms of integral kernels that are not
+absolute integrable.
+
+We can consider more general bases $\left\{ X_{\iota };1\leq \iota \leq
+\infty \right\} $, $\left\{ Y_{\iota };1\leq \iota \leq \infty \right\} $ of 
+${\cal B}\left( {\cal H}^{N}\right) $ and ${\cal B}_{1}\left( {\cal H}%
+^{N}\right) $ than those of Eqs.(\ref{TCBasis}) and (\ref{BoundBasis}) and
+expand each basis element in terms of the coordinate overcomplete set as%
+\begin{eqnarray}
+X_{\iota } &=&\int X_{\iota }\left( {\sf z}{\bf ,}{\sf z}^{\prime }\right)
+\left| {\sf z}\right\rangle \left\langle {\sf z}^{\prime }\right| d{\sf z}d%
+{\sf z}^{\prime }{\bf \equiv }\int X_{\iota }\left( {\sf z}{\bf ,}{\sf z}%
+^{\prime }\right) \left( {\sf z}{\bf ,}{\sf z}^{\prime }\right| d{\sf z}d%
+{\sf z}^{\prime }{\bf \equiv }\left( X_{\iota }\right|  \nonumber \\
+Y_{\iota } &=&\int Y_{\iota }\left( {\sf z}{\bf ,}{\sf z}^{\prime }\right)
+\left| {\sf z}\right\rangle \left\langle {\sf z}^{\prime }\right| d{\sf z}d%
+{\sf z}^{\prime }{\bf \equiv }\int Y_{\iota }\left( {\sf z}{\bf ,}{\sf z}%
+^{\prime }\right) \left| {\sf z}{\bf ,}{\sf z}^{\prime }\right) d{\sf z}d%
+{\sf z}^{\prime }{\bf \equiv }\left| Y_{\iota }\right)  \label{Overcomplete}
+\end{eqnarray}%
+where we have introduced the notation $\left| {\sf z}{\bf ,}{\sf z}^{\prime
+}\right) \equiv \left| {\sf z}\right\rangle \left\langle {\sf z}^{\prime
+}\right| $ and the {\it super vector} notation $\left| Y\right) $ for an
+operator $Y\in {\cal B}_{1}\left( {\cal H}^{N}\right) $ and $\left( {\sf z}%
+{\bf ,}{\sf z}^{\prime }\right| $ and $\left( X\right| $ for operators
+belonging to the dual space ${\cal B}\left( {\cal H}^{N}\right) .$ The
+operators $\left\{ \left| {\sf z}\right\rangle \left\langle {\sf z}^{\prime
+}\right| \right\} $ are common to both spaces and thus one can consider them
+as elements of either, however the type of convergence for the continuous
+linear combinations of $\left| {\sf z}\right\rangle \left\langle {\sf z}%
+^{\prime }\right| $ is implied by the use of either $\left( {\sf z}{\bf ,}%
+{\sf z}^{\prime }\right| $ or $\left| {\sf z}{\bf ,}{\sf z}^{\prime }\right) 
+$.
+
+We now are in a position to express maps $\hat{T}$: ${\cal B}_{1}\left( 
+{\cal H}^{N}\right) \longrightarrow {\cal B}_{1}\left( {\cal H}^{N}\right) $
+(sometimes called {\it super operators}) in terms of these dual bases as%
+\begin{equation}
+\hat{T}=\sum\Sb 1\leq \iota \leq \infty  \\ 1\leq \kappa \leq \infty  \endSb %
+T_{\kappa \iota }\left| Y_{\kappa }\right) \left( X_{\iota }\right|
+\end{equation}%
+where the bases $\left\{ X_{\kappa }\right\} $ and $\left\{ Y_{\iota
+}\right\} $ have been constructed to be biorthogonal i.e.%
+\begin{equation}
+\left( X_{\kappa }|Y_{\iota }\right) =\delta _{\kappa \iota }
+\end{equation}%
+and $T_{\kappa \iota }=\left( X_{\kappa }|\hat{T}Y_{\iota }\right) $. (A
+remark on notation: we denote operators :${\cal B}_{1}\left( {\cal H}%
+^{N}\right) \longrightarrow {\cal B}_{1}\left( {\cal H}^{N}\right) $ with
+the decoration $\hat{T}$, while operators :${\cal H}^{N}\rightarrow {\cal H}%
+^{N}$ will be denoted by the normal math font $X$ or with the decoration $%
+\breve{X}$ if the domain of operation is not self evident.) An important
+point to note is that unlike operators on Hilbert spaces, which are self
+dual, the adjoint operation on $\hat{T}$ changes it from an operator ${\cal B%
+}_{1}\left( {\cal H}^{N}\right) \longrightarrow {\cal B}_{1}\left( {\cal H}%
+^{N}\right) $ to an operator ${\cal B}\left( {\cal H}^{N}\right)
+\longrightarrow {\cal B}\left( {\cal H}^{N}\right) .$ Using the expansions
+Eq.(\ref{Overcomplete}) one can express $\hat{T}$ as%
+\begin{eqnarray}
+\hat{T} &=&\sum\Sb 1\leq \iota \leq \infty  \\ 1\leq \kappa \leq \infty 
+\endSb T_{\kappa \iota }\int Y_{\iota }\left( {\sf z}_{1}{\bf ,}{\sf z}%
+_{2}\right) \left| {\sf z}_{1}{\bf ,}{\sf z}_{2}\right) d{\sf z}_{1}d{\sf z}%
+_{2}\int X_{\kappa }^{\ast }\left( {\sf z}_{3}{\bf ,}{\sf z}_{4}\right)
+\left( {\sf z}_{3}{\bf ,}{\sf z}_{4}\right| d{\sf z}_{3}d{\sf z}_{4} 
+\nonumber \\
+&=&\sum\Sb 1\leq \iota \leq \infty  \\ 1\leq \kappa \leq \infty  \endSb %
+T_{\kappa \iota }\int Y_{\iota }\left( {\sf z}_{1}{\bf ,}{\sf z}_{2}\right)
+X_{\kappa }^{\ast }\left( {\sf z}_{3}{\bf ,}{\sf z}_{4}\right) \left| {\sf z}%
+_{1}{\bf ,}{\sf z}_{2}\right) \left( {\sf z}_{3}{\bf ,}{\sf z}_{4}\right| d%
+{\sf z}_{1}d{\sf z}_{2}d{\sf z}_{3}d{\sf z}_{4}  \nonumber \\
+&=&\int T\left( {\sf z}_{1}{\bf ,}{\sf z}_{2},{\sf z}_{3}{\bf ,}{\sf z}%
+_{4}\right) \left| {\sf z}_{1}{\bf ,}{\sf z}_{2}\right) \left( {\sf z}_{3}%
+{\bf ,}{\sf z}_{4}\right| d{\sf z}_{1}d{\sf z}_{2}d{\sf z}_{3}d{\sf z}_{4}
+\label{SuperOp}
+\end{eqnarray}%
+where 
+\begin{equation}
+T\left( {\sf z}_{1}{\bf ,}{\sf z}_{2},{\sf z}_{3}{\bf ,}{\sf z}_{4}\right)
+=\sum\Sb 1\leq \iota \leq \infty  \\ 1\leq \kappa \leq \infty  \endSb %
+T_{\kappa \iota }Y_{\iota }\left( {\sf z}_{1}{\bf ,}{\sf z}_{2}\right)
+X_{\kappa }^{\ast }\left( {\sf z}_{3}{\bf ,}{\sf z}_{4}\right)
+\end{equation}%
+and thus%
+\begin{equation}
+T_{\kappa \iota }=\int T\left( {\sf z}_{1}{\bf ,}{\sf z}_{2},{\sf z}_{3}{\bf %
+,}{\sf z}_{4}\right) Y_{\kappa }\left( {\sf z}_{1}{\bf ,}{\sf z}_{2}\right)
+X_{\iota }^{\ast }\left( {\sf z}_{3}{\bf ,}{\sf z}_{4}\right) d{\sf z}_{1}d%
+{\sf z}_{2}d{\sf z}_{3}d{\sf z}_{4}
+\end{equation}%
+We can express Eq.(\ref{SuperOp}) in a more transparent form as%
+\begin{equation}
+\hat{T}=\int T\left( {\sf z}_{1}{\bf ,}{\sf z}_{2},{\sf z}_{3}{\bf ,}{\sf z}%
+_{4}\right) |\left| {\sf z}_{1}\right\rangle \left\langle {\sf z}_{2}\right| 
+{\bf )}\left( \left| {\sf z}_{3}\right\rangle \left\langle {\sf z}%
+_{4}\right| \right| d{\sf z}_{1}d{\sf z}_{2}d{\sf z}_{3}d{\sf z}_{4}
+\end{equation}%
+Note that $T\left( {\sf z}_{1}{\bf ,}{\sf z}_{2},{\sf z}_{3}{\bf ,}{\sf z}%
+_{4}\right) $ inherits properties from $\left\{ X_{\kappa }^{\ast }\left( 
+{\sf z}_{3}{\bf ,}{\sf z}_{4}\right) \right\} $ for the $\left( {\sf z}_{3}%
+{\bf ,}{\sf z}_{4}\right) $ arguments and properties from $\left\{ Y_{\iota
+}\left( {\sf z}_{1}{\bf ,}{\sf z}_{2}\right) \right\} $ for the $\left( {\sf %
+z}_{1}{\bf ,}{\sf z}_{2}\right) $ arguments {\it and these properties can be
+quite different}. Thus these operators do not, in general, have symmetry
+properties relating the $\left( {\sf z}_{1}{\bf ,}{\sf z}_{2}\right) $
+arguments to the $\left( {\sf z}_{3}{\bf ,}{\sf z}_{4}\right) $ arguments.
+
+\subsection{Operators preserving the direct sum structure ${\cal B}%
+_{1}\left( {\cal H}^{N}\right) =K_{OD}\oplus K_{D}\oplus S_{D}$}
+
+The space of trace class operators ${\cal B}_{1}\left( {\cal H}^{N}\right) $
+can be decomposed into the direct sum of three subspaces defined as%
+\begin{eqnarray}
+K_{OD} &=&{\rm cls}\left\{ Y\in {\cal B}_{1}\left( {\cal H}^{N}\right)
+:Y=\int Y\left( {\sf z}{\bf ,}{\sf z}^{\prime }\right) \left| {\sf z}%
+\right\rangle \left\langle {\sf z}^{\prime }\right| d{\sf z}d{\sf z}^{\prime
+}{\bf ;\quad }Y\left( {\sf z},{\sf z}^{\prime }\right) {\bf =0}\text{%
+\thinspace\ if }\,{\sf z}{\bf =}{\sf z}^{\prime }\right\} \\
+K_{D} &=&{\rm cls}\left\{ Y\in {\cal B}_{1}\left( {\cal H}^{N}\right)
+:Y=\int Y\left( {\sf z}\right) \left| {\sf z}\right\rangle \left\langle {\sf %
+z}\right| d{\sf z}\right. ;  \nonumber \\
+&&\left. \qquad \qquad \quad \int Y\left( \kappa _{1,}..,\kappa
+_{N_{e}},\kappa _{N_{e}+1},..\kappa _{N}\right) d\kappa _{2}\ldots d\kappa
+_{N_{e}}d\kappa _{N_{e}+2}\ldots d\kappa _{N}{\bf =0}\text{ }{\bf a.e.}%
+\right\} \\
+S_{D} &=&{\rm cls}\left\{ Y\in {\cal B}_{1}\left( {\cal H}^{N}\right)
+:Y=\int Y\left( {\sf z}\right) \left| {\sf z}\right\rangle \left\langle {\sf %
+z}\right| d{\sf z}\right. \text{ };  \nonumber \\
+&&\left. \qquad \qquad \quad \int Y\left( \kappa _{1,}..,\kappa
+_{N_{e}},\kappa _{N_{e}+1},..\kappa _{N}\right) d\kappa _{2}\ldots d\kappa
+_{N_{e}}d\kappa _{N_{e}+2}\ldots d\kappa _{N}{\bf \neq 0\,a.e.}\right\}
+\end{eqnarray}%
+where ${\bf a.e.\equiv }$ almost everywhere i.e. except on sets of measure
+zero. We can form bases for these three subspaces of ${\cal B}_{1}\left( 
+{\cal H}^{N}\right) $,%
+\begin{eqnarray}
+K_{OD} &=&{\rm cls}\left\{ \breve{h}_{\iota }:\breve{h}_{\iota }=\int
+h_{\iota }\left( {\sf z}{\bf ,}{\sf z}^{\prime }\right) \left| {\sf z}%
+\right\rangle \left\langle {\sf z}^{\prime }\right| d{\sf z}d{\sf z}^{\prime
+};{\sf z}{\bf \neq }{\sf z}^{\prime }\right\}  \label{hbasis} \\
+K_{D} &=&{\rm cls}\left\{ \breve{k}_{\iota }:\breve{k}_{\iota }=\int
+k_{\iota }\left( {\sf z}\right) \left| {\sf z}\right\rangle \left\langle 
+{\sf z}\right| d{\sf z}\right.  \nonumber \\
+&&\quad \quad \quad \left. \int k_{\iota }\left( \kappa _{2,}..,\kappa
+_{N_{e}},\kappa _{N_{e}+1},..\kappa _{N}\right) d\kappa _{2}\ldots d\kappa
+_{N_{e}}d\kappa _{N_{e}+2}\ldots d\kappa _{N}{\bf =0}\text{ }{\bf a.e.}%
+\right\}  \label{kbasis} \\
+S_{D} &=&{\rm cls}\left\{ \breve{s}_{\iota }:\breve{s}_{\iota }=\int
+s_{\iota }\left( {\sf z}\right) \left| {\sf z}\right\rangle \left\langle 
+{\sf z}\right| d{\sf z}\right. ;  \nonumber \\
+&&\quad \left. \qquad \int s_{\iota }\left( \kappa _{2,}..,\kappa
+_{N_{e}},\kappa _{N_{e}+1},..\kappa _{N}\right) d\kappa _{2}\ldots d\kappa
+_{N_{e}}d\kappa _{N_{e}+2}\ldots d\kappa _{N}{\bf \neq 0\,a.e.}\right\}
+\label{sbasis}
+\end{eqnarray}
+
+In the following we will be considering representations in both the
+overcomplete continuous basis $\left\{ \left| {\cal K}\right) \right\} $ and
+the complete discrete basis $\left\{ \left| {\bf \breve{h}}\right) ,\left| 
+{\bf \breve{k}}\right) ,\left| {\bf \breve{s}}\right) \right\} $ of ${\cal B}%
+_{1}\left( {\cal H}^{N}\right) $, where arrays of bases vectors are denoted
+by $\left| {\cal K}\right) \equiv \left| {\sf z}_{1},{\sf z}_{2}\right)
+,..,\left| {\sf z}_{1}^{\prime },{\sf z}_{2}^{\prime }\right) ,..;$forming a
+continuous array of uncountably many basis vectors and $\left| {\bf \breve{h}%
+}\right) \equiv \left| \breve{h}_{1}\right) ,..,\left| \breve{h}_{r}\right)
+;\left| {\bf \breve{k}}\right) \equiv \left| \breve{k}_{1}\right) ,..,\left| 
+\breve{k}_{r}\right) $and $\left| {\bf \breve{s}}\right) \equiv \left| 
+\breve{s}_{1}\right) ,..,\left| \breve{s}_{r}\right) $ forming a discrete
+array of countably many basis vectors, where in general $r=\infty $. The
+form of the transformation from the discrete basis to the continuous one can
+be deduced by using the biorthogonal bases $\left\{ \left\{ \left( {\bf 
+\breve{h}}^{d}\right| ,\left( {\bf \breve{k}}^{d}\right| ,\left( {\bf \breve{%
+s}}^{d}\right| \right\} ,\left\{ \left| {\bf \breve{h}}\right) ,\left| {\bf 
+\breve{k}}\right) ,\left| {\bf \breve{s}}\right) \right\} \right\} $ and $%
+\left\{ \left\{ \left( {\cal K}\right| \right\} ,\left\{ \left| {\cal K}%
+\right) \right\} \right\} $, (note that $\left\{ {\bf \breve{h}}^{d},{\bf 
+\breve{k}}^{d},{\bf \breve{s}}^{d}\right\} \in {\cal B}\left( {\cal H}%
+^{N}\right) $, while $\left\{ {\bf \breve{h}},{\bf \breve{k}},{\bf \breve{s}}%
+\right\} \in {\cal B}_{1}\left( {\cal H}^{N}\right) $), and the resolutions
+of the identity that they form in the following manner 
+\begin{equation}
+\left| Y\right) =\left| {\bf \breve{h}}\right) \left( {\bf \breve{h}}%
+^{d}|Y\right) +\left| {\bf \breve{k}}\right) \left( {\bf \breve{k}}%
+^{d}|Y\right) +\left| {\bf \breve{s}}\right) \left( {\bf \breve{s}}%
+^{d}|Y\right) =\left| {\cal K}\right) \left( {\cal K}|Y\right)
+\end{equation}%
+\begin{eqnarray}
+\Rightarrow \left| Y\right) &=&\left| {\cal K}\right) \left( {\cal K}|{\bf 
+\breve{h}}\right) \left( {\bf \breve{h}}^{d}|Y\right) +\left| {\cal K}%
+\right) \left( {\cal K}|{\bf \breve{k}}\right) \left( {\bf \breve{k}}%
+^{d}|Y\right) +\left| {\cal K}\right) \left( {\cal K}|{\bf \breve{s}}\right)
+\left( {\bf \breve{s}}^{d}|Y\right)  \nonumber \\
+&=&\left( \left| {\cal K}\right) \right) \left( 
+\begin{array}{ccc}
+\left( {\cal K}|{\bf \breve{h}}\right) & \left( {\cal K}|{\bf \breve{k}}%
+\right) & \left( {\cal K}|{\bf \breve{s}}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}|Y\right) \\ 
+\left( {\bf \breve{k}}^{d}|Y\right) \\ 
+\left( {\bf \breve{s}}^{d}|Y\right)%
+\end{array}%
+\right)  \label{KtoH}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+\Rightarrow \left| Y\right) &=&\left| {\bf \breve{h}}\right) \left( {\bf 
+\breve{h}}^{d}|{\cal K}\right) \left( {\cal K}|Y\right) +\left| {\bf \breve{k%
+}}\right) \left( {\bf \breve{k}}^{d}|{\cal K}\right) \left( {\cal K}%
+|Y\right) +\left| {\bf \breve{s}}\right) \left( {\bf \breve{s}}^{d}|{\cal K}%
+\right) \left( {\cal K}|Y\right)  \nonumber \\
+&=&\left( \left| {\bf \breve{h}}\right) ,\left| {\bf \breve{k}}\right)
+,\left| {\bf \breve{s}}\right) \right) \left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{k}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{s}}^{d}|{\cal K}\right)%
+\end{array}%
+\right) \left( {\cal K}|Y\right)  \label{HtoK}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+\left| {\bf \breve{h}}\right) \left( {\bf \breve{h}}^{d}\right|
+&=&\sum_{1\leq \iota \leq \infty }\left| \breve{h}_{\iota }\right) \left( 
+\breve{h}_{\iota }^{d}\right| =\hat{P}_{K_{OD}}  \nonumber \\
+\left| {\bf \breve{k}}\right) \left( {\bf \breve{k}}^{d}\right|
+&=&\sum_{1\leq \iota \leq \infty }\left| \breve{k}_{\iota }\right) \left( 
+\breve{k}_{\iota }^{d}\right| =\hat{P}_{K_{D}}  \nonumber \\
+\left| {\bf \breve{s}}\right) \left( {\bf \breve{s}}^{d}\right|
+&=&\sum_{1\leq \iota \leq \infty }\left| \breve{s}_{\iota }\right) \left( 
+\breve{s}_{\iota }^{d}\right| =\hat{P}_{S_{D}}  \nonumber \\
+I &=&\left| {\bf \breve{h}}\right) \left( {\bf \breve{h}}^{d}\right| +\left| 
+{\bf \breve{k}}\right) \left( {\bf \breve{k}}^{d}\right| +\left| {\bf \breve{%
+s}}\right) \left( {\bf \breve{s}}^{d}\right|  \nonumber \\
+I &=&\left| {\cal K}\right) \left( {\cal K}\right| =\int \left| {\sf z}_{1},%
+{\sf z}_{2}\right) \left( {\sf z}_{1},{\sf z}_{2}\right| d{\sf z}_{1}d{\sf z}%
+_{2}
+\end{eqnarray}%
+$\hat{P}_{K_{OD}}$, $\hat{P}_{K_{D}}$ and $\hat{P}_{S_{D}}$ are the
+projectors onto $K_{OD}$, $K_{D}$ and $S_{D}$ respectively and their
+integral kernels are given by 
+\begin{eqnarray}
+P_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
+&=&\sum_{\kappa }\left( {\sf z}_{1},{\sf z}_{2}|\breve{h}_{\kappa }\right)
+\left( \breve{h}_{\kappa }^{d}|{\sf z}_{3},{\sf z}_{4}\right) \\
+P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
+&=&\sum_{\kappa }\left( {\sf z}_{1},{\sf z}_{2}|\breve{k}_{\kappa }\right)
+\left( \breve{k}_{\kappa }^{d}|{\sf z}_{3},{\sf z}_{4}\right)  \nonumber \\
+&=&\sum_{\kappa }\left( {\sf z}_{1},{\sf z}_{1}|\breve{k}_{\kappa }\right)
+\left( \breve{k}_{\kappa }^{d}|{\sf z}_{3},{\sf z}_{3}\right) \delta \left( 
+{\sf z}_{1}-{\sf z}_{2}\right) \delta \left( {\sf z}_{3}-{\sf z}_{4}\right) 
+\nonumber \\
+&\equiv &P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{3}\right) \delta \left( {\sf z}%
+_{1}-{\sf z}_{2}\right) \delta \left( {\sf z}_{3}-{\sf z}_{4}\right)
+\end{eqnarray}%
+\begin{eqnarray}
+P_{S_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
+&=&\sum_{\kappa }\left( {\sf z}_{1},{\sf z}_{2}|\breve{s}_{\kappa }\right)
+\left( \breve{s}_{\kappa }^{d}|{\sf z}_{3},{\sf z}_{4}\right)  \nonumber \\
+&=&\sum_{\kappa }\left( {\sf z}_{1},{\sf z}_{1}|\breve{s}_{\kappa }\right)
+\left( \breve{s}_{\kappa }^{d}|{\sf z}_{3},{\sf z}_{3}\right) \delta \left( 
+{\sf z}_{1}-{\sf z}_{2}\right) \delta \left( {\sf z}_{3}-{\sf z}_{4}\right) 
+\nonumber \\
+&\equiv &P_{S_{D}}\left( {\sf z}_{1},{\sf z}_{3}\right) \delta \left( {\sf z}%
+_{1}-{\sf z}_{2}\right) \delta \left( {\sf z}_{3}-{\sf z}_{4}\right)
+\end{eqnarray}%
+Note that these projectors are {\bf not }orthogonal projectors and {\it in
+fact }there is no property of orthogonality nor adjoint operation on
+operators acting in ${\cal B}_{1}\left( {\cal H}^{N}\right) $, as it is{\it %
+\ not }a Hilbert space, unless ${\cal H}^{N}$ is finite dimensional. They do
+however have the properties 
+\begin{eqnarray}
+\hat{P}_{A}^{2} &=&\hat{P}_{A}  \nonumber \\
+\hat{P}_{A}\hat{P}_{B} &=&0\quad A\neq B
+\end{eqnarray}%
+The matrix transforming from the $\left\{ \left| {\bf \breve{h}}\right)
+,\left| {\bf \breve{k}}\right) ,\left| {\bf \breve{s}}\right) \right\} $
+basis to the $\left\{ \left| {\cal K}\right) \right\} $ basis obtained from
+Eq.(\ref{KtoH}) is, 
+\begin{equation}
+{\Bbb S=}\left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{k}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{s}}^{d}|{\cal K}\right)%
+\end{array}%
+\right)
+\end{equation}%
+i.e.%
+\begin{equation}
+\left| {\cal K}\right) =\left( \left| {\bf \breve{h}}\right) ,\left| {\bf 
+\breve{k}}\right) ,\left| {\bf \breve{s}}\right) \right) \left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{k}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{s}}^{d}|{\cal K}\right)%
+\end{array}%
+\right)
+\end{equation}%
+and using Eq.(\ref{HtoK}) the transformation from the $\left\{ \left| {\cal K%
+}\right) \right\} $ to the $\left\{ \left| {\bf \breve{h}}\right) ,\left| 
+{\bf \breve{k}}\right) ,\left| {\bf \breve{s}}\right) \right\} $ basis is 
+\begin{equation}
+{\Bbb S}^{-1}{\Bbb =}\left( 
+\begin{array}{ccc}
+\left( {\cal K}|{\bf \breve{h}}\right) & \left( {\cal K}|{\bf \breve{k}}%
+\right) & \left( {\cal K}|{\bf \breve{s}}\right)%
+\end{array}%
+\right)
+\end{equation}%
+i.e.%
+\begin{equation}
+\left( \left| {\bf \breve{h}}\right) ,\left| {\bf \breve{k}}\right) ,\left| 
+{\bf \breve{s}}\right) \right) =\left| {\cal K}\right) \left( 
+\begin{array}{ccc}
+\left( {\cal K}|{\bf \breve{h}}\right) & \left( {\cal K}|{\bf \breve{k}}%
+\right) & \left( {\cal K}|{\bf \breve{s}}\right)%
+\end{array}%
+\right)
+\end{equation}%
+{\bf Note }that ${\Bbb S}^{-1}$ {\it is not }the transpose or adjoint matrix
+of ${\Bbb S}$ as ${\cal B}_{1}\left( {\cal H}^{N}\right) $ is not self dual,
+one can for instance can see that ${\Bbb S}^{-1}$ involves integral kernels $%
+\left( {\sf z}_{1},{\sf z}_{2}|\breve{h}_{\iota }\right) $ of trace class
+operators, while ${\Bbb S}$ involves integral kernels $\left( \breve{h}%
+_{\iota }^{d}|{\sf z}_{1},{\sf z}_{2}\right) $ of bounded operators that do
+not have to be of trace class. We also have the biorthogonality condition 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}\right| \\ 
+\left( {\bf \breve{k}}^{d}\right| \\ 
+\left( {\bf \breve{s}}^{d}\right|%
+\end{array}%
+\right) \left( \left| {\bf \breve{h}}\right) ,\left| {\bf \breve{k}}\right)
+,\left| {\bf \breve{s}}\right) \right) =\left( 
+\begin{array}{ccc}
+\left( {\bf \breve{h}}^{d}|{\bf \breve{h}}\right) & \left( {\bf \breve{h}}%
+^{d}|{\bf \breve{k}}\right) & \left( {\bf \breve{h}}^{d}|{\bf \breve{s}}%
+\right) \\ 
+\left( {\bf \breve{k}}^{d}|{\bf \breve{h}}\right) & \left( {\bf \breve{k}}%
+^{d}|{\bf \breve{k}}\right) & \left( {\bf \breve{k}}^{d}|{\bf \breve{s}}%
+\right) \\ 
+\left( {\bf \breve{s}}^{d}|{\bf \breve{h}}\right) & \left( {\bf \breve{s}}%
+^{d}|{\bf \breve{k}}\right) & \left( {\bf \breve{s}}^{d}|{\bf \breve{s}}%
+\right)%
+\end{array}%
+\right) ={\Bbb I} \\
+&\Leftrightarrow &{\Bbb S}^{d}\left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}\right| \\ 
+\left( {\bf \breve{k}}^{d}\right| \\ 
+\left( {\bf \breve{s}}^{d}\right|%
+\end{array}%
+\right) \left( \left| {\bf \breve{h}}\right) ,\left| {\bf \breve{k}}\right)
+,\left| {\bf \breve{s}}\right) \right) {\Bbb S}=\left( {\cal K}|{\cal K}%
+\right) ={\cal I=}{\Bbb S}^{d}{\Bbb S}
+\end{eqnarray}%
+where ${\cal I}$ is the integral kernel $\delta \left( {\sf z}_{1}-{\sf z}%
+_{3}\right) \delta \left( {\sf z}_{2}-{\sf z}_{4}\right) $ and ${\Bbb S}%
+^{d}: $ ${\cal B}\left( {\cal H}^{N}\right) \rightarrow {\cal B}\left( {\cal %
+H}^{N}\right) $ is the transformation between the dual bases $\left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}\right| \\ 
+\left( {\bf \breve{k}}^{d}\right| \\ 
+\left( {\bf \breve{s}}^{d}\right|%
+\end{array}%
+\right) \rightarrow \left( {\cal K}\right| $, which shows that ${\Bbb S}^{d}=%
+{\Bbb S}^{-1}$. Hence we obtain the identities 
+\begin{eqnarray}
+&&{\cal \hat{M}}\breve{Y}=\left( \left| {\bf \breve{h}}\right) ,\left| {\bf 
+\breve{k}}\right) ,\left| {\bf \breve{s}}\right) \right) {\Bbb SS}%
+^{-1}\left( 
+\begin{array}{ccc}
+{\Bbb M}_{K_{OD}} & {\Bbb M}_{K_{OD}K_{D}} & {\Bbb M}_{K_{OD}S_{D}} \\ 
+{\Bbb M}_{K_{D}K_{OD}} & {\Bbb M}_{K_{D}} & {\Bbb M}_{K_{D}S_{D}} \\ 
+{\Bbb M}_{S_{D}K_{OD}} & {\Bbb M}_{S_{D}K_{D}} & {\Bbb T}_{S_{D}}%
+\end{array}%
+\right) {\Bbb SS}^{-1}\left( 
+\begin{array}{c}
+{\Bbb Y}_{_{K_{OD}}} \\ 
+{\Bbb Y}_{_{K_{D}}} \\ 
+{\Bbb Y}_{_{S_{D}}}%
+\end{array}%
+\right) = \\
+&&  \nonumber \\
+&&\left( \left| {\cal K}\right) \right) {\Bbb S}^{-1}\left( 
+\begin{array}{ccc}
+{\Bbb M}_{K_{OD}} & {\Bbb M}_{K_{OD}K_{D}} & {\Bbb M}_{K_{OD}S_{D}} \\ 
+{\Bbb M}_{K_{D}K_{OD}} & {\Bbb M}_{K_{D}} & {\Bbb M}_{K_{D}S_{D}} \\ 
+{\Bbb M}_{S_{D}K_{OD}} & {\Bbb M}_{S_{D}K_{D}} & {\Bbb T}_{S_{D}}%
+\end{array}%
+\right) {\Bbb S}\left( {\cal K}|Y\right) =\left( \left| {\cal K}\right)
+\right) \left( {\cal K}|{\cal \hat{M}K}\right) \left( {\cal K}|Y\right)
+\end{eqnarray}%
+where 
+\begin{equation}
+\left( {\cal K}|{\cal \hat{M}K}\right) =\left( 
+\begin{array}{ccc}
+\left( {\cal K}|{\bf \breve{h}}\right) & \left( {\cal K}|{\bf \breve{k}}%
+\right) & \left( {\cal K}|{\bf \breve{s}}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{ccc}
+{\Bbb M}_{K_{OD}} & {\Bbb M}_{K_{OD}K_{D}} & {\Bbb M}_{K_{OD}S_{D}} \\ 
+{\Bbb M}_{K_{D}K_{OD}} & {\Bbb M}_{K_{D}} & {\Bbb M}_{K_{D}S_{D}} \\ 
+{\Bbb M}_{S_{D}K_{OD}} & {\Bbb M}_{S_{D}K_{D}} & {\Bbb M}_{S_{D}}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( {\bf \breve{h}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{k}}^{d}|{\cal K}\right) \\ 
+\left( {\bf \breve{s}}^{d}|{\cal K}\right)%
+\end{array}%
+\right)
+\end{equation}%
+We also have that 
+\begin{eqnarray}
+&&{\cal \hat{M}}\breve{Y}=\left( \left| {\cal K}\right) \right) {\Bbb S}%
+^{-1}\left( 
+\begin{array}{ccc}
+{\Bbb M}_{K_{OD}} & {\Bbb M}_{K_{OD}K_{D}} & {\Bbb M}_{K_{OD}S_{D}} \\ 
+{\Bbb M}_{K_{D}K_{OD}} & {\Bbb M}_{K_{D}} & {\Bbb M}_{K_{D}S_{D}} \\ 
+{\Bbb M}_{S_{D}K_{OD}} & {\Bbb M}_{S_{D}K_{D}} & {\Bbb M}_{S_{D}}%
+\end{array}%
+\right) {\Bbb SS}^{-1}\left( 
+\begin{array}{c}
+{\Bbb Y}_{_{K_{OD}}} \\ 
+{\Bbb Y}_{_{K_{D}}} \\ 
+{\Bbb Y}_{_{S_{D}}}%
+\end{array}%
+\right) =  \nonumber \\
+&&  \nonumber \\
+&&\left( \left| {\cal K}\right) \right) \left\{ \left( {\cal K}|{\cal \hat{M}%
+}_{K_{OD}}{\cal K}\right) +\left( {\cal K}|{\cal \hat{M}}_{K_{OD}K_{D}}{\cal %
+K}\right) +\left( {\cal K}|{\cal \hat{M}}_{K_{OD}S_{D}}{\cal K}\right)
++\right.  \nonumber \\
+&&\qquad \left( {\cal K}|{\cal \hat{M}}_{K_{D}K_{OD}}{\cal K}\right) +\left( 
+{\cal K}|{\cal \hat{M}}_{K_{D}}{\cal K}\right) +\left( {\cal K}|{\cal \hat{M}%
+}_{K_{D}S_{D}}{\cal K}\right) +\left( {\cal K}|{\cal \hat{M}}_{S_{D}K_{OD}}%
+{\cal K}\right) +  \nonumber \\
+&&\qquad \qquad \left. \left( {\cal K}|{\cal \hat{M}}_{S_{D}K_{D}}{\cal K}%
+\right) +\left( {\cal K}|{\cal \hat{M}}_{S_{D}}{\cal K}\right) \right\}
+\left\{ \left( {\cal K}|Y_{K_{OD}}\right) +\left( {\cal K}|Y_{K_{D}}\right)
++\left( {\cal K}|Y_{S_{D}}\right) \right\}  \label{func}
+\end{eqnarray}%
+where 
+\begin{equation}
+{\cal \hat{M}}_{AB}=\hat{P}_{A}{\cal \hat{M}}\hat{P}_{B}\quad \text{and\quad 
+}Y_{A}=\hat{P}_{A}Y
+\end{equation}%
+for various subspaces $A$ and $B$ of ${\cal B}_{1}\left( {\cal H}^{N}\right) 
+$. The expression in Eq.(\ref{func}) can be further developed to give 
+\begin{equation}
+{\cal \hat{M}}\breve{Y}=\breve{Y}^{\prime }=\left( \left| {\cal K}\right)
+\right) \left\{ \left( {\cal K}|Y_{K_{OD}}^{\prime }\right) +\left( {\cal K}%
+|Y_{K_{D}}^{\prime }\right) +\left( {\cal K}|Y_{S_{D}}^{\prime }\right)
+\right\}
+\end{equation}%
+where 
+\begin{eqnarray}
+\left( 
+\begin{array}{c}
+\left( {\cal K}|Y_{K_{OD}}^{\prime }\right) \\ 
+\left( {\cal K}|Y_{K_{D}}^{\prime }\right) \\ 
+\left( {\cal K}|Y_{S_{D}}^{\prime }\right)%
+\end{array}%
+\right) &=&\left( 
+\begin{array}{ccc}
+\left( {\cal K}|{\cal \hat{M}}_{K_{OD}}{\cal K}\right) & \left( {\cal K}|%
+{\cal \hat{M}}_{K_{OD}K_{D}}{\cal K}\right) & \left( {\cal K}|{\cal \hat{M}}%
+_{K_{OD}S_{D}}{\cal K}\right) \\ 
+\left( {\cal K}|{\cal \hat{M}}_{K_{D}K_{OD}}{\cal K}\right) & \left( {\cal K}%
+|{\cal \hat{M}}_{K_{D}}{\cal K}\right) & \left( {\cal K}|{\cal \hat{M}}%
+_{S_{D}K_{OD}}{\cal K}\right) \\ 
+\left( {\cal K}|{\cal \hat{M}}_{S_{D}K_{D}}{\cal K}\right) & \left( {\cal K}|%
+{\cal \hat{M}}_{S_{D}K_{D}}{\cal K}\right) & \left( {\cal K}|{\cal \hat{M}}%
+_{S_{D}}{\cal K}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( {\cal K}|Y_{K_{OD}}\right) \\ 
+\left( {\cal K}|Y_{K_{D}}\right) \\ 
+\left( {\cal K}|Y_{S_{D}}\right)%
+\end{array}%
+\right)  \nonumber \\
+&&
+\end{eqnarray}
+
+Transformations of ${\cal B}_{1}\left( {\cal H}^{N}\right) $ that preserve
+the vector bundle structure of ${\frak B}_{vect}$ can be expressed as a sum%
+\begin{eqnarray}
+{\frak \hat{T}} &{\frak =}&{\frak \hat{T}}_{K_{OD}}+{\frak \hat{T}}_{K_{D}}+%
+{\frak \hat{T}}_{S_{D}}+{\frak \hat{T}}_{K_{D}S_{D}}+{\frak \hat{T}}%
+_{K_{OD}S_{D}}+{\frak \hat{T}}_{K_{OD}K_{D}}+{\frak \hat{T}}_{K_{D}K_{OD}} 
+\nonumber \\
+{\frak \hat{T}} &:&{\frak B}_{vect}\longrightarrow {\frak B}_{vect}
+\end{eqnarray}%
+where ${\frak \hat{T}}_{AB}$ denotes maps between subspaces $A$ and $B$.
+These can be represented as matrices wrt the bases introduced in Eqs. (\ref%
+{hbasis}),(\ref{kbasis}) and (\ref{sbasis}) as 
+\begin{equation}
+\left( 
+\begin{array}{ccc}
+{\Bbb T}_{K_{OD}} & {\Bbb T}_{K_{OD}K_{D}} & {\Bbb T}_{K_{OD}S_{D}} \\ 
+{\Bbb T}_{K_{D}K_{OD}} & {\Bbb T}_{K_{D}} & {\Bbb T}_{K_{D}S_{D}} \\ 
+{\Bbb O} & {\Bbb O} & {\Bbb T}_{S_{D}}%
+\end{array}%
+\right)
+\end{equation}%
+The non zero components can be expanded as%
+\begin{eqnarray}
+{\frak \hat{T}}_{K_{OD}} &=&\sum_{\kappa ,\iota }{\frak T}_{K_{OD}\kappa
+\iota }\left| \breve{h}_{\kappa }\right) \left( \breve{h}_{\iota }^{d}\right|
+\nonumber \\
+{\frak \hat{T}}_{K_{D}} &=&\sum_{\kappa ,\iota }{\frak T}_{K_{D}\kappa \iota
+}\left| \breve{k}_{\kappa }\right) \left( \breve{k}_{\iota }^{d}\right| 
+\nonumber \\
+{\frak \hat{T}}_{S_{D}} &=&\sum_{\kappa ,\iota }{\frak T}_{S_{D}\kappa \iota
+}\left| \breve{s}_{\kappa }\right) \left( \breve{s}_{\iota }^{d}\right| 
+\nonumber \\
+{\frak \hat{T}}_{K_{D}S_{D}} &=&\sum_{\kappa ,\iota }{\frak T}%
+_{K_{D}S_{D}\kappa \iota }\left| \breve{k}_{\kappa }\right) \left( \breve{s}%
+_{\iota }^{d}\right|  \nonumber \\
+{\frak \hat{T}}_{K_{OD}K_{D}} &=&\sum_{\kappa ,\iota }{\frak T}%
+_{K_{OD}K_{D}\kappa \iota }\left| \breve{h}_{\kappa }\right) \left( \breve{k}%
+_{\iota }^{d}\right|  \nonumber \\
+{\frak \hat{T}}_{K_{D}K_{OD}} &=&\sum_{\kappa ,\iota }{\frak T}%
+_{K_{D}K_{OD}\kappa \iota }\left| \breve{k}_{\kappa }\right) \left( \breve{h}%
+_{\iota }^{d}\right|  \nonumber \\
+{\frak \hat{T}}_{K_{OD}S_{D}} &=&\sum_{\kappa ,\iota }{\frak T}%
+_{K_{OD}S_{D}\kappa \iota }\left| \breve{h}_{\kappa }\right) \left( \breve{s}%
+_{\iota }^{d}\right|
+\end{eqnarray}
+
+In order to analyze the properties of Lie groups formed from such operators
+it is convenient to express them as ${\frak \hat{T}}=\hat{I}+\hat{\Lambda}%
+=e^{\hat{\Upsilon}}$, then%
+\begin{eqnarray}
+{\frak \hat{T}}_{K_{OD}} &=&\hat{P}_{K_{OD}}+\hat{\Lambda}_{K_{OD}}=\hat{P}%
+_{K_{OD}}{\frak \hat{T}}\hat{P}_{K_{OD}}  \nonumber \\
+{\frak \hat{T}}_{K_{D}} &=&\hat{P}_{K_{D}}+\hat{\Lambda}_{K_{D}}=\hat{P}%
+_{K_{D}}{\frak \hat{T}}\hat{P}_{K_{D}}  \nonumber \\
+{\frak \hat{T}}_{S_{D}} &=&\hat{P}_{S_{D}}+\hat{\Lambda}_{S_{D}}=\hat{P}%
+_{S_{D}}{\frak \hat{T}}\hat{P}_{S_{D}}  \nonumber \\
+{\frak \hat{T}}_{K_{D}S_{D}} &=&\hat{\Lambda}_{K_{D}S_{D}}=\hat{P}_{K_{D}}%
+{\frak \hat{T}}\hat{P}_{S_{D}}  \nonumber \\
+{\frak \hat{T}}_{K_{D}K_{OD}} &=&\hat{\Lambda}_{K_{D}K_{OD}}=\hat{P}_{K_{D}}%
+{\frak \hat{T}}\hat{P}_{K_{OD}}  \nonumber \\
+{\frak \hat{T}}_{K_{OD}K_{D}} &=&\hat{\Lambda}_{K_{OD}K_{D}}=\hat{P}_{K_{OD}}%
+{\frak \hat{T}}\hat{P}_{K_{D}}  \nonumber \\
+{\frak \hat{T}}_{K_{OD}S_{D}} &=&\hat{\Lambda}_{K_{OD}S_{D}}=\hat{P}_{K_{OD}}%
+{\frak \hat{T}}\hat{P}_{S_{D}}
+\end{eqnarray}%
+(A notational note: in kernels where arguments are repeated we only display
+one argument if this does not detract from the clarity of the exposition).
+The integral kernels of ${\frak \hat{T}}_{K_{OD}}$, ${\frak \hat{T}}_{K_{D}}$%
+, and ${\frak \hat{T}}_{S_{D}}$, are given by 
+\begin{eqnarray}
+{\frak T}_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) &=&\left( {\sf z}_{1},{\sf z}_{2}|{\frak \hat{T}}_{K_{OD}}{\sf z}%
+_{3},{\sf z}_{4}\right) =\left( \left| {\sf z}_{1}\right\rangle \left\langle 
+{\sf z}_{2}\right| |{\frak \hat{T}}_{K_{OD}}\left| {\sf z}_{3}\right\rangle
+\left\langle {\sf z}_{4}\right| \right)  \nonumber \\
+&=&\sum_{\kappa ,\iota }{\frak T}_{K_{OD}\kappa \iota }\left( \left| {\sf z}%
+_{1}\right\rangle \left\langle {\sf z}_{2}\right| |\breve{h}_{\kappa
+}\right) \left( \breve{h}_{\iota }^{d}|\left| {\sf z}_{3}\right\rangle
+\left\langle {\sf z}_{4}\right| \right)  \nonumber \\
+&=&\sum_{\kappa ,\iota }{\frak T}_{K_{OD}\kappa \iota }\breve{h}_{\kappa
+}\left( {\sf z}_{1},{\sf z}_{2}\right) \breve{h}_{\iota }^{d\ast }\left( 
+{\sf z}_{3},{\sf z}_{4}\right) \\
+&=&P_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
++\sum_{\kappa ,\iota }\Lambda _{K_{OD}\kappa \iota }\breve{h}_{\kappa
+}\left( {\sf z}_{1},{\sf z}_{2}\right) \breve{h}_{\iota }^{d\ast }\left( 
+{\sf z}_{3},{\sf z}_{4}\right)  \nonumber \\
+&=&P_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
++\Lambda _{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right)  \label{KOD}
+\end{eqnarray}%
+\begin{equation}
+\qquad \qquad {\frak T}_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right)
+=\sum_{\kappa ,\iota }{\frak T}_{K_{D}\kappa \iota }k_{\kappa }\left( {\sf z}%
+_{1}\right) k_{\iota }^{d\ast }\left( {\sf z}_{2}\right) =P_{K_{D}}\left( 
+{\sf z}_{1},{\sf z}_{2}\right) +\Lambda _{K_{D}}\left( {\sf z}_{1},{\sf z}%
+_{2}\right)  \label{KD}
+\end{equation}%
+\begin{equation}
+\qquad \qquad {\frak T}_{S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right)
+=\sum_{\kappa ,\iota }{\frak T}_{S_{D}\kappa \iota }s_{\kappa }\left( {\sf z}%
+_{1}\right) s_{\iota }^{d\ast }\left( {\sf z}_{2}\right) =P_{S_{D}}\left( 
+{\sf z}_{1},{\sf z}_{2}\right) +\Lambda _{S_{D}}\left( {\sf z}_{1},{\sf z}%
+_{2}\right)  \label{SD}
+\end{equation}%
+and those of ${\frak \hat{T}}_{K_{OD}K_{D}}$, ${\frak \hat{T}}_{K_{D}K_{OD}}$%
+, ${\frak \hat{T}}_{K_{OD}S_{D}}$ and ${\frak \hat{T}}_{K_{D}S_{D}}$ by%
+\begin{eqnarray}
+{\frak T}_{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) &=&\sum_{\kappa
+,\iota }{\frak T}_{K_{D}S_{D}\kappa \iota }k_{\kappa }\left( {\sf z}%
+_{1}\right) s_{\iota }^{d\ast }\left( {\sf z}_{2}\right)  \nonumber \\
+&=&\sum_{\kappa ,\iota }\Lambda _{K_{D}S_{D}\kappa \iota }k_{\kappa }\left( 
+{\sf z}_{1}\right) s_{\iota }^{d\ast }\left( {\sf z}_{2}\right) =\Lambda
+_{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right)  \nonumber \\
+{\frak T}_{K_{OD}S_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3}\right)
+&=&\sum_{\kappa ,\iota }{\frak T}_{K_{OD}S_{D}\kappa \iota }h_{\kappa
+}\left( {\sf z}_{1},{\sf z}_{2}\right) s_{\iota }^{d\ast }\left( {\sf z}%
+_{3}\right)  \nonumber \\
+&=&\sum_{\kappa ,\iota }\Lambda _{K_{OD}S_{D}\kappa \iota }h_{\kappa }\left( 
+{\sf z}_{1},{\sf z}_{2}\right) s_{\iota }^{d\ast }\left( {\sf z}_{3}\right)
+=\Lambda _{K_{OD}S_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3}\right) 
+\nonumber \\
+{\frak T}_{K_{D}K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3}\right)
+&=&\sum_{\kappa ,\iota }{\frak T}_{K_{D}K_{OD}\kappa \iota }k_{\kappa
+}\left( {\sf z}_{1}\right) h_{\iota }^{d\ast }\left( {\sf z}_{1},{\sf z}%
+_{2}\right)  \nonumber \\
+&=&\sum_{\kappa ,\iota }\Lambda _{K_{D}K_{OD}\kappa \iota }k_{\kappa }\left( 
+{\sf z}_{1}\right) h_{\iota }^{d\ast }\left( {\sf z}_{2},{\sf z}_{3}\right)
+=\Lambda _{K_{D}K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3}\right) 
+\nonumber \\
+{\frak T}_{K_{OD}K_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3}\right)
+&=&\sum_{\kappa ,\iota }{\frak T}_{K_{OD}K_{D}\kappa \iota }h_{\kappa
+}\left( {\sf z}_{1},{\sf z}_{2}\right) k_{\iota }^{d\ast }\left( {\sf z}%
+_{3}\right)  \nonumber \\
+&=&\sum_{\kappa ,\iota }\Lambda _{K_{OD}K_{D}\kappa \iota }h_{\kappa }\left( 
+{\sf z}_{1},{\sf z}_{2}\right) k_{\iota }^{d\ast }\left( {\sf z}_{3}\right)
+=\Lambda _{K_{OD}K_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3}\right)
+\label{mixed}
+\end{eqnarray}%
+The super operator transformations, ${\frak \hat{T}}$, can be associated
+with matrices of integral kernels as 
+\begin{eqnarray}
+{\frak \hat{T}\equiv }\left( 
+\begin{array}{ccc}
+{\frak T}_{K_{OD}} & {\frak T}_{K_{OD,}K_{D}} & {\frak T}_{K_{D},S_{D}} \\ 
+{\frak T}_{K_{D},K_{OD}} & {\frak T}_{K_{D}} & {\frak T}_{K_{D}S_{D}} \\ 
+0 & 0 & {\frak T}_{S_{D}}%
+\end{array}%
+\right) = &&\left( 
+\begin{array}{ccc}
+P_{K_{OD}} & 0 & 0 \\ 
+0 & P_{K_{D}} & 0 \\ 
+0 & 0 & P_{S_{D}}%
+\end{array}%
+\right)  \nonumber \\
+&&+\left( 
+\begin{array}{ccc}
+\Lambda _{K_{OD}} & \Lambda _{K_{D}K_{OD}} & \Lambda _{K_{D}S_{D}} \\ 
+\Lambda _{K_{D}K_{OD}} & \Lambda _{K_{D}} & \Lambda _{K_{OD}S_{D}} \\ 
+0 & 0 & \Lambda _{S_{D}}%
+\end{array}%
+\right)
+\end{eqnarray}%
+which produce the transformed integral kernels $Y^{\prime }\left( {\sf z}%
+_{1},{\sf z}_{2}\right) ={\frak \hat{T}}Y\left( {\sf z}_{1},{\sf z}%
+_{2}\right) $ of trace class operators in the following manner%
+\begin{equation}
+\left( {\sf z}_{1},{\sf z}_{2}|{\frak \hat{T}}Y\right) =\left( {\sf z}_{1},%
+{\sf z}_{2}|\breve{Y}_{K_{OD}}^{\prime }\right) +\left( {\sf z}_{1},{\sf z}%
+_{2}|\breve{Y}_{K_{D}}^{\prime }\right) +\left( {\sf z}_{1},{\sf z}_{2}|%
+\breve{Y}_{S_{D}}^{\prime }\right)  \label{transkern}
+\end{equation}%
+where%
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\left( {\sf z}_{1},{\sf z}_{2}|\breve{Y}_{K_{OD}}^{\prime }\right) \\ 
+\left( {\sf z}_{1},{\sf z}_{2}|\breve{Y}_{K_{D}}^{\prime }\right) \\ 
+\left( {\sf z}_{1},{\sf z}_{2}|\breve{Y}_{S_{D}}^{\prime }\right)%
+\end{array}%
+\right) =  \nonumber \\
+&&\int \left( 
+\begin{array}{ccc}
+{\frak T}_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) & {\frak T}_{K_{OD,}K_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}%
+_{3},{\sf z}_{4}\right) & {\frak T}_{K_{D},S_{D}}\left( {\sf z}_{1},{\sf z}%
+_{2},{\sf z}_{3},{\sf z}_{4}\right) \\ 
+{\frak T}_{K_{D},K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) & {\frak T}_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},%
+{\sf z}_{4}\right) & {\frak T}_{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2},%
+{\sf z}_{3},{\sf z}_{4}\right) \\ 
+0 & 0 & {\frak T}_{S_{D}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right)%
+\end{array}%
+\right)  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \times \left( 
+\begin{array}{c}
+Y_{K_{OD}}\left( {\sf z}_{3},{\sf z}_{4}\right) \\ 
+Y_{K_{D}}\left( {\sf z}_{3},{\sf z}_{4}\right) \\ 
+S_{K_{D}}\left( {\sf z}_{3},{\sf z}_{4}\right)%
+\end{array}%
+\right) d{\sf z}_{3}d{\sf z}_{4}  \label{kerneq}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+Y_{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2}\right) &=&\sum_{1\leq \iota \leq
+\infty }\left( {\sf z}_{1,}{\sf z}_{2}|\breve{h}_{\iota }\right) \left( 
+\breve{h}_{\iota }^{d}|\breve{Y}\right) =\int P_{K_{OD}}\left( {\sf z}_{1},%
+{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right) Y\left( {\sf z}_{3,}{\sf z}%
+_{4}\right) d{\sf z}_{3}d{\sf z}_{4}  \nonumber \\
+Y_{K_{D}}\left( {\sf z}_{1,}{\sf z}_{2}\right) &=&\sum_{1\leq \iota \leq
+\infty }\left( {\sf z}_{1,}{\sf z}_{2}|\breve{k}_{\iota }\right) \left( 
+\breve{k}_{\iota }^{d}|\breve{Y}\right) =\int P_{K_{D}}\left( {\sf z}_{1},%
+{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right) Y\left( {\sf z}_{3,}{\sf z}%
+_{4}\right) d{\sf z}_{3}d{\sf z}_{4}  \nonumber \\
+Y_{S_{D}}\left( {\sf z}_{1,}{\sf z}_{2}\right) &=&\sum_{1\leq \iota \leq
+\infty }\left( {\sf z}_{1,}{\sf z}_{2}|\breve{s}_{\iota }\right) \left( 
+\breve{s}_{\iota }^{d}|\breve{Y}\right) =\int P_{S_{D}}\left( {\sf z}_{1},%
+{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right) Y\left( {\sf z}_{3,}{\sf z}%
+_{4}\right) d{\sf z}_{3}d{\sf z}_{4}
+\end{eqnarray}
+
+In the main body of this article we have considered maps, $\hat{T}$, that
+map pure states to pure states and have the property $\hat{T}_{K_{OD}K_{D}}=%
+\hat{T}_{K_{D}K_{OD}}=\hat{T}_{K_{OD}S_{D}}=0$. These transformations $\hat{T%
+}$ are congruence transformations of ${\cal B}_{1}\left( {\cal H}^{N}\right) 
+$ formed from multiplication operators (in the coordinate representation)
+acting on ${\cal H}^{N}$ and act as {\it super multiplication operators }(in
+the coordinate representation){\it \ }on ${\cal B}_{1}\left( {\cal H}%
+^{N}\right) $ in the following fashion%
+\begin{eqnarray}
+\hat{T}\breve{X} &=&\breve{T}\breve{X}\breve{T}^{\dagger
+}\Longleftrightarrow \text{ the integral kernel relationships}  \nonumber \\
+&&\left( \left| {\sf z}_{1}\right\rangle \left\langle {\sf z}_{2}\right| |%
+\hat{T}\breve{X}\right) =\left( \left| {\sf z}_{1}\right\rangle \left\langle 
+{\sf z}_{2}\right| |\breve{T}\breve{X}\breve{T}^{\dagger }\right) =Tr\left\{
+\left| {\sf z}_{2}\right\rangle \left\langle {\sf z}_{1}\right| \breve{T}%
+\breve{X}\breve{T}^{\dagger }\right\}  \nonumber \\
+\qquad &=&\left\langle {\sf z}_{1}|\breve{T}\breve{X}\breve{T}^{\dagger }%
+{\sf z}_{2}\right\rangle =T\left( {\sf z}_{1}\right) X\left( {\sf z}_{1},%
+{\sf z}_{2}\right) T^{\ast }\left( {\sf z}_{2}\right)  \nonumber \\
+&=&\left( 1+\phi \left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}}e^{i\omega
+\left( {\sf z}_{1}\right) }X\left( {\sf z}_{1},{\sf z}_{2}\right) \left(
+1+\phi \left( {\sf z}_{2}\right) \right) ^{\frac{1}{2}}e^{-i\omega \left( 
+{\sf z}_{2}\right) }  \nonumber \\
+&=&\left( 1+\phi \left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}}\left(
+1+\phi \left( {\sf z}_{2}\right) \right) ^{\frac{1}{2}}e^{i\left( \omega
+\left( {\sf z}_{1}\right) -\omega \left( {\sf z}_{2}\right) \right) }X\left( 
+{\sf z}_{1},{\sf z}_{2}\right)  \nonumber \\
+&\equiv &{\rm T}\left( {\sf z}_{1},{\sf z}_{2}\right) X\left( {\sf z}_{1},%
+{\sf z}_{2}\right)  \nonumber \\
+&\Rightarrow &{\rm T}\left( {\sf z}_{1},{\sf z}_{2}\right) =\left( 1+\phi
+\left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}}\left( 1+\phi \left( {\sf z}%
+_{2}\right) \right) ^{\frac{1}{2}}e^{i\left( \omega \left( {\sf z}%
+_{1}\right) -\omega \left( {\sf z}_{2}\right) \right) }
+\end{eqnarray}%
+where, as in the main text, $T\left( {\sf z}_{1}\right) =\left( 1+\phi
+\left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}}e^{i\omega \left( {\sf z}%
+_{1}\right) }$ $=e^{{\cal V}\left( {\sf z}_{1}\right) +i\omega \left( {\sf z}%
+_{1}\right) }$ and hence the operators $\hat{T}$ can be expanded as 
+\begin{eqnarray}
+\hat{T} &=&\int {\rm T}\left( {\sf z}_{1},{\sf z}_{2}\right) \delta \left( 
+{\sf z}_{1}-{\sf z}_{3}\right) \delta \left( {\sf z}_{2}-{\sf z}_{4}\right) |%
+{\sf z}_{1},{\sf z}_{2}{\bf )}\left( {\sf z}_{3},{\sf z}_{4}\right| d{\sf z}%
+_{1}d{\sf z}_{2}d{\sf z}_{3}d{\sf z}_{4}  \nonumber \\
+&=&\int \left( 1+\phi \left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}}\left(
+1+\phi \left( {\sf z}_{2}\right) \right) ^{\frac{1}{2}}e^{i\left( \omega
+\left( {\sf z}_{1}\right) -\omega \left( {\sf z}_{2}\right) \right) }|{\sf z}%
+_{1},{\sf z}_{2}{\bf )}\left( {\sf z}_{1},{\sf z}_{2}\right| d{\sf z}_{1}d%
+{\sf z}_{2}
+\end{eqnarray}%
+The operators $\hat{T}$ have the decomposition 
+\begin{eqnarray}
+\hat{T} &=&\hat{P}_{K_{OD}}\hat{T}\hat{P}_{K_{OD}}+\hat{P}_{K_{D}}\hat{T}%
+\hat{P}_{K_{D}}+\hat{P}_{K_{D}}\hat{T}\hat{P}_{K_{S}}+\hat{P}_{S_{D}}\hat{T}%
+\hat{P}_{S_{D}}  \nonumber \\
+&\equiv &\hat{T}_{K_{OD}}+\hat{T}_{K_{D}}+\hat{T}_{K_{D}S_{D}}+\hat{T}%
+_{S_{D}}
+\end{eqnarray}%
+one can see that $\hat{T}_{d}\equiv \hat{T}_{K_{D}}+\hat{T}_{K_{D}S_{D}}+%
+\hat{T}_{K_{S}S_{D}}$ has the expansion 
+\begin{equation}
+\hat{T}_{d}=\int \left( 1+\phi \left( {\sf z}_{1}\right) \right) |{\sf z}%
+_{1},{\sf z}_{1}{\bf )}\left( {\sf z}_{1},{\sf z}_{1}\right| d{\sf z}_{1}
+\end{equation}%
+We now consider $\hat{T}=\hat{I}+\hat{\Phi}$ and note that 
+\begin{equation}
+\hat{\Phi}_{d}=\int \phi \left( {\sf z}_{1}\right) |{\sf z}_{1},{\sf z}_{1}%
+{\bf )}\left( {\sf z}_{1},{\sf z}_{1}\right| d{\sf z}_{1}
+\end{equation}%
+and the various projections and integral kernels of projections of $\hat{\Phi%
+}_{d}$ are given by 
+\begin{eqnarray}
+\hat{\Phi}_{K_{D}} &=&\int \Phi _{K_{D}}\left( {\sf z}_{1},{\sf z}%
+_{3}\right) |{\sf z}_{1},{\sf z}_{1}{\bf )}\left( {\sf z}_{3},{\sf z}%
+_{3}\right| d{\sf z}_{1}d{\sf z}_{3}  \nonumber \\
+\Phi _{K_{D}}\left( {\sf z}_{1},{\sf z}_{3}\right) &=&\int P_{K_{D}}\left( 
+{\sf z}_{1},{\sf z}_{2}\right) \phi \left( {\sf z}_{2}\right)
+P_{K_{D}}\left( {\sf z}_{2},{\sf z}_{3}\right) d{\sf z}_{2}  \nonumber \\
+\hat{\Phi}_{K_{D}S_{D}} &=&\int \Phi _{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}%
+_{3}\right) |{\sf z}_{1},{\sf z}_{1}{\bf )}\left( {\sf z}_{3},{\sf z}%
+_{3}\right| d{\sf z}_{1}d{\sf z}_{3}  \nonumber \\
+\Phi _{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{3}\right) &=&\int
+P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) \phi \left( {\sf z}%
+_{2}\right) P_{S_{D}}\left( {\sf z}_{2},{\sf z}_{3}\right) d{\sf z}_{2} 
+\nonumber \\
+\hat{\Phi}_{S_{D}} &=&\int \Phi _{S_{D}}\left( {\sf z}_{1},{\sf z}%
+_{3}\right) |{\sf z}_{1},{\sf z}_{1}{\bf )}\left( {\sf z}_{3},{\sf z}%
+_{3}\right| d{\sf z}_{1}d{\sf z}_{3}  \nonumber \\
+\Phi _{S_{D}}\left( {\sf z}_{1},{\sf z}_{3}\right) &=&\int P_{S_{D}}\left( 
+{\sf z}_{1},{\sf z}_{2}\right) \phi \left( {\sf z}_{2}\right)
+P_{S_{D}}\left( {\sf z}_{2},{\sf z}_{3}\right) d{\sf z}_{2}  \label{kerproj}
+\end{eqnarray}%
+The super operator $\hat{T}$ can be associated with the following matrices
+of integral kernels 
+\begin{eqnarray}
+&&\hat{T}{\frak \equiv }\left( 
+\begin{array}{ccc}
+\left( {\cal K}|\hat{T}_{K_{OD}}{\cal K}\right) & 0 & 0 \\ 
+0 & \left( {\cal K}|\hat{T}_{K_{D}}{\cal K}\right) & \left( {\cal K}|\hat{T}%
+_{K_{D}S_{D}}{\cal K}\right) \\ 
+0 & 0 & \left( {\cal K}|\hat{T}_{S_{D}}{\cal K}\right)%
+\end{array}%
+\right) =  \nonumber \\
+&&\left( 
+\begin{array}{ccc}
+\left( {\cal K}|\hat{P}_{K_{OD}}{\cal K}\right) & 0 & 0 \\ 
+0 & \left( {\cal K}|\hat{P}_{K_{D}}{\cal K}\right) & 0 \\ 
+0 & 0 & \left( {\cal K}|\hat{P}_{S_{D}}{\cal K}\right)%
+\end{array}%
+\right) +\left( 
+\begin{array}{ccc}
+\left( {\cal K}|\hat{\Phi}_{K_{OD}}{\cal K}\right) & 0 & 0 \\ 
+0 & \left( {\cal K}|\hat{\Phi}_{K_{D}}{\cal K}\right) & \left( {\cal K}|\hat{%
+\Phi}_{K_{D}S_{D}}{\cal K}\right) \\ 
+0 & 0 & \left( {\cal K}|\hat{\Phi}_{S_{D}}{\cal K}\right)%
+\end{array}%
+\right)  \nonumber \\
+&&
+\end{eqnarray}%
+The various integral kernels composing the transformed kernel evaluated in
+the manner of Eqs.(\ref{transkern}) and (\ref{kerneq}) are 
+\begin{equation}
+Y^{\prime }\left( {\sf z}_{1},{\sf z}_{2}\right) =Y_{K_{OD}}^{\prime }\left( 
+{\sf z}_{1},{\sf z}_{2}\right) +Y_{K_{D}}^{\prime }\left( {\sf z}_{1},{\sf z}%
+_{2}\right) +Y_{S_{D}}^{\prime }\left( {\sf z}_{1},{\sf z}_{2}\right)
+\end{equation}%
+and are given by 
+\begin{eqnarray}
+Y_{K_{OD}}^{\prime }\left( {\sf z}_{1},{\sf z}_{2}\right) &=&\left( {\sf z}%
+_{1},{\sf z}_{2}|\hat{T}\breve{Y}_{K_{OD}}\right) =\left( {\sf z}_{1},{\sf z}%
+_{2}|\hat{T}_{K_{OD}}\breve{Y}_{K_{OD}}\right)  \nonumber \\
+&=&\int \left\{ P_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) +\Phi _{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) \right\} Y_{K_{OD}}\left( {\sf z}_{3},{\sf z}_{4}\right) d{\sf z}%
+_{3}d{\sf z}_{4}  \nonumber \\
+&=&\left( 1+\phi \left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}}\left(
+1+\phi \left( {\sf z}_{2}\right) \right) ^{\frac{1}{2}}e^{i\left( \omega
+\left( {\sf z}_{1}\right) -\omega \left( {\sf z}_{2}\right) \right) }\left(
+1-\delta \left( {\sf z}_{1}-{\sf z}_{2}\right) \right) Y_{K_{OD}}\left( {\sf %
+z}_{1},{\sf z}_{2}\right)
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+Y_{d}^{\prime }\left( {\sf z}_{1},{\sf z}_{1}\right) &=&\left( {\sf z}_{1},%
+{\sf z}_{1}|\hat{T}\breve{Y}_{d}\right) =\left\langle {\sf z}_{1}|\breve{T}%
+\breve{Y}_{d}\breve{T}^{\dagger }{\sf z}_{1}\right\rangle  \nonumber \\
+&=&\int \left\{ P_{d}\left( {\sf z}_{1},{\sf z}_{1},{\sf z}_{3},{\sf z}%
+_{3}\right) +\Phi _{K_{d}}\left( {\sf z}_{1},{\sf z}_{1},{\sf z}_{3},{\sf z}%
+_{3}\right) \right\} Y_{d}\left( {\sf z}_{3},{\sf z}_{3}\right) d{\sf z}_{3}
+\nonumber \\
+&=&T\left( {\sf z}_{1}\right) Y_{d}\left( {\sf z}_{1},{\sf z}_{1}\right)
+T^{\ast }\left( {\sf z}_{1}\right) =\left| T\left( {\sf z}_{1}\right)
+\right| ^{2}Y_{d}\left( {\sf z}_{1}\right) =\left( 1+\phi \left( {\sf z}%
+_{1}\right) \right) Y_{d}\left( {\sf z}_{1}\right)
+\end{eqnarray}%
+which splits into two parts $\left( {\sf z}_{1},{\sf z}_{1}|\hat{T}\breve{Y}%
+_{d}\right) =\left( {\sf z}_{1},{\sf z}_{1}|\breve{Y}_{K_{D}}^{\prime
+}\right) +\left( {\sf z}_{1},{\sf z}_{1}|\breve{Y}_{S_{D}}^{\prime }\right) $
+given by 
+\begin{eqnarray}
+\left( {\sf z}_{1},{\sf z}_{1}|\breve{Y}_{K_{D}}^{\prime }\right) &=&\int
+\left\{ \left( \delta \left( {\sf z}_{1}-{\sf z}_{2}\right) +\Phi
+_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) \right) Y_{K_{D}}\left( {\sf z}%
+_{2}\right) +\Phi _{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right)
+Y_{S_{D}}\left( {\sf z}_{2}\right) \right\} d{\sf z}_{2}  \nonumber \\
+\left( {\sf z}_{1},{\sf z}_{1}|\breve{Y}_{S_{D}}^{\prime }\right) &=&\int
+\left( \delta \left( {\sf z}_{1}-{\sf z}_{2}\right) +\Phi _{S_{D}}\left( 
+{\sf z}_{1},{\sf z}_{2}\right) \right) Y_{S_{D}}\left( {\sf z}_{2}\right) d%
+{\sf z}_{2}
+\end{eqnarray}%
+Collecting together the diagonal terms from the last two equations one
+obtains 
+\begin{eqnarray}
+\left( {\sf z}_{1},{\sf z}_{1}|\hat{T}\breve{Y}_{d}\right) &=&\left( 1+\phi
+\left( {\sf z}_{1}\right) \right) Y_{d}\left( {\sf z}_{1}\right)  \nonumber
+\\
+&=&\left\{ Y_{K_{D}}\left( {\sf z}_{1}\right) +Y_{S_{D}}\left( {\sf z}%
+_{1}\right) \right\} +\int \left\{ \Phi _{K_{D}}\left( {\sf z}_{1},{\sf z}%
+_{2}\right) Y_{K_{D}}\left( {\sf z}_{2}\right) \right.  \nonumber \\
+&&+\left. \Phi _{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right)
+Y_{S_{D}}\left( {\sf z}_{2}\right) +\Phi _{K_{D}S_{D}}\left( {\sf z}_{1},%
+{\sf z}_{2}\right) Y_{S_{D}}\left( {\sf z}_{2}\right) \right\} d{\sf z}_{2}
+\end{eqnarray}%
+which gives the important relationship 
+\begin{eqnarray}
+\phi \left( {\sf z}_{1}\right) Y_{d}\left( {\sf z}_{1}\right) &=&\int
+\left\{ \Phi _{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) Y_{K_{D}}\left( 
+{\sf z}_{2}\right) \right.  \nonumber \\
+&&+\left. \Phi _{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right)
+Y_{S_{D}}\left( {\sf z}_{2}\right) +\Phi _{S_{D}}\left( {\sf z}_{1},{\sf z}%
+_{2}\right) Y_{S_{D}}\left( {\sf z}_{2}\right) \right\} d{\sf z}_{2}
+\end{eqnarray}%
+The projected integral kernels of $\hat{\Phi}$ in the preceding equations
+are given in Eq.$\left( \ref{kerproj}\right) $. To summarize, the action of
+the $\hat{T}$ {\it super multiplication operator }(in the coordinate
+representation) on an operator $\breve{Y}=\breve{Y}_{K_{OD}}+\breve{Y}_{d}=%
+\breve{Y}_{K_{OD}}+\breve{Y}_{K_{D}}+\breve{Y}_{S_{D}}$, is given by%
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\left( {\cal K}|\breve{Y}_{K_{OD}}^{\prime }\right) \\ 
+\left( {\cal K}|\breve{Y}_{K_{D}}^{\prime }\right) \\ 
+\left( {\cal K}|\breve{Y}_{S_{D}}^{\prime }\right)%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+\left( {\cal K}|\hat{T}_{K_{OD}}{\cal K}\right) & 0 & 0 \\ 
+0 & \left( {\cal K}|\hat{T}_{K_{D}}{\cal K}\right) & \left( {\cal K}|\hat{T}%
+_{S_{D}K_{OD}}{\cal K}\right) \\ 
+0 & 0 & \left( {\cal K}|\hat{T}_{S_{D}}{\cal K}\right)%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\left( {\cal K}|\breve{Y}_{K_{OD}}\right) \\ 
+\left( {\cal K}|\breve{Y}_{K_{D}}\right) \\ 
+\left( {\cal K}|\breve{Y}_{S_{D}}\right)%
+\end{array}%
+\right) =  \nonumber \\
+&&\left\{ \left( 
+\begin{array}{ccc}
+\left( {\cal K}|\hat{P}_{K_{OD}}{\cal K}\right) & 0 & 0 \\ 
+0 & \left( {\cal K}|\hat{P}_{K_{D}}{\cal K}\right) & 0 \\ 
+0 & 0 & \left( {\cal K}|\hat{P}_{S_{D}}{\cal K}\right)%
+\end{array}%
+\right) +\right.  \nonumber \\
+&&\qquad \qquad \qquad \left. \left( 
+\begin{array}{ccc}
+\left( {\cal K}|\hat{\Phi}_{K_{OD}}{\cal K}\right) & 0 & 0 \\ 
+0 & \left( {\cal K}|\hat{\Phi}_{K_{D}}{\cal K}\right) & \left( {\cal K}|\hat{%
+\Phi}_{S_{D}K_{OD}}{\cal K}\right) \\ 
+0 & 0 & \left( {\cal K}|\hat{\Phi}_{S_{D}}{\cal K}\right)%
+\end{array}%
+\right) \right\} \left( 
+\begin{array}{c}
+\left( {\cal K}|\breve{Y}_{K_{OD}}\right) \\ 
+\left( {\cal K}|\breve{Y}_{K_{D}}\right) \\ 
+\left( {\cal K}|\breve{Y}_{S_{D}}\right)%
+\end{array}%
+\right)
+\end{eqnarray}%
+and 
+\begin{equation}
+\left( {\cal K}|\breve{Y}^{\prime }\right) =\left( {\cal K}|\breve{Y}%
+_{K_{OD}}^{\prime }\right) +\left( {\cal K}|\breve{Y}_{K_{D}}^{\prime
+}\right) +\left( {\cal K}|\breve{Y}_{S_{D}}^{\prime }\right)
+\end{equation}%
+where 
+\begin{eqnarray}
+&&\left( {\sf z}_{1},{\sf z}_{1}|\breve{Y}_{K_{D}}^{\prime }\right) +\left( 
+{\sf z}_{1},{\sf z}_{1}|\breve{Y}_{S_{D}}^{\prime }\right) =\left( 1+\phi
+\left( {\sf z}_{1}\right) \right) Y_{d}\left( {\sf z}_{1}\right)  \nonumber
+\\
+&&\qquad \qquad \qquad \qquad =Y_{K_{D}}^{\prime }\left( {\sf z}_{1}\right)
++Y_{S_{D}}^{\prime }\left( {\sf z}_{1}\right)  \nonumber \\
+&&\qquad \qquad \qquad \qquad +\Delta _{K_{D}}Y_{K_{D}}\left( {\sf z}%
+_{1}\right) +\Delta _{K_{D}S_{D}}Y_{S_{D}}\left( {\sf z}_{1}\right) +\Delta
+_{S_{D}}Y_{S_{D}}\left( {\sf z}_{1}\right)  \label{diagker}
+\end{eqnarray}%
+where the incremental change functions are 
+\begin{eqnarray}
+\Delta _{K_{D}}Y_{K_{D}}\left( {\sf z}_{1}\right) &=&\int \Phi
+_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) Y_{K_{D}}\left( {\sf z}%
+_{2}\right) d{\sf z}_{2}  \nonumber \\
+\Delta _{K_{D}S_{D}}Y_{S_{D}}\left( {\sf z}_{1}\right) &=&\int \Phi
+_{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) Y_{S_{D}}\left( {\sf z}%
+_{2}\right) d{\sf z}_{2}  \nonumber \\
+\Delta _{S_{D}}Y_{S_{D}}\left( {\sf z}_{1}\right) &=&\int \Phi
+_{S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) Y_{S_{D}}\left( {\sf z}%
+_{2}\right) d{\sf z}_{2}  \label{incrfun}
+\end{eqnarray}%
+Note that in order for $\hat{T}$ $=I+\hat{\Phi}$ to be a vector bundle map :$%
+{\frak B}_{vec}\rightarrow {\frak B}_{vec}$ the function $\phi $ defining
+the integral kernel of $\hat{\Phi}$ must have the following properties 
+\begin{equation}
+\left( \breve{s}_{i}^{d}|\hat{\Phi}\breve{k}_{\kappa }\right) =\int s_{\iota
+}^{d\ast }\left( {\sf z}\right) \phi \left( {\sf z}\right) k_{\kappa }\left( 
+{\sf z}\right) d{\sf z}=0\quad \forall \iota ,\kappa
+\end{equation}
+
+\subsection{Intra and Inter Equivalence Class Transformations}
+
+\subsubsection{Intra Equivalence Class Transformations}
+
+In this section we utilize the decomposition of trace class operators 
+\begin{equation}
+\breve{Y}\left( f\right) =\breve{Y}_{K_{OD}}+\breve{Y}_{K_{D}}+\breve{\Gamma}%
+\left( f\right)
+\end{equation}%
+adapted to the vector bundle structure of ${\frak B}_{vec}$, where $\Xi
+\left( \breve{Y}\left( f\right) \right) =\Xi \left( \breve{\Gamma}\left(
+f\right) \right) $ and $\Xi $ is an isomorphism from $S_{D}$ to $L_{1}\left( 
+{\tt Z}\right) $. The equivalence class $\left[ f\right] _{N}$ is then given
+by 
+\begin{equation}
+\left[ f\right] _{N}=\left\{ \breve{Y}_{K_{OD}}+\breve{Y}_{K_{D}}+\breve{%
+\Gamma}\left( f\right) ;\breve{Y}_{K_{OD}}\in K_{OD},\breve{Y}_{K_{D}}\in
+K_{D}\right\}
+\end{equation}%
+Transformations, $\hat{T}_{\ker },$ that map $\ker \Xi \rightarrow \ker \Xi $%
+, where $\ker \Xi =K_{OD}\oplus K_{D}$, and have no effect on $S_{D\text{ }}$
+are of the form 
+\begin{eqnarray}
+\hat{T}_{\ker } &=&\sum_{1\leq \kappa ,\iota \leq \infty }\left\{ {\rm T}%
+_{\ker K_{OD}\kappa \iota }\left| \breve{h}_{\kappa }\right) \left( \breve{h}%
+_{\iota }^{d}\right| +{\rm T}_{\ker K_{OD}K_{D}\kappa \iota }\left| \breve{h}%
+_{\kappa }\right) \left( \breve{k}_{\iota }^{d}\right| \right.  \nonumber \\
+&&\qquad \qquad \quad \left. +{\rm T}_{\ker K_{D}K_{OD}\kappa \iota }\left| 
+\breve{k}_{\kappa }\right) \left( \breve{h}_{\iota }^{d}\right| +{\rm T}%
+_{\ker K_{D}\kappa \iota }\left| \breve{k}_{\kappa }\right) \left( \breve{k}%
+_{\iota }^{d}\right| +\left| \breve{s}_{\kappa }\right) \left( \breve{s}%
+_{\iota }^{d}\right| \delta _{\iota \kappa }\right\} \\
+&=&\hat{P}_{S_{D}}+\sum_{1\leq \kappa ,\iota \leq \infty }\left\{ {\rm T}%
+_{\ker K_{OD}\kappa \iota }\left| \breve{h}_{\kappa }\right) \left( \breve{h}%
+_{\iota }^{d}\right| +{\rm T}_{\ker K_{OD}K_{D}\kappa \iota }\left| \breve{h}%
+_{\kappa }\right) \left( \breve{k}_{\iota }^{d}\right| \right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \left. \,+{\rm T}_{\ker
+K_{D}K_{OD}\kappa \iota }\left| \breve{k}_{\kappa }\right) \left( \breve{h}%
+_{\iota }^{d}\right| +{\rm T}_{\ker K_{D}\kappa \iota }\left| \breve{k}%
+_{\kappa }\right) \left( \breve{k}_{\iota }^{d}\right| \right\} \\
+&=&\int {\rm T}_{\ker }\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) |{\sf z}_{1},{\sf z}_{2}{\bf )}\left( {\sf z}_{3},{\sf z}%
+_{4}\right| d{\sf z}_{1}d{\sf z}_{2}d{\sf z}_{3}d{\sf z}_{4}
+\end{eqnarray}%
+and map any given element of $\left[ f\right] _{N}$ into all others in $%
+\left[ f\right] _{N}$.
+
+Invertible transformations have the added property that they can be
+expressed as exponentials 
+\begin{equation}
+\hat{T}_{\ker }=e^{\sum_{1\leq \kappa ,\iota \leq \infty }\left\{ {\rm %
+\Upsilon }_{\ker K_{OD}\kappa \iota }\left| \breve{h}_{\kappa }\right)
+\left( \breve{h}_{\iota }^{d}\right| +{\rm \Upsilon }_{\ker
+K_{OD}K_{D}\kappa \iota }\left| \breve{h}_{\kappa }\right) \left( \breve{k}%
+_{\iota }^{d}\right| +{\rm \Upsilon }_{\ker K_{D}K_{OD}\kappa \iota }\left| 
+\breve{k}_{\kappa }\right) \left( \breve{h}_{\iota }^{d}\right| +{\rm %
+\Upsilon }_{\ker K_{D}\kappa \iota }\left| \breve{k}_{\kappa }\right) \left( 
+\breve{k}_{\iota }^{d}\right| \right\} }  \label{tker}
+\end{equation}%
+and form a representation of the group $GL\left( \ker \Xi \right) ,$ which
+acts homogeneously\cite{homogen} in $\left[ f\right] _{N}$. More generally
+we can form a representation of $GL\left( \ker \Xi \right) $ by invertible
+super operators of the form 
+\begin{equation}
+\hat{T}_{\ker }^{\prime }=e^{\sum_{1\leq \iota ,\kappa \leq \infty }{\rm %
+\Upsilon }_{\ker S_{D}}\left( \hat{T}_{\ker }\right) _{\kappa \iota }\left| 
+\breve{s}_{\kappa }\right) \left( \breve{s}_{\iota }^{d}\right| }\hat{T}%
+_{\ker }=\hat{t}\left( \hat{T}_{\ker }\right) \hat{T}_{\ker }
+\end{equation}%
+for coefficients $\left\{ {\rm \Upsilon }_{\ker S_{D}}\left( \hat{T}_{\ker
+}\right) _{\kappa \iota }\right\} $ that are determined by the $\hat{T}%
+_{\ker }$ given in Eq.$\left( \ref{tker}\right) $ and that satisfy the group
+property%
+\begin{equation}
+\hat{t}\left( \hat{T}_{\ker 1}\right) \hat{t}\left( \hat{T}_{\ker 2}\right) =%
+\hat{t}\left( \hat{T}_{\ker 1}\hat{T}_{\ker 2}\right)
+\end{equation}%
+but such transformations would not be intra fiber transformations. The
+matrix coefficients $\left\{ {\rm \Upsilon }_{\ker K_{OD}\kappa \iota },{\rm %
+\Upsilon }_{\ker K_{OD}K_{D}\kappa \iota },{\rm \Upsilon }_{\ker
+K_{D}K_{OD}\kappa \iota },{\rm \Upsilon }_{\ker K_{D}\kappa \iota }\right\} $
+parameterize the equivalence class in a redundant manner (i.e. two or more
+sets of parameters are associated with a single element), however if we
+start from a reference element of $\left[ f\right] _{N}$, which has the
+decomposition, 
+\begin{equation}
+\breve{Y}_{ref}\left( f\right) =\breve{Y}_{refK_{OD}}+\breve{Y}_{refK_{D}}+%
+\breve{\Gamma}\left( f\right)
+\end{equation}%
+we can generate all of $\left[ f\right] _{N}$ by acting on $\left| \breve{Y}%
+_{ref}\left( f\right) \right) $ with the transformations 
+\begin{equation}
+\hat{T}_{\ker \breve{Y}_{ref}}=e^{\sum_{1\leq \kappa \leq \infty }\left\{
+\Upsilon _{\ker K_{OD}\kappa \iota }\left| \breve{h}_{\kappa }\right) \left( 
+\breve{Y}_{refK_{OD}}^{d}\right| +\Upsilon _{\ker K_{D}\kappa \iota }\left| 
+\breve{k}_{\kappa }\right) \left( \breve{Y}_{refK_{D}}^{d}\right| \right\} }
+\label{parker}
+\end{equation}%
+that form a coset as described in the summary section, where $\breve{h}_{1}=%
+\breve{Y}_{refK_{OD}}$ and $\breve{k}_{1\iota }=\breve{Y}_{refK_{D}}$. This
+gives a non redundant parameterization for the action of the group $GL\left(
+\ker \Xi \right) $ on the element $\breve{Y}_{ref}\left( f\right) $, which
+produces all the members of $\left[ f\right] _{N}$.
+
+We now restrict attention to the subgroup, ${\frak G}_{fib}{\frak \subset }%
+GL\left( \ker \Xi \right) $, of super multiplication operators, (in the
+coordinate representation){\it \ }that can be represented by super operators
+of the form $\hat{T}_{fib}=\hat{T}_{fibK_{OD}{\rm \ }}+\hat{T}_{fibK_{D}{\rm %
+\ }}+\hat{P}_{S_{D}}$ where 
+\begin{eqnarray}
+\hat{T}_{fibK_{OD}{\rm \ }} &=&\hat{P}_{K_{OD}}+\hat{\Phi}_{K_{OD}} 
+\nonumber \\
+\hat{T}_{fibK_{D}{\rm \ }} &=&\hat{P}_{K_{D}}+\hat{\Phi}_{K_{D}}
+\end{eqnarray}%
+that map {\it pure states to pure states} and are generated by the functions 
+$\phi _{K_{D}}$ and a fixed $\omega $ for $\hat{T}_{fibK_{OD}{\rm \ }}$,
+that have the properties 
+\begin{eqnarray}
+\left( \breve{s}_{i}^{d}|\hat{\Phi}_{K_{D}}\breve{s}_{\kappa }\right)
+&=&\int s_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{K_{D}}\left( {\sf z}%
+\right) s_{\kappa }\left( {\sf z}\right) d{\sf z}=0\quad \forall \iota
+,\kappa  \nonumber \\
+\left( \breve{k}_{i}^{d}|\hat{\Phi}_{K_{D}}\breve{s}_{\kappa }\right)
+&=&\int k_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{K_{D}}\left( {\sf z}%
+\right) s_{\kappa }\left( {\sf z}\right) d{\sf z}=0\quad \forall \iota
+,\kappa  \nonumber \\
+\left( \breve{s}_{i}^{d}|\hat{\Phi}_{K_{D}}\breve{k}_{\kappa }\right)
+&=&\int s_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{K_{D}}\left( {\sf z}%
+\right) k_{\kappa }\left( {\sf z}\right) d{\sf z}=0\quad \forall \iota
+,\kappa  \nonumber \\
+\left( \breve{k}_{i}^{d}|\hat{\Phi}_{K_{D}}\breve{k}_{\kappa }\right)
+&=&\int k_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{K_{D}}\left( {\sf z}%
+\right) k_{\kappa }\left( {\sf z}\right) d{\sf z}\neq 0\quad \text{for some }%
+\iota ,\kappa  \label{phicond}
+\end{eqnarray}%
+Functions with these properties can be expanded as 
+\begin{eqnarray}
+\phi _{K_{D}}\left( {\sf z}\right) &=&\sum_{1\leq \kappa ,\iota \leq \infty
+}\phi _{K_{D}\kappa \iota }\left( {\sf z},{\sf z}|\breve{k}_{\kappa }\right)
+\left( \breve{k}_{\iota }^{d}|{\sf z},{\sf z}\right)  \nonumber \\
+&=&\int P_{K_{D}}\left( {\sf z},{\sf z}^{\prime }\right) \phi _{K_{D}}\left( 
+{\sf z}^{\prime }\right) P_{K_{D}}\left( {\sf z}^{\prime },{\sf z}\right) d%
+{\sf z}^{\prime }  \nonumber \\
+\phi _{K_{D}\kappa \iota } &=&\int k_{\kappa }^{d\ast }\left( {\sf z}\right)
+\phi _{K_{D}}\left( {\sf z}\right) k_{\iota }\left( {\sf z}\right) d{\sf z}
+\label{PhiKD}
+\end{eqnarray}%
+However note that it is {\bf not }sufficient for functions to have
+expansions of the form Eq.$\left( \ref{PhiKD}\right) $ in order for them to
+satisfy the conditions expressed in Eq.$\left( \ref{phicond}\right) $, it is
+only necessary. This can be seen, for instance, by considering the following
+expansions with arbitrary $\phi _{K_{D}\kappa \iota }$ 
+\begin{eqnarray}
+&&\int s_{r}^{d\ast }\left( {\sf z}\right) \sum_{1\leq \kappa ,\iota \leq
+\infty }\phi _{K_{D}\kappa \iota }\left( {\sf z},{\sf z}|\breve{k}_{\kappa
+}\right) \left( \breve{k}_{\iota }^{d}|{\sf z},{\sf z}\right) s_{s}\left( 
+{\sf z}\right) d{\sf z}  \nonumber \\
+&=&\int \sum_{1\leq \kappa ,\iota \leq \infty }\phi _{K_{D}\kappa \iota
+}\left( \breve{s}_{r}^{d}|{\sf z},{\sf z}\right) \left( {\sf z},{\sf z}|%
+\breve{k}_{\kappa }\right) \left( \breve{k}_{\iota }^{d}|{\sf z},{\sf z}%
+\right) \left( {\sf z},{\sf z}|\breve{s}_{s}\right) d{\sf z}
+\end{eqnarray}%
+which {\it might or might not} equal zero. The super operator $\hat{\Phi}%
+_{K_{D}}$ is defined in terms of functions satisfying Eq.$\left( \ref%
+{phicond}\right) $by the integral kernel 
+\begin{equation}
+\Phi _{K_{D}}\left( {\sf z}_{1,}{\sf z}_{2}\right) =\phi _{K_{D}}\left( {\sf %
+z}_{1}\right) \delta \left( {\sf z}_{1}-{\sf z}_{2}\right)
+\end{equation}%
+The diagonal part of the transformed integral kernel $\left( {\sf z}_{1},%
+{\sf z}_{1}|\breve{Y}_{d}^{\prime }\right) =\left( {\sf z}_{1},{\sf z}_{1}|%
+\hat{T}_{fib}\breve{Y}_{d}\right) $ can be developed as 
+\begin{eqnarray}
+&&\left( {\sf z}_{1},{\sf z}_{1}|\breve{Y}_{K_{D}}^{\prime }\right) +\left( 
+{\sf z}_{1},{\sf z}_{1}|\breve{\Gamma}\left( f\right) \right) =  \nonumber \\
+&&\qquad \qquad \left( 1+\phi _{K_{D}}\left( {\sf z}_{1}\right) \right)
+Y_{d}\left( {\sf z}_{1}\right) =  \nonumber \\
+&&Y_{K_{D}}\left( {\sf z}_{1}\right) +\Gamma \left( f\right) \left( {\sf z}%
+_{1}\right) +\Delta _{K_{D}}Y_{K_{D}}\left( {\sf z}_{1}\right) +\Delta
+_{K_{D}S_{D}}\Gamma \left( f\right) \left( {\sf z}_{1}\right) +\Delta
+_{S_{D}}\Gamma \left( f\right) \left( {\sf z}_{1}\right)  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \quad =Y_{K_{D}}\left( {\sf z}%
+_{1}\right) +\Gamma \left( f\right) \left( {\sf z}_{1}\right) +\Delta
+_{K_{D}}Y_{K_{D}}\left( {\sf z}_{1}\right)  \label{diagexp}
+\end{eqnarray}%
+the last line in the above equation results from 
+\begin{eqnarray}
+\Phi _{K_{D}S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) &=&\int
+P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{1}^{\prime }\right) \phi _{K_{D}}\left( 
+{\sf z}_{1}^{\prime }\right) P_{S_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}\right) d{\sf z}_{1}^{\prime }=0  \label{KDSD} \\
+\Phi _{S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) &=&\int P_{S_{D}}\left( 
+{\sf z}_{1},{\sf z}_{1}^{\prime }\right) \phi _{K_{D}}\left( {\sf z}%
+_{1}^{\prime }\right) P_{S_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}\right) d{\sf z}_{1}^{\prime }=0  \label{PhiSD}
+\end{eqnarray}%
+and the definitions of the incremental functions Eq.$\left( \ref{incrfun}%
+\right) $. Thus Eq.$\left( \ref{diagexp}\right) $ provides the identity 
+\begin{equation}
+\phi _{K_{D}}\left( {\sf z}_{1}\right) Y_{d}\left( {\sf z}_{1}\right)
+=\Delta _{K_{D}}Y_{K_{D}}\left( {\sf z}_{1}\right) =\phi _{K_{D}}\left( {\sf %
+z}_{1}\right) Y_{K_{D}}\left( {\sf z}_{1}\right)
+\end{equation}%
+as a result of Eqs.$\left( \ref{KDSD}\right) $, $\left( \ref{PhiSD}\right) $
+and 
+\begin{eqnarray}
+\Delta _{K_{D}}Y_{K_{D}}\left( {\sf z}_{1}\right) &=&\int \Phi
+_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) Y_{K_{D}}\left( {\sf z}%
+_{2}\right) d{\sf z}_{2}  \nonumber \\
+&=&\int \phi _{K_{D}}\left( {\sf z}_{1}\right) \delta \left( {\sf z}_{1}-%
+{\sf z}_{2}\right) Y_{K_{D}}\left( {\sf z}_{2}\right) d{\sf z}_{2}=\phi
+_{K_{D}}\left( {\sf z}_{1}\right) Y_{K_{D}}\left( {\sf z}_{1}\right)
+\end{eqnarray}%
+The integral kernel of the super operator $\hat{T}_{fibK_{D}{\rm \ }}$ thus
+has the expansions 
+\begin{eqnarray}
+\hat{T}_{fibK_{D}{\rm \ }} &=&\hat{P}_{K_{D}}+\hat{\Phi}_{K_{D}} \\
+&=&\int \left\{ P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) +\phi
+_{K_{D}}\left( {\sf z}_{1}\right) \delta \left( {\sf z}_{1}-{\sf z}%
+_{2}\right) \right\} \left| {\sf z}_{1},{\sf z}_{2}\right) \left( {\sf z}%
+_{1},{\sf z}_{2}\right| d{\sf z}_{1}d{\sf z}_{2}
+\end{eqnarray}%
+The integral kernel of the super operator $\hat{T}_{fibK_{OD}{\rm \ }}=\hat{P%
+}_{K_{OD}}+\hat{\Phi}_{K_{OD}}$ which is determined up to phase by $\phi
+_{K_{D}}\left( {\sf z}_{1}\right) $ has the expansion 
+\begin{equation}
+\Phi _{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3,}{\sf z}_{4}\right)
+=\sum_{1\leq \kappa ,\iota \leq \infty }\Phi _{K_{OD}\kappa \iota }\left( 
+{\sf z}_{1},{\sf z}_{2}|\breve{h}_{\kappa }\right) \left( \breve{h}_{\iota
+}^{d}|{\sf z}_{3},{\sf z}_{4}\right)
+\end{equation}%
+where 
+\begin{equation}
+\Phi _{K_{OD}\kappa \iota }=\int k_{\kappa }^{d\ast }\left( {\sf z}_{1},{\sf %
+z}_{2}\right) \Phi _{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},{\sf z}_{3,}{\sf z%
+}_{4}\right) k_{\iota }\left( {\sf z}_{3},{\sf z}_{4}\right) d{\sf z}_{1}d%
+{\sf z}_{2}d{\sf z}_{3}d{\sf z}_{4}
+\end{equation}%
+and has the projection properties 
+\begin{eqnarray}
+&&\Phi _{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},{\sf z}_{3,}{\sf z}_{4}\right)
+\nonumber \\
+&=&\int P_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{1}^{\prime },{\sf z%
+}_{2}^{\prime }\right) \Phi _{K_{OD}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}^{\prime },{\sf z}_{3}^{\prime },{\sf z}_{4}^{\prime }\right)
+P_{K_{OD}}\left( {\sf z}_{3}^{\prime },{\sf z}_{4}^{\prime },{\sf z}_{3},%
+{\sf z}_{4}\right) d{\sf z}_{1}^{\prime }d{\sf z}_{2}^{\prime }d{\sf z}%
+_{3}^{\prime }d{\sf z}_{4}^{\prime }  \nonumber \\
+&=&\int P_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{1}^{\prime },{\sf z%
+}_{2}^{\prime }\right) \Phi _{K_{OD}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}^{\prime },{\sf z}_{3}^{\prime },{\sf z}_{4}^{\prime }\right) d{\sf z}%
+_{1}^{\prime }d{\sf z}_{2}^{\prime }  \nonumber \\
+&=&\int \Phi _{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2},{\sf z}_{3}^{\prime },%
+{\sf z}_{4}^{\prime }\right) P_{K_{OD}}\left( {\sf z}_{3}^{\prime },{\sf z}%
+_{4}^{\prime },{\sf z}_{3},{\sf z}_{4}\right) d{\sf z}_{3}^{\prime }d{\sf z}%
+_{4}^{\prime }
+\end{eqnarray}%
+The action of $\hat{T}_{fibK_{OD}}$ on $\hat{Y}_{K_{OD}}$ is given by 
+\begin{eqnarray}
+&&Y_{K_{OD}}^{\prime }\left( {\sf z}_{1,}{\sf z}_{2}\right) =\int
+T_{fibK_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
+Y_{K_{OD}}\left( {\sf z}_{3,}{\sf z}_{4}\right) d{\sf z}_{3}d{\sf z}_{4} 
+\nonumber \\
+&=&\int \left\{ P_{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) +\Phi _{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},{\sf z}_{3},{\sf z}%
+_{4}\right) \right\} Y_{K_{OD}}\left( {\sf z}_{3},{\sf z}_{4}\right) d{\sf z}%
+_{3}d{\sf z}_{4}  \nonumber \\
+&=&\int \left( 1+\phi _{K_{D}}\left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}%
+}\left( 1+\phi _{K_{D}}\left( {\sf z}_{3}\right) \right) ^{\frac{1}{2}%
+}e^{i\left( \omega \left( {\sf z}_{1}\right) -\omega \left( {\sf z}%
+_{3}\right) \right) }  \nonumber \\
+&&\times \left( 1-\delta \left( {\sf z}_{1}-{\sf z}_{2}\right) \right)
+\left( 1-\delta \left( {\sf z}_{3}-{\sf z}_{4}\right) \right) \delta \left( 
+{\sf z}_{1}-{\sf z}_{3}\right) \delta \left( {\sf z}_{3}-{\sf z}_{4}\right)
+Y_{K_{OD}}\left( {\sf z}_{3},{\sf z}_{4}\right) d{\sf z}_{3}d{\sf z}_{4} 
+\nonumber \\
+&=&\left( 1+\phi _{K_{D}}\left( {\sf z}_{1}\right) \right) ^{\frac{1}{2}%
+}\left( 1+\phi _{K_{D}}\left( {\sf z}_{2}\right) \right) ^{\frac{1}{2}%
+}\left( 1-\delta \left( {\sf z}_{1}-{\sf z}_{2}\right) \right) e^{i\left(
+\omega \left( {\sf z}_{1}\right) -\omega \left( {\sf z}_{2}\right) \right)
+}Y_{K_{OD}}\left( {\sf z}_{1},{\sf z}_{2}\right)  \label{Yprime}
+\end{eqnarray}%
+where the phase $\omega $ can be {\it arbitrarily} chosen and represents the
+factor from the subgroup ${\cal G}_{\Xi }$. The factor multiplying $%
+Y_{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2}\right) $ in the last line of Eq.$%
+\left( \ref{Yprime}\right) $ can be expanded further to give%
+\begin{equation}
+Eq.\left( \ref{Yprime}\right) =\left( 1+\Lambda _{_{K_{D}}}\left( {\sf z}%
+_{1,}{\sf z}_{2}\right) \right) e^{i\left( \omega \left( {\sf z}_{1}\right)
+-\omega \left( {\sf z}_{2}\right) \right) }\left( 1-\delta \left( {\sf z}%
+_{1}-{\sf z}_{2}\right) \right)  \label{xpan}
+\end{equation}%
+where $\Lambda _{_{K_{D}}}\left( {\sf z}_{1,}{\sf z}_{2}\right) $ is a power
+series in $\left( \phi _{K_{D}}\left( {\sf z}_{1}\right) +\phi
+_{K_{D}}\left( {\sf z}_{2}\right) +\phi _{K_{D}}\left( {\sf z}_{1}\right)
+\phi _{K_{D}}\left( {\sf z}_{2}\right) \right) $. Hence one can make the
+identification 
+\begin{equation}
+\Phi _{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
+=\Lambda _{_{K_{D}}}\left( {\sf z}_{1,}{\sf z}_{2}\right) \delta \left( {\sf %
+z}_{1}-{\sf z}_{3}\right) \delta \left( {\sf z}_{2}-{\sf z}_{4}\right)
+\left( 1-\delta \left( {\sf z}_{1}-{\sf z}_{2}\right) \right)
+\end{equation}%
+To recap the complete super operator $\hat{T}_{fib}$ is given by 
+\begin{equation}
+\hat{T}_{fib}=\hat{T}_{fibK_{OD}{\rm \ }}+\hat{T}_{fibK_{D}{\rm \ }}+\hat{P}%
+_{S_{D}}
+\end{equation}%
+where the various components are defined by the integral kernels in the
+preceding equations. One should note that in contrast to $GL\left( \ker \Xi
+\right) $ the subgroup ${\frak G}_{fib}$ does not act homogeneously on $%
+\left[ f\right] _{N}$.
+
+A non redundant parameterization for the action of the subgroup ${\frak G}%
+_{fib}$ on a reference operator $\left| \breve{k}_{ref}\right) $ is obtained
+by replacing $\phi _{K_{D}}\left( {\sf z}_{1}\right) $ in Eq.$\left( \ref%
+{PhiKD}\right) $ by functions that have the additional properties 
+\begin{equation}
+\left( \breve{k}_{i}^{d}|\hat{\Phi}_{K_{D}}\breve{k}_{\kappa }\right) =\int
+k_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{K_{D}}\left( {\sf z}\right)
+k_{\kappa }\left( {\sf z}\right) d{\sf z}=0;\quad 2\leq \kappa \leq \infty
+,1\leq \iota \leq \infty  \label{phinr}
+\end{equation}%
+where $\left| \breve{k}_{1}\right) \equiv \left| \breve{k}_{ref}\right) =%
+\hat{P}_{K_{D}}\left| \breve{Y}_{ref}\left( f\right) \right) $ to giving the
+transformation $\hat{T}_{fib}\left( \breve{k}_{ref}\right) $. The functions
+in Eq.$\left( \ref{phinr}\right) $ have the expansion 
+\begin{eqnarray}
+\phi _{refK_{D}}\left( {\sf z}_{1}\right) &=&\sum_{2\leq \kappa \leq \infty
+}\phi _{refK_{D\kappa }}\left( {\sf z}_{1},{\sf z}_{1}|\breve{k}_{\kappa
+}\right) \left( \breve{k}_{ref}^{d}|{\sf z}_{1},{\sf z}_{1}\right)  \nonumber
+\\
+\phi _{refK_{D\kappa }} &=&\int k_{\kappa }^{d\ast }\left( {\sf z}%
+_{1}\right) \phi _{K_{D}}\left( {\sf z}_{1}\right) k_{ref}\left( {\sf z}%
+_{1}\right) d{\sf z}_{1};\quad 2\leq \kappa \leq \infty  \label{refkd}
+\end{eqnarray}%
+Unlike the non redundant parameterization of $GL\left( \ker \Xi \right) $,
+which produced all of $\left[ f\right] _{N}$ from the reference operator $%
+\breve{Y}_{ref}\left( f\right) ,$ ${\frak G}_{fib}$ {\it does not. }However
+if $\breve{Y}_{ref}\left( \gamma \right) $ is a pure state this
+parameterization of {\it \ }${\frak G}_{fib}$ {\it does }produce all pure
+states belonging to $\left[ \gamma \right] _{N}$ when acting on $\left| 
+\breve{Y}_{ref}\left( \gamma \right) \right) \forall \gamma \in L_{1}\left( 
+{\tt Z}\right) _{+}$.
+
+\subsubsection{Inter Equivalence Class Transformations}
+
+We now wish to consider transformations that map between equivalence
+classes, and in particular to find a non redundant parameterization of $%
+S_{D} $ by such transformations acting on a reference element. The most
+obvious source of such transformations is the subgroup $GL\left(
+S_{D}\right) $ represented by super operators of the form 
+\begin{eqnarray}
+\hat{T}_{S}=e^{\sum_{1\leq \kappa ,\iota \leq \infty }\Upsilon _{S_{D}\kappa
+\iota }\left| \breve{s}_{\kappa }\right) \left( \breve{s}_{\iota
+}^{d}\right| } &=&\hat{P}_{K_{OD}}+\hat{P}_{K_{D}}+\hat{t}_{S}  \nonumber \\
+\hat{t}_{S} &=&\hat{P}_{S_{D}}\hat{T}_{S}\hat{P}_{S_{D}}
+\end{eqnarray}%
+More generally, however, we can form a reducible representation of $GL\left(
+S_{D}\right) $ by invertible super operators of the form 
+\begin{eqnarray}
+\hat{T}_{S} &=&\hat{T}_{K_{OD}}\left( \hat{t}_{S}\right) +\hat{P}_{K_{D}}+%
+\hat{t}_{S}  \nonumber \\
+\hat{T}_{K_{OD}}\left( \hat{t}_{S}\right) &=&\hat{P}_{K_{OD}}\hat{T}_{S}\hat{%
+P}_{K_{OD}}
+\end{eqnarray}%
+which are both inter fiber and intra fiber, where $\hat{T}_{K_{OD}}$ is a
+representation of $GL\left( S_{D}\right) $. Considering these more general
+representations of $GL\left( S_{D}\right) $ allows us to construct non
+redundant parameterizations of $S_{D}$ using the a coset of the subgroup $%
+{\frak G}_{den}\subset $ $GL\left( S_{D}\right) $ of super multiplication
+operators (in the coordinate representation),{\it \ }%
+\begin{equation}
+\hat{T}_{den}\left( \phi _{S_{D}}\right) =\hat{T}_{K_{OD}{\rm \ }}\left(
+\phi _{S_{D}},\omega \right) +\hat{P}_{K_{D}}+\hat{T}_{S_{D}{\rm \ }}\left(
+\phi _{S_{D}}\right)  \label{tden}
+\end{equation}%
+generated by a $\phi _{S_{D}}$, where $\omega $ can be chosen to be zero,
+that have the properties 
+\begin{eqnarray}
+\left( \breve{s}_{i}^{d}|\hat{\Phi}_{S_{D}}\breve{s}_{ref}\right) &=&\int
+s_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{S_{D}}\left( {\sf z}\right)
+s_{ref}\left( {\sf z}\right) d{\sf z}\neq 0;\quad \text{for some }\iota
+;1\leq \iota \leq \infty  \nonumber \\
+\left( \breve{s}_{i}^{d}|\hat{\Phi}_{S_{D}}\breve{s}_{\kappa }\right)
+&=&\int s_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{S_{D}}\left( {\sf z}%
+\right) s_{\kappa }\left( {\sf z}\right) d{\sf z}=0;\quad 1\leq \iota \leq
+\infty ,2\leq \kappa \leq \infty  \nonumber \\
+\left( \breve{k}_{i}^{d}|\hat{\Phi}_{S_{D}}\breve{s}_{\kappa }\right)
+&=&\int k_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{S_{D}}\left( {\sf z}%
+\right) s_{\kappa }\left( {\sf z}\right) d{\sf z}=0;\quad 1\leq \iota
+,\kappa \leq \infty  \nonumber \\
+\left( \breve{s}_{i}^{d}|\hat{\Phi}_{S_{D}}\breve{k}_{\kappa }\right)
+&=&\int s_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{S_{D}}\left( {\sf z}%
+\right) k_{\kappa }\left( {\sf z}\right) d{\sf z}=0;\quad 1\leq \iota
+,\kappa \leq \infty  \nonumber \\
+\left( \breve{k}_{i}^{d}|\hat{\Phi}_{S_{D}}\breve{k}_{\kappa }\right)
+&=&\int k_{\iota }^{d\ast }\left( {\sf z}\right) \phi _{S_{D}}\left( {\sf z}%
+\right) k_{\kappa }\left( {\sf z}\right) d{\sf z}=0;\quad 1\leq \iota
+,\kappa \leq \infty
+\end{eqnarray}%
+{\it together} with a fixed choice of phase $\omega $ for $\hat{T}_{K_{OD}%
+{\rm \ }}\left( \phi _{S_{D}}\right) $, where $\breve{s}_{1}=\breve{\Gamma}%
+\left( f_{ref}\right) =\hat{P}_{S_{D}}\breve{Y}_{ref}$ \ and $\Xi \left( 
+\breve{Y}_{ref}\right) =f_{ref}$. This coset is described in the summary
+section. The function $\phi _{S_{D}}$ has the expansion and properties 
+\begin{eqnarray}
+\phi _{S_{D}}\left( {\sf z}\right) &=&\sum_{1\leq \kappa \leq \infty }\phi
+_{S_{D}\kappa ref}\left( {\sf z},{\sf z}|\breve{s}_{\kappa }\right) \left( 
+\breve{\Gamma}\left( f_{ref}\right) ^{d}|{\sf z},{\sf z}\right)  \nonumber \\
+&=&\int P_{S_{D}}\left( {\sf z},{\sf z}^{\prime }\right) \phi _{S_{D}}\left( 
+{\sf z}^{\prime }\right) P_{S_{D}}\left( {\sf z}^{\prime },{\sf z}\right) d%
+{\sf z}^{\prime }  \nonumber \\
+\phi _{S_{D}\kappa ref} &=&\int s_{\kappa }^{d\ast }\left( {\sf z}\right)
+\phi _{S_{D}}\left( {\sf z}\right) \breve{\Gamma}\left( f_{ref}\right)
+\left( {\sf z}\right) d{\sf z}
+\end{eqnarray}%
+The super operators $\hat{T}_{den}\left( \phi _{S_{D}}\right) $ generate
+reference elements for all equivalence classes in a unique fashion and form
+a non redundant parameterization for the action of the subgroup ${\frak G}%
+_{den}$ {\it for a fixed choice of phase function }$\omega $ i.e. 
+\begin{equation}
+\hat{T}_{den}\left( \phi _{S_{D}}\right) :\left[ f_{ref}\right]
+_{N}\rightarrow \left[ f^{\prime }\right] _{N};\quad f\neq f^{\prime }
+\end{equation}%
+The integral kernels of the super operators appearing in Eq.$\left( \ref%
+{tden}\right) $, with suitable replacements of $\phi _{K_{D}}$ by $\phi
+_{S_{D}}$, are given by%
+\begin{eqnarray}
+T_{K_{OD}{\rm \ }}\left( \phi _{S_{D}}\right) \left( {\sf z}_{1,}{\sf z}_{2},%
+{\sf z}_{3},{\sf z}_{4}\right) &=&P_{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},%
+{\sf z}_{3},{\sf z}_{4}\right) +\Phi _{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},%
+{\sf z}_{3},{\sf z}_{4}\right)  \nonumber \\
+\Phi _{K_{OD}}\left( {\sf z}_{1,}{\sf z}_{2},{\sf z}_{3},{\sf z}_{4}\right)
+&=&\Lambda _{_{K_{S}}}\left( {\sf z}_{1},{\sf z}_{2}\right) \delta \left( 
+{\sf z}_{1}-{\sf z}_{3}\right) \delta \left( {\sf z}_{2}-{\sf z}_{4}\right)
+\left( 1-\delta \left( {\sf z}_{1}-{\sf z}_{2}\right) \right)  \label{tden2}
+\end{eqnarray}%
+(notice the subscript $K_{S\text{ }}$ in the definition of $\Lambda
+_{_{K_{S}}}$) and 
+\begin{equation}
+T_{S_{D}{\rm \ }}\left( \phi _{K_{S}}\right) \left( {\sf z}_{1,}{\sf z}%
+_{2}\right) =P_{K_{S}}\left( {\sf z}_{1,}{\sf z}_{2}\right) +\phi
+_{K_{S}}\left( {\sf z}_{1}\right) \delta \left( {\sf z}_{1}-{\sf z}%
+_{2}\right)  \label{tden3}
+\end{equation}%
+If $\left| \breve{Y}_{ref}\right) $ is a pure state then $\hat{T}%
+_{den}\left( \phi _{S_{D}}\right) \left| \breve{Y}_{ref}\right) $ is also a
+pure state different from $\left| \breve{Y}_{ref}\right) $. The set $\left\{ 
+\hat{T}_{den}\left( \phi _{S_{D}}\right) \breve{Y}_{ref};\quad \forall \phi
+_{S_{D}},\text{ fixed }\omega \right\} $ does not produce all pure states 
+{\it but it does contain a unique pure state representative for each
+equivalence class. }{\bf In the vector bundle classification of }${\cal B}%
+_{1}\left( {\cal H}^{N}\right) $ {\bf these different} {\bf paths of pure
+state represenatives provide different representations of the base of the
+vector bundle }${\frak B}_{vect}$.
+
+\section{Summary}
+
+We now summarize the salient features of this document and relate them to
+ideas introduced in the main body of paper I. The group of transformation, $%
+{\frak G}_{\Xi }$, that preserves the vector bundle structure, ${\frak B}%
+_{vect}$, of ${\cal B}_{1}\left( {\cal H}^{N}\right) $ is composed of maps
+that have the decomposition 
+\begin{equation}
+{\frak \hat{T}}{\frak =}{\frak \hat{T}}_{K_{OD}}+{\frak \hat{T}}_{K_{D}}+%
+{\frak \hat{T}}_{S_{D}}+{\frak \hat{T}}_{K_{D}S_{D}}+{\frak \hat{T}}%
+_{K_{OD}S_{D}}+{\frak \hat{T}}_{K_{OD}K_{D}}+{\frak \hat{T}}_{K_{D}K_{OD}}
+\end{equation}%
+and refer to the direct decomposition of ${\cal B}_{1}\left( {\cal H}%
+^{N}\right) $%
+\begin{equation}
+{\cal B}_{1}\left( {\cal H}^{N}\right) =\ker \Xi \oplus S_{D}=K_{OD}\oplus
+K_{D}\oplus S_{D}
+\end{equation}%
+The subgroup $GL\left( \ker \Xi \right) $ maps each equivalence class to
+itself and are thus intra fiber transformations, while the subgroup $%
+GL\left( S_{D}\right) $, {\it in general},{\it \ }maps between equivalence
+classes, but contains the subgroup, ${\frak G}_{den}$, of inter fiber
+transformations. These subgroups can be used to give non redundant
+parameterizations of $\ker \Xi $ and $S_{D}\equiv $ $\ker \Xi ^{c}$ by
+choosing a reference state $\breve{Y}_{ref}\in {\cal B}_{1}\left( {\cal H}%
+^{N}\right) $, where $\Xi \left( \breve{Y}_{ref}\right) =f_{ref}$, which can
+be decomposed as 
+\begin{eqnarray}
+Y_{ref} &=&Y_{ref\,K_{OD}}+Y_{ref\,K_{D}}+\breve{\Gamma}\left( f_{ref}\right)
+\\
+\left| \breve{\Gamma}\left( f_{ref}\right) \right) &=&\hat{P}_{S_{D}}\left| 
+\breve{Y}_{ref}\right)  \label{ref}
+\end{eqnarray}%
+and then forming left cosets, ${\frak Co}_{\ker \Xi }$ and ${\frak Co}%
+_{S_{D}}$ of $GL\left( \ker \Xi \right) $ and $GL\left( S_{D}\right) $ with
+respect to the isotropy subgroups of $\left| \breve{Y}_{ref\,K_{D}}\right) $
+and $\left| \breve{\Gamma}\left( f_{ref}\right) \right) $ respectively in
+the following manner. 
+\begin{eqnarray}
+{\frak G}_{Y_{ref\,d}} &=&\left\{ {\frak \hat{T};\hat{T}}\left| \breve{Y}%
+_{ref\,K_{D}}\right) =\left| \breve{Y}_{ref\,K_{D}}\right) \right\} 
+\nonumber \\
+{\frak Co}_{\ker \Xi } &=&GL\left( \ker \Xi \right) /{\frak G}_{\breve{Y}%
+_{ref\,K_{D}}} \\
+{\frak G}_{\Gamma \left( f_{ref}\right) } &=&\left\{ {\frak \hat{T};\hat{T}}%
+\left| \breve{\Gamma}\left( f_{ref}\right) \right) =\left| \breve{\Gamma}%
+\left( f_{ref}\right) \right) \right\}  \nonumber \\
+{\frak Co}_{S_{D}} &=&GL\left( S_{D}\right) /{\frak G}_{\Gamma \left(
+f_{ref}\right) }
+\end{eqnarray}%
+One can see that the parameterization of $\ker \Xi $ given by ${\frak C}%
+_{\ker \Xi }$, which does not depend on $f$ , (but it does implicitly if a
+reference $\breve{Y}_{ref}$ is used as in Eq.$\left( \ref{ref}\right) $
+rather than a reference $\breve{Y}_{ref\,K_{D}}$ that is totally contained
+in $\ker \Xi $), and is provided by Eq.$\left( \ref{parker}\right) $.
+
+\begin{itemize}
+\item If $\phi \ $defines a vector bundle map then $\int P_{S_{D}}\left( 
+{\sf z}_{1},{\sf z}_{1}^{\prime }\right) \phi \left( {\sf z}_{1}^{\prime
+}\right) P_{K_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}_{2}\right) d{\sf z}%
+_{1}^{\prime }=0\quad \forall {\sf z}_{1},{\sf z}_{2}$
+
+If $\phi \bot _{s}Y\quad \forall Y\in {\cal B}_{1}\left( {\cal H}^{N}\right) 
+$ then $\Phi _{S_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) =\int
+P_{S_{D}}\left( {\sf z}_{1},{\sf z}_{1}^{\prime }\right) \phi \left( {\sf z}%
+_{1}^{\prime }\right) P_{S_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}\right) d{\sf z}_{1}^{\prime }=0\quad \forall {\sf z}_{1},{\sf z}_{2}$
+
+If $\phi \bot _{s}Y\quad \forall Y\in K_{D}$ then $\int P_{S_{D}}\left( {\sf %
+z}_{1},{\sf z}_{1}^{\prime }\right) \phi \left( {\sf z}_{1}^{\prime }\right)
+P_{K_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}_{2}\right) d{\sf z}%
+_{1}^{\prime }=0\quad \forall {\sf z}_{1},{\sf z}_{2}\Longleftrightarrow $ $%
+\phi \ $defines a vector bundle map
+
+If $\phi \not{\bot}_{s}Y$ then $\Phi _{S_{D}}\left( {\sf z}_{1},{\sf z}%
+_{2}\right) =\int P_{S_{D}}\left( {\sf z}_{1},{\sf z}_{1}^{\prime }\right)
+\phi \left( {\sf z}_{1}^{\prime }\right) P_{S_{D}}\left( {\sf z}_{1}^{\prime
+},{\sf z}_{2}\right) d{\sf z}_{1}^{\prime }\neq 0\quad \forall {\sf z}_{1},%
+{\sf z}_{2}$
+
+If $\phi $ defines an element of ${\frak G}_{fib}$ then $\Phi _{S_{D}}\left( 
+{\sf z}_{1},{\sf z}_{2}\right) =\int P_{S_{D}}\left( {\sf z}_{1},{\sf z}%
+_{1}^{\prime }\right) \phi \left( {\sf z}_{1}^{\prime }\right)
+P_{S_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}_{2}\right) d{\sf z}%
+_{1}^{\prime }=0\quad \forall {\sf z}_{1},{\sf z}_{2}$ and $\int
+P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{1}^{\prime }\right) \phi \left( {\sf z}%
+_{1}^{\prime }\right) P_{S_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}\right) d{\sf z}_{1}^{\prime }=0\quad \forall {\sf z}_{1},{\sf z}_{2}$
+
+If $\phi $ defines an element of ${\frak G}_{den}$ then $\int
+P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{1}^{\prime }\right) \phi \left( {\sf z}%
+_{1}^{\prime }\right) P_{S_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}\right) d{\sf z}_{1}^{\prime }=0\quad \forall {\sf z}_{1},{\sf z}_{2}$
+and $\Phi _{K_{D}}\left( {\sf z}_{1},{\sf z}_{2}\right) =\int
+P_{K_{D}}\left( {\sf z}_{1},{\sf z}_{1}^{\prime }\right) \phi \left( {\sf z}%
+_{1}^{\prime }\right) P_{K_{D}}\left( {\sf z}_{1}^{\prime },{\sf z}%
+_{2}\right) d{\sf z}_{1}^{\prime }=0\quad \forall {\sf z}_{1},{\sf z}_{2}$
+
+\item The subgroup ${\frak G}_{\ker }\subset {\frak G}_{\Xi }$ introduced in
+the main section of paper I is formed by super multiplication operators
+generated by congruence transformations composed of operators $\in {\cal B}%
+_{1}\left( {\cal H}^{N}\right) $ that are diagonal in the coordinate
+representation. The operators $\hat{T}\left( \phi \right) $ belonging to the
+representation of ${\frak G}_{\ker }$ describe in the preceding have the
+properties 
+\begin{eqnarray}
+\hat{T}\left( \phi ,\omega \right) &:&K_{OD}\rightarrow K_{OD}  \nonumber \\
+\hat{T}\left( \phi ,\omega \right) &:&K_{D}\rightarrow K_{D}  \nonumber \\
+\hat{T}\left( \phi ,\omega \right) &:&S_{D}\rightarrow K_{D}  \nonumber \\
+\hat{T}\left( \phi ,\omega \right) &:&S_{D}\rightarrow S_{D}
+\end{eqnarray}%
+The subgroup that acts homogeneously on pure states is ${\frak G}_{pure}=$ $%
+{\frak G}_{fib}\times {\frak G}_{den}\subset {\frak G}_{\ker }$. The
+subgroup ${\frak G}_{\ker }$ can be factored as ${\frak G}_{\ker }={\frak Co}%
+_{kfd}\times {\frak G}_{pure}$ where the coset ${\frak Co}_{kfd}{\frak =G}%
+_{\ker }/\left( {\frak G}_{fib}\times {\frak G}_{den}\right) $ and contains
+maps from $S_{D}\rightarrow K_{D}$. The group ${\frak G}_{\ker }$ can also
+be factorized into products of positive and unitary operators as 
+\begin{equation}
+{\frak G}_{\ker }={\cal G}_{\ker }\times {\cal G}_{\Xi }
+\end{equation}
+
+\item The subgroup ${\frak G}_{den}$ can be represented by operators of the
+form 
+\begin{equation}
+{\frak G}_{den}=\left( 
+\begin{array}{ccc}
+\hat{t}_{K_{OD}}\left( \hat{T}_{S_{D}}\right) & 0 & 0 \\ 
+0 & \hat{t}_{K_{D}}\left( \hat{T}_{S_{D}}\right) & 0 \\ 
+0 & 0 & \hat{T}_{S_{D}}%
+\end{array}%
+\right)
+\end{equation}%
+where $\hat{t}_{K_{OD}}$ and $\hat{t}_{K_{D}}$ are representations of $%
+{\frak G}_{den}$. The representation $\hat{t}_{K_{OD}}$ is given by%
+\begin{equation}
+\hat{t}_{K_{OD}}\left( \hat{T}_{S_{D}}\right) \left( \breve{Y}%
+_{K_{OD}}\right) =e^{{\cal \breve{V}+}i\breve{\omega}}\breve{Y}_{K_{OD}}e^{%
+{\cal \breve{V}-}i\breve{\omega}}
+\end{equation}%
+for ${\cal V=V}\left( \phi _{S_{D}},\phi _{K_{D}0}\right) $ where $\phi
+_{K_{D}0}$ and $\omega $ are fixed. Note that $\hat{T}_{S_{D}}$ is not a
+super multiplication operator unless $\hat{t}_{K_{D}}$ is the identity
+representation i.e. $\phi _{K_{D}0}=0$. The subgroup ${\frak G}_{fib}$ can
+be represented by 
+\begin{equation}
+{\frak G}_{fib}=\left( 
+\begin{array}{ccc}
+\hat{t}_{K_{OD}}^{\prime }\left( \hat{T}_{K_{D}}\right) & 0 & 0 \\ 
+0 & \hat{T}_{K_{D}} & 0 \\ 
+0 & 0 & \hat{P}_{K_{S}}%
+\end{array}%
+\right)
+\end{equation}%
+where $\hat{t}_{K_{OD}}^{\prime }$ and $\hat{t}_{S_{D}}^{\prime }$ are
+representations of ${\frak G}_{fib}$. The representation $\hat{t}%
+_{K_{OD}}^{\prime }$ is given by 
+\begin{equation}
+\hat{t}_{K_{OD}}^{\prime }\left( \hat{T}_{K_{D}}\right) \left(
+Y_{K_{OD}}\right) =e^{{\cal \breve{V}+}i\breve{\omega}}Y_{K_{OD}}e^{{\cal 
+\breve{V}-}i\breve{\omega}}
+\end{equation}%
+for ${\cal V=V}\left( \phi _{K_{D}}\right) $ where $\omega $ is fixed.
+
+\item Restricting attention to the subgroup ${\frak G}_{fib}$ of super
+multiplication operators that transform equivalence classes to themselves
+i.e. 
+\begin{equation}
+\hat{T}_{fib}:\left( \left| \breve{k}\right) ,\left| \Gamma \left( f\right)
+\right) \right) \rightarrow \left( \left| \breve{k}^{\prime }\right) ,\left|
+\Gamma \left( f\right) \right) \right) ;\quad \hat{T}_{fib}\in {\frak G}%
+_{fib}
+\end{equation}%
+contained in $GL\left( \ker \Xi \right) $, leads to the non redundant
+parameterization of pure states belonging to an equivalence class as
+described in preceding. The parameterization for this action of ${\frak G}%
+_{fib}$ on a reference element is given in Eq.$\left( \ref{refkd}\right) $
+and the discussion preceding this equation, where the form of function, $%
+\phi _{refK_{D}}$, generating the super operator transformation $\hat{T}%
+_{fib}\left( \phi _{refK_{D}}\right) $ is described. The unitary subgroup $%
+{\cal G}_{\Xi }$ is contained in ${\frak G}_{fib}$ and we have used the
+factorization ${\frak G}_{fib}={\cal G}_{fib}\times {\cal G}_{\Xi }$
+extensively in section V of paper I. The function $\phi _{refK_{D}}$ is
+strongly orthogonal to $Y$, the integral kernel of any pure state, as by
+construction $\hat{P}_{S_{D}}\hat{\Phi}_{refK_{D}}\hat{P}_{S_{D}}=0$ (see
+Eqs.$\left( \ref{diagker}\right) $,$\left( \ref{kerproj}\right) $and $\left( %
+\ref{PhiKD}\right) )$ thus has no affect on $\hat{P}_{S_{D}}Y$ for any $Y$,
+while $\hat{\Phi}_{refK_{D}}:K_{D}\rightarrow K_{D}$ and $\hat{\Phi}%
+_{refK_{OD}}:K_{OD}\rightarrow K_{OD}$, which means that their integral
+kernels are automatically strongly orthogonal to $P_{K_{OD}}Y$ and $%
+P_{K_{D}}Y$. {\it Note }that it is possible for a more general $\phi $ (that
+has non zero components, $P_{S_{D}}\phi )$, to be strongly orthogonal to a
+specific $P_{S_{D}}Y_{ref}$ but not to {\it all }$P_{S_{D}}Y$.
+
+\item Restricting attention to the subgroup ${\frak G}_{den}$ of super
+multiplication operators contained in $GL\left( S_{D}\right) $, represented
+in the form of Eq.$\left( \ref{tden}\right) $,\ leads to the non redundant
+parameterization of a path pure states corresponding to different densities
+in a 1-1 fashion, (see Eqs.$\left( \ref{tden}\right) $,$\left( \ref{tden2}%
+\right) $and $\left( \ref{tden3}\right) )$.
+\end{itemize}
+
+\subsection{Example\protect\bigskip}
+
+As an example we consider the pure Independent Particle State $\breve{Y}%
+_{ref}\left( \gamma _{0}\right) =\left| \Psi _{0\,IPS}\right\rangle
+\left\langle \Psi _{0\,IPS}\right| $, where $\Xi \left( \breve{Y}%
+_{ref}\left( \gamma _{0}\right) \right) =\gamma _{0}$, which has the
+decomposition 
+\begin{equation}
+\breve{Y}_{ref}=\breve{Y}_{ref\,K_{OD}}+\breve{Y}_{ref\,K_{D}}+\breve{\Gamma}%
+\left( \gamma _{0}\right)
+\end{equation}%
+{\bf All} pure states with the same density as this reference state are
+generated by 
+\begin{equation}
+\left| \breve{Y}\left( \gamma _{0}\right) \right) =\hat{T}_{fib}\left( \phi
+_{K_{D}}{}_{ref}\right) \left| \breve{Y}_{ref}\left( \gamma _{0}\right)
+\right) ;\quad \hat{T}_{fib}\left( \phi _{K_{D}}{}_{ref}\right) \in {\frak G}%
+_{fib}
+\end{equation}%
+A {\it full }path of path pure states corresponding to {\bf all} different
+densities in a 1-1 fashion is generated by 
+\begin{equation}
+\left| \breve{Y}_{ref}\left( \gamma \right) \right) =\hat{T}_{den}\left(
+\phi _{\Gamma \left( \gamma _{0}\right) }\right) \left| \breve{Y}%
+_{ref}\left( \gamma _{0}\right) \right) ;\,\gamma \neq \gamma ^{\prime
+},\quad \hat{T}_{den}\left( \phi _{\Gamma \left( \gamma _{0}\right) }\right)
+\in {\frak G}_{den}
+\end{equation}%
+{\bf All }pure states with the density $\gamma $ are generated from $\left| 
+\breve{Y}_{ref}\left( \gamma \right) \right) $ by%
+\begin{equation}
+\left| \breve{Y}\left( \gamma \right) \right) =\hat{T}_{fib}\left( \phi
+_{K_{D}}{}_{ref\left( \gamma \right) }\right) \left| \breve{Y}_{ref}\left(
+\gamma \right) \right) ;\quad \hat{T}_{fib}\left( \phi _{K_{D}}{}_{ref\left(
+\gamma \right) }\right) \in {\frak G}_{fib}
+\end{equation}%
+A full path can be produced by finding intra fiber transformations $\hat{T}%
+_{fib\,IPS}\left( \phi _{S_{D}}\left( \gamma \right) \right) $, fixed for
+each fiber, that produce an IPS\ from $\left| \breve{Y}\left( \gamma \right)
+\right) $ 
+\begin{equation}
+\left| \breve{Y}_{IPS}\left( \gamma \right) \right) =\hat{T}%
+_{fib\,IPS}\left( \phi _{S_{D}}\left( \gamma \right) \right) \left| \breve{Y}%
+\left( \gamma \right) \right) ;\quad \hat{T}_{fib\,IPS}\left( \phi
+_{S_{D}}\left( \gamma \right) \right) \in {\frak G}_{fib}
+\end{equation}%
+The transformations $\hat{T}_{fib\,IPS}\left( \left( \phi _{S_{D}}\left(
+\gamma \right) \right) \right) $ are not unique as in general there many
+IPS\ in any given fiber/equivalence class. Thus one can produce many full
+paths of IPS.
+
+\begin{references}
+\bibitem{ideal} A two sided ideal of ${\cal B}\left( {\cal H}^{N}\right) $
+is a set ${\cal Y\subseteq B}\left( {\cal H}^{N}\right) $ such that $YX\in 
+{\cal B}\left( {\cal H}^{N}\right) $ and $XY\in {\cal B}\left( {\cal H}%
+^{N}\right) \forall X\in {\cal B}\left( {\cal H}^{N}\right) $ and $\forall
+Y\in {\cal Y}$.
+
+\bibitem{homogen} A groups of transformations acts homogeneously on a space
+if fro every $Y_{1}$ and $Y_{2}$ that belong to the space there exists a
+group element $g$ such that $Y_{1}=gY_{2}$.
+\end{references}

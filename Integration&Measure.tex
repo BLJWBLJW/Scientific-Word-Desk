@@ -1,0 +1,4159 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Saturday, May 08, 2021 10:09:19}
+%TCIDATA{LastRevised=Wednesday, July 14, 2021 16:43:58}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\subsection{Measure Spaces}
+
+\begin{definition}
+Measure Space $\mathcal{M}=\left\{  X,\Sigma,\mu\right\}  ,$ where $X$ is a
+non empty set, $\Sigma$ $\equiv\Sigma\left(  X\right)  $ a $\sigma$-algebra of
+subsets $\Delta$ of $X$ and $\mu$ a measure.
+\end{definition}
+
+\begin{definition}
+Measure (positive):%
+\begin{equation}
+\mu:\Sigma\rightarrow\left[  0,\infty\right]  \subset\mathbb{R}%
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+$\sigma$-algebra $\Sigma$:
+\end{definition}
+
+\begin{enumerate}
+\item
+\begin{equation}
+\phi,\,X,\,\Delta^{c}\,\in\Sigma\quad\forall\Delta\in\Sigma
+\end{equation}
+and
+
+\item
+\begin{equation}%
+%TCIMACRO{\tbigcup \limits_{j\in J}}%
+%BeginExpansion
+{\textstyle\bigcup\limits_{j\in J}}
+%EndExpansion
+\Delta_{j}\in\Sigma;\,\Delta_{j}\in\Sigma,
+\end{equation}
+where $J$ is a \emph{finite} or \emph{countably infinite} set.
+\end{enumerate}
+
+\begin{definition}
+$\U{3c3} $-additivity$\,\equiv\mu$ is countably additive
+\begin{equation}
+\mu\left(
+%TCIMACRO{\tbigcup \limits_{j\in J}}%
+%BeginExpansion
+{\textstyle\bigcup\limits_{j\in J}}
+%EndExpansion
+\Delta_{j}\right)  =\sum_{j\in J}\mu\left(  \Delta_{j}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\Delta_{j}\cap\Delta_{k}=\phi\quad j\neq k.
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+If
+\begin{equation}
+X=%
+%TCIMACRO{\tbigcup \limits_{j\in J}}%
+%BeginExpansion
+{\textstyle\bigcup\limits_{j\in J}}
+%EndExpansion
+\Delta_{j},
+\end{equation}
+where $\left\{  \Delta_{j}\right\}  $ do not have to be disjoint and
+\begin{equation}
+\mu\left(  \Delta_{j}\right)  <\infty,\quad j\in J
+\end{equation}
+then $\mu$ is $\U{3c3} $-finite.
+\end{definition}
+
+\begin{definition}
+Probability Space:%
+\begin{equation}
+\mu\left(  X\right)  =1
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+Monotone:
+\begin{equation}
+\Delta_{j}\subseteq\Delta_{k}\Rightarrow\mu\left(  \Delta_{j}\right)  \leq
+\mu\left(  \Delta_{k}\right)  .
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+A set $\Delta$ has \emph{zero }$\mu$\emph{-measure if}
+\begin{equation}
+\mu\left(  \Delta\right)  =0.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The empty set is always of measure zero%
+\begin{equation}
+\mu\left(  \phi\right)  =0.
+\end{equation}
+
+\end{remark}
+
+\begin{definition}
+A \emph{Borel set }is any set in a topological space that can be formed from
+\emph{open sets} (or, equivalently, from closed sets) through the operations
+of countable union, countable intersection, and relative complement. For a
+topological space $X$, the collection of all Borel sets on $X$ forms a
+$\U{3c3} $-algebra, known as the \emph{Borel algebra} or \emph{Borel }$\U{3c3}
+$\emph{-algebra}. The \emph{Borel algebra} on $X$ is the smallest $\U{3c3}
+$-algebra containing all open sets (or, equivalently, all closed sets).
+\end{definition}
+
+\begin{definition}
+Absolute Contiuous: A measure $\mu$ is absolutely continuous wrt a measure
+$\nu$ expressed as
+\begin{equation}
+\mu\ll\nu
+\end{equation}
+if
+\begin{equation}
+\nu\left(  \Delta\right)  =0\Rightarrow\mu\left(  \Delta\right)
+=0,\quad\forall\Delta\in\Sigma.
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+The definition of \emph{Lebesgue measure} $\lambda$ on the real line is length
+i.e.
+\begin{equation}
+\lambda\left(  \left[  a,b\right]  \right)  =\lambda\left(  \left(
+a,b\right)  \right)  =b-a.
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+Any \emph{countable }set of \emph{real} numbers $\Delta$ has \emph{Lebesgue}
+measure $0.$ In particular, the Lebesgue measure of the set of algebraic
+numbers is $0$, even though the set is dense in $\mathbb{R}$.
+
+\begin{definition}
+The definition of \emph{Lebesgue} measure $\lambda$ on $\mathbb{R}^{n},1\leq
+n<\infty$ is \emph{length/area/volume/hypervolume}
+\begin{equation}
+\lambda\left(  \Delta\right)  =\operatorname*{Vol}\left\{  \Delta\right\}
+=\left\vert \mathbf{v}_{1}\wedge\cdots\wedge\mathbf{v}_{n}\right\vert
+=\left\vert \det\left\{  \mathbb{V}\right\}  \right\vert ,
+\end{equation}
+where $\left\{  \left.  \mathbf{v}_{j}\right\vert 1\leq j\leq n\right\}  $ are
+the vectors defining the sides of the volume and are the columns of a matrix
+$\mathbb{V}$. If these vectors are orthogonal then
+\begin{equation}
+\operatorname*{Vol}\left\{  \Delta\right\}  =\left\vert \mathbf{v}_{1}%
+\wedge\cdots\wedge\mathbf{v}_{n}\right\vert =\left\Vert \mathbf{v}_{1}%
+\wedge\cdots\wedge\mathbf{v}_{n}\right\Vert =\left\Vert \mathbf{v}%
+_{1}\right\Vert \cdots\left\Vert \mathbf{v}_{n}\right\Vert .
+\end{equation}
+where $\left\Vert \mathbf{v}\right\Vert $ is the Eucliden norm of $\mathbf{v}$
+i.e. length of $\mathbf{v.}$
+\end{definition}
+\end{remark}
+
+\begin{remark}
+In $3$-dimensions
+\begin{equation}
+dV=d\mathbf{x}\wedge d\mathbf{y}\wedge d\mathbf{z}=\left\vert \left(
+\begin{array}
+[c]{ccc}%
+dx & 0 & 0\\
+0 & dy & 0\\
+0 & 0 & dz
+\end{array}
+\right)  \right\vert =\left(  dx\mathbf{i}\right)  \wedge\left(
+dy\mathbf{j}\right)  \wedge\left(  dz\mathbf{k}\right)  =\left(
+dxdydz\right)  \mathbf{i}\wedge\mathbf{j}\wedge\mathbf{k}=dxdydz,
+\end{equation}
+as
+\begin{equation}
+\mathbf{i}\wedge\mathbf{j}\wedge\mathbf{k}=\left(  \mathbf{%
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0
+\end{array}
+}\right)  \mathbf{\wedge}\left(  \mathbf{%
+\begin{array}
+[c]{ccc}%
+0 & 1 & 0
+\end{array}
+}\right)  \mathbf{\wedge}\left(  \mathbf{%
+\begin{array}
+[c]{ccc}%
+0 & 0 & 1
+\end{array}
+}\right)  =\left\vert \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}
+\right)  \right\vert =1.
+\end{equation}
+
+\end{remark}
+
+\begin{definition}
+The \emph{definition} of \emph{Infinitesimal Lebesgue} measure $d\lambda$ on
+$\mathbb{R}^{n},1\leq n<\infty$ is
+\begin{equation}
+d\lambda=dx_{1}\cdots dx_{n}\quad\forall\text{points }\mathbf{\in}%
+\mathbb{R}^{n},
+\end{equation}
+where
+\begin{equation}
+dx_{1}\cdots dx_{n}=\left\Vert d\mathbf{x}^{1}\wedge\cdots\wedge
+d\mathbf{x}^{n}\right\Vert =dx_{1}\cdots dx_{n}\left\Vert \mathbf{e}^{1}%
+\wedge\cdots\wedge\mathbf{e}^{n}\right\Vert =dx_{1}\cdots dx_{n}.
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+The sign of the coefficient, i.e. $\pm1,$ of the exterior product
+$d\mathbf{x}^{1}\wedge\cdots\wedge d\mathbf{x}^{n}=dx_{1}\cdots dx_{n}%
+\mathbf{e}^{1}\wedge\cdots\wedge\mathbf{e}^{n}$ determines the
+\emph{orientation} of the coordinate frame $\left\{  \mathbf{e}^{1}%
+,\cdots,\mathbf{e}^{n}\right\}  .$
+\end{remark}
+
+\begin{remark}
+If $X$ is a $n$-dimensional differential manifold then there exist coordinate
+functions
+\begin{equation}
+x^{j}:X\rightarrow\mathbb{R},\quad1\leq j\leq n
+\end{equation}
+producing covariant (dual vectors) differentials at points $p\in X$ that are
+linear functionals on the \emph{Tangent Spaces} $T_{p}\left(  X\right)  $ at
+the points $p\in X$ i.e.,
+\begin{equation}
+dx^{j}\left(  p\right)  :T_{p}\left(  X\right)  \rightarrow\mathbb{R}%
+,\quad1\leq j\leq n
+\end{equation}
+and $dx^{j}\left(  p\right)  \in T^{p}\left(  X\right)  $, the \emph{Cotangent
+Space} at a point $p\in X$.
+\end{remark}
+
+\begin{remark}
+Tangent spaces are generated by
+\begin{equation}
+T_{p}\left(  X\right)  =\mathbb{R}\text{-}\operatorname*{linspan}\left\{
+\left.  \frac{\partial}{\partial x_{k}}\left(  p\right)  \right\vert 1\leq
+j\leq n\right\}
+\end{equation}
+and Cotangent spaces are generated by
+\begin{equation}
+T^{p}\left(  X\right)  =\mathbb{R}\text{-}\operatorname*{linspan}\left\{
+\left.  dx^{j}\left(  p\right)  \right\vert 1\leq j\leq n\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{definition}
+The \emph{differential }$d\lambda\left(  p\right)  $\emph{ of Lebesgue
+measure} $\lambda$ on a $n$-dimensional differentiable manifold $X$ at a point
+$p\in X$ is a linear map from the tangent space $T_{p}\left(  X\right)  $ at
+the point $p$ to $\mathbb{R}$ i.e.
+\begin{align}
+d\lambda\left(  p\right)   &  :T_{p}\left(  X\right)  \rightarrow\mathbb{R}\\
+d\lambda\left(  p\right)   &  =d\mathbf{x}^{1}\left(  p\right)  \wedge
+\cdots\wedge d\mathbf{x}^{n}\left(  p\right)  ,\quad d\mathbf{x}^{j}\left(
+p\right)  \in\mathbb{R}^{n},1\leq j\leq n.
+\end{align}
+
+\end{definition}
+
+\begin{remark}%
+\begin{equation}
+d\lambda\left(  p\right)  =\left\Vert d\mathbf{x}^{1}\left(  p\right)
+\wedge\cdots\wedge d\mathbf{x}^{n}\left(  p\right)  \right\Vert =dx_{1}\cdots
+dx_{n}\left\Vert \mathbf{e}^{1}\left(  p\right)  \wedge\cdots\wedge
+\mathbf{e}^{n}\left(  p\right)  \right\Vert =dx_{1}\cdots dx_{n}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{align}
+T_{p}\left(  X\right)   &  \cong\mathbb{R}^{n}\\
+T^{p}\left(  X\right)   &  \cong\left(  \mathbb{R}^{n}\right)  ^{d}%
+\cong\mathbb{R}^{n}.
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+d\mathbf{x}^{1}\left(  p\right)  \wedge\cdots\wedge d\mathbf{x}^{n}\left(
+p\right)  \in%
+%TCIMACRO{\tbigwedge \nolimits^{n}}%
+%BeginExpansion
+{\textstyle\bigwedge\nolimits^{n}}
+%EndExpansion
+T^{p}\left(  X\right)
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The preceding bases are biorthogonal i.e.
+\begin{equation}
+dx^{j}\left(  p\right)  \left(  \frac{\partial}{\partial x_{k}}\left(
+p\right)  \right)  =\left\langle dx^{j}\left(  p\right)  ,\frac{\partial
+}{\partial x_{k}}\left(  p\right)  \right\rangle =\delta_{k}^{j}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{align}
+df\left(  p\right)   &  =%
+%TCIMACRO{\tsum \limits_{1\leq j\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq n}}
+%EndExpansion
+\eta_{j}dx^{j}\left(  p\right) \\
+\left\langle df\left(  p\right)  ,\frac{\partial}{\partial x_{k}}\left(
+p\right)  \right\rangle  &  =\left\langle
+%TCIMACRO{\tsum \limits_{1\leq j\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq n}}
+%EndExpansion
+\eta_{j}dx^{j}\left(  p\right)  ,\frac{\partial}{\partial x_{k}}\left(
+p\right)  \right\rangle =\eta_{k}=\frac{\partial f}{\partial x_{k}}\left(
+p\right)  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+The Tangent, $T\left(  X\right)  ,$ and Cotangent Bundles, $CT\left(
+X\right)  ,$ are Vector Bundles that are the \emph{disjoint union} $\bigsqcup$
+of the corresponding vector spaces i.e.
+\begin{align}
+T\left(  X\right)   &  =\bigsqcup\limits_{p\in X}T_{p}\left(  X\right) \\
+CT\left(  X\right)   &  =\bigsqcup\limits_{p\in X}T^{p}\left(  X\right)  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+$\left\{  \left.  dx^{j}\right\vert 1\leq j\leq n\right\}  $ and $\left\{
+\left.  \frac{\partial}{\partial x_{j}}\right\vert 1\leq j\leq n\right\}  $
+are \emph{cross sections} of $CT\left(  X\right)  $ and $T\left(  X\right)  $
+respectively, where
+\begin{equation}
+dx^{j}:X\rightarrow CT\left(  X\right)  ,1\leq j\leq n
+\end{equation}
+and
+\begin{equation}
+\frac{\partial}{\partial x_{j}}:X\rightarrow T\left(  X\right)  ,1\leq j\leq
+n.
+\end{equation}
+
+
+\begin{definition}
+The \emph{Cartesian} \emph{differential} $d\lambda\left(  p\right)  $ at a
+point $p\in X$ $\cong\mathbb{R}^{3}$ of Lebesgue measure $\lambda$ on
+$\mathbb{R}^{3}$ is
+\begin{equation}
+d\lambda\left(  p\right)  \equiv dV=dxdydz.
+\end{equation}
+
+\end{definition}
+\end{remark}
+
+\begin{remark}
+Having measure $0$ is \emph{not the same} as being not measurable.
+\end{remark}
+
+\begin{remark}
+It is convenient in $\mathbb{R}$ to consider measures $\mu$ that are
+absolutely continuous wrt Lebesgue measure i.e.%
+\begin{equation}
+\mu\left(  \Delta\right)  =\int_{\Delta}\rho\left(  p\right)  d\lambda\left(
+p\right)  ,
+\end{equation}
+where $\rho\left(  p\right)  \geq0$ is a density, then one can consider
+integrals $I_{\Delta}\left(  g\right)  $ of $g$ wrt $\mu$
+\begin{equation}
+I_{\Delta}\left(  g\right)  =\int_{\Delta}g\left(  p\right)  d\mu\left(
+p\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The Lebesgue measure of a set $\Delta$ is given by
+\begin{equation}
+\lambda\left(  \Delta\right)  =\int_{\Delta}d\lambda\left(  p\right)  .
+\end{equation}
+
+\end{remark}
+
+\subsection{Integrating step functions}
+
+\begin{definition}
+Indicator Function $\equiv$ Characteristic Function:
+\begin{align}
+\chi_{\Delta}  &  :\Sigma\rightarrow\left\{  0,1\right\} \\
+\chi_{\Delta}\left(  p\right)   &  =\left\{
+\begin{array}
+[c]{c}%
+1\text{ if }p\in\Delta\\
+0\text{ if }p\notin\Delta
+\end{array}
+\right.  .
+\end{align}
+
+\end{definition}
+
+\begin{definition}
+Heavyside Step Function $\Theta_{a}$%
+\begin{equation}
+\Theta_{a}:\mathbb{R}\rightarrow\mathbb{R}%
+\end{equation}
+is defined as
+\begin{equation}
+\Theta_{a}\left(  x\right)  =\left\{
+\begin{array}
+[c]{c}%
+0,\quad x<a\\
+1,\quad x>a
+\end{array}
+\right.  .
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+$\Theta_{a}$ is discontinuous at $x=a.$
+\end{remark}
+
+\begin{remark}
+The derivative of $\Theta_{a}$ at $x=a$ is the \emph{distribution} $\delta
+_{a}$%
+\begin{equation}
+\delta_{a}\left(  x\right)  =\delta\left(  x-a\right)  =\left\{
+\begin{array}
+[c]{c}%
+1\text{ if }x=a\\
+0\text{ if }x\neq a
+\end{array}
+\right.  ,
+\end{equation}
+i.e.%
+\begin{equation}
+\frac{d\Theta_{a}\left(  a\right)  }{dx}\left(  x\right)  =\delta_{a}\left(
+x\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The delta function is even i.e.
+\begin{equation}
+\delta_{a}\left(  x\right)  =\delta_{a}\left(  -x\right)  \equiv\delta\left(
+x-a\right)  =\delta\left(  a-x\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{lemma}
+\emph{Indicator functions} are differences of Heavyside step functions%
+\begin{equation}
+\chi_{\chi_{\left[  a,b\right]  }}\left(  x\right)  =\Theta_{a}\left(
+x\right)  -\Theta_{b}\left(  x\right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{lemma}
+The derivative of $\chi_{\Delta_{p}}$ $=\chi_{\left[  a,b\right]  }$ at the
+point $x$ is the sum of delta functions i.e.
+\begin{equation}
+\frac{d\chi_{\chi_{\left[  a,b\right]  }}}{dx}\left(  x\right)  =\delta\left(
+x-a\right)  -\delta\left(  x-b\right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{example}%
+\begin{align}
+\Delta &  =\Delta_{1}\cup\cdots\cup\Delta_{m}\\
+\chi_{\Delta}\left(  x\right)   &  =\chi_{\Delta_{1}}\left(  x\right)
++\cdots+\chi_{\Delta_{n}}\left(  x\right)
+\end{align}
+
+\end{example}
+
+\begin{definition}
+\emph{Step function }$\equiv$ \emph{Simple function} on a measure space
+$\left\{  X,\Sigma,%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\right\}  $ is a measurable function which takes only finitely many values.
+\end{definition}
+
+In other words, a step function%
+\begin{equation}
+s:X\rightarrow\mathbb{C}%
+\end{equation}
+is a function that may be expressed as a finite sum of indicator functions
+\begin{equation}
+s=\sum_{1\leq j\leq n}\eta_{j}\chi_{\Delta_{j}},\quad\Delta_{j}\cap\Delta
+_{k}=\phi\,,j\neq k,
+\end{equation}
+where $\eta_{j}\in\mathbb{C}$ are the distinct values taken by $s$
+\begin{equation}
+\Delta_{j}=s^{-1}\left(  \eta_{j}\right)  =\{x\in X|s(x)=\eta_{j}\}\in
+\Sigma\left(  X\right)
+\end{equation}
+are disjoint $\mu$-measurable subsets of $X$ and $\chi_{\Delta_{j}}$ are
+indicator functions of $\Delta_{j}$. This expression is unique, and $s>0$ if
+and only if $\eta_{j}>0$ for all $j$.
+
+The set of step functions on $X$, denoted $\operatorname*{Step}\left\{
+X\right\}  $, is stable under sums and products (in algebraic terms, it is a
+$\mathbb{C}$-algebra; the word \textquotedblleft algebra\textquotedblright%
+\ has here a completely different meaning than in $\U{3c3} -$algebra). This
+results in the two formulae
+\begin{align}
+\chi_{\Delta}\chi_{\Delta^{\prime}}  &  =\chi_{\Delta\cap\Delta^{\prime}}\\
+\chi_{\Delta}+\chi_{\Delta^{\prime}}  &  =\chi_{\Delta\cup\Delta^{\prime}%
+}+\chi_{\Delta\cap\Delta^{\prime}}=2\chi_{\Delta\cap\Delta^{\prime}}%
++\chi_{\Delta\cup\Delta^{\prime}-\Delta\cap\Delta^{\prime}}.
+\end{align}
+
+
+\subsection{Integral of functions.}
+
+\begin{definition}
+If $X$ is a real $n$-dimensional differentiable manifold the differential
+$d\mu\left(  p\right)  $ of a measure $\mu$ at a point $p\in X$ is a linear
+map from the tangent space $T_{p}\left(  X\right)  $ at the point $p\in X$ to
+$\mathbb{R}$ i.e.
+\begin{equation}
+d\mu\left(  p\right)  :T_{p}\left(  X\right)  \rightarrow\mathbb{R}.
+\end{equation}
+This can be extended to \emph{complex} $n$-dimensional differentiable manifold
+to produce
+\begin{equation}
+d\mu\left(  p\right)  :T_{p}\left(  X\right)  \rightarrow\mathbb{C}.
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+$X$ can be generalized to \emph{infinite dimensional} Banach or Hilbert manifolds.
+\end{remark}
+
+\begin{definition}
+Measurable function: The function
+\begin{equation}
+f:X\rightarrow\mathbb{C}%
+\end{equation}
+is $\mu$-measurable if
+\begin{equation}
+f^{-1}\left\{  \mathbb{C}\right\}  \in\Sigma.
+\end{equation}
+
+\end{definition}
+
+Let $\mathcal{M}=\left\{  X,\Sigma,%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\right\}  $ be a measure space then the \emph{measure of a set} $\Delta
+\in\Sigma$ is defined as the value of the integral of the characteristic
+function of $\Delta$, i.e.
+\begin{equation}%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  \Delta\right)  =\int\chi_{\Delta}\left(  p\right)  d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  p\right)  =\int_{\Delta}d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  p\right)
+\end{equation}
+from which we can compute the integral of functions taking finitely many
+values (by linearity). One then uses a limiting process to define integrals of
+non-negative functions, general real valued functions and then finally complex
+valued functions.
+
+\begin{definition}
+A \emph{real valued} function $f$ is $%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+$-integrable if%
+\begin{equation}
+\int f\left(  p\right)  d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  p\right)  =\sup\limits_{n}\left\{  \int f_{n}\left(  p\right)  d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  p\right)  \right\}  <\infty,
+\end{equation}
+where $f$ is the pointwise limit of the sequence $\left\{  f_{n}\right\}  $
+i.e.
+\begin{equation}
+f\left(  p\right)  =\lim\limits_{n\rightarrow\infty}\left\{  f_{n}\left(
+p\right)  \right\}  .
+\end{equation}
+If
+\begin{equation}
+\sup\limits_{n}\left\{  \int f_{n}\left(  p\right)  d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  p\right)  \right\}  =\infty
+\end{equation}
+then $f$ is non integrable.
+\end{definition}
+
+\begin{remark}%
+\begin{gather}
+\chi_{a}\left(  y\right)  =\left\{
+\begin{array}
+[c]{c}%
+1\text{ if }y=a\\
+0\text{ if }y\neq a
+\end{array}
+\right.  =\delta_{a}\left(  y\right)  =\delta\left(  a-y\right) \\
+\delta\left(  0\right)  =1\\
+\delta\left(  a\right)  \overset{a\neq0}{=}0.
+\end{gather}
+
+\end{remark}
+
+\begin{remark}
+The \emph{Lebesgue measure }$\lambda$ \emph{of }finite sets of discrete points
+is zero as the measure of discrete points is zero i.e.
+\begin{equation}
+\lambda\left(  \left\{  p\right\}  \right)  =0.
+\end{equation}
+
+\end{remark}
+
+\begin{lemma}
+If $\mu\ll\nu$ then
+\begin{equation}
+\mu\left(  \Delta\right)  =\int_{\Delta}f\left(  p\right)  d\nu\left(
+p\right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{definition}
+Integral: Let $s_{+}$ be a step function that is non negative for any
+measurable set $\Delta\in\Sigma$, we define the \emph{integral} of $s_{+}$ on
+$\Delta$ with respect to $%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+$ by%
+\begin{equation}
+\int_{\Delta}s_{+}(p)d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+(p)=\int_{\Delta}\sum_{1\leq j\leq n}\U{3b1} _{j}\chi_{\Delta_{j}}(p)d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+(p)=\sum_{1\leq j\leq n}\U{3b1} _{j}%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+(\Delta_{j}\cap\Delta)\in\lbrack0,+\infty],\quad\U{3b1} _{j}\geq0,1\leq j\leq
+n.
+\end{equation}
+
+\end{definition}
+
+One can generalize this to \emph{complex valued functions }%
+\begin{equation}
+f:X\rightarrow\mathbb{C}%
+\end{equation}
+which are assumed to be measurable for the fixed $\U{3c3} $-algebra $\Sigma,$
+by
+\begin{equation}
+f=f_{1+}-f_{2+}+i\left(  f_{3+}-f_{4+}\right)
+\end{equation}
+wrt the \emph{complex signed measure }$%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+$ given by \emph{ }
+\begin{equation}%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+=%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+_{1+}-%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+_{2+}+i\left(
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+_{3+}-%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+_{4+}\right)  .
+\end{equation}
+
+
+\begin{remark}
+The sum of two complex measures is a complex measure, as is the product of a
+complex measure by a complex number. That is to say, the set of all complex
+measures on a measure space $\left\{  X,\Sigma,%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\right\}  $ forms a \emph{vector space} $\mathcal{M}\left(  X,\Sigma\right)  $
+over the complex numbers. Moreover, the \emph{total variation} $\Vert
+\cdot\Vert$ defined as%
+\begin{equation}
+\left\Vert
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\right\Vert =\left\vert
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\right\vert \left(  X\right)
+\end{equation}
+is a norm, with respect to which the space of complex measures is a Banach space.
+\end{remark}
+
+\begin{definition}
+Recall that a \emph{measure} $\nu$ is absolutely continuous wrt a measure
+$\mu$ expressed as
+\begin{equation}
+\nu\gg\mu
+\end{equation}
+if
+\begin{equation}
+\nu\left(  \Delta\right)  =0\Rightarrow\mu\left(  \Delta\right)
+=0,\quad\Delta\in\Sigma.
+\end{equation}
+
+\end{definition}
+
+\begin{notation}
+Measure denotes positive measure i.e. not a \emph{signed} measure that can
+have both positive and negative values..
+\end{notation}
+
+\begin{theorem}
+\emph{Radon--Nikodym}: If $\nu\gg\mu$ then
+\begin{equation}
+\nu\left(  \Delta\right)  =\int_{\Delta}\rho_{\nu\mu}\left(  x\right)  d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  x\right)  =\int_{\Delta}\frac{d\nu}{d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+}\left(  x\right)  d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  x\right)  ,
+\end{equation}
+i.e. the "density" $\rho$ is the \emph{Radon-Nikodym derivative} i.e.
+\begin{equation}
+\rho_{\nu\mu}=\frac{d\nu}{d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+}.
+\end{equation}
+
+\end{theorem}
+
+\begin{corollary}%
+\begin{equation}
+\rho_{\nu\mu}=\frac{d\nu}{d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+}\geq0.
+\end{equation}
+
+\end{corollary}
+
+\begin{remark}%
+\begin{equation}%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  \Delta\right)  =\int_{\Delta}d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  p\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+If $\nu$ is a \emph{probability measure}
+\begin{equation}
+\nu\left(  X\right)  =\int_{X}d\nu\left(  p\right)  =\int_{X}\rho_{\nu\mu
+}\left(  p\right)  d%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+\left(  p\right)  =1
+\end{equation}
+and $\rho_{\nu\mu}$ is a \emph{probability density}. A probability measure and
+the associated probability density define a \emph{State}.
+\end{remark}
+
+\begin{definition}
+A \emph{Random Variable:} A $\left\{  E,{\LARGE \varepsilon}\right\}  $-valued
+random $\mathcal{R}$ is a measurable function from a measurable \emph{sample
+space} $X$ (the possible outcomes of experiments) to a measurable space $E$
+with $\sigma$-algebra ${\LARGE \varepsilon}$
+\begin{equation}
+\mathcal{R}:X\rightarrow E,
+\end{equation}
+where $\mathcal{P}=\left\{  X,\Sigma,\mu\right\}  $ is a \emph{Probability
+Space i.e. }$\mu\left(  X\right)  =1$. $\Sigma$ $\left(  X\right)  $
+$\equiv{\LARGE \varepsilon}$ is the $\sigma$-algebra of \emph{Events} in the
+\emph{Sample Space} $X.$
+\end{definition}
+
+\begin{definition}
+The \emph{Expectation Value,} $E_{\mu}\left(  \mathcal{R}\right)  ,$ of the
+Random Variable /Observable $\mathcal{R}$ in the state $\mu\equiv$ is the
+\emph{First Moment} of the Random Variable/Observable $\mathcal{R}$ in a state
+$\mu\equiv$ is $\emph{the}$ \emph{mean} value of the Random Variable
+/Observable $\mathcal{R}$ in the state $\mu$ is
+\begin{equation}
+E_{\mu}\left(  \mathcal{R}\right)  =\int pd\mu_{\mathcal{R}}\left(  p\right)
+=\int p\rho_{\mu_{\mathcal{R}}}\left(  p\right)  d\lambda\left(  p\right)  .
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+$d\mu_{\mathcal{R}}$ is the probability distrubution of the Random Variable
+$\mathcal{R}$ in the state $\mu.$
+\end{remark}
+
+\begin{remark}
+When $E$ is a topological space, then the most common choice for the $\U{3c3}
+$-algebra ${\LARGE \varepsilon}$ is the Borel $\U{3c3} $-algebra
+$\operatorname*{Bor}\left\{  E\right\}  $, which is the $\U{3c3} $-algebra
+generated by the collection of all open sets in $E$. In such case the
+$\left\{  E,{\LARGE \varepsilon}\right\}  $-valued random variable is called
+an $E$-valued random variable. Moreover, when the space $E$ is the real line
+$\mathbb{R}$, then such a real-valued random variable is called simply a
+random variable.
+\end{remark}
+
+\begin{remark}
+If
+\begin{equation}
+f:X\rightarrow E
+\end{equation}
+then
+\begin{equation}
+f^{-1}\left(  B\right)  \in\Sigma\left(  X\right)  ,\quad B\in
+\operatorname*{Bor}\left\{  E\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+Let $\mathcal{X}\in\mathcal{B}_{normal}\left(  \mathcal{H}^{r}\right)  $ be an
+\emph{observable} (possibly an unbounded operator acting on the containing
+rigged space $\mathcal{H}^{r})$\qquad then%
+\begin{equation}
+\mathcal{X=}\int_{\operatorname*{Spec}\left\{  X\right\}  \subseteq
+X}xd\mathcal{P}_{\mathcal{X}}\left(  x\right)  ,\quad x\in\mathbb{R}%
+\end{equation}
+then the associated Probability Distribution (PD), $P_{\mathcal{XD}},$ of
+$\mathcal{X}$ in the state $D$
+\begin{equation}
+P_{\mathcal{XD}}:\Sigma\left(  X\right)  \rightarrow\mathbb{R}%
+\end{equation}
+is given by
+\begin{equation}
+P_{\mathcal{XD}}\left(  \Delta\right)  =\int_{\Delta}\operatorname{Tr}\left\{
+d\mathcal{P}_{\mathcal{X}}\left(  x\right)  D\right\}  =\operatorname{Tr}%
+\left\{  \int_{\Delta}d\mathcal{P}_{\mathcal{X}}\left(  x\right)  D\right\}
+=\operatorname{Tr}\left\{  \mathcal{P}_{\mathcal{X}}\left(  \Delta\right)
+D\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+A probability distribution is a probability measure.
+\end{remark}
+
+\begin{remark}
+The expectation value of an observable $X\in\mathcal{B}_{sa}\left(
+\mathcal{H}\right)  $ is given by
+\begin{align}
+E_{D}\left(  X\right)   &  =\operatorname{Tr}\left\{  XD\right\}
+=\operatorname{Tr}\left\{  \left(  \int_{\operatorname*{Spec}\left\{
+X\right\}  }pd\mathcal{P}_{X}\left(  p\right)  \right)  D\right\}
+=\operatorname{Tr}\left\{  \left(  \int_{\operatorname*{Spec}\left\{
+X\right\}  }pd\mathcal{P}_{X}\left(  p\right)  \right)  \int_{\left(
+0,1\right)  }\rho_{D}\left(  p\right)  \left\vert \Psi_{D}\left(  p\right)
+\right\rangle \left\langle \Psi_{D}\left(  p\right)  \right\vert
+d\lambda\left(  p\right)  \right\} \\
+&  =\operatorname{Tr}\left\{  \left(  \int_{\operatorname*{Spec}\left\{
+X\right\}  }pd\mathcal{P}_{\mathcal{X}}\left(  p\right)  \right)
+\int_{\left(  0,1\right)  }\rho_{D}\left(  p\right)  \left\vert \Psi
+_{D}\left(  p\right)  \right\rangle \left\langle \Psi_{D}\left(  p\right)
+\right\vert d\lambda\left(  p\right)  \right\} \\
+&  =\int_{\operatorname*{Spec}\left\{  X\right\}  }\int_{\left(  0,1\right)
+}p^{\prime}\left\langle \Psi_{D}\left(  p\right)  \right\vert d\mathcal{P}%
+_{\mathcal{X}}\left(  p^{\prime}\right)  \rho_{D}\left(  p\right)  \left\vert
+\Psi_{D}\left(  p\right)  \right\rangle =\int_{\operatorname*{Spec}\left\{
+X\right\}  }\int_{\left(  0,1\right)  }p^{\prime}\left\langle \Psi_{D}\left(
+p\right)  \right\vert \rho_{\mathcal{X}}\left(  p^{\prime}\right)  \rho
+_{D}\left(  p\right)  \left\vert \Psi_{D}\left(  p\right)  \right\rangle
+d\lambda\left(  p^{\prime}\right)  d\lambda\left(  p\right)  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+For compact operators one obtains
+\begin{align}
+E_{D}\left(  X\right)   &  =\operatorname{Tr}\left\{  \left(  \sum_{1\leq
+j\leq\infty}p_{j}\left\vert \Psi_{Xj}\right\rangle \left\langle \Psi
+_{Xj}\right\vert \right)  \left(  \left(  \sum_{1\leq j\leq\infty}%
+d_{j}\left\vert \Psi_{Dj}\right\rangle \left\langle \Psi_{Dj}\right\vert
+\right)  \right)  \right\}  =\sum_{1\leq j,k\leq\infty}p_{j}d_{k}\left\vert
+\left\langle \Psi_{Xj}\left\vert \Psi_{D_{k}}\right.  \right\rangle
+\right\vert ^{2}\\
+&  =\sum_{1\leq j\leq\infty}d_{j}\left\langle \Psi_{D_{j}}\left\vert
+\mathcal{X}\Psi_{D_{j}}\right.  \right\rangle .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+For pure states
+\begin{equation}
+D=\left\vert \Psi_{D}\right\rangle \left\langle \Psi_{D}\right\vert
+\end{equation}
+and the expectation value $E_{D}\left(  X\right)  $ of the observable $X$ in
+the state $D$ is given by
+\begin{equation}
+E_{D}\left(  X\right)  =\left\langle \Psi_{D}\left\vert X\Psi_{D}\right.
+\right\rangle =\left\langle \Psi_{D}\left\vert \left(  \sum_{1\leq j\leq
+\infty}p_{j}\left\vert \Psi_{Xj}\right\rangle \left\langle \Psi_{Xj}%
+\right\vert \right)  \Psi_{D}\right.  \right\rangle =\sum_{1\leq j\leq\infty
+}p_{j}\left\vert \left\langle \Psi_{Xj}\left\vert \Psi_{D}\right.
+\right\rangle \right\vert ^{2}.
+\end{equation}
+
+\end{remark}
+
+\begin{example}
+\emph{Position Random Variable/Observable} $Q$%
+\begin{equation}
+Q:X\rightarrow\mathbb{R}^{3},
+\end{equation}
+where $X$ is the sample space of \emph{positions} in physical space.
+\end{example}
+
+\begin{example}
+The \emph{average value of the position of an object in a volume }%
+$\Delta\subset\mathbb{R}^{3}$ i.e. the observable $Q_{\Delta}$ in a state $D$
+is
+\begin{equation}
+E_{D}\left(  Q_{\Delta}\right)  =E_{D}\left(  \int_{\Delta}xd\mathcal{P}%
+_{Q}\left(  x\right)  \right)  =E_{D}\left(  \int_{\Delta}x\rho_{_{Q}}\left(
+x\right)  d\lambda\left(  x\right)  \right)
+\end{equation}
+and the probability that the object is in the region $\Delta\subset X$ in the
+state $D$ is
+\begin{equation}
+P_{Q}\left(  \Delta\right)  =\int_{\Delta}\operatorname{Tr}\left\{
+d\mathcal{P}_{Q}\left(  x\right)  D\right\}  =\int_{\Delta}\operatorname{Tr}%
+\left\{  \rho_{Q}\left(  x\right)  D\right\}  d\lambda\left(  x\right)
+=\int_{\Delta}\rho_{DQ}\left(  x\right)  d\lambda\left(  x\right)  .
+\end{equation}
+
+\end{example}
+
+\subsection{Integration of Operators (Spectral Theorem)}
+
+\begin{definition}
+A Projection Valued Measure (PVM) is a map $\mathcal{P}$ from the $\sigma
+$-algebra $\Sigma\left(  X\right)  $ of subsets of $X$ to the orthogonal
+projectors $\operatorname*{Proj}\left\{  \mathcal{H}\right\}  $ acting in a
+Hilbert space $\mathcal{H}$ i.e.
+\begin{equation}
+\mathcal{P}:\Sigma\left(  X\right)  \rightarrow\operatorname*{Proj}\left\{
+\mathcal{H}\right\}  \subset\mathcal{B}\left(  \mathcal{H}\right)  ,
+\end{equation}
+where
+
+\begin{enumerate}
+\item The values of the Projection Valued Measure (PVM) are orthogonal
+projectors i.e,
+\begin{equation}
+\mathcal{P}\left(  \Delta\right)  =\int{\large \chi}_{\mathcal{P}}\left(
+\Delta\right)  d\mathcal{P}\left(  x\right)  =\int_{\Delta}d\mathcal{P}\left(
+x\right)  ,\quad\mathcal{P}\left(  \Delta\right)  =\mathcal{P}\left(
+\Delta\right)  ^{2}=\mathcal{P}\left(  \Delta\right)  ^{\dagger}.
+\end{equation}
+
+
+\item ${\large \chi}_{\mathcal{P}}\left(  \Delta\right)  $ is the indicator
+function for the set $\Delta\in\Sigma\left(  X\right)  .$
+
+\item The intersection of sets
+\begin{equation}
+\mathcal{P}\left(  \Delta_{j}\cap\Delta_{k}\right)  =\mathcal{P}\left(
+\Delta_{j}\right)  \mathcal{P}\left(  \Delta_{k}\right)  .
+\end{equation}
+
+
+\item If the sets are disjoint
+\begin{equation}
+\Delta_{j}\cap\Delta_{k}=\phi\Leftrightarrow\mathcal{P}\left(  \Delta
+_{j}\right)  \mathcal{P}\left(  \Delta_{k}\right)  =0.
+\end{equation}
+
+
+\item The union of disjoint sets
+\begin{equation}
+\Delta_{j}\cap\Delta_{k}=\phi\Rightarrow\mathcal{P}\left(  \Delta_{j}%
+\cup\Delta_{k}\right)  =\mathcal{P}\left(  \Delta_{j}\right)  +\mathcal{P}%
+\left(  \Delta_{k}\right)  .
+\end{equation}
+
+
+\item If $X$ is a \emph{differentiable manifold} the differential
+$d\mathcal{P}\left(  x\right)  $ of $\mathcal{P}$ at the point $x$ is a linear
+transformation from the tangent space $T_{x}\left(  X\right)  $ of the sample
+space $X$ at the point $x$ to the space of bounded operators $\mathcal{B}%
+\left(  \mathcal{H}\right)  $ i.e.
+\begin{equation}
+d\mathcal{P}\left(  x\right)  :T_{x}\left(  X\right)  \rightarrow
+\mathcal{B}\left(  \mathcal{H}\right)  .
+\end{equation}
+
+
+\item It is possible that $T_{x}\left(  X\right)  $ is a Hilbert space and
+isomorphic to $\mathcal{H}$ and thus $X$ is a \emph{Hilbert Manifold or
+K\"{a}hler Manifold}.
+
+\item A Projection Valued Measure (PVM) $\mathcal{P}$ forms a \emph{Resolution
+of the Identity}
+\begin{equation}
+\mathcal{P}\left(  X\right)  =\int_{X}d\mathcal{P}\left(  x\right)
+=I_{\mathcal{H}}.
+\end{equation}
+
+\end{enumerate}
+\end{definition}
+
+\begin{remark}%
+\begin{equation}
+\mathcal{P}:X\rightarrow\operatorname*{Proj}\left\{  \mathcal{H}\right\}  ,
+\end{equation}
+though $\mathcal{H}$ might have to be replaced by the containing rigged
+Hilbert space $\mathcal{H}^{r}$, where
+\begin{equation}
+\mathcal{H}^{r}\supset\mathcal{H}\supset\mathcal{H}_{r}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+d\mathcal{P}\left(  x\right)  :T_{x}\left(  X\right)  \rightarrow
+\operatorname*{Proj}\left\{  \mathcal{H}\right\}  ,
+\end{equation}
+though $\mathcal{H}$ might have to be replaced by the containing rigged
+Hilbert space $\mathcal{H}^{r}.$
+\end{remark}
+
+\begin{remark}
+$\mathcal{P}$ can be considered as a map into the \emph{Lattice of Projectors}
+$\mathcal{LP}\left(  \mathcal{A}\right)  $ contained in a $w^{\ast}$-algebra
+$\mathcal{A}.$ The manifold of $1$-dimensional projectors in this Lattice has
+a $\emph{K\ddot{a}hler}$ $\emph{manifold}$ structure and is isomorphic to a
+\emph{Projective Hilbert space}.
+\end{remark}
+
+\begin{remark}
+A K\"{a}hler manifold is a manifold with three mutually compatible structures:
+\emph{a complex structure}, \emph{a Riemannian structure}, and a
+\emph{symplectic structure}.
+\end{remark}
+
+\begin{lemma}
+In the case $X=\mathbb{R}^{n}$ a PVM $\mathcal{P}$ be can expanded wrt
+Lebesgue measure $\mathcal{\lambda}$
+\begin{equation}
+\mathcal{P}\left(  \Delta\right)  =\int_{\Delta}d\mathcal{P}\left(  x\right)
+=\int{\large \chi}_{\mathcal{P}}\left(  \Delta\right)  d\mathcal{P}\left(
+x\right)  =\int_{\Delta}\rho_{\mathcal{P}}\left(  x\right)  d\mathcal{\lambda
+}\left(  x\right)  =\int_{\Delta}\left\vert \Psi\left(  x\right)
+\right\rangle \left\langle \Psi\left(  x\right)  \right\vert d\mathcal{\lambda
+}\left(  x\right)  ,
+\end{equation}
+where $\mathcal{\lambda}$ is lebesgue measure on $\mathbb{R}^{n}$ and forms a
+\emph{Resolution of the Identity}%
+\begin{equation}
+\mathcal{P}\left(  \mathbb{R}^{n}\right)  =\int_{\mathbb{R}^{n}}%
+d\mathcal{P}\left(  x\right)  =\int_{\mathbb{R}^{n}}\rho_{\mathcal{P}}\left(
+x\right)  d\mathcal{\lambda}\left(  x\right)  =\int_{\mathbb{R}^{n}}\left\vert
+\Psi\left(  x\right)  \right\rangle \left\langle \Psi\left(  x\right)
+\right\vert d\mathcal{\lambda}\left(  x\right)  =I_{\mathcal{H}},
+\end{equation}
+i.e. the density $\rho_{\mathcal{P}}\left(  x\right)  \in\mathcal{B}\left(
+\mathcal{H}^{r}\right)  $ of $\mathcal{P}\left(  \Delta\right)  \in
+\mathcal{B}\left(  \mathcal{H}\right)  $ is given by
+\begin{equation}
+\rho_{\mathcal{P}}\left(  x\right)  =\left\vert \Psi\left(  x\right)
+\right\rangle \left\langle \Psi\left(  x\right)  \right\vert .
+\end{equation}
+
+\end{lemma}
+
+\begin{definition}
+A \emph{discrete Density Operator} $\rho_{d}\in\mathcal{B}_{1}\left(
+\mathcal{H}\right)  $ can be expanded as a sum projectors
+\begin{equation}
+\rho_{d}=\sum_{1\leq j\leq\infty}\left\vert \Psi_{j}\right\rangle \left\langle
+\Psi_{j}\right\vert .
+\end{equation}
+and produces the operator valued probability density
+\begin{equation}
+\rho_{d}\left(  x\right)  =\sum_{1\leq j\leq\infty}\left\vert \Psi_{j}\left(
+x\right)  \right\rangle \left\langle \Psi_{j}\left(  x\right)  \right\vert
+=\sum_{1\leq j\leq\infty}\delta\left(  x-x_{j}\right)  \left\vert \Psi\left(
+x\right)  \right\rangle \left\langle \Psi\left(  x\right)  \right\vert .
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+The projectors $\left\{  \left.  \left\vert \Psi_{j}\right\rangle \left\langle
+\Psi_{j}\right\vert \right\vert 1\leq j\leq\infty\right\}  $ are one
+dimensional, thus such probability densities cannot exist in $III$ Von Neumann algebras.
+\end{remark}
+
+\begin{definition}
+A \emph{simple positive operator valued function }%
+\begin{equation}
+s:\mathbb{R}^{n}\rightarrow\mathcal{B}\left(  \mathcal{H}\right)
+\end{equation}
+is defined by%
+\begin{equation}
+s=\sum_{1\leq j\leq n}\eta_{j}\mathcal{P}_{j},\,\eta_{j}\in\mathbb{R}_{+}%
+\end{equation}
+where
+\begin{equation}
+\,\Delta_{j}=s^{-1}\left(  \eta_{j}\right)  ,\quad1\leq j\leq n,\,\Delta
+_{j}\in\Sigma\left(  \mathbb{R}^{n}\right)  ,\,\,\eta_{j}\in\mathbb{R}_{+}^{n}%
+\end{equation}
+and $\left\{  \left.  \mathcal{P}_{j}\right\vert 1\leq j\leq\infty\right\}  $
+are PVM's.
+\end{definition}
+
+Using \emph{simple positive functions} $s_{A}\left(  x\right)  $ one obtains
+the operator valued integral
+\begin{equation}
+A_{+}=\int_{\Delta}s_{A}\left(  x\right)  d\mathcal{P}_{A}\left(  x\right)
+=\sum_{1\leq j\leq n}\eta_{j}\mathcal{P}\left(  \Delta_{j}\right)
+\in\mathcal{B}\left(  \mathcal{H}\right)  ,\,\,x\in\mathbb{R}^{n},\eta_{j}%
+\in\mathbb{R}_{+},
+\end{equation}
+which is the \emph{spectral decomposition} of $A_{+}.$This can be generalized
+to the spectral decomposition of any \emph{normal operator}
+\begin{equation}
+A=A_{1+}-A_{2+}+i\left(  A_{3+}-A_{4+}\right)  ,
+\end{equation}
+where
+\begin{equation}
+s_{A}=s_{A1+}-s_{A2+}+i\left(  s_{A3+}-s_{A4+}\right)
+\end{equation}
+is the sum of simple positive functions.
+
+If
+\begin{equation}
+f=\text{pointwise-}\lim\limits_{m\rightarrow\infty}\left\{  f_{m}\right\}
+\equiv p\text{-}\lim\limits_{m\rightarrow\infty}\left\{  f_{m}\right\}
+\end{equation}
+then the spectral integral has the property
+\begin{equation}
+\int_{\Delta}f\left(  x\right)  d\mathcal{P}\left(  x\right)  =\int_{\Delta
+}\left(  p\text{-}\lim\limits_{m\rightarrow\infty}\left\{  f_{m}\left(
+x\right)  \right\}  \right)  d\mathcal{P}\left(  x\right)  =\text{strong
+operator-}\lim\limits_{m\rightarrow\infty}\left\{  \int_{\Delta}f_{m}\left(
+x\right)  d\mathcal{P}\left(  x\right)  \right\}  \equiv s\text{-}%
+\lim\limits_{m\rightarrow\infty}\left\{  \int_{\Delta}f_{m}\left(  x\right)
+d\mathcal{P}\left(  x\right)  \right\}  .
+\end{equation}
+
+
+\begin{definition}
+Strong Operator Covergence:%
+\begin{equation}
+T=\text{strong operator-}\lim\limits_{m\rightarrow\infty}\left\{
+T_{n}\right\}  \equiv s\text{-}\lim\limits_{m\rightarrow\infty}\left\{
+T_{n}\right\}  \Longleftrightarrow\lim\limits_{m\rightarrow\infty}\left\{
+\left\Vert \left(  T-T_{n}\right)  \psi\right\Vert _{\mathcal{H}}\right\}
+=0\,\forall\psi\in\mathcal{H}.
+\end{equation}
+
+\end{definition}
+
+The functions can be extended to
+\begin{equation}
+f:X\rightarrow\mathbb{C}%
+\end{equation}
+by
+\begin{equation}
+f=s_{r+}-s_{r-}+i\left(  s_{i+}-s_{i-}\right)
+\end{equation}
+leading to normal operators
+\begin{equation}
+A=\int_{X}\eta d\mathcal{P}_{A}\left(  \eta\right)  =\int%
+_{\operatorname*{Spec}\left\{  A\right\}  \subseteq\mathbb{C}}\eta
+d\mathcal{P}_{A}\left(  \eta\right)
+\end{equation}
+and
+\begin{equation}
+f\left(  A\right)  =\int_{\operatorname*{Spec}\left\{  A\right\}
+\subseteq\mathbb{C}}f\left(  \eta\right)  d\mathcal{P}_{A}\left(  \eta\right)
+.
+\end{equation}
+
+
+\begin{definition}
+A PVM measure $\mathcal{P}_{1}$ is \emph{absolutely continuous} wrt a PVM
+measure $\mathcal{P}_{2}$ expressed as
+\begin{equation}
+\mathcal{P}_{2}\gg\mathcal{P}_{1}%
+\end{equation}
+if
+\begin{equation}
+\mathcal{P}_{2}\left(  \Delta\right)  =0\Rightarrow\mathcal{P}_{1}\left(
+\Delta\right)  =0,\quad\Delta\in\Sigma.
+\end{equation}
+
+\end{definition}
+
+\begin{theorem}
+\emph{Operator} \emph{Radon--Nikodym}: If $\mathcal{P}_{2}\gg\mathcal{P}_{1}$
+then
+\begin{equation}
+\mathcal{P}_{2}\left(  \Delta\right)  =\int_{\Delta}\rho_{\mathcal{P}%
+_{2}\mathcal{P}_{1}}\left(  x\right)  d\mathcal{P}_{1}\left(  x\right)
+=\int_{\Delta}\frac{d\mathcal{P}_{2}}{d\mathcal{P}_{1}}\left(  x\right)
+d\mathcal{P}_{1}\left(  x\right)  ,
+\end{equation}
+i.e. the "density" $\rho_{\mathcal{P}_{2}\mathcal{P}_{1}}$ is the operator
+Radon-Nikodym derivative i.e. $\rho_{\mathcal{P}_{2}\mathcal{P}_{1}}%
+=\frac{d\mathcal{P}_{2}}{d\mathcal{P}_{1}}.$
+\end{theorem}
+
+The PVM $\mathcal{P}_{2}$ that is absolutely continuous wrt $\mathcal{P}_{1}$
+has the values
+\begin{equation}
+\mathcal{P}_{2}\left(  \Delta\right)  =\int\chi_{\Delta}\left(  x\right)
+d\mathcal{P}_{2}\left(  x\right)  =\int_{\Delta}d\mathcal{P}_{2}\left(
+x\right)  =\int_{\Delta}\rho_{\mathcal{P}_{2}\mathcal{P}_{1}}\left(  x\right)
+d\mathcal{P}_{1}\left(  x\right)  =\int_{\Delta}\left\vert \Psi_{\mathcal{P}%
+_{2}\mathcal{P}_{1}}\left(  x\right)  \right\rangle \left\langle
+\Psi_{\mathcal{P}_{2}\mathcal{P}_{1}}\left(  x\right)  \right\vert
+d\mathcal{P}_{1}\left(  x\right)  ,
+\end{equation}
+where $\rho_{\mathcal{P}_{2}\mathcal{P}_{1}}\left(  x\right)  \in
+\operatorname*{Proj}\left\{  \mathcal{B}\left(  \mathcal{H}_{r}\right)
+\right\}  $ i.e.%
+\begin{equation}
+\rho_{\mathcal{P}_{2}\mathcal{P}_{1}}\left(  x\right)  =\left\vert
+\Psi_{\mathcal{P}_{2}\mathcal{P}_{1}}\left(  x\right)  \right\rangle
+\left\langle \Psi_{\mathcal{P}_{2}\mathcal{P}_{1}}\left(  x\right)
+\right\vert ,
+\end{equation}
+where $\left\vert \Psi_{\mathcal{P}_{2}\mathcal{P}_{1}}\left(  x\right)
+\right\rangle \in\mathcal{H}_{r}$, $\left\langle \Psi_{\mathcal{P}%
+_{2}\mathcal{P}_{1}}\left(  x\right)  \right\vert \in\mathcal{H}^{r}$ and
+$\mathcal{H}^{r}=\left(  \mathcal{H}_{r}\right)  ^{d}.$
+
+\begin{example}
+Discrete Spectral Density: In general
+\begin{equation}
+A=\int_{\operatorname*{Spec}\left\{  A\right\}  }\eta d\mathcal{P}_{A}\left(
+\eta\right)  =\int_{\operatorname*{Spec}\left\{  A\right\}  }\eta\rho
+_{A}\left(  \eta\right)  d\mathcal{\lambda}\left(  \eta\right)  .
+\end{equation}
+In the compact operator case the discrete spectral density is
+\begin{equation}
+\rho_{A}\left(  \eta\right)  =\sum_{1\leq j\leq\infty}\delta\left(  \eta
+-\eta_{Aj}\right)  \left\vert \Psi_{A}\left(  \eta\right)  \right\rangle
+\left\langle \Psi_{A}\left(  \eta\right)  \right\vert =\sum_{1\leq j\leq
+\infty}\delta\left(  \eta-\eta_{Aj}\right)  \left\vert \Psi_{Aj}\right\rangle
+\left\langle \Psi_{Aj}\right\vert ,
+\end{equation}
+where
+\begin{equation}
+\left\vert \Psi_{Aj}\right\rangle \left\langle \Psi_{Aj}\right\vert
+=\left\vert \Psi_{A}\left(  \eta_{Aj}\right)  \right\rangle \left\langle
+\Psi_{A}\left(  \eta_{Aj}\right)  \right\vert ,\quad\eta_{Aj}\in
+\mathbb{C},1\leq j\leq\infty,
+\end{equation}
+giving for $A\in\mathcal{B}_{0}\left(  \mathcal{H}\right)  $ the spectral
+expansion%
+\begin{equation}
+A=\sum_{1\leq j\leq\infty}\eta_{Aj}\left\vert \Psi_{Aj}\right\rangle
+\left\langle \Psi_{Aj}\right\vert ,\quad\eta_{j}\in\mathbb{C},1\leq
+j\leq\infty.
+\end{equation}
+
+
+\begin{enumerate}
+\item Consider the density operator $D\in\mathcal{B}_{0}\left(  \mathcal{H}%
+\right)  $
+\begin{gather}
+D=\int_{x\in\mathbb{R}^{+}}xdP_{D}\left(  x\right) \\
+\operatorname{Tr}\left\{  D\right\}  =\int_{x\in\mathbb{R}^{+}}%
+x\operatorname{Tr}\left\{  d\left(  P_{D}\left(  x\right)  \right)  \right\}
+=\int_{x\in\mathbb{R}^{+}}xd\left(  \operatorname{Tr}\left\{  P_{D}\left(
+x\right)  \right\}  \right)  =1\\
+\int_{x\in\mathbb{R}^{+}}dP_{D}\left(  x\right)  =\int_{x\in\mathbb{R}^{+}%
+}\rho_{D}\left(  x\right)  d\lambda\left(  x\right)  =I_{\mathcal{A}}%
+\end{gather}
+while%
+\begin{equation}
+\operatorname{Tr}\left\{  I_{\mathcal{A}}\right\}  =\int_{x\in\mathbb{R}^{+}%
+}\operatorname{Tr}\left\{  dP_{D}\left(  x\right)  \right\}  =\int%
+_{x\in\mathbb{R}^{+}}d\operatorname{Tr}\left\{  P_{D}\left(  x\right)
+\right\}  =\int_{x\in\mathbb{R}^{+}}\operatorname{Tr}\left\{  \rho_{D}\left(
+x\right)  \right\}  d\lambda\left(  x\right)  =1
+\end{equation}
+hence
+\begin{equation}
+P_{D}\left(  x\right)  =\operatorname{Tr}\left\{  \rho_{D}\left(  x\right)
+\right\}
+\end{equation}
+is the \emph{probability density} associated with the state $D.$
+
+\item
+\begin{equation}
+P_{D\Delta}=\int\chi_{\Delta}\left(  x\right)  dP_{D}\left(  x\right)
+=\int_{\Delta}dP_{D}\left(  x\right)  .
+\end{equation}
+
+
+\item
+\begin{align}
+P_{D\Delta_{1}}  &  =\int\chi_{\Delta_{1}}\left(  x\right)  dP_{D}\left(
+x\right)  =\int_{\Delta_{1}}dP_{D}\left(  x\right) \\
+P_{D\Delta_{2}}  &  =\int\chi_{\Delta_{2}}\left(  x\right)  dP_{D}\left(
+x\right)  =\int_{\Delta_{2}}dP_{D}\left(  x\right) \\
+\Delta_{1}  &  \supset\Delta_{2}\\
+P_{D\Delta_{1}}-P_{D\Delta_{2}}  &  =\int\left\{  \chi_{\Delta_{1}}\left(
+x\right)  P_{D\Delta_{1}}\left(  x\right)  -\chi_{\Delta_{2}}\left(  x\right)
+dP_{D\Delta_{2}}\left(  x\right)  \right\}  \geq0.
+\end{align}
+
+
+\item
+\begin{equation}
+I_{\mathcal{A}}=\int_{X}dP_{I_{\mathcal{A}}}\left(  x\right)  =\int%
+\chi_{I_{\mathcal{A}}}\left(  x\right)  dP_{I_{\mathcal{A}}}\left(  x\right)
+.
+\end{equation}
+
+
+\item
+\begin{align}
+\chi_{\Delta_{1}}-\chi_{\Delta_{2}}  &  =\chi_{\Delta_{1}\cup\Delta_{2}}%
+-\chi_{\Delta_{1}\cap\Delta_{2}}\\
+\Delta_{1}\cup\Delta_{2}  &  =\Delta_{1}\\
+\Delta_{1}\cap\Delta_{2}  &  =\Delta_{2}\\
+\chi_{\Delta_{1}}-\chi_{\Delta_{2}}  &  =\chi_{\Delta_{1}-\Delta_{2}}.
+\end{align}
+
+\end{enumerate}
+\end{example}
+
+\begin{example}%
+\begin{align}
+n_{j}  &  =\int\chi_{n_{j}}\left(  x\right)  dP_{n_{j}}\left(  x\right)
+=\int_{x\in\mathbb{R}^{+}}dP_{n_{j}}\left(  x\right)  =P_{\mathcal{H}^{1}%
+}+\sum_{1\leq j_{1}\leq\infty}\left\vert \varphi_{j}\varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{j}\varphi_{j_{1}}\right\vert +\sum_{1\leq
+j_{1}<j_{2}\leq\infty}\left\vert \varphi_{j}\varphi_{j_{1}}\varphi_{j_{2}%
+}\right\rangle \left\langle \varphi_{j}\varphi_{j_{1}}\varphi_{j_{2}%
+}\right\vert +\cdots\\
+\operatorname*{Spec}\left\{  n_{j}\right\}   &  =\left\{  0,1\right\}  .
+\end{align}
+
+\end{example}
+
+\begin{definition}
+Normal State: Let $\mathcal{A}$ be a $w^{\ast}$-algebra, and $\U{3c6} $ be a
+positive linear functional on $\mathcal{A}$. We say that $\U{3c6} $ is
+\emph{normal} if
+\begin{equation}
+\U{3c6} (\sup\limits_{\U{3b1} }\left\{  A_{\U{3b1} }\right\}  )=\sup
+\limits_{\U{3b1} }\left\{  \U{3c6} (A_{\U{3b1} })\right\}
+\end{equation}
+for all \emph{increasing nets}$\{A_{\U{3b1} }\}$ in $\mathcal{A}_{+}$ that
+have an upper bound. If $\mathcal{A}$ is finite dimensional, then each state
+is a normal state.
+\end{definition}
+
+\begin{remark}
+A \emph{normal state} on a von Neumann algebra defines a \emph{countably
+additive probability measure} over the \emph{projection lattice contained in
+the }von Neumann algebra. The von Neumann algebras familiar from ordinary QM
+are algebras of all the bounded operators on a Hilbert space $\mathcal{H}$,
+aka Type $I$ factor von Neumann algebras. Their normal states are density
+operator states and can be pure or mixed. In QFT and the thermodynamic limit
+of QSM, von Neumann algebras of more exotic types abound. \emph{Type
+}$\emph{III}$\emph{ von Neumann algebras, for instance, have no
+\underline{\emph{pure}} normal states} as the pure states they do have
+\emph{fail to be} countably additive.
+\end{remark}
+
+\begin{theorem}
+Let $\U{3c6} $ be a state on a $w^{\ast}$-algebra $\mathcal{A\subseteq
+B}\left(  \mathcal{H}\right)  $ acting on a Hilberts space $\mathcal{H}$. Then
+$\U{3c6} $ is normal \emph{if and only if} there exists a density operator
+$D_{\Pi_{\U{3c6} }}\in\Pi_{\U{3c6} }\left(  \mathcal{A}\right)  $, i.e. a
+\emph{positive trace-class operator }$D_{\Pi_{\U{3c6} }}\in\mathcal{S\left(
+\mathcal{B}\left(  \mathcal{H}_{\varphi}\right)  \right)  \subset B}%
+_{1}\left(  \mathcal{H}_{\varphi}\right)  $ acting in $\mathcal{H}_{\varphi}$
+with
+\begin{equation}
+\operatorname{Tr}_{\mathcal{H}_{\varphi}}\left\{  D_{\Pi_{\U{3c6} }}\right\}
+=1
+\end{equation}
+such that
+\begin{equation}
+\U{3c6} (A)=\operatorname{Tr}_{\mathcal{H}_{\varphi}}\left\{  \Pi_{\U{3c6}
+}\left(  A\right)  D_{\Pi_{\U{3c6} }}\right\}  \,\forall A\in\mathcal{A},
+\end{equation}
+where
+\begin{equation}
+D_{\Pi_{\U{3c6} }}\geq0.
+\end{equation}
+
+\end{theorem}
+
+\begin{corollary}
+If $\U{3c6} $ is a normal state then $D_{\Pi_{\U{3c6} }}\in\Pi_{\U{3c6}
+}\left(  \mathcal{A}\right)  ,$ $D_{\Pi_{\U{3c6} }}\in\mathcal{B}_{1}\left(
+\Phi_{\U{3c6} }\left(  \mathcal{A}\right)  \right)  $ and hence $D_{\Pi
+_{\U{3c6} }}=\Pi_{\U{3c6} }\left(  D_{\U{3c6} }\right)  ,$ where $D_{\U{3c6}
+}\in\mathcal{A}.$
+\end{corollary}
+
+\begin{corollary}
+If $\Pi_{\U{3c6} }$ is faithful then $D_{\U{3c6} }$ is unique.
+\end{corollary}
+
+\begin{corollary}
+If $\U{3c6} $ is a normal state then%
+\begin{equation}
+\U{3c6} \left(  D_{\U{3c6} }\right)  =\operatorname{Tr}_{\mathcal{H}_{\varphi
+}}\left\{  D_{\Pi_{\U{3c6} }}^{2}\right\}  \leq1.
+\end{equation}
+
+\end{corollary}
+
+\begin{corollary}
+If
+\begin{equation}
+\U{3c6} \left(  D_{\U{3c6} }\right)  =\operatorname{Tr}_{\mathcal{H}_{\varphi
+}}\left\{  D_{\Pi_{\U{3c6} }}^{2}\right\}  =1
+\end{equation}
+then $\U{3c6} $ is a pure state and
+\begin{equation}
+D_{\Pi_{\U{3c6} }}^{2}=D_{\Pi_{\U{3c6} }}.
+\end{equation}
+
+\end{corollary}
+
+\begin{remark}
+If $\U{3c6} $ is a normal state then%
+\begin{equation}
+\Pi_{\U{3c6} }\left(  D_{\U{3c6} }\right)  \Phi_{\varphi}\left(
+I_{\mathcal{A}}\right)  =\Phi_{\varphi}\left(  D_{\U{3c6} }\right)
+\end{equation}
+and%
+\begin{align}
+\U{3c6} (A)  &  =\left\langle \left.  \Phi_{\varphi}\left(  I_{\mathcal{A}%
+}\right)  \right\vert \Pi_{\U{3c6} }\left(  A\right)  \Phi_{\varphi}\left(
+I_{\mathcal{A}}\right)  \right\rangle _{\varphi}=\operatorname{Tr}%
+_{\mathcal{H}_{\varphi}}\left\{  \Pi_{\U{3c6} }\left(  A\right)  \left\vert
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle \left\langle
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert \right\} \\
+&  =\operatorname{Tr}_{\mathcal{H}_{\varphi}}\left\{  \Pi_{\U{3c6} }\left(
+A\right)  D_{\Pi_{\U{3c6} }}\right\}  =\operatorname{Tr}_{\mathcal{H}%
+_{\varphi}}\left\{  \Pi_{\U{3c6} }\left(  A\right)  \Pi_{\U{3c6} }\left(
+D_{\U{3c6} }\right)  \right\}  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+If $\U{3c6} $ is a normal state then the vectors $\Phi_{\varphi}\left(
+I_{\mathcal{A}}\right)  $ and $\Phi_{\varphi}\left(  D_{\U{3c6} }\right)  $
+are not in general equal
+\begin{equation}
+\left\langle \left.  \left(  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+-\Phi_{\varphi}\left(  D_{\U{3c6} }\right)  \right)  \right\vert \left(
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  -\Phi_{\varphi}\left(
+D_{\U{3c6} }\right)  \right)  \right\rangle _{\varphi}=\left\langle \left.
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert \Phi_{\varphi
+}\left(  I_{\mathcal{A}}\right)  \right\rangle _{\varphi}-2\left\langle
+\left.  \overset{}{\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  }\right\vert
+\Phi_{\varphi}\left(  D_{\U{3c6} }\right)  \right\rangle _{\varphi
+}+\left\langle \left.  \Phi_{\varphi}\left(  D_{\U{3c6} }\right)  \right\vert
+\Phi_{\varphi}\left(  D_{\U{3c6} }\right)  \right\rangle _{\varphi}.
+\end{equation}
+
+\end{remark}
+
+\begin{lemma}
+If $\U{3c6} $ is a pure state then
+\begin{equation}
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  =\Phi_{\varphi}\left(
+D_{\U{3c6} }\right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{corollary}
+If $\U{3c6} $ is a pure state then%
+\begin{equation}
+\left\langle \left.  \left(  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+-\Phi_{\varphi}\left(  D_{\U{3c6} }\right)  \right)  \right\vert \left(
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  -\Phi_{\varphi}\left(
+D_{\U{3c6} }\right)  \right)  \right\rangle _{\varphi}=0.
+\end{equation}
+
+\end{corollary}
+
+\begin{remark}
+If $\U{3c6} $ is a normal state then%
+\begin{equation}
+\U{3c6} \left(  D_{\U{3c6} }\right)  =\operatorname{Tr}\left\{  \Pi_{\U{3c6}
+}\left(  D_{\U{3c6} }\right)  \Pi_{\U{3c6} }\left(  D_{\U{3c6} }\right)
+\right\}  =\operatorname{Tr}\left\{  \Pi_{\U{3c6} }\left(  D_{\U{3c6}
+}\right)  ^{2}\right\}  =\operatorname{Tr}\left\{  D_{\Pi_{\U{3c6} }}%
+^{2}\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+If $\U{3c6} $ is a state then%
+\begin{equation}
+\U{3c6} \left(  A\right)  =\operatorname{Tr}\left\{  \Pi_{\U{3c6} }\left(
+A\right)  \left\vert \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\rangle \left\langle \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\vert \right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+If $\U{3c6} $ is a normal state then $D_{\Pi_{\U{3c6} }}=\Pi_{\U{3c6} }\left(
+D_{\U{3c6} }\right)  $ then
+\[
+\U{3c6} \left(  D_{\U{3c6} }\right)  =\operatorname{Tr}\left\{  \left\vert
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle \left\langle
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert \Pi_{\U{3c6}
+}\left(  D_{\U{3c6} }\right)  \right\}  =\left\langle \left.  \Phi_{\varphi
+}\left(  I_{\mathcal{A}}\right)  \right\vert \Pi_{\U{3c6} }\left(  D_{\U{3c6}
+}\right)  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle .
+\]
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\left\Vert \Phi_{\U{3c6} }\left(  I_{\mathcal{A}}-D_{\U{3c6} }\right)
+\right\Vert _{\mathcal{H}_{\U{3c6} }}^{2}=\U{3c6} \left(  \left(
+I_{\mathcal{A}}-D_{\U{3c6} }\right)  \left(  I_{\mathcal{A}}-D_{\U{3c6}
+}\right)  \right)  =\U{3c6} \left(  I_{\mathcal{A}}-2D_{\U{3c6} }+D_{\U{3c6}
+}^{2}\right)  =1-2\U{3c6} \left(  D_{\U{3c6} }\right)  +\U{3c6} \left(
+D_{\U{3c6} }^{2}\right)  ,
+\end{equation}
+which again shows that the vectors $\Phi_{\varphi}\left(  I_{\mathcal{A}%
+}\right)  $ and $\Phi_{\varphi}\left(  D_{\U{3c6} }\right)  $ are not equal
+unless $\U{3c6} $ is a normal \emph{pure} state i.e.
+\begin{equation}
+D_{\U{3c6} }=D_{\U{3c6} }^{2}%
+\end{equation}
+and hence
+\begin{equation}
+D_{\Pi_{\U{3c6} }}=D_{\Pi_{\U{3c6} }}^{2}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{gather}
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  -\Phi_{\varphi}\left(
+D_{\U{3c6} }\right)  =0\Rightarrow\left\langle \left.  \left(  \Phi_{\varphi
+}\left(  I_{\mathcal{A}}\right)  -D_{\Pi_{\U{3c6} }}\right)  \right\vert
+\left(  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  -D_{\Pi_{\U{3c6} }%
+}\right)  \right\rangle _{\varphi}=0\\
+\Rightarrow\left\langle \left.  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\vert \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle
+_{\varphi}-2\left\langle \left.  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\vert D_{\Pi_{\U{3c6} }}\right\rangle _{\varphi}+\left\langle \left.
+D_{\Pi_{\U{3c6} }}\right\vert D_{\Pi_{\U{3c6} }}\right\rangle _{\varphi
+}=1-2\varphi\left(  D_{\U{3c6} }\right)  +\varphi\left(  D_{\U{3c6} }%
+^{2}\right)  =0
+\end{gather}
+If $D_{\Pi_{\U{3c6} }}$is a pure state
+\begin{equation}
+D_{\Pi_{\U{3c6} }}=D_{\Pi_{\U{3c6} }}^{2}%
+\end{equation}
+and
+\begin{equation}
+\operatorname{Tr}\left\{  D_{\Pi_{\U{3c6} }}\right\}  =1=\varphi\left(
+D_{\U{3c6} }\right)  .
+\end{equation}
+Thus if $\varphi$ is a pure normal state
+\begin{equation}
+1-2\varphi\left(  D_{\U{3c6} }\right)  +\varphi\left(  D_{\U{3c6} }%
+^{2}\right)  =1-2\varphi\left(  D_{\U{3c6} }\right)  +\varphi\left(
+D_{\U{3c6} }\right)  =0
+\end{equation}
+and
+\begin{equation}
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  =\Phi_{\varphi}\left(
+D_{\U{3c6} }\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+Are the operators $\Pi_{\U{3c6} }\left(  D_{\U{3c6} }\right)  $ and
+$\left\vert \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle
+\left\langle \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert $
+equal? The action of their difference is
+\begin{align}
+\left(  \Pi_{\U{3c6} }\left(  D_{\U{3c6} }\right)  -\left\vert \Phi_{\varphi
+}\left(  I_{\mathcal{A}}\right)  \right\rangle \left\langle \Phi_{\varphi
+}\left(  I_{\mathcal{A}}\right)  \right\vert \right)  \Phi_{\varphi}\left(
+A\right)   &  =\Phi_{\varphi}\left(  D_{\U{3c6} }A\right)  -\left\langle
+\left.  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert
+\Phi_{\varphi}\left(  A\right)  \right\rangle \Phi_{\varphi}\left(
+I_{\mathcal{A}}\right) \\
+&  =\Phi_{\varphi}\left(  D_{\U{3c6} }A\right)  -\varphi\left(  A\right)
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+Notice the difference between the inner product and expectation value
+differences:
+\begin{align}
+\operatorname{Tr}\left\{  \Pi_{\U{3c6} }\left(  X\right)  \Pi_{\U{3c6}
+}\left(  D_{\U{3c6} }\right)  \right\}   &  =\U{3c6} \left(  X\right) \\
+\left\langle \left.  \Phi_{\varphi}\left(  A\right)  \right\vert \Phi
+_{\varphi}\left(  B\right)  \right\rangle _{\U{3c6} }  &  =\U{3c6} \left(
+A^{\dagger}B\right) \\
+\left\langle \left.  \Phi_{\varphi}\left(  A\right)  \right\vert \Pi_{\U{3c6}
+}\left(  X\right)  \Phi_{\varphi}\left(  B\right)  \right\rangle _{\U{3c6} }
+&  =\U{3c6} \left(  A^{\dagger}XB\right) \\
+\left\langle \left.  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert
+\Pi_{\U{3c6} }\left(  X\right)  \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\rangle _{\U{3c6} }  &  =\U{3c6} \left(  X\right)  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+The expectation value of their difference is
+\begin{gather}
+\left\langle \left.  \Phi_{\varphi}\left(  A\right)  \right\vert \left(
+D_{\Pi_{\U{3c6} }}-\left\vert \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\rangle \left\langle \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\vert \right)  \Phi_{\varphi}\left(  A\right)  \right\rangle _{\U{3c6}
+}=\operatorname{Tr}\left\{  \left(  D_{\Pi_{\U{3c6} }}-\left\vert
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle \left\langle
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert \right)  \left\vert
+\Phi_{\varphi}\left(  A\right)  \right\rangle \left\langle \Phi_{\varphi
+}\left(  A\right)  \right\vert \right\} \\
+=\left\langle \left.  \Phi_{\varphi}\left(  A\right)  \right\vert
+D_{\Pi_{\U{3c6} }}\Phi_{\varphi}\left(  A\right)  \right\rangle _{\U{3c6}
+}-\left\langle \left.  \Phi_{\varphi}\left(  A\right)  \right\vert \left\vert
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle \left\langle
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert \Phi_{\varphi
+}\left(  A\right)  \right\rangle _{\U{3c6} }\\
+=\left\langle \left.  \Phi_{\varphi}\left(  A\right)  \right\vert
+D_{\Pi_{\U{3c6} }}\Phi_{\varphi}\left(  A\right)  \right\rangle _{\U{3c6}
+}-\left\vert \left\langle \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\vert \Phi_{\varphi}\left(  A\right)  _{\U{3c6} }\right\vert
+^{2}=\varphi\left(  A^{\dagger}D_{\U{3c6} }A\right)  -\left\vert
+\varphi\left(  A\right)  \right\vert ^{2},
+\end{gather}
+which is not in general zero.
+\end{remark}
+
+\begin{remark}
+This expectation value can also be expressed in trace form as
+\begin{align}
+&  \operatorname{Tr}\left\{  \left(  D_{\Pi_{\U{3c6} }}-\left\vert
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\rangle \left\langle
+\Phi_{\varphi}\left(  I_{\mathcal{A}}\right)  \right\vert \right)  \left\vert
+\Phi_{\varphi}\left(  A\right)  \right\rangle \left\langle \Phi_{\varphi
+}\left(  A\right)  \right\vert \right\} \\
+&  =\operatorname{Tr}\left\{  D_{\Pi_{\U{3c6} }}\left\vert \Phi_{\varphi
+}\left(  A\right)  \right\rangle \left\langle \Phi_{\varphi}\left(  A\right)
+\right\vert \right\}  -\operatorname{Tr}\left\{  \left\vert \Phi_{\varphi
+}\left(  I_{\mathcal{A}}\right)  \right\rangle \left\langle \Phi_{\varphi
+}\left(  I_{\mathcal{A}}\right)  \right\vert \left\vert \Phi_{\varphi}\left(
+A\right)  \right\rangle \left\langle \Phi_{\varphi}\left(  A\right)
+\right\vert \right\} \\
+&  =\varphi\left(  A^{\dagger}D_{\U{3c6} }A\right)  -\left\vert \varphi\left(
+A\right)  \right\vert ^{2}.
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+If
+\begin{equation}
+D_{\U{3c6} }=D_{\U{3c6} }^{2}%
+\end{equation}
+then
+\begin{equation}
+\Phi_{\U{3c6} }\left(  I_{\mathcal{A}}\right)  =\Phi_{\U{3c6} }\left(
+D_{\U{3c6} }\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{lemma}%
+\begin{equation}
+\varphi\left(  D^{2}\right)  =\varphi\left(  D\right)  =1\Leftrightarrow
+D^{2}=D
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+\begin{enumerate}
+\item
+\begin{align}
+D^{2}  &  =\sum_{1\leq j\leq\infty}d_{j}^{2}P_{j}\\
+\varphi\left(  D^{2}\right)   &  =\sum_{1\leq j\leq\infty}d_{j}^{2}%
+\varphi\left(  P_{j}\right)  =1
+\end{align}
+
+
+\item
+\begin{align}
+D  &  =\sum_{1\leq j\leq\infty}d_{j}P_{j}\\
+\varphi\left(  D\right)   &  =\sum_{1\leq j\leq\infty}d_{j}\varphi\left(
+P_{j}\right)  =1
+\end{align}
+
+
+\item
+\begin{equation}
+\sum_{1\leq j\leq\infty}P_{j}=I_{\mathcal{A}}%
+\end{equation}
+
+
+\item
+\begin{equation}
+d_{j}^{2}=d_{j}\Leftrightarrow d_{j}\left(  d_{j}-1\right)  =0\Leftrightarrow
+d_{j}=\left\{
+\begin{array}
+[c]{c}%
+1\\
+0
+\end{array}
+\right.  ,\quad1\leq j\leq\infty.
+\end{equation}
+
+\end{enumerate}
+\end{proof}
+
+\begin{remark}
+In general $\left\vert \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\rangle \left\langle \Phi_{\varphi}\left(  I_{\mathcal{A}}\right)
+\right\vert $ \emph{may or may not belong to} $\Pi_{\U{3c6} }\left(
+\mathcal{A}\right)  .$ If $\U{3c6} $ is a normal state then $D_{\Pi_{\U{3c6}
+}}\in\Pi_{\U{3c6} }\left(  \mathcal{A}\right)  $ and $D_{\Pi_{\U{3c6} }}%
+=\Pi_{\U{3c6} }\left(  D_{\U{3c6} }\right)  .$ If $\Pi_{\U{3c6} }$ is faithful
+then $D_{\U{3c6} }$ is unique.
+\end{remark}
+
+\begin{remark}
+In order for $\U{3c6} $ to be a state it must be a \underline{\emph{linear}}
+functional thus
+\begin{equation}
+\U{3c6} \left(  z_{1}A_{1}+z_{2}A_{2}\right)  =z_{1}\U{3c6} \left(
+A_{1}\right)  +z_{2}\U{3c6} \left(  A_{2}\right)
+\end{equation}
+as well as positive
+\begin{equation}
+\U{3c6} \left(  A^{\dagger}A\right)  \geq0\quad\forall A\in\mathcal{A}%
+\end{equation}
+and normalized
+\begin{equation}
+\U{3c6} \left(  I_{\mathcal{A}}\right)  =1.
+\end{equation}
+Thus normal states defined in terms of traces must have the form
+\begin{equation}
+\U{3c6} \left(  A\right)  \ =\operatorname{Tr}\left\{  AD_{2\U{3c6} }\right\}
+,
+\end{equation}
+which is\emph{ not of the form} of a Hilbert Schmidt inner product
+\begin{equation}
+\ \left\langle \left.  A\right\vert D_{\U{3c6} }\right\rangle _{HS}%
+=\operatorname{Tr}\left\{  A^{\dagger}D_{2\U{3c6} }\right\}  .
+\end{equation}
+Hence
+\begin{equation}
+\U{3c6} \left(  A\right)  =\left\langle A,D_{\U{3c6} }\right\rangle
+=\left\langle \left.  A^{\dagger}\right\vert D_{\U{3c6} }\right\rangle _{HS},
+\end{equation}
+where
+\begin{equation}
+D_{\U{3c6} }\in\mathcal{A}_{\ast}%
+\end{equation}
+and
+\begin{equation}
+\left\langle \left.  A^{\dagger}\right\vert D_{\U{3c6} }\right\rangle
+_{HS}=\U{3c6} \left(  A\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+If a normalized trace $\operatorname*{tr}$ exists it defines a state $\U{3c6}
+_{\operatorname*{tr}}$ by
+\begin{equation}
+\U{3c6} _{\operatorname*{tr}}\left(  A\right)  =\operatorname*{tr}\left\{
+AI_{A}\right\}  =\operatorname*{tr}\left\{  A\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+One can use a state $\U{3c6} $ to define a possibly degenerate inner product
+\begin{equation}
+\left\langle \left.  A\right\vert B\right\rangle _{\U{3c6} }=\U{3c6} \left(
+A^{\dagger}B\right)  ,\quad\forall A,B\in\mathcal{A}%
+\end{equation}
+and thus a GNS map%
+\begin{equation}
+\Phi_{\U{3c6} }:\mathcal{A\rightarrow H}_{\U{3c6} },
+\end{equation}
+where
+\begin{equation}
+\ker\left\{  \Phi_{\U{3c6} }\right\}  =\left\{  \left.  A\right\vert \U{3c6}
+\left(  A^{\dagger}A\right)  =0;A\in\mathcal{A}\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\Pi_{\U{3c6} }\left(  D_{\U{3c6} }\right)  \Phi_{\U{3c6} }\left(  A\right)
+=\Phi_{\U{3c6} }\left(  D_{\U{3c6} }A\right)  .
+\end{equation}
+
+\end{remark}
+
+Consider a tracial state $\U{3c6} _{\operatorname*{tr}},$ i.e.
+\begin{equation}
+\U{3c6} _{\operatorname*{tr}}\left(  AB\right)  =\U{3c6} _{\operatorname*{tr}%
+}\left(  BA\right)  \quad\forall A,B\in\mathcal{A}%
+\end{equation}
+defined by
+\begin{equation}
+\U{3c6} _{\operatorname*{tr}}\left(  A\right)  =\operatorname*{tr}\left\{
+AD_{\operatorname*{tr}}\right\}  =\operatorname*{tr}\left\{  AI_{\mathcal{A}%
+}\right\}  ,
+\end{equation}
+where $\operatorname*{tr}$ is a normalized trace i.e.
+\begin{equation}
+\operatorname*{tr}\left\{  I_{\mathcal{A}}\right\}  =1.
+\end{equation}
+If $\U{3c6} _{\operatorname*{tr}}\in\mathcal{S\left(  \mathcal{A}\right)  }$
+is a normal state then
+\begin{gather}
+\U{3c6} _{\operatorname*{tr}}(A)=\operatorname*{tr}\left\{
+AD_{\operatorname*{tr}}\right\}  =\operatorname{Tr}_{\mathcal{H}_{\U{3c6}
+_{\operatorname*{tr}}}}\left\{  \Pi_{\U{3c6} _{\operatorname*{tr}}}\left(
+A\right)  \Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  D_{\operatorname*{tr}%
+}\right)  \right\}  \,\forall A\in\mathcal{A}\\
+\operatorname*{tr}\left\{  D_{\operatorname*{tr}}\right\}  =\operatorname{Tr}%
+_{\mathcal{H}_{\U{3c6} _{\operatorname*{tr}}}}\left\{  \Pi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  D_{\operatorname*{tr}}\right)  \right\}  =1.
+\end{gather}
+
+
+\begin{conjecture}
+$\U{3c6} _{\operatorname*{tr}}$ is not a normal state if it was
+$D_{\operatorname*{tr}}$ would belong to predual $\mathcal{A}_{\ast}$ of
+$\mathcal{A,}$which it does not.
+\end{conjecture}
+
+\begin{remark}
+If the $w^{\ast}$-algebra $\mathcal{A}$ is of type $II$ or $III$ it has
+\emph{no normal pure states}.
+\end{remark}
+
+Let
+\begin{equation}
+D_{\operatorname*{tr}}=D_{\operatorname*{tr}}^{2}%
+\end{equation}
+then
+
+\begin{enumerate}
+\item
+\begin{equation}
+\U{3c6} _{\operatorname*{tr}}(A)=\left\langle \left.  \Phi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  I_{\mathcal{A}}\right)  \right\vert \Pi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  A\right)  \Phi_{\U{3c6} _{\operatorname*{tr}}%
+}\left(  I_{\mathcal{A}}\right)  \right\rangle _{\U{3c6} _{\operatorname*{tr}%
+}}=\operatorname*{tr}\left\{  A\right\}
+\end{equation}
+
+
+\item
+\begin{equation}
+\left(  I_{\mathcal{A}}-D_{\operatorname*{tr}}\right)  ^{2}=I_{\mathcal{A}%
+}-2D_{\operatorname*{tr}}+D_{\operatorname*{tr}}=I_{\mathcal{A}}%
+-D_{\operatorname*{tr}}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\left(  I_{\mathcal{A}}-D_{\operatorname*{tr}}\right)  D_{\operatorname*{tr}%
+}=0.
+\end{equation}
+
+
+\item
+\begin{equation}
+\operatorname*{tr}\left\{  \left(  I_{\mathcal{A}}-D_{\operatorname*{tr}%
+}\right)  \right\}  =0.
+\end{equation}
+
+
+\item
+\begin{align}
+\Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  D_{\operatorname*{tr}}\right)
+^{2}  &  =\Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  D_{\operatorname*{tr}%
+}\right) \\
+\Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  \left(  I_{\mathcal{A}%
+}-D_{\operatorname*{tr}}\right)  \right)  ^{2}  &  =\Pi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  \left(  I_{\mathcal{A}}-D_{\operatorname*{tr}%
+}\right)  \right)  .
+\end{align}
+
+
+\item
+\begin{equation}
+\Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  I_{\mathcal{A}}%
+-D_{\operatorname*{tr}}\right)  \Pi_{\U{3c6} _{\operatorname*{tr}}}\left(
+D_{\operatorname*{tr}}\right)  =\Pi_{\U{3c6} _{\operatorname*{tr}}}\left(
+\left(  I_{\mathcal{A}}-D_{\operatorname*{tr}}\right)  D_{\operatorname*{tr}%
+}\right)  =0.
+\end{equation}
+
+\end{enumerate}
+
+\begin{remark}%
+\begin{equation}
+\operatorname*{tr}\left\{  A\right\}  =\left\langle \left.  \Phi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  I_{\mathcal{A}}\right)  \right\vert \Pi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  A\right)  \Phi_{\U{3c6} _{\operatorname*{tr}}%
+}\left(  I_{\mathcal{A}}\right)  \right\rangle _{\U{3c6} _{\operatorname*{tr}%
+}}%
+\end{equation}
+thus
+\begin{equation}
+\operatorname*{tr}\left\{  A\right\}  \neq\operatorname{Tr}_{\mathcal{H}%
+_{\U{3c6} _{\operatorname*{tr}}}}\left\{  \Pi_{\U{3c6} _{\operatorname*{tr}}%
+}\left(  A\right)  \right\}
+\end{equation}
+as
+\begin{equation}
+\operatorname{Tr}_{\mathcal{H}_{\U{3c6} _{\operatorname*{tr}}}}\left\{
+\Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  A\right)  \right\}  =\left\langle
+\left.  \Phi_{\U{3c6} _{\operatorname*{tr}}}\left(  I_{\mathcal{A}}\right)
+\right\vert \Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  A\right)  \Phi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  I_{\mathcal{A}}\right)  \right\rangle _{\U{3c6}
+_{\operatorname*{tr}}}+\operatorname{Tr}_{\mathcal{H}_{\U{3c6}
+_{\operatorname*{tr}}}}\left\{  \left(  I_{\mathcal{H}_{\U{3c6}
+_{\operatorname*{tr}}}}-\left\vert \Phi_{\U{3c6} _{\operatorname*{tr}}}\left(
+I_{\mathcal{A}}\right)  \right\rangle \left\langle \Phi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  I_{\mathcal{A}}\right)  \right\vert \right)
+\Pi_{\U{3c6} _{\operatorname*{tr}}}\left(  A\right)  \right\}  ,
+\end{equation}
+where
+\begin{equation}
+I_{\mathcal{H}_{\U{3c6} _{\operatorname*{tr}}}}-\left\vert \Phi_{\U{3c6}
+_{\operatorname*{tr}}}\left(  I_{\mathcal{A}}\right)  \right\rangle
+\left\langle \Phi_{\U{3c6} _{\operatorname*{tr}}}\left(  I_{\mathcal{A}%
+}\right)  \right\vert =\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}\left\vert
+\Phi_{\U{3c6} _{\operatorname*{tr}}}\left(  x_{j_{1}}\cdots x_{j_{n}}\right)
+\right\rangle \left\langle \Phi_{\U{3c6} _{\operatorname*{tr}}}\left(
+x_{j_{1}}\cdots x_{j_{n}}\right)  \right\vert .
+\end{equation}
+
+\end{remark}
+
+\section{Polynomial $w^{\ast}$-Algebra $\mathcal{A}$}
+
+\begin{definition}%
+\begin{align}
+\mathcal{A}  &  =\text{strong operator-}\lim\limits_{r\rightarrow\infty
+}\left\{  \operatorname*{Alg}\left\{  I_{\mathcal{A}},\left\{  x_{1}%
+,\cdots,x_{2r}\right\}  \right\}  \right\} \\
+&  =\text{strong operator-}\lim\limits_{r\rightarrow\infty}\left\{  \left(
+\alpha_{0}I_{\mathcal{A}}+\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}\alpha
+_{j_{1}\cdots j_{n}}x_{j_{1}}\cdots x_{j_{n}}\right)  ,\alpha_{j_{1}\cdots
+j_{n}}\in\mathbb{C},1\leq j_{1}<\cdots<j_{n}\leq2r,0\leq n\leq2r\right\}
+\end{align}
+
+\end{definition}
+
+\begin{remark}
+The condition of $\mathcal{A}$ being a von Neumann algebra i.e. being closed
+in the weak operator topology is equivalent to being closed in the
+\textquotedblleft strong\textquotedblright, \textquotedblleft
+ultrastrong\textquotedblright, or \textquotedblleft
+ultraweak\textquotedblright\ operator topologies, which are topological
+conditions, and is equivalent to an algebraic condition i.e. being equal to
+its bicommutant.
+\end{remark}
+
+\begin{definition}
+A normalized tracial state can be defined as
+\begin{equation}
+\operatorname*{tr}\left\{  A\right\}  =\left\langle A\right\rangle _{0}%
+=\alpha_{0}.
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+$\mathcal{A}$ is a $w^{\ast}$-Algebra if is a $c^{\ast}$-Algebra that has a
+predual $\mathcal{A}_{\ast}$.
+\end{definition}
+
+\begin{remark}
+When people say \emph{"weak topology"} in the context of von Neumann algebras
+they are usually referring to the topology induced by the \emph{normal
+functionals}, which is the \emph{weak * topology} when the algebra is seen as
+the dual of the normal functionals. In a concrete von Neumann algebra, this is
+the \emph{ultraweak topology}; it \emph{agrees with the weak operator topology
+on bounded set}s it is induced by the seminorms%
+\begin{equation}
+p\left(  A\right)  =\left\vert \varphi\left(  A\right)  \right\vert ,\quad
+A\in\mathcal{A},\,\varphi\in\mathcal{A}_{\ast}%
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+$\mathcal{A}$ is closed in this topology.
+\end{remark}
+
+\begin{remark}
+Convergence
+\begin{equation}
+A=w\text{-}\lim\limits_{\left\{  A_{j}\right\}  _{j\in J}}A_{j}\Leftrightarrow
+p\left(  A-A_{j}\right)  \searrow0\Leftrightarrow p\left(  A-A_{j}\right)
+=p\left(  A_{j}\right)  \longrightarrow p\left(  A\right)
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The \emph{weak topology} induced on a von Neumann algebra by its predual is
+called the \emph{ultraweak topology}. The role of the \emph{ultraweak
+topology} for von Neumann algebras is analogous to the role of the \emph{norm
+topology for C*-algebras}.
+\end{remark}
+
+\begin{definition}
+$\mathcal{A}$ is a $c^{\ast}$-Algebra is an algebra that is a Banach space
+with norm $\left\Vert {}\right\Vert _{\mathcal{A}}$ that has the properties
+
+\begin{enumerate}
+\item
+\begin{equation}
+\left\Vert A^{\dagger}A\right\Vert _{\mathcal{A}}=\left\Vert A\right\Vert
+_{\mathcal{A}}^{2}.
+\end{equation}
+
+
+\item "$\dagger"$ is an involution such that
+\begin{align}
+\left(  AB\right)  ^{\dagger}  &  =B^{\dagger}A^{\dagger}\\
+\left(  \alpha A+\beta B\right)  ^{\dagger}  &  =\overline{\alpha}A^{\dagger
+}+\overline{\beta}B^{\dagger}.
+\end{align}
+
+\end{enumerate}
+\end{definition}
+
+$\mathcal{A}$ is a polynomial algebra
+\begin{equation}
+\mathcal{A}=\mathbb{C}\text{-}\operatorname*{Alg}\left\{  \left\{  \left.
+x_{j}\right\vert 1\leq j\leq2r\right\}  ,I_{\mathcal{A}}\right\}  ,
+\end{equation}
+where the generators have the properties:
+
+\begin{enumerate}
+\item Anti Commutivity%
+\begin{equation}
+x_{j}x_{k}=-x_{k}x_{j}\Longleftrightarrow\left\{  x_{j},x_{k}\right\}
+=0,\quad1\leq j<k\leq2r
+\end{equation}
+
+
+\item Normalized bases elements are involutions
+\begin{equation}
+x_{j}^{2}=I_{\mathcal{A}}\Longleftrightarrow\left\{  x_{j},x_{j}\right\}
+=2I_{\mathcal{A}},\quad1\leq j\leq2r.
+\end{equation}
+
+\end{enumerate}
+
+$\mathcal{A}$ has a graded decomposition
+\begin{equation}
+\mathcal{A}=%
+%TCIMACRO{\tbigoplus \limits_{0\leq n\leq2r}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{0\leq n\leq2r}}
+%EndExpansion
+\mathcal{A}_{n},
+\end{equation}
+where
+\begin{equation}
+\mathcal{A}_{n}=%
+%TCIMACRO{\tbigwedge \nolimits^{n}}%
+%BeginExpansion
+{\textstyle\bigwedge\nolimits^{n}}
+%EndExpansion
+\mathcal{A}_{1}%
+\end{equation}
+and the grading is left invariant by transformations $T\in{\large \boxtimes
+}\mathcal{B}\left(  \mathcal{A}_{1}\right)  $ where
+\begin{equation}
+{\large \boxtimes}\mathcal{B}\left(  \mathcal{A}_{1}\right)  =%
+%TCIMACRO{\tbigoplus \limits_{0\leq n\leq2r}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{0\leq n\leq2r}}
+%EndExpansion
+{\large \boxtimes}^{n}\mathcal{B}\left(  \mathcal{A}_{1}\right)  .
+\end{equation}
+
+
+\begin{theorem}
+$\mathcal{A}$ is a Clifford Algebra.
+\end{theorem}
+
+\begin{definition}
+Normalized Trace%
+\begin{equation}
+\operatorname*{tr}\left\{  A\right\}  =\left\langle A\right\rangle _{0}.
+\end{equation}
+
+\end{definition}
+
+\begin{lemma}
+$\left\langle {}\right\rangle _{0}\equiv\operatorname*{tr}$ is faithful and
+symmetric i.e.
+
+\begin{enumerate}
+\item
+\begin{equation}
+\left\langle AB\right\rangle _{0}=\left\langle BA\right\rangle _{0}%
+\equiv\operatorname*{tr}\left\{  AB\right\}  =\operatorname*{tr}\left\{
+BA\right\}  .
+\end{equation}
+
+
+\item
+\begin{equation}
+\left\langle A\right\rangle _{0}=0\Leftrightarrow A=0.
+\end{equation}
+
+\end{enumerate}
+\end{lemma}
+
+$\lceil$Grade filters $\left\langle {}\right\rangle _{n}$ are
+\begin{equation}
+\left\langle A\right\rangle _{n}=A_{n}\in\mathcal{A}_{n}%
+\end{equation}
+Multiplication is given by
+\begin{equation}
+AB=\sum_{0\leq m,n\leq2r}A_{m}B_{n},
+\end{equation}
+where
+\begin{equation}
+A_{m}B_{n}=\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle A_{m}%
+B_{n}\right\rangle _{\left\vert m-n\right\vert +2j}=\left\langle A_{m}%
+B_{n}\right\rangle _{\left\vert m-n\right\vert +0}+\left\langle A_{m}%
+B_{n}\right\rangle _{\left\vert m-n\right\vert +2}+\cdots+\left\langle
+A_{m}B_{n}\right\rangle _{\left\vert m-n\right\vert +2\left(  \min\left(
+m,n\right)  -1\right)  }+\left\langle A_{m}B_{n}\right\rangle _{\left\vert
+m-n\right\vert +2\left(  \min\left(  m,n\right)  \right)  }%
+\end{equation}
+giving%
+\begin{equation}
+AB=\sum_{0\leq m,n\leq2r}\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle
+A_{m}B_{n}\right\rangle _{\left\vert m-n\right\vert +2j}.
+\end{equation}
+$\rfloor$
+
+\begin{remark}%
+\begin{align}
+&  A^{\dagger}A=\sum_{0\leq m,n\leq2r}A_{m}^{\dagger}A_{n}\\
+&  A_{m}^{\dagger}A_{n}=\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle
+A_{m}^{\dagger}A_{n}\right\rangle _{\left\vert m-n\right\vert +2j}%
+=\left\langle A_{m}^{\dagger}A_{n}\right\rangle _{\left\vert m-n\right\vert
++0}+\left\langle A_{m}^{\dagger}A_{n}\right\rangle _{\left\vert m-n\right\vert
++2}+\cdots+\left\langle A_{m}^{\dagger}A_{n}\right\rangle _{\left\vert
+m-n\right\vert +2\left(  \min\left(  m,n\right)  -1\right)  }+\left\langle
+A_{m}^{\dagger}A_{n}\right\rangle _{\left\vert m-n\right\vert +2\left(
+\min\left(  m,n\right)  \right)  }\\
+&  A^{\dagger}A=\sum_{0\leq m,n\leq2r}\sum_{j=0}^{\min\left(  m,n\right)
+}\left\langle A_{m}^{\dagger}A_{n}\right\rangle _{\left\vert m-n\right\vert
++2j}\\
+&  \left\langle A_{m}^{\dagger}A_{n}\right\rangle _{\left\vert m-n\right\vert
++2j}=\sum_{\substack{0\leq j_{1}<\cdots<j_{m}\leq2r\\0\leq k_{1}<\cdots
+<k_{n}\leq2r}}\left(  \alpha_{j_{1}\cdots j_{m}}x_{j_{1}\cdots}x_{j_{m}%
+}\right)  ^{\dagger}\left(  \alpha_{j_{1}\cdots j_{n}}x_{k_{1}\cdots}x_{k_{n}%
+}\right)  =\sum_{\substack{0\leq j_{1}<\cdots<j_{m}\leq2r\\0\leq k_{1}%
+<\cdots<k_{n}\leq2r}}\overline{\alpha_{j_{1}\cdots j_{m}}}\alpha_{j_{n}\cdots
+j_{1}}x_{j_{1}\cdots}x_{j_{m}}x_{k_{1}\cdots}x_{k_{n}}\\
+&  \quad\quad\quad\quad\quad\quad\,\left.  =\right.  \sum_{\substack{0\leq
+j_{1}<\cdots<j_{m}\leq2r\\0\leq k_{1}<\cdots<k_{n}\leq2r}}\left(  -1\right)
+^{m+1}\overline{\alpha_{j_{1}\cdots j_{m}}}\alpha_{j_{1}\cdots j_{n}}%
+x_{j_{1}\cdots}x_{j_{m}}x_{k_{1}\cdots}x_{k_{n}}.
+\end{align}
+
+
+\begin{example}
+\begin{enumerate}
+\item $r=2$%
+\begin{align}
+&  AB=\sum_{0\leq m,n\leq4}\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle
+A_{m}B_{n}\right\rangle _{\left\vert m-n\right\vert +2j}=\\
+&  \sum_{j=0}^{0}\left\langle A_{0}B_{0}\right\rangle _{0+2j}+\sum_{j=0}%
+^{0}\left\langle A_{1}B_{0}\right\rangle _{1+2j}+\sum_{j=0}^{0}\left\langle
+A_{2}B_{0}\right\rangle _{2+2j}+\sum_{j=0}^{0}\left\langle A_{3}%
+B_{0}\right\rangle _{3+2j}+\sum_{j=0}^{0}\left\langle A_{4}B_{0}\right\rangle
+_{4+2j}\\
+&  \sum_{j=0}^{0}\left\langle A_{0}B_{1}\right\rangle _{1+2j}+\sum_{j=0}%
+^{1}\left\langle A_{1}B_{1}\right\rangle _{0+2j}+\sum_{j=0}^{1}\left\langle
+A_{2}B_{1}\right\rangle _{1+2j}+\sum_{j=0}^{1}\left\langle A_{3}%
+B_{1}\right\rangle _{2+2j}+\sum_{j=0}^{1}\left\langle A_{4}B_{1}\right\rangle
+_{3+2j}\\
+&  \sum_{j=0}^{0}\left\langle A_{0}B_{2}\right\rangle _{2+2j}+\sum_{j=0}%
+^{1}\left\langle A_{1}B_{2}\right\rangle _{1+2j}+\sum_{j=0}^{2}\left\langle
+A_{2}B_{2}\right\rangle _{0+2j}+\sum_{j=0}^{2}\left\langle A_{3}%
+B_{2}\right\rangle _{1+2j}+\sum_{j=0}^{2}\left\langle A_{4}B_{2}\right\rangle
+_{2+2j}\\
+&  \sum_{j=0}^{0}\left\langle A_{0}B_{3}\right\rangle _{3+2j}+\sum_{j=0}%
+^{1}\left\langle A_{1}B_{3}\right\rangle _{2+2j}+\sum_{j=0}^{2}\left\langle
+A_{2}B_{3}\right\rangle _{1+2j}+\sum_{j=0}^{3}\left\langle A_{3}%
+B_{3}\right\rangle _{0+2j}+\sum_{j=0}^{3}\left\langle A_{4}B_{3}\right\rangle
+_{1+2j}\\
+&  \sum_{j=0}^{0}\left\langle A_{0}B_{4}\right\rangle _{4+2j}+\sum_{j=0}%
+^{1}\left\langle A_{1}B_{4}\right\rangle _{3+2j}+\sum_{j=0}^{2}\left\langle
+A_{2}B_{4}\right\rangle _{2+2j}+\sum_{j=0}^{3}\left\langle A_{3}%
+B_{4}\right\rangle _{1+2j}+\sum_{j=0}^{4}\left\langle A_{4}B_{4}\right\rangle
+_{0+2j}.
+\end{align}
+
+
+\item $r=2$%
+\begin{align}
+&  AB=\sum_{0\leq m,n\leq4}\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle
+A_{m}B_{n}\right\rangle _{\left\vert m-n\right\vert +2j}=\\
+&  \left\langle A_{0}B_{0}\right\rangle _{0}+\left\langle A_{1}B_{0}%
+\right\rangle _{1}+\left\langle A_{2}B_{0}\right\rangle _{2}+\left\langle
+A_{3}B_{0}\right\rangle _{3}+\left\langle A_{4}B_{0}\right\rangle _{4}\\
+&  +\left\langle A_{0}B_{1}\right\rangle _{1}+\left\langle A_{1}%
+B_{1}\right\rangle _{0}+\left\langle A_{1}B_{1}\right\rangle _{2}+\left\langle
+A_{2}B_{1}\right\rangle _{1}+\left\langle A_{2}B_{1}\right\rangle
+_{3}+\left\langle A_{3}B_{1}\right\rangle _{2}+\left\langle A_{3}%
+B_{1}\right\rangle _{4}+\left\langle A_{4}B_{1}\right\rangle _{3}+\left\langle
+A_{4}B_{1}\right\rangle _{5}\\
+&  +\left\langle A_{0}B_{2}\right\rangle _{2}+\left\langle A_{1}%
+B_{2}\right\rangle _{1}+\left\langle A_{1}B_{2}\right\rangle _{3}+\left\langle
+A_{2}B_{2}\right\rangle _{0}+\left\langle A_{2}B_{2}\right\rangle
+_{2}+\left\langle A_{2}B_{2}\right\rangle _{4}\\
+&  +\left\langle A_{3}B_{2}\right\rangle _{1}+\left\langle A_{3}%
+B_{2}\right\rangle _{3}+\left\langle A_{3}B_{2}\right\rangle _{5}+\left\langle
+A_{4}B_{2}\right\rangle _{2}+\left\langle A_{4}B_{2}\right\rangle
+_{4}+\left\langle A_{4}B_{2}\right\rangle _{6}\\
+&  +\left\langle A_{0}B_{3}\right\rangle _{3}+\left\langle A_{1}%
+B_{3}\right\rangle _{2}+\left\langle A_{1}B_{3}\right\rangle _{4}+\left\langle
+A_{2}B_{3}\right\rangle _{1}+\left\langle A_{2}B_{3}\right\rangle
+_{3}+\left\langle A_{2}B_{3}\right\rangle _{5}\\
+&  +\left\langle A_{3}B_{3}\right\rangle _{0}+\left\langle A_{3}%
+B_{3}\right\rangle _{2}+\left\langle A_{3}B_{3}\right\rangle _{4}+\left\langle
+A_{3}B_{3}\right\rangle _{6}+\left\langle A_{4}B_{3}\right\rangle
+_{1}+\left\langle A_{4}B_{3}\right\rangle _{3}\\
+&  +\left\langle A_{4}B_{3}\right\rangle _{5}+\left\langle A_{4}%
+B_{3}\right\rangle _{7}\\
+&  +\left\langle A_{0}B_{4}\right\rangle _{4}+\left\langle A_{1}%
+B_{4}\right\rangle _{3}+\left\langle A_{1}B_{4}\right\rangle _{5}+\left\langle
+A_{2}B_{4}\right\rangle _{2}+\left\langle A_{2}B_{4}\right\rangle
+_{4}+\left\langle A_{2}B_{4}\right\rangle _{6}\\
+&  +\left\langle A_{3}B_{4}\right\rangle _{1}+\left\langle A_{3}%
+B_{4}\right\rangle _{3}+\left\langle A_{3}B_{4}\right\rangle _{5}+\left\langle
+A_{3}B_{4}\right\rangle _{7}\\
+&  +\left\langle A_{4}B_{4}\right\rangle _{0}+\left\langle A_{4}%
+B_{4}\right\rangle _{2}+\left\langle A_{4}B_{4}\right\rangle _{4}+\left\langle
+A_{4}B_{4}\right\rangle _{6}+\left\langle A_{4}B_{4}\right\rangle _{8}.
+\end{align}
+
+
+\item $r=2$%
+\begin{align}
+&  AB=\sum_{0\leq m,n\leq4}\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle
+A_{m}B_{n}\right\rangle _{\left\vert m-n\right\vert +2j}=\\
+&  \left.  +\right.  \left\langle A_{0}B_{0}\right\rangle _{0}+\left\langle
+A_{1}B_{1}\right\rangle _{0}+\left\langle A_{2}B_{2}\right\rangle
+_{0}+\left\langle A_{3}B_{3}\right\rangle _{0}+\left\langle A_{4}%
+B_{4}\right\rangle _{0}\\
+&  +\left\langle A_{1}B_{0}\right\rangle _{1}+\left\langle A_{0}%
+B_{1}\right\rangle _{1}+\left\langle A_{2}B_{1}\right\rangle _{1}+\left\langle
+A_{1}B_{2}\right\rangle _{1}+\left\langle A_{3}B_{2}\right\rangle
+_{1}+\left\langle A_{4}B_{3}\right\rangle _{1}+\left\langle A_{2}%
+B_{3}\right\rangle _{1}+\left\langle A_{3}B_{4}\right\rangle _{1}\\
+&  +\left\langle A_{2}B_{0}\right\rangle _{2}+\left\langle A_{1}%
+B_{1}\right\rangle _{2}+\left\langle A_{3}B_{1}\right\rangle _{2}+\left\langle
+A_{0}B_{2}\right\rangle _{2}+\left\langle A_{2}B_{2}\right\rangle
+_{2}+\left\langle A_{1}B_{3}\right\rangle _{2}+\left\langle A_{3}%
+B_{3}\right\rangle _{2}+\left\langle A_{4}B_{4}\right\rangle _{2}+\left\langle
+A_{4}B_{2}\right\rangle _{2}+\left\langle A_{2}B_{4}\right\rangle _{2}\\
+&  +\left\langle A_{3}B_{0}\right\rangle _{3}+\left\langle A_{2}%
+B_{1}\right\rangle _{3}+\left\langle A_{1}B_{2}\right\rangle _{3}+\left\langle
+A_{3}B_{2}\right\rangle _{3}+\left\langle A_{0}B_{3}\right\rangle
+_{3}+\left\langle A_{4}B_{1}\right\rangle _{3}+\left\langle A_{1}%
+B_{4}\right\rangle _{3}+\left\langle A_{3}B_{4}\right\rangle _{3}+\left\langle
+A_{2}B_{3}\right\rangle _{3}+\left\langle A_{4}B_{3}\right\rangle _{3}\\
+&  +\left\langle A_{4}B_{0}\right\rangle _{4}+\left\langle A_{3}%
+B_{1}\right\rangle _{4}+\left\langle A_{2}B_{2}\right\rangle _{4}+\left\langle
+A_{1}B_{3}\right\rangle _{4}+\left\langle A_{3}B_{3}\right\rangle
+_{4}+\left\langle A_{0}B_{4}\right\rangle _{4}+\left\langle A_{2}%
+B_{4}\right\rangle _{4}+\left\langle A_{4}B_{2}\right\rangle _{4}+\left\langle
+A_{4}B_{4}\right\rangle _{4}\\
+&  +\left\langle A_{4}B_{1}\right\rangle _{5}+\left\langle A_{3}%
+B_{2}\right\rangle _{5}+\left\langle A_{2}B_{3}\right\rangle _{5}+\left\langle
+A_{4}B_{3}\right\rangle _{5}+\left\langle A_{1}B_{4}\right\rangle
+_{5}+\left\langle A_{3}B_{4}\right\rangle _{5}\\
+&  +\left\langle A_{4}B_{2}\right\rangle _{6}+\left\langle A_{3}%
+B_{3}\right\rangle _{6}+\left\langle A_{2}B_{4}\right\rangle _{6}+\left\langle
+A_{4}B_{4}\right\rangle _{6}\\
+&  +\left\langle A_{4}B_{3}\right\rangle _{7}+\left\langle A_{3}%
+B_{4}\right\rangle _{7}\\
+&  +\left\langle A_{4}B_{4}\right\rangle _{8}.
+\end{align}
+
+
+\item
+\begin{align}
+A_{n}  &  =\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}\alpha_{j_{1}\cdots j_{n}%
+}x_{j_{1}}\wedge\cdots\wedge x_{j_{n}}=\sum_{1\leq j_{1}<\cdots<j_{n}\leq
+2r}\alpha_{j_{1}\cdots j_{n}}x_{j_{1}}\wedge\cdots\wedge x_{j_{n}};\quad\\
+B_{n}  &  =\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}\beta_{j_{1}\cdots j_{n}%
+}x_{j_{1}}\wedge\cdots\wedge x_{j_{n}}=\sum_{1\leq j_{1}<\cdots<j_{n}\leq
+2r}\beta_{j_{1}\cdots j_{n}}x_{j_{1}}\wedge\cdots\wedge x_{j_{n}}\\
+AB  &  =\sum_{0\leq m,n\leq4}\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle
+A_{m}B_{n}\right\rangle _{\left\vert m-n\right\vert +2j}=\sum_{0\leq m,n\leq
+4}\sum_{j=0}^{\min\left(  m,n\right)  }\sum_{\substack{0\leq j_{1}%
+<\cdots<j_{m}\leq4\\0\leq k_{1}<\cdots<k_{n}\leq4}}\alpha_{j_{1}\cdots j_{m}%
+}\beta_{k_{1}\cdots k_{n}}\left\langle x_{j_{1}}\cdots x_{j_{m}}x_{k_{1}%
+}\cdots x_{k_{n}}\right\rangle _{\left\vert m-n\right\vert +2j}.
+\end{align}
+
+
+\item Clifford Multiplication
+\begin{equation}
+x_{j_{1}}x_{k_{1}}=\left\langle x_{j_{1}}x_{k_{1}}\right\rangle _{0}%
++\left\langle x_{j_{1}}x_{k_{1}}\right\rangle _{2}=\left(  \left.  x_{j_{1}%
+}\right\vert x_{k_{1}}\right)  I_{\mathcal{A}}+x_{j_{1}}\wedge x_{k_{1}%
+}=\delta_{j_{1}k_{1}}I_{\mathcal{A}}+x_{j_{1}}\wedge x_{k_{1}}.
+\end{equation}
+
+
+\item
+\begin{align}
+&  \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}}x_{k_{4}%
+}\right)  =\left(  \left(  x_{j_{1}}x_{k_{1}}\right)  x_{k_{2}}x_{k_{3}%
+}x_{k_{4}}-\left(  x_{j_{1}}x_{k_{2}}\right)  x_{k_{1}}x_{k_{3}}x_{k_{4}%
+}+\left(  x_{j_{1}}x_{k_{3}}\right)  x_{k_{1}}x_{k_{2}}x_{k_{4}}-\left(
+x_{j_{1}}x_{k_{4}}\right)  x_{k_{1}}x_{k_{2}}x_{k_{3}}\right) \\
+&  =\left(  \delta_{j_{1}k_{1}}I_{\mathcal{A}}+x_{j_{1}}\wedge x_{k_{1}%
+}\right)  x_{k_{2}}x_{k_{3}}x_{k_{4}}-\left(  \delta_{j_{1}k_{2}%
+}I_{\mathcal{A}}+x_{j_{1}}\wedge x_{k_{2}}\right)  x_{k_{1}}x_{k_{3}}x_{k_{4}%
+}\\
+&  +\left.  \left(  \delta_{j_{1}k_{3}}I_{\mathcal{A}}+x_{j_{1}}\wedge
+x_{k_{3}}\right)  x_{k_{1}}x_{k_{2}}x_{k_{4}}-\left(  \delta_{j_{1}k_{4}%
+}I_{\mathcal{A}}+x_{j_{1}}\wedge x_{k_{4}}\right)  x_{k_{1}}x_{k_{2}}x_{k_{3}%
+}\right) \\
+&  =\delta_{j_{1}k_{1}}x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}+x_{j_{1}%
+}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}%
+-\delta_{j_{1}k_{2}}x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}}-x_{j_{1}}\wedge
+x_{k_{2}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}}\\
+&  +\delta_{j_{1}k_{3}}x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}}+x_{j_{1}%
+}\wedge x_{k_{3}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}}%
+-\delta_{j_{1}k_{4}}x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}-x_{j_{1}}\wedge
+x_{k_{4}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}%
+\end{align}
+giving%
+\begin{align}
+\left(  x_{j_{1}}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}}x_{k_{4}}\right)
+&  =\left(  x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{1}k_{1}%
+}-x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{1}k_{2}}+x_{k_{1}}\wedge
+x_{k_{2}}\wedge x_{k_{4}}\delta_{j_{1}k_{3}}-x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{3}}\delta_{j_{1}k_{4}}\right) \\
+&  +x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}.
+\end{align}
+
+
+\item
+\begin{align*}
+&  \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}%
+}\right)  =\sum_{j=0}^{2}\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{2+2j}\\
+&  =\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}\cdots
+x_{k_{4}}\right)  \right\rangle _{2}+\left\langle \left(  x_{j_{1}}x_{j_{2}%
+}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle
+_{4}+\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}\cdots
+x_{k_{4}}\right)  \right\rangle _{6}%
+\end{align*}
+
+
+\item
+\begin{align}
+&  \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}%
+}x_{k_{4}}\right)  =x_{j_{1}}\left(  \overset{}{x_{k_{2}}\wedge x_{k_{3}%
+}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}-x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}%
+}\delta_{j_{2}k_{2}}+x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}}\delta
+_{j_{2}k_{3}}}\right. \\
+&  -\left.  \overset{}{x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\delta
+_{j_{2}k_{4}}}\right)  +x_{j_{1}}\left(  x_{j_{2}}\wedge x_{k_{1}}\wedge
+x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}\right)
+\end{align}
+which gives
+\begin{align}
+&  =x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}}-x_{k_{2}%
+}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{3}}+x_{k_{2}}\wedge
+x_{k_{3}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{4}}+x_{j_{1}}\wedge x_{k_{2}%
+}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\\
+&  -x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}+x_{k_{1}%
+}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{3}}-x_{k_{1}}\wedge
+x_{k_{3}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{4}}+x_{j_{1}}\wedge x_{k_{1}%
+}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\\
+&  +x_{k_{2}}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{1}}-x_{k_{1}%
+}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{2}}+x_{k_{1}}\wedge
+x_{k_{2}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{4}}+x_{j_{1}}\wedge x_{k_{1}%
+}\wedge x_{k_{2}}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\\
+&  -x_{k_{2}}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{1}}+x_{k_{1}%
+}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{2}}-x_{k_{1}}\wedge
+x_{k_{2}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{3}}+\,x_{j_{1}}\wedge x_{k_{1}%
+}\wedge x_{k_{2}}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\\
+&  +x_{j_{1}}\left(  x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}%
+}\wedge x_{k_{4}}\right)
+\end{align}
+Noting that
+\begin{align}
+&  x_{j_{1}}\left(  x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}%
+}\wedge x_{k_{4}}\right)  =-\left(  x_{j_{2}}\wedge x_{k_{2}}\wedge x_{k_{3}%
+}\wedge x_{k_{4}}\delta_{j_{1}k_{1}}-x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{3}%
+}\wedge x_{k_{4}}\delta_{j_{1}k_{2}}\right. \\
+&  \left.  +x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}}%
+\delta_{j_{1}k_{3}}-x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}%
+}\delta_{j_{1}k_{4}}\right)  +x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{1}}\wedge
+x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}%
+\end{align}
+one obtains
+\begin{align}
+&  \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}%
+}x_{k_{4}}\right)  =\\
+&  x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}}-x_{k_{2}%
+}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{3}}+x_{k_{2}}\wedge
+x_{k_{3}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{4}}+x_{j_{1}}\wedge x_{k_{2}%
+}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\\
+&  -x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}}+x_{k_{1}%
+}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{3}}-x_{k_{1}}\wedge
+x_{k_{3}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{4}}+x_{j_{1}}\wedge x_{k_{1}%
+}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\\
+&  +x_{k_{2}}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{1}}-x_{k_{1}%
+}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{2}}+x_{k_{1}}\wedge
+x_{k_{2}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{4}}+x_{j_{1}}\wedge x_{k_{1}%
+}\wedge x_{k_{2}}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\\
+&  -x_{k_{2}}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{1}}+x_{k_{1}%
+}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{2}}-x_{k_{1}}\wedge
+x_{k_{2}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{3}}+\,x_{j_{1}}\wedge x_{k_{1}%
+}\wedge x_{k_{2}}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\\
+&  -x_{j_{2}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta
+_{j_{1}k_{1}}+x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}}%
+\delta_{j_{1}k_{2}}\\
+&  -x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}}\delta
+_{j_{1}k_{3}}+x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}%
+\delta_{j_{1}k_{4}}+x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}%
+}\wedge x_{k_{3}}\wedge x_{k_{4}}.
+\end{align}
+
+
+\item The second degree term is
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{2}\\
+=  &  \left(  x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{2}%
+}-x_{k_{2}}\wedge x_{k_{4}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{3}}+x_{k_{2}%
+}\wedge x_{k_{3}}\delta_{j_{2}k_{1}}\delta_{j_{1}k_{4}}\right)  +\\
+&  -\left(  x_{k_{3}}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{1}%
+}+x_{k_{1}}\wedge x_{k_{4}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{3}}-x_{k_{1}%
+}\wedge x_{k_{3}}\delta_{j_{2}k_{2}}\delta_{j_{1}k_{4}}\right) \\
+&  +\left(  x_{k_{2}}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{1}%
+}-x_{k_{1}}\wedge x_{k_{4}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{2}}+x_{k_{1}%
+}\wedge x_{k_{2}}\delta_{j_{2}k_{3}}\delta_{j_{1}k_{4}}\right) \\
+&  -\left(  x_{k_{2}}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{1}%
+}+x_{k_{1}}\wedge x_{k_{3}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{2}}-x_{k_{1}%
+}\wedge x_{k_{2}}\delta_{j_{2}k_{4}}\delta_{j_{1}k_{3}}\right)
+\end{align}
+which can be rearranged as
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{2}=\nonumber\\
+&  \quad x_{k_{1}}\wedge x_{k_{2}}\,\left(  \delta_{j_{2}k_{4}}\delta
+_{j_{1}k_{3}}-\delta_{j_{2}k_{3}}\delta_{j_{1}k_{4}}\right)  -x_{k_{1}}\wedge
+x_{k_{3}}\left(  \delta_{j_{1}k_{4}}\delta_{j_{2}k_{2}}-\delta_{j_{1}k_{2}%
+}\delta_{j_{2}k_{4}}\right) \\
+&  +x_{k_{1}}\wedge x_{k_{4}}\left(  \delta_{j_{1}k_{3}}\delta_{j_{2}k_{2}%
+}-\delta_{j_{1}k_{2}}\delta_{j_{2}k_{3}}\right)  +x_{k_{2}}\wedge x_{k_{3}%
+}\left(  \delta_{j_{1}k_{4}}\delta_{j_{2}k_{1}}-\delta_{j_{1}k_{1}}%
+\delta_{j_{2}k_{4}}\right) \\
+&  -x_{k_{2}}\wedge x_{k_{4}}\left(  \delta_{j_{1}k_{3}}\delta_{j_{2}k_{1}%
+}-\delta_{j_{1}k_{1}}\delta_{j_{2}k_{3}}\right)  +x_{k_{3}}\wedge x_{k_{4}%
+}\left(  \delta_{j_{1}k_{2}}\delta_{j_{2}k_{1}}-\delta_{j_{1}k_{1}}%
+\delta_{j_{2}k_{2}}\right)  .
+\end{align}
+
+
+\item Noting that metric matrix in the $r=2$ case is
+\begin{gather}
+\mathbf{\Delta}_{j_{1}j_{2}k_{1}k_{2}k_{3}k_{4}}=\left(
+\begin{array}
+[c]{cccccc}%
+0 & 0 & \Delta_{j_{1}k_{1}} & \Delta_{j_{1}k_{2}} & \Delta_{j_{1}k_{3}} &
+\Delta_{j_{1}k_{4}}\\
+0 & 0 & \Delta_{j_{2}k_{1}} & \Delta_{j_{2}k_{2}} & \Delta_{j_{2}k_{3}} &
+\Delta_{j_{2}k_{4}}\\
+-\Delta_{j_{1}k_{1}} & -\Delta_{j_{2}k_{1}} & 0 & \Delta_{k_{1}k_{2}} &
+\Delta_{k_{1}k_{3}} & \Delta_{k_{1}k_{4}}\\
+-\Delta_{j_{1}k_{2}} & -\Delta_{j_{2}k_{2}} & -\Delta_{k_{1}k_{2}} & 0 &
+\Delta_{k_{2}k_{3}} & \Delta_{k_{2}k_{4}}\\
+-\Delta_{j_{1}k_{3}} & -\Delta_{j_{2}k_{3}} & -\Delta_{k_{1}k_{3}} &
+-\Delta_{k_{2}k_{3}} & 0 & \Delta_{k_{3}k_{4}}\\
+-\Delta_{j_{1}k_{4}} & -\Delta_{j_{2}k_{3}} & -\Delta_{k_{1}k_{4}} &
+-\Delta_{k_{2}k_{4}} & -\Delta_{k_{3}k_{4}} & 0
+\end{array}
+\right) \\
+=\left(
+\begin{array}
+[c]{cccccc}%
+0 & 0 & \Delta_{j_{1}k_{1}} & \Delta_{j_{1}k_{2}} & \Delta_{j_{1}k_{3}} &
+\Delta_{j_{1}k_{4}}\\
+0 & 0 & \Delta_{j_{2}k_{1}} & \Delta_{j_{2}k_{2}} & \Delta_{j_{2}k_{3}} &
+\Delta_{j_{2}k_{4}}\\
+-\Delta_{j_{1}k_{1}} & -\Delta_{j_{2}k_{1}} & 0 & 0 & 0 & 0\\
+-\Delta_{j_{1}k_{2}} & -\Delta_{j_{2}k_{2}} & 0 & 0 & 0 & 0\\
+-\Delta_{j_{1}k_{3}} & -\Delta_{j_{2}k_{3}} & 0 & 0 & 0 & 0\\
+-\Delta_{j_{1}k_{4}} & -\Delta_{j_{2}k_{3}} & 0 & 0 & 0 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cccccc}%
+0 & 0 & \delta_{j_{1}k_{1}} & \delta_{j_{1}k_{2}} & \delta_{j_{1}k_{3}} &
+\delta_{j_{1}k_{4}}\\
+0 & 0 & \delta_{j_{2}k_{1}} & \delta_{j_{2}k_{2}} & \delta_{j_{2}k_{3}} &
+\delta_{j_{2}k_{4}}\\
+-\delta_{j_{1}k_{1}} & -\delta_{j_{2}k_{1}} & 0 & 0 & 0 & 0\\
+-\delta_{j_{1}k_{2}} & -\delta_{j_{2}k_{2}} & 0 & 0 & 0 & 0\\
+-\delta_{j_{1}k_{3}} & -\delta_{j_{2}k_{3}} & 0 & 0 & 0 & 0\\
+-\delta_{j_{1}k_{4}} & -\delta_{j_{2}k_{3}} & 0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{gather}
+and
+\begin{equation}
+\operatorname*{Pf}\left(  \mathbf{\Delta}_{1234}\right)  =\Delta_{12}%
+\Delta_{34}-\Delta_{13}\Delta_{24}+\Delta_{14}\Delta_{23}.
+\end{equation}
+
+
+\item This leads to the \emph{second degree} term $\left(  9\right)  $ being
+recast as
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{2}\nonumber\\
+&  =\operatorname*{Pf}\left(  \Delta_{k_{2}k_{3}k_{1}k_{4}}\right)  x_{j_{1}%
+}\wedge x_{j_{2}}+\operatorname*{Pf}\left(  \Delta_{j_{2}k_{3}k_{2}j_{6}%
+}\right)  x_{j_{1}}\wedge x_{k_{1}}+\operatorname*{Pf}\left(  \Delta
+_{k_{1}k_{3}j_{2}k_{4}}\right)  x_{j_{1}}\wedge x_{k_{2}}+\operatorname*{Pf}%
+\left(  \Delta_{j_{2}k_{1}k_{2}k_{4}}\right)  x_{j_{1}}\wedge x_{k_{3}}\\
+&  -\operatorname*{Pf}\left(  \Delta_{j_{1}k_{3}k_{2}k_{4}}\right)  x_{j_{2}%
+}\wedge x_{k_{1}}-\operatorname*{Pf}\left(  \Delta_{k_{1}k_{3}j_{1}k_{2}%
+}\right)  x_{j_{2}}\wedge x_{k_{2}}-\operatorname*{Pf}\left(  \Delta
+_{j_{1}k_{1}k_{2}k_{4}}\right)  x_{j_{2}}\wedge x_{k_{3}}+\operatorname*{Pf}%
+\left(  \Delta_{j_{2}k_{1}k_{2}k_{3}}\right)  x_{j_{1}}\wedge x_{k_{4}%
+}\nonumber\\
+&  -\operatorname*{Pf}\left(  \Delta_{j_{1}k_{1}k_{2}k_{3}}\right)  x_{j_{2}%
+}\wedge x_{k_{4}}+\operatorname*{Pf}\left(  \Delta_{j_{2}j_{1}k_{3}k_{4}%
+}\right)  x_{k_{1}}\wedge x_{k_{2}}-\operatorname*{Pf}\left(  \Delta
+_{j_{1}j_{2}k_{2}k_{4}}\right)  x_{k_{1}}\wedge x_{k_{3}}\\
+&  +\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}j_{3}j_{6}}\right)  x_{k_{2}%
+}\wedge x_{k_{3}}+\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{1}k_{2}%
+}\right)  x_{k_{3}}\wedge x_{k_{4}}-\operatorname*{Pf}\left(  \Delta
+_{j_{1}j_{2}j_{3}j_{5}}\right)  x_{k_{2}}\wedge x_{k_{4}}+\operatorname*{Pf}%
+\left(  \Delta_{j_{1}j_{2}j_{4}j_{5}}\right)  x_{k_{1}}\wedge x_{k_{4}}%
+\end{align}
+giving
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{2}=\operatorname*{Pf}\left(
+\Delta_{j_{2}j_{1}k_{3}k_{4}}\right)  x_{k_{1}}\wedge x_{k_{2}}%
+-\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{2}k_{4}}\right)  x_{k_{1}%
+}\wedge x_{k_{3}}+\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{2}k_{3}%
+}\right)  x_{k_{1}}\wedge x_{k_{4}}\nonumber\\
+&  +\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{1}k_{4}}\right)  x_{k_{2}%
+}\wedge x_{k_{3}}-\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{1}k_{3}%
+}\right)  x_{k_{2}}\wedge x_{k_{4}}+\operatorname*{Pf}\left(  \Delta
+_{j_{1}j_{2}k_{1}k_{2}}\right)  x_{k_{3}}\wedge x_{k_{4}}%
+\end{align}
+and thus
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{2}=\nonumber\\
+&  \quad x_{k_{1}}\wedge x_{k_{2}}\,\left(  \delta_{j_{2}k_{4}}\delta
+_{j_{1}k_{3}}-\delta_{j_{2}k_{3}}\delta_{j_{1}k_{4}}\right)  -x_{k_{1}}\wedge
+x_{k_{3}}\left(  \delta_{j_{1}k_{4}}\delta_{j_{2}k_{2}}-\delta_{j_{1}k_{2}%
+}\delta_{j_{2}k_{4}}\right) \\
+&  +x_{k_{1}}\wedge x_{k_{4}}\left(  \delta_{j_{1}k_{3}}\delta_{j_{2}k_{2}%
+}-\delta_{j_{1}k_{2}}\delta_{j_{2}k_{3}}\right)  +x_{k_{2}}\wedge x_{k_{3}%
+}\left(  \delta_{j_{1}k_{4}}\delta_{j_{2}k_{1}}-\delta_{j_{1}k_{1}}%
+\delta_{j_{2}k_{4}}\right) \\
+&  -x_{k_{2}}\wedge x_{k_{4}}\left(  \delta_{j_{1}k_{3}}\delta_{j_{2}k_{1}%
+}-\delta_{j_{1}k_{1}}\delta_{j_{2}k_{3}}\right)  +x_{k_{3}}\wedge x_{k_{4}%
+}\left(  \delta_{j_{1}k_{2}}\delta_{j_{2}k_{1}}-\delta_{j_{1}k_{1}}%
+\delta_{j_{2}k_{2}}\right)  .
+\end{align}
+
+
+\item The \emph{fourth degree} term calculated from pfaffians is
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{4}=\nonumber\\
+&  \quad-\delta_{j_{1}k_{1}}x_{j_{2}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}+\delta_{j_{1}k_{2}}x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}\\
+&  -\delta_{j_{1}k_{3}}x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{4}}+\delta_{j_{1}k_{4}}x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{3}}\nonumber\\
+&  +\delta_{j_{2}k_{1}}x_{j_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}-\delta_{j_{2}k_{2}}x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}\\
+&  +\delta_{j_{2}k_{3}}x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{4}}-\delta_{j_{2}k_{4}}x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{3}}.
+\end{align}
+
+
+\item The fourth degree term is
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{4}=\\
+&  \,x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\delta
+_{j_{2}k_{4}}+x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}%
+\delta_{j_{1}k_{4}}\,\\
+&  -\,x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}}\delta
+_{j_{1}k_{3}}+\,x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}%
+}\delta_{j_{2}k_{3}}\\
+&  +x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta
+_{j_{2}k_{2}}+\,\,x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}%
+}\delta_{j_{1}k_{2}}\\
+&  -x_{j_{2}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta
+_{j_{1}k_{1}}+x_{j_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}%
+\delta_{j_{2}k_{1}},
+\end{align}
+which can be rearranged as%
+\begin{align}
+&  \left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{4}=\\
+&  \,x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\delta
+_{j_{2}k_{4}}+x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}%
+\delta_{j_{1}k_{4}}\,\\
+&  -\,x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}}\delta
+_{j_{1}k_{3}}+\,x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{4}%
+}\delta_{j_{2}k_{3}}\\
+&  +x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta
+_{j_{2}k_{2}}+\,\,x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge x_{k_{4}%
+}\delta_{j_{1}k_{2}}\\
+&  -x_{j_{2}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}\delta
+_{j_{1}k_{1}}+x_{j_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}%
+\delta_{j_{2}k_{1}}.
+\end{align}
+
+
+\item The sixth degree term is%
+\begin{equation}
+\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{6}=x_{j_{1}}\wedge x_{j_{2}}\wedge
+x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}}.
+\end{equation}
+
+
+\item The sixth order products, where
+\begin{equation}
+1\leq j_{1}<j_{2}\leq4;1\leq k_{1}<\cdots<k_{4}\leq4
+\end{equation}
+are given by
+\begin{align}
+&  x_{j_{1}}x_{j_{2}}x_{k_{1}}x_{k_{2}}x_{k_{3}}x_{k_{4}}=x_{j_{1}}\wedge
+x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}%
+}\nonumber\\
+&  +\Delta_{j_{1}j_{2}}x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}-\Delta_{j_{1}k_{1}}x_{j_{2}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}+\Delta_{j_{1}k_{2}}x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}\nonumber\\
+&  -\Delta_{j_{1}k_{3}}x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{4}}+\Delta_{j_{1}k_{4}}x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{3}}+\Delta_{j_{2}k_{1}}x_{j_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}\nonumber\\
+&  -\Delta_{j_{2}k_{2}}x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}+\Delta_{j_{2}k_{3}}x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{4}}-\Delta_{j_{2}k_{4}}x_{j_{1}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge
+x_{k_{3}}\nonumber\\
+&  +\Delta_{k_{1}k_{2}}x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{3}}\wedge
+x_{k_{4}}-\Delta_{k_{1}k_{3}}x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{2}}\wedge
+x_{k_{4}}+\Delta_{k_{1}k_{4}}x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{2}}\wedge
+x_{k_{3}}\nonumber\\
+&  +\Delta_{k_{2}k_{3}}x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{1}}\wedge
+x_{k_{4}}-\Delta_{k_{2}k_{4}}x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{1}}\wedge
+x_{k_{3}}+\Delta_{k_{3}k_{4}}x_{j_{1}}\wedge x_{j_{2}}\wedge x_{k_{1}}\wedge
+x_{k_{2}}\nonumber\\
+&  +\operatorname*{Pf}\left(  \Delta_{k_{2}k_{3}k_{1}k_{4}}\right)  x_{j_{1}%
+}\wedge x_{j_{2}}+\operatorname*{Pf}\left(  \Delta_{j_{2}k_{3}k_{2}k_{4}%
+}\right)  x_{j_{1}}\wedge x_{k_{1}}+\operatorname*{Pf}\left(  \Delta
+_{k_{1}k_{3}j_{2}k_{4}}\right)  x_{j_{1}}\wedge x_{k_{2}}+\operatorname*{Pf}%
+\left(  \Delta_{j_{2}k_{1}k_{2}k_{4}}\right)  x_{j_{1}}\wedge x_{k_{3}%
+}\nonumber\\
+&  -\operatorname*{Pf}\left(  \Delta_{j_{1}k_{3}k_{2}k_{4}}\right)  x_{j_{2}%
+}\wedge x_{k_{1}}-\operatorname*{Pf}\left(  \Delta_{k_{1}k_{3}j_{1}k_{4}%
+}\right)  x_{j_{2}}\wedge x_{k_{2}}-\operatorname*{Pf}\left(  \Delta
+_{j_{1}k_{1}k_{2}k_{4}}\right)  x_{j_{2}}\wedge x_{k_{3}}+\operatorname*{Pf}%
+\left(  \Delta_{j_{2}j_{1}k_{4}}\right)  x_{k_{1}}\wedge x_{k_{2}}\nonumber\\
+&  -\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{2}k_{4}}\right)  x_{k_{1}%
+}\wedge x_{k_{3}}+\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{1}k_{4}%
+}\right)  x_{k_{2}}\wedge x_{k_{3}}+\operatorname*{Pf}\left(  \Delta
+_{j_{1}j_{2}k_{1}k_{2}}\right)  x_{k_{3}}\wedge x_{k_{4}}+\operatorname*{Pf}%
+\left(  \Delta_{j_{2}k_{1}k_{2}k_{3}}\right)  x_{j_{1}}\wedge x_{k_{4}%
+}\nonumber\\
+&  -\operatorname*{Pf}\left(  \Delta_{j_{1}k_{1}k_{2}k_{3}}\right)  x_{j_{2}%
+}\wedge x_{k_{4}}-\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{1}k_{3}%
+}\right)  x_{k_{2}}\wedge x_{k_{4}}+\operatorname*{Pf}\left(  \Delta
+_{j_{1}j_{2}k_{2}k_{3}}\right)  x_{k_{1}}\wedge x_{k_{4}}\nonumber\\
+&  +\operatorname*{Pf}\left(  \Delta_{j_{1}j_{2}k_{1}k_{2}k_{3}k_{4}}\right)
+I_{\mathcal{F}},
+\end{align}
+which can also be expressed as
+\begin{align}
+x_{j_{1}}x_{j_{2}}x_{k_{1}}x_{k_{2}}x_{k_{3}}x_{k_{4}}  &  =x_{j_{1}}\wedge
+x_{j_{2}}\wedge x_{k_{1}}\wedge x_{k_{2}}\wedge x_{k_{3}}\wedge x_{k_{4}%
+}\nonumber\\
+&  +\sum_{\sigma\in S_{6}/\left(  S_{2}\times S_{4}\right)  }\pi\left(
+\sigma\right)  \Delta_{j_{\sigma\left(  1\right)  }j_{\sigma\left(  2\right)
+}}x_{k_{\sigma\left(  1\right)  }}\wedge x_{k_{\sigma\left(  2\right)  }%
+}\wedge x_{k_{\sigma\left(  3\right)  }}\wedge x_{k_{\sigma\left(  4\right)
+}}\nonumber\\
+&  \qquad\qquad\qquad\qquad+\sum_{\sigma\in S_{6}/\left(  S_{4}\times
+S_{2}\right)  }\pi\left(  \sigma\right)  \operatorname*{Pf}\left(
+\mathbf{\Delta}_{j_{\sigma\left(  1\right)  }j_{\sigma\left(  2\right)
+}k_{\sigma\left(  3\right)  }k_{\sigma\left(  4\right)  }}\right)
+x_{k_{\sigma\left(  5\right)  }}\wedge x_{k_{\sigma\left(  6\right)  }%
+}+\operatorname*{Pf}\left(  \mathbf{\Delta}_{j_{1}j_{2}k_{1}k_{2}k_{3}k_{4}%
+}\right)  I_{\mathcal{F}}.
+\end{align}
+
+
+\begin{enumerate}
+\item The general expression for Clifford products is
+\begin{align}
+&  \left(  x_{j_{1}}\cdots x_{j_{m}}\right)  \left(  x_{k_{1}}\cdots x_{k_{n}%
+}\right)  =\sum_{j=0}^{\min\left(  m,n\right)  }\left\langle \left(  x_{j_{1}%
+}\cdots x_{j_{m}}\right)  \left(  x_{k_{1}}\cdots x_{k_{n}}\right)
+\right\rangle _{\left\vert m-n\right\vert +2j}\\
+&  =\left\langle \left(  x_{j_{1}}\cdots x_{j_{m}}\right)  \left(  x_{k_{1}%
+}\cdots x_{k_{n}}\right)  \right\rangle _{\left\vert m-n\right\vert
+}+\left\langle \left(  x_{j_{1}}\cdots x_{j_{m}}\right)  \left(  x_{k_{1}%
+}\cdots x_{k_{n}}\right)  \right\rangle _{\left\vert m-n\right\vert
++2}+\left\langle \left(  x_{j_{1}}\cdots x_{j_{m}}\right)  \left(  x_{k_{1}%
+}\cdots x_{k_{n}}\right)  \right\rangle _{\left\vert m-n\right\vert +4}+\\
+&  \cdots+\left\langle \left(  x_{j_{1}}\cdots x_{j_{m}}\right)  \left(
+x_{k_{1}}\cdots x_{k_{n}}\right)  \right\rangle _{m+n}.
+\end{align}
+
+
+\item for $r=2$%
+\begin{equation}
+\left(  m,n\right)  =\left(  0,0\right)  ,\left(  0,1\right)  ,\left(
+0,2\right)  ,\left(  0,3\right)  ,\left(  0,4\right)  ,\left(  1,1\right)
+,\left(  1,2\right)  ,\left(  1,3\right)  ,\left(  1,4\right)  ,\left(
+2,2\right)  ,\left(  2,3\right)  ,\left(  2,4\right)  ,\left(  3,3\right)
+,\left(  3,4\right)  ,\left(  4,4\right)  .
+\end{equation}
+
+
+\item $1\leq j_{1}<\cdots<j_{4}\leq4;1\leq k_{1}<\cdots<k_{4}\leq4$%
+\begin{align}
+&  \left(  x_{j_{1}}\cdots x_{j_{4}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}%
+}\right)  =\sum_{j=0}^{4}\left\langle \left(  x_{j_{1}}\cdots x_{j_{4}%
+}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle
+_{2j}=\left\langle \left(  x_{j_{1}}\cdots x_{j_{4}}\right)  \left(  x_{k_{1}%
+}\cdots x_{k_{4}}\right)  \right\rangle _{0}+\\
+&  \qquad\left\langle \left(  x_{j_{1}}\cdots x_{j_{4}}\right)  \left(
+x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{2}+\left\langle \left(
+x_{j_{1}}\cdots x_{j_{4}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)
+\right\rangle _{4}+\left\langle \left(  x_{j_{1}}\cdots x_{j_{4}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{6}+\left\langle
+\left(  x_{j_{1}}\cdots x_{j_{4}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}%
+}\right)  \right\rangle _{8}.
+\end{align}
+
+
+\item $1\leq j_{1}<\cdots<j_{3}\leq4;1\leq k_{1}<\cdots<k_{4}\leq4$%
+\begin{align*}
+&  \left(  x_{j_{1}}\cdots x_{j_{3}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}%
+}\right)  =\sum_{j=0}^{3}\left\langle \left(  x_{j_{1}}\cdots x_{j_{3}%
+}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle
+_{1+2j}=\left\langle \left(  x_{j_{1}}\cdots x_{j_{3}}\right)  \left(
+x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{1}+\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\left\langle \left(  x_{j_{1}%
+}\cdots x_{j_{3}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)
+\right\rangle _{3}+\left\langle \left(  x_{j_{1}}\cdots x_{j_{3}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{5}+\left\langle
+\left(  x_{j_{1}}\cdots x_{j_{3}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}%
+}\right)  \right\rangle _{7}\\
+&  \left(  x_{j_{1}}\cdots x_{j_{3}}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}%
+}\right)  =\sum_{j=0}^{3}\left\langle \left(  x_{j_{1}}\cdots x_{j_{3}%
+}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}}\right)  \right\rangle
+_{2j}=\left\langle \left(  x_{j_{1}}\cdots x_{j_{3}}\right)  \left(  x_{k_{1}%
+}\cdots x_{k_{3}}\right)  \right\rangle _{0}+\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\left\langle \left(  x_{j_{1}%
+}\cdots x_{j_{3}}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}}\right)
+\right\rangle _{2}+\left\langle \left(  x_{j_{1}}\cdots x_{j_{3}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{3}}\right)  \right\rangle _{4}+\left\langle
+\left(  x_{j_{1}}\cdots x_{j_{3}}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}%
+}\right)  \right\rangle _{6}.
+\end{align*}
+
+
+\item $1\leq j_{1}<j_{2}\leq4;1\leq k_{1}<\cdots<k_{4}\leq4$%
+\begin{align*}
+&  \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}%
+}\right)  =\sum_{j=0}^{2}\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{2+2j}=\left\langle
+\left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)
+\right\rangle _{2}+\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(
+x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{4}+\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left\langle \left(  x_{j_{1}}x_{j_{2}%
+}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{4}\\
+&  \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}%
+}\right)  =\sum_{j=0}^{2}\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{3}}\right)  \right\rangle _{2j}=\left\langle
+\left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}}\right)
+\right\rangle _{0}+\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(
+x_{k_{1}}\cdots x_{k_{3}}\right)  \right\rangle _{2}+\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left\langle \left(  x_{j_{1}}x_{j_{2}%
+}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}}\right)  \right\rangle _{6}\\
+&  \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}}\right)
+=\sum_{j=0}^{2}\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(
+x_{k_{1}}x_{k_{2}}\right)  \right\rangle _{2j}=\left\langle \left(  x_{j_{1}%
+}x_{j_{2}}\right)  \left(  x_{k_{1}}x_{k_{2}}\right)  \right\rangle
+_{0}+\left\langle \left(  x_{j_{1}}x_{j_{2}}\right)  \left(  x_{k_{1}}%
+x_{k_{2}}\right)  \right\rangle _{2}+\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left\langle \left(  x_{j_{1}}x_{j_{2}%
+}\right)  \left(  x_{k_{1}}x_{k_{2}}\right)  \right\rangle _{4}.
+\end{align*}
+
+
+\item $1\leq j_{1}\leq4;1\leq k_{1}<\cdots<k_{4}\leq4$%
+\begin{align*}
+&  \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)
+=\sum_{j=0}^{1}\left\langle \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\cdots
+x_{k_{4}}\right)  \right\rangle _{3+2j}=\left\langle \left(  x_{j_{1}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{4}}\right)  \right\rangle _{3}+\left\langle
+\left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\cdots x_{k_{4}}\right)
+\right\rangle _{5}\\
+&  \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}}\right)
+=\sum_{j=0}^{1}\left\langle \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\cdots
+x_{k_{3}}\right)  \right\rangle _{2+2j}=\left\langle \left(  x_{j_{1}}\right)
+\left(  x_{k_{1}}\cdots x_{k_{3}}\right)  \right\rangle _{2}+\left\langle
+\left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\cdots x_{k_{3}}\right)
+\right\rangle _{4}\\
+&  \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}x_{k_{2}}\right)  =\sum
+_{j=0}^{1}\left\langle \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}\right)  \right\rangle _{1+2j}=\left\langle \left(  x_{j_{1}}\right)  \left(
+x_{k_{1}}x_{k_{2}}\right)  \right\rangle _{1}+\left\langle \left(  x_{j_{1}%
+}\right)  \left(  x_{k_{1}}x_{k_{2}}\right)  \right\rangle _{3}\\
+&  \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\right)  =\sum_{j=0}%
+^{1}\left\langle \left(  x_{j_{1}}\right)  \left(  x_{k_{1}}\right)
+\right\rangle _{2j}=\left\langle \left(  x_{j_{1}}\right)  \left(  x_{k_{1}%
+}\right)  \right\rangle _{0}+\left\langle \left(  x_{j_{1}}\right)  \left(
+x_{k_{1}}\right)  \right\rangle _{2}.
+\end{align*}
+
+
+\item $j_{1}=0;1\leq k_{1}<\cdots<k_{4}\leq4:$%
+\begin{equation}
+I_{\mathcal{A}}\left(  x_{k_{1}}\cdots x_{k_{n}}\right)  =\left\langle \left(
+x_{k_{1}}\cdots x_{k_{n}}\right)  \right\rangle _{n}=x_{k_{1}}\cdots x_{k_{n}%
+};0\leq n\leq4.
+\end{equation}
+
+
+\item $\left(  m,n\right)  =\left(  1,1\right)  ,\left(  1,2\right)  ,\left(
+1,3\right)  ,\left(  1,4\right)  :$%
+\begin{align}
+&  \left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}\right)  \right\rangle
+_{p}=\left\{
+\begin{array}
+[c]{c}%
+\left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}\right)  \right\rangle
+_{0}=x_{1}x_{1}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}\right)  \right\rangle
+_{2}=x_{1}x_{2}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}\right)  \right\rangle
+_{2}=x_{1}x_{3}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}\right)  \right\rangle
+_{2}=x_{1}x_{4}%
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+\left\langle I_{\mathcal{A}}\right\rangle \\
+x_{1}x_{2}\\
+x_{1}x_{3}\\
+x_{1}x_{4}%
+\end{array}
+\right.  =\delta_{1k_{1}}I_{\mathcal{A}}+\left(  1-\delta_{1k_{1}}\right)
+\left\langle x_{1}x_{k_{1}}\right\rangle \\
+&  \left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}x_{k_{2}}\right)
+\right\rangle _{p}=\left\{
+\begin{array}
+[c]{c}%
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{2}\right)  \right\rangle
+_{1}=\\
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{3}\right)  \right\rangle
+_{1}=\\
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{4}\right)  \right\rangle
+_{1}=\\
+\left\langle \left(  x_{1}\right)  \left(  x_{2}x_{3}\right)  \right\rangle
+_{3}=\\
+\left\langle \left(  x_{1}\right)  \left(  x_{2}x_{4}\right)  \right\rangle
+_{3}=\\
+\left\langle \left(  x_{1}\right)  \left(  x_{3}x_{4}\right)  \right\rangle
+_{3}=
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+x_{2}\\
+x_{3}\\
+x_{4}\\
+x_{1}x_{2}x_{3}\\
+x_{1}x_{2}x_{4}\\
+x_{1}x_{3}x_{4}%
+\end{array}
+\right.  =\left(  1-\delta_{1k_{1}}\right)  \left\langle x_{k_{1}%
+}\right\rangle +\left(  1-\delta_{1k_{2}}\right)  \left\langle x_{k_{2}%
+}\right\rangle \\
+&  \left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}%
+}\right)  \right\rangle _{p}=\left\{
+\begin{array}
+[c]{c}%
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{2}x_{3}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{2}x_{4}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{3}x_{4}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{2}x_{3}x_{4}\right)
+\right\rangle _{4}%
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+x_{2}x_{3}\\
+x_{2}x_{4}\\
+x_{3}x_{4}\\
+x_{1}x_{2}x_{3}x_{4}%
+\end{array}
+\right. \\
+&  =\left(  1-\delta_{1k_{1}}\delta_{1k_{2}}\right)  \left\langle x_{k_{1}%
+}x_{k_{2}}\right\rangle +\left(  1-\delta_{1k_{1}}\delta_{1k_{3}}\right)
+\left\langle x_{k_{1}}x_{k_{3}}\right\rangle +\left(  1-\delta_{1k_{2}}%
+\delta_{1k_{3}}\right)  \left\langle x_{k_{1}}x_{k_{2}}\right\rangle
++\left\langle x_{1}x_{2}x_{3}x_{4}\right\rangle \\
+&  \left\langle \left(  x_{1}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}%
+}x_{k_{4}}\right)  \right\rangle _{p}=\left\{
+\begin{array}
+[c]{c}%
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{2}x_{3}x_{4}\right)
+\right\rangle _{3}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{2}x_{3}x_{4}\right)
+\right\rangle _{3}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{2}x_{3}x_{4}\right)
+\right\rangle _{3}\\
+\left\langle \left(  x_{1}\right)  \left(  x_{1}x_{2}x_{3}x_{4}\right)
+\right\rangle _{3}%
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+x_{2}x_{3}x_{4}\\
+x_{2}x_{3}x_{4}\\
+x_{2}x_{3}x_{4}\\
+x_{2}x_{3}x_{4}%
+\end{array}
+\right. \\
+&  =\left(  1-\delta_{1k_{1}}\delta_{1k_{2}}\delta_{1k_{3}}\right)
+\left\langle x_{k_{1}}x_{k_{2}}x_{k_{3}}\right\rangle +\left(  1-\delta
+_{1k_{1}}\delta_{1k_{2}}\delta_{1k_{4}}\right)  \left\langle x_{k_{1}}%
+x_{k_{2}}x_{k_{4}}\right\rangle +\left(  1-\delta_{1k_{2}}\delta_{1k_{3}%
+}\delta_{1k_{4}}\right)  \left\langle x_{k_{2}}x_{k_{3}}x_{k_{4}}\right\rangle
+.
+\end{align}
+
+
+\item $\left(  2,2\right)  ,\left(  2,3\right)  ,\left(  2,4\right)  :$%
+\begin{align}
+&  \left\langle \left(  x_{1}x_{2}\right)  \left(  x_{k_{1}}x_{k_{2}}\right)
+\right\rangle _{p}=\left\{
+\begin{array}
+[c]{c}%
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{1}x_{2}\right)
+\right\rangle _{0}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{1}x_{3}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{1}x_{4}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{2}x_{3}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{2}x_{4}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{3}x_{4}\right)
+\right\rangle _{4}%
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+-I_{\mathcal{A}}\\
+-x_{2}x_{3}\\
+-x_{2}x_{4}\\
+x_{1}x_{3}\\
+x_{1}x_{4}\\
+x_{1}x_{2}x_{3}x_{4}%
+\end{array}
+\right. \\
+&  =\delta_{1k_{1}}\delta_{2k_{2}}\left\langle I_{\mathcal{A}}\right\rangle
++\left(  1+\delta_{1k_{1}}-\delta_{2k_{2}}\right)  \left\langle x_{k_{1}%
+}x_{k_{2}}\right\rangle +\left(  1-\delta_{1k_{1}}\delta_{2k_{3}}\right)
+\left\langle x_{1}x_{2}x_{3}x_{4}\right\rangle \\
+&  \left\langle \left(  x_{1}x_{2}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}%
+}\right)  \right\rangle _{p}=\left\{
+\begin{array}
+[c]{c}%
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{1}x_{2}x_{3}\right)
+\right\rangle _{1}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{1}x_{2}x_{4}\right)
+\right\rangle _{1}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{1}x_{3}x_{4}\right)
+\right\rangle _{3}\\
+\left\langle \left(  x_{1}x_{2}\right)  \left(  x_{2}x_{3}x_{4}\right)
+\right\rangle _{3}%
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+-x_{3}\\
+-x_{4}\\
+-x_{2}x_{3}x_{4}\\
+x_{1}x_{3}x_{4}%
+\end{array}
+\right. \\
+&  =\\
+&  \left\langle \left(  x_{1}x_{2}\right)  \left(  x_{k_{1}}x_{k_{2}}x_{k_{3}%
+}x_{k_{4}}\right)  \right\rangle _{p}=\left\{  \left\langle \left(  x_{1}%
+x_{2}\right)  \left(  x_{1}x_{2}x_{3}x_{4}\right)  \right\rangle _{2}\right.
+=-x_{3}x_{4}.
+\end{align}
+
+
+\item $\left(  3,3\right)  ,\left(  3,4\right)  $%
+\begin{align}
+&  \left\langle \left(  x_{1}x_{2}x_{3}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}\right)  \right\rangle _{p}=\left\{
+\begin{array}
+[c]{c}%
+\left\langle \left(  x_{1}x_{2}x_{3}\right)  \left(  x_{1}x_{2}x_{3}\right)
+\right\rangle _{0}\\
+\left\langle \left(  x_{1}x_{2}x_{3}\right)  \left(  x_{1}x_{2}x_{4}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}x_{2}x_{3}\right)  \left(  x_{1}x_{3}x_{4}\right)
+\right\rangle _{2}\\
+\left\langle \left(  x_{1}x_{2}x_{3}\right)  \left(  x_{2}x_{3}x_{4}\right)
+\right\rangle _{2}%
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+-I_{\mathcal{A}}\\
+x_{3}x_{4}\\
+x_{2}x_{4}\\
+-x_{1}x_{4}%
+\end{array}
+\right. \\
+&  \left\langle \left(  x_{1}x_{2}x_{3}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{p}=\left\{  \left\langle \left(
+x_{1}x_{2}x_{3}\right)  \left(  x_{1}x_{2}x_{3}x_{4}\right)  \right\rangle
+_{1}\right.  =-x_{4}.
+\end{align}
+
+
+\item $\left(  4,4\right)  $%
+\[
+\left\langle \left(  x_{1}x_{2}x_{3}x_{4}\right)  \left(  x_{k_{1}}x_{k_{2}%
+}x_{k_{3}}x_{k_{4}}\right)  \right\rangle _{p}=\left\{  \left\langle \left(
+x_{1}x_{2}x_{3}x_{4}\right)  \left(  x_{1}x_{2}x_{3}x_{4}\right)
+\right\rangle _{0}\right.  =I_{\mathcal{A}}.
+\]
+
+\end{enumerate}
+\end{enumerate}
+\end{example}
+\end{remark}
+
+\begin{remark}
+As $\mathcal{A}$ is an algebra it is a vector space.
+\end{remark}
+
+\begin{definition}
+A \emph{Banach space norm} $\left\Vert {}\right\Vert _{\mathcal{H}%
+_{\mathcal{A}}}$ in $\mathcal{A}$ can be defined as
+\begin{align}
+\left\Vert A\right\Vert _{\mathcal{H}_{\mathcal{A}}}^{2}  &  =\left\langle
+A^{\dagger}A\right\rangle _{0}=\sum_{0\leq n\leq2r}\left\langle A_{n}%
+^{\dagger}A_{n}\right\rangle _{0}=\sum_{0\leq n\leq2r}\left\Vert
+A_{n}^{\dagger}A_{n}\right\Vert _{\mathcal{H}_{\mathcal{A}}}^{2}\\
+&  =\left\langle A_{0}^{\dagger}A_{0}\right\rangle _{0}+\left\langle
+A_{1}^{\dagger}A_{1}\right\rangle _{0}+\left\langle A_{2}^{\dagger}%
+A_{2}\right\rangle _{0}+\left\langle A_{3}^{\dagger}A_{3}\right\rangle
+_{0}+\left\langle A_{4}^{\dagger}A_{4}\right\rangle _{0}+\cdots+\left\langle
+A_{2r}^{\dagger}A_{2r}\right\rangle _{0}.
+\end{align}
+
+\end{definition}
+
+\begin{definition}
+This norm produces a \emph{Banach space }$\mathcal{H}_{\mathcal{A}}$ which is
+closed wrt $\left\Vert A\right\Vert _{\mathcal{H}_{\mathcal{A}}}.$
+\end{definition}
+
+\begin{definition}
+A \emph{Hermitian} inner product $\left\langle \left.  {}\right\vert
+\right\rangle _{\mathcal{H}_{\mathcal{A}}}$ in $\mathcal{A}$ can be defined
+as
+\begin{equation}
+\left\langle \left.  A\right\vert B\right\rangle _{\mathcal{H}_{\mathcal{A}}%
+}=\left\langle A^{\dagger}B\right\rangle _{0}=\left\langle A_{0}^{\dagger
+}B_{0}\right\rangle _{0}+\left\langle A_{1}^{\dagger}B_{1}\right\rangle
+_{0}+\left\langle A_{2}^{\dagger}B_{2}\right\rangle _{0}+\left\langle
+A_{3}^{\dagger}B_{3}\right\rangle _{0}+\left\langle A_{4}^{\dagger}%
+B_{4}\right\rangle _{0}+\cdots+\left\langle A_{2r}^{\dagger}B_{2r}%
+\right\rangle _{0},
+\end{equation}
+or which makes $\mathcal{H}_{\mathcal{A}}$ a \emph{separable} Hilbert space.
+\end{definition}
+
+\begin{lemma}
+The inner product $\left\langle \left.  {}\right\vert \right\rangle
+_{\mathcal{H}_{\mathcal{A}}}$ in $\mathcal{A}$ is faithful i.e.
+\begin{equation}
+\left\langle \left.  A\right\vert A\right\rangle _{\mathcal{H}_{\mathcal{A}}%
+}=0\Leftrightarrow A=0.
+\end{equation}
+
+\end{lemma}
+
+\begin{remark}%
+\begin{equation}
+\left\langle \left.  A\right\vert A\right\rangle _{\mathcal{H}_{\mathcal{A}}%
+}=\left\Vert A\right\Vert _{\mathcal{H}_{\mathcal{A}}}^{2}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The space of bounded operators $\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}%
+}\right)  $ is given by
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}}\right)  =\left\{  \left.
+\overset{}{\mathfrak{X}}\right\vert \sup\limits_{\left\Vert A\right\Vert
+_{\mathcal{H}_{\mathcal{A}}}=1}\left\{  \left(  \left\langle \left.
+A\right\vert \mathfrak{X}^{\dagger}\mathfrak{X}A\right\rangle _{\mathcal{H}%
+_{\mathcal{A}}}\right)  ^{\frac{1}{2}}\right\}  <\infty\right\}  =\left\{
+\left.  \overset{}{\mathfrak{X}}\right\vert \sup\limits_{\left\Vert
+A\right\Vert _{\mathcal{H}_{\mathcal{A}}}=1}\left\{  \left\Vert \mathfrak{X}%
+A\right\Vert _{\mathcal{H}_{\mathcal{A}}}^{2}\right\}  <\infty\right\}  ,
+\end{equation}
+where
+\begin{equation}
+\mathfrak{X:}\mathcal{A\rightarrow A}.
+\end{equation}
+
+\end{remark}
+
+\begin{lemma}
+The star operation "$\dagger"$ in $\mathcal{A}$ is the adjoint operation
+"$\dagger"$ defined by the inner product $\left\langle \left.  {}\right\vert
+\right\rangle _{\mathcal{H}_{\mathcal{A}}},$ where%
+\begin{equation}
+\left\langle \left.  \mathfrak{X}^{\dagger}B\right\vert A\right\rangle
+_{\mathcal{H}_{\mathcal{A}}}=\left\langle \left.  B\right\vert \mathfrak{X}%
+A\right\rangle _{\mathcal{H}_{\mathcal{A}}}\,\forall A\in\mathcal{H}%
+_{\mathcal{A}},\,B\in\mathcal{H}_{\mathcal{A}}.
+\end{equation}
+
+\end{lemma}
+
+\begin{definition}
+A $c^{\ast}$-algebra norm $\left\Vert {}\right\Vert _{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{A}}\right)  }$ in $\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{A}}\right)  $ is defined by
+\begin{gather}
+\left\Vert \mathfrak{X}\right\Vert _{\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{A}}\right)  }=\sup\limits_{\mathfrak{X}\in\mathcal{B}\left(
+\mathcal{H}_{\mathcal{A}}\right)  ,\left\Vert A\right\Vert _{\mathcal{H}%
+_{\mathcal{A}}}^{2}=1}\left\{  \left\Vert \mathfrak{X}\left(  A\right)
+\right\Vert _{\mathcal{H}_{\mathcal{A}}}\right\}  =\sup\limits_{\mathfrak{X}%
+\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}}\right)  ,\left\Vert
+A\right\Vert _{\mathcal{H}_{\mathcal{A}}}^{2}=1}\left\{  \left(  \left\langle
+\mathfrak{X}\left(  A\right)  ^{\dagger}\mathfrak{X}\left(  A\right)
+\right\rangle _{0}\right)  ^{\frac{1}{2}}\right\} \\
+=\sup\limits_{\mathfrak{X}\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}%
+}\right)  ,\left\Vert A\right\Vert _{\mathcal{H}_{\mathcal{A}}}^{2}=1}\left\{
+\left\langle \left.  \mathfrak{X}\left(  A\right)  \right\vert \mathfrak{X}%
+\left(  A\right)  \right\rangle ^{\frac{1}{2}}\right\}  .
+\end{gather}
+
+\end{definition}
+
+\begin{remark}
+\emph{The }$c^{\ast}$\emph{-algebra }$B\left(  \mathcal{H}_{\mathcal{A}%
+}\right)  $\emph{ may not be separable wrt the norm }$\left\Vert {}\right\Vert
+_{\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}}\right)  }$\emph{ topology, but
+in general it is wrt the strong operator topology induced by }$H_{\mathcal{A}%
+}.$
+\end{remark}
+
+\begin{lemma}
+The $c^{\ast}$-algebra norm $\left\Vert {}\right\Vert _{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{A}}\right)  }$ is faithful i.e.
+\begin{equation}
+\left\Vert \mathfrak{X}\right\Vert _{\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{A}}\right)  }=0\Leftrightarrow\mathfrak{X}=0.
+\end{equation}
+
+\end{lemma}
+
+\begin{lemma}
+$\left\Vert {}\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}%
+}\right)  }$ is a $c^{\ast}$-algebra norm i.e.
+\begin{equation}
+\left\Vert \mathfrak{X}^{\dagger}\mathfrak{X}\right\Vert _{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{A}}\right)  }=\left\Vert \mathfrak{X}\right\Vert
+_{\mathcal{A}}^{2}.
+\end{equation}
+
+\end{lemma}
+
+\begin{remark}
+$\mathcal{A}$ is a \emph{sub }$c^{\ast}$\emph{-algebra} of $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{A}}\right)  $ given by left multiplication i.e.
+\begin{equation}
+L_{A}\left(  B\right)  =AB\,\forall B\in\mathcal{A},\,A\in\mathcal{A}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+\emph{One can form }$c^{\ast}$\emph{-algebra representations }$\Pi_{\varphi
+}\left(  \mathcal{A}\right)  $\emph{ of }$A$\emph{ by using states }%
+$\varphi\in S\left(  \mathcal{A}\right)  $\emph{ and the GNS construction.
+Then one can then form the double commutatnt }$\Pi_{\varphi}\left(
+\mathcal{A}\right)  ^{\prime\prime}$\emph{ which is a Von Neumann algebra. The
+type of Von Neumann algebra }$\Pi_{\varphi}\left(  \mathcal{A}\right)
+^{\prime\prime}$\emph{ is determined by the state }$\varphi.$
+
+\begin{definition}
+We will denote the \emph{Von Neumann algebra induced by the }GNS
+representation produced by the normalized trace $\operatorname*{tr}$ as
+$\mathcal{A}_{\operatorname*{tr}},$ which is a $w^{\ast}$-algebra i.e.
+\begin{equation}
+\mathcal{A}_{\operatorname*{tr}}=%
+%TCIMACRO{\tprod \nolimits_{\operatorname*{tr}}}%
+%BeginExpansion
+{\textstyle\prod\nolimits_{\operatorname*{tr}}}
+%EndExpansion
+\left(  \mathcal{A}\right)  ^{\prime\prime}.
+\end{equation}
+By abus of notation we denote the $w^{\ast}$-algebra $\mathcal{A}%
+_{\operatorname*{tr}}$ as $\mathcal{A}.$ The $w^{\ast}$-algebra $\mathcal{A}%
+_{\operatorname*{tr}}$ is a Type $II_{1}$ algebra.
+\end{definition}
+\end{remark}
+
+\begin{remark}
+The representations $\Pi_{\varphi}\left(  \mathcal{A}\right)  $ can be of
+\emph{any type} depending on the nature of $\varphi\in S\left(  \mathcal{A}%
+\right)  .$ Initially one takes $\mathcal{A}$ as a $c^{\ast}$-algebra then
+produces a $c^{\ast}$-representation $\Pi_{\varphi}\left(  \mathcal{A}\right)
+$ and produces the weak operator closure $\overline{\Pi_{\varphi}\left(
+\mathcal{A}\right)  }^{w}$ of $\Pi_{\varphi}\left(  \mathcal{A}\right)  $ that
+is a Von Neumann algebra.
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\Pi_{\varphi}\left(  A\right)  =\alpha_{0}\Pi_{\varphi}\left(  I_{\mathcal{A}%
+}\right)  +\sum_{1\leq n\leq2r}\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}%
+\alpha_{j_{1}\cdots j_{n}}\Pi_{\varphi}\left(  x_{j_{1}}\cdots x_{j_{n}%
+}\right)
+\end{equation}
+and
+\begin{equation}
+\Phi_{\varphi}\left(  A\right)  =\alpha_{0}\Phi_{\varphi}\left(
+I_{\mathcal{A}}\right)  +\sum_{1\leq n\leq2r}\sum_{1\leq j_{1}<\cdots
+<j_{n}\leq2r}\alpha_{j_{1}\cdots j_{n}}\Phi_{\varphi}\left(  x_{j_{1}}\cdots
+x_{j_{n}}\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The gradation under $\Pi_{\varphi}$ is given by
+\begin{equation}
+\Pi_{\varphi}\left(  A\right)  =\alpha_{0}\Pi_{\varphi}\left(  I_{\mathcal{A}%
+}\right)  +\sum_{1\leq n\leq2r}\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}%
+\alpha_{j_{1}\cdots j_{n}}\Pi_{\varphi}\left(  x_{j_{1}}\right)  \cdots
+\Pi_{\varphi}\left(  x_{j_{n}}\right)  .
+\end{equation}
+If $\Pi_{\varphi}$ is faithful the gradation is preserved i.e.
+\begin{equation}
+\left\langle \Pi_{\varphi}\left(  A\right)  \right\rangle _{n}=\sum_{1\leq
+j_{1}<\cdots<j_{n}\leq2r}\alpha_{j_{1}\cdots j_{n}}\Pi_{\varphi}\left(
+x_{j_{1}}\right)  \cdots\Pi_{\varphi}\left(  x_{j_{n}}\right)  =\Pi_{\varphi
+}\left(  \left\langle A\right\rangle _{n}\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The inner product in $\mathcal{H}_{\mathcal{\varphi}}$ can be expanded as
+\begin{equation}
+\left\langle \left.  \Phi_{\varphi}\left(  A\right)  \right\vert \Phi
+_{\varphi}\left(  A\right)  \right\rangle _{\mathcal{H}_{\mathcal{\varphi}}%
+}=\varphi\left(  A^{\dagger}A\right)  =\left\langle A_{0}^{\dagger}%
+A_{0}\right\rangle _{0}+\left\langle A_{1}^{\dagger}A_{1}\right\rangle
+_{0}+\left\langle A_{2}^{\dagger}A_{2}\right\rangle _{0}+\left\langle
+A_{3}^{\dagger}A_{3}\right\rangle _{0}+\left\langle A_{4}^{\dagger}%
+A_{4}\right\rangle _{0}+\cdots+\left\langle A_{2r}^{\dagger}A_{2r}%
+\right\rangle _{0}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The linear functional "$\operatorname*{tr}$"$\in S\left(  \mathcal{A}\right)
+$ is a tracial state thus
+\begin{equation}
+\ker\left\{  \operatorname*{tr}\right\}  =\left\{  0\right\}
+\end{equation}
+and
+\begin{equation}
+\operatorname*{tr}\left\{  AB\right\}  =\operatorname*{tr}\left\{  BA\right\}
+.
+\end{equation}
+
+\end{remark}
+
+\begin{example}
+The linear functional "$\operatorname*{tr}$"$\in S\left(  \mathcal{A}\right)
+$ and produces the representation $\Pi_{\operatorname*{tr}}\left(
+\mathcal{A}\right)  $ and thus the \emph{Von Neumann algebra }$\Pi
+_{\operatorname*{tr}}\left(  \mathcal{A}\right)  ^{\prime\prime},$ which is a
+Type $II_{1}$\emph{Von Neumann algebra. }$\Pi_{\operatorname*{tr}}\left(
+\mathcal{A}\right)  =\Pi_{L}\left(  \mathcal{A}\right)  $ \emph{and is the
+left regular representation of }$\mathcal{A}$ (see later)\emph{.}
+\end{example}
+
+\begin{lemma}%
+\begin{equation}
+A\in\mathcal{A}\Rightarrow\operatorname*{tr}\left\{  A\right\}  =\left\langle
+A\right\rangle _{0}<\infty.
+\end{equation}
+
+\end{lemma}
+
+\begin{lemma}%
+\begin{align}
+\Pi_{L}\left(  I_{\mathcal{A}}\right)   &  =I_{\mathcal{B}\left(
+\mathcal{H}_{\mathcal{A}}\right)  }\\
+\Pi_{L}\left(  A\right)   &  =\Pi_{L}\left(  \alpha_{0}I_{\mathcal{A}}%
++\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}\alpha_{j_{1}\cdots j_{n}}x_{j_{1}%
+}\cdots x_{j_{n}}\right)  =\alpha_{0}\Pi_{L}\left(  I_{\mathcal{A}}\right)
++\sum_{1\leq j_{1}<\cdots<j_{n}\leq2r}\alpha_{j_{1}\cdots j_{n}}\Pi_{L}\left(
+x_{j_{1}}\right)  \cdots\Pi_{L}\left(  x_{j_{n}}\right) \\
+\operatorname*{tr}\left\{  A\right\}   &  =\left\langle A\right\rangle
+_{0}=\left\langle \Pi_{L}\left(  A\right)  \right\rangle _{0}=\alpha_{0}.
+\end{align}
+
+\end{lemma}
+
+\begin{remark}
+$\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}}\right)  $ is a type I Von
+Neumann\emph{-algebra}. The representation $\Pi_{L}\left(  \mathcal{A}\right)
+$ is a type $II_{1}$ Von Neumann algebra.
+\end{remark}
+
+\begin{notation}%
+\begin{align}
+\Pi_{\operatorname*{tr}}  &  =\Pi_{I_{\mathcal{A}}}\\
+\Phi_{\operatorname*{tr}}  &  =\Phi_{I_{\mathcal{A}}}.
+\end{align}
+
+\end{notation}
+
+\begin{notation}%
+\begin{equation}
+\varphi_{\operatorname*{tr}}\left(  X\right)  =\varphi_{I_{\mathcal{A}}%
+}\left(  X\right)  =\operatorname*{tr}\left\{  X\right\}  =\left\langle
+X\right\rangle _{0}%
+\end{equation}
+
+\end{notation}
+
+\begin{lemma}
+The GNS representation $\Pi_{\operatorname*{tr}}$ is identical to $\Pi_{L}$
+\end{lemma}
+
+\begin{proof}
+\begin{enumerate}
+\item
+\begin{equation}
+\ker\left\{  \Phi_{\operatorname*{tr}}\right\}  =\left\{  0\right\}
+\end{equation}
+as $\operatorname*{tr}$ is faithful i.e.
+\begin{equation}
+\left\langle \left.  \Phi_{\operatorname*{tr}}\left(  A\right)  \right\vert
+\Phi_{\operatorname*{tr}}\left(  A\right)  \right\rangle =\operatorname*{tr}%
+\left\{  A^{\dagger}A\right\}  =\left\langle A^{\dagger}A\right\rangle
+_{0}=0\Leftrightarrow A=0.
+\end{equation}
+
+
+\item
+\begin{equation}
+\Phi_{\operatorname*{tr}}\left(  \mathcal{A}\right)  =\mathcal{H}%
+_{\operatorname*{tr}}=\mathcal{H}_{\mathcal{A}}.
+\end{equation}
+
+
+\item The representation $\Pi_{\operatorname*{tr}}$ is defined by
+\begin{equation}
+\Pi_{\operatorname*{tr}}\left(  B\right)  \Phi_{\operatorname*{tr}}\left(
+A\right)  =\Phi_{\operatorname*{tr}}\left(  BA\right)  \,\forall
+A\in\mathcal{A}.
+\end{equation}
+
+
+\begin{lemma}
+$\Pi_{\operatorname*{tr}}$ is faithful%
+\begin{equation}
+\Pi_{\operatorname*{tr}}\left(  B-C\right)  =0\Leftrightarrow B=C
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+The action of $\Pi_{\operatorname*{tr}}\left(  B-C\right)  $ on the cyclic
+vector $\Phi_{\operatorname*{tr}}\left(  I_{\mathcal{A}}\right)  $
+\begin{equation}
+\Pi_{\operatorname*{tr}}\left(  B-C\right)  \Phi_{\operatorname*{tr}}\left(
+I_{\mathcal{A}}\right)  =\Phi_{\operatorname*{tr}}\left(  B-C\right)
+\end{equation}
+which gives if $\Pi_{\operatorname*{tr}}\left(  B-C\right)  =0$ that
+\begin{equation}
+\Phi_{\operatorname*{tr}}\left(  B-C\right)  =0\Longleftrightarrow B=C
+\end{equation}
+as $\Phi_{\operatorname*{tr}}$ is faithful. Thus $\Pi_{\operatorname*{tr}}$ is
+faithful and
+\begin{equation}
+\mathcal{A}\overset{w^{\ast}\text{-Algebra}}{\mathcal{\cong}}\Pi
+_{\operatorname*{tr}}\left(  \mathcal{A}\right)  ^{\prime\prime}%
+\subset\mathcal{B}\left(  \Phi_{\operatorname*{tr}}\left(  \mathcal{A}\right)
+\right)  =\mathcal{B}\left(  \mathcal{H}_{\mathcal{A}}\right)  .
+\end{equation}
+
+\end{proof}
+\end{enumerate}
+\end{proof}
+
+\begin{remark}
+We have assumed that $\Pi_{\operatorname*{tr}}$ is weakly continuous.
+\end{remark}
+
+\begin{remark}
+States $f\in\mathcal{S}\left(  \mathcal{A}\right)  $ do not have to be defined
+via $\operatorname*{tr}$ e.g.%
+\begin{equation}
+f\left(  X\right)  \neq\operatorname*{tr}\left\{  XA^{\dagger}A\right\}
+\end{equation}
+for any $A\in\mathcal{A}.$
+\end{remark}
+
+\begin{remark}
+The representations $\Pi_{f}\left(  \mathcal{A}\right)  $ can be of \emph{any
+type} depending on the nature of $f\in\mathcal{S}\left(  \mathcal{A}\right)
+.$ Initially one takes $\mathcal{A}$ as a $c^{\ast}$-algebra then produces a
+$c^{\ast}$-representation $\Pi_{f}\left(  \mathcal{A}\right)  $ and produces
+the weak operator closure $\overline{\Pi_{f}\left(  \mathcal{A}\right)  }^{w}$
+of $\Pi_{f}\left(  \mathcal{A}\right)  $ that is a Von Neumann algebra.
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\overline{\Pi_{f}\left(  \mathcal{A}\right)  }^{w}=\Pi_{f}\left(
+\mathcal{A}\right)  ^{\prime\prime}\subseteq\mathcal{B}\left(  \Phi_{f}\left(
+\mathcal{A}\right)  \right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+Consider $A^{\dagger}A\in\mathcal{B}_{0+}\left(  \mathcal{H}_{\mathcal{A}%
+}\right)  $ then
+\begin{equation}
+A^{\dagger}A=\sum_{1\leq j\leq\infty}x_{A^{\dagger}Aj}\left\vert
+\Psi_{A^{\dagger}Aj}\right\rangle \left\langle \Psi_{A^{\dagger}Aj}\right\vert
+,\,x_{A^{\dagger}Aj}\in\mathbb{R}_{+}%
+\end{equation}
+where
+\begin{equation}
+\sum_{1\leq j\leq\infty}\left\vert \Psi_{A^{\dagger}Aj}\right\rangle
+\left\langle \Psi_{A^{\dagger}Aj}\right\vert =I_{\mathcal{A}}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\sum_{1\leq j\leq\infty}\operatorname*{tr}\left\{  \left\vert \Psi
+_{A^{\dagger}Aj}\right\rangle \left\langle \Psi_{A^{\dagger}Aj}\right\vert
+\right\}  =1,
+\end{equation}
+hence
+\begin{equation}
+0\leq\operatorname*{tr}\left\{  \left\vert \Psi_{A^{\dagger}Aj}\right\rangle
+\left\langle \Psi_{A^{\dagger}Aj}\right\vert \right\}  \leq1.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+Let $\varphi_{A^{\dagger}A}$ defne a normal state $A^{\dagger}A$ by
+\begin{equation}
+\varphi_{A^{\dagger}A}\left(  B\right)  =\operatorname*{tr}\left\{
+BA^{\dagger}A\right\}  =1,
+\end{equation}
+then
+\begin{equation}
+\varphi_{A^{\dagger}A}\left(  I_{\mathcal{A}}\right)  =\operatorname*{tr}%
+\left\{  A^{\dagger}A\right\}  =1,
+\end{equation}
+hence
+\begin{equation}
+\operatorname*{tr}\left\{  \sum_{1\leq j\leq\infty}x_{A^{\dagger}Aj}\left\vert
+\Psi_{A^{\dagger}Aj}\right\rangle \left\langle \Psi_{A^{\dagger}Aj}\right\vert
+\right\}  =\sum_{1\leq j\leq\infty}x_{A^{\dagger}Aj}\operatorname*{tr}\left\{
+\left\vert \Psi_{A^{\dagger}Aj}\right\rangle \left\langle \Psi_{A^{\dagger}%
+Aj}\right\vert \right\}  =1.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+$\left\{  \left.  \varphi_{A^{\dagger}A}\right\vert A\in\mathcal{A}\right\}
+\subset\mathcal{S}\left(  \mathcal{A}\right)  $ is the folia of
+$\operatorname*{tr}$-states.
+\end{remark}
+
+\begin{remark}%
+\[
+\operatorname*{tr}\left\{  A^{\dagger}A-I_{\mathcal{A}}\right\}  =\sum_{1\leq
+j\leq\infty}\left(  x_{A^{\dagger}Aj}-1\right)  \operatorname*{tr}\left\{
+\left\vert \Psi_{A^{\dagger}Aj}\right\rangle \left\langle \Psi_{A^{\dagger}%
+Aj}\right\vert \right\}  =0\Longleftrightarrow x_{A^{\dagger}Aj}=1,1\leq
+j\leq\infty.
+\]
+
+\end{remark}
+
+\begin{remark}
+In order that
+\begin{equation}
+\sum_{1\leq j\leq\infty}\operatorname*{tr}\left\{  \left\vert \Psi
+_{A^{\dagger}Aj}\right\rangle \left\langle \Psi_{A^{\dagger}Aj}\right\vert
+\right\}  =\operatorname*{tr}\left\{  \sum_{1\leq j\leq\infty}\left\vert
+\Psi_{A^{\dagger}Aj}\right\rangle \left\langle \Psi_{A^{\dagger}Aj}\right\vert
+\right\}  =\operatorname*{tr}\left\{  I_{\mathcal{A}}\right\}  =1
+\end{equation}
+the value of
+\begin{equation}
+\operatorname*{tr}\left\{  \left\vert \Psi_{A^{\dagger}Aj}\right\rangle
+\left\langle \Psi_{A^{\dagger}Aj}\right\vert \right\}  =\operatorname*{tr}%
+\left\{  \left\vert \Psi_{A^{\dagger}Aj^{\prime}}\right\rangle \left\langle
+\Psi_{A^{\dagger}Aj^{\prime}}\right\vert \right\}  =p,\,j\neq j^{\prime}%
+\end{equation}
+and the infinite sum of of the constants $p$ equals $1.$ Hence
+\begin{equation}
+1=p\infty
+\end{equation}
+thus $p$ must be infinitessimal. 
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\operatorname*{tr}\left\{  XAA^{\dagger}\right\}  =\left\langle \left.
+\Phi_{\operatorname*{tr}}\left(  A\right)  \right\vert \Pi_{\operatorname*{tr}%
+}\left(  X\right)  \Phi_{\operatorname*{tr}}\left(  A\right)  \right\rangle
+=\operatorname{Tr}_{\mathcal{H}_{\mathcal{A}}}\left\{  \Pi_{\operatorname*{tr}%
+}\left(  X\right)  \left\vert \Phi_{\operatorname*{tr}}\left(  A\right)
+\right\rangle \left\langle \Phi_{\operatorname*{tr}}\left(  A\right)
+\right\vert \right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\left(  \overset{}{\Pi_{\operatorname*{tr}}\left(  AA^{\dagger}\right)
+}\right)  ^{2}=\Pi_{\operatorname*{tr}}\left(  \left(  AA^{\dagger}\right)
+^{2}\right)  =\Pi_{\operatorname*{tr}}\left(  AA^{\dagger}\right)
+\Pi_{\operatorname*{tr}}\left(  AA^{\dagger}\right)  \overset{\text{in
+general}}{\neq}\Pi_{\operatorname*{tr}}\left(  AA^{\dagger}\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\left\vert \Phi_{\operatorname*{tr}}\left(  A\right)  \right\rangle
+\left\langle \Phi_{\operatorname*{tr}}\left(  A\right)  \right\vert =\left(
+\left\vert \Phi_{\operatorname*{tr}}\left(  A\right)  \right\rangle
+\left\langle \Phi_{\operatorname*{tr}}\left(  A\right)  \right\vert \right)
+^{2}%
+\end{equation}
+hence
+\begin{equation}
+\Pi_{\operatorname*{tr}}\left(  AA^{\dagger}\right)  \overset{\text{in
+general}}{\neq}\left\vert \Phi_{\operatorname*{tr}}\left(  A\right)
+\right\rangle \left\langle \Phi_{\operatorname*{tr}}\left(  A\right)
+\right\vert .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{align}
+\left(  I_{\mathcal{A}}-X\right)  ^{2}  &  =I_{\mathcal{A}}-2X+X^{2}\\
+X^{2}  &  =X\Rightarrow\left(  I_{\mathcal{A}}-X\right)  ^{2}=I_{\mathcal{A}%
+}-X.
+\end{align}
+
+\end{remark}
+
+$\lceil$%
+\begin{align}
+AA^{\dagger} &  =\int_{\mathbb{R}_{+}}xdP_{AA^{\dagger}}\left(  x\right)  \\
+\left(  AA^{\dagger}\right)  ^{2} &  =\int_{\mathbb{R}_{+}}x^{2}%
+dP_{AA^{\dagger}}\left(  x\right)
+\end{align}%
+\begin{equation}
+AA^{\dagger}=\alpha_{0}I_{\mathcal{A}}+\sum_{1\leq n\leq2r}\sum_{1\leq
+j_{1}<\cdots<j_{n}\leq2r}\alpha_{j_{1}\cdots j_{n}}x_{j_{1}}\cdots x_{j_{n}}%
+\end{equation}
+$\rfloor$
+
+\appendix{}
+
+\section{Enveloping Algebra}
+
+\begin{remark}
+In the book "Spinors in Hilbert Space" by Plymen and Robinson, they show if
+$V$ is a \emph{complex (separable)} Hilbert space with a \emph{real
+structure}, and $Cl(V)$ the corresponding Clifford algebra, there is a
+\emph{unique completion} $Cl[V]$ of this algebra to a $c^{\ast}$-algebra: Any
+$\ast$-representation of $Cl(V)$ on a Hilbert space will induce that same
+$c^{\ast}$-norm on it, and the corresponding closure is the Clifford $c^{\ast
+}$-algebra $Cl[V].$
+\end{remark}
+
+The situation is \emph{different} for \emph{Von-Neumann algebras}. If%
+\begin{equation}
+\Pi:Cl(V)\rightarrow\mathcal{B}(\mathcal{H})
+\end{equation}
+
+
+is a $\ast$-representation, then the Von-Neumann-closure
+\begin{equation}
+VN_{\U{3c0} }\left[  Cl(V)\right]  \overset{\text{def}}{=}\Pi(Cl(V))^{\prime
+\prime}%
+\end{equation}
+will depend drastically on $\Pi$. For example, if $\Pi$ is the \emph{left
+regular representation}, then $VN_{\U{3c0} }$ is the \emph{hyperfinite}
+$II_{1}$ \emph{factor}, if $\Pi$ is a \emph{Fock} representation, then it is
+type $I_{\infty}$, and there are other settings where we obtain type $III$ factors.
+
+\begin{remark}
+There is another canonical Von-Neumann algebra containing $Cl(V)$, namely the
+\emph{universal enveloping} \emph{algebra}, coming from the case where $\Pi$
+is the \emph{universal representation} of $Cl[V]$. Alternatively, it is the
+double dual of $Cl[V].$
+\end{remark}
+
+\begin{remark}
+What can we say about the enveloping Von-Neumann-algebra of $Cl[V].$
+\end{remark}
+
+Is it possibly the \emph{hyperfinite} $II_{1}$ factor?
+
+No way! \emph{Every von Neumann completion is a quotient of the universal
+enveloping algebra}. \emph{It's as far from being a factor as you can get.}
+
+\begin{remark}
+Any \emph{weak}$^{\ast}$ closed ideal of a von Neumann algebra $\mathcal{A}$
+has the form $p\mathcal{A}$ for some central projection $p$. The quotient
+$\mathcal{A}/p\mathcal{A}$ is isomorphic to $(I-p)\mathcal{A}$ . Thus the
+image of $\mathcal{A}$ under any normal (i.e., \emph{weak }$^{\ast}%
+$-continuous) $^{\ast}$-homeomorphism is a Von Neumann algebra.
+\end{remark}
+
+\begin{remark}
+In operator algebras, the \emph{enveloping von Neumann algebra} of a $c^{\ast
+}$-algebra is a von Neumann algebra that contains all the operator-algebraic
+information about the given $c^{\ast}$-algebra. This may also be called the
+\emph{universal enveloping Von Neumann algebra}, since it is given by a
+universal property; and (as always with Von Neumann algebras) the term
+$w^{\ast}$-algebra may be used in place of Von Neumann algebra.
+\end{remark}
+
+\begin{definition}
+Let $\mathcal{A}$ be a $c^{\ast}$-algebra and $\Pi_{U}$ be its universal
+representation, acting on Hilbert space $\mathcal{H}_{U}$. The image of
+$\Pi_{U}$, $\Pi_{U}\left(  \mathcal{A}\right)  $, is a $c^{\ast}$-algebra of
+bounded operators on $\mathcal{H}_{U}$. The \emph{enveloping von Neumann
+algebra} of $\mathcal{A}$ is the closure of $\Pi_{U}\left(  \mathcal{A}%
+\right)  $ in the \emph{weak operator topology}. It is sometimes denoted by
+$\mathcal{A}^{\prime\prime}$.
+\end{definition}
+
+\begin{remark}
+\begin{enumerate}
+\item The universal representation $\Pi_{U}$ and $\mathcal{A}^{\prime\prime}$
+satisfy the following \emph{universal property}: for \emph{any representation}
+$\Pi$, there is a unique $\ast$-homomorphism%
+\begin{equation}
+\Upsilon:\Pi_{U}\left(  \mathcal{A}\right)  ^{\prime\prime}\rightarrow
+\Pi\left(  \mathcal{A}\right)  ^{\prime\prime}%
+\end{equation}
+that is continuous in the weak operator topology and the restriction of
+$\Upsilon$ to $\Pi_{U}\left(  \mathcal{A}\right)  $ is $\Pi$.
+
+\item As a particular case, one can consider the \emph{continuous functional
+calculus}, whose unique extension gives a canonical \emph{Borel functional
+calculus}.
+
+\item By the \emph{Sherman--Takeda theorem}, the double dual of a $c^{\ast}%
+$-algebra $\mathcal{A}$, $\mathcal{A}^{\ast\ast}$, can be identified with
+$\mathcal{A}^{\prime\prime}$, as Banach spaces.
+
+\item Every representation of $\mathcal{A}$ \emph{uniquely determines a
+central projection} (i.e. a projection in the center of the algebra) in
+$\mathcal{A}^{\prime\prime}$; it is called the \emph{central cover of that
+projection}.
+\end{enumerate}
+\end{remark}
+
+\section{Topologies}
+
+\begin{definition}
+We define four topologies on $\mathcal{B}\left(  \mathcal{H}\right)  $ as follows.
+
+\begin{enumerate}
+\item The \emph{uniform (or norm) topology} is the topology generated by the
+`operator norm', that is the topology of the quasi-normed space $\mathcal{B}%
+\left(  \mathcal{H}\right)  $.
+
+\item The \emph{strong operator topology} is the uniform topology generated by
+the collection of semi-norms
+\begin{equation}
+p_{x}(A):=\Vert Ax\Vert_{\mathcal{H}},\forall x\in\mathcal{H}.
+\end{equation}
+
+
+\item The \emph{weak operator topology} is the uniform topology generated by
+the collection of semi-norms
+\begin{equation}
+p_{xy}(A):=|\left\langle \left.  x\right\vert Ay\right\rangle _{\mathcal{H}%
+}|,\forall x,y\in\mathcal{H}.
+\end{equation}
+
+
+\item The \emph{normal (or ultra-weak) topology} is the uniform topology
+generated by the semi-norms
+\begin{equation}
+p_{B}(A):=|Tr\left\{  AB\right\}  |,\forall B\in\mathcal{B}_{1}\left(
+\mathcal{H}\right)  .
+\end{equation}
+
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+If $\mathcal{B}\left(  \mathcal{H}_{1},\mathcal{H}_{2}\right)  $ is a vector
+space of linear maps on the vector space $\mathcal{H}_{1}$ to the vector space
+$\mathcal{H}_{2}$, then $\U{3c3} \left(  \mathcal{H}_{1},\mathcal{H}%
+_{2}\right)  $ is defined to be the weakest topology on $\mathcal{H}_{1}$ such
+that all elements of $\mathcal{B}\left(  \mathcal{H}_{1},\mathcal{H}%
+_{2}\right)  $ are continuous.
+\end{definition}
+
+\begin{enumerate}
+\item The \emph{norm} topology or \emph{uniform} topology or \emph{uniform
+operator} topology is defined by the usual norm $||x||_{\mathcal{B}%
+(\mathcal{H})}$ on $\mathcal{B}(\mathcal{H})$. It is \emph{stronger} than all
+the other topologies below.
+
+\item The \emph{weak} (Banach space) topology is $\U{3c3} (\mathcal{B}%
+(\mathcal{H})$, $\mathcal{B}(\mathcal{H})^{\ast}$), in other words the weakest
+topology such that all elements of the dual $\mathcal{B}(\mathcal{H})^{\ast}$
+are continuous. It is the \emph{weak} topology on the Banach space
+$\mathcal{B}(\mathcal{H})$. It is \emph{stronger} than the \emph{ultraweak}
+and \emph{weak operator} topologies. (\emph{Warning: the weak Banach space
+topology and the weak operator topology and the ultraweak topology are all
+sometimes called the weak topology, but they are different.})
+
+\item The \emph{Mackey} topology or \emph{Arens-Mackey} topology is the
+\emph{strongest locally convex} topology on $\mathcal{B}(\mathcal{H})$ such
+that the dual is $\mathcal{B}(\mathcal{H})^{\ast}$, and is also the
+\emph{uniform convergence} topology on $\mathcal{B}(\mathcal{H})$. It is
+stronger than all topologies below.
+
+\item The $\U{3c3} $-\emph{strong} $\ast$ topology or \emph{ultrastrong}
+$\ast$ topology is the \emph{weakest} topology \emph{stronger} than the
+\emph{ultra strong} topology such that the adjoint map is continuous. It is
+defined by the family of seminorms $p_{w}(x)$ and $p_{w}(x^{\ast})$ for
+positive elements $w$ of $\mathcal{B}(\mathcal{H})^{\ast}$. It is
+\emph{stronger} than all topologies below.
+
+\item The $\U{3c3} $-\emph{strong }topology or \emph{ultrastrong} topology or
+\emph{strongest} topology or \emph{strongest operator }topology is defined by
+the family of seminorms $p_{w}(x)$ for positive elements w of $\mathcal{B}%
+(\mathcal{H})^{\ast}$. It is \emph{stronger} than all the topologies below
+other than the strong $^{\ast}$ topology. \emph{(Warning: in spite of the name
+"strongest topology", it is weaker than the norm topology.)}
+
+\item The $\U{3c3} $-\emph{weak} topology or \emph{ultraweak} topology or
+\emph{weak }$^{\ast}$\emph{ operator} topology or \emph{weak} $^{\ast}$
+topology or \emph{weak} topology or $\U{3c3} (\mathcal{B}(\mathcal{H}),$
+$\mathcal{B}(\mathcal{H})^{\ast})$ topology is defined by the family of
+seminorms $p_{w}\left(  x\right)  =|(w,x)|$ for elements $w$ of $\mathcal{B}%
+(\mathcal{H})^{\ast}$. It is \emph{stronger} than the \emph{weak} operator
+topology. \emph{(Warning: the weak Banach space topology and the weak operator
+topology and the ultraweak topology are all sometimes called the weak
+topology, but they are different.)}
+
+\item The \emph{strong }$^{\ast}$\emph{operator} topology or \emph{strong
+}$^{\ast}$ topology is defined by the seminorms $p_{x}\left(  h\right)
+=||x(h)||$ and $p_{x^{\ast}}\left(  h\right)  =||x^{\ast}(h)||$ for
+$h\in\mathcal{H}$. It is \emph{stronger} than the \emph{strong} and
+\emph{weak} operator topologies.
+
+\item The \emph{strong} operator topology (SOT) or \emph{strong} topology is
+defined by the seminorms $p_{x}\left(  h\right)  =||x(h)||$ for $h\in
+\mathcal{H}$. It is \emph{stronger} than the \emph{weak operator} topology.
+
+\item The \emph{weak operator} topology (WOT) or \emph{weak} topology is
+defined by the seminorms $|(x(h_{1}),h_{2})|$ for $h_{1},h_{2}\in\mathcal{H}$.
+\emph{(Warning: the weak Banach space topology, the weak operator topology,
+and the ultraweak topology are all sometimes called the weak topology, but
+they are different.)}
+\end{enumerate}
+
+\subsection{Relations between the topologies}
+
+The continuous linear functionals on $\mathcal{B}(\mathcal{H})$ for the
+\emph{weak}, \emph{strong}, and \emph{strong}$^{\ast}$ (operator) topologies
+are the same, and are the finite linear combinations of the linear functionals
+$\left\langle xh_{1},h_{2}\right\rangle $ for $h_{1},h_{2}\in\mathcal{H}$. The
+continuous linear functionals on $\mathcal{B}(\mathcal{H})$ for the
+\emph{ultraweak, ultrastrong, ultrastrong} $^{\ast}$ and \emph{Arens-Mackey}
+topologies are the same, and are the elements of the predual $\mathcal{B}%
+(\mathcal{H})_{\ast}$.
+
+By definition, the continuous linear functionals in the \emph{norm} topology
+are the same as those in the \emph{weak Banach} space topology. This dual is a
+rather large space with many pathological elements.
+
+On norm bounded sets of $\mathcal{B}(\mathcal{H})$, the \emph{weak} (operator)
+and \emph{ultraweak} topologies coincide. This can be seen via, for instance,
+the \emph{Banach--Alaoglu} theorem. For essentially the same reason, the
+\emph{ultrastrong} topology is the same as the \emph{strong} topology on any
+(norm) bounded subset of $\mathcal{B}(\mathcal{H})$. Same is true for the
+\emph{Arens-Mackey} topology, the \emph{ultrastrong} $^{\ast}$, and the
+\emph{strong}$^{\ast}$ topology.
+
+In locally convex spaces, closure of convex sets can be characterized by the
+continuous linear functionals. Therefore, for a convex subset $K$ of
+$\mathcal{B}(\mathcal{H})$, the conditions that $K$ be closed in the
+\emph{ultrastrong}$^{\ast}$, \emph{ultrastrong}, and \emph{ultraweak}
+topologies are all equivalent and are also equivalent to the conditions that
+for all $r>0$, $K$ has closed intersection with the closed ball of radius $r$
+in the \emph{strong}$^{\ast}$, \emph{strong}, or \emph{weak (operator)} topologies.
+
+The \emph{norm} topology is \emph{metrizable} and the others are not; in fact
+they fail to be \emph{first-countable}. However, when $\mathcal{H}$ is
+separable, all the topologies above are \emph{metrizable} when restricted to
+the unit ball (or to any norm-bounded subset).
+
+\subsection{Normal States}
+
+A normal state on a von Neumann algebra defines a \emph{countably additive
+probability measure} over its projection lattice. The von Neumann algebras
+familiar from ordinary QM are algebras of all the bounded operators on a
+Hilbert space $\mathcal{H}$, aka Type $I$ factor von Neumann algebras. Their
+normal states are density operator states, and can be pure or mixed. In QFT
+and the thermodynamic limit of QSM, von Neumann algebras of more exotic types
+abound. Type $III$ von Neumann algebras, for instance, \emph{have no pure
+normal} states; the pure states they do have fail to be countably additive.
+
+Non-normal states are not weakly continuous.
+
+In ordinary QM, $\mathcal{A}=\mathcal{B}(\mathcal{H})$ with $\mathcal{H}$
+separable, and let $\mathcal{P(B(H))}$ be the projection lattice of
+$\mathcal{B(H)}$. A normal state on $\mathcal{B(H)}$ defines a \emph{countably
+additive measure} on $\mathcal{P(B(H))}$. The converse is the assertion that
+for any countably additive measure
+\begin{equation}%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+:\mathcal{P(B(H))}\rightarrow\lbrack0,1]
+\end{equation}
+there is a unique normal state $\U{3c9} \in\mathcal{S}\left(  \mathcal{B(H)}%
+\right)  $ on $\mathcal{B(H)}$\emph{ }such that
+\begin{equation}
+\U{3c9} (p)=%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+(p)\quad\forall p\in\mathcal{P(B(H))}%
+\end{equation}
+or, equivalently, there is a density operator $D$ such that
+\begin{equation}
+Tr\left\{  pD\right\}  =%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+(p)\quad\forall p\in\mathcal{P(B(H))}.
+\end{equation}
+This assertion is not true in general, in particular, it fails if
+$\dim(\mathcal{H})\leq2$. But a highly nontrivial result, known as
+\emph{Gleason's Theorem}, shows that the assertion is true for $\dim
+(\mathcal{H})>2$.
+
+
+\end{document}

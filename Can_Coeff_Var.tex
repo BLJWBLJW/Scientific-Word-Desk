@@ -1,0 +1,472 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, August 09, 2004 09:20:59}
+%TCIDATA{LastRevised=Saturday, July 28, 2007 09:51:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Variation of the Occupation Numbers\label{OccVar}}
+
+In this section we show how by optimizing wrt geminal coefficients $\left\{
+c_{j}\right\}  $ for a fixed value of $\left(  \mathbf{\mathbf{\psi},\theta
+}\right)  $ one can determine an optimal value of $\mathbf{n}$ that satisfies
+the positivity and normalization constraints.
+
+The $2N$-electron, unnormalized, AGP state, $\left\vert g^{N}\right\rangle $,
+can be expressed as
+\begin{equation}
+\left\vert g^{N}\right\rangle =\left(  G^{\dagger}\right)  ^{N}\left\vert
+\phi\right\rangle ,
+\end{equation}
+where
+\begin{equation}
+G^{\dagger}=\sum_{1\leq j\leq s}c_{j}b_{j}^{\dagger}b_{j+s}^{\dagger},
+\label{gcreat}%
+\end{equation}
+and the electron creation operators $\left\{  \left.  b_{j}^{\dagger
+}\right\vert 1\leq j\leq2s\right\}  $ produce the CGSO's $\left\{  \left.
+\left\vert \psi_{j}\right\rangle \right\vert 1\leq j\leq2s\right\}  $ by
+acting on the zero particle vacuum vector i.e.
+\begin{equation}
+\left\vert \psi_{j}\right\rangle =b_{j}^{\dagger}\left\vert \phi\right\rangle
+;\quad1\leq j\leq2s.
+\end{equation}
+For fixed $\left(  \mathbf{\mathbf{\psi},\theta}\right)  $ the geminal creator
+in eq. $\left(  \ref{gcreat}\right)  $ is a function of the canonical
+coefficients $\left\{  \left.  c_{j}\right\vert 1\leq j\leq s\right\}  ,$
+which can be differentiated to give%
+\begin{equation}
+\frac{\partial G\left(  \mathbf{c}\right)  ^{\dagger N}}{\partial c_{j}%
+}=Nb_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1},
+\end{equation}
+which leads to
+\begin{equation}
+G\left(  \mathbf{c}\right)  ^{\dagger N}=\frac{1}{N}\sum_{1\leq j\leq s}%
+c_{j}\frac{\partial G\left(  \mathbf{c}\right)  ^{\dagger N}}{\partial c_{j}}.
+\label{euler}%
+\end{equation}
+The energy expression
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}\right)  =\frac{\mathcal{H}\left(  \mathbf{c}%
+\right)  }{S_{N}\left(  \mathbf{c}\right)  }=\frac{\left\langle G\left(
+\mathbf{c}\right)  ^{\dagger N}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger
+N}\phi\right\rangle }{\left\langle G\left(  \mathbf{c}\right)  ^{\dagger
+N}\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle }%
+\end{equation}
+produces the derivative
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  =\frac{1}%
+{S_{N}\left(  \mathbf{c}\right)  }\left\{  \partial_{\mathbf{c}}%
+^{1}\mathcal{H}\left(  \mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}%
+\right)  \partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}\right)  \right\}  ,
+\end{equation}
+where
+\begin{equation}
+\partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)  =N\left\{
+\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle
++\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|Hb_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle
+\right\}
+\end{equation}
+and
+\begin{equation}
+\partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)  =N\left\{  \left\langle
+b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}%
+\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle +\left\langle
+G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle \right\}  .
+\end{equation}
+Using eq. $\left(  \ref{euler}\right)  $ one obtains
+\begin{equation}
+\frac{1}{2N}\sum_{1\leq j\leq s}c_{j}\frac{\partial\mathcal{E}\left(
+\mathbf{c}\right)  }{\partial c_{j}}=\mathbf{c}^{t}\partial_{\mathbf{c}}%
+^{1}\mathcal{E}\left(  \mathbf{c}\right)  =\frac{1}{2NS_{N}\left(
+\mathbf{c}\right)  }\left\{  \mathcal{H}\left(  \mathbf{c}\right)
+-\mathcal{E}\left(  \mathbf{c}\right)  S_{N}\left(  \mathbf{c}\right)
+\right\}  =0,
+\end{equation}
+i.e. the vector $\mathbf{c}$ is always perpendicular to the vector
+$\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  $.
+
+The second derivatives $\left\{  \partial_{c_{j}c_{k}}^{2}\mathcal{E}\left(
+\mathbf{c}\right)  \right\}  $ are given by
+\begin{equation}
+\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}\right)  =\frac{1}%
+{S_{N}\left(  \mathbf{c}\right)  }\left\{  \partial_{\mathbf{c}}%
+^{2}\mathcal{H}\left(  \mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}%
+\right)  \partial_{\mathbf{c}}^{2}S_{N}\left(  \mathbf{c}\right)
+-\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  \otimes
+\partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}\right)  -\partial
+_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}\right)  \otimes\partial_{\mathbf{c}%
+}^{1}\mathcal{E}\left(  \mathbf{c}\right)  \right\}  , \label{Hess}%
+\end{equation}
+where
+\begin{align}
+\partial_{c_{j}c_{k}}^{2}\mathcal{H}\left(  \mathbf{c}\right)   &
+=N^{2}\left\{  \left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(
+\mathbf{c}\right)  ^{\dagger N-1}\phi|Hb_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle +\left\langle
+b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}%
+\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger
+N-1}\right\rangle \right\} \nonumber\\
+&  +N\left(  N-1\right)  \left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
+\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  +\left\langle
+b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(
+\mathbf{c}\right)  ^{\dagger N-2}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger
+}\phi\right\rangle \right\}
+\end{align}
+and
+\begin{align}
+\partial_{c_{j}c_{k}}^{2}S_{N}\left(  \mathbf{c}\right)   &  =N^{2}\left\{
+\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\right\rangle +\left\langle b_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi|b_{j}^{\dagger}b_{j+s}%
+^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle \right\}
+\nonumber\\
+&  +N\left(  N-1\right)  \left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
+\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  +\left\langle
+b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(
+\mathbf{c}\right)  ^{\dagger N-2}\phi|G\left(  \mathbf{c}\right)  ^{\dagger
+}\phi\right\rangle \right\}  .
+\end{align}
+Observing
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle b_{j}^{\dagger}b_{j+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi|Hb_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
++\left\langle b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}%
+\right)  ^{\dagger N-1}\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger N}\right\rangle
++\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|Hb_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)  ,
+\end{align}
+and
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|Hb_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi|HG\left(  \mathbf{c}\right)
+^{\dagger}\phi\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|Hb_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|HG\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)
+\end{align}
+one obtains
+\begin{equation}
+\sum_{1\leq k\leq s}\partial_{c_{j}c_{k}}^{2}\mathcal{H}\left(  \mathbf{c}%
+\right)  c_{k}=\left(  2N-1\right)  \partial_{c_{j}}^{1}\mathcal{H}\left(
+\mathbf{c}\right)  .
+\end{equation}
+The normalization term similarly gives
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle b_{j}^{\dagger}b_{j+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi|b_{k}^{\dagger}b_{k+s}%
+^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
++\left\langle b_{k}^{\dagger}b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\right\rangle
++\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|b_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)  ,
+\end{align}
+and
+\begin{align}
+&  \sum_{1\leq k\leq s}\left\{  \left\langle G\left(  \mathbf{c}\right)
+^{\dagger N}\phi|b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}%
+b_{k+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}b_{k}^{\dagger}b_{k+s}^{\dagger
+}G\left(  \mathbf{c}\right)  ^{\dagger N-2}\phi|G\left(  \mathbf{c}\right)
+^{\dagger}\phi\right\rangle \right\}  c_{k}\nonumber\\
+&  =\left\langle G\left(  \mathbf{c}\right)  ^{\dagger N}\phi|b_{j}^{\dagger
+}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)  ^{\dagger N-1}\phi\right\rangle
++\left\langle b_{j}^{\dagger}b_{j+s}^{\dagger}G\left(  \mathbf{c}\right)
+^{\dagger N-1}\phi|G\left(  \mathbf{c}\right)  ^{\dagger N}\phi\right\rangle
+=\frac{1}{N}\partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)  .
+\end{align}
+producing
+\begin{equation}
+\sum_{1\leq k\leq s}\partial_{c_{j}c_{k}}^{2}S_{N}\left(  \mathbf{c}\right)
+c_{k}=\left(  2N-1\right)  \partial_{c_{j}}^{1}S_{N}\left(  \mathbf{c}\right)
+.
+\end{equation}
+Thus
+\begin{equation}
+\sum_{1\leq k\leq s}\left\{  \partial_{c_{j}c_{k}}^{2}\mathcal{H}\left(
+\mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}\right)  \partial_{c_{j}%
+c_{k}}^{2}S_{N}\left(  \mathbf{c}\right)  \right\}  c_{k}=\left(  2N-1\right)
+\left\{  \partial_{c_{j}}^{1}\mathcal{H}\left(  \mathbf{c}\right)
+-\mathcal{E}\left(  \mathbf{c}\right)  \partial_{c_{j}}^{1}S_{N}\left(
+\mathbf{c}\right)  \right\}  ,
+\end{equation}
+which can be written in matrix notation as
+\begin{equation}
+L\left(  \mathbf{c}\right)  \mathbf{c}\equiv\left[  \partial_{\mathbf{c}}%
+^{2}\mathcal{H}\left(  \mathbf{c}\right)  -\mathcal{E}\left(  \mathbf{c}%
+\right)  \partial_{\mathbf{c}}^{2}S_{N}\left(  \mathbf{c}\right)  \right]
+\mathbf{c=}\left(  2N-1\right)  \partial_{\mathbf{c}}^{1}\mathcal{E}\left(
+\mathbf{c}\right)  , \label{gradrel}%
+\end{equation}
+which clearly shows that
+\begin{equation}
+\mathbf{c}^{t}L\left(  \mathbf{c}\right)  \mathbf{c=\mathbf{c}}^{t}%
+\mathbf{\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}\right)
+\mathbf{c}}=\mathbf{0.} \label{cd2c}%
+\end{equation}
+
+
+At stationary points, $\mathbf{c}_{\#}$, one can observe from eq. $\left(
+\ref{Hess}\right)  $ that
+\begin{equation}
+\mathbf{\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+=}\frac{1}{S_{N}\left(  \mathbf{c}_{\#}\right)  }L\left(  \mathbf{c}%
+_{\#}\right)
+\end{equation}
+and if $\mathbf{c}_{\#}$ is a local minimum then
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \geq\mathbf{0.}%
+\end{equation}
+Hence at a local minimum eq. $\left(  \ref{cd2c}\right)  $ shows that
+$\mathbf{c}_{\#}$ is an eigenvector corresponding to the lowest eigenvalue of
+$L\left(  \mathbf{c}_{\#}\right)  $ i.e.%
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \mathbf{c}_{\#}=0. \label{loweig}%
+\end{equation}
+
+
+If $\mathbf{c}_{\#}$ is the lowest eigenvalue of $L\left(  \mathbf{c}%
+_{\#}\right)  $ and $L\left(  \mathbf{c}_{\#}\right)  \geq0$ then as
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  =S_{N}\left(  \mathbf{c}_{\#}\right)
+\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
++\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\otimes\partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}_{\#}\right)
++\partial_{\mathbf{c}}^{1}S_{N}\left(  \mathbf{c}_{\#}\right)  \otimes
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\end{equation}
+one has
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \mathbf{c}_{\#}=S_{N}\left(  \mathbf{c}%
+_{\#}\right)  \partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}%
+_{\#}\right)  \mathbf{c}_{\#}+2NS_{N}\left(  \mathbf{c}_{\#}\right)
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)  =0,
+\end{equation}
+which implies
+\begin{equation}
+\frac{1}{2N}\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}%
+_{\#}\right)  \mathbf{c}_{\#}+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  =0.\label{stat1}%
+\end{equation}
+If the second order approximation $\mathcal{E}_{2}$
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}_{\#}+\mathbf{\delta}\right)  \simeq
+\mathcal{E}_{2}\left(  \mathbf{\delta}\right)  =\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  +\partial_{\mathbf{c}}^{1}\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  ^{t}\mathbf{\delta+}\frac{1}{2}\mathbf{\delta}%
+^{t}\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\mathbf{\delta}%
+\end{equation}
+to $\mathcal{E}$ about the point $\mathbf{c}_{\#}$ is stationary at the point
+$\mathbf{\delta}_{\#}$ then
+\begin{equation}
+\partial_{\mathbf{\delta}}\mathcal{E}_{2}\left(  \mathbf{\delta}_{\#}\right)
+=\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+^{t}+\mathbf{\delta}^{t}\partial_{\mathbf{c}}^{2}\mathcal{E}\left(
+\mathbf{c}_{\#}\right)  =0
+\end{equation}
+and hence
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
++\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+\mathbf{\delta}=0\label{stat2}%
+\end{equation}
+Thus
+\begin{equation}
+\mathbf{\delta}_{\#}=\frac{1}{2N}\mathbf{c}_{\#}%
+\end{equation}
+is a solution to eq. $\left(  \ref{stat2}\right)  $ by observing eq. $\left(
+\ref{stat1}\right)  .$ However as $\mathcal{E}$ is a homogenous function of
+degree $0$
+\begin{equation}
+\mathcal{E}\left(  \lambda\mathbf{c}\right)  =\mathcal{E}\left(
+\mathbf{c}\right)  \quad\forall\lambda\in\mathbb{R}%
+\end{equation}
+and
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}_{\#}+\mathbf{\delta}_{\#}\right)  =\mathcal{E}%
+\left(  \mathbf{c}_{\#}+\frac{1}{2N}\mathbf{c}_{\#}\right)  =\mathcal{E}%
+\left(  \mathbf{c}_{\#}\right)  .
+\end{equation}
+This means $\mathbf{\delta}_{\#}=\mathbf{0}$ is also a stationary point of
+$\mathcal{E}_{2}\left(  \mathbf{\delta}_{\#}\right)  $ and hence eq. $\left(
+\ref{stat2}\right)  $ shows that
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+=\mathbf{0,}%
+\end{equation}
+i.e. $\mathbf{c}_{\#}$ is stationary point of $\mathcal{E}.$ At stationary
+points of $\mathcal{E}$
+\begin{equation}
+\mathbf{\partial_{\mathbf{c}}^{2}\mathcal{E}\left(  \mathbf{c}_{\#}\right)
+=}\frac{1}{S_{N}\left(  \mathbf{c}_{\#}\right)  }L\left(  \mathbf{c}%
+_{\#}\right)
+\end{equation}
+and by assumption $L\left(  \mathbf{c}_{\#}\right)  \geq0$ thus one can
+conclude that $\mathbf{c}_{\#}$ is a local minimum. We can summarize the
+preceding by the theorem
+
+\begin{theorem}
+$\mathbf{c}_{\#}$ is a local minimum of $\mathcal{E}$ if and only if
+\begin{equation}
+L\left(  \mathbf{c}_{\#}\right)  \geq0\qquad\&\qquad L\left(  \mathbf{c}%
+_{\#}\right)  \mathbf{c}_{\#}=0.
+\end{equation}
+
+\end{theorem}
+
+An iterative minimization scheme can be based on this theorem by considering
+the first order approximation
+\begin{equation}
+\mathcal{E}\left(  \mathbf{c}+\mathbf{\delta}\right)  \simeq\mathcal{E}%
+_{1}\left(  \mathbf{\delta}\right)  =\mathcal{E}\left(  \mathbf{c}\right)
++\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  ^{t}%
+\mathbf{\delta} \label{o1}%
+\end{equation}
+and the eigenvalue equation
+\begin{equation}
+L\left(  \mathbf{c}\right)  \mathbf{x}_{j}=\lambda_{j}\mathbf{x}_{j}\mathbf{,}
+\label{Lc}%
+\end{equation}
+where $\left\{  \left.  \mathbf{x}_{j}\right\vert 1\leq j\leq s\right\}  $ are
+orthonormal eigenvectors. By taking the scalar product with $\mathbf{c}$ eq.
+$\left(  \ref{Lc}\right)  $ becomes by noting eq. $\left(  \ref{gradrel}%
+\right)  $
+\begin{equation}
+\mathbf{c}^{t}L\left(  \mathbf{c}\right)  \mathbf{x}_{j}=\left(  2N-1\right)
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  ^{t}%
+\mathbf{x}_{j}=\lambda_{j}\mathbf{c}^{t}\mathbf{x}_{j}%
+\end{equation}
+As $\mathbf{c}$ is always perpendicular to $\partial_{\mathbf{c}}%
+^{1}\mathcal{E}\left(  \mathbf{c}\right)  $ we obtain
+\begin{equation}
+\partial_{\mathbf{c}}^{1}\mathcal{E}\left(  \mathbf{c}\right)  ^{t}\left(
+\mathbf{x}_{j}-\mathbf{c}\right)  =\frac{1}{\left(  2N-1\right)  }\lambda
+_{j}\mathbf{c}^{t}\mathbf{x}_{j}%
+\end{equation}
+We can always choose an overall phase for $\mathbf{x}_{j}$ so that
+$\mathbf{c}^{t}\mathbf{x}_{j}>0.$ If $\lambda_{L}<0$ we can then set
+\begin{equation}
+\mathbf{\delta}=\alpha\left(  \mathbf{x}_{L}-\mathbf{c}\right)
+\end{equation}
+in eq. $\left(  \ref{o1}\right)  $, where $\lambda_{L}$ is the lowest
+eigenvalue of $L\left(  \mathbf{c}\right)  $ and find a small enough
+$\alpha>0$ that decreases the energy around the point $\mathbf{c.}$ Then we
+can compute a new point
+\begin{equation}
+\mathbf{c}_{new}=\alpha\left(  \mathbf{x}_{L}-\mathbf{c}\right)
+\end{equation}
+and continue iterating until the lowest eigenvalue is equal to zero.
+
+After the optimal $\mathbf{c}_{\#}$ has been found we can then define an
+optimal $\mathbf{n}_{\#}$ by
+\begin{equation}
+n_{\#j}=c_{\#j}^{2}\qquad1\leq j\leq s.
+\end{equation}
+As the values $\left\{  c_{\#j}\right\}  $ are optimal
+\begin{equation}
+\frac{\partial\mathbf{\mathcal{E}\left(  \mathbf{c}_{\#}\right)  }}{\partial
+c_{j}}=\frac{\partial\mathbf{\mathcal{E}\left(  \mathbf{n}_{\#}\right)  }%
+}{\partial n_{j}}\frac{\partial n_{j}}{\partial c_{j}}=2\frac{\partial
+\mathbf{\mathcal{E}\left(  \mathbf{n}_{\#}\right)  }}{\partial n_{j}}%
+=0\qquad1\leq j\leq s,
+\end{equation}
+showing that $\left\{  n_{\#j}\right\}  $ are also optimal and satisfy the
+positivity and normalization constraints. The phase information contained in
+the signs of $\left\{  c_{\#j}\right\}  ,$ although important in finding a
+$\mathbf{c}_{\#}$, is not important for our overall optimization procedure as
+it is recovered in the optimization of $\mathbf{\theta}$ and $\mathbf{\psi}$.
+
+
+\end{document}

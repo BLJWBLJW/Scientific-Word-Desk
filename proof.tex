@@ -1,0 +1,583 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Saturday, July 05, 2008 11:25:34}
+%TCIDATA{LastRevised=Sunday, July 06, 2008 08:40:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Equation 1
+
+\begin{align*}
+u\left( \boldsymbol{\theta }\right) \left( \left\vert \psi _{1}\right\rangle
+,\cdots ,\left\vert \psi _{r}\right\rangle \right) & =\left( \left\vert \psi
+_{1}\right\rangle ,\cdots ,\left\vert \psi _{r}\right\rangle \right) \left( 
+\begin{array}{ccc}
+e^{i\theta _{1}} & \cdots  & 0 \\ 
+\vdots  & \ddots  & \vdots  \\ 
+0 & \cdots  & e^{i\theta _{r}}%
+\end{array}%
+\right)  \\
+& =\left( e^{i\theta _{1}}\left\vert \psi _{1}\right\rangle ,\cdots
+,e^{i\theta _{r}}\left\vert \psi _{r}\right\rangle \right) 
+\end{align*}
+
+Equation 4
+
+\begin{eqnarray*}
+u\left( \boldsymbol{\theta }\right) D^{1}u\left( \boldsymbol{\theta }\right)
+^{\dagger } &=&\sum_{1\leq j\leq r}N_{j}e^{i\theta _{j}}\left\vert \psi
+_{j}\right\rangle \left\langle \psi _{j}\right\vert e^{-i\theta _{j}} \\
+&=&\sum_{1\leq j\leq r}N_{j}\left\vert \psi _{j}\right\rangle \left\langle
+\psi _{j}\right\vert ,
+\end{eqnarray*}
+
+Equation 5
+
+\begin{align*}
+& u\left( \boldsymbol{\theta }\right) D^{N}u\left( \boldsymbol{\theta }%
+\right) ^{\dagger } \\
+& =\sum_{\substack{ 1\leq j_{1}<\,\cdots <j_{N}\leq r \\ 1\leq
+k_{1}<\,\cdots <k_{N}\leq r}}\bar{c}_{j_{1}\cdots j_{N}}c_{k_{1}\cdots
+k_{N}}e^{i\left\{ \theta _{j_{1}}+\cdots +\theta _{j_{N}}\right\}
+}e^{-i\left\{ \theta _{k_{1}}+\cdots +\theta _{k_{N}}\right\} } \\
+& \left\vert \psi _{j_{1}}\cdots \psi _{j_{N}}\right\rangle \left\langle
+\psi _{k_{1}}\cdots \psi _{k_{N}}\right\vert \neq D^{N}.
+\end{align*}
+
+Equation 6
+
+\[
+\left\vert g\left( \boldsymbol{c},\boldsymbol{\psi },\boldsymbol{\theta }%
+\right) \right\rangle =\sum_{1\leq j\leq s}c_{j}e^{i\theta _{j}}\left\vert
+\psi _{j}\psi _{j+s}\right\rangle ,
+\]
+
+Equation 11
+
+\[
+N_{j}\left( \boldsymbol{c}\right) =n_{j}S_{\frac{N}{2}-1}\left( \hat{\jmath}%
+\right) \left( S_{\frac{N}{2}}\right) ^{-1},
+\]
+
+Equation 12a
+
+\[
+S_{_{\frac{N}{2}}}\equiv S_{_{\frac{N}{2}}}\left( \boldsymbol{n}\right)
+=\sum_{1\leq j_{1}<\cdots <j_{\frac{N}{2}}\leq s}n_{j_{1}}\cdots n_{j_{_{%
+\frac{N}{2}}}},
+\]
+
+Equation 12b
+
+\[
+S_{\frac{N}{2}-1}\left( \hat{\jmath}\right) =\sum_{\substack{ 1\leq
+j_{1}<\cdots <j_{\frac{N}{2}-1}\leq s \\ j_{1},\cdots ,j_{\frac{N}{2}-1}\neq
+j}}n_{j_{1}}\cdots n_{j_{_{\frac{N}{2}-1}}},
+\]
+
+Equation 13
+
+\[
+S_{_{1}}=\sum_{1\leq j_{1}\leq s}n_{j_{1}};\quad S_{0}\left( \hat{\jmath}%
+\right) =1,\quad 1\leq j\leq s.
+\]
+
+Equation 14
+
+\begin{align*}
+& D^{2}\left( \boldsymbol{c},\boldsymbol{\psi },\boldsymbol{\theta }\right)
+=\left( S_{\frac{N}{2}}\right) ^{-1}\left\{ \sum_{1\leq j\leq s}n_{j}S_{%
+\frac{N}{2}-1}\left( \hat{\jmath}\right) \left\vert \psi _{j}\psi
+_{j+s}\right\rangle \left\langle \psi _{j}\psi _{j+s}\right\vert +\right.  \\
+& \sum_{1\leq j\neq k\leq s}c_{j}c_{k}e^{i\left( \theta _{j}-\theta
+_{k}\right) }S_{\frac{N}{2}-1}\left( \hat{\jmath}\hat{k}\right) \left\vert
+\psi _{j}\psi _{j+s}\right\rangle \left\langle \psi _{k}\psi
+_{k+s}\right\vert  \\
+& \left. +\sum_{\substack{ 1\leq j<k\leq r \\ k\neq j+s}}n_{j}n_{k}S_{\frac{N%
+}{2}-2}\left( \hat{\jmath}\hat{k}\right) \left\vert \psi _{j}\psi
+_{k}\right\rangle \left\langle \psi _{j}\psi _{k}\right\vert \right\} ,
+\end{align*}
+
+Equation 15
+
+\[
+S_{\frac{N}{2}-1}\left( \hat{\jmath}\hat{k}\right) =\sum_{\substack{ 1\leq
+j_{1}<\cdots <j_{\frac{N}{2}-1}\leq s \\ j_{1},\cdots ,j_{\frac{N}{2}-1}\neq
+j,k}}n_{j_{1}}\cdots n_{j_{_{\frac{N}{2}-1}}},
+\]
+
+Equation 16
+
+\[
+S_{\frac{N}{2}-2}\left( \hat{\jmath}\hat{k}\right) =\sum_{\substack{ 1\leq
+j_{1}<\cdots <j_{\frac{N}{2}-2}\leq s \\ j_{1},\cdots ,j_{\frac{N}{2}-1}\neq
+j,k}}n_{j_{1}}\cdots n_{j_{_{\frac{N}{2}-2}}},
+\]
+
+Equation 18
+
+\begin{eqnarray*}
+&&\left\vert g\left( \boldsymbol{c},\boldsymbol{\psi },\boldsymbol{\theta }%
+\right) ^{\frac{N}{2}}\right\rangle  \\
+&=&\sum_{1\leq j_{1}<\cdots <j_{\frac{N}{2}}\leq s}c_{j_{1}}\cdots c_{j_{%
+\frac{N}{2}}}\exp \left\{ i\sum\limits_{1\leq \kappa \leq \frac{N}{2}}\theta
+_{j_{\kappa }}\right\} \left\vert \psi _{j_{1}}\psi _{j_{1}+s}\cdots \psi
+_{j_{\frac{N}{2}}}\psi _{_{j_{\frac{N}{2}}}+s}\right\rangle ,
+\end{eqnarray*}
+
+Equation 19
+
+\begin{align*}
+& \mathcal{E}\left( \boldsymbol{c},\boldsymbol{\psi },\boldsymbol{\theta }%
+\right) =\frac{\mathcal{H}\left( \boldsymbol{c},\boldsymbol{\psi },%
+\boldsymbol{\theta }\right) }{S_{\frac{N}{2}}\left( \boldsymbol{n}\right) }%
+=\left\{ \sum_{1\leq j\leq s}n_{j}S_{\frac{N}{2}-1}\left( \hat{\jmath}%
+\right) \right. \left\langle \psi _{j}\left\vert h_{1}\psi _{j}\right.
+\right\rangle  \\
+& \left\{ \overset{}{+\,\left\langle \psi _{j+s}\left\vert h_{1}\psi
+_{j+s}\right. \right\rangle }+\,\left\langle \psi _{j}\psi _{j+s}\right\vert
+\left\vert \psi _{j}\psi _{j+s}\right\rangle \right\}  \\
+& +\sum_{1\leq j\neq k\leq s}\left\{ c_{j}c_{k}e^{i\left( \theta _{j}-\theta
+_{k}\right) }S_{\frac{N}{2}-1}\left( \hat{\jmath}\hat{k}\right) \left\langle
+\psi _{j}\psi _{j+s}\right\vert \left\vert \psi _{k}\psi _{k+s}\right\rangle
+\right.  \\
+& \left. \left. \left. +\,\frac{1}{2}\overset{}{n_{j}n_{k}S_{\frac{N}{2}%
+-2}\left( \hat{\jmath}\hat{k}\right) \left\langle \psi _{j}\psi _{k}|||\psi
+_{j}\psi _{k}\right\rangle }\right\} \right\} \right/ S_{\frac{N}{2}}\left( 
+\boldsymbol{n}\right) .
+\end{align*}
+
+Equation 25
+
+\[
+\mathcal{E}\left( \boldsymbol{c}_{\#},\boldsymbol{\tilde{\psi}}_{\#}\right)
+=\min_{\boldsymbol{c},\boldsymbol{\tilde{\psi}}}\mathcal{E}\left( 
+\boldsymbol{c},\boldsymbol{\tilde{\psi}}\right) 
+\]
+
+Equation 26
+
+\[
+I\left( \tilde{\psi}_{\#j}\right) =\mathcal{E}\left( \boldsymbol{c}_{\#},%
+\boldsymbol{\tilde{\psi}}_{\#}\right) -\mathcal{E}_{N\,-1}\left( \boldsymbol{%
+c}_{\#},\boldsymbol{\tilde{\psi}}_{\#},\tilde{\psi}_{\#j}\right) 
+\]
+
+Equation 27%
+\[
+\mathcal{E}_{N\,-1}\left( \boldsymbol{c}_{\#},\boldsymbol{\tilde{\psi}}_{\#},%
+\tilde{\psi}_{\#j}\right) =\frac{\left\langle \left. g\left( \boldsymbol{c}%
+_{\#},\boldsymbol{\tilde{\psi}}_{\#}\right) ^{\frac{N}{2}}\right\vert
+a_{j}^{\dagger }Ha_{j}g\left( \boldsymbol{c}_{\#},\boldsymbol{\tilde{\psi}}%
+_{\#}\right) ^{\frac{N}{2}}\right\rangle }{\left\langle \left. g\left( 
+\boldsymbol{c}_{\#},\boldsymbol{\tilde{\psi}}_{\#}\right) ^{\frac{N}{2}%
+}\right\vert a_{j}^{\dagger }a_{j}g\left( \boldsymbol{c}_{\#},\boldsymbol{%
+\tilde{\psi}}_{\#}\right) ^{\frac{N}{2}}\right\rangle },
+\]%
+\bigskip 
+
+Equation 29
+
+\[
+\mathcal{E}\left( \boldsymbol{c}_{\#},\boldsymbol{\tilde{\psi}}_{\#}\right) =%
+\frac{1}{2}\sum_{1\leq j\leq 2s}N_{j}\left( \boldsymbol{c}_{\#}\right)
+\kappa \left( \tilde{\psi}_{\#j}\right) ,
+\]
+
+Equation 33
+
+\[
+\mathcal{E}\left( \boldsymbol{\tilde{\psi}}_{\#}\right) =\frac{1}{2}%
+\sum_{1\leq j\leq N}\kappa \left( \tilde{\psi}_{\#j}\right) =\frac{1}{2}%
+\sum_{1\leq j\leq N}\left\{ \epsilon \left( \tilde{\psi}_{\#j}\right)
++h_{1}\left( \tilde{\psi}_{\#j}\right) \right\} ,
+\]
+
+Equation 34
+
+\begin{align*}
+\mathcal{E}\left( \boldsymbol{c}_{\#,}\boldsymbol{\tilde{\psi}}_{\#}\right)
+& =\frac{1}{2}\sum_{1\leq j\leq s}N\left( \tilde{\psi}_{\#j}\right) \left\{
+\kappa \left( \tilde{\psi}_{\#j}\right) +\kappa \left( \tilde{\psi}%
+_{\#j+s}\right) \right\}  \\
+& =\frac{1}{2}\sum_{1\leq j\leq s}N\left( \tilde{\psi}_{\#j}\right) \left\{
+\epsilon \left( \tilde{\psi}_{\#j}\right) +\epsilon \left( \tilde{\psi}%
+_{\#j+s}\right) +h_{1}\left( \tilde{\psi}_{\#j}\right) \right.  \\
+& \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. +h_{1}\left( 
+\tilde{\psi}_{\#j+s}\right) \right\} .
+\end{align*}
+
+Equation 35
+
+\begin{eqnarray*}
+&&\sum_{j\in \left\{ j_{1H},\cdots ,j_{mH}\right\} }N\left( \tilde{\psi}%
+_{\#j}\right) \kappa \left( \tilde{\psi}_{\#j}\right)  \\
+&&\qquad \qquad \qquad \qquad =\max_{\substack{ j\in \left\{ j_{1},\cdots
+,j_{m}\right\}  \\ N\leq m\leq 2s}}\left\{ \sum_{j_{1},\cdots ,j_{m}}N\left( 
+\tilde{\psi}_{\#j}\right) \kappa \left( \tilde{\psi}_{\#j}\right) \right\} .
+\end{eqnarray*}
+
+Equation 36
+
+\[
+\min_{\substack{ \left\{ j_{1},\cdots ,j_{m}\right\}  \\ N\leq m\leq 2s}}%
+\left\vert \sum_{j\in \left\{ j_{1},\cdots ,j_{m}\right\} }N\left( \tilde{%
+\psi}_{\#j}\right) -1\right\vert ,
+\]
+
+Equation 38
+
+\[
+\mathcal{F}\left( D^{1}\left( \boldsymbol{c},\boldsymbol{\psi }\right)
+\right) =\min_{\boldsymbol{\theta }}\mathcal{E}\left( \boldsymbol{\theta }%
+\right) 
+\]
+
+Equation 39
+
+\begin{align*}
+\mathcal{E}\left( \boldsymbol{\theta }\right) & =\frac{\mathcal{H}\left(
+\theta \right) }{S_{\frac{N}{2}}}=S_{\frac{N}{2}}{}^{-1}\left\{ \sum_{1\leq
+j\leq s}n_{j}S_{\frac{N}{2}-1}\left( \hat{\jmath}\right) \left\{
+\left\langle \psi _{j}\left\vert h_{1}\psi _{j}\right. \right\rangle
+\right\} \right.  \\
+& \left. \left. +\,\left\langle \psi _{j+s}\left\vert h_{1}\psi
+_{j+s}\right. \right\rangle +\,\left\langle \psi _{j}\psi _{j+s}\right\vert
+\psi _{j}\psi _{j+s}\right\} \right\}  \\
+& +\sum_{1\leq j\neq k\leq s}\left\{ c_{j}c_{k}e^{i\left( \theta _{j}-\theta
+_{k}\right) }S_{\frac{N}{2}-1}\left( \hat{\jmath}\hat{k}\right) \left\langle
+\psi _{j}\psi _{j+s}\right\vert \left\vert \psi _{k}\psi _{k+s}\right\rangle
+\right.  \\
+& \left. \left. +\frac{1}{2}n_{j}n_{k}S_{\frac{N}{2}-2}\left( \hat{\jmath}%
+\hat{k}\right) \left\langle \psi _{j}\psi _{k}|||\psi _{j}\psi
+_{k}\right\rangle \,\right\} \right\} .
+\end{align*}
+
+Equation 48
+
+\begin{eqnarray*}
+D^{2}\left( g_{+}\right)  &=&\frac{1}{2}\left\{ \left\vert 1\alpha 3\beta
+\right\rangle \left\langle 1\alpha 3\beta \right\vert +\left\vert 1\alpha
+3\beta \right\rangle \left\langle 2\alpha 4\beta \right\vert \right.  \\
+&&+\left. \left\vert 2\alpha 4\beta \right\rangle \left\langle 1\alpha
+3\beta \right\vert +\left\vert 2\alpha 4\beta \right\rangle \left\langle
+2\alpha 4\beta \right\vert \right\} 
+\end{eqnarray*}
+
+Equation 49
+
+\begin{eqnarray*}
+D^{2}\left( g_{-}\right)  &=&\frac{1}{2}\left\{ \left\vert 1\alpha 3\beta
+\right\rangle \left\langle 1\alpha 3\beta \right\vert -\left\vert 1\alpha
+3\beta \right\rangle \left\langle 2\alpha 4\beta \right\vert \right.  \\
+&&-\left. \left\vert 2\alpha 4\beta \right\rangle \left\langle 1\alpha
+3\beta \right\vert +\left\vert 2\alpha 4\beta \right\rangle \left\langle
+2\alpha 4\beta \right\vert \right\} .
+\end{eqnarray*}
+
+Equation 52
+
+\begin{align*}
+& \mathcal{E}\left( g_{+}\right) =\frac{1}{2}\left\{ \overset{}{\left\langle
+1\alpha \left\vert h_{1}1\alpha \right. \right\rangle +\left\langle 2\alpha
+\left\vert h_{1}2\alpha \right. \right\rangle +\left\langle 3\beta
+\left\vert h_{1}3\beta \right. \right\rangle }\right.  \\
+& +\left\langle 4\beta \left\vert h_{1}4\beta \right. \right\rangle
++\left\langle 1\alpha 3\beta \right\vert \left\vert 1\alpha 3\beta
+\right\rangle +\left\langle 2\alpha 4\beta \right\vert \left\vert 2\alpha
+4\beta \right\rangle  \\
+& \left. \,+\left\langle 1\alpha 3\beta \right\vert \left\vert 2\alpha
+4\beta \right\rangle +\left\langle 2\alpha 4\beta \right\vert \left\vert
+1\alpha 3\beta \right\rangle \overset{}{}\right\} 
+\end{align*}
+
+Equation 53
+
+\begin{align*}
+& \mathcal{E}\left( g_{-}\right) =\frac{1}{2}\left\{ \overset{}{\left\langle
+1\alpha \left\vert h_{1}1\alpha \right. \right\rangle +\left\langle 2\alpha
+\left\vert h_{1}2\alpha \right. \right\rangle +\left\langle 3\beta
+\left\vert h_{1}3\beta \right. \right\rangle }\right.  \\
+& +\left\langle 4\beta \left\vert h_{1}4\beta \right. \right\rangle
++\left\langle 1\alpha 3\beta \right\vert \left\vert 1\alpha 3\beta
+\right\rangle +\left\langle 2\alpha 4\beta \right\vert \left\vert 2\alpha
+4\beta \right\rangle  \\
+& \left. \,-\left\langle 1\alpha 3\beta \right\vert \left\vert 2\alpha
+4\beta \right\rangle -\left\langle 2\alpha 4\beta \right\vert \left\vert
+1\alpha 3\beta \right\rangle \overset{}{}\right\} .
+\end{align*}
+
+Equation 54
+
+\begin{equation}
+\left\vert \varphi _{1}\right\rangle =\left\vert \varphi _{3}\right\rangle
+,\left\vert \varphi _{2}\right\rangle =\left\vert \varphi _{4}\right\rangle 
+\nonumber
+\end{equation}
+
+Equation 55
+
+\begin{align*}
+\left\vert g_{\text{res}+}\right\rangle & =\left( \sqrt{2}\right)
+^{-1}\left\{ \left\vert 1\alpha 1\beta \right\rangle +\left\vert 2\alpha
+2\beta \right\rangle \right\}  \\
+\left\vert g_{\text{res}-}\right\rangle & =\left( \sqrt{2}\right)
+^{-1}\left\{ \left\vert 1\alpha 1\beta \right\rangle -\left\vert 2\alpha
+2\beta \right\rangle \right\} .
+\end{align*}
+
+Equation 58
+
+\[
+\left\vert g\left( \boldsymbol{c},\boldsymbol{\psi },\theta \right)
+\right\rangle =c_{1}\left\vert 1\alpha 3\beta \right\rangle +c_{2}e^{i\theta
+}\left\vert 2\alpha 4\beta \right\rangle ,
+\]
+
+Equation 61
+
+\[
+\left\vert g\left( \chi ,\boldsymbol{\psi },\theta \right) \right\rangle
+=\cos \chi \left\vert 1\alpha 3\beta \right\rangle +e^{i\theta }\sin \chi
+\left\vert 2\alpha 4\beta \right\rangle .
+\]
+
+Equation 61+
+
+\begin{eqnarray*}
+D^{1}\left( \chi ,\boldsymbol{\psi }\right)  &=&\cos ^{2}\chi \left\{
+\left\vert 1\alpha \right\rangle \left\langle 1\alpha \right\vert
++\left\vert 3\beta \right\rangle \left\langle 3\beta \right\vert \right\}  \\
+&&\qquad \qquad +\sin ^{2}\chi \left\{ \left\vert 2\alpha \right\rangle
+\left\langle 2\alpha \right\vert +\left\vert 4\beta \right\rangle
+\left\langle 4\beta \right\vert \right\} 
+\end{eqnarray*}
+
+Equation 62
+
+\begin{align*}
+D^{2}\left( \chi ,\boldsymbol{\psi }\right) & =\cos ^{2}\chi \left\vert
+1\alpha 3\beta \right\rangle \left\langle 1\alpha 3\beta \right\vert +\sin
+^{2}\chi \left\vert 2\alpha 4\beta \right\rangle \left\langle 2\alpha 4\beta
+\right\vert + \\
+& \frac{1}{2}\left\{ e^{-i\theta }\left\vert 1\alpha 3\beta \right\rangle
+\left\langle 2\alpha 4\beta \right\vert +e^{i\theta }\left\vert 2\alpha
+4\beta \right\rangle \left\langle 1\alpha 3\beta \right\vert \right\} \sin
+2\chi .
+\end{align*}
+
+Equation 63
+
+\begin{align*}
+& \mathcal{E}\left( \theta \right) =\left\{ \left\{ \left\langle 1\alpha
+\left\vert h_{1}1\alpha \right. \right\rangle +\left\langle 3\beta
+\left\vert h_{1}3\beta \right. \right\rangle \right\} \cos ^{2}\chi
++\left\langle 2\alpha \left\vert h_{1}2\alpha \right. \right\rangle \right. 
+\\
+& \left. +\left\langle 4\beta \left\vert h_{1}4\beta \right. \right\rangle
+\sin ^{2}\chi \right\} +\left\langle 1\alpha 3\beta \right\vert \left\vert
+1\alpha 3\beta \right\rangle \cos ^{2}\chi  \\
+& +\left\langle 2\alpha 4\beta \right\vert \left\vert 2\alpha 4\beta
+\right\rangle \sin ^{2}\chi +\frac{1}{2}\left\{ e^{i\theta }\left\langle
+1\alpha 3\beta \right\vert \left\vert 2\alpha 4\beta \right\rangle \right. 
+\\
+& \qquad \qquad \qquad \qquad \qquad \qquad \left. +\,e^{-i\theta
+}\left\langle 2\alpha 4\beta \right\vert \left\vert 1\alpha 3\beta
+\right\rangle \right\} \sin 2\chi .
+\end{align*}
+
+Equation 64
+
+\begin{align*}
+\mathcal{E}\left( \theta \right) & =\left\{ \left( 1\left\vert h_{1}1\right.
+\right) +\left( 3\left\vert h_{1}3\right. \right) \right\} \cos ^{2}\chi
++\left\{ \left( 2\left\vert h_{1}2\right. \right) \right.  \\
+& +\left. \left( 4\left\vert h_{1}4\right. \right) \sin ^{2}\chi \right\}
++\left( \left. 13\right\vert 13\right) \cos ^{2}\chi +\left( \left.
+24\right\vert 24\right) \sin ^{2}\chi  \\
+& +\func{Re}\left\{ e^{i\theta }\left( \left. 13\right\vert 24\right) \sin
+2\chi \right\} \equiv k\left( \chi ,\boldsymbol{\psi }\right) +f\left( \chi ,%
+\boldsymbol{\psi },\theta \right) ,
+\end{align*}
+
+Equation 65
+
+\[
+\left( \left. jk\right\vert lm\right) =\int \varphi _{j}^{\ast }\left( 
+\boldsymbol{r}_{1}\right) \varphi _{k}^{\ast }\left( \boldsymbol{r}%
+_{2}\right) \frac{1}{\left\Vert \boldsymbol{r}_{1}-\boldsymbol{r}%
+_{2}\right\Vert }\varphi _{l}\left( \boldsymbol{r}_{1}\right) \varphi
+_{m}\left( \boldsymbol{r}_{2}\right) d\boldsymbol{r}_{1}d\boldsymbol{r}_{2},
+\]
+
+Equation 67
+
+\begin{align*}
+k\left( \chi ,\boldsymbol{\psi }\right) & =\left\{ \left( 1\left\vert
+h_{1}1\right. \right) +\left( 3\left\vert h_{1}3\right. \right) \right\}
+\cos ^{2}\chi +\left\{ \left( 2\left\vert h_{1}2\right. \right) \right.  \\
+& \left. +\,\left( 4\left\vert h_{1}4\right. \right) \sin ^{2}\chi \right\}
++\left( \left. 13\right\vert 13\right) \cos ^{2}\chi +\left( \left.
+24\right\vert 24\right) \sin ^{2}\chi 
+\end{align*}
+
+Equation 68
+
+\[
+f\left( \chi ,\boldsymbol{\psi },\theta \right) =\func{Re}\left\{ e^{i\theta
+}\left( \left. 13\right\vert 24\right) \sin 2\chi \right\} .
+\]
+
+Equation 69
+
+\[
+\mathcal{F}\left( \chi ,\boldsymbol{\psi }\right) =\mathcal{F}\left(
+D^{1}\left( \chi ,\boldsymbol{\psi }\right) \right) =\min_{\boldsymbol{%
+\theta }}\mathcal{E}\left( \theta \right) .
+\]
+
+Equation 70
+
+\begin{eqnarray*}
+f\left( \chi ,\boldsymbol{\psi },\theta \right)  &=&\func{Re}\left\{
+e^{i\theta }\left( \left. 13\right\vert 24\right) \right\} =\func{Re}\left\{
+e^{i\theta }ae^{i\alpha }\right\} =\func{Re}\left\{ e^{i\left( \theta
++\alpha \right) }a\right\}  \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad =a\cos \left( \theta +\alpha
+\right) ,
+\end{eqnarray*}
+
+Equation 74%
+\begin{align*}
+f\left( \chi ,\boldsymbol{\psi },\theta _{\min }\right) & =\min_{\theta
+}\left\{ a\cos \left( \theta +\alpha \right) \right\} =-a \\
+\theta _{\min }& =\pi -\alpha .
+\end{align*}
+
+Equation 75
+
+\[
+\mathcal{F}\left( \chi ,\boldsymbol{\psi }\right) =k\left( \chi ,\boldsymbol{%
+\psi }\right) -2\left\vert \left( \left. 13\right\vert 24\right) \right\vert
+\sin 2\chi 
+\]
+
+Equation 76
+
+\[
+\mathcal{E}\left( \left\vert g_{GS}\right\rangle \right) =\min_{\chi ,%
+\boldsymbol{\psi }}\mathcal{F}\left( \chi ,\boldsymbol{\psi }\right) .
+\]
+
+Equation B3
+
+\begin{align*}
+\Lambda \left( \tilde{u}\right) \left\vert g\left( \boldsymbol{c},%
+\boldsymbol{\psi },\boldsymbol{\theta }\right) \right\rangle & =\sum_{1\leq
+j\leq s}c_{j}e^{i\theta _{j}}u_{j}\left\vert \psi _{j}\psi
+_{j+s}\right\rangle  \\
+& =\sum_{1\leq j\leq s}c_{j}e^{i\theta _{j}}\left\vert u_{j}\psi
+_{j}u_{j}\psi _{j+s}\right\rangle  \\
+& =\sum_{1\leq j\leq s}c_{j}e^{i\theta _{j}}\left\vert \psi _{j}^{\prime
+}\psi _{j+s}^{\prime }\right\rangle =\left\vert g\left( \boldsymbol{c},%
+\boldsymbol{\psi },\boldsymbol{\theta }\right) \right\rangle ,
+\end{align*}
+
+Equation B4
+
+\[
+\left\vert g\left( \boldsymbol{c},\boldsymbol{\psi },\boldsymbol{\theta }%
+\right) \right\rangle =\sum_{1\leq j\leq d}c_{j}\sum_{1\leq k\leq
+d_{k}}e^{i\theta _{jk}}\left\vert \psi _{s_{j-1}+k}\psi
+_{s_{j-1}+k+s}\right\rangle ,
+\]
+
+Equation B5
+
+\[
+\left\vert g\left( \boldsymbol{c},\boldsymbol{\psi },\boldsymbol{\theta }%
+\right) \right\rangle =c_{1}\left\{ e^{i\theta _{1}}\left\vert \psi _{1}\psi
+_{4}\right\rangle +e^{i\theta _{2}}\left\vert \psi _{2}\psi
+_{5}\right\rangle \right\} +c_{2}e^{i\theta _{3}}\left\vert \psi _{3}\psi
+_{6}\right\rangle .
+\]
+
+Equation B8
+
+\[
+v\left\vert g\right\rangle =0,\quad u\left\vert g\right\rangle \neq 0;\quad
+u\in \boldsymbol{u},v\in \boldsymbol{v.}
+\]
+
+Equation C1
+
+\begin{eqnarray*}
+D^{2}\left( g_{-}\right)  &=&\frac{1}{2}\left\{ \left\vert 1\alpha 3\beta
+\right\rangle \left\langle 1\alpha 3\beta \right\vert -\left\vert 1\alpha
+3\beta \right\rangle \left\langle 2\alpha 4\beta \right\vert \right.  \\
+&&-\left. \left\vert 2\alpha 4\beta \right\rangle \left\langle 1\alpha
+3\beta \right\vert +\left\vert 2\alpha 4\beta \right\rangle \left\langle
+2\alpha 4\beta \right\vert \right\} ,
+\end{eqnarray*}
+
+Equation C7%
+\begin{align*}
+& D^{2}\left( g_{-}\right) =\left( S_{1}\right) ^{-1}\left\{ \sum_{1\leq
+j\leq 2}n_{j}S_{0}\left( \hat{\jmath}\right) \left\vert \psi _{j}\psi
+_{j+s}\right\rangle \left\langle \psi _{j}\psi _{j+s}\right\vert \right.  \\
+& +\sum_{1\leq j\neq k\leq 2}c_{j}c_{k}e^{i\left( \theta _{j}-\theta
+_{k}\right) }S_{0}\left( \hat{\jmath}\hat{k}\right) \left\vert \psi _{j}\psi
+_{j+s}\right\rangle \left\langle \psi _{k}\psi _{k+s}\right\vert  \\
+& \left. +\sum_{\substack{ 1\leq j<k\leq 4 \\ k\neq j+2}}n_{j}n_{k}S_{-1}%
+\left( \hat{\jmath}\hat{k}\right) \left\vert \psi _{j}\psi _{k}\right\rangle
+\left\langle \psi _{j}\psi _{k}\right\vert \right\} .
+\end{align*}
+
+Equation C13
+
+\begin{eqnarray*}
+&=&\frac{1}{2}\left\{ \left\vert \psi _{1}\psi _{3}\right\rangle
+\left\langle \psi _{1}\psi _{3}\right\vert -\left\vert \psi _{1}\psi
+_{3}\right\rangle \left\langle \psi _{2}\psi _{4}\right\vert -\left\vert
+\psi _{2}\psi _{4}\right\rangle \left\langle \psi _{1}\psi _{3}\right\vert
+\right.  \\
+&&+\left. \left\vert \psi _{2}\psi _{4}\right\rangle \left\langle \psi
+_{2}\psi _{4}\right\vert \right\} 
+\end{eqnarray*}
+
+\end{document}

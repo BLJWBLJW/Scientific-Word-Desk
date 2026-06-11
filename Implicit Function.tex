@@ -1,0 +1,243 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, May 20, 2005 13:40:53}
+%TCIDATA{LastRevised=Saturday, May 21, 2005 17:35:02}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+Consider
+\begin{equation}
+f\left(  x_{1},x_{2}\right)  =x_{1}^{2}-3x_{2}^{2}+6x_{1}x_{2}+3x_{1}+2x_{2}-9
+\end{equation}
+then
+\begin{equation}
+f\left(  1,1\right)  =0,
+\end{equation}%
+\begin{align}
+\frac{\partial f\left(  x_{1},x_{2}\right)  }{\partial x_{1}} &
+=2x_{1}+6x_{2}+3\\
+\frac{\partial f\left(  1,1\right)  }{\partial x_{1}} &  =11
+\end{align}
+and
+\begin{align}
+\frac{\partial f\left(  x_{1},x_{2}\right)  }{\partial x_{2}} &
+=-3x_{2}+6x_{1}+2\\
+\frac{\partial f\left(  1,1\right)  }{\partial x_{2}} &  =5.
+\end{align}
+Expanding
+\begin{align}
+f\left(  x_{1}+\delta x_{1},x_{2}+\delta x_{2}\right)   &  =f\left(
+x_{1},x_{2}\right)  +\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial f\left(  x_{1},x_{2}\right)  }{\partial x_{1}} & \frac{\partial
+f\left(  x_{1},x_{2}\right)  }{\partial x_{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x_{1}\\
+\delta x_{2}%
+\end{array}
+\right)  \\
+&  +\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\delta x_{1} & \delta x_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{1}^{2}} &
+\frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{1}\partial x_{2}%
+}\\
+\frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{2}\partial x_{1}}
+& \frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{2}^{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x_{1}\\
+\delta x_{2}%
+\end{array}
+\right)  ,
+\end{align}
+where
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{1}^{2}} &
+\frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{1}\partial x_{2}%
+}\\
+\frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{2}\partial x_{1}}
+& \frac{\partial^{2}f\left(  x_{1},x_{2}\right)  }{\partial x_{2}^{2}}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+2 & 6\\
+6 & -3
+\end{array}
+\right)  .
+\end{equation}
+To first order
+\begin{equation}
+f\left(  1+\delta x_{1},1+\delta x_{2}\right)  =\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial f\left(  1,1\right)  }{\partial x_{1}} & \frac{\partial
+f\left(  1,1\right)  }{\partial x_{2}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x_{1}\\
+\delta x_{2}%
+\end{array}
+\right)
+\end{equation}
+giving
+\begin{equation}
+\delta x_{1}=-\left[  \frac{\partial f\left(  1,1\right)  }{\partial x_{1}%
+}\right]  ^{-1}\frac{\partial f\left(  1,1\right)  }{\partial x_{2}}\delta
+x_{2}%
+\end{equation}
+Noting that
+\begin{align}
+\delta x_{1} &  =x_{1}-1\\
+\delta x_{2} &  =x_{2}-1
+\end{align}
+we obtain
+\begin{align}
+x_{1} &  =-\left[  \frac{\partial f\left(  1,1\right)  }{\partial x_{1}%
+}\right]  ^{-1}\frac{\partial f\left(  1,1\right)  }{\partial x_{2}}\left(
+x_{2}-1\right)  +1\\
+&  =-\left[  \frac{\partial f\left(  1,1\right)  }{\partial x_{1}}\right]
+^{-1}\frac{\partial f\left(  1,1\right)  }{\partial x_{2}}x_{2}+\left[
+\frac{\partial f\left(  1,1\right)  }{\partial x_{1}}\right]  ^{-1}%
+\frac{\partial f\left(  1,1\right)  }{\partial x_{2}}+1\\
+&  =-\frac{5}{11}x_{2}+\frac{16}{11}\equiv x_{1}\left(  x_{2}\right)
+\end{align}%
+\begin{align}
+\frac{\partial f\left(  x_{1},x_{2}\right)  }{\partial x_{1}} &
+=2x_{1}+6x_{2}+3\\
+\frac{\partial f\left(  1,1\right)  }{\partial x_{1}} &  =11
+\end{align}
+and
+\begin{align}
+\frac{\partial f\left(  x_{1},x_{2}\right)  }{\partial x_{2}} &
+=-3x_{2}+6x_{1}+2\\
+\frac{\partial f\left(  1,1\right)  }{\partial x_{2}} &  =5.
+\end{align}
+Evaluating this function at $x_{2}=2$ one obtains
+\begin{equation}
+x_{1}\left(  2\right)  =\frac{6}{11}%
+\end{equation}
+the value of the function $f$ at this point is
+\begin{align}
+f\left(  \frac{6}{11},2\right)   &  =\frac{36}{121}-12+\frac{12}{11}+\frac
+{18}{11}+4-9\\
+&  =\frac{36}{121}-17+\frac{30}{11}\neq0.
+\end{align}
+%
+
+\begin{align}
+f\left(  x_{1}+\delta x_{1},x_{2}+\delta x_{2}\right)   &  =f\left(
+x_{1},x_{2}\right)  +\left(
+\begin{array}
+[c]{cc}%
+2x_{1}+6x_{2}+3 & -3x_{2}+6x_{1}+2
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x_{1}\\
+\delta x_{2}%
+\end{array}
+\right)  \\
+&  +\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\delta x_{1} & \delta x_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+2 & 6\\
+6 & -3
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta x_{1}\\
+\delta x_{2}%
+\end{array}
+\right)  ,
+\end{align}
+
+
+
+\end{document}

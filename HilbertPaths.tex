@@ -1,0 +1,289 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{Created=Saturday, May 25, 2002 11:48:07}
+%TCIDATA{LastRevised=Thursday, May 30, 2002 13:41:32}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\preprint{}
+\title[H paths]{Hilbert Space Paths}
+\author{Brian Weiner}
+
+\begin{abstract}
+Shell document for REV\TeX
+\end{abstract}
+
+\date{05/29/02}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+\section{Paths in Hilbert Space}
+
+Consider the set of paths 
+\begin{align}
+F& :\bar{\Upsilon}\rightarrow \mathcal{H} \\
+F\left( t\right) & =\left\vert \Psi \left( t\right) \right\rangle ;\quad
+t\in \tau ,\,\Upsilon =\left( t_{i},t_{f}\right) ;\,\left\vert \Psi \left(
+t\right) \right\rangle \in \mathcal{H}.
+\end{align}%
+Let these paths be strongly continuous on $\bar{\Upsilon}$ i.e. 
+\begin{equation}
+\lim_{t_{k}\rightarrow t}\left\vert \Psi \left( t_{k}\right) \right\rangle
+=\left\vert \Psi \left( t\right) \right\rangle \,\forall \text{ sequence }%
+\left\{ t_{k}\right\} \text{ converging to }t
+\end{equation}%
+i.e.%
+\begin{equation}
+\lim_{t_{k}\rightarrow t}\left\Vert \left\vert \Psi \left( t_{k}\right)
+\right\rangle -\left\vert \Psi \left( t\right) \right\rangle \right\Vert
+=0\,\forall \text{ sequence }\left\{ t_{k}\right\} \text{ converging to }t
+\end{equation}%
+If $F_{1}$ and $F_{2}$ are two such functions then $F_{3}=\alpha F_{1}+\beta
+F_{2}$, $\alpha ,\beta \in \mathbb{C}$ is also, as 
+\begin{align}
+\lim_{t_{k}\rightarrow t}\left\vert \alpha \Psi _{1}\left( t_{k}\right)
+\right\rangle & =\left\vert \alpha \Psi _{1}\left( t\right) \right\rangle
+;\quad \lim_{t_{k}\rightarrow t}\left\vert \beta \Psi _{2}\left(
+t_{k}\right) \right\rangle =\left\vert \beta \Psi _{2}\left( t\right)
+\right\rangle   \notag \\
+& \Rightarrow \lim_{t_{k}\rightarrow t}\left\{ \left\vert \alpha \Psi
+_{1}\left( t_{k}\right) \right\rangle +\left\vert \beta \Psi _{2}\left(
+t_{k}\right) \right\rangle \right\} =\left\vert \alpha \Psi _{1}\left(
+t\right) \right\rangle +\left\vert \beta \Psi _{2}\left( t\right)
+\right\rangle 
+\end{align}%
+These paths form a linear space $\mathcal{P}\left( \tau ,\mathcal{H},%
+\mathcal{H}\right) $ under the sup norm 
+\begin{equation}
+\left\vert F\right\vert =\sup_{t\in \bar{\Upsilon}}\left\Vert F\left(
+t\right) \right\Vert 
+\end{equation}%
+Subspaces of paths $\mathcal{P}\left( \tau ,\left\vert \Psi
+_{i}\right\rangle ,\left\vert \Psi _{f}\right\rangle \right) $ are formed by
+paths that have fixed end point values i.e. 
+\begin{equation}
+\mathcal{P}\left( \tau ,\left\vert \Psi _{i}\right\rangle ,\left\vert \Psi
+_{f}\right\rangle \right) =\left\{ \left\vert \Psi \left( t\right)
+\right\rangle \in \mathcal{P}\left( \tau ,\mathcal{H},\mathcal{H}\right)
+|\left\vert \Psi \left( t_{i}\right) \right\rangle =\left\vert \Psi
+_{i}\right\rangle ,\left\vert \Psi \left( t_{f}\right) \right\rangle
+=\left\vert \Psi _{f}\right\rangle \right\} 
+\end{equation}%
+We can generalize this notation to $\mathcal{P}\left( \tau ,\mathcal{M}_{i},%
+\mathcal{M}_{f}\right) $ where the paths now have values in the subsets $%
+\mathcal{M}_{i}$ and $\mathcal{M}_{f}$ of $\mathcal{H}$, which could be
+manifolds. If the manifolds are linear $\mathcal{P}\left( \tau ,\mathcal{M}%
+_{i},\mathcal{M}_{f}\right) $ is still a linear space, otherwise this
+property is not maintained and $\mathcal{P}\left( \tau ,\mathcal{M}_{i},%
+\mathcal{M}_{f}\right) $ becomes a non linear manifold.
+
+By considering the paths 
+\begin{equation}
+\left\vert e_{j}\left( t\right) \right\rangle =c\left( t\right) \left\vert
+e_{j}\right\rangle
+\end{equation}
+for $j=1,\ldots,\infty$ where $\left\{ \left\vert e_{j}\right\rangle |1\leq
+j\leq\infty\right\} $ is a basis for $\mathcal{H}$ one can see that the
+values of the paths belonging to $\mathcal{P}\left( \tau,\left\vert \Psi
+_{i}\right\rangle ,\left\vert \Psi_{f}\right\rangle \right) $ for any $%
+t\in\Upsilon$ is dense in $\mathcal{H}$. In fact as $F$ ranges through all
+elements of $\mathcal{P}\left( \tau,\left\vert \Psi_{i}\right\rangle
+,\left\vert \Psi_{f}\right\rangle \right) ,$ for a fixed $t\in\Upsilon,$ all
+elements of $\mathcal{H}$ are obtained i.e. for a fixed $t$ every element of 
+$\mathcal{H}$ lies on some path $\left\vert \Psi\left( t\right)
+\right\rangle $.
+
+The space of all paths $\mathcal{P}\left( \infty ,\mathcal{H},\mathcal{H}%
+\right) $ contains the subsets $\mathcal{P}\left( \tau ,\mathcal{M}_{i},%
+\mathcal{M}_{f}\right) $ where $\mathcal{M}_{i}$ and $\mathcal{M}_{f}$ can
+be manifolds or single points. The norm on $\mathcal{P}\left( \infty ,%
+\mathcal{H},\mathcal{H}\right) $, (which is a linear space), is given by 
+\begin{equation}
+\left\vert F\right\vert =\sup_{\Upsilon }\sup_{t\in \bar{\Upsilon}%
+}\left\Vert F\left( t\right) \right\Vert 
+\end{equation}%
+The space $\mathcal{P}\left( \infty ,\mathcal{H},\mathcal{H}\right) $ can be
+classified into the linear subsapces $\left\{ \mathcal{P}\left( \infty
+,\left\vert a\right\rangle ,\left\vert b\right\rangle \right) |\left\vert
+a\right\rangle \in \mathcal{H},\left\vert b\right\rangle \in \mathcal{H}%
+\right\} $ and more finely classified into linear subspaces of paths of
+different durations 
+\begin{equation}
+\left\{ \mathcal{P}\left( \tau ,\left\vert a\right\rangle ,\left\vert
+b\right\rangle \right) |\left\vert a\right\rangle \in \mathcal{H},\left\vert
+b\right\rangle \in \mathcal{H},\left\{ 0\right\} \subseteq \cdots \left[
+0,\tau \right] \cdots \subseteq \mathbb{R}\right\} 
+\end{equation}
+
+Paths can be varied in the following ways:
+
+\begin{enumerate}
+\item within a fixed $\mathcal{P}\left( \tau ,\left\vert \Psi
+_{i}\right\rangle ,\left\vert \Psi _{f}\right\rangle \right) $, then the
+incremental functions $\left\vert \Delta \left( t\right) \right\rangle $
+must belong to the subspace $\mathcal{P}\left( \tau ,0,0\right) $, and thus
+periodic in the time duration $\tau $,
+
+\item within the spaces with variable end points, or having one fixed end
+point, so that the increment functions $\in $ $\mathcal{P}\left( \tau ,%
+\mathcal{H},\mathcal{H}\right) ,$ $\mathcal{P}\left( \tau ,0,\mathcal{H}%
+\right) $, $\mathcal{P}\left( \tau ,\mathcal{H},0\right) $.
+
+\qquad Varying the end points is equivalent to varying the paths e.g.%
+\begin{align}
+\left\vert \Psi \left( t\right) \right\rangle & \in \mathcal{P}\left( \tau
+,\left\vert a\right\rangle ,\left\vert b\right\rangle \right)   \notag \\
+\left\vert \Phi \left( t\right) \right\rangle & \in \mathcal{P}\left( \tau
+,\left\vert a\right\rangle ,\left\vert b\right\rangle +\left\vert \delta
+b\right\rangle \right) 
+\end{align}%
+then define 
+\begin{equation}
+\left\vert \Delta \left( t\right) \right\rangle =\left\vert \Phi \left(
+t\right) \right\rangle -\left\vert \Psi \left( t\right) \right\rangle 
+\end{equation}%
+which gives that 
+\begin{align}
+\left\vert \Delta \left( 0\right) \right\rangle & =0  \notag \\
+\left\vert \Delta \left( \tau \right) \right\rangle & =\left\vert \delta
+b\right\rangle 
+\end{align}%
+and that $\Delta \in \mathcal{P}\left( \tau ,0,\left\vert \delta
+b\right\rangle \right) $. $\Delta $ is a continuous function as it is the
+difference of two continuous functions. We can thus obtain all of $\mathcal{P%
+}\left( \tau ,\left\vert a\right\rangle ,\left\vert b\right\rangle
++\left\vert \delta b\right\rangle \right) $ by using the single increment
+function $\left\vert \Delta \left( \tau \right) \right\rangle $ then using
+increment functions belonging to $\mathcal{P}\left( \tau ,0,0\right) $
+
+\item within spaces where the end point are constrained to lie in a proper
+sub manifold of $\mathcal{H}$, so that the increment functions $\in \mathcal{%
+P}\left( \tau ,\mathcal{M}_{i},\mathcal{M}_{f}\right) $. Clearly the
+construction in type 2 only works if $\mathcal{M}_{f}$ is a linear manifold.
+If it is not then $\left\vert \delta b\right\rangle $ must belong to the
+tangent space of $\mathcal{M}_{f}$.
+
+\item within spaces where the end point are constrained to be fixed but the
+time duration varies. Let $\left\vert \Psi \left( t\right) \right\rangle \in 
+\mathcal{P}\left( \tau ,\left\vert a\right\rangle ,\left\vert b\right\rangle
+\right) $ and $\left\vert \Phi \left( t\right) \right\rangle \in \mathcal{P}%
+\left( \tau +\delta \tau ,\left\vert a\right\rangle ,\left\vert
+b\right\rangle \right) $ then we can set 
+\begin{align}
+\left\vert \Phi \left( t\right) \right\rangle & =\left\vert \Psi \left(
+t\right) \right\rangle -\left\vert \dot{\Psi}\left( t\right) \right\rangle
+\delta \tau \quad \forall t\in \left[ 0,\tau \right]   \notag \\
+\left\vert \Phi \left( t+\delta \tau \right) \right\rangle & =\left\vert
+\Psi \left( t\right) \right\rangle 
+\end{align}%
+(the derivative at the boundary is taken to be a one sided derivative). The
+incremental paths are then defined as 
+\begin{equation}
+\left\vert \Delta \left( t\right) \right\rangle =\left\vert \Phi \left(
+t\right) \right\rangle -\left\vert \Psi \left( t\right) \right\rangle
+;\qquad t\in \left[ 0,\tau \right] 
+\end{equation}%
+leading to 
+\begin{align}
+\left\vert \Delta \left( t\right) \right\rangle & =-\left\vert \dot{\Psi}%
+\left( t\right) \right\rangle \delta t;\qquad t\in \left[ 0,\tau \right]  
+\notag \\
+\left\vert \Delta \left( \tau +\delta \tau \right) \right\rangle &
+=\left\vert \Psi \left( \tau \right) \right\rangle 
+\end{align}%
+This construction assumes we use a $\left\vert \Psi \left( t\right)
+\right\rangle $ that is continuously differentiable.
+
+\qquad If we start with $\left\vert x\left( t\right) \right\rangle \in 
+\mathcal{P}\left( \tau ,\left\vert a\right\rangle ,\left\vert b\right\rangle
+\right) $ then we can define the increment as above and obtain $\left\vert
+x_{1}\left( t\right) \right\rangle \in \mathcal{P}\left( \tau +\delta \tau
+,\left\vert a\right\rangle ,\left\vert b\right\rangle \right) $, then we can
+define 
+\begin{align}
+& \left\vert \delta x\left( 0\right) \right\rangle =0  \notag \\
+& \left\vert \delta x\left( t\right) \right\rangle =-\left\vert \dot{x}%
+_{1}\left( t\right) \right\rangle \delta \tau =-\left\vert x\left( t\right) -%
+\dot{x}\left( t\right) \delta \tau \right\rangle \delta \tau =-\left\vert
+x\left( t\right) \delta \tau -\dot{x}\left( t\right) \left( \delta \tau
+\right) ^{2}\right\rangle ;  \notag \\
+& \left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad t\in \left( 0,\tau +\delta \tau \right]  \\
+& \left\vert \delta x\left( \tau +2\delta \tau \right) \right\rangle
+=\left\vert b\right\rangle 
+\end{align}%
+This gives 
+\begin{eqnarray}
+x_{2}\left( t\right)  &=&x\left( t\right) -x\left( t\right) \delta \tau +%
+\dot{x}\left( t\right) \left( \delta \tau \right) ^{2};\qquad \qquad t\in
+\left( 0,\tau +\delta \tau \right]   \notag \\
+x_{2}\left( t\right)  &=&b
+\end{eqnarray}%
+until we get to $\tau +\Delta \tau $, i.e. we continue the path in a sort of
+analytic fashion. All other paths defined on the new time ineterval are then
+obtianed by the increment functions of types 1 and 2.
+\end{enumerate}
+
+The general first order change $\left\vert \delta ^{\left( 1\right) }\Psi
+\left( t\right) \right\rangle $ of a path $\left\vert \Psi \left( t\right)
+\right\rangle \in \mathcal{P}\left( \infty ,\mathcal{H},\mathcal{H}\right) $
+is then given by 
+\begin{equation}
+\left\vert \delta ^{\left( 1\right) }\Psi \left( t\right) \right\rangle
+=\left\vert \Delta _{F}\Psi \left( t\right) \right\rangle +\left\vert \Delta
+_{E}\Psi \left( t\right) \right\rangle +\left\vert \Delta _{\tau }\Psi
+\left( t\right) \right\rangle 
+\end{equation}%
+where $\left\vert \Delta _{F}\Psi \left( t\right) \right\rangle $ is a first
+order change that leaves the end points and time duration fixed, $\left\vert
+\Delta _{E}\Psi \left( t\right) \right\rangle $ corresponds to a first order
+change of the end points such that the end points are constrained to lie in
+a manifold $\mathcal{M}\subseteq $ $\mathcal{H}$, while keeping the time
+duration fixed and $\left\vert \Delta _{\tau }\Psi \left( t\right)
+\right\rangle $ corresponds to a first order of the time duration, while
+leaving the end points fixed. In order to obtain the most general
+incremantal path $\left\vert \Delta _{F}\Psi \left( t\right) \right\rangle $
+varies over the linear space $\mathcal{P}\left( \tau ,0,0\right) $ for a
+fixed $\tau $, $\left\vert \Delta _{E}\Psi \left( t\right) \right\rangle $
+varies over subspaces of paths described in type 2, and $\left\vert \Delta
+_{\tau }\Psi \left( t\right) \right\rangle $ varies over the subspace of
+paths described in type 4
+
+\end{document}

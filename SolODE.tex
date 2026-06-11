@@ -1,0 +1,279 @@
+%TCIDATA{LaTeXparent=0,0,EOMN.tex}
+                      
+
+\section{Solution of Singular ODE}
+
+\subsection{Square Matrices}
+
+If ${\bf A}$ is non-singular then one has the following situation for the
+inhomogeneous ODE 
+\begin{eqnarray}
+{\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) &=&{\bf f}\left(
+t\right)  \nonumber \\
+{\bf x}\left( t_{0}\right) &=&{\bf c}
+\end{eqnarray}%
+the homogeneous equation 
+\begin{equation}
+{\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) ={\bf 0}
+\end{equation}%
+has general solution (non unique) 
+\begin{equation}
+{\bf x}\left( t\right) =e^{-{\bf A}^{-1}{\bf B}t}{\bf q}
+\end{equation}%
+and the initial value problem 
+\begin{eqnarray}
+{\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) &=&{\bf 0}  \nonumber
+\\
+{\bf x}\left( t_{0}\right) &=&{\bf c}
+\end{eqnarray}%
+has the unique solution 
+\begin{equation}
+{\bf x}\left( t\right) =e^{-{\bf A}^{-1}{\bf B}\left( t-t_{0}\right) }{\bf c}
+\end{equation}%
+and if ${\bf A}$ is non-singular the unique solution of the inhomogeneous
+initial value problem is 
+\begin{equation}
+{\bf x}\left( t\right) =e^{-{\bf A}^{-1}{\bf B}\left( t-t_{0}\right) }{\bf %
+c+A}^{-1}\int_{t_{0}}^{t}e^{-{\bf A}^{-1}{\bf B}\left( t-s\right) }{\bf f}%
+\left( s\right) ds
+\end{equation}
+
+\begin{definition}
+For ${\bf A,B\in }{\Bbb C}^{n\times n}$ and $t_{0}\in {\Bbb R}$, the vector $%
+{\bf c\in }{\Bbb C}^{n}$ is said to be a consistent initial vector
+associated with $t_{0}$ for the equation ${\bf A\dot{x}}\left( t\right) +%
+{\bf B}\left( t\right) ={\bf f}\left( t\right) $ when the initial value
+problem ${\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) ={\bf f}%
+\left( t\right) $, ${\bf x}\left( t_{0}\right) ={\bf c}$ possesses at least
+one solution.
+\end{definition}
+
+\begin{definition}
+The equation ${\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) ={\bf f}%
+\left( t\right) $ is said to be tractable at the point $t_{0}$ if the
+initial value problem ${\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right)
+={\bf f}\left( t\right) $, ${\bf x}\left( t_{0}\right) ={\bf c}$ has a
+unique solution for each consistent vector ${\bf c}$ associated with $t_{0}$.
+\end{definition}
+
+If the homogenous equation ${\bf A\dot{x}}\left( t\right) +{\bf B}\left(
+t\right) ={\bf 0}$ is tractable at some point $t_{0}$ then it is tractable
+at every $t$, so we say the equation is tractable.
+
+\begin{theorem}
+For ${\bf A,B\in }{\Bbb C}^{n\times n}$ the homogeneous differential
+equation 
+\begin{equation}
+{\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) ={\bf 0}
+\end{equation}%
+is tractable iff there exists a scalar $\lambda $ such that $\left( \lambda 
+{\bf A+B}\right) ^{-1}$ exists.
+\end{theorem}
+
+\begin{proof}
+see p173 ''{\it Generalized Inverses of Linear Transformations'' by S.L.
+Campbell and C.D. Meyer Jr (Dover Publications Inc, 1979) }
+\end{proof}
+
+\begin{theorem}
+Suppose that ${\bf A,B\in }{\Bbb C}^{n\times n}$ are that such $\exists
+\lambda \quad \ni \left( \lambda {\bf A+B}\right) ^{-1}.$ Let ${\bf A}%
+_{\lambda }=\left( \lambda {\bf A+B}\right) ^{-1}{\bf A,}$ ${\bf B}_{\lambda
+}=\left( \lambda {\bf A+B}\right) ^{-1}{\bf B}$ and ${\bf f}_{\lambda
+}=\left( \lambda {\bf A+B}\right) ^{-1}{\bf f.}$ $\forall \alpha ,\mu \in 
+{\Bbb C}$ \ for which $\left( \alpha {\bf A+B}\right) ^{-1}$ and $\left( \mu 
+{\bf A+B}\right) ^{-1}$ $\exists $, the following statements are true
+
+\begin{itemize}
+\item ${\bf A}_{\alpha }{\bf A}_{\alpha }^{D}={\bf A}_{\mu }{\bf A}_{\mu
+}^{D}$
+
+\item ${\bf A}_{\alpha }^{D}{\bf B}_{\alpha }={\bf A}_{\mu }^{D}{\bf B}_{\mu
+}$ and ${\bf A}_{\alpha }{\bf B}_{\alpha }^{D}={\bf A}_{\mu }{\bf B}_{\mu
+}^{D}$
+
+\item $%
+%TCIMACRO{\func{Ind}}%
+%BeginExpansion
+\mathop{\rm Ind}%
+%EndExpansion
+\left( {\bf A}_{\alpha }\right) =%
+%TCIMACRO{\func{Ind}}%
+%BeginExpansion
+\mathop{\rm Ind}%
+%EndExpansion
+\left( {\bf A}_{\mu }\right) $ and $%
+%TCIMACRO{\func{Range}}%
+%BeginExpansion
+\mathop{\rm Range}%
+%EndExpansion
+\left( {\bf A}_{\alpha }\right) =%
+%TCIMACRO{\func{Range}}%
+%BeginExpansion
+\mathop{\rm Range}%
+%EndExpansion
+\left( {\bf A}_{\mu }\right) $
+
+\item ${\bf A}_{\alpha }^{D}{\bf f}_{\alpha }={\bf A}_{\mu }^{D}{\bf f}_{\mu
+}$
+
+\item ${\bf B}_{\alpha }^{D}{\bf f}_{\alpha }={\bf B}_{\mu }^{D}{\bf f}_{\mu
+}$
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+see p174 ''{\it Generalized Inverses of Linear Transformations'' by S.L.
+Campbell and C.D. Meyer Jr (Dover Publications Inc, 1979) }
+\end{proof}
+
+\begin{theorem}
+Suppose ${\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) ={\bf 0}$ is
+tractable. Then the general solution is given by 
+\begin{equation}
+{\bf x}\left( t\right) =e^{-{\bf A}_{\lambda }^{D}{\bf B}_{\lambda }t}{\bf A}%
+_{\lambda }{\bf A}_{\lambda }^{D}{\bf q}
+\end{equation}%
+A vector ${\bf c\in }{\Bbb C}^{n}$ is a consistent initial vector for the
+homogeneous equation iff ${\bf c\in }%
+%TCIMACRO{\func{Range}}%
+%BeginExpansion
+\mathop{\rm Range}%
+%EndExpansion
+\left( {\bf A}_{\lambda }^{k}\right) =%
+%TCIMACRO{\func{Range}}%
+%BeginExpansion
+\mathop{\rm Range}%
+%EndExpansion
+\left( {\bf A}_{\lambda }^{D}{\bf A}_{\lambda }\right) .$ Suppose that ${\bf %
+f}\left( t\right) $ is k-times continuously differentiable around $t_{0}$
+then the non-homogeneous equation ${\bf A\dot{x}}\left( t\right) +{\bf B}%
+\left( t\right) ={\bf f}\left( t\right) $ always posses solutions and a
+particular solution is given by 
+\begin{equation}
+{\bf x}\left( t\right) =e^{-{\bf A}_{\lambda }^{D}{\bf B}_{\lambda
+}t}\int_{t_{0}}^{t}e^{{\bf A}_{\lambda }^{D}{\bf B}_{\lambda }s}{\bf A}%
+_{\lambda }^{D}{\bf f}_{\lambda }\left( s\right) ds+\left( I-{\bf A}%
+_{\lambda }{\bf A}_{\lambda }^{D}\right) \sum_{i=0}^{k-1}\left( -1\right)
+^{i}\left[ {\bf A}_{\lambda }{\bf B}_{\lambda }^{D}\right] ^{i}{\bf B}%
+_{\lambda }^{D}{\bf f}_{\lambda }^{\left( i\right) }\left( t\right)
+\end{equation}%
+moreover this expression is independent of $\lambda $. The general solution
+is given by 
+\begin{eqnarray}
+{\bf x}\left( t\right) &=&e^{-{\bf A}_{\lambda }^{D}{\bf B}_{\lambda }t}{\bf %
+A}_{\lambda }{\bf A_{\lambda }^{D}q+}e^{-{\bf A}_{\lambda }^{D}{\bf B}%
+_{\lambda }t}\int_{t_{0}}^{t}e^{{\bf A}_{\lambda }^{D}{\bf B}_{\lambda }s}%
+{\bf A}_{\lambda }^{D}{\bf f}_{\lambda }\left( s\right) ds  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad +\left( I-{\bf A}%
+_{\lambda }{\bf A}_{\lambda }^{D}\right) \sum_{i=0}^{k-1}\left( -1\right)
+^{i}\left[ {\bf A}_{\lambda }{\bf B}_{\lambda }^{D}\right] ^{i}{\bf B}%
+_{\lambda }^{D}{\bf f}_{\lambda }^{\left( i\right) }\left( t\right)
+\label{sol}
+\end{eqnarray}%
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \ \ \ \ A vector ${\bf c}$ is a consistent initial vector
+associated with $t_{0}$ for the inhomogeneous equation iff ${\bf c}$ $\in
+\left\{ {\bf w+}%
+%TCIMACRO{\func{Range}}%
+%BeginExpansion
+\mathop{\rm Range}%
+%EndExpansion
+\left( {\bf A}_{\lambda }^{k}\right) \right\} $, where 
+\begin{equation}
+{\bf w=}\left( I-{\bf A}_{\lambda }{\bf A}_{\lambda }^{D}\right)
+\sum_{i=0}^{k-1}\left( -1\right) ^{i}\left[ {\bf A}_{\lambda }{\bf B}%
+_{\lambda }^{D}\right] ^{i}{\bf B}_{\lambda }^{D}{\bf f}_{\lambda }^{\left(
+i\right) }\left( t\right)
+\end{equation}%
+which is independent of $\lambda .$ Furthermore the inhomogeneous equation
+is tractable at $t_{0}$ and the unique solution of the initial value problem
+with ${\bf x}\left( t\right) ={\bf c}$ is given by eq. $\left( \ref{sol}%
+\right) $. [$k=\dim \left\{ \ker {\bf A}\right\} $]
+\end{theorem}
+
+\begin{proof}
+see p175-176 ''{\it Generalized Inverses of Linear Transformations'' by S.L.
+Campbell and C.D. Meyer Jr (Dover Publications Inc, 1979).}
+\end{proof}
+
+An important special case is when ${\bf B}$ is invertible. Then we can take $%
+\lambda =0$ and 
+\begin{eqnarray}
+{\bf A}_{\lambda } &=&{\bf B}^{-1}{\bf A}  \nonumber \\
+{\bf B}_{\lambda } &=&I  \nonumber \\
+{\bf f}_{\lambda } &=&{\bf B}^{-1}{\bf f}
+\end{eqnarray}
+
+\subsection{Rectangular Matrices}
+
+\begin{theorem}
+Suppose $\left( \lambda {\bf A+B}\right) {\bf \ }${\bf is }1-1 and let 
+\begin{equation}
+{\bf \hat{A}=}\left( \lambda {\bf A+B}\right) ^{MP}A\text{ and }{\bf \hat{B}=%
+}\left( \lambda {\bf A+B}\right) ^{MP}B.
+\end{equation}%
+Then all the solutions of ${\bf A\dot{x}}\left( t\right) +{\bf B}\left(
+t\right) ={\bf 0}$ are of the form 
+\begin{equation}
+{\bf x}\left( t\right) =e^{-{\bf \hat{A}}^{D}{\bf \hat{B}}t}{\bf q}
+\end{equation}%
+where 
+\begin{equation}
+{\bf q\in }%
+%TCIMACRO{\func{Range}}%
+%BeginExpansion
+\mathop{\rm Range}%
+%EndExpansion
+\left( {\bf \hat{A}}^{D}{\bf \hat{A}}\right)
+\end{equation}
+and 
+\begin{equation}
+\left[ {\bf I-}\left( \lambda {\bf A+B}\right) \left( \lambda {\bf A+B}%
+\right) ^{MP}\right] {\bf A\hat{A}}^{D}\left[ {\bf \hat{A}}^{Dm}{\bf \hat{B}}%
+^{m}\right] {\bf q=0}\text{ for }m=0,1,\ldots ,n
+\end{equation}
+
+\begin{corollary}
+If $\left( \lambda {\bf A+B}\right) {\bf \ }${\bf is }1-1, and $\ker \left(
+\lambda ^{\ast }{\bf A}^{\dagger }{\bf +B}^{\dagger }\right) $=$\ker \left( 
+{\bf A}^{\dagger }\right) \cap \ker \left( {\bf B}^{\dagger }\right) $ Then
+all the solutions of ${\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) =%
+{\bf 0}$ are of the form 
+\begin{equation}
+{\bf x}\left( t\right) =e^{-{\bf \hat{A}}^{D}{\bf \hat{B}}t}{\bf \hat{A}}^{D}%
+{\bf \hat{A}q}
+\end{equation}%
+where ${\bf q}$ is arbitrary.
+
+\begin{theorem}
+Suppose $\left( \lambda {\bf A+B}\right) {\bf \ }${\bf is }1-1 and ${\bf A%
+\dot{x}}\left( t\right) +{\bf B}\left( t\right) ={\bf f}$ is consistent.
+Then all the solutions of ${\bf A\dot{x}}\left( t\right) +{\bf B}\left(
+t\right) ={\bf f}$ are of the form 
+\begin{eqnarray}
+{\bf x}\left( t\right) &=&e^{-{\bf \hat{A}}^{D}{\bf \hat{B}}t}{\bf \hat{A}}%
+^{D}{\bf \hat{A}q+\hat{A}}^{D}e^{-{\bf \hat{A}}^{D}{\bf \hat{B}}%
+t}\int_{t_{0}}^{t}e^{{\bf \hat{A}}^{D}{\bf \hat{B}}s}{\bf A}^{D}{\bf \hat{f}}%
+\left( s\right) ds  \nonumber \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad +\left( {\bf I}-{\bf 
+\hat{A}\hat{A}}^{D}\right) \sum_{i=0}^{k-1}\left( -1\right) ^{i}\left[ {\bf 
+\hat{A}\hat{B}}^{D}\right] ^{i}{\bf \hat{B}}^{D}{\bf \hat{f}}^{\left(
+i\right) }\left( t\right)
+\end{eqnarray}%
+where ${\bf \hat{f}=}\left( \lambda {\bf A+B}\right) ^{MP}{\bf f}$
+\end{theorem}
+
+\begin{theorem}
+Suppose $\left( \lambda {\bf A+B}\right) {\bf \ }${\bf is }1-1 and $\ker
+\left( \lambda ^{\ast }{\bf A}^{\dagger }{\bf +B}^{\dagger }\right) $=$\ker
+\left( {\bf A}^{\dagger }\right) \cap \ker \left( {\bf B}^{\dagger }\right) $%
+. Then ${\bf A\dot{x}}\left( t\right) +{\bf B}\left( t\right) ={\bf f}$ is
+consistent $iff$ 
+\begin{equation}
+\left[ {\bf I-}\left( \lambda {\bf A+B}\right) \left( \lambda {\bf A+B}%
+\right) ^{MP}\right] {\bf f=0}
+\end{equation}
+\end{theorem}
+\end{corollary}
+\end{theorem}

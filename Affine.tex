@@ -1,0 +1,1817 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, August 02, 2019 15:55:26}
+%TCIDATA{LastRevised=Thursday, October 10, 2019 10:23:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Affine Spaces}
+
+An affine space triple, $\mathcal{A}=\left\langle V,\Delta V,+\right\rangle ,$
+is a \emph{set of points} $\times$ \emph{the action of a free vector space on
+the set of points,} i.e.
+\begin{equation}
+A=\left\{  \left.  \left(  r,\Delta x\right)  \right\vert r\in V,\Delta
+x\in\Delta V\right\}
+\end{equation}
+such that
+\begin{equation}
+r_{2}-r_{1}\in\Delta V.
+\end{equation}
+$V$ are points$\equiv$positions and $\Delta V$ are differences of positions
+and a rule, $+$, for transforming points of $V$ by the vector space $\Delta
+V,$ which \emph{acts on} the set $V$ \emph{by translation to produce a new
+point }
+\begin{align}
+\Delta V  &  :V\rightarrow V\\
+\left[  \Delta x\right]  \left(  r_{1}\right)   &  =r_{1}+\Delta x=r_{2}.
+\end{align}
+
+
+\begin{remark}
+Addition is NOT defined in $V,$ however we will see that \emph{Barycentric
+addition} is defined i.e.
+\begin{equation}
+\sum_{j\in J}\lambda_{j}r_{j}\in V,
+\end{equation}
+when
+\begin{equation}
+\sum_{j\in J}\lambda_{j}=1
+\end{equation}
+and sum is produced by action of $\left\{  \left.  \left[  \Delta x\right]
+_{j}\in\Delta V\right\vert j\in J\right\}  .$
+\end{remark}
+
+For any two points $r_{1}$ and $r_{2}$ there exists a unique vector $\Delta x$
+such that
+\begin{equation}
+r_{2}=r_{1}+\Delta x.
+\end{equation}
+$\lceil\Delta V$ acts as an \emph{abelian group} on $V$, with identity element
+$0$ (the zero vector belonging to $\Delta V)$ and a given $\Delta x$ can act
+on any element of $V$ i.e.
+\begin{equation}
+\left[  \Delta x\right]  \left(  r_{3}\right)  =r_{3}=r_{4}+\Delta x,r_{3}\neq
+r_{1},r;r_{2}\neq r_{1},r_{2},
+\end{equation}%
+\begin{equation}
+r_{4}=r_{3}+\Delta y,
+\end{equation}%
+\begin{equation}
+\Delta y=\left(  \Delta x\right)  ^{-1}%
+\end{equation}%
+\begin{equation}
+2r_{1}=r_{1}+\Delta x=r_{1}+\left(  2r_{1}-r_{1}\right)  .
+\end{equation}
+$\rfloor$
+
+Intuitively, we can think of the elements of $\Delta V$ as \emph{forces} $F$
+moving the points in $V$ considered as physical particles. The effect of
+applying a force $F\in\Delta V$ to a point $r\in V$ is a translation. By this,
+we mean that for every force $F\in\Delta V$, the action of the force $F$ is to
+\textquotedblleft move\textquotedblright\ every point $r\in V$ to the point
+$r+F\in V$ obtained by the translation corresponding to $F$ viewed as a
+vector. Since translations can be composed, it is natural that $\Delta V$ is a
+vector space. For simplicity, it is assumed that all vector spaces under
+consideration are defined over the field $\mathbb{R}$ or $\mathbb{C}$. Most of
+the definitions and results also hold for an arbitrary field $\mathbb{F}$,
+although some care is needed when dealing with fields of characteristic
+different from zero. It is also assumed that all families $\left\{  \left.
+\U{3bb} _{j}\right\vert j\in I\right\}  $ of scalars have \emph{finite
+support}. Recall that a family $\left\{  \left.  \U{3bb} _{j}\right\vert j\in
+I\right\}  $ of scalars has \emph{finite support }if $\U{3bb} _{j}=0$ for all
+$j\in J-K$, where $K$ is a finite subset of $J$. Obviously, finite families of
+scalars have finite support.
+
+\begin{example}%
+\begin{equation}
+\mathbb{E}^{n}=\left\langle \mathbb{R}^{n},\mathbb{R}^{n},+\right\rangle
+\end{equation}
+The first $\mathbb{R}^{n}$ is just the \emph{SET} of n-tuples $\left\{
+x_{1},\cdots,x_{n}\right\}  $ of real scalar points, the second $\mathbb{R}%
+^{n}$ is the \emph{vector space} of directed line segments $\Delta\left(
+\mathbf{r}_{2}\mathbf{r}_{1}\right)  =\mathbf{r}_{2}-\mathbf{r}_{1}.$ The line
+segments map n-tuples to n-tuples through the action of the $"+"$ operation
+i.e.
+\begin{equation}
+\Delta\left(  \mathbf{r}_{2}\mathbf{r}_{1}\right)  \left(  \mathbf{x}\right)
+=\mathbf{x+r}_{2}-\mathbf{r}_{1}=\mathbf{y.}%
+\end{equation}
+
+\end{example}
+
+\begin{definition}
+An \emph{affine space} is either the empty set, or a triple $\left\langle
+V,\Delta V,+\right\rangle $ consisting of a nonempty set $V,$ (of points), a
+vector space $\Delta V$ (of translations, or free vectors) and an action%
+\begin{equation}
++:V\times\Delta V\rightarrow V
+\end{equation}
+satisfying the following conditions.
+
+\begin{enumerate}
+\item $a+0=a,\forall a\in V,$ $(0\in\Delta V)$.
+
+\item $(a+u)+v=a+(u+v),\forall a\in V,\forall u,v\in\Delta V.$
+
+\item For any two points $a,b\in V$, there is a unique $u\in\Delta V$ such
+that $a+u=b$.
+\end{enumerate}
+\end{definition}
+
+The unique vector $u\in\Delta V$ such that $a+u=b$ is denoted by $\mathbf{ab}%
+$, or $\overrightarrow{ab}$, or $\mathbf{b-a,}$ or $\Delta\left(
+\mathbf{ba}\right)  $. Thus one has%
+\begin{equation}
+b=a+\mathbf{ab}=a+\overrightarrow{ab}=a+\left(  \mathbf{b-a}\right)
+=a+\Delta\left(  \mathbf{ba}\right)  .
+\end{equation}
+$\lceil$Scalar multiplication in $V$ can be defined by
+\begin{equation}
+\lambda b=a+\left(  \lambda\mathbf{b-a}\right)
+\end{equation}%
+\begin{equation}
+\left(  \lambda_{1}\mathbf{b-a}\right)  -\left(  \lambda_{2}\mathbf{b-a}%
+\right)  =\left(  \lambda_{1}-\lambda_{2}\right)  \mathbf{b.}%
+\end{equation}
+$\rfloor$
+
+The dimension of the affine space $\left\langle V,\Delta V,+\right\rangle $ is
+the dimension $\dim\left\{  \Delta V\right\}  $ of the vector space $\Delta
+V$. For simplicity, it is denoted by $\dim\left\{  V\right\}  .$
+
+Conditions $1$ and $2$ say that the (abelian) group $\Delta V$ acts on $V$,
+and condition $3$ says that $\Delta V$ acts transitively and faithfully on $V$.
+
+\begin{remark}
+The set of points $V$ is often called the affine space.
+\end{remark}
+
+\begin{remark}
+The affine space based on $\mathbb{R}^{n}$ is denoted $\mathbb{E}^{n}$ and
+elements of $\Delta V$ can be denoted as vectors $\Delta\mathbf{r}%
+_{fi}=\mathbf{r}_{f}-\mathbf{r}_{i}\in\mathbb{R}^{n}$ and elements of $V$ as
+points $\mathbf{r}\in\mathbb{R}^{n},$ e.g.%
+\begin{equation}
+\left[  \Delta\left(  \mathbf{r}_{f}\mathbf{r}_{i}\right)  \right]
+\mathbf{r}\equiv\left[  \Delta\mathbf{r}_{fi}\right]  \mathbf{r=r+r}%
+_{f}-\mathbf{r}_{i}.
+\end{equation}
+If $\mathbf{r}_{i}=\mathbf{r}$ then
+\begin{equation}
+\left[  \Delta\left(  \mathbf{r}_{f}\mathbf{r}\right)  \right]  \mathbf{r}%
+\equiv\left[  \Delta\mathbf{r}_{fi}\right]  \mathbf{r=r+r}_{f}-\mathbf{r}%
+=\mathbf{r}_{f}.
+\end{equation}
+
+\end{remark}
+
+\subsubsection{Affine Combinations$\equiv$Barycenters}
+
+\begin{proposition}
+Given an affine space $V$, let $\left\{  \left.  a_{j}\right\vert j\in
+J\right\}  $ be a family of points in $V$ and let$\left\{  \left.  \U{3bb}
+_{j}\right\vert j\in J\right\}  $ be a family of scalars. For any two points
+$a,b\in V$, the following properties hold:
+
+\begin{enumerate}
+\item If
+\begin{equation}
+\sum_{j\in J}\lambda_{j}=1
+\end{equation}
+then
+\begin{equation}
+a+\sum_{j\in J}\lambda_{j}\left(  aa_{j}\right)  =b+\sum_{j\in J}\lambda
+_{j}\left(  ba_{j}\right)  \equiv a+\sum_{j\in J}\lambda_{j}\Delta\left(
+a_{j}a\right)  =b+\sum_{j\in J}\lambda_{j}\Delta\left(  a_{j}b\right)
+\end{equation}
+$\lceil$%
+\begin{gather}
+\mathbf{x}+\sum_{j\in J}\lambda_{j}\left(  \mathbf{r}_{i}-\mathbf{x}\right)
+=\mathbf{y}+\sum_{j\in J}\lambda_{j}\left(  \mathbf{r}_{i}-\mathbf{y}\right)
+\\
+\Updownarrow\\
+\left(  \mathbf{x}+\sum_{j\in J}\lambda_{j}\mathbf{r}_{i}-\sum_{j\in J}%
+\lambda_{j}\mathbf{x=}\frame{$\sum_j\in J\lambda_j\textbf{\textbf{r}_i}%
+$}\right)  =\left(  \mathbf{y}+\sum_{j\in J}\lambda_{j}\mathbf{r}_{i}%
+-\sum_{j\in J}\lambda_{j}\mathbf{y=}\frame{$\sum_j\in J\lambda_j\textbf{r}%
+_i$}\right)  ,
+\end{gather}
+which should be compared to
+\begin{equation}
+b=a+\mathbf{ab}=a+\overrightarrow{ab}=a+\left(  \mathbf{b-a}\right)
+=a+\Delta\left(  ba\right)  .
+\end{equation}
+$\rfloor$
+
+\item If
+\begin{equation}
+\sum_{j\in J}\lambda_{j}=0
+\end{equation}
+then
+\begin{equation}
+\sum_{j\in J}\lambda_{j}\left(  aa_{j}\right)  =\sum_{j\in J}\lambda
+_{j}\left(  ba_{j}\right)  .
+\end{equation}
+
+\end{enumerate}
+\end{proposition}
+
+$\lceil$%
+\begin{equation}
+\sum_{j\in J}\lambda_{j}\left(  \mathbf{r}_{i}-\mathbf{x}\right)  =\sum_{j\in
+J}\lambda_{j}\left(  \mathbf{r}_{i}-\mathbf{y}\right)  ,
+\end{equation}
+$\rfloor$
+
+Thus, by this Proposition for any family of points $\left\{  \left.
+a_{j}\right\vert j\in J\right\}  $ in $V$ and any family $\left\{  \left.
+\lambda_{j}\right\vert j\in J\right\}  $ of scalars such that $\sum_{j\in
+J}\lambda_{j}=1$, the point $x=a+\sum_{j\in J}\lambda_{j}\left(
+aa_{j}\right)  $ \emph{is independent of the choice of the origin} $a\in V$
+(note that $x\in V).$ This property motivates the following definition
+
+\begin{definition}
+For any family of points $\left\{  \left.  a_{j}\right\vert j\in J\right\}  $
+in $V$ and for any family $\left\{  \left.  \lambda_{j}\right\vert j\in
+J\right\}  $ of scalars such that $\sum_{j\in J}\lambda_{j}=1$ and for
+any$\ a\in V$ the point
+\begin{equation}
+x=a+\sum_{j\in J}\lambda_{j}\left(  aa_{j}\right)
+\end{equation}
+is independent of $a\in V$, (by the preceeding Proposition), and is called the
+\emph{barycenter} (or \emph{barycentric combination}, or \emph{affine
+combination}) of the points $a_{j}$ assigned the weights $\lambda_{j}$, and it
+is denoted by
+\begin{equation}
+\sum_{j\in J}\lambda_{j}a_{j}.
+\end{equation}
+
+\end{definition}
+
+$\lceil$In $\mathbb{E}^{n}$ this can be expressed as
+\begin{equation}
+\mathbf{x}+\sum_{j\in J}\lambda_{j}\left(  \mathbf{r}_{i}-\mathbf{x}\right)
+=\sum_{j\in J}\lambda_{j}\mathbf{r}_{i}%
+\end{equation}
+and any element $\mathbf{x\in}V\cong\mathbb{R}^{n}$ (as points) can be
+expressed as
+\begin{equation}
+\mathbf{x}=\mathbf{y}+\left(  \mathbf{x-y}\right)  .\rfloor
+\end{equation}
+
+
+\emph{Weighted points} are pairs $\left(  a,\lambda\right)  ,$ where $a\in V$
+and $\lambda\in\mathbb{F},$ and the barycenter of points $\left\{  \left.
+\left(  a_{j},\lambda_{j}\right)  \right\vert j\in J\right\}  $ is $\sum_{j\in
+J}\lambda_{j}a_{j},$ when $\sum_{j\in J}\lambda_{j}=1.$
+
+\subsubsection{Affine Subspaces}
+
+\begin{definition}
+Given an affine space $\mathcal{A}=\left\langle V,\Delta V,+\right\rangle $ an
+\emph{affine subspace} $\mathcal{B}=\left\langle W,\Delta W,+\right\rangle $
+is produced when a subset $W$ of $V$ has the property that for every family of
+weighted points $\left\{  \left.  \left(  a_{j},\lambda_{j}\right)
+\right\vert j\in J\right\}  $ in $W$ such that $\sum_{j\in J}\lambda_{j}=1$,
+the barycenter $\sum_{j\in J}\lambda_{j}a_{j}$ belongs to $W.$
+\end{definition}
+
+\begin{remark}
+Every intersection of affine subspaces is an affine subspace.
+\end{remark}
+
+\begin{example}
+The set
+\begin{equation}
+W=\left\{  \left.  \mathbf{x}\right\vert \left(  \left.  \mathbf{a}\right\vert
+\mathbf{x}\right)  =c\in\mathbb{F};\,\mathbf{a,x\in}\mathbb{F}^{n}\right\}
+\end{equation}
+is an affine subspace of $\mathbb{E}^{n}$ i.e.
+\begin{equation}
+\sum_{j\in J}\lambda_{j}\mathbf{x}_{j}\in W;\mathbf{x}_{j}\in W,
+\end{equation}
+when
+\begin{equation}
+\sum_{j\in J}\lambda_{j}=1
+\end{equation}
+i.e. it is closed under Barycentric sums $\equiv$ affine sums.
+
+The set
+\begin{equation}
+\Delta W=\left\{  \left.  \widetilde{\mathbf{x}}\right\vert \left(  \left.
+\mathbf{a}\right\vert \widetilde{\mathbf{x}}\right)  =0\in\mathbb{F}%
+;\,\mathbf{a,}\widetilde{\mathbf{x}}\mathbf{\in}\mathbb{F}^{n}\right\}
+\end{equation}
+is a subspace of $\Delta V$ and is closed under arbitary sums i.e
+\begin{equation}
+\sum_{j\in J}\mu_{j}\widetilde{\mathbf{x}}_{j}\in\Delta
+W;\widetilde{\mathbf{x}}_{j}\in\Delta W,
+\end{equation}
+for any
+\begin{equation}
+\mu_{j}\in\mathbb{F},j\in J.
+\end{equation}
+One can see that
+\begin{equation}
+\left(  \left.  \mathbf{a}\right\vert \left(  \mathbf{x}_{j}%
+-\widetilde{\mathbf{x}}_{j^{\prime}}\right)  \right)  =c
+\end{equation}
+hence $\left\{  \left(  \mathbf{x}_{j}-\widetilde{\mathbf{x}}_{j^{\prime}%
+}\right)  \in\Delta W;j,j^{\prime}\in J\right\}  $ and
+\begin{equation}
+W=\mathbf{x}+\Delta W
+\end{equation}
+for any fixed $\mathbf{x\in}W$, which shows that $W$ is the set of translates
+of the subspace $\Delta W.$
+\end{example}
+
+\begin{example}
+One can show that in general
+\begin{equation}
+W=\left\{  \left.  \mathbf{x}\right\vert \mathbb{A}\mathbf{x}=\mathbf{c}%
+\in\mathbb{R}^{m};\mathbb{A\in}M\left(  n,m,\mathbb{R}\right)  \mathbf{,x\in
+}\mathbb{R}^{n}\right\}
+\end{equation}
+is an affine subspace with difference subspace
+\begin{equation}
+\Delta W=\left\{  \mathbb{A}\widetilde{\mathbf{x}}=\mathbf{0}\in\mathbb{R}%
+^{m};\mathbb{A\in}M\left(  n,m,\mathbb{R}\right)  \mathbf{,}%
+\widetilde{\mathbf{x}}\mathbf{\in}\mathbb{R}^{n}\right\}
+\end{equation}
+and
+\begin{equation}
+W=\mathbf{x}+\Delta W
+\end{equation}
+for any $\mathbf{x\in}W.$
+\end{example}
+
+This is general as
+\begin{equation}
+x=a+\sum_{j\in J}\lambda_{j}\Delta\left(  a_{j}a\right)
+\end{equation}
+is the barycenter of the set of weighted points
+\begin{equation}
+\left\{  \left(  a_{1},\lambda_{1}\right)  ,\cdots,\left(  a_{n},\lambda
+_{n}\right)  ,\left(  a,1-\sum_{j\in J}\lambda_{j}\right)  \right\}
+\end{equation}
+since
+\begin{equation}
+\sum_{j\in J}\lambda_{j}+1-\sum_{j\in J}\lambda_{j}=1.
+\end{equation}
+
+
+\begin{definition}
+$\Delta W$ is the direction of the affine subspace $W.$ Two affine subspaces
+are parallel if their directions are equal.
+\end{definition}
+
+Given a nonempty subset $S$ of $V$, the smallest affine subspace of $V$
+generated by $S$ is often denoted by$\U{3008} S\U{3009} $. For example, a line
+specified by two distinct points $a$ and $b$ is denoted by$\U{3008} \left\{
+a,b\right\}  \U{3009} $ and similarly for planes, etc. An affine subspace of
+dimension $1$ is called a line, an affine subspace of codimension $1$ is
+called a hyperplane.
+
+\subsection{Affine Independence and Affine Frames}
+
+\begin{definition}
+Given an affine space, $\mathcal{V}=\U{3008} V,\Delta V,+\U{3009} $, a family
+$\left\{  \left.  a_{j}\right\vert j\in J\right\}  $ of points in $V$ is
+\emph{affinely independent} if the family $\left\{  \left.  \Delta\left(
+a_{j}a_{k}\right)  ;\right\vert j\in J-\left\{  k\right\}  \right\}  $ is
+linearly independent for some $k\in J$.
+\end{definition}
+
+\begin{proposition}
+Given an affine space $\mathcal{V}=\left\langle V,\Delta V,+\right\rangle $,
+let $\left\{  \left.  a_{j}\right\vert j\in J\right\}  $ be a family of $m+1$
+points in $V$. Let $x\in V$ and assume that
+\begin{align}
+&  x=\sum_{0\leq j\leq m}\lambda_{j}a_{j}\\
+&  \sum_{0\leq j\leq m}\lambda_{j}=1
+\end{align}
+Then the family $\left\{  \U{3bb} _{0},...,\U{3bb} _{m}\right\}  $ such that%
+\begin{equation}
+x=\sum_{0\leq j\leq m}\lambda_{j}a_{j}%
+\end{equation}
+is \emph{unique iff the family} $\left\{  (\Delta\left(  a_{1}a_{0}\right)
+,...,\Delta\left(  a_{m}a_{0}\right)  \right\}  $ \emph{is linearly
+independent.}
+\end{proposition}
+
+\begin{definition}
+Given an affine space $\mathcal{V}=\left\langle V,\Delta V,+\right\rangle $,
+an \emph{affine frame} \emph{with origin} $a_{0}$ is a family $\left\{
+a_{0},\cdots,a_{m}\right\}  $ of $m+1$ points in $V$ such that the list of
+vectors $\left\{  (\Delta\left(  a_{1}a_{0}\right)  ,...,\Delta\left(
+a_{m}a_{0}\right)  \right\}  $ is a basis of $\Delta V$. The pair $\left\{
+a_{0},\left\{  \Delta\left(  a_{1}a_{0}\right)  ,...,\Delta\left(  a_{m}%
+a_{0}\right)  \right\}  \right\}  $ is also called an \emph{affine frame}
+\emph{with origin} $a_{0}$. \emph{Then, every }$x\in V$\emph{ can be
+expressed}
+\begin{equation}
+x=a_{0}+\sum_{1\leq j\leq m}x_{j}\Delta\left(  a_{j}a_{0}\right)
+\end{equation}
+for a unique family $\left\{  (x_{1},...,x_{m}\right\}  $ of scalars, called
+the coordinates of $x$ w.r.t. the affine frame $\left\{  a_{0},\left\{
+(\Delta\left(  a_{1}a_{0}\right)  ,...,\Delta\left(  a_{m}a_{0}\right)
+\right\}  \right\}  $. Furthermore, every $x\in V$ can be written as%
+\begin{equation}
+x=\sum_{0\leq j\leq m}\lambda_{j}a_{j},
+\end{equation}
+where
+\begin{equation}
+\sum_{0\leq j\leq m}\lambda_{j}=1
+\end{equation}
+for some unique family ($\lambda_{0}$,...,$\lambda_{m}$) of scalars called the
+\emph{barycentric coordinates} of $x$ with respect to the affine frame
+$\left\{  a_{0},...,a_{m}\right\}  $.
+\end{definition}
+
+\begin{example}%
+\begin{gather}
+\mathbf{x}=\mathbf{a}_{0}+\sum_{1\leq j\leq m}x_{j}\Delta\left(
+\mathbf{a}_{j}\mathbf{a}_{0}\right) \\
+\mathbf{x}=\sum_{0\leq j\leq m}\lambda_{j}\mathbf{a}_{j}\\
+\sum_{0\leq j\leq m}\lambda_{j}=1,
+\end{gather}
+where $\left\{  \Delta\left(  \mathbf{a}_{1}\mathbf{a}_{0}\right)
+,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}_{0}\right)  \right\}  $ is a basis
+for $\mathbb{R}^{n}$ and $\mathbf{a}_{0}$ $\in\mathbb{R}^{n}$ a fixed point.
+One can express $\mathbf{x}$ wrt the affine frame $\left\{  \mathbf{a}%
+_{0},\left\{  \Delta\left(  \mathbf{a}_{1}\mathbf{a}_{0}\right)
+,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}_{0}\right)  \right\}  \right\}  $
+by
+\begin{equation}
+\mathbf{x}=\left(  \mathbf{a}_{0},\Delta\left(  \mathbf{a}_{1}\mathbf{a}%
+_{0}\right)  ,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}_{0}\right)  \right)
+\left(
+\begin{array}
+[c]{c}%
+1\\
+x_{1}\\
+\vdots\\
+x_{n}%
+\end{array}
+\right)  ,
+\end{equation}
+so $\mathbf{x}$ belongs to a $n$ dimensional affine manifold contained in
+$\mathbb{R}^{n+1}.$
+\end{example}
+
+\begin{proposition}
+Given an affine space $\mathcal{V}=\left\langle V,\Delta V,+\right\rangle $,
+let $\left\{  \left.  a_{j}\right\vert j\in J\right\}  $ be a family of points
+in $V$. The family $\left\{  \left.  a_{j}\right\vert j\in J\right\}  $ is
+\emph{affinely }\underline{\emph{dependent}} iff there is a family $\left\{
+\left.  \lambda_{j}\right\vert j\in J\right\}  $ such that $\lambda_{j}\neq0$
+for some $j\in J,$ $\U{2211} _{k\in J}\U{3bb} _{k}=0$ and $\U{2211} _{k\in
+J}\U{3bb} _{k}\Delta\left(  a_{k}x\right)  =0$ for every $x\in V$.
+\end{proposition}
+
+\subsection{Affine Maps}
+
+\begin{definition}
+A map
+\begin{equation}
+f:V_{1}\rightarrow V_{2}%
+\end{equation}
+is an affine map if
+\begin{gather}
+f\left(  \sum_{0\leq j\leq m}\lambda_{j}a_{j}\right)  =\sum_{0\leq j\leq
+m}\lambda_{j}f\left(  a_{j}\right)  \in V_{2}\quad\forall\left\{  \left.
+a_{j}\right\vert j\in J\right\}  \subset V_{1}\\
+\sum_{0\leq j\leq m}\lambda_{j}=1
+\end{gather}
+i.e. affine sums $\equiv$ barycenters are preserved.
+\end{definition}
+
+\begin{definition}
+$f^{-1}\left(  v_{2}\right)  ,v_{2}\in V_{2}$ is an affine subspace of $V_{1}$
+of direction $L_{f}^{-1}\left(  \Delta V_{2}\right)  $ and is called the fibre
+of $v_{2}.$
+\end{definition}
+
+\begin{lemma}
+Affine maps can be obtained from linear maps by defining an affine map $f$ by
+\begin{equation}
+f\left(  x\right)  =f\left(  a+\Delta v\right)  =f\left(  a\right)
++L_{f}\left(  \Delta v\right)  =b+\Delta f\left(  v\right)  =y,
+\end{equation}
+for any points $a\in V_{1}$ and $b\in V_{2},$ where $L_{f}$ is a linear map
+i.e.
+\begin{equation}
+L_{f}\left(  \alpha_{1}v_{1}+\alpha_{2}v_{2}\right)  =\alpha_{1}L_{f}\left(
+v_{1}\right)  +\alpha_{2}L_{f}\left(  v_{2}\right)  \quad\forall v_{1}%
+,v_{2}\in V_{1};\forall\alpha_{1},\alpha_{2}\in\mathbb{F}.
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}%
+\begin{equation}
+\sum_{1\leq j\leq m}\lambda_{j}\left(  a+v_{j}\right)  =a+\sum_{1\leq j\leq
+m}\lambda_{j}\Delta\left(  \left(  a+v_{j}\right)  a\right)  =a+\sum_{1\leq
+j\leq m}\lambda_{j}v_{j}%
+\end{equation}%
+\begin{equation}
+\sum_{1\leq j\leq m}\lambda_{j}\left(  b+L_{f}\left(  v_{j}\right)  \right)
+=b+\sum_{1\leq j\leq m}\lambda_{j}\Delta\left(  \left(  b+L_{f}\left(
+v_{j}\right)  \right)  b\right)  =b+\sum_{1\leq j\leq m}\lambda_{j}%
+L_{f}\left(  v_{j}\right)
+\end{equation}%
+\begin{align}
+f\left(  \sum_{1\leq j\leq m}\lambda_{j}\left(  a+v_{j}\right)  \right)   &
+=f\left(  a+\sum_{1\leq j\leq m}\lambda_{j}v_{j}\right)  =b+h\left(
+\sum_{1\leq j\leq m}\lambda_{j}v_{j}\right) \\
+&  =b+\sum_{1\leq j\leq m}\lambda_{j}L_{f}\left(  v_{j}\right)  =\sum_{1\leq
+j\leq m}\lambda_{j}\left(  b+L_{f}\left(  v_{j}\right)  \right)  =\sum_{1\leq
+j\leq m}\lambda_{j}f\left(  a+v_{j}\right)  .
+\end{align}
+
+\end{proof}
+
+\begin{proposition}
+For every affine map
+\begin{equation}
+f:V_{1}\rightarrow V_{2}%
+\end{equation}
+there is an unique linear map $L_{f}$%
+\begin{equation}
+L_{f}:\Delta V_{1}\rightarrow\Delta V_{2}%
+\end{equation}
+such that
+\begin{equation}
+f\left(  a+\Delta v\right)  =f\left(  a\right)  +L_{f}\left(  \Delta v\right)
+;\Delta v\in\Delta V_{1}.
+\end{equation}
+
+\end{proposition}
+
+\begin{corollary}
+Affine maps map affine subspaces to affine subspaces
+\end{corollary}
+
+\begin{remark}
+An affine map has the properties
+\begin{equation}
+f\left(  a+\Delta v\right)  =f\left(  a\right)  +L_{f}\left(  \Delta v\right)
+=b+\Delta f\left(  v\right)
+\end{equation}
+where $a\in V_{1},\Delta v\in\Delta V_{1},f\left(  a\right)  \in V_{2}$ and
+$\Delta f\left(  v\right)  \in\Delta V_{2}$.
+\end{remark}
+
+\begin{remark}
+Note that
+\begin{equation}
+\Delta f\left(  v\right)  =f\left(  \Delta v\right)  ,
+\end{equation}
+
+\end{remark}
+
+\begin{definition}
+If $L_{f}=I_{\Delta V}$ then $f$ is called a \emph{translation}.
+\end{definition}
+
+\begin{example}
+Affine maps from Euclidean space to Euclidean space (translation of origin
+plus a general linear transformation of the coordinate axes):
+\begin{align}
+&  f\left(  \mathbf{a}_{0}+\sum_{1\leq j\leq m}x_{j}\Delta\left(
+\mathbf{a}_{j}\mathbf{a}\right)  \right)  =f\left(  \mathbf{a}_{0}\right)
++L_{f}\left(  \sum_{1\leq j\leq m}x_{j}\Delta\left(  \mathbf{a}_{j}%
+\mathbf{a}\right)  \right) \\
+&  =f\left(  \left(  \mathbf{a}_{0},\Delta\left(  \mathbf{a}_{1}\mathbf{a}%
+_{0}\right)  ,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}_{0}\right)  \right)
+\left(
+\begin{array}
+[c]{c}%
+1\\
+x_{1}\\
+\vdots\\
+x_{n}%
+\end{array}
+\right)  \right)  =\left(  \mathbf{b}_{0},\Delta\left(  \mathbf{b}%
+_{1}\mathbf{b}_{0}\right)  ,...,\Delta\left(  \mathbf{b}_{m}\mathbf{b}%
+_{0}\right)  \right)  \left(
+\begin{array}
+[c]{c}%
+1\\
+x_{1}\\
+\vdots\\
+x_{n}%
+\end{array}
+\right) \\
+&  =\left(  \mathbf{a}_{0}+\mathbf{c},\Delta\left(  \mathbf{b}_{1}%
+\mathbf{b}_{0}\right)  ,...,\Delta\left(  \mathbf{b}_{m}\mathbf{b}_{0}\right)
+\right)  .
+\end{align}
+The transformed basis can be expressed as
+\begin{equation}
+\left(  \mathbf{b}_{0},\Delta\left(  \mathbf{b}_{1}\mathbf{b}_{0}\right)
+,...,\Delta\left(  \mathbf{b}_{m}\mathbf{b}_{0}\right)  \right)  =\left(
+\mathbf{a}_{0},\Delta\left(  \mathbf{a}_{1}\mathbf{a}_{0}\right)
+,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}_{0}\right)  \right)  \left(
+\begin{array}
+[c]{cc}%
+1\left(  1\times1\right)  & \mathbb{O}\left(  1\times n\right) \\
+\mathbf{c}\left(  n\times1\right)  & \mathbb{A}\left(  n\times n\right)
+\end{array}
+\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathbf{b}_{0}=\mathbf{a}_{0}+\mathbf{c,}%
+\end{equation}
+hence one can express the affine transformation wrt to the fixed basis
+$\left\{  \mathbf{a}_{0},\left\{  \Delta\left(  \mathbf{a}_{1}\mathbf{a}%
+_{0}\right)  ,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}_{0}\right)  \right\}
+\right\}  $ as
+\begin{equation}
+f\left(  \left(  \mathbf{a}_{0},\Delta\left(  \mathbf{a}_{1}\mathbf{a}%
+_{0}\right)  ,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}_{0}\right)  \right)
+\left(
+\begin{array}
+[c]{c}%
+1\\
+x_{1}\\
+\vdots\\
+x_{n}%
+\end{array}
+\right)  \right)  =\left(  \mathbf{a}_{0},\Delta\left(  \mathbf{a}%
+_{1}\mathbf{a}_{0}\right)  ,...,\Delta\left(  \mathbf{a}_{m}\mathbf{a}%
+_{0}\right)  \right)  \left(
+\begin{array}
+[c]{cc}%
+1\left(  1\times1\right)  & \mathbb{O}\left(  1\times n\right) \\
+\mathbf{c}\left(  n\times1\right)  & \mathbb{A}\left(  n\times n\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+1\\
+x_{1}\\
+\vdots\\
+x_{n}%
+\end{array}
+\right)  .
+\end{equation}
+
+\end{example}
+
+\subsubsection{ Representations of Affine Maps.}
+
+Let $E$ and $F$ be affine spaces of dimension $m$ and $\left\{  a_{0},\left\{
+(\Delta\left(  a_{1}a_{0}\right)  ,...,\Delta\left(  a_{m}a_{0}\right)
+\right\}  \right\}  $ an affine frame for $E.$ If $f$ is an affine map
+belonging to $\mathcal{A}\left(  E,F\right)  $ then for every sequence
+$\left\{  b_{0},\cdots,b_{m}\right\}  $ of $m+1$ points in $F$ one has
+\begin{gather}
+f\left(  \sum_{0\leq j\leq m}\lambda_{j}a_{j}\right)  =\sum_{0\leq j\leq
+m}\lambda_{j}f\left(  a_{j}\right)  =\sum_{0\leq j\leq m}\lambda_{j}b_{j}\\
+\sum_{0\leq j\leq m}\lambda_{j}=1.
+\end{gather}
+Consider the case $\mathcal{A}\left(  E,E\right)  $%
+\begin{equation}
+y=f\left(  x\right)  =f\left(  a+\Delta v\right)  =f\left(  a\right)
++L_{f}\left(  \Delta\left(  v\right)  \right)  =b+\Delta f\left(  v\right)
+\end{equation}
+where
+\begin{align}
+\Delta f\left(  v\right)   &  =f\left(  \Delta v\right)  =L_{f}\left(  \Delta
+v\right) \\
+b  &  =f\left(  a\right) \\
+a  &  \in V_{1},\Delta v\in\Delta V_{1},f\left(  a\right)  \in V_{2},\Delta
+f\left(  v\right)  \in\Delta V_{2}.
+\end{align}
+One can let
+\begin{equation}
+\Delta v=\Delta\left(  xa_{0}\right)
+\end{equation}
+then
+\begin{equation}
+f\left(  x\right)  =f\left(  a_{0}+\Delta\left(  xa_{0}\right)  \right)
+=f\left(  a_{0}\right)  +L_{f}\left(  \Delta\left(  xa_{0}\right)  \right)
+\quad\forall\Delta\left(  xa_{0}\right)  \in\Delta E.
+\end{equation}
+We can represent $x,b$ and $y$ wrt basis $\left\{  (\Delta\left(  a_{1}%
+a_{0}\right)  ,...,\Delta\left(  a_{m}a_{0}\right)  \right\}  $ by
+\begin{align}
+x  &  =x_{1}\Delta\left(  a_{1}a_{0}\right)  +\cdots+x_{m}\Delta\left(
+a_{m}a_{0}\right)  =\left(  \Delta\left(  a_{1}a_{0}\right)  ,\cdots
+,\Delta\left(  a_{m}a_{0}\right)  \right)  \left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+\vdots\\
+x_{m}%
+\end{array}
+\right) \\
+b  &  =f\left(  a\right)  =b_{1}\Delta\left(  a_{1}a_{0}\right)  +\cdots
++b_{m}\Delta\left(  a_{m}a_{0}\right)  =\left(  \Delta\left(  a_{1}%
+a_{0}\right)  ,\cdots,\Delta\left(  a_{m}a_{0}\right)  \right)  \left(
+\begin{array}
+[c]{c}%
+b_{1}\\
+\vdots\\
+b_{m}%
+\end{array}
+\right) \\
+y  &  =y_{1}\Delta\left(  a_{1}a_{0}\right)  +\cdots+y_{m}\Delta\left(
+a_{m}a_{0}\right)  =\left(  \Delta\left(  a_{1}a_{0}\right)  ,\cdots
+,\Delta\left(  a_{m}a_{0}\right)  \right)  \left(
+\begin{array}
+[c]{c}%
+y_{1}\\
+\vdots\\
+y_{m}%
+\end{array}
+\right)  .
+\end{align}
+Then the transformation
+\begin{equation}
+f\left(  x\right)  =f\left(  a+\Delta v\right)  =f\left(  a\right)
++L_{f}\left(  \Delta\left(  v\right)  \right)
+\end{equation}
+is equivalent to
+\begin{equation}
+\mathbf{y}=\mathbf{b}+\mathbb{A}\mathbf{x,}%
+\end{equation}
+which can be reformulated as
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{A} & \mathbf{b}\\
+0 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathbf{x}\\
+1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathbf{y}\\
+1
+\end{array}
+\right)
+\end{equation}
+or%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+\mathbf{b} & \mathbb{A}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+1\\
+\mathbf{x}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+1\\
+\mathbf{y}%
+\end{array}
+\right)  .
+\end{equation}
+$\lceil$ E.g.
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccc}%
+a_{11} & a_{12} & b_{1}\\
+a_{21} & a_{22} & b_{2}\\
+0 & 0 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+x_{1}\\
+x_{2}\\
+1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+a_{11}x_{1}+a_{12}x_{2}+b_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+b_{2}\\
+1
+\end{array}
+\right)
+\end{equation}
+or%
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+b_{1} & a_{11} & a_{12}\\
+b_{2} & a_{21} & a_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+1\\
+x_{1}\\
+x_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+1\\
+b_{1}+a_{11}x_{1}+a_{12}x_{2}\\
+b_{2}+a_{21}x_{1}+a_{22}x_{2}%
+\end{array}
+\right)
+\end{equation}
+In both cases this gives
+\begin{equation}
+f\left(  \mathbf{x}\right)  =\mathbf{y}=\mathbb{A}\mathbf{x+b.}%
+\end{equation}
+$\rfloor$
+
+$\lceil$This matrices are representations of the affine group as they closed
+under multiplication and have inverses%
+\begin{align}
+&  \left(
+\begin{array}
+[c]{ccc}%
+a_{11} & a_{12} & b_{1}\\
+a_{21} & a_{22} & b_{2}\\
+0 & 0 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\alpha_{11} & \alpha_{12} & \beta_{1}\\
+\alpha_{21} & \alpha_{22} & \beta_{2}\\
+0 & 0 & 1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+a_{11}\alpha_{11}+a_{12}\alpha_{21} & a_{11}\alpha_{12}+a_{12}\alpha_{22} &
+a_{11}\beta_{1}+a_{12}\beta_{2}+b_{1}\\
+a_{21}\alpha_{11}+a_{22}\alpha_{21} & a_{21}\alpha_{12}+a_{22}\alpha_{22} &
+a_{21}\beta_{1}+a_{22}\beta_{2}+b_{2}\\
+0 & 0 & 1
+\end{array}
+\right) \\
+&  =\left(
+\begin{array}
+[c]{cc}%
+\left(
+\begin{array}
+[c]{cc}%
+a_{11} & a_{12}\\
+a_{21} & a_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\alpha_{11} & \alpha_{12}\\
+\alpha_{21} & \alpha_{22}%
+\end{array}
+\right)  & \left(
+\begin{array}
+[c]{c}%
+b_{1}\\
+b_{2}%
+\end{array}
+\right)  +\left(
+\begin{array}
+[c]{cc}%
+a_{11} & a_{12}\\
+a_{21} & a_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\beta_{1}\\
+\beta_{2}%
+\end{array}
+\right) \\
+0 & 1
+\end{array}
+\right)  .
+\end{align}
+when the top left hand block belongs to $GL\left(  2,\mathbb{F}\right)
+\rfloor$
+
+\subsubsection{Affine Groups}
+
+The set of bijective affine maps
+\begin{equation}
+f:V\rightarrow V
+\end{equation}
+form the general linear affine group $GA\left(  V,\mathbb{F}\right)  .$ Cearly
+there is a \emph{group homomorphism}
+\begin{equation}
+T:GA\left(  V,\mathbb{F}\right)  \rightarrow GL\left(  \Delta V,\mathbb{F}%
+\right)  .
+\end{equation}
+The kernal $\ker\left\{  T\right\}  $ is the \emph{subgroup of translations}
+of $V.$ The general affine group is the \emph{semi direct product} of the
+abelian group of translation with the general liner group $GL\left(  \Delta
+V,\mathbb{F}\right)  $
+\begin{equation}
+GA\left(  V,\mathbb{F}\right)  =\Delta V\ltimes GL\left(  \Delta
+V,\mathbb{F}\right)  .
+\end{equation}
+Formally
+\begin{equation}
+GA\left(  V,\mathbb{F}\right)  \cong Aff\left(  V,\mathbb{F}\right)  \subset
+GL\left(  V\oplus K\right)  .
+\end{equation}
+In terms of \emph{real} matrix groups (i.e. \emph{real} matrix
+representations) this gives
+\begin{equation}
+GA\left(  n,\mathbb{R}\right)  =\Delta\mathbb{R}^{n}\ltimes GL\left(
+n,\mathbb{R}\right)  \subset GL\left(  n+1,\mathbb{R}\right)  ,
+\end{equation}
+where the group product in the semi direct product is given by
+\begin{equation}
+\left(  M,v\right)  \cdot\left(  N,w\right)  =\left(  MN,v+Mw\right)  ;\quad
+v,w\in\mathbb{R}^{n};M,N\in GL\left(  n,\mathbb{R}\right)  ,
+\end{equation}
+which can be represented in terms of matrices of the form
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+M & v\\
+0 & 1
+\end{array}
+\right)  \in M\left(  n+1,n+1,\mathbb{R}\right)  ,
+\end{equation}
+where
+\begin{equation}
+M\in M\left(  n,n,\mathbb{R}\right)  ;M\in M\left(  1,n,\mathbb{R}\right)
+;1\in M\left(  1,1,\mathbb{R}\right)  .
+\end{equation}
+\emph{Similar}$\equiv$\emph{isomorphic representations} to this matric
+representation are given by matrices belonging to $M\left(  n+1,n+1,\mathbb{R}%
+\right)  $ in which the entries in each column sum to $1$ i.e.%
+\begin{equation}
+\sum_{1\leq j\leq m+1}m_{kj}=1
+\end{equation}
+and the similarity transform between the two representations is given by
+\begin{equation}
+T\left(
+\begin{array}
+[c]{cc}%
+M & v\\
+0 & 1
+\end{array}
+\right)  T^{-1}=\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{n} & 0\\
+1 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+M & v\\
+0 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{n} & 0\\
+1 & 1
+\end{array}
+\right)  ^{-1}.
+\end{equation}
+In the case $n=1$ the upper triangular $2\times2$ matrices represent the
+affine group in one dimension. It is a two-parameter nonabelian Lie group with
+Lie algebra generated by
+\begin{align}
+A  &  =\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 0
+\end{array}
+\right)  ,B=\left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+0 & 0
+\end{array}
+\right) \\
+&  \left[  \left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 0
+\end{array}
+\right)  ,\left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+0 & 0
+\end{array}
+\right)  \right]  =\left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+0 & 0
+\end{array}
+\right)  ,
+\end{align}
+so that
+\begin{equation}
+\exp\left\{  aA+bB\right\}  =\left(
+\begin{array}
+[c]{cc}%
+e^{a} & \frac{b}{a}\left(  e^{a}-1\right) \\
+0 & 1
+\end{array}
+\right)  .
+\end{equation}
+
+
+\begin{remark}
+The \emph{Poincare group} is the affine group of the \emph{Lorentz group}
+\begin{equation}
+\mathcal{P}\left(  1,3,\mathbb{R}\right)  =\mathbb{R}^{\left(  1,3\right)
+}\ltimes O\left(  1,3,\mathbb{R}\right)  .
+\end{equation}
+
+\end{remark}
+
+The subgroup of affine dilations $DIL\left(  V\right)  \subset GA\left(
+V,\mathbb{F}\right)  $ is given by
+\begin{equation}
+DIL\left(  V\right)  =T^{-1}\left(  \left\{  \left.  \lambda I_{\Delta
+V}\right\vert \lambda\neq0\in\mathbb{R}\right\}  \right)
+\end{equation}
+and is the disjoint union of translations and dilatations of ratio
+$\lambda\neq0.$Given any point $a\in V$ and any scalar $\lambda\in\mathbb{R}$
+a \emph{dilation} $\equiv$ \emph{central} \emph{dilation} $\equiv$
+\emph{homothety of centrer }$a,$ $H_{a,\lambda}$ and ratio $\lambda$ is given
+by
+\begin{equation}
+H_{a,\lambda}\left(  x\right)  =a+\lambda\Delta\left(  xa\right)
+;\quad\forall x\in V.
+\end{equation}
+
+
+\subsubsection{Projective group}
+
+The group $PGL\left(  n+1,\mathbb{F}\right)  $ of transformations of the
+$n$-dimensional projective space $P(\mathbb{F}^{n+1})$ induced by the linear
+transformations of $\mathbb{F}^{n+1}$. There is a natural \emph{epimorphism}%
+\begin{equation}
+P:GL\left(  n+1,\mathbb{F}\right)  \rightarrow PGL\left(  n+1,\mathbb{F}%
+\right)  ,
+\end{equation}
+with as kernel the centre $\mathcal{Z}\left(  GL\left(  n+1,\mathbb{F}\right)
+\right)  $ of $GL\left(  n+1,\mathbb{F}\right)  $. Hence
+\begin{equation}
+\frac{PGL\left(  n+1,\mathbb{F}\right)  }{\mathcal{Z}\left(  GL\left(
+n+1,\mathbb{F}\right)  \right)  }.
+\end{equation}
+
+
+The elements of $PGL\left(  n+1,\mathbb{F}\right)  $ are called projective
+transformations of $P(\mathbb{F}^{n+1})$. Along with $PGL\left(
+n+1,\mathbb{F}\right)  $, which is also called the full projective group, one
+can also considers the unimodular projective group $PSL\left(  n+1,\mathbb{F}%
+\right)  $, and, in general, groups of the form $PG\left(  n+1,\mathbb{F}%
+\right)  \subset PGL\left(  n+1,\mathbb{F}\right)  $, where $G\subset
+GL\left(  n+1,\mathbb{F}\right)  $ is a linear group of $GL\left(
+n+1,\mathbb{F}\right)  $.
+
+\subsection{Projective Spaces}
+
+\emph{Affine spaces are subspaces of projective spaces}. An \emph{affine
+plane} can be obtained from any \emph{projective plane} by removing a line and
+all the points on it, and conversely any affine plane can be used to construct
+a projective plane as a closure by adding a line at infinity whose points
+correspond to equivalence classes of parallel lines.
+
+Further, transformations of projective space that preserve affine space
+(equivalently, that leave the hyperplane at infinity invariant as a set) yield
+transformations of affine space. \emph{Conversely, any affine linear
+transformation extends uniquely to a projective linear transformation, so the
+affine group is a subgroup of the projective group}. For instance,
+\emph{M\"{o}bius transformations} (projective transformations of the complex
+projective line, or Riemann sphere) are affine (transformations of the complex
+plane) if and only if they fix the point at infinity.
+
+Complex projective spaces, $P\left(  \mathbb{C}^{n+1}\right)  ,$ are formed by
+equivalence class of vectors that are colinear i.e. the points are
+\begin{equation}
+\left[  v\right]  =\left\{  \left.  \lambda v\right\vert \lambda\neq
+0\in\mathbb{C},v\in\mathbb{C}^{n+1}\right\}  .
+\end{equation}
+Real projective spaces, $P\left(  \mathbb{R}^{n+1}\right)  ,$ are formed by
+equivalence class of vectors that are colinear i.e. the points are
+\begin{equation}
+\left[  v\right]  =\left\{  \left.  \lambda v\right\vert \lambda\neq
+0\in\mathbb{R},v\in\mathbb{R}^{n+1}\right\}  .
+\end{equation}
+Projective spaces are \emph{NOT} linear spaces, though they can be embedded in
+linear spaces as non linear manifolds. One can define \emph{coordinate charts}
+$U_{j}$ by
+\begin{align}
+U_{j}  &  =\left\{  \left.  \left[  \mathbf{z}\right]  _{j}\right\vert
+z_{j}\neq0;1\leq j\leq n+1\right\} \\
+\left[  \mathbf{z}\right]  _{j}  &  =\left(  \frac{z_{1}}{z_{j}},\cdots
+,\frac{z_{n+1}}{z_{j}}\right) \\
+1  &  \leq j\leq n+1.
+\end{align}
+Thus one can see that
+\begin{equation}
+\left[  \lambda\mathbf{z}\right]  =\left[  \mathbf{z}\right]  ;\lambda
+\in\mathbb{C}.
+\end{equation}
+The coordinates in the coordinate chart $U_{1}$ are equivalent to affine
+coordinates i.e.
+\begin{equation}
+\left[  \mathbf{z}\right]  _{1}=\left(  \frac{z_{1}}{z_{1}},\cdots
+,\frac{z_{n+1}}{z_{1}}\right)  =\left(  1,\frac{z_{2}}{z_{1}},\cdots
+,\frac{z_{n+1}}{z_{1}}\right)
+\end{equation}
+and thus form an affine coordinate system, this of course can be achieved for
+all the charts $\left\{  \left.  U_{j}\right\vert 1\leq j\leq n+1\right\}
+.$These $n+1$ charts cover $P\left(  \mathbb{C}^{n+1}\right)  ,$ thus it is
+possible to give the metric in terms of the affine coordinates $\left(
+z_{1},\cdots,z_{n}\right)  $ on $U_{j}.$
+
+The coordinate transitions between two different such charts $U_{j}$ and
+$U_{k}$ are \emph{holomorphic functions} (in fact they are \emph{fractional
+linear transformations}). Thus $P\left(  \mathbb{C}^{n+1}\right)  $ carries
+the structure of a \emph{complex manifold} of complex dimension $n$, and a
+fortiori the structure of a \emph{real differentiable manifold} of real
+dimension $2n$.
+
+$P\left(  \mathbb{C}^{n+1}\right)  $ is a \emph{Hermitian Symmetric Space that
+is a representation of a coset space }i.e. \emph{ }
+\begin{equation}
+P\left(  \mathbb{C}^{n+1}\right)  =\left.  U\left(  n+1\right)  \right/
+\left(  U\left(  1\right)  \times U\left(  n\right)  \right)  \cong\left.
+SU\left(  n+1\right)  \right/  \left(  SU\left(  1\right)  \times SU\left(
+n\right)  \right)  .
+\end{equation}
+The \emph{geodesic symmetry} at a point $p$ is the unitary transformation that
+fixes $p\in\mathbb{C}^{n+1}$ and is the negative identity on the orthogonal
+complement of the line represented by $p.$
+
+The left coset $\mathcal{L}_{H}\left(  G\right)  \equiv G\left/  H\right.  $
+of a group $G$ by a subgroup $H$ is the set of group elements
+\begin{align}
+\mathcal{L}_{H}  &  :G\rightarrow G\left/  H\right. \\
+\mathcal{L}_{H}\left(  G\right)   &  \equiv G\left/  H\right.  =\left\{
+\left.  gh\right\vert g\in G;h\in H\right\}
+\end{align}
+i.e.
+\begin{equation}
+\mathcal{L}_{H}\left(  g\right)  =gh.
+\end{equation}
+The action of $G$ on $G\left/  H\right.  $ is given by
+\begin{gather}
+G:G\left/  H\right.  \rightarrow G\left/  H\right. \\
+g\left(  g_{1}h\right)  =\left(  gg_{1}\right)  h\in G\left/  H\right.
+\end{gather}
+and is transitive, thus $G\left/  H\right.  $ is a \emph{homogeneous space}
+wrt $G.$ The representation induced by $G\left/  H\right.  $ of $G$ is \emph{a
+non linear one}.
+
+\begin{remark}
+$G\left/  H\right.  $ is a subgroup if $H$ iff is a normal subgroup.
+\end{remark}
+
+\begin{theorem}
+Let a Lie group $G$ act smoothly and \emph{transitively} on a connected
+manifold $\mathcal{M}$ and define a Lie subgroup $H\subset G$ for a fixed
+point $x\in\mathcal{M}$, by $gx=x,$ the \emph{isotropy group} of the point
+$x.$ The isotropy group of any other point is also $H$ due to the transitive
+nature of the action of $G$ on $\mathcal{M}$. Then the coset $G/H$ is
+diffeomorphic to $\mathcal{M}.$
+\end{theorem}
+
+\begin{definition}
+\emph{GEODISIC: }Through any two points $p,q$ in a \emph{complex projective
+space}, there passes a unique complex line ($P\left(  \mathbb{C}^{1}\right)
+$). A great circle of this complex line that contains $p$ and $q$ is a
+\emph{geodesic} for the \emph{Fubini-Study} metric (this is the
+\emph{K\"{a}hler Metric} for this coset space). In particular, all of the
+geodesics are closed (they are circles), and all have equal length. (This is
+always true of Riemannian globally symmetric spaces of rank 1.)
+
+\begin{remark}
+The odd-dimensional projective planes can be given a spin structure, the
+even-demensional ones cannot.
+\end{remark}
+\end{definition}
+
+Complex projective spaces are a special case of \emph{Grassmannians}, and are
+\emph{homogeneous spaces} for various Lie groups. They are \emph{K\"{a}hler
+manifolds} carrying the \emph{Fubini--Study metric}, which is essentially
+determined by symmetry properties.
+
+\begin{example}
+The set of vectors belonging to $\mathcal{H},$ where $\dim\left\{
+\mathcal{H}\right\}  =n+1$
+\begin{equation}
+\left\vert \Psi\left(  \mathbf{z}\right)  \right\rangle =\left(  1+\left\Vert
+\mathbf{z}\right\Vert ^{2}\right)  ^{-\frac{1}{2}}\exp\left\{  \sum_{2\leq
+j\leq n+1}z_{j}\left\vert \Psi_{j}\right\rangle \left\langle \Psi
+_{1}\right\vert \right\}  \left\vert \Psi_{1}\right\rangle
+\end{equation}
+generated by a normalized vector $\left\vert \Psi_{1}\right\rangle $ are
+coherent states associated with the coset
+\begin{equation}
+\left(  1+\left\Vert \mathbf{z}\right\Vert ^{2}\right)  ^{-\frac{1}{2}}%
+\exp\left\{  \sum_{2\leq j\leq n+1}z_{j}\left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{1}\right\vert \right\}  \in\left.  U\left(  n+1\right)
+\right/  \left(  U\left(  1\right)  \times U\left(  n\right)  \right)  ,
+\end{equation}
+which are in fact the set of all normalized vectors in $\mathcal{H\cong%
+}\mathbb{C}^{n+1}.$ In this case the coherent states form a \emph{linear
+differentiable K\"{a}hler manifold,} which is isomorphic to $\mathbb{C}%
+^{n+1},$ but parameterized in a non linear way. The manifold $\mathbb{C}%
+^{n+1}$ is diffeomorphic to the coset $\left.  U\left(  n+1\right)  \right/
+\left(  U\left(  1\right)  \times U\left(  n\right)  \right)  .$
+
+The coset arrises from the unitary group, $U\left(  \mathcal{H}\right)  $
+factorization
+\begin{gather}
+u\left(  \mathbf{z,}\boldsymbol{\lambda}\right)  =\exp\left\{  \sum_{2\leq
+j\leq n+1}z_{j}\left\vert \Psi_{j}\right\rangle \left\langle \Psi
+_{1}\right\vert \right\}  \exp i\left\{  \lambda_{0}\left\vert \Psi
+_{1}\right\rangle \left\langle \Psi_{1}\right\vert \right\}  \exp i\left\{
+\sum_{2\leq j\leq n+1}\lambda_{jk}\left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{k}\right\vert \right\}  \exp\left\{  \sum_{2\leq j\leq
+n+1}\overline{z}_{j}\left\vert \Psi_{1}\right\rangle \left\langle \Psi
+_{j}\right\vert \right\} \\
+\mathbf{z\in}\mathbb{C}^{n};\boldsymbol{\lambda}\in M\left(  \mathbb{C}%
+^{n+1}\right)  ;\boldsymbol{\lambda}=\boldsymbol{\lambda}^{\dagger}.
+\end{gather}
+The set of one dimensional orthogonal projectors
+\begin{equation}
+\mathcal{P}\left(  \mathcal{H}\right)  =\left\{  \left.  \overset{}{\left\vert
+\Psi\right\rangle \left\langle \Psi\right\vert }\right\vert \left\Vert
+\Psi\right\Vert ^{2}=1,\left\vert \Psi\right\rangle \in\mathcal{H}\right\}
+\end{equation}
+correspond in a $1-1$ fashion to lines $\left\{  \left.  \overset{}{\alpha
+\left\vert \Psi\right\rangle }\right\vert \left\Vert \Psi\right\Vert
+^{2}=1,\left\vert \Psi\right\rangle \in\mathcal{H},\alpha\in\mathbb{C}%
+\right\}  $ and can be parameterized by the coset parameters $\mathbf{z}$ by
+\begin{equation}
+P\left(  \mathbf{z}\right)  =\left(  1+\left\Vert \mathbf{z}\right\Vert
+^{2}\right)  \exp\left\{  \sum_{2\leq j\leq n+1}z_{j}\left\vert \Psi
+_{j}\right\rangle \left\langle \Psi_{1}\right\vert \right\}  \left\vert
+\Psi_{1}\right\rangle \left\langle \Psi_{1}\right\vert \exp\left\{
+\sum_{2\leq j\leq n+1}\overline{z}_{j}\left\vert \Psi_{1}\right\rangle
+\left\langle \Psi_{j}\right\vert \right\}  ,
+\end{equation}
+i.e.
+\begin{equation}
+\mathcal{P}\left(  \mathcal{H}\right)  \cong\left\{  \left.  P\left(
+\mathbf{z}\right)  \right\vert \mathbf{z\in}\mathbb{C}^{n+1}\right\}  .
+\end{equation}
+\emph{The projective space} $P\left(  \mathbb{C}^{n+1}\right)  $ \emph{is a
+representation of }the coset $\left.  U\left(  n+1\right)  \right/  \left(
+U\left(  1\right)  \times U\left(  n\right)  \right)  ,$ and is diffeomorphic
+with $\mathcal{P}\left(  \mathcal{H}\right)  ,$ where $\dim\left\{
+\mathcal{H}\right\}  =n+1.$ The set $\mathcal{P}\left(  \mathcal{H}\right)  $
+is a non linear manifold contained in $\mathcal{B}\left(  \mathcal{H}\right)
+,$ (linear combinations of one dimensional projectors are not one dimensional
+projectors). Both $\left.  U\left(  n+1\right)  \right/  \left(  U\left(
+1\right)  \times U\left(  n\right)  \right)  $ and $\mathcal{P}\left(
+\mathcal{H}\right)  $ can be parameterized by $\mathbf{z\in}\mathbb{C}^{n+1}.$
+\end{example}
+
+\subsubsection{Grassmannian Manifolds}
+
+The generalization of complex projective spaces are \emph{Grassmannian
+Manifolds }that are diffeomorphic to cosets $G/H,$ when
+\begin{align}
+G  &  =U\left(  n+1\right) \\
+H  &  =U\left(  m\right)  \times U\left(  n+1-m\right)  ,
+\end{align}
+that correspond to\emph{ }
+
+\begin{enumerate}
+\item \emph{the non linear manifold, $\mathcal{M}_{\mathcal{H}^{\text{1}}}$%
+}$\left(  m\right)  ,$\emph{ of} \emph{the} \emph{set, }$\left\{
+\mathcal{H}^{1}\left(  m\right)  \right\}  ,$ \emph{of} $m-$\emph{dimensional
+subspaces} $\mathcal{H}^{1}\left(  m\right)  \subseteq\mathcal{H}^{1}$, where
+\begin{equation}
+\dim\left\{  \mathcal{H}^{1}\left(  m\right)  \right\}  =q;\quad0\leq q\leq m
+\end{equation}
+
+
+\item \emph{or equivalently} \emph{to the non linear manifold of orthogonal
+projectors,}$\left\{  P_{\mathcal{H}^{1}}\left(  m\right)  \right\}  ,$\emph{
+onto these subspaces,}
+\begin{equation}
+\operatorname{Tr}_{\mathcal{H}^{1}}\left\{  P_{\mathcal{H}^{1}}\left(
+m\right)  \right\}  =q;\quad0\leq q\leq m
+\end{equation}
+
+
+\item \emph{or equivalently to the non linear manifold of the set of one
+dimensional orthogonal projectors, }$\left\{  P_{\mathcal{H}_{b}^{m}}\left(
+1\right)  \right\}  ,$\emph{ onto blades contained in} $\mathcal{H}^{m}=%
+%TCIMACRO{\tbigwedge \nolimits^{m}}%
+%BeginExpansion
+{\textstyle\bigwedge\nolimits^{m}}
+%EndExpansion
+\left(  \mathcal{H}\right)  ,$%
+\begin{equation}
+\operatorname{Tr}_{\mathcal{H}^{m}}\left\{  P_{\mathcal{H}_{b}^{m}}\left(
+1\right)  \right\}  =1.
+\end{equation}
+The sets of $m$-dimensional subspaces $\left\{  \left.  \mathcal{H}^{1}\left(
+m\right)  \subseteq\mathcal{H}^{1}\right\vert 0\leq m\leq n+1\right\}  $ are
+in $1-1$ correspondence with normalized blades $\left\vert e_{j_{1}}\cdots
+e_{j_{m}}\right\rangle $ in the exterior product spaces $\left\{  \left.
+\mathcal{H}^{m}\right\vert 0\leq m\leq n+1\right\}  $ and thus orthogonal one
+dimensional projectors, $\left\vert e_{j_{1}}\cdots e_{j_{m}}\right\rangle
+\left\langle e_{j_{1}}\cdots e_{j_{m}}\right\vert ,$ onto blades$.$
+\end{enumerate}
+
+The Grassmannian manifolds, $\mathcal{G}_{m}\left(  \mathcal{H}^{1}\right)  ,$
+of $m$-dimensional subspaces of $\mathcal{H}^{1}$, are in $1-1$ correspondence
+with orthogonal projectors onto those subspaces and are parameterized by
+$\mathbf{z}_{m}\in\mathbb{C}^{m\left(  n+1-m\right)  }$ for $0\leq m\leq n+1$
+by
+\begin{align}
+P_{m}\left(  \mathbf{z}\right)   &  =\det\left\{  \mathbb{I}_{m}%
++\mathbb{Z}_{m}\mathbb{Z}_{m}^{\dagger}\right\}  ^{-1}\exp\left\{
+\sum_{\substack{m+1\leq p\leq n+1\\1\leq h\leq m}}z_{mph}a_{p}^{\dagger}%
+a_{h}\right\}  \left\vert \varphi_{1}\cdots\varphi_{m}\right\rangle
+\left\langle \varphi_{1}\cdots\varphi_{m}\right\vert \exp\left\{
+\sum_{\substack{m+1\leq p\leq n+1\\1\leq h\leq m}}\overline{z}_{mph}%
+a_{h}^{\dagger}a_{p}\right\} \\
+&  =\widehat{u\left(  \mathbf{z}_{m}\right)  }\left(  \left\vert \varphi
+_{1}\cdots\varphi_{m}\right\rangle \left\langle \varphi_{1}\cdots\varphi
+_{m}\right\vert \right)  ,
+\end{align}
+where $\mathbb{Z}_{m}$ is a $\left(  n+1-m\right)  \times m$ complex matrix
+and
+\begin{equation}
+u\left(  \mathbf{z}_{m}\right)  =\det\left\{  \mathbb{I}_{m}+\mathbb{Z}%
+_{m}\mathbb{Z}_{m}^{\dagger}\right\}  ^{-\frac{1}{2}}\exp\left\{
+\sum_{\substack{m+1\leq p\leq n+1\\1\leq h\leq m}}z_{mph}a_{p}^{\dagger}%
+a_{h}\right\}  .
+\end{equation}
+Points of these manifolds are left invariant by representations of the direct
+unitary product group $U\left(  m\right)  \times U\left(  n+1-m\right)
+\subset U\left(  \mathcal{H}\right)  ,$while representations of the coset
+$\left.  U\left(  n+1\right)  \right/  \left(  U\left(  m\right)  \times
+U\left(  n+1-m\right)  \right)  $ act \emph{homogeneously} on these manifolds
+(thus all projectors are produced from a reference projector).
+
+The set of all projectors, $\mathcal{P}\left(  \mathcal{H}^{1}\right)  ,$onto
+subspaces of \emph{any dimension} of $\mathcal{H}^{1}$ is mapped into itself
+under the action of the unitary group $U\left(  \mathcal{H}^{1}\right)  ,$
+while projectors, $P_{\mathcal{H}^{1}}\left(  m\right)  ,$ onto subspaces,
+$\mathcal{H}\left(  m\right)  ,$ of dimension $m$ are mapped onto themselves
+by the subgroups $U\left(  \mathcal{H}\left(  m\right)  \right)  \subseteq
+U\left(  \mathcal{H}^{1}\right)  ;1\leq m\leq n+1.$
+
+\begin{remark}
+$U\left(  \mathcal{H}^{1}\right)  $ acts on $\mathcal{H}_{\mathcal{F}}=%
+%TCIMACRO{\tbigoplus \limits_{0\leq m\leq n+1}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{0\leq m\leq n+1}}
+%EndExpansion
+\mathcal{H}^{m}\equiv%
+%TCIMACRO{\tbigoplus \limits_{0\leq m\leq n+1}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{0\leq m\leq n+1}}
+%EndExpansion%
+%TCIMACRO{\tbigwedge \nolimits^{m}}%
+%BeginExpansion
+{\textstyle\bigwedge\nolimits^{m}}
+%EndExpansion
+\left(  \mathcal{H}^{1}\right)  $ through the representation
+\begin{equation}
+\mathcal{R}_{\mathcal{H}_{\mathcal{F}}}\left(  U\left(  \mathcal{H}%
+^{1}\right)  \right)  =%
+%TCIMACRO{\tbigoplus \limits_{0\leq m\leq n+1}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{0\leq m\leq n+1}}
+%EndExpansion
+\mathcal{R}_{\mathcal{H}^{m}}\left(  U\left(  \mathcal{H}^{1}\right)  \right)
+.
+\end{equation}
+Thus a general $u\in U\left(  \mathcal{H}^{1}\right)  $ is represented by
+\begin{equation}
+\mathcal{R}_{\mathcal{H}_{\mathcal{F}}}\left(  u\right)  =%
+%TCIMACRO{\tbigoplus \limits_{0\leq m\leq n+1}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{0\leq m\leq n+1}}
+%EndExpansion
+\mathcal{R}_{\mathcal{H}^{m}}\left(  u\right)  =\sum_{0\leq m\leq n+1}%
+\det\left\{  \mathbb{I}_{m}+\mathbb{Z}_{m}\mathbb{Z}_{m}^{\dagger}\right\}
+^{-\frac{1}{2}}\exp\left\{  \sum_{\substack{m+1\leq p\leq n+1\\1\leq h\leq
+m}}z_{mph}a_{p}^{\dagger}a_{h}\right\}
+\end{equation}
+and
+\begin{equation}
+\widehat{\mathcal{R}_{\mathcal{H}_{\mathcal{F}}}\left(  u\right)  }\left(
+P\right)  =\sum_{0\leq m\leq n+1}\det\left\{  \mathbb{I}_{m}+\mathbb{Z}%
+_{m}\mathbb{Z}_{m}^{\dagger}\right\}  ^{-1}\exp\left\{  \sum
+_{\substack{m+1\leq p\leq n+1\\1\leq h\leq m}}z_{mph}a_{p}^{\dagger}%
+a_{h}\right\}  P\exp\left\{  \sum_{\substack{m+1\leq p\leq n+1\\1\leq h\leq
+m}}\overline{z}_{mph}a_{p}^{\dagger}a_{h}\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+The space $\mathcal{H}_{\mathcal{F}}$ carries an irrep of $U\left(
+\mathcal{H}_{\mathcal{F}}\right)  $ as well as the reducible representation of
+$U\left(  \mathcal{H}^{1}\right)  .$ The individual summands $\mathcal{H}^{m}$
+carry irreps of both $U\left(  \mathcal{H}^{m}\right)  $ and $U\left(
+\mathcal{H}^{1}\right)  .$
+\end{remark}
+
+\begin{remark}
+Consider the projector
+\begin{equation}
+\frac{1}{2}\left\vert \varphi_{1}+\left\vert \varphi_{2}\varphi_{3}%
+\right\rangle \right\rangle \left\langle \varphi_{1}+\left\vert \varphi
+_{2}\varphi_{3}\right\rangle \right\vert =\frac{1}{2}\left(  \left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{2}\varphi_{3}\right\vert
++\left\vert \varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi_{2}\varphi_{3}\right\rangle \left\langle
+\varphi_{2}\varphi_{3}\right\vert \right)
+\end{equation}
+and its orbit under the representation $\widehat{\mathcal{R}_{\mathcal{H}%
+_{\mathcal{F}}}\left(  \mathcal{H}^{1}\right)  }$
+\begin{align}
+&  \widehat{\mathcal{R}_{\mathcal{H}_{\mathcal{F}}}\left(  u\right)  }\left(
+\frac{1}{2}\left\vert \varphi_{1}+\left\vert \varphi_{2}\varphi_{3}%
+\right\rangle \right\rangle \left\langle \varphi_{1}+\left\vert \varphi
+_{2}\varphi_{3}\right\rangle \right\vert \right)  =\widehat{\mathcal{R}%
+_{\mathcal{H}_{\mathcal{F}}}\left(  u\right)  }\left(  \frac{1}{2}\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert +\left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{2}\varphi_{3}\right\vert
++\left\vert \varphi_{2}\varphi_{3}\right\rangle \left\langle \varphi
+_{1}\right\vert +\left\vert \varphi_{2}\varphi_{3}\right\rangle \left\langle
+\varphi_{2}\varphi_{3}\right\vert \right) \\
+&  =\frac{1}{2}\left\vert \varphi_{1}\left(  \mathbf{z}_{1}\right)
+\right\rangle \left\langle \varphi_{1}\left(  \mathbf{z}_{1}\right)
+\right\vert +\left\vert \varphi_{1}\left(  \mathbf{z}_{1}\right)
+\right\rangle \left\langle \varphi_{2}\varphi_{3}\right\vert +\left\vert
+\varphi_{2}\varphi_{3}\left(  \mathbf{z}_{2}\right)  \right\rangle
+\left\langle \varphi_{1}\left(  \mathbf{z}_{1}\right)  \right\vert +\left\vert
+\varphi_{2}\varphi_{3}\left(  \mathbf{z}_{2}\right)  \right\rangle
+\left\langle \varphi_{2}\varphi_{3}\left(  \mathbf{z}_{2}\right)  \right\vert
+,
+\end{align}
+these projectors \emph{DO\ NOT} correspond to subspaces of $\mathcal{H}^{1}.$
+\end{remark}
+
+\begin{theorem}%
+\begin{equation}
+\det\left\{  \mathbb{I}_{n}+\mathbb{Z}_{n}\mathbb{Z}_{n}^{\dagger}\right\}
+^{-\frac{1}{2}}\exp\left\{  \sum_{\substack{n+1\leq p\leq r\\1\leq h\leq
+n}}z_{mph}a_{p}^{\dagger}a_{h}\right\}  \left\vert \varphi_{1}\cdots
+\varphi_{n}\right\rangle =\det\left\{  \mathbb{I}_{n}+\mathbb{Z}_{n}%
+\mathbb{Z}_{n}^{\dagger}\right\}  ^{-\frac{1}{2}}\left\vert \varphi_{1}\left(
+\mathbf{z}_{\left(  n\right)  1}\right)  \cdots\varphi_{m}\left(
+\mathbf{z}_{\left(  n\right)  n}\right)  \right\rangle
+\end{equation}
+
+
+\begin{proof}
+For a fixed number of particles $n$ the particle-hole operators commute
+\begin{align}
+a_{p_{1}}^{\dagger}a_{h_{1}}a_{p_{2}}^{\dagger}a_{h_{2}}  &  =a_{p_{1}%
+}^{\dagger}a_{p_{2}}^{\dagger}a_{h_{2}}a_{h_{1}}\\
+a_{p_{2}}^{\dagger}a_{h_{2}}a_{p_{1}}^{\dagger}a_{h_{1}}  &  =a_{p_{2}%
+}^{\dagger}a_{p_{1}}^{\dagger}a_{h_{1}}a_{h_{2}}=a_{p_{1}}^{\dagger}a_{p_{2}%
+}^{\dagger}a_{h_{2}}a_{h_{1}}\\
+\left[  a_{p_{1}}^{\dagger}a_{h_{1}},a_{p_{2}}^{\dagger}a_{h_{2}}\right]   &
+=0
+\end{align}
+
+\end{proof}
+\end{theorem}
+
+thus%
+\begin{align}
+\exp\left\{  \sum_{\substack{n+1\leq p\leq r\\1\leq h\leq n}}z_{nph}%
+a_{p}^{\dagger}a_{h}\right\}   &  =\exp\left\{  \sum_{n+1\leq p\leq r}%
+z_{np1}a_{p}^{\dagger}a_{1}\right\}  \cdots\exp\left\{  \sum_{n+1\leq p\leq
+r}z_{nph}a_{p}^{\dagger}a_{m}\right\} \\
+&  =\exp\left\{  \sum_{n+1\leq p\leq r}z_{\left(  n\right)  p1}a_{p}^{\dagger
+}a_{1}\right\}  \cdots\exp\left\{  \sum_{n+1\leq p\leq r}z_{\left(  n\right)
+pn}a_{p}^{\dagger}a_{n}\right\}  ,
+\end{align}
+where
+\begin{equation}
+\mathbf{z}_{\left(  n\right)  h}=\left(
+\begin{array}
+[c]{c}%
+z_{\left(  n\right)  n+1h}\\
+\vdots\\
+z_{\left(  n\right)  rh}%
+\end{array}
+\right)  \in\mathbb{C}^{r-n}.
+\end{equation}
+
+
+\subsubsection{Automorphisms of Coset Spaces $\left(  \text{and Projective
+Spaces}\right)  $}
+
+Transformations, $\mathcal{T},$ acting on coset spaces
+\begin{equation}
+\mathcal{T}_{j}:G/H\rightarrow G/H
+\end{equation}
+can be naturally extended to diffeomorphic manifolds
+\begin{equation}
+G/H\cong\mathcal{M}\left(  \mathbf{z}\right)
+\end{equation}
+as linear fractional transformations (also called homographies)%
+\begin{equation}
+\mathcal{T}_{j}:\mathcal{M}\left(  \mathbf{z}\right)  \rightarrow
+\mathcal{M}\left(  \mathbf{z}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{T}_{j}\left(  \mathbf{z}\right)  =\left(  \mathbb{A}_{j}%
+\mathbf{z+b}_{j}\right)  \left(  \mathbb{C}_{j}\mathbf{z+d}_{j}\right)  ^{-1}.
+\end{equation}
+
+
+In particular for complex projective spaces where
+\begin{equation}
+G/H=\left.  U\left(  n+1\right)  \right/  \left(  U\left(  1\right)  \times
+U\left(  n\right)  \right)
+\end{equation}
+such mappings transform between elements of $\mathcal{P}\left(  \mathcal{H}%
+\right)  $%
+\begin{equation}
+\mathcal{T}_{j}:\mathcal{P}\left(  \mathcal{H}\right)  \rightarrow
+\mathcal{P}\left(  \mathcal{H}\right)  ,
+\end{equation}
+can be parameterized by $\mathbf{z\in}\mathbb{C}^{n+1}$ and are called
+\emph{generalized Mobius Transfromations. The group multiplication
+}$\mathcal{T}_{1}\cdot\mathcal{T}_{2}$ \emph{is given by composition i.e. }%
+\begin{equation}
+\left[  \mathcal{T}_{1}\cdot\mathcal{T}_{2}\right]  \left(  \mathbf{z}\right)
+=\left[  \mathcal{T}_{1}\circ\mathcal{T}_{2}\right]  \left(  \mathbf{z}%
+\right)  =\mathcal{T}_{1}\left(  \mathcal{T}_{2}\left(  \mathbf{z}\right)
+\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{T}_{1}\left(  \mathcal{T}_{2}\left(  \mathbf{z}\right)  \right)
+=\mathcal{T}_{1}\left(  \left(  \mathbb{A}_{2}\mathbf{z+b}_{2}\right)  \left(
+\mathbb{C}_{2}\mathbf{z+d}_{2}\right)  ^{-1}\right)  =\left(  \mathbb{A}%
+_{1}\left(  \mathbb{A}_{2}\mathbf{z+b}_{2}\right)  \left(  \mathbb{C}%
+_{2}\mathbf{z+d}_{2}\right)  ^{-1}+\mathbf{b}_{1}\right)  \left(
+\mathbb{C}_{1}\left(  \mathbb{A}_{2}\mathbf{z+b}_{2}\right)  \left(
+\mathbb{C}_{2}\mathbf{z+d}_{2}\right)  ^{-1}+\mathbf{d}_{1}\right)  ^{-1}.
+\end{equation}
+$\lceil$%
+\begin{align}
+f_{j}\left(  x\right)   &  =a_{j}x+b_{j}\\
+\left[  f_{1}\circ f_{2}\right]  \left(  x\right)   &  =f_{1}\left(
+f_{2}\left(  x\right)  \right)  =f_{1}\left(  a_{2}x+b_{2}\right)
+=a_{1}\left(  a_{2}x+b_{2}\right)  +b_{1}%
+\end{align}
+$\rfloor$
+
+\subsection{Subspaces of Vector Spaces}
+
+A subspace, $V,$ of a vector space always (by definition) contains the zero
+vector. The \emph{translation} of a vector subspace is a an \emph{affine
+subspace} $V_{a}$ i.e.
+\begin{align}
+V  &  =\mathbb{F}-\operatorname*{linspan}\left\{  \left.  e_{j}\right\vert
+1\leq j\leq r\right\} \\
+V_{a}  &  =\left\{  \left.  v+a\right\vert \forall v\in V,\text{ fixed }a\in
+V\right\}  .
+\end{align}
+The affine subspace $V_{a}$ is closed under \emph{Barycentric combinations}
+i.e.%
+\begin{equation}
+V_{a}=\left\{  \left.  \sum_{1\leq j\leq n}\lambda_{j}v_{aj}\right\vert
+v_{aj}\in V_{a},1\leq j\leq n\right\}  ,
+\end{equation}
+where
+\begin{equation}
+\sum_{1\leq j\leq n}\lambda_{j}=1,\lambda_{j}\in\mathbb{F},1\leq j\leq n.
+\end{equation}
+The space $V_{a}$ is \emph{NOT closed} under substraction i.e.
+\begin{equation}
+v_{2}-v_{1}\notin V_{a}%
+\end{equation}
+\emph{nor addition} i.e.
+\begin{equation}
+v_{2}+v_{1}\notin V_{a}.
+\end{equation}
+
+
+\subsection{ Hyperplanes}
+
+A \emph{hyperplane} passing through the origin is defined by
+\begin{equation}
+H_{0}=\left\{  \left.  \mathbf{x\in}\mathbb{R}^{n}\right\vert \left\langle
+\left.  \mathbf{n}\right\vert \mathbf{x}\right\rangle =0\text{ for fixed
+}\mathbf{n\in}\mathbb{F}^{n},\text{ where }\left\langle \left.  \mathbf{n}%
+\right\vert \mathbf{n}\right\rangle =1\right\}
+\end{equation}
+and it is a subspace as
+\begin{equation}
+\left\langle \left.  \mathbf{n}\right\vert \alpha\mathbf{x+}\beta
+\mathbf{y}\right\rangle =0\quad\forall\alpha\mathbf{,}\beta\mathbf{\in
+}\mathbb{F},\forall\mathbf{x,y\in}H_{0}.
+\end{equation}
+In general a hyperplane not passing through the origin is given by
+\begin{equation}
+H_{b}=\left\{  \left.  \mathbf{x\in}\mathbb{F}^{n}\right\vert \left\langle
+\left.  \mathbf{n}\right\vert \mathbf{x}\right\rangle =b\neq0\text{ for fixed
+}\mathbf{n\in}\mathbb{F}^{n},\text{ where }\left\langle \left.  \mathbf{n}%
+\right\vert \mathbf{n}\right\rangle =1\right\}
+\end{equation}
+so in particular $\mathbf{0}\mathbf{\notin}H_{b}$ and thus is not a subspace.
+
+Barycentric sums of vectors belonging to $H_{b}$ also belong to $H_{b}$ as
+\begin{equation}
+\left\langle \left.  \mathbf{n}\right\vert \alpha\mathbf{x+}\beta
+\mathbf{y}\right\rangle =\left(  \alpha+\beta\right)  b\quad\forall
+\alpha\mathbf{,}\beta\mathbf{\in}\mathbb{F},\forall\mathbf{x,y\in}H_{b}%
+\end{equation}
+when
+\begin{equation}
+\left(  \alpha+\beta\right)  =1\text{ then }\alpha\mathbf{x+}\beta
+\mathbf{y\in}H_{b}.
+\end{equation}
+This also shows that
+\begin{equation}
+\mathbf{x+}\left(  \mathbf{-x}\right)  \notin H_{b}\Rightarrow\mathbf{-x}%
+\notin H_{b}.
+\end{equation}
+One can see that if $\mathbf{x}$ and $\mathbf{y}$ belong to $H_{b}$ then
+$\mathbf{x}-$ $\mathbf{y\in}H_{0}$
+
+Let
+\begin{equation}
+\left\langle \left.  \mathbf{n}\right\vert \mathbf{r}\right\rangle =0\text{
+for a fixed }\mathbf{n}%
+\end{equation}
+then
+\begin{equation}
+\mathbf{x+r\in}H_{b}\text{ if }\left\langle \left.  \mathbf{n}\right\vert
+\mathbf{x}\right\rangle =b.
+\end{equation}
+
+
+\subsection{Reference Frames}
+
+The three dimensional Euclidean Affine space is given by
+\begin{equation}
+\mathbb{E}^{3}=\left\{  \left.  \left(  \mathbf{x,r}_{x}\right)  \right\vert
+\mathbf{x,r}_{x}\in\mathbb{R}^{3}\right\}
+\end{equation}
+%
+
+\begin{align}
+p  &  =\left(  \mathbf{x,r}_{x}\right)  =\left(  \mathbf{y,r}_{y}\right)
+=\left(  \mathbf{x,r}_{y}+\left(  \mathbf{y-x}\right)  \right) \\
+\mathbf{r}_{x}  &  =\mathbf{r}_{y}+\left(  \mathbf{y-x}\right)  .
+\end{align}
+
+
+\subsection{Newtonian Space-Time}
+
+Newtonian space time is a linear Affine space $\mathbb{E}^{4}$ constituted by
+vectors $\left(
+\begin{array}
+[c]{c}%
+\mathbf{r}\\
+t\\
+1
+\end{array}
+\right)  \in\mathbb{R}^{5},$ where transformations between such vectors are
+given by \emph{Galilean Transformations}%
+
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccccc}%
+a_{11} & a_{12} & a_{13} & v_{1} & \alpha_{1}\\
+a_{21} & a_{22} & a_{23} & v_{2} & \alpha_{2}\\
+a_{31} & a_{32} & a_{33} & v_{3} & \alpha_{3}\\
+0 & 0 & 0 & 1 & s\\
+0 & 0 & 0 & 0 & 1
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+r_{1}\\
+r_{2}\\
+r_{3}\\
+t\\
+1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathbb{A}\mathbf{r}+\mathbf{v}t+\mathbf{\alpha}\\
+t+s\\
+1
+\end{array}
+\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathbb{A}\in O\left(  3,\mathbb{R}\right)  ;\mathbf{r,v},\mathbf{\alpha}%
+\in\mathbb{R}^{3};t,s\in\mathbb{R}.
+\end{equation}
+The affine space points $\left\{  \left(  \mathbf{r,}t\right)  \right\}  $
+form a manifold in $\mathbb{R}^{5},$ thus \emph{Galilean Transformations }are
+a subgroup of $GL\left(  5,\mathbb{R}\right)  $ and in fact a \emph{subgroup}
+of $GA\left(  4,\mathbb{R}\right)  $ as time and space are not mixed.
+
+
+\end{document}

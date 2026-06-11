@@ -1,0 +1,2597 @@
+%\bibliographystyle{apsrev}
+%\input{tcilatex}
+
+
+\documentclass[aps,preprint,showpacs,showkeys]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[tcidvi]{graphicx}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{Created=Saturday, December 29, 2001 12:06:49}
+%TCIDATA{LastRevised=Wednesday, July 31, 2002 13:18:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\preprint{AGPOPT}
+\title[Optimized AGP]{An Effective Procedure for Energy Optimizing
+Antisymmetrized Geminal Power States}
+\author{B. Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+\author{J. V. Ortiz}
+\affiliation{Department of Chemistry, Kansas State University, Manhattan, KS 66506-3701}
+\keywords{AGP, Correlation, Self Consistent Calculations}
+
+\begin{abstract}
+A procedure for energy optimizing an Antisymmetrized Geminal Power State,
+which contains a description of correlation effects in an unbiased fashion,
+is presented.
+
+This procedure overcomes difficulties and shortcomings of past optimization
+procedures for Antisymmetrized Geminal Power states. It is shown that the
+computational cost scales as $r^{5}$, where $r$ is the size of the spin
+orbital atomic basis set, which is superior to the scaling costs of multi
+excited Complete Active Space Self Consistent Field calculations, but unlike
+such calculations their is no preselection of configurations or excitation
+level.
+
+The variational parameters are the geminal coefficients with respect to a 
+\emph{fixed }atomic orbital basis, which allows one to classify these
+variables into chemically significant and non significant ones according to
+their magnitudes and thus reduce size of calculations.
+\end{abstract}
+
+\date{05/02/2002}
+\accepted{06/20/2002}
+\received{05/09/2002}
+\published{09/15/2002}
+\startpage{1}
+\maketitle
+
+%\pacs{31.15.A, 03.65.F, 31.15.N, 31.25}
+
+\section{Introduction\label{Introduction}}
+
+Independent Particle States (IPS) have proved a mainstay of molecular
+multi-particle quantum mechanics both in physical modelling and numerical
+applications for many decades. The major attraction of these states lies in
+the conceptually concrete and chemically understandable pictures of
+molecular structure that they provide. Apart from an initial choice of $s$
+atomic orbitals and possibly a decision about the molecular point group and
+spin symmetry, one can obtain an unbiased description of the electronic
+states of a molecule by finding an IPS\ that minimizes the energy. These
+calculations scale at worst as $r^{4}$ where $r=2s$, and it has been shown
+that they asymptotically scale as $r^{2.6}$. A major drawback of IPS\ models
+is that they do not describe electron - electron correlation effects, which
+can be crucial in correctly predicting the chemical and physical properties
+of the system under study. Methods that introduce these effects, in an ab
+initio manner, invariably increase the computational cost of any
+calculation, scale at best as $r^{5}$, and usually involve constraints on
+the molecular state description that reflect some bias beyond the choice of
+the atomic orbital basis.
+
+There is, however, another state ansatz that preserves most of the benefits
+of IPS's, in particular providing an unbiased description of electronic
+states, while at the same time introducing a description of correlation
+effects. These are the Antisymmetrized Geminal Powers (AGP) states that were
+first introduced to quantum chemistry by Coleman \cite%
+{Coleman63,Coleman65,Coleman72} in the context of the analysis of the
+N-representability problem. The class of AGP\ states in fact includes the
+class of IPS's as a special case and so presents a true generalization of
+the independent particle ansatz. In the following decade investigators \cite%
+{Kutzenlig64, Silver69,Silver70,Silver71} examined the use of such states
+and Bratoz and Durand \cite{Bratoz65,Bratoz69} constructed an energy
+optimization procedure. However this procedure was not numerically
+competitive with Hartree-Fock Self Consistent Field Methods nor with methods
+that described correlation by other means. In the late 1970's it was found 
+\cite{Lindeberg77,Lindeberg79,Lindeberg80} that AGP states produce the best
+possible self consistent reference state for the Random Phase Approximation
+(RPA)\ with exchange. This lead to a series of calculations, using real
+restricted AGPs, on diatomic molecules that produced potential energy curves
+for several states simultaneously and the oscillator strengths for
+transitions amongst them over a range of internuclear distances from inside
+the equilibrium position to the dissociation limit \cite%
+{Kurtz83,Weiner84a,Weiner84,Weiner85,Weiner85b,Weiner87,Sangfelt87,Edwards84,Jensen82,Jorgen83}%
+. The results of these calculations were in overall good agreement with
+experiment, however the method was plagued with numerical problems that
+became worse when it was applied to larger molecules.
+
+In this paper we present a parametrization of AGP\ states and an
+optimization procedure that overcomes these previously encountered numerical
+difficulties, which at the same time has computational costs that increases
+more slowly, with respect to the scaling with size of the basis set, than
+comparable CASSCF and MCSCF procedures. The form of the parametrization
+presented allows one to carry out all the calculations in a \emph{fixed}
+localized atomic orbital basis and, as shown in the Appendix \ref{CostofComp}%
+, scales as a $r^{5}$, where $r$ is the size of the spin orbital basis set.
+This scaling should be compared to the \emph{combined }cost of the orbital
+variation (i.e. integral transformations) and C.I variation steps in a
+CASSCF, when almost all orders of excitation are described, which scale in a
+worse fashion due to the large number of independent CI coefficients
+contained in such states.
+
+The AGP\ state is determined by a geminal, which in a given one particle
+basis is determined by $r\left( r-1\right) /2$ complex variables, in
+comparison an IPS\ is determined by $Nr$ complex variables where $N$ is the
+number of electrons. These complex variables act as coordinates of the
+nonlinear manifold of AGP\ states and IPS's respectively and the energy
+associated with states belonging to these manifolds can be expressed as a
+function of these variables. In order to obtain the best approximation to
+the ground state of a given physical system one needs to find a global
+minimum of this energy function. Different choices of one particle bases
+induce different coordinate systems and thus various forms for the energy
+function and its derivatives. By choosing between these forms we construct a
+numerical scheme for the energy optimization of AGP\ states that scales in
+the manner described above. In order to consider the transformations between
+these coordinate systems in full generality\ we first carefully review in
+section \ref{Bases and Geminals} transformations between general spin
+orbitals and atomic orbitals which determine transformations of the
+coordinates labelling geminals. In section \ref{The AGP State} we then
+examine the definition of the AGP state, various forms of the energy
+expression for such\ states and the transformations between these forms. In
+section \ref{First Derivatives} we carry out the analogous analysis for the
+first derivatives and in section \ref{Methods of Optimization} construct an
+optimization scheme using the results of sections \ref{The AGP State} and %
+\ref{First Derivatives}.
+
+\section{Bases and Geminals\label{Bases and Geminals}}
+
+Multi-electronic states are invariably constructed in terms of one particle
+functions $\left\{ \varphi _{j}:1\leq j\leq r\right\} $ of space and spin
+coordinates $\left( \mathbf{r},\xi \right) $ that are products of real
+localized atomic orbitals $\left\{ \chi _{j}:1\leq j\leq s\right\} $ and
+spin functions $\left\{ \alpha ,\beta \right\} $ i.e.%
+\begin{eqnarray}
+\varphi _{j}\left( \mathbf{r},\xi \right) &=&\chi _{j}\left( \mathbf{r}%
+\right) \alpha \left( \xi \right) ;\quad 1\leq j\leq s  \notag \\
+\varphi _{j+s}\left( \mathbf{r},\xi \right) &=&\chi _{j}\left( \mathbf{r}%
+\right) \beta \left( \xi \right) ;\quad s\leq j\leq r
+\end{eqnarray}%
+where $r=2s$. The functions $\left\{ \chi _{j}\right\} $ are linearly
+independent and thus produce a non singular overlap matrix $\mathbb{S}$
+given by 
+\begin{equation}
+S_{ij}=\left\langle \chi _{i}|\chi _{j}\right\rangle =\int \chi _{i}\left( 
+\mathbf{r}\right) \chi _{j}\left( \mathbf{r}\right) d\mathbf{r;\quad }1\leq
+i,j\leq s
+\end{equation}%
+The spin functions $\left\{ \alpha ,\beta \right\} $ are orthonormal i.e. 
+\begin{eqnarray}
+\left\langle \alpha |\alpha \right\rangle &=&\left\langle \beta |\beta
+\right\rangle =1  \notag \\
+\left\langle \alpha |\beta \right\rangle &=&\left\langle \beta |\alpha
+\right\rangle =0
+\end{eqnarray}%
+where spin inner product is 
+\begin{equation}
+\left\langle \sigma |\sigma ^{\prime }\right\rangle =\int \sigma ^{\ast
+}\left( \xi \right) \sigma ^{\prime }\left( \xi \right) d\xi
+\end{equation}%
+and $^{\ast }$ denotes complex conjugation. The functions $\left\{ \varphi
+_{j};1\leq j\leq r\right\} $ form the one particle Hilbert space $\mathcal{H}%
+^{1}$. Orthonormal molecular orbitals $\left\{ \omega _{j}:1\leq j\leq
+s\right\} $ can be defined in terms of the atomic orbitals as 
+\begin{equation}
+\left( \underline{\omega }\right) =\left( \underline{\chi }\right) \mathbb{W}
+\end{equation}%
+where we have used the array of basis functions notation 
+\begin{eqnarray}
+\left( \underline{\omega }\right) &=&\left( \omega _{1},\ldots ,\omega
+_{s}\right)  \notag \\
+\left( \underline{\chi }\right) &=&\left( \chi _{1},\ldots ,\chi _{s}\right)
+\end{eqnarray}%
+The linear transformation $\mathbb{W}$ has the properties 
+\begin{equation}
+\mathbb{W}^{\dagger }\mathbb{SW}=\mathbb{I}_{s}\,\mathbb{\Longleftrightarrow
+WW}^{\dagger }=\mathbb{S}^{-1}\mathbb{\Longleftrightarrow W}^{-1}=\mathbb{W}%
+^{\dagger }\mathbb{S}
+\end{equation}%
+and is clearly non unique as any transformation $\mathbb{WU}$ has the same
+properties when $\mathbb{U}$ is unitary. The molecular orbitals $\left\{
+\omega _{j}:1\leq j\leq s\right\} $ can be used to form \emph{restricted
+spin }bases of the one particle space $\mathcal{H}^{1}$ given by 
+\begin{eqnarray}
+\psi _{j}\left( \mathbf{r},\xi \right) &=&\omega _{j}\left( \mathbf{r}%
+\right) \alpha \left( \xi \right) ;\quad 1\leq j\leq s  \notag \\
+\psi _{j+s}\left( \mathbf{r},\xi \right) &=&\omega _{j}\left( \mathbf{r}%
+\right) \beta \left( \xi \right) ;\quad s<j\leq r
+\end{eqnarray}%
+so that 
+\begin{equation}
+\left( \underline{\psi }\right) =\left( \underline{\varphi }\right) \left( 
+\begin{array}{cc}
+\mathbb{W} & 0 \\ 
+0 & \mathbb{W}%
+\end{array}%
+\right)
+\end{equation}%
+This construction can be generalized to form \emph{unrestricted spin }bases
+for $\mathcal{H}^{1}$ given by 
+\begin{equation}
+\left( \underline{\psi }\right) =\left( \underline{\varphi }\right) \left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha } & 0 \\ 
+0 & \mathbb{W}_{\beta }%
+\end{array}%
+\right)
+\end{equation}%
+where $\mathbb{W}_{\alpha }\neq \mathbb{W}_{\beta }$ but 
+\begin{equation}
+\mathbb{W}_{\alpha }^{\dagger }\mathbb{SW}_{\alpha }=\mathbb{W}_{\beta
+}^{\dagger }\mathbb{SW}_{\beta }=\mathbb{I}_{s}\,
+\end{equation}%
+One can extend this type of construction further to form \emph{generalized
+spin bases }%
+\begin{equation}
+\left( \underline{\psi }\right) =\left( \underline{\varphi }\right) \left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha \alpha } & \mathbb{W}_{\alpha \beta } \\ 
+\mathbb{W}_{\beta \alpha } & \mathbb{W}_{\beta \beta }%
+\end{array}%
+\right)
+\end{equation}%
+where $\mathbb{W}_{\alpha \beta }\neq 0$ and $\mathbb{W}_{\beta \alpha }\neq
+0$ but 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha \alpha } & \mathbb{W}_{\alpha \beta } \\ 
+\mathbb{W}_{\beta \alpha } & \mathbb{W}_{\beta \beta }%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{cc}
+\mathbb{S} & 0 \\ 
+0 & \mathbb{S}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha \alpha } & \mathbb{W}_{\alpha \beta } \\ 
+\mathbb{W}_{\beta \alpha } & \mathbb{W}_{\beta \beta }%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\mathbb{I}_{s} & 0 \\ 
+0 & \mathbb{I}_{s}%
+\end{array}%
+\right) ,
+\end{equation}%
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha \alpha } & \mathbb{W}_{\alpha \beta } \\ 
+\mathbb{W}_{\beta \alpha } & \mathbb{W}_{\beta \beta }%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha \alpha } & \mathbb{W}_{\alpha \beta } \\ 
+\mathbb{W}_{\beta \alpha } & \mathbb{W}_{\beta \beta }%
+\end{array}%
+\right) ^{\dagger }=\left( 
+\begin{array}{cc}
+\mathbb{S} & 0 \\ 
+0 & \mathbb{S}%
+\end{array}%
+\right) ^{-1}
+\end{equation}%
+and 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha \alpha } & \mathbb{W}_{\alpha \beta } \\ 
+\mathbb{W}_{\beta \alpha } & \mathbb{W}_{\beta \beta }%
+\end{array}%
+\right) ^{-1}=\left( 
+\begin{array}{cc}
+\mathbb{W}_{\alpha \alpha } & \mathbb{W}_{\alpha \beta } \\ 
+\mathbb{W}_{\beta \alpha } & \mathbb{W}_{\beta \beta }%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{cc}
+\mathbb{S} & 0 \\ 
+0 & \mathbb{S}%
+\end{array}%
+\right)
+\end{equation}%
+which we can write in non partitioned form as 
+\begin{equation}
+\mathbb{W}_{f}^{-1}=\mathbb{W}_{f}^{\dagger }\mathbb{S}_{f}
+\end{equation}%
+where the subscript ''$f$'' denotes full and 
+\begin{equation}
+\mathbb{A}_{f}\equiv \left( 
+\begin{array}{cc}
+\mathbb{A}_{\alpha \alpha } & \mathbb{A}_{\alpha \beta } \\ 
+\mathbb{A}_{\beta \alpha } & \mathbb{A}_{\beta \beta }%
+\end{array}%
+\right) .
+\end{equation}%
+The individual basis functions in the \emph{generalized spin bases }are of
+the form 
+\begin{eqnarray}
+\left| \psi _{j}\right\rangle &=&\sum_{1\leq k\leq s}\left\{ \left| \varphi
+_{k}\right\rangle W_{\alpha \alpha \,kj}+\left| \varphi _{k+s}\right\rangle
+W_{\beta \alpha \,kj}\right\} \equiv \left| \psi _{j}^{\alpha }\right\rangle
++\left| \psi _{j}^{\beta }\right\rangle ;\quad 1\leq j\leq s  \notag \\
+\left| \psi _{j+s}\right\rangle &=&\sum_{1\leq k\leq s}\left\{ \left|
+\varphi _{k}\right\rangle W_{\alpha \beta \,kj}+\left| \varphi
+_{k+s}\right\rangle W_{\beta \beta \,kj}\right\} \equiv \left| \psi
+_{j+s}^{\alpha }\right\rangle +\left| \psi _{j+s}^{\beta }\right\rangle
+;\quad 1\leq j\leq s
+\end{eqnarray}
+
+Geminals, which are antisymmetric two particle functions, can be expanded in
+terms of the two particle orthonormal basis $\left\{ \left| \psi _{j}\psi
+_{k}\right\rangle ;1\leq j<k\leq r\right\} $ formed from antisymmetrized
+products of the generalized spin orbitals $\left\{ \left| \psi
+_{j}\right\rangle ;1\leq j\leq r\right\} $ as 
+\begin{equation}
+\left| g\right\rangle =\sum_{1\leq j<k\leq r}c_{jk}\left| \psi _{j}\psi
+_{k}\right\rangle
+\end{equation}%
+The same geminal $\left| g\right\rangle $ can also be expanded in terms of
+the non orthonormal two particle basis, $\left\{ \left| \varphi _{j}\varphi
+_{k}\right\rangle ;1\leq j<k\leq r\right\} $, as 
+\begin{equation}
+\left| g\right\rangle =\sum_{1\leq j<k\leq r}\gamma _{jk}\left| \varphi
+_{j}\varphi _{k}\right\rangle
+\end{equation}%
+The sets of coefficients $\left\{ c_{jk}\right\} $ and $\left\{ \gamma
+_{jk}\right\} $ are just coordinates for the same geminal in different
+coordinate systems. The transformations between the coordinate systems $%
+\mathbf{c}$ and $\mathbf{\gamma }$ are \emph{linear }and given by (see
+Appendix \ref{appengct})%
+\begin{eqnarray}
+\mathbf{\gamma } &=&\,\left( \mathbb{W}_{f}\otimes \mathbb{W}_{f}\right) 
+\mathbf{c=\,}\mathbb{W}_{f}\mathbf{c}\mathbb{W}_{f}^{t}  \notag \\
+\mathbf{c} &=&\left( \mathbb{W}_{f}\otimes \mathbb{W}_{f}\right) ^{-1}\,%
+\mathbf{\gamma =\,}\mathbb{W}_{f}^{-1}\,\mathbf{\gamma \,}\mathbb{W}%
+_{f}^{-1t}=\mathbf{\,}\mathbb{W}_{f}^{\dagger }\mathbb{S}_{f}\,\,\mathbf{%
+\gamma \,\,}\mathbb{S}_{f}^{t}\mathbb{W}_{f}^{\ast }
+\end{eqnarray}%
+where $\mathbf{c}$ and $\mathbf{\gamma }$ are viewed first as vectors and
+then matrices. As the coordinate transformation is linear one has the
+following relationship between partial derivative w.r.t the variables $%
+\mathbf{c}$ and $\mathbf{\gamma }$ 
+\begin{eqnarray}
+\frac{\partial }{\partial \mathbf{\gamma }} &=&\left( \mathbb{W}_{f}\otimes 
+\mathbb{W}_{f}\right) \frac{\partial }{\partial \mathbf{c}}\equiv \mathbb{W}%
+_{f}\frac{\partial }{\partial \mathbf{c}}\mathbb{W}_{f}^{t}  \notag \\
+\frac{\partial }{\partial \mathbf{c}} &=&\left( \mathbb{W}_{f}\otimes 
+\mathbb{W}_{f}\right) ^{-1}\,\frac{\partial }{\partial \mathbf{\gamma }}%
+\equiv \mathbf{\,\,}\mathbb{W}_{f}^{\dagger }\mathbb{S}_{f}\,\,\frac{%
+\partial }{\partial \mathbf{\gamma }}\mathbf{\,\,}\mathbb{S}_{f}^{t}\mathbb{W%
+}_{f}^{\ast }  \label{coordtrans}
+\end{eqnarray}%
+where again $\frac{\partial }{\partial \mathbf{\gamma }}$ and $\frac{%
+\partial }{\partial \mathbf{c}}$ are viewed first as vectors and then
+matrices.
+
+\section{The AGP State\label{The AGP State}}
+
+\subsection{Definition}
+
+We can associate a geminal creator, $G^{\dagger }$, with a geminal, $\left|
+g\right\rangle $, by 
+\begin{equation}
+G^{\dagger }=\frac{1}{2}\sum_{1\leq j,k\leq r}\gamma _{jk}a_{j}^{\dagger
+}a_{k}^{\dagger }=\frac{1}{2}\sum_{1\leq j,k\leq r}c_{jk}b_{j}^{\dagger
+}b_{k}^{\dagger }
+\end{equation}%
+where $\gamma _{jk}=-\gamma _{kj}$ and $c_{jk}=-c_{kj}$ and the second
+quantized creators have the properties 
+\begin{eqnarray}
+a_{j}^{\dagger }\left| \phi \right\rangle &=&\left| \varphi _{j}\right\rangle
+\notag \\
+b_{j}^{\dagger }\left| \phi \right\rangle &=&\left| \psi _{j}\right\rangle
+\end{eqnarray}%
+when acting on the zero particle state $\left| \phi \right\rangle $ and
+satisfy the commutation relationships 
+\begin{eqnarray}
+\left[ a_{j},a_{k}^{\dagger }\right] _{+} &=&S_{jk}  \notag \\
+\left[ b_{j},b_{k}^{\dagger }\right] _{+} &=&\delta _{jk}  \notag \\
+\left[ a_{j},a_{k}\right] _{+} &=&\left[ a_{j}^{\dagger },a_{k}^{\dagger }%
+\right] _{+}=\left[ b_{j},b_{k}\right] _{+}=\left[ b_{j}^{\dagger
+},b_{k}^{\dagger }\right] _{+}=0
+\end{eqnarray}%
+The geminal can then be expressed in second quantized, \emph{coordinate free}%
+, notation as 
+\begin{equation}
+\left| g\right\rangle =G^{\dagger }\left| \phi \right\rangle
+\end{equation}%
+\qquad In order to display the coordinate of the geminal explicitly we will
+use the notation 
+\begin{eqnarray}
+\left| g\left( \mathbf{\gamma }\right) \right\rangle &=&G\left( \mathbf{%
+\gamma }\right) ^{\dagger }\left| \phi \right\rangle =\frac{1}{2}\sum_{1\leq
+j,k\leq r}\gamma _{jk}a_{j}^{\dagger }a_{k}^{\dagger }\left| \phi
+\right\rangle  \notag \\
+\left| g\left( \mathbf{c}\right) \right\rangle &=&G\left( \mathbf{c}\right)
+^{\dagger }\left| \phi \right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq
+r}c_{jk}b_{j}^{\dagger }b_{k}^{\dagger }\left| \phi \right\rangle
+\label{quantgem}
+\end{eqnarray}%
+which leads to the coordinate dependent expressions for the geminal 
+\begin{equation}
+\left| g\right\rangle =G\left( \mathbf{\gamma }\right) ^{\dagger }\left|
+\phi \right\rangle =G\left( \mathbf{c}\right) ^{\dagger }\left| \phi
+\right\rangle
+\end{equation}
+
+The 2N-electron \emph{unnormalized }AGP state, $\left\vert
+g^{N}\right\rangle $, is defined as 
+\begin{equation}
+\left\vert g^{N}\right\rangle =\left( G^{\dagger }\right) ^{N}\left\vert
+\phi \right\rangle
+\end{equation}%
+which can be expanded in coordinates wrt a linearly dependent \emph{unordered%
+} bases as 
+\begin{eqnarray}
+\left\vert g^{N}\right\rangle &=&\frac{1}{2^{N}}\sum_{1\leq
+j_{1},k_{1},\cdots ,j_{N},k_{N}\leq r}c_{j_{1}k_{1}}\cdots
+c_{j_{N}k_{N}}\left\vert \psi _{j_{1}}\psi _{k_{1}}\cdots \psi _{j_{N}}\psi
+_{k_{N}}\right\rangle  \notag \\
+&=&\frac{1}{2^{N}}\sum_{1\leq j_{1},k_{1},\cdots ,j_{N},k_{N}\leq r}\gamma
+_{j_{1}k_{1}}\cdots \gamma _{j_{N}k_{N}}\left\vert \varphi _{j_{1}}\varphi
+_{k_{1}}\cdots \varphi _{j_{N}}\varphi _{k_{N}}\right\rangle .  \label{AGPEX}
+\end{eqnarray}%
+The sums in eq. $\left( \ref{AGPEX}\right) $ can be expressed wrt a linearly
+independent \emph{ordered} basis by collecting together CI coefficients that
+refer to configurations that can permuted into each other as described in
+Appendix \ref{Pfaff}. The use of these ordered coefficients, however,
+increases the complexity of the expressions and the construction of
+optimization procedures.
+
+\subsection{State Energy}
+
+The energy of an 2N-electron AGP state is given by 
+\begin{equation}
+\mathcal{E}\left( g^{N}\right) =\frac{\mathcal{H}\left( g^{N}\right) }{%
+\mathcal{N}\left( g^{N}\right) }  \label{Energy}
+\end{equation}%
+where%
+\begin{equation}
+\mathcal{H}\left( g^{N}\right) =\left\langle g^{N}|Hg^{N}\right\rangle
+\end{equation}%
+in terms of the Hamiltonian%
+\begin{equation*}
+H=h_{0}+h_{1}+h_{2}\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\end{equation*}%
+\begin{equation*}
+h_{0}=\sum_{1\leq j<k\leq N_{nuc}}\frac{Z_{j}Z_{k}}{\left\Vert \mathbf{R}%
+_{j}-\mathbf{R}_{k}\right\Vert }\qquad \qquad \qquad \qquad \qquad \quad
+\end{equation*}%
+\begin{equation*}
+h_{1}=-\left( \sum_{_{1\leq j\leq N_{nuc};1\leq k\leq 2N}}\frac{Z_{j}}{%
+\left\Vert \mathbf{R}_{j}-\mathbf{r}_{k}\right\Vert }+\frac{1}{2m_{e}}%
+\sum_{1\leq j\leq 2N}\nabla _{\mathbf{r}_{j}}^{2}\right) \,
+\end{equation*}%
+\begin{equation}
+h_{2}=\sum_{1\leq j<k\leq N}\frac{1}{\left\Vert \mathbf{r}_{j}-\mathbf{r}%
+_{k}\right\Vert }\qquad \qquad \qquad \qquad \qquad \qquad \quad
+\end{equation}%
+and the normalization factor 
+\begin{equation}
+\mathcal{N}\left( g^{N}\right) =\left\langle g^{N}|g^{N}\right\rangle
+\end{equation}%
+for nuclei of charges $\left\{ Z_{j};1\leq j\leq N_{nuc}\right\} $ at a
+fixed configuration $\left( \mathbf{R}_{1},\ldots ,\mathbf{R}%
+_{N_{nuc}}\right) $. We can express the functions 
+\begin{eqnarray}
+\mathcal{E}\left( g^{N}\right) &=&\mathcal{E}\left( \mathbf{c}^{\ast },%
+\mathbf{c}\right) =\mathcal{E}\left( \mathbf{\gamma }^{\ast },\mathbf{\gamma 
+}\right)  \notag \\
+\mathcal{H}\left( g^{N}\right) &=&\mathcal{H}\left( \mathbf{c}^{\ast },%
+\mathbf{c}\right) =\mathcal{H}\left( \mathbf{\gamma }^{\ast },\mathbf{\gamma 
+}\right)  \notag \\
+\mathcal{N}\left( g^{N}\right) &=&\mathcal{N}\left( \mathbf{c}^{\ast },%
+\mathbf{c}\right) =\mathcal{N}\left( \mathbf{\gamma }^{\ast },\mathbf{\gamma 
+}\right)  \label{EnFunc}
+\end{eqnarray}%
+in terms of coordinates by observing%
+\begin{eqnarray}
+\mathcal{H}\left( \mathbf{c},\mathbf{c}^{\ast }\right) &=&\frac{1}{2^{2N}}%
+\sum c_{j_{1}^{\prime }k_{1}^{\prime }}^{\ast }\cdots c_{j_{N}^{\prime
+}k_{N}^{\prime }}^{\ast }c_{j_{1}k_{1}}\cdots c_{j_{N}k_{N}}\langle \psi
+_{j_{1}^{\prime }}\psi _{k_{1}^{\prime }}\cdots \psi _{j_{N}^{\prime }}\psi
+_{k_{N}^{\prime }}\left\vert H\psi _{j_{1}}\psi _{k_{1}}\cdots \psi
+_{j_{N}}\psi _{k_{N}}\right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \quad _{1\leq j_{1},k_{1},j_{2},k_{2},\cdots
+,j_{N},k_{N}\leq r;\,1\leq j_{1}^{\prime },k_{1}^{\prime },j_{2}^{\prime
+},k_{2}^{\prime },\cdots ,j_{N}^{\prime },k_{N}^{\prime }\leq r}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+\mathcal{H}\left( \mathbf{\gamma }^{\ast },\mathbf{\gamma }\right) &=&\frac{1%
+}{2^{2N}}\sum \gamma _{j_{1}^{\prime }k_{1}^{\prime }}^{\ast }\cdots \gamma
+_{j_{N}^{\prime }k_{N}^{\prime }}^{\ast }\gamma _{j_{1}k_{1}}\cdots \gamma
+_{j_{N}k_{N}}\left\langle \varphi _{j_{1}^{\prime }}\varphi _{k_{1}^{\prime
+}}\cdots \varphi _{j_{N}^{\prime }}\varphi _{k_{N}^{\prime }}|H\varphi
+_{j_{1}}\varphi _{k_{1}}\cdots \varphi _{j_{N}}\varphi _{k_{N}}\right\rangle
+\notag \\
+&&\qquad \qquad \qquad \qquad \quad _{1\leq j_{1},k_{1},j_{2},k_{2},\cdots
+,j_{N},k_{N}\leq r;\,1\leq j_{1}^{\prime },k_{1}^{\prime },j_{2}^{\prime
+},k_{2}^{\prime },\cdots ,j_{N}^{\prime },k_{N}^{\prime }\leq r}
+\end{eqnarray}%
+obtaining the norm functions $\mathcal{N}\left( \mathbf{c}^{\ast },\mathbf{c}%
+\right) $ and $\mathcal{N}\left( \mathbf{\gamma }^{\ast },\mathbf{\gamma }%
+\right) $ by setting $H=I$ in these expressions.
+
+\subsection{Canonical Coordinates}
+
+It is always possible to expand the AGP state in terms of $s$ complex
+canonical geminal coordinates \cite{Löwdin56,Bloch62,Zumino62} $\left\{
+\zeta _{j};1\leq j\leq s\right\} $, instead of the $s\left( 2s-1\right) $
+complex coordinates used in eq. $\left( \ref{AGPEX}\right) $, as 
+\begin{equation}
+\left| g^{N}\right\rangle =N!\sum_{1\leq j_{1}<j_{2}<\cdots <j_{N}\leq
+s}\zeta _{j_{1}}\cdots \zeta _{j_{N}}\left| \eta _{j_{1}}\eta
+_{j_{1}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\right\rangle  \label{canexp}
+\end{equation}%
+where $\left\{ \eta _{j};1\leq j\leq r\right\} $ are canonical general spin
+orbitals of the geminal $\left| g\right\rangle ,$ which has the canonical
+expansion 
+\begin{equation}
+\left| g\right\rangle =\sum_{1\leq j\leq s}\zeta _{j}\left| \eta _{j}\eta
+_{j+s}\right\rangle =\sum_{1\leq j\leq s}n_{j}^{\frac{1}{2}}e^{i\theta
+_{j}}\left| \eta _{j}\eta _{j+s}\right\rangle ,
+\end{equation}%
+and we have expressed the canonical coordinates $\left\{ \zeta _{j}\right\} $
+in polar form as 
+\begin{equation}
+\zeta _{j}=n_{j}^{\frac{1}{2}}e^{i\theta _{j}};\quad n_{j}=\left| \zeta
+_{j}\right| ^{2}.
+\end{equation}%
+The canonical coordinates $\left\{ \zeta _{j}\right\} $ can be constructed
+by first forming the one particle reduced density matrix $\frac{1}{2}\mathbf{%
+cc}^{\dagger }$ of the two particle state $\left| g\right\rangle $
+represented in the orthonormal basis $\left\{ \psi _{j};1\leq j\leq
+r\right\} $ and then carrying out the following steps \cite{Bloch62,Zumino62}%
+, which are explained in detail in Appendix $\ref{Appenccc}$:
+
+\begin{enumerate}
+\item diagonalize the matrix $\mathbf{cc}^{\dagger }$ formed from the
+complex antisymmetric coefficient matrix $\mathbf{c}$ with a unitary
+transformation $\mathbb{U}$ to obtain 
+\begin{equation}
+\mathbb{U}^{\dagger }\mathbf{cc}^{\dagger }\mathbb{U=}\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right)  \label{uccu}
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{n=}\left( 
+\begin{array}{ccc}
+n_{1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & n_{s}%
+\end{array}%
+\right) ;\qquad n_{j}\geq 0,
+\end{equation}%
+by solving the eigenvalue problem to determine the columns $\left\{
+u_{j}\right\} $ and eigenvalues $\left\{ n_{j}\right\} $ 
+\begin{equation}
+\mathbf{cc}^{\dagger }\mathbf{\,}u_{j}=n_{j}u_{j}
+\end{equation}
+
+\item then use $\mathbb{U}$ as a coordinate transformation matrix to obtain
+a block diagonal matrix%
+\begin{equation}
+\mathbb{U}^{\dagger }\mathbf{c}\mathbb{U}^{\ast }=\left( 
+\begin{array}{ccc}
+\mathbb{C}_{1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \mathbb{C}_{p}%
+\end{array}%
+\right)
+\end{equation}%
+where the blocks $\left\{ \mathbb{C}_{\kappa },1\leq \kappa \leq p\right\} $
+are antisymmetric, $d\left( \kappa \right) \times d\left( \kappa \right) $
+in size, and have the property 
+\begin{equation}
+\mathbb{C}_{\kappa }\mathbb{C}_{\kappa }^{\dagger }=\eta _{\kappa }\mathbb{I}%
+_{d\left( \kappa \right) };\quad 1\leq \kappa \leq p
+\end{equation}%
+and $\eta _{\kappa }$ is the value of the $d\left( \kappa \right) $-fold
+degenerate $\kappa ^{th}$ eigenvalue of $\mathbf{cc}^{\dagger }$, then
+
+\item simultaneously diagonalize the real and imaginary parts of $\mathbb{C}%
+_{\kappa }$ with a real orthogonal $d\left( \kappa \right) \times d\left(
+\kappa \right) $ matrix, which thus diagonalizes $\mathbb{C}_{\kappa }$,
+(see Appendix $\ref{Appenccc}$), to produce 
+\begin{equation}
+\mathbb{O}_{\kappa }^{t}\mathbb{C}_{\kappa }\mathbb{O}_{\kappa }=\left( 
+\begin{array}{cc}
+\mathbf{0} & e^{i\mathbf{\phi }_{\kappa }} \\ 
+-e^{i\mathbf{\phi }_{\kappa }} & \mathbf{0}%
+\end{array}%
+\right) ;\quad 1\leq \kappa \leq p  \label{orthog}
+\end{equation}%
+where 
+\begin{equation}
+e^{i\mathbf{\phi }_{\kappa }}=\left( 
+\begin{array}{ccc}
+e^{i\theta _{\kappa 1}} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & e^{i\theta _{\kappa d\left( \kappa \right) }}%
+\end{array}%
+\right)
+\end{equation}%
+hence producing the transformation 
+\begin{equation}
+\mathbb{V}^{t}\mathbf{c}\mathbb{V\equiv O}^{t}\mathbb{U}^{\dagger }\mathbf{c}%
+\mathbb{U}^{\ast }\mathbb{O}=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta } \\ 
+-\mathbf{\zeta } & \mathbf{0}%
+\end{array}%
+\right)  \label{ucu}
+\end{equation}%
+where%
+\begin{equation}
+\mathbb{O}=\left( 
+\begin{array}{ccc}
+\mathbb{O}_{1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \mathbb{O}_{p}%
+\end{array}%
+\right)
+\end{equation}%
+and 
+\begin{equation}
+\mathbf{\zeta =}\left( 
+\begin{array}{ccc}
+\zeta _{1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \zeta _{s}%
+\end{array}%
+\right) .
+\end{equation}
+\end{enumerate}
+
+The canonical coordinates can be constructed directly in the non orthogonal $%
+\mathbf{\gamma }$ coordinate system by letting $\left\{ \psi _{j};1\leq
+j\leq r\right\} $ be the orthonormal basis obtained from $\left\{ \varphi
+_{j};1\leq j\leq r\right\} $ by symmetric orthonormalization which gives%
+\begin{equation}
+\mathbf{c}=\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}_{f}^{\frac{%
+1}{2}t}
+\end{equation}%
+\begin{equation}
+\mathbf{cc}^{\dagger }=\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}%
+_{f}^{t}\mathbf{\gamma }^{\dagger }\mathbb{S}_{f}^{\frac{1}{2}}
+\end{equation}%
+and hence the following hermitian eigenvalue equation for the columns $%
+\left\{ u_{j}\right\} $ and the eigenvalues $\left\{ n_{j}\right\} $ 
+\begin{equation}
+\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}_{f}^{t}\mathbf{\gamma 
+}^{\dagger }\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\,}u_{j}=n_{j}\,u_{j};\qquad
+1\leq j\leq r  \label{NGSO}
+\end{equation}%
+which produces the unitary transformation $\mathbb{U}$ that has the
+properties 
+\begin{equation}
+\mathbb{U}^{\dagger }\,\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}%
+_{f}^{t}\mathbf{\gamma }^{\dagger }\mathbb{S}_{f}^{\frac{1}{2}}\mathbf{\,}%
+\mathbb{U}=\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) .
+\end{equation}%
+Then using $\mathbb{U}$ to block diagonalize $\mathbb{S}_{f}^{\frac{1}{2}}%
+\mathbf{\gamma }\mathbb{S}_{f}^{\frac{1}{2}t}$, constructing the $\left\{ 
+\mathbb{O}_{\kappa };1\leq \kappa \leq p\right\} $, as in eq. $\left( \ref%
+{orthog}\right) $, then generating the transformation, as in eq. $\left( \ref%
+{ucu}\right) $, that produces the skew canonical form, i.e.%
+\begin{equation}
+\mathbb{OU}^{\dagger }\mathbb{\,S}_{f}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S%
+}_{f}^{\frac{1}{2}t}\mathbf{\,}\mathbb{U}^{\ast }\mathbb{O}^{t}\equiv 
+\mathbb{V\,S}_{f}^{\frac{1}{2}}\mathbf{\gamma }\mathbb{S}_{f}^{\frac{1}{2}t}%
+\mathbf{\,}\mathbb{V}^{t}=\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta } \\ 
+-\mathbf{\zeta } & \mathbf{0}%
+\end{array}%
+\right) .  \label{eta}
+\end{equation}
+
+In general the canonical coordinate axes are very sensitive to changes in
+the geminal. Small geminal perturbations therefore will make the right hand
+side of eq. $\left( \ref{eta}\right) $ non skew diagonal if the axes, i.e.
+basis functions, are not changed correspondingly.
+
+\subsection{State Energy in Canonical Coordinates}
+
+A. J. Coleman showed \cite{Coleman65} that the energy of a $2N$-electron
+AGP\ state (see eq.$\left( \ref{Energy}\right) $ has a particularly succinct
+form (see Appendix \ref{EnDetail}) when expressed in the canonical
+coordinates $\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) $. The
+normalization $\mathcal{N}\left( g^{N}\right) $ becomes 
+\begin{equation}
+\mathcal{N}\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) =\left(
+N\right) !^{2}S_{N}
+\end{equation}%
+where $S_{N}$ is the $N^{th}$ order elementary symmetric function, which is
+defined in terms of the eigenvalues $\left\{ n_{j};1\leq j\leq s\right\} $
+of the one particle reduced density operator associated with the geminal $%
+\left| g\right\rangle $ as 
+\begin{equation}
+S_{N}=\sum_{1\leq j_{1}<j_{2}<\cdots <j_{N}\leq s}n_{j_{1}}\cdots
+n_{_{j_{N}}}.
+\end{equation}%
+The unnormalized energy $\mathcal{H}\left( g^{N}\right) $ in the canonical
+coordinates $\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) $ becomes%
+\begin{eqnarray}
+&&\mathcal{H}\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) =h_{0}%
+\mathcal{N}\left( g^{N}\right) +\left( N\right) !^{2}\left\{ \sum_{1\leq
+j\leq s}n_{j}S_{N-1}\left( \hat{\jmath}\right) \left\{
+h_{jj}+h_{j+sj+s}+\left\langle jj+s||jj+s\right\rangle \right\} \right. 
+\notag \\
+&&\qquad +\sum_{1\leq j\neq k\leq s}\zeta _{j}^{\ast }\zeta
+_{k}S_{N-1}\left( \hat{\jmath}\hat{k}\right) \left\langle
+jj+s||kk+s\right\rangle \left. +\sum_{1\leq j,k\leq
+s}n_{j}n_{k}S_{N-2}\left( \hat{\jmath}\hat{k}\right) \left\langle
+jk|||jk\right\rangle \right\}  \label{canen}
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+&&S_{N-1}\left( \hat{\jmath}\right) =\sum_{\substack{ 1\leq
+j_{1}<j_{2}<\cdots <j_{N-1}\leq s  \\ j_{1},j_{2},\cdots ,j_{N-1}\neq j}}%
+n_{j_{1}}\cdots n_{_{j_{N-1}}} \\
+&&\left. {}\right. \quad h_{jk}=-\int \eta _{j}^{\ast }\left( \mathbf{r,\xi }%
+\right) \left\{ \sum_{_{1\leq j\leq N_{nuc}}}\frac{Z_{j}}{\left\| \mathbf{R}%
+_{j}-\mathbf{r}\right\| }+\frac{1}{2m_{e}}\nabla _{\mathbf{r}}^{2}\right\}
+\eta _{k}\left( \mathbf{r,\xi }\right) d\mathbf{r}d\xi ;1\leq j,k\leq 2s \\
+&&\left\langle jk||lm\right\rangle =\int \left\{ \eta _{j}^{\ast }\left( 
+\mathbf{r}_{1}\mathbf{,\xi }_{1}\right) \eta _{k}^{\ast }\left( \mathbf{r}%
+_{2}\mathbf{,\xi }_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-\mathbf{r}%
+_{2}\right\| }\eta _{l}\left( \mathbf{r}_{1}\mathbf{,\xi }_{1}\right) \eta
+_{m}\left( \mathbf{r}_{2}\mathbf{,\xi }_{2}\right) \right.  \notag \\
+&&\qquad \qquad \qquad -\left. \eta _{j}^{\ast }\left( \mathbf{r}_{1}\mathbf{%
+,\xi }_{1}\right) \eta _{k}^{\ast }\left( \mathbf{r}_{2}\mathbf{,\xi }%
+_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-\mathbf{r}_{2}\right\| }\eta
+_{l}\left( \mathbf{r}_{2}\mathbf{,\xi }_{1}\right) \eta _{m}\left( \mathbf{r}%
+_{1}\mathbf{,\xi }_{2}\right) \right\} d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi
+_{1}d\xi _{2}  \notag \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \quad \qquad 1\leq j,k\leq 2s;1\leq l,m\leq 2s \\
+&&\left\langle jk|||jk\right\rangle =\left\langle jk||jk\right\rangle
++\left\langle j\,k+s||j\,k+s\right\rangle +\left\langle
+j+s\,k||j+s\,k\right\rangle +\left\langle j+s\,k+s||j+s\,k+s\right\rangle 
+\notag \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad 1\leq j,k\leq s
+\end{eqnarray}%
+The total energy, $\mathcal{E}\left( g^{N}\right) $, is then given in the
+canonical coordinates as 
+\begin{equation}
+\mathcal{E}\left( g^{N}\right) =\mathcal{E}\left( \mathbf{\zeta }^{\ast },%
+\mathbf{\zeta }\right) =\frac{\mathcal{H}\left( \mathbf{\zeta }^{\ast },%
+\mathbf{\zeta }\right) }{\mathcal{N}\left( \mathbf{\zeta }^{\ast },\mathbf{%
+\zeta }\right) }.
+\end{equation}%
+One should observe that this coordinate system \emph{is geminal} \emph{%
+dependent }i.e. $\mathbf{\zeta =\zeta }\left( g\right) $ unlike the $\mathbf{%
+c}$ and $\mathbf{\gamma }$ coordinate systems and the preceding expressions 
+\emph{do not} provide a global representation of the energy function over
+the non linear manifold of AGP\ states. However they \emph{do }provide a
+procedure for the calculation of the energy of the N-electron AGP state and
+its derivatives at a specific point in this manifold.
+
+\subsection{State Energy in Atomic Orbital Basis}
+
+The energy expression eq. $\left( \ref{canen}\right) $ can be easily
+transformed to a mixed form in terms of \emph{fixed} atomic orbitals \emph{%
+and }canonical coordinates as (see Appendix \ref{Trans2AObasis}) 
+\begin{eqnarray}
+&&\mathcal{H}\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) =h_{0}%
+\mathcal{N}\left( g^{N}\right)  \notag \\
+&&\qquad +\left( N\right) !^{2}\left\{ \sum_{j_{1,}j_{2}=1}^{r}\sum_{1\leq
+j\leq s}n_{j}S_{N-1}\left( \hat{\jmath}\right) \left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}j+s}\right\}
+h_{j_{1}j_{2}}^{a}\right.  \notag \\
+&&\qquad \qquad +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \overset{}{%
+\underset{}{}}\sum_{1\leq j\leq s}n_{j}S_{N-1}\left( \hat{\jmath}\right)
+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}\right.  \notag \\
+&&\qquad \qquad \qquad \qquad +\sum_{1\leq j\neq k\leq s}\zeta _{j}^{\ast
+}\zeta _{k}S_{N-1}\left( \hat{\jmath}\hat{k}\right) V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j+s}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}k+s}  \notag \\
+&&\left. {}\right. \qquad \qquad \quad \left. \left. +\sum_{1\leq j,k\leq
+s}n_{j}n_{k}S_{N-2}\left( \hat{\jmath}\hat{k}\right) V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}j}V_{f\,j_{4}k}\right\} \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}  \label{AGPen}
+\end{eqnarray}%
+where the matrix elements $\left\{ h_{j_{1}j_{2}}^{a},\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} $ of the Hamiltonian are
+computed in the atomic orbital basis and spin can be integrated out as
+displayed in Appendix \ref{SpinInteg}. Hence one can calculate the
+unnormalized energy of a $2N$-particle AGP state characterized by geminal
+coefficients $\left\{ \gamma _{ij};1\leq i<j\leq r\right\} $ by solving the $%
+r\times r$ generalized eigenvalue equation eq. $\left( \ref{NGSO}\right) $
+to obtain $\left\{ n_{j};1\leq j\leq s\right\} $ and $\mathbb{V}$, then
+using eq. $\left( \ref{eta}\right) $ to produce $\left\{ \zeta _{j},1\leq
+j\leq s\right\} $, and finally substituting these values into eq. $\left( %
+\ref{AGPen}\right) $ for \emph{fixed values }of the one and two particle
+integrals\emph{\ }calculated\emph{\ }in the\emph{\ atomic orbital }basis%
+\emph{.}
+
+\section{First Derivatives of the AGP\ State Energy\label{First Derivatives}}
+
+The energy at any point can be expanded in a Taylors series expansion (see
+Appendix \ref{DiffProp}) in terms of derivatives with respect to any of the
+coordinate systems we have discussed, which can then be transformed between
+each other. In particular the derivatives of the AGP energy, $\mathcal{E}%
+\left( g^{N}\right) $, in terms of the $\mathbf{\gamma }$ coordinate system
+evaluated at a specific geminal $\left| g\right\rangle $ can be expressed in
+terms of the derivatives of $\mathcal{E}\left( g^{N}\right) $ in the $%
+\mathbf{c}$ coordinate system using the coordinate transformation of eqs. $%
+\left( \ref{coordtrans}\right) $ and $\left( \ref{d1trans}\right) $. When
+evaluating these derivatives at a particular point $\left| g\right\rangle $
+it is convenient to \emph{choose} the coordinate system $\mathbf{c}$ \emph{%
+to be }the canonical coordinate system $\mathbf{\zeta }\left( g\right) $ for
+the geminal $\left| g\right\rangle $. It should be emphasized that this
+approach is \emph{not} the same as differentiating the canonical energy
+expression based on eq. $\left( \ref{canen}\right) $ with respect to
+canonical coordinates, as the canonical coordinate system is geminal
+dependent.
+
+The derivatives of $\mathcal{E}\left( \mathbf{\gamma }^{\ast },\mathbf{%
+\gamma }\right) $, which are expressed in terms of the derivatives of $%
+\mathcal{H}\left( \mathbf{\gamma }^{\ast },\mathbf{\gamma }\right) $ and $%
+\mathcal{N}\left( \mathbf{\gamma }^{\ast },\mathbf{\gamma }\right) $, can be
+easily displayed using the second quantized operators introduced in eq. $%
+\left( \ref{quantgem}\right) $ and utilizing the relationship 
+\begin{equation}
+\frac{\partial G\left( \mathbf{\gamma }\right) ^{\dagger N}}{\partial \gamma
+_{pq}}=Na_{p}^{\dagger }a_{q}^{\dagger }G\left( \mathbf{\gamma }\right)
+^{\dagger N-1}=Na_{p}^{\dagger }a_{q}^{\dagger }G^{\dagger N-1}
+\label{GPderiv}
+\end{equation}%
+Note that in the last term of eq. $\left( \ref{GPderiv}\right) $ $G^{\dagger
+N-1}$ is coordinate free and could be expanded in \emph{any }coordinate
+system. The derivative of the unnormalized energy in the coordinate system $%
+\mathbf{\gamma }$ is thus 
+\begin{eqnarray}
+\frac{\partial \mathcal{H}\left( g\right) }{\partial \gamma _{pq}} &=&\frac{%
+\partial \left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi \right\rangle }{%
+\partial \gamma _{pq}}=N\left\langle G^{\dagger N}\phi |Ha_{p}^{\dagger
+}a_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle  \notag \\
+\frac{\partial \mathcal{H}\left( g\right) }{\partial \gamma _{pq}^{\ast }}
+&=&\frac{\partial \left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi
+\right\rangle }{\partial \gamma _{pq}^{\ast }}=N\left\langle a_{p}^{\dagger
+}a_{q}^{\dagger }G^{\dagger N-1}\phi |HG^{\dagger N}\phi \right\rangle
+\end{eqnarray}%
+and are related to the derivatives in the $\mathbf{c}$ coordinate systems by 
+\begin{eqnarray}
+\frac{\partial \mathcal{H}\left( g\right) }{\partial \mathbf{\gamma }}
+&=&\left( \mathbb{W}_{f}\otimes \mathbb{W}_{f}\right) \frac{\partial 
+\mathcal{H}\left( g\right) }{\partial \mathbf{c}}  \notag \\
+\frac{\partial \mathcal{H}\left( g\right) }{\partial \mathbf{\gamma }^{\ast }%
+} &=&\left( \mathbb{W}_{f}^{\ast }\otimes \mathbb{W}_{f}^{\ast }\right) 
+\frac{\partial \mathcal{H}\left( g\right) }{\partial \mathbf{c}^{\ast }}
+\label{gamder}
+\end{eqnarray}%
+where $\mathbb{W}_{f}$ is the coordinate transformation from the $\mathbf{%
+\gamma }$ to the coordinates $\mathbf{c}$. We now make the important
+observation that we can choose $\mathbf{c}$ to be the canonical coordinates
+of $\left| g\right\rangle $, so that $\mathbb{W}_{f}=\mathbb{V}_{f}$, and
+obtain 
+\begin{eqnarray}
+\frac{\partial \mathcal{H}\left( g\right) }{\partial \mathbf{c}}
+&=&N\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle  \notag \\
+\frac{\partial \mathcal{H}\left( g\right) }{\partial \mathbf{c}^{\ast }}
+&=&N\left\langle b_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi
+|HG^{\dagger N}\phi \right\rangle  \label{cander}
+\end{eqnarray}%
+where $\left\{ b_{j}^{\dagger };1\leq j\leq r\right\} $ are the creators
+associated with the canonical basis $\left\{ \eta _{j};1\leq j\leq r\right\} 
+$ of $\left| g\right\rangle $ and hence the right hand side of eq. $\left( %
+\ref{cander}\right) $ can be computed in this basis. The derivatives $%
+\left\{ \frac{\partial \mathcal{H}\left( g\right) }{\partial \mathbf{\gamma }%
+},\frac{\partial \mathcal{H}\left( g\right) }{\partial \mathbf{\gamma }%
+^{\ast }}\right\} $ with respect to the geminal coefficients in the atomic
+orbital basis can now be obtained by using the transformation displayed in
+eq. $\left( \ref{gamder}\right) $ from the canonical to the atomic orbital
+basis.
+
+\subsection{Calculation of the Matrix Elements $\left\langle G^{\dagger N}%
+\protect\phi |Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\protect\phi %
+\right\rangle $}
+
+Using the canonical expansion eq. $\left( \ref{canexp}\right) $ one can
+develop this matrix element as 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\left\langle G^{\dagger N}\phi
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\left( \hat{p}\hat{q}%
+\right) \phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\qquad \qquad \sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast
+}\zeta _{k_{2}}\cdots \zeta _{k_{N}}\langle \eta _{j_{1}}\eta
+_{j_{1}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left| H\eta _{p}\eta
+_{q}\eta _{k_{2}}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta
+_{k_{N}+s}\right\rangle  \notag \\
+&&\overset{1\leq j_{1}<\cdots <j_{N}\leq s;\,1\leq k_{2}<\cdots <k_{N}\leq
+s;\,\,k_{i}\neq p,q;\,\,2\leq i\leq N}{}  \label{Derexp}
+\end{eqnarray}%
+where the carats indicate that terms involving $p$ and $q$ are missing from
+the geminal. We introduce the notation $\bar{p}$ to denote the conjugate,
+paired GSO\ of $p$ i.e. $\bar{p}=p\pm s$ and $\left| p\right| $ to denote
+the index of $p$ defined as 
+\begin{equation}
+\left| p\right| =\left\{ 
+\begin{array}{c}
+p\quad \text{if \ }1\leq p\leq s\qquad \\ 
+p-s\text{ \ if \ }s+1\leq p\leq 2s%
+\end{array}%
+\right.
+\end{equation}%
+We can consider two cases:
+
+\begin{enumerate}
+\item $q=\left\vert p\right\vert $
+\end{enumerate}
+
+This case can be obtained by differentiating the canonical energy expression
+eq. $\left( \ref{canen}\right) $, which we use as a generating function,
+with respect to $\zeta _{p}$ to produce 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =  \notag \\
+&&N!\left( N-1\right) !\left\{ \overset{}{\underset{}{}}S_{N-1}\left( \hat{p}%
+\right) \zeta _{p}^{\ast }\left\{ h_{0}+h_{pp}+h_{p+sp+s}+\left\langle
+pp+s||pp+s\right\rangle \right\} \right.  \notag \\
+&&\left. {}\right. \qquad +\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath%
+}\right) \left\{ \overset{}{\underset{}{}}\zeta _{p}^{\ast }n_{j}\left\{
+h_{jj}+h_{j+sj+s}+\left\langle jj+s||jj+s\right\rangle +\left\langle
+jp|||jp\right\rangle \right\} \right.  \notag \\
+&&\left. {}\right. \qquad \qquad \left. +\zeta _{j}^{\ast }\left\langle
+jj+s||pp+s\right\rangle \right\} +\sum_{j\neq k\neq p}S_{N-2}\left( \hat{p}%
+\hat{\jmath}\hat{k}\right) \zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta
+_{k}\left\langle jj+s||kk+s\right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left.
++\zeta _{p}^{\ast }\sum_{j<k\neq p}S_{N-3}\left( \hat{p}\hat{\jmath}\hat{k}%
+\right) n_{j}n_{k}\left\langle jk|||jk\right\rangle \right\}  \label{pps}
+\end{eqnarray}%
+or from the expansion eq. $\left( \ref{Derexp}\right) $ and evaluating
+matrix elements between Independent Particle States (IPS). (See Appendix $%
+\ref{CompFiDer}$ for details)
+
+\begin{enumerate}
+\item[2] $q\neq \left\vert p\right\vert $
+\end{enumerate}
+
+This case can only be obtained by evaluating matrix elements between IPS's
+(See Appendix $\ref{CompFiDer}$ for details). 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =  \notag \\
+&&N!\left( N-1\right) !\left\{ \sum_{\kappa \neq \left| p\right| \neq \left|
+q\right| }^{s}\left\{ S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) \zeta
+_{\kappa }^{\ast }\left\langle \kappa \kappa +s||pq\right\rangle
++S_{N-2}\left( \hat{\kappa}\hat{p}\hat{q}\right) \left\langle \bar{p}\bar{q}%
+||\kappa \kappa +s\right\rangle \zeta _{p}^{\ast }\zeta _{q}^{\ast }\zeta
+_{\kappa }\right. \right.  \notag \\
+&&\quad \quad \quad \quad \quad \quad \quad \quad \left. +\left\langle \bar{q%
+}\kappa ||p\kappa \right\rangle n_{\kappa }\zeta _{q}^{\ast }+\left\langle 
+\bar{p}\kappa ||q\kappa \right\rangle n_{\kappa }\zeta _{p}^{\ast }\right\}
++\zeta _{p}^{\ast }\left\langle p\bar{p}||pq\right\rangle S_{N-1}\left( \hat{%
+p}\hat{q}\right)  \notag \\
+&&\quad \quad \quad \quad \quad \quad \quad \quad \quad \qquad \,\left.
++\zeta _{q}^{\ast }\left\langle q\bar{q}||pq\right\rangle S_{N-1}\left( \hat{%
+p}\hat{q}\right) +\left\{ \zeta _{q}^{\ast }h_{\bar{q}p}+\zeta _{p}^{\ast
+}h_{\bar{p}q}\right\} S_{N-1}\left( \hat{p}\hat{q}\right) \overset{\underset{%
+}{}}{\underset{}{}}\right\}  \label{pq}
+\end{eqnarray}
+
+\subsection{Transformation of Derivatives to Atomic Orbital Basis}
+
+For details see Appendix \ref{Trans2AObasis}. In the atomic orbital case we
+only have derivatives of the form%
+\begin{equation}
+\left\langle G^{\dagger N}\phi |Ha_{j_{1}}^{\dagger }a_{j_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle ;1\leq j_{1}<j_{2}\leq r  \label{deriv}
+\end{equation}%
+which are given in terms of the derivatives expressed in the canonical basis
+as%
+\begin{equation}
+\left\langle G^{\dagger N}\phi |Ha_{j_{1}}^{\dagger }a_{j_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle
+=\sum_{p,q=1}^{r}V_{f\,j_{1}p}V_{f\,j_{2}q}\left\langle G^{\dagger N}\phi
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+\label{ftrm}
+\end{equation}%
+a sum that goes over the two types of matrix elements, paired terms where $%
+p=\left\vert q\right\vert $ computed in eq. $\left( \ref{pq}\right) $ and
+unpaired terms $p\neq \left\vert q\right\vert $ computed in eq. $\left( \ref%
+{pps}\right) $. The paired term gives 
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times \\
+&&\left\{ h_{0}S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}+\sum_{j_{1,}j_{2}=1}^{r}\left\{ \underset{}{\overset{}{}}S_{N-1}\left( 
+\hat{p}\right) \zeta _{p}^{\ast }\left\{ V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p}+V_{f\,j_{1}p+s}^{\ast }V_{f\,j_{2}p+s}\right\}
+h_{j_{1}j_{2}}^{a}\right. \right. \\
+&&\qquad \qquad \qquad \qquad \qquad \quad \left. +\right. \left.
+\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \zeta _{p}^{\ast
+}n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}j+s}\right\} h_{j_{1}j_{2}}^{a}\right\}
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&\left. +\right. \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \underset{}{%
+\overset{}{\left. {}\right. }}S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right. \\
+&&\qquad +\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \left\{
+\zeta _{p}^{\ast }n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j}\right. \right. \\
+&&\qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j+s} \\
+&&\qquad \qquad \qquad \qquad \left. +V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p+s}V_{f\,j_{4}j+s}\right\} \left.
++\,\zeta _{j}^{\ast }V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\underset{}{\overset{}{}}\right\}
+\end{eqnarray*}%
+\begin{eqnarray}
+&&+\sum_{j\neq k\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\hat{k}\right)
+\zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta _{k}V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j+s}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}k+s}\qquad \qquad \qquad 
+\notag \\
+&&\qquad \quad +\frac{1}{2}\zeta _{p}^{\ast }\sum_{j,k\neq
+p}^{s}S_{N-3}\left( \hat{p}\hat{\jmath}\hat{k}\right) n_{j}n_{k}\left\{
+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}pj}\right.
+\notag \\
+&&\qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}pj+s}  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. \left. \left. \left.
++V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj+s}\right\} \underset{}{\overset{}{}}\right\}
+\right\} \left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\underset{}{%
+\overset{\underset{}{\overset{}{}}}{}}\right\}
+\end{eqnarray}%
+and the unpaired term gives 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\left\{ S_{N-1}\left( \hat{p}\hat{q}\right)
+\sum_{j_{1},j_{2}=1}^{r}\left\{ V_{f\,j_{1}\bar{q}}^{\ast
+}V_{f\,j_{2}p}\zeta _{q}^{\ast }+V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}q}\zeta _{p}^{\ast }\right\} h_{j_{1}j_{2}}^{a}\right.  \notag \\
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \sum_{\kappa \neq \left\vert
+p\right\vert \neq \left\vert q\right\vert }^{s}S_{N-1}\left( \hat{\kappa}%
+\hat{p}\hat{q}\right) \left\{ V_{f\,j_{1}\kappa }^{\ast }V_{f\,j_{2}\kappa
++s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta _{\kappa }^{\ast }\right. \right.
+\notag \\
+&&\qquad \qquad \qquad \qquad +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\bar{q}%
+}^{\ast }V_{f\,j_{3}\kappa }V_{f\,j_{4}\kappa +s}\zeta _{p}^{\ast }\zeta
+_{q}^{\ast }\zeta _{\kappa }+V_{f\,j_{1}\bar{q}}^{\ast }V_{f\,j_{2}\kappa
+}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{q}^{\ast } 
+\notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \left. +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}q}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{p}^{\ast }\right\} 
+\notag \\
+&&+S_{N-1}\left( \hat{p}\hat{q}\right) \left\{ \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}+\zeta _{q}^{\ast }V_{f\,j_{1}q}^{\ast
+}V_{f\,j_{2}q+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\right\} \left. \left. 
+\underset{}{\overset{}{}}\right\} \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\underset{}{\overset{\underset{}{%
+\overset{}{}}}{}}\right\}
+\end{eqnarray}
+
+\section{Method of Optimization\label{Methods of Optimization}}
+
+In figure 1 we show a schematic of the proposed optimization procedure which
+has the following steps:
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{agpfig.eps}
+\caption{Optimization Flow Diagram}
+\label{flowdiag}
+\end{figure}
+
+\begin{enumerate}
+\item The integrals in the atomic orbital basis are calculated and stored.
+
+\item An initial choice of geminal coefficients in a localized atomic
+orbital basis, based on qualitative physical and chemical properties of the
+system is made.
+
+\item Using these coefficients, the fixed overlap matrix of the atomic
+orbital basis functions and the method described in section \ref{The AGP
+State}, values for the canonical coordinates are determined, the number of
+computations in this step scales as $r^{3}$.
+
+\item Using the method outlined in \cite{Jensen80, Jensen81} and the
+eigenvalues of $\left| g\right\rangle \left\langle g\right| $, produced in
+the previous step, the symmetric functions needed for the evaluation of the
+energy and the derivatives of the energy with respect to the geminal
+coefficients in the atomic orbital basis are calculated, the number of
+computations in this step scales as $s^{4}$
+
+\item The derivatives of the energy are now calculated using the
+eigenvectors of $\left| g\right\rangle \left\langle g\right| $ produced in
+step 3, the integrals produced in step 1 and the quantities $\mathcal{D}%
+_{0i_{1}i_{2}},\mathcal{D}_{1i_{1}i_{2}}$ and $\mathcal{D}_{2i_{1}i_{2}}$
+described in Appendix \ref{CostofComp}. The number of computations needed to
+produce these $\mathcal{D}$ quantities scales as $s^{4}$ and the step
+combining these quantities with the integrals scales as $r^{5}$.
+
+\item The gradient of the energy function formed from the partial
+derivatives produced in step 5 is then passed to a standard update
+optimization procedure which returns a geminal coefficient change vector
+
+\item A new set of geminal coefficients in the atomic orbital basis is
+produced and one returns to step 3 and continues the iterative cycle until
+convergence is obtained.
+\end{enumerate}
+
+\section{Discussion\label{Discussion}}
+
+Introducing correlation corrections to electronic state vectors of molecular
+systems is notoriously expensive in terms of computer resources and almost
+always involves some type of subjective decision on which terms to keep and
+which to neglect. In comparison the choice of an Independent Particle (IP)\
+state\ vector is free from any bias, save for the choice of atomic orbital
+basis set, is dramatically less expensive to produce and the cost of
+computation scales at worst as $r^{4}$, where $r$ is the size of the atomic
+spin orbital basis set. In this paper we have described how a correlated
+state, the Antisymmetrized Geminal Power (AGP) state is also free of
+subjective bias, once the basis set has been determined, and can be chosen
+by a computational process that scales as $r^{5}$, which is overall superior
+to the scaling of large CASSCF calculations. In an analogous fashion to IP\
+state vectors, such an unbiasedly chosen AGP\ state vector can be used as a 
+\emph{correlated }reference state from which to introduce further
+correlation effects. As the reference would now be a ''dressed state''
+perturbation expansions will converge much faster than in the IP case and
+lower orders of corrections will provide better approximations to the exact
+state vector.
+
+Although the choice of AGP\ state is unbiased, chemical insight can still
+play an important role in decreasing the cost of the calculations through
+the choice of atomic orbital basis sets. As the optimization procedure
+described in this work takes place in a \emph{fixed }atomic orbital basis, a
+chemically sensible choice of a localized basis can decrease dramatically
+the number of integrals and geminal coefficients that are numerically
+significant and thus the integral and geminal coefficient matrices will have
+block diagonal form. This will have a similar effect to that of point group
+symmetry decreasing the effective size of a basis.
+
+The formalism in this paper utilizes the full generality of a general spin
+orbital description which allows the treatment of relativistic and magnetic
+effects, and produces a more flexible approximation scheme than spin
+restricted ones. It is straightforward, however, to modify the equations so
+that they describe spin symmetry constraints.
+
+\section{Acknowledgements}
+
+We would like thank the support of the Petroleum Research Foundation through
+a grant PRF 34859-AC6.
+
+\appendix 
+
+\section{Geminal Coordinate Transformations\label{appengct}}
+
+A geminal $\left| g\right\rangle $ can be expanded in the bases $\left\{
+\left| \psi _{j}\psi _{k}\right\rangle ;1\leq j<k\leq r\right\} $ and $%
+\left\{ \left| \varphi _{j}\varphi _{k}\right\rangle ;1\leq j<k\leq
+r\right\} $ as
+
+\begin{equation}
+\left| g\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}c_{jk}\left| \psi
+_{j}\psi _{k}\right\rangle =\frac{1}{2}\sum_{1\leq j,k\leq r}\gamma
+_{jk}\left| \varphi _{j}\varphi _{k}\right\rangle
+\end{equation}%
+where we have used the antisymmetry of the basis elements and set $%
+c_{kj}=-c_{jk}$ and $\gamma _{kj}=-\gamma _{jk}$ for $1\leq j<k\leq r$. In
+array of basis function notation this becomes 
+\begin{equation}
+\left| g\right\rangle =\left( \left| \underline{\psi }\underline{\psi }%
+\right\rangle \right) \mathbf{c}=\left( \left| \underline{\varphi }%
+\underline{\varphi }\right\rangle \right) \mathbf{\gamma }
+\end{equation}%
+Hence 
+\begin{equation}
+\left( \left| \underline{\psi }\underline{\psi }\right\rangle \right) 
+\mathbf{c=}\left( \left| \underline{\varphi }\underline{\varphi }%
+\right\rangle \right) \left( \mathbb{W}_{f}\otimes \mathbb{W}_{f}\right) 
+\mathbf{c}
+\end{equation}%
+and thus 
+\begin{equation}
+\mathbf{\gamma =}\left( \mathbb{W}_{f}\otimes \mathbb{W}_{f}\right) \mathbf{%
+c=}\mathbb{W}_{f}\mathbf{c}\mathbb{W}_{f}^{t}
+\end{equation}
+
+\section{CI Coefficients of AGP States\label{Pfaff}}
+
+An AGP\ state can be expanded in an unordered linearly dependent bases as 
+\begin{equation}
+\frac{1}{2^{N}}\sum_{1\leq j_{1},j_{2},\cdots ,j_{2N-1},j_{2N}\leq r}\gamma
+_{j_{1}j_{2}}\cdots \gamma _{j_{2N-1}j_{2N}}\left\vert \varphi
+_{j_{1}}\varphi _{j_{2}}\cdots \varphi _{j_{2N-1}}\varphi
+_{j_{2N}}\right\rangle
+\end{equation}%
+Using the symmetry property 
+\begin{equation}
+\left\vert \varphi _{j_{1}}\varphi _{j_{2}}\cdots \varphi _{j_{2N-1}}\varphi
+_{j_{2N}}\right\rangle =\left( -1\right) ^{\pi \left( \sigma \right)
+}\left\vert \varphi _{j_{\sigma \left( 1\right) }}\varphi _{j_{\sigma \left(
+2\right) }}\cdots \varphi _{j_{\sigma \left( 2N-1\right) }}\varphi
+_{j_{\sigma \left( 2N\right) }}\right\rangle \qquad \forall \sigma \in S_{2N}
+\end{equation}%
+where $\pi \left( \sigma \right) $ is the parity of the permutation $\sigma $
+that belongs to the symmetric group $S_{2N}$, the coefficients of
+configurations that can be rearranged into each other can be collected
+together as the coefficient, $Pf\left( \gamma :j_{1}\cdots j_{2N}\right) $,
+of a single ordered configuration $\left\vert \varphi _{j_{1}}\cdots \varphi
+_{j_{2N}}\right\rangle $ where $j_{1}<j_{2}<\cdots <j_{2N-1}<j_{2N}$. This
+coefficient is given by 
+\begin{eqnarray}
+&&Pf\left( \gamma :j_{1}\cdots j_{2N}\right) \left\vert \varphi
+_{j_{1}}\varphi _{j_{2}}\cdots \varphi _{j_{2N-1}}\varphi
+_{j_{2N}}\right\rangle  \notag \\
+&=&\frac{1}{N!2^{N}}\sum_{\sigma \in S_{2N}}\gamma _{j_{\sigma \left(
+1\right) }j_{\sigma \left( 2\right) }}\cdots \gamma _{j_{\sigma \left(
+2N-1\right) }j_{\sigma \left( 2N\right) }}\left\vert \varphi _{j_{\sigma
+\left( 1\right) }}\varphi _{j_{\sigma \left( 2\right) }}\cdots \varphi
+_{j_{\sigma \left( 2N-1\right) }}\varphi _{j_{\sigma \left( 2N\right)
+}}\right\rangle  \notag \\
+&=&\frac{1}{N!2^{N}}\sum_{\sigma \in S_{2N}}\left( -1\right) ^{\pi \left(
+\sigma \right) }\gamma _{j_{\sigma \left( 1\right) }j_{\sigma \left(
+2\right) }}\cdots \gamma _{j_{\sigma \left( 2N-1\right) }j_{\sigma \left(
+2N\right) }}\left\vert \varphi _{j_{1}}\varphi _{j_{2}}\cdots \varphi
+_{j_{2N-1}}\varphi _{j_{2N}}\right\rangle
+\end{eqnarray}%
+where 
+\begin{eqnarray}
+Pf\left( \gamma :j_{1}\cdots j_{2N}\right) &=&Pf\left( 
+\begin{array}{ccccc}
+0 & \gamma _{j_{1}j_{2}} & \gamma _{j_{1}j_{4}} & \cdots & \gamma
+_{j_{1}j_{2N}} \\ 
+\gamma _{j_{2}j_{1}} & 0 & \gamma _{j_{2}j_{4}} & \vdots & \gamma
+_{j_{2}j_{2N}} \\ 
+\vdots & \vdots & \ddots & \vdots & \vdots \\ 
+\vdots & \vdots & \vdots & 0 & \gamma _{j_{2N-1}j_{2N}} \\ 
+\gamma _{j_{2N}j_{1}} & \cdots & \cdots & \gamma _{j_{2N}j_{2N-1}} & 0%
+\end{array}%
+\right)  \notag \\
+&=&\frac{1}{N!2^{N}}\sum_{\sigma \in S_{2N}}\left( -1\right) ^{\pi \left(
+\sigma \right) }\gamma _{j_{\sigma \left( 1\right) }j_{\sigma \left(
+2\right) }}\cdots \gamma _{j_{\sigma \left( 2N-1\right) }j_{\sigma \left(
+2N\right) }}
+\end{eqnarray}%
+The symbol stands for Pfaffian, which is a function that associates a scalar
+with antisymmetric matrices. For further details on Pfaffians see \cite%
+{Weiner94,Marcus73,Caianiello73}
+
+\section{Canonical Coordinates Construction\label{Appenccc}}
+
+Bloch and Messiah \cite{Bloch62} and Zumino \cite{Zumino62} proved
+
+\begin{theorem}
+If $\mathbf{c}$ is a $2s\times 2s$ complex antisymmetric matrix then there
+exists a unitary matrix $\mathbb{T}$ such that 
+\begin{equation}
+\mathbb{T}^{t}\mathbf{c}\mathbb{T=}\left( 
+\begin{array}{cc}
+\mathbf{0} & \mathbf{\zeta } \\ 
+-\mathbf{\zeta } & \mathbf{0}%
+\end{array}%
+\right)  \label{tct}
+\end{equation}%
+where 
+\begin{equation}
+\mathbf{\zeta =}\left( 
+\begin{array}{ccc}
+\zeta _{1} & 0 & 0 \\ 
+0 & \ddots & 0 \\ 
+0 & 0 & \zeta _{s}%
+\end{array}%
+\right) ;\qquad \zeta _{j}\in \mathbb{C},\quad 1\leq j\leq s
+\end{equation}
+\end{theorem}
+
+Hence from eq. $\left( \ref{tct}\right) $ 
+\begin{equation}
+\mathbb{T}^{\dagger }\mathbf{cc}^{\dagger }\mathbb{T}=\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right)  \label{TccT}
+\end{equation}%
+however, eq. $\left( \ref{TccT}\right) $ does not imply eq. $\left( \ref{tct}%
+\right) $, which shows that from the class of unitary transformations that
+diagonalizes $\mathbf{cc}^{\dagger }$ only a subset of these satisfy eq. $%
+\left( \ref{tct}\right) $. In order to obtain $\mathbb{T}^{\prime }s$ that
+do satisfy eq. $\left( \ref{tct}\right) $ they displayed that
+
+\begin{itemize}
+\item any unitary transformation that diagonalizes $\mathbf{cc}^{\dagger }$
+produces an antisymmetric block diagonal matrix $\mathbb{U}^{t}\mathbf{c}%
+\mathbb{U}$, where the size of the blocks are equal to the level of the
+degeneracy of the eigenvalues of $\mathbf{cc}^{\dagger }$, and whose real
+and imaginary parts \emph{commute, }
+
+\item the blocks have the property 
+\begin{equation}
+\mathbb{C}_{\kappa }\mathbb{C}_{\kappa }^{\dagger }=\eta _{\kappa }\mathbb{I}%
+_{d\left( \kappa \right) };\quad 1\leq \kappa \leq p
+\end{equation}%
+where $p$ is the number of blocks, $\eta _{\kappa }$ is the value of the $%
+d\left( \kappa \right) $-degenerate $\kappa ^{th}$ eigenvalue of $\mathbf{cc}%
+^{\dagger }$,
+
+\item $\mathbb{U}^{t}\mathbf{c}\mathbb{U}$ can be brought to skew diagonal
+form by a \emph{real orthogonal} transformation $\mathbb{O}^{t}\mathbb{U}^{t}%
+\mathbf{c}\mathbb{UO}$, where $\mathbb{O}$ commutes with $\mathbb{U}%
+^{\dagger }\mathbf{cc}^{\dagger }\mathbb{U}$ i.e. 
+\begin{equation}
+\mathbb{O}^{t}\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) \mathbb{O=}\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right) \mathbb{O}^{t}\mathbb{O=}\left( 
+\begin{array}{cc}
+\mathbf{n} & \mathbf{0} \\ 
+\mathbf{0} & \mathbf{n}%
+\end{array}%
+\right)
+\end{equation}%
+and the transformation $\mathbb{O}$ is a simple rearrangement of the direct
+sum of the transformations $\mathbb{O}_{\kappa }$ that bring the individual
+antisymmetric blocks, $\mathbb{C}_{\kappa }$, of $\mathbb{U}^{t}\mathbf{c}%
+\mathbb{U}$ to skew diagonal form and in particular simultaneously
+diagonalize the real and imaginary parts of $\mathbb{C}_{\kappa }$ and
+
+\item hence $\mathbb{T=UO}$
+\end{itemize}
+
+In order to compute the transformations $\mathbb{O}_{\kappa }$ we consider
+the real and imaginary parts of the \emph{antisymmetric unitary matrix} $%
+\mathbb{B}_{\kappa }=\eta _{\kappa }^{-\frac{1}{2}}\mathbb{C}_{\kappa }$ and
+denote them by%
+\begin{eqnarray}
+\mathbb{B}_{R} &=&\func{Re}\mathbb{B}_{\kappa }  \notag \\
+\mathbb{B}_{I} &=&\func{Im}\mathbb{B}_{\kappa }
+\end{eqnarray}%
+where we drop the subscript $\kappa $, which plays no role in the
+considerations of this section. We know that 
+\begin{equation}
+\mathbb{B}_{R}=-\mathbb{B}_{R}^{t}\text{ and }\mathbb{B}_{I}=-\mathbb{B}%
+_{I}^{t}
+\end{equation}%
+and 
+\begin{eqnarray}
+&&\mathbb{BB}^{\ast }=\mathbb{B^{\ast }B}=-\mathbb{I}  \notag \\
+&\Rightarrow &\mathbb{B}^{-1}=-\mathbb{B^{\ast }}\text{ and }\mathbb{B}%
+_{R}^{2}+\mathbb{B}_{I}^{2}=-\mathbb{I}
+\end{eqnarray}%
+We can then form the commuting hermitian matrices $\mathbb{H}_{R}$ and $%
+\mathbb{H}_{I}$ by 
+\begin{equation}
+\mathbb{H}_{R}=i\mathbb{B}_{R}\text{ and }\mathbb{H}_{I}=i\mathbb{B}_{I}
+\end{equation}%
+so that 
+\begin{equation}
+\mathbb{H}_{R}^{2}+\mathbb{H}_{I}^{2}=\mathbb{I}\text{ and }\left[ \mathbb{H}%
+_{R},\mathbb{H}_{I}\right] =0
+\end{equation}%
+Hence we can conclude that there exists a matrix $\mathbf{\Omega }$ such
+that 
+\begin{equation}
+\mathbb{H}_{R}=\cos \mathbf{\Omega }\text{ and }\mathbb{H}_{I}=\sin \mathbf{%
+\Omega }
+\end{equation}%
+and thus that 
+\begin{equation}
+\mathbb{H}_{R}\mathbb{H}_{I}=\mathbb{H}_{I}\mathbb{H}_{R}=\sin \mathbf{%
+\Omega }\cos \mathbf{\Omega =}\frac{1}{2}\sin 2\mathbf{\Omega }
+\end{equation}%
+Now 
+\begin{equation}
+\mathbb{H}_{R}\mathbb{H}_{I}=-\mathbb{B}_{R}\mathbb{B}_{I}
+\end{equation}%
+so the solution of the \emph{real symmetric} eigenvalue problem 
+\begin{equation}
+\mathbb{B}_{R}\mathbb{B}_{I}\mathbf{v}_{j}=-\sin 2\mathbf{\Omega \,v}%
+_{j}=\lambda _{j}\mathbf{v}_{j}
+\end{equation}%
+gives a real orthonormal basis $\left\{ \mathbf{v}_{j}\right\} $ in which $%
+\sin 2\mathbf{\Omega }$, $\sin \mathbf{\Omega }$, $\cos \mathbf{\Omega }$, $%
+\mathbb{H}_{R}$ and $\mathbb{H}_{I}$ are diagonal and $\mathbb{B}_{R}$ and $%
+\mathbb{B}_{I}$ are skew diagonal. The eigenvalues $\left\{ \lambda
+_{j}\right\} $ are at least doubly degenerate as $\mathbb{B}_{R}$ and $%
+\mathbb{B}_{I}$ are antisymmetric. The vectors $\left\{ \mathbf{v}%
+_{j}\right\} $ form the columns of $\mathbb{O}$. The diagonal entries
+(eigenvalues) of $\mathbb{H}_{R}$ and $\mathbb{H}_{I}$ are given in terms of 
+\begin{equation}
+\varphi _{j}=\frac{1}{2}\sin ^{-1}\left( -\lambda _{j}\right)
+\end{equation}%
+as 
+\begin{equation}
+\alpha _{j}=-i\cos \varphi _{j}=-i\cos \left\{ \frac{1}{2}\sin ^{-1}\left(
+-\lambda _{j}\right) \right\}
+\end{equation}%
+and 
+\begin{equation}
+\beta _{j}=-i\sin \varphi _{j}=-i\sin \left\{ \frac{1}{2}\sin ^{-1}\left(
+-\lambda _{j}\right) \right\}
+\end{equation}%
+leading to the eigenvalues of $\mathbb{B}$ being 
+\begin{equation}
+-i\cos \varphi _{j}+\sin \varphi _{j}=-i\left( \cos \varphi _{j}+i\sin
+\varphi _{j}\right) =e^{i\left\{ \varphi _{j}+\pi \right\} }=e^{i\theta _{j}}
+\end{equation}%
+i.e. $\theta _{j}=\varphi _{j}+\pi $.
+
+\section{Energy of the 2N-Electron Unnormalized AGP State\label{EnDetail}}
+
+The Hamiltonian in the canonical basis can be written as 
+\begin{equation}
+H=h_{0}+\sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger }b_{j}+\frac{1}{4}%
+\sum_{i,j,k,l=1}^{r}\left\langle ij||kl\right\rangle b_{i}^{\dagger
+}b_{j}^{\dagger }b_{l}b_{k}
+\end{equation}%
+giving the 2N-electron unnormalized AGP state energy\ 
+\begin{equation}
+\left\langle G^{\dagger N}\phi |HG^{\dagger N}\phi \right\rangle
+=\left\langle G^{\dagger N}\phi \left| \left\{
+h_{0}+\sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger }b_{j}+\frac{1}{4}%
+\sum_{i,j,k,l=1}^{r}\left\langle ij||kl\right\rangle b_{i}^{\dagger
+}b_{j}^{\dagger }b_{l}b_{k}\right\} G^{\dagger N}\phi \right. \right\rangle
+\end{equation}%
+that can be expanded as 
+\begin{eqnarray*}
+&&\sum_{1\leq j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{1},\cdots ,k_{N}\leq
+s}\zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta _{k_{1}}\cdots
+\zeta _{k_{N}} \\
+&&\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}\left| \left\{ h_{0}+\sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger }b_{j}+%
+\frac{1}{4}\sum_{i,j,k,l=1}^{r}\left\langle ij||kl\right\rangle
+b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\right\} \eta _{k_{1}}\eta
+_{k_{1}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right. \right\rangle
+\end{eqnarray*}%
+\begin{equation}
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad
+\end{equation}%
+The first term is easy to compute--all paired indices must match, and as
+they are unordered we pick up a factor $N!$ each from the bra and ket to
+obtain 
+\begin{eqnarray}
+&&h_{0}\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{1}}\cdots \zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\right. \left| \eta _{k_{1}}\eta
+_{k_{1}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right\rangle =h_{0}\left(
+N!\right) ^{2}S_{N}  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad _{\quad \qquad 1\leq j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{1},\cdots
+,k_{N}\leq s}
+\end{eqnarray}%
+The one electron terms are obtained by noting that $b_{i}^{\dagger }b_{j}$
+must annihilate the same GSO from the bra and the ket producing 
+\begin{eqnarray}
+&&\qquad \sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{1}}\cdots \zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots
+\eta _{j_{N}\,}\eta _{j_{N}+s}\left| \sum_{i,,j=1}^{r}h_{ij}b_{i}^{\dagger
+}b_{j}\eta _{k_{1}}\eta _{k_{1}+s}\cdots \eta _{k_{N}\,}\eta
+_{k_{N}+s}\right. \right\rangle  \notag \\
+&&_{1\leq j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{1},\cdots ,k_{N}\leq s} 
+\notag \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad =\left( N!\right) ^{2}\sum_{i=1}^{s}\left\{ h_{ii}+h_{i+si+s}\right\}
+n_{i}S_{N-1}\left( \hat{\imath}\right)
+\end{eqnarray}%
+With the two electron term 
+\begin{equation*}
+\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta _{k_{1}}\cdots
+\zeta _{k_{N}}\left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\left| \frac{1}{4}\sum_{i,j,k,l=1}^{r}\left\langle
+ij||kl\right\rangle b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\eta
+_{k_{1}}\eta _{k_{1}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right.
+\right\rangle
+\end{equation*}%
+\begin{equation}
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad _{1\leq j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{1},\cdots
+,k_{N}\leq s\,}
+\end{equation}%
+we have more choices. To see this clearly we can split the two-electron
+operator into the following portions%
+\begin{eqnarray}
+&&\sum_{i,j,k,l=1}^{r}\left\langle ij||kl\right\rangle b_{i}^{\dagger
+}b_{j}^{\dagger }b_{l}b_{k}=  \notag \\
+&&\left. {}\right. \sum_{i=1}^{s}\left\langle ii+s||ii+s\right\rangle
+\left\{ b_{i}^{\dagger }b_{i+s}^{\dagger }b_{i+s}b_{i}-b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{i}b_{i+s}-b_{i+s}^{\dagger }b_{i}^{\dagger
+}b_{i+s}b_{i}+b_{i+s}^{\dagger }b_{i}^{\dagger }b_{i}b_{i+s}\right\}  \notag
+\\
+&&+\sum_{i\neq l=1}^{s}\left\langle ii+s||ll+s\right\rangle \left\{
+b_{i}^{\dagger }b_{i+s}^{\dagger }b_{l+s}b_{l}-b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{l}b_{l+s}-b_{i+s}^{\dagger }b_{i}^{\dagger
+}b_{l+s}b_{l}+b_{i+s}^{\dagger }b_{i}^{\dagger }b_{l}b_{l+s}\right\}
+\label{twoel1}
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+&&+\sum_{i,,j=1}^{s}\left\langle ij||ij\right\rangle \left\{ b_{i}^{\dagger
+}b_{j}^{\dagger }b_{j}b_{i}-b_{i}^{\dagger }b_{j}^{\dagger
+}b_{i}b_{j}-b_{j}^{\dagger }b_{i}^{\dagger }b_{j}b_{i}+b_{j}^{\dagger
+}b_{i}^{\dagger }b_{i}b_{j}\right\}  \notag \\
+&&+\sum_{i,j=1}^{s}\left\langle i+sj||i+sj\right\rangle \left\{
+b_{i+s}^{\dagger }b_{j}^{\dagger }b_{j}b_{i+s}-b_{i+s}^{\dagger
+}b_{j}^{\dagger }b_{i+s}b_{j}-b_{j}^{\dagger }b_{i+s}^{\dagger
+}b_{j}b_{i+s}+b_{j}^{\dagger }b_{i+s}^{\dagger }b_{i+s}b_{j}\right\}  \notag
+\\
+&&+\sum_{i,j}^{s}\left\langle ij+s||ij+s\right\rangle \left\{ b_{i}^{\dagger
+}b_{j+s}^{\dagger }b_{j+s}b_{i}-b_{i}^{\dagger }b_{j+s}^{\dagger
+}b_{i}b_{j+s}-b_{j+s}^{\dagger }b_{i}^{\dagger
+}b_{j+s}b_{i}+b_{j+s}^{\dagger }b_{i}^{\dagger }b_{i}b_{j+s}\right\}  \notag
+\\
+&&+\sum_{i,j=1}^{s}\left\langle i+sj+s||i+sj+s\right\rangle \left\{
+b_{i+s}^{\dagger }b_{j+s}^{\dagger }b_{j+s}b_{i+s}-b_{i+s}^{\dagger
+}b_{j+s}^{\dagger }b_{i+s}b_{j+s}\right.  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. -b_{j+s}^{\dagger
+}b_{i+s}^{\dagger }b_{j+s}b_{i+s}+b_{j+s}^{\dagger }b_{i+s}^{\dagger
+}b_{i+s}b_{j+s}\right\} ;\quad i\neq j\pm s  \notag \\
+&&+\text{ other terms}  \label{twoel2}
+\end{eqnarray}%
+The portion eq. $\left( \ref{twoel1}\right) $ produces 
+\begin{equation}
+4\left( N\right) !^{2}\left\{ \sum_{1\leq i\leq s}n_{i}S_{N-1}\left( \hat{%
+\imath}\right) \left\langle ii+s||ii+s\right\rangle +\sum_{1\leq i\neq j\leq
+s}\zeta _{i}^{\ast }\zeta _{j}S_{N-2}\left( \hat{\imath}\hat{\jmath}\right)
+\left\langle ii+s||jj+s\right\rangle \right\}
+\end{equation}%
+and the portion eq. $\left( \ref{twoel2}\right) $ produces%
+\begin{equation}
+4\left( N\right) !^{2}\sum_{1\leq i,j\leq s}n_{i}n_{j}S_{N-2}\left( \hat{%
+\imath}\hat{\jmath}\right) \left\langle ij|||ij\right\rangle
+\end{equation}%
+and the expectation value of the ''other terms'' is zero. The full
+unnormalized energy expression is then 
+\begin{eqnarray}
+&&\mathcal{H}\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) =h_{0}%
+\mathcal{N}\left( g^{N}\right) +\left( N\right) !^{2}\left\{ \sum_{1\leq
+i\leq s}n_{i}S_{N-1}\left( \hat{\imath}\right) \left\{
+h_{ii}+h_{i+si+s}+\left\langle ii+s||ii+s\right\rangle \right\} \right. 
+\notag \\
+&&\qquad \qquad +\sum_{1\leq i\neq j\leq s}\zeta _{i}^{\ast }\zeta
+_{j}S_{N-1}\left( \hat{\imath}\hat{\jmath}\right) \left\langle
+ii+s||jj+s\right\rangle \left. +\sum_{1\leq i,j\leq
+s}n_{i}n_{j}S_{N-2}\left( \hat{\imath}\hat{\jmath}\right) \left\langle
+ij|||ij\right\rangle \right\}
+\end{eqnarray}
+
+\section{Differential Properties\label{DiffProp}}
+
+\subsection{Taylor Series Expansion}
+
+The functions appearing in eq. $\left( \ref{EnFunc}\right) $ have second
+order Taylor series expansions given by 
+\begin{equation}
+f\left( \mathbf{z}^{\ast }+\mathbf{h}^{\ast },\mathbf{z}+\mathbf{h}\right)
+\simeq f\left( \mathbf{z}^{\ast },\mathbf{z}\right) +D^{1}f\left( \mathbf{z}%
+^{\ast },\mathbf{z}\right) \bullet \mathbf{h}+\frac{1}{2}\mathbf{h}^{\dagger
+}\bullet D^{2}f\left( \mathbf{z}^{\ast },\mathbf{z}\right) \bullet \mathbf{h}
+\end{equation}%
+where%
+\begin{eqnarray}
+\mathbf{y} &\mathbf{=}&\left( 
+\begin{array}{c}
+\mathbf{z}^{\ast } \\ 
+\mathbf{z}%
+\end{array}%
+\right)  \notag \\
+D^{1}f\left( \mathbf{z}^{\ast },\mathbf{z}\right) &=&\left( 
+\begin{array}{cc}
+\frac{\partial f}{\partial \mathbf{z}^{\ast }} & \frac{\partial f}{\partial 
+\mathbf{z}}%
+\end{array}%
+\right)  \notag \\
+D^{2}f\left( \mathbf{z}^{\ast },\mathbf{z}\right) &=&\left( 
+\begin{array}{cc}
+\frac{\partial ^{2}f}{\partial \mathbf{z}^{\ast }\partial \mathbf{z}} & 
+\frac{\partial ^{2}f}{\partial \mathbf{z}^{\ast }\partial \mathbf{z}^{\ast }}
+\\ 
+\frac{\partial ^{2}f}{\partial \mathbf{z}\partial \mathbf{z}} & \frac{%
+\partial ^{2}f}{\partial \mathbf{z}\partial \mathbf{z}^{\ast }}%
+\end{array}%
+\right)
+\end{eqnarray}%
+\begin{eqnarray}
+\left( \frac{\partial f}{\partial \mathbf{z}}\right) _{j} &=&\frac{\partial f%
+}{\partial z_{j}}  \notag \\
+\left( \frac{\partial ^{2}f}{\partial \mathbf{z}^{\ast }\partial \mathbf{z}}%
+\right) _{jk} &=&\frac{\partial ^{2}f}{\partial z_{j}^{\ast }\partial z_{k}}
+\end{eqnarray}%
+and all the derivatives are evaluated at $\left( \mathbf{z}^{\ast },\mathbf{z%
+}\right) $ and all other terms are obtained by complex conjugation.
+
+\subsection{Coordinate Transformation}
+
+The derivatives in different coordinate systems $\mathbf{c}$ and $\mathbf{%
+\gamma }$ are related to each by 
+\begin{eqnarray}
+&&\left( 
+\begin{array}{c}
+\frac{\partial f}{\partial \mathbf{\gamma }^{\ast }} \\ 
+\frac{\partial f}{\partial \mathbf{\gamma }}%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+\mathbb{W}_{f}^{\ast }\otimes \mathbb{W}_{f}^{\ast } & \mathbf{0} \\ 
+\mathbf{0} & \mathbb{W}_{f}\otimes \mathbb{W}_{f}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\frac{\partial f}{\partial \mathbf{c}^{\ast }} \\ 
+\frac{\partial f}{\partial \mathbf{c}}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\mathbb{W}_{f}^{\ast }\frac{\partial f}{\partial \mathbf{c}^{\ast }}\mathbb{W%
+}_{f}^{\dagger } \\ 
+\mathbb{W}_{f}\frac{\partial f}{\partial \mathbf{c}}\mathbb{W}_{f}^{t}%
+\end{array}%
+\right)  \label{d1trans} \\
+&&\left( 
+\begin{array}{cc}
+\frac{\partial ^{2}f}{\partial \mathbf{\gamma }\partial \mathbf{\gamma }%
+^{\ast }} & \frac{\partial ^{2}f}{\partial \mathbf{\gamma }\partial \mathbf{%
+\gamma }} \\ 
+\frac{\partial ^{2}f}{\partial \mathbf{\gamma }^{\ast }\partial \mathbf{%
+\gamma }^{\ast }} & \frac{\partial ^{2}f}{\partial \mathbf{\gamma }^{\ast
+}\partial \mathbf{\gamma }}%
+\end{array}%
+\right) =  \notag \\
+&&\left( 
+\begin{array}{cc}
+\mathbb{W}_{f}\otimes \mathbb{W}_{f} & \mathbf{0} \\ 
+\mathbf{0} & \mathbb{W}_{f}^{\ast }\otimes \mathbb{W}_{f}^{\ast }%
+\end{array}%
+\right) ^{\dagger }\left( 
+\begin{array}{cc}
+\frac{\partial ^{2}f}{\partial \mathbf{c}\partial \mathbf{c}^{\ast }} & 
+\frac{\partial ^{2}f}{\partial \mathbf{c}\partial \mathbf{c}} \\ 
+\frac{\partial ^{2}f}{\partial \mathbf{c}^{\ast }\partial \mathbf{c}^{\ast }}
+& \frac{\partial ^{2}f}{\partial \mathbf{c}^{\ast }\partial \mathbf{c}}%
+\end{array}%
+\right) \left( 
+\begin{array}{cc}
+\mathbb{W}_{f}^{\dagger }\otimes \mathbb{W}_{f}^{\dagger } & \mathbf{0} \\ 
+\mathbf{0} & \mathbb{W}_{f}^{t}\otimes \mathbb{W}_{f}^{t}%
+\end{array}%
+\right) =  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \left( 
+\begin{array}{cc}
+\mathbb{W}_{f}\otimes \mathbb{W}_{f}\frac{\partial ^{2}f}{\partial \mathbf{c}%
+\partial \mathbf{c}^{\ast }}\mathbb{W}_{f}^{\dagger }\otimes \mathbb{W}%
+_{f}^{\dagger } & \mathbb{W}_{f}\otimes \mathbb{W}_{f}\frac{\partial ^{2}f}{%
+\partial \mathbf{c}\partial \mathbf{c}}\mathbb{W}_{f}^{t}\otimes \mathbb{W}%
+_{f}^{t} \\ 
+\mathbb{W}_{f}^{\ast }\otimes \mathbb{W}_{f}^{\ast }\frac{\partial ^{2}f}{%
+\partial \mathbf{c}^{\ast }\partial \mathbf{c}^{\ast }}\mathbb{W}%
+_{f}^{\dagger }\otimes \mathbb{W}_{f}^{\dagger } & \mathbb{W}_{f}^{\ast
+}\otimes \mathbb{W}_{f}^{\ast }\frac{\partial ^{2}f}{\partial \mathbf{c}%
+^{\ast }\partial \mathbf{c}}\mathbb{W}_{f}^{t}\otimes \mathbb{W}_{f}^{t}%
+\end{array}%
+\right)  \label{d2trans}
+\end{eqnarray}
+
+\subsection{Derivatives of Quotients}
+
+The energy is expressed as a rational function 
+\begin{equation}
+\mathcal{E}\left( \mathbf{z}^{\ast },\mathbf{z}\right) =\frac{\mathcal{H}%
+\left( \mathbf{z}^{\ast },\mathbf{z}\right) }{\mathcal{N}\left( \mathbf{z}%
+^{\ast },\mathbf{z}\right) }
+\end{equation}%
+which has first derivative 
+\begin{equation}
+D^{1}\mathcal{E}\left( \mathbf{z}^{\ast },\mathbf{z}\right) \mathcal{=}\frac{%
+1}{\mathcal{N}\left( \mathbf{z}^{\ast },\mathbf{z}\right) }\left\{ D^{1}%
+\mathcal{H}\left( \mathbf{z}^{\ast },\mathbf{z}\right) \mathcal{-E}\left( 
+\mathbf{z}^{\ast },\mathbf{z}\right) D^{1}\mathcal{N}\left( \mathbf{z}^{\ast
+},\mathbf{z}\right) \right\}
+\end{equation}%
+and second derivative 
+\begin{eqnarray}
+D^{2}\mathcal{E}\left( \mathbf{z}^{\ast },\mathbf{z}\right) &=&\frac{1}{%
+\mathcal{N}\left( \mathbf{z}^{\ast },\mathbf{z}\right) }\left\{ D^{2}%
+\mathcal{H}\left( \mathbf{z}^{\ast },\mathbf{z}\right) \mathcal{-E}\left( 
+\mathbf{z}^{\ast },\mathbf{z}\right) D^{2}\mathcal{N}\left( \mathbf{z}^{\ast
+},\mathbf{z}\right) \right.  \notag \\
+&&\left. -\left\{ D^{1}\mathcal{E}\left( \mathbf{z}^{\ast },\mathbf{z}%
+\right) \otimes D^{1}\mathcal{N}\left( \mathbf{z}^{\ast },\mathbf{z}\right)
++D^{1}\mathcal{N}\left( \mathbf{z}^{\ast },\mathbf{z}\right) \otimes D^{1}%
+\mathcal{E}\left( \mathbf{z}^{\ast },\mathbf{z}\right) \right\} \right\}
+\end{eqnarray}
+
+\section{Computation of First Derivatives\label{CompFiDer}}
+
+\subsection{\textit{Calculation of} $\left\langle G^{\dagger N}\protect\phi %
+|Hb_{p}^{\dagger }b_{p+s}^{\dagger }G^{\dagger N-1}\protect\phi %
+\right\rangle $}
+
+The 2N-electron AGP unnormalized state energy derivative wrt $\gamma _{pq}$
+needs the matrix elements $\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger
+}b_{p+s}^{\dagger }G^{\dagger N-1}\phi \right\rangle $ and $\left\langle
+G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi
+\right\rangle $ for $\left| p\right| \neq \left| q\right| $. We first
+consider the $\left( p,p+s\right) $ elements 
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle \quad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad \\
+&=&\left\langle G^{\dagger N}\phi \left| \left\{
+h_{0}+\sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger }b_{j}+\frac{1}{4}%
+\sum_{i,j,k,l=1}^{r}\left\langle ij||kl\right\rangle b_{i}^{\dagger
+}b_{j}^{\dagger }b_{l}b_{k}\right\} b_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right. \right\rangle
+\end{eqnarray*}%
+\begin{eqnarray}
+&=&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}\qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \qquad \qquad \qquad \quad  \notag \\
+&&\qquad \qquad \quad \qquad \langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\left| H\eta _{p}\eta _{p+s}\eta _{k_{2}}\eta
+_{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,k_{m}\neq
+p;\,2\leq m\leq N}
+\end{eqnarray}%
+The first term produces 
+\begin{eqnarray}
+&&h_{0}\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \notag \\
+&&\qquad \qquad \left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\right. \left| \eta _{p}\eta _{p+s}\eta
+_{k_{2}}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right\rangle 
+\notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,k_{m}\neq
+p;\,2\leq m\leq N}  \notag \\
+&&\left. {}\right. =h_{0}N!\left( N-1\right) !\zeta _{p}^{\ast
+}S_{N-1}\left( \hat{p}\right)
+\end{eqnarray}%
+The one electron terms are obtained by noting that $b_{i}^{\dagger }b_{j}$
+must annihilate the same GSO from the bra and the ket producing 
+\begin{eqnarray}
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \notag \\
+&&\qquad \left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}\left| \sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger }b_{j}\eta _{p}\eta
+_{p+s}\eta _{k_{2}}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta
+_{k_{N}+s}\right. \right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,\,k_{m}\neq
+p;\quad 2\leq m\leq N}  \notag \\
+&=&N!\left( N-1\right) !\zeta _{p}^{\ast }\left\{ \left\{
+h_{pp}+h_{p+sp+s}\right\} S_{N-1}\left( \hat{p}\right) +\sum_{i\neq
+p}^{s}\left\{ h_{ii}+h_{i+si+s}\right\} n_{j}S_{N-2}\left( \hat{\imath}\hat{p%
+}\right) \right\}
+\end{eqnarray}%
+With the two electron term 
+\begin{eqnarray}
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}  \notag \\
+&&\qquad \left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}\left| \frac{1}{4}\sum_{i,j,k,l=1}^{r}\left\langle
+ij||kl\right\rangle b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\eta _{p}\eta
+_{p+s}\eta _{k_{2}\,}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta
+_{k_{N}+s}\right. \right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,\,k_{m}\neq
+p;\quad 2\leq m\leq N}
+\end{eqnarray}%
+we can use the two electron operator from eq. $\left( \ref{twoel1}\right) $
+and $\left( \ref{twoel2}\right) $. From eq. $\left( \ref{twoel1}\right) $ we
+obtain 
+\begin{eqnarray}
+&&4N!\left( N-1\right) !\left\{ \underset{i}{\underset{}{\zeta _{p}^{\ast
+}S_{N-1}\left( \hat{p}\right) \left\langle pp+s||pp+s\right\rangle }}+%
+\underset{ii}{\sum_{i\neq j\neq p}^{s}\zeta _{p}^{\ast }\zeta _{i}^{\ast
+}\zeta _{j}S_{N-2}\left( \hat{p}\hat{\imath}\hat{\jmath}\right) \left\langle
+ii+s||jj+s\right\rangle }\right.  \notag \\
+&&\left. {}\right. \qquad \qquad \left. \underset{iii}{\sum_{i\neq
+p}^{s}\zeta _{p}^{\ast }n_{i}S_{N-2}\left( \hat{p}\hat{\imath}\right)
+\left\langle ii+s||ii+s\right\rangle }+\underset{iv}{\sum_{i\neq p}^{s}\zeta
+_{i}^{\ast }S_{N-2}\left( \hat{p}\hat{\imath}\right) \left\langle
+ii+s||pp+s\right\rangle }\right\}
+\end{eqnarray}%
+and from eq. $\left( \ref{twoel2}\right) $%
+\begin{equation}
+4N!\left( N-1\right) !\left\{ \underset{v}{\sum_{i<j\neq p}^{s}\zeta
+_{p}^{\ast }n_{i}n_{j}S_{N-3}\left( \hat{p}\hat{\imath}\hat{\jmath}\right)
+\left\langle ij|||ij\right\rangle }+\underset{vi}{\sum_{i\neq
+p}^{s}n_{i}\zeta _{p}^{\ast }S_{N-2}\left( \hat{p}\hat{\imath}\right)
+\left\langle ip|||ip\right\rangle }\right\}
+\end{equation}%
+Term $\left( i\right) $ comes from summing terms of the form%
+\begin{eqnarray}
+&&\left\langle pp+s||pp+s\right\rangle \times  \notag \\
+&&\qquad \left\langle \eta _{p\,}\eta _{p+s}\eta _{j_{2}}\eta _{j_{2}+s}%
+{\small \cdots }\eta _{j_{N}\,}\eta _{j_{N}+s}|b_{p}^{\dagger
+}b_{p+s}^{\dagger }b_{p+s}b_{p}\eta _{p}\eta _{p+s}\eta _{j_{2}\,}\eta
+_{j_{2}+s}{\small \cdots }\eta _{j_{N}\,}\eta _{j_{N}\,+s}\right\rangle
+\label{t1}
+\end{eqnarray}%
+term $\left( ii\right) $ from%
+\begin{eqnarray}
+&&\left\langle ii+s||jj+s\right\rangle \times  \notag \\
+&&\left\langle \eta _{p\,}\eta _{p+s}\eta _{i}\eta _{i+s}\eta _{j_{3}\,}\eta
+_{j_{3}+s}{\small \cdots }\eta _{j_{N}\,}\eta _{j_{N}+s}|b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{j+s}b_{j}\eta _{p}\eta _{p+s}\eta _{j}\eta _{j+s}\eta
+_{j_{3}\,}\eta _{j_{3}+s}{\small \cdots }\eta _{j_{N}\,}\eta
+_{j_{N}+s}\right\rangle  \label{t2}
+\end{eqnarray}%
+term $\left( iii\right) $ from%
+\begin{eqnarray}
+&&\left\langle ii+s||ii+s\right\rangle \times  \notag \\
+&&\left\langle \eta _{p\,}\eta _{p+s}\eta _{i}\eta _{i+s}\eta _{j_{3}\,}\eta
+_{j_{3}+s}{\small \cdots }\eta _{j_{N}\,}\eta _{j_{N}+s}|b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{i+s}b_{i}\eta _{p}\eta _{p+s}\eta _{i}\eta _{i+s}\eta
+_{j_{3}\,}\eta _{j_{3}+s}{\small \cdots }\eta _{j_{N}\,}\eta
+_{j_{N}+s}\right\rangle  \label{t3}
+\end{eqnarray}%
+term $\left( iv\right) $ from%
+\begin{equation}
+\left\langle ii+s||pp+s\right\rangle \left\langle \eta _{p\,}\eta _{p+s}\eta
+_{j_{2}}\eta _{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}|b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{p+s}b_{p}\eta _{p}\eta _{p+s}\eta _{j_{2}\,}\eta
+_{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\right\rangle  \label{t4}
+\end{equation}%
+term $\left( v\right) $ from%
+\begin{eqnarray}
+&&\left\langle ij|||ij\right\rangle \times  \notag \\
+&&\left\langle \eta _{p\,}\eta _{p+s}\eta _{i}\eta _{i+s}\eta _{j_{3}}\eta
+_{j_{3}+s}{\small \cdots }\eta _{j_{N}\,}\eta _{j_{N}+s}|b_{i}^{\dagger
+}b_{i+s}^{\dagger }b_{j+s}b_{j}\eta _{p}\eta _{p+s}\eta _{j}\eta _{j+s}\eta
+_{j_{3}\,}\eta _{j_{3}+s}{\small \cdots }\eta _{j_{N}\,}\eta
+_{j_{N}+s}\right\rangle  \label{t5}
+\end{eqnarray}%
+and term $\left( vi\right) $ from%
+\begin{equation}
+\left\langle ip|||ip\right\rangle \left\langle \eta _{p\,}\eta _{p+s}\eta
+_{i}\eta _{i+s}\eta _{j_{3}}\eta _{j_{3}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}|b_{i}^{\dagger }b_{i+s}^{\dagger }b_{p+s}b_{p}\eta _{p}\eta
+_{p+s}\eta _{j_{3}\,}\eta _{j_{3}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}\right\rangle  \label{t6}
+\end{equation}%
+The final result is%
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\left\{ h_{0}\zeta _{p}^{\ast }S_{N-1}\left( \hat{p}\right) +\right.
+\left\{ h_{pp}+h_{p+sp+s}\right\} \zeta _{p}^{\ast }S_{N-1}\left( \hat{p}%
+\right) +\sum_{i\neq p}^{s}\left\{ h_{ii}+h_{i+si+s}\right\} \zeta
+_{p}^{\ast }n_{i}S_{N-2}\left( \hat{\imath}\hat{p}\right) +  \notag \\
+&&\quad \quad \zeta _{p}^{\ast }S_{N-1}\left( \hat{p}\right) \left\langle
+pp+s||pp+s\right\rangle +\sum_{i\neq j\neq p}^{s}\zeta _{p}^{\ast }\zeta
+_{i}^{\ast }\zeta _{j}S_{N-2}\left( \hat{p}\hat{\imath}\hat{\jmath}\right)
+\left\langle ii+s||jj+s\right\rangle  \notag \\
+&&\left. {}\right. \qquad \qquad \sum_{i\neq p}^{s}\zeta _{p}^{\ast
+}n_{i}S_{N-2}\left( \hat{p}\hat{\imath}\right) \left\langle
+ii+s||ii+s\right\rangle +\sum_{i\neq p}^{s}\zeta _{i}^{\ast }S_{N-2}\left( 
+\hat{p}\hat{\imath}\right) \left\langle ii+s||pp+s\right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \left. \sum_{i,j\neq p}^{s}\zeta _{p}^{\ast
+}n_{i}n_{j}S_{N-3}\left( \hat{p}\hat{\imath}\hat{\jmath}\right) \left\langle
+ij|||ij\right\rangle +\sum_{i\neq p}^{s}n_{i}\zeta _{p}^{\ast }S_{N-2}\left( 
+\hat{p}\hat{\imath}\right) \left\langle ip|||ip\right\rangle \right\}
+\label{Der}
+\end{eqnarray}%
+The expression eq. $\left( \ref{Der}\right) $ can be rearranged into sums
+driven by the symmetric functions as 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =  \notag \\
+&&N!\left( N-1\right) !\left\{ \zeta _{p}^{\ast }S_{N-1}\left( \hat{p}%
+\right) \left\{ h_{0}+h_{pp}+h_{p+sp+s}+\left\langle pp+s||pp+s\right\rangle
+\right\} \right.  \notag \\
+&&\left. {}\right. \quad +\sum_{i\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\imath}%
+\right) \left\{ \zeta _{p}^{\ast }n_{i}\left\{
+h_{ii}+h_{i+si+s}+\left\langle ii+s||ii+s\right\rangle +\left\langle
+ip|||ip\right\rangle \right\} \right.  \notag \\
+&&\qquad \qquad \qquad \left. +\zeta _{i}^{\ast }\left\langle
+ii+s||pp+s\right\rangle \right\} +\sum_{i\neq j\neq p}^{s}\zeta _{i}^{\ast
+}\zeta _{j}S_{N-2}\left( \hat{p}\hat{\imath}\hat{\jmath}\right) \left\langle
+ii+s||jj+s\right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left.
++\zeta _{p}^{\ast }\sum_{i<j\neq p}^{s}n_{i}n_{j}S_{N-3}\left( \hat{p}\hat{%
+\imath}\hat{\jmath}\right) \left\langle ij|||ij\right\rangle \right\}
+\end{eqnarray}
+
+\subsection{\textit{Calculation of} $\left\langle G^{\dagger N}\protect\phi %
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\protect\phi \right\rangle $%
+, $\left| p\right| \neq \left| q\right| $}
+
+In this case there are no contributions from $h_{0}$. The one electron terms
+are obtained by noting that $b_{i}^{\dagger }b_{j}$ must either annihilate
+the $p$ from the bra and $\bar{q}$ from the ket or $q$ from the bra and $%
+\bar{p}$ from the ket to obtain 
+\begin{eqnarray}
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}\times  \notag \\
+&&\qquad \left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}\left| \sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger }b_{j}\eta _{p}\eta
+_{q}\eta _{k_{2}}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta _{k_{N}+s}\right.
+\right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,\,k_{m}\neq
+p;\quad 2\leq m\leq N}  \notag \\
+&&\left. {}\right. \qquad \qquad \qquad \qquad \qquad \qquad =N!\left(
+N-1\right) !\left\{ \zeta _{q}^{\ast }h_{\bar{q}p}+\zeta _{p}^{\ast }h_{\bar{%
+p}q}\right\} S_{N-1}\left( \hat{p}\hat{q}\right)
+\end{eqnarray}%
+The two electron term has the form 
+\begin{eqnarray}
+&&\sum \zeta _{j_{1}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{k_{2}}\cdots \zeta _{k_{N}}\times  \notag \\
+&&\qquad \left\langle \eta _{j_{1}}\eta _{j_{1}+s}\cdots \eta _{j_{N}\,}\eta
+_{j_{N}+s}\left| \frac{1}{4}\sum_{i,j,k,l=1}^{r}\left\langle
+ij||kl\right\rangle b_{i}^{\dagger }b_{j}^{\dagger }b_{l}b_{k}\eta _{p}\eta
+_{q}\eta _{k_{2}\,}\eta _{k_{2}+s}\cdots \eta _{k_{N}\,}\eta
+_{k_{N}+s}\right. \right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad _{1\leq
+j_{1},\cdots ,j_{N}\leq s;\,1\leq k_{2},\cdots ,k_{N}\leq s;\,\,\,k_{m}\neq
+p,q;\quad 2\leq m\leq N}
+\end{eqnarray}%
+which can be expanded as 
+\begin{eqnarray*}
+&=&\frac{1}{4}\sum_{\kappa ,j_{2},\cdots ,j_{N}\,}\sum_{i,j,k,l=1}^{r}\zeta
+_{\kappa }^{\ast }\zeta _{j_{2}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta
+_{j_{2}}\cdots \zeta _{j_{N}}\left\langle \kappa \kappa +s||pq\right\rangle
+\times \qquad \qquad \qquad \qquad \qquad \\
+&&\left\langle \eta _{\kappa }\eta _{\kappa +s}\eta _{j_{2}}\eta
+_{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left| b_{\kappa }^{\dagger
+}b_{\kappa +s}^{\dagger }b_{q}b_{p}\eta _{p}\eta _{q}\eta _{j_{2}\,}\eta
+_{j_{2}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\right. \right\rangle
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&+\,\frac{1}{4}\sum_{\kappa ,j_{3},\cdots
+,j_{N}\,}\sum_{i,j,k,l=1}^{r}\zeta _{p}^{\ast }\zeta _{q}^{\ast }\zeta
+_{j_{3}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta _{\kappa }\zeta
+_{j_{3}}\cdots \zeta _{j_{N}}\left\langle \bar{p}\bar{q}||\kappa \kappa
++s\right\rangle \times \\
+&&\left\langle \eta _{p}\eta _{p+s}\eta _{q}\eta _{q+s}\eta _{j_{3}}\eta
+_{j_{3}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left| b_{\bar{p}}^{\dagger
+}b_{\bar{q}}^{\dagger }b_{\lambda +s}b_{\lambda }\eta _{p}\eta _{q}\eta
+_{\lambda \,}\eta _{\lambda +s}\eta _{j_{3}\,}\eta _{j_{3}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\right. \right\rangle
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&+\,\frac{1}{4}\sum_{\kappa ,j_{3},\cdots
+,j_{N}\,}\sum_{i,j,k,l=1}^{r}\zeta _{\kappa }^{\ast }\zeta _{q}^{\ast }\zeta
+_{j_{3}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta _{j_{3}}\cdots \zeta
+_{j_{N}}\left\langle \bar{q}\kappa ||p\kappa \right\rangle \times \\
+&&\left\langle \eta _{\kappa }\eta _{\kappa +s}\eta _{q}\eta _{q+s}\eta
+_{j_{3}\,}\eta _{j_{3}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left| b_{\bar{%
+q}}^{\dagger }b_{\kappa }^{\dagger }b_{\kappa }b_{p}\eta _{p}\eta _{q}\eta
+_{\kappa \,}\eta _{\kappa +s}\eta _{j_{3}\,}\eta _{j_{3}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\right. \right\rangle
+\end{eqnarray*}%
+\begin{eqnarray}
+&&+\,\frac{1}{4}\sum_{\kappa ,j_{3},\cdots
+,j_{N}\,}\sum_{i,j,k,l=1}^{r}\zeta _{\kappa }^{\ast }\zeta _{q}^{\ast }\zeta
+_{j_{3}}^{\ast }\cdots \zeta _{j_{N}}^{\ast }\zeta _{j_{3}}\cdots \zeta
+_{j_{N}}\left\langle \bar{q}\kappa ||p\kappa \right\rangle \times  \notag \\
+&&\left\langle \eta _{\kappa }\eta _{\kappa +s}\eta _{q}\eta _{q+s}\eta
+_{j_{3}\,}\eta _{j_{3}+s}\cdots \eta _{j_{N}\,}\eta _{j_{N}+s}\left| b_{\bar{%
+q}}^{\dagger }b_{\kappa }^{\dagger }b_{\kappa }b_{p}\eta _{p}\eta _{q}\eta
+_{\kappa \,}\eta _{\kappa +s}\eta _{j_{3}\,}\eta _{j_{3}+s}\cdots \eta
+_{j_{N}\,}\eta _{j_{N}+s}\right. \right\rangle
+\end{eqnarray}%
+which gives 
+\begin{eqnarray}
+&&\sum_{\kappa \neq \left| p\right| \neq \left| q\right| }^{s}\left\{ \zeta
+_{\kappa }^{\ast }\left\langle \kappa \kappa +s||pq\right\rangle
+S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) +\right.  \notag \\
+&&\qquad \qquad \left. +\zeta _{p}^{\ast }\left\langle pp+s||pq\right\rangle
+S_{N-1}\left( \hat{p}\hat{q}\right) +\zeta _{q}^{\ast }\left\langle
+qq+s||pq\right\rangle S_{N-1}\left( \hat{p}\hat{q}\right) \right\}  \notag \\
+&&\qquad \qquad +\sum_{\kappa \neq \left| p\right| \neq \left| q\right|
+}^{s}\left\langle \bar{p}\bar{q}||\kappa \kappa +s\right\rangle \zeta
+_{p}^{\ast }\zeta _{q}^{\ast }\zeta _{\kappa }S_{N-2}\left( \hat{\kappa}\hat{%
+p}\hat{q}\right)  \notag \\
+&&\qquad \qquad +\sum_{\kappa \neq \left| p\right| \neq \left| q\right|
+}^{s}\left\langle \bar{q}\kappa ||p\kappa \right\rangle n_{\kappa }\zeta
+_{q}^{\ast }S_{N-2}\left( \hat{\kappa}\hat{p}\hat{q}\right)  \notag \\
+&&\qquad \qquad +\sum_{\kappa \neq \left| p\right| \neq \left| q\right|
+}^{s}\left\langle \bar{p}\kappa ||q\kappa \right\rangle n_{\kappa }\zeta
+_{p}^{\ast }S_{N-2}\left( \hat{\kappa}\hat{p}\hat{q}\right)
+\end{eqnarray}%
+which can be collected together with the one electron terms to give 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\left\{ \sum_{\kappa \neq \left| p\right| \neq \left| q\right|
+}^{s}\left\{ S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) \zeta _{\kappa
+}^{\ast }\left\langle \kappa \kappa +s||pq\right\rangle +S_{N-2}\left( \hat{%
+\kappa}\hat{p}\hat{q}\right) \left\langle \bar{p}\bar{q}||\kappa \kappa
++s\right\rangle \zeta _{p}^{\ast }\zeta _{q}^{\ast }\zeta _{\kappa }\right.
+\right.  \notag \\
+&&\quad \quad \quad \quad \quad \quad \left. +\left\langle \bar{q}\kappa
+||p\kappa \right\rangle n_{\kappa }\zeta _{q}^{\ast }+\left\langle \bar{p}%
+\kappa ||q\kappa \right\rangle n_{\kappa }\zeta _{p}^{\ast }\right\} +\zeta
+_{p}^{\ast }\left\langle pp+s||pq\right\rangle S_{N-1}\left( \hat{p}\hat{q}%
+\right)  \notag \\
+&&\quad \quad \quad \quad \quad \quad \quad \left. +\zeta _{q}^{\ast
+}\left\langle qq+s||pq\right\rangle S_{N-1}\left( \hat{p}\hat{q}\right)
++\left\{ \zeta _{q}^{\ast }h_{\bar{q}p}+\zeta _{p}^{\ast }h_{\bar{p}%
+q}\right\} S_{N-1}\left( \hat{p}\hat{q}\right) \overset{}{\underset{}{}}%
+\right\}
+\end{eqnarray}
+
+\section{Transformation of the Energy of the 2N-Electron Unnormalized AGP
+State to the Atomic Orbital Basis\label{Trans2AObasis}}
+
+Expressing the canonical basis $\left\{ \eta _{j}\right\} $ in terms of the
+atomic basis $\left\{ \varphi _{j}\right\} $ the energy expression eq. $%
+\left( \ref{canen}\right) $ becomes
+
+\begin{eqnarray}
+&&\mathcal{H}\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) =h_{0}%
+\mathcal{N}\left( g^{N}\right) +\left( N\right) !^{2}\times  \notag \\
+&&\left\{ \sum_{j_{1,}j_{2}=1}^{r}\sum_{1\leq j\leq s}n_{j}S_{N-1}\left( 
+\hat{\jmath}\right) \left\{ \underset{}{\overset{}{}}\left\{
+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}j+s}\right\} h_{j_{1}j_{2}}^{a}\right. \right.  \notag \\
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j+s}^{\ast }V_{f\,j_{3}j}V_{f\,j_{4}j+s}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\left. \underset{}{\overset{}{}}%
+\right\}  \notag \\
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\sum_{1\leq j\neq k\leq s}\zeta
+_{j}^{\ast }\zeta _{k}S_{N-1}\left( \hat{\jmath}\hat{k}\right)
+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}k+s}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}  \notag \\
+&&\left. +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\sum_{1\leq j,k\leq
+s}n_{j}n_{k}S_{N-2}\left( \hat{\jmath}\hat{k}\right) V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}j}V_{f\,j_{4}k}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
+\end{eqnarray}%
+which can be rearranged to give 
+\begin{eqnarray}
+&&\mathcal{H}\left( \mathbf{\zeta }^{\ast },\mathbf{\zeta }\right) =h_{0}%
+\mathcal{N}\left( g^{N}\right) +\left( N\right) !^{2}\times  \notag \\
+&&\left\{ \sum_{j_{1,}j_{2}=1}^{r}\sum_{1\leq j\leq s}n_{j}S_{N-1}\left( 
+\hat{\jmath}\right) \left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}j+s}\right\}
+h_{j_{1}j_{2}}^{a}\right.  \notag \\
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \overset{}{\underset{}{}}%
+\sum_{1\leq j\leq s}n_{j}S_{N-1}\left( \hat{\jmath}\right)
+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}\right.  \notag \\
+&&+\sum_{1\leq j\neq k\leq s}\zeta _{j}^{\ast }\zeta _{k}S_{N-1}\left( \hat{%
+\jmath}\hat{k}\right) V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}k+s}  \notag \\
+&&\left. \left. +\sum_{1\leq j,k\leq s}n_{j}n_{k}S_{N-2}\left( \hat{\jmath}%
+\hat{k}\right) V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}k}\right\} \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
+\end{eqnarray}
+
+\section{Spin Integration of the Hamiltonian Matrix Elements \label%
+{SpinInteg}}
+
+\begin{eqnarray}
+&&h_{jk}^{a}=h_{j+sk+s}^{a}=-\int \chi _{j}^{\ast }\left( \mathbf{r}\right)
+\left\{ \sum_{_{1\leq j\leq N_{nuc}}}\frac{Z_{j}}{\left\| \mathbf{R}_{j}-%
+\mathbf{r}\right\| }+\frac{1}{2m_{e}}\nabla _{\mathbf{r}}^{2}\right\} \chi
+_{k}\left( \mathbf{r}\right) d\mathbf{r};\quad 1\leq j,k\leq s  \notag \\
+&&h_{jk+s}^{a}=h_{j+sk}^{a}=0;\quad 1\leq j,k\leq s \\
+&&  \notag \\
+&&\left\langle jk||lm\right\rangle ^{a}=\int \left\{ \chi _{j}^{\ast }\left( 
+\mathbf{r}_{1}\right) \chi _{k}^{\ast }\left( \mathbf{r}_{2}\right) \frac{1}{%
+\left\| \mathbf{r}_{1}-\mathbf{r}_{2}\right\| }\chi _{l}\left( \mathbf{r}%
+_{1}\right) \chi _{m}\left( \mathbf{r}_{2}\right) \right.  \notag \\
+&&-\left. \chi _{j}^{\ast }\left( \mathbf{r}_{1}\right) \chi _{k}^{\ast
+}\left( \mathbf{r}_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-\mathbf{r}%
+_{2}\right\| }\chi _{l}\left( \mathbf{r}_{2}\right) \chi _{m}\left( \mathbf{r%
+}_{1}\right) \right\} d\mathbf{r}_{1}d\mathbf{r}_{2};\quad 1\leq j,k\leq
+s;1\leq l,m\leq s \\
+&&  \notag \\
+&&\left\langle j+sk||lm\right\rangle ^{a}=\left\langle jk+s||lm\right\rangle
+^{a}=\left\langle jk||l+sm\right\rangle ^{a}=\left\langle
+jk||lm+s\right\rangle ^{a}=\left\langle j+sk+s||l+sm\right\rangle ^{a}= 
+\notag \\
+&&\left\langle j+sk+s||lm+s\right\rangle ^{a}=\left\langle
+j+sk||l+sm+s\right\rangle ^{a}=\left\langle jk+s||l+sm+s\right\rangle ^{a}=0
+\notag \\
+&&\left. {}\right. \quad \qquad \qquad \quad \qquad \qquad \quad \qquad
+\qquad \quad \qquad \qquad \quad 1\leq j,k\leq s;1\leq l,m\leq s \\
+&&  \notag \\
+&&\left\langle jk+s||l+sm\right\rangle ^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=  \notag \\
+&&\qquad \int \chi _{j}^{\ast }\left( \mathbf{r}_{1}\right) \chi _{k}^{\ast
+}\left( \mathbf{r}_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-\mathbf{r}%
+_{2}\right\| }\chi _{l}\left( \mathbf{r}_{1}\right) \chi _{m}\left( \mathbf{r%
+}_{2}\right) d\mathbf{r}_{1}d\mathbf{r}_{2};\quad 1\leq j,k\leq s;1\leq
+l,m\leq s \\
+&&  \notag \\
+&&\left\langle jk+s||lm+s\right\rangle ^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=-\left\langle jk+s||l+sm\right\rangle
+^{a}=-\left\langle j+sk||lm+s\right\rangle ^{a}  \notag \\
+&&\left. {}\right. \quad \qquad \qquad \quad \qquad \qquad \quad \quad
+\qquad \quad \qquad \qquad \qquad \quad 1\leq j,k\leq s;1\leq l,m\leq s \\
+&&\left\langle jk|||jk\right\rangle ^{a}=\left\langle jk||jk\right\rangle
+^{a}+\left\langle j\,k+s||j\,k+s\right\rangle ^{a}+\left\langle
+j+s\,k||j+s\,k\right\rangle ^{a}+\left\langle
+j+s\,k+s||j+s\,k+s\right\rangle ^{a}  \notag \\
+&&\left. {}\right. \quad \qquad \qquad \quad \qquad \qquad \quad \qquad
+\qquad \quad \qquad =0;\qquad 1\leq j,k\leq s;1\leq l,m\leq s
+\end{eqnarray}
+
+\section{Transformation of Derivatives to Atomic Orbital Basis \label%
+{DerTrans}}
+
+In the atomic orbital case we only have derivatives of the form%
+\begin{equation}
+\left\langle G^{\dagger N}\phi |Ha_{j_{1}}^{\dagger }a_{j_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle ;1\leq j_{1},j_{2}\leq r
+\end{equation}%
+which are given in terms of the derivatives expressed in the canonical basis
+as%
+\begin{equation}
+\left\langle G^{\dagger N}\phi |Ha_{j_{1}}^{\dagger }a_{j_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle
+=\sum_{p,q=1}^{r}V_{f\,j_{1}p}V_{f\,j_{2}q}\left\langle G^{\dagger N}\phi
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle
+\end{equation}%
+a sum that goes over the two types of matrix elements computed in eq. $%
+\left( \ref{pps}\right) $ and eq. $\left( \ref{pq}\right) $ and each of
+these matrix elements can also be expanded in the atomic basis. The paired
+terms $p=\left| q\right| $ as%
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times \qquad
+\qquad \qquad \qquad \qquad \qquad \\
+&&\left\{ S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast }\left\{
+h_{0}+\sum_{j_{1,}j_{2}=1}^{r}\left\{ V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p}+V_{f\,j_{1}p+s}^{\ast }V_{f\,j_{2}p+s}\right\}
+h_{j_{1}j_{2}}^{a}\right. \right. \\
+&&+\left. {}\right. \qquad \qquad \quad \left.
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}p+s}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&+\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \left\{ \zeta
+_{p}^{\ast }n_{j}\left\{ \sum_{j_{1},j_{2}}^{r}\left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}j+s}\right\}
+h_{j_{1}j_{2}}^{a}\right. \right. \qquad \\
+&&+\left. \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j+s}^{\ast }V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}p}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}j}\right\} \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}p}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}j}+V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p+s}V_{f\,j_{4}j}\right. \\
+&&\qquad \qquad \qquad \qquad +V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j+s}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j+s} \\
+&&\left. \qquad \qquad \qquad \qquad \qquad \qquad \qquad \right. +\left.
+\zeta _{j}^{\ast }V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right\} \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}
+\end{eqnarray*}%
+\begin{eqnarray}
+&&+\sum_{j\neq k\neq p}S_{N-2}\left( \hat{p}\hat{\jmath}\hat{k}\right) \zeta
+_{p}^{\ast }\zeta _{j}^{\ast }\zeta
+_{k}\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j+s}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}k+s}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}  \notag \\
+&&+\frac{1}{2}\zeta _{p}^{\ast }\sum_{j,k\neq p}S_{N-3}\left( \hat{p}\hat{%
+\jmath}\hat{k}\right) n_{j}n_{k}\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{
+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}pj}\right.
+\notag \\
+&&\qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}pj+s}+  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \quad +\left. \left.
++V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj+s}\right\} \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\underset{}{\overset{}{}}\right\}
+\end{eqnarray}%
+which can be rearranged as%
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times \\
+&&\left\{ h_{0}S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}+\sum_{j_{1,}j_{2}=1}^{r}\left\{ \overset{}{\underset{}{}}S_{N-1}\left( 
+\hat{p}\right) \zeta _{p}^{\ast }\left\{ V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p}+V_{f\,j_{1}p+s}^{\ast }V_{f\,j_{2}p+s}\right\}
+h_{j_{1}j_{2}}^{a}\right. \right. \\
+&&+\left. \sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \zeta
+_{p}^{\ast }n_{j}\left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}j+s}\right\}
+h_{j_{1}j_{2}}^{a}\right\} \qquad \qquad \qquad \qquad \qquad
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \overset{}{\underset{}{}}%
+S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast }V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right. \\
+&&+\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \left\{ \zeta
+_{p}^{\ast }n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j}\right. \right. \\
+&&\qquad \qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j+s} \\
+&&\qquad \qquad \qquad \qquad \qquad +\left. V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p+s}V_{f\,j_{4}j+s}\right\} \left. +\zeta
+_{j}^{\ast }V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right\}
+\end{eqnarray*}%
+\begin{eqnarray}
+&&+\sum_{j\neq k\neq p}S_{N-2}\left( \hat{p}\hat{\jmath}\hat{k}\right) \zeta
+_{p}^{\ast }\zeta _{j}^{\ast }\zeta _{k}V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j+s}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}k+s}\qquad \qquad \qquad 
+\notag \\
+&&+\frac{1}{2}\zeta _{p}^{\ast }\sum_{j,k\neq p}S_{N-3}\left( \hat{p}\hat{%
+\jmath}\hat{k}\right) n_{j}n_{k}\left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}pj}\right.  \notag \\
+&&\qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}pj+s}  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. \left. \left.
++V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj+s}\right\} \underset{}{\overset{}{}}\right\}
+\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
+\end{eqnarray}%
+The other term $\left| p\right| \neq \left| q\right| $%
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\left\{ \sum_{\kappa \neq \left| p\right| \neq \left| q\right|
+}^{s}\left\{ S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) \left\{
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}\kappa }^{\ast
+}V_{f\,j_{2}\kappa +s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta _{\kappa
+}^{\ast }\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right.
+\right. \right.  \notag \\
+&&\quad \qquad \quad \quad \quad \qquad +\left.
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}%
+\bar{q}}^{\ast }V_{f\,j_{3}\kappa }V_{f\,j_{4}\kappa +s}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\zeta _{p}^{\ast }\zeta _{q}^{\ast
+}\zeta _{\kappa }\right\}  \notag \\
+&&\qquad \qquad \quad \quad \qquad
++\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}\bar{q}}^{\ast
+}V_{f\,j_{2}\kappa }^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}\kappa }\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}n_{\kappa }\zeta _{q}^{\ast }  \notag
+\\
+&&\qquad \qquad \quad \quad \qquad \left.
++\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}\kappa }^{\ast }V_{f\,j_{3}q}V_{f\,j_{4}\kappa }\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}n_{\kappa }\zeta _{p}^{\ast }\right\}
+\notag \\
+&&\qquad \qquad \quad \quad \quad +\zeta _{p}^{\ast }S_{N-1}\left( \hat{p}%
+\hat{q}\right) \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}  \notag \\
+&&\qquad \qquad \quad \quad \quad +\zeta _{q}^{\ast }S_{N-1}\left( \hat{p}%
+\hat{q}\right) \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}q}^{\ast
+}V_{f\,j_{2}q+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}  \notag \\
+&&\qquad \quad \quad \quad \qquad \left. +S_{N-1}\left( \hat{p}\hat{q}%
+\right) \sum_{j_{1},j_{2}=1}^{r}\left\{ V_{f\,j_{1}\bar{q}}^{\ast
+}V_{f\,j_{2}p}\zeta _{q}^{\ast }+V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}q}\zeta _{p}^{\ast }\right\} h_{j_{1}j_{2}}^{a}\right\}
+\end{eqnarray}%
+This can be rearranged to give 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\left\{ S_{N-1}\left( \hat{p}\hat{q}\right)
+\sum_{j_{1},j_{2}=1}^{r}\left\{ V_{f\,j_{1}\bar{q}}^{\ast
+}V_{f\,j_{2}p}\zeta _{q}^{\ast }+V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}q}\zeta _{p}^{\ast }\right\} h_{j_{1}j_{2}}\right.  \notag \\
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \sum_{\kappa \neq \left|
+p\right| \neq \left| q\right| }^{s}S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}%
+\right) \left\{ V_{f\,j_{1}\kappa }^{\ast }V_{f\,j_{2}\kappa +s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta _{\kappa }^{\ast }\right. \right.  \notag \\
+&&\quad \qquad \quad +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\bar{q}}^{\ast
+}V_{f\,j_{3}\kappa }V_{f\,j_{4}\kappa +s}\zeta _{p}^{\ast }\zeta _{q}^{\ast
+}\zeta _{\kappa }+V_{f\,j_{1}\bar{q}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{q}^{\ast }  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left.
++V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}q}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{p}^{\ast }\right\} 
+\notag \\
+&&+\zeta _{p}^{\ast }S_{N-1}\left( \hat{p}\hat{q}\right) V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}  \notag \\
+&&\qquad \qquad \qquad \left. \left. +\zeta _{q}^{\ast }S_{N-1}\left( \hat{p}%
+\hat{q}\right) V_{f\,j_{1}q}^{\ast }V_{f\,j_{2}q+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}\underset{}{\overset{}{}}\right\} \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\underset{}{\overset{\underset{}{}}{}%
+}\right\}
+\end{eqnarray}
+
+\section{Cost of the Computations\label{CostofComp}}
+
+The partial derivatives of the energy wrt geminal coefficients are given by
+eq. $\left( \ref{deriv}\right) $ as a sum that goes over two types of matrix
+elements, paired terms where $p=\left| q\right| $ and unpaired terms where $%
+p\neq \left| q\right| $%
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\left\{ h_{0}S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}+\sum_{j_{1,}j_{2}=1}^{r}\left\{ \underset{}{\overset{}{}}S_{N-1}\left( 
+\hat{p}\right) \zeta _{p}^{\ast }\left\{ V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p}+V_{f\,j_{1}p+s}^{\ast }V_{f\,j_{2}p+s}\right\}
+h_{j_{1}j_{2}}^{a}\right. \right.  \notag \\
+&&\qquad \qquad \qquad \left. +\right. \left. \sum_{j\neq
+p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \zeta _{p}^{\ast
+}n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}j+s}\right\} h_{j_{1}j_{2}}^{a}\right\} .
+\end{eqnarray}%
+The paired terms themselves can be expressed as a sum of three types $%
+TP_{0},TP_{1}$ and $TP_{2}$ 
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =TP_{0}+TP_{1}+TP_{2} \\
+&=&N!\left( N-1\right) !\left\{
+TP_{0p}h_{0}+\sum_{j_{1,}j_{2}=1}TP_{1pj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TP_{2pj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
+\end{eqnarray*}%
+where $TP_{0}$ is given by 
+\begin{equation}
+TP_{0p}=S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast },
+\end{equation}%
+$TP_{1}$ is a term whose elements' computational cost scale as $s$ and is
+given by 
+\begin{eqnarray}
+&&TP_{1pj_{1}j_{2}}=S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast }\left\{
+V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p}+V_{f\,j_{1}p+s}^{\ast
+}V_{f\,j_{2}p+s}\right\}  \notag \\
+&&\qquad \qquad \qquad \qquad \left. +\right. \sum_{j\neq
+p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \zeta _{p}^{\ast
+}n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}j+s}\right\}
+\end{eqnarray}%
+and $TP_{2}$ is a term whose elements' computational cost scale as $s^{2}$
+and is given by 
+\begin{eqnarray}
+TP_{2pj_{1}j_{2}j_{3}j_{4}} &=&S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}p+s} 
+\notag \\
+&&+\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \left\{ \zeta
+_{p}^{\ast }n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j}\right. \right.  \notag \\
+&&\qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j+s}  \notag \\
+&&\qquad \qquad +\left. +V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j+s}\right\} \left. +\,\zeta _{j}^{\ast
+}V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right\}  \notag \\
+&&+\sum_{j\neq k\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\hat{k}\right)
+\zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta _{k}V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}j+s}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}k+s}  \notag \\
+&&+\frac{1}{2}\zeta _{p}^{\ast }\sum_{j,k\neq p}^{s}S_{N-3}\left( \hat{p}%
+\hat{\jmath}\hat{k}\right) n_{j}n_{k}\left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}pj}\right.  \notag \\
+&&\qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}pj+s}  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left.
++V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj+s}\right\}
+\end{eqnarray}%
+The unpaired term 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \notag \\
+&&\left\{ S_{N-1}\left( \hat{p}\hat{q}\right)
+\sum_{j_{1},j_{2}=1}^{r}\left\{ V_{f\,j_{1}\bar{q}}^{\ast
+}V_{f\,j_{2}p}\zeta _{q}^{\ast }+V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}q}\zeta _{p}^{\ast }\right\} h_{j_{1}j_{2}}^{a}\right.  \notag \\
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \sum_{\kappa \neq \left|
+p\right| \neq \left| q\right| }^{s}S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}%
+\right) \left\{ V_{f\,j_{1}\kappa }^{\ast }V_{f\,j_{2}\kappa +s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta _{\kappa }^{\ast }\right. \right.  \notag \\
+&&\quad \qquad \quad +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\bar{q}}^{\ast
+}V_{f\,j_{3}\kappa }V_{f\,j_{4}\kappa +s}\zeta _{p}^{\ast }\zeta _{q}^{\ast
+}\zeta _{\kappa }+V_{f\,j_{1}\bar{q}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{q}^{\ast }  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\left. +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}q}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{p}^{\ast }\right\} 
+\notag \\
+&&\left. +S_{N-1}\left( \hat{p}\hat{q}\right) \left\{ \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}+\zeta _{q}^{\ast }V_{f\,j_{1}q}^{\ast
+}V_{f\,j_{2}q+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\right\} \right\}  \notag
+\\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \left. \left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}%
+\overset{}{\underset{}{}}\right\}
+\end{eqnarray}%
+can be expressed as a sum of two types $TU_{1}$ and $TU_{2}$ 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =TU_{1}+TU_{2}  \notag \\
+&&\left. {}\right. =N!\left( N-1\right) !\left\{
+\sum_{j_{1},j_{2}=1}^{r}TU_{1pqj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TU_{2pqj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
+\end{eqnarray}%
+where $TU_{1}$ is given by 
+\begin{equation}
+TU_{1pqj_{1}j_{2}}=S_{N-1}\left( \hat{p}\hat{q}\right) \left\{ V_{f\,j_{1}%
+\bar{q}}^{\ast }V_{f\,j_{2}p}\zeta _{q}^{\ast }+V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}q}\zeta _{p}^{\ast }\right\}
+\end{equation}%
+and $TU_{2}$ is a term whose elements' computational cost scale as $s$ and
+is given by 
+\begin{eqnarray}
+TU_{2pqj_{1}j_{2}j_{3}j_{4}} &=&\sum_{\kappa \neq \left| p\right| \neq
+\left| q\right| }^{s}S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) \left\{
+V_{f\,j_{1}\kappa }^{\ast }V_{f\,j_{2}\kappa +s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta _{\kappa }^{\ast }\right.  \notag \\
+&&\qquad +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\bar{q}}^{\ast
+}V_{f\,j_{3}\kappa }V_{f\,j_{4}\kappa +s}\zeta _{p}^{\ast }\zeta _{q}^{\ast
+}\zeta _{\kappa }+V_{f\,j_{1}\bar{q}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{q}^{\ast }  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. +V_{f\,j_{1}%
+\bar{p}}^{\ast }V_{f\,j_{2}\kappa }^{\ast }V_{f\,j_{3}q}V_{f\,j_{4}\kappa
+}n_{\kappa }\zeta _{p}^{\ast }\right\}  \notag \\
+&&+S_{N-1}\left( \hat{p}\hat{q}\right) \left\{ \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}+\zeta _{q}^{\ast }V_{f\,j_{1}q}^{\ast
+}V_{f\,j_{2}q+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\right\}
+\end{eqnarray}
+
+The partial derivative $\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger
+}a_{i_{2}}^{\dagger }G^{\dagger N-1}\phi \right\rangle $ is the sum of
+paired and unpaired terms given by 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\sum_{p=1}^{r}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\}
+\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad +\sum_{\substack{ p<q=1  \\ %
+q\neq p+s}}^{r}\left\{
+V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\} \left\langle
+G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi
+\right\rangle
+\end{eqnarray}%
+which can be expressed in terms of $TP_{0}$, $TP_{1}$, $TP_{2}$, $TU_{1}$
+and $TU_{2}$ as 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\left\{
+\sum_{p=1}^{r}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\} \times
+\right.  \notag \\
+&&\qquad \qquad \qquad \qquad \left\{
+\sum_{j_{1,}j_{2}=1}^{r}TP_{1pj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TP_{2pj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} +  \notag \\
+&&\sum_{\substack{ p<q=1  \\ q\neq p+s}}^{r}\left\{
+V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\} \left\{
+\sum_{j_{1},j_{2}=1}^{r}TU_{1pqj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TU_{2pqj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}  \notag \\
+&&
+\end{eqnarray}%
+that can be written as 
+\begin{equation}
+\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\mathcal{D}_{0i_{1}i_{2}}h_{0}+%
+\sum_{j_{1,}j_{2}=1}^{r}\mathcal{D}%
+_{1i_{1}i_{2}j_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\mathcal{D}%
+_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}  \label{matel}
+\end{equation}%
+where $\mathcal{D}_{0i_{1}i_{2}}$ is a term whose elements' computational
+cost scale as $s$ and is given by 
+\begin{equation}
+\mathcal{D}_{0i_{1}i_{2}}=N!\left( N-1\right) !\sum_{p=1}^{s}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\} TP_{0p}
+\end{equation}%
+$\mathcal{D}_{1i_{1}i_{2}}$ is a term whose elements' computation scales as $%
+s^{3}$ given by 
+\begin{eqnarray}
+\mathcal{D}_{1i_{1}i_{2}j_{1}j_{2}} &=&N!\left( N-1\right) !\left\{
+\sum_{p=1}^{s}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\}
+TP_{1pj_{1}j_{2}}\right.  \notag \\
+&&\qquad \qquad \qquad \qquad \left. +\sum_{\substack{ p<q=1  \\ q\neq p+s}}%
+^{s}\left\{ V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\}
+TU_{1pqj_{1}j_{2}}\right\}
+\end{eqnarray}%
+and $\mathcal{D}_{2i_{1}i_{2}}$ is a term whose elements' computational cost
+scale as $s^{4}$ and is given by%
+\begin{eqnarray}
+\mathcal{D}_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}} &=&N!\left( N-1\right)
+!\left\{ \sum_{p=1}^{s}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\}
+TP_{2pj_{1}j_{2}j_{3}j_{4}}\right.  \notag \\
+&&\qquad \qquad \qquad +\left. \sum_{\substack{ p<q=1  \\ q\neq p+s}}%
+^{s}\left\{ V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\}
+TU_{2pqj_{1}j_{2}j_{3}j_{4}}\right\}
+\end{eqnarray}
+
+The calculation of $TP_{0}$, $TP_{1}$, $TP_{2}$, $TU_{1}$ and $TU_{2}$ need
+the following elementary symmetric functions 
+\begin{equation}
+S_{N-1}\left( \hat{p}\right) ,S_{N-1}\left( \hat{p}\hat{q}\right)
+,S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) ,S_{N-2}\left( \hat{p}\hat{%
+\jmath}\right) ,S_{N-2}\left( \hat{p}\hat{\jmath}\hat{k}\right)
+,S_{N-3}\left( \hat{p}\hat{\jmath}\hat{k}\right)
+\end{equation}%
+to be evaluated. These can be computed independently of the other terms in
+the calculation by a very efficient, robust procedure that scales as $s^{4}$%
+, which has been developed by \cite{Jensen80,Jensen81}. This procedure is
+based on a graphical approach to a recursion relationship between the
+symmetric functions $S_{N},S_{N-1}\left( \hat{p}\right) $ and $S_{N}\left( 
+\hat{p}\right) $ described in these references.
+
+The number of steps in the computation of $\left\langle G^{\dagger N}\phi
+|Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger }G^{\dagger N-1}\phi \right\rangle $
+in eq. $\left( \ref{matel}\right) $ is $r^{5}$, given that $\left\{ \mathcal{%
+D}_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\right\} $ and $\left\{ \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} $ have been calculated,
+thus form the rate controlling step and the overall computational cost of
+the derivatives scale as $r^{5}$.
+
+\bibliographystyle{apsrev}
+\bibliography{AGPOPT,BW}
+
+\end{document}

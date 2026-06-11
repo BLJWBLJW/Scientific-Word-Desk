@@ -1,0 +1,3119 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, April 12, 2019 15:37:46}
+%TCIDATA{LastRevised=Monday, October 03, 2022 08:29:17}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Singular Valued Decomposition (SVD)}
+
+Let $\mathcal{V}$ and $\mathcal{W}$ be normed spaces and consider the linear
+map
+\begin{equation}
+M:\mathcal{V}\rightarrow\mathcal{W},\quad M\in\mathcal{L}\left(
+\mathcal{V},\mathcal{W}\right)
+\end{equation}
+and the dual map
+\begin{equation}
+M^{d}:\mathcal{W}^{d}\rightarrow\mathcal{V}^{d},\quad M^{d}\in\mathcal{L}%
+\left(  \mathcal{W}^{d},\mathcal{V}^{d}\right)
+\end{equation}
+defined by%
+\begin{equation}
+\left\langle w^{d},Mv\right\rangle =\left\langle M^{d}w^{d},v\right\rangle .
+\end{equation}
+The map $M$ is a surjection (\emph{submersion}) if
+\begin{equation}
+\operatorname*{Range}\left\{  M\right\}  =\mathcal{W}%
+\end{equation}
+if it is injective it is an \emph{immersion} and it \emph{embeds}
+$\mathcal{V}$ in $\mathcal{W}.$
+
+\begin{definition}
+A complete normed space is a Banach space. 
+\end{definition}
+
+\begin{definition}
+Let $\mathcal{X}$ and $\mathcal{Y}$ be Banach spaces such that dim$\left\{
+\mathcal{X}\right\}  \leq\,$dim$\left\{  \mathcal{Y}\right\}  $ with bases
+$\left\{  e_{1},\cdots,e_{q}\right\}  $ and $\left\{  f_{1},\cdots
+,f_{q},f_{q+1,\cdots,}f_{p}\right\}  $ then $\mathcal{Y}$ \emph{envelopes
+}$\mathcal{X}$ and $\mathcal{X}$ is \emph{embedded }in $\mathcal{Y}$ through
+an injection $\mathfrak{i}_{ef}\in\mathcal{L}\left(  \mathcal{X}%
+,\mathcal{Y}\right)  $
+\begin{equation}
+\mathfrak{i}_{ef}:\left\{  e_{1},\cdots,e_{q}\right\}  \rightarrow\left\{
+f_{1},\cdots,f_{q},f_{q+1,\cdots,}f_{p}\right\}  ,
+\end{equation}
+where
+\begin{equation}
+\operatorname{Ran}\left\{  \mathfrak{i}\right\}  ^{c}=\mathbb{C}%
+\text{-}\operatorname*{linspan}\left\{  f_{q+1,\cdots,}f_{p}\right\}
+\end{equation}
+and
+\begin{equation}
+\operatorname{Ran}\left\{  \mathfrak{i}\right\}  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  f_{1},\cdots,f_{q}\right\}  .
+\end{equation}
+
+
+\begin{example}
+
+\end{example}
+\end{definition}
+
+\begin{example}
+\begin{enumerate}
+\item The injection $\mathfrak{i}_{ef}$ embeds $\mathcal{X}=\mathbb{C}^{2}$
+into $\mathcal{Y}=\mathbb{C}^{3}$
+
+\begin{enumerate}
+\item It has the following properties%
+\begin{gather}
+\mathfrak{i}_{ef}:\mathbb{C}^{2}\rightarrow\mathbb{C}^{3}\\
+\mathfrak{i}_{ef}:\ker\left\{  \mathfrak{i}_{ef}\right\}  ^{c}\subseteq
+\mathcal{X}\rightarrow\operatorname{Ran}\left\{  \mathfrak{i}_{ef}\right\}
+\subseteq\mathcal{Y}\\
+\ker\left\{  \mathfrak{i}_{ef}\right\}  ^{c}\cong\operatorname{Ran}\left\{
+\mathfrak{i}_{ef}\right\}  .
+\end{gather}
+
+
+\item It transforms the basis $\left(  \mathbf{e}\right)  $ of $\mathcal{X}$
+into the basis $\left(  \mathbf{f}\right)  $ of $\mathcal{Y}$
+\begin{equation}
+\mathfrak{i}_{ef}:\left\{  e_{1},e_{2}\right\}  \rightarrow\left\{
+f_{1},f_{2},f_{3}\right\}  =\left\{  \mathfrak{i}_{ef}\left(  e_{1}\right)
+,\mathfrak{i}_{ef}\left(  e_{2}\right)  ,f_{3}\right\}  ,\quad f_{3}%
+\in\operatorname{Ran}\left\{  \mathfrak{i}_{ef}\right\}  ^{c}.
+\end{equation}
+
+
+\item And embeds the basis $\left(  \mathbf{e}\right)  $ into $\mathcal{Y}$
+\begin{gather}
+\mathfrak{i}_{ef}\left(  \left(  \mathbf{e}\right)  \right)  =\mathfrak{i}%
+_{ef}\left(  \left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \right)  =\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \mathcal{R}_{e}\left(  \mathfrak{i}_{ef}\right)  =\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & 0
+\end{array}
+\right)  \\
+=\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & 0
+\end{array}
+\right)  ,
+\end{gather}
+where $\mathcal{R}_{e}\left(  \mathfrak{i}_{ef}\right)  $ is the $\left(
+\mathbf{e}\right)  $-representation of the injection $\mathfrak{i}_{ef}$ and
+$\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\right)  $ is the
+\emph{corresponding} $\left(  \mathbf{f}\right)  $-representation of the
+injection $\mathfrak{i}_{ef}.$ $\mathcal{R}_{e}\left(  \mathfrak{i}%
+_{ef}\right)  $ is the representaion of the injection $\equiv$ embedding
+$\mathfrak{i}_{ef}$ wrt the basis $\left(  \mathbf{e}\right)  $ i.e.
+
+\begin{description}
+\item[*]
+\begin{equation}
+\mathcal{R}_{e}\left(  \mathfrak{i}_{ef}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}
+\right)
+\end{equation}
+and 
+
+\item[*] $\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\right)  $ is the
+representaion of the image of the injection $\equiv$ embedding $\mathfrak{i}%
+_{ef}\in$ $\mathcal{L}\left(  \mathcal{X},\mathcal{Y}\right)  $ considered as
+an operator belonging to $\mathcal{L}\left(  \mathcal{Y}\right)  $ wrt the
+basis $\left(  \mathbf{f}\right)  $ i.e.
+\begin{equation}
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  .
+\end{equation}
+
+\end{description}
+
+\item Embedding of vectors $z\in\mathcal{X}$%
+\begin{align}
+\mathfrak{i}_{ef}\left(  z\right)   &  =\mathfrak{i}_{ef}\left(
+\overset{}{\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \mathcal{R}_{e}\left(  z\right)  }\right)  =\mathfrak{i}_{ef}\left(
+\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  \right)  =\mathfrak{i}_{ef}\left(  \left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \right)  \mathfrak{i}_{ef}\left(  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  \right)  \\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  z\right)  _{1}\\
+\mathcal{R}_{f}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  .
+\end{align}
+
+
+\begin{description}
+\item[*] $\mathcal{R}_{e}\left(  z\right)  $ is the representaion of the
+vector $z\in$ $\mathcal{X}$ wrt the basis $\left(  \mathbf{e}\right)  $ i.e.
+\begin{equation}
+\mathcal{R}_{e}\left(  z\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)
+\end{equation}
+and
+
+\item[*] $\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  z\right)  \right)  $
+is the representaion of the image $\mathfrak{i}_{ef}\left(  z\right)
+\in\mathcal{Y}$ of the vector $z\in$ $\mathcal{X}$ wrt the basis $\left(
+\mathbf{f}\right)  $ i.e.
+\begin{equation}
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  z\right)  \right)  =\left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  z\right)  _{1}\\
+\mathcal{R}_{f}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  .
+\end{equation}
+
+\end{description}
+
+\item Representation of the injection process%
+\begin{equation}
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  z\right)  \right)
+=\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  \overset{}{\left(
+\mathbf{e}\right)  \mathcal{R}_{e}\left(  z\right)  }\right)  \right)
+=\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  \left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  \right)  \right)  =\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  z\right)  _{1}\\
+\mathcal{R}_{f}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  .
+\end{equation}
+
+
+\item Embedding correspondence%
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  z\right)  _{1}\\
+\mathcal{R}_{f}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  .
+\end{equation}
+
+
+\item $e$-representation of the injection $\mathfrak{i}_{ef}$%
+\begin{equation}
+\mathcal{R}_{fe}\left(  \mathfrak{i}_{ef}\right)  =\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1\\
+0 & 0
+\end{array}
+\right)  .
+\end{equation}
+
+
+\item $f$-representation of the injection $\mathfrak{i}_{ef}$%
+\begin{equation}
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  .
+\end{equation}
+
+
+\item The inverse $\mathfrak{i}_{ef}^{-1}$ of the injection $\mathfrak{i}%
+_{ef}$
+\begin{equation}
+\mathfrak{i}_{ef}^{-1}:\operatorname{Ran}\left\{  \mathfrak{i}_{ef}\right\}
+\rightarrow\mathcal{X}%
+\end{equation}
+
+
+\item $f$-representation of the injection $\mathfrak{i}_{ef}^{-1}$%
+\begin{equation}
+\mathcal{R}_{fe}\left(  \mathfrak{i}_{ef}^{-1}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}
+\right)
+\end{equation}
+
+
+\item $e$-representation of the injection $\mathfrak{i}_{ef}^{-1}$%
+\begin{equation}
+\mathcal{R}_{e}\left(  \mathfrak{i}_{ef}^{-1}\right)  =\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1
+\end{array}
+\right)
+\end{equation}
+
+
+\item
+\begin{gather}
+\mathfrak{i}_{ef}\mathfrak{i}_{ef}^{-1}:\operatorname{Ran}\left\{
+\mathfrak{i}_{ef}\right\}  \rightarrow\operatorname{Ran}\left\{
+\mathfrak{i}_{ef}\right\}  \\
+\operatorname{Ran}\left\{  \mathfrak{i}_{ef}\right\}  \subseteq\mathcal{Y}\\
+\mathfrak{i}_{ef}^{-1}\mathfrak{i}_{ef}:\operatorname{Ker}\left\{
+\mathfrak{i}_{ef}\right\}  ^{c}\rightarrow\operatorname{Ker}\left\{
+\mathfrak{i}_{ef}\right\}  ^{c}\\
+\operatorname{Ker}\left\{  \mathfrak{i}_{ef}\right\}  ^{c}\subseteq\mathcal{X}%
+\end{gather}
+
+
+\item
+\begin{align}
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}^{-1}\right)  \mathcal{R}_{e}\left(
+\mathfrak{i}_{ef}\right)   &  =\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1\\
+0 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1
+\end{array}
+\right)  =\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}^{-1}\mathfrak{i}%
+_{ef}\right)  =\mathcal{R}_{e}\left(  P_{\operatorname{Ker}\left\{
+\mathfrak{i}_{ef}\right\}  ^{c}}\right)  \\
+\mathcal{R}_{e}\left(  \mathfrak{i}_{ef}\right)  \mathcal{R}_{f}\left(
+\mathfrak{i}_{ef}^{-1}\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1\\
+0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  =\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\mathfrak{i}_{ef}%
+^{-1}\right)  =\mathcal{R}_{f}\left(  P_{\operatorname{Ran}\left\{
+\mathfrak{i}_{ef}\right\}  }\right)
+\end{align}
+
+
+\item
+\begin{align}
+A  & =P_{\operatorname{Ran}\left\{  \mathfrak{i}_{ef}\right\}  }%
+AP_{\operatorname{Ker}\left\{  \mathfrak{i}_{ef}\right\}  ^{c}}=\left[
+\mathfrak{i}_{ef}\left(  \mathbf{e}\right)  \left(  \overset{}{\mathfrak{i}%
+_{ef}\left(  \mathbf{e}\right)  }\right)  ^{d}\right]  A\left[  \left(
+\mathbf{e}\right)  \left(  \mathbf{e}\right)  ^{d}\right]  \\
+& =\mathfrak{i}_{ef}\left(  \mathbf{e}\right)  \left(  \overset{}{\left(
+\overset{}{\mathfrak{i}_{ef}\left(  \mathbf{e}\right)  }\right)  ^{d}\left(
+A\left(  \mathbf{e}\right)  \right)  }\right)  \left(  \mathbf{e}\right)
+^{d}=\sum_{\substack{1\leq j\leq3\\1\leq k\leq2}}\left[  \left(
+\overset{}{\mathfrak{i}_{ef}\left(  e_{j}\right)  }\right)  ^{d}e_{k}\right]
+\mathcal{R}_{fe}\left(  A\right)  _{jk}%
+\end{align}
+
+
+\item
+\begin{equation}
+\left(  \overset{}{\mathfrak{i}_{ef}\left(  \mathbf{e}\right)  ^{d}\left(
+A\left(  \mathbf{e}\right)  \right)  }\right)  _{jk}=\mathfrak{i}_{ef}\left(
+e_{j}\right)  ^{d}\left(  \overset{}{Ae_{k}}\right)  =\mathcal{M}_{fe}\left(
+A\right)  _{jk}=\mathcal{R}_{fe}\left(  A\right)  _{jk},\quad1\leq
+j\leq3,1\leq k\leq2
+\end{equation}
+
+
+\item
+\begin{align}
+\mathcal{R}_{fe}\left(  A\right)   &  =\mathcal{R}_{fe}\left(
+P_{\operatorname{Ran}\left\{  \mathfrak{i}_{ef}\right\}  }%
+AP_{\operatorname{Ker}\left\{  \mathfrak{i}_{ef}\right\}  ^{c}}\right)
+=\mathcal{R}_{f}\left(  P_{\operatorname{Ran}\left\{  \mathfrak{i}%
+_{ef}\right\}  }\right)  \mathcal{R}_{fe}\left(  A\right)  \mathcal{R}%
+_{e}\left(  P_{\operatorname{Ker}\left\{  \mathfrak{i}_{ef}\right\}  ^{c}%
+}\right)  \\
+= &  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12}\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22}\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{e}\left(  A\right)  _{11} & \mathcal{R}_{e}\left(  A\right)
+_{12}\\
+\mathcal{R}_{e}\left(  A\right)  _{21} & \mathcal{R}_{e}\left(  A\right)
+_{22}\\
+\mathcal{R}_{e}\left(  A\right)  _{31} & \mathcal{R}_{e}\left(  A\right)
+_{32}%
+\end{array}
+\right)  ,
+\end{align}
+i.e.%
+\begin{equation}
+\mathcal{R}_{fe}\left(  A\right)  =\mathcal{M}_{fe}\left(  A\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12}\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22}\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32}%
+\end{array}
+\right)  .
+\end{equation}
+
+
+\item
+\begin{equation}
+\left(  A\mathfrak{i}_{ef}^{-1}\right)  :\mathcal{Y\rightarrow Y}.
+\end{equation}
+
+
+\item The matrix of the embedded operator $A$ i.e. the corresponding operator
+\begin{equation}
+\mathcal{R}_{f}\left(  A\mathfrak{i}_{ef}^{-1}\right)  =\mathcal{R}%
+_{fe}\left(  A\right)  \mathcal{R}_{fe}\left(  \mathfrak{i}_{ef}^{-1}\right)
+=\left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12}\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22}\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12} & 0\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22} & 0\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32} & 0
+\end{array}
+\right)  .
+\end{equation}
+
+\end{enumerate}
+
+\item The general map $A\in\mathcal{L}\left(  \mathcal{X},\mathcal{Y}\right)
+$
+
+\begin{enumerate}
+\item
+\begin{align}
+Az &  =\eta,\quad A\in\mathcal{L}\left(  \mathcal{X},\mathcal{Y}\right)
+,\quad z\in\mathcal{X},\quad\mathcal{Y}\\
+\left(  A\mathfrak{i}_{ef}^{-1}\right)  \left(  \mathfrak{i}_{ef}\left(
+z\right)  \right)   &  =\eta\in\mathcal{Y}\\
+\mathfrak{i}_{ef}\left(  z\right)   &  \in\mathcal{Y}\\
+\left(  A\mathfrak{i}_{ef}^{-1}\right)   &  \in\mathcal{L}\left(
+P_{\operatorname{Ran}\left\{  \mathfrak{i}_{ef}\right\}  }\mathcal{Y}\right)
+\subseteq\mathcal{L}\left(  \mathcal{Y}\right)  .
+\end{align}
+
+
+\item
+\begin{equation}
+\eta=\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  \eta\right)  _{1}\\
+\mathcal{R}_{f}\left(  \eta\right)  _{2}\\
+\mathcal{R}_{f}\left(  \eta\right)  _{3}%
+\end{array}
+\right)
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{R}_{fe}\left(  A\right)  \mathcal{R}_{e}\left(  z\right)  =\left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12}\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22}\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  \eta\right)  _{1}\\
+\mathcal{R}_{f}\left(  \eta\right)  _{2}\\
+\mathcal{R}_{f}\left(  \eta\right)  _{3}%
+\end{array}
+\right)  =\mathcal{R}_{f}\left(  \eta\right)
+\end{equation}
+
+
+\item
+\begin{equation}
+\eta=\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \mathcal{R}_{f}\left(  \eta\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12}\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22}\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)
+\end{equation}
+
+
+\item
+\begin{equation}
+A\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12}\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22}\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32}%
+\end{array}
+\right)
+\end{equation}
+
+
+\item
+\begin{align}
+&  Az=A\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \mathcal{R}_{fe}\left(  A\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  \\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12}\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22}\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)
+\end{align}
+
+
+\item 
+
+\begin{description}
+\item[*]
+\begin{equation}
+\left(  A\mathfrak{i}_{ef}^{-1}\right)  \left(  \mathfrak{i}_{ef}\left(
+z\right)  \right)  =Az
+\end{equation}
+
+
+\item[*]
+\begin{equation}
+\mathcal{R}_{f}\left(  A\mathfrak{i}_{ef}^{-1}\right)  \mathcal{R}_{fe}\left(
+\mathfrak{i}_{ef}\left(  z\right)  \right)  =\mathcal{R}_{fe}\left(  A\right)
+\mathcal{R}_{e}\left(  z\right)
+\end{equation}
+
+
+\item[*]
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \mathcal{R}_{fe}\left(  A\right)
+_{12} & 0\\
+\mathcal{R}_{fe}\left(  A\right)  _{21} & \mathcal{R}_{fe}\left(  A\right)
+_{22} & 0\\
+\mathcal{R}_{fe}\left(  A\right)  _{31} & \mathcal{R}_{fe}\left(  A\right)
+_{32} & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  \eta\right)  _{1}\\
+\mathcal{R}_{f}\left(  \eta\right)  _{2}\\
+\mathcal{R}_{f}\left(  \eta\right)  _{3}%
+\end{array}
+\right)
+\end{equation}
+
+\end{description}
+\end{enumerate}
+
+\item The correspondence between $\mathcal{L}\left(  \mathcal{X}\right)  $ and
+$\mathcal{L}\left(  \mathfrak{i}_{ef}\left(  \mathcal{X}\right)  \right)  $
+
+\begin{enumerate}
+\item $A\in\mathcal{L}\left(  \mathcal{X},\mathcal{Y}\right)  $%
+\begin{align}
+\mathcal{X} &  =\mathfrak{i}_{ef}^{-1}\left(  \operatorname{Ran}\left\{
+\mathfrak{i}_{ef}\right\}  \right)  \\
+\operatorname{Ran}\left\{  A\right\}   &  \subseteq\mathfrak{i}_{ef}\left(
+\mathcal{X}\right)  \\
+A &  =P_{\operatorname{Ran}\left\{  A\right\}  }A\\
+P_{\operatorname{Ran}\left\{  A\right\}  }A &  \subseteq\mathfrak{i}%
+_{ef}\left(  \mathcal{X}\right)
+\end{align}
+
+
+\item The representation $\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(
+A\right)  \right)  $ of the image of the operator $\mathfrak{i}_{ef}\left(
+A\right)  \in\mathcal{L}\left(  \mathcal{Y}\right)  $ wrt the basis $\left(
+\mathbf{f}\right)  $ of $\mathcal{Y}$
+\begin{align}
+A\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)   &  =\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{e}\left(  A\right)  _{11} & \mathcal{R}_{e}\left(  A\right)
+_{12} & \mathcal{R}_{e}\left(  A\right)  _{13}\\
+\mathcal{R}_{e}\left(  A\right)  _{21} & \mathcal{R}_{e}\left(  A\right)
+_{22} & \mathcal{R}_{e}\left(  A\right)  _{23}%
+\end{array}
+\right)  \\
+&  =,
+\end{align}%
+\begin{equation}
+A\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{11} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{12} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{13}\\
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{21} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{22} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{23}\\
+0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
+where $\mathcal{R}_{e}\left(  A\right)  $ is the representation of the
+operator $A\in\mathcal{L}\left(  \mathcal{X}\right)  $ wrt the basis $\left(
+\mathbf{e}\right)  $ of $\mathcal{X}.$
+\begin{align}
+Az\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)   &  =A\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{e}\left(  A\right)  _{11} & \mathcal{R}_{e}\left(  A\right)
+_{12} & \mathcal{R}_{e}\left(  A\right)  _{13}\\
+\mathcal{R}_{e}\left(  A\right)  _{21} & \mathcal{R}_{e}\left(  A\right)
+_{22} & \mathcal{R}_{e}\left(  A\right)  _{23}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  \\
+&
+\end{align}%
+\begin{equation}
+=\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{11} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{12} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{13}\\
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{21} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{22} &
+\mathcal{R}_{f}\left(  \mathfrak{i}_{ef}\left(  A\right)  \right)  _{23}\\
+0 & 0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  z\right)  _{1}\\
+\mathcal{R}_{f}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)
+\end{equation}%
+\begin{align}
+\mathfrak{i}_{ef}\left(  Az\right)   &  =\mathfrak{i}_{ef}\left(
+\overset{}{\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \mathcal{R}_{e}\left(  A\right)  \mathcal{R}_{e}\left(  z\right)
+}\right)  =\mathfrak{i}_{ef}\left(  \left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{e}\left(  A\right)  _{11} & \mathcal{R}_{e}\left(  A\right)
+_{12}\\
+\mathcal{R}_{e}\left(  A\right)  _{21} & \mathcal{R}_{e}\left(  A\right)
+_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  \right)  \\
+&  =\mathfrak{i}_{ef}\left(  \left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  A\right)  _{11}\mathcal{R}_{e}\left(  z\right)
+_{1}+\mathcal{R}_{e}\left(  A\right)  _{12}\mathcal{R}_{e}\left(  z\right)
+_{2}\\
+\mathcal{R}_{e}\left(  A\right)  _{21}\mathcal{R}_{e}\left(  z\right)
+_{1}+\mathcal{R}_{e}\left(  A\right)  _{22}\mathcal{R}_{e}\left(  z\right)
+_{2}%
+\end{array}
+\right)  \right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  Az\right)  _{1}\\
+\mathcal{R}_{f}\left(  Az\right)  _{2}\\
+0
+\end{array}
+\right)  \\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\left(
+\begin{array}
+[c]{cc}%
+\mathcal{R}_{e}\left(  A\right)  _{11} & \mathcal{R}_{e}\left(  A\right)
+_{12}\\
+\mathcal{R}_{e}\left(  A\right)  _{21} & \mathcal{R}_{e}\left(  A\right)
+_{22}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{e}\left(  z\right)  _{1}\\
+\mathcal{R}_{e}\left(  z\right)  _{2}%
+\end{array}
+\right)  \\
+\end{array}
+\right)  \\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{i}_{ef}\left(  e_{1}\right)   & \mathfrak{i}_{ef}\left(
+e_{2}\right)   & f_{3}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{e}\left(  A\right)  _{11} & \mathcal{R}_{e}\left(  A\right)
+_{12} & \\
+\mathcal{R}_{e}\left(  A\right)  _{21} & \mathcal{R}_{e}\left(  A\right)
+_{22} & \\
+&  &
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\mathcal{R}_{f}\left(  z\right)  _{1}\\
+\mathcal{R}_{f}\left(  z\right)  _{2}\\
+0
+\end{array}
+\right)
+\end{align}%
+\begin{gather}
+\mathfrak{i}_{ef}\left(  z\right)  =\mathfrak{i}_{ef}\left(  \left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \right)  \mathcal{R}_{e}\left(  z\right)  =\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \mathcal{R}_{e}\left(  \mathfrak{i}_{ef}\right)  \mathcal{R}%
+_{e}\left(  z\right)  =\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+i_{11} & i_{12}\\
+\mathfrak{i}_{21} & \mathfrak{i}_{22}\\
+\mathfrak{i}_{31} & \mathfrak{i}_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  \\
+=\left(
+\begin{array}
+[c]{cc}%
+e_{1} & e_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & 1\\
+\mathfrak{i}_{31} & \mathfrak{i}_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  \\
+=\mathfrak{i}_{ef}\left(  z\right)  =\left(  f_{1},f_{2},f_{3}\right)
+\mathcal{R}_{f}\left(  \mathfrak{i}\left(  z\right)  \right)  =\left(
+f_{1},f_{2},f_{3}\right)  \left(
+\begin{array}
+[c]{c}%
+\mathfrak{i}\left(  z\right)  _{1}\\
+\mathfrak{i}\left(  z\right)  _{2}\\
+\mathfrak{i}\left(  z\right)  _{3}%
+\end{array}
+\right)  =\left(  f_{1},f_{2},f_{3}\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}\\
+\mathfrak{i}\left(  z\right)  _{3}%
+\end{array}
+\right)  \\
+\left(
+\begin{array}
+[c]{cc}%
+i_{11} & i_{12}\\
+\mathfrak{i}_{21} & \mathfrak{i}_{22}\\
+\mathfrak{i}_{31} & \mathfrak{i}_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\mathfrak{i}\left(  z\right)  _{1}\\
+\mathfrak{i}\left(  z\right)  _{2}\\
+\mathfrak{i}\left(  z\right)  _{3}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+i_{11}z_{1}+i_{12}z_{2}\\
+i_{21}z_{1}+i_{22}z_{2}\\
+i_{31}z_{1}+i_{32}z_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}\\
+i_{31}z_{1}+i_{32}z_{2}%
+\end{array}
+\right)
+\end{gather}
+
+\end{enumerate}
+
+\item
+\begin{equation}
+A\left(  e_{1},e_{2}\right)  =\left(  f_{1},f_{2},f_{3}\right)  \mathcal{R}%
+_{ef}\left(  A\right)  =\left(  f_{1},f_{2},f_{3}\right)  \left(
+\begin{array}
+[c]{cc}%
+A_{11} & A_{12}\\
+A_{21} & A_{22}\\
+A_{31} & A_{32}%
+\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+Az\left(  e_{1},e_{2}\right)  =A\left(  e_{1},e_{2}\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  =\left(  f_{1},f_{2},f_{3}\right)  \mathcal{R}_{ef}\left(  A\right)
+\left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  =\left(  f_{1},f_{2},f_{3}\right)  \left(
+\begin{array}
+[c]{cc}%
+A_{11} & A_{12}\\
+A_{21} & A_{22}\\
+A_{31} & A_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  =\left(  f_{1},f_{2},f_{3}\right)  \left(
+\begin{array}
+[c]{c}%
+\eta_{1}\\
+\eta_{2}\\
+\eta_{3}%
+\end{array}
+\right)
+\end{equation}%
+\begin{gather}
+Az=A\left(  e_{1},e_{2}\right)  \mathcal{R}_{e}\left(  z\right)  =\left(
+e_{1},e_{2}\right)  \mathcal{R}_{e}\left(  A\right)  \mathcal{R}_{e}\left(
+z\right)  =\left(  e_{1},e_{2}\right)  \left(
+\begin{array}
+[c]{cc}%
+A_{11} & A_{12}\\
+A_{21} & A_{22}\\
+A_{31} & A_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  =\eta=\left(  f_{1},f_{2},f_{3}\right)  \mathcal{R}_{f}\left(
+\eta\right)  =\left(  f_{1},f_{2},f_{3}\right)  \left(
+\begin{array}
+[c]{c}%
+\eta_{1}\\
+\eta_{2}\\
+\eta_{3}%
+\end{array}
+\right) \\
+\left(
+\begin{array}
+[c]{cc}%
+A_{11} & A_{12}\\
+A_{21} & A_{22}\\
+A_{31} & A_{32}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\eta_{1}\\
+\eta_{2}\\
+\eta_{3}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+A_{11}z_{1}+A_{12}z_{2}\\
+A_{21}z_{1}+A_{22}z_{2}\\
+A_{31}z_{1}+A_{32}z_{2}%
+\end{array}
+\right)
+\end{gather}%
+\begin{equation}
+{\huge \updownarrow}%
+\end{equation}%
+\begin{gather}
+\left(  \mathfrak{i}A\mathfrak{i}^{-1}\right)  \left(  \mathfrak{i}z\right)
+=\left(  \mathfrak{i}\eta\right) \\
+P_{2}\left(  \mathfrak{i}A\mathfrak{i}^{-1}\right)  P_{2}P_{2}\left(
+\mathfrak{i}z\right)  =P_{2}\left(  \mathfrak{i}\eta\right) \\
+\left(
+\begin{array}
+[c]{ccc}%
+A_{11} & A_{12} & A_{13}\\
+A_{21} & A_{22} & A_{23}\\
+A_{31} & A_{32} & A_{33}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}\\
+0
+\end{array}
+\right)  =\left[  \left(
+\begin{array}
+[c]{ccc}%
+A_{11} & A_{12} & A_{13}\\
+A_{21} & A_{22} & A_{23}\\
+A_{31} & A_{32} & A_{33}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  \right]  \left[  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}\\
+\widetilde{z_{3}}%
+\end{array}
+\right)  \right]  =\left(
+\begin{array}
+[c]{c}%
+\eta_{1}\\
+\eta_{2}\\
+\eta_{3}%
+\end{array}
+\right)
+\end{gather}
+where
+
+\begin{enumerate}
+\item $P_{2}$ is the projector onto the $\operatorname{Ran}\left\{
+\mathfrak{i}\right\}  $ of $\mathfrak{i.}$
+
+\item The projection $P_{2}\widetilde{A}P_{2}$ of $\widetilde{A}\in
+\mathcal{L}\left(  \mathcal{Y}\right)  $ producing $\mathfrak{i}\left(
+A\right)  ,$ where $A\in\mathcal{L}\left(  \mathcal{X},\mathcal{Y}\right)  $
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccc}%
+A_{11} & A_{12} & A_{13}\\
+A_{21} & A_{22} & A_{23}\\
+A_{31} & A_{32} & A_{33}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+A_{11} & A_{12} & 0\\
+A_{21} & A_{22} & 0\\
+A_{31} & A_{32} & 0
+\end{array}
+\right)
+\end{equation}
+and
+
+\item
+\begin{equation}
+\left(
+\begin{array}
+[c]{ccc}%
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}\\
+z_{3}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+z_{1}\\
+z_{2}\\
+0
+\end{array}
+\right)  .
+\end{equation}
+One can always find many $\widetilde{A}\in$ $\mathcal{L}\left(  \mathcal{Y}%
+\right)  $ such that
+\begin{equation}
+P_{2}\widetilde{A}P_{2}=P_{2}\left(  \mathfrak{i}A\mathfrak{i}^{-1}\right)
+P_{2}.
+\end{equation}
+
+\end{enumerate}
+\end{enumerate}
+\end{example}
+
+\begin{remark}
+A complete normed space is a Banach space.
+\end{remark}
+
+\begin{definition}
+One can define an adjoint $A^{\dagger}$ of a closed densely defined operator
+$A\in\mathcal{L}\left(  \mathcal{V}\right)  $ by
+\end{definition}
+
+\begin{enumerate}
+\item
+\begin{equation}
+\left(  zA\right)  ^{\dagger}=\overline{z}A^{\dagger}%
+\end{equation}
+
+
+\item
+\begin{equation}
+A^{\dagger\dagger}=A
+\end{equation}
+
+
+\item
+\begin{equation}
+\left(  A+B\right)  ^{\dagger}=A^{\dagger}+B^{\dagger}%
+\end{equation}
+
+
+\item
+\begin{equation}
+A^{\dagger}B^{\dagger}=\left(  BA\right)  ^{\dagger}\text{ on }%
+\operatorname*{Dom}\left\{  A^{\dagger}\right\}  \cap\operatorname*{Dom}%
+\left\{  B^{\dagger}\right\}
+\end{equation}
+
+
+\item if $A\in\mathcal{L}\left(  \mathcal{V}\right)  ,$ then
+\begin{equation}
+\Vert A^{\dagger}A\Vert_{\mathcal{L}\left(  \mathcal{V}\right)  }\leq M\Vert
+A\Vert_{\mathcal{L}\left(  \mathcal{V}\right)  }^{2}%
+\end{equation}
+
+
+\item if $A\in\mathcal{L}\left(  \mathcal{V}\right)  ,$ it has a bounded
+extension to $\mathcal{L}[H]$
+\end{enumerate}
+
+\begin{remark}%
+\begin{gather}
+\mathcal{V}\overset{M}{------\rightarrow}\mathcal{W}\\
+\left\vert \qquad\quad\qquad\qquad\qquad\right\vert \\
+\digamma_{v}\left\vert \qquad\quad\quad\quad\qquad\,\,\qquad\right\vert
+\digamma_{w}\\
+\downarrow\quad\qquad\qquad\quad\qquad\downarrow\,\\
+\mathcal{V}^{d}\overset{M^{d}}{\longleftarrow------}\mathcal{W}^{d}%
+\end{gather}
+
+\end{remark}
+
+\begin{remark}
+One has the dual "bases"
+\begin{align}
+v_{j},v_{j}^{d},\quad1  &  \leq j\leq m\\
+w_{j},w_{j}^{d},\quad1  &  \leq j\leq n,
+\end{align}
+where
+\begin{equation}
+\dim\left\{  \mathcal{V}\right\}  =m\text{ and }\dim\left\{  \mathcal{W}%
+\right\}  =n.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+In the following $1\leq j\leq m,1\leq k\leq n.$One can form the following
+injections from tensor product spaces to operator spaces
+
+\begin{enumerate}
+\item The tensor product space $\mathcal{W\otimes V}^{d}$
+\begin{equation}
+\Lambda_{wv^{d}}:\mathcal{W\otimes V}^{d}\rightarrow\mathcal{L}\left(
+\mathcal{V},\mathcal{W}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+w_{j}v_{k}^{d}\right]  \right\}  .$
+
+\item The tensor product space $\mathcal{V\otimes W}^{d}$%
+\begin{equation}
+\Lambda_{wv^{d}}:\mathcal{V\otimes W}^{d}\rightarrow\mathcal{L}\left(
+\mathcal{W},\mathcal{V}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+v_{j}w_{k}^{d}\right]  \right\}  =\left\{  \left[  w_{j}v_{k}^{d}\right]
+^{d}\right\}  .$
+
+\item The tensor product space $\mathcal{V}^{d}\mathcal{\otimes W}$%
+\begin{equation}
+\Lambda_{v^{d}w}:\mathcal{V}^{d}\mathcal{\otimes W}\rightarrow\mathcal{L}%
+\left(  \mathcal{W}^{d},\mathcal{V}^{d}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+v_{j}^{d}w_{k}\right]  \right\}  .$
+
+\item The tensor product space $\mathcal{W}^{d}\mathcal{\otimes V}$%
+\begin{equation}
+\Lambda_{w^{d}v}:\mathcal{W}^{d}\mathcal{\otimes V}\rightarrow\mathcal{L}%
+\left(  \mathcal{V}^{d},\mathcal{W}^{d}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+w_{j}^{d}v_{k}\right]  \right\}  =\left\{  \left[  v_{j}^{d}w_{k}\right]
+^{d}\right\}  .$
+
+\item The tensor product space $\mathcal{W\otimes W}^{d}$%
+\begin{equation}
+\Lambda_{ww^{d}}:\mathcal{W\otimes W}^{d}\rightarrow\mathcal{L}\left(
+\mathcal{W},\mathcal{W}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+w_{j}w_{k}^{d}\right]  \right\}  .$
+
+\item The tensor product space $\mathcal{W}^{d}\mathcal{\otimes W}$%
+\begin{equation}
+\Lambda_{w^{d}w}:\mathcal{W}^{d}\mathcal{\otimes W}\rightarrow\mathcal{L}%
+\left(  \mathcal{W}^{d},\mathcal{W}^{d}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+w_{j}^{d}w_{k}\right]  \right\}  =\left\{  \left[  w_{j}w_{k}^{d}\right]
+^{d}\right\}  $
+
+\item The tensor product space $\mathcal{V\otimes V}^{d}$%
+\begin{equation}
+\Lambda_{vv^{d}}:\mathcal{V\otimes V}^{d}\rightarrow\mathcal{L}\left(
+\mathcal{V},\mathcal{V}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+v_{j}v_{k}^{d}\right]  \right\}  .$
+
+\item The tensor product space $\mathcal{V}^{d}\mathcal{\otimes V}$%
+\begin{equation}
+\Lambda_{v^{d}w}:\mathcal{V}^{d}\mathcal{\otimes V}\rightarrow\mathcal{L}%
+\left(  \mathcal{V}^{d},\mathcal{V}^{d}\right)
+\end{equation}
+the operator space is generated by the elementary operators $\left\{  \left[
+v_{j}^{d}v_{k}\right]  \right\}  =\left\{  \left[  v_{j}v_{k}^{d}\right]
+^{d}\right\}  .$
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+\begin{enumerate}
+\item One has the injections
+
+\begin{enumerate}
+\item
+\begin{equation}
+\digamma_{v}:\mathcal{V}\rightarrow\mathcal{V}^{d}%
+\end{equation}
+and
+
+\item
+\begin{equation}
+\digamma_{v^{d}}^{-1}:\operatorname*{Range}\left\{  \digamma_{v}\right\}
+\rightarrow\mathcal{V},
+\end{equation}
+
+\end{enumerate}
+
+\item One has the injections
+
+\begin{enumerate}
+\item
+\begin{equation}
+\digamma_{w}:\mathcal{W}\rightarrow\mathcal{W}^{d}%
+\end{equation}
+and
+
+\item
+\begin{equation}
+\digamma_{w^{d}}^{-1}:\operatorname*{Range}\left\{  \digamma_{w}\right\}
+\rightarrow\mathcal{W},
+\end{equation}
+
+\end{enumerate}
+
+\item leading to
+\begin{equation}
+\widehat{\digamma_{vw}}:\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)
+\rightarrow\mathcal{L}\left(  \mathcal{W}^{d},\mathcal{V}^{d}\right)
+\end{equation}
+by
+
+\begin{enumerate}
+\item
+\begin{equation}
+A^{d}=\widehat{\digamma_{vw}}\left(  A\right)  =\digamma_{w}\circ
+A\circ\digamma_{v^{d}}^{-1}%
+\end{equation}
+and its inverse
+
+\item
+\begin{equation}
+\widehat{\digamma_{vw}^{-1}}:\mathcal{L}\left(  \mathcal{W}^{d},\mathcal{V}%
+^{d}\right)  \rightarrow\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)
+\end{equation}
+by
+
+\item
+\begin{equation}
+A=\widehat{\digamma_{vw}^{-1}}\left(  A^{d}\right)  =\digamma_{w}^{-1}\circ
+A^{d}\circ\digamma_{v^{d}}.
+\end{equation}
+
+\end{enumerate}
+\end{enumerate}
+\end{remark}
+
+\begin{remark}
+In the case $\digamma_{v}=\digamma_{\left\vert v\right\rangle }$ and
+$\digamma_{w}=\digamma_{\left\vert w\right\rangle }$ one has for
+$A\in\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)  $
+\begin{equation}
+A^{\dagger}=\widehat{\digamma_{\left\vert vw\right\rangle }}\left(  A\right)
+,
+\end{equation}
+where $A^{\dagger}\in\mathcal{L}\left(  \mathcal{W}^{d},\mathcal{V}%
+^{d}\right)  .$
+\end{remark}
+
+\begin{remark}
+In finite dimensions $\mathcal{W}\cong\mathcal{W}^{d}$ and $\mathcal{V}%
+\cong\mathcal{V}^{d}$ and if they are Hilbert spaces one can use $\digamma
+_{e}=\digamma_{\left\vert e\right\rangle }$ and consider $\mathcal{W}%
+=\mathcal{W}^{d}$ and $\mathcal{V}=\mathcal{V}^{d}.$
+\end{remark}
+
+One can always decompose $\mathcal{V}$ as the direct sum
+\begin{equation}
+\mathcal{V}=\operatorname{Ker}\left\{  M\right\}  \oplus\operatorname{Ker}%
+\left\{  M\right\}  ^{c}%
+\end{equation}
+and $\mathcal{W}$ as the direct sum
+\begin{equation}
+\mathcal{W}=\operatorname*{Range}\left\{  M\right\}  \oplus
+\operatorname*{Range}\left\{  M\right\}  ^{c}%
+\end{equation}
+then
+\begin{equation}
+M:\operatorname{Ker}\left\{  M\right\}  ^{c}\rightarrow\operatorname*{Range}%
+\left\{  M\right\}  \subseteq\mathcal{W}%
+\end{equation}
+is an injection. If
+
+\begin{enumerate}
+\item $\dim\left\{  \mathcal{V}\right\}  <\dim\left\{  \mathcal{W}\right\}  $
+then
+\begin{equation}
+\operatorname*{Range}\left\{  M\right\}  \subset\mathcal{W}%
+\end{equation}
+and
+\begin{equation}
+\operatorname{Ker}\left\{  M\right\}  \supseteq\phi.
+\end{equation}
+
+
+\item $\dim\left\{  \mathcal{V}\right\}  >\dim\left\{  \mathcal{W}\right\}  $
+then%
+\begin{equation}
+\operatorname{Ker}\left\{  M\right\}  \supsetneqq\phi
+\end{equation}
+and
+\begin{equation}
+M:\operatorname{Ker}\left\{  M\right\}  ^{c}\rightarrow\mathcal{W}%
+\end{equation}
+is an injection but may or may not be a surjection i.e.
+\begin{equation}
+\operatorname*{Range}\left\{  M\right\}  \subseteq\mathcal{W}.
+\end{equation}
+
+
+\item $\dim\left\{  \mathcal{V}\right\}  =\dim\left\{  \mathcal{W}\right\}  $
+then
+\begin{equation}
+M:\operatorname{Ker}\left\{  M\right\}  ^{c}\rightarrow\mathcal{W}%
+\end{equation}
+is an injection and
+\begin{equation}
+\operatorname*{Range}\left\{  M\right\}  \subseteq\mathcal{W}.
+\end{equation}
+
+\end{enumerate}
+
+\begin{definition}
+A \emph{non-negative} real number $\U{3c3} _{k}$ is a singular value for
+$M\in\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)  $ \emph{if and only
+if} there exist unit-length vectors $\left\{  \left.  u_{k}\right\vert 1\leq
+k\leq\min(m,n)\right\}  $ in $\mathcal{W}$ and $\left\{  \left.  \zeta
+_{k}\right\vert 1\leq k\leq\min(m,n)\right\}  $ in $\mathcal{V}$ defined by
+\begin{equation}
+M\zeta_{k}=\U{3c3} _{k}u_{k},\quad1\leq k\leq\min(m,n)
+\end{equation}
+and
+\begin{equation}
+M^{\dagger}u_{k}=\U{3c3} _{k}\zeta_{k},\quad1\leq k\leq\min(m,n).
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+The vectors $u_{k}$ and $\zeta_{k}$ are called \emph{left-singular} and
+\emph{right-singular} vectors for $\U{3c3} _{k}$, respectively. The first
+$p=\min(m,n)$ \emph{column operators} of $U$ and $V$ correspond to \emph{left-
+and right-singular vectors for the corresponding singular values }respectively.
+\end{definition}
+
+Hence
+\begin{equation}
+\mathfrak{C}_{e}\left(  U\right)  _{k}=\sum_{1\leq j\leq m}\left[  w_{j}%
+w_{k}^{d}\right]  \mathcal{R}_{e}\left(  U\right)  _{jk},\quad1\leq k\leq
+p=\min(m,n)
+\end{equation}
+and%
+\begin{equation}
+\mathfrak{C}_{e}\left(  V^{\dagger}\right)  _{k}=\sum_{1\leq j\leq n}\left[
+v_{j}v_{k}^{d}\right]  \mathcal{R}_{e}\left(  V^{\dagger}\right)  _{jk}%
+,\quad1\leq k\leq p=\min(m,n).
+\end{equation}
+
+
+\begin{remark}
+\begin{enumerate}
+\item
+\begin{equation}
+\mathfrak{C}_{e}\left(  U\right)  _{k}\in\mathcal{L}\left(  \mathcal{W}%
+,\mathcal{W}\right)  ,\quad1\leq k\leq p=\min(m,n)
+\end{equation}
+and
+
+\item
+\begin{equation}
+\mathfrak{C}_{e}\left(  V\right)  _{k}\in\mathcal{L}\left(  \mathcal{V}%
+,\mathcal{V}\right)  ,\quad1\leq k\leq p=\min(m,n)
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\begin{lemma}
+If $u_{k}$ and $v_{k}$ are called \emph{left-singular} and
+\emph{right-singular} vectors for $\U{3c3} _{k}$ for $M$ has a SVD given by
+\end{lemma}
+
+%
+
+\begin{equation}
+M=U\U{3a3} V^{\dagger},
+\end{equation}
+where
+\begin{equation}
+\U{3a3} =\sum_{1\leq j\leq\min(m,n)}\U{3c3} _{k}\left[  v_{j}w_{j}^{d}\right]
+.
+\end{equation}
+
+
+\begin{remark}%
+\begin{equation}
+V^{\dagger}\in\mathcal{L}\left(  \mathcal{V},\mathcal{V}\right)
+\end{equation}%
+\begin{equation}
+\U{3a3} \in\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)
+\end{equation}%
+\begin{equation}
+U\in\mathcal{L}\left(  \mathcal{W},\mathcal{W}\right)
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+In any singular value decomposition%
+\begin{equation}
+M=U\U{3a3} V^{\dagger}%
+\end{equation}
+one has the expansions
+\begin{align*}
+M  &  =\sum_{\substack{1\leq j,\leq n\\1\leq k\leq m}}\left[  v_{j}w_{k}%
+^{d}\right]  \mathcal{R}_{vw}\left(  M\right)  _{jk}\\
+&  =\sum_{\substack{1\leq j_{1},j_{2}\leq n\\1\leq k_{3}\leq m}}\left[
+w_{j_{1}}w_{j_{2}}^{d}\right]  \left[  w_{j_{3}}v_{j_{3}}^{d}\right]  \left[
+v_{k_{2}}v_{k_{3}}^{d}\right]  \mathcal{R}_{w}\left(  U\right)  _{j_{1}j_{2}%
+}\mathcal{R}_{wv}\left(  \U{3a3} \right)  _{j_{2}j_{2}}\mathcal{R}_{v}\left(
+V^{\dagger}\right)  _{j_{2}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1},j_{2}\leq n\\1\leq j_{2}\leq\min\left(
+n,m\right)  \\1\leq k_{3}\leq m}}\left[  w_{j_{1}}v_{k_{3}}^{d}\right]
+\mathcal{R}_{w}\left(  U\right)  _{j_{1}j_{2}}\U{3c3} _{j_{2}}\mathcal{R}%
+_{v}\left(  V^{\dagger}\right)  _{j_{2}k_{3}}%
+\end{align*}
+
+\end{remark}
+
+\begin{theorem}
+If
+\begin{equation}
+Mv_{k}=\U{3c3} _{k}u_{k}^{d},\quad1\leq k\leq\min(m,n)
+\end{equation}
+and
+\begin{equation}
+M^{d}u_{k}^{d}=\U{3c3} _{k}v_{k},\quad1\leq k\leq\min(m,n).
+\end{equation}
+then
+\begin{equation}
+M=U\U{3a3} V^{d}=\sum_{1\leq k\leq\min(m,n)}\left[  u_{k}v_{k}\right]  \U{3c3}
+_{k}%
+\end{equation}
+and
+\begin{align}
+M  &  =U\U{3a3} V^{d}\\
+&  \parallel
+\end{align}%
+\begin{gather*}
+\sum_{\substack{1\leq j_{1},j_{2}\leq n\\1\leq k_{3}\leq m}}\left[  u_{j_{1}%
+}w_{j_{2}}^{d}\right]  \left[  u_{j_{3}}v_{j_{3}}\right]  \left[  v_{k_{2}%
+}^{d}v_{k_{3}}\right]  \mathcal{R}_{u}\left(  U\right)  _{j_{1}j_{2}%
+}\mathcal{R}_{uv^{d}}\left(  \U{3a3} \right)  _{j_{2}j_{2}}\mathcal{R}_{v^{d}%
+}\left(  V^{d}\right)  _{j_{2}k_{3}}\\
+\parallel\\
+\sum_{\substack{1\leq j_{1},j_{2}\leq n\\1\leq j_{2}\leq\min\left(
+n,m\right)  \\1\leq k_{3}\leq m}}\left[  u_{j_{1}}v_{k_{3}}\right]
+\mathcal{R}_{u}\left(  U\right)  _{j_{1}j_{2}}\U{3c3} _{j_{2}}\mathcal{R}%
+_{v^{d}}\left(  V^{d}\right)  _{j_{2}k_{3}}.
+\end{gather*}
+
+\end{theorem}
+
+\begin{remark}
+\begin{enumerate}
+\item In any singular value decomposition%
+\begin{equation}
+M=U\U{3a3} Z^{\dagger}%
+\end{equation}
+the "diagonal entries" of $\U{3a3} $ are equal to the singular values of $M$.
+
+\item
+\begin{equation}
+MM^{\dagger}=U\U{3a3} Z^{\dagger}Z\U{3a3} ^{\dagger}U^{\dagger}=U\U{3a3}
+\U{3a3} ^{\dagger}U^{\dagger}%
+\end{equation}
+
+
+\item
+\begin{equation}
+M^{\dagger}M=Z\U{3a3} ^{\dagger}U^{\dagger}U\U{3a3} Z^{\dagger}=Z\U{3a3}
+^{\dagger}\U{3a3} Z^{\dagger}%
+\end{equation}
+
+
+\item $Z$ is unitary
+\begin{equation}
+Z,Z^{\dagger}:\mathcal{V}\rightarrow\mathcal{V},\quad Z\in\mathcal{L}\left(
+\mathcal{V}\right)  \cong\mathcal{L}\left(  \mathbb{C}^{m}\right)
+\end{equation}
+i.e.
+\begin{equation}
+Z^{\dagger}Z=I_{m}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\U{3a3} :\mathcal{V}\rightarrow\mathcal{W},\quad\in\mathcal{L}\left(
+\mathcal{V},\mathcal{W}\right)  \cong\mathcal{L}\left(  \mathbb{C}%
+^{m},\mathbb{C}^{n}\right)
+\end{equation}
+
+
+\item $U$ is unitary%
+\begin{equation}
+U,U^{\dagger}:\mathcal{W\rightarrow W},\quad U\in\mathcal{L}\left(
+\mathcal{W}\right)  \cong\mathcal{L}\left(  \mathbb{C}^{n}\right)
+\end{equation}
+i.e.
+\begin{equation}
+U^{\dagger}U=I_{n}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\U{3a3} =\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}\left[
+w_{j}v_{j}^{d}\right]  =\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma
+_{j}E_{w_{j}v_{j}^{d}},\quad E_{w_{j}v_{j}^{d}}=\left[  w_{j}v_{j}^{d}\right]
+\in\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)  \cong\mathcal{L}\left(
+\mathbb{C}^{m},\mathbb{C}^{n}\right)  ,\quad\sigma_{j}\geq0
+\end{equation}
+where
+\begin{equation}
+E_{w_{j}v_{j}^{d}}:\mathcal{V}\rightarrow\mathcal{W},\quad\in\mathcal{L}%
+\left(  \mathcal{V},\mathcal{W}\right)  \cong\mathcal{L}\left(  \mathbb{C}%
+^{m},\mathbb{C}^{n}\right)  .
+\end{equation}
+Note that it is possible $\sigma_{j}=0$ for some $j\in\mathbb{N}^{\min\left(
+m,n\right)  }.$
+
+\item
+\begin{equation}
+M=U\left(  \sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}\left[
+w_{j}z_{j}^{d}\right]  \right)  Z^{\dagger}%
+\end{equation}
+
+
+\item
+\begin{equation}
+\operatorname*{Range}\left(  M\right)  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  w_{j}\right\vert 1\leq j\leq
+n\right\}
+\end{equation}
+
+
+\item
+\begin{equation}
+\U{3a3} z_{j}=\sigma_{j}u_{j},\quad1\leq j\leq\min\left(  m,n\right)
+\end{equation}
+
+
+\item
+\begin{equation}
+\U{3a3} ^{d}u_{j}^{d}=\sigma_{j}z_{j}^{d}%
+\end{equation}
+
+
+\item
+\begin{align}
+T  &  :\mathcal{V}\rightarrow\mathcal{W}\\
+T  &  =\sum_{\substack{1\leq j\leq n\\1\leq k\leq m}}\left[  w_{j}v_{k}%
+^{d}\right]  T_{jk}\\
+T\left(  \mathbf{v}\right)   &  =\mathcal{R}_{v}\left(  T\right) \\
+\mathcal{R}_{v}\left(  T\right)   &  \in\mathcal{M}\left(  m,n,\mathbb{C}%
+\right)
+\end{align}
+
+
+\item
+\begin{align}
+v  &  =\left(  \mathbf{v}\right)  \mathcal{R}_{v}\left(  v\right)
+=\sum_{1\leq j\leq m}v_{j}\mathcal{R}_{v}\left(  v\right)  _{j}\\
+T\left(  \mathbf{v}\right)   &  =\left(  \mathbf{v}\right)  \mathcal{R}%
+_{wv}\left(  T\right)  =\sum_{\substack{1\leq j\leq n\\1\leq k\leq m}%
+}w_{k}\mathcal{R}_{wv}\left(  T\right)  _{kj}\\
+Tv  &  =T\left(  \mathbf{v}\right)  \mathcal{R}_{v}\left(  v\right)  =\left(
+\mathbf{v}\right)  \mathcal{R}_{wv}\left(  T\right)  \mathcal{R}_{v}\left(
+v\right)  =\sum_{\substack{1\leq j\leq n\\1\leq k\leq m}}w_{k}\mathcal{R}%
+_{wv}\left(  T\right)  _{kj}\mathcal{R}_{v}\left(  v\right)  _{j}%
+\end{align}
+
+
+\item
+\begin{equation}
+\left(  \sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}u_{j}z_{j}%
+^{d}\right)  \left(  \mathbf{v}\right)  =\left(  \sum_{1\leq j\leq\min\left(
+m,n\right)  }\sigma_{j}u_{j}z_{j}^{d}\right)  \left(  z_{1},\cdots
+,z_{r}\right)  =\left(  \sigma_{1}u_{1},\cdots,\sigma_{r}u_{r}\right)
+=\left(  z_{1},\cdots,z_{r}\right)  \mathcal{R}_{z}\left(  \U{3a3} \right)
+\end{equation}
+
+
+\item
+\begin{equation}
+\left(  \mathbf{w}\right)  =\U{3a3} \left(  \mathbf{v}\right)  =\left(
+\mathbf{v}\right)  \mathcal{R}_{z}\left(  \U{3a3} \right)  =\left(
+\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}u_{j}z_{j}^{d}\right)
+\left(  \mathbf{z}\right)  =\left(  \mathbf{z}\right)  \mathcal{R}_{z}\left(
+\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}u_{j}z_{j}^{d}\right)
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{R}_{z}\left(  \U{3a3} \right)  =\mathcal{R}_{v}\left(  \sum_{1\leq
+j\leq\min\left(  m,n\right)  }\sigma_{j}u_{j}z_{j}^{d}\right)  =\mathcal{M}%
+_{uz}\left(  \U{3a3} \right)
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\begin{enumerate}
+\item
+\begin{definition}%
+\begin{equation}
+\left(  E_{w_{j}v_{j}^{d}}\right)  ^{\dagger}=E_{v_{j}w_{j}^{d}}=v_{j}%
+w_{j}^{d},
+\end{equation}
+where
+\begin{equation}
+E_{v_{j}w_{j}^{d}}:\mathcal{W}\rightarrow\mathcal{V},\quad\in\mathcal{L}%
+\left(  \mathcal{W},\mathcal{V}\right)  \cong\mathcal{L}\left(  \mathbb{C}%
+^{n},\mathbb{C}^{m}\right)  .
+\end{equation}
+
+\end{definition}
+
+\item
+\begin{align}
+\U{3a3}  &  =\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}u_{j}%
+z_{j}^{d}=\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}E_{u_{j}%
+z_{j}^{d}},\quad E_{u_{j}z_{j}^{d}}=\left[  u_{j}z_{j}^{d}\right]
+\in\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)  \cong\mathcal{L}\left(
+\mathbb{C}^{m},\mathbb{C}^{n}\right) \\
+\U{3a3} ^{\dagger}  &  =\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma
+_{j}z_{j}u_{j}^{d}=\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma
+_{j}E_{z_{j}u_{j}^{d}},\quad E_{z_{j}u_{j}^{d}}=\left[  z_{j}u_{j}^{d}\right]
+\in\mathcal{L}\left(  \mathcal{W},\mathcal{V}\right)  \cong\mathcal{L}\left(
+\mathbb{C}^{n},\mathbb{C}^{m}\right)  .
+\end{align}
+
+
+\begin{enumerate}
+\item
+\begin{equation}
+\U{3a3} z_{j}=\sigma_{j}u_{j}%
+\end{equation}
+
+
+\item
+\begin{equation}
+\U{3a3} ^{\dagger}u_{j}=\sigma_{j}z_{j}%
+\end{equation}
+
+
+\item
+\begin{equation}
+u_{j}^{d}\U{3a3} =\sigma_{j}z_{j}^{d}%
+\end{equation}
+
+
+\item
+\begin{equation}
+z_{j}^{d}\U{3a3} ^{\dagger}=\sigma_{j}u_{j}^{d}.
+\end{equation}
+
+\end{enumerate}
+\end{enumerate}
+
+\begin{remark}
+\begin{enumerate}
+\item Products of $\left[  w_{l}v_{m}^{d}\right]  $ and their adjoints
+
+\begin{enumerate}
+\item
+\begin{equation}
+\left[  w_{j}v_{k}^{d}\right]  ^{\dagger}\left[  w_{l}v_{m}^{d}\right]
+=\left[  v_{k}w_{j}^{d}\right]  \left[  w_{l}v_{m}^{d}\right]  =\left[
+v_{k}v_{m}^{d}\right]  \delta_{jl}%
+\end{equation}
+and
+
+\item
+\begin{equation}
+\left[  w_{l}v_{m}^{d}\right]  \left[  w_{j}v_{k}^{d}\right]  ^{\dagger
+}=\left[  w_{l}v_{m}^{d}\right]  \left[  v_{k}w_{j}^{d}\right]  =\left[
+w_{l}w_{j}^{d}\right]  \delta_{km}.
+\end{equation}
+
+\end{enumerate}
+
+\item $\left[  w_{j}v_{j}^{d}\right]  $ are not normal operators as in general as
+
+\begin{enumerate}
+\item
+\begin{equation}
+\left[  w_{j}v_{j}^{d}\right]  ^{\dagger}\left[  w_{k}v_{k}^{d}\right]
+=\left[  v_{j}w_{j}^{d}\right]  \left[  w_{k}v_{k}^{d}\right]  =\left[
+v_{j}v_{k}^{d}\right]  w_{j}^{d}\left(  w_{k}\right)  =\left[  v_{j}v_{j}%
+^{d}\right]  \delta_{jk}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\left[  w_{j}v_{j}^{d}\right]  \left[  w_{k}v_{k}^{d}\right]  ^{\dagger
+}=\left[  w_{j}v_{j}^{d}\right]  \left[  v_{k}w_{k}^{d}\right]  =\left[
+w_{j}w_{k}^{d}\right]  v_{j}^{d}\left(  v_{k}\right)  =\left[  w_{j}w_{j}%
+^{d}\right]  \delta_{jk}.
+\end{equation}
+
+\end{enumerate}
+
+\item $\left[  w_{j}v_{j}^{d}\right]  $ are partial isometries as $\left[
+v_{j}v_{j}^{d}\right]  $ and $\left[  w_{j}w_{j}^{d}\right]  $ are projectors
+i.e.
+\begin{equation}
+\left[  v_{j}v_{j}^{d}\right]  ^{2}=\left[  v_{j}v_{j}^{d}\right]
+\end{equation}
+and
+\begin{equation}
+\left[  w_{j}w_{j}^{d}\right]  ^{2}=\left[  w_{j}w_{j}^{d}\right]  .
+\end{equation}
+
+
+\begin{enumerate}
+\item
+\begin{equation}
+\U{3a3} =\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}\left[
+u_{j}z_{j}^{d}\right]  ,\quad\sigma_{j}>0.
+\end{equation}
+
+
+\item
+\begin{equation}
+\U{3a3} ^{\dagger}=\sum_{1\leq j,k\leq\min\left(  m,n\right)  }\sigma
+_{j}\left[  z_{j}u_{j}^{d}\right]  ,\quad\sigma_{j}>0.
+\end{equation}
+
+
+\item
+\begin{align}
+\U{3a3} ^{\dagger}\U{3a3}  &  =\sum_{1\leq j,k\leq\min\left(  m,n\right)
+}\sigma_{j}\sigma_{k}\left[  u_{j}z_{j}^{d}\right]  ^{\dagger}\left[
+u_{j}z_{j}^{d}\right]  =\sum_{1\leq j,k\leq\min\left(  m,n\right)  }\sigma
+_{j}\sigma_{k}\left[  z_{j}u_{j}^{d}\right]  \left[  u_{k}z_{k}^{d}\right] \\
+&  =\sum_{1\leq j,k\leq\min\left(  m,n\right)  }\sigma_{j}\sigma_{k}\left[
+z_{j}z_{j}^{d}\right]  u_{j}^{d}\left(  u_{k}\right)  =\sum_{1\leq j,k\leq
+\min\left(  m,n\right)  }\sigma_{j}\sigma_{k}\left[  z_{j}z_{j}^{d}\right]
+\delta_{jk}=\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}^{2}\left[
+z_{j}z_{j}^{d}\right]  .
+\end{align}
+
+
+\item
+\begin{align}
+\U{3a3} \U{3a3} ^{\dagger}  &  =\sum_{1\leq j,k\leq\min\left(  m,n\right)
+}\sigma_{j}\sigma_{k}\left[  u_{j}z_{j}^{d}\right]  \left[  u_{k}z_{k}%
+^{d}\right]  ^{\dagger}=\sum_{1\leq j,k\leq\min\left(  m,n\right)  }\sigma
+_{j}\sigma_{k}\left[  u_{j}z_{j}^{d}\right]  \left[  z_{k}u_{k}^{d}\right] \\
+&  =\sum_{1\leq j,k\leq\min\left(  m,n\right)  }\sigma_{j}^{2}\left[
+u_{j}u_{k}^{d}\right]  z_{j}^{d}\left(  z_{k}\right)  =\sum_{1\leq j,k\leq
+\min\left(  m,n\right)  }\sigma_{j}\sigma_{k}\left[  u_{j}u_{k}^{d}\right]
+\delta_{jk}=\sum_{1\leq j\leq\min\left(  m,n\right)  }\sigma_{j}^{2}\left[
+u_{j}u_{j}^{d}\right]  .
+\end{align}
+
+\end{enumerate}
+
+\item
+\begin{align}
+M  &  =\sum_{\substack{1\leq j,\leq n\\1\leq k\leq m}}\left[  z_{j}u_{k}%
+^{d}\right]  \mathcal{R}_{zu}\left(  M\right)  _{jk}=\sum_{1\leq j_{1}%
+,j_{2}\leq n}\left[  u_{j_{1}}u_{j_{2}}^{d}\right]  \mathcal{R}_{u}\left(
+U\right)  _{j_{1}j_{2}}\sum_{\substack{1\leq j_{3}\leq n\\1\leq k_{1}\leq
+m}}\left[  u_{j_{3}}z_{k_{1}}^{d}\right]  \mathcal{R}_{uz}\left(  \U{3a3}
+\right)  _{j_{3}k_{1}}\sum_{1\leq k_{2},k_{3}\leq m}\left[  z_{k_{2}}z_{k_{3}%
+}^{d}\right]  \mathcal{R}_{z}\left(  Z^{\dagger}\right)  _{k_{2}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1},j_{2},j_{3}\leq n\\1\leq k_{1},k_{2},k_{3}\leq
+m}}\left[  u_{j_{1}}u_{j_{2}}^{d}\right]  \left[  u_{j_{3}}z_{k_{1}}%
+^{d}\right]  \left[  z_{k_{2}}z_{k_{3}}^{d}\right]  \mathcal{R}_{u}\left(
+U\right)  _{j_{1}j_{2}}\mathcal{R}_{uz}\left(  \U{3a3} \right)  _{j_{3}k_{1}%
+}\mathcal{R}_{z}\left(  Z^{\dagger}\right)  _{k_{2}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1},j_{2}\leq n\\1\leq k_{1},k_{3}\leq m}}\left[
+u_{j_{1}}z_{k_{3}}^{d}\right]  \mathcal{R}_{u}\left(  U\right)  _{j_{1}j_{2}%
+}\mathcal{R}_{uz}\left(  \U{3a3} \right)  _{j_{2}k_{1}}\mathcal{R}_{z}\left(
+Z^{\dagger}\right)  _{k_{1}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1},j_{2}\leq n\\1\leq j_{2}\leq\min\left(
+n,m\right)  \\1\leq k_{3}\leq m}}\left[  u_{j_{1}}z_{k_{3}}^{d}\right]
+\mathcal{R}_{u}\left(  U\right)  _{j_{1}j_{2}}\mathcal{R}_{uz}\left(  \U{3a3}
+\right)  _{j_{2}j_{2}}\mathcal{R}_{z}\left(  Z^{\dagger}\right)  _{j_{2}k_{3}%
+}=\sum_{\substack{1\leq j_{1},\leq n\\1\leq k_{3}\leq m}}\left[  z_{j_{1}%
+}u_{k_{3}}^{d}\right]  \mathcal{R}_{zu}\left(  M\right)  _{j_{1}k_{3}}%
+\end{align}%
+\begin{equation}
+\mathcal{R}_{zu}\left(  M\right)  _{j_{1}k_{3}}=\mathcal{R}_{u}\left(
+U\right)  _{j_{1}j_{2}}\mathcal{R}_{uz}\left(  \U{3a3} \right)  _{j_{2}j_{2}%
+}\mathcal{R}_{z}\left(  Z^{\dagger}\right)  _{j_{2}k_{3}}%
+\end{equation}%
+\begin{equation}
+\sum_{\substack{1\leq j_{3}\leq n\\1\leq k_{1}\leq m}}\left[  u_{j_{3}%
+}z_{k_{1}}^{d}\right]  \mathcal{R}_{uz}\left(  \U{3a3} \right)  _{j_{3}k_{1}%
+}=\sum_{1\leq j_{3}\leq\min\left(  n,m\right)  }\left[  u_{j_{3}}z_{j_{3}}%
+^{d}\right]  \mathcal{R}_{uz}\left(  \U{3a3} \right)  _{j_{3}j_{3}}%
+\end{equation}
+
+
+\item The columns of $V$ (right-singular vectors) are eigenvectors of
+$M^{\dagger}M$.%
+\begin{align}
+M^{\dagger}M  &  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq
+m}}\left[  z_{j_{1}}u_{k_{1}}^{d}\right]  \mathcal{R}_{uz}\left(  M\right)
+_{j_{1}k_{1}}^{\dagger}\sum_{\substack{1\leq j_{2}\leq n\\1\leq k_{2}\leq
+m}}\left[  u_{j_{2}}z_{k_{2}}^{d}\right]  \mathcal{R}_{uz}\left(  M\right)
+_{j_{2}k_{2}}=\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq m}%
+}\sum_{\substack{1\leq j_{2}\leq n\\1\leq k_{2}\leq m}}\left[  z_{j_{1}%
+}u_{k_{1}}^{d}\right]  \left[  u_{j_{2}}z_{k_{2}}^{d}\right]  \mathcal{R}%
+_{uz}\left(  M\right)  _{j_{1}k_{1}}^{\dagger}\mathcal{R}_{uz}\left(
+M\right)  _{j_{2}k_{2}}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq m\\1\leq k_{2}\leq
+m}}\left[  z_{j_{1}}u_{k_{2}}^{d}\right]  \mathcal{R}_{uz}\left(  M\right)
+_{j_{1}k_{1}}^{\dagger}\mathcal{R}_{uz}\left(  M\right)  _{k_{1}k_{2}}%
+=\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{2}\leq m}}\left[  z_{j_{1}%
+}u_{k_{2}}^{d}\right]  \mathcal{R}_{uz}\left(  M^{\dagger}M\right)
+_{j_{1}k_{2}}%
+\end{align}%
+\begin{align}
+MM^{\dagger}  &  =\sum_{\substack{1\leq j_{2}\leq n\\1\leq k_{2}\leq
+m}}\left[  u_{j_{2}}z_{k_{2}}^{d}\right]  \mathcal{R}_{uz}\left(  M\right)
+_{j_{2}k_{2}}\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq m}}\left[
+z_{j_{1}}u_{k_{1}}^{d}\right]  \mathcal{R}_{uz}\left(  M\right)  _{j_{1}k_{1}%
+}^{\dagger}=\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq m}%
+}\sum_{\substack{1\leq j_{2}\leq n\\1\leq k_{2}\leq m}}\left[  u_{j_{2}%
+}z_{k_{2}}^{d}\right]  \left[  z_{j_{1}}u_{k_{1}}^{d}\right]  \mathcal{R}%
+_{uz}\left(  M\right)  _{j_{2}k_{2}}\mathcal{R}_{uz}\left(  M\right)
+_{j_{1}k_{1}}^{\dagger}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq m\\1\leq k_{2}\leq
+m}}\left[  z_{j_{1}}u_{k_{2}}^{d}\right]  \mathcal{R}_{uz}\left(  M\right)
+_{j_{1}k_{1}}^{\dagger}\mathcal{R}_{uz}\left(  M\right)  _{k_{1}k_{2}}%
+=\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{2}\leq m}}\left[  z_{j_{1}%
+}u_{k_{2}}^{d}\right]  \mathcal{R}_{uz}\left(  MM^{\dagger}\right)
+_{j_{1}k_{2}}%
+\end{align}%
+\begin{equation}
+M^{\dagger}Mu_{j}=\lambda_{j}u_{j}%
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+The columns of $U$ (left-singular vectors) are eigenvectors of $MM^{\dagger}$.%
+\begin{equation}
+MM^{\dagger}z_{j}=\lambda_{j}z_{j}%
+\end{equation}
+
+
+\begin{remark}
+\begin{enumerate}
+\item
+\begin{align}
+M  &  =\sum_{\substack{1\leq j,\leq n\\1\leq k\leq m}}E_{v_{j}w_{k}^{d}%
+}\mathcal{R}_{vw}\left(  M\right)  _{jk}=\sum_{\substack{1\leq j_{1}\leq
+n\\1\leq k_{1}\leq n}}E_{w_{j_{1}}w_{k_{1}}^{d}}\mathcal{R}_{w}\left(
+U\right)  _{j_{1}k_{1}}\sum_{\substack{1\leq j_{2}\leq n\\1\leq k_{2}\leq
+m}}E_{w_{j_{2}}v_{k_{2}}^{d}}\mathcal{R}_{wv}\left(  \U{3a3} \right)
+_{j_{2}k_{2}}\sum_{\substack{1\leq j_{3}\leq m\\1\leq k_{3}\leq m}%
+}E_{v_{j_{3}}v_{k_{3}}^{d}}\mathcal{R}_{v}\left(  V^{\dagger}\right)
+_{j_{3}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq n}}E_{w_{j_{1}}%
+w_{k_{1}}^{d}}\mathcal{R}_{w}\left(  U\right)  _{j_{1}k_{1}}\sum_{1\leq
+j_{2}\leq\min\left(  m,n\right)  }E_{w_{j_{2}}v_{j_{2}}^{d}}\mathcal{R}%
+_{wv}\left(  \U{3a3} \right)  _{j_{2}j_{2}}\sum_{\substack{1\leq j_{3}\leq
+m\\1\leq k_{3}\leq m}}E_{v_{j_{3}}v_{k_{3}}^{d}}\mathcal{R}_{v}\left(
+V^{\dagger}\right)  _{j_{3}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq n}}\sum_{1\leq
+j_{2}\leq\min\left(  m,n\right)  }\sum_{\substack{1\leq j_{3}\leq m\\1\leq
+k_{3}\leq m}}E_{w_{j_{1}}w_{k_{1}}^{d}}E_{w_{j_{2}}v_{j_{2}}^{d}}E_{v_{j_{3}%
+}v_{k_{3}}^{d}}\mathcal{R}_{w}\left(  U\right)  _{j_{1}k_{1}}\mathcal{R}%
+_{wv}\left(  \U{3a3} \right)  _{j_{2}j_{2}}\mathcal{R}_{v}\left(  V^{\dagger
+}\right)  _{j_{3}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq n}}\sum_{1\leq
+j_{2}\leq\min\left(  m,n\right)  }\sum_{\substack{1\leq j_{3}\leq m\\1\leq
+k_{3}\leq m}}E_{w_{j_{1}}v_{k_{3}}^{d}}\delta_{k_{1}j_{2}}\delta_{j_{2}j_{3}%
+}\mathcal{R}_{w}\left(  U\right)  _{j_{1}k_{1}}\mathcal{R}_{wv}\left(  \U{3a3}
+\right)  _{j_{2}j_{2}}\mathcal{R}_{v}\left(  V^{\dagger}\right)  _{j_{3}k_{3}%
+}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{1}\leq n}}\sum_{1\leq
+j_{2}\leq\min\left(  m,n\right)  }\sum_{\substack{1\leq j_{3}\leq m\\1\leq
+k_{3}\leq m}}E_{w_{j_{1}}v_{k_{3}}^{d}}\mathcal{R}_{w}\left(  U\right)
+_{j_{1}j_{2}}\mathcal{R}_{wv}\left(  \U{3a3} \right)  _{j_{2}j_{2}}%
+\mathcal{R}_{v}\left(  V^{\dagger}\right)  _{j_{2}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{3}\leq m}}E_{w_{j_{1}}%
+v_{k_{3}}^{d}}\sum_{1\leq j_{2}\leq\min\left(  m,n\right)  }\mathcal{R}%
+_{w}\left(  U\right)  _{j_{1}j_{2}}\mathcal{R}_{wv}\left(  \U{3a3} \right)
+_{j_{2}j_{2}}\mathcal{R}_{v}\left(  V^{\dagger}\right)  _{j_{2}k_{3}}\\
+&  =\sum_{\substack{1\leq j_{1}\leq n\\1\leq k_{3}\leq m}}E_{w_{j_{1}}%
+v_{k_{3}}^{d}}\mathcal{R}_{wv}\left(  U\U{3a3} V^{\dagger}\right)
+_{j_{1}k_{3}}%
+\end{align}%
+\begin{equation}
+\sum_{1\leq j_{2}\leq\min\left(  m,n\right)  }\sum_{\substack{1\leq j_{1}\leq
+n\\1\leq k_{3}\leq m}}E_{w_{j_{1}}v_{k_{3}}^{d}}\mathcal{R}_{w}\left(
+U\right)  _{j_{1}j_{2}}\mathcal{R}_{wv}\left(  \U{3a3} \right)  _{j_{2}j_{2}%
+}\mathcal{R}_{v}\left(  V^{\dagger}\right)  _{j_{2}k_{3}}%
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+As%
+\begin{align}
+M^{\dagger}M  &  =(U\U{3a3} V^{\dagger})^{\dagger}(U\U{3a3} V^{\dagger
+})=(V\U{3a3} ^{\dagger}U^{\dagger})(U\U{3a3} V^{\dagger})=V(\U{3a3} ^{\dagger
+}\U{3a3} )V^{\dagger}\\
+MM^{\dagger}  &  =(U\U{3a3} V^{\dagger})(U\U{3a3} V^{\dagger})^{\dagger
+}=(U\U{3a3} V^{\dagger})(V\U{3a3} ^{\dagger}U^{\dagger})=U(\U{3a3} \U{3a3}
+^{\dagger})U^{\dagger},
+\end{align}
+$V$ diagonalizes the operator $M^{\dagger}M$, while $U$ diagonalizes the
+matrix $MM^{\dagger}.$ We now recognize that this is always possible precisely
+because the matrix $M^{\dagger}M$ is indeed self adjoint. With these
+observations, we now detail the recipe for the construction of the SVD for $M$.
+
+The singular value decomposition of an $m\times\ n$ complex matrix
+$\mathcal{R}_{\U{3a3} }\left(  M\right)  $ is a factorization of the form
+$\mathcal{R}_{\U{3a3} }\left(  M\right)  =\mathcal{R}_{\U{3a3} }\left(
+U\right)  \mathcal{R}_{\U{3a3} }\left(  \U{3a3} \right)  \mathcal{R}_{\U{3a3}
+}\left(  V^{\dagger}\right)  $, where $\mathcal{R}_{\U{3a3} }\left(  U\right)
+$ is an $m\times\ m$ complex unitary matrix, $\mathcal{R}_{\U{3a3} }\left(
+\U{3a3} \right)  $ is an $m\times\ n$ \emph{rectangular diagonal matrix with
+non-negative real numbers }on the diagonal, $\mathcal{R}_{\U{3a3} }\left(
+V\right)  $ is an $n\times\ n$ complex unitary matrix, and $V^{\dagger}$ is
+the adjoint of $V$. If $M$ is real, then $\mathcal{R}_{\U{3a3} }\left(
+U\right)  $ and $\mathcal{R}_{\U{3a3} }\left(  V\right)  $ can be guaranteed
+to be real orthogonal matrices; in such contexts, the SVD is often denoted
+$\mathcal{R}_{\U{3a3} }\left(  U\right)  \mathcal{R}_{\U{3a3} }\left(  \U{3a3}
+\right)  \mathcal{R}_{\U{3a3} }\left(  V\right)  ^{t}$.
+
+The diagonal entries $\U{3c3} _{i}=\mathcal{R}_{\U{3a3} }\left(  \U{3a3}
+\right)  _{ii}$ are uniquely determined by $M$ and are known as the singular
+values of $M$. The number of non-zero singular values is equal to the rank of
+$M$. The columns of $U$ and the columns of $V$ are called \emph{left-singular
+vectors} and \emph{right-singular vectors} of $M$, respectively. They form two
+sets of orthonormal bases $\left\{  u_{1},...,u_{m}\right\}  $ and $\left\{
+v_{1},...,v_{n}\right\}  ,$ and the singular value decomposition can be
+written as%
+\begin{equation}
+M=\sum_{1\leq j\leq r\leq\min\left(  m,n\right)  }\sigma_{j}u_{j}v_{j}^{d},
+\end{equation}
+$r$ is the rank of $M$.
+
+The SVD is not unique. It is always possible to choose the decomposition so
+that the singular values $\U{3c3} _{i}=\mathcal{R}_{\U{3a3} }\left(  \U{3a3}
+\right)  _{ii}$ are in descending order. In this case, $\U{3a3} $ (but not $U$
+and $V$) is uniquely determined by $M$.
+
+\begin{enumerate}
+\item $\mathcal{L}\left(  \mathcal{V},\mathcal{W}\right)  $%
+\begin{align}
+\operatorname*{Range}\left(  M\right)   &  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  w_{j}\in\mathcal{W}\right\vert 1\leq
+j\leq n\right\} \\
+\mathcal{W}  &  \mathcal{=}\operatorname*{Range}\left(  M\right)
+\oplus\operatorname*{Range}\left(  M\right)  ^{c}\text{ hence }%
+\operatorname*{Range}\left(  M\right)  ^{c}=\frac{\mathcal{W}}%
+{\operatorname*{Range}\left(  M\right)  }\\
+\operatorname*{Range}\left(  M\right)  ^{\bot}  &  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  w^{d}\left(  w\right)  =0\right\vert
+w^{d}\in\mathcal{W}^{d},\forall w\in\operatorname*{Range}\left(  M\right)
+\subseteq\mathcal{W}\right\}
+\end{align}
+
+
+\item
+\begin{align}
+\operatorname{Ker}\left(  M\right)   &  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  Mv=0\right\vert v\in\mathcal{V}%
+\right\} \\
+\mathcal{V}  &  =\operatorname{Ker}\left(  M\right)  \oplus\operatorname{Ker}%
+\left(  M\right)  ^{c}\text{ hence }\operatorname{Ker}\left(  M\right)
+^{c}=\frac{\mathcal{V}}{\operatorname{Ker}\left(  M\right)  }\\
+\operatorname{Ker}\left(  M\right)  ^{\bot}  &  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  v^{d}\left(  v\right)  =0\right\vert
+v^{d}\in\mathcal{V}^{d},\forall v\in\operatorname{Ker}\left(  M\right)
+\subseteq\mathcal{V}\right\}
+\end{align}
+
+
+\item The restriction of $M$
+\begin{equation}
+M:\operatorname{Ker}\left(  M\right)  ^{c}\rightarrow\operatorname*{Range}%
+\left(  M\right)  \subseteq\mathcal{W}%
+\end{equation}
+is an injection.
+\end{enumerate}
+
+\subsection{SVD and spectral decomposition}
+
+Singular values, singular vectors, and their relation to the SVD
+
+A \emph{non-negative} real number $\U{3c3} $ is a singular value for $M$ if
+and only if there exist unit-length vectors $u$ in $\mathbb{C}^{m}$ and $v$ in
+$\mathbb{C}^{n}$ such that%
+
+\begin{equation}
+Mv=\U{3c3} u
+\end{equation}
+and
+\begin{equation}
+M^{\dagger}u=\U{3c3} v.
+\end{equation}
+
+
+The vectors $u$ and $v$ are called \emph{left-singular} and
+\emph{right-singular} vectors for $\U{3c3} $, respectively.
+
+In any singular value decomposition%
+\begin{equation}
+M=U\U{3a3} V^{\dagger}%
+\end{equation}
+the diagonal entries of $\U{3a3} $ are equal to the singular values of $M$.
+The first $p=\min(m,n)$ \underline{\emph{columns}} of $U$ and $V$ are,
+respectively, \emph{left- and right-singular vectors for the corresponding
+singular values}. Consequently, the above theorem implies that:
+
+An $m\times\ n$ matrix $M$ has at most $p$ distinct singular values.
+
+It is always possible to find a unitary basis $U$ for $\mathcal{W}$ with a
+subset of basis vectors spanning the left-singular vectors of each singular
+value of $M$.
+
+It is always possible to find a unitary basis $V$ for $\mathcal{V}$ with a
+subset of basis vectors spanning the right-singular vectors of each singular
+value of $M$.
+
+A singular value for which we can find two left (or right) singular vectors
+that are linearly independent is called degenerate. If $u_{1}1$ and $u_{2}2$
+are two left-singular vectors which both correspond to the singular value
+$\U{3c3} $, then any normalized linear combination of the two vectors is also
+a left-singular vector corresponding to the singular value $\U{3c3} $. The
+similar statement is true for right-singular vectors. The number of
+independent left and right-singular vectors coincides, and these singular
+vectors appear in the same columns of $U$ and $V$ corresponding to diagonal
+elements of $\U{3a3} $ all with the same value $\U{3c3} $.
+
+As an exception, the left and right-singular vectors of singular value $0$
+comprise all unit vectors in the kernel and cokernel, respectively, of $M$,
+which by the rank--nullity theorem cannot be the same dimension if $m\neq n$.
+Even if all singular values are nonzero, if $m>n$ then the cokernel is
+nontrivial, in which case $U$ is padded with $m-n$ orthogonal vectors from the
+cokernel. Conversely, if $m<n$, then $V$ is padded by $n-m$ orthogonal vectors
+from the kernel. However, if the singular value of $0$ exists, the extra
+columns of $U$ or $V$ already appear as left or right-singular vectors.
+
+Non-degenerate singular values always have unique left- and right-singular
+vectors, up to multiplication by a unit-phase factor $ei\U{3c6} $ (for the
+real case up to a sign). Consequently, if all singular values of a square
+matrix M are non-degenerate and non-zero, then its singular value
+decomposition is unique, up to multiplication of a column of $U$ by a
+unit-phase factor and simultaneous multiplication of the corresponding column
+of $V$ by the same unit-phase factor. In general, the SVD is unique up to
+arbitrary unitary transformations applied uniformly to the column vectors of
+both $U$ and $V$ spanning the subspaces of each singular value, and up to
+arbitrary unitary transformations on vectors of $U$ and $V$ spanning the
+kernel and cokernel, respectively, of $M$.
+
+Relation to eigenvalue decomposition
+
+The singular value decomposition is very general in the sense that it can be
+applied to any m \times\ n matrix, whereas eigenvalue decomposition can only
+be applied to diagonalizable matrices. Nevertheless, the two decompositions
+are related.
+
+Given an SVD of M, as described above, the following two relations hold:%
+
+\begin{equation}
+M^{\dagger}M=V\U{3a3} ^{\dagger}U^{\dagger}U\U{3a3} V^{\dagger}=V(\U{3a3}
+^{\dagger}\U{3a3} )V^{\dagger}MM^{\dagger}=U\U{3a3} V^{\dagger}V\U{3a3}
+^{\dagger}U^{\dagger}=U(\U{3a3} \U{3a3} ^{\dagger})U^{\dagger}%
+\end{equation}
+
+
+The right-hand sides of these relations describe the eigenvalue decompositions
+of the left-hand sides. Consequently:
+
+The columns of $V$ (right-singular vectors) are eigenvectors of $M^{\dagger}M$.
+
+The columns of $U$ (left-singular vectors) are eigenvectors of $MM^{\dagger}$.
+
+The non-zero elements of $\U{3a3} $ (non-zero singular values) are the square
+roots of the non-zero eigenvalues of $M^{\dagger}M$ or $MM^{\dagger}$.
+
+In the special case that $M$ is a normal matrix, which by definition must be
+square, the spectral theorem says that it can be unitarily diagonalized using
+a basis of eigenvectors, so that it can be written $M=UDU^{\dagger}$ for a
+unitary matrix $U$ and a diagonal matrix $D$ with complex elements $\U{3c3}
+_{i}$ along the diagonal. When $M$ is positive semi-definite, $\U{3c3} _{i}$
+will be non-negative real numbers so that the decomposition $M=UDU^{\dagger}$
+is also a singular value decomposition. Otherwise, it can be recast as an SVD
+by moving the phase ei\U{3c6} of each $\U{3c3} _{i}$ to either its
+corresponding $V_{i}$ or $U_{i}.$ The natural connection of the SVD to
+non-normal matrices is through the polar decomposition theorem: $M=SR$, where
+$S=U\U{3a3} U^{\dagger}$ is positive semidefinite and normal, and
+$R=UV^{\dagger}$ is unitary.
+
+Thus, except for positive semi-definite matrices, the eigenvalue decomposition
+and SVD of $M$, while related, differ: the eigenvalue decomposition is
+$M=UDU^{-1}$, where $U$ is not necessarily unitary and $D$ is not necessarily
+positive semi-definite, while the SVD is $M=U\U{3a3} V^{\dagger}$, where
+$\U{3a3} $ is diagonal and positive semi-definite, and $U$ and $V$ are unitary
+matrices that are not necessarily related except through the matrix $M$. While
+only non-defective square matrices have an eigenvalue decomposition, any
+$m\times\ n$ matrix has a SVD.
+
+\section{Applications of the SVD}
+
+\subsection{Pseudoinverse}
+
+The singular value decomposition can be used for computing the pseudoinverse
+of a matrix. (Various authors use different notation for the pseudoinverse;
+here we use $\#$.) Indeed, the pseudoinverse of the matrix M with singular
+value decomposition $M=U\U{3a3} V^{\dagger}$ is%
+
+\begin{equation}
+M^{\#}\ =V\U{3a3} ^{\#}U^{\dag}\
+\end{equation}
+where $\U{3a3} ^{\#}$\ is the pseudoinverse of $\U{3a3} $, which is formed by
+replacing every non-zero diagonal entry by its reciprocal and transposing the
+resulting matrix. The pseudoinverse is one way to solve linear least squares problems.
+
+\subsection{Solving homogeneous linear equations}
+
+A set of homogeneous linear equations can be written as $Ax=0$ for a matrix
+$A$ and vector $x$. A typical situation is that $A$ is known and a non-zero
+$x$ is to be determined which satisfies the equation. Such an $x$ belongs to
+$A$'s null space and is sometimes called a (right) null vector of $A$. The
+vector $x$ can be characterized as a right-singular vector corresponding to a
+singular value of $A$ that is zero. This observation means that if $A$ is a
+square matrix and has no vanishing singular value, the equation has no
+non-zero $x$ as a solution. It also means that if there are several vanishing
+singular values, any linear combination of the corresponding right-singular
+vectors is a valid solution. Analogously to the definition of a (right) null
+vector, a non-zero $x$ satisfying $x^{\dagger}A=0$, with $x^{\dagger}$
+denoting the conjugate transpose of $x$, is called a left null vector of $A$.
+
+\subsection{Total least squares minimization}
+
+A total least squares problem seeks the vector x that minimizes the 2-norm of
+a vector $Ax$ under the constraint $||x||=1$. The solution turns out to be the
+right-singular vector of $A$ corresponding to the smallest singular value.
+
+\subsubsection{Range, null space and rank}
+
+Another application of the SVD is that it provides an explicit representation
+of the range and null space of a matrix $M$. The right-singular vectors
+corresponding to vanishing singular values of $M$ span the null space of $M$
+and the left-singular vectors corresponding to the non-zero singular values of
+$M$ span the range of $M$. For example, in the above example the null space is
+spanned by the last two rows of $V^{\dagger}$ and the range is spanned by the
+first three columns of $U$.
+
+As a consequence, the rank of $M$ equals the number of non-zero singular
+values which is the same as the number of non-zero diagonal elements in
+$\U{3a3} $ . In numerical linear algebra the singular values can be used to
+determine the effective rank of a matrix, as rounding error may lead to small
+but non-zero singular values in a rank deficient matrix. Singular values
+beyond a significant gap are assumed to be numerically equivalent to zero.
+
+\subsection{Low-rank matrix approximation}
+
+Some practical applications need to solve the problem of approximating a
+matrix $M$ with another matrix $M\symbol{126}$, said to be truncated, which
+has a specific rank $r$. In the case that the approximation is based on
+minimizing the Frobenius norm of the difference between $M$ and $\widetilde{M}%
+$ under the constraint that $\operatorname*{Rank}(\widetilde{M})=r$, it turns
+out that the solution is given by the SVD of $M$, namely%
+
+\begin{equation}
+\widetilde{M}=U\widetilde{\U{3a3} }V^{\dagger}%
+\end{equation}
+where $\widetilde{\U{3a3} }$ is the same matrix as $\U{3a3} $ except that it
+contains only the $r$ largest singular values (the other singular values are
+replaced by zero). This is known as the Eckart--Young theorem, as it was
+proved by those two authors in 1936 (although it was later found to have been
+known to earlier authors; see Stewart 1993).
+
+\subsection{Separable models}
+
+The SVD can be thought of as decomposing a matrix into a weighted, ordered sum
+of separable matrices. By separable, we mean that a matrix $A$ can be written
+as an outer product of two vectors $A=u\otimes v$, or, in coordinates,
+$A_{ij}=u_{i}v_{j}$. Specifically, the matrix $M$ can be decomposed as%
+
+\begin{equation}
+M=\sum_{i}A_{i}=\sum_{i}\U{3c3} _{i}U_{i}\otimes V_{i}.
+\end{equation}
+Here $U_{i}$ and $V_{i}$ are the $i$-th columns of the corresponding SVD
+matrices, $\U{3c3} _{i}$ are the ordered singular values, and each $A_{i}$ is
+separable. The SVD can be used to find the decomposition of an image
+processing filter into separable horizontal and vertical filters. Note that
+the number of non-zero $\U{3c3} _{i}$ is exactly the rank of the matrix.
+
+\subsubsection{Nearest orthogonal matrix}
+
+It is possible to use the SVD of a square matrix $A$ to determine the
+orthogonal matrix $O$ closest to $A$. The closeness of fit is measured by the
+Frobenius norm of $O-A.$ The solution is the product $UV^{\dagger}$. This
+intuitively makes sense because an orthogonal matrix would have the
+decomposition $UIV^{\dagger}$ where $I$ is the identity matrix, so that if
+$A=U\U{3a3} V^{\dagger}$ then the product $A=UV^{\dagger}$ amounts to
+replacing the singular values with ones. Equivalently, the solution is the
+unitary matrix $R=UV^{\dagger}$ of the Polar Decomposition $M=RP=P\prime R$ in
+either order of stretch and rotation, as described above.
+
+\subsection{Signal processing}
+
+The SVD and pseudoinverse have been successfully applied to signal processing,
+image processing and big data (e.g., in genomic signal processing).
+
+\subsection{Existence proofs}
+
+An eigenvalue $\U{3bb} $ of a matrix $M$ is characterized by the algebraic
+relation $Mu=\U{3bb} u$. When $M$ is Hermitian, a variational characterization
+is also available. Let $M$ be a real $n\times\ n$ symmetric matrix. Define%
+\begin{align}
+f  &  :\mathbb{R}^{n}\rightarrow\mathbb{R}\\
+f  &  :x\mapsto x^{\dagger}Mx
+\end{align}
+By the extreme value theorem, this continuous function attains a maximum at
+some $u$ when restricted to the unit sphere $\{||x||=1\}$. By the Lagrange
+multipliers theorem, $u$ necessarily satisfies%
+\begin{equation}
+\left(  \nabla u\right)  ^{\dagger}Mu-\U{3bb} \left(  \nabla u\right)
+^{\dagger}u=0
+\end{equation}
+for some real number $\U{3bb} $. The nabla symbol, $\nabla$, is the del
+operator (differentiation with respect to $x$). Using the symmetry of $M$ we obtain%
+
+\begin{equation}
+\left(  \nabla x\right)  ^{\dagger}Mx-\U{3bb} \left(  \nabla x\right)
+^{\dagger}x=2(M-\U{3bb} I)x.
+\end{equation}
+
+
+Therefore $Mu=\U{3bb} u$, so $u$ is a unit length eigenvector of $M$. For
+every unit length eigenvector $v$ of $M$ its eigenvalue is $f(v)$, so $\U{3bb}
+$ is the largest eigenvalue of $M$. The same calculation performed on the
+orthogonal complement of $u$ gives the next largest eigenvalue and so on. The
+complex Hermitian case is similar; there $f(x)=x^{\dagger}Mx$ is a real-valued
+function of $2n$ real variables.
+
+Singular values are similar in that they can be described algebraically or
+from variational principles. Although, unlike the eigenvalue case,
+Hermiticity, or symmetry, of $M$ is no longer required.
+
+This section gives these two arguments for existence of singular value decomposition.
+
+\subsubsection{Based on the spectral theorem}
+
+Let $M$ be an $m\times\ n$ complex matrix. Since $M^{\dagger}M$ is positive
+semi-definite and Hermitian, by the spectral theorem, there exists an $n\times
+n$ unitary matrix $V$ such that%
+
+\begin{equation}
+V^{\dagger}M^{\dagger}MV=D=\left(
+\begin{array}
+[c]{cc}%
+\overline{D} & 0\\
+0 & 0
+\end{array}
+\right)  ,
+\end{equation}
+where $\overline{D}$ is diagonal and positive definite, of dimension
+$\ell\times\ \ell$ , with $\ell$ the number of non-zero eigenvalues of
+$M^{\dagger}M$ (which can be shown to verify $\ell\leq\min(n,m)$ . Note that
+$V$ is here by definition a matrix whose $i$-th column is the $i$-th
+eigenvector of $M^{\dagger}M$ , corresponding to the eigenvalue $\overline
+{D}_{ii}$. Moreover, the $j$-th column of $V$ , for $j>\ell$ , is an
+eigenvector of $M^{\dagger}M$ with eigenvalue $\overline{D}_{jj}=0$ . This can
+be expressed by writing $V$ as $V=[V_{1}V_{2}]$, where the columns of $V_{1}$
+and $V_{2}$ therefore contain the eigenvectors of $M^{\dagger}M$ corresponding
+to non-zero and zero eigenvalues, respectively. Using this rewriting of $V$,
+the equation becomes:%
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+V_{1}^{\dagger}\\
+V_{2}^{\dagger}%
+\end{array}
+\right)  M^{\dagger}M\left(
+\begin{array}
+[c]{cc}%
+V_{1} & V_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+V_{1}^{\dagger}M^{\dagger}MV_{1} & V_{1}^{\dagger}M^{\dagger}MV_{2}\\
+V_{2}^{\dagger}M^{\dagger}MV_{1} & V_{2}^{\dagger}M^{\dagger}MV_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+\overline{D} & 0\\
+0 & 0
+\end{array}
+\right)
+\end{equation}
+
+
+This implies that%
+\begin{align}
+V_{1}^{\dagger}M^{\dagger}MV_{1}  &  =\overline{D}\\
+V_{2}^{\dagger}M^{\dagger}MV_{1}  &  =0.
+\end{align}
+
+
+Moreover, the second equation implies $MV_{2}=0$ Finally, the unitary-ness of
+$V_{2}$ into the following conditions:%
+\begin{align}
+V_{1}^{\dagger}V_{1}  &  =I_{1},\\
+V_{2}^{\dagger}V_{2}  &  =I_{2},\\
+V_{1}V_{1}^{\dagger}+V_{2}V_{2}^{\dagger}  &  =I_{12},
+\end{align}
+
+
+where the subscripts on the identity matrices are used to remark that they are
+of different dimensions.
+
+Let us now define%
+\begin{equation}
+U_{1}=MV_{1}D^{-\frac{1}{2}}.
+\end{equation}
+Then,%
+\begin{equation}
+U_{1}D^{\frac{1}{2}}V_{1}^{\dagger}=MV_{1}D^{-\frac{1}{2}}D^{\frac{1}{2}}%
+V_{1}^{\dagger}=M(I-V_{2}V_{2}^{\dagger})=M-(MV_{2})V_{2}^{\dagger}=M,
+\end{equation}
+since $MV_{2}=0$. This can be also seen as immediate consequence of the fact
+that $MV_{1}V_{1}^{\dagger}=M$ . This is equivalent to the observation that if
+$\{\left.  v_{i}\right\vert 1\leq i\leq l\}$ is the set of eigenvectors of
+$M^{\dagger}M$ corresponding to non-vanishing eigenvalues $\{\left.  \U{3bb}
+_{i}\right\vert 1\leq i\leq l\}$, then $\{\left.  Mv_{i}\right\vert 1\leq
+i\leq l\}$ is a set of orthogonal vectors, and $\{\left.  \U{3bb} _{i}%
+^{-\frac{1}{2}}Mv_{i}\right\vert 1\leq i\leq l\}$ is a (generally not
+complete) set of orthonormal vectors. This matches with the matrix formalism
+used above denoting with $V_{1}$ the matrix whose columns are $\{\left.
+v_{i}\right\vert 1\leq i\leq l\}$, with $V_{2}$ the matrix whose columns are
+the eigenvectors of $M^{\dagger}M$ with vanishing eigenvalue, and $U_{1}$ the
+matrix whose columns are the vectors $\{\left.  \U{3bb} _{i}^{-\frac{1}{2}%
+}Mv_{i}\right\vert 1\leq i\leq l\}$ .
+
+We see that this is almost the desired result, except that $U_{1}$ and $U_{1}$
+are in general not unitary, since they might not be square. However, we do
+know that the number of rows of $U_{1}$ is no smaller than the number of
+columns, since the dimensions of $D$ is no greater than $m$ and $n$ . Also,
+since%
+\begin{equation}
+U_{1}^{\dagger}U_{1}=D^{-\frac{1}{2}}V_{1}^{\dagger}M^{\dagger}MV_{1}%
+D^{-\frac{1}{2}}=D^{-\frac{1}{2}}DD^{-\frac{1}{2}}=I_{1},
+\end{equation}
+the columns in $U_{1}$ are orthonormal and can be extended to an orthonormal
+basis. This means that we can choose $U_{2}$ such that $U=[U_{1}U_{2}]$ is unitary.
+
+For $V_{1}$ we already have $V_{2}$ to make it unitary. Now, define%
+\begin{equation}
+\U{3a3} =\left(
+\begin{array}
+[c]{c}%
+\left(
+\begin{array}
+[c]{cc}%
+D^{\frac{1}{2}} & 0\\
+0 & 0
+\end{array}
+\right) \\
+0
+\end{array}
+\right)
+\end{equation}
+where extra zero rows are added or removed to make the number of zero rows
+equal the number of columns of $U2$, and hence the overall dimensions of
+$\U{3a3} $ equal to $m\times\ n$ . Then%
+\begin{equation}
+\left(
+\begin{array}
+[c]{cc}%
+U_{1} & U_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+D^{\frac{1}{2}} & 0\\
+0 & 0
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+V_{1}^{\dagger}\\
+V_{2}^{\dagger}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{cc}%
+U_{1} & U_{2}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+D^{\frac{1}{2}}V_{1}^{\dagger}\\
+0
+\end{array}
+\right)  =U_{1}D^{\frac{1}{2}}V_{1}^{\dagger}=M,
+\end{equation}
+which is the desired result:%
+\begin{equation}
+M=U\U{3a3} V^{\dagger}.
+\end{equation}
+
+
+Notice the argument could begin with diagonalizing $MM^{\dagger}$ rather than
+$M^{\dagger}M$ (This shows directly that $MM^{\dagger}$ and $M^{\dagger}M$
+have the same non-zero eigenvalues).
+
+\subsubsection{Based on variational characterization}
+
+The singular values can also be characterized as the maxima of $u^{\dagger}%
+Mv$, considered as a function of $u$ and $v$, over particular subspaces. The
+singular vectors are the values of $u$ and $v$ where these maxima are attained.
+
+Let $M$ denote an $m\times\ n$ matrix with real entries. Let $S^{k-1}$ be the
+unit $(k-1)$-sphere in $\mathbb{R}^{k}$, and define
+\begin{equation}
+\U{3c3} (u,v)=uTMv,u\in S^{m-1},v\in S^{n-1}.
+\end{equation}
+
+
+Consider the function $\U{3c3} $ restricted to $S^{m-1}\times\ S^{n-1}$. Since
+both $S^{m-1}$ and $S^{n-1}$ are compact sets, their product is also compact.
+Furthermore, since $\U{3c3} $ is continuous, it attains a largest value for at
+least one pair of vectors $u\in S^{m-1}$ and $v\in S^{n-1}$. This largest
+value is denoted $\U{3c3} _{1}$ and the corresponding vectors are denoted
+$u_{1}$ and $v_{1}$. Since $\U{3c3} _{1}$ is the largest value of $\U{3c3}
+(u,v)$ it must be non-negative. If it were negative, changing the sign of
+either $u_{1}$ or $v_{1}$ would make it positive and therefore larger.
+
+\begin{theorem}
+$u_{1},v_{1}$ are left and right-singular vectors of $M$ with corresponding
+singular value $\U{3c3} _{1}$.
+\end{theorem}
+
+\begin{proof}
+Similar to the eigenvalues case, by assumption the two vectors satisfy the
+Lagrange multiplier equation:%
+\begin{equation}
+\nabla\U{3c3} =\left(  \nabla u\right)  ^{\dagger}Mv-\U{3bb} _{1}\left(
+\nabla u\right)  ^{\dagger}u-\U{3bb} _{2}\left(  \nabla v\right)  ^{\dagger}v
+\end{equation}
+After some algebra, this becomes%
+\begin{equation}
+Mv_{1}=2\U{3bb} _{1}u_{1}+0M^{\dagger}u_{1}=0+2\U{3bb} _{2}v_{1}%
+\end{equation}
+Multiplying the first equation from left by $u_{1}^{\dagger}$ and the second
+equation from left by $v_{1}^{\dagger}$ and taking
+\begin{equation}
+\left\Vert u\right\Vert =\left\Vert v\right\Vert =1
+\end{equation}
+into account gives%
+\begin{equation}
+\U{3c3} _{1}=2\U{3bb} _{1}=2\U{3bb} _{2}.
+\end{equation}
+Plugging this into the pair of equations above, we have%
+\begin{equation}
+Mv_{1}=\U{3c3} _{1}u_{1}M^{\dagger}u_{1}=\U{3c3} _{1}v_{1}%
+\end{equation}
+
+\end{proof}
+
+$\blacksquare$
+
+More singular vectors and singular values can be found by maximizing $\U{3c3}
+(u,v)$ over normalized $u,v$ which are orthogonal to $u_{1}$ and $v_{1}$, respectively.
+
+\subsection{Norms}
+
+\subsubsection{Ky Fan norms}
+
+The sum of the $k$ largest singular values of $M$ is a matrix norm, the Ky Fan
+$k$-norm of $M$.
+
+The first of the Ky Fan norms, the Ky Fan $1$-norm, is the same as the
+operator norm of $M$ as a linear operator with respect to the Euclidean norms
+of $K^{m}$ and $K^{n}$. In other words, the Ky Fan $1$-norm is the operator
+norm induced by the standard $\ell_{2}$ Euclidean inner product. For this
+reason, it is also called the operator 2-norm. One can easily verify the
+relationship between the Ky Fan $1$-norm and singular values. It is true in
+general, for a bounded operator M on (possibly infinite-dimensional) Hilbert
+spaces%
+\begin{equation}
+\Vert M\Vert=||M^{\dagger}M||^{\frac{1}{2}}%
+\end{equation}
+
+
+But, in the matrix case, $\left(  M^{\dagger}M\right)  ^{^{\frac{1}{2}}}$ is a
+normal matrix, so $||M^{\dagger}M||^{\frac{1}{2}}$ is the largest eigenvalue
+of $(M\ast M)^{\frac{1}{2}}$, i.e. the largest singular value of $M$.
+
+The last of the Ky Fan norms, the sum of all singular values, is the trace
+norm (also known as the 'nuclear norm'), defined by $\Vert M\Vert=\left\langle
+\left.  M\right\vert M\right\rangle ^{\frac{1}{2}}$ (the eigenvalues of
+$M^{\dagger}M$ are the squares of the singular values).
+
+\subsubsection{Hilbert--Schmidt norm}
+
+The singular values are related to another norm on the space of operators.
+Consider the Hilbert--Schmidt inner product on the $n\times\ n$ matrices,
+defined by%
+\begin{equation}
+\left\langle \left.  M\right\vert M\right\rangle =\operatorname{Tr}\U{2061}
+(N^{\dagger}M)
+\end{equation}
+
+
+So the induced norm is%
+\begin{equation}
+\Vert M\Vert=\left\langle \left.  M\right\vert M\right\rangle ^{\frac{1}{2}%
+}=\operatorname{Tr}\U{2061} (M^{\dagger}M)
+\end{equation}
+
+
+Since the trace is invariant under unitary equivalence, this shows%
+\begin{equation}
+\Vert M\Vert=\sum_{i}\U{3c3} _{i}^{2}%
+\end{equation}
+
+
+where $\U{3c3} _{i}$ are the singular values of M. This is called the
+Frobenius norm, Schatten 2-norm, or Hilbert--Schmidt norm of M. Direct
+calculation shows that the Frobenius norm of $M=\left\{  m_{ij}\right\}  $
+coincides with: $\U{2211} ij|m_{ij}|^{2}$.
+
+In addition, the Frobenius norm and the trace norm (the nuclear norm) are
+special cases of the Schatten norm.
+
+\subsection{Tensor SVD}
+
+Two types of tensor decompositions exist, which generalise the SVD to
+multi-way arrays. One of them decomposes a tensor into a sum of rank-1
+tensors, which is called a tensor rank decomposition. The second type of
+decomposition computes the orthonormal subspaces associated with the different
+factors appearing in the tensor product of vector spaces in which the tensor
+lives. This decomposition is referred to in the literature as the higher-order
+\emph{SVD (HOSVD)} or $\emph{Tucker3/TuckerM}$. In addition, multilinear
+principal component analysis in multilinear subspace learning involves the
+same mathematical operations as Tucker decomposition, being used in a
+different context of dimensionality reduction.
+
+\subsection{Scale-invariant SVD}
+
+The singular values of a matrix $A$ are uniquely defined and are invariant
+with respect to left and/or right unitary transformations of $A$. In other
+words, the singular values of $UAV$, for unitary $U$ and $V$, are equal to the
+singular values of $A$. This is an important property for applications in
+which it is necessary to preserve Euclidean distances and invariance with
+respect to rotations.
+
+The Scale-Invariant SVD, or SI-SVD, is analogous to the conventional SVD
+except that its uniquely-determined singular values are invariant with respect
+to diagonal transformations of $A$. In other words, the singular values of
+$DAE$, for invertible diagonal matrices $D$ and $E$, are equal to the singular
+values of $A$. This is an important property for applications for which
+invariance to the choice of units on variables (e.g., metric versus imperial
+units) is needed.
+
+\subsection{Bounded operators on Hilbert spaces}
+
+The factorization $M=U\U{3a3} V^{\dagger}$ can be extended to a bounded
+operator $M$ on a separable Hilbert space $\mathcal{H}$. Namely, for any
+bounded operator $M$, there exist a partial isometry $U$, a unitary $V$, a
+measure space $(X,%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+)$, and a non-negative measurable $f$ such that $M=UT_{f}V^{\dagger}$ where
+$T_{f}$ is the multiplication by $f$ on $L_{2}(X,%
+%TCIMACRO{\U{3bc} }%
+%BeginExpansion
+\mu
+%EndExpansion
+)$.
+
+This can be shown by mimicking the linear algebraic argument for the matricial
+case above. $VT_{f}V^{\dagger}$ is the unique positive square root of
+$M^{\dagger}M$, as given by the Borel functional calculus for self-adjoint
+operators. The reason why $U$ need not be unitary is because, unlike the
+finite-dimensional case, given an isometry $U_{1}$ with nontrivial kernel, a
+suitable $U_{2}$ may not be found such that $[U_{1}U_{2}]$ is a unitary operator.
+
+As for matrices, the singular value factorization is equivalent to the polar
+decomposition for operators: we can simply write%
+
+\begin{equation}
+M=\left(  UV^{\dagger}\right)  \left(  VT_{f}V^{\dagger}\right)
+\end{equation}
+and notice that $UV^{\dagger}$ is still a partial isometry while
+$VT_{f}V^{\dagger}$ is positive.
+
+\subsubsection{Singular values and compact operators}
+
+The notion of singular values and left/right-singular vectors can be extended
+to compact operator on Hilbert space as they have a discrete spectrum. If $T$
+is compact, every non-zero \U{3bb} in its spectrum is an eigenvalue.
+Furthermore, a compact self-adjoint operator can be diagonalized by its
+eigenvectors. If $M$ is compact, so is $M^{\dagger}M$. Applying the
+diagonalization result, the unitary image of its positive square root $T_{f}$
+has a set of orthonormal eigenvectors $\{e_{i}\}$ corresponding to strictly
+positive eigenvalues $\{\U{3c3} _{i}\}$. For any $\U{3c8} \in\mathcal{H}$,%
+
+\begin{equation}
+M\U{3c8} =UT_{f}V^{\dagger}\U{3c8} =\sum_{i}\left\langle \left.
+UT_{f}V^{\dagger}\U{3c8} \right\vert ,Ue_{i}\right\rangle Ue_{i}=\sum
+_{i}\U{3c3} _{i}\left\langle \left.  \U{3c8} \right\vert Ve_{i}\right\rangle
+Ue_{i},
+\end{equation}
+where the series converges in the norm topology on $\mathcal{H}$. Notice how
+this resembles the expression from the finite-dimensional case. $\U{3c3} _{i}$
+are called the singular values of $M$. $\{Ue_{i}\}$ (resp. $\{Ve_{i}\}$) can
+be considered the left-singular (resp. right-singular) vectors of $M$.
+
+Compact operators on a Hilbert space are the closure of finite-rank operators
+in the uniform operator topology. The above series expression gives an
+explicit such representation. An immediate consequence of this is:
+
+\begin{theorem}
+$M$ is compact if and only if $M^{\dagger}M$ is compact.
+\end{theorem}
+
+\subsection{History}
+
+The singular value decomposition was originally developed by differential
+geometers, who wished to determine whether a real bilinear form could be made
+equal to another by independent orthogonal transformations of the two spaces
+it acts on. Eugenio Beltrami and Camille Jordan discovered independently, in
+1873 and 1874 respectively, that the singular values of the bilinear forms,
+represented as a matrix, form a complete set of invariants for bilinear forms
+under orthogonal substitutions. James Joseph Sylvester also arrived at the
+singular value decomposition for real square matrices in 1889, apparently
+independently of both Beltrami and Jordan. Sylvester called the singular
+values the canonical multipliers of the matrix $A$. The fourth mathematician
+to discover the singular value decomposition independently is Autonne in 1915,
+who arrived at it via the polar decomposition. The first proof of the singular
+value decomposition for rectangular and complex matrices seems to be by Carl
+Eckart and Gale J. Young in 1936 they saw it as a generalization of the
+principal axis transformation for Hermitian matrices.
+
+In 1907, Erhard Schmidt defined an analog of singular values for integral
+operators (which are compact, under some weak technical assumptions); it seems
+he was unaware of the parallel work on singular values of finite matrices.
+This theory was further developed by \'{E}mile Picard in 1910, who is the
+first to call the numbers $\U{3c3} _{k}$ singular values (or in French,
+valeurs singuli\`{e}res).
+
+Practical methods for computing the SVD date back to Kogbetliantz in
+1954--1955 and Hestenes in 1958 resembling closely the Jacobi eigenvalue
+algorithm, which uses plane rotations or Givens rotations. However, these were
+replaced by the method of Gene Golub and William Kahan published in 1965,
+which uses Householder transformations or reflections. In 1970, Golub and
+Christian Reinsch published a variant of the Golub/Kahan algorithm that is
+still the one most-used today.
+\end{document}

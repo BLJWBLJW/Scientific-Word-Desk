@@ -1,0 +1,265 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, May 14, 2002 12:13:47}
+%TCIDATA{LastRevised=Tuesday, May 14, 2002 14:47:33}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[Summary]{Summary of Content of Proposed Papers}
+\author{Brian Weiner}
+\affiliation{}
+\keywords{}
+\date{05/14/02}
+\received{}
+
+\startpage{1 }
+\maketitle
+\tableofcontents
+
+
+\begin{enumerate}
+\item \emph{All} $N$-particle states, $\breve{D}^{N}$, (pure and ensemble) can
+be obtained from a reference positive operator $\breve{D}_{ref}\in
+\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)  $, by
+\begin{equation}
+\breve{D}^{N}=\hat{T}\left(  D_{ref}\right)  =\breve{T}\breve{D}_{ref}%
+\breve{T}^{\dagger};\quad D_{ref}\left(  \mathsf{z}^{N},\mathsf{z}^{\prime
+N}\right)  \overset{a.e.}{\neq}0\text{ and }rank\left\{  \breve{D}%
+_{ref}\right\}  =\infty
+\end{equation}
+where $\left\{  \breve{T}\right\}  $ are diagonal operators
+\begin{equation}
+\breve{T}=\int T\left(  \mathsf{z}^{N}\right)  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+=\int\nu\left(  \mathsf{z}^{N}\right)  e^{i\omega\left(  \mathsf{z}%
+^{N}\right)  }\left\vert \mathsf{z}^{N}\right\rangle \left\langle
+\mathsf{z}^{N}\right\vert d\mathsf{z}^{N};\,\nu\left(  \mathsf{z}^{N}\right)
+\geq0
+\end{equation}
+and $T\left(  \mathsf{z}^{N}\right)  \in L_{\infty}\left(  \mathsf{Z}%
+^{N}\right)  $ and $T\left(  \mathsf{z}^{N}\right)  $ are symmetric functions
+of the coordinates that refer to indistinguishable particles. This set of
+transformations forms an abelian semi group, $\mathfrak{S}$, that is also a
+$w^{\ast}$-algebra ($L_{\infty}\left(  \mathsf{Z}^{N}\right)  $ is a
+representation of this algebra), which contains a group, $\mathfrak{G}_{pos}$,
+of invertible elements
+\begin{equation}
+\mathfrak{G}_{pos}=\left\{  \breve{T}|T\left(  \mathsf{z}^{N}\right)
+\overset{.}{\overset{a.e.}{\neq}0\Leftrightarrow\nu\left(  \mathsf{z}%
+^{N}\right)  \overset{a.e.}{\neq}0}\right\}
+\end{equation}
+The group $\mathfrak{G}_{pos}$ is not sufficient to generate all states from a reference.
+
+The diagonal operators can be expressed in second quantized notation as
+\begin{equation}
+\breve{T}=\int T\left(  \mathsf{z}^{N}\right)  \prod_{1\leq i<j\leq N}%
+\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  \Phi\left(
+\mathsf{z}_{1}\right)  ^{\dagger}\Phi\left(  \mathsf{z}_{1}\right)  \cdots
+\Phi\left(  \mathsf{z}_{N}\right)  ^{\dagger}\Phi\left(  \mathsf{z}%
+_{N}\right)  d\mathsf{z}^{N}%
+\end{equation}
+where
+\begin{equation}
+\delta^{C}\left(  \mathsf{z}_{i}-\mathsf{z}_{j}\right)  =1-\delta\left(
+\mathsf{z}_{i}-\mathsf{z}_{j}\right)
+\end{equation}
+
+
+\item The contraction maps
+\begin{subequations}
+\begin{align}
+\Xi &  :\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \rightarrow
+L_{1}\left(  \mathsf{Z}\right)  \subset\mathcal{B}_{1}\left(  \mathcal{H}%
+^{1}\right) \\
+L_{N}^{1}  &  :\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right) \\
+L_{N}^{2}  &  :\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathcal{B}_{1}\left(  \mathcal{H}^{2}\right)
+\end{align}
+are linear and thus their kernels are linear subspaces of $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $. The maps $L_{N}^{1}$ and $L_{N}^{2}$
+are basis independent, but $\Xi$ is not. The Banach space $\mathcal{B}%
+_{1}\left(  \mathcal{H}^{N}\right)  $ can be expressed as the direct sums
+\end{subequations}
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =\bigoplus_{i=0}^{N}%
+\mathcal{B}_{i}^{N}%
+\end{equation}
+where
+\begin{align}
+\mathcal{B}_{i}^{N}  &  =KerL_{N}^{i-1}\circleddash KerL_{N}^{i};\qquad1\leq
+i\leq N\nonumber\\
+\mathcal{B}_{0}^{N}  &  =\left[  KerL_{N}^{0}\right]  ^{C}%
+\end{align}
+and $\left[  KerL_{N}^{0}\right]  ^{C}$ is the canonical compliment of
+$KerL_{N}^{0}$ and
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  =Ker\Xi\oplus\left[
+Ker\Xi\right]  ^{C}=Ker\Xi_{OD}\oplus Ker\Xi_{D}\oplus\left[  Ker\Xi\right]
+^{C}.
+\end{equation}
+$\lceil$Note that $L_{N}^{0}\left(  X\right)  =Tr\left\{  X\right\}  \rfloor$.
+We have the following relationship between kernels
+\begin{align}
+KerL_{N}^{0}  &  \supset Ker\Xi\supset KerL_{N}^{1}\tag{*}\\
+&  \Downarrow\nonumber\\
+\left[  KerL_{N}^{0}\right]  ^{C}  &  \subset\left[  Ker\Xi\right]
+^{C}\subset\left[  KerL_{N}^{1}\right]  ^{C}%
+\end{align}
+
+\end{enumerate}
+
+\begin{itemize}
+\item[*] One can define semi groups of $\mathfrak{S}$ that leave these kernels
+invariant by
+\begin{subequations}
+\begin{align}
+\mathfrak{S}_{\Xi}  &  =\left\{  \breve{T}|\Xi\left(  \breve{T}X\breve
+{T}^{\dagger}\right)  =0\text{ if }\Xi\left(  X\right)  =0\right\} \\
+\mathfrak{S}_{L_{N}^{1}}  &  =\left\{  \breve{T}|L_{N}^{1}\left(  \breve
+{T}X\breve{T}^{\dagger}\right)  =0\text{ if }L_{N}^{1}\left(  X\right)
+=0\right\} \\
+\mathfrak{S}_{L_{N}^{2}}  &  =\left\{  \breve{T}|L_{N}^{2}\left(  \breve
+{T}X\breve{T}^{\dagger}\right)  =0\text{ if }L_{N}^{2}\left(  X\right)
+=0\right\}
+\end{align}
+Thus
+\end{subequations}
+\begin{subequations}
+\begin{align}
+\Xi\left(  \breve{T}X\breve{T}^{\dagger}\right)   &  =\Xi\left(  X\right)
+\quad\forall\breve{T}\in\mathfrak{S}_{\Xi}\\
+L_{N}^{1}\left(  \breve{T}X\breve{T}^{\dagger}\right)   &  =L_{N}^{1}\left(
+X\right)  \quad\forall\breve{T}\in\mathfrak{S}_{L_{N}^{1}}\\
+L_{N}^{2}\left(  \breve{T}X\breve{T}^{\dagger}\right)   &  =L_{N}^{2}\left(
+X\right)  \quad\forall\breve{T}\in\mathfrak{S}_{L_{N}^{2}}%
+\end{align}
+
+\end{subequations}
+\end{itemize}
+
+\begin{enumerate}
+Any operator that belongs to these subspaces (the kernels of the contraction
+maps) with an integral kernel that is non zero almost everywhere can be used
+as a reference operator to generate all other operators belonging to these
+subspaces. The integral kernels of the semi groups associated with the
+contraction maps are characterized by the following:
+\end{enumerate}
+
+\begin{itemize}
+\item The density contraction: in order that $Ker\Xi\rightarrow Ker\Xi$ by
+$\mathfrak{S}_{\Xi}$ we must have that
+\begin{equation}
+\int X\left(  \mathsf{z}^{N}\right)  \left\vert T\left(  \mathsf{z}%
+^{N}\right)  \right\vert ^{2}d\mathsf{z}_{2}\cdots d\mathsf{z}_{N}%
+\overset{a.e.}{=}0\qquad\forall\breve{X}\in Ker\Xi
+\end{equation}
+i.e.
+\begin{equation}
+\hat{T}:Ker\Xi_{D}\rightarrow Ker\Xi_{D}%
+\end{equation}
+$\lceil$Note that $\hat{T}:Ker\Xi_{OD}\rightarrow Ker\Xi_{OD}$ automatically
+so this is not a constraint$\rfloor$.
+
+\item The one density contraction: in order that $KerL_{N}^{1}\rightarrow
+KerL_{N}^{1}$ by $\mathfrak{S}_{L_{N}^{1}}$ we must have that%
+\begin{equation}
+\int X\left(  \mathsf{z}_{1}\mathsf{z}^{N-1}\mathsf{,z}_{1}^{\prime}%
+\mathsf{z}^{N-1}\right)  T\left(  \mathsf{z}_{1}\mathsf{z}^{N-1}\right)
+T\left(  \mathsf{z}_{1}^{\prime}\mathsf{z}^{N-1}\right)  ^{\ast}%
+d\mathsf{z}^{N-1}\overset{a.e.}{=}0\qquad\forall\breve{X}\in KerL_{N}^{1}%
+\end{equation}
+
+
+\item The two density contraction: in order that $KerL_{N}^{2}\rightarrow
+KerL_{N}^{2}$ by $\mathfrak{S}_{L_{N}^{2}}$ we must have that%
+\begin{equation}
+\int X\left(  \mathsf{z}_{1}\mathsf{z}_{2}\mathsf{z}^{N-2}\mathsf{,z}%
+_{1}^{\prime}\mathsf{z}_{2}^{\prime}\mathsf{z}^{N-2}\right)  T\left(
+\mathsf{z}_{1}\mathsf{z}_{2}\mathsf{z}^{N-2}\right)  T\left(  \mathsf{z}%
+_{1}^{\prime}\mathsf{z}_{2}^{\prime}\mathsf{z}^{N-2}\right)  ^{\ast
+}d\mathsf{z}^{N-2}\overset{a.e.}{=}0\,\forall\breve{X}\in KerL_{N}^{2}%
+\end{equation}
+
+
+\item[*] One can also construct semi groups that have the property%
+\begin{subequations}
+\begin{align}
+\mathfrak{S}_{\Xi}^{C}  &  :\left[  Ker\Xi\right]  ^{C}\rightarrow\left[
+Ker\Xi\right]  ^{C}\\
+\mathfrak{S}_{L_{N}^{1}}^{C}  &  :\left[  KerL_{N}^{1}\right]  ^{C}%
+\rightarrow\left[  KerL_{N}^{1}\right]  ^{C}\\
+\mathfrak{S}_{L_{N}^{2}}^{C}  &  :\left[  KerL_{N}^{2}\right]  ^{C}%
+\rightarrow\left[  KerL_{N}^{2}\right]  ^{C}%
+\end{align}
+and any operator that belongs to these subspaces with an integral kernel that
+is non zero almost everywhere can be used as a reference to generate all other
+operators belonging to these subspaces.
+
+\item[*] One can construct vector bundles with fibers that are the kernels of
+the contraction maps and the base of the fibers being the canonical
+compliments of the kernels.
+
+\item[*] Using the groups $\left\{  \mathfrak{S}_{\mathcal{X}}^{C}%
+|\mathcal{X=}\Xi,L_{N}^{1},L_{N}^{2}\right\}  $and some technical definitions
+of coset type objects one can define maps that uniquely take a reference
+operator in $\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)  $ to the root of
+each fiber, $T_{B}D_{ref}^{N}T_{B}^{\dagger}$, in an unique manner and then by
+using cosets of $\left\{  \mathfrak{S}_{\mathcal{X}}|\mathcal{X=}\Xi,L_{N}%
+^{1},L_{N}^{2}\right\}  $ uniquely from $T_{B}D_{ref}^{N}T_{B}^{\dagger}$ to
+any state in the fiber $\left[  T_{B}D_{ref}^{N}T_{B}^{\dagger}\right]  _{N}$.
+
+\item[*] The energy functional is defined on $\mathcal{B}_{1+}\left(
+\mathcal{H}^{N}\right)  \rightarrow\mathbb{R}$ by
+\end{subequations}
+\begin{equation}
+E\left(  D^{N}\right)  =\frac{Tr\left\{  HD^{N}\right\}  }{Tr\left\{
+D^{N}\right\}  }%
+\end{equation}
+from which one can define energy functionals on the base as
+\begin{equation}
+\mathcal{E}\left(  T_{B}\right)  =\underset{D^{N}\in\left[  T_{B}D_{ref}%
+^{N}T_{B}^{\dagger}\right]  _{N}}{Min}E\left(  D^{N}\right)  =\underset
+{T_{F}\in\mathfrak{S}_{\mathcal{X}}}{Min}E\left(  T_{F}T_{B}D_{ref}^{N}%
+T_{B}^{\dagger}T_{F}^{\dagger}\right)
+\end{equation}
+where $T_{B}\in\mathfrak{S}_{\mathcal{X}}^{C}$ and $T_{F}\in\mathfrak{S}%
+_{\mathcal{X}}$ for $\mathcal{X=}\Xi$ or $L_{N}^{1}$ or $L_{N}^{2}$ and we
+have used the non uniqueness of $Ker\Xi^{C}$ to represent the base in non
+canonical form as $\left\{  T_{B}D_{ref}^{N}T_{B}^{\dagger}|T_{B}%
+\in\mathfrak{S}_{\mathcal{X}}^{C}\right\}  $.
+
+\item[*] In the time dependent case these would be action functionals.
+\end{itemize}
+
+
+\end{document} 

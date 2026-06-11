@@ -1,0 +1,758 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, March 13, 2003 08:58:42}
+%TCIDATA{LastRevised=Thursday, April 03, 2003 22:03:50}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Generalized Strong Orthogonality}
+
+The FORDO can be expanded in natural form as%
+\begin{equation}
+D^{1}=\sum_{1\leq j\leq p}n_{j}\left\vert \varphi_{j}\right\rangle
+\left\langle \varphi_{j}\right\vert \label{nat}%
+\end{equation}
+We can define a an orthogonal direct sum decomposition of the one particle
+Hilbert space as
+\begin{equation}
+\mathcal{H}^{1}=\mathcal{H}_{D^{1}}\oplus\mathcal{H}_{D^{1\bot}}%
+\end{equation}
+where
+\begin{align}
+\mathcal{H}_{D^{1}}  &  =\operatorname{linspan}\left\{  \left.  \varphi
+_{j}\right\vert 1\leq j\leq p\right\} \nonumber\\
+\mathcal{H}_{D^{1\bot}}  &  =\operatorname{linspan}\left\{  \left.  \chi
+_{j}\right\vert 1\leq j\leq q\right\}
+\end{align}
+and subspaces of $\mathcal{H}^{N}$ based on these by%
+\begin{align}
+\mathcal{H}_{N-\kappa}^{N}  &  =\operatorname{linspan}\left\{  \left.
+\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{\kappa}}\chi_{j_{\kappa+1}}%
+\cdots\chi_{j_{N}}\right\rangle \right\vert 1\leq j_{1}<\cdots j_{\kappa}\leq
+p;1\leq j_{\kappa+1}<\cdots j_{N}\leq q\right\}  ;0\leq\kappa\leq N\nonumber\\
+\mathcal{C}_{\lambda}^{N}  &  =%
+%TCIMACRO{\dbigoplus \limits_{\lambda\leq\kappa\leq N}}%
+%BeginExpansion
+{\displaystyle\bigoplus\limits_{\lambda\leq\kappa\leq N}}
+%EndExpansion
+\mathcal{H}_{\kappa}^{N};\quad0\leq\lambda\leq N
+\end{align}
+First we consider the case where $D^{N}$ is a pure state
+\begin{equation}
+D^{N}=\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+\end{equation}
+then
+\begin{equation}
+\left\vert \Psi\right\rangle =\sum_{1\leq j_{1}<\cdots<j_{N}\leq p}%
+C_{j_{1}\cdots j_{N}}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle
+\end{equation}
+and
+\begin{equation}
+\left\vert \Psi\right\rangle \left\langle \Psi\right\vert =\sum
+_{\substack{1\leq j_{1}<\cdots<j_{N}\leq p\\1\leq k_{1}<\cdots<k_{N}\leq
+p}}C_{j_{1}\cdots j_{N}}C_{k_{1}\cdots k_{N}}^{\ast}\left\vert \varphi_{j_{1}%
+}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k_{1}}\cdots
+\varphi_{k_{N}}\right\vert
+\end{equation}
+Let
+\begin{equation}
+\breve{T}=\breve{I}+\breve{\Lambda}%
+\end{equation}
+and consider
+\begin{equation}
+\breve{T}\left\vert \Psi\right\rangle \left\langle \Psi\right\vert \breve
+{T}^{\dagger}=\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
++\breve{\Lambda}\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
++\left\vert \Psi\right\rangle \left\langle \Psi\right\vert \breve{\Lambda
+}^{\dagger}+\breve{\Lambda}\left\vert \Psi\right\rangle \left\langle
+\Psi\right\vert \breve{\Lambda}^{\dagger}%
+\end{equation}
+where%
+\begin{equation}
+\breve{\Lambda}=\sum_{\substack{1\leq j_{1}\cdots<j_{N-2}\leq r\\1\leq
+k_{1}\cdots<k_{N}\leq p\\1\leq j_{N-1}<j_{N}\leq q}}\lambda_{j_{1}\cdots
+j_{N}k_{1}\cdots k_{N}}\left\vert \psi_{j_{1}}\cdots\psi_{j_{N-2}}%
+\chi_{j_{N-1}}\chi_{j_{N}}\right\rangle \left\langle \varphi_{k_{1}}%
+\cdots\varphi_{k_{N}}\right\vert
+\end{equation}
+and%
+\begin{equation}
+\left\{  \left.  \psi_{j}\right\vert 1\leq j\leq r\right\}  =\left\{  \left.
+\varphi_{j}\right\vert 1\leq j\leq p\right\}  \cup\left\{  \left.  \chi
+_{j}\right\vert 1\leq j\leq q\right\}
+\end{equation}
+then
+\begin{align}
+&  \breve{\Lambda}\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+=\\
+&  \sum_{\substack{1\leq j_{1}<\cdots<j_{N}\leq p\\1\leq k_{1}<\cdots
+<k_{N}\leq p\\1\leq l_{1}<\cdots<l_{N-2}\leq r;1\leq l_{N-1}<l_{N}\leq
+q}}\lambda_{l_{1}\cdots l_{N}j_{1}\cdots j_{N}}C_{j_{1}\cdots j_{N}}%
+C_{k_{1}\cdots k_{N}}^{\ast}\left\vert \psi_{l_{1}}\cdots\psi_{l_{N-2}}%
+\chi_{l_{N-1}}\chi_{l_{N}}\right\rangle \left\langle \varphi_{k_{1}}%
+\cdots\varphi_{k_{N}}\right\vert
+\end{align}
+Let us first consider $\Psi$ to be an IPS\ then
+\begin{equation}
+\left\vert \Psi\right\rangle =\left\vert \varphi_{1}\cdots\varphi
+_{N}\right\rangle
+\end{equation}
+and
+\begin{equation}
+\breve{\Lambda}\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+=\sum\lambda_{j_{1}\cdots j_{N}1\cdots N}\left\vert \psi_{j_{1}}\cdots
+\psi_{j_{N-2}}\chi_{j_{N-1}}\chi_{j_{N}}\right\rangle \left\langle \varphi
+_{1}\cdots\varphi_{N}\right\vert
+\end{equation}
+unless the coefficients are all imaginary a sufficient condition for this to
+contract to zero under $L_{N}^{1}$ is that there are at least two differences
+between the bra and the ket i.e. $\breve{\Lambda}$ is of the form
+\begin{equation}
+\breve{\Lambda}=\sum_{\substack{1\leq j_{1}\cdots<j_{N-2}\leq r\\1\leq
+j_{N-1}<j_{N}\leq q}}\lambda_{j_{1}\cdots j_{N}k_{1}\cdots k_{N}}\left\vert
+\psi_{j_{1}}\cdots\psi_{j_{N-2}}\chi_{j_{N-1}}\chi_{j_{N}}\right\rangle
+\left\langle \varphi_{1}\cdots\varphi_{N}\right\vert .
+\end{equation}
+However even if the coefficients are imaginary this is not a sufficient
+condition for
+\begin{equation}
+\breve{\Lambda}\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+\breve{\Lambda}^{\dagger}=\sum\lambda_{j_{1}\cdots j_{N}1\cdots N}%
+\lambda_{k_{1}\cdots k_{N}1\cdots N}^{\ast}\left\vert \psi_{j_{1}}\cdots
+\psi_{j_{N-2}}\chi_{j_{N-1}}\chi_{j_{N}}\right\rangle \left\langle \psi
+_{k_{1}}\cdots\psi_{k_{N-2}}\chi_{k_{N-1}}\chi_{k_{N}}\right\vert
+\end{equation}
+to contract to zero. which can never be the case, thus one is forced to the
+conclusion that
+\begin{equation}
+\breve{\Lambda}\left\vert \Psi\right\rangle \left\langle \Psi\right\vert =0
+\end{equation}
+
+
+$\rfloor$ Then
+\begin{align}
+Tr_{N-1}\left\{  \breve{\Lambda}\left\vert \Psi\right\rangle \left\langle
+\Psi\right\vert \right\}   &  =0\nonumber\\
+Tr_{N-1}\left\{  \left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+\breve{\Lambda}^{\dagger}\right\}   &  =0
+\end{align}
+and
+\begin{equation}
+Tr_{N-1}\left\{  \breve{\Lambda}^{\dagger}\left\vert \Psi\right\rangle
+\left\langle \Psi\right\vert \breve{\Lambda}\right\}  =0
+\end{equation}
+as in particular
+\begin{align}
+&  \breve{\Lambda}^{\dagger}\left\vert \Psi\right\rangle \left\langle
+\Psi\right\vert \breve{\Lambda}=\\
+&  \sum C_{j_{1}\cdots j_{N}}C_{k_{1}\cdots k_{N}}^{\ast}\lambda_{l_{1}\cdots
+l_{N}m_{1}\cdots m_{N}}\lambda_{t_{1}\cdots t_{N}v_{1}\cdots v_{N}}^{\ast
+}\left\vert \psi_{j_{1}}\cdots\psi_{j_{N-2}}\chi_{j_{N-1}}\chi_{j_{N}%
+}\right\rangle \left\langle \psi_{k_{1}}\cdots\psi_{k_{N-2}}\chi_{k_{N-1}}%
+\chi_{k_{N}}\right\vert \\
+&  \qquad\qquad\qquad\qquad\qquad\times\left\vert \varphi_{l_{1}}\cdots
+\varphi_{l_{N}}\right\rangle \left\langle \varphi_{m_{1}}\cdots\varphi_{m_{N}%
+}\right\vert \left\vert \psi_{t_{1}}\cdots\psi_{t_{N-2}}\chi_{t_{N-1}}%
+\chi_{t_{N}}\right\rangle \left\langle \psi_{v_{1}}\cdots\psi_{v_{N-2}}%
+\chi_{v_{N-1}}\chi_{v_{N}}\right\vert
+\end{align}
+Hence the positive transformation
+\begin{equation}
+\hat{T}\left(  D^{N}\right)  =\breve{T}D^{N}\breve{T}^{\dagger}=\left(
+\breve{I}+\breve{\Lambda}\right)  D^{N}\left(  \breve{I}+\breve{\Lambda
+}^{\dagger}\right)  =D^{N}+\breve{\Lambda}D^{N}+D^{N}\breve{\Lambda}^{\dagger
+}+\breve{\Lambda}D^{N}\breve{\Lambda}^{\dagger}%
+\end{equation}
+leading to
+\begin{equation}
+\hat{\Omega}\left(  D^{N}\right)  =\breve{\Lambda}D^{N}+D^{N}\breve{\Lambda
+}^{\dagger}+\breve{\Lambda}D^{N}\breve{\Lambda}^{\dagger}%
+\end{equation}
+where
+\begin{equation}
+\hat{T}=\hat{I}+\hat{\Omega}%
+\end{equation}
+gives
+\begin{equation}
+Tr_{N-1}\left\{  \hat{\Omega}\left(  D^{N}\right)  \right\}  =0
+\end{equation}
+
+
+If $D^{N}$ is an ensemble state
+\begin{equation}
+D^{N}=\sum_{1\leq j\leq m}\alpha_{j}\left\vert \Psi_{j}\right\rangle
+\left\langle \Psi_{j}\right\vert
+\end{equation}
+where
+\begin{equation}
+\sum_{1\leq j\leq m}\alpha_{j}=1;\quad0\leq\alpha_{j}\leq1,\quad1\leq j\leq m
+\end{equation}
+with the same natural general spin orbitals (ngso) as eq. $\left(
+\ref{nat}\right)  $ then
+\begin{equation}
+\left\vert \Psi_{\kappa}\right\rangle \left\langle \Psi_{\kappa}\right\vert
+=\sum_{\substack{1\leq j_{1}<\cdots<j_{N}\leq p\\1\leq k_{1}<\cdots<k_{N}\leq
+p}}C_{\kappa j_{1}\cdots j_{N}}C_{\kappa k_{1}\cdots k_{N}}^{\ast}\left\vert
+\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\rangle \left\langle \varphi_{k_{1}%
+}\cdots\varphi_{k_{N}}\right\vert ;\quad1\leq\kappa\leq m
+\end{equation}
+and we once again obtain that $Tr_{N-1}\left\{  \hat{\Omega}\left(
+D^{N}\right)  \right\}  =0$. Hence we have the following theorem
+
+\begin{theorem}
+If $\left\{  \left.  \varphi_{j}\right\vert 1\leq j\leq p\right\}  $ are the
+natural general spin orbitals of the $N$-particle state $D^{N}$ associated
+with nonzero occupation numbers then $\hat{T}\left(  D^{N}\right)  $ is also
+an $N$-particle state (possibly unormalized) that has the \textbf{same }FORDO.
+\end{theorem}
+
+\section{FORDO Preserving Transformations}
+
+Let us consider the unitary transformation
+\begin{equation}
+\hat{U}\left(  D^{N}\right)  =\breve{U}D^{N}\breve{U}^{\dagger}=e^{i\Upsilon
+}D^{N}e^{-i\Upsilon}=D^{N}+i\left[  \Upsilon,D^{N}\right]  +\cdots+
+\end{equation}
+in order that $\hat{U}$ be a FORDO preserving map
+\begin{equation}
+Tr\left\{  \left\{  \left[  \Upsilon,D^{N}\right]  +\cdots+\right\}
+a_{k}^{\dagger}a_{l}\right\}  =0
+\end{equation}
+We can set%
+\begin{equation}
+e^{i\Upsilon}=I+\Lambda
+\end{equation}
+and obtain
+\begin{equation}
+\left(  \breve{I}+\breve{\Lambda}\right)  D^{N}\left(  \breve{I}%
++\breve{\Lambda}\right)  ^{\dagger}=D^{N}%
+\end{equation}
+giving that
+\begin{equation}
+Tr\left\{  \breve{\Lambda}D^{N}+D^{N}\breve{\Lambda}+\breve{\Lambda}%
+D^{N}\breve{\Lambda}^{\dagger}\right\}  =0
+\end{equation}
+
+
+\subsection{Real and imaginary parts of an operator}
+
+First one must define the real and imaginary parts of a vector, this concept
+is basis dependent i.e. if
+\begin{equation}
+\left\vert \upsilon\right\rangle =\sum_{j}\upsilon_{j}\left\vert \varphi
+_{j}\right\rangle
+\end{equation}
+then
+\begin{align}
+\operatorname{Re}_{\varphi}\left(  \left\vert \upsilon\right\rangle \right)
+&  =\sum_{j}\operatorname{Re}\upsilon_{j}\left\vert \varphi_{j}\right\rangle
+\\
+\operatorname{Im}_{\varphi}\left(  \left\vert \upsilon\right\rangle \right)
+&  =\sum_{j}\operatorname{Im}\upsilon_{j}\left\vert \varphi_{j}\right\rangle
+\end{align}
+Any basis formed by real transformations $T$ of the $\left\{  \varphi
+_{j}\right\}  $ basis, so that
+\begin{align}
+T\left\vert \mathbf{\varphi}\right\rangle  &  =\left\vert \mathbf{\varphi
+}\right\rangle \mathbb{T}\nonumber\\
+\operatorname{Re}\mathbb{T}  &  \mathbb{=T}\nonumber\\
+\operatorname{Im}\mathbb{T}  &  \mathbb{=O}%
+\end{align}
+gives the same definition of real and imaginary part of a vector. A convenient
+basis to define the real and imaginary parts wrt is $\left\{  \left\vert
+\mathsf{z}\right\rangle \right\}  $ i.e.
+\begin{align}
+\left\vert \upsilon\right\rangle  &  =\int\left\langle \mathsf{z}%
+|\upsilon\right\rangle \left\vert \mathsf{z}\right\rangle d\mathsf{z}%
+=\int\upsilon\left(  \mathsf{z}\right)  \left\vert \mathsf{z}\right\rangle
+d\mathsf{z}=\int\left\{  \operatorname{Re}\upsilon\left(  \mathsf{z}\right)
++i\operatorname{Im}\upsilon\left(  \mathsf{z}\right)  \right\}  \left\vert
+\mathsf{z}\right\rangle d\mathsf{z}\nonumber\\
+\operatorname{Re}_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle
+\right)   &  =\int\operatorname{Re}\upsilon\left(  \mathsf{z}\right)
+\left\vert \mathsf{z}\right\rangle d\mathsf{z}\nonumber\\
+\operatorname{Im}_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle
+\right)   &  =\int\operatorname{Im}\upsilon\left(  \mathsf{z}\right)
+\left\vert \mathsf{z}\right\rangle d\mathsf{z}%
+\end{align}
+Any basis $\left\{  \varphi_{j}\right\}  $ producing the same definition has
+the property
+\begin{equation}
+\varphi_{j}\left(  \mathsf{z}\right)  \in\mathbb{R}%
+\end{equation}
+i.e. is composed of \emph{real valued} functions. Such bases form an
+equivalence class and the set of all bases can be classified into equivalence
+classes that are invariant under real linear transformations.
+
+One can then define an operator $X$ to be real (wrt $\left\{  \left\vert
+\mathsf{z}\right\rangle \right\}  )$ when
+\begin{equation}
+X\left(  \left\vert \mathbf{\varphi}\right\rangle \right)  =\left(  \left\vert
+\mathbf{\varphi}\right\rangle \right)  \mathbb{X}_{\varphi};\quad
+\mathbb{X}_{\varphi}\mathbb{\in R} \label{con3}%
+\end{equation}
+Such operators map $\operatorname{Re}_{\mathsf{z}}\left(  \left\vert
+\upsilon\right\rangle \right)  $ to $\operatorname{Re}_{\mathsf{z}}\left(
+\left\vert \tilde{\upsilon}\right\rangle \right)  $ and $\operatorname{Im}%
+_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle \right)  $ to
+$\operatorname{Im}_{\mathsf{z}}\left(  \left\vert \tilde{\upsilon
+}\right\rangle \right)  $ i.e preserves the real/imaginary structure defined
+by $\left\{  \left\vert \mathsf{z}\right\rangle \right\}  $ basis. Any
+operator $Z$ can be represented as
+\begin{equation}
+Z\left(  \left\vert \mathbf{\varphi}\right\rangle \right)  =\left(  \left\vert
+\mathbf{\varphi}\right\rangle \right)  \mathbb{Z}_{\varphi}%
+\end{equation}
+and representation $\mathbb{Z}$ can be uniquely split into its real and
+imaginary parts as
+\begin{equation}
+\mathbb{Z}_{\varphi}\mathbb{=}\operatorname{Re}\mathbb{Z}_{\varphi}%
+\mathbb{+}i\operatorname{Im}\mathbb{Z}_{\varphi}%
+\end{equation}
+where
+\begin{align}
+\operatorname{Re}\mathbb{Z}_{\varphi}  &  \mathbb{=}\frac{1}{2}\left(
+\mathbb{Z}_{\varphi}+\mathbb{Z}_{\varphi}^{\ast}\right) \nonumber\\
+\operatorname{Im}\mathbb{Z}_{\varphi}  &  \mathbb{=}\frac{1}{2i}\left(
+\mathbb{Z}_{\varphi}-\mathbb{Z}_{\varphi}^{\ast}\right)
+\end{align}
+leading to the operator definitions
+\begin{align}
+\operatorname{Re}_{\mathsf{z}}\left(  Z\right)   &  =\left(  \left\vert
+\mathbf{\varphi}\right\rangle \right)  \operatorname{Re}\mathbb{Z}_{\varphi
+}\left(  \left\vert \mathbf{\varphi}\right\rangle \right)  ^{\dagger
+}\nonumber\\
+\operatorname{Im}_{\mathsf{z}}\left(  Z\right)   &  =\left(  \left\vert
+\mathbf{\varphi}\right\rangle \right)  \operatorname{Im}\mathbb{Z}_{\varphi
+}\left(  \left\vert \mathbf{\varphi}\right\rangle \right)  ^{\dagger}%
+\end{align}
+and
+\begin{equation}
+Z=\operatorname{Re}_{\mathsf{z}}\left(  Z\right)  +i\operatorname{Im}%
+_{\mathsf{z}}\left(  Z\right)  =\left(  \left\vert \mathbf{\varphi
+}\right\rangle \right)  \operatorname{Re}\mathbb{Z}_{\varphi}\left(
+\left\vert \mathbf{\varphi}\right\rangle \right)  ^{\dagger}+i\left(
+\left\vert \mathbf{\varphi}\right\rangle \right)  \operatorname{Im}%
+\mathbb{Z}_{\varphi}\left(  \left\vert \mathbf{\varphi}\right\rangle \right)
+^{\dagger}%
+\end{equation}
+One can observe that $\left\{  \operatorname{Re}_{\mathsf{z}}\left(  Z\right)
+,\operatorname{Im}_{\mathsf{z}}\left(  Z\right)  \right\}  $ preserve the
+real/imaginary structure defined by the $\left\{  \left\vert \mathsf{z}%
+\right\rangle \right\}  $ basis. It also allows us to define the complex
+conjugate of an operator as
+\begin{equation}
+Z^{\ast_{\mathsf{z}}}=\left(  \left\vert \mathbf{\varphi}\right\rangle
+\right)  \mathbb{Z}_{\varphi}^{\ast}\left(  \left\vert \mathbf{\varphi
+}\right\rangle \right)  ^{\dagger}%
+\end{equation}
+obviously one can define a different complex conjugation for each class of bases.
+
+We can compare this decomposition which is bases dependent (at least bases
+class dependent) to the basis independent decomposition into two hermitian
+operators
+\begin{equation}
+Z=Z_{H1}+iZ_{H2}%
+\end{equation}
+where
+\begin{align}
+Z_{H1} &  =\frac{1}{2}\left(  Z+Z^{\dagger}\right)  \nonumber\\
+Z_{H2} &  =\frac{1}{2i}\left(  Z-Z^{\dagger}\right)
+\end{align}
+giving that
+\begin{align}
+\left(  \mathbb{Z}_{\varphi H1}\right)  _{kl} &  =\frac{1}{2}\left(
+Z_{kl}+Z_{lk}^{\ast}\right)  \nonumber\\
+\left(  \mathbb{Z}_{\varphi H2}\right)  _{kl} &  =\frac{1}{2i}\left(
+Z_{kl}-Z_{lk}^{\ast}\right)
+\end{align}
+which should be compared to
+\begin{align}
+\left(  \operatorname{Re}\mathbb{Z}_{\varphi}\right)  _{kl} &  =\frac{1}%
+{2}\left(  Z_{kl}+Z_{kl}^{\ast}\right)  \nonumber\\
+\left(  \operatorname{Im}\mathbb{Z}_{\varphi}\right)  _{kl} &  =\frac{1}%
+{2i}\left(  Z_{kl}-Z_{kl}^{\ast}\right)
+\end{align}
+which are in general quite different. If $Z=Z^{\dagger}$ then $Z_{lk}^{\ast
+}=Z_{kl}$ and
+\begin{align}
+\left(  \operatorname{Re}\mathbb{Z}_{\varphi}\right)  _{kl}  & =\frac{1}%
+{2}\left(  Z_{kl}+Z_{lk}\right)  \nonumber\\
+\left(  \operatorname{Im}\mathbb{Z}_{\varphi}\right)  _{kl}  & =\frac{1}%
+{2i}\left(  Z_{kl}-Z_{lk}\right)
+\end{align}
+
+
+\subsection{Complex Structures}
+
+One can associate two operations with a given complex structure, multipication
+by $i$ $\operatorname{complex}$ conjugation $K_{\mathsf{z}}$ i.e.
+\begin{align}
+&  J_{\mathsf{z}}:\operatorname{Re}_{\mathsf{z}}\left(  \left\vert
+\upsilon\right\rangle \right)  +i\operatorname{Im}_{\mathsf{z}}\left(
+\left\vert \upsilon\right\rangle \right)  =i\operatorname{Re}_{\mathsf{z}%
+}\left(  \left\vert \upsilon\right\rangle \right)  -\operatorname{Im}%
+_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle \right)  \nonumber\\
+&  J_{\mathsf{z}}\left(  \operatorname{Re}_{\mathsf{z}}\left(  \left\vert
+\upsilon\right\rangle \right)  \right)  =\operatorname{Im}_{\mathsf{z}}\left(
+J_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle \right)  \right)
+\nonumber\\
+&  J_{\mathsf{z}}\left(  \operatorname{Im}_{\mathsf{z}}\left(  \left\vert
+\upsilon\right\rangle \right)  \right)  =-\operatorname{Re}_{\mathsf{z}%
+}\left(  J_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle \right)
+\right)
+\end{align}
+producing
+\begin{align}
+J_{\mathsf{z}}\circ\operatorname{Re}_{\mathsf{z}} &  =\operatorname{Im}%
+_{\mathsf{z}}\circ J_{\mathsf{z}}\nonumber\\
+J_{\mathsf{z}}\circ\operatorname{Im}_{\mathsf{z}} &  =-\operatorname{Re}%
+_{\mathsf{z}}\circ J_{\mathsf{z}}%
+\end{align}
+and
+\begin{align}
+&  K_{\mathsf{z}}:\operatorname{Re}_{\mathsf{z}}\left(  \left\vert
+\upsilon\right\rangle \right)  +i\operatorname{Im}_{\mathsf{z}}\left(
+\left\vert \upsilon\right\rangle \right)  =\operatorname{Re}_{\mathsf{z}%
+}\left(  \left\vert \upsilon\right\rangle \right)  -i\operatorname{Im}%
+_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle \right)  \nonumber\\
+&  K_{\mathsf{z}}\left(  \operatorname{Re}_{\mathsf{z}}\left(  \left\vert
+\upsilon\right\rangle \right)  \right)  =\operatorname{Re}\left(
+K_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle \right)  \right)
+\nonumber\\
+&  K_{\mathsf{z}}\left(  \operatorname{Im}_{\mathsf{z}}\left(  \left\vert
+\upsilon\right\rangle \right)  \right)  =-\operatorname{Im}\left(
+K_{\mathsf{z}}\left(  \left\vert \upsilon\right\rangle \right)  \right)
+\end{align}
+producing
+\begin{align}
+K_{\mathsf{z}}\circ\operatorname{Re}_{\mathsf{z}} &  =\operatorname{Re}%
+_{\mathsf{z}}\circ K_{\mathsf{z}}\nonumber\\
+K_{\mathsf{z}}\circ\operatorname{Im}_{\mathsf{z}} &  =-\operatorname{Im}%
+_{\mathsf{z}}\circ K_{\mathsf{z}}%
+\end{align}
+The representation of $J_{\mathsf{z}}$ on any orthonormal basis of a complex
+Hilbert space $\mathcal{H}$ is
+\begin{equation}
+J_{\mathsf{z}}\left\vert \mathbf{\varphi}\right\rangle =\left\vert
+\mathbf{\varphi}\right\rangle i\mathbb{I}%
+\end{equation}
+so is not basis dependent. Any complex Hilbert space $\mathcal{H}$ with conb
+$\left\{  \varphi_{j}\right\}  $ can be expanded as
+\begin{equation}
+\mathcal{H=H}_{\mathbb{R}}\oplus i\mathcal{H}_{\mathbb{R}}%
+\end{equation}
+where
+\begin{align}
+\mathcal{H}_{\mathbb{R}} &  =\mathbb{R-}\operatorname{linspan}\left\{
+\varphi_{j}\right\}  \nonumber\\
+i\mathcal{H}_{\mathbb{R}} &  =\mathbb{R-}\operatorname{linspan}\left\{
+i\varphi_{j}\right\}
+\end{align}
+then
+\begin{equation}
+J_{\mathsf{z}}\left(  \left\vert \mathbf{\varphi}\right\rangle ,i\left\vert
+\mathbf{\varphi}\right\rangle \right)  =\left(  \left\vert \mathbf{\varphi
+}\right\rangle ,i\left\vert \mathbf{\varphi}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & \mathbb{I}\\
+-\mathbb{I} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+and
+\begin{equation}
+K_{\mathsf{z}}\left(  \left\vert \mathbf{\varphi}\right\rangle ,i\left\vert
+\mathbf{\varphi}\right\rangle \right)  =\left(  \left\vert \mathbf{\varphi
+}\right\rangle ,i\left\vert \mathbf{\varphi}\right\rangle \right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}%
+\end{array}
+\right)
+\end{equation}
+showing that while both $J_{\mathsf{z}}$ and $K_{\mathsf{z}}$ can be
+considered as $\mathbb{R-}$ linear transformations of $\mathcal{H}%
+_{\mathbb{R}}\oplus i\mathcal{H}_{\mathbb{R}}$ only $J_{\mathsf{z}}$ can be
+extended to a $\mathbb{C-}$linear transformation of $\mathcal{H}$. However a
+real Hilbert space $\mathcal{H}_{\mathbb{R}},$ with conb $\left\{  \psi
+_{j}\right\}  $
+
+\subsection{Strong Orthogonality via a Variational Condition}
+
+Letting
+\begin{equation}
+\breve{\Lambda}=\operatorname{Re}_{\mathsf{z}}\breve{A}+i\operatorname{Im}%
+_{\mathsf{z}}\breve{B}%
+\end{equation}
+where
+\begin{align}
+\breve{A} &  =\frac{1}{2}\left(  \breve{\Lambda}+\breve{\Lambda}^{\ast
+}\right)  =\breve{A}^{\ast}\nonumber\\
+\breve{B} &  =\frac{1}{2i}\left(  \breve{\Lambda}-\breve{\Lambda}^{\ast
+}\right)  =\breve{B}^{\ast}%
+\end{align}
+and $^{\ast}$ is the complex conjugation defined by the basis $\left\{
+\left\vert \mathsf{z}\right\rangle \right\}  .$ Without loss of generality we
+can always start from a density operator that has a real representation in a
+bases belonging to $\left\langle \left\vert \mathsf{z}\right\rangle
+\right\rangle $ as  Using this we obtain%
+\begin{equation}
+Tr_{N-1}\left\{  \breve{A}D^{N}\breve{A}+\breve{B}D^{N}\breve{B}+\breve
+{A}D^{N}+D^{N}\breve{A}\right\}  +iTr_{N-1}\left\{  \breve{B}D^{N}-D^{N}%
+\breve{B}\right\}  =0
+\end{equation}
+so that the real part
+\begin{equation}
+Tr_{N-1}\left\{  \breve{A}D^{N}\breve{A}+\breve{B}D^{N}\breve{B}\right\}
+=-Tr_{N-1}\left\{  \left[  \breve{A},D^{N}\right]  _{+}\right\}
+\end{equation}
+and the imaginary part
+\begin{equation}
+Tr_{N-1}\left\{  \left[  \breve{B},D^{N}\right]  \right\}  =0
+\end{equation}
+\emph{as }these relationships \emph{must} also be true in all represenstations
+produced by bases $\left\{  \varphi_{j}\right\}  $ that produce the same
+complex conjugation as $\left\{  \left\vert \mathsf{z}\right\rangle \right\}
+.$  Leading to
+\begin{equation}
+Tr\left\{  \left[  \breve{B},D^{N}\right]  a_{k}^{\dagger}a_{l}\right\}  =0
+\end{equation}
+which can be reeexpressed as
+\begin{equation}
+Tr\left\{  \breve{B}D^{N}a_{k}^{\dagger}a_{l}-a_{k}^{\dagger}a_{l}D^{N}%
+\breve{B}\right\}  =Tr\left\{  \left[  a_{k}^{\dagger}a_{l},\breve{B}\right]
+D^{N}\right\}  =0\label{con1}%
+\end{equation}
+Which is equivalent to finding
+\begin{equation}
+\delta Tr\left\{  e^{i%
+%TCIMACRO{\tsum }%
+%BeginExpansion
+{\textstyle\sum}
+%EndExpansion
+\eta_{kl}a_{k}^{\dagger}a_{l}}\breve{B}e^{-i%
+%TCIMACRO{\tsum }%
+%BeginExpansion
+{\textstyle\sum}
+%EndExpansion
+\eta_{kl}a_{k}^{\dagger}a_{l}}D^{N}\right\}  =0
+\end{equation}
+i.e.%
+\begin{equation}
+Tr\left\{  B\left(  \eta_{\ast}\right)  D^{N}\right\}  =\operatorname*{stat}%
+_{\eta}Tr\left\{  B\left(  \eta\right)  D^{N}\right\}
+\end{equation}
+where
+\begin{align}
+\breve{B}\left(  \eta\right)   &  =U_{1}\left(  \eta\right)  \breve{B}%
+U_{1}\left(  \eta\right)  ^{\dagger}\nonumber\\
+U_{1}\left(  \eta\right)   &  =e^{i%
+%TCIMACRO{\tsum }%
+%BeginExpansion
+{\textstyle\sum}
+%EndExpansion
+\eta_{kl}a_{k}^{\dagger}a_{l}}%
+\end{align}
+The "real" hermitian part $\breve{A}$ is determined by $\breve{B}\left(
+\eta_{\ast}\right)  $
+\begin{align}
+&  Tr\left\{  \left\{  \breve{A}D^{N}\breve{A}+\breve{B}\left(  \eta_{\ast
+}\right)  D^{N}\breve{B}\left(  \eta_{\ast}\right)  \right\}  a_{k}^{\dagger
+}a_{l}\right\}  =-Tr_{N-1}\left\{  \left[  \breve{A},D^{N}\right]  _{+}%
+a_{k}^{\dagger}a_{l}\right\}  \nonumber\\
+&  \Leftrightarrow Tr\left\{  \left\{  \breve{A}D^{N}\breve{A}+\left[
+\breve{A},D^{N}\right]  _{+}\right\}  a_{k}^{\dagger}a_{l}\right\}
+=-Tr\left\{  \breve{B}\left(  \eta_{\ast}\right)  D^{N}\breve{B}\left(
+\eta_{\ast}\right)  a_{k}^{\dagger}a_{l}\right\}  \label{con2}%
+\end{align}
+
+
+If $D^{N}$ is a pure IPS\ then eq $\left(  \ref{con1}\right)  $ gives
+\begin{equation}
+\left\langle \Phi_{\ast}|\left[  a_{k}^{\dagger}a_{l},\breve{B}\right]
+\Phi_{\ast}\right\rangle =\operatorname*{stat}_{\eta}\left\langle \Phi_{\ast
+}|U_{1}\left(  \eta\right)  ^{\dagger}\breve{B}U_{1}\left(  \eta\right)
+\Phi_{\ast}\right\rangle =\operatorname*{stat}_{\eta}\left\langle \Phi
+_{ref}|U_{1}\left(  \eta\right)  ^{\dagger}\breve{B}U_{1}\left(  \eta\right)
+\Phi_{ref}\right\rangle
+\end{equation}
+where
+\begin{equation}
+\left\vert \Phi_{\ast}\right\rangle =U_{1}\left(  \eta_{\ast}\right)
+\left\vert \Phi_{ref}\right\rangle
+\end{equation}
+and RHS of eq $\left(  \ref{con2}\right)  $ gives
+\begin{align}
+\left\langle \Phi_{ref}|\breve{B}\left(  \eta_{\ast}\right)  a_{k}^{\dagger
+}a\breve{B}\left(  \eta_{\ast}\right)  \Phi_{ref}\right\rangle  &
+=\left\langle \Phi_{ref}|U_{1}\left(  \eta_{\ast}\right)  ^{\dagger}\breve
+{B}U_{1}\left(  \eta_{\ast}\right)  a_{k}^{\dagger}a_{l}U_{1}\left(
+\eta_{\ast}\right)  ^{\dagger}\breve{B}U_{1}\left(  \eta_{\ast}\right)
+\Phi_{ref}\right\rangle \nonumber\\
+&  =\left\langle \Phi_{\ast}|\breve{B}U_{1}\left(  \eta_{\ast}\right)
+a_{k}^{\dagger}a_{l}U_{1}\left(  \eta_{\ast}\right)  ^{\dagger}\breve{B}%
+\Phi_{\ast}\right\rangle \nonumber\\
+&  =\left\langle \Phi_{\ast}|\breve{B}U_{1}\left(  \eta_{\ast}\right)
+a_{k}^{\dagger}U_{1}\left(  \eta_{\ast}\right)  ^{\dagger}U_{1}\left(
+\eta_{\ast}\right)  a_{l}U_{1}\left(  \eta_{\ast}\right)  ^{\dagger}\breve
+{B}\Phi_{\ast}\right\rangle \nonumber\\
+&  =\left\langle \Phi_{\ast}|\breve{B}b_{k}^{\dagger}b_{l}\breve{B}\Phi_{\ast
+}\right\rangle
+\end{align}
+and the LHS gives
+\begin{equation}
+-\left\{  \left\langle \Phi_{\ast}|\breve{A}_{\eta_{\ast}}b_{k}^{\dagger}%
+b_{l}\breve{A}_{\eta_{\ast}}\Phi_{\ast}\right\rangle +\left\langle \Phi_{\ast
+}|\left[  b_{k}^{\dagger}b_{l},\breve{A}_{\eta_{\ast}}\right]  _{+}\Phi_{\ast
+}\right\rangle \right\}
+\end{equation}
+
+
+\section{Forms of the Contraction Map.}
+
+The contraction map
+\begin{equation}
+L_{N}^{1}:\mathcal{B}_{1}\left(  \mathcal{H}^{N}\right)  \rightarrow
+\mathcal{B}_{1}\left(  \mathcal{H}^{1}\right)
+\end{equation}
+can be expressed in following equivalent ways:
+
+\begin{enumerate}
+\item
+\begin{align}
+L_{N}^{1}\left(  D^{N}\right)   &  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+D^{1}\left(  \mathsf{z,z}^{\prime}\right)  \left\vert \mathsf{z}\right\rangle
+\left\langle \mathsf{z}^{\prime}\right\vert d\mathsf{z}d\mathsf{z}^{\prime
+}\nonumber\\
+D^{1}\left(  \mathsf{z,z}^{\prime}\right)   &  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+D^{1}\left(  \mathsf{z,z}^{N-1};\mathsf{z}^{\prime},\mathsf{z}^{\prime
+N-1}\right)  d\mathsf{z}^{N-1}d\mathsf{z}^{\prime N-1}%
+\end{align}
+
+
+\item
+\begin{align}
+L_{N}^{1}\left(  D^{N}\right)   &  =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+D_{jk}^{1}\left\vert \psi_{j}\right\rangle \left\langle \psi_{j}\right\vert
+\nonumber\\
+D_{jk}^{1}  &  =%
+%TCIMACRO{\dsum \limits_{1\leq j_{2},\ldots,j_{N}\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j_{2},\ldots,j_{N}\leq r}}
+%EndExpansion
+D_{jj_{2}\cdots j_{N}kj_{2}\cdots j_{N}}^{N}%
+\end{align}
+
+
+\item
+\begin{align}
+D^{1}  &  =%
+%TCIMACRO{\dsum \limits_{1\leq l_{2},\ldots,l_{N}\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq l_{2},\ldots,l_{N}\leq r}}
+%EndExpansion
+\left\langle \psi_{l_{2}}\cdots\psi_{l_{N}}\right\vert \left\{
+%TCIMACRO{\dsum \limits_{\substack{1\leq j,j_{2},\ldots,j_{N}\leq r\\1\leq
+%k,k_{2},\ldots,k_{N}\leq r}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\substack{1\leq j,j_{2},\ldots,j_{N}\leq r\\1\leq
+k,k_{2},\ldots,k_{N}\leq r}}}
+%EndExpansion
+D_{jj_{2}\cdots j_{N}kj_{2}\cdots j_{N}}^{N}\left\vert \psi_{j}\psi_{j_{2}%
+}\cdots\psi_{j_{N}}\right\rangle \left\langle \psi_{k}\psi_{k_{2}}\cdots
+\psi_{k_{N}}\right\vert \right\} \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad\qquad\times\left\vert \psi_{l_{2}}\cdots\psi_{l_{N}%
+}\right\rangle \nonumber\\
+&  =Tr_{N-1}\left\{  D^{N}\right\}
+\end{align}
+
+
+\item
+\begin{equation}
+D_{jk}^{1}=Tr\left\{  a\left(  \psi_{j}\right)  ^{\dagger}a\left(  \psi
+_{k}\right)  D^{N}\right\}
+\end{equation}
+
+\end{enumerate}
+
+
+\end{document}

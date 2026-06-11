@@ -1,0 +1,1826 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, June 12, 2018 08:30:22}
+%TCIDATA{LastRevised=Friday, May 03, 2019 07:55:05}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Clifford Algebra}
+
+A Clifford map $\Phi$ from an \emph{inner product} vector space $E$ to an
+associative algebra $\mathcal{A}$
+\begin{equation}
+\Phi:E\rightarrow\mathcal{A}%
+\end{equation}
+is given by
+\begin{equation}
+\Phi\left(  x\right)  ^{2}=\left(  \left.  x\right\vert x\right)
+I_{\mathcal{A}},
+\end{equation}
+which is equivalent to
+\begin{equation}
+\Phi\left(  x\right)  \Phi\left(  y\right)  +\Phi\left(  y\right)  \Phi\left(
+x\right)  =2\left(  \left.  x\right\vert y\right)  I_{\mathcal{A}}.
+\end{equation}
+The subspace $\Phi\left(  E\right)  $ generates the Clifford algebra
+$\mathcal{C}\left(  E\right)  \subseteq\mathcal{A}$ and as the map $\Phi$ is
+linar and injective one can identify $E$ and $\Phi\left(  E\right)  $ and set
+\begin{equation}
+xy+yx=2\left(  \left.  x\right\vert y\right)  I_{\mathcal{A}},\,x,y\in E.
+\end{equation}
+
+
+\subsubsection{Examples}
+
+\begin{enumerate}
+\item $E=\mathbb{R};\left(  \left.  x\right\vert y\right)  =-xy$%
+\begin{align}
+\Phi &  :\mathbb{R}\rightarrow\mathbb{C}\\
+\mathcal{C}\left(  E\right)   &  =\mathbb{C}.
+\end{align}
+
+
+\item $E=\mathbb{R}^{2};\left(  \left.  x\right\vert y\right)  =-\sum
+\limits_{1\leq j\leq2}x_{j}y_{j}$%
+\begin{align}
+\Phi &  :\mathbb{R}^{2}\rightarrow\mathbb{H}\\
+\mathcal{C}\left(  E\right)   &  =\mathbb{H}.
+\end{align}
+
+
+\item dim$\left\{  E\right\}  =r;\left(  \left.  x\right\vert y\right)
+=0;\forall x,y$%
+\begin{equation}
+\mathcal{C}\left(  E\right)  =\wedge\left(  E\right)  .
+\end{equation}
+
+\end{enumerate}
+
+\subsubsection{$\mathbb{Z}_{2}$-Grading of Clifford Algebra}
+
+One can decompose the Clifford algebra $\mathcal{C}\left(  E\right)  $ into a
+direct sum of a subalgebra, $\mathcal{C}\left(  E\right)  _{0},$ and a
+subspace $\mathcal{C}\left(  E\right)  _{1}$ with a $\mathbb{Z}_{2}$ grading
+\begin{equation}
+\mathcal{C}\left(  E\right)  =\mathcal{C}\left(  E\right)  _{even}%
+\oplus\mathcal{C}\left(  E\right)  _{odd}\equiv\mathcal{C}\left(  E\right)
+_{0}\oplus\mathcal{C}\left(  E\right)  _{1},
+\end{equation}
+associated with an involution
+\begin{equation}
+\omega\left(  x\right)  =-x,
+\end{equation}
+that extends to all of $\mathcal{C}\left(  E\right)  $ by the definition
+\begin{equation}
+\omega\left(  x_{1}\cdots x_{n}\right)  =\omega\left(  x_{1}\right)
+\cdots\omega\left(  x_{n}\right)  ,
+\end{equation}
+to give
+\begin{align}
+\omega &  :\mathcal{C}\left(  E\right)  _{0}\rightarrow\mathcal{C}\left(
+E\right)  _{0}\\
+\omega &  :\mathcal{C}\left(  E\right)  _{1}\rightarrow\mathcal{C}\left(
+E\right)  _{1}.
+\end{align}
+
+
+Consider two inner product spaces $E$ and $F$ and their direct sum $E$
+$\oplus$ $F:$
+
+\begin{theorem}
+The $\mathbb{Z}_{2}$-graded algebra $\mathcal{C}\left(  E\oplus F\right)  $ is
+isomorphic to the skew tensor product of the $\mathbb{Z}_{2}$-graded algebras
+$\mathcal{C}\left(  E\right)  $ and $\mathcal{C}\left(  F\right)  $, i.e.
+\begin{equation}
+\mathcal{C}\left(  E\oplus F\right)  \cong\mathcal{C}\left(  E\right)
+\widehat{\otimes}\mathcal{C}\left(  F\right)  .
+\end{equation}
+
+\end{theorem}
+
+\begin{proof}
+Let $H=E\oplus F$ then the injections
+\begin{align}
+i  &  :E\rightarrow H\\
+j  &  :F\rightarrow H
+\end{align}
+induce%
+\begin{align}
+i_{C}  &  :\mathcal{C}\left(  E\right)  \rightarrow\mathcal{C}\left(  H\right)
+\\
+j_{C}  &  :\mathcal{C}\left(  F\right)  \rightarrow\mathcal{C}\left(
+H\right)  .
+\end{align}
+Define a linear map $f$
+\begin{equation}
+f:\mathcal{C}\left(  E\right)  \widehat{\otimes}\mathcal{C}\left(  F\right)
+\rightarrow\mathcal{C}\left(  H\right)
+\end{equation}
+by
+\begin{equation}
+f\left(  a\otimes b\right)  =i_{C}\left(  a\right)  \bullet j_{C}\left(
+b\right)  ,
+\end{equation}
+where "$\bullet"$ is Clifford multiplication. The skew tensor product
+$\mathcal{C}\left(  E\right)  \widehat{\otimes}\mathcal{C}\left(  F\right)  $
+\emph{is contained} in the tensor product $\mathcal{C}\left(  E\right)
+\otimes\mathcal{C}\left(  F\right)  ,$ hence
+\begin{equation}
+f:\mathcal{C}\left(  E\right)  \otimes\mathcal{C}\left(  F\right)
+\rightarrow\mathcal{C}\left(  E\right)  \widehat{\otimes}\mathcal{C}\left(
+F\right)  .
+\end{equation}
+One can show that $f$ is an algebra homomorphism and
+\begin{equation}
+i_{C}\left(  a\right)  \bullet j_{C}\left(  b\right)  =\left(  -1\right)
+^{\alpha\beta}i_{C}\left(  b\right)  \bullet j_{C}\left(  a\right)
+;\,\alpha=\deg\left\{  a\right\}  ,\beta=\deg\left\{  b\right\}
+,a\in\mathcal{C}\left(  E\right)  ,b\in\mathcal{C}\left(  F\right)
+\end{equation}
+Since
+\begin{equation}
+i_{C}\left(  E\right)  \bot i_{C}\left(  F\right)
+\end{equation}
+the commutation relationship gives
+\begin{equation}
+i_{C}\left(  x\right)  \bullet j_{C}\left(  y\right)  +i_{C}\left(  y\right)
+\bullet j_{C}\left(  x\right)  =0\,\forall x\in i_{C}\left(  E\right)
+,\forall y\in i_{C}\left(  F\right)
+\end{equation}
+thus
+\begin{align}
+f\left(  a\otimes b\right)   &  =i_{C}\left(  a\right)  \bullet j_{C}\left(
+b\right)  =i_{C}\left(  x_{1}\cdots x_{\alpha}\right)  \bullet j_{C}\left(
+y_{1}\cdots y_{\beta}\right)  =i_{C}\left(  x_{1}\right)  \bullet\cdots\bullet
+i_{C}\left(  x_{\alpha}\right)  \bullet i_{C}\left(  y_{1}\right)
+\bullet\cdots\bullet i_{C}\left(  y_{b}\right) \\
+&  =\left(  -1\right)  ^{\alpha\beta}i_{C}\left(  y_{1}\right)  \bullet
+\cdots\bullet i_{C}\left(  y_{b}\right)  \bullet i_{C}\left(  x_{1}\right)
+\bullet\cdots\bullet i_{C}\left(  x_{\alpha}\right)  =\left(  -1\right)
+^{\alpha\beta}i_{C}\left(  b\right)  \bullet j_{C}\left(  a\right)  =\left(
+-1\right)  ^{\alpha\beta}f\left(  b\otimes a\right)
+\end{align}
+
+\end{proof}
+
+One can further show that $f$ is injective on $f^{-1}\left(  \mathcal{C}%
+\left(  H\right)  \right)  $ thus an algebra isomorphism from $f^{-1}\left(
+\mathcal{C}\left(  H\right)  \right)  \subset\mathcal{C}\left(  E\right)
+\otimes\mathcal{C}\left(  F\right)  $
+\begin{equation}
+a\otimes b=\left(  -1\right)  ^{\alpha\beta}b\otimes a
+\end{equation}
+so $\otimes$ is a skew tensor product when $a\in f^{-1}\left(  \mathcal{C}%
+\left(  E\right)  \right)  $ and $b\in f^{-1}\left(  \mathcal{C}\left(
+F\right)  \right)  $ and $\otimes$ is restricted to $f^{-1}\left(
+\mathcal{C}\left(  H\right)  \right)  .$
+
+\paragraph{Example}
+
+Let $\left(  \left.  {}\right\vert \right)  $ be degenerate and $E_{0}$ be its
+null space and $E_{0}^{c}$ a complimentary subspace so that
+\begin{equation}
+E=E_{0}\oplus E_{0}^{c}%
+\end{equation}
+then
+\begin{equation}
+C\left(  E\right)  \cong\wedge E_{0}\widehat{\otimes}C\left(  E_{0}%
+^{c}\right)  =\mathcal{C}\left(  E_{0}\oplus E_{0}^{c}\right)  .
+\end{equation}
+
+
+\subsubsection{\emph{Linear} Isomorphism between Exterior and Clifford
+Algebras}
+
+The \emph{linear isomorphism} $\xi_{E}$%
+\begin{equation}
+\xi_{E}:\bigwedge\left(  E\right)  \rightarrow C\left(  E\right)
+\end{equation}
+given by
+\begin{equation}
+\xi_{E}\left(  x_{1}\wedge\cdots\wedge x_{p}\right)  =\frac{1}{p!}\sum
+_{\sigma\in S_{p}}\left(  -1\right)  ^{\pi\left(  \sigma\right)  }%
+x_{\sigma\left(  1\right)  }\cdots x_{\sigma\left(  p\right)  },
+\end{equation}
+shows that $\bigwedge\left(  E\right)  $ is linearly identical to $C\left(
+E\right)  ,$ though not algebraically identical as%
+\begin{equation}
+\xi_{E}\left(  A\wedge B\right)  \neq\xi_{E}\left(  A\right)  \circ\xi
+_{E}\left(  B\right)  .
+\end{equation}
+The inverse $\xi_{E}^{-1}$ is given by
+\begin{equation}
+x_{1}\wedge\cdots\wedge x_{p}=\xi_{E}^{-1}\left(  \frac{1}{p!}\sum_{\sigma\in
+S_{p}}\left(  -1\right)  ^{\pi\left(  \sigma\right)  }x_{\sigma\left(
+1\right)  }\cdots x_{\sigma\left(  p\right)  }\right)  =\xi_{E}^{-1}\left(
+x_{1}\cdots x_{p}\right)  ,
+\end{equation}
+where $\left\{  \left.  x_{j}\right\vert 1\leq j\leq p\right\}  $ are all
+distinct. Again
+\begin{equation}
+\xi_{E}^{-1}\left(  A\circ B\right)  \neq\xi_{E}^{-1}\left(  A\right)
+\wedge\xi_{E}^{-1}\left(  B\right)  .
+\end{equation}
+
+
+Elements of $C\left(  E\right)  $ can be expanded as
+\begin{align}
+A  &  =\sum_{0\leq p\leq r}\sum_{1\leq j_{1}<\cdots<j_{p}\leq r}\alpha
+_{j_{1}\cdots j_{p}}x_{1}\wedge\cdots\wedge x_{p}\\
+B  &  =\sum_{0\leq p\leq r}\sum_{1\leq j_{1}<\cdots<j_{p}\leq r}\beta
+_{j_{1}\cdots j_{p}}x_{1}\wedge\cdots\wedge x_{p}%
+\end{align}
+
+
+\subsubsection{Centre and Anticentre of $C\left(  E\right)  .$}
+
+The centre, which is \emph{a subalgebra,} is given by
+\begin{equation}
+Z_{E}=\left\{  A\left\vert \left[  A,B\right]  =0;\forall B\in C\left(
+E\right)  ,A\in C\left(  E\right)  \right.  \right\}
+\end{equation}
+and the anticentre, which is \emph{a subspace,} by%
+\begin{equation}
+AZ_{E}=\left\{  A\left\vert \left\{  A,B\right\}  =0;\forall B\in C\left(
+E\right)  ,A\in C\left(  E\right)  \right.  \right\}  .
+\end{equation}
+Both the centre and anticentre are $\mathbb{Z}_{2}$-graded and decompose into
+even and odd elements
+\begin{align}
+Z_{E}  &  =Z_{E}^{0}\oplus Z_{E}^{1}\\
+AZ_{E}  &  =\left(  AZ_{E}\right)  ^{0}\oplus\left(  AZ_{E}\right)  ^{1}.
+\end{align}
+Greub shows that if the inner product is non degenerate
+\begin{align}
+\left(  AZ_{E}\right)  ^{1}  &  =0\\
+Z_{E}^{0}  &  =\left\{  I_{A}\right\}  .
+\end{align}
+If $n$ is even
+\begin{align}
+Z_{E}  &  =\left\{  I_{A}\right\}  +\left\{  \Delta_{A}\right\} \\
+AZ_{E}  &  =0.
+\end{align}
+If $n$ is odd
+\begin{align}
+Z_{E}  &  =\left\{  I_{A}\right\} \\
+AZ_{E}  &  =\left\{  \Delta_{A}\right\}  .
+\end{align}
+
+
+\begin{theorem}
+Let $E$ be an even dimensional space which admits a deterninant function
+$\Delta$ such that $e_{\Delta}^{2}=\varepsilon e$ for $\varepsilon=\pm1.$ Then
+for any inner product space $F$%
+\begin{equation}
+C\left(  E\oplus\varepsilon F\right)  \cong C\left(  E\right)  \otimes
+C\left(  F\right)
+\end{equation}
+
+\end{theorem}
+
+\subsubsection{Direct Sum of Dual Spaces}
+
+Let $E_{1\text{ }}$and $E_{2}$ be dual spaces one can consider the \emph{non
+degenerate} inner product
+\begin{equation}
+\left(  x_{1}\oplus x_{2},y_{1}\oplus y_{2}\right)  =\frac{1}{2}\left(
+\left\langle x_{1},y_{2}\right\rangle +\left\langle x_{2},y_{1}\right\rangle
+\right)  ;x_{1},y_{1}\in E_{1\text{ }},x_{2},y_{2}\in E_{2\text{ }},
+\end{equation}
+which is a different inner product to the conventional one i.e.
+\begin{equation}
+\left(  x_{1}\oplus x_{2},y_{1}\oplus y_{2}\right)  _{con}=\left\langle
+x_{1},y_{1}\right\rangle +\left\langle x_{2},y_{2}\right\rangle ;x_{1}%
+,y_{1}\in E_{1\text{ }},x_{2},y_{2}\in E_{2\text{ }}.
+\end{equation}
+
+
+\begin{proposition}
+$C\left(  E\right)  \cong\mathcal{B}\left(  \wedge\left(  E_{1}\right)
+\right)  $
+\end{proposition}
+
+\begin{proposition}
+Let $E$ be a $2r$-dimensional vector space with a \emph{nondegenerate} inner
+product. Assume that there exists an involution $\omega$ of E such that
+$\omega^{t}=-\omega$, where the transpose is wrt $\left(  \left.
+{}\right\vert \right)  $. Then the Clifford algebra $C\left(  E\right)  $ is
+\emph{algebraically} isomorphic to the algebra of linear transformations of
+$\wedge\left(  E_{1}\right)  ,$ where
+\begin{equation}
+E_{1}=\ker\left\{  (\omega-I)\right\}  =\left\{  \left.  \omega\left(
+x\right)  =x\right\vert x\in E\right\}  .
+\end{equation}
+
+\end{proposition}
+
+\subsubsection{Creation and Annihilation Operators}
+
+Recall the left multiplication operator $\mu\left(  x\right)  $, by the
+element $x$, which is proportional to the creation operator $a^{\dagger
+}\left(  x\right)  ,$
+\begin{align}
+\mu\left(  x\right)   &  :\wedge\left(  E_{1}\right)  \rightarrow\wedge\left(
+E_{1}\right) \\
+\mu\left(  x\right)   &  \in\mathcal{B}\left(  \wedge\left(  E_{1}\right)
+\right)
+\end{align}
+is defined by
+\begin{equation}
+\left[  \mu\left(  x\right)  \right]  \left(  y\right)  =x\wedge y.
+\end{equation}
+Since $\wedge\left(  E_{1}\right)  $ is an associative algebra the
+relationship between the exterior product and the operator/composition product
+is
+\begin{equation}
+\mu\left(  x\wedge y\right)  =\mu\left(  x\right)  \circ\mu\left(  y\right)
+\end{equation}
+and
+\begin{equation}
+\mu\left(  x\right)  \circ\mu\left(  y\right)  =\left(  -1\right)  ^{pq}%
+\mu\left(  y\right)  \circ\mu\left(  x\right)  .
+\end{equation}
+The adjoint operator (also associated with $x\in\wedge\left(  E_{1}\right)
+)$
+\begin{align}
+i\left(  x\right)   &  :\wedge\left(  E_{1}\right)  ^{d}\leftarrow
+\wedge\left(  E_{1}\right)  ^{d}\\
+\mu\left(  x\right)   &  \in\mathcal{B}\left(  \wedge\left(  E_{1}\right)
+^{d}\right)
+\end{align}
+is given by%
+\begin{equation}
+\left\langle \left.  i\left(  x\right)  y^{d}\right\vert z\right\rangle
+=\left\langle \left.  y^{d}\right\vert \mu\left(  x\right)  z\right\rangle
+\end{equation}
+is proportional to the annihilation operator $a\left(  x\right)  .$
+
+In this case the relationship between the exterior product and the
+operator/composition product is%
+\begin{equation}
+i\left(  x\wedge y\right)  =i\left(  y\right)  \circ i\left(  x\right)
+\end{equation}
+and
+\begin{equation}
+i\left(  x\right)  \circ i\left(  y\right)  =\left(  -1\right)  ^{pq}i\left(
+y\right)  \circ i\left(  x\right)  ,
+\end{equation}
+where $x,y\in\wedge\left(  E_{1}\right)  .$
+
+Let $x,y\in E_{1}$ then the operators $i\left(  x\right)  ,i\left(  y\right)
+$ are homogeneous of degree $-1$ and
+\begin{equation}
+i\left(  x\right)  \circ i\left(  y\right)  +i\left(  y\right)  \circ i\left(
+x\right)  =0.
+\end{equation}
+In particular they are nilpotent i.e
+\begin{equation}
+i\left(  x\right)  ^{2}=0.
+\end{equation}
+
+
+\begin{proposition}
+The operator $i\left(  x\right)  $ is an anti derivation in the algebra
+$\wedge\left(  E_{1}\right)  ^{d}\equiv\wedge\left(  E_{1}^{d}\right)  $ i.e.
+\begin{equation}
+\left[  i\left(  x\right)  \right]  \left(  u^{d}\wedge v^{d}\right)  =\left(
+\left[  i\left(  x\right)  \right]  \left(  u^{d}\right)  \right)  \wedge
+v^{d}+\left(  -1\right)  ^{p}u^{d}\wedge\left(  \left[  i\left(  x\right)
+\right]  \left(  v^{d}\right)  \right)  ;u^{d}\in\wedge^{p}\left(  E_{1}%
+^{d}\right)  ,v^{d}\in\wedge\left(  E_{1}^{d}\right)  .
+\end{equation}
+
+\end{proposition}
+
+\begin{corollary}
+1: CAR%
+\begin{equation}
+i\left(  x\right)  \circ\mu\left(  y^{d}\right)  +\mu\left(  y^{d}\right)
+\circ i\left(  x\right)  =\left\langle \left.  y^{d}\right\vert x\right\rangle
+I_{\mathcal{A}}%
+\end{equation}
+
+\end{corollary}
+
+\begin{corollary}
+II:%
+\begin{equation}
+\left[  i\left(  x\right)  \right]  \left(  y_{1}^{d}\wedge\cdots\wedge
+y_{p}^{d}\right)  =\sum_{1\leq j\leq p}\left(  -1\right)  ^{p-1}\left\langle
+\left.  y_{j}^{d}\right\vert x\right\rangle y_{1}^{d}\wedge\cdots
+\wedge\widehat{y_{j}^{d}}\wedge\cdots\wedge y_{p}^{d}%
+\end{equation}
+
+\end{corollary}
+
+\begin{corollary}
+III:Let $F_{1}$ be subspace of $E_{1}$ and $F_{1}^{\bot}$ its orthogonal
+compliment then $\wedge\left(  F_{1}\right)  $ and $\wedge\left(  F_{1}%
+^{d}\right)  $ are subalgebras of $\wedge\left(  E_{1}\right)  $ and
+$\wedge\left(  E_{1}^{d}\right)  $ respectively then
+\begin{equation}
+\left[  i\left(  x\right)  \right]  \left(  u^{d}\wedge v^{d}\right)  =\left(
+-1\right)  ^{pq}u^{d}\wedge\left(  \left[  i\left(  x\right)  \right]  \left(
+v^{d}\right)  \right)  ;\,x\in\wedge^{p}\left(  F_{1}\right)  ,u^{d}\in
+\wedge^{q}\left(  F_{1}^{\bot}\right)  ,v^{d}\in\wedge\left(  E_{1}%
+^{d}\right)  .
+\end{equation}
+
+\end{corollary}
+
+\begin{proposition}
+If $u^{d}\in\wedge^{p}\left(  E_{1}^{d}\right)  $ satisfies the equation
+\begin{equation}
+\left[  i\left(  x\right)  \right]  u^{d}=0
+\end{equation}
+for all $x\in E_{1}$ then
+\begin{equation}
+u^{d}=0.
+\end{equation}
+
+\end{proposition}
+
+In the following $1\leq j<k\leq r$
+\begin{align}
+x  &  \in E_{1};a\in\wedge^{p}\left(  E_{1}\right) \\
+x_{j}^{2}  &  =I_{\mathcal{A}}.
+\end{align}
+
+
+\begin{lemma}
+$\xi_{E}\left(  a\wedge x\right)  =\xi_{E}\left(  a\right)  \circ x-\xi
+_{E}\left(  \left[  i\left(  x\right)  \right]  \left(  a\right)  \right)  $
+\end{lemma}
+
+\begin{lemma}
+$\xi_{E}\left(  x\wedge a\right)  =x\circ\xi_{E}\left(  a\right)  -\left(
+-1\right)  ^{p}\xi_{E}\left(  \left[  i\left(  x\right)  \right]  \left(
+a\right)  \right)  $
+\end{lemma}
+
+Examples:
+
+\begin{enumerate}
+\item
+\begin{align}
+a  &  =x_{j}\\
+x  &  =x_{k}%
+\end{align}%
+\begin{align}
+\xi_{E}\left(  x_{j}\wedge x_{k}\right)   &  =\xi_{E}\left(  x_{j}\right)
+\circ x_{k}-\xi_{E}\left(  i\left(  x_{k}\right)  \circ x_{j}\right) \\
+&  =x_{j}x_{k}-\delta_{jk}x_{j}^{2}=\left\{
+\begin{array}
+[c]{c}%
+x_{j}x_{k};\,j\neq k\\
+0;\,j=k
+\end{array}
+\right.
+\end{align}
+
+
+\item
+\begin{align}
+a  &  =x_{j}x_{k}\\
+x  &  =x_{l}%
+\end{align}%
+\begin{align}
+&  \xi_{E}\left(  x_{j}x_{k}\wedge x_{l}\right) \\
+&  =\xi_{E}\left(  x_{j}x_{k}\right)  x_{l}-\xi_{E}\left(  \left[  i\left(
+x_{l}\right)  \right]  \left(  x_{j}x_{k}\right)  \right) \\
+&  =\left(  x_{j}\wedge x_{k}\right)  x_{l}-\xi_{E}\left(  \left[  i\left(
+x_{l}\right)  \right]  \left(  x_{j}x_{k}\right)  \right) \\
+&  =\frac{1}{2}\left(  x_{j}\wedge x_{k}x_{l}-x_{k}\wedge x_{j}x_{l}\right)
+-\xi_{E}\left(  \left(  \left(  \left[  i\left(  x_{l}\right)  \right]
+\left(  x_{j}\right)  \right)  x_{k}-x_{j}\left[  i\left(  x_{l}\right)
+\right]  \left(  x_{k}\right)  \right)  \right) \\
+&  =x_{j}x_{k}x_{l}+x_{j}\delta_{kl}-x_{k}\delta_{jl}%
+\end{align}
+
+\end{enumerate}
+
+In the following $u\in C\left(  E\right)  ,x\in E_{1}$
+
+\begin{lemma}
+$\left[  \xi_{E}^{-1}\right]  \left(  xu\right)  =x\wedge\left[  \xi_{E}%
+^{-1}\right]  \left(  u\right)  -\left[  i\left(  x\right)  \right]  \left(
+\xi_{E}^{-1}\left(  u\right)  \right)  $
+\end{lemma}
+
+\begin{lemma}
+$\left[  \xi_{E}^{-1}\right]  \left(  ux\right)  =\left[  \xi_{E}^{-1}\left(
+u\right)  \right]  \wedge x-\left[  i\left(  x\right)  \right]  \left(
+\xi_{E}^{-1}\left(  \omega_{E_{1}}\left(  u\right)  \right)  \right)  $
+\end{lemma}
+
+\section{Complex Clifford Algebras}
+
+In this case $\left(  \left.  {}\right\vert \right)  $ is a symmetric complex
+valued non degenerate bilinear form on $\mathcal{H}^{1}\cong\mathbb{C}^{r}$
+
+\subparagraph{Example: $r=1,$ $C_{1}\protect\cong\mathbb{C\oplus C}$}
+
+Here the isomorphism is given by
+\begin{align}
+\Phi &  :C_{1}\rightarrow\mathbb{C\oplus C}\\
+\Phi\left(  \alpha e_{1}+\beta e_{2}\right)   &  =\left(  \alpha+\beta
+,\alpha-\beta\right)  .
+\end{align}
+
+
+A normed determinant function in $\mathbb{C}^{r}$ is given by
+\begin{equation}
+\Delta\left(  x_{1},\cdots,x_{r}\right)  \Delta\left(  y_{1},\cdots
+,y_{r}\right)  =\det\left\{  \left(  x_{i},y_{j}\right)  \right\}
+;x_{i},y_{j}\in\mathbb{C}^{r}%
+\end{equation}
+The cannonical element $e_{\Delta}$ is given by
+\begin{equation}
+e_{\Delta}^{2}=\left(  -1\right)  ^{r\left(  r-1\right)  }e,
+\end{equation}
+and one has
+
+\begin{theorem}
+$C_{2m+k}\cong C_{2m}\otimes C_{k}.$
+\end{theorem}
+
+\begin{proposition}
+$C_{2m}\cong\mathcal{B}\left(  \wedge\mathbb{C}^{m}\right)  \cong%
+\mathcal{B}\left(  \wedge E_{1}\right)  .$
+\end{proposition}
+
+\begin{proposition}
+$C_{2m+1}\cong\mathcal{B}\left(  \wedge\mathbb{C}^{m}\right)  \oplus
+\mathcal{B}\left(  \wedge\mathbb{C}^{m}\right)  \cong\mathcal{B}\left(  \wedge
+E_{1}\right)  \oplus\mathcal{B}\left(  \wedge E_{1}\right)  .$
+\end{proposition}
+
+\begin{proof}
+Let $\left\{  \left.  a_{j}\right\vert 1\leq j\leq m\right\}  $ and $\left\{
+\left.  b_{j}\right\vert 1\leq j\leq m\right\}  $ be mutually orthogonal conb
+bases of $A$ and $B$ respectively so that
+\begin{align}
+A &  =\mathbb{C-}\operatorname*{linspan}\left\{  \left.  a_{j}\right\vert
+1\leq j\leq m\right\}  \\
+B &  =\mathbb{C-}\operatorname*{linspan}\left\{  \left.  b_{j}\right\vert
+1\leq j\leq m\right\}  =A^{\bot},
+\end{align}
+so that
+\begin{equation}
+E=A\oplus B
+\end{equation}
+and
+\begin{align}
+\left(  \left.  a_{j}\right\vert b_{k}\right)   &  =0\\
+\left(  \left.  a_{j}\right\vert a_{k}\right)   &  =\delta_{jk}\\
+\left(  \left.  b_{j}\right\vert b_{k}\right)   &  =\delta_{jk}.
+\end{align}
+\emph{Define an antisymmetric involution} $\omega$
+\begin{equation}
+\omega:E\rightarrow E
+\end{equation}
+by%
+\begin{align}
+\omega\left(  a_{j}\right)   &  =ib_{j}\\
+\omega\left(  b_{j}\right)   &  =-ia_{j}.
+\end{align}
+This is an \emph{involution} as
+\begin{align}
+\omega\left(  \omega\left(  a_{j}\right)  \right)   &  =i\omega\left(
+b_{j}\right)  =-i^{2}a_{j}=a_{j}\\
+\omega\left(  \omega\left(  b_{j}\right)  \right)   &  =-i\omega\left(
+a_{j}\right)  =-i^{2}b_{j}=b_{j}%
+\end{align}
+and it is \emph{antisymmetric} as
+\begin{align}
+\left(  \left.  a_{j}\right\vert \omega\left(  a_{k}\right)  \right)   &
+=\left(  \left.  b_{j}\right\vert \omega\left(  b_{k}\right)  \right)  =0\\
+\left(  \left.  a_{j}\right\vert \omega\left(  b_{k}\right)  \right)   &
+=-i\left(  \left.  a_{j}\right\vert a_{k}\right)  =-i\delta_{jk}\\
+\left(  \left.  b_{j}\right\vert \omega\left(  a_{k}\right)  \right)   &
+=i\left(  \left.  b_{j}\right\vert b_{k}\right)  =i\delta_{jk}.
+\end{align}
+The involution $\omega$ in turn defines a subspace of $E_{1}$ of $E$ by
+\begin{equation}
+E_{1}=\left\{  \left.  x\right\vert \omega\left(  x\right)  =x;x\in E\right\}
+=\ker\left\{  \omega-I_{\mathcal{A}}\right\}  ,
+\end{equation}
+so that
+\begin{align}
+E_{1} &  =\mathbb{C-}\operatorname*{linspan}\left\{  \left.  e_{j}\right\vert
+1\leq j\leq m\right\}  \\
+E_{1}^{\bot} &  =\mathbb{C-}\operatorname*{linspan}\left\{  \left.
+e_{j}\right\vert m+1\leq j\leq2m\right\}  ,
+\end{align}
+where
+\begin{align}
+e_{j} &  =\frac{1}{\sqrt{2}}\left(  a_{j}+ib_{j}\right)  ;\,1\leq j\leq m\\
+e_{j} &  =\frac{1}{\sqrt{2}}\left(  a_{j}-ib_{j}\right)  ;m+\,1\leq j\leq2m.
+\end{align}
+The effect of $\omega$ on the basis $\left\{  \left.  e_{j}\right\vert 1\leq
+j\leq2m\right\}  ,\left\{  \left.  a_{j}\right\vert 1\leq j\leq m\right\}  $
+and $\left\{  \left.  b_{j}\right\vert 1\leq j\leq m\right\}  $ is given by
+\begin{align}
+\omega\left(  e_{j}\right)   &  =\frac{1}{\sqrt{2}}\omega\left(  a_{j}%
++ib_{j}\right)  =\frac{1}{\sqrt{2}}\left(  ib_{j}-iia_{j}\right)  =\,\frac
+{1}{\sqrt{2}}\left(  a_{j}+ib_{j}\right)  \,\,=e_{j};\,1\leq j\leq m\\
+\omega\left(  e_{j}\right)   &  =\frac{1}{\sqrt{2}}\omega\left(  a_{j}%
+-ib_{j}\right)  =\frac{1}{\sqrt{2}}\left(  ib_{j}+iia_{j}\right)  =-\frac
+{1}{\sqrt{2}}\left(  a_{j}-ib_{j}\right)  =-e_{j};\,m+\,1\leq j\leq2m.
+\end{align}
+The representations of $A$ and $B$ wrt the bases $\left\{  \left.
+a_{j}\right\vert 1\leq j\leq m\right\}  $,$\left\{  \left.  b_{j}\right\vert
+1\leq j\leq m\right\}  ,\left\{  \left.  e_{j}\right\vert 1\leq j\leq
+m\right\}  $ and $\left\{  \left.  e_{j}\right\vert m+1\leq j\leq2m\right\}  $
+give
+\begin{equation}
+\mathbb{C}^{2m}=\mathbb{A\oplus B=E\oplus E}^{\bot}=\mathbb{E\oplus}%
+\overline{\mathbb{E}}?,
+\end{equation}
+where
+\begin{align}
+\mathbb{A} &  =\mathcal{R}_{a}\left(  A\right)  \\
+\mathbb{B} &  =\mathcal{R}_{b}\left(  B\right)  ,
+\end{align}%
+\begin{align}
+\mathbb{E} &  =\mathcal{R}e\left(  E\right)  \\
+\mathbb{E}^{\bot} &  =\overline{\mathbb{E}}=\mathcal{R}_{e}\left(  E^{\bot
+}\right)  ,?
+\end{align}
+and the complex conjugation is defined wrt the basis $\left\{  \left.
+e_{j}\right\vert 1\leq j\leq2m\right\}  .$
+
+The representations of $\omega$ are given by
+\begin{equation}
+\omega\left(  \mathbf{a,b}\right)  =\left(  \mathbf{a,b}\right)
+\mathcal{R}_{ab}\left(  \omega\right)  =\left(  \mathbf{a,b}\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -i\mathbb{I}_{m}\\
+i\mathbb{I}_{m} & \mathbb{O}%
+\end{array}
+\right)  =\left(  \mathbf{a,b}\right)  i\left(
+\begin{array}
+[c]{cc}%
+\mathbb{O} & -\mathbb{I}_{m}\\
+\mathbb{I}_{m} & \mathbb{O}%
+\end{array}
+\right)
+\end{equation}
+and%
+\begin{equation}
+\omega\left(  \mathbf{e}_{1}\mathbf{,e}_{2}\right)  =\left(  \mathbf{e}%
+_{1}\mathbf{,e}_{2}\right)  \mathcal{R}_{e}\left(  \omega\right)  =\left(
+\mathbf{e}_{1}\mathbf{,e}_{2}\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{O}\\
+\mathbb{O} & -\mathbb{I}_{m}%
+\end{array}
+\right)  .
+\end{equation}%
+\begin{equation}
+\left(  \mathbf{a,b}\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  =\left(  \mathbf{e}_{1}\mathbf{,e}_{2}\right)
+\end{equation}
+
+\end{proof}
+
+$\lceil$Example $m=1$%
+\begin{equation}
+\mathbb{C}^{2}=\mathbb{A\oplus B}%
+\end{equation}%
+\begin{align}
+\mathbb{A}=\mathbb{C-}  &  \operatorname*{linspan}\left\{  a_{1}\right\} \\
+\mathbb{B}=\mathbb{C-}  &  \operatorname*{linspan}\left\{  b_{1}\right\}
+\end{align}
+That
+\begin{align}
+E_{1}  &  =\mathbb{C-}\operatorname*{linspan}\left\{  a_{1}+ib_{1}\right\} \\
+E_{1}^{c}  &  =\mathbb{C-}\operatorname*{linspan}\left\{  a_{1}-ib_{1}%
+\right\}
+\end{align}
+is shown by
+\begin{align}
+\omega\left(  a_{1}\right)   &  =ib_{1}\\
+\omega\left(  b_{1}\right)   &  =-ia_{1}%
+\end{align}
+giving%
+\begin{equation}
+\omega\left(  \alpha a_{1}+\beta b_{1}\right)  =i\alpha b_{1}-i\beta
+a_{1};\alpha,\beta\in\mathbb{C}.
+\end{equation}
+The eigenvlaue $+1$ constraint gives
+\[
+i\alpha b_{1}-i\beta a_{1}=\alpha a_{1}+\beta b_{1}%
+\]
+leading to
+\begin{align}
+i\alpha &  =\beta\\
+-i\beta &  =\alpha\Leftrightarrow i\alpha=\beta
+\end{align}
+and thus
+\begin{equation}
+\alpha a_{1}+\beta b_{1}=\alpha a_{1}+i\alpha b_{1}=\alpha\left(  a_{1}%
++ib_{1}\right)  ,
+\end{equation}
+so the $+1$ eigenspace is populated by vectors of the form $\left\{  \left.
+\alpha\left(  a_{1}+ib_{1}\right)  \right\vert \alpha\in\mathbb{C}\right\}  .$
+
+The eigenvlaue $-1$ constraint gives
+\[
+i\alpha b_{1}-i\beta a_{1}=-\alpha a_{1}-\beta b_{1}%
+\]
+leading to
+\begin{align}
+i\alpha &  =-\beta\\
+i\beta &  =\alpha\Leftrightarrow i\alpha=-\beta
+\end{align}
+and thus
+\begin{equation}
+\alpha a_{1}+\beta b_{1}=\alpha a_{1}-i\alpha b_{1}=\alpha\left(  a_{1}%
+-ib_{1}\right)  ,
+\end{equation}
+so the $-1$ eigenspace is populated by vectors of the form $\left\{  \left.
+\alpha\left(  a_{1}-ib_{1}\right)  \right\vert \alpha\in\mathbb{C}\right\}  .$
+
+$\lceil$%
+\begin{align}
+\left(  x+iy\right)  \left(  a_{1}+ib_{1}\right)   &  =xa_{1}+iya_{1}%
++xib_{1}-yb_{1}=\left(  x+iy\right)  a_{1}+\left(  ix-y\right)  b_{1}=\left(
+x+iy\right)  a_{1}+i\left(  x+iy\right)  b_{1}=\left(  x+iy\right)  \left(
+a_{1}+ib_{1}\right) \\
+\left(  x+iy\right)  \left(  a_{1}-ib_{1}\right)   &  =xa_{1}+iya_{1}%
+-xib_{1}+yb_{1}=\left(  x+iy\right)  a_{1}+\left(  -ix+y\right)  b_{1}=\left(
+x+iy\right)  a_{1}-i\left(  x+iy\right)  b_{1}=\left(  x+iy\right)  \left(
+a_{1}-ib_{1}\right)  .
+\end{align}
+$\rfloor$
+
+$A$ could be the \emph{complex} spaces generated by $\left\{  \left.
+a_{j}^{\dagger}\right\vert 1\leq j\leq m\right\}  $ or $\left\{  \left.
+x_{j}\right\vert 1\leq j\leq m\right\}  $ and $B$ by $\left\{  \left.
+a_{j}\right\vert 1\leq j\leq m\right\}  $ or $\left\{  \left.  x_{j}%
+\right\vert m+1\leq j\leq2m\right\}  $ then%
+
+\begin{align}
+&  \left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}\right)
+\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  =\left(  \mathbf{z,}\overset{-}{\mathbf{z}}\right)  \\
+&  \left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}\right)
+=\left(  \mathbf{z,}\overset{-}{\mathbf{z}}\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & -i\mathbb{I}_{m}\\
+\mathbb{I}_{m} & i\mathbb{I}_{m}%
+\end{array}
+\right)
+\end{align}
+and%
+\begin{equation}
+\left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}\right)
+\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O}_{m} & \mathbb{I}_{m}\\
+\mathbb{I}_{m} & \mathbb{O}_{m}%
+\end{array}
+\right)  =\left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}%
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+-i\mathbb{I}_{m} & i\mathbb{I}_{m}%
+\end{array}
+\right)  =\left(  \mathbf{z,}\overset{-}{\mathbf{z}}\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O}_{m} & \mathbb{I}_{m}\\
+\mathbb{I}_{m} & \mathbb{O}_{m}%
+\end{array}
+\right)  =\left(  \overset{-}{\mathbf{z}},\mathbf{z}\right)  .
+\end{equation}
+Complex conjugation is given by
+\begin{align}
+&  \left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}\right)
+\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{O}_{m}\\
+\mathbb{O}_{m} & -\mathbb{I}_{m}%
+\end{array}
+\right)  =\left(  \operatorname{Re}\mathbf{z,-}\operatorname{Im}%
+\mathbf{z}\right)  \\
+&  =\left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}\right)
+\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & -i\mathbb{I}_{m}\\
+\mathbb{I}_{m} & i\mathbb{I}_{m}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{O}_{m}\\
+\mathbb{O}_{m} & -\mathbb{I}_{m}%
+\end{array}
+\right)  \frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  \\
+&  =\left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}\right)
+\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  \frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & i\mathbb{I}_{m}\\
+\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  \\
+&  =\left(  \operatorname{Re}\mathbf{z,}\operatorname{Im}\mathbf{z}\right)
+\frac{1}{\sqrt{2}}\left(
+\begin{array}
+[c]{cc}%
+\mathbb{I}_{m} & \mathbb{I}_{m}\\
+i\mathbb{I}_{m} & -i\mathbb{I}_{m}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O}_{m} & \mathbb{I}_{m}\\
+\mathbb{I}_{m} & \mathbb{O}_{m}%
+\end{array}
+\right)  \\
+&  =\left(  \overset{-}{\mathbf{z}},\mathbf{z}\right)  \left(
+\begin{array}
+[c]{cc}%
+\mathbb{O}_{m} & \mathbb{I}_{m}\\
+\mathbb{I}_{m} & \mathbb{O}_{m}%
+\end{array}
+\right)  =\left(  \overset{-}{\mathbf{z}},\mathbf{z}\right)
+\end{align}
+
+
+\subsection{Complexification of Real Clifford Algebra}
+
+Let $F$ be a real inner product space (not neccesarily finite dimension) its
+complexification
+\begin{equation}
+E=\mathbb{C\otimes}F,
+\end{equation}
+with inner product
+\begin{equation}
+\left(  \left.  \lambda\otimes x\right\vert \mu\otimes y\right)  =\lambda
+\mu\left(  \left.  x\right\vert y\right)
+\end{equation}
+then one can show
+\begin{equation}
+C\left(  E\right)  \cong\mathbb{C\otimes}C\left(  F\right)  .
+\end{equation}
+
+
+\subsection{Clifford Algebras Over a Real Vector Space}
+
+If $\left(  \left.  x\right\vert y\right)  $ is a {\footnotesize non
+degenerate} inner prodct on $E$ then
+\begin{equation}
+E=E_{+}\oplus E_{-},
+\end{equation}
+where
+\begin{align}
+\dim\left\{  E\right\}   &  =n=p+q\\
+\dim\left\{  E_{+}\right\}   &  =p\\
+\dim\left\{  E_{-}\right\}   &  =q.
+\end{align}
+
+
+We write
+\begin{align}
+C\left(  p,0\right)   &  =C\left(  E_{+}\right) \\
+C\left(  0,q\right)   &  =C\left(  E_{-}\right)
+\end{align}
+
+
+\subsubsection{Canonical Element}
+
+The canonical element of $C\left(  p,q\right)  $ is given by
+\begin{equation}
+e_{\Delta}^{2}=\left(  -1\right)  ^{\frac{1}{2}n\left(  n-1\right)  +q}e,
+\end{equation}
+where
+\begin{equation}
+e=e_{1}\wedge\cdots\wedge e_{n}.
+\end{equation}
+
+
+\begin{enumerate}
+\item If $\left(  \left.  x\right\vert y\right)  $ is positive definite
+\begin{equation}
+e_{\Delta}^{2}=\left(  -1\right)  ^{\frac{1}{2}n\left(  n-1\right)  }e
+\end{equation}
+
+
+\item If $\left(  \left.  x\right\vert y\right)  $ is negative definite
+\begin{equation}
+e_{\Delta}^{2}=\left(  -1\right)  ^{\frac{1}{2}n\left(  n-1\right)  }e
+\end{equation}
+
+
+\item If $n=2m$ and $p=q=m,$
+\begin{equation}
+e_{\Delta}^{2}=e.
+\end{equation}
+
+\end{enumerate}
+
+\begin{theorem}
+There are algebra isomorphisms
+\end{theorem}
+
+%
+
+\begin{align}
+C\left(  p,q\right)  \mathbb{\otimes}C\left(  2,0\right)   &  \cong C\left(
+q+2,p\right) \\
+C\left(  p,q\right)  \mathbb{\otimes}C\left(  0,2\right)   &  \cong C\left(
+q,p+2\right)
+\end{align}
+In particular for $n\geq0$
+\begin{align}
+C\left(  0,n\right)  \mathbb{\otimes}C\left(  2,0\right)   &  \cong C\left(
+n+2,0\right) \\
+C\left(  n,0\right)  \mathbb{\otimes}C\left(  0,2\right)   &  \cong C\left(
+0,n+2\right)
+\end{align}
+
+
+\begin{theorem}
+Assume that $s\equiv0\,\left(  \text{mod }4\right)  $ then
+\end{theorem}
+
+%
+
+\begin{equation}
+C\left(  p,q\right)  \cong C\left(  q,p\right)
+\end{equation}
+In particular
+\begin{equation}
+C\left(  0,n\right)  \cong C\left(  n,0\right)
+\end{equation}
+if $n\equiv0\,\left(  \text{mod }4\right)  .$
+
+\subsection{Inner Product Spaces with Zero Signiture}
+
+If the inner product $\left(  \left.  {}\right\vert \right)  $ is of type
+$\left(  m,m\right)  $ it has zero signiture and one has the following theorem:
+
+\begin{theorem}%
+\begin{equation}
+C\left(  E\right)  \cong\mathcal{B}\left(  \wedge\left(  E_{1}\right)
+\right)  ,
+\end{equation}
+where
+\begin{equation}
+\dim\left\{  E_{1}\right\}  =m.
+\end{equation}
+
+\end{theorem}
+
+\begin{proof}
+Let
+\begin{align}
+E_{+}  &  =\mathbb{C-}\operatorname*{linspan}\left\{  \left.  a_{j}\right\vert
+1\leq j\leq m\right\} \\
+E_{-}  &  =\mathbb{C-}\operatorname*{linspan}\left\{  \left.  b_{j}\right\vert
+1\leq j\leq m\right\}  =E_{+}^{\bot},
+\end{align}
+so that
+\begin{equation}
+E=E_{+}\oplus E_{-}%
+\end{equation}
+where
+\begin{align}
+\left(  \left.  a_{j}\right\vert b_{k}\right)   &  =0\\
+\left(  \left.  a_{j}\right\vert a_{k}\right)   &  =\delta_{jk}\\
+\left(  \left.  b_{j}\right\vert b_{k}\right)   &  =-\delta_{jk}.
+\end{align}
+Define an involution $\omega$ of $E$ by
+\begin{align}
+\omega\left(  a_{j}\right)   &  =b_{j}\\
+\omega\left(  b_{j}\right)   &  =a_{j};1\leq j\leq m.
+\end{align}
+Then $\omega$ is antisymmetric wrt inner product $\left(  \left.
+{}\right\vert \right)  $ and the $m$ dimensional subspace $E_{1}$ defined by
+\begin{equation}
+E_{1}=\ker\left\{  \omega-I_{E}\right\}  =\mathbb{R-}\operatorname*{linspan}%
+\left\{  \left.  x\in E\right\vert \omega\left(  x\right)  =x\right\}
+\end{equation}
+generates the Clifford algebra $C\left(  E\right)  $ by the vector space
+isomorphism
+\begin{equation}
+C\left(  E\right)  \cong\mathcal{B}\left(  \wedge\left(  E_{1}\right)
+\right)  .
+\end{equation}
+The subspaces $E_{1}$ and $E_{1}^{c}$ are given by elements of the form
+\begin{align}
+\omega\left(  x+\omega\left(  x\right)  \right)   &  =\omega\left(  x\right)
++x=x+\omega\left(  x\right) \\
+\omega\left(  x-\omega\left(  x\right)  \right)   &  =-\omega\left(  x\right)
++x=-\left(  x+\omega\left(  x\right)  \right)
+\end{align}
+Thus%
+\begin{equation}
+E_{1}=\mathbb{R-}\operatorname*{linspan}\left\{  \left.  \frac{1}{\sqrt{2}%
+}\left(  a_{j}+b_{j}\right)  \right\vert 1\leq j\leq m\right\}
+\end{equation}
+\begin{equation}
+E_{1}^{c}=\mathbb{R-}\operatorname*{linspan}\left\{  \left.  \frac{1}{\sqrt
+{2}}\left(  a_{j}-b_{j}\right)  \right\vert 1\leq j\leq m\right\}  ,
+\end{equation}
+which shows that the subspaces $E_{1}$ and $E_{1}^{c}$ are \emph{totally
+isotropic}, but not orthogonal to each other as
+\begin{equation}
+\left(  \left.  \frac{1}{\sqrt{2}}\left(  a_{j}+b_{j}\right)  \right\vert
+\frac{1}{\sqrt{2}}\left(  a_{k}+b_{k}\right)  \right)  =\frac{1}{2}\left\{
+\left(  \left.  a_{j}\right\vert a_{k}\right)  +\left(  \left.  a_{j}%
+\right\vert b_{k}\right)  +\left(  \left.  b_{j}\right\vert a_{k}\right)
++\left(  \left.  b_{j}\right\vert b_{k}\right)  \right\}  =0;1\leq j,k\leq m
+\end{equation}%
+\begin{equation}
+\left(  \left.  \frac{1}{\sqrt{2}}\left(  a_{j}-b_{j}\right)  \right\vert
+\frac{1}{\sqrt{2}}\left(  a_{k}-b_{k}\right)  \right)  =\frac{1}{2}\left\{
+\left(  \left.  a_{j}\right\vert a_{k}\right)  -\left(  \left.  a_{j}%
+\right\vert b_{k}\right)  -\left(  \left.  b_{j}\right\vert a_{k}\right)
++\left(  \left.  b_{j}\right\vert b_{k}\right)  \right\}  =0;1\leq j,k\leq m
+\end{equation}%
+\begin{equation}
+\left(  \left.  \frac{1}{\sqrt{2}}\left(  a_{j}+b_{k}\right)  \right\vert
+\frac{1}{\sqrt{2}}\left(  a_{j}-b_{k}\right)  \right)  =\frac{1}{2}\left\{
+\left(  \left.  a_{j}\right\vert a_{k}\right)  -\left(  \left.  a_{j}%
+\right\vert b_{k}\right)  +\left(  \left.  b_{j}\right\vert a_{k}\right)
+-\left(  \left.  b_{j}\right\vert b_{k}\right)  \right\}  =\delta_{jk};1\leq
+j,k\leq m.
+\end{equation}
+The real subspaces $E_{1}$ and $E_{1}^{c}$ correspond to real linear
+combinations of creators and annihilators respectiely, while the real
+subspaces $E_{+}$ and $E_{-}$ correspond to real linear combinations of
+Majorona operators.
+\end{proof}
+
+\subsection{Definite Real Clifford Algebras of Low Dimension}
+
+The clifford algebras $C\left(  n,0\right)  $ and $C\left(  0,n\right)  $ for
+$1\leq n\leq8$ are given by
+\begin{equation}
+C\left(  1,0\right)  \cong\mathbb{R\oplus R}%
+\end{equation}%
+\begin{equation}
+C\left(  0,1\right)  \cong\mathbb{C}%
+\end{equation}%
+\begin{equation}
+C\left(  2,0\right)  \cong\mathcal{B}\left(  \mathbb{R}^{2}\right)
+\end{equation}%
+\begin{equation}
+C\left(  3,0\right)  \cong\mathbb{C}\otimes\mathcal{B}\left(  \mathbb{R}%
+^{2}\right)  =M\left(  2,\mathbb{C}\right)
+\end{equation}%
+\begin{equation}
+C\left(  0,3\right)  \cong\mathbb{H\oplus H}%
+\end{equation}%
+\begin{equation}
+C\left(  4,0\right)  \cong C\left(  0,4\right)  \cong\mathbb{H}\otimes
+\mathcal{B}\left(  \mathbb{R}^{2}\right)  =M\left(  2,\mathbb{H}\right)
+\end{equation}%
+\begin{equation}
+C\left(  5,0\right)  \cong\left(  \mathbb{H\oplus H}\right)  \otimes
+\mathcal{B}\left(  \mathbb{R}^{2}\right)  \cong\mathbb{H}\otimes
+\mathcal{B}\left(  \mathbb{R}^{2}\right)  \oplus\mathcal{B}\left(
+\mathbb{R}^{2}\right)  \otimes\mathbb{H}=M\left(  2,\mathbb{H}\right)  \oplus
+M\left(  2,\mathbb{H}\right)
+\end{equation}%
+\begin{equation}
+C\left(  0,5\right)  \cong\left(  \mathbb{H\oplus H}\right)  \otimes
+\mathcal{B}\left(  \mathbb{R}^{2}\right)  \cong\mathbb{C}\otimes
+\mathcal{B}\left(  \mathbb{R}^{2}\right)  \otimes\mathbb{H}%
+\end{equation}%
+\begin{equation}
+C\left(  6,0\right)  \cong\mathbb{H}\otimes\mathcal{B}\left(  \mathbb{R}%
+^{4}\right)  =M\left(  4,\mathbb{H}\right)
+\end{equation}%
+\begin{equation}
+C\left(  0,6\right)  \cong\mathcal{B}\left(  \mathbb{R}^{8}\right)
+\end{equation}%
+\begin{equation}
+C\left(  7,0\right)  \cong\mathbb{C\otimes H}\otimes\mathcal{B}\left(
+\mathbb{R}^{4}\right)
+\end{equation}%
+\begin{equation}
+C\left(  0,7\right)  \cong\mathcal{B}\left(  \mathbb{R}^{8}\right)
+\oplus\mathcal{B}\left(  \mathbb{R}^{8}\right)
+\end{equation}%
+\begin{equation}
+C\left(  8,0\right)  \cong C\left(  0,8\right)  \cong\mathcal{B}\left(
+\mathbb{R}^{16}\right)
+\end{equation}
+
+
+\subsection{Definite Real Clifford Algebras of Higher Dimension}
+
+All Clifford algebras $C\left(  m,0\right)  ,C\left(  0,m\right)  $ are
+determined by $C\left(  n,0\right)  ,C\left(  0,n\right)  ;1\leq n\leq8;0\leq
+m<\infty$ by
+\begin{equation}
+C\left(  n+8,0\right)  \cong C\left(  n,0\right)  \otimes\mathcal{B}\left(
+\mathbb{R}^{16}\right)  \subset M\left(  16,C\left(  n,0\right)  \right)
+\end{equation}%
+\begin{equation}
+C\left(  0,n+8\right)  \cong C\left(  0,n\right)  \otimes\mathcal{B}\left(
+\mathbb{R}^{16}\right)  \subset M\left(  16,C\left(  0,n\right)  \right)  .
+\end{equation}
+$\lceil$%
+\begin{align}
+C\left(  0,15\right)   &  \cong C\left(  0,7\right)  \otimes\mathcal{B}\left(
+\mathbb{R}^{16}\right)  \subset M\left(  16,C\left(  0,7\right)  \right) \\
+C\left(  0,22\right)   &  \cong C\left(  0,14\right)  \otimes\mathcal{B}%
+\left(  \mathbb{R}^{16}\right)  \cong C\left(  0,6\right)  \otimes
+\mathcal{B}\left(  \mathbb{R}^{16}\right)  \otimes\mathcal{B}\left(
+\mathbb{R}^{16}\right)  \subset M\left(  16\times16,C\left(  0,6\right)
+\right)
+\end{align}
+$\rfloor$
+
+\subsection{Indefinite Real Clifford Algebras}
+
+Clifford algebras of type $C\left(  p,q\right)  $ are descibed by
+
+\begin{enumerate}
+\item $p=q$%
+\begin{equation}
+C\left(  p,p\right)  \cong\mathcal{B}\left(  \mathbb{\wedge R}^{p}\right)
+=\mathcal{B}\left(  2^{2p}\right)
+\end{equation}
+
+
+\item $p>q$%
+\begin{equation}
+C\left(  p,q\right)  \cong C\left(  q,q\right)  \otimes C\left(  s,0\right)
+\cong\mathcal{B}\left(  \mathbb{R}^{q}\right)  \otimes C\left(  s,0\right)
+\subset M\left(  q,C\left(  s,0\right)  \right)  ,
+\end{equation}
+where
+\begin{equation}
+s=p-q
+\end{equation}
+
+
+\item $p<q$%
+\begin{equation}
+C\left(  p,q\right)  \cong C\left(  p,p\right)  \otimes C\left(  0,r\right)
+\cong\mathcal{B}\left(  \mathbb{R}^{p}\right)  \otimes C\left(  0,r\right)
+\subset M\left(  p,C\left(  0,r\right)  \right)  .
+\end{equation}%
+\begin{equation}
+r=p-q.
+\end{equation}
+
+\end{enumerate}
+
+These relationships plus the modulo $8$ preceding ones characterize\emph{ all
+real }Clifford algebras.
+
+$\lceil$%
+\begin{align}
+2^{4}  &  =16\\
+2^{8}  &  =16\times16=256
+\end{align}
+$\rfloor$
+
+Thus \emph{all }real Clifford algebras are produced from the Clifford algebras
+$\operatorname*{Cl}\left(  p,q,\mathbb{R}\right)  ;$ $0\leq p,q\leq8$, whose
+structure is given in the following:%
+
+\begin{align}
+&  \left(
+\begin{array}
+[c]{ccccc}%
+8 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,0,\mathbb{R}\right) \\
+M\left(  16,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,1,\mathbb{R}\right) \\
+M\left(  16,\mathbb{R}\right)  \oplus M\left(  16,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,2,\mathbb{R}\right) \\
+M\left(  32,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,3,\mathbb{R}\right) \\
+M\left(  32,\mathbb{C}\right)
+\end{array}
+\\
+7 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,0,\mathbb{R}\right) \\
+M\left(  8,\mathbb{R}\right)  \oplus M\left(  8,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,1,\mathbb{R}\right) \\
+M\left(  16,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,2,\mathbb{R}\right) \\
+M\left(  16,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,3,\mathbb{R}\right) \\
+M\left(  16,\mathbb{H}\right)
+\end{array}
+\\
+6 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,0,\mathbb{R}\right) \\
+M\left(  8,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,1,\mathbb{R}\right) \\
+M\left(  8,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,2,\mathbb{R}\right) \\
+M\left(  8,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,3,\mathbb{R}\right) \\
+M\left(  8,\mathbb{H}\right)  \oplus M\left(  8,\mathbb{H}\right)
+\end{array}
+\\
+5 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,0,\mathbb{R}\right) \\
+M\left(  4,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,1,\mathbb{R}\right) \\
+M\left(  4,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,2,\mathbb{R}\right) \\
+M\left(  4,\mathbb{H}\right)  \oplus M\left(  4,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,3,\mathbb{R}\right) \\
+M\left(  8,\mathbb{H}\right)
+\end{array}
+\\
+4 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,0,\mathbb{R}\right) \\
+M\left(  2,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,1,\mathbb{R}\right) \\
+M\left(  2,\mathbb{H}\right)  \oplus M\left(  2,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,2,\mathbb{R}\right) \\
+M\left(  4,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,3,\mathbb{R}\right) \\
+M\left(  8,\mathbb{C}\right)
+\end{array}
+\\
+3 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,0,\mathbb{R}\right) \\
+\mathbb{H\oplus H}%
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,1,\mathbb{R}\right) \\
+M\left(  2,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,2,\mathbb{R}\right) \\
+M\left(  4,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,3,\mathbb{R}\right) \\
+M\left(  4,\mathbb{R}\right)  \oplus M\left(  4,\mathbb{R}\right)
+\end{array}
+\\
+2 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,0,\mathbb{R}\right) \\
+\mathbb{H}%
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,1,\mathbb{R}\right) \\
+M\left(  2,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,2,\mathbb{R}\right) \\
+M\left(  4,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,3,\mathbb{R}\right) \\
+M\left(  4,\mathbb{R}\right)  \oplus M\left(  4,\mathbb{R}\right)
+\end{array}
+\\
+1 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,0,\mathbb{R}\right) \\
+\mathbb{C}%
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,1,\mathbb{R}\right) \\
+M\left(  2,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,2,\mathbb{R}\right) \\
+M\left(  2,\mathbb{R}\right)  \oplus M\left(  2,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,3,\mathbb{R}\right) \\
+M\left(  4,\mathbb{R}\right)
+\end{array}
+\\
+0 &
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,0,\mathbb{R}\right) \\
+\mathbb{R}%
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,1,\mathbb{R}\right) \\
+\mathbb{R\oplus R}%
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,2,\mathbb{R}\right) \\
+M\left(  2,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,3,\mathbb{R}\right) \\
+M\left(  2,\mathbb{C}\right)
+\end{array}
+\\
+\left.  p\right.  \left/  q\right.  & 0 & 1 & 2 & 3
+\end{array}
+\right. \\
+&  \left.
+\begin{array}
+[c]{ccccc}%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,4,\mathbb{R}\right) \\
+M\left(  32,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,5,\mathbb{R}\right) \\
+M\left(  32,\mathbb{H}\right)  \oplus M\left(  32,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,6,\mathbb{R}\right) \\
+M\left(  64,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,7,\mathbb{R}\right) \\
+M\left(  128,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  8,8,\mathbb{R}\right) \\
+M\left(  256,\mathbb{R}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,4,\mathbb{R}\right) \\
+M\left(  16,\mathbb{H}\right)  \oplus M\left(  16,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,5,\mathbb{R}\right) \\
+M\left(  32,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,6,\mathbb{R}\right) \\
+M\left(  64,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,7,\mathbb{R}\right) \\
+M\left(  128,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  7,8,\mathbb{R}\right) \\
+M\left(  256,\mathbb{R}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,4,\mathbb{R}\right) \\
+M\left(  16,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,5,\mathbb{R}\right) \\
+M\left(  32,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,6,\mathbb{R}\right) \\
+M\left(  64,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,7,\mathbb{R}\right) \\
+M\left(  64,\mathbb{R}\right)  \oplus M\left(  64,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  6,8,\mathbb{R}\right) \\
+M\left(  128,\mathbb{R}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,4,\mathbb{R}\right) \\
+M\left(  16,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,5,\mathbb{R}\right) \\
+M\left(  32,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,6,\mathbb{R}\right) \\
+M\left(  32,\mathbb{R}\right)  \oplus M\left(  32,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,7,\mathbb{R}\right) \\
+M\left(  64,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  5,8,\mathbb{R}\right) \\
+M\left(  64,\mathbb{C}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,4,\mathbb{R}\right) \\
+M\left(  16,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,5,\mathbb{R}\right) \\
+M\left(  16,\mathbb{R}\right)  \oplus M\left(  16,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,6,\mathbb{R}\right) \\
+M\left(  32,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,7,\mathbb{R}\right) \\
+M\left(  32,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  4,8,\mathbb{R}\right) \\
+M\left(  32,\mathbb{H}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,4,\mathbb{R}\right) \\
+M\left(  8,\mathbb{R}\right)  \oplus M\left(  8,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,5,\mathbb{R}\right) \\
+M\left(  16,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,6,\mathbb{R}\right) \\
+M\left(  16,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,7,\mathbb{R}\right) \\
+M\left(  16,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  3,8,\mathbb{R}\right) \\
+M\left(  16,\mathbb{H}\right)  \oplus M\left(  16,\mathbb{H}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,4,\mathbb{R}\right) \\
+M\left(  8,\mathbb{R}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,5,\mathbb{R}\right) \\
+M\left(  8,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,6,\mathbb{R}\right) \\
+M\left(  8,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,7,\mathbb{R}\right) \\
+M\left(  8,\mathbb{H}\right)  \oplus M\left(  8,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  2,8,\mathbb{R}\right) \\
+M\left(  16,\mathbb{H}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,4,\mathbb{R}\right) \\
+M\left(  4,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,5,\mathbb{R}\right) \\
+M\left(  4,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,6,\mathbb{R}\right) \\
+M\left(  4,\mathbb{H}\right)  \oplus M\left(  4,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,7,\mathbb{R}\right) \\
+M\left(  8,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  1,8,\mathbb{R}\right) \\
+M\left(  16,\mathbb{C}\right)
+\end{array}
+\\%
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,4,\mathbb{R}\right) \\
+M\left(  2,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,5,\mathbb{R}\right) \\
+M\left(  2,\mathbb{H}\right)  \oplus M\left(  2,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,6,\mathbb{R}\right) \\
+M\left(  4,\mathbb{H}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,7,\mathbb{R}\right) \\
+M\left(  8,\mathbb{C}\right)
+\end{array}
+&
+\begin{array}
+[c]{c}%
+\operatorname*{Cl}\left(  0,8,\mathbb{R}\right) \\
+M\left(  16,\mathbb{R}\right)
+\end{array}
+\\
+4 & 5 & 6 & 7 & 8
+\end{array}
+\right)
+\end{align}
+
+
+\subsubsection{Example}
+
+Clifford algebra over Minkowski space $p=3,q=1$ is given by
+\begin{equation}
+C\left(  3,1\right)  =C\left(  2,0\right)  \otimes\mathcal{B}\left(
+\mathbb{\wedge R}^{1}\right)  \cong\mathcal{B}\left(  \mathbb{R}^{2}\right)
+\otimes\mathcal{B}\left(  \mathbb{R}^{2}\right)  \cong\mathcal{B}\left(
+\mathbb{R}^{4}\right)  .
+\end{equation}
+
+\end{document}

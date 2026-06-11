@@ -1,0 +1,1169 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, May 16, 2003 15:55:00}
+%TCIDATA{LastRevised=Sunday, January 25, 2004 08:59:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title[AGP\ Coh. States ]{Antisymmetrized Geminal Power Coherent States}
+\author{Brian Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+\keywords{}
+
+\begin{abstract}
+
+
+\end{abstract}
+\date{01/19/2004}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction\label{intro}}
+
+Isolated molecular systems do not interact with their environment and are thus
+unobservable. In order to have a physical effect and be observed they must
+respond to external probes, such as electromagnetic fields, and form a
+composite interacting system whose evolution is described by a joint
+Hamiltonian. The effect of radiation on the molecular subsystem can be
+monitored by changes in the molecules density and reduced density matrices. If
+the radiation is weak the behavior of the interaction is well described by the
+linear response of the molecular system to the radiation, i.e. is linearly
+proportional to the radiation strength, while if the radiation is intense the
+molecular system responds in a nonlinear way. The interaction of the
+electromagnetic field with molecules can be approximated in a standard semi
+classical fashion by averaging over the photonic degrees of freedom to produce
+effective one electron observables. This leads to a reduced Hamiltonian for
+the molecular subsystem that includes perturbing effective time dependent one
+body potentials which describe the interaction with the radiation field. In
+the case of weak intensity radiation, where the linear response regime is
+sufficient to describe the changes in the molecular system, one needs to only
+consider responses that are first order in these observables.
+
+The temporal behavior of a state of physical system is completely described by
+the evolution of its full density matrix, which in term determines the
+evolution of all of its reduced density matrices. These variations are
+conveniently expressed in terms of various propagators, which thus provide a
+comprehensive formulation of the response of the molecular subsystem to
+external probes. As is well known exact solutions for quantum evolutions have
+only been determined for simple model systems, and are not known for
+multi-electron molecular systems that involve coulombic interactions between
+electrons. Thus for practical applications the goal is to develop systematic,
+cost effective, theoretically well founded and non arbitrary approximation
+schemes, that are accurate enough to explain experimental results. A major
+focus of the illustrious career of professor Osvaldo Goscinski has been the
+analysis and construction of approximate propagators, that fulfill these
+objectives. In particular the one-electron and polarization propagators, where
+he effectively used the properties of super operators acting on operator
+manifolds associated with a given reference state to generate various orders
+of approximation \cite{Goscinski73}\cite{Pickup73}\cite{Goscinski69}%
+\cite{Goscinski70}\cite{Weiner80a}\cite{Goscinski80}\cite{Howat77a}. In this
+article I will concentrate, for illustrative purposes, on the polarization
+propagator for a molecular system with a fixed even number of electrons at a
+fixed geometry. This propagator describes the linear response of the First
+Order Reduced Density Matrix (FORDM) to electromagnetic radiation.
+
+The polarization propagator is a hermitian matrix of time dependent response
+functions of the matrix elements of the FORDM. If one takes the Laplace
+transform of this propagator and expresses the resulting matrix in diagonal
+form, in terms of normal mode operators, one can clearly observe that the
+poles of this propagator are excitation energies and the associated residues
+the transition probabilities for excitations generated by one particle
+operators between stationary states, $\left\{  \left\vert \Psi_{k}%
+\right\rangle \right\}  ,$ of the molecular system. If the initial molecular
+reference state is stationary (usually the ground state, but not necessarily
+so) then the poles are the excitation energies and the residues the transition
+probabilities from that state. If the transition probability is 100\% for a
+given one particle operator then this operator produces an excited state from
+the initial stationary state and is called a state excitation operator. If
+such an operator produces the excited state $\left\vert \Psi_{k}\right\rangle
+,$ then its effect on the reference state $\left\vert \Psi_{0}\right\rangle $
+is the same as the $N$-particle bra-ket operator $\left\vert \Psi
+_{k}\right\rangle \left\langle \Psi_{0}\right\vert .$
+
+Approximations to the polarization propagator are often based on following criteria,
+
+\begin{itemize}
+\item all one particle operators that diagonalize the propagator matrix are
+state excitation operators,
+
+\item their adjoints annihilate the reference state,
+
+\item the reference state is stationary with respect to at least one particle variations.
+\end{itemize}
+
+If an approximation satisfies these conditions one says that it is a
+consistent approximation, however, in general, usually one or more of these
+conditions are not satisfied and the approximation is inconsistent. Some
+approximations can even lead to propagators that do not correspond to a valid
+$N$-particle reference state and thus are not even $N$-representable.
+
+An important point of note is that it is not necessary that the normal mode
+one-particle operators actually produce excited states from the reference
+state, in fact, in the exact case they generally do not. Hence there is thus
+some level of ambiguity about polarization propagator approximations, if one
+is trying to obtain an approximation to a one-particle linear response
+function then the annihilation condition is not necessary, though stationarity
+and $N$-representability are desirable, while if one is asserting that the
+polarization propagator is a one-particle approximation to the full
+$N$-particle propagator and is used to produce excited states, as well as
+excitation energies and transition probabilities, then the annihilation
+condition is necessary for consistency.
+
+In the late 1970's it was found \cite{Weiner80}\cite{Weiner80a}%
+\cite{Goscinski80} \cite{Linderberg77}\cite{Ohrn79} that an Antisymmetrized
+Geminal Power (AGP) \cite{Coleman63} State was the most general $2M$ electron
+state that was annihilated by a maximal set of one electron operators, (for
+odd number of electrons Generalized AGP (GAGP) states \cite{Coleman65} are
+needed but their properties can be derived from AGP states). The $2M$-electron
+AGP $\left\vert g^{M}\right\rangle $ state is an antisymmetrized product of
+$M$ two particle geminals
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j<k\leq s}g_{jk}\left\vert \varphi
+_{j}\varphi_{k}\right\rangle
+\end{equation}
+where $\left\{  g_{ij}\right\}  $ are complex coefficients and $\left\{
+\left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq j\leq
+r=2s\right\}  $ is an orthonormal basis for the one particle Hilbert space
+$\mathcal{H}^{1}.$ However even when the reference state was an energy
+optimized AGP state the polarization propagator approximation failed to be
+consistent, in that the adjoints of the normal mode excitation operators did
+not annihilate the reference state, although the numerical results obtained
+from the application of this approximation scheme agreed well with
+experimental values of excitation energies and dipole induced transition
+probabilities, i.e. oscillator strengths, for example \cite{Sangfelt85}%
+\cite{Sangfelt84}\cite{Elander83}\cite{Goscinski82}\cite{Weiner83}%
+\cite{Sangfelt81} \cite{Weiner87}\cite{Sangfelt87}\cite{Ohrn85}\cite{Weiner85}%
+\cite{Weiner84a}\cite{Jensen82}\cite{Jorgen83}.
+
+It turns out that the annihilation condition can be naturally expressed in
+terms of group Coherent States (CS) \cite{Perelomov_book}\cite{Klauder}%
+\cite{Gilmore_book}, where the reference state corresponds to a lowest or
+highest weight state associated with a representation of the group. The basic
+ingredients needed for the construction of a family of group CS's in a vector
+space is the existence of an irreducible representation of a group and a one
+dimensional representation of a subgroup. The subgroup is called the isotropy
+or invariance group of the CS's and the family of CS's is generated by the
+action of the coset formed by factoring the group with respect to (wrt) this
+subgroup on a reference state. In the study of electronic systems it is
+natural to consider the real, compact, \cite{Encyclo} Lie group $U(r)$ of
+unitary transformations of the one electron state space $\mathcal{H}^{1}$ (of
+dimension $r=2s)$, that has irreducible representations on all $N$-electron
+state spaces $\mathcal{H}^{N}$. The family of CS's in this case are nonlinear
+manifolds of the $N$-electron Hilbert space, $\mathcal{H}^{N},$ generated by
+cosets formed by one-particle operators.
+
+One can construct approximate propagators based on stationary states of the
+restriction of the Time Dependent Schr\"{o}dinger Equation (TDSE) to these
+manifolds. Solutions to such restrictions of the TDSE are obtained by using
+the Time Dependent Variational Principle (TDVP) \cite{Kramer81} or
+equivalently the Stationary Phase Approximation (SPA) \cite{Schulman81} to the
+path integral expressed in terms of paths on this CS manifold. The resulting
+Equations of Motion (EOM)\ are those of a generalized \emph{classical }system
+described by a curved phase space, a consequence of the fact that a family of
+group coherent states forms a differentiable manifold \cite{Helgason78} whose
+tangent spaces have an intrinsic symplectic structure \cite{Encyclo}.
+Approximate stationary states of the molecular system then correspond to the
+special stationary phase "paths" that are critical points of the corresponding
+classical Hamiltonian. The linear response of these approximate stationary
+states to external perturbing fields then involves the generators of the Lie
+algebra of the group, and hence describes the response of the reduced density
+matrix formed by these operators. Thus the response of the FORDM\ is
+determined by generators of one-particle groups.
+
+In this article we will describe how different coset decompositions of the one
+particle unitary group $U(2s)$ correspond to different CS manifolds of
+AGP\ states and how these manifolds can be parameterized by the coordinates of
+the subspaces of the direct sum Lie algebra expansions adapted to these coset
+decompositions. These CS\ manifolds form generalized curved phase spaces in
+which classical EOM\ approximating the TDSE\ can be formulated, leading to a
+classical linear response theory of time dependent perturbations that extends
+and clarifies certain aspects of the quantum Random Phase Approximation and
+propagator approximations. However due to space limitations these
+considerations will be presented in future manuscripts.
+
+In section \ref{liealg} we discuss the Lie algebra structure of Fermi-Fock
+space, which is the direct sum of all of the state spaces $\left\{
+\mathcal{H}^{N}\right\}  $, in section \ref{one particle groups} we will
+describe the possible decompositions of the Lie algebra $u\left(  2s\right)  $
+of $U(2s)$, the one particle group associated with $\mathcal{H}^{1},$ and thus
+the factorizations of $U(2s)$ that lead to manifolds of coherent states in
+$\mathcal{H}^{N}$ that can be based on $U(2s)$. In section \ref{cohstate} we
+study in detail the form of AGP\ coherent states. We conclude with a
+discussion in section \ref{discussion}.
+
+\section{Lie Algebras\label{liealg}}
+
+The most convenient representation of the generators of the Lie algebra of
+$U(2s)$ for fermionic quantum mechanics is by second quantized operators
+acting in Fermi-Fock space, $\mathcal{H}_{F}$, which is defined to be the
+direct sum
+\begin{equation}
+\mathcal{H}_{F}=%
+%TCIMACRO{\tbigoplus \limits_{0\leq N\leq r}}%
+%BeginExpansion
+{\textstyle\bigoplus\limits_{0\leq N\leq r}}
+%EndExpansion
+\mathcal{H}^{N}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{H}^{N}=%
+%TCIMACRO{\tbigwedge }%
+%BeginExpansion
+{\textstyle\bigwedge}
+%EndExpansion
+\mathcal{H}^{1}%
+\end{equation}
+is the $N$ -fold antisymmetric tensor product of the one particle state space
+$\mathcal{H}^{1}$, a space generated by an orthonormal basis of one particle
+functions of position and spin
+\begin{equation}
+\left\{  \left.  \varphi_{j}\right\vert 1\leq j\leq r\right\}  .
+\end{equation}
+The Banach space \cite{Encyclo} of bounded operators acting in $\mathcal{H}%
+_{F}$ is denoted by $\mathcal{B}\left(  \mathcal{H}_{F}\right)  ,$ and is
+spanned by a second quantized operator basis
+\begin{equation}
+\left\{  \left.  a_{j_{1}}^{\dagger}\cdots a_{j_{p}}^{\dagger}a_{k_{q}}\cdots
+a_{k_{1}}\right\vert 1\leq j_{1}<\cdots j_{p}\leq r;1\leq k_{1}<\cdots
+k_{p}\leq r;1\leq p,q\leq r\right\}
+\end{equation}
+where the second quantized operators $\left\{  a_{j}^{\dagger},a_{j}\right\}
+$ act on the zero particle vacuum $\left\vert \phi\right\rangle $ in the
+following fashion%
+\begin{align}
+a_{j}\left\vert \phi\right\rangle  &  =0\nonumber\\
+a_{j}^{\dagger}\left\vert \phi\right\rangle  &  =\left\vert \varphi
+_{j}\right\rangle
+\end{align}
+and satisfy the Canonical Anti-commutation Relationships (CAR)
+\begin{equation}
+\left[  a_{j}^{\dagger},a_{k}\right]  _{+}=\delta_{jk}I
+\end{equation}
+The operator space $\mathcal{B}\left(  \mathcal{H}_{F}\right)  $ contains
+realizations of many classical Lie groups, algebras and universal enveloping
+algebras \cite{Encyclo}. In particular the generators
+\begin{equation}
+\left\{  a_{j}^{\dagger},a_{k},a_{j}^{\dagger}a_{k}-\frac{1}{2}\delta
+_{jk}I,a_{j}^{\dagger}a_{k}^{\dagger},a_{j}a_{k};1\leq j\leq k\leq r\right\}
+\end{equation}
+satisfy the commutation relationships of the lie algebra $so\left(
+2r+1,\mathbb{R}\right)  ,$ (see \cite{Gilmore_book} for example for the
+definitions of classical lie groups and algebras), and generate a
+representation of the universal enveloping algebra $so\left(  2r+1,\mathbb{R}%
+\right)  $ in $\mathcal{B}\left(  \mathcal{H}_{F}\right)  ,$ which is fact all
+of $\mathcal{B}\left(  \mathcal{H}_{F}\right)  .$ The subset of these
+generators
+\begin{equation}
+\left\{  a_{j}^{\dagger}a_{k}-\frac{1}{2}\delta_{jk}I,a_{j}^{\dagger}%
+a_{k}^{\dagger},a_{j}a_{k};1\leq j\leq k\leq r\right\}
+\end{equation}
+satisfy the commutation relationships of the lie algebra of $so\left(
+2r,\mathbb{R}\right)  $ and generate a representation of the universal
+enveloping algebra of $so\left(  2r,\mathbb{R}\right)  $ in $\mathcal{B}%
+\left(  \mathcal{H}_{F}\right)  .$ The subset of these generators
+\begin{equation}
+\left\{  a_{j}^{\dagger}a_{k}-\frac{1}{2}\delta_{jk}I;1\leq j\leq k\leq
+r\right\}
+\end{equation}
+satisfy the commutation relationships of the lie algebra $u\left(  r\right)  $
+and generate a representation of the universal enveloping algebra of $u\left(
+r\right)  $ in $\mathcal{B}\left(  \mathcal{H}_{F}\right)  $. The
+representation of $so\left(  2r+1,\mathbb{R}\right)  $ is irreducible, while
+the representations of $so\left(  2r,\mathbb{R}\right)  $ and $u\left(
+r\right)  $ are reducible. The irreducible representations of $so\left(
+2r,\mathbb{R}\right)  $ are obtained by restricting to the subspace of even or
+odd number states in $\mathcal{H}_{F},$ while the irreducible representations
+of $u\left(  r\right)  $ are obtained by restricting to subspaces of states of
+fixed integer particle number.
+
+\section{One Particle Groups \label{one particle groups}}
+
+In this section we describe the possible direct sum decompositions of the lie
+algebra, $u(2s),$ of the group $U(2s)$ of unitary transformations of one
+particle state space, $\mathcal{H}^{1}$ of dimension $2s,$ which lead in a
+canonical fashion to families of CS's in $N$-particle state space
+$\mathcal{H}^{N}$. These decompositions are based on the subgroup of special
+orthogonal transformations, $SO\left(  2s,\mathbb{R}\right)  ,$ of a real
+$2s$-dimensional Hilbert space, the subgroup, $U\left(  N\right)  \times
+U\left(  2s-N\right)  $, formed by products of unitary transformations of
+complex $N$ and $2s-N$ dimensional Hilbert spaces and the subgroup,
+$USp\left(  2s\right)  $, of transformations of a complex $2s$-dimensional
+Hilbert space, that are simultaneously unitary and symplectic. This latter
+subgroup is isomorphic to the group of unitary transformations, $U\left(
+s,\mathbb{Q}\right)  $ of a quaternionic $s$-dimensional Hilbert space. We
+signify the CS's that they induce as $G/K$-CS's, where $G=U\left(  2s\right)
+$ and the subgroup $K\in\left\{  SO\left(  2s,\mathbb{R}\right)  ,U\left(
+N\right)  \times U\left(  2s-N\right)  ,USp\left(  2s\right)  \right\}  $.
+
+The Lie algebra $u(2s)$ has three direct sum Cartan decompositions
+\cite{Encyclo} which are in terms of the Lie algebras, $so\left(
+2s,\mathbb{R}\right)  ,$ $\left[  u\left(  N\right)  \oplus u\left(
+2s-N\right)  \right]  ,$ and $usp\left(  2s\right)  ,$ of its maximal compact
+\cite{Encyclo} subgroups $SO\left(  2s,\mathbb{R}\right)  ,$ $\left[  U\left(
+N\right)  \times U\left(  2s-N\right)  \right]  ,$ and $USp\left(  2s\right)
+$, (see \cite{Gilmore_book} for the definitions of these groups). These
+decompositions are%
+\begin{subequations}
+\begin{align}
+u\left(  2s\right)   &  =so\left(  2s,\mathbb{R}\right)  \oplus so\left(
+2s,\mathbb{R}\right)  ^{\bot}\label{d1}\\
+u\left(  2s\right)   &  =\left[  u\left(  N\right)  \oplus u\left(
+2s-N\right)  \right]  \oplus\left[  u\left(  N\right)  \oplus u\left(
+2s-N\right)  \right]  ^{\bot};\quad0\leq N\leq2s\label{d2}\\
+u\left(  2s\right)   &  =usp\left(  2s\right)  \oplus usp\left(  2s\right)
+^{\bot} \label{d3}%
+\end{align}
+where the orthogonality is with respect to the killing form inner product
+\cite{Encyclo} of $u(2s)$. The decomposition eqs. $\left(  \ref{d1}%
+,\ref{d2},\ref{d3}\right)  $ define the following distinct coset
+decompositions of $U(2s)$%
+\end{subequations}
+\begin{subequations}
+\begin{align}
+&  U\left(  2s\right)  \left/  U\left(  N\right)  \otimes U\left(
+2s-N\right)  \overset{}{}\right.  ;\quad0\leq N\leq2s\label{c1}\\
+&  U\left(  2s\right)  \left/  USp\left(  2s\right)  \overset{}{}\right.
+\label{c2}\\
+&  U\left(  2s\right)  \left/  SO\left(  2s,\mathbb{R}\right)  \overset{}%
+{}\right.  \label{c3}%
+\end{align}
+and thus three classes of families of coherent states (see Section
+\ref{cohstate}).
+
+The motivation of using \emph{maximal} compact subgroups in eqs. $\left(
+\ref{c1}\right)  ,\left(  \ref{c2}\right)  $ and $\left(  \ref{c3}\right)  $
+is to produce coset spaces that are irreducible Riemannian Manifolds
+\cite{Helgason78} (a Riemannian Manifold has tangent spaces that are inner
+product spaces) i.e. they cannot be factored into a Riemannian product of
+smaller Riemannian Manifolds. This technical feature, although important in
+the classification of Riemannian Manifolds, is too restrictive when
+considering manifolds of CS's, where we also need to examine decompositions
+generated by subgroups of these maximal compact groups. We thus enlarge the
+designation $G/K$-CS to include subgroups of $K$.
+
+In order for any of the subgroups
+\end{subequations}
+\begin{equation}
+\left\{  SO\left(  2s,\mathbb{R}\right)  ,\left\{  \left.  U\left(  N\right)
+\otimes U\left(  2s-N\right)  \right\vert 0\leq N\leq2s\right\}  ,USp\left(
+2s\right)  \right\}  ,
+\end{equation}
+or their subgroups, to be isotropy groups of a given $N$-electron state, the
+state must carry a one dimensional unitary representation of that subgroup and
+not of any larger subgroup containing that subgroup.
+
+There are \emph{no} states in $\mathcal{H}^{N}$ that produce a one-dimensional
+representation of $SO\left(  2s,\mathbb{R}\right)  $ and we conjecture (see
+Appendix \ref{conjecture}) that there are \emph{no }subgroups of $SO\left(
+2s,\mathbb{R}\right)  ,$ which \emph{are not} subgroups of $U\left(  N\right)
+\otimes U\left(  2s-N\right)  $ or $USp\left(  2s\right)  ,$ that produce
+one-dimensional representations on $\mathcal{H}^{N}$. Thus there are \emph{no
+}CS manifolds in $\mathcal{H}^{N}$ based on subgroups of $SO\left(
+2s,\mathbb{R}\right)  $ that cannot be described in terms of $U\left(
+N\right)  \otimes U\left(  2s-N\right)  $ or $USp\left(  2s\right)  $ CS's.
+
+The only subgroup from the set $\left\{  \left.  U\left(  N\right)  \otimes
+U\left(  2s-N\right)  \right\vert 0\leq N\leq2s\right\}  $ that produces a
+one-dimensional representations in $\mathcal{H}^{N}$ is $U\left(  N\right)
+\otimes U\left(  2s-N\right)  .$ The $U\left(  2s\right)  \left/  U\left(
+N\right)  \otimes U\left(  2s-N\right)  \overset{}{}\right.  $-coherent states
+give the well known Thouless parameterization \cite{Thouless60} of the
+manifold of Independent Particle States (IPS) and lead to the standard Random
+Phase Approximation (RPA) for the linear response function. The subgroup
+$U\left(  N\right)  \otimes U\left(  2s-N\right)  $ is actually a subgroup of
+$USp\left(  2s\right)  $ when $N=2M$ and we display in section $\left(
+\ref{cohstate}\right)  $ that $U\left(  2s\right)  /\left[  U\left(  N\right)
+\otimes U\left(  2s-N\right)  \right]  $-CS's can in fact be described in
+terms of the class of $U\left(  2s\right)  /USp\left(  2s\right)  $-CS's.
+
+We show by construction in section $\left(  \ref{cohstate}\right)  $ that the
+group $USp\left(  2s\right)  $ and its subgroups do have one dimensional
+representations in $\mathcal{H}^{N}=\mathcal{H}^{2M}$ and one can form
+\begin{equation}
+U\left(  2s\right)  /K-\text{coherent states, where }USp\left(  2s\right)
+\supseteq K, \label{USPCS}%
+\end{equation}
+which are manifolds of general Antisymmetrized Geminal Power (AGP) states (see
+Appendix \ref{AGP}). All manifolds of CS's in $\mathcal{H}^{2M}$ based on
+$U\left(  2s\right)  $ can thus be expressed in terms of the cosets eq.
+$\left(  \ref{USPCS}\right)  $ which have the form
+\begin{equation}
+U\left(  2s\right)  \left/  \left[  USp\left(  2\omega_{1}\right)
+\cdots\times USp\left(  2\omega_{p}\right)  \times SU\left(  2\right)
+^{\sigma}\times SU\left(  2\xi\right)  \right]  \overset{}{}\right.  ,
+\end{equation}
+where
+\begin{equation}
+SU\left(  2\right)  ^{\sigma}=\,\overset{\sigma-\text{factors}}{\overbrace
+{SU\left(  2\right)  \times\cdots\times SU\left(  2\right)  }},
+\end{equation}
+the index set $\left\{  \sigma,\omega_{1},\cdots,\omega_{\rho},\xi\right\}  $
+characterizes the type of AGP\ reference state and its elements satisfy
+\begin{align}
+2\sigma+2\omega+2\xi &  =r=2s\nonumber\\
+\omega &  =\sum_{1\leq j\leq\rho}\omega_{j}.
+\end{align}
+The index set $\left\{  \sigma,\omega_{1},\cdots,\omega_{\rho},\xi\right\}  $
+is determined by the array $\left\{  \left.  c_{j}\right\vert 1\leq j\leq
+s\right\}  $ of canonical canonical coefficients \cite{Weiner&ortiz04} of the
+geminal that determines the AGP\ state according to:
+
+\begin{description}
+\item[$\cdot$] $\sigma=$ number of non zero, non equal $\left\{
+c_{j}\right\}  $'s
+
+\item[$\cdot$] $\omega_{j}=$ number of equal coefficients in the $j^{th}$ set
+
+\item[$\cdot$] $\rho=$ number of sets of equal $\left\{  c_{j}\right\}  $'s
+
+\item[$\cdot$] $\xi=$ number of zero coefficients.
+\end{description}
+
+If $\xi=0$ and $\omega=0\Leftrightarrow\rho=0,$ i.e. all the coefficients are
+different and non zero, then the isotropy subgroup is
+\begin{equation}
+SU\left(  2\right)  ^{s}=\overset{s-\text{factors}}{\overbrace{SU\left(
+2\right)  \times\cdots\times SU\left(  2\right)  }}%
+\end{equation}
+which is the smallest one possible, leading to the biggest coset.\ In this
+case the action of coset on the reference AGP generates the manifold of all
+AGP\ states. If $\xi\neq0$ the reference AGP\ is produced by a degenerate
+geminal and the action of the associated coset only produces a submanifold of
+AGP\ states, all of which correspond to geminals that have the same null space
+$\left(  \text{see Appendix \ref{AGP}}\right)  $ as the reference AGP. If
+$\rho\neq0$ then the geminal has some extreme components and again the coset
+only generates a sub manifold of AGP's from the reference. If $\sigma=0$,
+$\xi=0$ and $\rho=s$ then the reference state is an extreme AGP\ (see Appendix
+\ref{agp}) and the action of the coset on the reference produces the manifold
+of \emph{all }extreme AGP states.
+
+All CS manifolds in $\mathcal{H}^{2M}$ based on the one particle group
+$U\left(  2s\right)  $ are families of AGP\ states, some of these manifolds
+are irreducible Riemannian manifolds and correspond to cosets formed by the
+maximal compact subgroups $U\left(  2M\right)  \otimes U\left(  2s-2M\right)
+$ and $USp\left(  2s\right)  ,$ while others are reducible and correspond to
+non maximal compact subgroups $USp\left(  2\omega_{1}\right)  \cdots\times
+USp\left(  2\omega_{p}\right)  \times SU\left(  2\right)  ^{\sigma}\times
+SU\left(  2\xi\right)  $. Each of these manifolds of CS's have certain basic
+physical properties e.g. $U\left(  2M\right)  \otimes U\left(  2s-2M\right)  $
+invariant manifold describes uncorrelated Independent Particle States (IPS's),
+the $USp\left(  2s\right)  $ invariant manifold describes highly correlated
+extreme AGP\ states that are superconducting, while the $USp\left(
+2\omega_{1}\right)  \cdots\times USp\left(  2\omega_{\rho}\right)  \times
+SU\left(  2\right)  ^{\sigma}\times SU\left(  2\xi\right)  $ invariant
+manifold for general $\left\{  \omega_{1},\cdots,\omega_{\rho},\sigma
+,\xi\right\}  $ describe intermediate types of correlation and linear response
+properties, see for a particular example \cite{Goscinski82a}, most of which
+have not been explored in any depth.
+
+\section{Coherent States\label{cohstate}}
+
+\subsection{Definition and Construction\label{def}}
+
+The coherent state construction is based on the Hilbert space of states
+$\mathcal{H}$ that carries unitary irreducible representations $\mathcal{R}%
+\left(  G\right)  $ of a compact group $G$ on $\mathcal{H}$ and a one
+dimensional representation of a subgroup $K\subset G$. The groups $G$ we
+consider are $U\left(  \mathcal{H}^{N}\right)  $ and $U\left(  \mathcal{H}%
+^{1}\right)  $ the groups associated with $N$-electron state space and
+$1$-electron state space respectively. In the finite dimensional case these
+groups are the classical matrix groups and $U\left(  \mathcal{H}^{N}\right)
+\equiv U\left(  \left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  \right)  $ and $U\left(  \mathcal{H}^{1}\right)  \equiv U\left(
+r\right)  ,$ in general we will use the matric notation even though in an
+exact treatment $r=\infty$ and one should be aware of possible infinite
+dimensional pathologies. The irreducible representations we consider are
+$\mathcal{R}\left(  U\left(  \left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  \right)  \right)  $ and $\mathcal{R}\left(  U\left(  r\right)
+\right)  $ that are carried by $\mathcal{H}^{N},$ unless otherwise stated we
+will not distinguish between the groups $G$ and $K$ and their representations
+on $\mathcal{H}^{N}$.
+
+A state $\left\vert \Phi\right\rangle \in\mathcal{H}^{N}$ is a reference state
+for a group $G$ if there is an isotropy subgroup $K$ that is contained in $G$
+that has $1$-dimensional representation on $\mathcal{H}^{N}$ defined by
+\begin{equation}
+K=\left\{  \left.  g\right\vert \quad\mathcal{R}\left(  g\right)  \left\vert
+\Phi\right\rangle =e^{i\theta\left(  g\right)  }\left\vert \Phi\right\rangle
+;g\in G;\theta\left(  g\right)  \in\mathbb{R}\right\}  . \label{subgpcon}%
+\end{equation}
+If such isotropy groups exists $G$ can be factored as%
+\begin{equation}
+G=\left(  G/K\right)  K.
+\end{equation}
+
+
+\subsection{AGP\ Coherent States}
+
+The group $U\left(  2s\right)  $ has subgroups that leave reference
+$2M$-electron AGP\ states,$\left\vert g^{\frac{N}{2}}\right\rangle $ invariant
+up to an overall phase factor and thus satisfy eq. $\left(  \ref{subgpcon}%
+\right)  $. AGP states are given \cite{Weiner&ortiz04} by%
+\begin{equation}
+\left\vert g^{\frac{N}{2}}\right\rangle =\sum_{1\leq j_{1}<j_{2}%
+<\cdots<j_{\frac{N}{2}}\leq s}c_{j_{1}}\cdots c_{j_{\frac{N}{2}}}\left\vert
+\eta_{j_{1}}\eta_{j_{1}+s}\cdots\eta_{j_{N}}\eta_{j_{N}+s}\right\rangle ,
+\label{canexp}%
+\end{equation}
+where $\left\{  \left.  \left\vert \eta_{j}\right\rangle \right\vert 1\leq
+j\leq r\right\}  $ is a complete orthonormal basis for $\mathcal{H}^{1},$
+$\left\{  \left.  c_{j_{1}}\right\vert 1\leq j\leq s\right\}  $ are positive
+real numbers called the canonical coefficients of the two electron geminal
+$\left\vert g\right\rangle $ which can be expanded in canonical form as%
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}c_{j_{1}}\left\vert \eta
+_{j}\eta_{j+s}\right\rangle . \label{gemcan}%
+\end{equation}
+The state $\left\vert g^{\frac{N}{2}}\right\rangle $ can also be expressed in
+terms of the coset $SO\left(  2r,\mathbb{R}\right)  /SU\left(  r\right)  $ of
+the group $SO\left(  2r,\mathbb{R}\right)  $ acting on the zero particle
+vacuum state $\left\vert \phi\right\rangle $ of $\mathcal{H}_{F}$
+\cite{Deumens87} as
+\begin{equation}
+\left\vert g^{\frac{N}{2}}\right\rangle =P_{\frac{N}{2}}\exp\left\{
+\sum_{1\leq j\leq s}c_{j_{1}}b_{j}^{\dagger}b_{j+s}^{\dagger}\right\}
+\left\vert \phi\right\rangle
+\end{equation}
+where $P_{\frac{N}{2}}$ is the orthogonal projector onto $\mathcal{H}^{N}$ and
+$\left\{  \left.  b_{j}^{\dagger}\right\vert 1\leq j\leq s\right\}  $ are the
+creators for the one particle states $\left\{  \left.  \left\vert \eta
+_{j}\right\rangle \right\vert 1\leq j\leq r\right\}  $ i.e.
+\begin{equation}
+b_{j}^{\dagger}\left\vert \phi\right\rangle =\left\vert \eta_{j}\right\rangle
+.
+\end{equation}
+
+
+\subsection{Coset Factorization for $U\left(  2s\right)  $\label{factor}}
+
+In general the action of $U\left(  2s\right)  $ on a reference AGP,
+$\left\vert g^{\frac{N}{2}}\right\rangle $, state produces a manifold,
+$\mathcal{M}\left(  \sigma,\omega_{1},\cdots,\omega_{\rho},\xi\right)  $ of
+AGP states given by
+\begin{equation}
+\left\{  \left[  U\left(  2s\right)  \left/  K\overset{}{}\right.  \right]
+\times K\right\}  \left\vert g^{\frac{N}{2}}\right\rangle . \label{su2act}%
+\end{equation}
+where
+\begin{equation}
+K=USp\left(  2\omega_{1}\right)  \cdots\times USp\left(  2\omega_{p}\right)
+\times SU\left(  2\right)  ^{\sigma}\times SU\left(  2\xi\right)  .
+\end{equation}
+Each element of the manifold can be expressed as
+\begin{equation}
+\left\vert g\left(  c\right)  ^{\frac{N}{2}}\right\rangle =ck_{\omega_{1}%
+}\cdots k_{\omega_{\rho}}k_{\sigma}k_{\xi}\left\vert g^{\frac{N}{2}%
+}\right\rangle =c\left\vert g^{\frac{N}{2}}\right\rangle ,
+\end{equation}
+where the isotropy subgroup is given by the products $k_{\omega_{1}}\cdots
+k_{\omega_{\rho}}k_{\sigma}k_{\xi}$ where%
+\begin{equation}
+k_{\omega_{j}}\in USp\left(  2\omega_{j}\right)  ;1\leq j\leq\rho,k_{\sigma
+}\in SU\left(  2\right)  ^{\sigma},k_{\xi}\in SU\left(  2\xi\right)  ,
+\end{equation}
+$c\in U\left(  2s\right)  /K$ and the reference AGP is generated by a geminal
+$\left\vert g\right\rangle $ in the class $\left\{  \rho,\sigma,\xi\right\}
+.$ The most general AGP manifold is produced when $\sigma=s$ ($\Leftrightarrow
+\left(  \rho=0\text{ \& }\xi=0\right)  $ ) so it is advantages to first
+consider that case.
+
+\subsection{$SU\left(  2\right)  ^{s}$ factors}
+
+The isotropy sub group, $K$, for an AGP reference state that has non equal and
+nonzero canonical coefficients $\left\{  \left.  c_{j}\right\vert 1\leq j\leq
+s\right\}  ,$ i.e. $\sigma=s,$ is the product group $SU\left(  2\right)
+^{s},$ which produces the coset decomposition
+\begin{equation}
+U\left(  2s\right)  =\left[  U\left(  2s\right)  /SU\left(  2\right)
+^{s}\right]  \times SU\left(  2\right)  ^{s}.
+\end{equation}
+One can express coset representatives in a factored form as the product
+$G_{+1}G_{0}G_{-1}$, \cite{Zhang90} where $\left\{  G_{+1},G_{0}%
+,G_{-1}\right\}  $ are subgroups of the linear group $GL\left(  2s,\mathbb{C}%
+\right)  ,\ $which is the complexification of $U\left(  2s\right)  ,$ and the
+group $G_{-1}$ leaves the reference AGP state invariant (note that it is
+different to the real compact isotropy groups). Restricting attention to the
+connected components of these subgroups, that contain the identity element,
+one can express this factorization in terms of Lie algebras as
+\begin{equation}
+U\left(  2s\right)  =e^{N_{+}}e^{N_{0}}e^{N_{-}}e^{\mathcal{K}}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{K}=\,\overset{s\text{-subspaces}}{\overbrace{su\left(  2\right)
+\oplus\cdots\oplus su\left(  2\right)  }},
+\end{equation}
+$\left\{  N_{+1},N_{0},N_{-1}\right\}  $ are Lie subalgebras of $gl\left(
+2s,\mathbb{C}\right)  ,$ the Lie algebra of $GL\left(  2s,\mathbb{C}\right)
+$. The subalgebras $\left\{  N_{-1},\mathcal{K}\right\}  $ annihilate
+$\left\vert g^{\frac{N}{2}}\right\rangle $ i.e.
+\begin{equation}
+b\left\vert g^{\frac{N}{2}}\right\rangle =0\quad\forall b\in N_{-1}%
+\oplus\mathcal{K},
+\end{equation}
+while the subalgebras $\left\{  N_{+1},N_{0}\right\}  $ have the property
+\begin{equation}
+b\left\vert g^{\frac{N}{2}}\right\rangle \neq0\quad\forall b\in N_{+1}\oplus
+N_{0}.
+\end{equation}
+Introducing coordinate systems $\left\{  \mathbf{z}_{+},\mathbf{\lambda,z}%
+_{-},\mathbf{\eta}\right\}  $ with respect to fixed bases of $\left\{
+N_{+1},N_{0},N_{-1},\mathcal{K}\right\}  ,$ that depend on the reference AGP
+state, one can parameterize group elements $u\in U\left(  2s\right)  $ as
+\begin{equation}
+u\left(  \mathbf{\tilde{z},\eta}\right)  =\tilde{c}\left(  \mathbf{\tilde{z}%
+}\right)  k\left(  \mathbf{\eta}\right)  =c_{+1}\left(  \mathbf{z}_{+}\right)
+c_{0}\left(  \mathbf{\lambda}\right)  c_{-1}\left(  \mathbf{z}_{-}\right)
+k\left(  \mathbf{\eta}\right)  .
+\end{equation}
+The action of $U\left(  2s\right)  $ on the AGP state is
+\begin{equation}
+u\left(  \mathbf{\tilde{z},\eta}\right)  \left\vert g^{\frac{N}{2}%
+}\right\rangle =\tilde{c}\left(  \mathbf{\tilde{z}}\right)  k\left(
+\mathbf{\eta}\right)  \left\vert g^{\frac{N}{2}}\right\rangle =c_{+1}\left(
+\mathbf{z}_{+}\right)  c_{0}\left(  \mathbf{\lambda}\right)  c_{-1}\left(
+\mathbf{z}_{-}\right)  k\left(  \mathbf{\eta}\right)  \left\vert g^{\frac
+{N}{2}}\right\rangle =c_{+1}\left(  \mathbf{z}_{+}\right)  c_{0}\left(
+\mathbf{\lambda}\right)  \left\vert g^{\frac{N}{2}}\right\rangle ,
+\end{equation}
+showing that the non redundant coordinates $\mathbf{z}\equiv\left(
+\mathbf{z}_{+},\mathbf{\lambda}\right)  $ describe a configuration space, that
+is a sub manifold $\mathcal{M}$ (in general nonlinear) of $\mathcal{H}^{N}$
+with a coordinate system $\left\{  \mathbf{z}\right\}  ,$ that parameterize
+the set of $\left\{  \left\vert \Phi\left(  \mathbf{z}\right)  \right\rangle
+\right\}  $ of $U\left(  2s\right)  /SU\left(  2\right)  ^{s}$-coherent
+states
+\begin{equation}
+\left\vert \Phi\left(  \mathbf{z}\right)  \right\rangle =c_{+1}\left(
+\mathbf{z}_{+}\right)  c_{0}\left(  \mathbf{\lambda}\right)  \left\vert
+g^{\frac{N}{2}}\right\rangle \equiv c\left(  \mathbf{z}\right)  \left\vert
+g^{\frac{N}{2}}\right\rangle ,
+\end{equation}
+and at the same time represents the coset space $U\left(  2s\right)
+/SU\left(  2\right)  ^{s}$. The reference AGP is generated by a geminal
+$\left\vert g\right\rangle $ in the class $\left\{  \rho,\sigma,\xi\right\}
+=\left\{  0,s,0\right\}  $
+
+The AGP\ state dependent bases one chooses are
+\begin{subequations}
+\begin{align}
+N_{+1}  &  =\mathbb{C-}\operatorname{linspan}\left\{  c_{j}a_{k}^{\dagger
+}a_{j}-\sigma\left(  j\right)  \sigma\left(  k\right)  c_{k}a_{-j}^{\dagger
+}a_{-k};\right. \nonumber\\
+&  \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+\quad\quad\quad\left.  -s\leq j<k\leq s,\left\vert j\right\vert \neq\left\vert
+k\right\vert ;\,\sigma\left(  j\right)  =\operatorname{sign}\left(  j\right)
+\right\} \label{l1}\\
+N_{0}  &  =\mathbb{C-}\operatorname{linspan}\left\{  \left(  a_{j}^{\dagger
+}a_{j}+a_{-j}^{\dagger}a_{-j}\right)  ,\left(  a_{j}^{\dagger}a_{-j}%
++a_{-j}^{\dagger}a_{j}\right)  ,\left(  a_{j}^{\dagger}a_{j}-a_{-j}^{\dagger
+}a_{-j}\right)  ,\right. \nonumber\\
+&  \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+\quad\quad\quad\quad\quad\quad\quad\quad\quad\left.  i\left(  a_{j}^{\dagger
+}a_{-j}-a_{-j}^{\dagger}a_{j}\right)  ;1\leq j\leq s\right\} \label{l2}\\
+N_{-1}  &  =\mathbb{C-}\operatorname{linspan}\left\{  c_{k}a_{k}^{\dagger
+}a_{j}+\sigma\left(  j\right)  \sigma\left(  k\right)  c_{j}a_{-j}^{\dagger
+}a_{-k}\right. \nonumber\\
+&  \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+\quad\quad\quad\left.  -s\leq j<k\leq s,\left\vert j\right\vert \neq\left\vert
+k\right\vert ;\,\sigma\left(  j\right)  =\operatorname{sign}\left(  j\right)
+\right\} \label{l3}\\
+\mathcal{K}  &  =\mathbb{R-}\operatorname{linspan}\left\{  i\left(
+a_{j}^{\dagger}a_{-j}+a_{-j}^{\dagger}a_{j}\right)  ,i\left(  a_{j}^{\dagger
+}a_{j}-a_{-j}^{\dagger}a_{-j}\right)  ,\left(  a_{j}^{\dagger}a_{-j}%
+-a_{-j}^{\dagger}a_{j}\right)  ;\quad1\leq j\leq s\right\}  , \label{l4}%
+\end{align}
+where we have translated the indexing of the CGSO's by
+\end{subequations}
+\begin{equation}
+\left\vert \eta_{j}\right\rangle \rightarrow\left\vert \eta_{j-s}\right\rangle
+\quad1\leq j\leq2s.
+\end{equation}
+It is useful to note that
+\begin{equation}
+N_{0}=\left\{  \mathcal{K\oplus N}\right\}  ^{\mathbb{C}}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{N=\,}%
+%TCIMACRO{\tbigoplus _{1\leq j\leq s}}%
+%BeginExpansion
+{\textstyle\bigoplus_{1\leq j\leq s}}
+%EndExpansion
+\left\{  \mathbb{R-}\operatorname{linspan}\left\{  \left.  \left(
+a_{j}^{\dagger}a_{j}+a_{-j}^{\dagger}a_{-j}\right)  \right\vert \quad1\leq
+j\leq s\right\}  \right\}  .
+\end{equation}
+and $\left\{  {}\right\}  ^{\mathbb{C}}$ denotes complexification. The factors
+in the group decomposition are%
+\begin{align}
+c_{+1}\left(  \mathbf{z}_{+}\right)   &  =\exp\left\{  \sum
+\limits_{\substack{-s\leq j<k\leq s\\\left\vert j\right\vert \neq\left\vert
+k\right\vert }}z_{+jk}\left\{  c_{j}a_{k}^{\dagger}a_{j}-\sigma\left(
+j\right)  \sigma\left(  k\right)  c_{k}a_{-j}^{\dagger}a_{-k}\right\}
+\right\}  =\exp\sum\limits_{_{\substack{-s\leq j<k\leq s\\\left\vert
+j\right\vert \neq\left\vert k\right\vert }}}z_{+jk}q_{jk}^{\dagger
+};\label{co1}\\
+c_{-1}\left(  \mathbf{z}_{-}\right)   &  =\exp\left\{  \sum
+\limits_{\substack{-s\leq j<k\leq s\\\left\vert j\right\vert \neq\left\vert
+k\right\vert }}z_{-jk}\left\{  c_{k}a_{k}^{\dagger}a_{j}+\sigma\left(
+j\right)  \sigma\left(  k\right)  c_{j}a_{-j}^{\dagger}a_{-k}\right\}
+\right\}  =\exp\sum\limits_{_{\substack{-s\leq j<k\leq s\\\left\vert
+j\right\vert \neq\left\vert k\right\vert }}}z_{-jk}q_{jk}\label{co2}\\
+c_{0}\left(  \mathbf{\lambda}\right)   &  =\exp\left\{  \sum
+\limits_{_{\substack{1\leq j<\leq s\\1\leq k\leq4}}}\lambda_{jk}n_{jk}\right\}
+\label{co3}\\
+h\left(  \mathbf{\eta}\right)   &  =\exp\left\{  \sum
+\limits_{_{\substack{1\leq j<\leq s\\1\leq k\leq3}}}\eta_{jk}u_{jk}\right\}
+\label{co4}%
+\end{align}
+where $\left\{  z_{+jk},z_{-jk}\right\}  \in\mathbb{C},\left\{  \lambda
+_{jk},\eta_{jk}\right\}  \in\mathbb{R}$ , and $\left\{  n_{jk},u_{jk}\right\}
+$ are given by equ's. $\left(  \ref{l2}\right)  $ and $\left(  \ref{l4}%
+\right)  $ respectively.
+
+In order that the transformation $c_{+1}\left(  \mathbf{z}_{+}\right)
+c_{0}\left(  \mathbf{\lambda}\right)  c_{-1}\left(  \mathbf{z}_{-}\right)
+k\left(  \mathbf{\eta}\right)  $ be unitary the values of $\left\{
+\mathbf{z}_{+},\mathbf{\lambda,z}_{-}\right\}  $ must be constrained resulting
+in dependencies between the variables. The action of such unitary
+transformations on a normalized reference state produce normalized coherent
+states that can be expressed in terms of the coset representatives
+$c_{+1}\left(  \mathbf{z}_{+}\right)  c_{0}\left(  \mathbf{\lambda}\right)  $.
+However there are dependencies between the variables $\left\{  \mathbf{z}%
+_{+}\right\}  $ and $\left\{  \mathbf{\lambda}\right\}  $ which are often
+convenient to avoid. One method of achieving this is to consider unnormalized
+coherent states by modifying the coset representative $c_{0}\left(
+\mathbf{\lambda}\right)  $ and explicitly considering the norm of the state in
+various expectation value expressions.
+
+\subsection{$USp\left(  \omega_{j}\right)  $ factors}
+
+The changes from the $SU\left(  2\right)  ^{s}$ case can be illustrated by an
+$\sigma=s-2,\rho=1,\omega_{1}=2$ example, which clearly leads to the general
+picture for $\rho>1$. Here we have $s-2$ eigenvalues, $\left\{  \left.
+c_{j}^{2}\right\vert 3\leq j\leq s\right\}  $ of $gg^{\dag}$ that are doubly
+degenerate and one fourfold degenerate eigenvalue, $c_{1}^{2}$, of $gg^{\dag}%
+$, which is associated with two doubly degenerate eigenvalues, $\left\{
+c_{1},-c_{1}\right\}  $ of $g$ affiliated with CGSO's that are linear
+combinations of $\left\{  \left\vert \eta_{1}\right\rangle ,\left\vert
+\eta_{2}\right\rangle \right\}  $ and $\left\{  \left\vert \eta_{-1}%
+\right\rangle ,\left\vert \eta_{-2}\right\rangle \right\}  $ respectively
+\cite{Weiner&ortiz04}. In this case unitary transformations, $u\left(
+\mathbf{\tilde{z},\eta}\right)  $, belonging to $U\left(  2s\right)  $ can be
+expressed in factored form as
+\begin{align}
+u\left(  \mathbf{\tilde{z},\eta}\right)   &  =c\left(  \mathbf{\tilde{z}%
+}\right)  k_{\sigma}\left(  \mathbf{\eta}_{\sigma}\right)  k_{\omega}\left(
+\mathbf{\eta}_{\omega}\right) \nonumber\\
+&  =c_{+1}\left(  \mathbf{z}_{\sigma+}\right)  u_{+1}\left(  \mathbf{z}%
+_{\omega+}\right)  u_{0}\left(  \mathbf{\lambda}_{\omega}\right)  c_{0}\left(
+\mathbf{\lambda}_{\sigma}\right)  u_{-1}\left(  \mathbf{z}_{\omega-}\right)
+c_{-1}\left(  \mathbf{z}_{-}\right)  k_{\sigma}\left(  \mathbf{\eta}_{\sigma
+}\right)  k_{\omega}\left(  \mathbf{\eta}_{\omega}\right)  . \label{gpprod}%
+\end{align}
+where $k_{\sigma}\left(  \mathbf{\eta}_{\sigma}\right)  \in SU\left(
+2\right)  ^{s-2}$ and $c_{\sigma0}\left(  \mathbf{\lambda}_{\sigma}\right)
+\in\exp N_{0}$ and are expanded in the basis eqs.$\left(  \ref{l2}\right)  $
+and $\left(  \ref{l4}\right)  $ respectively with the operators referring to
+CGSO's $\left\{  \left.  \left\vert \eta_{j}\right\rangle \right\vert
+j=\pm1,\pm2\right\}  $ deleted. The operators $c_{+1}\left(  \mathbf{z}%
+_{\sigma+}\right)  \in\exp N_{+1}$ and $c_{-1}\left(  \mathbf{z}_{\sigma
+-}\right)  \in\exp N_{-1}$ are expanded in the basis eqs.$\left(
+\ref{l1}\right)  $ and $\left(  \ref{l3}\right)  $ with the operators
+referring to the pairs $\left\{  \left.  \left(  \left\vert \eta
+_{j}\right\rangle ,\left\vert \eta_{k}\right\rangle \right)  \right\vert
+j=\pm1,k=\pm1\right\}  $ of CGSO's deleted. The factors $u_{+1}\left(
+\mathbf{z}_{\omega+}\right)  \in\exp U_{+11},u_{-1}\left(  \mathbf{z}%
+_{\omega-}\right)  \in\exp U_{-11},u_{\omega0}\left(  \mathbf{\lambda}%
+_{\omega}\right)  \in\exp U_{01},k_{\omega}\left(  \mathbf{\eta}_{\omega
+}\right)  \in USp\left(  4\right)  $, where $U_{+1},U_{0},U_{-1}$ and
+$usp\left(  4\right)  $ are expanded in the following bases%
+
+\begin{subequations}
+\begin{align}
+U_{+11}  &  =\mathbb{C-}\operatorname{linspan}\left\{  a_{k}^{\dagger}%
+a_{j}+\sigma\left(  j\right)  \sigma\left(  k\right)  a_{-j}^{\dagger}%
+a_{-k};\quad j=1,-1;k=2,-2\right\} \label{u1}\\
+U_{01}  &  =\mathbb{C-}\operatorname{linspan}\left\{  \left(  a_{j}^{\dagger
+}a_{j}+a_{-j}^{\dagger}a_{-j}\right)  ,\left(  a_{j}^{\dagger}a_{j}%
+-a_{-j}^{\dagger}a_{-j}\right)  ,\left(  a_{j}^{\dagger}a_{-j}+a_{-j}%
+^{\dagger}a_{j}\right)  ,\right. \nonumber\\
+&  i\left(  a_{j}^{\dagger}a_{-j}-a_{-j}^{\dagger}a_{j}\right)  ,i\left(
+a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)  \sigma\left(  k\right)
+a_{-j}^{\dagger}a_{-k}-a_{j}^{\dagger}a_{k}+\sigma\left(  j\right)
+\sigma\left(  k\right)  a_{-k}^{\dagger}a_{-j}\right)  ,\nonumber\\
+&  \left.  \left(  a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)  \sigma\left(
+k\right)  a_{-j}^{\dagger}a_{-k}+a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)
+\sigma\left(  k\right)  a_{-k}^{\dagger}a_{-j}\right)  ;\quad
+j=1,-1;k=2,-2\right\} \label{u2}\\
+U_{-11}  &  =\mathbb{C-}\operatorname{linspan}\left\{  a_{k}^{\dagger}%
+a_{j}-\sigma\left(  j\right)  \sigma\left(  k\right)  a_{-j}^{\dagger}%
+a_{-k};\quad j=1,-1;k=2,-2\right\} \label{u3}\\
+usp\left(  2\omega_{1}\right)   &  =usp\left(  4\right)  =\mathbb{R-}%
+\operatorname{linspan}\left\{  i\left(  a_{j}^{\dagger}a_{j}-a_{-j}^{\dagger
+}a_{-j}\right)  ,i\left(  a_{j}^{\dagger}a_{-j}+a_{-j}^{\dagger}a_{j}\right)
+,\left(  a_{j}^{\dagger}a_{-j}-a_{-j}^{\dagger}a_{j}\right)  ,\right.
+\nonumber\\
+&  \left(  a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)  \sigma\left(
+k\right)  a_{-j}^{\dagger}a_{-k}-a_{j}^{\dagger}a_{k}+\sigma\left(  j\right)
+\sigma\left(  k\right)  a_{-k}^{\dagger}a_{-j}\right)  ,\nonumber\\
+&  \left.  i\left(  a_{k}^{\dagger}a_{j}-\sigma\left(  j\right)  \sigma\left(
+k\right)  a_{-j}^{\dagger}a_{-k}+a_{j}^{\dagger}a_{k}-\sigma\left(  j\right)
+\sigma\left(  k\right)  a_{-k}^{\dagger}a_{-j}\right)  ;\quad
+j=1,-1;k=2,-2\right\}  , \label{u4}%
+\end{align}
+where $\sigma\left(  j\right)  =\operatorname{sign}\left(  j\right)  .$ The
+manifold of $U\left(  2s\right)  /\left[  USp\left(  4\right)  \times
+SU\left(  2\right)  ^{s-1}\right]  $-coherent states is then given by
+\end{subequations}
+\begin{equation}
+\left\vert \Phi\left(  \mathbf{z}\right)  \right\rangle =c_{+1}\left(
+\mathbf{z}_{+\sigma}\right)  u_{+1}\left(  \mathbf{z}_{+\omega}\right)
+u_{01}\left(  \mathbf{\lambda}_{\omega_{1}}\right)  c_{0}\left(
+\mathbf{\lambda}_{\sigma}\right)  \left\vert g^{\frac{N}{2}}\right\rangle ,
+\end{equation}
+where $\mathbf{z\equiv}\left(  \mathbf{z}_{+\sigma},\mathbf{z}_{+\omega
+},\mathbf{\lambda}_{\omega},\mathbf{\lambda}_{\sigma}\right)  $ and the
+reference AGP is generated by a geminal $\left\vert g\right\rangle $ in the
+class $\left\{  \rho,\sigma,\xi\right\}  =\left\{  1,s-1,0\right\}  .$
+
+If $\rho>2$ then one deletes the appropriate operators in the bases $\left\{
+N_{+1},N_{0},N_{-1},\mathcal{K}\right\}  $ defined in eqs. $\left(
+\ref{l1}\right)  -\left(  \ref{l4}\right)  $ and defines new bases $\left\{
+\left.  \left\{  U_{+1j},U_{0j},U_{-1j},usp\left(  2\omega_{j}\right)
+\right\}  \right\vert 1\leq j\leq\rho\right\}  $ according to eqs. $\left(
+\ref{u1}\right)  -\left(  \ref{u4}\right)  .$ The subalgebras $\left\{
+\left.  U_{-1j},usp\left(  2\omega_{j}\right)  \right\vert 1\leq j\leq
+\rho\right\}  $ annihilate $\left\vert g^{\frac{N}{2}}\right\rangle $ i.e.
+\begin{equation}
+b\left\vert g^{\frac{N}{2}}\right\rangle =0\quad\forall b\in\bigoplus
+\limits_{1\leq j\leq\rho}U_{-1j}\oplus\bigoplus\limits_{1\leq j\leq\rho
+}usp\left(  2\omega_{j}\right)  ,
+\end{equation}
+while the subalgebras $\left\{  \left.  U_{+1j},U_{0j}\right\vert 1\leq
+j\leq\rho\right\}  $ have the property
+\begin{equation}
+b\left\vert g^{\frac{N}{2}}\right\rangle \neq0\quad\forall b\in\bigoplus
+\limits_{1\leq j\leq\rho}U_{+1j}\oplus\bigoplus\limits_{1\leq j\leq\rho}%
+U_{0j}.
+\end{equation}
+The $U\left(  2s\right)  /\left[
+%TCIMACRO{\tprod _{1\leq j\leq\rho}}%
+%BeginExpansion
+{\textstyle\prod_{1\leq j\leq\rho}}
+%EndExpansion
+USp\left(  2\omega_{j}\right)  \times SU\left(  2\right)  ^{s-\omega}\right]
+$-coherent state manifold is then given by
+\begin{equation}
+\left\vert \Phi\left(  \mathbf{z}\right)  \right\rangle =c_{+1}\left(
+\mathbf{z}_{\sigma+}\right)
+%TCIMACRO{\tprod _{1\leq j\leq\rho}}%
+%BeginExpansion
+{\textstyle\prod_{1\leq j\leq\rho}}
+%EndExpansion
+\left\{  u_{+1j}\left(  \mathbf{z}_{+j}\right)  u_{0j}\left(  \mathbf{\lambda
+}_{j}\right)  \right\}  c_{0}\left(  \mathbf{\lambda}_{\sigma}\right)
+\left\vert g^{\frac{N}{2}}\right\rangle .
+\end{equation}
+
+
+The manifold of extreme AGP's $\mathcal{M}\left(  0,s,0\right)  $ are
+$U\left(  2s\right)  /USp\left(  2s\right)  $-coherent state, which have been
+discussed in super conductivity \cite{Yukalov00} is given by
+\begin{equation}
+\left\vert \Phi\left(  \mathbf{z}\right)  \right\rangle =u_{+11}\left(
+\mathbf{z}_{+1}\right)  u_{01}\left(  \mathbf{\lambda}_{1}\right)  \left\vert
+g^{\frac{N}{2}}\right\rangle .
+\end{equation}
+
+
+\subsection{$SU\left(  2\xi\right)  $ factors}
+
+The changes from $SU\left(  2\right)  ^{s}$ can this time be illustrated by an
+$\sigma=s-1,\rho=0,\xi=1$ example, which also clearly leads to the general
+picture for $\xi>1$. Here we have $s-1$ eigenvalues, $\left\{  \left.
+c_{j}^{2}\right\vert 2\leq j\leq s\right\}  $ of $gg^{\dag}$ that are doubly
+degenerate and a doubly degenerate zero eigenvalue of $gg^{\dag}$, which is
+associated with the CGSO's $\left\{  \left\vert \eta_{-1}\right\rangle
+,\left\vert \eta_{1}\right\rangle \right\}  .$ In this case unitary
+transformations, $u\left(  \mathbf{\tilde{z},\eta}\right)  $, belonging to
+$U\left(  2s\right)  $ can be expressed in factored form as
+\begin{equation}
+u\left(  \mathbf{\tilde{z},\eta}\right)  =c\left(  \mathbf{\tilde{z}}\right)
+k_{\sigma}\left(  \mathbf{\eta}_{\sigma}\right)  k_{\xi}\left(  \mathbf{\eta
+}_{\xi}\right)  =c_{+1}\left(  \mathbf{z}_{\sigma+}\right)  v_{0}\left(
+\mathbf{\lambda}_{\xi}\right)  c_{0}\left(  \mathbf{\lambda}_{\sigma}\right)
+c_{-1}\left(  \mathbf{z}_{-}\right)  k_{\sigma}\left(  \mathbf{\eta}_{\sigma
+}\right)  k_{\xi}\left(  \mathbf{\eta}_{\xi}\right)  , \label{untrans}%
+\end{equation}
+where $k_{\sigma}\left(  \mathbf{\eta}_{\sigma}\right)  \in SU\left(
+2\right)  ^{s-1}$ and $c_{0}\left(  \mathbf{\lambda}_{\sigma}\right)  \in\exp
+N_{0}$ which are expanded in the basis eqs.$\left(  \ref{l2}\right)  $,
+$\left(  \ref{l4}\right)  $ with the operators referring to CGSO's $\left\{
+\left.  \left\vert \eta_{j}\right\rangle \right\vert j=\pm1\right\}  $
+deleted. The definitions of $c_{+1}\left(  \mathbf{z}_{\sigma+}\right)
+\in\exp N_{+1}$ and $c_{-1}\left(  \mathbf{z}_{\sigma-}\right)  \in\exp
+N_{-1}$ are unchanged and are still expanded in the basis eqs.$\left(
+\ref{l1}\right)  $ and $\left(  \ref{l3}\right)  $. The factors $v_{0}\left(
+\mathbf{\lambda}_{\xi}\right)  \in\exp V_{0},k_{\xi}\left(  \mathbf{\eta}%
+_{\xi}\right)  \in SU\left(  2\right)  $, where $su\left(  2\right)  $ is
+expanded in the following bases%
+\begin{equation}
+su\left(  2\right)  =\mathbb{R-}\operatorname{linspan}\left\{  i\left(
+a_{1}^{\dagger}a_{-1}+a_{-1}^{\dagger}a_{1}\right)  ,i\left(  a_{1}^{\dagger
+}a_{1}-a_{-1}^{\dagger}a_{-1}\right)  ,\left(  a_{1}^{\dagger}a_{-1}%
+-a_{-1}^{\dagger}a_{1}\right)  \right\}
+\end{equation}
+and $V_{0}$ is given by
+\begin{equation}
+\left\{  su\left(  2\right)  \mathcal{\oplus\,N}\right\}  ^{\mathbb{C}}%
+\end{equation}
+where
+\begin{equation}
+\mathcal{N}=\mathbb{R-}\operatorname{linspan}\left\{  \left(  a_{1}^{\dagger
+}a_{1}+a_{-1}^{\dagger}a_{-1}\right)  \right\}  .
+\end{equation}
+The subalgebra $\left\{  su\left(  2\xi\right)  \right\}  $ annihilates
+$\left\vert g^{\frac{N}{2}}\right\rangle $ i.e.
+\begin{equation}
+b\left\vert g^{\frac{N}{2}}\right\rangle =0\quad\forall b\in su\left(
+2\xi\right)  .
+\end{equation}
+As the class of the reference AGP\ changes from $\left(  s-1,0,1\right)  $
+to$\left(  s-p,0,p\right)  $ it is clear how the definitions of the factors
+eq. $\left(  \ref{untrans}\right)  $ evolve. It is easy to confirm that the
+$\left(  M,0,s-M\right)  $ cannot in fact exist, while the class $\left(
+0,M,s-M\right)  $ does and such reference AGP's are IPS's and the $U\left(
+2s\right)  /\left[  USp\left(  2M\right)  \times SU\left(  2s-2M\right)
+\right]  $-coherent state manifold is in fact the Thouless $U\left(
+2s\right)  /\left[  U\left(  2M\right)  \times U\left(  2s-2M\right)  \right]
+$-coherent state manifold.
+
+As an illustration of the preceding forms of the cosets of $U\left(
+\mathcal{H}^{1}\right)  $ we can consider their action on an AGP\ state
+$\left\vert g^{\frac{N}{2}}\right\rangle $ determined by a geminal
+\begin{equation}
+\left\vert g\right\rangle =\sum_{1\leq j\leq s}c_{j_{1}}\left\vert \eta
+_{j}\eta_{j+s}\right\rangle
+\end{equation}
+given by
+\begin{equation}
+c_{+1}\left(  \mathbf{z}_{+}\right)  c_{0}\left(  \mathbf{\lambda}\right)
+c_{+1}\left(  \mathbf{z}_{\sigma+}\right)  v_{0}\left(  \mathbf{\lambda}_{\xi
+}\right)
+%TCIMACRO{\tprod _{1\leq j\leq\rho}}%
+%BeginExpansion
+{\textstyle\prod_{1\leq j\leq\rho}}
+%EndExpansion
+\left\{  u_{+1j}\left(  \mathbf{z}_{+j}\right)  u_{0j}\left(  \mathbf{\lambda
+}_{j}\right)  \right\}  c_{0}\left(  \mathbf{\lambda}_{\sigma}\right)
+\left\vert g^{\frac{N}{2}}\right\rangle
+\end{equation}
+$\sigma=$ number of non zero, non equal $\left\{  c_{j}\right\}  $'s
+
+\begin{description}
+\item[$\cdot$] $\omega_{j}=$ number of equal coefficients in the $j^{th}$ set
+
+\item[$\cdot$] $\rho=$ number of sets of equal $\left\{  c_{j}\right\}  $'s
+
+\item[$\cdot$] $\xi=$ number of zero coefficients.
+\end{description}
+
+\subsection{$U\left(  \mathcal{H}^{N}\right)  /U\left(  1\right)  $-Coherent
+States}
+
+In order to examine the properties of general state excitation operators in
+terms of CS's it is necessary and illuminating to consider the \emph{exact
+}quantum evolution equations expressed in terms of a CS manifold. The
+resulting classical equations of motion defined on such a manifold are
+equivalent to the full TDSE. The configuration space formed by these coherent
+sates represents all of the states $\left\vert \Psi\right\rangle
+\in\mathcal{H}^{N}$ via a parameterization $\left\{  \left\vert \Phi\left(
+\mathbf{z}\right)  \right\rangle \right\}  $. The group $G$ in this case is
+the full unitary group $U\left(  \left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  \right)  $ of $N$-electron state space and the isotropy subgroup is
+\begin{equation}
+K=\left\{  \left.  g\right\vert g\in G,g\left\vert \Phi_{1}\right\rangle
+=e^{i\theta\left(  g\right)  }\left\vert \Phi_{1}\right\rangle \right\}
+=\left\{  \exp\left(  i\lambda\left(  g\right)  \left\vert \Phi_{1}%
+\right\rangle \left\langle \Phi_{1}\right\vert \right)  \exp\left(
+i\sum_{i,j\neq1}\lambda_{ij}\left(  g\right)  \left\vert \Phi_{i}\right\rangle
+\left\langle \Phi_{j}\right\vert \right)  \right\}
+\end{equation}
+The coset representatives are
+\begin{equation}
+G/K=\left\{  \exp\left(  \sum_{i>1}\eta_{i}\left\vert \Phi_{i}\right\rangle
+\left\langle \Phi_{1}\right\vert \right)  \exp\left(  \eta_{1}\left\vert
+\Phi_{1}\right\rangle \left\langle \Phi_{1}\right\vert \right)  \exp\left(
+-\sum_{i>1}\bar{\eta}_{i}\left\vert \Phi_{i}\right\rangle \left\langle
+\Phi_{1}\right\vert \right)  \right\}
+\end{equation}
+where $\left\{  \left.  \left\vert \Phi_{i}\right\rangle \right\vert
+\quad1\leq i\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  \right\}  $ is a complete orthonormal basis for $\mathcal{H}^{N}$.
+The family of CS's associated with this coset is defined as
+\begin{equation}
+\left\vert \Phi\left(  \mathbf{\eta}\right)  \right\rangle =\left\{
+\exp\left(  \sum_{i>1}\eta_{i}\left\vert \Phi_{i}\right\rangle \left\langle
+\Phi_{1}\right\vert \right)  \exp\left(  \eta_{1}\left\vert \Phi
+_{i}\right\rangle \left\langle \Phi_{1}\right\vert \right)  \right\}
+\left\vert \Phi_{1}\right\rangle .
+\end{equation}
+It is convenient to introduce a new equivalent coordinate system $\left\{
+\mathbf{z}\right\}  $ by setting
+\begin{align}
+\eta_{1}  &  =\ln\left(  z_{1}\right)  \Leftrightarrow z_{1}=e^{\eta_{1}}\\
+\eta_{j}  &  =\frac{z_{j}}{z_{1}};\quad2\leq j\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  \Leftrightarrow z_{j}=\eta_{j}e^{\eta_{1}}%
+\end{align}
+which leads to the following form for the coherent states
+\begin{equation}
+\left\vert \Phi\left(  \mathbf{z}\right)  \right\rangle =\sum_{1\leq
+j\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }z_{j}\left\vert \Phi_{j}\right\rangle \label{CI}%
+\end{equation}
+Clearly eq. $\left(  \ref{CI}\right)  $ is the familiar CI expansion of a
+general $N$-fermion state and the parameters $\left\{  z_{j}\right\}  $ the
+configurational interaction coefficients. The normalization of these CS's is
+given by
+\begin{align}
+\left\langle \left.  \Phi\left(  \mathbf{z}\right)  \right\vert \Phi\left(
+\mathbf{z}\right)  \right\rangle  &  =\sum_{1\leq j\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\left\vert z_{j}\right\vert ^{2}=\left\vert z_{1}\right\vert
+^{2}+\sum_{2\leq j\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\left\vert z_{j}\right\vert ^{2}\\
+\left\langle \left.  \Phi\left(  \mathbf{\eta}\right)  \right\vert \Phi\left(
+\mathbf{\eta}\right)  \right\rangle  &  =e^{2\operatorname{Re}\eta_{1}%
+}\left\{  1+\sum_{2\leq j\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\left\vert \eta_{j}\right\vert ^{2}\right\}
+\end{align}
+Hence if one sets $\eta_{1}$ as the function
+\begin{equation}
+\eta_{1}=\eta_{1}\left(  \eta_{2},\cdots,\eta_{\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\right)  =\frac{1}{2}\ln\left(  1-\sum_{2\leq j\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }e^{2\operatorname{Re}\eta_{j}}\right)  \label{n1}%
+\end{equation}
+and $z_{1}$ as the function%
+\begin{equation}
+z_{1}=z_{1}\left(  z_{2},\cdots,z_{\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\right)  =\left(  1-\sum_{2\leq j\leq\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\left\vert z_{j}\right\vert ^{2}\right)  ^{\frac{1}{2}} \label{n2}%
+\end{equation}
+the family of CS's $\left\{  \left\vert \Phi\left(  \mathbf{z}\right)
+\right\rangle \right\}  \equiv\left\{  \left\vert \Phi\left(  \mathbf{\eta
+}\right)  \right\rangle \right\}  $ are normalized if the reference state
+$\left\vert \Phi_{1}\right\rangle $ is normalized i.e. $\left\langle \left.
+\Phi_{1}\right\vert \Phi_{1}\right\rangle =1.$ If one uses the CS parameters
+$\left\{  \eta_{2},\cdots,\eta_{\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\right\}  $ or $\left\{  z_{2},\cdots,z_{\left(
+%TCIMACRO{\QATOP{r}{N}}%
+%BeginExpansion
+\genfrac{}{}{0pt}{}{r}{N}%
+%EndExpansion
+\right)  }\right\}  $ the CS manifold is the unit sphere in $\mathcal{H}^{N}$,
+while if one uses $\left\{  \mathbf{\eta}\right\}  $ or $\left\{
+\mathbf{z}\right\}  $ then it is all of $\mathcal{H}^{N}$ and one explicitly
+considers the normalization in all expressions.
+
+\section{Discussion\label{discussion}}
+
+\appendix
+
+\section{Conjecture\label{conjecture}}
+
+\section{AGP States \label{agp}}
+
+\bibliographystyle{apsrev}
+\bibliography{agpopt,bibrefs,bw,Coleman,lowdin-per-olov,novel,Ohrn,Osvaldo,Yngve}
+
+\end{document}

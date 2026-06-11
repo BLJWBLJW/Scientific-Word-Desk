@@ -1,0 +1,2133 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Wednesday, November 09, 2022 07:18:56}
+%TCIDATA{LastRevised=Sunday, December 18, 2022 14:06:21}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{SVDnew}
+
+\subparagraph{Real and imaginary parts of a vector}
+
+Let $V$ be a complex vectore space with bases $\left\{  \left.  e_{j}%
+\right\vert 1\leq j\leq r\right\}  $ then
+\begin{equation}
+v=\sum_{1\leq j\leq r}\mathcal{R}_{e}\left(  v\right)  _{j}e_{j}%
+\end{equation}
+then
+\begin{equation}
+v=\sum_{1\leq j\leq r}\operatorname{Re}\left(  \mathcal{R}_{e}\left(
+v\right)  _{j}\right)  e_{j}+i\sum_{1\leq j\leq r}\operatorname{Im}\left(
+\mathcal{R}_{e}\left(  v\right)  _{j}\right)  e_{j}.
+\end{equation}
+
+
+\begin{definition}%
+\begin{equation}
+\operatorname{Re}_{e}\left(  v\right)  =\sum_{1\leq j\leq r}\operatorname{Re}%
+\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)  e_{j}%
+\end{equation}
+and
+\begin{equation}
+\operatorname{Im}_{e}\left(  v\right)  =\sum_{1\leq j\leq r}\operatorname{Im}%
+\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)  e_{j}.
+\end{equation}
+
+\end{definition}
+
+\begin{remark}%
+\begin{equation}
+\operatorname{Re}_{e},\operatorname{Im}_{e}\in\mathcal{B}_{\mathbb{R}}\left(
+V\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+v=\operatorname{Re}_{e}\left(  v\right)  +i\operatorname{Im}_{e}\left(
+v\right)  =\operatorname{Re}_{f\ }\left(  v\right)  +i\operatorname{Im}%
+_{f}\left(  v\right)  .
+\end{equation}
+Obviously the real and imaginary parts of a vector are only invariant to real
+transformations $T\in GL\left(  V,\mathbb{R}\right)  $ and depend on
+equilvalence classes of bases.
+\end{remark}
+
+\subparagraph{Dual Spaces}
+
+The dual space $V^{d}$ of a vector space $V$ is the linear space of linear
+functionals defined on $V$ i.e.%
+\begin{equation}
+f\in V^{d}\Leftrightarrow f\left(  c_{1}v_{1}+c_{2}v_{2}\right)
+=c_{1}f\left(  v_{1}\right)  +c_{2}f\left(  v_{2}\right)  ,\quad c_{1}%
+,c_{2}\in\mathbb{C},\quad v_{1},v_{2}\in V
+\end{equation}
+
+
+\begin{definition}
+The complex conjugate $\mathcal{K}_{e}^{d}\left(  f\right)  $ of the linear
+functional $f,$
+\begin{equation}
+\mathcal{K}_{e}^{d}\left(  c_{1}f_{1}+c_{2}f_{2}\right)  =\overline{c_{1}%
+}\mathcal{K}_{e}^{d}\left(  f_{1}\right)  +\overline{c_{2}}\mathcal{K}_{e}%
+^{d}\left(  f_{2}\right)  ,
+\end{equation}
+is given by
+\begin{equation}
+\mathcal{K}_{e}^{d}\left(  f\right)  =\sum_{1\leq j\leq n}\overline
+{\mathcal{R}_{e^{d}}\left(  f\right)  _{j}}e_{j}^{d}%
+\end{equation}
+for a bases $\left\{  \left.  e_{j}^{d}\right\vert 1\leq j\leq n\right\}  $ of
+$V^{d}$. The map $\mathcal{K}_{e}^{d}$ is an anti isomorphism i.e.
+$\mathcal{K}_{e}^{d}\in\mathcal{B}_{anti}\left(  V^{d}\right)  $.
+\end{definition}
+
+\begin{definition}
+The \emph{c}omplex conjugate $\mathcal{J}_{e}\left(  v\right)  $ of \emph{a}
+vector $v$
+\begin{equation}
+\mathcal{J}_{e}\left(  c_{1}v_{1}+c_{2}v_{2}\right)  =\overline{c_{1}%
+}\mathcal{J}_{e}\left(  v_{1}\right)  +\overline{c_{2}}\mathcal{J}_{e}\left(
+v_{2}\right)  ,
+\end{equation}
+\emph{is }given by
+\begin{equation}
+\mathcal{J}_{e}\left(  v\right)  =\sum_{1\leq j\leq n}\overline{\mathcal{R}%
+_{e}\left(  v\right)  _{j}}e_{j}%
+\end{equation}
+for a bases $\left\{  \left.  e_{j}\right\vert 1\leq j\leq n\right\}  $ of
+$V.$ The map $\mathcal{J}_{e}$ is an anti isomorphism i.e. $\mathcal{J}_{e}%
+\in\mathcal{B}_{anti}\left(  V\right)  .$
+\end{definition}
+
+\begin{definition}
+$\mathcal{K}_{e}\in\mathcal{B}_{anti}\left(  V\right)  $%
+\begin{equation}
+\mathcal{K}_{e}:V\rightarrow V
+\end{equation}
+by%
+\begin{equation}
+f\left(  \mathcal{K}_{e}\left(  v\right)  \right)  =\left[  \mathcal{K}%
+_{e}^{d}\left(  f\right)  \right]  \left(  v\right)  ,\quad\forall\quad f\in
+V^{d},\quad v\in V.
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+$\mathcal{J}_{e}^{d}\in\mathcal{B}_{anti}\left(  V^{d}\right)  $%
+\begin{equation}
+\mathcal{J}_{e}^{d}:V^{d}\rightarrow V^{d}%
+\end{equation}
+by%
+\begin{equation}
+\left[  \mathcal{J}_{e}^{d}\left(  f\right)  \right]  \left(  v\right)
+=f\left(  \mathcal{J}_{e}\left(  v\right)  \right)  ,\quad\forall\quad\ v\in
+V,\quad f\in V^{d}.
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+Each conjugation is associated with a class of bases.
+\end{remark}
+
+\begin{remark}
+The mappings $\mathcal{J}_{e}^{d}$ and $\mathcal{K}_{e}^{d}$ are different i.e.
+
+\begin{enumerate}
+\item
+\begin{equation}
+\left[  \mathcal{J}_{e}^{d}\left(  f\right)  \right]  \left(  v\right)
+=f\left(  \mathcal{J}_{e}\left(  v\right)  \right)  =\sum_{1\leq j\leq
+n}\mathcal{R}_{e^{d}}\left(  f\right)  _{j}\overline{\mathcal{R}_{e}\left(
+v\right)  _{j}}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\left[  \mathcal{K}_{e}^{d}\left(  f\right)  \right]  \left(  v\right)
+=f\left(  \mathcal{K}_{e}\left(  v\right)  \right)  =\sum_{1\leq j\leq
+n}\overline{\mathcal{R}_{e^{d}}\left(  f\right)  _{j}}\mathcal{R}_{e}\left(
+v\right)  _{j}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{K}_{e}^{d}\left(  f\right)  \left(  \mathcal{J}_{e}\left(  v\right)
+\right)  =\left[  \left[  \mathcal{K}_{e}^{d}\mathcal{J}_{e}^{d}\right]
+\left(  f\right)  \right]  \left(  v\right)  =\overline{f\left(  v\right)
+}=\sum_{1\leq j\leq n}\overline{\mathcal{R}_{e^{d}}\left(  f\right)  _{j}%
+}\overline{\mathcal{R}_{e}\left(  v\right)  _{j}}.
+\end{equation}
+
+
+\item
+\begin{equation}
+f\left(  \mathcal{J}_{e}\left(  v\right)  \right)  =\left[  \mathcal{J}%
+_{e}^{d}\left(  f\right)  \right]  \left(  v\right)  =\overline{\left[
+\mathcal{K}_{e}^{d}\left(  f\right)  \right]  \left(  v\right)  }%
+=\overline{f\left(  \mathcal{K}_{e}\left(  v\right)  \right)  }.
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\begin{definition}
+The operation producing the complex conjugate $\overline{f\left(  v\right)  }$
+of the value $f\left(  v\right)  $ of a linear functional $f$ is produced by
+the antilinear map
+\begin{equation}
+\mathcal{C}:V^{d}\rightarrow V^{d}%
+\end{equation}
+given by
+\begin{equation}
+\mathcal{C}=\mathcal{K}_{e}^{d}\circ\mathcal{J}_{e}^{d}.
+\end{equation}
+
+
+\begin{remark}
+
+
+\begin{enumerate}
+\item
+\begin{equation}
+\mathcal{C}\left(  f\right)  =\left[  \mathcal{K}_{e}^{d}\circ\mathcal{J}%
+_{e}^{d}\right]  \left(  f\right)  .
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{C\in B}_{00}\left(  V^{d}\right)  .
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\mathcal{C}\left(  f\right)  =\left[  \mathcal{K}_{e}^{d}\circ\mathcal{J}%
+_{e}^{d}\right]  \left(  f\right)  =\left[  \mathcal{K}_{e}^{d}f\right]
+\circ\mathcal{J}_{e},
+\end{equation}
+where
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item
+\begin{equation}
+\left[  \mathcal{K}_{e}^{d}\circ\mathcal{J}_{e}^{d}\right]  :V^{d}\rightarrow
+V^{d}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{K}_{e}^{d}\circ f\circ\mathcal{J}_{e}=\mathcal{K}_{e}^{d}%
+\circ\mathcal{J}_{e}^{d}\circ f=\left[  \mathcal{K}_{e}^{d}\circ
+\mathcal{J}_{e}^{d}\right]  \left(  f\right)  ,\quad\forall\quad f\in V^{d}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\left[  \left[  \mathcal{K}_{e}^{d}\circ\mathcal{J}_{e}^{d}\right]  \left(
+f\right)  \right]  \left(  v\right)  =\overline{f\left(  v\right)  }%
+\in\mathbb{C}.
+\end{equation}
+
+\end{enumerate}
+\end{enumerate}
+\end{remark}
+\end{definition}
+
+\begin{lemma}
+$\mathcal{C}$ is basis independent.
+\end{lemma}
+
+\begin{remark}
+$\mathcal{K}_{e}^{d}$ and $\mathcal{J}_{e}^{d}$ are antilinear isomorphisms.
+\end{remark}
+
+\begin{example}
+Let $v\in\mathcal{V}$ then
+
+\begin{enumerate}
+\item
+\begin{equation}
+v=\sum_{1\leq j\leq n}\mathcal{R}_{e}\left(  v\right)  _{j}e_{j}%
+\end{equation}
+
+
+\item Let $\mathcal{J}_{e}\mathcal{\in B}_{anti}\left(  V\right)  $%
+\begin{equation}
+\mathcal{J}_{e}\left(  v\right)  =\sum_{1\leq j\leq n}\mathcal{R}_{e}\left(
+\mathcal{J}\left(  v\right)  \right)  _{j}e_{j}=\sum_{1\leq j\leq n}%
+\overline{\mathcal{R}_{e}\left(  v\right)  }_{j}e_{j}%
+\end{equation}
+
+
+\item
+\begin{gather}
+f\left(  v\right)  =\sum_{1\leq j,k\leq n}\mathcal{R}_{e^{d}}\left(  f\right)
+_{j}\mathcal{R}_{e}\left(  v\right)  _{k}e_{j}^{d}\left(  e_{k}\right)
+=\sum_{1\leq j\leq n}\mathcal{R}_{e^{d}}\left(  f\right)  _{j}\mathcal{R}%
+_{e}\left(  v\right)  _{j}\\
+\Downarrow\\
+f\left(  e_{k}\right)  =\mathcal{R}_{e^{d}}\left(  f\right)  _{k}.
+\end{gather}
+
+
+\item
+\begin{gather}
+\left[  \mathcal{K}_{e}^{d}\left(  f\right)  \right]  \left(  v\right)
+=\sum_{1\leq j\leq n}\overline{\mathcal{R}_{e^{d}}\left(  f\right)  _{j}%
+}\mathcal{R}_{e}\left(  v\right)  _{j}\\
+\Downarrow\\
+\left[  \mathcal{K}_{e}^{d}\left(  f\right)  \right]  \left(  e_{k}\right)
+=\mathcal{R}_{e^{d}}\left(  \mathcal{K}_{e}^{d}\left(  f\right)  \right)
+_{k}=\overline{\mathcal{R}_{e^{d}}\left(  f\right)  }_{k}.
+\end{gather}
+
+
+\begin{enumerate}
+\item
+\begin{equation}
+\mathcal{K}_{e}^{d}\left(  f\right)  =\sum_{1\leq j\leq n}\mathcal{R}_{e^{d}%
+}\left(  \mathcal{K}_{e}^{d}\left(  f\right)  \right)  _{j}e_{j}^{d}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{J}_{e}\left(  v\right)  =\sum_{1\leq j\leq n}\mathcal{R}_{e}\left(
+\mathcal{J}_{e}\left(  v\right)  \right)  _{j}e_{j}.
+\end{equation}
+
+\end{enumerate}
+
+\item
+\begin{equation}
+\left[  \mathcal{C}^{d}\left(  f\right)  \right]  \left(  v\right)  =\left[
+\mathcal{K}_{e}^{d}\left(  f\right)  \right]  \left(  \mathcal{J}_{e}\left(
+v\right)  \right)  =\sum_{1\leq j\leq n}\mathcal{R}_{e^{d}}\left(
+\mathcal{K}_{e}^{d}\left(  f\right)  \right)  _{j}\mathcal{R}_{e}\left(
+\mathcal{J}_{e}\left(  v\right)  \right)  _{j}=\overline{f\left(  v\right)  }.
+\end{equation}
+
+
+\item
+\begin{gather}
+f\left(  v\right)  \\
+\parallel\\
+\sum_{1\leq j\leq n}\mathcal{R}_{e^{d}}\left(  f\right)  _{j}\mathcal{R}%
+_{e}\left(  v\right)  _{j}=\sum_{1\leq j\leq n}\left(  \operatorname{Re}%
+\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)  +i\operatorname{Im}%
+\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)  \right)  \left(
+\operatorname{Re}\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)
++i\operatorname{Im}\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)
+\right)  \\
+=\sum_{1\leq j\leq n}\left(  \left(  \operatorname{Re}\left(  \mathcal{R}%
+_{e^{d}}\left(  f\right)  _{j}\right)  \operatorname{Re}\left(  \mathcal{R}%
+_{e}\left(  v\right)  _{j}\right)  -\operatorname{Im}\left(  \mathcal{R}%
+_{e^{d}}\left(  f\right)  _{j}\right)  \operatorname{Im}\left(  \mathcal{R}%
+_{e}\left(  v\right)  _{j}\right)  \right)  \right.  \\
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+\left.  i\left(
+\operatorname{Im}\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)
+\operatorname{Re}\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)
++\operatorname{Re}\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)
+\operatorname{Im}\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)
+\right)  \right)  .
+\end{gather}
+
+
+\item
+\begin{gather}
+\left[  \left[  \mathcal{K}_{e}^{d}\mathcal{J}_{e}^{d}\right]  \left(
+f\right)  \right]  \left(  v\right)  =\overline{f\left(  v\right)  }\\
+\parallel\\
+\sum_{1\leq j\leq n}\overline{\mathcal{R}_{e^{d}}\left(  f\right)
+_{j}\mathcal{R}_{e}\left(  v\right)  _{j}}=\sum_{1\leq j\leq n}\left(
+\operatorname{Re}\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)
+-i\operatorname{Im}\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)
+\right)  \left(  \operatorname{Re}\left(  \mathcal{R}_{e}\left(  v\right)
+_{j}\right)  -i\operatorname{Im}\left(  \mathcal{R}_{e}\left(  v\right)
+_{j}\right)  \right)  \\
+=\sum_{1\leq j\leq n}\left(  \left(  \operatorname{Re}\left(  \mathcal{R}%
+_{e^{d}}\left(  f\right)  _{j}\right)  \operatorname{Re}\left(  \mathcal{R}%
+_{e}\left(  v\right)  _{j}\right)  -\operatorname{Im}\left(  \mathcal{R}%
+_{e^{d}}\left(  f\right)  _{j}\right)  \operatorname{Im}\left(  \mathcal{R}%
+_{e}\left(  v\right)  _{j}\right)  \right)  \right.  \\
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad-\left.  i\left(
+\operatorname{Im}\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)
+\operatorname{Re}\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)
++\operatorname{Re}\left(  \mathcal{R}_{e^{d}}\left(  f\right)  _{j}\right)
+\operatorname{Im}\left(  \mathcal{R}_{e}\left(  v\right)  _{j}\right)
+\right)  \right)  .
+\end{gather}
+
+
+\item
+\begin{equation}
+\left[  \mathcal{K}_{e}^{d}\left(  f\right)  \right]  \left(  v\right)
+=\sum_{1\leq j\leq n}\mathcal{R}_{e^{d}}\left(  \mathcal{K}_{e}^{d}\left(
+f\right)  \right)  _{j}\mathcal{R}_{e}\left(  v\right)  _{j}.
+\end{equation}
+
+
+\item
+\begin{equation}
+\left[  \mathcal{K}_{e}^{d}\left(  f\right)  \right]  \left(  e_{k}\right)
+=\overline{\mathcal{R}_{e}\left(  f\right)  }_{k}=\mathcal{R}_{e^{d}}\left(
+\mathcal{K}_{e}^{d}\left(  f\right)  \right)  _{k}.
+\end{equation}
+
+\end{enumerate}
+\end{example}
+
+\subparagraph{Linear Transformations}
+
+The complex vector spaces $\mathcal{V}$ and $\mathcal{W}$ that have
+dimensions
+\begin{align}
+\dim\left\{  \mathcal{V}\right\}   &  =n\\
+\dim\left\{  \mathcal{W}\right\}   &  =m\nonumber
+\end{align}
+and bases
+\begin{equation}
+\left\{  \left.  e_{j}\right\vert 1\leq j\leq n\right\}  \text{ and }\left\{
+\left.  f_{j}\right\vert 1\leq j\leq m\right\}  .
+\end{equation}
+
+
+We consider linear transformations%
+
+\begin{align}
+A  &  \in\mathcal{B}\left(  \mathcal{W},\mathcal{V}\right) \\
+A  &  :\mathcal{V}\rightarrow\mathcal{W},\nonumber
+\end{align}
+where the dual linear transformations%
+\begin{align}
+A^{d}  &  \in\mathcal{B}\left(  \mathcal{V}^{d},\mathcal{W}^{d}\right) \\
+A^{d}  &  :\mathcal{W}^{d}\rightarrow\mathcal{V}^{d},
+\end{align}
+act in the dual spaces $\mathcal{V}^{d}$ and $\mathcal{W}^{d}$ that have
+dimensions
+\begin{align}
+\dim\left\{  \mathcal{V}^{d}\right\}   &  =n\\
+\dim\left\{  \mathcal{W}^{d}\right\}   &  =m\nonumber
+\end{align}
+and dual bases
+\begin{equation}
+\left\{  \left.  e_{j}^{d}\right\vert 1\leq j\leq n\right\}  \text{ and
+}\left\{  \left.  f_{j}^{d}\right\vert 1\leq j\leq m\right\}  .
+\end{equation}
+
+
+\begin{definition}
+The dual transformation $A^{d}\in\mathcal{B}\left(  \mathcal{V}^{d}%
+,\mathcal{W}^{d}\right)  $ of $A\in\mathcal{B}\left(  \mathcal{W}%
+,\mathcal{V}\right)  $ is defined by
+\begin{equation}
+\left[  A^{d}w^{d}\right]  \left(  v\right)  =w^{d}\left(  Av\right)
+,\quad\forall v\in\mathcal{V}.
+\end{equation}
+
+\end{definition}
+
+\begin{lemma}
+The dual transformation $A^{d}$ of $A$ is given by
+\begin{equation}
+\left(  A^{d}f_{j}^{d}\right)  \left(  e_{k}\right)  =f_{j}^{d}\left(
+Ae_{k}\right)  ,\,1\leq j\leq m,1\leq k\leq n.
+\end{equation}
+
+\end{lemma}
+
+It is convenient to consider $\mathcal{W}$ and $\mathcal{V}$ to be normed
+spaces with norms $\left\Vert {}\right\Vert _{\mathcal{V}}$ and $\left\Vert
+{}\right\Vert _{\mathcal{W}}$ and if they are complete wrt these norms they
+are \emph{Banach} spaces.
+
+\begin{definition}
+Bases of $V$ and $V^{d}$ are dual if they are biorthogonal i.e.
+\begin{equation}
+e_{j}^{d}\left(  e_{k}\right)  =\delta_{jk},\quad1\leq j,k\leq r.
+\end{equation}
+
+\end{definition}
+
+\begin{definition}
+The complex linear injection $\mathfrak{I}_{V}$ from the complex linear space
+$V$ to its dual
+\begin{equation}
+\mathfrak{I}_{V}:V\rightarrow V^{d}%
+\end{equation}
+is given by%
+\begin{equation}
+\mathfrak{I}_{V}\left(  e_{j}\right)  =e_{j}^{d},\quad1\leq j\leq r,
+\end{equation}
+where $\left\{  \left.  e_{j}\right\vert 1\leq j\leq r\right\}  $ is any basis
+for $V.$
+\end{definition}
+
+\subparagraph{Tensor Products Spaces of $V.$}
+
+\begin{enumerate}
+\item The \emph{full tensor product} ${\Large \otimes}^{2}V=V\otimes V$%
+\begin{equation}
+V\otimes V=\mathbb{C}\text{-}\operatorname*{linspan}\left\{  \left.
+e_{j}\otimes e_{k}\right\vert 1\leq j\leq r,1\leq k\leq r\right\}  .
+\end{equation}
+
+
+\item The \emph{symmetric tensor product} ${\Large \vee}^{2}V=V\vee V$%
+\begin{equation}
+{\Large \vee}^{2}V=\mathcal{S}_{2}\left(  {\Large \otimes}^{2}V\right)  ,
+\end{equation}
+where
+\begin{equation}
+v_{1}\vee v_{2}=\frac{1}{2}\left(  v_{1}\otimes v_{2}+v_{2}\otimes
+v_{1}\right)
+\end{equation}
+and $\mathcal{S}$ is the projection operator called the symmetrizer
+\begin{equation}
+\mathcal{S}_{2}=\frac{1}{2}\sum_{\sigma\in S_{2}}P_{\sigma},
+\end{equation}
+which is defined in terms of permutation operators
+\begin{equation}
+P_{\sigma}\left(  v_{1}\otimes v_{2}\right)  =v_{\sigma\left(  1\right)
+}\otimes v_{\sigma\left(  2\right)  }%
+\end{equation}
+Any element of ${\Large \vee}^{2}V$ can be expressed as
+\begin{equation}
+s=\sum_{1\leq j,k\leq r}\mathcal{R}_{e}\left(  s\right)  _{jk}e_{j}\otimes
+e_{k},\quad\mathcal{R}_{e}\left(  s\right)  _{jk}=\mathcal{R}_{e}\left(
+s\right)  _{kj},\quad1\leq j,k\leq r.
+\end{equation}
+
+
+\item The \emph{antisymmetric tensor product} ${\large \wedge}^{2}V=V\wedge V$%
+\begin{equation}
+{\Large \wedge}^{2}V=\mathcal{A}_{2}\left(  {\Large \otimes}^{2}V\right)  ,
+\end{equation}
+where
+\begin{equation}
+v_{1}\wedge v_{2}=\frac{1}{2}\left(  v_{1}\otimes v_{2}-v_{2}\otimes
+v_{1}\right)
+\end{equation}
+and $\mathcal{A}_{2}$ is the projection operator called the antisymmetrizer
+\begin{equation}
+\mathcal{A}_{2}=\frac{1}{2}\sum_{\sigma\in S_{2}}\pi\left(  \sigma\right)
+P_{\sigma},
+\end{equation}
+which is defined in terms of permutation operators $P_{\sigma}$
+\begin{equation}
+P_{\sigma}\left(  v_{1}\otimes v_{2}\right)  =v_{\sigma\left(  1\right)
+}\otimes v_{\sigma\left(  2\right)  }%
+\end{equation}
+and the parity coefficient $\pi\left(  \sigma\right)  $
+\begin{equation}
+\pi\left(  \sigma\right)  =\left\{
+\begin{array}
+[c]{c}%
+1\text{ if }\sigma\text{ is even}\\
+-1\text{ if }\sigma\text{ is odd}%
+\end{array}
+\right.  .
+\end{equation}
+Any element of ${\Large \wedge}^{2}V$ can be expressed as
+\begin{equation}
+\ g=\sum_{1\leq j,k\leq r}\mathcal{R}_{e}\left(  g\right)  _{jk}e_{j}\otimes
+e_{k},\quad\mathcal{R}_{e}\left(  \ g\right)  _{jk}=-\mathcal{R}_{e}\left(
+g\right)  _{kj},\quad1\leq j,k\leq r.
+\end{equation}
+
+
+\item Decompositions
+
+\begin{enumerate}
+\item The projectors $\mathcal{S}_{2}$ and $\mathcal{A}_{2}$ are complimentary
+i.e.
+\begin{equation}
+\mathcal{S}_{2}+\mathcal{A}_{2}=I_{{\Large \otimes}^{2}V}.
+\end{equation}
+
+
+\item The full tensor product $v_{1}\otimes v_{2}$ is the sum of the symmetric
+and antisymmetric tensor products i.e.
+\begin{equation}
+v_{1}\otimes v_{2}=v_{1}\vee v_{2}+v_{1}\wedge v_{2}.
+\end{equation}
+
+
+\item The full tensor product space ${\Large \otimes}^{2}V$ is the sum of the
+symmetric and antisymmetric tensor product spaces i.e.%
+\begin{equation}
+{\Large \otimes}^{2}V={\Large \vee}^{2}V\oplus{\Large \wedge}^{2}V.
+\end{equation}
+
+\end{enumerate}
+\end{enumerate}
+
+\begin{definition}
+
+\end{definition}
+
+\begin{enumerate}
+\item The \emph{sesquilinear tensor product} $\mathcal{J}_{e}\left(  V\right)
+\otimes V$
+\begin{equation}
+\mathcal{J}_{e}\left(  V\right)  \otimes V=\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  \mathcal{J}\left(  e_{j}\right)
+\otimes e_{k}\right\vert 1\leq j\leq r,1\leq k\leq r\right\}  .
+\end{equation}
+
+
+\item The \emph{sesquilinear symmetric tensor product }$\mathcal{J}_{e}\left(
+V\right)  \vee V$%
+\begin{equation}
+\mathcal{J}_{e}\left(  V\right)  \vee V=\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  \mathcal{J}_{e}\left(  e_{j}\right)
+\vee e_{k}\right\vert 1\leq j\leq k\leq r\right\}  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  \frac{1}{2}\left(  \mathcal{J}%
+_{e}\left(  e_{j}\right)  \otimes e_{k}+e_{k}\otimes\mathcal{J}_{e}\left(
+e_{j}\right)  \right)  \right\vert 1\leq j\leq k\leq r\right\}  .
+\end{equation}
+
+
+\item The\emph{ sesquilinear antisymmetric tensor product} $\mathcal{J}\left(
+V\right)  \wedge V$%
+\begin{equation}
+\mathcal{J}_{e}\left(  V\right)  \wedge V=\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  \mathcal{J}_{e}\left(  e_{j}\right)
+\wedge e_{k}\right\vert 1\leq j<k\leq r\right\}  =\mathbb{C}\text{-}%
+\operatorname*{linspan}\left\{  \left.  \frac{1}{2}\left(  \mathcal{J}%
+_{e}\left(  e_{j}\right)  \otimes e_{k}\ -e_{k}\otimes\mathcal{J}_{e}\left(
+e_{j}\right)  \right)  \right\vert 1\leq j<k\leq r\right\}  .
+\end{equation}
+
+\end{enumerate}
+
+\begin{remark}
+The dual spaces ${\Large \otimes}^{2}V^{d},{\Large \vee}^{2}V^{d}%
+$,${\large \wedge}^{2}V^{d},\mathcal{K}_{e}^{d}\left(  V^{d}\right)  \otimes
+V^{d},\mathcal{K}_{e}^{d}\left(  V^{d}\right)  \vee V^{d}$ and $\mathcal{K}%
+_{e}^{d}\left(  V^{d}\right)  \wedge V^{d}$ are defined in anagolous fashions.
+\end{remark}
+
+\begin{lemma}
+Let $P=P^{2}$ then%
+\begin{equation}
+\left[  P^{d}w^{d}\right]  \left(  v\right)  =w^{d}\left(  Pv\right)  =\left[
+P^{d}w^{d}\right]  \left(  Pv\right)
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}%
+\begin{equation}
+\left[  P^{d}w^{d}\right]  \left(  Pv\right)  =w^{d}\left(  PPv\right)
+=w^{d}\left(  Pv\right)  .
+\end{equation}
+
+\end{proof}
+
+\begin{lemma}
+Let $P_{1}=P_{1}^{2}$ and $P_{2}=P_{2}^{2}$ then
+\begin{align}
+\ \left[  w_{1}^{d}\otimes w_{2}^{d}\right]  \left(  \overset{}{\left[
+P_{1}\otimes P_{2}\right]  \left(  v_{1}\otimes v_{2}\right)  }\right)   &
+=\left[  \left[  P_{1}^{d}\otimes P_{2}^{d}\right]  \left(  \overset{}{w_{1}%
+^{d}\otimes w_{2}^{d}}\right)  \right]  \left(  v_{1}\otimes v_{2}\right)  \\
+&  =\left[  \overset{}{\left[  P_{1}^{d}\otimes P_{2}^{d}\right]  \left(
+\overset{}{w_{1}^{d}\otimes w_{2}^{d}}\right)  }\right]  \left(
+\overset{}{\left[  P_{1}\otimes P_{2}\right]  \left(  \overset{}{v_{1}\otimes
+v_{2}}\right)  }\right)
+\end{align}
+
+\end{lemma}
+
+\begin{proof}%
+\begin{align}
+\ \left[  w_{1}^{d}\otimes w_{2}^{d}\right]  \left(  \left[  P_{1}\otimes
+P_{2}\right]  \left(  v_{1}\otimes v_{2}\right)  \right)   &  =w_{1}%
+^{d}\left(  P_{1}v_{1}\right)  w_{2}^{d}\left(  P_{2}v_{2}\right) \\
+\left[  \left[  P_{1}^{d}\otimes P_{2}^{d}\right]  \left(  w_{1}^{d}\otimes
+w_{2}^{d}\right)  \right]  \left(  v_{1}\otimes v_{2}\right)   &  =P_{1}%
+^{d}w_{1}^{d}\left(  v_{1}\right)  P_{2}^{d}w_{2}^{d}\left(  v_{2}\right)
+=w_{1}^{d}\left(  P_{1}v_{1}\right)  w_{2}^{d}\left(  P_{2}v_{2}\right) \\
+\left[  \left[  P_{1}^{d}\otimes P_{2}^{d}\right]  \left(  w_{1}^{d}\otimes
+w_{2}^{d}\right)  \right]  \left(  \left[  P_{1}\otimes P_{2}\right]  \left(
+v_{1}\otimes v_{2}\right)  \right)   &  =P_{1}^{d}w_{1}^{d}\left(  P_{1}%
+v_{1}\right)  P_{2}^{d}w_{2}^{d}\left(  P_{2}v_{2}\right)  =w_{1}^{d}\left(
+P_{1}v_{1}\right)  w_{2}^{d}\left(  P_{2}v_{2}\right)  .
+\end{align}
+
+\end{proof}
+
+\begin{lemma}
+Let $P_{12}=P_{12}^{2}$ then
+\begin{equation}
+\ \left[  w_{1}^{d}\otimes w_{2}^{d}\right]  \left(  P_{12}\left(
+v_{1}\otimes v_{2}\right)  \right)  =\left[  P_{12}^{d}\left(  w_{1}%
+^{d}\otimes w_{2}^{d}\right)  \right]  \left(  v_{1}\otimes v_{2}\right)
+=\left[  P_{12}\left(  w_{1}^{d}\otimes w_{2}^{d}\right)  \right]  \left(
+P_{12}\left(  v_{1}\otimes v_{2}\right)  \right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{remark}
+The tensor product of dual vector spaces $V^{d}$ and $W^{d}$ define bilinear
+functionals on the vevctor spaces $V$ and $W$ as
+\begin{equation}
+\left[  e_{j}^{d}\otimes f_{k}^{d}\right]  \left(  v,w\right)  =\left[
+e_{j}^{d}\otimes f_{k}^{d}\right]  \left(  v\otimes w\right)  =e_{j}%
+^{d}\left(  v\right)  f_{k}^{d}\left(  w\right)
+\end{equation}
+and
+\begin{gather}
+\left[  e_{j}^{d}\otimes f_{k}^{d}\right]  \left(  c_{1}v_{1}+c_{2}v_{2}%
+,d_{1}w_{1}+d_{2}w_{2}\right) \\
+\parallel\\
+c_{1}d_{1}\left[  e_{j}^{d}\otimes f_{k}^{d}\right]  \left(  v_{1}%
+,w_{1}\right)  +c_{1}d_{2}\left[  e_{j}^{d}\otimes f_{k}^{d}\right]  \left(
+v_{1},w_{2}\right)  +c_{2}d_{1}\left[  e_{j}^{d}\otimes f_{k}^{d}\right]
+\left(  v_{2},w_{1}\right)  +c_{2}d_{2}\left[  e_{j}^{d}\otimes f_{k}%
+^{d}\right]  \left(  v_{2},w_{2}\right)  ,\forall v_{1},v_{2}\in V,\forall
+w_{1},w_{2}\in W.
+\end{gather}
+
+\end{remark}
+
+\begin{remark}
+In general
+\begin{equation}
+\mathfrak{b}=\sum_{\substack{1\leq j\leq m\\1\leq k\leq n}}\mathcal{R}%
+_{e^{d}f^{d}}\left(  \mathfrak{b}\right)  _{jk}\left[  e_{j}^{d}\otimes
+f_{k}^{d}\right]
+\end{equation}
+then 
+\end{remark}%
+
+\begin{equation}
+\mathfrak{b}\left(  v,w\right)  =\sum_{\substack{1\leq j\leq m\\1\leq k\leq
+n}}\mathcal{R}_{e^{d}}\left(  v\right)  _{j}\mathcal{R}_{e^{d}f^{d}}\left(
+\mathfrak{b}\right)  _{jk}\mathcal{R}_{f}\left(  w\right)  _{k}.
+\end{equation}
+
+
+\begin{remark}
+Let
+\begin{align}
+\left[  \alpha^{d}\otimes\beta^{d}\right]  \left(  \mathcal{J}\left(
+v\right)  \otimes w\right)   &  =\alpha^{d}\left(  \mathcal{J}\left(
+v\right)  \right)  \beta^{d}\left(  w\right)  =\sum_{1\leq j\leq m}%
+\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}\mathcal{R}_{e}\left(
+\mathcal{J}\left(  v\right)  \right)  _{j}\sum_{1\leq j\leq n}\mathcal{R}%
+_{f^{d}}\left(  \beta^{d}\right)  _{j}\mathcal{R}_{f}\left(  w\right)  _{j}\\
+&  =\sum_{1\leq j\leq m}\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)
+_{j}\overline{\mathcal{R}_{e}\left(  v\right)  }_{j}\sum_{1\leq j\leq
+n}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)  _{j}\mathcal{R}_{f}\left(
+w\right)  _{j}.
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{align}
+\left[  \alpha^{d}\otimes\beta^{d}\right]  \left(  \mathcal{J}\left(
+w\right)  \otimes v\right)   &  =\alpha^{d}\left(  \mathcal{J}\left(
+w\right)  \right)  \beta^{d}\left(  v\right)  =\sum_{1\leq j\leq m}%
+\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}\mathcal{R}_{e}\left(
+\mathcal{J}\left(  w\right)  \right)  _{j}\sum_{1\leq j\leq n}\mathcal{R}%
+_{f^{d}}\left(  \beta^{d}\right)  _{j}\mathcal{R}_{f}\left(  v\right)  _{j}\\
+&  =\sum_{1\leq j\leq m}\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)
+_{j}\overline{\mathcal{R}_{e}\left(  w\right)  }_{j}\sum_{1\leq j\leq
+n}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)  _{j}\mathcal{R}_{f}\left(
+v\right)  _{j}.
+\end{align}
+
+\end{remark}
+
+\begin{remark}
+Let
+\begin{align}
+h\left(  v,w\right)  = &  \left[  \alpha^{d}\otimes\beta^{d}\right]  \left(
+\mathcal{J}\left(  v\right)  \otimes w+w\otimes\mathcal{J}\left(  v\right)
+\right)  =\alpha^{d}\left(  \mathcal{J}\left(  v\right)  \right)  \beta
+^{d}\left(  w\right)  +\alpha^{d}\left(  w\right)  \beta^{d}\left(
+\mathcal{J}\left(  v\right)  \right)  \\
+&  =\sum_{1\leq j\leq m}\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)
+_{j}\mathcal{R}_{e}\left(  \mathcal{J}\left(  v\right)  \right)  _{j}%
+\sum_{1\leq j\leq n}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)
+_{j}\mathcal{R}_{f}\left(  w\right)  _{j}+\sum_{1\leq j\leq m}\mathcal{R}%
+_{e^{d}}\left(  \alpha^{d}\right)  _{j}\mathcal{R}_{e}\left(  w\right)
+_{j}\sum_{1\leq j\leq n}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)
+_{j}\mathcal{R}_{f}\left(  \mathcal{J}\left(  v\right)  \right)  _{j}\\
+&  =\sum_{1\leq j\leq m}\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)
+_{j}\overline{\mathcal{R}_{e}\left(  v\right)  }_{j}\sum_{1\leq j\leq
+n}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)  _{j}\mathcal{R}_{f}\left(
+w\right)  _{j}+\sum_{1\leq j\leq m}\mathcal{R}_{e^{d}}\left(  \alpha
+^{d}\right)  _{j}\overline{\mathcal{R}_{e}\left(  w\right)  }_{j}\sum_{1\leq
+j\leq n}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)  _{j}\mathcal{R}%
+_{f}\left(  v\right)  _{j}\\
+&  =\sum_{\substack{1\leq j\leq m\\1\leq k\leq n}}\left\{  \mathcal{R}_{e^{d}%
+}\left(  \alpha^{d}\right)  _{j}\overline{\mathcal{R}_{e}\left(  v\right)
+}_{j}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)  _{k}\mathcal{R}_{f}\left(
+w\right)  _{k}+\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}%
+\overline{\mathcal{R}_{e}\left(  w\right)  }_{j}\mathcal{R}_{f^{d}}\left(
+\beta^{d}\right)  _{k}\mathcal{R}_{f}\left(  v\right)  _{k}\right\}  .
+\end{align}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+h\left(  w,v\right)  =\sum_{\substack{1\leq j\leq m\\1\leq k\leq n}}\left\{
+\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}\overline{\mathcal{R}%
+_{e}\left(  w\right)  }_{j}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)
+_{k}\mathcal{R}_{f}\left(  v\right)  _{k}+\mathcal{R}_{e^{d}}\left(
+\alpha^{d}\right)  _{j}\overline{\mathcal{R}_{e}\left(  v\right)  }%
+_{j}\mathcal{R}_{f^{d}}\left(  \beta^{d}\right)  _{k}\mathcal{R}_{f}\left(
+w\right)  _{k}\right\}  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\overline{h\left(  w,v\right)  }=\sum_{\substack{1\leq j\leq m\\1\leq k\leq
+n}}\left\{  \overline{\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}%
+}\mathcal{R}_{e}\left(  w\right)  _{j}\overline{\mathcal{R}_{f^{d}}\left(
+\beta^{d}\right)  }_{k}\overline{\mathcal{R}_{f}\left(  v\right)  _{k}%
+}+\overline{\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}}\mathcal{R}%
+_{e}\left(  v\right)  _{j}\overline{\mathcal{R}_{f^{d}}\left(  \beta
+^{d}\right)  }_{k}\overline{\mathcal{R}_{f}\left(  w\right)  }_{k}\right\}
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{equation}
+\overline{h\left(  v,w\right)  }=\sum_{\substack{1\leq j\leq m\\1\leq k\leq
+n}}\left\{  \overline{\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}%
+}\mathcal{R}_{e}\left(  v\right)  _{j}\overline{\mathcal{R}_{f^{d}}\left(
+\beta^{d}\right)  }_{k}\overline{\mathcal{R}_{f}\left(  w\right)  _{k}%
+}+\overline{\mathcal{R}_{e^{d}}\left(  \alpha^{d}\right)  _{j}}\mathcal{R}%
+_{e}\left(  w\right)  _{j}\overline{\mathcal{R}_{f^{d}}\left(  \beta
+^{d}\right)  }_{k}\overline{\mathcal{R}_{f}\left(  v\right)  }_{k}\right\}
+\end{equation}
+
+\end{remark}
+
+\subparagraph{Group Representations carried by ${\protect\Large \otimes}^{2}%
+V$}
+
+The group $GL\left(  V\right)  \subset GL\left(  {\Large \otimes}^{2}V\right)
+$ has matrix representations $\mathcal{R}_{e\otimes e}$%
+\begin{equation}
+\mathcal{R}_{e\otimes e}:GL\left(  V\right)  \rightarrow\mathcal{M}\left(
+r^{2},r^{2},\mathbb{C}\right)  ,
+\end{equation}
+which are reducible and have direct sum decompositions
+\begin{equation}
+\mathcal{R}_{e\otimes e}=\mathcal{R}_{e\vee e}\oplus\mathcal{R}_{e\wedge e}%
+\end{equation}
+and is the tensor product of the representation $\mathcal{R}_{e}$ with itself
+i.e.
+\begin{equation}
+\mathcal{R}_{e\otimes e}\left(  T\otimes T\right)  =\mathcal{R}_{e}\left(
+T\right)  \otimes\mathcal{R}_{e}\left(  T\right)  .
+\end{equation}
+
+
+\subparagraph{Bilinear Forms acting in $V.$}
+
+\begin{enumerate}
+\item Complex nondegenerate bilinear forms $\mathfrak{b}\left(  ,\right)  $
+can be defined in $V\times V$ i.e.
+\begin{equation}
+\mathfrak{b}\left(  ,\right)  :V\times V\rightarrow\mathbb{C},
+\end{equation}
+where
+\begin{equation}
+\mathfrak{b}\left(  c_{1}v_{1}+c_{2}v_{2},c_{3}v_{3}+c_{4}w_{4}\right)
+=c_{1}c_{3}\mathfrak{b}\left(  v_{1},v_{3}\right)  +c_{1}c_{4}\mathfrak{b}%
+\left(  v_{1},v_{3}\right)  +c_{2}c_{3}\mathfrak{b}\left(  v_{2},v_{3}\right)
++c_{2}c_{4}\mathfrak{b}\left(  v_{2},v_{4}\right)  ,\forall v_{1},v_{2}%
+,v_{3},v_{4}\in V.
+\end{equation}
+
+
+\begin{enumerate}
+\item The form $\mathfrak{b}$ can always be generated by an element of the
+tensor product space ${\large \otimes}^{2}V^{d}=V^{d}\otimes V^{d}$ i.e.
+\begin{equation}
+\mathfrak{b}\left(  v_{1},v_{2}\right)  =\left(  \left.  {}\right\vert \left.
+{}\right.  \right)  _{\mathfrak{b}}=\left[  \sum_{1\leq j\leq r}w_{j}%
+^{d}\otimes x_{j}^{d}\right]  \left(  v_{1}\otimes v_{2}\right)  =\left[
+\sum_{1\leq j,k\leq r}\mathcal{R}_{e}\left(  b\right)  _{jk}e_{j}^{d}\otimes
+e_{k}^{d}\right]  \left(  v_{1}\otimes v_{2}\right)  .
+\end{equation}
+
+
+\item
+\begin{equation}
+b\in\mathcal{B}_{00}\left(  V\right)  \cong V\otimes V^{d}\cong V^{d}\otimes
+V^{d}%
+\end{equation}
+
+\end{enumerate}
+
+\item Complex nondegenerate symmetric bilinear forms $\mathfrak{s}\left(
+,\right)  =\left(  \left.  {}\right\vert \left.  {}\right.  \right)
+_{\mathfrak{s}}$ can be defined in $V\times V$ i.e.
+\begin{equation}
+\left(  \left.  {}\right\vert \left.  {}\right.  \right)  _{\mathfrak{s}%
+}:V\times V\rightarrow\mathbb{C},
+\end{equation}
+where
+\begin{equation}
+\mathfrak{s}\left(  v_{1},v_{2}\right)  =\left(  \left.  v_{1}\right\vert
+v_{2}\right)  _{\mathfrak{s}}=\left(  \left.  v_{2}\right\vert v_{1}\right)
+_{\mathfrak{s}}=\mathfrak{s}\left(  v_{2},v_{1}\right)  ,\forall v_{1}%
+,v_{2}\in V.
+\end{equation}
+
+
+\begin{enumerate}
+\item The form $\mathfrak{s}$ can always be generated by an element of the
+symmetric tensor product space ${\Large \vee}^{2}V^{d}=V^{d}\vee V^{d}$ i.e.
+\begin{equation}
+\mathfrak{s}\left(  v_{1},v_{2}\right)  =\left(  \left.  v_{2}\right\vert
+v_{1}\right)  _{\mathfrak{s}}=\left[  \sum_{1\leq j\leq r}w_{j}^{d}\vee
+x_{j}^{d}\right]  \left(  v_{1}\vee v_{2}\right)  =\left[  \sum_{1\leq j\leq
+r}w_{j}^{d}\vee x_{j}^{d}\right]  \left(  v_{2}\vee v_{1}\right)
+=\mathfrak{s}\left(  v_{2},v_{1}\right)  .
+\end{equation}
+
+
+\item The form $\mathfrak{s}$ can be expressed wrt a general basis by%
+\begin{equation}
+\mathfrak{s}\left(  v_{1},v_{2}\right)  =\left(  \left.  v_{2}\right\vert
+v_{1}\right)  _{\mathfrak{s}}=\left[  \sum_{1\leq j\leq r}w_{j}^{d}\vee
+x_{j}^{d}\right]  \left(  v_{1}\vee v_{2}\right)  =\left[  \sum_{1\leq j,k\leq
+r}\mathcal{R}_{e}\left(  s\right)  _{jk}e_{j}^{d}\otimes e_{k}^{d}\right]
+\left(  v_{1}\otimes v_{2}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{R}_{e}\left(  s\right)  _{jk}=\mathcal{R}_{e}\left(  s\right)
+_{kj},\quad1\leq j\leq r,1\leq k\leq r.
+\end{equation}
+
+
+\item
+\begin{equation}
+s\in\mathcal{B}_{00}\left(  V\right)  \cong V\otimes V^{d}\cong V^{d}\otimes
+V^{d}.
+\end{equation}
+
+\end{enumerate}
+
+\item Complex nondegenerate antisymmetric bilinear forms $\mathfrak{g}\left(
+,\right)  =\left\{  \left.  {}\right\vert \left.  {}\right.  \right\}
+_{\mathfrak{g}}=$ $\left(  \left.  {}\right\vert \left.  {}\right.  \right)
+_{\mathfrak{g}}$ can be defined in $V\times V$ i.e.
+\begin{equation}
+\left\{  \left.  {}\right\vert \left.  {}\right.  \right\}  _{\mathfrak{g}%
+}:V\times V\rightarrow\mathbb{C},
+\end{equation}
+where
+\begin{equation}
+\mathfrak{g}\left(  v_{1},v_{2}\right)  =\left\{  \left.  v_{1}\right\vert
+v_{2}\right\}  _{\mathfrak{g}}=-\left\{  \left.  v_{1}\right\vert
+v_{2}\right\}  _{\mathfrak{g}}=-\mathfrak{g}\left(  v_{2},v_{1}\right)
+,\,\forall v_{1},v_{2}\in V.
+\end{equation}
+
+
+\begin{enumerate}
+\item The form $\mathfrak{g}$ can always be generated by an element of the
+antisymmetric tensor product space ${\Large \wedge}^{2}V^{d}=V^{d}\wedge
+V^{d}$ i.e.
+\begin{equation}
+\mathfrak{g}\left(  v_{1},v_{2}\right)  =\left\{  \left.  v_{1}\right\vert
+v_{2}\right\}  _{\mathfrak{g}}=\left[  \sum_{1\leq j\leq s}w_{j}^{d}\wedge
+w_{j+s}^{d}\right]  \left(  v_{1}\wedge v_{2}\right)  =-\left[  \sum_{1\leq
+j\leq s}w_{j}^{d}\wedge w_{j+s}^{d}\right]  \left(  v_{2}\wedge v_{1}\right)
+.
+\end{equation}
+
+
+\item The form $\mathfrak{g}$ can be expressed wrt a general basis by
+\begin{equation}
+\mathfrak{g}\left(  v_{1},v_{2}\right)  =\left(  \left.  v_{1}\right\vert
+v_{2}\right)  _{\mathfrak{g}}=\left[  \sum_{1\leq j\leq r}w_{j}^{d}\wedge
+x_{j}^{d}\right]  \left(  v_{1}\wedge v_{2}\right)  =\left[  \sum_{1\leq
+j,k\leq r}\mathcal{R}_{e}\left(  g\right)  _{jk}e_{j}^{d}\otimes e_{k}%
+^{d}\right]  \left(  v_{1}\otimes v_{2}\right)  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{R}_{e}\left(  g\right)  _{jk}=-\mathcal{R}_{e}\left(  g\right)
+_{kj},\quad1\leq j\leq r,1\leq k\leq r.
+\end{equation}
+
+
+\item
+\begin{equation}
+g\in\mathcal{B}_{00}\left(  V\right)  \cong V\otimes V^{d}\cong V^{d}\otimes
+V^{d}%
+\end{equation}
+
+\end{enumerate}
+
+\item Sesquilinear nondegenerate forms $\mathfrak{h}\left(  ,\right)
+=\left\langle \left.  {}\right\vert \left.  {}\right.  \right\rangle
+_{\mathfrak{h}}$ can be defined in $V\times V$ i.e.
+\begin{equation}
+\left\langle \left.  {}\right\vert \left.  {}\right.  \right\rangle
+_{\mathfrak{h}}:V\times V\rightarrow\mathbb{C},
+\end{equation}
+by 
+
+\begin{enumerate}
+\item
+\begin{equation}
+\mathfrak{h}\left(  v_{1},v_{2}\right)  =\left\langle \left.  v_{1}\right\vert
+v_{2}\right\rangle _{\mathfrak{h}}=\overline{\left\langle \left.
+v_{2}\right\vert v_{1}\right\rangle }_{\mathfrak{h}},\forall v_{1},v_{2}\in V
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathfrak{h=}%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}e_{j}^{d}\otimes e_{k}^{d}%
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{R}_{e}\left(  h\right)  _{jk}=\overline{\mathcal{R}_{e}\left(
+h\right)  _{kj}},\quad1\leq j\leq r,1\leq k\leq r.
+\end{equation}
+
+
+\item
+\begin{equation}
+h\in\mathcal{B}_{00}\left(  V\right)  \cong V\otimes V^{d}\cong V^{d}\otimes
+V^{d}.
+\end{equation}
+
+
+\item
+\begin{equation}
+h=%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}e_{j}\otimes e_{k}^{d}%
+\end{equation}
+
+
+\item
+\begin{align}
+h  & =h^{\dagger}\\
+\left(  u^{\dagger}hu\right)  ^{\dagger}  & =u^{\dagger}hu
+\end{align}
+
+
+\item
+\begin{equation}
+\mathcal{R}_{e}\left(  \sigma_{e}\left(  v\right)  \right)  _{j}%
+=\overline{\mathcal{R}_{e}\left(  v\right)  _{j}},\quad1\leq j\leq r.
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathfrak{h}\left(  v_{1},v_{2}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}\mathcal{R}_{e}\left(
+h\right)  _{jk}\mathcal{R}_{e}\left(  v_{2}\right)  _{k}=%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  \sigma_{e}\left(  v_{1}\right)  \right)  _{j}%
+\mathcal{R}_{e}\left(  h\right)  _{jk}\mathcal{R}_{e}\left(  v_{2}\right)
+_{k}%
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathfrak{h}\left(  v_{1},v_{2}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}e_{j}^{d}\otimes e_{k}^{d}%
+%TCIMACRO{\dsum \limits_{1\leq l,m\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq l,m\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  \sigma_{e}\left(  v_{1}\right)  \right)  _{l}%
+\mathcal{R}_{e}\left(  v_{2}\right)  _{m}e_{l}\otimes e_{m}=%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}\mathcal{R}_{e}\left(  \sigma_{e}\left(
+v_{1}\right)  \right)  _{j}\mathcal{R}_{e}\left(  v_{2}\right)  _{k}%
+\end{equation}
+
+
+\item
+\begin{align}
+\overline{\mathfrak{h}\left(  v_{2},v_{1}\right)  }  & =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v_{2}\right)  _{j}\overline{\mathcal{R}_{e}\left(
+h\right)  _{jk}}\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{k}}=%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v_{2}\right)  _{k}\mathcal{R}_{e}\left(  h\right)
+_{jk}\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}=%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v_{2}\right)  _{k}\mathcal{R}_{e}\left(  h\right)
+_{jk}\mathcal{R}_{e}\left(  \sigma_{e}\left(  v_{1}\right)  \right)  _{j}\\
+& =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}\mathcal{R}_{e}\left(
+h\right)  _{jk}\mathcal{R}_{e}\left(  v_{2}\right)  _{k}=%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  \sigma_{e}\left(  v_{1}\right)  \right)  _{j}%
+\mathcal{R}_{e}\left(  h\right)  _{jk}\mathcal{R}_{e}\left(  v_{2}\right)
+_{k}=\mathfrak{h}\left(  v_{1},v_{2}\right)  .
+\end{align}
+
+
+\item
+\begin{align}
+h  & =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}e_{j}\otimes e_{k}^{d}\\
+hv  & =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}e_{j}\otimes e_{k}^{d}%
+%TCIMACRO{\dsum \limits_{1\leq l\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq l\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v\right)  _{l}e_{j}=%
+%TCIMACRO{\dsum \limits_{1\leq k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}\mathcal{R}_{e}\left(  v\right)
+_{k}e_{j\ }\\
+\sigma_{e}\left(  hv\right)    & =\sigma_{e}\left(
+%TCIMACRO{\dsum \limits_{1\leq k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  h\right)  _{jk}\mathcal{R}_{e}\left(  v\right)
+_{k}e_{j\ }\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  h\right)  _{jk}\mathcal{R}_{e}\left(
+v\right)  _{k}}e_{j\ }\\
+& =\left[  \sigma_{e}\left(  h\right)  \sigma_{e}\right]  \left(  v\right)
+\end{align}
+
+
+\item
+\begin{equation}
+\end{equation}
+
+
+\begin{lemma}
+The form $\mathfrak{h}$ can always be generated by an element of the
+sesquilinear symmetric tensor product space $\mathcal{\sigma}_{e}^{d}\left(
+V^{d}\right)  \vee V^{d}$ where the sesquilinear symmetric tensor product
+space is given by
+\begin{equation}
+\mathcal{\sigma}_{e}^{d}\left(  V^{d}\right)  \vee\left(  V^{d}\right)
+=\mathbb{C}\text{-}\operatorname*{linspan}\left\{  \left.  \mathcal{\sigma
+}_{e}^{d}\left(  e_{j}^{d}\right)  \vee e_{k}^{d}\right\vert 1\leq j\leq
+r,1\leq k\leq r\right\}  ,
+\end{equation}
+where
+\begin{equation}
+\mathcal{S}_{2}\left(  \mathcal{\sigma}_{e}^{d}\left(  e_{j}^{d}\right)
+\otimes e_{k}^{d}\right)  =\mathcal{\sigma}_{e}^{d}\left(  e_{j}^{d}\right)
+\vee e_{k}^{d}=\frac{1}{2}\left(  \mathcal{\sigma}_{e}^{d}\left(  e_{j}%
+^{d}\right)  \otimes e_{k}^{d}\right)  +\left(  e_{k}^{d}\otimes
+\mathcal{\sigma}_{e}^{d}\left(  e_{j}^{d}\right)  \right)  .
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}%
+\begin{equation}
+\mathcal{\sigma}_{e}^{d}\left(  v_{1}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}\mathcal{\sigma}_{e}%
+^{d}\left(  e_{j}^{d}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}e_{j}^{d}%
+\end{equation}%
+\begin{align}
+\mathcal{\sigma}_{e}\left(  v_{1}\right)  \vee v_{2}  & =\frac{1}{2}\left(
+\mathcal{\sigma}_{e}\left(  v_{1}\right)  \otimes v_{2}\right)  +\left(
+v_{2}\otimes\mathcal{\sigma}_{e}\left(  v_{1}\right)  \right)  \\
+& =\frac{1}{2}\left(  \left(
+%TCIMACRO{\dsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}e_{j}\right)  \otimes
+v_{2}\right)  +\left(  v_{2}\otimes\left(
+%TCIMACRO{\dsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}e_{j}\right)  \right)  \\
+& =\frac{1}{2}\left(  \left(
+%TCIMACRO{\dsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}e_{j}\right)  \otimes%
+%TCIMACRO{\dsum \limits_{1\leq k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v_{2}\right)  _{k}e_{k}\right)  +\left(
+%TCIMACRO{\dsum \limits_{1\leq k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v_{2}\right)  _{k}e_{k}\otimes\left(
+%TCIMACRO{\dsum \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}e_{j}\right)  \right)  \\
+& =\frac{1}{2}\left(
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}\mathcal{R}_{e}\left(
+v_{2}\right)  _{k}e_{j}\otimes e_{k}\right)  +\left(
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v_{2}\right)  _{k}\overline{\mathcal{R}_{e}\left(
+v_{1}\right)  _{j}}e_{k}\otimes e_{j}\right)  \\
+& =\frac{1}{2}%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\left\{  \overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}\mathcal{R}%
+_{e}\left(  v_{2}\right)  _{k}+\mathcal{R}_{e}\left(  v_{2}\right)
+_{j}\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{k}}\right\}  e_{j}\otimes
+e_{k}%
+\end{align}%
+\begin{equation}
+\end{equation}%
+\begin{align}
+\mathfrak{h}\left(  v_{1},v_{2}\right)    & =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+e_{j}^{d}\left(  \sigma_{e}\left(  v_{1}\right)  \right)  \mathcal{R}%
+_{e}\left(  h\right)  _{jk}e_{k}^{d}\left(  v_{2}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}\mathcal{R}_{e}\left(
+h\right)  _{jk}\mathcal{R}_{e}\left(  v_{2}\right)  _{k}\\
+\mathfrak{h}\left(  v_{2},v_{1}\right)    & =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+e_{j}^{d}\left(  \sigma_{e}\left(  v_{2}\right)  \right)  \mathcal{R}%
+_{e}\left(  h\right)  _{jk}e_{k}^{d}\left(  v_{1}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{2}\right)  _{j}}\mathcal{R}_{e}\left(
+h\right)  _{jk}\mathcal{R}_{e}\left(  v_{1}\right)  _{k}\\
+\overline{\mathfrak{h}\left(  v_{2},v_{1}\right)  }  & =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{e_{j}^{d}\left(  \sigma_{e}\left(  v_{2}\right)  \right)
+\mathcal{R}_{e}\left(  h\right)  _{jk}e_{k}^{d}\left(  v_{1}\right)  }\\
+& =%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\mathcal{R}_{e}\left(  v_{2}\right)  _{j}\mathcal{R}_{e}\left(  h\right)
+_{kj}\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{k}}=%
+%TCIMACRO{\dsum \limits_{1\leq j,k\leq r}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j,k\leq r}}
+%EndExpansion
+\overline{\mathcal{R}_{e}\left(  v_{1}\right)  _{j}}\mathcal{R}_{e}\left(
+h\right)  _{jk}\mathcal{R}_{e}\left(  v_{2}\right)  _{k}=\mathfrak{h}\left(
+v_{1},v_{2}\right)  .
+\end{align}
+
+\end{proof}
+
+\item The forms $\mathfrak{h}$ are explicitly given by
+\begin{equation}
+\left\langle \left.  v_{1}\right\vert v_{2}\right\rangle _{\mathfrak{h}%
+}=\mathfrak{h}\left(  v_{1},v_{2}\right)  =\left[  \sum_{1\leq j\leq
+r}\mathcal{K}_{e}^{d}\left(  w_{j}^{d}\right)  \vee x_{j}^{d}\right]  \left(
+v_{1}\ ,v_{2}\right)  =\overline{\left[  \sum_{1\leq j\leq r}\mathcal{K}%
+_{e}^{d}\left(  w_{j}^{d}\right)  \vee x_{j}^{d}\right]  \left(  v_{2}%
+,v_{1}\right)  }=\overline{\mathfrak{h}\left(  v_{2},v_{1}\right)  }%
+=\overline{\left\langle \left.  v_{2}\right\vert v_{1}\right\rangle },
+\end{equation}
+which can be seen from
+\begin{equation}
+\left[  2\mathcal{K}_{e}^{d}\left(  e_{j}^{d}\right)  \vee e_{k}^{d}\right]
+\left(  v_{1},v_{2}\right)  =\left[  \left(  \mathcal{K}_{e}^{d}\left(
+e_{j}^{d}\right)  \otimes e_{k}^{d}\right)  +\left(  e_{k}^{d}\otimes
+\mathcal{K}_{e}^{d}\left(  e_{j}^{d}\right)  \right)  \right]  \left(
+v_{1},v_{2}\right)  =\overline{e_{j}^{d}\left(  v_{1}\right)  }e_{k}%
+^{d}\left(  v_{2}\right)  +\overline{e_{k}^{d}\left(  v_{1}\right)  }e_{j}%
+^{d}\left(  v_{2}\right)
+\end{equation}
+and%
+\begin{align}
+\left[  2\mathcal{K}_{e}^{d}\left(  e_{j}^{d}\right)  \vee e_{k}^{d}\right]
+\left(  v_{2},v_{1}\right)   &  =\left[  \left(  \mathcal{K}_{e}^{d}\left(
+e_{j}^{d}\right)  \otimes e_{k}^{d}\right)  +\left(  e_{k}^{d}\otimes
+\mathcal{K}^{d}\left(  e_{j}^{d}\right)  \right)  \right]  \left(  v_{2}%
+,v_{1}\right)  =\overline{e_{j}^{d}\left(  v_{2}\right)  }e_{k}^{d}\left(
+v_{1}\right)  +\overline{e_{k}^{d}\left(  v_{2}\right)  }e_{j}^{d}\left(
+v_{1}\right)  \\
+&  \Downarrow\\
+\overline{\left[  2\mathcal{K}_{e}^{d}\left(  e_{j}^{d}\right)  \vee e_{k}%
+^{d}\right]  \left(  v_{2},v_{1}\right)  } &  =e_{j}^{d}\left(  v_{2}\right)
+\overline{e_{k}^{d}\left(  v_{1}\right)  }+e_{k}^{d}\left(  v_{2}\right)
+\overline{e_{j}^{d}\left(  v_{1}\right)  }=\overline{e_{j}^{d}\left(
+v_{1}\right)  }e_{k}^{d}\left(  v_{2}\right)  +\overline{e_{k}^{d}\left(
+v_{1}\right)  }e_{j}^{d}\left(  v_{2}\right)  .
+\end{align}
+
+\end{enumerate}
+\end{enumerate}
+
+\begin{definition}
+$\mathfrak{b}$-\emph{biorthogonal} bases sets $\left\{  \left.  e_{j}%
+^{b}\right\vert 1\leq j\leq r\right\}  $ and $\left\{  \left.  e_{j}%
+\right\vert 1\leq j\leq r\right\}  $ wrt a bilinear form $\mathfrak{b}$ are
+bases that have the property
+\begin{equation}
+\mathfrak{b}\left(  e_{j}^{b},e_{k}\right)  =\delta_{jk},\quad1\leq j,k\leq r.
+\end{equation}
+
+\end{definition}
+
+\begin{remark}
+If $T\in GL\left(  V\right)  $ then conjugate bilinear forms can be defined
+by
+\begin{equation}
+\left[  \left(  T^{d}\otimes T^{d}\right)  \mathfrak{b}\right]  \left(
+v_{1},v_{2}\right)  =\left[  \sum_{1\leq j\leq r}\left(  Tw\right)  _{j}%
+^{d}\otimes\left(  Tx\right)  _{j}^{d}\right]  \left(  v_{1}\otimes
+v_{2}\right)  =\left[  \sum_{1\leq j\leq r}w_{j}^{d}\otimes x_{j}^{d}\right]
+\left(  Tv_{1}\otimes Tv_{2}\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+A complex nondegenerate bilinear form $\mathfrak{b}$ defines a complex linear
+injection $\mathfrak{I}_{\mathfrak{b}}$ from the complex linear space $V$ to
+its dual $V^{d}$
+\begin{equation}
+\mathfrak{I}_{\mathfrak{b}}:V\rightarrow V^{d}%
+\end{equation}
+given by%
+\begin{equation}
+w_{1}^{d}=\mathfrak{I}_{\mathfrak{b}}\left(  v_{1}\right)  ,
+\end{equation}
+where%
+\begin{equation}
+w_{1}^{d}\left(  v_{2}\right)  =\mathfrak{b}\left(  v_{1},v_{2}\right)
+=\left[  \mathfrak{I}_{\mathfrak{b}}\left(  v_{1}\right)  \right]  \left(
+v_{2}\right)  ,\quad\forall v_{2}\in V.
+\end{equation}
+
+\end{remark}
+
+\begin{definition}
+The \emph{Form matrix} $\mathcal{M}_{e}\left(  \mathfrak{b}\right)
+\in\mathcal{M}\left(  r,r,\mathbb{C}\right)  $ of $\mathfrak{b}$ wrt a basis
+$\left\{  \left.  e_{j}\right\vert 1\leq j\leq r\right\}  $ of $V$ is
+\begin{equation}
+\mathcal{M}_{e}\left(  \mathfrak{b}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{b}\left(  e_{1},e_{1}\right)  & \cdots & \mathfrak{b}\left(
+e_{1},e_{r}\right) \\
+\vdots & \ddots & \vdots\\
+\mathfrak{b}\left(  e_{r},e_{1}\right)  & \cdots & \mathfrak{b}\left(
+e_{r},e_{r}\right)
+\end{array}
+\right)  .
+\end{equation}
+
+\end{definition}
+
+\begin{lemma}%
+\begin{align}
+\mathfrak{b}\left(  T\boldsymbol{e},\boldsymbol{e}\right)   &  =\mathcal{R}%
+_{e}\left(  T\right)  ^{t}\mathfrak{b}\left(  \boldsymbol{e},\boldsymbol{e}%
+\right) \\
+\mathfrak{b}\left(  \boldsymbol{e},T\boldsymbol{e}\right)   &  =\mathfrak{b}%
+\left(  \boldsymbol{e},\boldsymbol{e}\right)  \mathcal{R}_{e}\left(  T\right)
+.
+\end{align}
+
+\end{lemma}
+
+\begin{proof}
+In terms of matrix elements one has
+\begin{equation}
+\mathfrak{b}\left(  Te_{p},e_{q}\right)  =\mathfrak{b}\left(  \sum_{1\leq
+j\leq r}e_{j}\mathcal{R}_{e}\left(  T\right)  _{jp},e_{q}\right)  =\sum_{1\leq
+j\leq r}\mathcal{R}_{e}\left(  T\right)  _{jp}\mathfrak{b}\left(  e_{j}%
+,e_{q}\right)  =\sum_{1\leq j\leq r}\mathcal{R}_{e}\left(  T\right)  _{pj}%
+^{t}\mathfrak{b}\left(  e_{j},e_{q}\right)
+\end{equation}
+and
+\begin{equation}
+\mathfrak{b}\left(  e_{p},Te_{q}\right)  =\mathfrak{b}\left(  e_{p}%
+,\sum_{1\leq j\leq r}e_{j}\mathcal{R}_{e}\left(  T\right)  _{jq},\right)
+=\sum_{1\leq j\leq r}\mathfrak{b}\left(  e_{p},e_{j}\right)  \mathcal{R}%
+_{e}\left(  T\right)  _{jq}.
+\end{equation}
+
+\end{proof}
+
+\begin{remark}
+The Form matrices wrt different bases $\left(  \boldsymbol{e}\right)  $ and
+$\left(  \boldsymbol{f}\right)  ,$ where
+\begin{equation}
+\left(  \boldsymbol{f}\right)  =T_{fe}\left(  \boldsymbol{e}\right)  =\left(
+\boldsymbol{e}\right)  \mathcal{R}_{e}\left(  T_{fe}\right)
+\end{equation}
+and
+\begin{equation}
+T_{fe}\in GL\left(  V\right)
+\end{equation}
+are related by
+\begin{equation}
+\mathfrak{b}\left(  \boldsymbol{f},\boldsymbol{f}\right)  =\mathfrak{b}\left(
+T_{fe}\boldsymbol{e},T_{fe}\boldsymbol{e}\right)  =\mathcal{M}_{f}\left(
+\mathfrak{b}\right)  =\mathcal{R}_{e}\left(  T_{fe}\right)  ^{t}%
+\mathcal{M}_{e}\left(  \mathfrak{b}\right)  \mathcal{R}_{e}\left(
+T_{fe}\right)  =\mathcal{R}_{e}\left(  T_{fe}\right)  ^{t}\mathfrak{b}\left(
+\boldsymbol{e},\boldsymbol{e}\right)  \mathcal{R}_{e}\left(  T_{fe}\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+One can form dual basis $\left(  \boldsymbol{e}^{d}\right)  $ from $\left(
+\boldsymbol{e}\right)  $ by forming the biorthogonal basis $\left(
+\boldsymbol{e}^{b}\right)  $
+\begin{equation}
+\left(  \boldsymbol{e}^{b}\right)  =\left(  \left.  \boldsymbol{e}\right\vert
+\boldsymbol{e}\right)  ^{-1}\left(  \boldsymbol{e}\right)  =\mathfrak{b}%
+\left(  \boldsymbol{e},\boldsymbol{e}\right)  ^{-1}\left(  \boldsymbol{e}%
+\right)
+\end{equation}
+and then defining
+\begin{equation}
+\boldsymbol{e}^{d}=\mathfrak{I}_{\mathfrak{b}}\left(  \boldsymbol{e}%
+^{b}\right)  ,
+\end{equation}
+where one uses the matrix SVD
+\begin{equation}
+\mathfrak{b}\left(  \boldsymbol{e},\boldsymbol{e}\right)  \equiv
+\mathcal{M}_{e}\left(  \mathfrak{b}\right)  =\left(  \mathfrak{I}%
+_{\mathfrak{b}}\boldsymbol{e}^{d}\right)  \left(  \boldsymbol{e}\right)
+=\mathbb{U}\boldsymbol{\Sigma}\mathbb{V}%
+\end{equation}
+to obtain the inverse of the form matrix $\mathcal{M}_{e}\left(
+\mathfrak{b}\right)  $
+\begin{equation}
+\mathcal{M}_{e}\left(  \mathfrak{b}\right)  ^{-1}=\left(  \left[
+\mathfrak{I}_{\mathfrak{b}}\left(  \overset{}{\boldsymbol{e}^{d}}\right)
+\right]  \left(  \overset{}{\boldsymbol{e}}\right)  \right)  ^{-1}%
+=\mathbb{V}^{\dagger}\boldsymbol{\Sigma}^{-1}\mathbb{U}^{\dagger}.
+\end{equation}
+
+\end{remark}
+
+\begin{remark}%
+\begin{gather}
+\mathfrak{b}\left(  \boldsymbol{e},\boldsymbol{e}\right)  \equiv\left(
+\left.  \boldsymbol{e}\right\vert \boldsymbol{e}\right)  =\mathcal{M}%
+_{e}\left(  \mathfrak{b}\right) \\
+\left(  \boldsymbol{e}^{d}\right)  =\mathfrak{I}_{\mathfrak{b}}\left(  \left(
+\boldsymbol{e}\right)  \left(  \left.  \boldsymbol{e}\right\vert
+\boldsymbol{e}\right)  ^{-1}\right)  =\mathfrak{I}_{\mathfrak{b}}\left(
+\left(  \boldsymbol{e}\right)  \mathfrak{b}\left(  \boldsymbol{e}%
+,\boldsymbol{e}\right)  ^{-1}\right)  =\mathfrak{I}_{\mathfrak{b}}\left(
+\left(  \boldsymbol{e}^{b}\right)  \right)  .
+\end{gather}
+
+\end{remark}
+
+\begin{conjecture}
+For each $\left(  \boldsymbol{e}\right)  $ the dual basis $\left(
+\boldsymbol{e}^{d}\right)  $ is unique thus the expression $\mathfrak{I}%
+_{\mathfrak{b}}\left(  \left(  \boldsymbol{e}\right)  \mathfrak{b}\left(
+\boldsymbol{e},\boldsymbol{e}\right)  ^{-1}\right)  $ is independent of
+$\mathfrak{b.}$
+\end{conjecture}
+
+\begin{remark}%
+\begin{equation}
+\mathfrak{b}\left(  \boldsymbol{e},\boldsymbol{e}\right)  \equiv
+\mathcal{M}_{e}\left(  \mathfrak{b}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+w_{1}^{d}\left(  e_{1}\right)  & \cdots & w_{1}^{d}\left(  e_{r}\right) \\
+\vdots & \ddots & \vdots\\
+w_{r}^{d}\left(  e_{1}\right)  & \cdots & w_{r}^{d}\left(  e_{r}\right)
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{I}_{\mathfrak{b}}\left(  e_{1}\right)  \left(  e_{1}\right)  &
+\cdots & \mathfrak{I}_{\mathfrak{b}}\left(  e_{1}\right)  \left(  e_{r}\right)
+\\
+\vdots & \ddots & \vdots\\
+\mathfrak{I}_{\mathfrak{b}}\left(  e_{r}\right)  \left(  e_{1}\right)  &
+\cdots & \mathfrak{I}_{\mathfrak{b}}\left(  e_{r}\right)  \left(
+e_{r}\right)
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathfrak{b}\left(  e_{1},e_{1}\right)  & \cdots & \mathfrak{b}\left(
+e_{1},e_{r}\right) \\
+\vdots & \ddots & \vdots\\
+\mathfrak{b}\left(  e_{r},e_{1}\right)  & \cdots & \mathfrak{b}\left(
+e_{r},e_{r}\right)
+\end{array}
+\right)  .
+\end{equation}
+
+\end{remark}
+
+\begin{remark}
+In finite dimensions the injections $\mathfrak{I}_{V}$ are also surjective and
+thus are isomorphisms.
+\end{remark}
+
+\subparagraph{Representations}
+
+The matrix representation $\mathcal{R}_{e}\left(  A\right)  \in\mathcal{M}%
+\left(  m,n,\mathbb{C}\right)  $ of $A\in\mathcal{B}\left(  \mathcal{W}%
+,\mathcal{V}\right)  $ wrt bases $\left\{  \left.  e_{j}\right\vert 1\leq
+j\leq n\right\}  $ and $\left\{  \left.  f_{j}\right\vert 1\leq j\leq
+m\right\}  $ generated by the linear map $A$ can be displayed as
+\begin{equation}
+A\left(  \boldsymbol{e}\right)  =A\left(  e_{1},\cdots,e_{n}\right)  =\left(
+e_{1},\cdots,e_{n}\right)  \mathcal{R}_{e}\left(  A\right)  =\left(
+\boldsymbol{f}\right)  =\left(  e_{1},\cdots,e_{m}\right)  \mathcal{M}%
+_{f^{d}e}\left(  A\right)  ,
+\end{equation}
+where the matrices $\mathcal{R}_{e}\left(  A\right)  $ and $\mathcal{M}%
+_{f^{d}e}\left(  A\right)  $ are given by
+\begin{equation}
+\mathcal{R}_{e}\left(  A\right)  =\left(
+\begin{array}
+[c]{ccc}%
+\mathcal{R}_{fe}\left(  A\right)  _{11} & \cdots & \mathcal{R}_{fe}\left(
+A\right)  _{1n}\\
+\vdots & \ddots & \vdots\\
+\mathcal{R}_{fe}\left(  A\right)  _{m1} & \cdots & \mathcal{R}_{fe}\left(
+A\right)  _{mn}%
+\end{array}
+\right)  =\mathcal{M}_{f^{d}e}\left(  A\right)
+\end{equation}
+and%
+\begin{equation}
+\mathcal{M}_{f^{d}e}\left(  A\right)  =\left(
+\begin{array}
+[c]{ccc}%
+f_{1}^{d}\left(  Ae_{1}\right)  & \cdots & f_{1}^{d}\left(  Ae_{n}\right) \\
+\vdots & \ddots & \vdots\\
+f_{m}^{d}\left(  Ae_{1}\right)  & \cdots & f_{m}^{d}\left(  Ae_{n}\right)
+\end{array}
+\right)  =\boldsymbol{f}^{d}\left(  A\boldsymbol{e}\right)  .
+\end{equation}
+
+
+\subparagraph{Tensor Product Spaces}
+
+We consider the tensor product spaces
+
+\begin{enumerate}
+\item
+\begin{equation}
+\mathcal{W}\otimes\mathcal{V}^{d}=\mathbb{C}\text{-}\operatorname*{linspan}%
+\left\{  \left.  f_{j}\otimes e_{k}^{d}\right\vert 1\leq k\leq m,1\leq k\leq
+n\right\}
+\end{equation}
+and
+
+\item
+\begin{equation}
+\mathcal{W}\otimes\mathcal{V}=\mathbb{C}\text{-}\operatorname*{linspan}%
+\left\{  \left.  f_{j}\otimes e_{k}\right\vert 1\leq k\leq m,1\leq k\leq
+n\right\}  .
+\end{equation}
+
+\end{enumerate}
+
+\begin{definition}
+Of the product "\#"
+\begin{align}
+x\#y^{d}  &  \in\mathcal{B}\left(  \mathcal{W},\mathcal{V}\right) \\
+\left(  x\#y^{d}\right)  \left(  v\right)   &  =y^{d}\left(  v\right)
+x\quad\forall v\in\mathcal{V},\,\,x\in\mathcal{W},\,y^{d}\in\mathcal{V}^{d}.
+\end{align}
+
+\end{definition}
+
+\begin{notation}%
+\begin{equation}
+E_{xy}\equiv x\#y^{d}.
+\end{equation}
+
+\end{notation}
+
+\begin{theorem}
+$\left(  \text{Greu\ss }\right)  $ If $a\in\mathcal{W}\otimes\mathcal{V}$
+then
+\begin{equation}
+a=\sum_{1\leq j\leq p}w_{j}\otimes v_{j}\quad\in\mathcal{W}\otimes
+\mathcal{V},\quad w_{j}\in\mathcal{W},v_{j}\in\mathcal{V},\mathcal{\quad}1\leq
+j\leq p,
+\end{equation}
+where $p=\min\left(  m,n\right)  $, $\left\{  \left.  w_{j}\right\vert 1\leq
+j\leq p\right\}  $ and $\left\{  \left.  v_{j}\right\vert 1\leq k\leq
+p\right\}  $ are linearly independent sets of vectors in $\mathcal{W}$ and
+$\mathcal{V}$ respectively.
+\end{theorem}
+
+\begin{corollary}
+If $\mathcal{W}$ and $\mathcal{V}$ are normed spaces one can express
+$a\in\mathcal{W}\otimes\mathcal{V}$ in terms of normed vectors as
+\begin{equation}
+a=\sum_{1\leq j\leq p}\sigma_{j}\widetilde{w_{j}}\otimes\widetilde{v_{j}},
+\end{equation}
+where
+
+\begin{enumerate}
+\item
+\begin{equation}
+\left\Vert \widetilde{w_{j}}\right\Vert _{\mathcal{W}}=\left\Vert
+\widetilde{v_{j}}\right\Vert _{\mathcal{V}}=1,\quad1\leq j\leq p.
+\end{equation}
+
+
+\item
+\begin{align}
+\widetilde{w_{j}}  &  =\frac{w_{j}}{\left\Vert w_{j}\right\Vert _{\mathcal{W}%
+}}\\
+\widetilde{v_{j}}  &  =\frac{v_{j}}{\left\Vert v_{j}\right\Vert _{\mathcal{W}%
+}}\\
+1  &  \leq j\leq p.
+\end{align}
+
+
+\item
+\begin{equation}
+\sigma_{j}>0,\quad1\leq j\leq p.
+\end{equation}
+
+\end{enumerate}
+\end{corollary}
+
+\begin{theorem}
+The spaces $\mathcal{B}_{00}\left(  \mathcal{W},\mathcal{V}\right)
+$,$\mathcal{W}\otimes\mathcal{V}^{d}$ and $\mathcal{W}\otimes\mathcal{V}$ are
+linearly isomorphic i.e.
+\begin{equation}
+\mathcal{B}_{00}\left(  \mathcal{W},\mathcal{V}\right)  \cong\mathcal{W}%
+\otimes\mathcal{V}^{d}\cong\mathcal{W}\otimes\mathcal{V},
+\end{equation}
+where the isomorphisms, denoted by $\Upsilon,$ and $\Xi$ are given by
+\end{theorem}
+
+\begin{enumerate}
+\item
+\begin{gather}
+\Upsilon:\mathcal{W}\otimes\mathcal{V}^{d}\rightarrow\mathcal{B}_{00}\left(
+\mathcal{W},\mathcal{V}\right) \\
+\Upsilon\left(  f_{j}\otimes e_{k}^{d}\right)  =f_{j}\#e_{k}^{d}\equiv E_{fe}.
+\end{gather}
+and
+
+\item
+\begin{gather}
+\Xi:\mathcal{W}\otimes\mathcal{V}\rightarrow\mathcal{B}_{00}\left(
+\mathcal{W},\mathcal{V}\right) \\
+\Xi\left(  f_{j}\otimes e_{k}\right)  =f_{j}\#e_{k}^{d}\equiv E_{fe}.
+\end{gather}
+
+\end{enumerate}
+
+\begin{lemma}
+The mapping $A\in\mathcal{B}_{00}\left(  \mathcal{W},\mathcal{V}\right)  $ can
+be expanded as
+\[
+A=\sum_{1\leq j\leq p}E_{\eta_{j}\varsigma_{j}}=\sum_{1\leq j\leq p}\eta
+_{j}\#\varsigma_{j}^{d}=\sum_{1\leq j\leq p}\widetilde{\eta_{j}}\#\left(
+\sigma_{j}\widetilde{\varsigma_{j}}^{d}\right)  =\sum_{1\leq j\leq p}%
+\sigma_{j}\widetilde{\eta}_{j}^{d}\#\widetilde{\varsigma}_{j}=\left(
+\widetilde{\boldsymbol{\eta}}\right)  \mathcal{R}_{\boldsymbol{\varsigma}%
+}\left(  A\right)  \left(  \widetilde{\boldsymbol{\varsigma}}^{d}\right)
+^{t}=\left(  \widetilde{\boldsymbol{\eta\#\varsigma}^{d}}\right)
+\cdot\mathcal{R}_{\boldsymbol{\varsigma}}\left(  A\right)  ,
+\]
+where
+\begin{equation}
+\widetilde{\eta_{j}}=\sigma_{j}^{\frac{1}{2}}\eta_{j}%
+\end{equation}
+and
+\begin{equation}
+\widetilde{\varsigma_{j}}=\sigma_{j}^{\frac{1}{2}}\varsigma_{j}.
+\end{equation}
+
+\end{lemma}
+
+\begin{remark}
+The expansion of $A$ wrt a general bases is
+\begin{equation}
+A=\sum_{\substack{1\leq j\leq m\\1\leq k\leq n}}E_{f_{j}e_{k}}\mathcal{R}%
+_{\boldsymbol{e}}\left(  A\right)  _{jk}.
+\end{equation}
+
+\end{remark}
+
+If $\mathcal{W}$ and $\mathcal{V}$ are Hilbert spaces
+
+\begin{enumerate}
+\item
+\begin{align*}
+E_{\eta_{j}\varsigma_{k}}  &  =\eta_{j}\#\varsigma_{k}^{d}=\left\vert \eta
+_{j}\right\rangle \left\langle \varsigma_{k}\right\vert \in\mathcal{B}\left(
+\mathcal{W},\mathcal{V}\right) \\
+\left\vert \varsigma_{k}\right\rangle \left\langle \eta_{j}\right\vert  &
+=\left\vert \eta_{j}\right\rangle \left\langle \varsigma_{k}\right\vert
+^{\dagger}=\left(  E_{\eta_{j}\varsigma_{k}}\right)  ^{\dagger}\in
+\mathcal{B}\left(  \mathcal{V},\mathcal{W}\right)  .
+\end{align*}
+
+
+\item Resolutions of the identity%
+\begin{align*}
+\left\vert \mathbf{u}\right\rangle \left\langle \mathbf{u}\right\vert  &
+=I_{\mathcal{W}}\\
+\left\vert \mathbf{v}\right\rangle \left\langle \mathbf{v}\right\vert  &
+=I_{\mathcal{V}}.
+\end{align*}
+
+
+\item The operator SVD%
+\[
+\left\vert \mathbf{u}\right\rangle \left\langle \mathbf{u}\right\vert \left(
+\overset{}{\left\vert \boldsymbol{\eta}\right\rangle \mathcal{R}%
+_{\varsigma\eta}\left(  A\right)  \left\langle \boldsymbol{\varsigma
+}\right\vert }\right)  \left\vert \mathbf{v}\right\rangle \left\langle
+\mathbf{v}\right\vert =\left\vert \mathbf{u}\right\rangle \left(
+\overset{}{\left\langle \mathbf{u}\right\vert \left(  \overset{}{\left\vert
+\boldsymbol{\eta}\right\rangle \mathcal{R}_{\varsigma\eta}\left(  A\right)
+\left\langle \boldsymbol{\varsigma}\right\vert }\right)  \left\vert
+\mathbf{v}\right\rangle }\right)  \left\langle \mathbf{v}\right\vert
+=\left\vert \mathbf{u}\right\rangle \mathcal{R}_{uv}\left(  A\right)
+\left\langle \mathbf{v}\right\vert .
+\]
+
+
+\item The matrix SVD
+\[
+\mathcal{R}_{uv}\left(  A\right)  =\left(  \overset{}{\left\langle
+\mathbf{u}\right\vert \left\vert \boldsymbol{\eta}\right\rangle }\right)
+\left(  \overset{}{\mathcal{R}_{\varsigma\eta}\left(  A\right)  }\right)
+\left(  \overset{}{\left\langle \boldsymbol{\varsigma}\right\vert \left\vert
+\mathbf{v}\right\rangle }\right)  .
+\]
+
+
+\item Transformation of bases
+\begin{align*}
+\mathbf{u\#}\boldsymbol{\eta}^{d}  &  =T_{u\eta}=\left\vert \mathbf{u}%
+\right\rangle \left\langle \boldsymbol{\eta}\right\vert \in\mathcal{B}\left(
+\mathcal{W}\right) \\
+\boldsymbol{\eta}\mathbf{\#}\boldsymbol{u}^{d}  &  =T_{u\eta}^{\dagger
+}=\left\vert \boldsymbol{\eta}\right\rangle \left\langle \mathbf{u}\right\vert
+\in\mathcal{B}\left(  \mathcal{W}\right) \\
+\mathbf{v\#}\boldsymbol{\varsigma}^{d}  &  =T_{v\varsigma}=\left\vert
+\mathbf{v}\right\rangle \left\langle \boldsymbol{\varsigma}\right\vert
+\in\mathcal{B}\left(  \mathcal{V}\right) \\
+\boldsymbol{\varsigma}\mathbf{\#v}^{d}  &  =T_{v\varsigma}^{\dagger
+}=\left\vert \boldsymbol{\varsigma}\right\rangle \left\langle \mathbf{v}%
+\right\vert \in\mathcal{B}\left(  \mathcal{V}\right)
+\end{align*}
+
+
+\item Unitary property%
+\begin{align*}
+T_{u\eta}T_{u\eta}^{\dagger}  &  =T_{u\eta}^{\dagger}T_{u\eta}=I_{\mathcal{W}%
+}\\
+T_{v\varsigma}T_{v\varsigma}^{\dagger}  &  =T_{v\varsigma}^{\dagger
+}T_{v\varsigma}=I_{\mathcal{V}}.
+\end{align*}
+
+
+\item Representations of bases transformations%
+\begin{align*}
+\mathcal{R}_{\eta}\left(  T_{u\eta}\right)   &  =\mathcal{M}_{\eta}\left(
+\left\vert \mathbf{u}\right\rangle \left\langle \boldsymbol{\eta}\right\vert
+\right)  =\mathcal{R}_{\eta}\left(  \left\vert \mathbf{u}\right\rangle
+\left\langle \boldsymbol{\eta}\right\vert \right)  =\left\langle \left.
+\boldsymbol{\eta}\right\vert \mathbf{u}\right\rangle \in\mathcal{M}\left(
+\mathcal{W},\mathcal{W},\mathbb{C}\right)  \equiv\mathcal{M}\left(
+m,m,\mathbb{C}\right) \\
+\mathcal{R}_{\eta}\left(  T_{u\eta}^{\dagger}\right)   &  =\mathcal{M}_{\eta
+}\left(  \left\vert \boldsymbol{\eta}\right\rangle \left\langle \mathbf{u}%
+\right\vert \right)  =\mathcal{R}_{\eta}\left(  \left\vert \boldsymbol{\eta
+}\right\rangle \left\langle \mathbf{u}\right\vert \right)  =\left\langle
+\left.  \boldsymbol{u}\right\vert \boldsymbol{\eta}\right\rangle
+\in\mathcal{M}\left(  \mathcal{W},\mathcal{W},\mathbb{C}\right)
+\equiv\mathcal{M}\left(  m,m,\mathbb{C}\right) \\
+\mathcal{R}_{u}\left(  T_{u\eta}\right)   &  =\mathcal{M}_{u}\left(
+\left\vert \mathbf{u}\right\rangle \left\langle \boldsymbol{\eta}\right\vert
+\right)  =\mathcal{R}_{u}\left(  \left\vert \mathbf{u}\right\rangle
+\left\langle \boldsymbol{\eta}\right\vert \right)  =\left\langle \left.
+\boldsymbol{\eta}\right\vert \mathbf{u}\right\rangle \in\mathcal{M}\left(
+\mathcal{W},\mathcal{W},\mathbb{C}\right)  \equiv\mathcal{M}\left(
+m,m,\mathbb{C}\right) \\
+\mathcal{R}_{u}\left(  T_{u\eta}^{\dagger}\right)   &  =\mathcal{M}_{u}\left(
+\left\vert \boldsymbol{\eta}\right\rangle \left\langle \mathbf{u}\right\vert
+\right)  =\mathcal{R}_{u}\left(  \left\vert \boldsymbol{\eta}\right\rangle
+\left\langle \mathbf{u}\right\vert \right)  =\left\langle \left.
+\boldsymbol{u}\right\vert \boldsymbol{\eta}\right\rangle \in\mathcal{M}\left(
+\mathcal{W},\mathcal{W},\mathbb{C}\right)  \equiv\mathcal{M}\left(
+m,m,\mathbb{C}\right) \\
+\mathcal{R}_{\varsigma}\left(  T_{v\varsigma}\right)   &  =\mathcal{M}%
+_{v}\left(  \left\vert \mathbf{v}\right\rangle \left\langle
+\boldsymbol{\varsigma}\right\vert \right)  =\mathcal{R}_{\varsigma}\left(
+\left\vert \mathbf{v}\right\rangle \left\langle \boldsymbol{\varsigma
+}\right\vert \right)  =\left\langle \left.  \boldsymbol{\varsigma}\right\vert
+\mathbf{v}\right\rangle \in\mathcal{M}\left(  \mathcal{V},\mathcal{V}%
+,\mathbb{C}\right)  \equiv\mathcal{M}\left(  n,n,\mathbb{C}\right) \\
+\mathcal{R}_{\varsigma}\left(  T_{v\varsigma}^{\dagger}\right)   &
+=\mathcal{M}_{\varsigma}\left(  \left\vert \boldsymbol{\varsigma}\right\rangle
+\left\langle \mathbf{v}\right\vert \right)  =\mathcal{R}_{\varsigma}\left(
+\left\vert \boldsymbol{\varsigma}\right\rangle \left\langle \mathbf{v}%
+\right\vert \right)  =\left\langle \left.  \mathbf{v}\right\vert
+\boldsymbol{\varsigma}\right\rangle \in\mathcal{M}\left(  \mathcal{V}%
+,\mathcal{V},\mathbb{C}\right)  \equiv\mathcal{M}\left(  n,n,\mathbb{C}\right)
+\\
+\mathcal{R}_{v}\left(  T_{v\varsigma}\right)   &  =\mathcal{M}_{v}\left(
+\left\vert \mathbf{v}\right\rangle \left\langle \boldsymbol{\varsigma
+}\right\vert \right)  =\mathcal{R}_{v}\left(  \left\vert \mathbf{v}%
+\right\rangle \left\langle \boldsymbol{\varsigma}\right\vert \right)
+=\left\langle \left.  \boldsymbol{\varsigma}\right\vert \mathbf{v}%
+\right\rangle \in\mathcal{M}\left(  \mathcal{V},\mathcal{V},\mathbb{C}\right)
+\equiv\mathcal{M}\left(  n,n,\mathbb{C}\right) \\
+\mathcal{R}_{v}\left(  T_{v\varsigma}^{\dagger}\right)   &  =\mathcal{M}%
+_{v}\left(  \left\vert \boldsymbol{\varsigma}\right\rangle \left\langle
+\mathbf{v}\right\vert \right)  =\mathcal{R}_{v}\left(  \left\vert
+\boldsymbol{\varsigma}\right\rangle \left\langle \mathbf{v}\right\vert
+\right)  =\left\langle \left.  \mathbf{v}\right\vert \boldsymbol{\varsigma
+}\right\rangle \in\mathcal{M}\left(  \mathcal{V},\mathcal{V},\mathbb{C}%
+\right)  \equiv\mathcal{M}\left(  n,n,\mathbb{C}\right)
+\end{align*}
+
+\end{enumerate}
+
+\begin{theorem}
+The Singular Valued Decomposition any operator $A\in\mathcal{B}_{0}\left(
+\mathcal{W},\mathcal{V}\right)  $ is given by the expansion
+\begin{equation}
+A=\sum_{1\leq j\leq p}\mathcal{R}_{\varsigma}\left(  A\right)  _{jj}%
+E_{\eta_{j}\varsigma_{j}^{d}}=\sum_{1\leq j\leq p}\mathcal{R}_{\varsigma
+}\left(  A\right)  _{jj}\eta_{j}\#\varsigma_{j}^{d}=\sum_{1\leq j\leq
+p}\mathcal{R}_{\varsigma}\left(  A\right)  _{jj}\Xi\left(  \eta_{j}%
+\otimes\varsigma_{j}\right)  =\Xi\left(  \sum_{1\leq j\leq p}\mathcal{R}%
+_{\varsigma}\left(  A\right)  _{jj}\eta_{j}\otimes\varsigma_{j}\right)  .
+\end{equation}
+
+\end{theorem}
+
+\begin{remark}
+\begin{enumerate}
+\item
+\begin{equation}
+A=\left(  \boldsymbol{E}_{\eta\varsigma}\right)  \mathcal{R}_{\varsigma
+}\left(  A\right)
+\end{equation}
+
+
+\item
+\begin{equation}
+\boldsymbol{E}_{uv}=T_{u\eta}\boldsymbol{E}_{\eta\varsigma}T_{v\varsigma}%
+^{t}=\left(  \mathbf{u\#}\boldsymbol{\eta}^{d}\right)  \boldsymbol{E}%
+_{\eta\varsigma}\left(  \boldsymbol{\varsigma}\mathbf{\#v}^{d}\right)
+\end{equation}
+
+
+\item
+\begin{equation}
+\mathcal{R}_{v}\left(  A\right)  =\mathcal{R}_{\varsigma}\left(  T_{u\eta
+}AT_{v\varsigma}^{t}\right)  =\mathcal{R}_{\varsigma}\left(  T_{u\eta}\right)
+\mathcal{R}_{\varsigma}\left(  A\right)  \mathcal{R}_{\varsigma}\left(
+T_{v\varsigma}^{t}\right)  .
+\end{equation}
+
+\end{enumerate}
+\end{remark}
+
+\begin{corollary}
+In any non canonical bases the operator SVD expansion is
+\begin{equation}
+A=\sum_{\substack{1\leq j\leq m\\1\leq k\leq n}}\mathcal{R}_{v}\left(
+A\right)  _{jk}E_{u_{j}v_{k}}=\sum_{\substack{1\leq j\leq m\\1\leq k\leq
+n}}\mathcal{R}_{\varsigma}\left(  T_{u\eta}AT_{v\varsigma}^{t}\right)
+_{jk}E_{u_{j}v_{k}}=\sum_{1\leq j\leq p}\mathcal{R}_{\varsigma}\left(
+A\right)  _{jj}E_{\eta_{j}\varsigma_{j}}%
+\end{equation}
+
+\end{corollary}
+
+\appendix{}
+
+\begin{notation}
+Products in super vector notation
+\end{notation}
+
+\begin{enumerate}
+\item $\left(  \boldsymbol{e}\right)  $-basis scalar sum of scalar products of
+vectors
+\[
+\left(  \boldsymbol{e}^{d}\right)  \cdot\left(  \boldsymbol{e}\right)
+^{t}=\left(  e_{1}^{d},\cdots,e_{m}^{d}\right)  \cdot\left(  e_{1}%
+,\cdots,e_{m}\right)  ^{t}=\left(  e_{1}^{d},\cdots,e_{m}^{d}\right)
+\cdot\left(
+\begin{array}
+[c]{c}%
+e_{1}\\
+\vdots\\
+e_{m}%
+\end{array}
+\right)  =\sum_{1\leq j\leq n}e_{j}^{d}\left(  e_{j}\right)  =n.
+\]
+
+
+\item $\left(  \boldsymbol{e}\right)  $-basis matrix of scalar products of
+vectors%
+\begin{align}
+\left(  \boldsymbol{e}^{d}\right)  ^{t}\cdot\left(  \boldsymbol{e}\right)   &
+=\left(  e_{1}^{d},\cdots,e_{n}^{d}\right)  ^{t}\cdot\left(  e_{1}%
+,\cdots,e_{n}\right)  =\left(
+\begin{array}
+[c]{c}%
+e_{1}^{d}\\
+\vdots\\
+e_{n}^{d}%
+\end{array}
+\right)  \cdot\left(  e_{1},\cdots,e_{n}\right) \\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+e_{1}^{d}\left(  e_{1}\right)  & \cdots & e_{1}^{d}\left(  e_{n}\right) \\
+\vdots & \ddots & \vdots\\
+e_{n}^{d}\left(  e_{1}\right)  & \cdots & e_{n}^{d}\left(  e_{n}\right)
+\end{array}
+\right)  =\mathcal{R}_{e}\left(  I_{\mathcal{W}}\right)  =\mathbb{I}_{n}%
+\in\mathcal{M}\left(  n,n,\mathbb{C}\right)  .
+\end{align}
+
+
+\item $\left(  \boldsymbol{e}\right)  $-basis matrix of operator products of
+vectors%
+\[
+\left(  \boldsymbol{e}\right)  \#\left(  \boldsymbol{e}^{d}\right)
+^{t}=\left(  e_{1},\cdots,e_{n}\right)  ^{t}\#\left(  e_{1}^{d},\cdots
+,e_{n}^{d}\right)  =\left(
+\begin{array}
+[c]{c}%
+e_{1}\\
+\vdots\\
+e_{n}%
+\end{array}
+\right)  \#\left(  e_{1}^{d},\cdots,e_{n}^{d}\right)  =\left(
+\begin{array}
+[c]{ccc}%
+e_{1}\#e_{1}^{d} & \cdots & e_{n}\#e_{1}^{d}\\
+\vdots & \ddots & \vdots\\
+e_{1}\#e_{n}^{d} & \cdots & e_{n}\#e_{n}^{d}%
+\end{array}
+\right)  \in\mathcal{M}\left(  n,n,\mathcal{B}\left(  \mathcal{W}%
+,\mathcal{W}\right)  \right)  .
+\]
+
+
+\item $\left(  \boldsymbol{e}\right)  $-basis operator sum of operator
+products of vectors%
+\begin{equation}
+\left(  \boldsymbol{e}\right)  \#\left(  \boldsymbol{e}^{d}\right)
+^{t}=\left(  e_{1},\cdots,e_{n}\right)  \#\left(
+\begin{array}
+[c]{c}%
+e_{1}^{d}\\
+\vdots\\
+e_{n}^{d}%
+\end{array}
+\right)  =\sum_{1\leq j\leq n}e_{j}\#e_{j}^{d}=I_{\mathcal{W}}\in
+\mathcal{B}\left(  \mathcal{W},\mathcal{W}\right)  .
+\end{equation}
+
+\end{enumerate}
+
+
+\end{document}

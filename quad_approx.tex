@@ -1,0 +1,380 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, November 28, 2003 11:55:12}
+%TCIDATA{LastRevised=Friday, November 28, 2003 11:55:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{}
+
+The perturbing potential $\mathcal{F}\left(  \mathrm{z,\bar{z}}\mathbf{,}%
+t\right)  $ can be expanded in terms of the incremental paths $\left\{
+\delta\mathrm{z}\left(  t\right)  \right\}  $ about a critical (stationary)
+path $\mathrm{z}_{0}\left(  t\right)  =\mathbf{z}_{0}$ as
+\begin{align}
+\mathcal{F}\left(  \mathbf{z}_{0}+\delta\mathrm{z}\left(  t\right)  ,\bar
+{z}_{0}\left(  t\right)  +\delta\mathrm{\bar{z}}\left(  t\right)
+\mathbf{,}t\right)   &  =\mathcal{F}\left(  z_{0},\bar{z}_{0}\mathbf{,}%
+t\right)  +D_{\mathbf{z}}\mathcal{F}\left(  z_{0},\bar{z}_{0}\mathbf{,}%
+t\right)  \bullet\delta\mathrm{z}\left(  t\right)  \nonumber\\
+&  +D_{\mathbf{\bar{z}}}\mathcal{F}\left(  z_{0},\bar{z}_{0}\mathbf{,}%
+t\right)  \bullet\delta\mathrm{\bar{z}}\left(  t\right)  +\cdots
+\end{align}
+where
+\begin{equation}
+D_{\mathbf{x}}\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}%
+\mathbf{,}t\right)  =D_{\mathbf{\rho}}\mathcal{F}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)  \bullet D_{\mathbf{x}%
+}\mathcal{\rho}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  =\sum
+_{k,l}f_{kl}\left(  t\right)  \frac{\partial\mathcal{\rho}_{kl}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial x_{j}};\quad
+\mathbf{x=z,\bar{z}}%
+\end{equation}
+and the matrix elements of $\left\{  D_{\mathbf{z}}\mathcal{F}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)  ,D_{\mathbf{\rho}%
+}\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)
+,D_{\mathbf{z}}\mathcal{\rho}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0}\right)  \right\}  $ are given by
+\begin{align}
+\left[  D_{\mathbf{x}}^{1}\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}%
+}_{0}\mathbf{,}t\right)  \right]  _{j} &  =\frac{\partial\mathcal{F}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)  }{\partial x_{j}}%
+=\sum_{k,l}\frac{\partial\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}%
+}_{0}\mathbf{,}t\right)  }{\partial\rho_{kl}}\frac{\partial\mathcal{\rho}%
+_{kl}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial z_{j}%
+};\mathbf{x=z,\bar{z};}x_{j}=z_{j},\bar{z}_{j}\nonumber\\
+\left[  D_{\mathbf{\rho}}^{1}\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar
+{z}}_{0}\mathbf{,}t\right)  \right]  _{kl} &  =\frac{\partial\mathcal{F}%
+\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)  }{\partial
+\rho_{kl}}=f_{kl}\left(  t\right)  \nonumber\\
+\left[  D_{\mathbf{x}}^{1}\mathcal{\rho}\left(  \mathbf{z}_{0},\mathbf{\bar
+{z}}_{0}\right)  \right]  _{klj} &  =\frac{\partial\mathcal{\rho}_{kl}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial x_{j}};\mathbf{x=z,\bar
+{z};}x_{j}=z_{j},\bar{z}_{j}%
+\end{align}
+leading to
+\begin{align}
+\delta_{\mathbf{z}_{0}}^{\left(  1\right)  }\mathcal{F}\left(  \delta
+\mathrm{z}\left(  t\right)  ,\delta\mathrm{\bar{z}}\left(  t\right)
+\mathbf{,}t\right)   &  =\sum_{k,l}f_{kl}\left(  t\right)  \delta^{\left(
+1\right)  }\rho_{lk}\left(  \delta\mathrm{z}\left(  t\right)  ,\delta
+\mathrm{\bar{z}}\left(  t\right)  \right)  \nonumber\\
+&  =\sum_{k,l}f_{kl}\left(  t\right)  \left\{  \frac{\partial\mathcal{\rho
+}_{kl}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial z_{j}%
+}\delta\mathrm{z}_{j}\left(  t\right)  +\frac{\partial\mathcal{\rho}%
+_{kl}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial\bar{z}%
+_{j}}\delta\mathrm{\bar{z}}_{j}\left(  t\right)  \right\}
+\end{align}
+One can form a quadratic approximation to this evolution around a point
+$\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  $ by expanding up to
+second order in the local changes $\left(  \delta\mathbf{z}\left(  t\right)
+,\delta\mathbf{\bar{z}}\left(  t\right)  \right)  $
+\begin{equation}
+\mathcal{E}\left(  \mathbf{z},\mathbf{\bar{z},}t\right)  \approx
+\mathcal{E}_{2}\left[  \mathbf{z}_{0}\right]  \left(  \delta\mathbf{z}%
+,\delta\mathbf{\bar{z}},t\right)  =\mathcal{E}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)  +\delta^{1}\mathcal{E}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)  +\delta^{2}%
+\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\mathbf{,}t\right)
+\end{equation}
+to produce an approximate classical Hamiltonian around the point $\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  $ where
+\begin{align}
+\delta^{1}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}%
+\mathbf{,}t\right)   &  =D^{1}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar
+{z}}_{0},t\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{z}\left(  t\right)  \\
+\delta\mathbf{\bar{z}}\left(  t\right)
+\end{array}
+\right)  \\
+\delta^{2}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}%
+\mathbf{,}t\right)   &  =\frac{1}{2}\left(
+\begin{array}
+[c]{cc}%
+\delta\mathbf{z}\left(  t\right)   & \delta\mathbf{\bar{z}}\left(  t\right)
+\end{array}
+\right)  D^{2}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+\left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{z}\left(  t\right)  \\
+\delta\mathbf{\bar{z}}\left(  t\right)
+\end{array}
+\right)
+\end{align}
+The gradient $D^{1}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  $ of $\mathcal{E}\left(  \mathbf{z},\mathbf{\bar{z}},t\right)
+$ at the critical point $\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  $
+of $\mathcal{E}_{0}$ is given by
+\begin{align*}
+\frac{\partial\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{x}} &  =\frac{1}{\mathcal{S}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0}\right)  }\left\{  \frac{\partial\mathcal{H}%
+_{0}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial\mathbf{x}%
+}+\frac{\partial\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  }{\partial\mathbf{x}}\right.  \\
+&  \qquad\qquad\qquad\qquad\qquad\left.  -\left(  \mathcal{E}_{0}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  +\mathcal{F}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},t\right)  \right)  \frac{\partial\mathcal{S}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial\mathbf{x}}\right\}  \\
+&  =\frac{1}{\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)
+}\left\{  \frac{\partial\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  }{\partial\mathbf{x}}-\mathcal{F}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},t\right)  \frac{\partial\mathcal{S}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial\mathbf{x}}\right\}
+\end{align*}
+as
+\begin{equation}
+\frac{\partial\mathcal{H}_{0}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0}\right)  }{\partial\mathbf{x}}-\mathcal{E}_{0}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0}\right)  \frac{\partial\mathcal{S}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial\mathbf{x}}=\mathbf{0}%
+\end{equation}
+The Hessian $D^{2}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  $ at any point $\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  $ is given by matrix elements
+\begin{align}
+&  \frac{\partial^{2}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  }{\partial\mathbf{x}\partial\mathbf{y}}=\frac{1}{\mathcal{S}%
+\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }\left\{  \frac
+{\partial^{2}\mathcal{H}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{x}\partial\mathbf{y}}-\frac{\partial\mathcal{E}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial\mathbf{x}}%
+\frac{\partial\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{y}}\right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  -\mathcal{E}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  \frac{\partial^{2}%
+\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }%
+{\partial\mathbf{x}\partial\mathbf{y}}-\frac{\partial\mathcal{S}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial\mathbf{x}}%
+\frac{\partial\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{y}}\right\}  \nonumber\\
+&  \qquad\qquad\qquad\quad\left.  =\right.  \frac{1}{\mathcal{S}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }\left\{  \frac{\partial
+^{2}\mathcal{H}_{0}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{x}\partial\mathbf{y}}+\frac{\partial^{2}\mathcal{F}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial\mathbf{x}%
+\partial\mathbf{y}}\right.  \nonumber\\
+&  -\left(  \frac{\partial\mathcal{E}_{0}\left(  \mathbf{z}_{0},\mathbf{\bar
+{z}}_{0},t\right)  }{\partial\mathbf{x}}+\frac{\partial\mathcal{F}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial\mathbf{x}}\right)
+\frac{\partial\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{y}}-\left(  \mathcal{E}_{0}\left(  \mathbf{z}_{0}%
+,\mathbf{\bar{z}}_{0}\right)  +\mathcal{F}\left(  \mathbf{z}_{0}%
+,\mathbf{\bar{z}}_{0},t\right)  \right)  \frac{\partial^{2}\mathcal{S}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial\mathbf{x}%
+\partial\mathbf{y}}\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
+-\frac{\partial\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  }{\partial\mathbf{x}}\left(  \frac{\partial\mathcal{E}%
+_{0}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }{\partial\mathbf{y}%
+}+\frac{\partial\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  }{\partial\mathbf{y}}\right)  \right\}
+\end{align}
+If the point $\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  $ is a
+critical point of the unperturbed energy $\mathcal{E}_{0}\left(
+\mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  $ and we only consider first order
+effects of $\mathcal{F},$ then this gives
+\begin{align}
+\frac{\partial^{2}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  }{\partial\mathbf{x}\partial\mathbf{y}} &  =\frac
+{1}{\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0}\right)  }\left\{
+\frac{\partial^{2}\mathcal{H}_{0}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0}\right)  }{\partial\mathbf{x}\partial\mathbf{y}}\right.  -\frac
+{\partial\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{x}}\frac{\partial\mathcal{S}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial\mathbf{y}}\nonumber\\
+&  \left.  -\left(  \mathcal{E}_{0}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0}\right)  +\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+\right)  \frac{\partial^{2}\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}%
+}_{0}\right)  }{\partial\mathbf{x}\partial\mathbf{y}}-\frac{\partial
+\mathcal{S}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }%
+{\partial\mathbf{x}}\frac{\partial\mathcal{F}\left(  \mathbf{z}_{0}%
+,\mathbf{\bar{z}}_{0},t\right)  }{\partial\mathbf{y}}\right\}
+\end{align}
+A linearized EOM in the tangent space at the point $\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0}\right)  $ is obtained by using the quadratic
+approximation $\mathcal{E}_{2}\left[  \mathbf{z}_{0}\right]  \left(
+\delta\mathbf{z},\delta\mathbf{\bar{z}},t\right)  $ to the classical
+Hamiltonian around the critical point $\left(  \mathbf{z}_{0},\mathbf{\bar{z}%
+}_{0}\right)  $%
+\begin{align}
+&  \left(
+\begin{array}
+[c]{c}%
+\frac{d\delta\mathbf{\bar{z}}\left(  t\right)  }{dt}\\
+\frac{d\delta\mathbf{z}\left(  t\right)  }{dt}%
+\end{array}
+\right)  \nonumber\\
+&  \quad=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{0} & \frac{i}{\hslash}\mathbf{\bar{C}}^{-1}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},t\right)  \\
+-\frac{i}{\hslash}\mathbf{C}^{-1}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)   & \mathbf{0}%
+\end{array}
+\right)  \left(  D^{1}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  +D^{2}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\bar{z}}\left(  t\right)  \\
+\delta\mathbf{z}\left(  t\right)
+\end{array}
+\right)  \right)
+\end{align}
+where the driving force is given by the gradient of $\mathcal{E}_{2}\left[
+\mathbf{z}_{0}\right]  $
+\begin{equation}
+\left(
+\begin{array}
+[c]{c}%
+\frac{\partial\mathcal{E}_{2}\left[  \mathbf{z}_{0}\right]  \left(
+\delta\mathbf{z},\delta\mathbf{\bar{z}},t\right)  }{\partial\delta
+\mathbf{\bar{z}}}\\
+\frac{\partial\mathcal{E}_{2}\left[  \mathbf{z}_{0}\right]  \left(
+\delta\mathbf{z},\delta\mathbf{\bar{z}},t\right)  }{\partial\delta\mathbf{z}}%
+\end{array}
+\right)  =D^{1}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  +D^{2}\mathcal{E}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\bar{z}}\left(  t\right)  \\
+\delta\mathbf{z}\left(  t\right)
+\end{array}
+\right)
+\end{equation}
+
+
+The linear response $\delta\mathbf{\rho}\left(  t\right)  $ of $\mathbf{\rho
+}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  $ is given by the
+linear response $\left\{  \delta\rho_{kl}\left(  t\right)  \right\}  $ of the
+classical functions $\rho_{kl}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}%
+_{0},t\right)  $
+\begin{equation}
+\delta\rho_{kl}\left(  t\right)  =\sum_{j}\left\{  \frac{\partial\rho
+_{kl}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial z_{j}%
+}\delta z_{j}\left(  t\right)  +\frac{\partial\rho_{kl}\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial\bar{z}_{j}}\delta\bar{z}%
+_{j}\left(  t\right)  \right\}
+\end{equation}
+which gives
+\begin{equation}
+\delta\mathbf{\rho}\left(  t\right)  =\left(
+\begin{array}
+[c]{cc}%
+\frac{\partial\rho\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
+}{\partial\mathbf{\bar{z}}} & \frac{\partial\rho\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0},t\right)  }{\partial\mathbf{z}}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\delta\mathbf{\bar{z}}\left(  t\right)  \\
+\delta\mathbf{z}\left(  t\right)
+\end{array}
+\right)
+\end{equation}
+
+
+There is a linear relationship between the classical external field
+$\mathcal{F}\left(  \mathbf{z},\mathbf{\bar{z}},t\right)  $ and the FORDM
+$\mathbf{\rho}$ which is itself a linear function of the full density matrix
+of the molecular system. Hence in the linear response regime where we only
+consider first order changes in $\mathbf{\rho,}$ which are produced by
+$\delta\mathbf{z}\left(  t\right)  ,$ it is consistent to approximate
+$\mathcal{F}\left(  \mathbf{z+}\delta\mathbf{z},\mathbf{\bar{z}+}%
+\delta\mathbf{\bar{z}},t\right)  $ about the point $\left(  \mathbf{z}%
+_{0},\mathbf{\bar{z}}_{0}\right)  $ by
+\begin{equation}
+\mathcal{F}\left(  \mathbf{z}_{0}\mathbf{+}\delta\mathbf{z},\mathbf{\bar{z}%
+}_{0}\mathbf{+}\delta\mathbf{\bar{z}},t\right)  \approx\mathcal{F}_{1}\left[
+\mathbf{z}_{0}\right]  \left(  \delta\mathbf{z},\mathbf{\bar{z}}_{0},t\right)
+=\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)
++D^{1}\mathcal{F}\left(  \mathbf{z}_{0},\mathbf{\bar{z}}_{0},t\right)  \left(
+%
+\begin{array}
+[c]{c}%
+\delta\mathbf{\bar{z}}\left(  t\right)  \\
+\delta\mathbf{z}\left(  t\right)
+\end{array}
+\right)
+\end{equation}
+which produces the approximate field dependent classical Hamiltonian
+\begin{equation}
+\mathcal{E}_{2L}\left[  \mathbf{z}_{0}\right]  \left(  \delta\mathbf{z}%
+_{0},\delta\mathbf{\bar{z}}_{0},t\right)  =\mathcal{E}_{0}\left[
+\mathbf{z}_{0}\right]  \left(  \delta\mathbf{z}_{0},\delta\mathbf{\bar{z}}%
+_{0}\right)  +\mathcal{F}_{1}\left[  \mathbf{z}_{0}\right]  \left(
+\delta\mathbf{z}_{0},\delta\mathbf{\bar{z}}_{0},t\right)
+\end{equation}
+
+
+
+\end{document}

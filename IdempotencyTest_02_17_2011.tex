@@ -1,0 +1,1348 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Thursday, February 10, 2011 17:14:23}
+%TCIDATA{LastRevised=Friday, May 20, 2011 12:04:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{ }
+\title{Idempotency Test}
+\author{Brian Weiner}
+\date{02/15/2011}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\subsection{Product of Vectors}
+
+$C=A\wedge B,$ $A\in\mathcal{B}\left(  \mathcal{H}^{1}\right)  ,B\in
+\mathcal{H}^{1}$%
+\begin{align}
+A &  =\sum_{1\leq j<k\leq4}A_{jk}\left\vert \varphi_{j}\varphi_{k}%
+\right\rangle \sum_{1\leq i\leq4}B_{i}\left\vert \varphi_{i}\right\rangle
+=\frac{1}{2}\sum_{1\leq i,j,k\leq4}A_{jk}B_{i}\left\vert \varphi_{j}%
+\varphi_{k}\varphi_{i}\right\rangle \nonumber\\
+&  =\frac{1}{2}\left\{  \left(  A_{12}B_{3}-A_{13}B_{2}+A_{23}B_{1}%
+-A_{21}B_{3}-A_{32}B_{1}-A_{31}B_{2}\right)  \left\vert 123\right\rangle
+\right.  \nonumber\\
+&  +\left(  A_{12}B_{4}-A_{14}B_{2}+A_{24}B_{1}-A_{21}B_{4}-A_{42}B_{1}%
+-A_{41}B_{2}\right)  \left\vert 124\right\rangle \nonumber\\
+&  +\left(  A_{13}B_{4}-A_{14}B_{3}+A_{34}B_{1}-A_{31}B_{4}-A_{43}B_{1}%
+-A_{41}B_{3}\right)  \left\vert 134\right\rangle \nonumber\\
+&  \left.  +\left(  A_{23}B_{4}-A_{24}B_{3}+A_{34}B_{2}-A_{32}B_{4}%
+-A_{43}B_{2}-A_{42}B_{3}\right)  \left\vert 234\right\rangle \right\}  .
+\end{align}
+In more detail%
+\begin{align}
+&  A=\sum_{1\leq j<k\leq4}A_{jk}\left\vert \varphi_{j}\varphi_{k}\right\rangle
+\sum_{1\leq i\leq4}B_{i}\left\vert \varphi_{i}\right\rangle =\frac{1}{2}%
+\sum_{1\leq i,,j,k\leq4}A_{jk}B_{i}\left\vert \varphi_{j}\varphi_{k}%
+\varphi_{i}\right\rangle \nonumber\\
+&  =\frac{1}{2}\left(  A_{12}B_{3}\left\vert 123\right\rangle +A_{13}%
+B_{2}\left\vert 132\right\rangle +A_{23}B_{1}\left\vert 231\right\rangle
+\right)  =\quad\left(  A_{12}B_{3}-A_{13}B_{2}+A_{23}B_{1}\right)  \left\vert
+123\right\rangle \nonumber\\
+&  \left.  +\right.  \frac{1}{2}\left(  A_{12}B_{4}\left\vert 124\right\rangle
++A_{14}B_{2}\left\vert 142\right\rangle +A_{24}B_{1}\left\vert
+241\right\rangle \right)  =\left(  A_{12}B_{4}-A_{14}B_{2}+A_{24}B_{1}\right)
+\left\vert 124\right\rangle \nonumber\\
+&  \left.  +\right.  \frac{1}{2}\left(  A_{13}B_{4}\left\vert 134\right\rangle
++A_{14}B_{3}\left\vert 143\right\rangle +A_{34}B_{1}\left\vert
+341\right\rangle \right)  =\left(  A_{13}B_{4}-A_{14}B_{3}+A_{34}B_{1}\right)
+\left\vert 134\right\rangle \nonumber\\
+&  \left.  +\right.  \frac{1}{2}\left(  A_{23}B_{4}\left\vert 234\right\rangle
++A_{24}B_{3}\left\vert 243\right\rangle +A_{34}B_{2}\left\vert
+342\right\rangle \right)  =\left(  A_{23}B_{4}-A_{24}B_{3}+A_{34}B_{2}\right)
+\left\vert 234\right\rangle
+\end{align}
+and the coefficients of the unordered basis elements \emph{are antisymmetric.
+}
+
+The normalization of the basis elements is given by
+\begin{equation}
+\left\vert \varphi_{j}\varphi_{k}\varphi_{i}\right\rangle =\frac{1}{\sqrt{3}%
+}\left\vert \varphi_{j}\varphi_{k}\right\rangle \wedge\left\vert \varphi
+_{i}\right\rangle .
+\end{equation}
+
+
+\subsection{Product of Operators}
+
+\subsubsection{$C=A\wedge B,$ $A,B\in\mathcal{B}\left(  \mathcal{H}%
+^{1}\right)  $}%
+
+\begin{equation}
+A=\sum_{1\leq j<k\leq r}A_{jk}\left\vert \varphi_{j}\right\rangle \left\langle
+\varphi_{k}\right\vert \sum_{1\leq i<s\leq r}B_{is}\left\vert \varphi
+_{i}\right\rangle \left\langle \varphi_{s}\right\vert =\frac{1}{4}%
+\sum_{\substack{1\leq j,k\leq r\\1\leq i,s\leq r}}A_{jk}B_{is}\left\vert
+\varphi_{j}\varphi_{i}\right\rangle \left\langle \varphi_{k}\varphi
+_{s}\right\vert
+\end{equation}
+
+
+\subsubsection{%
+\begin{equation}
+=\sum_{\substack{1\leq j<k\leq r\\1\leq i<s\leq r}}\frac{1}{4}\left(
+A_{jk}B_{is}-A_{ik}B_{js}-A_{js}B_{ik}+A_{is}B_{jk}\right)  \left\vert
+\varphi_{j}\varphi_{i}\right\rangle \left\langle \varphi_{k}\varphi
+_{s}\right\vert
+\end{equation}
+$C=A\wedge B,$ $A\in\mathcal{B}\left(  \mathcal{H}^{2}\right)  ,B\in
+\mathcal{B}\left(  \mathcal{H}^{1}\right)  $}%
+
+\begin{equation}
+A=\sum_{\substack{1\leq j<k\leq r\\1\leq l<m\leq r}}A_{jklm}\left\vert
+\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{l}\varphi
+_{m}\right\vert \sum_{1\leq i,s\leq r}B_{is}\left\vert \varphi_{i}%
+\right\rangle \left\langle \varphi_{s}\right\vert =\frac{1}{4}\sum
+_{\substack{1\leq j,k\leq r\\1\leq l,m\leq r\\1\leq i,s\leq r}}A_{jklm}%
+B_{is}\left\vert \varphi_{j}\varphi_{k}\varphi_{i}\right\rangle \left\langle
+\varphi_{l}\varphi_{m}\varphi_{s}\right\vert
+\end{equation}
+all permutations of $\left\{  jki\right\}  $ and $\left\{  lms\right\}  $ are
+allowed for each $\left\vert \varphi_{j}\varphi_{k}\varphi_{i}\right\rangle
+\left\langle \varphi_{l}\varphi_{m}\varphi_{s}\right\vert $ ths gives
+\begin{align}
+&  =\sum_{\substack{1\leq j<k<i\leq r\\1\leq l<m<s\leq r}}\frac{1}{4}\left(
+A_{jklm}B_{is}-A_{kjlm}B_{is}+A_{kilm}B_{js}-A_{iklm}B_{js}+A_{ijlm}%
+B_{ks}-A_{jilm}B_{ks}\right.  \nonumber\\
+&  -A_{jkml}B_{is}+A_{kjml}B_{is}-A_{kiml}B_{js}+A_{ikml}B_{js}-A_{ijml}%
+B_{ks}+A_{jiml}B_{ks}\nonumber\\
+&  +A_{jkms}B_{il}-A_{kjms}B_{il}+A_{kims}B_{jl}-A_{ikms}B_{jl}+A_{ijms}%
+B_{kl}-A_{jims}B_{kl}\nonumber\\
+&  -A_{jksm}B_{il}+A_{kjsm}B_{il}-A_{kism}B_{jl}+A_{iksm}B_{jl}-A_{ijsm}%
+B_{kl}+A_{jism}B_{kl}\nonumber\\
+&  +A_{jksl}B_{im}-A_{kjsl}B_{im}+A_{kisl}B_{jm}-A_{iksl}B_{jm}+A_{ijsl}%
+B_{km}-A_{jisl}B_{km}\nonumber\\
+&  -\left.  A_{jkls}B_{im}+A_{kjls}B_{im}-A_{kils}B_{jm}+A_{ikls}%
+B_{jm}-A_{ijls}B_{km}+A_{jils}B_{km}\right)  \left\vert \varphi_{j}\varphi
+_{k}\varphi_{i}\right\rangle \left\langle \varphi_{l}\varphi_{m}\varphi
+_{s}\right\vert
+\end{align}
+which gives%
+\begin{align}
+&  =\sum_{\substack{1\leq j<k<i\leq r\\1\leq l<m<s\leq r}}\left(
+A_{jklm}B_{is}+A_{kilm}B_{js}-A_{jilm}B_{ks}\right.  +A_{jkms}B_{il}%
++A_{kims}B_{jl}-A_{jims}B_{kl}\\
+&  -\left.  A_{jkls}B_{im}-A_{kils}B_{jm}+A_{jils}B_{km}\right)  \left\vert
+\varphi_{j}\varphi_{k}\varphi_{i}\right\rangle \left\langle \varphi_{l}%
+\varphi_{m}\varphi_{s}\right\vert .
+\end{align}
+Thus
+\begin{align}
+A\wedge B &  =\sum_{\substack{1\leq j<k<i\leq r\\1\leq l<m<s\leq r}%
+}C_{jkilms}\left\vert \varphi_{j}\varphi_{k}\varphi_{i}\right\rangle
+\left\langle \varphi_{l}\varphi_{m}\varphi_{s}\right\vert \\
+&  =\frac{1}{36}\sum_{\substack{1\leq j,k,i\leq r\\1\leq l,m,s\leq
+r}}C_{jkilms}\left\vert \varphi_{j}\varphi_{k}\varphi_{i}\right\rangle
+\left\langle \varphi_{l}\varphi_{m}\varphi_{s}\right\vert ,
+\end{align}
+where
+\begin{align}
+C_{jkilms} &  =A_{jklm}B_{is}+A_{kilm}B_{js}-A_{jilm}B_{ks}+A_{jkms}%
+B_{il}+A_{kims}B_{jl}-\nonumber\\
+&  A_{jims}B_{kl}-A_{jkls}B_{im}-A_{kils}B_{jm}+A_{jils}B_{km}\nonumber\\
+1 &  \leq j,k,i\leq r,1\leq l,m,s\leq r.
+\end{align}
+The normalization of the basis elements is given by
+\begin{equation}
+\left\vert \varphi_{j}\varphi_{k}\varphi_{i}\right\rangle \left\langle
+\varphi_{l}\varphi_{m}\varphi_{s}\right\vert =\frac{1}{3}\left\vert
+\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{l}\varphi
+_{m}\right\vert \wedge\left\vert \varphi_{i}\right\rangle \left\langle
+\varphi_{s}\right\vert .
+\end{equation}
+
+
+In particular this gives for $r=4$%
+
+\begin{align}
+A\wedge B &  =\quad\left(  A_{1212}B_{33}-A_{1312}B_{23}+A_{2312}%
+B_{13}-A_{1213}B_{32}+A_{1313}B_{22}-A_{2313}B_{12}\right.  \nonumber\\
+&  \left.  +A_{1223}B_{31}-A_{1323}B_{21}+A_{2323}B_{11}\right)  \left\vert
+123\right\rangle \left\langle 123\right\vert \nonumber\\
+&  \left(  A_{1212}B_{34}-A_{1312}B_{24}+A_{2312}B_{14}-A_{1214}%
+B_{32}+A_{1314}B_{22}-A_{2314}B_{12}\right.  \nonumber\\
+&  \left.  +A_{1224}B_{31}-A_{1324}B_{21}+A_{2324}B_{11}\right)  \left\vert
+123\right\rangle \left\langle 124\right\vert \nonumber\\
+&  \left(  A_{1213}B_{34}-A_{1313}B_{24}+A_{2313}B_{14}-A_{1214}%
+B_{33}+A_{1314}B_{23}-A_{2314}B_{13}\right.  \nonumber\\
+&  \left.  +A_{1234}B_{31}-A_{1334}B_{21}+A_{2334}B_{11}\right)  \left\vert
+123\right\rangle \left\langle 134\right\vert \nonumber\\
+&  \left(  A_{1223}B_{34}-A_{1323}B_{24}+A_{2323}B_{14}-A_{1224}%
+B_{33}+A_{1324}B_{23}-A_{2324}B_{13}\right.  \nonumber\\
+&  \left.  +A_{1234}B_{32}-A_{1334}B_{22}+A_{2334}B_{12}\right)  \left\vert
+123\right\rangle \left\langle 234\right\vert
+\end{align}%
+\begin{align}
+&  +\quad\left(  A_{1212}B_{43}-A_{1412}B_{23}+A_{2412}B_{13}-A_{1214}%
+B_{32}+A_{1414}B_{22}-A_{2313}B_{12}\right.  \nonumber\\
+&  \left.  +A_{1223}B_{41}-A_{1423}B_{21}+A_{2423}B_{11}\right)  \left\vert
+124\right\rangle \left\langle 123\right\vert \nonumber\\
+&  \left(  A_{1212}B_{44}-A_{1412}B_{24}+A_{2412}B_{14}-A_{1214}%
+B_{42}+A_{1414}B_{22}-A_{2414}B_{12}\right.  \nonumber\\
+&  \left.  +A_{1224}B_{41}-A_{1424}B_{21}+A_{2424}B_{11}\right)  \left\vert
+124\right\rangle \left\langle 124\right\vert \nonumber\\
+&  \left(  A_{1213}B_{44}-A_{1413}B_{24}+A_{2413}B_{14}-A_{1214}%
+B_{43}+A_{1414}B_{23}-A_{2414}B_{13}\right.  \nonumber\\
+&  \left.  +A_{1234}B_{41}-A_{1434}B_{21}+A_{2434}B_{11}\right)  \left\vert
+124\right\rangle \left\langle 134\right\vert \nonumber\\
+&  \left(  A_{1223}B_{44}-A_{1423}B_{24}+A_{2423}B_{14}-A_{1224}%
+B_{43}+A_{1424}B_{23}-A_{2424}B_{13}\right.  \nonumber\\
+&  \left.  +A_{1234}B_{42}-A_{1434}B_{22}+A_{2434}B_{12}\right)  \left\vert
+124\right\rangle \left\langle 234\right\vert
+\end{align}%
+\begin{align}
+&  \left(  A_{1312}B_{43}-A_{1412}B_{33}+A_{3412}B_{13}-A_{1314}%
+B_{32}+A_{1414}B_{32}-A_{2313}B_{12}\right.  \nonumber\\
+&  \left.  +A_{1323}B_{41}-A_{1423}B_{31}+A_{3423}B_{11}\right)  \left\vert
+134\right\rangle \left\langle 123\right\vert \nonumber\\
+&  \left(  A_{1312}B_{44}-A_{1412}B_{34}+A_{3412}B_{14}-A_{1314}%
+B_{42}+A_{1414}B_{32}-A_{3414}B_{12}\right.  \nonumber\\
+&  \left.  +A_{1324}B_{41}-A_{1424}B_{31}+A_{3424}B_{11}\right)  \left\vert
+134\right\rangle \left\langle 124\right\vert \nonumber\\
+&  \left(  A_{1313}B_{44}-A_{1413}B_{34}+A_{3413}B_{14}-A_{1314}%
+B_{43}+A_{1414}B_{33}-A_{3414}B_{13}\right.  \nonumber\\
+&  \left.  +A_{1334}B_{41}-A_{1434}B_{31}+A_{3434}B_{11}\right)  \left\vert
+134\right\rangle \left\langle 134\right\vert \nonumber\\
+&  \left(  A_{1323}B_{44}-A_{1423}B_{34}+A_{3423}B_{14}-A_{1324}%
+B_{43}+A_{1424}B_{33}-A_{3424}B_{13}\right.  \nonumber\\
+&  \left.  +A_{1334}B_{42}-A_{1434}B_{32}+A_{3434}B_{12}\right)  \left\vert
+134\right\rangle \left\langle 234\right\vert
+\end{align}%
+\begin{align}
+&  \left(  A_{2312}B_{43}-A_{2412}B_{33}+A_{3412}B_{23}-A_{2314}%
+B_{32}+A_{2414}B_{32}-A_{2313}B_{22}\right.  \nonumber\\
+&  \left.  +A_{2323}B_{41}-A_{2423}B_{31}+A_{3423}B_{21}\right)  \left\vert
+234\right\rangle \left\langle 123\right\vert \nonumber\\
+&  \left(  A_{2312}B_{44}-A_{2412}B_{34}+A_{3412}B_{24}-A_{2314}%
+B_{42}+A_{2414}B_{32}-A_{3414}B_{22}\right.  \nonumber\\
+&  \left.  +A_{2324}B_{41}-A_{2424}B_{31}+A_{3424}B_{21}\right)  \left\vert
+234\right\rangle \left\langle 124\right\vert \nonumber\\
+&  \left(  A_{2313}B_{44}-A_{2413}B_{34}+A_{3413}B_{24}-A_{2314}%
+B_{43}+A_{2414}B_{33}-A_{3414}B_{23}\right.  \nonumber\\
+&  \left.  +A_{2334}B_{41}-A_{2434}B_{31}+A_{3434}B_{21}\right)  \left\vert
+234\right\rangle \left\langle 134\right\vert \nonumber\\
+&  \left(  A_{2323}B_{44}-A_{2423}B_{34}+A_{3423}B_{24}-A_{2324}%
+B_{43}+A_{2424}B_{33}-A_{3424}B_{23}\right.  \nonumber\\
+&  \left.  +A_{2334}B_{42}-A_{2434}B_{32}+A_{3434}B_{22}\right)  \left\vert
+234\right\rangle \left\langle 234\right\vert
+\end{align}
+
+
+\subsection{$C=A\wedge B,$ $A\in\mathcal{B}\left(  \mathcal{H}^{2}\right)
+,B\in\mathcal{B}\left(  \mathcal{H}^{2}\right)  $}%
+
+\begin{align}
+A  & =\sum_{\substack{1\leq i_{1}<i_{2}\leq r\\1\leq j_{1}<j_{2}\leq
+r}}A_{i_{1}i_{2}j_{1}j_{2}}\left\vert \varphi_{i_{1}}\varphi_{i_{2}%
+}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}}\right\vert
+\sum_{\substack{1\leq i_{3}<i_{4}\leq r\\1\leq j_{3}<j_{4}\leq r}%
+}B_{i_{3}i_{4}j_{3}j_{4}}\left\vert \varphi_{i_{3}}\varphi_{i_{4}%
+}\right\rangle \left\langle \varphi_{j_{3}}\varphi_{j_{4}}\right\vert
+=\frac{1}{16}\sum_{\substack{1\leq i_{1},i_{2},i_{3},i_{4}\leq r\\1\leq
+j_{1},j_{2},j_{3},j_{4}\leq r}}A_{i_{1}i_{2}j_{1}j_{2}}B_{i_{3}i_{4}j_{3}%
+j_{4}}\left\vert \varphi_{i_{1}}\varphi_{i_{2}}\varphi_{i_{3}}\varphi_{i_{4}%
+}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}%
+}\varphi_{j_{4}}\right\vert \nonumber\\
+& =\sum_{\substack{1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r\\1\leq j_{1}%
+<j_{2}<j_{3}<j_{4}\leq r}}C_{i_{1}i_{2}i_{3}i_{4}j_{1}j_{2}j_{3}j_{4}%
+}\left\vert \varphi_{i_{1}}\varphi_{i_{2}}\varphi_{i_{3}}\varphi_{i_{4}%
+}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}%
+}\varphi_{j_{4}}\right\vert
+\end{align}
+Using
+\begin{equation}
+S_{4}=\frac{S_{4}}{\left(  S_{2}\times S_{2}\right)  }\left(  S_{2}\times
+S_{2}\right)
+\end{equation}
+one gets%
+\begin{equation}%
+\begin{array}
+[c]{ccccccc}
+& j_{1}j_{2}j_{3}j_{4} & j_{2}j_{3}j_{1}j_{4} & j_{2}j_{4}j_{3}j_{1} &
+j_{3}j_{1}j_{2}j_{4} & j_{1}j_{4}j_{3}j_{2} & j_{3}j_{4}j_{1}j_{2}\\
+i_{1}i_{2}i_{3}i_{4} & A_{i_{1}i_{2}j_{1}j_{2}}B_{i_{3}i_{4}j_{3}j_{4}} &
+A_{i_{1}i_{2}j_{2}j_{3}}B_{i_{3}i_{4}j_{1}j_{4}} & A_{i_{1}i_{2}j_{2}j_{4}%
+}B_{i_{3}i_{4}j_{3}j_{1}} & A_{i_{1}i_{2}j_{3}j_{1}}B_{i_{3}i_{4}j_{2}j_{4}} &
+A_{i_{1}i_{2}j_{1}j_{4}}B_{i_{3}i_{4}j_{3}j_{2}} & A_{i_{1}i_{2}j_{3}j_{4}%
+}B_{i_{3}i_{4}j_{1}j_{2}}\\
+i_{2}i_{3}i_{1}i_{4} & A_{i_{2}i_{3}j_{1}j_{2}}B_{i_{1}i_{4}j_{3}j_{4}} &
+A_{i_{2}i_{3}j_{2}j_{3}}B_{i_{1}i_{4}j_{1}j_{4}} & A_{i_{2}i_{3}j_{2}j_{4}%
+}B_{i_{1}i_{4}j_{3}j_{1}} & A_{i_{2}i_{3}j_{3}j_{1}}B_{i_{1}i_{4}j_{2}j_{4}} &
+A_{i_{2}i_{3}j_{1}j_{4}}B_{i_{1}i_{4}j_{3}j_{2}} & A_{i_{2}i_{3}j_{3}j_{4}%
+}B_{i_{1}i_{4}j_{1}j_{2}}\\
+i_{2}i_{4}i_{3}i_{1} & A_{i_{2}i_{4}j_{1}j_{2}}B_{i_{3}i_{1}j_{3}j_{4}} &
+A_{i_{2}i_{4}j_{2}j_{3}}B_{i_{3}i_{1}j_{1}j_{4}} & A_{i_{2}i_{4}j_{2}j_{4}%
+}B_{i_{3}i_{1}j_{3}j_{1}} & A_{i_{2}i_{4}j_{3}j_{1}}B_{i_{3}i_{1}j_{2}j_{4}} &
+A_{i_{2}i_{4}j_{1}j_{4}}B_{i_{3}i_{1}j_{3}j_{2}} & A_{i_{2}i_{4}j_{3}j_{4}%
+}B_{i_{3}i_{1}j_{1}j_{2}}\\
+i_{3}i_{1}i_{2}i_{4} & A_{i_{3}i_{1}j_{1}j_{2}}B_{i_{2}i_{4}j_{3}j_{4}} &
+A_{i_{3}i_{1}j_{2}j_{3}}B_{i_{2}i_{4}j_{1}j_{4}} & A_{i_{3}i_{1}j_{2}j_{4}%
+}B_{i_{2}i_{4}j_{3}j_{1}} & A_{i_{3}i_{1}j_{3}j_{1}}B_{i_{2}i_{4}j_{2}j_{4}} &
+A_{i_{3}i_{1}j_{1}j_{4}}B_{i_{2}i_{4}j_{3}j_{2}} & A_{i_{3}i_{1}j_{3}j_{4}%
+}B_{i_{2}i_{4}j_{1}j_{2}}\\
+i_{1}i_{4}i_{3}i_{2} & A_{i_{1}i_{4}j_{1}j_{2}}B_{i_{3}i_{2}j_{3}j_{4}} &
+A_{i_{1}i_{4}j_{2}j_{3}}B_{i_{3}i_{2}j_{1}j_{4}} & A_{i_{1}i_{4}j_{2}j_{4}%
+}B_{i_{3}i_{2}j_{3}j_{1}} & A_{i_{1}i_{4}j_{3}j_{1}}B_{i_{3}i_{2}j_{2}j_{4}} &
+A_{i_{1}i_{4}j_{1}j_{4}}B_{i_{3}i_{2}j_{3}j_{2}} & A_{i_{1}i_{4}j_{3}j_{4}%
+}B_{i_{3}i_{2}j_{1}j_{2}}\\
+i_{3}i_{4}i_{1}i_{2} & A_{i_{3}i_{4}j_{1}j_{2}}B_{i_{1}i_{2}j_{3}j_{4}} &
+A_{i_{3}i_{4}j_{2}j_{3}}B_{i_{1}i_{2}j_{1}j_{4}} & A_{i_{3}i_{4}j_{2}j_{4}%
+}B_{i_{1}i_{2}j_{3}j_{1}} & A_{i_{3}i_{4}j_{3}j_{1}}B_{i_{1}i_{2}j_{2}j_{4}} &
+A_{i_{3}i_{4}j_{1}j_{4}}B_{i_{1}i_{2}j_{3}j_{2}} & A_{i_{3}i_{4}j_{3}j_{4}%
+}B_{i_{1}i_{2}j_{1}j_{2}}%
+\end{array}
+\end{equation}
+Thus for $1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq r$ and $1\leq j_{1}<j_{2}%
+<j_{3}<j_{4}\leq r$ one has
+\begin{align}
+C_{i_{1}i_{2}i_{3}i_{4}j_{1}j_{2}j_{3}j_{4}}  & =A_{i_{1}i_{2}j_{1}j_{2}%
+}B_{i_{3}i_{4}j_{3}j_{4}}+A_{i_{1}i_{2}j_{2}j_{3}}B_{i_{3}i_{4}j_{1}j_{4}%
+}+A_{i_{1}i_{2}j_{2}j_{4}}B_{i_{3}i_{4}j_{3}j_{1}}+A_{i_{1}i_{2}j_{3}j_{1}%
+}B_{i_{3}i_{4}j_{2}j_{4}}+A_{i_{1}i_{2}j_{1}j_{4}}B_{i_{3}i_{4}j_{3}j_{2}%
+}+A_{i_{1}i_{2}j_{3}j_{4}}B_{i_{3}i_{4}j_{1}j_{2}}+\nonumber\\
+& A_{i_{2}i_{3}j_{1}j_{2}}B_{i_{1}i_{4}j_{3}j_{4}}+A_{i_{2}i_{3}j_{2}j_{3}%
+}B_{i_{1}i_{4}j_{1}j_{4}}+A_{i_{2}i_{3}j_{2}j_{4}}B_{i_{1}i_{4}j_{3}j_{1}%
+}+A_{i_{2}i_{3}j_{3}j_{1}}B_{i_{1}i_{4}j_{2}j_{4}}+A_{i_{2}i_{3}j_{1}j_{4}%
+}B_{i_{1}i_{4}j_{3}j_{2}}+A_{i_{2}i_{3}j_{3}j_{4}}B_{i_{1}i_{4}j_{1}j_{2}%
+}+\nonumber\\
+& A_{i_{2}i_{4}j_{1}j_{2}}B_{i_{3}i_{1}j_{3}j_{4}}+A_{i_{2}i_{4}j_{2}j_{3}%
+}B_{i_{3}i_{1}j_{1}j_{4}}+A_{i_{2}i_{4}j_{2}j_{4}}B_{i_{3}i_{1}j_{3}j_{1}%
+}+A_{i_{2}i_{4}j_{3}j_{1}}B_{i_{3}i_{1}j_{2}j_{4}}+A_{i_{2}i_{4}j_{1}j_{4}%
+}B_{i_{3}i_{1}j_{3}j_{2}}+A_{i_{2}i_{4}j_{3}j_{4}}B_{i_{3}i_{1}j_{1}j_{2}%
+}+\nonumber\\
+& A_{i_{3}i_{1}j_{1}j_{2}}B_{i_{2}i_{4}j_{3}j_{4}}+A_{i_{3}i_{1}j_{2}j_{3}%
+}B_{i_{2}i_{4}j_{1}j_{4}}+A_{i_{3}i_{1}j_{2}j_{4}}B_{i_{2}i_{4}j_{3}j_{1}%
+}+A_{i_{3}i_{1}j_{3}j_{1}}B_{i_{2}i_{4}j_{2}j_{4}}+A_{i_{3}i_{1}j_{1}j_{4}%
+}B_{i_{2}i_{4}j_{3}j_{2}}+A_{i_{3}i_{1}j_{3}j_{4}}B_{i_{2}i_{4}j_{1}j_{2}%
+}+\nonumber\\
+& A_{i_{1}i_{4}j_{1}j_{2}}B_{i_{3}i_{2}j_{3}j_{4}}+A_{i_{1}i_{4}j_{2}j_{3}%
+}B_{i_{3}i_{2}j_{1}j_{4}}+A_{i_{1}i_{4}j_{2}j_{4}}B_{i_{3}i_{2}j_{3}j_{1}%
+}+A_{i_{1}i_{4}j_{3}j_{1}}B_{i_{3}i_{2}j_{2}j_{4}}+A_{i_{1}i_{4}j_{1}j_{4}%
+}B_{i_{3}i_{2}j_{3}j_{2}}+A_{i_{1}i_{4}j_{3}j_{4}}B_{i_{3}i_{2}j_{1}j_{2}%
+}+\nonumber\\
+& A_{i_{3}i_{4}j_{1}j_{2}}B_{i_{1}i_{2}j_{3}j_{4}}+A_{i_{3}i_{4}j_{2}j_{3}%
+}B_{i_{1}i_{2}j_{1}j_{4}}+A_{i_{3}i_{4}j_{2}j_{4}}B_{i_{1}i_{2}j_{3}j_{1}%
+}+A_{i_{3}i_{4}j_{3}j_{1}}B_{i_{1}i_{2}j_{2}j_{4}}+A_{i_{3}i_{4}j_{1}j_{4}%
+}B_{i_{1}i_{2}j_{3}j_{2}}+A_{i_{3}i_{4}j_{3}j_{4}}B_{i_{1}i_{2}j_{1}j_{2}}%
+\end{align}
+which can reordered as
+\begin{align}
+C_{i_{1}i_{2}i_{3}i_{4}j_{1}j_{2}j_{3}j_{4}}  & =A_{i_{1}i_{2}j_{1}j_{2}%
+}B_{i_{3}i_{4}j_{3}j_{4}}+A_{i_{1}i_{2}j_{2}j_{3}}B_{i_{3}i_{4}j_{1}j_{4}%
+}-A_{i_{1}i_{2}j_{2}j_{4}}B_{i_{3}i_{4}j_{1}j_{3}}-A_{i_{1}i_{2}j_{1}j_{3}%
+}B_{i_{3}i_{4}j_{2}j_{4}}-A_{i_{1}i_{2}j_{1}j_{4}}B_{i_{3}i_{4}j_{2}j_{3}%
+}+A_{i_{1}i_{2}j_{3}j_{4}}B_{i_{3}i_{4}j_{1}j_{2}}\nonumber\\
+& A_{i_{2}i_{3}j_{1}j_{2}}B_{i_{1}i_{4}j_{3}j_{4}}+A_{i_{2}i_{3}j_{2}j_{3}%
+}B_{i_{1}i_{4}j_{1}j_{4}}-A_{i_{2}i_{3}j_{2}j_{4}}B_{i_{1}i_{4}j_{1}j_{3}%
+}-A_{i_{2}i_{3}j_{1}j_{3}}B_{i_{1}i_{4}j_{2}j_{4}}-A_{i_{2}i_{3}j_{1}j_{4}%
+}B_{i_{1}i_{4}j_{2}j_{3}}+A_{i_{2}i_{3}j_{3}j_{4}}B_{i_{1}i_{4}j_{1}j_{2}%
+}+\nonumber\\
+& -A_{i_{2}i_{4}j_{1}j_{2}}B_{i_{1}i_{3}j_{3}j_{4}}-A_{i_{2}i_{4}j_{2}j_{3}%
+}B_{i_{1}i_{3}j_{1}j_{4}}+A_{i_{2}i_{4}j_{2}j_{4}}B_{i_{1}i_{3}j_{1}j_{3}%
+}+A_{i_{2}i_{4}j_{1}j_{3}}B_{i_{1}i_{3}j_{2}j_{4}}+A_{i_{2}i_{4}j_{1}j_{4}%
+}B_{i_{1}i_{3}j_{2}j_{3}}-A_{i_{2}i_{4}j_{3}j_{4}}B_{i_{1}i_{3}j_{1}j_{2}%
+}+\nonumber\\
+& -A_{i_{1}i_{3}j_{1}j_{2}}B_{i_{2}i_{4}j_{3}j_{4}}-A_{i_{1}i_{3}j_{2}j_{3}%
+}B_{i_{2}i_{4}j_{1}j_{4}}+A_{i_{1}i_{3}j_{2}j_{4}}B_{i_{2}i_{4}j_{1}j_{3}%
+}+A_{i_{1}i_{3}j_{1}j_{3}}B_{i_{2}i_{4}j_{2}j_{4}}+A_{i_{1}i_{3}j_{1}j_{4}%
+}B_{i_{2}i_{4}j_{2}j_{3}}-A_{i_{1}i_{3}j_{3}j_{4}}B_{i_{2}i_{4}j_{1}j_{2}%
+}+\nonumber\\
+& -A_{i_{1}i_{4}j_{1}j_{2}}B_{i_{2}i_{3}j_{3}j_{4}}-A_{i_{1}i_{4}j_{2}j_{3}%
+}B_{i_{2}i_{3}j_{1}j_{4}}-A_{i_{1}i_{4}j_{2}j_{4}}B_{i_{2}i_{3}j_{3}j_{1}%
+}+A_{i_{1}i_{4}j_{1}j_{3}}B_{i_{2}i_{3}j_{2}j_{4}}-A_{i_{1}i_{4}j_{1}j_{4}%
+}B_{i_{2}i_{3}j_{3}j_{2}}-A_{i_{1}i_{4}j_{3}j_{4}}B_{i_{2}i_{3}j_{1}j_{2}%
+}+\nonumber\\
+& A_{i_{3}i_{4}j_{1}j_{2}}B_{i_{1}i_{2}j_{3}j_{4}}-A_{i_{3}i_{4}j_{2}j_{3}%
+}B_{i_{1}i_{2}j_{1}j_{4}}-A_{i_{3}i_{4}j_{2}j_{4}}B_{i_{1}i_{2}j_{1}j_{3}%
+}-A_{i_{3}i_{4}j_{1}j_{3}}B_{i_{1}i_{2}j_{2}j_{4}}+A_{i_{3}i_{4}j_{1}j_{4}%
+}B_{i_{1}i_{2}j_{2}j_{3}}+A_{i_{3}i_{4}j_{3}j_{4}}B_{i_{1}i_{2}j_{1}j_{2}}%
+\end{align}
+In particular this gives when $A=B$ that
+\begin{align}
+C_{i_{1}i_{2}i_{3}i_{4}j_{1}j_{2}j_{3}j_{4}}  & =2A_{i_{1}i_{2}j_{1}j_{2}%
+}A_{i_{3}i_{4}j_{3}j_{4}}+2A_{i_{1}i_{2}j_{2}j_{3}}A_{i_{3}i_{4}j_{1}j_{4}%
+}-2A_{i_{1}i_{2}j_{2}j_{4}}A_{i_{3}i_{4}j_{1}j_{3}}-2A_{i_{1}i_{2}j_{1}j_{3}%
+}A_{i_{3}i_{4}j_{2}j_{4}}-2A_{i_{1}i_{2}j_{1}j_{4}}A_{i_{3}i_{4}j_{2}j_{3}%
+}+2A_{i_{1}i_{2}j_{3}j_{4}}A_{i_{3}i_{4}j_{1}j_{2}}\nonumber\\
+& 2A_{i_{2}i_{3}j_{1}j_{2}}A_{i_{1}i_{4}j_{3}j_{4}}+2A_{i_{2}i_{3}j_{2}j_{3}%
+}A_{i_{1}i_{4}j_{1}j_{4}}-2A_{i_{2}i_{3}j_{2}j_{4}}A_{i_{1}i_{4}j_{1}j_{3}%
+}-2A_{i_{2}i_{3}j_{1}j_{3}}A_{i_{1}i_{4}j_{2}j_{4}}-2A_{i_{2}i_{3}j_{1}j_{4}%
+}A_{i_{1}i_{4}j_{2}j_{3}}+2A_{i_{2}i_{3}j_{3}j_{4}}A_{i_{1}i_{4}j_{1}j_{2}%
+}+\nonumber\\
+& -2A_{i_{2}i_{4}j_{1}j_{2}}A_{i_{1}i_{3}j_{3}j_{4}}-2A_{i_{2}i_{4}j_{2}j_{3}%
+}A_{i_{1}i_{3}j_{1}j_{4}}+2A_{i_{2}i_{4}j_{2}j_{4}}A_{i_{1}i_{3}j_{1}j_{3}%
+}+2A_{i_{2}i_{4}j_{1}j_{3}}A_{i_{1}i_{3}j_{2}j_{4}}+2A_{i_{2}i_{4}j_{1}j_{4}%
+}A_{i_{1}i_{3}j_{2}j_{3}}-2A_{i_{2}i_{4}j_{3}j_{4}}A_{i_{1}i_{3}j_{1}j_{2}%
+}\nonumber
+\end{align}
+and if $A\ $is diagonal then
+\begin{align}
+C_{i_{1}i_{2}i_{3}i_{4}i_{1}i_{2}i_{3}i_{4}}  & =2A_{i_{1}i_{2}i_{1}i_{2}%
+}A_{i_{3}i_{4}i_{3}i_{4}}+2A_{i_{1}i_{2}i_{2}i_{3}}A_{i_{3}i_{4}i_{1}i_{4}%
+}-2A_{i_{1}i_{2}i_{2}i_{4}}A_{i_{3}i_{4}i_{1}i_{3}}-2A_{i_{1}i_{2}i_{1}i_{3}%
+}A_{i_{3}i_{4}i_{2}i_{4}}-2A_{i_{1}i_{2}i_{1}i_{4}}A_{i_{3}i_{4}i_{2}i_{3}%
+}+2A_{i_{1}i_{2}i_{3}i_{4}}A_{i_{3}i_{4}i_{1}i_{2}}\nonumber\\
+& 2A_{i_{2}i_{3}i_{1}i_{2}}A_{i_{1}i_{4}i_{3}i_{4}}+2A_{i_{2}i_{3}i_{2}i_{3}%
+}A_{i_{1}i_{4}i_{1}i_{4}}-2A_{i_{2}i_{3}i_{2}i_{4}}A_{i_{1}i_{4}i_{1}i_{3}%
+}-2A_{i_{2}i_{3}i_{1}i_{3}}A_{i_{1}i_{4}i_{2}i_{4}}-2A_{i_{2}i_{3}i_{1}i_{4}%
+}A_{i_{1}i_{4}i_{2}i_{3}}+2A_{i_{2}i_{3}i_{3}i_{4}}A_{i_{1}i_{4}i_{1}i_{2}%
+}+\nonumber\\
+& -2A_{i_{2}i_{4}i_{1}i_{2}}A_{i_{1}i_{3}i_{3}i_{4}}-2A_{i_{2}i_{4}i_{2}i_{3}%
+}A_{i_{1}i_{3}i_{1}i_{4}}+2A_{i_{2}i_{4}i_{2}i_{4}}A_{i_{1}i_{3}i_{1}i_{3}%
+}+2A_{i_{2}i_{4}i_{1}i_{3}}A_{i_{1}i_{3}i_{2}i_{4}}+2A_{i_{2}i_{4}i_{1}i_{4}%
+}A_{i_{1}i_{3}i_{2}i_{3}}-2A_{i_{2}i_{4}i_{3}i_{4}}A_{i_{1}i_{3}i_{1}i_{2}%
+}\nonumber
+\end{align}
+The normalization of the basis elements is given by noting that
+\begin{equation}
+\left\vert \varphi_{i_{1}}\varphi_{i_{2}}\right\rangle \left\langle
+\varphi_{j_{1}}\varphi_{j_{2}}\right\vert \wedge\left\vert \varphi_{i_{3}%
+}\varphi_{i_{4}}\right\rangle \left\langle \varphi_{j_{3}}\varphi_{j_{4}%
+}\right\vert =\left\vert \left\vert \varphi_{i_{1}}\varphi_{i_{2}%
+}\right\rangle \wedge\left\vert \varphi_{i_{3}}\varphi_{i_{4}}\right\rangle
+\right\rangle \left\langle \left\langle \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\vert \wedge\left\langle \varphi_{j_{3}}\varphi_{j_{4}}\right\vert
+\right\vert =\frac{1}{4}\left\vert \varphi_{i_{1}}\wedge\varphi_{i_{2}}%
+\wedge\varphi_{i_{3}}\wedge\varphi_{i_{4}}\right\rangle \left\langle
+\varphi_{j_{1}}\wedge\varphi_{j_{2}}\wedge\varphi_{j_{3}}\wedge\varphi_{j_{4}%
+}\right\vert
+\end{equation}
+and%
+\begin{equation}
+\left\vert \varphi_{i_{1}}\varphi_{i_{2}}\varphi_{i_{3}}\varphi_{i_{4}%
+}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}%
+}\varphi_{j_{4}}\right\vert =\frac{1}{24}\left\vert \varphi_{i_{1}}%
+\wedge\varphi_{i_{2}}\wedge\varphi_{i_{3}}\wedge\varphi_{i_{4}}\right\rangle
+\left\langle \varphi_{j_{1}}\wedge\varphi_{j_{2}}\wedge\varphi_{j_{3}}%
+\wedge\varphi_{j_{4}}\right\vert
+\end{equation}
+thus giving%
+\begin{equation}
+\left\vert \varphi_{i_{1}}\varphi_{i_{2}}\varphi_{i_{3}}\varphi_{i_{4}%
+}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}%
+}\varphi_{j_{4}}\right\vert =\frac{1}{6}\left\vert \varphi_{i_{1}}%
+\varphi_{i_{2}}\right\rangle \left\langle \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\vert \wedge\left\vert \varphi_{i_{3}}\varphi_{i_{4}}\right\rangle
+\left\langle \varphi_{j_{3}}\varphi_{j_{4}}\right\vert .
+\end{equation}
+
+
+***************************************************************************************
+
+If we let $B$ be the projector onto $\mathcal{H}^{1}$ we obtain
+\begin{align}
+\quad &  =\left(  A_{1212}+A_{1313}+A_{2323}\right)  \left\vert
+123\right\rangle \left\langle 123\right\vert +\left(  A_{1314}+A_{2324}%
+\right)  \left\vert 123\right\rangle \left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{2334}-A_{1214}\right)  \left\vert 123\right\rangle \left\langle
+134\right\vert -\left(  A_{1224}+A_{1334}\right)  \left\vert 123\right\rangle
+\left\langle 234\right\vert
+\end{align}%
+\begin{align}
+&  +\quad\left(  A_{1414}+A_{2423}\right)  \left\vert 124\right\rangle
+\left\langle 123\right\vert +\left(  A_{1212}+A_{1414}+A_{2424}\right)
+\left\vert 124\right\rangle \left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{1213}+A_{2434}\right)  \left\vert 124\right\rangle \left\langle
+134\right\vert +\left(  A_{1223}-A_{1434}\right)  \left\vert 124\right\rangle
+\left\langle 234\right\vert
+\end{align}%
+\begin{align}
+&  +\left(  A_{3423}-A_{1412}\right)  \left\vert 134\right\rangle \left\langle
+123\right\vert +\left(  A_{1312}+A_{3424}\right)  \left\vert 134\right\rangle
+\left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{1313}+A_{1414}+A_{3434}\right)  \left\vert 134\right\rangle
+\left\langle 134\right\vert +\left(  A_{1323}+A_{1424}\right)  \left\vert
+134\right\rangle \left\langle 234\right\vert
+\end{align}%
+\begin{align}
+-  &  \left(  A_{2412}+A_{2313}\right)  \left\vert 234\right\rangle
+\left\langle 123\right\vert +\left(  A_{2312}-A_{3414}\right)  \left\vert
+234\right\rangle \left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{2313}+A_{2414}\right)  \left\vert 234\right\rangle \left\langle
+134\right\vert +\left(  A_{2323}+A_{2424}+A_{3434}\right)  \left\vert
+234\right\rangle \left\langle 234\right\vert
+\end{align}
+which in general is given by
+\begin{align}
+C_{jkilms}  &  =A_{jklm}\delta_{is}+A_{kilm}\delta_{js}-A_{jilm}\delta
+_{ks}+A_{jkms}\delta_{il}+A_{kims}\delta_{jl}-\nonumber\\
+&  A_{jims}\delta_{kl}-A_{jkls}\delta_{im}-A_{kils}\delta_{jm}+A_{jils}%
+\delta_{km}\nonumber\\
+1  &  \leq j,k,i\leq r,1\leq l,m,s\leq r.
+\end{align}
+We will need to consider
+\begin{equation}
+\left(  A\wedge B\right)  ^{2}=\sum_{\substack{1\leq j<k<i\leq r\\1\leq
+l<m<s\leq r\\1\leq l^{\prime}<m^{\prime}<s^{\prime}\leq r}}C_{jkilms}%
+C_{lmsl^{\prime}m^{\prime}s^{\prime}}\left\vert \varphi_{j}\varphi_{k}%
+\varphi_{i}\right\rangle \left\langle \varphi_{l^{\prime}}\varphi_{m^{\prime}%
+}\varphi_{s^{\prime}}\right\vert .
+\end{equation}
+
+
+********************************************************************************************%
+
+\begin{align}
+P_{\mathcal{H}^{1}}\wedge P_{\mathcal{H}^{1}}\wedge P_{\mathcal{H}^{1}}  &
+=\sum_{1\leq i_{1},i_{2},i_{3}\leq r}\left\vert \varphi_{i_{1}}\right\rangle
+\left\langle \varphi_{i_{1}}\right\vert \wedge\left\vert \varphi_{i_{2}%
+}\right\rangle \left\langle \varphi_{i_{2}}\right\vert \wedge\left\vert
+\varphi_{i_{3}}\right\rangle \left\langle \varphi_{i_{3}}\right\vert \\
+&  =\sum_{1\leq i_{1},i_{2},i_{3}\leq r}\left\vert \varphi_{i_{1}}%
+\varphi_{i_{2}}\varphi_{i_{3}}\right\rangle \left\langle \varphi_{i_{1}%
+}\varphi_{i_{2}}\varphi_{i_{3}}\right\vert =6P_{\mathcal{H}^{3}}%
+\end{align}%
+\begin{equation}
+P_{\mathcal{H}^{1}}\wedge P_{\mathcal{H}^{1}}=2P_{\mathcal{H}^{2}}%
+\end{equation}
+The general condition for idempotency of a particle conserving operator is
+\begin{equation}
+P_{\mathcal{H}^{m}}AP_{\mathcal{H}^{m}}=P_{\mathcal{H}^{m}}AP_{\mathcal{H}%
+^{m}}AP_{\mathcal{H}^{m}};\,0\leq m\leq r
+\end{equation}
+The action of the projector $P_{\mathcal{H}^{3}}$ on $A$ is given by
+\begin{align}
+&  \left\vert \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}}\right\rangle
+\left\langle \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}}\right\vert
+A\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{k_{3}}\right\rangle
+\left\langle \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{k_{3}}\right\vert
+\nonumber\\
+&  =\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}}\right\rangle
+\left\langle \varphi_{j_{1}}\varphi_{j_{2}}\varphi_{j_{3}}\right\vert
+A\left\vert \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{k_{3}}\right\rangle
+\left\langle \varphi_{k_{1}}\varphi_{k_{2}}\varphi_{k_{3}}\right\vert
+A\left\vert \varphi_{_{l1}}\varphi_{l_{2}}\varphi_{l_{3}}\right\rangle
+\left\langle \varphi_{l_{1}}\varphi_{l_{2}}\varphi_{l_{3}}\right\vert .
+\end{align}
+
+
+If $A$ is the second quantization of a two particle operator then
+\begin{equation}
+A=\Gamma\left(  A_{2}\right)  =\Gamma\left(  \sum_{p_{1},p_{2},q_{1},q_{2}%
+}A_{2}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right\rangle \left\langle
+\varphi_{q_{1}}\varphi_{q_{2}}\right\vert \right)  =A_{2}\wedge I_{\mathcal{H}%
+_{\mathcal{F}}}\nonumber
+\end{equation}
+and
+\begin{equation}
+P_{\mathcal{H}^{2}}AP_{\mathcal{H}^{2}}=P_{\mathcal{H}^{2}}\Gamma\left(
+A_{2}\right)  P_{\mathcal{H}^{2}}=\frac{1}{4}\sum_{1\leq p_{1},p_{2}%
+,q_{1},q_{2}\leq r}A_{2p_{1}p_{2}q_{1}q_{2}}\left\vert \varphi_{p_{1}}%
+\varphi_{p_{2}}\right\rangle \left\langle \varphi_{q_{1}}\varphi_{q_{2}%
+}\right\vert .
+\end{equation}
+An important relationship is given by
+\begin{align}
+P_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}  &  =P_{\mathcal{H}^{3}}\left(
+A_{2}\wedge I_{\mathcal{H}_{\mathcal{F}}}\right)  P_{\mathcal{H}^{3}}%
+=A_{2}\wedge P_{\mathcal{H}^{1}}\nonumber\\
+&  =\frac{1}{4}\sum_{1\leq p_{1},p_{2},q_{1},q_{2},i\leq r}A_{2p_{1}p_{2}%
+q_{1}q_{2}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\right\rangle \left\langle
+\varphi_{q_{1}}\varphi_{q_{2}}\right\vert \wedge\left\vert \varphi
+_{i}\right\rangle \left\langle \varphi_{i}\right\vert .
+\end{align}
+The squared operator is
+\begin{equation}
+P_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}=\frac{1}{16}%
+\sum_{\substack{1\leq p_{1},p_{2},q_{1},q_{2},i\leq r\\1\leq1p_{1}^{\prime
+},p_{2}^{\prime},q_{1}^{\prime},q_{2}^{\prime},i^{\prime}\leq r}%
+}A_{2p_{1}p_{2}q_{1}q_{2}}A_{2p_{1}^{\prime}p_{2}^{\prime}q_{1}^{\prime}%
+q_{2}^{\prime}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}%
+\right\rangle \left\langle \varphi_{q_{1}}\varphi_{q_{2}}\varphi
+_{i}\right\vert \left\vert \varphi_{p_{1}^{\prime}}\varphi_{p_{2}^{\prime}%
+}\varphi_{i^{\prime}}\right\rangle \left\langle \varphi_{q_{1}^{\prime}%
+}\varphi_{q_{2}^{\prime}}\varphi_{i^{\prime}}\right\vert
+\end{equation}
+as
+\begin{align}
+\left\langle \varphi_{q_{1}}\varphi_{q_{2}}\varphi_{i}\left\vert
+\varphi_{p_{1}^{\prime}}\varphi_{p_{2}^{\prime}}\varphi_{i^{\prime}}\right.
+\right\rangle  &  =\left\langle \varphi_{q_{1}}\varphi_{q_{2}}\varphi
+_{i}\left\vert \mathcal{A}_{3}\varphi_{p_{1}^{\prime}}\varphi_{p_{2}^{\prime}%
+}\varphi_{i^{\prime}}\right.  \right\rangle \nonumber\\
+&  =\frac{1}{6}\left\{  \delta_{q_{1}p_{1}^{\prime}}\delta_{q_{2}p_{2}%
+^{\prime}}\delta_{ii^{\prime}}-\delta_{q_{1}p_{2}^{\prime}}\delta_{q_{2}%
+p_{1}^{\prime}}\delta_{ii^{\prime}}-\delta_{q_{1}p_{1}^{\prime}}\delta
+_{q_{2}i^{\prime}}\delta_{ip_{2}^{\prime}}\right. \nonumber\\
+&  +\left.  \delta_{q_{1}i^{\prime}}\delta_{q_{2}p_{1}^{\prime}}\delta
+_{ip_{2}^{\prime}}+\delta_{q_{1}p_{2}^{\prime}}\delta_{q_{2}i^{\prime}}%
+\delta_{ip_{1}^{\prime}}-\delta_{q_{1}i^{\prime}}\delta_{q_{2}p_{2}^{\prime}%
+}\delta_{ip_{1}^{\prime}}\right\}
+\end{align}
+$\lceil$%
+\begin{align}
+\left\vert \varphi_{1}\varphi_{2}\varphi_{3}\right\rangle  &  =\frac{1}%
+{\sqrt{6}}\left(  \varphi_{1}\otimes\varphi_{2}\otimes\varphi_{3}-\varphi
+_{2}\otimes\varphi_{1}\otimes\varphi_{3}+\varphi_{2}\otimes\varphi_{3}%
+\otimes\varphi_{1}-\varphi_{3}\otimes\varphi_{2}\otimes\varphi_{1}\right. \\
+&  +\left.  \varphi_{3}\otimes\varphi_{1}\otimes\varphi_{2}-\varphi_{1}%
+\otimes\varphi_{3}\otimes\varphi_{2}\right) \\
+\left\langle \varphi_{1}\varphi_{2}\varphi_{3}\left\vert \varphi_{1}%
+\varphi_{2}\varphi_{3}\right.  \right\rangle  &  =1
+\end{align}
+$\rfloor$ one has%
+\begin{align}
+&  P_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}\nonumber\\
+&  \left.  =\right.  \frac{1}{96}\sum_{\substack{1\leq p_{1},p_{2},q_{1}%
+,q_{2},i\leq r\\1\leq1p_{1}^{\prime},p_{2}^{\prime},q_{1}^{\prime}%
+,q_{2}^{\prime},i^{\prime}\leq r}}A_{2p_{1}p_{2}q_{1}q_{2}}A_{2p_{1}^{\prime
+}p_{2}^{\prime}q_{1}^{\prime}q_{2}^{\prime}}\left\{  \delta_{q_{1}%
+p_{1}^{\prime}}\delta_{q_{2}p_{2}^{\prime}}\delta_{ii^{\prime}}-\delta
+_{q_{1}p_{2}^{\prime}}\delta_{q_{2}p_{1}^{\prime}}\delta_{ii^{\prime}}%
+-\delta_{q_{1}p_{1}^{\prime}}\delta_{q_{2}i^{\prime}}\delta_{ip_{2}^{\prime}%
+}\right. \nonumber\\
+&  \left.  +\,\delta_{q_{1}i^{\prime}}\delta_{q_{2}p_{1}^{\prime}}%
+\delta_{ip_{2}^{\prime}}+\delta_{q_{1}p_{2}^{\prime}}\delta_{q_{2}i^{\prime}%
+}\delta_{ip_{1}^{\prime}}-\delta_{q_{1}i^{\prime}}\delta_{q_{2}p_{2}^{\prime}%
+}\delta_{ip_{1}^{\prime}}\right\}  \left\vert \varphi_{p_{1}}\varphi_{p_{2}%
+}\varphi_{i}\right\rangle \left\langle \varphi_{q_{1}^{\prime}}\varphi
+_{q_{2}^{\prime}}\varphi_{i^{\prime}}\right\vert
+\end{align}
+which gives%
+\begin{align}
+&  P_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}=\frac{1}%
+{96}\left\{  \sum_{\substack{p_{1},p_{2},q_{1},q_{2},i,\\q_{1}^{\prime}%
+,q_{2}^{\prime}}}A_{2p_{1}p_{2}q_{1}q_{2}}A_{2q_{1}q_{2}q_{1}^{\prime}%
+q_{2}^{\prime}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}%
+\right\rangle \left\langle \varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}%
+}\varphi_{i}\right\vert \right. \nonumber\\
+&  -\sum_{\substack{p_{1},p_{2},q_{1},q_{2},i,\\q_{1}^{\prime},q_{2}^{\prime}%
+}}A_{2p_{1}p_{2}q_{1}q_{2}}A_{2q_{2}q_{1}q_{1}^{\prime}q_{2}^{\prime}%
+}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}\right\rangle
+\left\langle \varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}}\varphi
+_{i}\right\vert \\
+&  -\sum_{\substack{p_{1},p_{2},q_{1},i,\\q_{1}^{\prime},q_{2}^{\prime
+},i^{\prime}}}A_{2p_{1}p_{2}i^{\prime}q_{1}}A_{2iq_{1}q_{1}^{\prime}%
+q_{2}^{\prime}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}%
+\right\rangle \left\langle \varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}%
+}\varphi_{i^{\prime}}\right\vert \\
+-  &  \sum_{\substack{p_{1},p_{2},q_{1},i,\\q_{1}^{\prime},q_{2}^{\prime
+},i^{\prime}}}A_{2p_{1}p_{2}i^{\prime}q_{1}}A_{2iq_{1}q_{1}^{\prime}%
+q_{2}^{\prime}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}%
+\right\rangle \left\langle \varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}%
+}\varphi_{i^{\prime}}\right\vert \\
+&  -\sum_{\substack{p_{1},p_{2},q_{1},i,\\q_{1}^{\prime},q_{2}^{\prime
+},i^{\prime}}}A_{2p_{1}p_{2}i^{\prime}q_{1}}A_{2iq_{1}q_{1}^{\prime}%
+q_{2}^{\prime}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}%
+\right\rangle \left\langle \varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}%
+}\varphi_{i^{\prime}}\right\vert \\
+&  \left.  -\sum_{\substack{p_{1},p_{2},q_{1},i,\\q_{1}^{\prime},q_{2}%
+^{\prime},i^{\prime}}}A_{2p_{1}p_{2}i^{\prime}q_{1}}A_{2iq_{1}q_{1}^{\prime
+}q_{2}^{\prime}}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi
+_{i}\right\rangle \left\langle \varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime
+}}\varphi_{i^{\prime}}\right\vert \right\}
+\end{align}%
+\begin{align}
+P_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}  &  =\frac{1}%
+{48}\sum_{\substack{1\leq p_{1},p_{2},i,\\q_{1}^{\prime},q_{2}^{\prime}\leq
+3}}A_{2p_{1}p_{2}q_{1}q_{2}}A_{2q_{1}q_{2}q_{1}^{\prime}q_{2}^{\prime}%
+}\left\vert \varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}\right\rangle
+\left\langle \varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}}\varphi
+_{i}\right\vert \\
+&  \qquad\qquad\qquad\qquad-\frac{1}{24}\sum_{\substack{1\leq p_{1}%
+,p_{2},q_{1},i,\\q_{1}^{\prime},q_{2}^{\prime},i^{\prime}\leq3}}A_{2p_{1}%
+p_{2}i^{\prime}q_{1}}A_{2iq_{1}q_{1}^{\prime}q_{2}^{\prime}}\left\vert
+\varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}\right\rangle \left\langle
+\varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}}\varphi_{i^{\prime}%
+}\right\vert
+\end{align}
+which gives%
+\begin{align}
+P_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}AP_{\mathcal{H}^{3}}  &  =\frac{1}%
+{48}\sum_{\substack{1\leq p_{1},p_{2},i,\\q_{1}^{\prime},q_{2}^{\prime}\leq
+3}}A_{2p_{1}p_{2}q_{1}^{\prime}q_{2}^{\prime}}^{2}\left\vert \varphi_{p_{1}%
+}\varphi_{p_{2}}\varphi_{i}\right\rangle \left\langle \varphi_{q_{1}^{\prime}%
+}\varphi_{q_{2}^{\prime}}\varphi_{i}\right\vert \\
+&  \qquad\qquad\qquad\qquad-\frac{1}{24}\sum_{\substack{1\leq p_{1}%
+,p_{2},q_{1},i,\\q_{1}^{\prime},q_{2}^{\prime},i^{\prime}\leq3}}A_{2p_{1}%
+p_{2}i^{\prime}q_{1}}A_{2iq_{1}q_{1}^{\prime}q_{2}^{\prime}}\left\vert
+\varphi_{p_{1}}\varphi_{p_{2}}\varphi_{i}\right\rangle \left\langle
+\varphi_{q_{1}^{\prime}}\varphi_{q_{2}^{\prime}}\varphi_{i^{\prime}%
+}\right\vert
+\end{align}%
+\begin{align}
+\left(  A\wedge B\right)  ^{2}  &  =\sum_{\substack{1\leq j<k<i\leq r\\1\leq
+l<m<s\leq r\\1\leq l^{\prime}<m^{\prime}<s^{\prime}\leq r}}C_{jkilms}%
+C_{lmsl^{\prime}m^{\prime}s^{\prime}}\left\vert \varphi_{j}\varphi_{k}%
+\varphi_{i}\right\rangle \left\langle \varphi_{l^{\prime}}\varphi_{m^{\prime}%
+}\varphi_{s^{\prime}}\right\vert \nonumber\\
+&  =\sum_{\substack{1\leq j<k<i\leq r\\1\leq l^{\prime}<m^{\prime}<s^{\prime
+}\leq r}}\left(  C^{2}\right)  _{jkil^{\prime}m^{\prime}s^{\prime}}\left\vert
+\varphi_{j}\varphi_{k}\varphi_{i}\right\rangle \left\langle \varphi
+_{l^{\prime}}\varphi_{m^{\prime}}\varphi_{s^{\prime}}\right\vert .
+\end{align}
+where
+\begin{align}
+C_{jkilms}  &  =A_{jklm}B_{is}+A_{kilm}B_{js}-A_{jilm}B_{ks}+A_{jkms}%
+B_{il}+A_{kims}B_{jl}-\nonumber\\
+&  A_{jims}B_{kl}-A_{jkls}B_{im}-A_{kils}B_{jm}+A_{jils}B_{km}\nonumber\\
+1  &  \leq j,k,i\leq r,1\leq l,m,s\leq r.
+\end{align}
+and
+\begin{equation}
+\left(  C^{2}\right)  _{jkil^{\prime}m^{\prime}s^{\prime}}=\sum_{1\leq
+l<m<s\leq r}C_{jkilms}C_{lmsl^{\prime}m^{\prime}s^{\prime}}=\frac{1}{36}%
+\sum_{1\leq l,m,s\leq r}C_{jkilms}C_{lmsl^{\prime}m^{\prime}s^{\prime}}.
+\end{equation}
+In the case $B=P_{\mathcal{H}^{2}}$ one has
+\begin{align}
+C_{jkilms}  &  =A_{jklm}\delta_{is}+A_{kilm}\delta_{js}-A_{jilm}\delta
+_{ks}+A_{jkms}\delta_{il}+A_{kims}\delta_{jl}-\nonumber\\
+&  A_{jims}\delta_{kl}-A_{jkls}\delta_{im}-A_{kils}\delta_{jm}+A_{jils}%
+\delta_{km}\nonumber\\
+1  &  \leq j,k,i\leq r,1\leq l,m,s\leq r.
+\end{align}%
+\begin{align}
+C_{lmsl^{\prime}m^{\prime}s^{\prime}}  &  =A_{lml^{\prime}m^{\prime}}%
+\delta_{ss^{\prime}}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}%
+}-A_{lsl^{\prime}m^{\prime}}\delta_{ms^{\prime}}+A_{lmm^{\prime}s^{\prime}%
+}\delta_{sl^{\prime}}+A_{msm^{\prime}s^{\prime}}\delta_{ll^{\prime}%
+}-\nonumber\\
+&  A_{lsm^{\prime}s^{\prime}}\delta_{ml^{\prime}}-A_{lml^{\prime}s^{\prime}%
+}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime}}\delta_{lm^{\prime}%
+}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\nonumber\\
+1  &  \leq j,k,i\leq r,1\leq l,m,s\leq r.
+\end{align}
+thus%
+\begin{align}
+\left(  C^{2}\right)  _{jkil^{\prime}m^{\prime}s^{\prime}}  &  =\frac{1}%
+{36}\sum_{1\leq l,m,s\leq r}\left(  A_{jklm}\delta_{is}+A_{kilm}\delta
+_{js}-A_{jilm}\delta_{ks}+A_{jkms}\delta_{il}+A_{kims}\delta_{jl}-\right. \\
+&  \left.  A_{jims}\delta_{kl}-A_{jkls}\delta_{im}-A_{kils}\delta
+_{jm}+A_{jils}\delta_{km}\right)  \left(  A_{lml^{\prime}m^{\prime}}%
+\delta_{ss\prime}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}%
+-A_{lsl^{\prime}m^{\prime}}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta_{ml^{\prime
+}}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime}%
+}\delta_{lm^{\prime}}+A_{ls^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+***********************************************************************
+
+1%
+\begin{align}
+&  \left(  C^{2}\right)  _{jkil^{\prime}m^{\prime}s^{\prime}}=\frac{1}{36}%
+\sum_{1\leq l,m,s\leq r}A_{jklm}\delta_{is}\left(  A_{lml^{\prime}m^{\prime}%
+}\delta_{ss\prime}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}%
+}-A_{lsl^{\prime}m^{\prime}}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta
+_{ml}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime
+}}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+2%
+\begin{align}
+&  +A_{kilm}\delta_{js}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta
+_{ml}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime
+}}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+3%
+\begin{align}
+&  -A_{jilm}\delta_{ks}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta_{ml^{\prime
+}}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime}%
+}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+4%
+\begin{align}
+&  +A_{jkms}\delta_{il}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta
+_{ml}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime
+}}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+5%
+\begin{align}
+&  -A_{kims}\delta_{jl}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta_{ml^{\prime
+}}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime}%
+}\delta_{lm^{\prime}}+A_{ls^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+6%
+\begin{align}
+&  A_{jims}\delta_{kl}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta_{ml^{\prime
+}}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime}%
+}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+7%
+\begin{align}
+&  -A_{jkls}\delta_{im}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta
+_{ml}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime
+}}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+8%
+\begin{align}
+&  -A_{kils}\delta_{jm}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta
+_{ml}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime
+}}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+9%
+\begin{align}
+&  +A_{jils}\delta_{km}\left(  A_{lml^{\prime}m^{\prime}}\delta_{ss\prime
+}+A_{msl^{\prime}m^{\prime}}\delta_{ls^{\prime}}-A_{lsl^{\prime}m^{\prime}%
+}\delta_{ms^{\prime}}\right. \\
+&  \left.  +A_{lmm^{\prime}s^{\prime}}\delta_{sl^{\prime}}+A_{msm^{\prime
+}s^{\prime}}\delta_{ll^{\prime}}-A_{lsm^{\prime}s^{\prime}}\delta
+_{ml}-A_{lml^{\prime}s^{\prime}}\delta_{sm^{\prime}}-A_{msl^{\prime}s^{\prime
+}}\delta_{lm^{\prime}}+A_{lsl^{\prime}s^{\prime}}\delta_{mm^{\prime}}\right)
+\end{align}
+1%
+\begin{align}
+&  \left(  C^{2}\right)  _{jkil^{\prime}m^{\prime}s^{\prime}}=\frac{1}{36}%
+\sum_{1\leq l,m,s\leq r}\left(  A_{jklm}A_{lml^{\prime}m^{\prime}}\delta
+_{is}\delta_{ss\prime}+A_{jklm}A_{msl^{\prime}m^{\prime}}\delta_{is}%
+\delta_{ls^{\prime}}-A_{jklm}A_{lsl^{\prime}m^{\prime}}\delta_{is}%
+\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jklm}A_{lmm^{\prime}s^{\prime}}\delta_{is}\delta_{sl^{\prime}}%
++A_{jklm}A_{msm^{\prime}s^{\prime}}\delta_{is}\delta_{ll^{\prime}}%
+-A_{jklm}A_{lsm^{\prime}s^{\prime}}\delta_{is}\delta_{ml}-A_{jklm}%
+A_{lml^{\prime}s^{\prime}}\delta_{is}\delta_{sm^{\prime}}\\
+-A_{jklm}A_{msl^{\prime}s^{\prime}}\delta_{is}\delta_{lm^{\prime}}%
++A_{jklm}A_{lsl^{\prime}s^{\prime}}\delta_{is}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+2%
+\begin{align}
+&  +\left(  A_{kilm}A_{lml^{\prime}m^{\prime}}\delta_{js}\delta_{ss\prime
+}+A_{kilm}A_{msl^{\prime}m^{\prime}}\delta_{js}\delta_{ls^{\prime}}%
+-A_{kilm}A_{lsl^{\prime}m^{\prime}}\delta_{js}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{kilm}A_{lmm^{\prime}s^{\prime}}\delta_{js}\delta_{sl^{\prime}}%
++A_{kilm}A_{msm^{\prime}s^{\prime}}\delta_{js}\delta_{ll^{\prime}}%
+-A_{kilm}A_{lsm^{\prime}s^{\prime}}\delta_{js}\delta_{ml}-A_{kilm}%
+A_{lml^{\prime}s^{\prime}}\delta_{js}\delta_{sm^{\prime}}\\
+-A_{kilm}A_{msl^{\prime}s^{\prime}}\delta_{js}\delta_{lm^{\prime}}%
++A_{kilm}A_{lsl^{\prime}s^{\prime}}\delta_{js}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+3%
+\begin{align}
+&  -\left(  A_{jilm}A_{lml^{\prime}m^{\prime}}\delta_{ks}\delta_{ss\prime
+}+A_{jilm}A_{msl^{\prime}m^{\prime}}\delta_{ks}\delta_{ls^{\prime}}%
+-A_{jilm}A_{lsl^{\prime}m^{\prime}}\delta_{ks}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jilm}A_{lmm^{\prime}s^{\prime}}\delta_{ks}\delta_{sl^{\prime}}%
++A_{jilm}A_{msm^{\prime}s^{\prime}}\delta_{ks}\delta_{ll^{\prime}}%
+-A_{jilm}A_{lsm^{\prime}s^{\prime}}\delta_{ks}\delta_{ml}-A_{jilm}%
+A_{lml^{\prime}s^{\prime}}\delta_{ks}\delta_{sm^{\prime}}\\
+-A_{jilm}A_{msl^{\prime}s^{\prime}}\delta_{ks}\delta_{lm^{\prime}}%
++A_{jilm}A_{ls^{\prime}s^{\prime}}\delta_{ks}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+4%
+\begin{align}
+&  +\left(  A_{jkms}A_{lml^{\prime}m^{\prime}}\delta_{il}\delta_{ss\prime
+}+A_{jkms}A_{msl^{\prime}m^{\prime}}\delta_{il}\delta_{ls^{\prime}}%
+-A_{jkms}A_{lsl^{\prime}m^{\prime}}\delta_{il}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jkms}A_{lmm^{\prime}s^{\prime}}\delta_{il}\delta_{sl^{\prime}}%
++A_{jkms}A_{msm^{\prime}s^{\prime}}\delta_{il}\delta_{ll^{\prime}}%
+-A_{jkms}A_{lsm^{\prime}s^{\prime}}\delta_{il}\delta_{ml}-A_{jkms}%
+A_{lml^{\prime}s^{\prime}}\delta_{il}\delta_{sm^{\prime}}\\
+-A_{jkms}A_{msl^{\prime}s^{\prime}}\delta_{il}\delta_{lm^{\prime}}%
++A_{jkms}A_{lsl^{\prime}s^{\prime}}\delta_{il}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+5%
+\begin{align}
+&  +\left(  A_{kims}A_{lml^{\prime}m^{\prime}}\delta_{jl}\delta_{ss\prime
+}+A_{kims}A_{msl^{\prime}m^{\prime}}\delta_{jl}\delta_{ls^{\prime}}%
+-A_{kims}A_{lsl^{\prime}m^{\prime}}\delta_{jl}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{kims}A_{lmm^{\prime}s^{\prime}}\delta_{jl}\delta_{sl^{\prime}}%
++A_{kims}A_{msm^{\prime}s^{\prime}}\delta_{jl}\delta_{ll^{\prime}}%
+-A_{kims}A_{lsm^{\prime}s^{\prime}}\delta_{jl}\delta_{ml}-A_{kims}%
+A_{lml^{\prime}s^{\prime}}\delta_{jl}\delta_{sm^{\prime}}\\
+-A_{kims}A_{msl^{\prime}s^{\prime}}\delta_{jl}\delta_{lm^{\prime}}%
++A_{kims}A_{ls^{\prime}s^{\prime}}\delta_{jl}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+6%
+\begin{align}
+&  -\left(  A_{jims}A_{lml^{\prime}m^{\prime}}\delta_{kl}\delta_{ss\prime
+}+A_{jims}A_{msl^{\prime}m^{\prime}}\delta_{kl}\delta_{ls^{\prime}}%
+-A_{jims}A_{lsl^{\prime}m^{\prime}}\delta_{kl}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jims}A_{lmm^{\prime}s^{\prime}}\delta_{kl}\delta_{sl^{\prime}}%
++A_{jims}A_{msm^{\prime}s^{\prime}}\delta_{kl}\delta_{ll^{\prime}}%
+-A_{jims}A_{lsm^{\prime}s^{\prime}}\delta_{kl}\delta_{ml}-A_{jims}%
+A_{lml^{\prime}s^{\prime}}\delta_{kl}\delta_{sm^{\prime}}\\
+-A_{jims}A_{msl^{\prime}s^{\prime}}\delta_{kl}\delta_{lm^{\prime}}%
++A_{jims}A_{lsl^{\prime}s^{\prime}}\delta_{kl}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+7%
+\begin{align}
+&  -\left(  A_{jkls}A_{lml^{\prime}m^{\prime}}\delta_{im}\delta_{ss\prime
+}+A_{jkls}A_{msl^{\prime}m^{\prime}}\delta_{im}\delta_{ls^{\prime}}%
+-A_{jkls}A_{lsl^{\prime}m^{\prime}}\delta_{im}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jkls}A_{lmm^{\prime}s^{\prime}}\delta_{im}\delta_{sl^{\prime}}%
++A_{jkls}A_{msm^{\prime}s^{\prime}}\delta_{im}\delta_{ll^{\prime}}%
+-A_{jkls}A_{lsm^{\prime}s^{\prime}}\delta_{im}\delta_{ml}-A_{jkls}%
+A_{lml^{\prime}s^{\prime}}\delta_{im}\delta_{sm^{\prime}}\\
+-A_{jkls}A_{msl^{\prime}s^{\prime}}\delta_{im}\delta_{lm^{\prime}}%
++A_{jkls}A_{lsl^{\prime}s^{\prime}}\delta_{im}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+8%
+\begin{align}
+&  -\left(  A_{kils}A_{lml^{\prime}m^{\prime}}\delta_{jm}\delta_{ss\prime
+}+A_{kils}A_{msl^{\prime}m^{\prime}}\delta_{jm}\delta_{ls^{\prime}}%
+-A_{kils}A_{lsl^{\prime}m^{\prime}}\delta_{jm}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{kils}A_{lmm^{\prime}s^{\prime}}\delta_{jm}\delta_{sl^{\prime}}%
++A_{kils}A_{msm^{\prime}s^{\prime}}\delta_{jm}\delta_{ll^{\prime}}%
+-A_{kils}A_{lsm^{\prime}s^{\prime}}\delta_{jm}\delta_{ml}-A_{kils}%
+A_{lml^{\prime}s^{\prime}}\delta_{jm}\delta_{sm^{\prime}}\\
+-A_{kils}A_{msl^{\prime}s^{\prime}}\delta_{jm}\delta_{lm^{\prime}}%
++A_{kils}A_{lsl^{\prime}s^{\prime}}\delta_{jm}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+9%
+\begin{align}
+&  +\left(  A_{jils}A_{lml^{\prime}m^{\prime}}\delta_{km}\delta_{ss\prime
+}+A_{jils}A_{msl^{\prime}m^{\prime}}\delta_{km}\delta_{ls^{\prime}}%
+-A_{jils}A_{lsl^{\prime}m^{\prime}}\delta_{km}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jils}A_{lmm^{\prime}s^{\prime}}\delta_{km}\delta_{sl^{\prime}}%
++A_{jils}A_{msm^{\prime}s^{\prime}}\delta_{km}\delta_{ll^{\prime}}%
+-A_{jils}A_{lsm^{\prime}s^{\prime}}\delta_{km}\delta_{ml}-A_{jils}%
+A_{lml^{\prime}s^{\prime}}\delta_{km}\delta_{sm^{\prime}}\\
+-A_{jils}A_{msl^{\prime}s^{\prime}}\delta_{km}\delta_{lm^{\prime}}%
++A_{jils}A_{lsl^{\prime}s^{\prime}}\delta_{km}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+***************************************************************************
+
+1%
+\begin{align}
+&  \left(  C^{2}\right)  _{jkil^{\prime}m^{\prime}s^{\prime}}=\frac{1}{36}%
+\sum_{1\leq l,m,s\leq r}\left(  A_{jkl^{\prime}m^{\prime}}^{2}\delta
+_{is\prime}+A_{jks^{\prime}m}A_{mil^{\prime}m^{\prime}}-A_{jklm}%
+A_{lil^{\prime}s^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jkm^{\prime}l^{\prime}}^{2}\delta_{is}+A_{jkl^{\prime}m}A_{mim^{\prime
+}s^{\prime}}+A_{jkll^{\prime}}A_{ilm^{\prime}s^{\prime}}-A_{jklml^{\prime
+}s^{\prime}}^{2}\delta_{im^{\prime}}\\
+-A_{jkm^{\prime}m}A_{mil^{\prime}s^{\prime}}+A_{jklm^{\prime}}A_{lil^{\prime
+}s^{\prime}}%
+\end{array}
+\right)
+\end{align}
+2%
+\begin{align}
+&  +\left(  A_{kilm}A_{lml^{\prime}m^{\prime}}\delta_{js}\delta_{ss\prime
+}+A_{kilm}A_{msl^{\prime}m^{\prime}}\delta_{js}\delta_{ls^{\prime}}%
+-A_{kilm}A_{lsl^{\prime}m^{\prime}}\delta_{js}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{kilm}A_{lmm^{\prime}s^{\prime}}\delta_{js}\delta_{sl^{\prime}}%
++A_{kilm}A_{msm^{\prime}s^{\prime}}\delta_{js}\delta_{ll^{\prime}}%
+-A_{kilm}A_{lsm^{\prime}s^{\prime}}\delta_{js}\delta_{ml}-A_{kilm}%
+A_{lml^{\prime}s^{\prime}}\delta_{js}\delta_{sm^{\prime}}\\
+-A_{kilm}A_{msl^{\prime}s^{\prime}}\delta_{js}\delta_{lm^{\prime}}%
++A_{kilm}A_{lsl^{\prime}s^{\prime}}\delta_{js}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+3%
+\begin{align}
+&  -\left(  A_{jilm}A_{lml^{\prime}m^{\prime}}\delta_{ks}\delta_{ss\prime
+}+A_{jilm}A_{msl^{\prime}m^{\prime}}\delta_{ks}\delta_{ls^{\prime}}%
+-A_{jilm}A_{lsl^{\prime}m^{\prime}}\delta_{ks}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jilm}A_{lmm^{\prime}s^{\prime}}\delta_{ks}\delta_{sl^{\prime}}%
++A_{jilm}A_{msm^{\prime}s^{\prime}}\delta_{ks}\delta_{ll^{\prime}}%
+-A_{jilm}A_{lsm^{\prime}s^{\prime}}\delta_{ks}\delta_{ml}-A_{jilm}%
+A_{lml^{\prime}s^{\prime}}\delta_{ks}\delta_{sm^{\prime}}\\
+-A_{jilm}A_{msl^{\prime}s^{\prime}}\delta_{ks}\delta_{lm^{\prime}}%
++A_{jilm}A_{lsl^{\prime}s^{\prime}}\delta_{ks}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+4%
+\begin{align}
+&  +\left(  A_{jkms}A_{lml^{\prime}m^{\prime}}\delta_{il}\delta_{ss\prime
+}+A_{jkms}A_{msl^{\prime}m^{\prime}}\delta_{il}\delta_{ls^{\prime}}%
+-A_{jkms}A_{lsl^{\prime}m^{\prime}}\delta_{il}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jkms}A_{lmm^{\prime}s^{\prime}}\delta_{il}\delta_{sl^{\prime}}%
++A_{jkms}A_{msm^{\prime}s^{\prime}}\delta_{il}\delta_{ll^{\prime}}%
+-A_{jkms}A_{lsm^{\prime}s^{\prime}}\delta_{il}\delta_{ml}-A_{jkms}%
+A_{lml^{\prime}s^{\prime}}\delta_{il}\delta_{sm^{\prime}}\\
+-A_{jkms}A_{msl^{\prime}s^{\prime}}\delta_{il}\delta_{lm^{\prime}}%
++A_{jkms}A_{ls^{\prime}s^{\prime}}\delta_{il}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+5%
+\begin{align}
+&  +\left(  A_{kims}A_{lml^{\prime}m^{\prime}}\delta_{jl}\delta_{ss\prime
+}+A_{kims}A_{msl^{\prime}m^{\prime}}\delta_{jl}\delta_{ls^{\prime}}%
+-A_{kims}A_{lsl^{\prime}m^{\prime}}\delta_{jl}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{kims}A_{lmm^{\prime}s^{\prime}}\delta_{jl}\delta_{sl^{\prime}}%
++A_{kims}A_{msm^{\prime}s^{\prime}}\delta_{jl}\delta_{ll^{\prime}}%
+-A_{kims}A_{lsm^{\prime}s^{\prime}}\delta_{jl}\delta_{ml}-A_{kims}%
+A_{lml^{\prime}s^{\prime}}\delta_{jl}\delta_{sm^{\prime}}\\
+-A_{kims}A_{msl^{\prime}s^{\prime}}\delta_{jl}\delta_{lm^{\prime}}%
++A_{kims}A_{ls^{\prime}s^{\prime}}\delta_{jl}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+6%
+\begin{align}
+&  -\left(  A_{jims}A_{lml^{\prime}m^{\prime}}\delta_{kl}\delta_{ss\prime
+}+A_{jims}A_{msl^{\prime}m^{\prime}}\delta_{kl}\delta_{ls^{\prime}}%
+-A_{jims}A_{lsl^{\prime}m^{\prime}}\delta_{kl}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jims}A_{lmm^{\prime}s^{\prime}}\delta_{kl}\delta_{sl^{\prime}}%
++A_{jims}A_{msm^{\prime}s^{\prime}}\delta_{kl}\delta_{ll^{\prime}}%
+-A_{jims}A_{lsm^{\prime}s^{\prime}}\delta_{kl}\delta_{ml}-A_{jims}%
+A_{lml^{\prime}s^{\prime}}\delta_{kl}\delta_{sm^{\prime}}\\
+-A_{jims}A_{msl^{\prime}s^{\prime}}\delta_{kl}\delta_{lm^{\prime}}%
++A_{jims}A_{lsl^{\prime}s^{\prime}}\delta_{kl}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+7%
+\begin{align}
+&  -\left(  A_{jkls}A_{lml^{\prime}m^{\prime}}\delta_{im}\delta_{ss\prime
+}+A_{jkls}A_{msl^{\prime}m^{\prime}}\delta_{im}\delta_{ls^{\prime}}%
+-A_{jkls}A_{lsl^{\prime}m^{\prime}}\delta_{im}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jkls}A_{lmm^{\prime}s^{\prime}}\delta_{im}\delta_{sl^{\prime}}%
++A_{jkls}A_{msm^{\prime}s^{\prime}}\delta_{im}\delta_{ll^{\prime}}%
+-A_{jkls}A_{lsm^{\prime}s^{\prime}}\delta_{im}\delta_{ml}-A_{jkls}%
+A_{lml^{\prime}s^{\prime}}\delta_{im}\delta_{sm^{\prime}}\\
+-A_{jkls}A_{msl^{\prime}s^{\prime}}\delta_{im}\delta_{lm^{\prime}}%
++A_{jkls}A_{lsl^{\prime}s^{\prime}}\delta_{im}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+8%
+\begin{align}
+&  -\left(  A_{kils}A_{lml^{\prime}m^{\prime}}\delta_{jm}\delta_{ss\prime
+}+A_{kils}A_{msl^{\prime}m^{\prime}}\delta_{jm}\delta_{ls^{\prime}}%
+-A_{kils}A_{lsl^{\prime}m^{\prime}}\delta_{jm}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{kils}A_{lmm^{\prime}s^{\prime}}\delta_{jm}\delta_{sl^{\prime}}%
++A_{kils}A_{msm^{\prime}s^{\prime}}\delta_{jm}\delta_{ll^{\prime}}%
+-A_{kils}A_{lsm^{\prime}s^{\prime}}\delta_{jm}\delta_{ml}-A_{kils}%
+A_{lml^{\prime}s^{\prime}}\delta_{jm}\delta_{sm^{\prime}}\\
+-A_{kils}A_{msl^{\prime}s^{\prime}}\delta_{jm}\delta_{lm^{\prime}}%
++A_{kils}A_{lsl^{\prime}s^{\prime}}\delta_{jm}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+9%
+\begin{align}
+&  +\left(  A_{jils}A_{lml^{\prime}m^{\prime}}\delta_{km}\delta_{ss\prime
+}+A_{jils}A_{msl^{\prime}m^{\prime}}\delta_{km}\delta_{ls^{\prime}}%
+-A_{jils}A_{lsl^{\prime}m^{\prime}}\delta_{km}\delta_{ms^{\prime}}\right. \\
+&  \left.
+\begin{array}
+[c]{c}%
++A_{jils}A_{lmm^{\prime}s^{\prime}}\delta_{km}\delta_{sl^{\prime}}%
++A_{jils}A_{msm^{\prime}s^{\prime}}\delta_{km}\delta_{ll^{\prime}}%
+-A_{jils}A_{lsm^{\prime}s^{\prime}}\delta_{km}\delta_{ml}-A_{jils}%
+A_{lml^{\prime}s^{\prime}}\delta_{km}\delta_{sm^{\prime}}\\
+-A_{jils}A_{msl^{\prime}s^{\prime}}\delta_{km}\delta_{lm^{\prime}}%
++A_{jils}A_{lsl^{\prime}s^{\prime}}\delta_{km}\delta_{mm^{\prime}}%
+\end{array}
+\right)
+\end{align}
+
+
+\bigskip
+
+***************************************************************************%
+
+\begin{equation}
+A=A^{2}%
+\end{equation}%
+\begin{equation}
+\sum_{1\leq j\leq r}A_{ij}A_{jk}=A_{ik}%
+\end{equation}%
+\begin{equation}
+\sum_{1\leq j\leq r}A_{ij}A_{ji}=\sum_{1\leq j\leq r}\left\vert A_{ij}%
+\right\vert ^{2}=A_{ii}\geq0
+\end{equation}%
+\begin{equation}
+\sum_{1\leq j\neq i\leq r}\left\vert A_{ij}\right\vert ^{2}+\left(
+A_{ii}\right)  ^{2}=A_{ii}%
+\end{equation}%
+\begin{align}
+\sum_{1\leq j\neq i\leq r}\left\vert A_{ij}\right\vert ^{2}  &  =A_{ii}%
+-\left(  A_{ii}\right)  ^{2}=A_{ii}\left(  1-A_{ii}\right) \\
+&  \Rightarrow1\geq A_{ii}\geq0
+\end{align}
+\begin{align}
+A_{2}  &  =\sum_{1\leq J\leq\binom{r}{2}}\left\vert g_{J}\right\rangle
+\left\langle g_{J}\right\vert =\frac{1}{4}\sum_{1\leq J\leq\binom{r}{2}}%
+\sum_{\substack{1\leq j,k\leq r\\1\leq l,m\leq r}}g_{Jjk}g_{Jlm}\left\vert
+\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{l}\varphi
+_{m}\right\vert \\
+A_{2}\wedge P_{\mathcal{H}^{1}}  &  =\frac{1}{4}\sum_{1\leq J\leq\binom{r}{2}%
+}\sum_{1\leq i,j,k,l,m\leq r}g_{Jjk}\bar{g}_{Jlm}\left\vert \varphi_{i}%
+\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{i}\varphi_{l}%
+\varphi_{m}\right\vert \\
+\left(  A_{2}\wedge P_{\mathcal{H}^{1}}\right)  ^{2}  &  =\frac{1}{16}%
+\sum_{1\leq J,K\leq\binom{r}{2}}\sum_{\substack{1\leq i,j,k,l,m\leq
+r\\1\leq\alpha,\beta,\gamma,\zeta,\eta\leq r}}g_{Jjk}\bar{g}_{Jlm}%
+g_{K\beta\gamma}\bar{g}_{K\zeta\eta}\left\vert \varphi_{i}\varphi_{j}%
+\varphi_{k}\right\rangle \left\langle \varphi_{i}\varphi_{l}\varphi
+_{m}\left\vert \varphi_{\alpha}\varphi_{\beta}\varphi_{\gamma}\right.
+\right\rangle \left\langle \varphi_{\alpha}\varphi_{\zeta}\varphi_{\eta
+}\right\vert
+\end{align}
+The inner product gives
+\begin{align}
+\left\langle \varphi_{i}\varphi_{l}\varphi_{m}\left\vert \varphi_{\alpha
+}\varphi_{\beta}\varphi_{\gamma}\right.  \right\rangle  &  =\frac{1}%
+{6}\left\{  \delta_{i\alpha}\delta_{l\beta}\delta_{m\gamma}-\delta_{i\beta
+}\delta_{l\alpha}\delta_{m\gamma}-\delta_{i\alpha}\delta_{l\gamma}%
+\delta_{m\beta}\right. \nonumber\\
+&  +\left.  \delta_{i\gamma}\delta_{l\alpha}\delta_{m\beta}+\delta_{i\beta
+}\delta_{l\gamma}\delta_{m\alpha}-\delta_{i\gamma}\delta_{l\beta}%
+\delta_{m\alpha}\right\}  .
+\end{align}
+Using this relationship we obtain%
+
+\begin{align}
+\left(  A_{2}\wedge P_{\mathcal{H}^{1}}\right)  ^{2}  &  =\frac{1}{16}%
+\sum_{1\leq J,K\leq\binom{r}{2}}\sum_{\substack{1\leq i,j,k,l,m\leq
+r\\1\leq\alpha,\beta,\gamma,\zeta,\eta\leq r}}g_{Jjk}\bar{g}_{Jlm}%
+g_{K\beta\gamma}\bar{g}_{K\zeta\eta}\left\vert \varphi_{i}\varphi_{j}%
+\varphi_{k}\right\rangle \left\langle \varphi_{\alpha}\varphi_{\zeta}%
+\varphi_{\eta}\right\vert \\
+&  \left\{  \delta_{i\alpha}\delta_{l\beta}\delta_{m\gamma}-\delta_{i\beta
+}\delta_{l\alpha}\delta_{m\gamma}-\delta_{i\alpha}\delta_{l\gamma}%
+\delta_{m\beta}\right.  +\left.  \delta_{i\gamma}\delta_{l\alpha}%
+\delta_{m\beta}+\delta_{i\beta}\delta_{l\gamma}\delta_{m\alpha}-\delta
+_{i\gamma}\delta_{l\beta}\delta_{m\alpha}\right\}  ,
+\end{align}
+which gives%
+
+\begin{align}
+\left(  A_{2}\wedge P_{\mathcal{H}^{1}}\right)  ^{2}  &  =\frac{1}{16}%
+\sum_{1\leq J,K\leq\binom{r}{2}}\sum_{\substack{1\leq i,j,k,l,m\leq
+r\\1\leq\alpha,\beta,\gamma,\zeta,\eta\leq r}}\left\vert \varphi_{i}%
+\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{\alpha}%
+\varphi_{\zeta}\varphi_{\eta}\right\vert \\
+&  \times\frac{1}{6}\left\{  g_{Jjk}\bar{g}_{Jlm}g_{Klm}\bar{g}_{K\zeta\eta
+}\delta_{i\alpha}-g_{Jjk}\bar{g}_{J\alpha m}g_{Kim}g_{K\zeta\eta}-g_{Jjk}%
+\bar{g}_{Jlm}g_{Kml}\bar{g}_{K\zeta\eta}\delta_{i\alpha}\right. \\
+&  \left.  g_{Jjk}\bar{g}_{J\alpha m}g_{Kmi}\bar{g}_{K\zeta\eta}+g_{Jjk}%
+\bar{g}_{Jl\alpha}\bar{g}_{Kil}g_{K\zeta\eta}-g_{Jjk}\bar{g}_{Jl\alpha}%
+g_{Kli}\bar{g}_{K\zeta\eta}\right\}
+\end{align}
+then%
+
+\begin{align}
+\left(  A_{2}\wedge P_{\mathcal{H}^{1}}\right)  ^{2}  &  =\frac{1}{16}%
+\sum_{1\leq J,K\leq\binom{r}{2}}\sum_{\substack{1\leq i,j,k,l,m\leq
+r\\1\leq\alpha,\beta,\gamma,\zeta,\eta\leq r}}\left\vert \varphi_{i}%
+\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{\alpha}%
+\varphi_{\zeta}\varphi_{\eta}\right\vert \\
+&  \times\frac{1}{6}\left\{  2g_{Jjk}\delta_{JK}\bar{g}_{K\zeta\eta}%
+\delta_{i\alpha}+g_{Jjk}\left(  g_{K}g_{L}^{\dagger}\right)  _{i\alpha
+}g_{K\zeta\eta}+\right. \\
+&  \left.  g_{Jjk}\left(  g_{K}g_{L}^{\dagger}\right)  _{i\alpha}\bar
+{g}_{K\zeta\eta}+g_{Jjk}\left(  g_{K}g_{L}^{\dagger}\right)  _{i\alpha}\bar
+{g}_{K\zeta\eta}+g_{Jjk}\left(  g_{K}g_{L}^{\dagger}\right)  _{i\alpha}\bar
+{g}_{K\zeta\eta}\right\}
+\end{align}
+and%
+
+\begin{align}
+\left(  A_{2}\wedge P_{\mathcal{H}^{1}}\right)  ^{2}  &  =\frac{1}{16}%
+\sum_{\substack{1\leq i,j,k\leq r\\1\leq\zeta,\eta\leq r}}\left\vert
+\varphi_{i}\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{\alpha
+}\varphi_{\zeta}\varphi_{\eta}\right\vert \\
+&  \times\frac{1}{3}\sum_{1\leq J,K\leq\binom{r}{2}}\left\{  g_{Jjk}\bar
+{g}_{K\zeta\eta}\delta_{JK}\delta_{i\alpha}+2g_{Jjk}\left(  g_{K}%
+g_{L}^{\dagger}\right)  _{i\alpha}g_{K\zeta\eta}\right\}  ,
+\end{align}
+where%
+\begin{equation}
+A_{2}=\sum_{1\leq J\leq\binom{r}{2}}\left\vert g_{J}\right\rangle \left\langle
+g_{J}\right\vert =\frac{1}{4}\sum_{1\leq J\leq\binom{r}{2}}\sum
+_{\substack{1\leq j,k\leq r\\1\leq l,m\leq r}}g_{Jjk}\bar{g}_{Jlm}\left\vert
+\varphi_{j}\varphi_{k}\right\rangle \left\langle \varphi_{l}\varphi
+_{m}\right\vert
+\end{equation}
+As
+\begin{align}
+C_{jkilms}  &  =A_{jklm}B_{is}+A_{kilm}B_{js}-A_{jilm}B_{ks}+A_{jkms}%
+B_{il}+A_{kims}B_{jl}-\nonumber\\
+&  A_{jims}B_{kl}-A_{jkls}B_{im}-A_{kils}B_{jm}+A_{jils}B_{km}\nonumber\\
+1  &  \leq j,k,i\leq r,1\leq l,m,s\leq r.
+\end{align}
+one obtains
+\begin{equation}
+A_{2}\wedge P_{\mathcal{H}^{1}}=\frac{1}{36}\sum_{1\leq J\leq\binom{r}{2}}%
+\sum_{1\leq i,j,k,l,m\leq r}C_{jkilms}\left\vert \varphi_{j}\varphi_{k}%
+\varphi_{i}\right\rangle \left\langle \varphi_{l}\varphi_{m}\varphi
+_{s}\right\vert
+\end{equation}
+where
+\begin{align}
+C_{jkilms}  &  =g_{Jjk}\bar{g}_{Jlm}\delta_{is}+g_{Jki}\bar{g}_{Jlm}%
+\delta_{js}-g_{Jji}\bar{g}_{Jlm}\delta_{ks}+g_{Jjk}\bar{g}_{Jms}\delta
+_{il}+g_{Jki}\bar{g}_{Jlm}\delta_{jl}-\nonumber\\
+&  g_{Jji}\bar{g}_{Jms}\delta_{kl}-g_{Jjk}\bar{g}_{Jls}\delta_{im}-g_{Jji}%
+\bar{g}_{Jls}\delta_{jm}+g_{Jji}\bar{g}_{Jls}\delta_{km}\nonumber\\
+1  &  \leq j,k,i\leq r,1\leq l,m,s\leq r.
+\end{align}
+We need to compare to
+\begin{align}
+\left(  A_{2}\wedge P_{\mathcal{H}^{1}}\right)  ^{2}  &  =\frac{1}{16}%
+\sum_{1\leq j,k,i,l,m,s\leq r}\left\vert \varphi_{j}\varphi_{k}\varphi
+_{i}\right\rangle \left\langle \varphi_{l}\varphi_{m}\varphi_{s}\right\vert
+\nonumber\\
+&  \times\frac{1}{3}\sum_{1\leq J,K\leq\binom{r}{2}}\left\{  g_{Jjk}\bar
+{g}_{Kms}\delta_{JK}\delta_{il}+2g_{Jjk}\left(  g_{K}g_{L}^{\dagger}\right)
+_{il}g_{Kms}\right\}  .
+\end{align}%
+\begin{align}
+\quad &  =\left(  A_{1212}+A_{1313}+A_{2323}\right)  \left\vert
+123\right\rangle \left\langle 123\right\vert +\left(  A_{1314}+A_{2324}%
+\right)  \left\vert 123\right\rangle \left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{2334}-A_{1214}\right)  \left\vert 123\right\rangle \left\langle
+134\right\vert -\left(  A_{1224}+A_{1334}\right)  \left\vert 123\right\rangle
+\left\langle 234\right\vert
+\end{align}%
+\begin{align}
+&  +\quad\left(  A_{1414}+A_{2423}\right)  \left\vert 124\right\rangle
+\left\langle 123\right\vert +\left(  A_{1212}+A_{1414}+A_{2424}\right)
+\left\vert 124\right\rangle \left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{1213}+A_{2434}\right)  \left\vert 124\right\rangle \left\langle
+134\right\vert +\left(  A_{1223}-A_{1434}\right)  \left\vert 124\right\rangle
+\left\langle 234\right\vert
+\end{align}%
+\begin{align}
+&  +\left(  A_{3423}-A_{1412}\right)  \left\vert 134\right\rangle \left\langle
+123\right\vert +\left(  A_{1312}+A_{3424}\right)  \left\vert 134\right\rangle
+\left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{1313}+A_{1414}+A_{3434}\right)  \left\vert 134\right\rangle
+\left\langle 134\right\vert +\left(  A_{1323}+A_{1424}\right)  \left\vert
+134\right\rangle \left\langle 234\right\vert
+\end{align}%
+\begin{align}
+-  &  \left(  A_{2412}+A_{2313}\right)  \left\vert 234\right\rangle
+\left\langle 123\right\vert +\left(  A_{2312}-A_{3414}\right)  \left\vert
+234\right\rangle \left\langle 124\right\vert \nonumber\\
+&  +\left(  A_{2313}+A_{2414}\right)  \left\vert 234\right\rangle \left\langle
+134\right\vert +\left(  A_{2323}+A_{2424}+A_{3434}\right)  \left\vert
+234\right\rangle \left\langle 234\right\vert
+\end{align}
+
+
+
+\end{document}

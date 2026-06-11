@@ -1,0 +1,94 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath, amssymb}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Monday, June 09, 2025 07:15:21}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\input{tcilatex}
+
+\begin{document}
+
+
+\section*{Explicit Form of the Second Pfaffian Compound $\mathcal{P}_2(A)$
+for a $4 \times 4$ Skew-Symmetric Matrix $A$}
+
+Consider a general $4\times 4$ skew-symmetric matrix: 
+\begin{equation*}
+A=%
+\begin{pmatrix}
+0 & a_{12} & a_{13} & a_{14} \\ 
+-a_{12} & 0 & a_{23} & a_{24} \\ 
+-a_{13} & -a_{23} & 0 & a_{34} \\ 
+-a_{14} & -a_{24} & -a_{34} & 0%
+\end{pmatrix}%
+.
+\end{equation*}
+
+The \textbf{second Pfaffian compound matrix} $\mathcal{P}_2(A)$ is
+constructed from the Pfaffians of all $2 \times 2$ principal submatrices of $%
+A$.
+
+\subsection*{Step 1: Identify the $2 \times 2$ Principal Submatrices}
+
+There are $\binom{4}{2} = 6$ principal submatrices. Their Pfaffians are: 
+\begin{align*}
+\text{Pf}(A_{\{1,2\}}) &= a_{12}, \\
+\text{Pf}(A_{\{1,3\}}) &= a_{13}, \\
+\text{Pf}(A_{\{1,4\}}) &= a_{14}, \\
+\text{Pf}(A_{\{2,3\}}) &= a_{23}, \\
+\text{Pf}(A_{\{2,4\}}) &= a_{24}, \\
+\text{Pf}(A_{\{3,4\}}) &= a_{34}.
+\end{align*}
+
+\subsection*{Step 2: Construct $\mathcal{P}_2(A)$ as a Skew-Symmetric Matrix}
+
+The compound matrix $\mathcal{P}_2(A)$ is a $6 \times 6$ skew-symmetric
+matrix. Its entries are determined by: 
+\begin{equation*}
+(\mathcal{P}_2(A))_{I,J} = \text{Pf}(A_{I \cup J}) \cdot \text{sgn}(I, J), 
+\end{equation*}
+where $\text{sgn}(I,J)$ is the permutation sign for merging $I$ and $J$.
+
+\subsection*{Step 3: Explicit Form of $\mathcal{P}_2(A)$}
+
+Ordering rows/columns lexicographically as $\{1,2\}, \{1,3\}, \{1,4\},
+\{2,3\}, \{2,4\}, \{3,4\}$, we obtain: 
+\begin{equation*}
+\mathcal{P}_2(A) = 
+\begin{pmatrix}
+0 & a_{23} & -a_{24} & -a_{13} & a_{14} & 0 \\ 
+- a_{23} & 0 & a_{34} & a_{12} & 0 & -a_{14} \\ 
+a_{24} & -a_{34} & 0 & 0 & -a_{12} & a_{13} \\ 
+a_{13} & -a_{12} & 0 & 0 & a_{34} & -a_{24} \\ 
+- a_{14} & 0 & a_{12} & -a_{34} & 0 & a_{23} \\ 
+0 & a_{14} & -a_{13} & a_{24} & -a_{23} & 0 \\ 
+&  &  &  &  & 
+\end{pmatrix}%
+. 
+\end{equation*}
+
+\subsection*{Verification}
+
+The Pfaffian identity holds: 
+\begin{equation*}
+\text{Pf}(\mathcal{P}_2(A)) = \text{Pf}(A)^{\binom{3}{1}} = \text{Pf}(A)^3. 
+\end{equation*}
+
+\subsection*{Remarks}
+
+\begin{itemize}
+\item For larger matrices, $\mathcal{P}_{2k}(A)$ follows analogous but more
+complex constructions. 
+
+\item Applications include fermionic systems in physics and algebraic
+combinatorics.
+\end{itemize}
+
+\end{document}

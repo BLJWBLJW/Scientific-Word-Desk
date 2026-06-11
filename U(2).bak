@@ -1,0 +1,314 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Saturday, November 24, 2018 10:59:10}
+%TCIDATA{LastRevised=Saturday, March 09, 2019 16:45:55}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Representations of $U(2)$}%
+
+\begin{equation}
+u\left(  1,\mathbb{Q}\right)  \cong su\left(  2,\mathbb{C}\right)  \cong
+so\left(  3,\mathbb{R}\right)
+\end{equation}
+The corresponding Lie groups are locally isomorphic and either globally
+isomorphic or homomorphic images of their universal covering group. Since
+$SU\left(  2,\mathbb{C}\right)  \cong U\left(  1,\mathbb{Q}\right)  $ are the
+covering groups of $SO\left(  3,\mathbb{R}\right)  .$ 
+
+The group $U\left(  2,\mathbb{C}\right)  $ is not simply connected thus has
+non trivial universal covering group.
+
+$\lceil$The Pauli matrices, $\left\{  \left.  \mathbb{\sigma}_{j}\right\vert
+1\leq j\leq3\right\}  ,$ represent the cartesian operator components of a
+general 3D spin operator in the spinor formulation i.e.
+\begin{equation}
+\Omega=\Omega_{x}\mathbb{\sigma}_{1}+\Omega_{y}\mathbb{\sigma}_{2}+\Omega
+_{z}\mathbb{\sigma}_{3};\left(  \Omega_{1},\Omega_{2},\Omega_{3}\right)
+\in\mathbb{R}^{3}.
+\end{equation}
+They also generate representations of the Lie algebras $su(2)$ and $sl\left(
+2,\mathbb{C}\right)  $ i.e.
+\begin{align}
+su(2)  &  =\mathbb{R}\text{-}\operatorname*{linspan}\left\{  \left.
+i\sigma_{j}\right\vert 1\leq j\leq3\right\} \\
+sl\left(  2,\mathbb{C}\right)   &  =\mathbb{C}\text{-}\operatorname*{linspan}%
+\left\{  \left.  i\sigma_{j}\right\vert 1\leq j\leq3\right\}  ,
+\end{align}
+which are closed under the commutator product (thus sub Lie algebras of
+$M_{2}\left(  \mathbb{C}\right)  $) i.e.
+\begin{align}
+\left[  i\sigma_{j},i\sigma_{k}\right]   &  =-\epsilon_{jkl}i\sigma_{l},\\
+\left[  i\sigma_{0},i\sigma_{j}\right]   &  =0;1\leq j\leq3,
+\end{align}
+where $\epsilon_{jkl}$ is the Levi-Civita symbol
+\begin{equation}
+\epsilon_{\sigma\left(  1,2,3\right)  }=\left(  -1\right)  ^{\pi\left(
+\sigma\right)  }.
+\end{equation}
+They generate a representations of $SU(2)$
+\begin{equation}
+u\left(  \widehat{\mathbf{n}}\cdot\mathbf{\sigma}\right)  =\exp\left\{
+\frac{i}{2}\left(  \widehat{\mathbf{n}}\cdot\mathbf{\sigma}\right)  \right\}
+,
+\end{equation}
+and $SL\left(  2,\mathbb{C}\right)  $ i.e.
+\begin{equation}
+g\left(  \widehat{\mathbf{z}}\cdot\mathbf{\sigma}\right)  .
+\end{equation}
+The corresponding representation of $u(2)$ is produced by
+\begin{equation}
+u(2)=\operatorname*{linspan}\left\{  \left.  i\sigma_{j}\right\vert 0\leq
+j\leq3\right\}  .
+\end{equation}
+
+
+Eulers formula can expressed in terms of the Pauli matrices as
+\begin{equation}
+\exp\left\{  \frac{i}{2}\left(  \widehat{\mathbf{n}}\cdot\mathbf{\sigma
+}\right)  \right\}  =I_{2}\cos\left(  \theta\right)  +i\left(
+\widehat{\mathbf{n}}\cdot\mathbf{\sigma}\right)  \sin\left(  \theta\right)  ,
+\end{equation}
+where
+\begin{equation}
+\exp\left\{  \frac{i}{2}\left(  \widehat{\mathbf{n}}\cdot\mathbf{\sigma
+}\right)  \right\}
+\end{equation}
+is a counter clockwise rotation about the $\widehat{\mathbf{n}}$ axis and the
+spin vector is given by
+\begin{align}
+\mathbf{S}  &  \equiv\mathbf{\sigma}=\left(  \left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+1 & 0
+\end{array}
+\right)  ,\left(
+\begin{array}
+[c]{cc}%
+0 & -i\\
+i & 0
+\end{array}
+\right)  ,\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & -1
+\end{array}
+\right)  \right) \\
+\widehat{\mathbf{n}}  &  \in\mathbb{R}^{3};\,\widehat{\mathbf{n}}%
+\cdot\widehat{\mathbf{n}}=1.
+\end{align}
+$\rfloor$%
+
+\begin{equation}
+\overset{\text{algebra}}{\sum_{1\leq j\leq3}\alpha_{j}X_{j}}\quad
+\overset{\exp}{\longrightarrow}\overset{\text{group}}{\quad\exp\left\{
+\sum_{1\leq j\leq3}\alpha_{j}X_{j}\right\}  \,}\equiv\left(
+\widehat{\mathbf{\alpha}},\left\Vert \mathbf{\alpha}\right\Vert \right)
+\end{equation}
+
+
+$\lceil$%
+\begin{equation}
+\mathbf{u}=\left(  u_{1},u_{2}.u_{3}\right)  =i\mathbf{\sigma}=\left(  \left(
+%
+\begin{array}
+[c]{cc}%
+0 & i\\
+i & 0
+\end{array}
+\right)  ,\left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+-1 & 0
+\end{array}
+\right)  ,\left(
+\begin{array}
+[c]{cc}%
+i & 0\\
+0 & -i
+\end{array}
+\right)  \right)
+\end{equation}
+$\rfloor$%
+
+\begin{align}
+\left[  u_{1},u_{2}\right]   &  =2u_{3}\\
+\left[  u_{2},u_{3}\right]   &  =2u_{1}\\
+\left[  u_{3},u_{1}\right]   &  =2u_{2}%
+\end{align}
+we can form a basis for $sl\left(  2,\mathbb{C}\right)  $ by
+\begin{align}
+H  &  =\frac{1}{i}u_{3}=\left(
+\begin{array}
+[c]{cc}%
+1 & 0\\
+0 & -1
+\end{array}
+\right) \\
+X  &  =\frac{1}{2i}\left(  u_{1}-iu_{2}\right)  =\left(
+\begin{array}
+[c]{cc}%
+0 & 1\\
+0 & 0
+\end{array}
+\right) \\
+Y  &  =\frac{1}{2i}\left(  u_{1}+iu_{2}\right)  =\left(
+\begin{array}
+[c]{cc}%
+0 & 0\\
+1 & 0
+\end{array}
+\right)
+\end{align}%
+\begin{align}
+\left[  H,X\right]   &  =2X\\
+\left[  H,Y\right]   &  =-2Y\\
+\left[  X,Y\right]   &  =H
+\end{align}%
+\begin{equation}
+Hv=\alpha v
+\end{equation}
+The eigenvalues of, $H,$ $\alpha$ are known as weights, $X$ and $Y$ are known
+as step and step down operators respectively.%
+\begin{align}
+HXv  &  =\left(  \alpha+2\right)  Xv\\
+HYv  &  =\left(  \alpha-2\right)  Yv
+\end{align}%
+\begin{align}
+Xv  &  =0\text{ or eigenvector with eigenvalue }\left(  \alpha+2\right) \\
+Yv  &  =0\text{ or eigenvector with eigenvalue }\left(  \alpha-2\right)
+\end{align}
+Let \ $V$ be an irreducible subspace for the Lie algebra $sl\left(
+2,\mathbb{C}\right)  $ then $H$ can only have finitely many eigenvalues thus
+$H$ must have a zeo eigenvlaue corresponding to the eigenvector $v_{0}$ and
+one can obtain a chain of $m+1$ vectors
+\begin{equation}
+v_{k}=Y^{k}v_{0}%
+\end{equation}
+such that
+\begin{align}
+Yv_{m}  &  =0\\
+Yv_{k}  &  =v_{k+1};0<k<m\\
+Xv_{0}  &  =0\\
+Xv_{k}  &  =k\left(  m-\left(  k-1\right)  \right)  v_{k-1};m>k>0\\
+Hv_{k}  &  =\left(  m-2k\right)  v_{k}\\
+V  &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{  v_{0},\cdots
+,v_{m}\right\}
+\end{align}
+
+
+\begin{conclusion}
+\begin{conclusion}
+For each non-negative integer $m$, there is a unique irreducible
+representation with highest weight $m$. Each irreducible representation is
+equivalent to one of these. The representation with highest weight $m$ has
+dimension $m+1$ with weights $m,m-2,\ldots,-(m-2),-m$ each having multiplicity one.
+\end{conclusion}
+\end{conclusion}
+
+\paragraph{Casimer Operator}%
+
+\begin{align}
+C  &  =-\left(  u_{1}^{2}+u_{2}^{2}+u_{3}^{2}\right) \\
+&  =\left(  X+Y\right)  ^{2}-\left(  -X+Y\right)  ^{2}+H^{2}=4XY+H^{2}+2H
+\end{align}%
+\begin{align}
+CP_{V_{m}}  &  =m\left(  m+2\right)  P_{V_{m}}\\
+\left[  C,P_{V_{m}}\right]   &  =0.
+\end{align}
+
+
+\paragraph{Homotopy}
+
+Let $G$ be a group with subgroup $H$ and Lie algebra $\mathfrak{g}$. Then
+their is exactly one simply connected subgroup, $SG,$ with Lie algebra
+$\mathfrak{g}$ and $G$ is a homomorpic image of $SG.$In fact
+\begin{equation}
+G\cong\left.  SG\right/  D,
+\end{equation}
+where $D$ is one of the discrete invariant subgroups of $SG.$
+\begin{equation}
+H\cong D
+\end{equation}
+
+
+\subsubsection{Homotopy Group}
+
+Let $P_{1}$ and $P_{2}$ be paths in $G$ i.e paths in the parameter spaces of
+the group. The the path $P_{1}P_{2}$ is the path $P_{1}$ starting and
+returning to the identity followed by the path $P_{2}$ starting and returning
+to the identity. Ther are as many distinct homotopy group elements as there
+are classes of paths that cannot be deformed into each other.
+
+
+\end{document}

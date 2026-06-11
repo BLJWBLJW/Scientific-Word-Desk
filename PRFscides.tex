@@ -1,0 +1,653 @@
+%\documentclass[nofootinbib,floatfix,aps,pra,twocolumn]{revtex4}
+%%  As of 17 Dec. 2002
+%%  Last revised: SBT
+%%  based on clas02b
+%%  This is Sect VI ``The Proposed Research''
+%\bibliographystyle{apsrev}
+
+
+\documentclass[nofootinbib,floatfix,aps,pra,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{LastRevised=Wednesday, December 18, 2002 13:20:05}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\topmargin -1.0cm
+\oddsidemargin 0.cm 
+\textheight 22.5cm 
+\textwidth 17.0cm 
+\sloppy
+
+\input{tcilatex}
+
+\begin{document}
+
+
+% enumeration in items as A, B etc, not as 1, 2,...
+\renewcommand{\labelenumi}{\Alph{enumi}.}
+
+%\newpage
+% sbt: Restart page counter at prescribed value
+\setcounter{page}{1} \renewcommand{\baselinestretch}{1.1}
+
+\textrm{\vspace*{-01.1cm} \noindent }
+
+\begin{center}
+\textrm{{\large \textsc{Systematic Construction of Better Spin-Density
+Functionals}} \textsc{Abstract} }
+\end{center}
+
+\textrm{Practical implementation of a new method for systematic construction
+of approximate density functionals is proposed. The construction builds the
+functionals from a pre-selected kind of state (for example, determinant with
+general spin orbitals or singles and doubles CI or AGP, etc.), so the
+functionals will have known properties related directly to that type of
+state. We will focus on spin topologies as they change with geometry because
+of the difficulty these problems pose for many pesent-day DFT approximations
+and because of their high relevance to catalysis, biochemical reactions, and
+self-assembly of nanostructures. }
+
+\textrm{The initial target will be on non-collinear spin configurations at
+transition metal surfaces and ultrathin films, and related problems for
+metal clusters. For rapidity of computation on complicated systems, we will
+build functionals without explicit orbital dependence. Because the
+functionals can have the properties of a known type of wave function built
+in, the expectation is that many of the limitations of present-day
+orbital-independent functionals will be overcome, so that a much greater
+range of spin-dependent phenomena on chemically active surfaces can be
+treated reliably and swiftly. }
+
+\textrm{The method of construction involves systematic use of
+transformations we have derived which map between and within elements of a
+fiber bundle structure which we have proved is equivalent to the well-known
+Levy-Lieb constrained search formulation of Density Functional Theory. }
+
+\textrm{The proposal is to fund a postdoctoral associate, plus modest travel
+for the co-author of the method (B.~Weiner) to be part of the project.
+\newpage \noindent }
+
+\begin{center}
+\textrm{\textsc{Concept} }
+\end{center}
+
+\textrm{\setcounter{page}{1} \noindent \emph{Issues} }
+
+\textrm{Density Functional Theory (DFT) has evolved to being among the major
+quantum mechanical methods for predicting the properties of materials and
+molecules from first principles. The 1998 Nobel Prize in Chemistry
+recognized the remarkable feat accomplished via DFT. It avoids having to
+cope explicitly with the mathematical complexity of the quantum mechanics of
+hundreds to thousands of electrons treated explicitly. It does this by
+converting the problem of predicting the properties of a molecule or
+material into the study of a \emph{physically observable} function of three
+spatial variables and a spin variable, the electron spin (number) density. }
+
+\textrm{Brief surveys of the state of the art in DFT are found in Refs.~\cite%
+{DFTrefs}. Particularly with the advent of so-called hybrid approximate
+functionals (more below), there has been an outpouring of calculations on
+molecular properties. The phrase ``approximate functionals'' points,
+however, to the central intellectual challenge for predictive use of DFT.
+The basic Hohenberg, Kohn, and Sham (HKS) theorems \cite{HKS} provide
+assurance that the requisite mathematical objects, the spin-density
+functionals, exist and have the needed properties. \emph{Unlike} other forms
+of many-electron quantum mechanics however, the basic theorems give little
+more than hints at the detailed properties of the exact functionals.
+Approximations are needed therefore. But the challenge is stiffened, since
+neither the theorems nor their proofs provide an explicit, systematic
+framework for devising sequences of succesively more realistic approximate
+functionals. The contrast with modern methods based explicitly on $N$%
+-electron states (e.g. configuration interaction, coupled-cluster) is
+striking. }
+
+\textrm{As would be expected, this dilemma has generated a diversity of
+responses: \vspace{-0.2cm} }
+
+\begin{itemize}
+\item \textrm{Use of empirical, numerical procedures to force the
+approximate DFT functional to reproduce certain features and properties
+determined from very-high-precision molecular wave-function (for example,
+Ref.~\cite{Handy}); }
+
+\item \textrm{Constraint of the approximate functional to have the known
+mathematical properties of the ``exchange hole'' and ``correlation hole''
+functions; pointers to the large original literature are in Sect. 3 of \cite%
+{DFTrefs}(g); }
+
+\item \textrm{Constraint of the approximate functional to satisfy
+inequalities from coordinate scaling analysis \cite{scaling}; }
+
+\item \textrm{Design of approximations that satisfy known asymptotic
+constraints and can be calibrated to thermo-chemical data \cite{BeckeBaer}. }
+
+\item \textrm{Use of explicit $N$-fermion theories terminated at some order
+as implicit density functionals (``ab initio DFT'') \cite{RJBaiDFT} }
+\end{itemize}
+
+\textrm{It is important to distinguish non-empirical and empirical
+functionals. Non-empirical functions incorporate no experimental data in
+their parameterization (though many do incorporate information from
+numerical studies, especially of the homogeneous electron gas). While
+empirical approximations have enjoyed great popularity, they clearly cannot
+be considered to be predictive in the full sense of the term. Since our goal
+is the realization of the first-principles character of DFT, our attention
+is directed to non-empirical functionals. }
+
+\textrm{For all their successes, present-day non-empirical approximate
+functionals developed these approaches (and variations and combinations)
+have several well-known shortcomings when used on real materials and
+molecules. The limitations pertinent to this project all involve the
+interplay of spin configurations, system energetics and geometry, and
+mechanical properties. Critical limitations include }
+
+\begin{itemize}
+\item \textrm{\vspace{-0.21cm} }
+
+\item \textrm{The dilemma of choice between unphysical spin-symmetry
+breaking and unphysically high energies as systems are separated (diluted) 
+\cite{PerdewSavin}; \vspace{-0.21cm} }
+
+\item \textrm{The incomplete treatment of general spin density topologies
+(e.g.~non-collinear magnetism), typically addressed either by ingenious
+individual mapping to a presumably equivalent problem (``unwinding'')
+amenable to a standard DFT approximation \cite{Kleinman98,Oda} or else by
+theorems that generalize standard DFT approximations to handle a particular
+spin density topology \cite{Capelle00}; \vspace{-0.21cm} }
+
+\item \textrm{A poor description of ground states that are strong admixtures
+of nearly-degenerate single-determinant configurations (in quantum chemistry
+terms, a static correlation problem); \vspace{-0.21cm} }
+
+\item \textrm{The failure to bind negative ions correctly (or at all in some
+cases) \cite{NRSBT97} and improper behavior of the ground state energies of
+isoelectronic sequences of positive atomic ions \cite{Davidson98}; \vspace{%
+-0.21cm} }
+
+\item \textrm{An erratic balance (from system to system) in quality of
+calculated cohesive energies (atomization energies) vs. lattice constants
+(bond lengths) vs. bulk moduli (ground state vibrational frequency) \cite%
+{Zupan98,SBT97a}. \vspace{-0.21cm} }
+\end{itemize}
+
+\textrm{These limitations are particularly important for the prediction of
+interactions with open-shell systems (clusters, nanostructures, surfaces),
+interactions at metallic surfaces or at sites with metal atoms, and for
+tuning surface, cluster, or nanostructure behavior by tailoring of spin
+populations. These physical and chemical aspects are relevant, in turn, to
+issues of structure, mechanical stability, and efficacy of heterogeneous
+catalysts and self-assembled bio-nano materials, to give but two examples. }
+
+\textrm{\vspace{1cm} \noindent \emph{New Approach} }
+
+\textrm{These limitations on the chemical and physical reliability of
+present-day non-empirical functionals can be traced to the details of how
+those functionals handle spin configurations. In a certain sense the point
+is obvious: because DFT parameterizes the $N$-electron quantum mechanical
+ground state via the electron spin number density, the details of the
+interplay between anti-symmetrization and spatial distribution in the ground
+state are concealed. }
+
+\textrm{Though the problem is obvious, that does not mean that a systematic
+solution also is obvious. Our approach is to devise, then implement an
+explicit, systematic characterization of the mappings from the known
+spin-configuration properties of a specified kind of state function to a
+functional. This proposal is to fund the initial \emph{implementation}
+phase; we have completed the formal mathematical analysis already. By use of
+this constructive DFT formalism already developed by B.~Weiner and me, we
+will devise and test new functionals as well as improve existing ones.
+Weiner is on the Physics faculty at Penn State, with teaching
+responsibilities at the Dubois undergraduate campus. He has visited QTP on
+several occasions. He will be a partner in this project, as detailed below. }
+
+\textrm{The constructive DFT formalism is the product of our recent work on
+formal analytical properties of DFT. The mathematical foundations of the
+approach are published \cite{BLWSBT97,BLWSBT98,BLWSBT99}. To preserve
+competitive advantage (more discussion below), we have not published the
+explicit procedure for constructing functionals. A summary of the
+time-independent case follows. The time-dependent analogue is substantially
+more intricate and involves a different variational principle. Nevertheless,
+the time-dependent and time-independent methodologies work in essentially
+the same way so far as constructing the functionals are concerned. }
+
+\textrm{First, recall that the Hohenberg-Kohn-Sham (HKS) theorems are: %
+\renewcommand{\labelenumi}{\Roman{enumi}.} }
+
+\begin{enumerate}
+\item \textrm{\vspace{-0.21cm} }
+
+\item \textrm{The ground state energy of a many-electron system is a
+functional of the electron spin number density alone. It consists of a
+universal functional (i.e., a functional independent of the external
+potential) of the electron spin number density plus the energy from the
+total external potential $E_{tot}[n_{0}] = F[n_{0}] + \int {}{} \, v_{ext}({}%
+) \, n_{0}({}) $ \vspace{-0.21cm} }
+
+\item \textrm{The total energy has a variational minimum with respect to the
+electron spin density at the exact ground state spin density: $%
+E_{tot}[n_{0}] = \min_{n} E_{tot}[n] \;\; \forall \;\; n({}) \, \ni \, \int {%
+}{}\, n({}) = N $ \vspace{-0.21cm} }
+
+\item \textrm{The variational minimization problem can be set into
+correspondence with a one-electron problem for the spin densities of an
+auxiliary system of non-interacting Fermions (the Kohn-Sham system) whose
+spin-orbitals are eigenfunctions of a purely local effective Hamiltonian. 
+\vspace{-0.21cm} }
+\end{enumerate}
+
+\textrm{\renewcommand{\labelenumi}{\Alph{enumi}.} Today these statements
+usually are proved via the constrained search approach due to Levy \cite%
+{LevySem2,Levy79,LevyPerdew85} and Lieb \cite{Lieb}. Motivated originally by
+spin-symmetry-breaking problems in DFT, the Weiner-Trickey reformulation
+makes explicit the internal structure of constrained search as well as
+resolving some critical, subtle difficulties \cite%
+{BLWSBT97,BLWSBT98,BLWSBT99}. The proposed research depends primarily on the
+outcomes of those papers and only secondarily on the lengthy, formal
+analysis that they present. Thus a summary of the major technical components
+will suffice to outline the underpinnings and show why it is indeed a
+constructive methodology. Those main components include:\vspace{-0.07cm} }
+
+\begin{enumerate}
+\item \textrm{\vspace{-0.15cm} }
+
+\item \textrm{Formulation as a linear problem in $N$-electron density
+operators and their contraction maps to the spin density (rather than as a
+bi-linear problem in Hilbert space states); }
+
+\item \textrm{Classification of all $N$-electron density operators (pure 
+\emph{and} ensemble) according to equivalence classes for each electron spin
+density into a well-characterized fiber bundle structure;\vspace{-0.21cm} }
+
+\item \textrm{Establishment of the existence of a Hohenberg-Kohn universal
+variational energy functional on that bundle;\vspace{-0.21cm} }
+
+\item \textrm{Proof of the existence of required functional derivatives of
+the HK functional on that bundle (and proof that such derivatives may not
+exist elsewhere);\vspace{-0.21cm} }
+
+\item \textrm{Characterization of the group of invariances of the kernel of
+the contraction map from the $N$-electron density operator to the
+one-electron spin density;\vspace{-0.21cm} }
+
+\item \textrm{Use of the properties of that invariance group to derive
+explicit transformations for two cases }
+
+\begin{itemize}
+\item \textrm{transformations that leave the pure-state segment of a given
+fiber invariant (i.e. move among states \emph{intra}-fiber), }
+
+\item \textrm{transformations that go from the pure-state segment of one
+fiber to the pure-state segment of another (i.e. move among states \emph{%
+inter}-fiber) }
+\end{itemize}
+
+\textrm{and analogously for the set of fiber segments corresponding to a
+specified ensemble. \vspace{-0.21cm} }
+\end{enumerate}
+
+\textrm{Though we did not initially recognize it, the closest antecedent to
+our approach probably is the work of Englisch and Englisch \cite{Englisch}
+and the slightly prior work of Zumbach and Maschke \cite{Zumbach}. Those
+authors focused on the construction of all the states that contract to a
+given density, on the existence of functional derivatives needed to carry
+out the variation principle, etc. Both pairs of authors in fact gave
+constructions for the wave functions that map to a specified density. The
+constructions are quite difficult to use in constructing practical
+functionals however, because in essence the constructions are a full
+Configuration Interaction in a particularly cleverly devised basis. }
+
+\textrm{Our approach differs most significantly in focusing on the linear
+nature of the problem when posed in terms of density operators and
+therefore, in the constructive part, items E and F in the foregoing list.
+The linear nature of the formulation allows us to elucidate a group
+structure and group parameterization of the transformations among states.
+This is the core of our constructive approach. We can select a well-known
+class of approximate wavefunctions (for example, single CI, or singles and
+doubles CI, or AGP, etc. from quantum chemistry) and \emph{construct} the
+form of functional which corresponds to that class. The supporting logic can
+be summarized as follows:\vspace{-0.21cm} }
+
+\begin{itemize}
+\item \textrm{A given type of approximate state corresponds to a particular
+sector of each fiber;\vspace{-0.21cm} }
+
+\item \textrm{A functional on that type of state consists of a path joining
+those selected segments such that the elements connected are the energy
+minima for each such segment \vspace{-0.21cm} }
+
+\item \textrm{That path can be constructed explicitly in terms of the group
+parameters for the invariances of those segments. }
+\end{itemize}
+
+\textrm{Because rapidity of computation is essential for the predictive
+treatment of complicated systems (\emph{e.g.} the quantum mechanical domain
+in a multi-scale simulation), we will build functionals without explicit
+orbital dependence. Though not the most fashionable approach, particularly
+in the Chemistry part of the DFT community, it is in keeping with the
+fundamental proposition of DFT, to wit, that the density (and not some
+orbitals that generate it) is the fundamental quantity with which to
+parameterize and $N$-Fermion ground state. }
+
+\textrm{Because single determinant reference functions are critical in the
+conventional implementation of HKS DFT, and because spin symmetry problems
+are ubiquitous in such implementations, a particularly appealing route is to
+study the density operators corresponding to Generalized Hartree Fock wave
+functions. Since we have already shown how the Fukutome symmetry classes 
+\cite{Fukutome} for such determinants exhaust all possible Kohn-Sham states
+so far as spin topologies are concerned, the connection should be extremely
+fruitful. }
+
+\textrm{An obvious area of relevance for this approach is systems with
+non-collinear spin densities. From the large literature on such systems we
+pick but one example, the ``unwinding'' technique used by Bylander and
+Kleinman \cite{Kleinman98} to treat fcc Fe. That technique is equivalent to
+a special case mapping onto the seventh Fukutome class (``torsional spin
+density waves'') followed by treatment of the component KS equations via the
+ordinary local spin density approximation (LSDA). See also the closely
+related paper by Oda et al.\cite{Oda} Also the theorems proved by Capelle
+and Oliveira \cite{Capelle00} for non-collinear magnetism are particular
+realizations of our general results regarding Fukutome classes. Recently
+Kleinman \cite{Kleinman99} has put forth a functional specifically for
+spiral spin density waves. Another application of our approach will be to
+derive that functional from the antecedent density operator class. Note that
+this general idea has some roots also in the work of von Barth and Hedin 
+\cite{vBH72}. Our contribution is to reformulate the theory to give a
+procedure for \emph{building } functionals that behave properly in the sense
+of reproducing the known behavior of a particular kind of state. }
+
+\textrm{It appears that analogous reasoning should hold for current density
+functional theory (CDFT; references in \cite{VignaleRasolt}) but we have not
+explored that supposition thus far. Doing so would leverage my present NSF
+funding (DMR-0218957), which is under the Information Technology for
+Research program in Division of Materials Research. A major component of
+that award is to implement CDFT in the Boettger-Trickey computer code GTOFF.
+Simultaneous formal investigation of CDFT would be immediately implementable
+and testable computationally therefore. }
+
+\begin{center}
+\textrm{\textsc{Opportunity and Plan} }
+\end{center}
+
+\textrm{The scientific opportunity is to demonstrate the construction of
+better functionals by use of our constructive formal DFT methods. The route
+forward is clear, yet we have not been able to exploit it for lack of
+personnel. In principle there also is a funding opportunity, except for an
+impasse that we propose to resolve by this project. The impasse is that
+proposals to both DOE and NSF have been rejected on the grounds that we have
+not so far constructed a new functional. We have not done so because we need
+more human resources. The mathematical formalism has been developed without
+support as a kind of hobby. Such a marginal effort cannot support the
+development and stringent testing of new functionals. So the impasse arises:
+no funding implies no new functionals but no new functionals implies no
+funding. }
+
+\textrm{To escape the impasse we have done and/or are doing the following: }
+
+\textrm{A. I have submitted an internal proposal to the College of Liberal
+Arts and Sciences (``Cooperative Project on Improving Density Functionals'',
+25 October 2002). Included in it is a commmitment to the remaining steps
+listed here. The internal proposal is to jump-start the effort by short-term
+(approximately 5.5 months) funding of a post-doctoral associate who is
+well-prepared in DFT to work on functionals with us. At least two people
+have been identified who are strong candidates, without even trying to
+recruit such a person. That internal proposal is pending. }
+
+\textrm{B. The present proposal to PRF is for funding of that same
+post-doctoral for two years as well as modest travel and incidentals
+primarily so that Weiner can work at Florida in the summer with us. Together
+with step A, we believe that this would provide the funding base to produce,
+test, and publish perhaps two new functionals and two to three improvements
+of existing functionals. }
+
+\textrm{C. Weiner will be submitting a Research at Undergraduate
+Institutions proposal to NSF-DMR to work on Current Density Functional
+Theory as it relates to the implementation phase in my NSF ITR grant; recall
+previous remarks about CDFT. In both cases his expertise will be focused on
+better functionals, so there is synergy. }
+
+\textrm{D. A new (Fall 2002) Chemistry graduate student, Joe Stember
+approached me in September, 2002, and asked to study formal DFT with the
+intent of doing his research in that area. I have started tutoring him with
+notes from my PHY 7097 course, taught first in Fall 2001. Stember has a
+Grinter fellowship from Univ. of Florida, which gives full support for 4
+years. Though he has not selected a thesis advisor at this writing, I am the
+only faculty member with whom he is working as an individual. If he does
+become my student, the obvious direction for his Ph.D.~thesis will be this
+project. }
+
+\textrm{The plan is to begin by constructing functionals explicitly for
+non-collinear spin topologies from the corresponding Fukutome class. We will
+test these on ``toy'' systems using the Boettger-Trickey GTOFF code. An
+example is the H mononlayer. Though physically unrealistic, it poses a
+difficult problem with spin configurations as the lattice parameter is
+enlarged. Thus it is a good shake-down test for comparison with published
+functionals. We then will consider systems such as discussed above in
+respect to the work of Kleinman and co-workers. In particular, we will test
+for the dependence of spin topology on lattice constant. We also will
+compare with the model Hamiltonian treatment of Uzdin \emph{et al.} \cite%
+{Uzdin99} and the DFT studies by Kurz \emph{et al.} \cite{Kurz00} of the
+non-collinear magnetism of transition-metal ultra thin films. Issues to be
+assessed include the physical realism of the resulting spin topologies, the
+extent to which the new functional gives qualitatively and/or quantitatively
+different descriptions of the surface chemistry, etc. A related issue is the
+strain-dependent cusping of the spin-magnetic moments of the Fe monolayer
+found originally by Boettger and extended to all 3d transition metal
+monolayers by the two of us \cite{JCB93}. The question is to what extent
+this phenomenon, which could be useful in tuning surface reactivity, is a
+sharp consequence of the relatively simple DFT approximation we used (LSDA). 
+}
+
+\textrm{If these explorations are as successful as we expect (or even
+moderately encouraging), we will implement the new functional at
+prototype-level coding in the ACES-II program package \cite{ACESII} and test
+for performance on the notoriously difficult case of Cr$_2$ as the bond
+length is extended. }
+
+\textrm{Second, we will examine popular spin-dependent functionals based on
+scaling and inequalities, \emph{e.g.} PBE \cite{PBE}, to see how they can be
+``reverse-engineered'' to uncover their connection with a particular class
+of wave function or ensemble. Characterizing such a connection would enable
+one to state with precision and clarity the limits of predictive utility for
+that particular functional. Additionally, this reverse-engineering should
+enable us to propose refinements and/or extensions of the existing
+functionals to improve the fidelity with which they track to a known class
+of wave function or ensemble. }
+
+\textrm{Assuming, as expected, that the new or modified functionals will
+achieve substantially greater physical realism as well as more generality
+than existing ones, we may also attempt to build a functional that follows
+from an explicitly correlated wave function, probably a geminal-based one,
+such as AGP (which has been used to provide a formal basis for the structure
+of electron propagator approximations) \cite{AGP}. The objective of this
+construction would be to assess the way in which correlation contributions
+are handled by the functional. }
+
+\textrm{However, if the pursuit of functionals from other Fukutome classes
+(which themselves are correlated in the sense of being multi-determinantal,
+since they use general spin orbitals) seems more promising, we shall follow
+that route. Since we have lacked the opportunity until now to try out our
+constructive approach, detailed research plans beyond those just enunciated
+are more than a bit speculative. }
+
+\textrm{\vspace{1.1cm} }
+
+\begin{thebibliography}{99}
+\bibitem{} \textrm{%\setcounter{page}{1}
+}
+
+\bibitem{DFTrefs} \textrm{{\small (a) ``The Density Functional Formalism,
+its Applications and Prospects'', R.O.~Jones and O.~Gunnarsson, Rev. Mod.
+Phys. \textbf{61}, 689-746 (1989); (b) R.G.~Parr and W.~Yang, \textit{%
+Density Functional Theory of Atoms and Molecules} (Oxford, NY, 1989); (c)
+R.M.~Dreizler and E.K.U.~Gross, \textit{Density Functional Theory}
+(Springer, Berlin, 1990); (d) E.S.~Kryachko and E.V.~Lude\~na, \textit{%
+Energy Density Functional Theory of Many-Electron Systems} (Kluwer,
+Dordrecht, 1990); (e) ``Density Functional Theory of Electronic Structure'',
+W.~Kohn, A.D.~Becke, and R.G.~Parr, J. Phys. Chem. \textbf{100}, 12974-80
+(1996); (f) H.~Eschrig, \textit{The Fundamentals of Density Functional Theory%
+}, Teubner Texte f\"ur Physik \textbf{32} (Teubner, Stuttgart and Leipzig,
+1996); (g) ``A Critical Assessment of Density Functional Theory with Regard
+to Applications in Organometallic Chemistry'', A.~G{\"o}rling, S.B.~Trickey,
+P.~Gisdakis, and N.~R{\"o}sch, in \textit{Topics in Organometallic Chemistry}%
+, vol.\ 4, P.~Hoffmann and J.M.~Brown eds. (Springer, Berlin, 1999) 109-63. }%
+}
+
+\bibitem{HKS} \textrm{{\small (a) ``Inhomogeneous Electron Gas'',
+P.~Hohenberg and W.~Kohn, Phys. Rev. \textbf{136}, B864-71 (1964); (b)
+``Self-Consistent Equations Including Exchange and Correlation Effects'',
+W.~Kohn and L.J.~Sham, Phys. Rev. \textbf{140}, A1133-38 (1965). }}
+
+\bibitem{Handy} \textrm{{\small ``Learning from Exchange-Correlation
+Potentials'', W.H.~Green, D.J.~Tozer, and N.C.~Handy, Chem. Phys. Lett. 
+\textbf{290}, 465-72 (1998) and references therein. }}
+
+\bibitem{scaling} \textrm{{\small (a) M.~Levy and A.~G\"orling, Phys. Rev. A 
+\textbf{51}, 2851-55 (1995); (b) C.~Filippi, X.~Gonze, and C.J.~Umrigar, in 
+\emph{Recent Developments and Applications of Modern Density Functional
+Theory}, J.A.~Seminario ed. (Elsevier, Amsterdam, 1996), 295-326. }}
+
+\bibitem{BeckeBaer} \textrm{{\small (a) ``Density-functional Exchange-energy
+Approximation with Correct Asymptotic Behavior'', A.D.~Becke, Phys. Rev. A 
+\textbf{38}, 3098-3100 (1988); (b) ``Exchange-correlation Potential with
+Correct Asymptotic Behavior'', R.~van Leeuwen and E.J.~Baerends, Phys. Rev.
+A \textbf{49}, 2421-31 (1994). }}
+
+\bibitem{RJBaiDFT} \textrm{{\small ``\emph{Ab Initio} Density Functional
+Theory: OEP-MBPT(2). A New Orbital-dependent Correlation Functional'',
+I.~Grabowski, S.~Hirata, S.~Ivanov, and R.J.~Bartlett, J. Chem. Phys. 
+\textbf{116}, 4415-25 (2002). }}
+
+\bibitem{PerdewSavin} \textrm{{\small ``Escaping the Symmetry Dilemma
+through a Pair-Density Interpretation of Spin-Density Functional Theory'',
+J.P.~Perdew, A.~Savin, and K.~Burke, Phys. Rev. A \textbf{51}, 4531-41
+(1995). }}
+
+\bibitem{Kleinman98} \textrm{{\small ``Full Potential \textit{ab initio}
+Calculations of Spiral Spin Density Waves in fcc Fe'', D.M.~Bylander and
+L.~Kleinman, Phys. Rev. B \textbf{58}, 9207-11 (1998). }}
+
+\bibitem{Oda} \textrm{{\small ``Fully Unconstrained Approach to Noncollinear
+Magnetism: Application to Small Fe Clusters'', T.~Oda, A.~Pasquarello, and
+R.~Car, Phys. Rev. Lett. \textbf{80}, 3622-25 (1998). }}
+
+\bibitem{Capelle00} \textrm{{\small ``Density Functional Theory for
+Spin-density Waves and Antiferromagnetic Systems'', K.~Capelle and
+L.N.~Oliveira Phys. Rev. B \textbf{61}, 15228-40 (2000). }}
+
+\bibitem{NRSBT97} \textrm{{\small ``Negative Ions in Density Functional
+Theory - Comment on J. Chem. Phys. \textbf{105}, 862 (1996)'', N. R{\"o}sch
+and S.B. Trickey, J. Chem. Phys. \textbf{106}, 8940-41 (1997) and references
+therein. }}
+
+\bibitem{Davidson98} \textrm{{\small ``Ground-state Energies of
+Isoelectronic Atomic Series from Density-Functional Theory: Exploring the
+Accuracy of Density Functionals'', A.A.~Jarzecki and E.R.~Davidson, Phys.
+Rev. A \textbf{58}, 1902-08 (1998). }}
+
+\bibitem{Zupan98} \textrm{{\small ``Pressure-induced Phase Transition in
+Solid Si, $\mathrm{SiO_{2}}$, and Fe: Performance of LSD and GGA Density
+Functionals'', A.~Zupan, P.~Blaha, K.~Schwarz, and J.P.~Perdew, Phys. Rev. B 
+\textbf{58}, 11266-272 (1998). }}
+
+\bibitem{SBT97a} \textrm{{\small ``Benchmark Comparison of Gradient
+Dependent and Local Density Calculations for Bulk Si and Al'', S.B.~Trickey,
+Internat. J. Quantum Chem. \textbf{61}, 641-46 (1997). }}
+
+\bibitem{LevySem2} \textrm{{\small ``Coordinate Scaling Requirements for
+Approximating Exchange and Correlation'', M.~Levy, in \emph{Recent
+Developments and Applications of Modern Density Functional Theory},
+J.A.~Seminario ed. (Elsevier, Amsterdam, 1996), 3-24. }}
+
+\bibitem{Levy79} \textrm{{\small ``Universal Variational Functionals of
+Electron Densities, First-Order Density Matrices, and Natural Spin Orbitals
+and Solution of the v-Representability Problem'', M.~Levy, Proc. Natl. Acad.
+Sci. USA \textbf{76}, 6062-65 (1979). }}
+
+\bibitem{LevyPerdew85} \textrm{{\small ``The Constrained Search Formulation
+of Density Functional Theory'', M.~Levy and J.P.~Perdew in \emph{Density
+Functional Methods in Physics}, R.M.~Dreizler and J.~da Providencia (Plenum,
+NY, 1985) 11-30. }}
+
+\bibitem{Lieb} \textrm{{\small ``Density Functionals for Coulomb Systems'',
+E.H. Lieb, Internat. J. Quantum. Chem. \textbf{24}, 243-77 (1983). }}
+
+\bibitem{BLWSBT97} \textrm{{\small ``Fukutome Symmetry Classification of the
+Kohn-Sham Auxiliary One-Matrix and its Associated State or Ensemble'',
+B.~Weiner and S.B.~Trickey, Internat. J. Quantum Chem. \textbf{69} 451-60
+(1998) Also at http://www.personal.psu.edu/bqw/list\_pap.html }}
+
+\bibitem{BLWSBT98} \textrm{{\small ``Time Dependent Variational Principle in
+Density Functional Theory'', B.~Weiner and S.B.~Trickey, Adv. Quantum
+Chemistry (Academic, San Diego), \textbf{35}, 217-48 (1999). Version with a
+shortened introduction is at http://www.personal.psu.edu/bqw/list\_pap.html }%
+}
+
+\bibitem{BLWSBT99} \textrm{{\small ``State Energy Functionals and
+Variational Equations in Density Functional Theory'', B.~Weiner and
+S.B.~Trickey, J. Molec. Struc. (Theochem) \textbf{501}-\textbf{02}, 65-83
+(2000). Also at http://www.personal.psu.edu/bqw/list\_pap.html }}
+
+\bibitem{Englisch} \textrm{{\small (a) ``Exact Density Functionals for
+Ground-State Energies I. General Results'', H.~Englisch and R.~Englisch,
+Phys. Stat. Solidi (b) \textbf{123}, 711-21 (1984) (b) ``Exact Density
+Functionals for Ground-State Energies II. Details and Remarks'', H.~Englisch
+and R.~Englisch, Phys. Stat. Solidi (b) \textbf{124}, 373-79 (1984). }}
+
+\bibitem{Zumbach} \textrm{{\small ``New Approach to the Calculation of
+Density Functionals,'' G.~Zumbach and K.~Maschke, Phys. Rev. A \textbf{28},
+544-54 (1983); erratum Phys. Rev. A \textbf{29}, 1585-86 (1984). }}
+
+\bibitem{Fukutome} \textrm{{\small ``Unrestricted Hartree-Fock Theory and
+Its Applications to Molecules and Chemical Reactions'', H.~Fukutome,
+Internat. J. Quantum Chem. \textbf{20}, 955-1065 (1981). }}
+
+\bibitem{VignaleRasolt} \textrm{{\small ``Magnetic Fields and Density
+Functional Theory'', G.~Vignale, M.~Rasolt, and D.J.W.~Geldart in Adv.
+Quantum Chem. \textbf{21}, 235-53 (1990). }}
+
+\bibitem{Kleinman99} \textrm{{\small ``Density Functional for Noncollinear
+Magnetic Systems'', L.~Kleinman, Phys. Rev. B \textbf{59}, 3314-17 (1998). }}
+
+\bibitem{vBH72} \textrm{{\small ``A Local Exchange-Correlation Potential for
+the Spin Polarized Case: I'', U.~von Barth and L.~Hedin, J. Phys. C: Sol.
+St. Phys. \textbf{5}, 1629-42 (1972). }}
+
+\bibitem{Uzdin99} \textrm{{\small ``Noncollinear Magnetism of Fe/CR Films
+and Multilayers'', V.M.~Uzdin, N.S.~Yarseva, and S.V.~Yartsev, J. Mag. Mag.
+Matl. \textbf{196-97}, 70-72 (1999). }}
+
+\bibitem{Kurz00} \textrm{{\small ``Noncollinear Magnetism of Cr and Mn
+Monolayers on Cu(111)'', Ph.~Kurz, G.~Bihlmayer, and S.~Bl\"ugel, J. Appl.
+Phys. \textbf{87} 6101-03 (2000). }}
+
+\bibitem{JCB93} \textrm{{\small ``Theoretical Strain-dependent Properties of
+Square and Hexagonal Fe Monolayers'', J.C.~Boettger, Phys. Rev. B \textbf{48}%
+, 10247-53 (1993); ``First-Principles Systematics of Ordered Metallic
+Monolayers: 3D Transition Metals'', S.B.~Trickey and J.C.~Boettger, Invited
+lecture, Fifth Chemical Congress of North American, Canc\'un, M\'exico,
+11-15 Nov. 1997 (unpublished). }}
+
+\bibitem{ACESII} \textrm{{\small ACES II is a program product of the Quantum
+Theory Project, University of Florida. Authors: J.F. Stanton, J. Gauss, S.
+A. Perera, J.D. Watts, M. Nooijen, Anthony Yau, N. Oliphant, P. G. Szalay,
+W.J. lauderdale, S.R. Gwaltney, S. Beck, A. Balkov{\'a} D. E. Bernholdt,
+K.-K Baeck, P. Rozyczko, H. Sekino, C. Huber, Ji\u{r}i{\'a} Pittner and R.J.
+Bartlett. Integral packages included are VMOL (J. Alml{\"o}f and P.R.
+Taylor); VPROPS (P. Taylor) ABACUS; (T. Helgaker, H.J. Aa. Jensen, P. J{\o }%
+rgensen, J. Olsen, and P.R. Taylor). }}
+
+\bibitem{PBE} \textrm{{\small ``Generalized Gradient Approximation Made
+Simple'', J.P.~Perdew, K.~Burke, and M.~Ernzerhof, Phys. Rev. Lett. \textbf{%
+77}, 3865-68 (1997), erratum Phys. Rev. Lett. \textbf{78}, 1396 (1997) }}
+
+\bibitem{AGP} \textrm{{\small ``The AGP wavefunction and Its Relation to
+Other Descriptions of Electronic Structure'', J.V.~Ortiz, B.~Weiner, and
+Y.~\"Ohrn, Internat. J. Quantum Chem. S-\textbf{15}, 113-28 (1981) }}
+\end{thebibliography}
+
+\end{document}

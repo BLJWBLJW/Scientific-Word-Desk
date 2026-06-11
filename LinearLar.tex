@@ -1,0 +1,193 @@
+
+\documentstyle[amssymb,preprint,aps]{revtex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Sunday, November 18, 2001 09:49:30}
+%TCIDATA{LastRevised=Thursday, November 22, 2001 10:08:53}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX - APS and AIP Article">}
+%TCIDATA{CSTFile=revtxtci.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\begin{document}
+\title{A Simple APS RevTeX Article}
+\author{J. C. Stenerson}
+\address{600 Ericksen Avenue NE, Suite 300, Bainbridge Island, WA 98110}
+\date{\today}
+\maketitle
+\pacs{23.23.+x, 56.65.Dy}
+
+\begin{abstract}
+Replace this text with the abstract of your paper.
+\end{abstract}
+
+\section{Linear Lagrangians}
+
+We are considering Lagrangians ${\cal L}$ and Lagrangian densities ${\frak L}
+$ of the form 
+\begin{eqnarray}
+{\cal L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) &=&%
+\frac{i}{2}\frac{\left( \left\langle \Psi \left( t\right) |\dot{\Psi}\left(
+t\right) \right\rangle -\left\langle \dot{\Psi}\left( t\right) |\Psi \left(
+t\right) \right\rangle \right) }{\left\langle \Psi \left( t\right) |\Psi
+\left( t\right) \right\rangle }-\frac{\left\langle \Psi \left( t\right)
+|H\Psi \left( t\right) \right\rangle }{\left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle }  \nonumber \\
+&=&\frac{i}{2}\frac{\int \left\{ \Psi ^{\ast }\left( {\sf z,}t\right) \dot{%
+\Psi}\left( {\sf z,}t\right) -\dot{\Psi}^{\ast }\left( {\sf z,}t\right) \Psi
+\left( {\sf z,}t\right) -\Psi ^{\ast }\left( {\sf z,}t\right) \left[ H\Psi %
+\right] \left( {\sf z,}t\right) \right\} }{\left\langle \Psi \left( t\right)
+|\Psi \left( t\right) \right\rangle }d{\sf z}  \nonumber \\
+&\equiv &\int {\frak L}\left( {\sf z,}t\right) d{\sf z}  \label{laden}
+\end{eqnarray}%
+Parameterizing the wave functions by the real functions ${\cal \varkappa }%
+\left( {\sf z},t\right) $ one obtains 
+\begin{equation}
+{\cal L}\left( \Psi \left( {\cal \varkappa }\left( t\right) \right) ,\dot{%
+\Psi}\left( {\cal \varkappa }\left( t\right) \right) \right) ={\cal L}\left( 
+{\cal \varkappa }\left( t\right) ,{\cal \dot{\varkappa}}\left( t\right)
+\right) =\int {\cal \dot{\varkappa}}\left( {\sf z},t\right) {\cal Z}\left( 
+{\sf z},t\right) d{\sf z}-{\cal E}\left( {\cal \varkappa }\left( t\right)
+\right)  \label{ladef}
+\end{equation}%
+where 
+\begin{eqnarray}
+{\cal Z}\left( {\sf z},t\right) &=&\frac{i}{2}\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle ^{-1}\left\{ \left\langle \Psi
+\left( t\right) \left| \frac{\delta \Psi \left( t\right) }{\delta {\cal %
+\varkappa }\left( {\sf z}\right) }\right. \right\rangle -\left\langle \left. 
+\frac{\delta \Psi \left( t\right) }{\delta {\cal \varkappa }\left( {\sf z}%
+\right) }\right| \Psi \left( t\right) \right\rangle \right\} \\
+{\cal E}\left( \Psi \left( t\right) \right) &=&\frac{{\cal H}\left( \Psi
+\left( t\right) \right) }{{\cal N}\left( \Psi \left( t\right) \right) } \\
+{\cal H}\left( \Psi \left( t\right) \right) &=&\left\langle \Psi \left(
+t\right) |H\Psi \left( t\right) \right\rangle ;\qquad {\cal N}\left( \Psi
+\left( t\right) \right) =\left\langle \Psi \left( t\right) |\Psi \left(
+t\right) \right\rangle
+\end{eqnarray}
+
+The matter Hamiltonian is given by 
+\begin{equation}
+H=-\frac{1}{2}\tilde{\nabla}^{2}+V
+\end{equation}%
+where 
+\begin{eqnarray}
+\tilde{\nabla}^{2} &=&\left( 
+\begin{array}{c}
+\tilde{\nabla}_{{\bf r}}^{2} \\ 
+\tilde{\nabla}_{{\bf R}}^{2}%
+\end{array}%
+\right) =\tilde{\nabla}\cdot \tilde{\nabla}=\left( 
+\begin{array}{cc}
+\tilde{\nabla}_{{\bf r}} & \tilde{\nabla}_{{\bf R}}%
+\end{array}%
+\right) \cdot \left( 
+\begin{array}{c}
+\tilde{\nabla}_{{\bf r}} \\ 
+\tilde{\nabla}_{{\bf R}}%
+\end{array}%
+\right) \\
+\tilde{\nabla}_{{\bf r}} &=&\frac{1}{\sqrt{m_{e}}}\sum_{1\leq j\leq
+N_{e}}\nabla _{{\bf r}_{j}}\otimes I_{N_{e}}\left( \check{j}\right) \otimes
+I_{N_{n}} \\
+\tilde{\nabla}_{{\bf R}} &=&\sum_{1\leq j\leq N_{n}}\frac{1}{\sqrt{M_{j}}}%
+\nabla _{{\bf R}_{j}}\otimes I_{N_{n}}\left( \check{j}\right) \otimes
+I_{N_{e}} \\
+V &=&V_{e}\left( {\bf r}\right) +V_{en}\left( {\bf r,R}\right) +V_{n}\left( 
+{\bf R}\right) \\
+V_{e}\left( {\bf r}\right) &=&\frac{1}{2}\sum_{1\leq j\neq k\leq N_{e}}\frac{%
+1}{\left\| {\bf r}_{j}-{\bf r}_{k}\right\| }\otimes I_{N_{e}}\left( \check{j}%
+,\check{k}\right) \otimes I_{N_{n}} \\
+V_{en}\left( {\bf r,R}\right) &=&-\sum_{1\leq j\leq N_{e};1\leq k\leq N_{n}}%
+\frac{Z_{k}}{\left\| {\bf r}_{j}-{\bf R}_{k}\right\| }I_{N_{e}}\left( \check{%
+j}\right) \otimes I_{N_{n}}\left( \check{k}\right) \\
+V_{n}\left( {\bf r}\right) &=&\frac{1}{2}\sum_{1\leq j\neq k\leq N_{n}}\frac{%
+Z_{j}Z_{k}}{\left\| {\bf R}_{j}-{\bf R}_{k}\right\| }\otimes I_{N_{n}}\left( 
+\check{j},\check{k}\right) \otimes I_{N_{e}}
+\end{eqnarray}%
+and 
+\begin{equation}
+\left[ H\Psi \right] \left( {\sf z,}t\right) =\left[ \tilde{\nabla}\Psi
+^{\ast }\right] \left( {\sf z,}t\right) \cdot \left[ \tilde{\nabla}\Psi %
+\right] \left( {\sf z,}t\right) +V\left( {\sf z}\right) \Psi ^{\ast }\left( 
+{\sf z,}t\right) \Psi \left( {\sf z,}t\right)
+\end{equation}
+
+One can show that the Lagrange equation associated with this Lagrangian
+coincides with Schr\"{o}dingers equation. Since Schr\"{o}dingers equation is
+first order in time giving an intial state $\Psi \left( t_{0}\right) $ is
+sufficient to fix the future evolution of the system. It then follows that
+the Lagrangian ${\cal L}$ taken as a function of $\Psi ^{\ast }\left( {\sf z,%
+}t\right) $ and $\Psi \left( t\right) $ and their time derrivatives contains
+an excess of dynamical variables. In order to find the conjugate momenta and
+to pass to the Hamiltonian formalism it is necessary then to eliminate from
+eq. $\left( \ref{laden}\right) $ the redundant variables.
+
+Let 
+\begin{equation}
+\Psi \left( {\sf z,}t\right) =\Psi _{r}\left( {\sf z,}t\right) +i\Psi
+_{i}\left( {\sf z,}t\right) 
+\end{equation}%
+and 
+\begin{equation}
+\Psi \left( {\sf z,}t\right) =\Psi \left( {\cal \varkappa }\left( {\sf z,}%
+t\right) \right) =\Psi \left( {\cal V}\left( {\sf z,}t\right) ,\omega \left( 
+{\sf z,}t\right) \right) =e^{{\cal V}\left( {\sf z,}t\right) +i\omega \left( 
+{\sf z,}t\right) }\Psi _{ref}\left( {\sf z,}t\right) 
+\end{equation}%
+then 
+\begin{eqnarray}
+\Psi _{r}\left( {\sf z,}t\right)  &=&\Psi _{r}\left( {\cal V}\left( {\sf z,}%
+t\right) ,\omega \left( {\sf z,}t\right) \right) =e^{{\cal V}\left( {\sf z,}%
+t\right) }\cos \omega \left( {\sf z,}t\right) \Psi _{ref}\left( {\sf z,}%
+t\right)   \nonumber \\
+\Psi _{i}\left( {\sf z,}t\right)  &=&\Psi _{i}\left( {\cal V}\left( {\sf z,}%
+t\right) ,\omega \left( {\sf z,}t\right) \right) =e^{{\cal V}\left( {\sf z,}%
+t\right) }\sin \omega \left( {\sf z,}t\right) \Psi _{ref}\left( {\sf z,}%
+t\right) 
+\end{eqnarray}%
+The generalized conjugate momentum $\Pi _{r}\left( {\sf z,}t\right) $
+associated with $\Psi _{r}\left( {\sf z,}t\right) $ is given by 
+\begin{equation}
+\Pi _{r}\left( {\sf z,}t\right) =\frac{\delta {\cal L}\left( \Psi \left(
+t\right) ,\dot{\Psi}\left( t\right) \right) }{\delta \dot{\Psi}_{r}\left( 
+{\sf z}\right) }
+\end{equation}%
+where 
+\begin{equation}
+{\cal L}\left( \Psi \left( t\right) ,\dot{\Psi}\left( t\right) \right) =\int
+\Pi _{r}\left( {\sf z,}t\right) \dot{\Psi}_{r}\left( {\sf z,}t\right) d{\sf %
+z-}{\cal E}\left( \Psi \left( t\right) ,\Psi \left( t\right) \right) 
+\end{equation}%
+and 
+\begin{equation}
+\dot{\Psi}_{r}\left( {\sf z,}t\right) =\left( {\cal \dot{V}}\left( {\sf z,}%
+t\right) -\dot{\omega}\left( {\sf z,}t\right) \tan \omega \left( {\sf z,}%
+t\right) \right) \Psi _{r}\left( {\sf z,}t\right) 
+\end{equation}%
+It can also be shown that 
+\begin{equation}
+\Pi _{r}\left( {\sf z,}t\right) =2\Psi _{i}\left( {\sf z,}t\right) 
+\end{equation}
+
+\end{document}

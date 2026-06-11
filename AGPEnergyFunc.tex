@@ -1,0 +1,143 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}%
+\usepackage{amsmath}%
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Tuesday, May 11, 2004 09:40:54}
+%TCIDATA{LastRevised=Tuesday, May 11, 2004 11:05:38}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Energy Functional}%
+
+\begin{align}
+\mathcal{E}\left(  \mathbf{n,\psi,\theta}\right)  = &  \frac{\mathcal{H}%
+\left(  \mathbf{\psi,n}\right)  }{S_{N}\left(  \mathbf{n}\right)  }=\frac
+{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq s}%
+N_{j}\left\{  \left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.
+\right\rangle +\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.
+\right\rangle +\left\langle \psi_{j}\psi_{j+s}|h_{2}|\psi_{j}\psi
+_{j+s}\right\rangle \right\}  \right.  \nonumber\\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\hat{\jmath}\hat{k}\right)  e^{i\left(  \theta_{j}-\theta_{k}\right)
+}\left\langle \psi_{j}\psi_{j+s}|h_{2}|\psi_{k}\psi_{k+s}\right\rangle \left.
++\sum_{1\leq i,j\leq s}n_{i}n_{j}S_{N-2}\left(  \hat{\jmath}\hat{k}\right)
+\left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle \right\}
+,\label{energy}%
+\end{align}
+where $\mathbf{\psi}$ are the NGSO's of $\left\vert g^{N}\right\rangle
+\in\left[  D^{1}\right]  _{N},$ $\mathbf{0}\leq\mathbf{n\leq I,}Tr\left\{
+\mathbf{n}\right\}  =1,\mathbf{0\leq\theta<2\pi}.$
+
+\section{Example}%
+
+\begin{align}
+\left\vert g^{2}\right\rangle  & =\left(  c_{1}\left\vert \psi_{1}\psi
+_{4}\right\rangle +c_{2}\left\vert \psi_{2}\psi_{5}\right\rangle
++c_{3}\left\vert \psi_{3}\psi_{6}\right\rangle \right)  ^{2}=c_{1}%
+c_{2}\left\vert \psi_{1}\psi_{2}\psi_{3}\psi_{4}\right\rangle +c_{1}%
+c_{3}\left\vert \psi_{1}\psi_{2}\psi_{5}\psi_{6}\right\rangle \nonumber\\
+& +c_{2}c_{3}\left\vert \psi_{3}\psi_{4}\psi_{5}\psi_{6}\right\rangle
+\end{align}
+The following geminals have the same FORDO%
+\begin{align}
+D^{2}\left(  g^{N}\left(  \mathbf{\theta}_{1}\right)  \right)   &  =\left(
+S_{N}\right)  ^{-\frac{1}{2}}\left\{  \sum_{1\leq j\leq s}N_{j}\left\vert
+\psi_{j}\psi_{j+s}\right\rangle \left\langle \psi_{j}\psi_{j+s}\right\vert
++\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}e^{i\left(
+\theta_{1j}-\theta_{1k}\right)  }S_{N-1}\left(  \hat{\jmath}\hat{k}\right)
+\left\vert \psi_{j}\psi_{j+s}\right\rangle \left\langle \psi_{k}\psi
+_{k+s}\right\vert \right.  \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  +\sum_{1\leq
+j<k\leq s}n_{j}n_{k}S_{N-2}\left(  \hat{\jmath}\hat{k}\right)  \left\vert
+\psi_{j}\psi_{k}\right\rangle \left\langle \psi_{j}\psi_{k}\right\vert
+\right\}  ,\label{D2}%
+\end{align}%
+\begin{equation}
+\theta_{1jk}=\theta_{1j}-\theta_{1k}=\theta_{2j}-\theta_{2k}=\theta
+_{2jk}\qquad\forall j,k
+\end{equation}%
+\begin{align}
+\left\vert g\right\rangle  & =c_{1}e^{\theta_{1}}\left\vert \psi_{1}\psi
+_{4}\right\rangle +c_{2}e^{\theta_{2}}\left\vert \psi_{2}\psi_{5}\right\rangle
++c_{3}e^{\theta_{3}}\left\vert \psi_{3}\psi_{6}\right\rangle \\
+\theta_{2}  & =\theta_{1}+\varphi_{1},\theta_{3}=\theta_{1}+\varphi_{2}%
+\end{align}
+%
+
+\begin{equation}
+F\left\vert \psi_{j}\right\rangle =\varepsilon_{j}\left\vert \psi
+_{j}\right\rangle \Longleftrightarrow Fe^{\varphi_{j}}\left\vert \psi
+_{j}\right\rangle =\varepsilon_{j}e^{\varphi_{j}}\left\vert \psi
+_{j}\right\rangle
+\end{equation}
+\begin{align}
+\varphi_{j}+\varphi_{j+s}  & =\theta_{j}\\
+\theta_{jk}  & =\theta_{j}-\theta_{k}=\varphi_{j}+\varphi_{j+s}-\varphi
+_{k}-\varphi_{kj+s}%
+\end{align}
+If $\theta_{jk}\neq0$ $\forall jk$ then the solutions refer to a different
+geminal.
+\begin{equation}
+\end{equation}
+
+\end{document}

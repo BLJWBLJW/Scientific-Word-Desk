@@ -1,0 +1,1074 @@
+
+\documentstyle[amstex,amssymb,12pt,aip]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Tuesday, February 19, 2008 09:05:57}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=LaTeX article.cst}
+
+\include{epsf}
+\include{amssymb}
+\include{amsfonts}
+\epsfverbosetrue 
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\half}{1/2}
+\newcommand{\pprime}{\prime \prime}
+\newcommand{\ppprime}{\prime \prime \prime}
+\def\rank{\mathop{\rm rank}\nolimits}
+\input{tcilatex}
+\begin{document}
+
+\title{Constructive Approach to Time-dependent Density Functional Theory
+Beyond the Born-Oppenheimer Approximation II. Construction of Approximate
+Time-Dependent Functionals}
+\author{B. Weiner \thanks{%
+Permanent address Dept. of Physics, Pennsylvania State University, Dubois PA
+15801, U.S.A.} \\
+%EndAName
+and \\
+S.B. Trickey \\
+Quantum Theory Project \\
+Department of Physics \\
+University of Florida \\
+Gainesville, FL 32611-8435, U.S.A.}
+\date{Jul. 18, 2001}
+\maketitle
+
+\begin{abstract}
+The formulation of constrained search TDDFT in terms of group
+parameterization of the states in the fiber bundle of trace class operators
+(preceding paper) is exploited to yield explicit functionals. The approach
+is systematic approximation to the transformations by decomposition into 1,
+2, 3 \ldots irreducible particle parts. Examples based on independent
+particle and antisymmetrized geminal power reference states are presented.
+\end{abstract}
+
+\newpage
+
+\newpage
+
+%\author{B. Weiner, \thanksref{w}
+
+%\thanks[w] {Permanent address Dept. of Physics, Pennsylvania State
+%University, Dubois PA 15801, U.S.A.}  
+
+%\tighten
+%\widetext
+
+\newpage
+
+%\narrowtext
+
+\section{Introduction}
+
+To give the agenda of this paper requires first a succinct overview of the
+preceding paper (hereafter I). It developed a constrained-search
+time-dependent density functional theory (TDDFT) by (i) classification of
+trace-class operators into equivalence classes labeled (in the case of
+density operators) by full nuclear-electronic space-spin densities, (ii)
+recognition of the set of equivalence classes as a vector bundle, and (iii)
+formulation of a constructive form of constrained search both within a fiber
+and across the bundle by characterization of the group properties of the
+contraction map $\Xi $ (see I for definition) which generates the
+equivalence classes.
+
+Step (iii) focused on pure states in ${\cal H}^{N}$ (notation is as in I
+unless otherwise noted). The result was identification of the properties of
+Lie groups of positive maps of ${\cal B}_{1}\left( {\cal H}^{N}\right) $
+that preserve the defining relationship for the vector bundle structure,
+namely that each group element transforms the kernel of $\Xi $ to itself. In
+particular we described the group ${\frak G}_{\ker }$,${\cal \ }$comprised
+of invertible operators acting in ${\cal H}^{N}$, that are diagonal in the
+coordinate representation, which contained the subgroups ${\frak G}_{fib}$
+and ${\frak G}_{den}$ of intra and interfiber transformations respectively.
+The subgroup ${\frak G}_{fib}$ was used to produce a non redundant
+parameterization of the pure states contained in an equivalence class $\left[
+\gamma \right] _{N}$ when acting on a reference pure state $%
+D_{ref}^{N}\left( \gamma \right) $ in $\left[ \gamma \right] _{N}$, while
+the subgroup ${\frak G}_{den}$ was used to give a non redundant
+parameterization of pure states in the base of the vector bundle by acting
+on a reference pure state $D_{ref}^{N}\left( \gamma _{0}\right) $. The
+operators $D_{ref}^{N}\left( \gamma \right) $ and $D_{ref}^{N}\left( \gamma
+_{0}\right) $ are the density operators associated with the states $|\Psi
+_{ref}\left( \gamma \right) \rangle $ and $|\Psi _{ref}\left( \gamma
+_{0}\right) \rangle $ belonging to ${\cal H}^{N}$ and 
+\begin{eqnarray}
+|\Psi _{ref}\left( \gamma \right) \rangle &=&e^{{\cal \breve{V}}_{den}\left(
+\gamma \right) }|\Psi _{ref}\left( \gamma _{0}\right) \rangle ;\quad e^{%
+{\cal \breve{V}}_{den}\left( \gamma \right) }\in {\frak G}_{den}  \nonumber
+\\
+|\Psi \left( \gamma \right) \rangle &=&e^{{\cal \breve{V}}_{fib}(\gamma )+i%
+\breve{\omega}}|\Psi _{ref}\left( \gamma \right) \rangle ;\,\quad e^{{\cal 
+\breve{V}}_{fib}(\gamma )+i\breve{\omega}}\equiv e^{\breve{\Upsilon}\left(
+\gamma \right) }\in {\frak G}_{fib}
+\end{eqnarray}%
+The exponentiated integral operators are written in a shorthand notation
+that was introduced in I. The subgroup ${\frak G}_{fib}$ can be factorized
+into the direct product ${\cal G}_{fib}\times {\cal G}_{\Xi }$ of positive, $%
+e^{{\cal \breve{V}}_{fib}}$, and $e^{i\breve{\omega}}$ unitary operators.
+The coset ${\frak Co}_{den}$ of the subgroup group ${\frak G}_{den}$
+produces an unique reference base state $|\Psi _{ref}\left( \gamma \right)
+\rangle $ from $|\Psi _{ref}\left( \gamma _{0}\right) \rangle $ for each
+fiber $\left[ \gamma \right] _{N}$ and the coset ${\frak Co}_{fib}$ of the
+subgroup ${\frak G}_{fib}$ produces {\em all }the pure states in the fiber $%
+\left[ \gamma \right] _{N}$ in a unique fashion from $|\Psi _{ref}\left(
+\gamma \right) \rangle $. Given a reference state $|\Psi _{ref}\left( \gamma
+_{0}\right) \rangle $, {\em any} pure state (in general, un-normalized) in $%
+{\cal H}^{N}$ can be parameterized in terms of these cosets as 
+\begin{equation}
+|\Psi ({\cal V}_{fib}(\gamma ),\omega ,{\cal V}_{den}\left( \gamma \right)
+\rangle =e^{{\cal \breve{V}}_{fib}(\gamma )}\,e^{i\breve{\omega}}e^{{\cal 
+\breve{V}}_{den}\left( \gamma \right) }|\Psi _{ref}\left( \gamma _{0}\right)
+\rangle  \label{vv1omega1}
+\end{equation}%
+One can view the functions $\left\{ {\cal V}_{fib},\omega ,{\cal V}%
+_{den}\right\} $ as coordinates for the manifold of pure states. One of the
+most significant results of paper I (in Appendix G) was the construction of
+the integral kernel ${\cal V}_{den}$ of the operator ${\cal \breve{V}}_{den}$
+as an invertible function of the density $\gamma $ i.e. ${\cal V}_{den}=%
+{\cal V}_{den}\left( \gamma \right) $ and thus as a transformed coordinate
+of this manifold equivalent to $\gamma $ i.e. 
+\begin{equation}
+|\Psi ({\cal V}_{fib}(\gamma ),\omega ,{\cal \gamma }\rangle \equiv |\Psi (%
+{\cal V}_{fib}(\gamma ),\omega ,{\cal V}_{den}\left( \gamma \right) \rangle
+\end{equation}%
+details of this coordinate transformation are given in Appendix ?. Specific
+forms for the non-unitary parts (in the coordinate eigenfunction
+representation) and strong- orthogonality constraints on the integral
+kernels of ${\cal \breve{V}}_{fib}(\gamma )$ and ${\cal \breve{V}}_{den}$ so
+that they produce non rendundant parameterizations were developed in I,
+Appendices F and G.
+
+The time-dependent variational principle (TDVP) can be used to yield a set
+of coupled dynamical equations equivalent to the Time Dependent Schr\"{o}%
+dinger Equation in terms of the state coordinates $\left\{ {\cal V}%
+_{fib},\omega ,{\cal \gamma }\right\} $ (I, eq. (54)) 
+\begin{equation}
+\{({\cal V}_{fib},\omega ,\gamma ),{\cal E}\}=({\cal \dot{V}}_{fib},\dot{%
+\omega},\dot{\gamma})  \label{Vomegagammaeom}
+\end{equation}%
+This equation can be partitioned, yielding equations for Time Dependent
+Density Functionals (TDDFs) , ${\frak M}\left( {\cal V}_{d},t\right) $ and $%
+{\frak R}\left( {\cal V}_{d},t\right) $, of density trajectories $\gamma
+\left( t\right) ,$ that are given in terms of trajectories $\left\{ {\cal V}%
+_{fib\,\#},\omega _{\#}\right\} $ determined by the equation 
+\begin{equation}
+\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega } \\ 
+-\eta _{{\cal V}_{fib}\omega }^{t} & 0%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) =\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E+}\eta _{{\cal V}_{den}\omega }^{t}{\cal \dot{V}}%
+_{den}%
+\end{array}%
+\right)
+\end{equation}
+and an equation in terms of these functionals that determines exact density
+trajectories (I, eq. (56)) 
+\begin{equation}
+{\frak M}\left( {\cal \gamma },t\right) \dot{\gamma}={\frak R}\left( {\cal V}%
+_{d},t\right)  \label{gammadot2}
+\end{equation}%
+The functionals ${\frak M}\left( {\cal V}_{d},t\right) $ and ${\frak R}%
+\left( {\cal V}_{d},t\right) $ are given in I, Appendix I.
+
+In this paper we develop approximate time dependent density functionals by
+decomposing ${\frak G}_{fib}$ into 1-, 2-, 3-, \ldots , particle irreducible
+parts, then obtaining equations for $r^{\text{th}}$ level approximate
+functionals that are determined by considering up $r$-particle parts. We
+obtain these equations in terms of time dependent matrix elements of the
+kinetic energy and coulomb interaction term in the respective cases. Section
+3 focuses on expansions for evaluating these expressions exactly or
+approximately. In Section 4 we develop and study exact equations that
+determine the time- dependent density functionals, then consider
+approximations to those equations and the construction of approximate
+time-dependent functionals. Section 5 first treats exact equations for the
+time-dependent density, with particular emphasis on the metric term
+introduced by the parameterization. Consideration of approximate equations
+follows. We give a brief sketch of the time-independent limit and the
+connection to stationary state DFT in Section 6, then turn to Kohn-Sham type
+equations in Section 7. Section 8 provides further consideration of the
+Born-Oppenheimer limit and of the classical description of the nuclei. Brief
+summary remarks are in Section 9.]
+
+\section{Equations for Determining Time Dependent Density Functionsls}
+
+\subsection{Stationarity Conditions\protect\bigskip}
+
+In the context of TDDFT the constrained search approach to the construction
+of functionals of the density can be formulated by utilizing action
+functionals defined on equivalence classes of states by 
+\begin{eqnarray}
+{\cal A}_{fib}\left( \gamma ,\tau \right) &=&\min_{D^{N}\left( t\right) \in %
+\left[ \gamma \left( t\right) \right] _{N}}\left\{ {\cal A}\left( D^{N},\tau
+\right) \right\} \quad  \nonumber \\
+&=&{\cal A}\left( D_{\#}^{N}\left( \gamma \right) ,\tau \right)
+\label{restact}
+\end{eqnarray}%
+where $\tau =\left[ t_{initial},t_{final}\right] $, $\left\{ \gamma
+,D^{N}\right\} $ denote the trajectories $\left\{ \gamma \left( t\right)
+,D^{N}\left( t\right) ;\,t\in \tau \right\} $ with fixed initial and final
+values and the full action is given by 
+\begin{equation}
+{\cal A}\left( D^{N},\tau \right) =\int_{t_{initial}}^{t_{final}}{\cal L}%
+\left( D^{N}\left( t\right) \right) dt
+\end{equation}%
+in terms of the Lagrangian ${\cal L}\left( D^{N}\left( t\right) \right) $.
+The density operator trajectory, $D_{\#}^{N}\left( t\right) $, that
+satisfies the Heisenberg Equation of Motion (HEM) for the given boundary
+conditions is then given by 
+\begin{equation}
+{\cal A}\left( D_{\#}^{N}\left( \gamma _{\#}\right) ,\tau \right)
+=\min_{\gamma \in {\cal P}_{N}}\left\{ {\cal A}\left( D_{\#}^{N}\left(
+\gamma \right) ,\tau \right) \right\}
+\end{equation}%
+which also gives equations for the density trajectory $\gamma _{\#}\left(
+t\right) $ to be associated with the trajectory of states $D_{\#}^{N}\left(
+\gamma _{\#}\left( t\right) \right) $ i.e. 
+\begin{equation}
+\min_{\gamma \in {\cal P}_{N}}\left\{ {\cal A}_{fib}\left( \gamma ,\tau
+\right) \right\} ={\cal A}_{fib}\left( \gamma _{\#},\tau \right)
+\end{equation}%
+where ${\cal A}_{fib}\left( \gamma ,\tau \right) ={\cal A}\left(
+D_{\#}^{N}\left( \gamma \right) ,\tau \right) $.
+
+For pure states the full Lagrangian is 
+\begin{equation}
+{\cal L}\left( D^{N}\left( t\right) \right) ={\cal K}\left( D^{N}\left(
+t\right) \right) -{\cal E}\left( D^{N}\left( t\right) \right)  \label{LA}
+\end{equation}%
+where 
+\begin{equation}
+{\cal K}\left( D^{N}\left( t\right) \right) =\frac{i}{2}\frac{\left(
+\left\langle \Psi \left( t\right) |\dot{\Psi}\left( t\right) \right\rangle
+-\left\langle \dot{\Psi}\left( t\right) |\Psi \left( t\right) \right\rangle
+\right) }{\left\langle \Psi \left( t\right) |\Psi \left( t\right)
+\right\rangle }\equiv {\cal K}\left( \gamma \left( t\right) ,{\cal V}%
+_{fib}\left( t\right) ,\omega \left( t\right) \right)
+\end{equation}%
+and 
+\begin{equation}
+{\cal E}\left( D^{N}\left( t\right) \right) =\frac{\left\langle \Psi \left(
+t\right) |H\Psi \left( t\right) \right\rangle }{\left\langle \Psi \left(
+t\right) |\Psi \left( t\right) \right\rangle }\equiv {\cal E}\left( \gamma
+\left( t\right) ,{\cal V}_{fib}\left( t\right) ,\omega \left( t\right)
+\right)
+\end{equation}%
+If we limit attention to pure states $D^{N}\left( t\right) =\left| \Psi
+\left( t\right) \right\rangle \left\langle \Psi \left( t\right) \right| $
+the action associated with each fiber becomes 
+\begin{equation}
+{\cal A}_{fib}\left( \gamma ,\tau \right) ={\cal A}\left( \gamma ,{\cal V}%
+_{fib}^{\#},{\cal V}_{fib}^{\#},\tau \right) =\int_{t_{initial}}^{t_{final}}%
+{\cal L}_{fib}\left( \gamma \left( t\right) ,{\cal V}_{fib}^{\#}\left(
+t\right) ,\omega ^{\#}\left( t\right) \right) dt  \label{fact}
+\end{equation}%
+where the Lagrangian, ${\cal L}_{fib}$, is given by eq. $\left( \ref{LA}%
+\right) $ where now 
+\begin{equation}
+\Psi \left( t\right) =\Psi \left( \gamma \left( t\right) ,{\cal V}%
+_{fib}^{\#}\left( t\right) ,\omega ^{\#}\left( t\right) \right)
+\end{equation}%
+which can be expanded to give 
+\begin{eqnarray}
+{\cal L}_{fib}\left( \gamma ,{\cal V}_{fib}^{\#},\omega ^{\#}\right) &=&\int 
+{\cal \dot{\gamma}}\left( {\bf z}\right) {\cal Z}\left( {\cal \gamma }%
+\right) \left( {\bf z}\right) d{\bf z+}  \nonumber \\
+&&\int \left\{ {\cal \dot{V}}_{fib}^{\#}\left( {\sf z}\right) {\cal Z}\left( 
+{\cal V}_{fib}^{\#}\right) \left( {\sf z}\right) +{\cal \dot{\omega}}%
+^{\#}\left( {\sf z}\right) {\cal Z}\left( {\cal \omega }^{\#}\right) \left( 
+{\sf z}\right) \right\} d{\sf z}-{\cal E}\left( \gamma ,{\cal V}_{fib}^{\#},%
+{\cal \omega }^{\#}\right)
+\end{eqnarray}%
+at each point of time $t$, (recall ${\sf z}=\kappa _{1},\ldots ,\kappa _{N}=%
+{\bf x}_{1},\ldots ,{\bf x}_{N_{e}},{\bf X}_{1},\ldots ,{\bf X}_{N_{n}}$ and 
+${\bf z}\equiv ({\bf x}\,,{\bf X})$), where 
+\begin{equation}
+{\cal Z}\left( {\cal \gamma }\right) \left( {\bf z}\right) =\frac{i}{2}%
+\left\langle \Psi |\Psi \right\rangle ^{-1}\left\{ \left\langle \Psi \left| 
+\frac{\delta \Psi }{\delta {\cal \gamma }\left( {\bf z}\right) }\right.
+\right\rangle -\left\langle \left. \frac{\delta \Psi }{\delta {\cal \gamma }%
+\left( {\bf z}\right) }\right| \Psi \right\rangle \right\}
+\end{equation}%
+and the derrivatives wrt $\gamma \left( {\bf z}\right) $ are given by the
+coordinate transformation $\frac{\delta }{\delta \gamma \left( {\bf z}%
+\right) }=\int \frac{\delta {\cal V}_{den}\left( {\sf z}\right) }{\delta
+\gamma \left( {\bf z}\right) }\frac{\delta }{\delta {\cal V}_{den}\left( 
+{\sf z}\right) }d{\sf z}$%
+\begin{eqnarray}
+{\cal Z}\left( {\cal V}_{fib}^{\#}\right) \left( {\sf z}\right) &=&\frac{i}{2%
+}\left\langle \Psi |\Psi \right\rangle ^{-1}\left\{ \left\langle \Psi \left| 
+\frac{\delta \Psi }{\delta {\cal V}_{fib}\left( {\sf z}\right) }\right.
+\right\rangle -\left\langle \left. \frac{\delta \Psi }{\delta {\cal V}%
+_{fib}\left( {\sf z}\right) }\right| \Psi \right\rangle \right\}  \nonumber
+\\
+{\cal Z}\left( \omega ^{\#}\right) \left( {\sf z}\right) &=&\frac{i}{2}%
+\left\langle \Psi |\Psi \right\rangle ^{-1}\left\{ \left\langle \Psi \left| 
+\frac{\delta \Psi }{\delta \omega \left( {\sf z}\right) }\right.
+\right\rangle -\left\langle \left. \frac{\delta \Psi }{\delta \omega \left( 
+{\sf z}\right) }\right| \Psi \right\rangle \right\}
+\end{eqnarray}%
+and 
+\begin{equation}
+\left| \Psi \right\rangle \equiv \left| \Psi \left( \gamma \left( t\right) ,%
+{\cal V}_{fib}^{\#}\left( t\right) ,\omega ^{\#}\left( t\right) \right)
+\right\rangle
+\end{equation}%
+We show below that 
+\begin{equation}
+{\cal Z}\left( {\cal \gamma }\right) \left( {\bf z}\right) =0\text{ and }%
+{\cal Z}\left( {\cal V}_{fib}\right) \left( {\sf z}\right) =0
+\end{equation}%
+so that the Lagrangian ${\cal L}_{fib}$ becomes 
+\begin{equation}
+{\cal L}_{fib}\left( \gamma ,{\cal V}_{fib}^{\#},\omega ^{\#}\right) =\int 
+{\cal \dot{\omega}}^{\#}\left( {\sf z}\right) {\cal Z}\left( {\cal \omega }%
+^{\#}\right) \left( {\sf z}\right) d{\sf z}-{\cal E}\left( \gamma ,{\cal V}%
+_{fib}^{\#},{\cal \omega }^{\#}\right)
+\end{equation}%
+This Lagrangian together with the stationary action condition $\delta {\cal A%
+}_{fib}=0$ produces the equation of motion eq. $\left( \ref{gammadot2}%
+\right) $for the exact density trajectory $\gamma ^{\#}\left( t\right) $.
+
+The constrained Action and Lagrangian used in eq. $\left( \ref{restact}%
+\right) $ to obtain the fiber Action and Lagrangian are 
+\begin{eqnarray}
+{\cal L}\left| _{fib}\left( \gamma \left( t\right) ,{\cal V}_{fib}\left(
+t\right) ,\omega \left( t\right) \right) \right. &=&  \nonumber \\
+{\cal A}\left| _{fib}\left( \gamma ,{\cal V}_{fib},\omega ,\tau \right)
+\right. &=&\int_{t_{initial}}^{t_{final}}{\cal L}\left| _{fib}\left( \gamma
+\left( t\right) ,{\cal V}_{fib}\left( t\right) ,\omega \left( t\right)
+\right) \right. dt
+\end{eqnarray}%
+together with the constraint 
+\begin{equation}
+\end{equation}%
+and the fiber Action is given by 
+\begin{equation}
+\delta {\cal A}\left| _{fib}\left( \gamma ,{\cal V}_{fib},\omega ,\tau
+\right) \right. =0
+\end{equation}%
+We discuss the form of these Lagrangians in more detail in paper III of this
+series within the context of path integrals.
+
+The action principle in eq. $\left( \ref{restact}\right) $ leads to Euler -
+Lagrange equations of motion that determine trajectories of states $\left\{
+D_{\#}^{N}\left( \gamma \right) \right\} $ for each density $\gamma \left(
+t\right) $, however the solutions $D_{\#}^{N}\left( \gamma \right) $ are
+only determined up to positive time dependent (no space or spin dependence)
+multiplicative factors $\kappa \left( t\right) $, i.e. $\kappa \left(
+t\right) D_{\#}^{N}\left( \gamma \left( t\right) \right) $ is also a
+solution as the factor $\kappa \left( t\right) $ just adds a total time
+derrivative to Lagrangian ${\cal L}\left( D^{N}\left( t\right) \right) $.
+The solution trajecories $\left\{ D_{\#}^{N}\left( \gamma \right) \right\} $
+determine time dependent density functionals $F_{{\cal K}}$ and $F_{{\cal E}%
+} $ of time dependent densities 
+\begin{eqnarray}
+F_{{\cal K}}\left( \gamma \left( t\right) \right) &=&{\cal K}\left(
+D_{\#}^{N}\left( \gamma \left( t\right) \right) \right)  \nonumber \\
+F_{{\cal E}}\left( \gamma \left( t\right) \right) &=&{\cal E}\left(
+D_{\#}^{N}\left( \gamma \left( t\right) \right) \right)
+\end{eqnarray}%
+The functional $F_{{\cal E}}\left( \gamma \left( t\right) \right) $ does not
+depend on $\kappa \left( t\right) $, while one must make a fixed choice for $%
+F_{{\cal K}}\left( \gamma \left( t\right) \right) $.
+
+The functional $F_{{\cal E}}$ can be decomposed into electron and nuclear
+kinetic energy, electron and nuclear coulomb interaction and
+electron-nuclear coulomb interaction. The nuclear and electron coulomb
+interaction terms can be further decomposed into classical coulomb and
+exchange-correlation parts. We emphasize that there is {\em no }external
+potential energy term in the Hamiltonian $H$.
+
+The condition for eq. $\left( \ref{fibact}\right) $ to be satisfied is that
+the first order restricted variation vanish i.e. 
+\begin{equation}
+\delta {\cal L}\left( \Upsilon \left( \gamma \left( t\right) \right) ,\gamma
+\left( t\right) \right) =0;\quad \text{fixed trajectory }\gamma  \label{var1}
+\end{equation}%
+and that the second order restricted variation be positive i.e. 
+\begin{equation}
+\delta ^{2}{\cal L}\left( \Upsilon \left( \gamma \left( t\right) \right)
+,\gamma \left( t\right) \right) \geq 0;\quad \text{fixed trajectory }\gamma
+\end{equation}%
+The constrained stationarity condition eq. $\left( \ref{var1}\right) $ for a
+fixed $\left\{ \gamma \left( t\right) ;\,t\in \tau \right\} $ leads to the
+equations of motion described in Appendix I of paper I 
+\begin{equation}
+\left( 
+\begin{array}{c}
+{\cal \dot{V}}_{fib} \\ 
+\dot{\omega}%
+\end{array}%
+\right) =\eta \left( {\cal \gamma }\right) ^{-1}\left( 
+\begin{array}{c}
+\nabla _{{\cal V}_{fib}}{\cal E} \\ 
+\nabla _{\omega }{\cal E}+\eta _{{\cal V}_{den}\omega }^{t}{\cal \dot{V}}%
+_{den}%
+\end{array}%
+\right) +\sum_{1\leq i\leq m_{1}}\lambda _{i}\left( {\cal \gamma }\right)
+\left| k_{i}\left( {\cal \gamma }\right) \right\rangle  \label{EOM}
+\end{equation}
+and 
+\begin{equation}
+\eta \left( {\cal \gamma }\right) =\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega } \\ 
+\eta _{\omega {\cal V}_{fib}} & 0%
+\end{array}%
+\right) =\left( 
+\begin{array}{ccc}
+0 & \eta _{{\cal V}_{fib}\omega _{den}} & \eta _{{\cal V}_{fib}\omega _{fib}}
+\\ 
+\eta _{\omega _{den}{\cal V}_{fib}} & 0 & 0 \\ 
+\eta _{\omega _{fib}{\cal V}_{fib}} & 0 & 0%
+\end{array}%
+\right)  \label{etamat}
+\end{equation}%
+for $A={\cal \Upsilon }^{\ast }$, ${\cal \Upsilon }$ or $\gamma $; $B={\cal %
+\Upsilon }^{\ast }$, ${\cal \Upsilon }$ or $\gamma $ and ${\tt z}={\sf z}$
+in the cases ${\cal \Upsilon }^{\ast }$and ${\cal \Upsilon }$ while {\tt z}$=%
+{\bf z}$ in the case of $\gamma $, and the overlap $S$ is
+
+In terms of these variables we obtain four types of derrivatives, namely%
+\begin{eqnarray}
+&&i\left\{ \frac{\delta }{\delta {\cal \tilde{V}}_{fib}({\sf z})}\frac{%
+\delta }{\delta {\cal V}_{fib}({\sf z}^{\prime })}\,-\,\frac{\delta }{\delta 
+{\cal V}_{fib}({\sf z})}\frac{\delta }{\delta {\cal \tilde{V}}_{fib}({\sf z}%
+^{\prime })}\right\} \ln S|_{{\cal \tilde{V}}_{fib}={\cal V}_{fib}} 
+\nonumber \\
+&&i\left\{ \frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z})}\frac{\delta 
+}{\delta {\cal \omega }({\sf z}^{\prime })}\,-\,\frac{\delta }{\delta {\cal %
+\omega }({\sf z})}\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z}%
+^{\prime })}\right\} \ln S|_{{\cal \tilde{\omega}}={\cal \omega }}
+\label{same}
+\end{eqnarray}%
+and%
+\begin{eqnarray}
+&&i\left\{ \frac{\delta }{\delta {\cal \tilde{V}}_{fib}({\sf z})}\frac{%
+\delta }{\delta {\cal \omega }({\sf z}^{\prime })}\,-\,\frac{\delta }{\delta 
+{\cal V}_{fib}({\sf z})}\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z}%
+^{\prime })}\right\} \ln S|_{{\cal \tilde{V}}_{fib}={\cal V}_{fib},{\cal 
+\tilde{\omega}}={\cal \omega }}  \nonumber \\
+&&i\left\{ \frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z})}\frac{\delta 
+}{\delta {\cal V}_{fib}({\sf z}^{\prime })}\,-\,\frac{\delta }{\delta {\cal %
+\omega }({\sf z})}\frac{\delta }{\delta {\cal \tilde{V}}_{fib}({\sf z}%
+^{\prime })}\right\} \ln S|_{{\cal \tilde{V}}_{fib}={\cal V}_{fib},{\cal 
+\tilde{\omega}}={\cal \omega }}  \label{mixed}
+\end{eqnarray}%
+we show shortly that derrivatives eq. $\left( \ref{same}\right) $ are zero
+while the ones in eq. $\left( \ref{mixed}\right) $ are skew symmetric with
+respect to each other. Hence in terms of the real and imaginary parts 
+\begin{equation}
+\eta _{{\bf \digamma \,\digamma }}(t)=\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega }\left( t\right) \\ 
+\eta _{\omega {\cal V}_{fib}}\left( t\right) & 0%
+\end{array}%
+\right) =\left( 
+\begin{array}{cc}
+0 & \eta _{{\cal V}_{fib}\omega }\left( t\right) \\ 
+-\eta _{{\cal V}_{fib}\omega }\left( t\right) ^{t} & 0%
+\end{array}%
+\right)  \label{reim}
+\end{equation}%
+where $\eta _{{\cal V}_{fib}\omega }\left( t,{\sf z},{\sf z}^{\prime
+}\right) =-\eta _{\omega {\cal V}_{fib}}\left( t,{\sf z}^{\prime },{\sf z}%
+\right) $ and $\eta _{{\cal V}_{fib}\omega }\left( t,{\sf z},{\sf z}^{\prime
+}\right) ^{t}=\eta _{{\cal V}_{fib}\omega }\left( t,{\sf z}^{\prime },{\sf z}%
+\right) $. All the quantities in eq. $\left( \ref{var1}\right) $ to eq. $%
+\left( \ref{reim}\right) $ refer to the trajectory $\gamma $ at a specific
+time $t$. Taking into account the form of $\eta _{{\bf \digamma \,\digamma }%
+}(t)$ given in eq. $\left( \ref{reim}\right) $ eq. $\left( \ref{EOM}\right) $
+can be expressed as 
+\begin{eqnarray}
+\eta _{{\cal V}_{fib}\omega }\dot{\omega} &=&\nabla _{{\cal V}_{fib}}{\cal E}%
+\left( t\right) \\
+\eta _{{\cal V}_{fib}\omega }^{t}{\cal \dot{V}}_{fib} &=&-\nabla _{{\cal %
+\omega }}{\cal E}\left( t\right)
+\end{eqnarray}%
+The trajectory of parameters $\left( {\cal V}_{fib\#}(\gamma \left( t\right)
+),\omega _{\#}\left( t\right) \right) $ controls which pure state in the
+fiber $\left[ \gamma \left( t\right) \right] _{N}$ is selected by the EOM
+eq. $\left( \ref{EOM}\right) $ and thus determines the time dependent
+functionals.
+
+The first step is to determine the trajectory $\left( {\cal V}_{fib\#}\left(
+\gamma \right) ,\omega _{\#}\left( \gamma \right) \right) $ for a specific
+Hamiltonian $H$ and thus obtain time depnendent density functionals. The
+Hamiltonian $H$ contains parts that are common to all electron-nuclei
+systems of a given number of electrons, namely the electron kinetic and
+coulomb interaction terms, and this part defines a true universal functional
+of the density. However the nuclear part and nuclear-electron interaction is
+clearly system dependent as the mass and charge of nuclei vary. The equation
+that determines $\left( {\cal V}_{fib\#}\left( \gamma \right) ,\omega
+_{\#}\left( \gamma \right) \right) $
+
+\begin{itemize}
+\item contains the metric terms
+
+$\eta _{{\cal V}_{fib}\omega _{fib}}$,$\eta _{{\cal \omega }_{fib}{\cal V}%
+_{den}}$,$\eta _{\omega _{fib}{\cal V}_{fib}}$,$\eta _{{\cal V}_{fib}{\cal %
+\omega }_{den}}$,$\eta _{\omega _{den}{\cal V}_{den}}$,$\eta _{{\cal V}%
+_{den}\omega _{fib}}$,$\eta _{{\cal V}_{fib}\omega _{den}}$
+
+\item the force terms $\nabla _{\omega _{fib}}{\cal E}$,$\nabla _{{\cal V}%
+_{fib}}{\cal E}$,$\nabla _{{\cal V}_{den}}{\cal E}$ and
+
+\item the \textquotedblright velocity terms\textquotedblright\ ${\cal \dot{V}%
+}_{den}$,$\dot{\omega}_{den}$,${\cal \dot{V}}_{fib}$,$\dot{\omega}_{fib}$,$%
+\dot{\omega}_{den}$
+\end{itemize}
+
+all of which are evaluated along a fixed density trajectory $\left\{ \gamma
+\left( t\right) ;\,t\in \tau \right\} $
+
+\subsection{\protect\bigskip Metric Terms}
+
+The metric terms all have the basic form 
+\begin{equation}
+\eta _{\lambda _{1},\lambda _{2}}(t,{\sf z},{\sf z}^{\prime })=i\left\{ 
+\frac{\delta }{\delta \tilde{\lambda}_{1}({\sf z})}\frac{\delta }{\delta
+\lambda _{2}({\sf z}^{\prime })}-\frac{\delta }{\delta \lambda _{2}({\sf z})}%
+\frac{\delta }{\delta \tilde{\lambda}_{1}({\sf z}^{\prime })}\right\} \ln S| 
+\begin{Sb} \tilde{\lambda}_{1}=\lambda _{1}  \\ \tilde{\lambda}_{2}=\lambda
+_{2}  \end{Sb}   \label{metric}
+\end{equation}%
+where $\lambda _{1},\lambda _{2}\in \left\{ {\cal V}_{fib},{\cal V}%
+_{den},\omega _{fib},\omega _{den}\right\} $. The overlap term $S$ is given
+by 
+\begin{eqnarray}
+S &=&\left\langle \widetilde{e^{{\cal \breve{V}}_{fib}({\cal V}_{den})}e^{i%
+{\cal \breve{\omega}}_{fib}({\cal V}_{den})}e^{i{\cal \breve{\omega}}_{den}(%
+{\cal V}_{den})}e^{{\cal \breve{V}}_{den}}}\Psi _{ref}\left( \gamma
+_{0}\right) \right.  \nonumber \\
+&&\qquad \qquad \qquad \left. |e^{{\cal \breve{V}}_{fib}({\cal V}_{den})}e^{i%
+{\cal \breve{\omega}}_{fib}({\cal V}_{den})}e^{i{\cal \breve{\omega}}_{den}(%
+{\cal V}_{den})}e^{{\cal \breve{V}}_{den}}\Psi _{ref}\left( \gamma
+_{0}\right) \right\rangle
+\end{eqnarray}%
+where ${\cal V}_{den}$ is a fixed trajectory that corresponds to a density
+trajectory $\gamma \left( t\right) $. Without loss of generality we can take
+the reference state to be an IPS 
+\begin{equation}
+\left| \Psi _{ref}\left( \gamma _{0}\right) \right\rangle =\left| \psi _{1}%
+\text{\textperiodcentered \textperiodcentered }\psi _{N_{e}}\right\rangle
+\otimes \left| \varphi _{1}\text{\textperiodcentered \textperiodcentered }%
+\varphi _{N_{n}}\right\rangle
+\end{equation}%
+and choose $e^{i{\cal \breve{\omega}}_{den}({\cal V}\left( t\right)
+_{den})}e^{{\cal \breve{V}}\left( t\right) _{den}}\left| \Psi _{ref}\left(
+\gamma _{0}\left( t\right) \right) \right\rangle $ to be an IPS\ for all
+times $t\in \tau $. It is not necessary to make this choice, trajectories of
+reference states can also be chosen to belong other families of pure states.
+However in general other choices will result in more complicated expectation
+values, though could produce better low order approximations to the time
+dependent density functionals. Recall that 
+\begin{eqnarray}
+&&{\cal T}\left( t\right) {\cal =}\int \left( {\cal V}_{fib}\left( {\cal V}%
+_{den}\left( t\right) \right) ({\bf x}_{1},..,{\bf x}_{N_{e}}{\bf X}_{1},..,%
+{\bf X}_{N_{n}})+\right.  \nonumber \\
+&&{\cal V}_{den}\left( t,{\bf x}_{1},\ldots ,{\bf x}_{N_{e}}{\bf X}_{1},..,%
+{\bf X}_{N_{n}}\right) \left. +i{\cal \omega }\left( {\cal V}_{den}\left(
+t\right) \right) ({\bf x}_{1},..,{\bf x}_{N_{e}}{\bf X}_{1},..,{\bf X}%
+_{N_{n}})\right)  \nonumber \\
+&&\qquad \qquad \qquad \times \prod\limits_{j=1}^{N_{e}}\Phi _{e}^{\dagger
+}(x_{j})\Phi _{e}(x_{j})\prod\limits_{k=1}^{N_{n}}\Phi _{n}^{\dagger
+}(X_{k})\Phi
+_{n}(X_{k})\prod\limits_{l=1}^{N_{e}}dx_{l}\prod_{m=1}^{N_{n}}dX_{m}
+\end{eqnarray}%
+where ${\cal V}_{fib}\left( {\cal V}_{den}\left( t\right) \right) =\frac{1}{2%
+}\ln \left( 1+\phi \left( {\cal V}_{den}\left( t\right) \right) \right) $
+and $\phi \in L_{\infty }\left( {\tt Z}\right) $, $\perp _{s}K_{D}$ and
+biorthogonal to the integral kernels of all super operators belonging to $%
+S_{D}$.
+
+The second derrivatives in eq. $\left( \ref{metric}\right) $ have the same
+form 
+\begin{equation}
+\frac{\delta }{\delta \tilde{\lambda}_{1}({\sf z})}\frac{\delta }{\delta
+\lambda _{2}({\sf z}^{\prime })}\ln S=\frac{1}{S}\left\{ \frac{\delta ^{2}S}{%
+\delta \tilde{\lambda}_{1}({\sf z})\delta \lambda _{2}({\sf z}^{\prime })}-%
+\frac{1}{S}\frac{\delta S}{\delta \tilde{\lambda}_{1}({\sf z})}\frac{\delta S%
+}{\delta \lambda _{2}({\sf z}^{\prime })}\right\}
+\end{equation}%
+different combinations of $\lambda _{1},\lambda _{2}\in \left\{ {\cal V}%
+_{fib},{\cal V}_{den},\omega _{fib},\omega _{den}\right\} $ result in 
+\begin{eqnarray}
+&&\frac{\delta }{\delta \tilde{\lambda}_{1}({\sf z})}\frac{\delta }{\delta
+\lambda _{2}({\sf z}^{\prime })}\ln S=\frac{1}{S}\left\{ \left\langle \Psi
+_{ref}\left( \gamma _{0}\right) |\Lambda \left( {\sf z}\right) \Lambda
+\left( {\sf z}^{\prime }\right) \Psi _{ref}\left( \gamma _{0}\right)
+\right\rangle \right.  \nonumber \\
+&&\qquad \qquad \left. \left\langle \Psi _{ref}\left( \gamma _{0}\right)
+|\Lambda \left( {\sf z}\right) \Psi _{ref}\left( \gamma _{0}\right)
+\right\rangle \left\langle \Psi _{ref}\left( \gamma _{0}\right) |\Lambda
+\left( {\sf z}^{\prime }\right) \Psi _{ref}\left( \gamma _{0}\right)
+\right\rangle \right\}
+\end{eqnarray}%
+where%
+\begin{equation}
+\Lambda \left( {\sf z}\right) =\prod\limits_{j=1}^{N_{e}}\Phi _{e}^{\dagger
+}(x_{j})\Phi _{e}(x_{j})\prod\limits_{k=1}^{N_{n}}\Phi _{n}^{\dagger
+}(X_{k})\Phi _{n}(X_{k})
+\end{equation}%
+Letting leading to the relationships ${\cal V=V}_{den}$ or ${\cal V}_{fib}$
+and $\omega =\omega _{den}$ or $\omega _{fib\text{ }}$ one obtains 
+\begin{eqnarray}
+\frac{\delta }{\delta {\cal \tilde{V}}({\sf z})}\frac{\delta }{\delta \omega
+({\sf z}^{\prime })}\ln S &=&i\frac{\delta }{\delta {\cal \tilde{V}}({\sf z})%
+}\frac{\delta }{\delta {\cal V}({\sf z}^{\prime })}\ln S \\
+\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z})}\frac{\delta }{\delta 
+{\cal V}({\sf z}^{\prime })}\ln S &=&-i\frac{\delta }{\delta {\cal \tilde{V}}%
+({\sf z})}\frac{\delta }{\delta {\cal V}({\sf z}^{\prime })}\ln S \\
+\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z})}\frac{\delta }{\delta
+\omega ({\sf z}^{\prime })}\ln S &=&i\frac{\delta }{\delta {\cal \tilde{V}}(%
+{\sf z})}\frac{\delta }{\delta {\cal V}({\sf z}^{\prime })}\ln S
+\end{eqnarray}%
+Hence one can see that 
+\begin{eqnarray}
+\frac{\delta }{\delta {\cal \tilde{V}}({\sf z})}\frac{\delta }{\delta {\cal V%
+}({\sf z}^{\prime })}\ln S &=&\frac{\delta }{\delta {\cal V}({\sf z})}\frac{%
+\delta }{\delta {\cal \tilde{V}}({\sf z}^{\prime })}\ln S \\
+\frac{\delta }{\delta {\cal \tilde{V}}({\sf z})}\frac{\delta }{\delta {\cal %
+\omega }({\sf z}^{\prime })}\ln S &=&-\frac{\delta }{\delta {\cal V}({\sf z})%
+}\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z}^{\prime })}\ln S \\
+\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z})}\frac{\delta }{\delta 
+{\cal V}({\sf z}^{\prime })}\ln S &=&-\frac{\delta }{\delta \omega ({\sf z})}%
+\frac{\delta }{\delta {\cal \tilde{V}}({\sf z}^{\prime })}\ln S \\
+\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z})}\frac{\delta }{\delta
+\omega ({\sf z}^{\prime })}\ln S &=&i\frac{\delta }{\delta \omega ({\sf z})}%
+\frac{\delta }{\delta {\cal \tilde{\omega}}({\sf z}^{\prime })}\ln S
+\end{eqnarray}%
+note that in all cases the order in which the functional derrivatives are
+taken is immaterial i.e.%
+\begin{equation}
+\frac{\delta }{\delta \tilde{\lambda}_{1}({\sf z})}\frac{\delta }{\delta
+\lambda _{2}({\sf z}^{\prime })}\ln S=\frac{\delta }{\delta \lambda _{2}(%
+{\sf z}^{\prime })}\frac{\delta }{\delta \tilde{\lambda}_{1}({\sf z})}\ln S
+\end{equation}%
+as one would expect from the continuous function $\ln S.$Thus the various
+components of the metric term are 
+\begin{eqnarray}
+\eta _{{\cal V}_{fib}{\cal V}_{fib}} &=&\eta _{{\cal V}_{fib}{\cal V}%
+_{den}}=\eta _{{\cal V}_{den}{\cal V}_{fib}}=\eta _{{\cal V}_{den}{\cal V}%
+_{den}}=0 \\
+\eta _{{\cal \omega }_{fib}{\cal \omega }_{fib}} &=&\eta _{{\cal \omega }%
+_{fib}{\cal \omega }_{den}}=\eta _{{\cal \omega }_{den}{\cal \omega }%
+_{fib}}=\eta _{{\cal \omega }_{den}{\cal \omega }_{den}}=0
+\end{eqnarray}%
+\begin{eqnarray}
+\eta _{{\cal V\omega }} &=&\frac{2i}{{\cal N}\left( \Upsilon \left( \gamma
+\left( t\right) \right) ,\gamma \left( t\right) \right) }\left\{
+\left\langle \Psi _{ref}\left( \gamma _{0}\right) |\Lambda \left( {\sf z}%
+\right) \Lambda \left( {\sf z}^{\prime }\right) \Psi _{ref}\left( \gamma
+_{0}\right) \right\rangle \right.  \nonumber \\
+&&\qquad \qquad \left. \left\langle \Psi _{ref}\left( \gamma _{0}\right)
+|\Lambda \left( {\sf z}\right) \Psi _{ref}\left( \gamma _{0}\right)
+\right\rangle \left\langle \Psi _{ref}\left( \gamma _{0}\right) |\Lambda
+\left( {\sf z}^{\prime }\right) \Psi _{ref}\left( \gamma _{0}\right)
+\right\rangle \right\}  \nonumber \\
+&=&-\eta _{\omega {\cal V}}  \label{vomega}
+\end{eqnarray}%
+One can thus write $\eta _{{\cal V\omega }}$ as 
+\begin{equation}
+\left( 
+\begin{array}{cccc}
+0 & \eta _{{\cal V}_{fib}\omega _{fib}} & 0 & \eta _{{\cal V}_{fib}\omega
+_{den}} \\ 
+-\eta _{{\cal V}_{fib}\omega _{fib}}^{t} & 0 & -\eta _{{\cal V}_{fib}\omega
+_{den}}^{t} & 0 \\ 
+0 & \eta _{{\cal V}_{den}\omega _{fib}} & 0 & \eta _{{\cal V}_{den}\omega
+_{den}} \\ 
+-\eta _{{\cal V}_{den}\omega _{fib}}^{t} & 0 & -\eta _{{\cal V}_{den}\omega
+_{den}}^{t} & 0%
+\end{array}%
+\right)
+\end{equation}%
+where 
+\begin{equation}
+\eta _{{\cal V}\omega }^{t}({\sf z},{\sf z}^{\prime })=\eta _{\omega {\cal V}%
+}({\sf z}^{\prime },{\sf z})
+\end{equation}%
+The expectation values occuring in eq. $\left( \ref{vomega}\right) $ are
+integral kernels of the unnormalized $N$-body density operator 
+\begin{eqnarray}
+D^{N}\left( \gamma \right) &=&\left| \Psi ({\cal V}_{fib}({\cal V}%
+_{den}),\omega _{fib}({\cal V}_{den}),{\cal V}_{den},\omega \left( {\cal V}%
+_{den}\right) \right\rangle  \nonumber \\
+&&\qquad \qquad \times \left\langle \Psi ({\cal V}_{fib}({\cal V}%
+_{den}),\omega _{fib}({\cal V}_{den}),{\cal V}_{den},\omega \left( {\cal V}%
+_{den}\right) \right|
+\end{eqnarray}%
+and its associated reduced density operators. For instance 
+\begin{equation}
+D^{N}\left( {\cal T}\left( \gamma \left( t\right) \right) \right) \left( 
+{\sf z},{\sf z}\right) =\left( -1\right) ^{N_{e}+N_{n}}\left\langle \Psi
+\left( {\cal T}\left( \gamma \left( t\right) \right) \right) |\Lambda \left( 
+{\sf z}\right) \Psi \left( {\cal T}\left( \gamma \left( t\right) \right)
+\right) \right\rangle
+\end{equation}%
+when all the coordinates contained in ${\sf z}$ are distinct. If $N_{e}-p$
+of the electronic coordinates are the same then one obtains the integral
+kernel of areduced density operator referring to $p$ electrons, while if $%
+N_{n}-q$ of the nuclear coordinates are the identical for fermionic nuclei
+one obtains the integral kernel of a reduced density operator referring to $%
+N_{n}-q$ nuclei. For bosonic nuclei one does not produce reduced density
+operators as the order of the field operators is never reduced. The kernels
+produced from the operators $\Lambda \left( {\sf z}\right) \Lambda \left( 
+{\sf z}^{\prime }\right) $ are also of the $N$-body density operator and its
+associated reduced density operators. In order to produce non zero kernels
+for electronic and either fermionic nuclear or distinguishable nuclear
+systems ${\sf z=z}^{\prime }$ (see Appendix A) and then $\Lambda \left( {\sf %
+z}\right) ^{2}=\Lambda \left( {\sf z}\right) $.
+
+One can systematically consdier the contributions to the metric $\eta $
+arrising from the full and various reduced density operators by decomposing $%
+{\cal \breve{T}}$ into {\it pure particle parts }$\left\{ {\cal \breve{T}}%
+_{pq}\right\} $, $p$-electron and $q$-nuclear, defined for electrons and
+nuclei as%
+\begin{equation}
+{\cal \breve{T}}_{pq}=\int {\cal T}_{pq}\left( {\sf x,X}\right) \prod_{1\leq
+i\leq p}\Phi _{e}^{\dagger }(x_{i})\Phi _{e}(x_{i})\prod_{1\leq j\leq q}\Phi
+_{n}^{\dagger }(X_{j})\Phi _{n}(X_{j})\prod_{1\leq i\leq
+p}dx_{i}\prod_{1\leq j\leq q}dx_{j}
+\end{equation}%
+where $\left\{ x_{1},\ldots ,x_{p}\right\} $ and $\left\{ X_{1},\ldots
+,X_{q}\right\} $ have distinct values over the integration range. The
+operator ${\cal T}$ can be decomposed as 
+\begin{equation}
+{\cal \breve{T}=}\sum_{0\leq p\leq N_{e};0\leq q\leq N_{n}}{\cal \breve{T}}%
+_{pq}
+\end{equation}%
+where ${\cal \breve{T}}_{0q}$ and ${\cal \breve{T}}_{p0}$ refer to
+electronic and nuclear parts that are purely time dependent i.e. ones that
+have no spatial nor spin dependence. Each of the pure parts ${\cal \breve{T}}%
+_{pq}$ can be expressed as 
+\begin{equation}
+{\cal \breve{T}}_{pq}={\cal \breve{V}}_{fib\,pq}+i\breve{\omega}_{fib\,pq}+%
+{\cal \breve{V}}_{den\,pq}+i\breve{\omega}_{den\,pq}
+\end{equation}%
+and the variables $\left\{ {\cal \breve{V}}_{fib},\breve{\omega}_{fib},{\cal 
+\breve{V}}_{den},\breve{\omega}_{den}\right\} $ can be varied and
+approximated in terms of their independent pure parts 
+\begin{equation}
+\left\{ \left\{ {\cal \breve{V}}_{fib\,pq}\right\} ,\left\{ \breve{\omega}%
+_{fib\,pq}\right\} ,\left\{ {\cal \breve{V}}_{den\,pq}\right\} ,\left\{ 
+\breve{\omega}_{den\,pq}\right\} ;0\leq p\leq N_{e},0\leq q\leq N_{n}\right\}
+\end{equation}
+hence 
+\begin{equation}
+e^{{\cal \breve{T}}}=\prod_{0\leq p\leq N_{e};0\leq q\leq N_{n}}e^{{\cal 
+\breve{T}}_{pq}}
+\end{equation}%
+and we have analogous expressions for $\left\{ {\cal \breve{V}}_{fib},\breve{%
+\omega}_{fib},{\cal \breve{V}}_{den},\breve{\omega}_{den}\right\} $. These
+decompositions will be used as basic template for the systematic
+approximations scheme for the construction of approximate time dependent
+functionals that we are developing in this article.
+
+The variations with respect to the different irreducible components involve
+metric terms based on combinations of different reduced density operators.
+In order to illuminate the details of these terms we concentrate on the
+variations of the components $\left\{ 0\leq p\leq 2,0\leq q\leq 2\right\} $
+
+\section{Computation of Metric and Force Terms}
+
+\section{Summary Remarks}
+
+\section{Acknowledgements}
+
+We thank \ldots SBT was supported in part by the U.S. National Science
+Foundation.
+
+\section{Appendix A Properties of Field Operators}
+
+Fermionic local density operators are idempotent and commute with each other
+i.e. 
+\begin{eqnarray}
+&&\left( \Phi _{\lambda }^{\dagger }(\kappa )\Phi _{\lambda }(\kappa
+)\right) ^{2}=\Phi _{\lambda }^{\dagger }(\kappa )\Phi _{\lambda }(\kappa ) 
+\nonumber \\
+&&\left[ \Phi _{{\cal \lambda }}^{\dagger }(\kappa _{1})\Phi _{{\cal \lambda 
+}}(\kappa _{1}),\Phi _{{\cal \lambda }}^{\dagger }(\kappa _{2})\Phi _{{\cal %
+\lambda }}(\kappa _{2})\right] =0
+\end{eqnarray}%
+where $\kappa $ can be electron or nuclear coordinates associated with $%
+\lambda =e$ or $n$. Products of these local density operators have the
+decomposition property can be rearranged into nromal form as 
+\begin{eqnarray}
+&&\prod_{1\leq i\leq m}\Phi _{{\cal \lambda }}^{\dagger }(\kappa _{i})\Phi _{%
+{\cal \lambda }}(\kappa _{i})=  \nonumber \\
+&=&\sum_{1\leq i_{1}<i_{2}\leq m}\left\{ \Phi _{{\cal \lambda }}^{\dagger
+}(\kappa _{i_{1}})\Phi _{{\cal \lambda }}(\kappa _{i_{2}})\prod\begin{Sb} %
+1\leq j_{1}<j_{2}\leq m  \\ j_{1},j_{2}\neq i_{1},i_{2}  \end{Sb}  \delta
+\left( \kappa _{j_{1}}-\kappa _{j_{2}}\right) \right\} -  \nonumber \\
+&&\sum_{1\leq i_{1}<i_{2}<i_{3}<i_{4}\leq m}\left\{ \Phi _{{\cal \lambda }%
+}^{\dagger }(\kappa _{i_{1}})\Phi _{{\cal \lambda }}^{\dagger }(\kappa
+_{i_{2}})\Phi _{{\cal \lambda }}(\kappa _{i_{2}})\Phi _{{\cal \lambda }%
+}(\kappa _{i_{1}})\right.  \nonumber \\
+&&\qquad \qquad \qquad \qquad \times \left. \prod\begin{Sb} 1\leq
+j_{1}<j_{2}\leq m  \\ j_{1},j_{2}\neq i_{1},i_{2},i_{3},i_{4}  \end{Sb} 
+\delta \left( \kappa _{j_{1}}-\kappa _{j_{2}}\right) \right\} +\cdots 
+\nonumber \\
+&&\left( -1\right) ^{r}\sum_{1\leq i_{1}<\cdots <i_{r}\leq m}\left\{ \Phi _{%
+{\cal \lambda }}^{\dagger }(\kappa _{i_{1}})\cdots \Phi _{{\cal \lambda }%
+}^{\dagger }(\kappa _{i_{r}})\Phi _{{\cal \lambda }}(\kappa _{i_{r}})\cdots
+\Phi _{{\cal \lambda }}(\kappa _{i_{1}})\right.  \nonumber \\
+&&\qquad \qquad \qquad \times \left. \prod\begin{Sb} 1\leq j_{1}<j_{2}\leq m 
+\\ j_{1},j_{2}\neq i_{1},\ldots ,,i_{r}  \end{Sb}  \delta \left( \kappa
+_{j_{1}}-\kappa _{j_{2}}\right) \right\} +  \nonumber \\
+&&\qquad \qquad \cdots \left( -1\right) ^{m}\Phi _{{\cal \lambda }}^{\dagger
+}(\kappa _{1})\cdots \Phi _{{\cal \lambda }}^{\dagger }(\kappa _{m})\Phi _{%
+{\cal \lambda }}(\kappa _{m})\cdots \Phi _{{\cal \lambda }}(\kappa _{1})
+\label{decomp}
+\end{eqnarray}%
+Thus one can observe that products of more than $N_{e}$ electron operators
+and $N_{n}$ nuclear operators (belonging to the same fermionic species) on a 
+$N=N_{e}+N_{n}$ particle state can be duplicated by products of order $\leq $
+$N_{e}$ and $\leq $ $N_{n}$. By noting that if coordinates are equal in the
+top line of eq. $\left( \ref{decomp}\right) $ one can permute the product so
+that local density operators with the same coordinates are adjacent to each
+other and thus by the idempotency property produce just the first power of
+that local density operator and hence see that such a product is a lower
+order one containing distinct coordinates and thus conclude that 
+\begin{eqnarray}
+\prod_{1\leq i\leq m}\Phi _{{\cal \lambda }}^{\dagger }(\kappa _{i})\Phi _{%
+{\cal \lambda }}(\kappa _{i}) &=&\prod_{1\leq i\leq m^{\prime }\leq m}\Phi _{%
+{\cal \lambda }}^{\dagger }(\kappa _{i})\Phi _{{\cal \lambda }}(\kappa _{i})
+\nonumber \\
+&=&\left( -1\right) ^{m^{\prime }}\Phi _{{\cal \lambda }}^{\dagger }(\kappa
+_{1})\cdots \Phi _{{\cal \lambda }}^{\dagger }(\kappa _{m^{\prime }})\Phi _{%
+{\cal \lambda }}(\kappa _{m^{\prime }})\cdots \Phi _{{\cal \lambda }}(\kappa
+_{1})
+\end{eqnarray}%
+Hence one only need to consider electronic and nuclear coordinates that are
+distinct amongst the same species.
+
+Products of Bosonic local density operators have a similiar decomposition to
+eq. $\left( \ref{decomp}\right) $without alternating + and - signs i.e. 
+\begin{eqnarray}
+&&\prod_{1\leq i\leq m}\Phi _{n}^{\dagger }(\kappa _{i})\Phi _{n}(\kappa
+_{i})= \\
+&&\sum_{1\leq r\leq N_{n}}\sum_{1\leq i_{1}<\cdots <i_{r}\leq m}\left\{ \Phi
+_{{\cal \lambda }}^{\dagger }(\kappa _{i_{1}})\cdots \Phi _{{\cal \lambda }%
+}^{\dagger }(\kappa _{i_{r}})\Phi _{{\cal \lambda }}(\kappa _{i_{r}})\cdots
+\Phi _{{\cal \lambda }}(\kappa _{i_{1}})\right. \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \times \left. \prod\begin{Sb} %
+1\leq j_{1}<j_{2}\leq m  \\ j_{1},j_{2}\neq i_{1},\ldots ,,i_{r}  \end{Sb} 
+\delta \left( \kappa _{j_{1}}-\kappa _{j_{2}}\right) \right\}
+\end{eqnarray}%
+and the same observation applies to the boson case as the fermion one. These
+operators still commute but are no longer idempotent i.e 
+\begin{eqnarray}
+&&\left( \Phi _{\lambda }^{\dagger }(\kappa )\Phi _{\lambda }(\kappa
+)\right) ^{2}\neq \Phi _{\lambda }^{\dagger }(\kappa )\Phi _{\lambda
+}(\kappa )  \nonumber \\
+&&\left[ \Phi _{{\cal \lambda }}^{\dagger }(\kappa _{1})\Phi _{{\cal \lambda 
+}}(\kappa _{1}),\Phi _{{\cal \lambda }}^{\dagger }(\kappa _{2})\Phi _{{\cal %
+\lambda }}(\kappa _{2})\right] =0
+\end{eqnarray}%
+Products of bosonic local density operators do not reduce in particle number
+when coordinates are equal due to this lack of idempotency.
+
+Products, $\left\{ \Phi _{{\cal \lambda }_{1}}^{\dagger }(\kappa _{1})\Phi _{%
+{\cal \lambda }_{1}}(\kappa _{1}),\ldots ,\Phi _{r}^{\dagger }(\kappa
+_{r})\Phi _{r}(\kappa _{r})\right\} $, of local density operators for
+distinguishable species commute and do not have to fulfill any commutation
+relationships so 
+\begin{eqnarray}
+&&\left[ \Phi _{{\cal \lambda }_{i}}^{\dagger }(\kappa _{i})\Phi _{{\cal %
+\lambda }_{i}}(\kappa _{i}),\Phi _{{\cal \lambda }_{j}}^{\dagger }(\kappa
+_{j})\Phi _{{\cal \lambda }_{j}}(\kappa _{j})\right] =0  \nonumber \\
+&&\prod_{1\leq i\leq m}\Phi _{{\cal \lambda }_{i}}^{\dagger }(\kappa
+_{i})\Phi _{{\cal \lambda }_{i}}(\kappa _{i})=\Phi _{{\cal \lambda }%
+_{1}}^{\dagger }(\kappa _{i_{1}})\cdots \Phi _{{\cal \lambda }_{m}}^{\dagger
+}(\kappa _{i_{m}})\Phi _{{\cal \lambda }_{m}}(\kappa _{i_{m}})\cdots \Phi _{%
+{\cal \lambda }_{1}}(\kappa _{i_{1}})
+\end{eqnarray}%
+By using the preceding relationships one can easily obtain reodering and
+decomposition expressions for mixed fermionic-bosonic-distinguishable
+systems.
+
+{\sc Part I references are next}
+
+\begin{thebibliography}{99}
+\bibitem{Teil92} J.~Teilhaber, Phys. Rev. B {\bf 46}, 12990 (1992).
+
+\bibitem{Stener95} M.~Stener, P.~Decleva, and A.~Lisini, J. Phys. B [At.
+Mol. Opt. Phys.] {\bf 28}, 4973 (1995).
+
+\bibitem{Saalmann96} U.~Saalmann and R.~Schmidt, Z. Phys. D {\bf 38}, 153
+(1996)
+
+\bibitem{Tong97} X.M.~Tong and S-I.~Chu, Phys. Rev. A {\bf 55}, 3406 (1997).
+
+\bibitem{Serra97a} L.~Serra and A.~Rubio, Z. Physik D {\bf 40}, 262 (1997).
+
+\bibitem{Ullrich97} C.A.~Ullrich, P.G.~Reinhard, and E.~Suraud, J. Phys.B
+[At. Mol. Optical Phys.] {\bf 30}, 5043 (1997).
+
+\bibitem{AG97} A.~G\"orling, Phys. Rev. B {\bf 55}, 2630 (1997).
+
+\bibitem{Vignale97} G.~Vignale, C.A.~Ullrich, and S.~Conti, Phys. Rev. Lett. 
+{\bf 79}, 4878 (1997).
+
+\bibitem{Calvayrac98} F.~Calvayrac, A.~Domps, P.G.~Reinhard, E.~Suraud, and
+C.A.~Ullrich, Euro. Phys. J. {\bf 4}, 207-18 (1998).
+
+\bibitem{Reinhard98} P.G.~Reinhard, E.~Suraud, and C.A.~Ullrich, Euro. Phys.
+J. {\bf 1}, 303-11 (1998).
+
+\bibitem{Ullrich98} C.A.~Ullrich, P.G.~Reinhard, and E.~Suraud, Phys. Rev. A 
+{\bf 57}, 1938-43 (1998).
+
+\bibitem{Telnov98} D.A.~Telnov and S-I.~Chu, Phys. Rev. A {\bf 58}, 4749-56
+(1998).
+
+\bibitem{Tong98} X.-M.~Tong and S.-I.~Chu, Phys. Rev. A {\bf 57}, 452 (1998).
+
+\bibitem{Campillo99} I.~Campillo, A.~Rubio, and J.M.~Pitarke, Phys. Rev.B 
+{\bf 59}, 12188-91 (1999).
+
+\bibitem{Vasiliev99} I.~Vasiliev, S.~Ogut, and J.R.~Chelikowsky, Phys. Rev.
+Lett. {\bf 82}, 1919-22 (1999).
+
+\bibitem{Knospe99} O.~Knospe, J.~Jellinek, U.~Saalmann, and R.~Schmidt, Eur.
+Phys. J. D {\bf 5}, 1 (1999) and references therein.
+
+\bibitem{Hessler} P.~Hessler, J.~Park, and K.~Burke, Phys. Rev. Lett. {\bf 82%
+}, 378 (1999).
+
+\bibitem{Gross96} E.K.U.~Gross, J.F.~Dobson, and M.~Petersilka, in {\it %
+Density Functional Theory II - Topics in Current Chemistry 181}, R.F.
+Nalewajski ed. (Springer, Berlin and Heidelberg, 1996) pp 81-172.
+
+\bibitem{Casida95} M.~Casida in D.P. Chong ed., {\it Recent Advances in
+Density Functional Methods} (World Scientific, Singapore, 1995) pp 155-192.
+
+\bibitem{Bartolotti81} L.J.~Bartolotti, Phys. Rev. A {\bf 24}, 1661 (1981).
+
+\bibitem{DebGhosh82} B.M.~Deb and S.K.~Ghosh, J. Chem. Phys. {\bf 77}, 342
+(1982).
+
+\bibitem{RG84} E.~Runge and E.K.U.~Gross, Phys. Rev. Lett. {\bf 52}, 997
+(1984).
+
+\bibitem{HK} P.~Hohenberg and W.~Kohn, Phys. Rev. {\bf 136}, B864 (1964).
+
+\bibitem{Xu85} B-X.~Xu and A.K.~Rajagopal, Phys. Rev. A {\bf 31}, 2682
+(1985).
+
+\bibitem{Dhara87} A.K.~Dhara and S.K.~Ghosh, Phys. Rev. A {\bf 35}, 442
+(1987).
+
+\bibitem{Levy79} M.~Levy, Proc. Natl. Acad. Sci. USA {\bf 76}, 6062-65
+(1979).
+
+\bibitem{LevyPerdew85} M.~Levy and J.P.~Perdew in R.M.~Dreizler and J.~da
+Providencia eds., {\it Density Functional Methods in Physics} (Plenum, N.Y.,
+1985) pp 11-30.
+
+\bibitem{Lieb} E.H.~Lieb, Internat. J. Quantum. Chem. {\bf 24}, 243 (1983).
+
+\bibitem{KD86} H.~Kohl and R.M.~Dreizler, Phys. Rev. Lett. {\bf 56}, 1993
+(1986).
+
+\bibitem{Raj94A} A.K.~Rajagopal, Phys. Lett. A {\bf 193}, 363 (1994).
+
+\bibitem{RajBuot94B} A.K.~Rajagopal and F.A.~Buot, Phys. Rev. E {\bf 50},
+721 (1994).
+
+\bibitem{LiTong86} T-C.~Li and P-q. Tong, Phys. Rev. A {\bf 34}, 529 (1986).
+
+\bibitem{Qian98} A.~Qian and V.~Sahni, Phys. Lett. A {\bf 247}, 303 (1998).
+
+\bibitem{Chermyak00} V.~Chernyak and S.~Mukamel J. Chem. Phys. {\bf 112},
+3572 (2000)
+
+\bibitem{DeumensA} E.~Deumens, A.~Diz, R.~Longo, and Y.~{\"O}hrn, Rev. Mod.
+Phys. {\bf 66}, 917 (1994).
+
+\bibitem{DeumensB} E.~Deumens and Y.~{\"O}hrn, J. Chem. Soc., Faraday Trans. 
+{\bf 93}, 919 (1997) and refs.~therein.
+
+\bibitem{BLWSBT99a} B.~Weiner and S.B.~Trickey, Adv. Quantum Chemistry {\bf %
+35} (Academic, San Diego, 1999). 217.
+
+\bibitem{BLWSBT00a} ``State Energy Functionals and Variational Equations in
+Density Functional Theory,'' B.~Weiner and S.B.~Trickey, J. Molec. Struct.
+(Theochem) {\bf 501}-{\bf 02}, 65 (2000).
+
+\bibitem{Leeuwen99} R.~van Leeuwen, Phys. Rev. Lett. {\bf 82}, 3863 (1999).
+
+\bibitem{GrossKohn90} W.~Kohn and E.K.U.~Gross in {\it Density Functional
+Theory for Many-Fermion Systems} S.B. Trickey spec. ed., Adv. Quant. Chem. 
+{\bf 21} (Academic, San Diego, 1990), 255.
+
+\bibitem{Fois88} E.S.~Fois, A.~Selloni, M.~Parinello,and R.~Car, J. Phys.
+Chem. {\bf 92}, 3268 (1988)
+
+\bibitem{PerdewSavin} J.P.~Perdew, A.~Savin, and K.~Burke, Phys. Rev. A {\bf %
+51}, 4531 (1995).
+
+\bibitem{BLWSBT98} B.~Weiner and S.B.~Trickey, Internat. J. Quantum Chem. 
+{\bf 69}, 451 (1998).
+
+\bibitem{SavinSem2} A.~Savin, in J.M. Seminario ed., {\it Recent
+Developments and Applications of Modern Density Functional Theory}
+(Elsevier, Amsterdam, 1996), p. 351.
+
+\bibitem{Sjoqvist} E.~Sj\"oqvist and M.~Hedstr\"om, Phys. Rev. A {\bf 56}
+3417 (1997).
+
+\bibitem{Bruhat} {\it Analysis, Manifolds, and Physics}, Y.~Choquet-Bruhat
+and C. DeWitt-Morette with M. Dillrd-Bleick, Revised Edition (North-
+Holland, Amsterdam, 1982) p.350 ff.
+
+\bibitem{affinebundleref} {\it Encyclopedic Dictionary of Mathematics},
+K.~It\^o ed. (MIT Press, Cambridge, 1996) vol. 1, p. 569
+
+\bibitem{Harriman81} J. Harriman, Phys. Rev. A {\bf 24}, 680 (1981).
+
+\bibitem{KramSar} P.~Kramer and M.~Saraceno, {\it Geometry of the Time
+Dependent Variational Principle in Quantum Mechanics} (Springer, New York
+1981).
+
+\bibitem{etainv} {\it Classical Dynamics A Modern Perspective},
+E.C.G.~Sudarshan and N.~Mukunda (John Wiley and Sons, NY, 1974) 112-19.
+
+\bibitem{BLW94} B.~Weiner, E.~Deumens, and Y.~\"Ohrn, J. Math. Phys. {\bf 35}%
+, 1139 (1994).
+
+\bibitem{Ortiz81} J.V.~Ortiz, B.~Weiner, and Y.~\"Ohrn, Internat J. Quantum
+Chem. S-{\bf 15}, 113 (1981).
+
+%\bibitem{coneref} {\sc Need Reference here}
+
+\bibitem{Kummer} H.~Kummer, J. Math. Phys. {\bf 8}, 2063 (1967)
+
+\bibitem{BerezinShubin} F.A.~Berezin and M.A..~Shubin, {\it The
+Schr\"odinger Equation} (Kluwer Academic Press, ??? 1981).
+
+\bibitem{Richtmyer} R.~Richtmyer, {\it Principles of Advanced Mathematical
+Physics} (Springer Verlag, NY, 1978) vol. 1, p. 245.
+\end{thebibliography}
+
+\end{document}

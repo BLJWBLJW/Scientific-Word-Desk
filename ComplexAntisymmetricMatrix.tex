@@ -1,0 +1,358 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, April 06, 2012 11:15:25}
+%TCIDATA{LastRevised=Friday, January 16, 2026 09:09:42}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+\preprint{}
+\title{Complex Symmetric Matrices}
+\author{Brian Weiner}
+\affiliation{PSU}
+\author{}
+
+\begin{abstract}
+\end{abstract}
+
+\date{07/19/2025}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+\section{Theorem on Complex Antisymmetric Matrices}
+
+\begin{theorem}
+For any \textbf{complex antisymmetric matrix }$A=B+iC$ where:
+
+\begin{itemize}
+\item $B^{T}=-B$ (real part of antisymmetric matrix) $=-\func{Re}\left(
+A\right) $
+
+\item $C^{T}=-C$ (complex part of antisymmetric matrix) $=-\func{Im}\left(
+A\right) $
+\end{itemize}
+
+the following conditions hold:
+
+\begin{enumerate}
+\item $A$ is normal ($AA^\dagger = A^\dagger A$) if and only if the
+commutator $[B,C] = BC - CB = 0$
+
+\item When normal, $A$ is unitarily diagonalizable with purely imaginary
+eigenvalues
+
+\item When $[B,C] \neq 0$, $A$ may have defective eigenvalues requiring
+Jordan form
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\underline{Part 1: Normality Condition}
+
+For $A = B + iC$ with $B^T = -B$ and $C^T = -C$:
+
+\begin{align*}
+AA^\dagger &= (B + iC)(B^T - iC^T) \\
+&= (B + iC)(-B - iC) \\
+&= -B^2 - iBC - iCB + C^2
+\end{align*}
+
+\begin{align*}
+A^\dagger A &= (B^T - iC^T)(B + iC) \\
+&= (-B - iC)(B + iC) \\
+&= -B^2 - iCB - iBC + C^2
+\end{align*}
+
+The normality condition reduces to: 
+\begin{equation}
+AA^\dagger - A^\dagger A = -2i[B,C] = 0 \quad \iff \quad [B,C] = 0
+\end{equation}
+
+\underline{Part 2: Diagonalizability}
+
+When $[B,C] = 0$:
+
+\begin{itemize}
+\item $A$ is normal $\Rightarrow$ unitarily diagonalizable via $A =
+UDU^\dagger$
+
+\item Eigenvalues are purely imaginary since $A^\dagger = -A$
+\end{itemize}
+
+When $[B,C] \neq 0$:
+
+\begin{itemize}
+\item $A$ is non-normal
+
+\item May have defective eigenvalues (geometric multiplicity $<$ algebraic
+multiplicity)
+
+\item Requires Jordan form $A = PJP^{-1}$ with non-trivial Jordan blocks
+\end{itemize}
+\end{proof}
+
+\section{Main Theorem}
+
+\begin{theorem}
+For an $n \times n$ complex matrix $A$, an eigenvalue $\lambda$ is \textbf{%
+defective} if and only if its geometric multiplicity is strictly less than
+its algebraic multiplicity: 
+\begin{equation*}
+\dim \ker(A - \lambda I) < \text{mult}_{\text{alg}}(\lambda).
+\end{equation*}
+\end{theorem}
+
+\section{Proof}
+
+The Jordan decomposition $A = PJP^{-1}$ yields:
+
+\begin{equation}
+J=\bigoplus_{i=1}^{k}J_{m_{i}}(\lambda _{i}),\quad J_{m}(\lambda )=%
+\begin{pmatrix}
+\lambda  & 1 &  & 0 \\ 
+0 & \ddots  & \ddots  &  \\ 
+& \ddots  & \ddots  & 1 \\ 
+0 &  & 0 & \lambda 
+\end{pmatrix}%
+_{m\times m}
+\end{equation}
+
+For each $\lambda$:
+
+\begin{itemize}
+\item Algebraic multiplicity $\left( AM\right) $: $\sum_{m_{i}}m_{i}$ where $%
+\lambda _{i}=\lambda $
+
+\item Geometric multiplicity $\left( GM\right) $: number of blocks $%
+J_{m_{i}}(\lambda )$
+\end{itemize}
+
+Defectiveness occurs when any $m_i > 1$, creating non-trivial Jordan blocks.
+
+\section{Examples}
+
+\subsection{Non-Defective Matrix}
+
+\begin{equation}
+A = 
+\begin{pmatrix}
+2 & 0 \\ 
+0 & 2%
+\end{pmatrix}%
+\end{equation}
+
+\begin{itemize}
+\item $\chi _{A}(\lambda )=(\lambda -2)^{2}$ (AM $=2$)
+
+\item $\ker (A-2I)=\mathbb{C}^{2}$ (GM $=2$)
+
+\item Full set of eigenvectors
+\end{itemize}
+
+\subsection{Defective Matrix}
+
+\begin{equation}
+B = 
+\begin{pmatrix}
+2 & 1 \\ 
+0 & 2%
+\end{pmatrix}%
+\end{equation}
+
+\begin{itemize}
+\item $\chi _{B}(\lambda )=(\lambda -2)^{2}$ (AM $=2$)
+
+\item $\ker (B-2I)=\text{span}\{(1,0)^{T}\}$ (GM$\ =1$)
+
+\item Requires Jordan form
+\end{itemize}
+
+\section{Antisymmetric Case}
+
+For $A = B + iC$ with $B^T = -B$, $C^T = -C$:
+
+\begin{equation}
+\text{Normality} \Leftrightarrow [B,C] = 0
+\end{equation}
+
+Non-normal cases may exhibit defective eigenvalues:
+
+\begin{equation}
+A = 
+\begin{pmatrix}
+0 & 1+i \\ 
+-1-i & 0%
+\end{pmatrix}%
+, \quad [B,C] \neq 0
+\end{equation}
+
+\begin{itemize}
+\item Potential defective eigenvalues when $[B,C] \neq 0$
+
+\item Block-diagonalization may contain non-trivial Jordan blocks
+\end{itemize}
+
+\section*{Conclusion}
+
+Defective eigenvalues emerge when geometric multiplicity fails to match
+algebraic multiplicity, necessitating Jordan forms. For complex
+antisymmetric matrices, non-commutativity of real and imaginary components
+can induce such defects, preventing full diagonalization.
+
+\section{Block Diagonalization Theorem}
+
+\begin{theorem}
+Every \textbf{complex} antisymmetric matrix $A\in M_{n}(\mathbb{C})$ with $%
+A^{T}=-A$ can be brought to block diagonal form: 
+\begin{equation}
+A=U%
+\begin{pmatrix}
+\begin{pmatrix}
+0 & \lambda _{1} \\ 
+-\lambda _{1} & 0%
+\end{pmatrix}
+&  &  &  &  &  \\ 
+& \ddots  &  &  &  &  \\ 
+&  & 
+\begin{pmatrix}
+0 & \lambda _{k} \\ 
+-\lambda _{k} & 0%
+\end{pmatrix}
+&  &  &  \\ 
+&  &  & 0 &  &  \\ 
+&  &  &  & \ddots  &  \\ 
+&  &  &  &  & 0%
+\end{pmatrix}%
+U^{T}
+\end{equation}%
+where:
+
+\begin{itemize}
+\item $U$ is unitary ($U^\dagger U = I$)
+
+\item $\lambda _{j}\in \mathbb{C}$ are non-zero \textbf{complex} numbers
+
+\item The last block is a $1 \times 1$ zero if $n$ is odd
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+We proceed through four main steps:
+
+\textbf{Step 1}: Reduction to Singular Value Form
+
+For any complex square matrix $A$, there exist unitary matrices $U$ and $V$
+such that: 
+\begin{equation}
+A = U \Sigma V^T
+\end{equation}
+where $\Sigma$ is diagonal with non-negative real entries. For antisymmetric 
+$A$: 
+\begin{equation}
+A^T = V \Sigma^T U^T = -A = -U \Sigma V^T
+\end{equation}
+This implies $V \Sigma U^T = -U \Sigma V^T$, leading to: 
+\begin{equation}
+\Sigma = -Q \Sigma Q^T \quad \text{where} \quad Q = U^\dagger V
+\end{equation}
+
+\textbf{Step 2}: Pairing of Singular Values
+
+From $\Sigma = -Q \Sigma Q^T$, we deduce that non-zero singular values must
+come in pairs. For each $\sigma_j > 0$, there exists $\sigma_k = \sigma_j$
+such that the corresponding blocks satisfy: 
+\begin{equation}
+\begin{pmatrix}
+\sigma_j & 0 \\ 
+0 & \sigma_k%
+\end{pmatrix}
+= -%
+\begin{pmatrix}
+q_{11} & q_{12} \\ 
+q_{21} & q_{22}%
+\end{pmatrix}
+\begin{pmatrix}
+\sigma_j & 0 \\ 
+0 & \sigma_k%
+\end{pmatrix}
+\begin{pmatrix}
+q_{11} & q_{21} \\ 
+q_{12} & q_{22}%
+\end{pmatrix}%
+\end{equation}
+This enforces the $2 \times 2$ block structure.
+
+\textbf{Step 3}: Construction of Block Diagonal Form
+
+Through careful choice of unitary transformations, we can arrange: 
+\begin{equation}
+\Sigma = \bigoplus_{j=1}^k 
+\begin{pmatrix}
+0 & \sigma_j \\ 
+-\sigma_j & 0%
+\end{pmatrix}
+\oplus 0_{n-2k}
+\end{equation}
+The complex phases of $\sigma_j$ can be absorbed into $U$, giving the
+general form with $\lambda_j \in \mathbb{C}$.
+
+\textbf{Step 4}: Unitary Congruence
+
+The final form is achieved through unitary congruence (not similarity): 
+\begin{equation}
+A = U \Lambda U^T
+\end{equation}
+where $\Lambda$ contains the $2 \times 2$ blocks and possibly a zero block.
+This preserves the antisymmetry property while revealing the canonical
+structure.
+\end{proof}
+
+\section*{Corollaries}
+
+\begin{corollary}
+For \textbf{normal} antisymmetric matrices ($[B,C]=0$), all $\lambda _{j}$
+are purely imaginary.
+\end{corollary}
+
+\begin{corollary}
+When $n$ is odd, at least one eigenvalue must be zero.
+\end{corollary}
+
+\end{document}

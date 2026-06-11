@@ -1,0 +1,184 @@
+
+\documentclass[aps,preprint]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{physics}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, April 06, 2012 11:15:25}
+%TCIDATA{LastRevised=Monday, July 28, 2025 11:10:04}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle#1\right|}
+\newcommand{\braket}[2]{\left\langle#1 \middle| #2 \right\rangle}
+\input{tcilatex}
+\begin{document}
+
+\title{}
+\author{}
+\maketitle
+
+\section{Covariant and Contravariant Tensors in Dual Spaces}
+
+Given a finite-dimensional vector space $V $ over $\mathbb{R}$ or $\mathbb{C}
+$:
+
+\begin{itemize}
+\item \textbf{Contravariant tensors} (rank-1) are vectors in $V$. Under
+basis $\{e_{i}\}$, they transform as: 
+\begin{equation*}
+v^{i}\rightarrow (A^{-1})_{j}^{i}v^{j}\quad \text{(inverse transformation)}.
+\end{equation*}%
+They have upper index coordinates i.e. 
+\begin{equation}
+v_{1}=\sum_{1\leq i\leq r}e_{i}v_{1}^{i}
+\end{equation}%
+i.e.%
+\begin{equation}
+v_{1}=\left( \boldsymbol{e}\right) \mathcal{R}_{e}\left( v_{1}\right)
+=\left( 
+\begin{array}{ccc}
+e_{1} & \cdots  & e_{r}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+\mathcal{R}_{e}\left( v_{1}\right) ^{1} \\ 
+\vdots  \\ 
+\mathcal{R}_{e}\left( v_{1}\right) ^{r}%
+\end{array}%
+\right) 
+\end{equation}
+
+\item \textbf{Covariant tensors} (rank-1) are covectors in $V^{\ast }$.
+Their components transform as: 
+\begin{equation*}
+f_{j}\rightarrow A_{j}^{i}f_{i}\quad \text{(same as basis)}.
+\end{equation*}%
+They have lower index coordinates i.e. 
+\begin{equation}
+f^{1}=\sum_{1\leq i\leq r}e^{i}f_{i}^{1}
+\end{equation}%
+i.e.%
+\begin{equation}
+f^{1}=\mathcal{R}_{e^{d}}\left( f^{1}\right) \left( \boldsymbol{e}%
+^{d}\right) =\left( 
+\begin{array}{ccc}
+\mathcal{R}_{e^{d}}\left( f^{1}\right) _{1} & \cdots  & \mathcal{R}%
+_{e^{d}}\left( f^{1}\right) _{r}%
+\end{array}%
+\right) \left( 
+\begin{array}{c}
+e_{1}^{d} \\ 
+\vdots  \\ 
+e_{r}^{d}%
+\end{array}%
+\right) 
+\end{equation}
+
+\item The \textbf{metric tensor} $g$ provides an isomorphism $%
+V\leftrightarrow V^{d}$, allowing index raising/lowering: 
+\begin{equation*}
+v_{j}=g_{ji}v^{i},\quad v^{i}=g^{ij}v_{j}.
+\end{equation*}
+\end{itemize}
+
+\section{Operators as Mixed (1,1)-Tensors}
+
+A linear operator $T: V \to V $ corresponds to a \textbf{mixed tensor} $%
+\mathbf{T} = T_i^j e_j \otimes e^i \in V \otimes V^* $:
+
+\begin{itemize}
+\item Acts on vectors: $\mathbf{T}(v) = T_i^j v^i e_j $.
+
+\item Acts on covectors: $\mathbf{T}(\omega) = T_i^j \omega_j e^i $.
+
+\item In quantum mechanics, this becomes $\hat{T}=T_{ij}\left\vert
+e_{i}\right\rangle \left\langle e_{j}\right\vert $.
+\end{itemize}
+
+\section{Antilinearity in Quantum Mechanics}
+
+For a complex Hilbert space $\mathcal{H} $:
+
+\begin{itemize}
+\item The inner product induces an \textbf{antilinear isomorphism} $\mathcal{%
+H}\simeq \mathcal{H}^{\ast }$: 
+\begin{equation*}
+\left\vert \varphi \right\rangle \mapsto \left\langle \varphi \right\vert
+,\quad \text{where }\left\langle a\varphi \right\vert \text{ }=a^{\ast
+}\left\langle \varphi \right\vert .
+\end{equation*}
+
+\item This ensures probability conservation: $|\left\langle \phi |\psi %
+\middle||\right\rangle ^{2}$ is invariant under $\left\vert \psi
+\right\rangle \rightarrow e^{i\theta }\left\vert \psi \right\rangle $.
+\end{itemize}
+
+\section{Hilbert-Schmidt Operators vs. Bounded Operators}
+
+The space $\text{HS}(\mathcal{H}) $ of Hilbert-Schmidt operators is a proper
+subset of $\mathcal{B}(\mathcal{H}) $ in infinite dimensions:
+
+\begin{itemize}
+\item \textbf{Surjectivity failure}: The identity $I $ is bounded but not
+Hilbert-Schmidt: 
+\begin{equation*}
+\|I\|_{\text{op}} = 1 < \infty, \quad \|I\|_{\text{HS}}^2 =
+\sum_{n=1}^\infty 1 = \infty.
+\end{equation*}
+
+\item \textbf{Norm inequivalence}: For finite-rank projections $P_N $: 
+\begin{equation*}
+\|P_N\|_{\text{op}} = 1, \quad \|P_N\|_{\text{HS}} = \sqrt{N} \to \infty.
+\end{equation*}
+
+\item No Banach isomorphism exists because $\text{HS}(\mathcal{H}) $ is
+neither closed in $\mathcal{B}(\mathcal{H}) $ nor norm-equivalent.
+\end{itemize}
+
+\section*{Key Takeaways}
+
+\begin{itemize}
+\item \textbf{Covariant/contravariant distinction} arises from dual spaces
+and metric-induced isomorphisms.
+
+\item \textbf{Antilinearity} in QM ensures consistency with probability
+rules.
+
+\item \textbf{Hilbert-Schmidt operators} form a strict subspace of bounded
+operators in infinite dimensions, with no norm-preserving isomorphism.
+\end{itemize}
+
+\end{document}

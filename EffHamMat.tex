@@ -1,0 +1,963 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2347}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, December 23, 2002 09:53:03}
+%TCIDATA{LastRevised=Monday, December 23, 2002 12:43:22}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{%
+\begin{equation}
+\mathcal{K}_{1eff}\left(  \nu,\omega\right)  =\mathcal{S}_{eff}\left(
+\nu\right)  ^{-1}%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\tint }%
+%BeginExpansion
+{\textstyle\int}
+%EndExpansion
+\end{equation}%
+\begin{equation}
+\left(
+\protect\begin{array}
+[c]{ccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \nabla\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\bullet
+\nabla\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \nabla\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\bullet
+\nabla\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \right.
+\times\\
+\qquad\left.  \nabla\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\bullet
+\nabla\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \right.
+\times\\
+\qquad\left.  \nabla\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\bullet
+\nabla\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)
+\end{equation}%
+\begin{equation}
+\times\operatorname{adj}\left(
+\protect\begin{array}
+[c]{ccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\left.  \varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)
+\end{equation}%
+\begin{align}
+\mathcal{K}_{2eff}\left(  \nu,\omega\right)   &  =\mathcal{S}_{eff}\left(
+\nu\right)  ^{-1}%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left(
+\protect\begin{array}
+[c]{ccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nabla\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}%
+\right)  \bullet\nabla\varphi_{1}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nabla\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}%
+\right)  \bullet\nabla\varphi_{N}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\right.  \times\\
+\left.  \nabla\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}%
+\right)  \bullet\nabla\varphi_{1}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\right.  \times\\
+\left.  \nabla\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}%
+\right)  \bullet\nabla\varphi_{N}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)  \times\nonumber\\
+&  \qquad\qquad\operatorname{adj}\left(
+\protect\begin{array}
+[c]{ccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\left.  \varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)
+\end{align}%
+\begin{align}
+\mathcal{K}_{2eff}\left(  \nu,\omega\right)   &  =\mathcal{S}_{eff}\left(
+\nu\right)  ^{-1}%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime},\sigma^{\textquotedblright}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\textquotedblright}%
+\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left(
+\protect\begin{array}
+[c]{ccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \nabla\omega_{\sigma^{\textquotedblright}\left(  1\right)
+}\left(  \mathsf{z}\right)  \bullet\nabla\varphi_{1}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\qquad\left.  \nabla\omega_{\sigma^{\textquotedblright}\left(  1\right)
+}\left(  \mathsf{z}\right)  \bullet\nabla\varphi_{N}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \right.
+\times\\
+\qquad\left.  \nabla\omega_{\sigma^{\textquotedblright}\left(  N\right)
+}\left(  \mathsf{z}\right)  \bullet\nabla\varphi_{1}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \right.
+\times\\
+\qquad\left.  \nabla\omega_{\sigma^{\textquotedblright}\left(  N\right)
+}\left(  \mathsf{z}\right)  \bullet\nabla\varphi_{N}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right) \nonumber\\
+&  \qquad\qquad\operatorname{adj}\left(
+\protect\begin{array}
+[c]{ccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\left.  \omega_{\sigma^{\textquotedblright}\left(  1\right)  }\varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\left.  \omega_{\sigma^{\textquotedblright}\left(  N\right)  }\varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\left.  \omega_{\sigma^{\textquotedblright}\left(  1\right)  }\varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right. \\
+\left.  \omega_{\sigma^{\textquotedblright}\left(  N\right)  }\varphi
+_{N}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(  \mathsf{z}\right)
+\right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)
+\end{align}%
+\begin{align}
+\mathcal{V}_{\mathrm{I}eff}\left(  \nu,\omega\right)  =  &  \mathcal{S}%
+_{eff}\left(  \nu\right)  ^{-1}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left\{  \det\left(
+\protect\begin{array}
+[c]{ccccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\qquad\left.  \nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \vdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \vdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\qquad\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\qquad\left.  \nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)  \right\}
+\end{align}%
+\begin{align}
+\mathcal{V}_{\mathrm{II}eff}\left(  \nu,\omega\right)  =  &  \mathcal{S}%
+_{eff}\left(  \nu\right)  ^{-1}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left\{  \det\left(
+\protect\begin{array}
+[c]{ccccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\omega_{\sigma^{\prime\prime}\left(  j\right)
+}\left(  \mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  j\right)  }\left(  \mathsf{z}\right)  \varphi
+_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \vdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  j\right)  }\left(  \mathsf{z}\right)  \varphi
+_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\omega_{\sigma^{\prime\prime}\left(  j\right)
+}\left(  \mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+& \vdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  j\right)  }\left(  \mathsf{z}\right)  \varphi
+_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \omega_{\sigma^{\prime\prime}\left(  N\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \varphi
+_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \mathbf{\nabla}_{j}^{2}\omega_{\sigma^{\prime\prime}\left(  j\right)
+}\left(  \mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \varphi
+_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \omega_{\sigma^{\prime\prime}\left(  N\right)  }\left(  \mathsf{z}%
+\right)  \varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)  \right\}
+\end{align}%
+\begin{align}
+&  \mathcal{V}_{\mathrm{III}eff}\left(  \nu,\omega\right)  =\mathcal{S}%
+_{eff}\left(  \nu\right)  ^{-1}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left\{  \det\left(
+\protect\begin{array}
+[c]{ccccc}%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \left(  \mathbf{\nabla}_{j}\nu_{\sigma^{\prime}\left(  j\right)
+}\left(  \mathsf{z}\right)  \bullet\mathbf{\nabla}_{j}\omega_{\sigma
+^{\textquotedblright}\left(  j\right)  }\left(  \mathsf{z}\right)  \right)
+\nu_{\sigma^{\prime}\left(  j\right)  }\left(  \mathsf{z}\right)  \varphi
+_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \vdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \left(  \mathbf{\nabla}_{j}\nu_{\sigma^{\prime}\left(  j\right)
+}\left(  \mathsf{z}\right)  \bullet\mathbf{\nabla}_{j}\omega_{\sigma
+^{\textquotedblright}\left(  j\right)  }\left(  \mathsf{z}\right)  \varphi
+_{j}\left(  \mathsf{z}\right)  \right)  \nu_{\sigma^{\prime}\left(  j\right)
+}\left(  \mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\protect\end{array}
+& \vdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \omega_{\sigma^{\prime\prime}\left(  N\right)  }\left(  \mathsf{z}%
+\right)  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\omega_{\sigma^{\prime\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \left(  \mathbf{\nabla}_{j}\nu_{\sigma^{\prime}\left(  j\right)
+}\left(  \mathsf{z}\right)  \bullet\mathbf{\nabla}_{j}\omega_{\sigma
+^{\textquotedblright}\left(  j\right)  }\left(  \mathsf{z}\right)  \right)
+\nu_{\sigma^{\prime}\left(  j\right)  }\left(  \mathsf{z}\right)  \varphi
+_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+& \cdots &
+\protect\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right. \\
+\left.  \nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\omega_{\sigma^{\prime\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\protect\end{array}
+\protect\end{array}
+\right)  \right\}
+\end{align}
+}%
+
+\begin{align}
+\mathcal{V}_{\mathrm{IV}eff}\left(  \nu,\omega\right)  = &  \mathcal{S}%
+_{eff}\left(  \nu\right)  ^{-1}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{a=x,y,z}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{a=x,y,z}}
+%EndExpansion%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left\{  \det\left(
+\begin{array}
+[c]{ccccc}%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \mathbf{\nabla}_{a_{j}}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\begin{array}
+[c]{c}%
+\int\left\{  \varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\mathbf{\nabla
+}_{a_{j}}\nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \vdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\mathbf{\nabla
+}_{a_{j}}\nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \mathbf{\nabla}_{a_{j}}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \vdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\mathbf{\nabla
+}_{a_{j}}\nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \mathbf{\nabla}_{a_{j}}\nu_{\sigma^{\prime}\left(  j\right)  }\left(
+\mathsf{z}\right)  \varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\end{array}
+\right)  \right\}
+\end{align}%
+\begin{align}
+&  \mathcal{V}_{\mathrm{V}eff}\left(  \nu,\omega\right)  =\mathcal{S}%
+_{eff}\left(  \nu\right)  ^{-1}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{a=x,y,z}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{a=x,y,z}}
+%EndExpansion%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left\{  \det\left(
+\begin{array}
+[c]{ccccc}%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \omega_{\sigma^{\textquotedblright}\left(  1\right)  }\left(
+\mathsf{z}\right)  \omega_{\sigma^{\prime\prime\prime}\left(  1\right)
+}\left(  \mathsf{z}\right)  \varphi_{1}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \mathbf{\nabla}_{a_{j}}\omega_{\sigma^{\textquotedblright}\left(
+j\right)  }\mathbf{\nabla}_{a_{j}}\omega_{\sigma^{\prime\prime\prime}\left(
+j\right)  }\varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \nu_{\sigma^{\prime}\left(  1\right)  }\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\
+\vdots & \vdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)  \varphi
+_{1}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \mathbf{\nabla}_{a_{j}}\omega_{\sigma^{\textquotedblright}\left(
+j\right)  }\mathbf{\nabla}_{a_{j}}\omega_{\sigma^{\prime\prime\prime}\left(
+j\right)  }\varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \vdots & \vdots\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \varphi
+_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \omega_{\sigma^{\textquotedblright}\left(  1\right)  }\left(
+\mathsf{z}\right)  \omega_{\sigma^{\prime\prime\prime}\left(  1\right)
+}\left(  \mathsf{z}\right)  \varphi_{1}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \varphi
+_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \mathbf{\nabla}_{a_{j}}\omega_{\sigma^{\textquotedblright}\left(
+j\right)  }\mathbf{\nabla}_{a_{j}}\omega_{\sigma^{\prime\prime\prime}\left(
+j\right)  }\varphi_{j}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)  \varphi
+_{N}\left(  \mathsf{z}\right)  ^{\ast}\times\right.  \\
+\left.  \omega_{\sigma^{\textquotedblright}\left(  N\right)  }\left(
+\mathsf{z}\right)  \omega_{\sigma^{\prime\prime\prime}\left(  N\right)
+}\left(  \mathsf{z}\right)  \varphi_{N}\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}%
+\end{array}
+\end{array}
+\right)  \right\}
+\end{align}%
+\begin{align}
+\mathcal{V}_{1}\left(  \nu\right)   &  =\mathcal{S}_{eff}\left(  \nu\right)
+^{-1}%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\det\left\{  \mathrm{V}_{\mathrm{ext}\sigma\sigma^{\prime}}\right\}
+\nonumber\\
+&  \left\{  \det\left(
+\begin{array}
+[c]{ccc}%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \mathrm{v}\left(  \mathsf{z}\right)  \varphi_{1}\left(  \mathsf{z}%
+\right)  ^{\ast}\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \mathrm{v}\left(  \mathsf{z}\right)  \varphi_{1}\left(  \mathsf{z}%
+\right)  ^{\ast}\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \mathrm{v}\left(  \mathsf{z}\right)  \varphi_{1}\left(  \mathsf{z}%
+\right)  ^{\ast}\varphi_{1}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \mathrm{v}\left(  \mathsf{z}\right)  \varphi_{N}\left(  \mathsf{z}%
+\right)  ^{\ast}\varphi_{N}\left(  \mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\end{array}
+\right)  \right\}
+\end{align}%
+\begin{align}
+\mathcal{S}_{eff}\left(  \nu\right)   &  =%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\nonumber\\
+&  \left\{  \det\left(
+\begin{array}
+[c]{ccc}%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\\
+\vdots & \vdots & \vdots\\%
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  1\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\qquad\left.  \varphi_{1}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{1}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+& \cdots &
+\begin{array}
+[c]{c}%
+\int\left\{  \nu_{\sigma\left(  N\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  N\right)  }\left(  \mathsf{z}\right)
+\times\right.  \\
+\left.  \varphi_{N}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{N}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{array}
+\end{array}
+\right)  \right\}
+\end{align}
+
+
+
+\end{document}

@@ -1,0 +1,422 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Monday, January 18, 2016 14:25:21}
+%TCIDATA{LastRevised=Tuesday, September 24, 2024 06:38:30}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Types of Von Neumann Algebras}
+
+\begin{remark}
+Algebraically a von Neumann algebra is a $\ast$-algebra of bounded operators
+on some Hilbert space of countable dimension and is the commutant of its commutant.
+\end{remark}
+
+\begin{remark}
+Topologically a von Neumann algebra is an $\ast$-algebra of operators that is
+closed in the \emph{weak operator topology. }A sequence of operators $\left\{
+T_{i}\right\}  $ converges in the \emph{weak operator topology (WOT)} to an
+operator $T$ if their expectation values converge to that of $T$ in every
+state, that is,
+\begin{equation}
+\lim\limits_{i\rightarrow\infty}\left\langle \left\vert \Psi\right\vert
+T_{i}\Psi\right\rangle =\left\langle \left\vert \Psi\right\vert T\Psi
+\right\rangle \forall\,\Psi\in\mathcal{H}.
+\end{equation}
+
+\end{remark}
+
+\emph{It's a nontrivial theorem that these two definitions agree!}
+
+Classifying all $\ast$-algebras of operators is an utterly hopeless task,
+while classifying von Neumann algebras is almost within reach. Every von
+Neumann algebra can be built from so-called \emph{simple} ones as a direct
+sum, or more generally a \emph{direct integral}. As usual in algebra, the
+simple von Neumann algebras are defined to be those without any nontrivial
+ideals. This turns out to be equivalent to saying that only scalar multiples
+of the identity commute with everything in the von Neumann algebra.
+
+Simple von Neumann algebras are called \emph{factors}. Thus we just need to
+classify the factors: the process of combining these together to get the other
+von Neumann algebras is well defined.
+
+The first step in classifying factors was done by von Neumann and Murray, who
+divided them into Types $I,II,$and $III$. This classification involves the
+concept of a trace or weight, which is a generalization of the usual trace of
+a matrix.
+
+\begin{definition}
+A (faithful, normal) trace on $\mathcal{A}$ is a function%
+\begin{equation}
+\U{3c4} :\mathcal{A\rightarrow}\mathbb{C}%
+\end{equation}
+satisfying:
+
+\textbullet\qquad$\U{3c4} $ is a linear map;
+
+\textbullet\qquad$\U{3c4} $ is positive, that is,
+\begin{equation}
+\U{3c4} (x^{\dagger}x)\geq0\forall x\in\mathcal{A}%
+\end{equation}
+i.e
+\begin{equation}
+\tau:\mathcal{C}\rightarrow\left[  0,\infty\right]  ;
+\end{equation}
+
+
+\textbullet\qquad(normality) $\U{3c4} $ is weakly continuous (the identity is
+its corresponding density operator);
+
+\textbullet\qquad(faithful) $\U{3c4} (x^{\dagger}x)$ $=0$ if and only if $x=0$;
+
+\textbullet\qquad(trace property) $\U{3c4} (xy)=\U{3c4} (yx)$.
+\end{definition}
+
+A trace is very much like an integral, so we're really studying a
+noncommutative version of the theory of integration. On the other hand, in the
+matrix case, the trace of a projection operator is just the dimension of the
+space it's the projection onto. We can define a "projection" in any von
+Neumann algebra, $\mathcal{A},$ to be an operator with
+\begin{equation}
+p=p^{\dagger}=p^{2}.
+\end{equation}
+Traces, weights and states can be generalized to \emph{centre valued} linear
+functions i.e.
+\begin{equation}
+\U{3c4} :\mathcal{A\rightarrow Z}\left(  \mathcal{A}\right)  .
+\end{equation}
+
+
+\begin{definition}
+For $\mathcal{A}\subset\mathcal{B(H)}$ a von Neumann algebra, a
+\emph{center-valued state} is a linear map $\U{3d5} :\mathcal{A\rightarrow
+Z}\left(  \mathcal{A}\right)  $ such that:
+\end{definition}
+
+\begin{enumerate}
+\item $\U{3d5} (x^{\dagger}x)\geq0$ for all $x\in\mathcal{A}$
+
+\item $\U{3d5} (z)=z$ for all $z\in\mathcal{Z}\left(  \mathcal{A}\right)  $
+
+\item $\U{3d5} (zx)=z\U{3d5} (x)$ for all $x\in\mathcal{A}$ and $z\in
+\mathcal{Z}\left(  \mathcal{A}\right)  $
+
+\item $\U{3d5} $ is \emph{normal} if it is $\U{3c3} -$WOT continuous (ultra
+weak continuous), normal can also be defined as states that preserves suprema
+when applied to increasing nets of self adjoint operators; or equivalently to
+increasing sequences of projections.
+\end{enumerate}
+
+Scalar valued states are special cases of center values states.
+
+\paragraph{Weights, states, and traces}
+
+Weights and their special cases states and traces are discussed in detail in
+(Takesaki 1979).
+
+A \emph{weight} $\U{3c9} $ on a von Neumann algebra is a linear map from the
+set of positive elements (those of the form $x^{\dagger}x$) to $[0,\infty]$.
+
+A positive linear functional is a weight with $\U{3c9} (I_{\mathcal{A}})$
+finite (or rather the extension of $\U{3c9} $ to the whole algebra by linearity).
+
+\begin{enumerate}
+\item A \emph{state} is a weight with $\U{3c9} (I_{\mathcal{A}}%
+)=I_{\mathcal{A}}$.
+
+\item A \emph{trace} is a weight with $\U{3c9} (x^{\dagger}x)=\U{3c9}
+(xx^{\dagger})$ for all $x$.
+
+\item A \emph{tracial state} is a trace with $\U{3c9} (I_{\mathcal{A}%
+})=I_{\mathcal{A}}$.
+\end{enumerate}
+
+Any factor has a trace such that the trace of a non-zero projection is
+non-zero and the trace of a projection is infinite if and only if the
+projection is infinite. Such a trace is unique up to rescaling. For factors
+that are separable or finite, two projections are equivalent if and only if
+they have the same trace. The type of a factor can be read off from the
+possible values of this trace on projections as follows:
+
+\begin{enumerate}
+\item Type $I_{n}$: $0,x,2x,....,nx$ for some positive $x$ (usually normalized
+to be $1/n$ or $1$); $n\in\mathbb{N}.$
+
+\item Type $II_{1}:[0,x]$ for some positive $x$ (usually normalized to be $1$).
+
+\item Type$II_{\infty}:[0,\infty]$.
+
+\item Type $III$: $\left\{  0,\infty\right\}  $.
+\end{enumerate}
+
+\begin{theorem}
+Every von Neumann algebra $\mathcal{A}\subset\mathcal{B(H)}$ has a normal,
+center-valued state.
+\end{theorem}
+
+The set of all projections in a von Neumann algebra, $\mathcal{A},$ is denoted
+$\mathcal{P}\left(  \mathcal{A}\right)  .$ If we study the trace of
+projections, we're studying a GENERALIZATION OF THE CONCEPT OF DIMENSION. It
+turns out this can be infinite, or even nonintegral.
+
+Factors are:
+
+\begin{enumerate}
+\item Type $I_{n}$ if
+\begin{equation}
+\tau:\mathcal{P}\left(  \mathcal{A}\right)  \rightarrow\left\{  0,n\right\}
+\subset\mathbb{N};1\leq n\leq\infty.
+\end{equation}
+It turn out that every Type $I_{n}$ factor is isomorphic to the algebra of
+$n\times n$ matrices. Also, every type Type $I_{\infty}$ factor is isomorphic
+to the algebra of all bounded operators on a Hilbert space of countably
+infinite dimension.
+
+\item Type $II_{1}$ if
+\begin{equation}
+\tau:\mathcal{P}\left(  \mathcal{A}\right)  \rightarrow\left[  0,1\right]
+\subset\mathbb{R}.
+\end{equation}
+Type $II_{\infty}$ if
+\begin{equation}
+\tau:\mathcal{P}\left(  \mathcal{A}\right)  \rightarrow\left[  0,\infty
+\right]  \subset\mathbb{R}.
+\end{equation}
+Playing with Type $II$ factors amounts to letting dimension be a continuous
+rather than discrete parameter! It is easy to construct a Type $II_{1}$
+factor
+\begin{align}
+\tau &  :%
+%TCIMACRO{\tbigcup \limits_{1\leq n\leq r}}%
+%BeginExpansion
+{\textstyle\bigcup\limits_{1\leq n\leq r}}
+%EndExpansion
+M\left(  2^{n},\mathbb{C}\right)  \rightarrow\mathbb{C}\\
+\left.  \tau\right.  _{n}  &  =\frac{1}{2^{n}}\left.  \operatorname{Tr}%
+\right.  _{n}%
+\end{align}
+then
+\begin{equation}
+\mathcal{A}_{II_{1}}=\lim\limits_{n\rightarrow\infty}%
+%TCIMACRO{\tbigcup \limits_{1\leq n\leq r}}%
+%BeginExpansion
+{\textstyle\bigcup\limits_{1\leq n\leq r}}
+%EndExpansion
+M\left(  2^{n},\mathbb{C}\right)  .
+\end{equation}
+One can show this von Neumann algebra is a factor. This isn't the only Type
+$II_{1}$ factor, but it's the only one that contains a sequence of
+finite-dimensional von Neumann algebras whose union is dense in the weak
+topology. A von Neumann algebra like that is called "\emph{hyperfinite}", in
+this case is called "\emph{the hyperfinite Type} $II_{1}$ \emph{factor}".
+
+\begin{enumerate}
+\item The algebra of $2^{n}\times2^{n}$ matrices is a Clifford algebra, so the
+hyperfinite $II_{1}$ factor is a kind of infinite-dimensional Clifford algebra.
+
+\item The Clifford algebra of $2^{n}\times2^{n}$ matrices is just another name
+for the algebra generated by creation and annihilation operators on the
+fermionic Fock space over $\mathbb{C}^{n}$. One can show that the hyperfinite
+$II_{1}$ factor is the smallest von Neumann algebra containing the creation
+and annihilation operators on a fermionic Fock space of countably infinite dimension.
+
+\item There is more than one Type $II_{\infty}$ factor, but again there is
+only one that is hyperfinite. You can get this by tensoring the Type
+$I_{\infty}$ and the hyperfinite $II_{1}$.
+\end{enumerate}
+
+\item Type $III$ if all projections other than $0$ have infinite trace. In
+other words. The only trace on type III factors takes the value $\infty$ on
+all non-zero positive elements, and any two non-zero projections are equivalent.
+\end{enumerate}
+
+\begin{definition}
+Lattice of Projections%
+\begin{align}%
+%TCIMACRO{\tbigwedge \limits_{i\in I}}%
+%BeginExpansion
+{\textstyle\bigwedge\limits_{i\in I}}
+%EndExpansion
+p_{i}  &  =\text{orthogonal projection onto }%
+%TCIMACRO{\tbigcap \limits_{i\in I}}%
+%BeginExpansion
+{\textstyle\bigcap\limits_{i\in I}}
+%EndExpansion
+\text{ }p_{i}\mathcal{H}\\%
+%TCIMACRO{\tbigvee \limits_{i\in I}}%
+%BeginExpansion
+{\textstyle\bigvee\limits_{i\in I}}
+%EndExpansion
+p_{i}  &  =\text{orthogonal projection onto }%
+%TCIMACRO{\tbigcup \limits_{i\in I}}%
+%BeginExpansion
+{\textstyle\bigcup\limits_{i\in I}}
+%EndExpansion
+\text{ }p_{i}\mathcal{H}%
+\end{align}
+
+\end{definition}
+
+\begin{definition}
+For $\mathcal{A}\subset\mathcal{B(H)}$ a von Neumann algebra, a projection
+$p\in\mathcal{P(A)}$ is said to be monic if there exists a finite collection
+of pairwise orthogonal projections $\{p_{1},...,p_{n}\}\subset\mathcal{P(A)}$
+such that $p_{i}\sim p$ for $1\leq i\leq n$ and $%
+%TCIMACRO{\tsum \limits_{1\leq i\leq n}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq i\leq n}}
+%EndExpansion
+p_{i}\in\mathcal{Z}\left(  \mathcal{A}\right)  .$
+\end{definition}
+
+\begin{definition}
+Let $\mathcal{A}\subset\mathcal{B}(\mathcal{H})$ be a von Neumann algebra,
+then $p\in\mathcal{P}(\mathcal{A})$ is said to be
+\end{definition}
+
+\textbullet\qquad\emph{minimal} if $p\neq0$ and $q\leq p$ implies $q=0$ or
+$q=p$; equivalently, $\dim\left\{  p\mathcal{A}p\right\}  =1$.
+
+\textbullet\qquad\emph{abelian} if $p\mathcal{A}p$ is abelian.
+
+\textbullet\qquad\emph{finite} if $q\leq p$ and $q\sim p$ implies $p=q$.
+
+\textbullet\qquad\emph{semi-finite} if there exists a family $\{\left.
+p_{i}\right\vert i\in I\}$ of pairwise orthogonal, finite projections such
+that
+\begin{equation}
+p=%
+%TCIMACRO{\tsum \limits_{i\in I}}%
+%BeginExpansion
+{\textstyle\sum\limits_{i\in I}}
+%EndExpansion
+p_{i}%
+\end{equation}
+
+
+\textbullet\qquad\emph{purely infinite} if $p\neq0$ and there does not exist
+any non-zero finite projections $q\leq p$.
+
+\textbullet\qquad\emph{properly infinite} if $p\neq0$ and for all non-zero
+$z\in\mathcal{P}(\mathcal{Z}(\mathcal{A}))$ the projection $zp$ is not finite.
+
+For a projection $p\in\mathcal{P}(\mathcal{A})$ we have the following
+implications:%
+\begin{equation}
+\text{minimal}\Rightarrow\text{abelian}\Rightarrow\text{finite}\Rightarrow
+\text{semi-finite}\Rightarrow\text{not purely infinite}%
+\end{equation}
+
+
+and%
+\begin{equation}
+\text{purely infinite}\Rightarrow\text{properly infinite.}%
+\end{equation}
+
+
+\begin{definition}
+For $p,q\in\mathcal{P}(\mathcal{A})$, we say that p is sub-equivalent to $q$
+(in $\mathcal{A}$ ) and write $p\preccurlyeq q$ if there exists a partial
+isometry $v\in M$ such that $v^{\dagger}v=p$ and $vv^{\dagger}\leq q$. We say
+$p$ is equivalent to $q$ (in $\mathcal{A}$ ) and write $p\sim q$ if there
+exists a partial isometry $v\in\mathcal{A}$ such that $v^{\dagger}v=p$ and
+$vv^{\dagger}\leq q$. If $p\preceq q$ but $p\nsim q$, we write $p\prec q$.
+\end{definition}
+
+\begin{remark}
+If $p,q\in\mathcal{P}(\mathcal{A})$ are such that $p\leq q$, then $p\sim q$
+with partial isometry $v=p$.
+\end{remark}
+
+\begin{proposition}
+For $\mathcal{A}\subset\mathcal{B}(\mathcal{H})$, the relation $\sim$ is a
+partial ordering and an equivalence relation on $\mathcal{P}(\mathcal{A})$.
+\end{proposition}
+
+\begin{definition}
+A von Neumann algebra $\mathcal{A}\subset\mathcal{B}(\mathcal{H})$ is said to be
+\end{definition}
+
+\textbullet\qquad Type $I$ if every non-zero projection has a non-zero abelian subprojection.
+
+\textbullet\qquad Type $II$ if it is semi-finite and has no non-zero abelian projections.
+
+\textbullet\qquad Type $III$ if it is purely infinite.
+
+\begin{theorem}
+Let $\mathcal{A}\subset\mathcal{B}(\mathcal{H})$ be a von Neumann algebra.
+Then there exists unique, central, pairwise orthogonal projections
+$\mathcal{Z}I,\mathcal{Z}II,\mathcal{Z}III\in\mathcal{Z}(\mathcal{A})$ such
+that $\mathcal{Z}I+\mathcal{Z}II+\mathcal{Z}III$ $=I$ and $\mathcal{Z}T$ is
+Type $T$ for $T\in\{I,II,III\}$.
+\end{theorem}
+
+
+\end{document}

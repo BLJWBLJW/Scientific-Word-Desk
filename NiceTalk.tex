@@ -1,0 +1,845 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, June 22, 2007 14:42:54}
+%TCIDATA{LastRevised=Sunday, January 20, 2008 18:05:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\[
+\left\vert \psi_{j}\left(  \mathbf{r,\xi}\right)  \right\vert ^{2}%
+\]%
+\[
+\left\{  N_{j};1\leq j\leq r\right\}
+\]%
+\[
+SU(2)^{s}%
+\]%
+\[
+U(1)=U(2)/SU(2)
+\]%
+\begin{align*}
+\mathcal{E}\left(  \mathbf{n,\psi}\right)   &  =\frac{\mathcal{H}\left(
+\mathbf{n,\psi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }\\
+&  =\frac{1}{S_{N}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{  \left\langle \psi_{j}\left\vert
+h_{1}\psi_{j}\right.  \right\rangle +\left\langle \psi_{j+s}\left\vert
+h_{1}\psi_{j+s}\right.  \right\rangle +\left\langle \psi_{j}\psi_{j+s}%
+||\psi_{j}\psi_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{N-1}\left(
+\jmath k\right)  \left\langle \psi_{j}\psi_{j+s}||\psi_{k}\psi_{k+s}%
+\right\rangle \left.  +\sum_{1\leq j<k\leq s}n_{i}n_{j}S_{N-2}\left(  \jmath
+k\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle
+\right\}  .
+\end{align*}
+and $\left\{  \left\langle jk|||jk\right\rangle \right\}  $
+\begin{align*}
+&  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle =\left\langle
+jk||jk\right\rangle +\left\langle j\,k+s||j\,k+s\right\rangle +\\
+&  \left\langle j+s\,k||j+s\,k\right\rangle +\left\langle
+j+s\,k+s||j+s\,k+s\right\rangle ;1\leq j,k\leq s.
+\end{align*}
+1%
+\begin{align*}
+&  \mathcal{E}\left(  \mathbf{n},\mathbf{\eta},\mathbf{\theta}\right)
+=\frac{\mathcal{H}\left(  \mathbf{n},\mathbf{\eta},\mathbf{\theta}\right)
+}{S_{N}\left(  \mathbf{n}\right)  }=\\
+&  \left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{
+\overset{}{\left\langle \eta_{j}\left\vert h_{1}\eta_{j}\right.  \right\rangle
++\left\langle \eta_{j+s}\left\vert h_{1}\eta_{j+s}\right.  \right\rangle
+}+\,\left\langle \eta_{j}\eta_{j+s}\right\vert \left\vert \eta_{j}\eta
+_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j,k\leq s}\left\{  n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}%
+}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)
+\left\langle \eta_{j}\eta_{j+s}\right\vert \left\vert \eta_{k}\eta
+_{k+s}\right\rangle \right. \\
+&  \qquad\qquad\qquad\left.  \left.  \left.  +\overset{}{n_{i}n_{j}%
+S_{N-2}\left(  \jmath k\right)  \left\langle \eta_{j}\eta_{k}|||\eta_{j}%
+\eta_{k}\right\rangle }\right\}  \right\}  \right/  S_{N}\left(
+\mathbf{n}\right)
+\end{align*}%
+\begin{equation}
+\mathbf{\pi}%
+\end{equation}%
+\[
+\left\langle \eta_{j}\eta_{k}\right\vert \left\vert \eta_{l}\eta
+_{m}\right\rangle \equiv\left\langle jk||lm\right\rangle
+\]%
+\begin{align*}
+\left\langle jk||lm\right\rangle  &  =\int\left\{  \eta_{j}^{\ast}\left(
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \eta_{k}^{\ast}\left(  \mathbf{r}%
+_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}%
+-\mathbf{r}_{2}\right\Vert }\eta_{l}\left(  \mathbf{r}_{1}\mathbf{,\xi}%
+_{1}\right)  \eta_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \right.
+\\
+&  -\left.  \eta_{j}^{\ast}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)
+\eta_{k}^{\ast}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\eta_{l}\left(
+\mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \eta_{m}\left(  \mathbf{r}%
+_{1}\mathbf{,\xi}_{1}\right)  \right\}  d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi
+_{1}d\xi_{2}\\
+&  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad1\leq j,k\leq2s;1\leq l,m\leq2s
+\end{align*}%
+\[
+\left\vert \psi_{j}\right\rangle =n_{j}^{\frac{1}{2}}e^{i\frac{\theta_{j}}{2}%
+}\left\vert \eta_{j}\right\rangle
+\]%
+\begin{align*}
+&  \mathcal{E}\left(  \mathbf{\psi}\right)  =\frac{\mathcal{H}\left(
+\mathbf{\psi}\right)  }{S_{N}\left(  \mathbf{n}\right)  }=\\
+&  \left\{  \sum_{1\leq j\leq s}S_{N-1}\left(  \jmath\right)  \left\{
+\overset{}{\left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle
++\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle
+}+\,n_{j}^{-1}\,\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi
+_{j}\psi_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j,k\leq s}\left\{  \overset{}{S_{N-1}\left(  \jmath k\right)
+\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{k}\psi
+_{k+s}\right\rangle }\right. \\
+&  \qquad\qquad\qquad\left.  \left.  \left.  +\overset{}{S_{N-2}\left(  \jmath
+k\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}\psi_{k}\right\rangle
+}\right\}  \right\}  \right/  S_{N}\left(  \mathbf{n}\right)
+\end{align*}%
+\[
+\left(  \mathbf{n},\mathbf{\eta},\mathbf{\theta}\right)
+\]%
+\[
+\left(  \mathbf{n},\mathbf{\varphi}\right)
+\]%
+\begin{equation}
+\left\vert \varphi_{j}\right\rangle =e^{i\frac{\theta_{j}}{2}}\left\vert
+\eta_{j}\right\rangle
+\end{equation}%
+\[
+\mathbf{\psi}%
+\]%
+\[
+\mathbf{g}%
+\]
+The solution to the optimization problem
+\[
+\min_{\left(  \mathbf{n,\varphi}\right)  }\mathcal{E}\left(  \mathbf{n,\varphi
+}\right)
+\]
+subject to the orthonormality constraints%
+\[
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+=\delta_{jk};\quad1\leq j,k\leq2s
+\]
+and the constraints of positivity and normalization on the geminal occupation
+numbers
+\begin{subequations}
+\[
+n_{j}\geq0;\quad1\leq j\leq s,
+\]%
+\end{subequations}
+\[
+\mathcal{E}\left(  \mathbf{\alpha,\varphi}\right)  =\mathcal{E}\left(
+\mathbf{n}\left(  \mathbf{\alpha}\right)  \mathbf{,\varphi}\right)
+\]
+LLLLLL*********%
+\[
+\mathcal{L}\left(  \mathbf{\alpha}_{\#}\mathbf{,\varphi}_{\#}\right)
+=\min_{\left(  \mathbf{\alpha,\varphi}\right)  }\mathcal{L}\left(
+\mathbf{\alpha,\varphi}\right)
+\]%
+\[
+\mathbf{n}_{\#}=\mathbf{n}\left(  \mathbf{\alpha}_{\#}\right)
+\]
+**%
+\[
+n_{j}=e^{\alpha_{j}}n_{0j}%
+\]
+*%
+\[
+\mathcal{L}\left(  \mathbf{\alpha,\varphi}\right)  =\mathcal{E}\left(
+\mathbf{\alpha,\varphi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon_{kj}\left(
+\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+-\delta_{jk}\right)
+\]%
+\begin{align*}
+&  \mathcal{E}\left(  \mathbf{n},\mathbf{\varphi}\right)  =\frac
+{\mathcal{H}\left(  \mathbf{n},\mathbf{\varphi}\right)  }{S_{N}\left(
+\mathbf{n}\right)  }=\\
+&  \left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{
+\overset{}{\left\langle \varphi_{j}\left\vert h_{1}\varphi_{j}\right.
+\right\rangle +\left\langle \varphi_{j+s}\left\vert h_{1}\varphi_{j+s}\right.
+\right\rangle }+\,\left\langle \varphi_{j}\varphi_{j+s}\right\vert \left\vert
+\varphi_{j}\varphi_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j,k\leq s}\left\{  n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}%
+}S_{N-1}\left(  \jmath k\right)  \left\langle \varphi_{j}\varphi
+_{j+s}\right\vert \left\vert \varphi_{k}\varphi_{k+s}\right\rangle \right. \\
+&  \qquad\qquad\qquad\left.  \left.  \left.  +\overset{}{n_{i}n_{j}%
+S_{N-2}\left(  \jmath k\right)  \left\langle \varphi_{j}\varphi_{k}%
+|||\varphi_{j}\varphi_{k}\right\rangle }\right\}  \right\}  \right/
+S_{N}\left(  \mathbf{n}\right)
+\end{align*}
+****
+
+a%
+\[
+\frac{\delta\mathcal{L}\left(  \mathbf{\alpha,\varphi}\right)  }{\delta
+\varphi_{j}^{\ast}}=0;\quad1\leq j\leq2s,
+\]
+b%
+\[
+\frac{\partial\mathcal{E}\left(  \mathbf{n,\varphi}\right)  }{\partial
+\varphi_{j}^{\ast}}=F\left(  \mathbf{n,\varphi}\right)  \left\vert \varphi
+_{j}\right\rangle ,\quad1\leq j\leq2s
+\]
+c%
+\[
+\frac{\partial\mathcal{E}\left(  \mathbf{n,\varphi}\right)  }{\partial
+\varphi_{j}^{\ast}}=\sum_{1\leq j,k\leq2s}\left\vert \varphi_{k}\right\rangle
+\varepsilon_{kj}.
+\]
+dddddddddddddddddddd%
+\begin{align*}
+\frac{\partial\mathcal{L}\left(  \mathbf{\alpha}_{\#}\mathbf{,\varphi}%
+_{\#}\right)  }{\partial\varphi_{j}^{\ast}}  &  =\frac{\partial\mathcal{L}%
+\left(  \mathbf{\alpha}_{\#}\mathbf{,\varphi}_{\#}\right)  }{\partial
+\varphi_{j}}=0\\
+\frac{\partial\mathcal{L}\left(  \mathbf{\alpha}_{\#}\mathbf{,\varphi}%
+_{\#}\right)  }{\partial\alpha_{j}}  &  =0;\quad1\leq j\leq s
+\end{align*}%
+\[
+\frac{\partial\mathcal{L}\left(  \mathbf{\alpha}_{\#}\mathbf{,\varphi}%
+_{\#}\right)  }{\partial\alpha_{j}}=0;\quad1\leq j\leq s,
+\]
+e%
+\[
+\mathcal{L}\left(  \mathbf{\alpha,\varphi}\right)  =\mathcal{E}\left(
+\mathbf{\alpha,\varphi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon_{jk}\left(
+\left\langle \left.  \varphi_{k}\right\vert \varphi_{j}\right\rangle
+-\delta_{jk}\right)
+\]%
+\[
+\text{where }\left\langle \left.  \varphi_{k}\right\vert \varphi
+_{j}\right\rangle =\left\langle \left.  \varphi_{j}\right\vert \varphi
+_{k}\right\rangle ^{\ast}\Rightarrow\varepsilon_{jk}=\varepsilon_{kj}^{\ast}%
+\]
+ffffffffffffffffff%
+\[
+\frac{\partial\mathcal{E}\left(  \mathbf{\alpha,\varphi}\right)  }%
+{\partial\varphi_{j}^{\ast}}=F\left(  \mathbf{n,\varphi}\right)  \left\vert
+\varphi_{j}\right\rangle \text{ and }\frac{\partial\mathcal{E}\left(
+\mathbf{\alpha,\varphi}\right)  }{\partial\varphi_{j}}=\left\langle
+\varphi_{j}\right\vert F\left(  \mathbf{n,\varphi}\right)  ^{\dagger}%
+\]
+gggggg***********%
+\[
+F\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)  =F\left(
+\mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)  ^{\dagger}%
+\]
+that depends on the occupation numbers $\mathbf{n,}$ and the GSO's
+$\mathbf{\varphi}$ and is given by
+
+g1******%
+\[
+F\left(  \mathbf{n,\varphi}\right)  =\sum_{1\leq m,n\leq2s}\left\{  \left(
+\mathbb{H}_{1}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{1}\left(
+\mathbf{n}\right)  \right)  _{mn}+\frac{1}{2}\left(  L_{2}^{1}\left(
+\mathbb{V}_{2}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{2}\left(
+\mathbf{n}\right)  \right)  \right)  _{mn}\right\}  \left\vert \varphi
+_{m}\right\rangle \left\langle \varphi_{n}\right\vert
+\]
+g2*******%
+\[
+F\left(  \mathbf{C,\varphi}\right)  =\sum_{1\leq m,n\leq2s}\left\{  \left(
+\mathbb{H}_{1}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{1}\left(
+\mathbf{C}\right)  \right)  _{mn}+\frac{1}{2}\left(  L_{2}^{1}\left(
+\mathbb{V}_{2}\left(  \mathbf{\varphi}\right)  \mathbb{D}^{2}\left(
+\mathbf{C}\right)  \right)  \right)  _{mn}\right\}  \left\vert \varphi
+_{m}\right\rangle \left\langle \varphi_{n}\right\vert
+\]
+g3*********%
+\[
+\mathcal{L}\left(  \mathbf{\alpha,\varphi}\right)  =\mathcal{E}\left(
+\mathbf{\alpha,\varphi}\right)  -\sum_{1\leq j,k\leq2s}\varepsilon_{jk}\left(
+\left\langle \left.  \varphi_{k}\right\vert \varphi_{j}\right\rangle
+-\delta_{kj}\right)
+\]%
+\[
+\frac{\partial\mathcal{E}\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)
+}{\partial\varphi_{j}}=\left\langle \varphi_{\#j}\right\vert F\left(
+\mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)  ^{\dagger}=\sum_{1\leq k\leq
+2s}\left\langle \varphi_{\#k}\right\vert \varepsilon_{\#jk}%
+\]%
+\[
+\Rightarrow F\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)  \left\vert
+\varphi_{\#j}\right\rangle =\sum_{1\leq k\leq2s}\left\vert \varphi
+_{\#k}\right\rangle \varepsilon_{\#jk}^{\ast}%
+\]
+h***************%
+\[
+\frac{\partial\mathcal{E}\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)
+}{\partial\varphi_{j}^{\ast}}=F\left(  \mathbf{n}_{\#}\mathbf{,\varphi}%
+_{\#}\right)  \left\vert \varphi_{\#j}\right\rangle =\sum_{1\leq k\leq
+2s}\left\vert \varphi_{\#k}\right\rangle \varepsilon_{\#kj}%
+\]
+h1%
+\[
+\left[  \mathbb{D}^{1}\left(  \mathbf{n}\right)  ,\mathbb{H}_{1}\left(
+\mathbf{\varphi}\right)  \right]  +\frac{1}{2}L_{2}^{1}\left(  \left[
+\mathbb{D}^{2}\left(  \mathbf{n}\right)  ,\mathbb{V}_{2}\left(
+\mathbf{\varphi}\right)  \right]  \right)  =\mathbf{0}%
+\]
+h2%
+\[
+\left\{  \left.  \left\vert \varsigma\right\rangle \right\vert ;1\leq
+j\leq2s\right\}
+\]
+The contraction operator $L_{2}^{1}$ is defined as
+\[
+L_{2}^{1}\left(  \mathbb{A}\right)  _{jk}=\sum_{1\leq l\leq2s}A_{jlkl}%
+\]
+$\mathbb{H}_{1}\left(  \mathbf{\psi}\right)  $ is the matrix of the
+one--particle Hamiltonian $h_{1}$, $\mathbb{V}_{2}\left(  \mathbf{\psi
+}\right)  $ is the matrix of the two--particle Hamiltonian $h_{2}$,
+$\mathbb{D}^{1}\left(  \mathbf{n}\right)  $ the FORDM and $\mathbb{D}%
+^{2}\left(  \mathbf{n}\right)  $ the SORDM of the $2N$-electron AGP\ state wrt
+the basis $\left\{  \left\vert \psi_{j}\right\rangle ;1\leq j\leq2s\right\}  $%
+\begin{equation}
+\mathcal{E}\left(  \mathbb{D}^{2}\left(  \mathbf{\upsilon}\right)
+,\mathbf{\upsilon}\right)  =\mathcal{E}\left(  \mathbb{D}^{2}\left(
+\mathbf{\varphi}\right)  ,\mathbf{\varphi}\right)  =\frac{1}{2}\sum_{1\leq
+p\leq2s}N_{p}\left\{  I\left(  \upsilon_{p}\right)  +\left\langle \left.
+\upsilon_{p}\right\vert h_{1}\upsilon_{p}\right\rangle \right\}  =\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+N_{p}\kappa\left(  \upsilon_{p}\right)  , \label{Enkappa}%
+\end{equation}
+where we have introduced the new quantity,
+\begin{equation}
+\kappa\left(  \upsilon_{p}\right)  =I\left(  \upsilon_{p}\right)
++\left\langle \left.  \upsilon_{p}\right\vert h_{1}\upsilon_{p}\right\rangle .
+\label{kappa}%
+\end{equation}%
+\begin{equation}
+\mathcal{E}\left(  \mathbf{n},\mathbf{\varphi}\right)  =\frac{1}{2}\sum_{1\leq
+p\leq2s}\left\{  N_{p}I\left(  \varphi_{p}\right)  +N_{p}\left\langle \left.
+\varphi_{p}\right\vert h_{1}\varphi_{p}\right\rangle \right\}  \equiv\frac
+{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq p\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq2s}}
+%EndExpansion
+N_{p}\kappa\left(  \varphi_{p}\right)  ,
+\end{equation}
+where GSO quantities $\left\{  \kappa\left(  \varphi_{p}\right)  \right\}  $
+are given by
+\begin{equation}
+\kappa\left(  \varphi_{p}\right)  =I\left(  \varphi_{p}\right)  +\left\langle
+\left.  \varphi_{p}\right\vert h_{1}\varphi_{p}\right\rangle .
+\end{equation}
+In contrast to the general MCSCF case, the GSO's $\left\{  \left\vert
+\varphi_{p}\right\rangle \right\}  $ and their occupation $\left\{
+N_{p}\right\}  $ numbers do determine the $2N$-electron AGP state.
+
+Hocc************%
+\[
+\mathcal{H}_{occ}^{1}=\text{linear span}\left\{  \left.  \left\vert \psi
+_{j}\right\rangle \right\vert N_{j}\neq0;1\leq j\leq2s\right\}
+\]
+IPSINV**********%
+\[
+\left\vert \Psi_{IPS}\right\rangle =U_{N}\left\vert \Psi_{IPS}\right\rangle
+=\left\vert U_{1}\psi_{1}\cdots U_{1}\psi_{N}\right\rangle
+\]
+MCS*************%
+\[
+\left\vert \Psi\right\rangle =\left\vert \Psi(\mathbf{C}\left(  \mathbf{\psi
+}\right)  ,\mathbf{\psi}\right\rangle
+\]%
+\begin{equation}
+\sum c_{j_{1}\cdots j_{N}}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle =\sum c_{j_{1}\cdots j_{N}}U_{j_{1}k_{1}}\cdots U_{j_{N}k_{N}%
+}\left\vert \psi_{k_{1}}\cdots\psi_{k_{N}}\right\rangle
+\end{equation}
+MCSINV*********%
+\[
+U\left\vert \Psi\right\rangle =\left\vert \Psi\left(  \mathbb{U}%
+_{CI}\mathbf{C}\left(  \mathbf{\psi}\right)  ,U_{orb}\mathbf{\psi}\right)
+\right\rangle =\left\vert \Psi\right\rangle
+\]
+MC******%
+\[
+\mathbf{C}\left(  \mathbf{\psi}\right)
+\]
+U1%
+\[
+U_{1}:\mathcal{H}_{occ}^{1}\rightarrow\mathcal{H}_{occ}^{1}%
+\]%
+\begin{align*}
+U_{orb}  &  :\mathcal{H}_{occ}^{1}\rightarrow\mathcal{H}_{occ}^{1}\\
+\mathbb{U}_{CI}  &  :\mathbb{C}^{\binom{2s}{N}}\rightarrow\mathbb{C}%
+^{\binom{2s}{N}}%
+\end{align*}%
+\[
+\left\vert g^{\frac{N}{2}}\right\rangle =\left\vert g^{\frac{N}{2}}%
+(\mathbf{n},\mathbf{\varphi}\right\rangle
+\]
+gem%
+\[
+\left\vert g\left(  \mathbf{n},\mathbf{\varphi}\right)  \right\rangle
+=\sum_{1\leq j,k\leq2s}g_{jk}\left(  \mathbf{n},\mathbf{\psi}\right)
+\left\vert \psi_{j}\psi_{k}\right\rangle =\sum_{1\leq j\leq2s}n_{j}^{\frac
+{1}{2}}\left\vert \varphi_{j}\varphi_{j+s}\right\rangle
+\]%
+\begin{equation}
+\sum_{1\leq j\leq2s}n_{j}^{\frac{1}{2}}\left\vert \varphi_{j}\varphi
+_{j+s}\right\rangle
+\end{equation}%
+\begin{align}
+\sum_{1\leq j\leq2s}n_{j}^{\frac{1}{2}}\left\vert \varphi_{j}\varphi
+_{j+s}\right\rangle  &  =\sum_{1\leq j\leq2s}\sum_{1\leq k,l\leq2s}%
+n_{j}^{\frac{1}{2}}\left\vert \psi_{k}\psi_{l}\right\rangle U_{kj}U_{lj+s}\\
+&  =\sum_{1\leq j\leq2s}\sum_{1\leq k,l\leq2s}U_{kj}n_{j}^{\frac{1}{2}%
+}U_{lj+s}\left\vert \psi_{k}\psi_{l}\right\rangle \\
+&  =\sum_{1\leq j\leq2s}\sum_{1\leq k,l\leq2s}U_{kj}n_{j}^{\frac{1}{2}%
+}U_{j+sl}^{t}\left\vert \psi_{k}\psi_{l}\right\rangle \\
+&  =\sum_{1\leq k,l\leq2s}\left(  \mathbb{U}\mathbf{n}_{2}^{\frac{1}{2}%
+}\mathbb{U}^{t}\right)  _{kl}\left\vert \psi_{k}\psi_{l}\right\rangle
+\end{align}
+T1********%
+\[
+\sum_{1\leq j\leq2s}n_{j}^{\frac{1}{2}}\left\vert \varphi_{j}\varphi
+_{j+s}\right\rangle =\sum_{1\leq k,l\leq2s}\left(  \mathbb{U}\mathbf{n}%
+_{2}^{\frac{1}{2}}\mathbb{U}^{t}\right)  _{kl}\left\vert \psi_{k}\psi
+_{l}\right\rangle
+\]
+T2**********%
+\[
+\mathbf{n}_{2}^{\frac{1}{2}}=\left(
+\begin{array}
+[c]{cc}%
+\mathbf{n}^{\frac{1}{2}} & \mathbb{O}\\
+\mathbb{O} & \mathbf{n}^{\frac{1}{2}}%
+\end{array}
+\right)
+\]%
+\[
+\left\{  \mathbf{\varphi}\right\}
+\]%
+\begin{align*}
+\left\vert g\left(  \mathbf{n},\mathbf{\varphi}\right)  \right\rangle  &
+=\sum_{1\leq j,k\leq2s}g_{jk}\left(  \mathbf{n},\mathbf{\psi}\right)
+\left\vert \psi_{j}\psi_{k}\right\rangle \\
+g_{jk}\left(  \mathbf{n},\mathbf{\psi}\right)   &  =n_{j}^{\frac{1}{2}}%
+\delta_{jk}%
+\end{align*}%
+\begin{align*}
+U_{orb}  &  :\mathcal{H}_{occ}^{1}\rightarrow\mathcal{H}_{occ}^{1}\\
+\mathbb{V}_{gem}  &  :\mathbb{C}^{2s}\rightarrow\mathbb{C}^{2s}%
+\end{align*}
+u%
+\[
+\left\vert \Psi_{AGP}\right\rangle =U_{N}\left\vert \Psi_{AGP}\right\rangle
+=\left\vert U_{2}g\cdots U_{2}g\right\rangle
+\]%
+\[
+U_{2}\left\vert g\right\rangle =
+\]%
+\[
+\mathbb{V}_{gem}\mathbb{GV}_{gem}^{t}%
+\]
+basis%
+\[
+\left\{  \left.  \left\vert \varsigma_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}
+\]%
+\[
+\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}
+\]
+**Koop%
+\begin{align*}
+F\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi}\right)  _{jj}
+&  =\Omega_{j}\left(  \psi_{j}\right)  \left\{  \mathcal{E}\left(
+\mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi}\right)  -\mathcal{E}%
+_{N-1}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi,}\psi
+_{j}\right)  \right\} \\
+&  \equiv\Omega_{j}\left(  \psi_{j}\right)  I\left(  \psi_{j}\right)
+;\qquad1\leq j\leq2s
+\end{align*}%
+\[
+\mathcal{E}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi
+}\right)
+\]%
+\[
+\mathcal{E}_{N-1}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)
+,\mathbf{\psi,}\psi_{j}\right)
+\]%
+\[
+\left\vert \psi_{j}\right\rangle
+\]
+ioniz%
+\[
+I\left(  \psi_{j}\right)
+\]
+occup%
+\[
+\Omega_{j}\left(  \psi_{j}\right)
+\]%
+\[
+\mathcal{E}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi
+}\right)  =\frac{1}{2}\left\{  \overset{}{\operatorname{Tr}\left\{  F\left(
+\mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi}\right)  \right\}
++\mathcal{E}_{1}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi
+}\right)  }\right\}
+\]%
+\[
+\mathcal{E}_{1}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi
+}\right)  =\sum_{1\leq j,k\leq2s}D^{1}\left(  \mathbf{C}\left(  \mathbf{\psi
+}\right)  \right)  _{jk}\left\langle \left.  \psi_{k}\right\vert h_{1}\psi
+_{j}\right\rangle
+\]
+eigen%
+\[
+\varepsilon_{j}=\Omega_{j}\left(  \varsigma_{j}\right)  I\left(  \varsigma
+_{j}\right)  ;\qquad1\leq j\leq2s
+\]%
+\[
+\left\{  \left.  \varepsilon_{j}\right\vert ;1\leq j\leq2s\right\}
+\]%
+\[
+\operatorname{Tr}\left\{  F\left(  \mathbf{C}\left(  \mathbf{\psi}\right)
+,\mathbf{\psi}\right)  \right\}  =\sum_{1\leq j\leq2s}\varepsilon_{j}%
+\]%
+\[
+\mathcal{E}_{1}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi
+}\right)  =\sum_{1\leq j\leq2s}N_{j}\left\langle \left.  \varphi
+_{j}\right\vert h_{1}\varphi_{j}\right\rangle
+\]%
+\[
+\left\{  \left.  N_{j}\right\vert ;1\leq j\leq2s\right\}
+\]%
+\begin{align*}
+\mathcal{E}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi
+}\right)   &  =\frac{1}{2}\left\{  \overset{}{\sum_{1\leq j\leq2s}\left\{
+\varepsilon_{j}+N_{j}\left\langle \left.  \varphi_{j}\right\vert h_{1}%
+\varphi_{j}\right\rangle \right\}  }\right\} \\
+&  =\frac{1}{2}\left\{  \overset{}{\sum_{1\leq j\leq2s}\left\{  \Omega
+_{j}\left(  \varsigma_{j}\right)  I\left(  \varsigma_{j}\right)
++N_{j}\left\langle \left.  \varphi_{j}\right\vert h_{1}\varphi_{j}%
+\right\rangle \right\}  }\right\} \\
+&  =\frac{1}{2}\left\{  \overset{}{\sum_{1\leq j\leq2s}\left\{  N_{j}I\left(
+\varphi_{j}\right)  +N_{j}\left\langle \left.  \varphi_{j}\right\vert
+h_{1}\varphi_{j}\right\rangle \right\}  }\right\} \\
+&  =\frac{1}{2}\overset{}{\sum_{1\leq j\leq2s}N_{j}\left\{  I\left(
+\varphi_{j}\right)  +h_{1}\left(  \varphi_{j}\right)  \right\}  }\\
+&  =\frac{1}{2}\sum_{1\leq j\leq2s}N_{j}\kappa\left(  \varphi_{j}\right)
+\end{align*}%
+\[
+\mathcal{E}\left(  \mathbf{C}\left(  \mathbf{\psi}\right)  ,\mathbf{\psi
+}\right)  =\frac{1}{2}\sum_{1\leq j\leq2s}N_{j}\kappa\left(  \varphi
+_{j}\right)
+\]%
+\[
+\kappa\left(  \varphi_{j}\right)  =I\left(  \varphi_{j}\right)  +h_{1}\left(
+\varphi_{j}\right)
+\]%
+\[
+h_{1}\left(  \varphi_{j}\right)  =\sum_{1\leq j\leq2s}\left\langle \left.
+\varphi_{j}\right\vert h_{1}\varphi_{j}\right\rangle
+\]%
+\[
+\left\vert \mathbf{\psi}\right\rangle \neq\left\vert \mathbf{\varphi
+}\right\rangle \neq\left\vert \mathbf{\varsigma}\right\rangle
+\]%
+\[
+\left\{  \left.  I\left(  \varphi_{j}\right)  \right\vert 1\leq j\leq
+2s\right\}
+\]%
+\[
+\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq
+j\leq2s\right\}
+\]%
+\[
+\left\langle \left.  \psi_{j}\right\vert \psi_{k}\right\rangle =n_{j}%
+\delta_{jk}%
+\]%
+\[
+I\left(  \psi_{j}\right)
+\]%
+\[
+\kappa\left(  \psi_{j}\right)
+\]%
+\[
+\mathcal{E}\left(  g^{\frac{N}{2}}\left(  \mathbf{\psi}\right)  \right)
+=\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq j\leq2s}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq2s}}
+%EndExpansion
+N\left(  \frac{\psi_{j}}{\sqrt{n_{j}}}\right)  \kappa\left(  \frac{\psi_{j}%
+}{\sqrt{n_{j}}}\right)
+\]%
+\[
+\left\{  \left.  \tfrac{1}{\sqrt{n_{j}}}\left\vert \overset{\left.  {}\right.
+}{\psi_{j}}\right\rangle \right\vert 1\leq j\leq2s\right\}
+\]%
+\[
+\Updownarrow
+\]
+a1\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\begin{equation}
+\left\vert g\left(  \mathbf{c,\theta,\psi}\right)  \right\rangle =\sum_{1\leq
+j\leq s}c_{j}e^{i\theta_{j}}\left\vert \psi_{j}\psi_{j+s}\right\rangle
+\nonumber
+\end{equation}%
+\[
+\left\vert \psi_{j}\psi_{j+s}\right\rangle \neq e^{i\alpha_{k}}\left\vert
+\tilde{\psi}_{k}\tilde{\psi}_{k+s}\right\rangle ;1\leq k\leq s
+\]
+a2\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\[
+\left\{  g\left(  \mathbf{c,\theta,\psi}\right)  \right\}  ;0\leq\theta
+_{2},\cdots,\theta_{s}<2\pi;\theta_{1}=0
+\]%
+\[
+0\leq\theta_{2},\cdots,\theta_{s}<2\pi;\theta_{1}=0
+\]
+a3\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\begin{align*}
+&  \qquad\qquad\qquad\qquad\qquad\left\vert g\left(  \mathbf{c,\theta,\psi
+}\right)  ^{\frac{N}{2}}\right\rangle \\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\left.  \parallel\right. \\
+&  \sum_{1\leq j_{1}<\cdots<j_{\frac{N}{2}}\leq s}c_{j_{1}}\cdots
+c_{j_{\frac{N}{2}}}\exp\left\{  i\sum\limits_{1\leq\kappa\leq\frac{N}{2}%
+}\theta_{j_{\kappa}}\right\}  \left\vert \psi_{j_{1}}\psi_{j_{1}+s}\cdots
+\psi_{j_{\frac{N}{2}}}\psi_{_{j_{\frac{N}{2}}}+s}\right\rangle
+\end{align*}
+a4\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\[
+\left\{  \left.  \left\vert \psi_{j}\right\rangle \right\vert 1\leq j\leq
+r\right\}
+\]
+a5\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\[
+\mathcal{H}_{\hat{\psi}_{j}}^{1}=\mathbb{C}\left\vert \hat{\psi}%
+_{j}\right\rangle ;1\leq j\leq r
+\]
+a6\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\[
+\mathcal{D}_{\mathbf{\psi}}^{1}\left(  u\right)  =\sum_{1\leq j\leq
+r}\mathcal{D}_{\psi_{j}}\left(  u\right)
+\]%
+\[
+\mathcal{D}_{\psi_{j}}\left(  u\right)  \left\vert \psi_{j}\right\rangle
+=e^{i\vartheta_{j}}\left\vert \psi_{j}\right\rangle
+\]%
+\[
+\mathcal{D}_{\mathbf{\psi}}^{1N}\left(  u\right)  \left\vert \psi_{j_{1}%
+}\cdots\psi_{j_{N}}\right\rangle =\exp i\left\{  \sum_{1\leq\kappa\leq
+r}\vartheta_{j_{\kappa}}\right\}  \left\vert \psi_{j_{1}}\cdots\psi_{j_{N}%
+}\right\rangle
+\]
+a7\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\begin{align*}
+&  \qquad\left\{  \left\vert \varphi_{a}\right\rangle ,\left\vert \varphi
+_{b}\right\rangle \right\}  \sim\left\{  \left\vert \varphi_{c}\right\rangle
+,\left\vert \varphi_{d}\right\rangle \right\} \\
+&  \left\Vert \varphi_{a}\right\Vert =\left\Vert \varphi_{b}\right\Vert
+=\left\Vert \varphi_{c}\right\Vert =\left\Vert \varphi_{d}\right\Vert =1
+\end{align*}
+a8\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\begin{align*}
+\left\{  \left\vert \psi_{a}\right\rangle ,\left\vert \psi_{b}\right\rangle
+\right\}   &  \sim\left\{  \left\vert \psi_{c}\right\rangle ,\left\vert
+\psi_{d}\right\rangle \right\} \\
+\left\vert \psi_{a}\psi_{b}\right\rangle \left\langle \psi_{a}\psi
+_{b}\right\vert  &  =\left\vert \psi_{c}\psi_{d}\right\rangle \left\langle
+\psi_{c}\psi_{d}\right\vert
+\end{align*}%
+\[
+\mathcal{C}_{2}%
+\]
+a9\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\begin{align*}
+&  \left.  \quad\right.  \left\{  \theta_{1},\cdots,\theta_{s}\right\}
+\sim\left\{  \theta_{1}^{\prime},\cdots,\theta_{s}^{\prime}\right\} \\
+&  \left.  \quad\right.  0\leq\theta_{j},\theta_{j}^{\prime}<2\pi;1\leq j\leq
+s\\
+&  \theta_{j}-\theta_{k}=\theta_{j}^{\prime}-\theta_{k}^{\prime};1\leq j<k\leq
+s
+\end{align*}
+a%
+\[
+\mathbf{\theta\nsim\theta}^{\prime}%
+\]
+b%
+\[
+\mathbf{\theta\sim\theta}^{\prime}%
+\]
+a10\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\begin{align*}
+&  \left.  \qquad\qquad\right.  u\left\vert \mathbf{\psi}\right\rangle
+=\left\vert \mathbf{\psi}\right\rangle \mathbf{u}_{\mathbf{\psi}}\\
+\mathbf{u}_{\mathbf{\psi}}  &  =\left(
+\begin{array}
+[c]{cccc}%
+e^{i\alpha_{1}} & 0 & \cdots & 0\\
+0 & \ddots & \ddots & \vdots\\
+\vdots & \ddots & \ddots & 0\\
+0 & \cdots & 0 & e^{i\alpha_{r}}%
+\end{array}
+\right)
+\end{align*}%
+\[
+\bigwedge\nolimits^{N}\mathbf{u}_{\mathbf{\psi}}%
+\]
+a11\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\[
+\sum\limits_{1\leq j\leq s}c_{j}^{2}=1;c_{j}\geq0;1\leq j\leq s
+\]%
+\begin{align*}
+&  \mathcal{E}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+=\frac{\mathcal{H}\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+}{S_{N}\left(  \mathbf{n}\right)  }=\\
+&  \left\{  \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \jmath\right)  \left\{
+\overset{}{\left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle
++\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle
+}+\,\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{j}\psi
+_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j,k\leq s}\left\{  n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}%
+}e^{i\left(  \theta_{j}-\theta_{k}\right)  }S_{N-1}\left(  \jmath k\right)
+\left\langle \psi_{j}\psi_{j+s}\right\vert \left\vert \psi_{k}\psi
+_{k+s}\right\rangle \right. \\
+&  \qquad\qquad\qquad\left.  \left.  \left.  +\overset{}{n_{i}n_{j}%
+S_{N-2}\left(  \jmath k\right)  \left\langle \psi_{j}\psi_{k}|||\psi_{j}%
+\psi_{k}\right\rangle }\right\}  \right\}  \right/  S_{N}\left(
+\mathbf{n}\right)
+\end{align*}
+a11\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#%
+\[
+\left(  \mathbf{n},\mathbf{\psi},\mathbf{\theta}\right)
+\]%
+\[
+\left\vert \eta_{j}\right\rangle =n_{j}^{\frac{1}{2}}e^{i\frac{\theta_{j}}{2}%
+}\left\vert \psi_{j}\right\rangle
+\]%
+\begin{align*}
+&  \mathcal{E}\left(  \mathbf{\eta}\right)  =\frac{\mathcal{H}\left(
+\mathbf{\eta}\right)  }{S_{N}\left(  \mathbf{n}\right)  }=\\
+&  \left\{  \sum_{1\leq j\leq s}S_{N-1}\left(  \jmath\right)  \left\{
+\overset{}{\left\langle \eta_{j}\left\vert h_{1}\eta_{j}\right.  \right\rangle
++\left\langle \eta_{j+s}\left\vert h_{1}\eta_{j+s}\right.  \right\rangle
+}+\,n_{j}^{-1}\,\left\langle \eta_{j}\eta_{j+s}\right\vert \left\vert \eta
+_{j}\eta_{j+s}\right\rangle \right\}  \right. \\
+&  +\sum_{1\leq j,k\leq s}\left\{  \overset{}{S_{N-1}\left(  \jmath k\right)
+\left\langle \eta_{j}\eta_{j+s}\right\vert \left\vert \eta_{k}\eta
+_{k+s}\right\rangle }\right. \\
+&  \qquad\qquad\qquad\left.  \left.  \left.  +\overset{}{S_{N-2}\left(  \jmath
+k\right)  \left\langle \eta_{j}\eta_{k}|||\eta_{j}\eta_{k}\right\rangle
+}\right\}  \right\}  \right/  S_{N}\left(  \mathbf{n}\right)
+\end{align*}
+
+
+########################################################################################%
+\[
+\frac{\partial\mathcal{E}\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)
+}{\partial\varphi_{j}^{\ast}}=F\left(  \mathbf{n}_{\#}\mathbf{,\varphi}%
+_{\#}\right)  \left\vert \varphi_{_{\#}j}\right\rangle \text{ and }%
+\frac{\partial\mathcal{E}\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)
+}{\partial\varphi_{j}}=\left\langle \varphi_{j}\right\vert F\left(
+\mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)  ^{\dagger}%
+\]
+#########################################################################################%
+\[
+\frac{\partial\mathcal{E}\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)
+}{\partial\varphi_{j}^{\ast}}=F\left(  \mathbf{n}_{\#}\mathbf{,\varphi}%
+_{\#}\right)  \left\vert \varphi_{\#j}\right\rangle =\sum_{1\leq k\leq
+2s}\left\vert \varphi_{\#k}\right\rangle \varepsilon_{_{\#}kj}%
+\]
+#########################################################################################%
+\[
+F\left(  \mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)  =F\left(
+\mathbf{n}_{\#}\mathbf{,\varphi}_{\#}\right)  ^{\dagger}%
+\]
+%
+
+\[
+\left\vert g\left(  \mathbf{n},\mathbf{\varphi}\right)  \right\rangle
+=\sum_{1\leq k,l\leq2s}g_{kl}\left(  \mathbf{n},\mathbf{\psi}\right)
+\left\vert \psi_{k}\psi_{l}\right\rangle =\sum_{1\leq j\leq2s}n_{j}^{\frac
+{1}{2}}\left\vert \varphi_{j}\varphi_{j+s}\right\rangle
+\]%
+\[
+\left\{  \left\vert \psi_{j}\right\rangle ;1\leq j\leq r\right\}
+\]%
+\[
+\left\{  N_{j};1\leq j\leq r\right\}
+\]
+
+
+
+\end{document}

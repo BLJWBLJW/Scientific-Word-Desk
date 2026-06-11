@@ -1,0 +1,2697 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.10.0.2363}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Sunday, January 05, 2003 12:06:13}
+%TCIDATA{LastRevised=Monday, June 16, 2003 12:52:04}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{Diagonal Operators}
+\title[Diag\_Op]{A Novel Method for Generating Approximate Wavefunctions}
+\author{B. Weiner}
+\affiliation{Department of Physics, Pennsylvania State University, DuBois PA 15801}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Molecular Hamiltonians are constituted by momentum operators (e.g. kinetic
+energy and interaction with electro-magnetic radiation), local potential
+operators (e.g. electron-electron coulomb, electron-nucleus and
+electron-external field interactions) and spin operators. In general the
+effect of transformations that generate states from a reference state is to
+destroy this form.
+
+Here it is shown how one can generate all pure states by the action of a
+commutative semigroup of transformations that are diagonal in the space-spin
+coordinate representation that \emph{do not }destroy\emph{ }this form and thus
+maintain the physical interpretability of effective Hamiltonians.
+
+Using such transformations we formulate an approximation theory that has
+physical interpretation at all orders.
+
+\end{abstract}
+\date{02/15/2003}
+\startpage{1}
+\maketitle
+\tableofcontents
+
+
+\section{Introduction\label{Intro}}
+
+The Hamiltonian operator characterizes a physical system by describing all the
+interactions effecting it and determines which states are consistent with
+these interactions. Invariably physical Hamiltonians (as distinct from model
+Hamiltonians) are formulated in the space-spin \emph{coordinate}
+representation, which reflects the fact that the properties of natural systems
+are most tangibly described primarily in terms of spatial coordinates and
+geometric images in a local pointwise fashion, i.e. at any given instant the
+momentum and potential energy (including the potential energy of interaction
+with like particles) associated with a specific particle is expressed in terms
+of a single spatial coordinate. Once the Hamiltonian has been constructed one
+can form discrete matrix or even other continuous representations by the
+introduction of proper bases (constituted by vectors that belong to the
+Hilbert space) or generalized bases (constituted by vectors that do not belong
+to the Hilbert space). However in order to obtain the physical content of such
+representations one invariably relates it back to the coordinate representation.
+
+Nearly all molecular quantum mechanical approximations to Hamiltonians and/or
+states are formulated in the context of proper bases and when transformed back
+to the coordinate representation produce \emph{non local }effective
+Hamiltonians, which in general makes their direct physical interpretation
+somewhat difficult. Consequently it would be convenient if the approximations
+could be expressed directly in the coordinate representation, in which they do
+have a clear physical interpretation. An added benefit of such a formalism
+would be that approximations could rigorously be suggested by certain
+properties of the specific system under study.
+
+The most widely used approximation for molecular systems is the Self
+Consistent Field (SCF)\ method. One of the most appealing properties of this
+method is that it is based on an Independent Particle State (IPS) ansatz which
+permits one to give a physical interpretation to all terms in the variational
+expression and thus producing a pictorial model of processes involving atoms
+and molecules. A major computational asset of this method is that it does not
+involve two particle transformations thus allowing the Hamiltonian to be
+expressed in terms of a fixed atomic orbital basis at all stages of the
+optimization procedure i.e. the form of the Hamiltonian is preserved at all
+steps. This permits one to introduce approximations to the Hamiltonian while
+still maintaining the physical meaning of the various terms e.g. the coulomb
+operator can be approximated by ignoring interactions between distant parts of
+the molecule and core interactions replaced by pseudo potentials.
+
+The optimal Independent Particle State (IPS)\ is found by minimizing the
+expectation value of Hamiltonians with respect to (wrt) the parameters
+characterizing these states. This expectation value can be alternatively
+viewed as the expectation value of the exact or a fixed approximate
+Hamiltonian wrt a variable IPS\ \emph{or} the expectation value of an
+effective Hamiltonian that depends on the variational parameters wrt a fixed
+reference IPS. However in latter case one often loses the ability to clearly
+physically interpret the various terms in the effective Hamiltonian e.g. terms
+that refer to local atomic centers become delocalized. When one is considering
+correlated approximations beyond the SCF method this latter way of viewing the
+energy expectation value is frequently more desirable, even taking into
+account the loss of direct physical interpretability, as it focuses on the
+most effective way of computing the energy expression e.g. consider the couple
+cluster method.
+
+The variation over trial states can be formulated in terms of transformations,
+that frequently form a commuting set, acting on a fixed reference state. Even
+when the set of transformations commute they invariably do not commute with
+their adjoints, nor with terms in the Hamiltonian and hence produce rather
+complicated effective Hamiltonians. There is however a way of combining the
+desirable features of physical interpretability and fixed Hamiltonian form by
+generating all pure states from a fixed independent particle reference state
+by transformations that
+
+\begin{description}
+\item[$\bullet$] are diagonal in the space-spin coordinate representation
+
+\item[$\bullet$] form self adjoint commuting sets
+
+\item[$\bullet$] produce effective Hamiltonians that maintain the form of the
+exact Hamiltonian i.e. are expressed in terms of momentum and local potentials
+
+\item[$\bullet$] maintain the physical interpretability of all terms in
+effective Hamiltonians
+
+\item[$\bullet$] allow one to express the energy of any state in terms of the
+expectation value of an effective Hamiltonian wrt a given reference state
+
+\item[$\bullet$] produce approximations that have a direct physical interpretation.
+\end{description}
+
+In this article we describe how pure states can be generated from a reference
+state by the action of abelian semigroups of operators \cite{Encyclo}, which
+allows one to express the expectation value of all observable in any state in
+terms of "dressed" observables in the reference state. Utilizing this
+construction and considering inclusive sequences of semigroups we develop an
+approximation theory. Our construction is based on the properties of
+generalized bases, in particular the bases formed by the generalized
+eigenvectors of the coordinate operator. In section \ref{Semi} we describe the
+abelian semigroups associated with this bases and prove that one can generate
+all pure states from a reference state using these semigroups. In section
+\ref{EffHam} we display the effective Hamiltonian generated by the action of
+this semigroup on the system Hamiltonian and in section \ref{Approx} we
+develop an approximation theory based on this construction, to be followed in
+section \ref{Example} with some examples and a summary in section \ref{Sum}.
+
+\section{Generation of States\label{Semi}}
+
+Generalized bases of Hilbert spaces have been a cornerstone of quantum
+mechanics since their introduction by Dirac \cite{P.A.M.Dirac}, since their
+inception they have been given a firm mathematical foundation in the context
+of Distribution theory \cite{Richtmyer}, Group theory \cite{Barut} and
+Topological Vector Spaces \cite{Robertson}. A full discussion of their
+properties can be found in \cite{Berezin91} and they are closely related to
+Rigged Hilbert spaces introduced by \cite{Bohm78}. In this section we prove
+that an abelian semigroup formed by operators that are diagonal in the
+space-spin generalized eigen basis generates all pure states form a cyclic
+\cite{Encyclo} reference state. It is essential to consider abelian semigroups
+and \emph{not} abelian groups as the latter can only maximally generate a
+proper subset of states from a reference state i.e. cyclic reference states
+\emph{do not} exist for these groups.
+
+\subsection{Resolution of the Identity}
+
+The identity operator in $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ (see
+Appendix \ref{spaces} for the definition of operator spaces) can be resolved
+as an integral of the projectors onto the generalized eigenvectors $\left\{
+\left\vert \mathsf{z}^{N}\right\rangle \right\}  $ of the $N$-particle
+space-spin position operator as%
+\begin{equation}
+I=\int\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}%
+^{N}\right\vert d\mathsf{z}^{N}%
+\end{equation}
+where $\left\vert \mathsf{z}^{N}\right\rangle =\left\vert \mathsf{z}_{1}%
+\cdots\mathsf{z}_{N}\right\rangle $ is the antisymmetric tensor product of $N$
+one particle generalized eigenvectors $\left\{  \left\vert \mathsf{z}%
+_{j}\right\rangle |1\leq j\leq N\right\}  $ and $\mathsf{z}_{j}\equiv\left(
+\mathbf{r}_{j},\xi_{j}\right)  $ for a spatial position $\mathbf{r}_{j}$ and
+spin vector $\xi_{j}$. The wavefunction $\Psi\left(  \mathsf{z}^{N}\right)  $
+of any pure state $\left\vert \Psi\right\rangle \left\langle \Psi\right\vert $
+(see Appendix \ref{states} for a discussion of states) is given by
+\begin{equation}
+\Psi\left(  \mathsf{z}^{N}\right)  =\left\langle \mathsf{z}^{N}|\Psi
+\right\rangle
+\end{equation}
+and the state vector $\left\vert \Psi\right\rangle $ has the expansion
+\begin{equation}
+\left\vert \Psi\right\rangle =\int\left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{N}|\Psi\right\rangle d\mathsf{z}^{N}%
+\end{equation}
+
+
+\subsection{Hamiltonian}
+
+The molecular spin free Hamiltonian for a system of $N$-electrons and
+$M$-nuclei at fixed positions $\left\{  \mathbf{R}_{j}|1\leq j\leq M\right\}
+$ is essentially local (i.e. all the terms are point interactions or are
+properties of a specific point), and is defined through its tangibly physical
+space-spin coordinate representation in atomic units as%
+\begin{align}
+H  &  =\sum_{1\leq j<k\leq M}\frac{Z_{j}Z_{k}}{\left\Vert \mathbf{R}%
+_{j}-\mathbf{R}_{k}\right\Vert }\nonumber\\
+&  \qquad\qquad\qquad+\int\left\{  \sum_{1\leq j\leq N}V_{ext}\left(
+\mathbf{r}_{j}\right)  +\sum_{1\leq j<k\leq N}\frac{1}{\left\Vert
+\mathbf{r}_{j}-\mathbf{r}_{k}\right\Vert }-\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\left.  \sum_{\substack{1\leq j\leq M\\1\leq
+k\leq N}}\frac{Z_{j}}{\left\Vert \mathbf{R}_{j}-\mathbf{r}_{k}\right\Vert
+}-\sum_{1\leq j\leq N}\left\Vert \mathbf{p}_{j}\left(  \mathbf{r}_{j}\right)
+\right\Vert ^{2}\right\}  \left\vert \mathbf{r}^{N}\right\rangle \left\langle
+\mathbf{r}^{N}\right\vert d\mathbf{r}^{N} \label{hamilt1}%
+\end{align}
+where nuclei $j$ has atomic number $Z_{j}$ and is at the position
+$\mathbf{R}_{j}$, $\mathbf{r}_{j}$ is the position of electron $j$ that has
+momentum $\mathbf{p}_{j}\left(  \mathbf{r}_{j}\right)  =\nabla_{\mathbf{r}%
+_{j}}-\mathbf{A}_{ext\,j}\left(  \mathbf{r}_{j}\right)  ,$ where
+$\mathbf{A}_{ext\,j}\left(  \mathbf{r}_{j}\right)  $ is the sum of all
+external vector potentials acting on particle $j$ and $V_{ext}\left(
+\mathbf{r}_{j}\right)  $ is the sum of all external scalar potentials. For
+future reference we denote the one and two particle potentials $V_{1}$ and
+$V_{2}$ as
+\begin{align}
+V_{1}  &  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\sum\limits_{\substack{1\leq j\leq M\\1\leq k\leq N}}\left\{  -\frac{Z_{j}%
+}{\left\Vert \mathbf{R}_{j}-\mathbf{r}_{k}\right\Vert }+V_{ext}\left(
+\mathbf{r}_{k}\right)  \right\}  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}\nonumber\\
+V_{2}  &  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \sum\limits_{1\leq j<k\leq N}\frac{1}{\left\Vert \mathbf{r}%
+_{j}-\mathbf{r}_{k}\right\Vert }\right\}  \left\vert \mathsf{z}^{N}%
+\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+\end{align}
+and a constant internuclear interaction term
+\begin{equation}
+H_{0}=\sum_{1\leq j<k\leq M}\frac{Z_{j}Z_{k}}{\left\Vert \mathbf{R}%
+_{j}-\mathbf{R}_{k}\right\Vert }.
+\end{equation}
+. By introducing a proper basis $\left\{  \left\vert \varphi_{j}\right\rangle
+\right\}  $ for the one particle Hilbert space $\mathcal{H}^{1}$ one produces
+a matrix representation of $H$. If this basis is constituted by localized
+atomic orbitals this matrix representation still has a physically recognizable
+content but if the functions $\left\{  \left\vert \varphi_{j}\right\rangle
+\right\}  $ are delocalized over all centers it is hard to discern specific
+physical interactions and properties. In all cases the space-spin coordinate
+is the defining representation that determines the matrix one.
+
+The energy $E\left(  \Psi\right)  $ of a state $\left\vert \Psi\right\rangle $
+is given by the expectation value
+\begin{equation}
+E\left(  \Psi\right)  =\frac{\left\langle \Psi|H\Psi\right\rangle
+}{\left\langle \Psi|\Psi\right\rangle }%
+\end{equation}
+where
+\begin{align}
+\frac{\left\langle \Psi|H\Psi\right\rangle }{\left\langle \Psi|\Psi
+\right\rangle }  &  =\sum_{1\leq j<k\leq M}\frac{Z_{j}Z_{k}}{\left\Vert
+\mathbf{R}_{j}-\mathbf{R}_{k}\right\Vert }+\left\langle \Psi|\Psi\right\rangle
+^{-1}\left\{  \int\sum_{\substack{1\leq j\leq M\\1\leq k\leq N}}\frac
+{-Z_{j}\Psi\left(  \mathsf{z}^{N}\right)  ^{\ast}\Psi\left(  \mathsf{z}%
+^{N}\right)  }{\left\Vert \mathbf{R}_{j}-\mathbf{r}_{k}\right\Vert
+}d\mathsf{z}^{N}\right. \nonumber\\
+&  -\int\sum_{1\leq j\leq N}^{N}\left[  \left(  \nabla_{\mathbf{r}_{j}%
+}-\mathbf{A}_{ext\,j}\left(  \mathsf{z}^{N}\right)  \right)  \Psi\left(
+\mathsf{z}^{N}\right)  ^{\ast}\right]  \bullet\left[  \left(  \nabla
+_{\mathbf{r}_{j}}-\mathbf{A}_{ext\,j}\left(  \mathsf{z}^{N}\right)  \right)
+\Psi\left(  \mathsf{z}^{N}\right)  \right]  d\mathsf{z}^{N}\nonumber\\
+&  +\left.  \int\sum_{1\leq j<k\leq N}\frac{\Psi\left(  \mathsf{z}^{N}\right)
+^{\ast}\Psi\left(  \mathsf{z}^{N}\right)  }{\left\Vert \mathbf{r}%
+_{j}-\mathbf{r}_{k}\right\Vert }d\mathsf{z}^{N}+\int V_{ext}\left(
+\mathsf{z}^{N}\right)  \Psi\left(  \mathsf{z}^{N}\right)  ^{\ast}\Psi\left(
+\mathsf{z}^{N}\right)  d\mathsf{z}^{N}\right\}
+\end{align}
+the coordinates $\mathsf{z}^{N}\equiv\mathsf{z}_{1}\cdots\mathsf{z}_{N}%
+\equiv\left(  \mathbf{r}_{1},\sigma_{1}\right)  ,\cdots,\left(  \mathbf{r}%
+_{N},\sigma_{N}\right)  $ and the normalization is
+\begin{equation}
+\left\langle \Psi|\Psi\right\rangle =\int\Psi\left(  \mathsf{z}^{N}\right)
+^{\ast}\Psi\left(  \mathsf{z}^{N}\right)  d\mathsf{z}^{N}%
+\end{equation}
+
+
+\subsection{Pure State Generation}
+
+In the coordinate representation, all pure states (unnormalized, see Appendix
+\ref{states}) in $\mathcal{H}^{N}$ can be produced from a reference pure
+state, $\left\vert \Psi_{ref}\right\rangle $, that has a wavefunction
+\begin{equation}
+\left\langle \mathsf{z}^{N}|\Psi_{ref}\right\rangle =\varrho\left(
+\mathsf{z}^{N}\right)  e^{iS\left(  \mathsf{z}^{N}\right)  }%
+\end{equation}
+that is non zero $a.e.\cite{Encyclo}$ by the transformations
+\begin{equation}
+\left\vert \Psi\left(  \nu,\omega\right)  \right\rangle =\breve{T}\left(
+\nu,\omega\right)  \left\vert \Psi_{ref}\right\rangle =\breve{\nu}%
+_{N}e^{i\breve{\omega}_{N}}\left\vert \Psi_{ref}\right\rangle
+\end{equation}
+where the operators $\breve{T}\left(  \nu,\omega\right)  ,\breve{\nu}_{N}$ and
+$\breve{\omega}_{N}$ are diagonal in the space-spin basis $\left\{  \left\vert
+\mathsf{z}^{N}\right\rangle \right\}  $ and are given by
+\begin{subequations}
+\begin{align}
+\breve{\nu}_{N}  &  =\int\nu\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}\in\mathcal{B}\left(  \mathcal{H}^{N}\right) \\
+\breve{\omega}_{N}  &  =\int\omega\left(  \mathsf{z}^{N}\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}\in\mathcal{B}\left(  \mathcal{H}^{N}\right)
+\end{align}
+and form a commuting set, which we denote as $\mathcal{C}_{c}$. $\lceil$A
+notational aside: In this article when it is important to distinguish between
+an operator belonging to $\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ and its
+integral kernel, we denote the operator by $\breve{T}$ and the integral kernel
+by $T\left(  \mathsf{z}^{N}\right)  $ or $T\left(  \mathsf{z}^{N}%
+,\mathsf{z}^{\prime N}\right)  ,$ if it not important to distinguish between
+we just use $T\rfloor$.
+
+The strong closure \cite{Richtmyer} of the space $\mathcal{C}_{c}$ of diagonal
+integral operators that map $\mathcal{H}^{N}\rightarrow\mathcal{H}^{N}$ is the
+space of integral operators with symmetric integral kernels $\left\{  T\left(
+\mathsf{z}^{N}\right)  \right\}  $ that belong to the Banach space $L_{\infty
+}\left(  \mathsf{Z}^{N}\right)  $ $\cite{Encyclo}$, and form a semigroup which
+is in particular a $w^{\ast}$-algebra. \cite{Thirring3}. The following extract
+from Thirring \cite{Thirring3}\textit{ }should be noted:
+\end{subequations}
+\begin{quotation}
+$L_{\infty}\left(  \mathsf{Z}^{N}\right)  ,$ \textit{considered as
+multiplication operators on} $L_{2}\left(  \mathsf{Z}^{N}\right)  $ \textit{is
+maximally abelian. }\emph{Every function in }$L_{2}\left(  \mathsf{Z}%
+^{N}\right)  $\emph{\ that is non zero }$a.e.$\emph{\ is a cyclic
+vector}\textit{. Functions that vanish on some set} $\left[  \Omega
+^{N}\right]  ^{C}=\mathsf{Z}^{N}-\Omega^{N}\subset\mathsf{Z}^{N}$ \textit{form
+invariant subspaces. Thus} $L_{\infty}\left(  \mathsf{Z}^{N}\right)  $
+\textit{is reducible and not a factor }\cite{Encyclo}.
+\end{quotation}
+
+One can see that $T\left(  \nu,\omega\right)  \left(  \mathsf{z}^{N}\right)  $
+(the integral kernel of $\breve{T}\left(  \nu,\omega\right)  )$ is a
+parameterization of a representation of an abelian $w^{\ast}$-algebra,
+$\mathfrak{A}$, on $L_{2}\left(  \mathsf{Z}^{N}\right)  $ by $L_{\infty
+}\left(  \mathsf{Z}^{N}\right)  $. This representation is reducible as
+$L_{2}\left(  \mathsf{Z}^{N}\right)  $ contains the following invariant
+subspaces
+\begin{equation}
+L_{2}\left(  \Omega^{N}\right)  =\left\{  \Psi\left\vert \Psi\left(
+\mathsf{z}^{N}\right)  =0\,\text{if \thinspace}\mathsf{z}^{N}\notin\Omega
+^{N}\,\text{,\thinspace}\int_{\Omega^{N}}d\mathsf{z}^{N}\neq
+0\,\text{and\thinspace}\Omega^{N}\subset\mathsf{Z}^{N}\right.  \right\}
+\end{equation}
+The operator $\breve{T}\left(  \nu,\omega\right)  $ produces elements that
+have amplitudes that belong to $L_{2}\left(  \Omega^{N}\right)  $ when
+$\operatorname{Supp}\left(  \nu\right)  =$ $\Omega^{N}$ $\cite{Richtmyer}$.
+
+The set of invertible diagonal operators in $\mathfrak{A}$ form a group,
+$\mathfrak{G}$, that also has a reducible representation on $L_{\infty}\left(
+\mathsf{Z}^{N}\right)  $, as clearly $L_{2}\left(  \Omega^{N}\right)  $ are
+also invariant subspaces of $\mathfrak{G}$. However \emph{it is not true} that
+every function in $L_{2}\left(  \mathsf{Z}^{N}\right)  $\ that is nonzero
+$a.e.$\ is a cyclic vector for $\mathfrak{G}$ and in fact there do not exist
+\emph{any} cyclic vectors for $\mathfrak{G}$ in $L_{2}\left(  \mathsf{Z}%
+^{N}\right)  $ and thus one can never generate all pure states by the action
+of $\mathfrak{G}$ on a reference state.
+
+We can contrast this semigroup to ones formed by proper bases of $N$-particle
+space by comparing the preceding to the discrete case by focusing on a proper
+basis $\left\{  \left\vert \Phi_{j}\right\rangle \right\}  $ of $\mathcal{H}%
+^{N}$, the abelian algebra, $\mathcal{C}_{d},$ generated by $\left\{
+%TCIMACRO{\tsum \limits_{1\leq j\leq\infty}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq\infty}}
+%EndExpansion
+\lambda_{j}\left\vert \Phi_{j}\right\rangle \left\langle \Phi_{j}\right\vert
+\right\}  $ and a reference state $\left\vert \Phi_{ref}\right\rangle =%
+%TCIMACRO{\tsum \limits_{1\leq j\leq\infty}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq\infty}}
+%EndExpansion
+\alpha_{j}\left\vert \Phi_{j}\right\rangle $ that has the property that
+$\alpha_{j}\neq0\,\forall i$ $\left(  \text{see Appendix \ref{Difference}%
+}\right)  $. Similarly to $\mathcal{C}_{c}$ the abelian algebra $\mathcal{C}%
+_{d}$ can also generate all pure states from such a reference state but it
+\emph{does not }have such desirable properties wrt $H$ as $\mathcal{C}_{c}$
+does e.g. the potential terms in $H$ are no longer diagonal nor will
+$\mathcal{C}_{c}$ commute with these terms.
+
+\section{Effective Hamiltonian\label{EffHam}}
+
+Any pure state $N$-particle density operator $\breve{D}^{N}\left(  \nu
+,\omega\right)  $, (in general unnormalized), can be generated from a cyclic
+reference density $\mathcal{\breve{D}}_{ref}^{N}$ by the transformation
+\begin{equation}
+\mathcal{\breve{D}}^{N}\left(  \nu,\omega\right)  =\hat{T}\left(
+\mathcal{\breve{D}}_{ref}^{N}\right)  =\breve{T}\left(  \nu,\omega\right)
+\mathcal{\breve{D}}_{ref}^{N}\breve{T}\left(  \nu,\omega\right)  ^{\dagger}%
+\end{equation}
+The transformation $\hat{T}\left(  \nu,\omega\right)  $ is positive as it maps
+the set of positive operators $\mathcal{B}_{1+}\left(  \mathcal{H}^{N}\right)
+$ to itself and the set of all such $\hat{T}$ correspond to the semigroup
+$\mathcal{C}_{c}$.
+
+As the energy expectation value $E\left(  \nu,\omega\right)  $ can be
+expressed as
+\begin{equation}
+E\left(  \nu,\omega\right)  =\frac{Tr\left\{  H\mathcal{\breve{D}}^{N}\left(
+\nu,\omega\right)  \right\}  }{Tr\left\{  \mathcal{\breve{D}}^{N}\left(
+\nu,\omega\right)  \right\}  }=\frac{Tr\left\{  H\breve{T}\left(  \nu
+,\omega\right)  \mathcal{\breve{D}}_{ref}^{N}\breve{T}\left(  \nu
+,\omega\right)  ^{\dagger}\right\}  }{Tr\left\{  \breve{T}\left(  \nu
+,\omega\right)  \mathcal{\breve{D}}_{ref}^{N}\breve{T}\left(  \nu
+,\omega\right)  ^{\dagger}\right\}  }=\frac{Tr\left\{  \breve{T}\left(
+\nu,\omega\right)  ^{\dagger}H\breve{T}\left(  \nu,\omega\right)
+\mathcal{\breve{D}}_{ref}^{N}\right\}  }{Tr\left\{  \breve{T}\left(
+\nu,\omega\right)  \mathcal{\breve{D}}_{ref}^{N}\breve{T}\left(  \nu
+,\omega\right)  ^{\dagger}\right\}  }%
+\end{equation}
+the action of the transformation $\hat{T}\left(  \nu,\omega\right)  $ can be
+incorporated into an effective Hamiltonian $H\left(  \nu,\omega\right)  $
+defined by
+\begin{equation}
+H\left(  \nu,\omega\right)  =\breve{T}\left(  \nu,\omega\right)  ^{\dagger
+}H\breve{T}\left(  \nu,\omega\right)
+\end{equation}
+and all expectation values can be taken wrt the IPS $\mathcal{\breve{D}}%
+_{ref}^{N}$.
+
+The Hamiltonians, $H$, we consider are of the form%
+\begin{equation}
+H=H_{0}-\mathbf{P\bullet P}+V_{1}+V_{2}%
+\end{equation}
+where $H_{0}$ is a constant, $\mathbf{P}$ the total \emph{generalized
+}momentum operator for the system, $V_{1}$ is the sum of all one particle
+potential operators and $V_{2}$ is the sum of all two particle potential
+operators. The \emph{generalized }momentum is defined in terms of one particle
+\emph{generalized }momentum operators as
+\begin{equation}
+\mathbf{P=}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\mathbf{p}_{j}%
+\end{equation}
+where
+\begin{equation}
+\mathbf{p}_{j}=-i\mathbf{\nabla}_{j}-\mathbf{A}_{j}%
+\end{equation}
+$\mathbf{A}_{j}$ is the total external vector potential acting on particle $j$
+and
+\begin{equation}
+-i\mathbf{\nabla}_{j}=-i\left(
+\begin{array}
+[c]{c}%
+\frac{\partial}{\partial x_{j}}\\
+\frac{\partial}{\partial y_{j}}\\
+\frac{\partial}{\partial z_{j}}%
+\end{array}
+\right)  ;\quad\mathbf{A}_{j}=\left(
+\begin{array}
+[c]{c}%
+A_{jx}\\
+A_{jy}\\
+A_{jz}%
+\end{array}
+\right)
+\end{equation}
+The potentials $\left\{  \mathbf{A}_{j}\right\}  $, $V_{1}$ and $V_{2}$ are
+all diagonal in the space-spin representation. The operators $\left\{
+\breve{T}\left(  \nu,\omega\right)  \right\}  $ \emph{all} \emph{commute }with
+these potentials, which is of course by design, so that
+\begin{align}
+\breve{T}\left(  \nu,\omega\right)  ^{\dagger}V\breve{T}\left(  \nu
+,\omega\right)   &  =\breve{\nu}_{N}e^{-i\breve{\omega}_{N}}V\breve{\nu}%
+_{N}e^{i\breve{\omega}_{N}}=\left(  \breve{\nu}_{N}\right)  ^{2}V\nonumber\\
+\breve{T}\left(  \nu,\omega\right)  ^{\dagger}\mathbf{A}_{j}\breve{T}\left(
+\nu,\omega\right)   &  =\breve{\nu}_{N}e^{-i\breve{\omega}_{N}}\mathbf{A}%
+_{j}\breve{\nu}_{N}e^{i\breve{\omega}_{N}}=\left(  \breve{\nu}_{N}\right)
+^{2}\mathbf{A}_{j}%
+\end{align}
+where $V=V_{1}$ $+$ $V_{2}$
+\begin{align}
+\left(  \breve{\nu}_{N}\right)  ^{2}V  &  =\int\nu\left(  \mathsf{z}%
+^{N}\right)  ^{2}V\left(  \mathsf{z}^{N}\right)  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}%
+^{N}\nonumber\\
+\left(  \breve{\nu}_{N}\right)  ^{2}A_{j\kappa}  &  =\int\nu\left(
+\mathsf{z}^{N}\right)  ^{2}A_{j\kappa}\left(  \mathsf{z}^{N}\right)
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N};\qquad\kappa=x,y,z
+\end{align}
+i.e. the potentials are scaled by the integral kernels $\left\{  \nu\left(
+\mathsf{z}^{N}\right)  \right\}  $. It is \emph{important }to note that while
+the Hamiltonian $H$ only contains potentials describing up to two particle
+interactions, the integral kernels $\left\{  \nu\left(  \mathsf{z}^{N}\right)
+\right\}  $ are in general \emph{multiparticle} functions and thus produce
+multiparticle potentials $\left\{  \nu\left(  \mathsf{z}^{N}\right)
+^{2}V\left(  \mathsf{z}^{N}\right)  \right\}  $ describing up to simultaneous
+$N$-particle interactions. Furthermore the $N$-particle local scaling factors
+$\nu\left(  \mathsf{z}^{N}\right)  $ contain phase information pertaining to
+$1,2,\cdots,M<N$ particle interactions and the $N$-particle local phase
+$\omega\left(  \mathsf{z}^{N}\right)  $ contains local scaling information
+pertaining to $1,2,\cdots,M<N$ particle interactions as will discussed in the examples.
+
+The effect of the unitary part $\left\{  e^{i\omega_{N}}\right\}  $ of the
+transformations $\left\{  \breve{T}\left(  \nu,\omega\right)  \right\}  $ on
+the momentum operators $\left\{  -i\nabla_{j}\right\}  $ (for simplicity we
+consider the case where there is no external vector potential) is to produce a
+generalized gauge transformation i.e. producing the component operators
+\begin{equation}
+e^{-i\breve{\omega}_{N}}\left(  -i\frac{\partial}{\partial x_{j}}\right)
+e^{i\breve{\omega}_{N}}=-i\frac{\partial}{\partial x_{j}}+\frac{\partial
+\breve{\omega}_{N}}{\partial x_{j}}%
+\end{equation}
+and $1$-particle vector operators
+\begin{equation}
+e^{-i\breve{\omega}_{N}}\left(  -i\nabla_{j}\right)  e^{i\breve{\omega}_{N}%
+}=-i\nabla_{j}+\nabla_{j}\breve{\omega}_{N}%
+\end{equation}
+(again note that $\breve{\omega}_{N}$ are $N$-particle operators). The effect
+of the scaling $\breve{\nu}_{N}$ on this is
+\begin{equation}
+\left(  -i\nabla_{j}+\nabla_{j}\breve{\omega}_{N}\right)  \breve{\nu}%
+_{N}=-i\breve{\nu}_{N}\nabla_{j}-i\left(  \nabla_{j}\breve{\nu}_{N}\right)
++\breve{\nu}_{N}\left(  \nabla_{j}\breve{\omega}_{N}\right)
+\end{equation}
+leading to an effective kinetic energy operator (see Appendix \ref{KinEnTrans}%
+) which is a sum of kinetic, momentum and potential terms
+\begin{align}
+&  K\left(  \nu,\omega\right)  =\breve{T}\left(  \nu,\omega\right)  ^{\dagger
+}\left(  \mathbf{P\bullet P}\right)  \breve{T}\left(  \nu,\omega\right)
+=\nonumber\\
+&  \qquad-\nabla\bullet\left(  \breve{\nu}^{2}\right)  \mathbb{I}\bullet
+\nabla-\nabla\bullet\left(  \breve{\nu}_{N}^{2}\nabla\breve{\omega}%
+_{N}-i\breve{\nu}_{N}\nabla\breve{\nu}_{N}\right) \nonumber\\
+&  \qquad\qquad-\left(  \breve{\nu}_{N}^{2}\nabla\breve{\omega}_{N}%
+-i\breve{\nu}_{N}\nabla\breve{\nu}_{N}\right)  \bullet\nabla+\left(
+\breve{\nu}_{N}\nabla\breve{\omega}_{N}-i\nabla\breve{\nu}_{N}\right)
+\bullet\mathbb{I}\bullet\left(  \breve{\nu}_{N}\nabla\breve{\omega}%
+_{N}-i\nabla\breve{\nu}_{N}\right)  \label{effkin}%
+\end{align}
+where $\mathbb{I}$ is $3N\times3N$ unit matrix. Thus the effective Hamiltonian
+is given by%
+\begin{equation}
+H\left(  \nu,\omega\right)  =H_{0}+K\left(  \nu,\omega\right)  +\left(
+\breve{\nu}_{N}\right)  ^{2}V \label{effham2}%
+\end{equation}
+which displays that the effective scalar potential does not depend on the
+$N$-particle local phase factor $\exp\left\{  i\omega\left(  \mathsf{z}%
+^{N}\right)  \right\}  $, but it should be noted that it \emph{does }depend on
+phase relationships between the individual particles.
+
+\section{Approximations\label{Approx}}
+
+One can expand the transformation $\breve{T}\left(  \nu,\omega\right)
+\in\mathcal{B}\left(  \mathcal{H}^{N}\right)  $ in terms of antisymmetrized
+tensor products of transformations \cite{Marcus}\cite{Greub} $\breve{T}%
+_{n_{j}}\in\mathcal{B}\left(  \mathcal{H}^{n_{j}}\right)  $ associated with
+partitions $\left\{  n_{1},\ldots,n_{m}\right\}  $ of $N$, i.e. for sets of
+$\left\{  \left.  n_{j}\right\vert 1\leq j\leq m\right\}  $ where $0\leq
+n_{j}\leq N$ and $%
+%TCIMACRO{\tsum \limits_{1\leq j\leq m}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq m}}
+%EndExpansion
+n_{j}=N$, as
+\begin{equation}
+\breve{T}\left(  \nu,\omega\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq m\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq m\leq N}}
+%EndExpansion
+\,%
+%TCIMACRO{\dsum \limits_{\left\{  n_{1},\ldots,n_{m}\right\}  }}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\left\{  n_{1},\ldots,n_{m}\right\}  }}
+%EndExpansion
+c_{n_{1}\ldots n_{m}}\breve{T}_{n_{1}}\left(  \nu_{n_{1}},\omega_{n_{1}%
+}\right)  \wedge\cdots\wedge\breve{T}_{n_{m}}\left(  \nu_{n_{m}},\omega
+_{n_{m}}\right)  \label{Transexp}%
+\end{equation}
+where $\nu_{n_{p}}$ defines the operator $\breve{\nu}_{n_{p}}$ through an
+integral kernel $\nu_{n_{p}}\left(  \mathsf{z}^{n_{p}}\right)  $ with
+variables $\mathsf{z}^{n_{p}}\equiv\mathsf{z}_{q_{p}+1}\cdots\mathsf{z}%
+_{q_{p}+n_{p}}$, where $q_{p}=n_{1}+\cdots+n_{p-1}$. The antisymmetrized
+product operator $\breve{T}_{n_{1}}\left(  \nu_{n_{1}},\omega_{n_{1}}\right)
+\wedge\cdots\wedge\breve{T}_{n_{m}}\left(  \nu_{n_{m}},\omega_{n_{m}}\right)
+$ is defined by
+\begin{align}
+&  \breve{T}_{n_{1}}\left(  \nu_{n_{1}},\omega_{n_{1}}\right)  \wedge
+\cdots\wedge\breve{T}_{n_{m}}\left(  \nu_{n_{m}},\omega_{n_{m}}\right)
+\left\vert \Phi_{J_{n_{1}}}^{n_{1}}\wedge\cdots\wedge\Phi_{J_{n_{m}}}^{n_{m}%
+}\right\rangle \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad=\left\vert \breve
+{T}_{n_{1}}\left(  \nu_{n_{1}},\omega_{n_{1}}\right)  \Phi_{J_{n_{1}}}^{n_{1}%
+}\wedge\cdots\wedge\breve{T}_{n_{m}}\left(  \nu_{n_{m}},\omega_{n_{m}}\right)
+\Phi_{J_{n_{m}}}^{n_{m}}\right\rangle
+\end{align}
+for $1\leq J_{n_{j}}\leq\binom{r}{n_{j}},\,1\leq j\leq m$ for a specific fixed
+partition $\left\{  n_{1},\ldots,n_{m}\right\}  $ where $\left\{  \left.
+\left\vert \Phi_{J_{n_{j}}}^{n_{j}}\right\rangle \right\vert 1\leq J_{n_{j}%
+}\leq\binom{r}{n_{j}};\left\{  n_{1},\ldots,n_{m}\right\}  \right\}  $ are
+proper bases for $\left\{  \left.  \mathcal{H}^{n_{j}}\right\vert 1\leq j\leq
+m\right\}  $. If a factor $\breve{T}_{n_{p}}\left(  \nu_{n_{p}},\omega_{n_{p}%
+}\right)  $ can be expressed as a product of lower order factors e.g.
+\begin{equation}
+\breve{T}_{n_{p}}\left(  \nu_{n_{p}},\omega_{n_{p}}\right)  =\breve{T}_{p_{1}%
+}\left(  \nu_{p_{1}},\omega_{p_{1}}\right)  \wedge\cdots\wedge\breve{T}%
+_{p_{m}}\left(  \nu_{p_{m}},\omega_{p_{m}}\right)
+\end{equation}
+where $%
+%TCIMACRO{\tsum \limits_{1\leq j\leq m}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq m}}
+%EndExpansion
+p_{j}=n_{p}$ for a partition $\left\{  p_{1},\ldots,p_{m}\right\}  $ we say it
+is decomposable if not, i.e. it can only be expressed as a sum of such
+products, we say it is indecomposable.
+
+In general it is possible to express the expansion eq. $\left(  \ref{Transexp}%
+\right)  $ of $\breve{T}\left(  \nu,\omega\right)  $ in terms of
+\emph{antisymmetric} tensor products $\breve{T}_{n_{1}}\left(  \nu_{n_{1}%
+},\omega_{n_{1}}\right)  \wedge\cdots\wedge\breve{T}_{n_{m}}\left(  \nu
+_{n_{m}},\omega_{n_{m}}\right)  $ of indecomposable operators $\left\{
+\breve{T}_{n_{p}}\left(  \nu_{n_{p}},\omega_{n_{p}}\right)  \right\}  $ whose
+integral kernels are symmetric functions $\left(  \text{see Appendix
+}\ref{symker}\right)  $ given by the \emph{symmetric }\cite{Marcus}%
+\cite{Greub} tensor product of the kernels of these operators as\emph{ }
+\begin{equation}
+T_{n_{1}\cdots n_{m}}\left(  \mathsf{z}^{N}\right)  =T_{n_{1}}\left(
+\mathsf{z}^{n_{1}}\right)  \vee\cdots\vee T_{n_{m}}\left(  \mathsf{z}^{n_{m}%
+}\right)
+\end{equation}
+
+
+Approximations to the set of transformations $\left\{  \breve{T}\left(
+\nu,\omega\right)  \right\}  $ can be generated by placing restrictions on the
+expansion eq. $\left(  \ref{Transexp}\right)  $ to various classes of
+partitions $\left\{  n_{1},\ldots,n_{m}\right\}  $, the types of operators in
+the products and by limiting the choice of integral kernels $\nu\left(
+\mathsf{z}^{N}\right)  ,\omega\left(  \mathsf{z}^{N}\right)  $ by expanding
+them in terms of fixed sets of function. For example some different types of
+products are produced by:
+
+\begin{enumerate}
+\item The partition $\left\{  1,\ldots,1\right\}  $ that leads to one particle
+operators acting in $N$-particle space $\mathcal{H}^{N}$ whose integral
+kernels are formed by a product of identical one particle integral kernels
+\begin{equation}
+T\left(  \mathsf{z}^{N}\right)  =T_{1}^{N}\left(  \mathsf{z}^{N}\right)
+=T_{1}\left(  \mathsf{z}_{1}\right)  \cdots T_{1}\left(  \mathsf{z}%
+_{N}\right)
+\end{equation}
+and corresponds to a linear transformations of $N$-particle space
+$\mathcal{H}^{N}$ through%
+\begin{equation}
+T_{1}\wedge\cdots\wedge T_{1}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{N}%
+}\right\rangle =\left\vert T_{1}\varphi_{j_{1}}\cdots T_{1}\varphi_{j_{N}%
+}\right\rangle ;\quad1\leq j_{1}<\cdots<j_{N}\leq r
+\end{equation}
+where $\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq
+j\leq r\right\}  $ forms a complete orthonormal basis for $\mathcal{H}^{1}$ of
+dimension $r$.
+
+\item The partition $\left\{  1,\ldots,1\right\}  $ that leads to $N$-particle
+operators acting in $N$-particle space $\mathcal{H}^{N}$ whose integral
+kernels are formed by a product of different one particle integral kernels
+\begin{equation}
+T\left(  \mathsf{z}^{N}\right)  =\sum_{\sigma\in\mathcal{S}_{N}}T_{1}\left(
+\mathsf{z}_{\sigma\left(  1\right)  }\right)  \cdots T_{N}\left(
+\mathsf{z}_{\sigma\left(  N\right)  }\right)
+\end{equation}
+These transformations correspond to
+\begin{equation}
+T_{1}\wedge\cdots\wedge T_{N}\left\vert \varphi_{1}\cdots\varphi
+_{N}\right\rangle =\left\vert T_{1}\varphi_{1}\cdots T_{N}\varphi
+_{N}\right\rangle \qquad\forall\left\vert \varphi_{j}\right\rangle
+\in\mathcal{H}^{N},1\leq j\leq N
+\end{equation}
+which\emph{\ are not induced }by linear transformations of one particle space
+$\mathcal{H}^{1}$ unless $T_{1}=\cdots=T_{N}$. The integral kernel of this
+transformation can be developed using the polar decomposition $T_{j}\left(
+\mathsf{z}\right)  =\nu_{j}\left(  \mathsf{z}\right)  e^{i\omega_{j}\left(
+\mathsf{z}\right)  }$ to give
+\begin{align}
+T\left(  \mathsf{z}^{N}\right)   &  =\sum_{\sigma\in\mathcal{S}_{N}}%
+\nu_{\sigma\left(  1\right)  }\left(  \mathsf{z}_{1}\right)  e^{i\omega
+_{\sigma\left(  1\right)  }\left(  \mathsf{z}_{1}\right)  }\cdots\nu
+_{\sigma\left(  N\right)  }\left(  \mathsf{z}_{N}\right)  e^{i\omega
+_{\sigma\left(  N\right)  }\left(  \mathsf{z}_{N}\right)  }\nonumber\\
+&  =\sum_{\sigma\in\mathcal{S}_{N}}\nu_{\sigma\left(  1\right)  }\left(
+\mathsf{z}_{1}\right)  \cdots\nu_{\sigma\left(  N\right)  }\left(
+\mathsf{z}_{N}\right)  e^{i\left\{  \omega_{\sigma\left(  1\right)  }\left(
+\mathsf{z}_{1}\right)  +\cdots+\omega_{\sigma\left(  N\right)  }\left(
+\mathsf{z}_{N}\right)  \right\}  }%
+\end{align}
+One should be careful to note that in this expansion $\nu\left(
+\mathsf{z}^{N}\right)  \neq\sum_{\sigma\in\mathcal{S}_{N}}\nu_{\sigma\left(
+1\right)  }\left(  \mathsf{z}_{1}\right)  \cdots\nu_{\sigma\left(  N\right)
+}\left(  \mathsf{z}_{N}\right)  ,$ and $\omega\left(  \mathsf{z}^{N}\right)
+\neq\sum\limits_{1\leq j\leq N}\omega_{\sigma\left(  j\right)  }\left(
+\mathsf{z}_{j}\right)  $ but each are in fact complicated functions of
+$\left\{  \nu_{j},\omega_{j}|1\leq j\leq N\right\}  $. Thus although $T\left(
+\mathsf{z}^{N}\right)  =\nu\left(  \mathsf{z}^{N}\right)  e^{i\omega\left(
+\mathsf{z}^{N}\right)  }$ and the norm $\left\Vert \left\vert T_{1}\varphi
+_{1}\cdots T_{N}\varphi_{N}\right\rangle \right\Vert $ is \emph{independent}
+of\emph{ }the\emph{ }N-particle phase $\omega\left(  \mathsf{z}^{N}\right)  $
+it is \emph{not }independent of the individual particle phases $\left\{
+\omega_{j}\left(  \mathsf{z}_{j}\right)  \right\}  $. Another important point
+to note from this example is that IPSs \emph{are not all} generated from a
+reference IPS\ by one particle diagonal operators i.e. by transformations of
+the form $T_{1}\wedge\cdots\wedge T_{1}$ but they \emph{are all }generated by
+$N$-particle transformations of the form $T_{1}\wedge T_{2}\wedge\cdots\wedge
+T_{N},$ (see section \ref{NVCT} for a discussion of how these diagonal
+$N$-particle operators correspond to non diagonal $1$-particle operators)
+
+\item The partition $\left\{  2,\ldots,2\right\}  $ that leads to $N$-particle
+operators acting in $N$-particle space $\mathcal{H}^{N}$ whose integral
+kernels are formed by a product of identical two particle integral kernels (of
+course there must be an even number of particles in this case)
+\begin{equation}
+T\left(  \mathsf{z}^{N}\right)  =T_{2}^{\frac{N}{2}}\left(  \mathsf{z}%
+^{N}\right)  =\sum_{\sigma\in\mathcal{S}_{N}}T_{2}\left(  \mathsf{z}%
+_{\sigma\left(  1\right)  }\mathsf{z}_{\sigma\left(  2\right)  }\right)
+\cdots T_{2}\left(  \mathsf{z}_{\sigma\left(  N-1\right)  }\mathsf{z}%
+_{\sigma\left(  N\right)  }\right)
+\end{equation}
+through the definition%
+\begin{equation}
+T_{2}\wedge\cdots\wedge T_{2}\left\vert g_{1}\cdots g_{\frac{N}{2}%
+}\right\rangle =\left\vert T_{2}g_{1}\cdots T_{2}g_{\frac{N}{2}}\right\rangle
+\qquad\forall\left\vert g_{j}\right\rangle \in\mathcal{H}^{2},1\leq j\leq
+\frac{N}{2}%
+\end{equation}
+
+\end{enumerate}
+
+Using the expansion eq. $\left(  \ref{Transexp}\right)  $ one can decompose
+$T\left(  \mathsf{z}^{N}\right)  $ in terms of indecomposable parts indexed by
+$\left\{  n_{1},\ldots,n_{m}\right\}  $ e.g.
+\begin{equation}
+T\left(  \mathsf{z}^{N}\right)  =\sum_{1\leq m\leq N}\,%
+%TCIMACRO{\tsum \limits_{\left\{  n_{1},\ldots,n_{m}\right\}  }}%
+%BeginExpansion
+{\textstyle\sum\limits_{\left\{  n_{1},\ldots,n_{m}\right\}  }}
+%EndExpansion
+T_{n_{1}\ldots n_{m}}\left(  \mathsf{z}^{N}\right)  \label{vwexpan}%
+\end{equation}
+and formulate approximations to the energy functional $E\left(  \nu
+,\omega\right)  $ by truncating and approximating terms in this expansion. For
+instance one might choose the parts indexed by $\left\{  1,\cdots,1\right\}  $
+which contains integral kernels of the form
+\begin{equation}
+T\left(  \mathsf{z}^{N}\right)  =T_{1}\left(  \mathsf{z}_{1}\right)
+\vee\cdots\vee T_{N}\left(  \mathsf{z}_{N}\right)
+\end{equation}
+which includes $p$-particle operator integral kernels of the form%
+\begin{equation}
+T_{1}\left(  \mathsf{z}_{1}\right)  \vee\cdots\vee T_{p}\left(  \mathsf{z}%
+_{p}\right)  \vee\delta\left(  \mathsf{z}_{p+1}\right)  \vee\cdots\vee
+\delta\left(  \mathsf{z}_{N}\right)  ;\quad T_{j}\neq T_{k},1\leq j<k\leq
+p;1\leq p\leq N
+\end{equation}
+and $1$-particle operators integral kernels of the form
+\begin{equation}
+T_{1}\left(  \mathsf{z}_{1}\right)  \vee\cdots\vee T_{1}\left(  \mathsf{z}%
+_{N}\right)  . \label{symprod}%
+\end{equation}
+or just restrict attention to the operator kernels of eq. $\left(
+\ref{symprod}\right)  $. A higher level of approximation would include parts
+indexed by $\left\{  1,\cdots,1\right\}  $ and all or a selection from
+integral kernels indexed by $\left\{  2,1,\cdots,1\right\}  ,\left\{
+2,2,1,\cdots,1\right\}  ,\ldots,\left\{  2,2,\cdots,2\right\}  $ and so on....
+
+\section{Commutative versus Noncommutative Transformations \label{NVCT}}
+
+Example 2 of section \ref{Approx} showed that all IPSs can be generated by an
+\emph{abelian} semigroup $\mathcal{C}_{c}$ of diagonal $N$-particle operators,
+$T_{1}\wedge\cdots\wedge T_{N}$, composed of $N$ diagonal one particle
+operators $\left\{  \left.  T_{j}\right\vert 1\leq j\leq N\right\}  $. At the
+same time it is well known that all IPSs can be generated by the \emph{non
+abelian} general linear group, $\mathcal{GL}\left(  \mathcal{H}^{1}\right)  $,
+of transformations that map $\mathcal{H}^{1}\rightarrow\mathcal{H}^{1}$. In
+this section we explicitly describe a correspondence between $\mathcal{C}_{c}$
+and $\mathcal{GL}\left(  \mathcal{H}^{1}\right)  $ by considering the
+equivalence of $N$-dimensional subspaces, $V\left(  \mathbf{\varphi}\right)
+,$ spanned by the vectors $\left\{  \left.  \left\vert \varphi_{j}%
+\right\rangle \right\vert 1\leq j\leq N\right\}  $ of $\mathcal{H}^{1}$ to
+$N$-particle IPSs $\left\vert \varphi_{1}\cdots\varphi_{N}\right\rangle $. The
+diagonal transformation
+\begin{equation}
+T_{1}\wedge\cdots\wedge T_{N}\left\vert \varphi_{1}\cdots\varphi
+_{N}\right\rangle =\left\vert T_{1}\varphi_{1}\cdots T_{N}\varphi
+_{N}\right\rangle
+\end{equation}
+can be associated with the transformation $\mathcal{T}\left(  \mathbf{\varphi
+}\right)  :V\left(  \mathbf{\varphi}\right)  \rightarrow V_{T}\left(
+\mathbf{\varphi}\right)  $ between the subspaces $V\left(  \mathbf{\varphi
+}\right)  $ spanned by the \emph{linearly independent }vectors $\left\{
+\left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq j\leq N\right\}
+$ and $V_{T}\left(  \mathbf{\varphi}\right)  $ spanned by the
+\emph{orthonormal} vectors $\left\{  \left.  \left\vert \psi_{j}\right\rangle
+\right\vert 1\leq j\leq N\right\}  $ defined by%
+\begin{equation}
+\mathcal{T}\left(  \mathbf{\varphi}\right)  \left(  \left\vert \varphi
+_{1}\right\rangle ,\cdots,\left\vert \varphi_{N}\right\rangle \right)
+=\left(  \left\vert \psi_{1}\right\rangle ,\cdots,\left\vert \psi
+_{N}\right\rangle \right)  =\left(  \left\vert T_{1}\varphi_{1}\right\rangle
+,\cdots,\left\vert T_{N}\varphi_{N}\right\rangle \right)  \mathbf{\Delta
+}\left(  \mathbf{\varphi}\right)  ^{-\frac{1}{2}}%
+\end{equation}
+where $\Delta\left(  \mathbf{\varphi}\right)  _{jk}=\left\langle T_{j}%
+\varphi_{j}|T_{k}\varphi_{k}\right\rangle $ and
+\begin{equation}
+\Delta\left(  \mathbf{\varphi}\right)  \left(  \left\vert T_{1}\varphi
+_{1}\right\rangle ,\cdots,\left\vert T_{N}\varphi_{N}\right\rangle \right)
+=\left(  \left\vert T_{1}\varphi_{1}\right\rangle ,\cdots,\left\vert
+T_{N}\varphi_{N}\right\rangle \right)  \mathbf{\Delta}\left(  \mathbf{\varphi
+}\right)  \label{delta}%
+\end{equation}
+i.e.%
+\begin{equation}
+\left\vert \psi_{j}\right\rangle =%
+%TCIMACRO{\tsum \limits_{1\leq k\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq N}}
+%EndExpansion
+\left\vert T_{k}\varphi_{k}\right\rangle \left(  \mathbf{\Delta}\left(
+\mathbf{\varphi}\right)  ^{-\frac{1}{2}}\right)  _{kj};\qquad1\leq j\leq N
+\end{equation}
+Using eq. $\left(  \ref{delta}\right)  $ we obtain
+\begin{equation}
+\left\vert \psi_{1}\cdots\psi_{N}\right\rangle =\det\left(  \mathbf{\Delta
+}\left(  \mathbf{\varphi}\right)  \right)  ^{-\frac{1}{2}}\left\vert
+T_{1}\varphi_{1}\cdots T_{N}\varphi_{N}\right\rangle
+\end{equation}
+and
+\begin{equation}
+\left\vert T_{1}\varphi_{1}\cdots T_{N}\varphi_{N}\right\rangle =\det\left(
+\mathbf{\Delta}\left(  \mathbf{\varphi}\right)  \right)  ^{\frac{1}{2}%
+}\left\vert \psi_{1}\cdots\psi_{N}\right\rangle
+\end{equation}
+Hence the action of the $N$-particle diagonal transformation $T_{1}%
+\wedge\cdots\wedge T_{N}$ on the IPS\ $\left\vert \varphi_{1}\cdots\varphi
+_{N}\right\rangle $ produces the IPS $\left\vert T_{1}\varphi_{1}\cdots
+T_{N}\varphi_{N}\right\rangle $ that can also be generated by the action of
+the one particle transformation $\mathcal{R}\left(  \mathbf{\varphi}\right)  $
+on $\left\vert \varphi_{1}\cdots\varphi_{N}\right\rangle $ where
+$\mathcal{R}\left(  \mathbf{\varphi}\right)  =$ $\mathbf{\Delta}\left(
+\mathbf{\varphi}\right)  ^{\frac{1}{2}}\mathcal{T}\left(  \mathbf{\varphi
+}\right)  $ i.e.
+\begin{align}
+T_{1}\wedge\cdots\wedge T_{N}\left\vert \varphi_{1}\cdots\varphi
+_{N}\right\rangle  &  =\mathcal{R}\left(  \mathbf{\varphi}\right)
+\wedge\cdots\wedge\mathcal{R}\left(  \mathbf{\varphi}\right)  \left\vert
+\varphi_{1}\cdots\varphi_{N}\right\rangle \nonumber\\
+&  =\left\vert \mathcal{R}\left(  \mathbf{\varphi}\right)  \varphi_{1}%
+\cdots\mathcal{R}\left(  \mathbf{\varphi}\right)  \varphi_{N}\right\rangle
+=\left\vert \mathbf{\Delta}\left(  \mathbf{\varphi}\right)  ^{\frac{1}{2}%
+}\mathcal{T}\left(  \mathbf{\varphi}\right)  \varphi_{1}\cdots\mathbf{\Delta
+}\left(  \mathbf{\varphi}\right)  ^{\frac{1}{2}}\mathcal{T}\left(
+\mathbf{\varphi}\right)  \varphi_{N}\right\rangle \nonumber\\
+&  =\det\left(  \mathbf{\Delta}\left(  \mathbf{\varphi}\right)  \right)
+^{\frac{1}{2}}\left\vert \mathcal{T}\left(  \mathbf{\varphi}\right)
+\varphi_{1}\cdots\mathcal{T}\left(  \mathbf{\varphi}\right)  \varphi
+_{N}\right\rangle =\left\vert T_{1}\varphi_{1}\cdots T_{N}\varphi
+_{N}\right\rangle
+\end{align}
+The transformations $\left\{  T_{j}\right\}  $ and $\left\{  T_{1}\wedge
+\cdots\wedge T_{N}\right\}  $ form commuting sets, are diagonal in the
+space-spin coordinate representation and are semigroups, while the
+transformations $\left\{  \mathcal{R}\left(  \mathbf{\varphi}\right)
+\right\}  $ and $\left\{  \mathcal{R}\left(  \mathbf{\varphi}\right)
+\wedge\cdots\wedge\mathcal{R}\left(  \mathbf{\varphi}\right)  \right\}  $ are
+not in general diagonal in this representation nor do they form commuting
+sets, but they do form a group.
+
+The correspondence between the $N$-particle transformation $T_{1}\wedge
+\cdots\wedge T_{N}$ and the one particle transformation $\mathcal{R}\left(
+\mathbf{\varphi}\right)  $ depends on the existence of the $one$ dimensional
+representation $\det\left(  \mathbf{\Delta}\right)  $ of $\Delta$ in
+$\mathcal{H}^{N}$. This does \emph{not }carry over to the analogous
+construction applied to transformations defined in $\mathcal{H}^{2}$ e.g. as
+in example 3 of section \ref{Approx}, thus one cannot obtain such a
+correspondence between a transformation on $\mathcal{H}^{2}$ and a product of
+diagonal transformation acting in $\mathcal{H}^{N}$.
+
+It is interesting to note the form of the first order reduced density
+operators, $L_{N}^{1}\left(  D^{N}\right)  $ associated with the normalized
+states
+\begin{equation}
+D^{N}=\frac{\left\vert T_{1}\varphi_{1}\cdots T_{N}\varphi_{N}\right\rangle
+\left\langle T_{1}\varphi_{1}\cdots T_{N}\varphi_{N}\right\vert }{\left\langle
+T_{1}\varphi_{1}\cdots T_{N}\varphi_{N}|T_{1}\varphi_{1}\cdots T_{N}%
+\varphi_{N}\right\rangle }%
+\end{equation}
+are
+\begin{equation}
+L_{N}^{1}\left(  D^{N}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j,k\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j,k\leq N}}
+%EndExpansion
+\left\vert T_{j}\varphi_{j}\right\rangle \left(  \Delta^{-1}\right)
+_{jk}\left\langle T_{k}\varphi_{k}\right\vert =%
+%TCIMACRO{\tsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\left\vert \psi_{j}\right\rangle \left\langle \psi_{j}\right\vert
+\label{FORDO}%
+\end{equation}
+which leads to vastly simplified expressions for expectation values wrt the
+state $\left\vert T_{1}\varphi_{1}\cdots T_{N}\varphi_{N}\right\rangle $ than
+the general ones developed in section \ref{Example}. Eq. $\left(
+\ref{FORDO}\right)  $ covers the case $T_{j}=I_{j}$ $1\leq j\leq N$ leading
+to
+\begin{equation}
+L_{N}^{1}\left(  \frac{\left\vert \varphi_{1}\cdots\varphi_{N}\right\rangle
+\left\langle \varphi_{1}\cdots\varphi_{N}\right\vert }{\left\langle
+\varphi_{1}\cdots\varphi_{N}|\varphi_{1}\cdots\varphi_{N}\right\rangle
+}\right)  =%
+%TCIMACRO{\tsum \limits_{1\leq j,k\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j,k\leq N}}
+%EndExpansion
+\left\vert \varphi_{j}\right\rangle \left(  \Delta^{-1}\right)  _{jk}%
+\left\langle \varphi_{k}\right\vert =%
+%TCIMACRO{\tsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\left\vert \psi_{j}\right\rangle \left\langle \psi_{j}\right\vert
+\end{equation}
+where $\Delta_{jk}=\left\langle \varphi_{j}|\varphi_{k}\right\rangle .$
+
+\section{Examples\label{Example}}
+
+We first consider the approximation indexed by $\left\{  1,\cdots,1\right\}  $
+and develop it in manner that can be used for higher order approximations so
+that we can see the general structure common to all levels of approximation.
+It is clear however that the resulting expressions are more complicated than
+the ones that would be obtained if we utilized the correspondence described in
+section \ref{NVCT}.
+
+\subsection{Approximations indexed by $\left\{  1,\cdots,1\right\}  $}
+
+The transformations that we consider in this case are
+\begin{equation}
+\breve{T}_{1}\wedge\cdots\wedge\breve{T}_{N}\left\vert \varphi_{1}%
+\cdots\varphi_{N}\right\rangle =\left\vert \breve{T}_{1}\varphi_{1}%
+\cdots\breve{T}_{N}\varphi_{N}\right\rangle
+\end{equation}
+That have integral kernels
+\begin{align}
+T\left(  \mathsf{z}^{N}\right)   &  =T_{1}\left(  \mathsf{z}_{1}\right)
+\vee\cdots\vee T_{N}\left(  \mathsf{z}_{N}\right)  =%
+%TCIMACRO{\tsum \limits_{\sigma\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma\in\mathcal{S}_{N}}}
+%EndExpansion
+T_{1}\left(  \mathsf{z}_{\sigma\left(  1\right)  }\right)  \cdots T_{N}\left(
+\mathsf{z}_{\sigma\left(  N\right)  }\right) \nonumber\\
+&  =%
+%TCIMACRO{\tsum \limits_{\sigma\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma\in\mathcal{S}_{N}}}
+%EndExpansion
+T_{\sigma\left(  1\right)  }\left(  \mathsf{z}_{1}\right)  \cdots
+T_{\sigma\left(  N\right)  }\left(  \mathsf{z}_{N}\right) \nonumber\\
+&  =\sum_{\sigma\in\mathcal{S}_{N}}\nu_{\sigma\left(  1\right)  }\left(
+\mathsf{z}_{1}\right)  \cdots\nu_{\sigma\left(  N\right)  }\left(
+\mathsf{z}_{N}\right)  e^{i\left\{  \omega_{\sigma\left(  1\right)  }\left(
+\mathsf{z}_{1}\right)  +\cdots+\omega_{\sigma\left(  N\right)  }\left(
+\mathsf{z}_{N}\right)  \right\}  }%
+\end{align}
+where
+\begin{equation}
+\omega_{\sigma\left(  j\right)  }\left(  \mathsf{z}_{j}\right)  =\delta\left(
+\mathsf{z}_{1}\right)  \cdots\delta\left(  \mathsf{z}_{j-1}\right)
+\omega_{\sigma\left(  j\right)  }\left(  \mathsf{z}_{j}\right)  \delta\left(
+\mathsf{z}_{j+1}\right)  \cdots\delta\left(  \mathsf{z}_{N}\right)
+\end{equation}
+and the kernels $\left\{  \nu_{j}\left(  \mathsf{z}_{j}\right)  |1\leq j\leq
+N\right\}  $ could be equal to each other or be delta functions as could the
+kernels $\left\{  \omega_{j}\left(  \mathsf{z}_{j}\right)  |1\leq j\leq
+N\right\}  $. The $N$-particle kernels $\nu,\omega$ are both functions of the
+$1$-particle kernels $\left\{  \nu_{1},\ldots,\nu_{N},\omega_{1},\ldots
+,\omega_{N}\right\}  $ i.e.%
+\begin{align}
+\nu &  =\nu\left(  \nu_{1},\ldots,\nu_{N},\omega_{1},\ldots,\omega_{N}\right)
+\nonumber\\
+\omega &  =\omega\left(  \nu_{1},\ldots,\nu_{N},\omega_{1},\ldots,\omega
+_{N}\right)
+\end{align}
+
+
+The first term we need to evaluate is the normalization
+\begin{align}
+&  Tr\left\{  \mathcal{\breve{D}}^{N}\left(  \nu,\omega\right)  \right\}
+=\left\langle \breve{T}\left(  \nu,\omega\right)  \varphi_{1}\cdots\varphi
+_{N}\right\vert \left.  \breve{T}\left(  \nu,\omega\right)  \varphi_{1}%
+\cdots\varphi_{N}\right\rangle \nonumber\\
+&  =\sum_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}\left\langle \breve
+{T}_{\sigma\left(  1\right)  }\cdots\breve{T}_{\sigma\left(  N\right)
+}\varphi_{1}\cdots\varphi_{N}\right.  \left\vert \breve{T}_{\sigma^{\prime
+}\left(  1\right)  }\cdots\breve{T}_{\sigma^{\prime}\left(  N\right)  }%
+\varphi_{1}\cdots\varphi_{N}\right\rangle \nonumber\\
+&  =\sum_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}\left\langle \breve
+{T}_{\sigma\left(  1\right)  }\varphi_{1}\cdots\breve{T}_{\sigma\left(
+N\right)  }\varphi_{N}\right.  \left\vert \breve{T}_{\sigma^{\prime}\left(
+1\right)  }\varphi_{1}\cdots\breve{T}_{\sigma^{\prime}\left(  N\right)
+}\varphi_{N}\right\rangle \nonumber\\
+&  =\left\langle \varphi_{1}\cdots\varphi_{N}\right\vert \left.  \breve
+{S}_{eff}\left(  \nu,\omega\right)  \varphi_{1}\cdots\varphi_{N}\right\rangle
+\equiv\mathcal{S}\left(  \nu,\omega\right)
+\end{align}
+where $\left\vert \varphi_{1}\cdots\varphi_{N}\right\rangle $ is a fixed IPS.
+The effect of the multiparticle potential $T_{\sigma\left(  1\right)  }\cdots
+T_{\sigma\left(  N\right)  }$ on an IPS\ is to produce a new IPS so that we
+obtain the inner product between two different IPSs leading to the
+normalization
+\begin{equation}
+\mathcal{S}\left(  \nu,\omega\right)  =%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\det\left\{  \mathbf{S}_{\sigma\sigma^{\prime}}\right\}
+\end{equation}
+where
+\begin{align}
+\left(  \mathbf{S}_{\sigma\sigma^{\prime}}\right)  _{jk}  &  =\left\langle
+\left.  \nu_{\sigma\left(  j\right)  }e^{i\omega_{\sigma\left(  j\right)  }%
+}\varphi_{j}\right\vert \nu_{\sigma^{\prime}\left(  k\right)  }e^{i\omega
+_{\sigma^{\prime}\left(  k\right)  }}\varphi_{k}\right\rangle =\nonumber\\
+&  \qquad\qquad\qquad\qquad%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\varphi_{k}\left(  \mathsf{z}%
+\right)  e^{i\left(  \omega_{\sigma^{\prime}\left(  k\right)  }\left(
+\mathsf{z}\right)  -\omega_{\sigma\left(  j\right)  }\left(  \mathsf{z}%
+\right)  \right)  }\nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}\right)
+\nu_{\sigma^{\prime}\left(  k\right)  }\left(  \mathsf{z}\right)  d\mathsf{z}%
+\end{align}
+
+
+The second term produced by the effective Hamiltonian is the expectation value
+$\mathcal{K}\left(  \nu,\omega\right)  $ wrt the IPS\ $\left\vert \varphi
+_{1}\cdots\varphi_{N}\right\rangle $
+\begin{equation}
+\mathcal{K}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu,\omega\right)
+^{-1}\left\langle \varphi_{1}\cdots\varphi_{N}\right\vert \left.  K\left(
+\nu,\omega\right)  \varphi_{1}\cdots\varphi_{N}\right\rangle
+\end{equation}
+of the effective kinetic energy operator $K\left(  \nu,\omega\right)  $ given
+by
+\begin{align}
+\mathcal{K}\left(  \nu,\omega\right)   &  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\left\{  \left\langle \nu_{\sigma\left(  1\right)  }e^{i\omega_{\sigma\left(
+1\right)  }}\varphi_{1}\cdots e^{i\omega_{\sigma\left(  N\right)  }}%
+\nu_{\sigma\left(  N\right)  }\varphi_{N}\right.  \right. \nonumber\\
+&  \qquad\qquad\left.  \left(  -%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\nabla_{j}^{2}\right)  \left.  e^{i\omega_{\sigma^{\prime}\left(  1\right)  }%
+}\nu_{\sigma^{\prime}\left(  1\right)  }\varphi_{1}\cdots e^{i\omega
+_{\sigma^{\prime}\left(  N\right)  }}\nu_{\sigma\prime\left(  N\right)
+}\varphi_{N}\right\rangle \right\}
+\end{align}
+which can be evaluated by utilizing the expressions described in Appendix
+\ref{Transamp} that have been developed by \cite{Verbeek1990} to give
+\begin{equation}
+\mathcal{K}\left(  \nu,\omega\right)  =%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\operatorname{Tr}\left\{  \mathbf{K}_{\sigma\sigma^{\prime}}\operatorname{adj}%
+\left(  \mathbf{S}_{\sigma\sigma^{\prime}}\right)  \right\}
+\end{equation}
+where
+\begin{equation}
+\left(  \mathbf{K}_{\sigma\sigma^{\prime}}\right)  _{jk}=-\int\left\{
+\nabla\varphi_{j}\left(  \mathsf{z}\right)  ^{\ast}\bullet\nabla\varphi
+_{k}\left(  \mathsf{z}\right)  \nu_{\sigma\left(  j\right)  }\left(
+\mathsf{z}\right)  \nu_{\sigma^{\prime}\left(  k\right)  }\left(
+\mathsf{z}\right)  e^{i\left\{  \omega_{\sigma^{\prime}\left(  k\right)
+}\left(  \mathsf{z}\right)  -\,\omega_{\sigma\left(  j\right)  }\left(
+\mathsf{z}\right)  \right\}  }\right\}  d\mathsf{z}%
+\end{equation}
+
+
+The expectation value of the one particle potential term
+\begin{align}
+&  \mathcal{V}_{1}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}\nu_{\sigma\left(  1\right)  }\left\langle e^{i\omega
+_{\sigma\left(  1\right)  }}\varphi_{1}\cdots e^{i\omega_{\sigma\left(
+N\right)  }}\nu_{\sigma\left(  N\right)  }\varphi_{N}\right\vert
+\times\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.  V_{1}e^{i\omega
+_{\sigma^{\prime}\left(  1\right)  }}\nu_{\sigma^{\prime}\left(  1\right)
+}\varphi_{1}\cdots e^{i\omega_{\sigma^{\prime}\left(  N\right)  }}\nu
+_{\sigma\prime\left(  N\right)  }\varphi_{N}\right\rangle
+\end{align}
+can be evaluated to give
+\begin{equation}
+\mathcal{V}_{1}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+\operatorname{Tr}\left\{  \mathbf{V}_{1\sigma\sigma^{\prime}}%
+\operatorname{adj}\left(  \mathbf{S}_{\sigma\sigma^{\prime}}\right)  \right\}
+\end{equation}
+where $V_{1}\left(  \mathsf{z}^{N}\right)  =%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+V_{1}\left(  \mathsf{z}_{j}\right)  $ and
+\begin{equation}
+\left(  \mathbf{V}_{1\sigma\sigma^{\prime}}\right)  _{jk}=\int\left\{
+V_{1}\left(  \mathsf{z}_{1}\right)  \varphi_{j}\left(  \mathsf{z}_{1}\right)
+^{\ast}\varphi_{k}\left(  \mathsf{z}_{1}\right)  \nu_{\sigma\left(  j\right)
+}\left(  \mathsf{z}_{1}\right)  \nu_{\sigma^{\prime}\left(  k\right)  }\left(
+\mathsf{z}_{1}\right)  e^{i\left\{  \omega_{\sigma^{\prime}\left(  k\right)
+}\left(  \mathsf{z}\right)  -\,\omega_{\sigma\left(  j\right)  }\left(
+\mathsf{z}\right)  \right\}  }\right\}  d\mathsf{z}_{1}%
+\end{equation}
+
+
+The expectation value $\mathcal{V}_{2}\left(  \nu\right)  $ of the coulomb
+potential term is given by
+\begin{equation}
+\mathcal{V}_{2}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}\left\langle \nu_{\sigma\left(  1\right)  }%
+e^{i\omega_{\sigma\left(  1\right)  }}\varphi_{1}\cdots e^{i\omega
+_{\sigma\left(  N\right)  }}\nu_{\sigma\left(  N\right)  }\varphi
+_{N}\left\vert V_{2}\right.  e^{i\omega_{\sigma^{\prime}\left(  1\right)  }%
+}\nu_{\sigma^{\prime}\left(  1\right)  }\varphi_{1}\cdots e^{i\omega
+_{\sigma^{\prime}\left(  N\right)  }}\nu_{\sigma\prime\left(  N\right)
+}\varphi_{N}\right\rangle
+\end{equation}
+which can be evaluated using the expressions in Appendix $\ref{Transamp}$ as
+\begin{equation}
+\mathcal{S}\left(  \nu,\omega\right)  ^{-1}%
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+Tr\left\{  \mathbf{G}_{\sigma,\sigma^{\prime}}\operatorname{adj}^{\left(
+2\right)  }\left(  \mathbf{S}_{\sigma\sigma^{\prime}}\right)  \right\}
+\end{equation}
+where
+\begin{align}
+\left(  \mathbf{G}_{\sigma,\sigma^{\prime}}\right)  _{jklm}  &  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}_{1}\right)
+\varphi_{j}\left(  \mathsf{z}_{1}\right)  ^{\ast}\nu_{\sigma\left(  k\right)
+}\left(  \mathsf{z}_{1}\right)  \varphi_{k}\left(  \mathsf{z}_{1}\right)
+^{\ast}\nu_{l}\left(  \mathsf{z}_{2}\right)  \varphi_{\sigma^{\prime}\left(
+l\right)  }\left(  \mathsf{z}_{2}\right)  \nu_{m}\left(  \mathsf{z}%
+_{2}\right)  \varphi_{\sigma^{\prime}\left(  m\right)  }\left(  \mathsf{z}%
+_{2}\right)  \right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\times\frac{e^{i\left\{  \omega
+_{\sigma^{\prime}\left(  l\right)  }\left(  \mathsf{z}_{2}\right)
++\omega_{\sigma^{\prime}\left(  m\right)  }\left(  \mathsf{z}_{2}\right)
+-\,\omega_{\sigma\left(  j\right)  }\left(  \mathsf{z}_{1}\right)
+-\omega_{\sigma\left(  k\right)  }\left(  \mathsf{z}_{1}\right)  \right\}  }%
+}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\nonumber\\
+&  -\nu_{\sigma\left(  j\right)  }\left(  \mathsf{z}_{2}\right)  \varphi
+_{j}\left(  \mathsf{z}_{2}\right)  ^{\ast}\nu_{\sigma\left(  k\right)
+}\left(  \mathsf{z}_{2}\right)  \varphi_{k}\left(  \mathsf{z}_{2}\right)
+^{\ast}\nu_{l}\left(  \mathsf{z}_{1}\right)  \varphi_{\sigma^{\prime}\left(
+l\right)  }\left(  \mathsf{z}_{1}\right)  \nu_{m}\left(  \mathsf{z}%
+_{1}\right)  \varphi_{\sigma^{\prime}\left(  m\right)  }\left(  \mathsf{z}%
+_{1}\right) \nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\times\left.  \frac{e^{i\left\{
+\omega_{\sigma^{\prime}\left(  l\right)  }\left(  \mathsf{z}_{1}\right)
++\omega_{\sigma^{\prime}\left(  m\right)  }\left(  \mathsf{z}_{1}\right)
+-\,\omega_{\sigma\left(  j\right)  }\left(  \mathsf{z}_{2}\right)
+-\omega_{\sigma\left(  k\right)  }\left(  \mathsf{z}_{2}\right)  \right\}  }%
+}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\right\}
+d\mathsf{z}_{1}d\mathsf{z}_{2}%
+\end{align}
+The value of the energy functional $E\left(  \nu,\omega\right)  $ is then the
+sum
+\begin{equation}
+E\left(  \nu,\omega\right)  =H_{0}+\mathcal{K}\left(  \nu,\omega\right)
++\mathcal{V}_{1}\left(  \nu,\omega\right)  +\mathcal{V}_{2}\left(  \nu
+,\omega\right)
+\end{equation}
+where the kernels $\left\{  \nu,\omega\right\}  $ are expressed in terms of
+$\left\{  \nu_{1},\ldots,\nu_{N},\omega_{1},\ldots,\omega_{N}\right\}  $ which
+in turn can be expanded in terms of a fixed subset of $s$ functions $\left\{
+f_{1},\ldots,f_{s}\right\}  $ and the coefficients of these expansions then
+become the variational parameters of the problem.
+
+\subsection{Approximations indexed by $\left\{  2,\cdots,2\right\}  $}
+
+The transformations that we consider in this case are
+\begin{equation}
+\breve{T}_{1}\wedge\cdots\wedge\breve{T}_{\frac{N}{2}}\left\vert \varphi
+_{1}\cdots\varphi_{N}\right\rangle =%
+%TCIMACRO{\dsum \limits_{\sigma\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma\in\mathcal{S}_{N}}}
+%EndExpansion
+\left\vert \breve{T}_{1}\left(  \varphi_{\sigma\left(  1\right)  }%
+\varphi_{\sigma\left(  2\right)  }\right)  \cdots\breve{T}_{\frac{N}{2}%
+}\left(  \varphi_{\sigma\left(  N-1\right)  }\varphi_{\sigma\left(  N\right)
+}\right)  \right\rangle
+\end{equation}
+where the amplitudes of $\left\vert T_{j}\left(  \varphi_{\sigma\left(
+2j-1\right)  }\varphi_{\sigma\left(  2j\right)  }\right)  \right\rangle $ are
+given by
+\begin{equation}
+\left\langle \mathsf{z}_{2j-1},\mathsf{z}_{2j}\right.  \left\vert T_{j}\left(
+\varphi_{\sigma\left(  2j-1\right)  }\varphi_{\sigma\left(  2j\right)
+}\right)  \right\rangle =\int T_{j}\left(  \mathsf{z}_{2j-1},\mathsf{z}%
+_{2j}\right)  \varphi_{\sigma\left(  2j-1\right)  }\left(  \mathsf{z}%
+_{2j-1}\right)  \varphi_{\sigma\left(  2j\right)  }\left(  \mathsf{z}%
+_{2j}\right)  d\mathsf{z}_{2j-1}d\mathsf{z}_{2j}%
+\end{equation}
+and the integral kernels of $\breve{T}_{1}\wedge\cdots\wedge\breve{T}%
+_{\frac{N}{2}}$ are
+\begin{align}
+T\left(  \mathsf{z}^{N}\right)   &  =T_{1}\left(  \mathsf{z}_{1}%
+,\mathsf{z}_{2}\right)  \vee\cdots\vee T_{\frac{N}{2}}\left(  \mathsf{z}%
+_{N-1,}\mathsf{z}_{N}\right)  =%
+%TCIMACRO{\tsum \limits_{\sigma\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma\in\mathcal{S}_{N}}}
+%EndExpansion
+T_{1}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\mathsf{z}_{\sigma\left(
+2\right)  }\right)  \cdots T_{\frac{N}{2}}\left(  \mathsf{z}_{\sigma\left(
+N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)  }\right) \nonumber\\
+&  =\sum_{\sigma\in\mathcal{S}_{N}}\nu_{1}\left(  \mathsf{z}_{\sigma\left(
+1\right)  },\mathsf{z}_{\sigma\left(  2\right)  }\right)  \cdots\nu_{\frac
+{N}{2}}\left(  \mathsf{z}_{\sigma\left(  N-1\right)  },\mathsf{z}%
+_{\sigma\left(  2N\right)  }\right)  e^{i\left\{  \omega_{1}\left(
+\mathsf{z}_{\sigma\left(  1\right)  },\mathsf{z}_{\sigma\left(  2\right)
+}\right)  +\cdots+\omega_{\frac{N}{2}}\left(  \mathsf{z}_{\sigma\left(
+N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)  }\right)  \right\}  }%
+\end{align}
+where
+\begin{equation}
+\omega_{j}\left(  \mathsf{z}_{\sigma\left(  2j-1\right)  },\mathsf{z}%
+_{\sigma\left(  2j\right)  }\right)  =\delta\left(  \mathsf{z}_{1}\right)
+\cdots\omega_{j}\left(  \mathsf{z}_{\sigma\left(  2j-1\right)  }%
+,\mathsf{z}_{\sigma\left(  2j\right)  }\right)  \cdots\delta\left(
+\mathsf{z}_{N}\right)
+\end{equation}
+
+
+In this case we must treat the effective overlap operator $S\left(  \nu
+,\omega\right)  $ as a full $N$-particle operator
+\begin{align}
+S\left(  \nu,\omega\right)   &  =\int\left\{
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion
+T_{1}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\mathsf{z}_{\sigma\left(
+2\right)  }\right)  ^{\ast}\cdots T_{\frac{N}{2}}\left(  \mathsf{z}%
+_{\sigma\left(  N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)  }\right)
+^{\ast}\right. \nonumber\\
+&  \left.  T_{1}\left(  \mathsf{z}_{\sigma^{\prime}\left(  1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2\right)  }\right)  \cdots T_{\frac{N}%
+{2}}\left(  \mathsf{z}_{\sigma^{\prime}\left(  N-1\right)  ,}\mathsf{z}%
+_{\sigma^{\prime}\left(  N\right)  }\right)  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert \right\}
+d\mathsf{z}^{N}%
+\end{align}
+and take the expectation value of this operator wrt the IPS $\left\vert
+\varphi_{1}\cdots\varphi_{N}\right\rangle $ producing
+\begin{align}
+&  \mathcal{S}\left(  \nu,\omega\right)  =\left\langle \varphi_{1}%
+\cdots\varphi_{N}|S\left(  \nu,\omega\right)  \varphi_{1}\cdots\varphi
+_{N}\right\rangle =\nonumber\\
+&
+%TCIMACRO{\tsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \varphi_{_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}\cdots\varphi
+_{N}\left(  \mathsf{z}_{N}\right)  ^{\ast}\left(  -1\right)  ^{\pi\left(
+\sigma^{\prime\prime}\right)  }\varphi_{1}\left(  \mathsf{z}_{\sigma
+^{\prime\prime}\left(  1\right)  }\right)  \cdots\varphi_{N}\left(
+\mathsf{z}_{\sigma^{\prime\prime}\left(  N\right)  }\right)  \right.
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\times%
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right) \nonumber\\
+&  \qquad\times\left.  e^{i\left\{  \omega_{1}\left(  \mathsf{z}%
+_{\sigma^{\prime}\left(  1\right)  },\mathsf{z}_{\sigma^{\prime}\left(
+2\right)  }\right)  -\omega_{1}\left(  \mathsf{z}_{\sigma\left(  1\right)
+},\mathsf{z}_{\sigma\left(  2\right)  }\right)  +\cdots+\omega_{\frac{N}{2}%
+}\left(  \mathsf{z}_{\sigma^{\prime}\left(  N-1\right)  ,}\mathsf{z}%
+_{\sigma^{\prime}\left(  N\right)  }\right)  -\omega_{\frac{N}{2}}\left(
+\mathsf{z}_{\sigma\left(  N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)
+}\right)  \right\}  }\right\}  d\mathsf{z}^{N}%
+\end{align}
+The effective kinetic energy is the expectation value $\mathcal{K}\left(
+\nu,\omega\right)  $
+\begin{equation}
+\mathcal{K}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu,\omega\right)
+^{-1}\left\langle \varphi_{1}\cdots\varphi_{N}\right\vert \left.  K\left(
+\nu,\omega\right)  \varphi_{1}\cdots\varphi_{N}\right\rangle
+\end{equation}
+of the effective kinetic energy operator $K\left(  \nu,\omega\right)  $ given
+by%
+\begin{align}
+K\left(  \nu,\omega\right)   &  =\,\underset{I}{\underbrace{-\nabla
+\bullet\left(  \nu^{2}\right)  \mathbb{I}\bullet\nabla}}-\underset
+{II}{\underbrace{\nabla\bullet\left(  \nu^{2}\nabla\omega-i\nu\nabla
+\nu\right)  }}\nonumber\\
+&  -\underset{III}{\underbrace{\left(  \nu^{2}\nabla\omega-i\nu\nabla
+\nu\right)  \bullet\nabla}}+\underset{IV}{\underbrace{\left(  \nu\nabla
+\omega-i\nabla\nu\right)  \bullet\mathbb{I}\bullet\left(  \nu\nabla
+\omega-i\nabla\nu\right)  }} \label{KE2}%
+\end{align}
+where the $N-$particle integral kernels $\nu,\omega$ are functions of the two
+particle integral kernels $\left\{  \nu_{1},\ldots,\nu_{\frac{N}{2}}%
+,\omega_{1},\ldots,\omega_{\frac{N}{2}}\right\}  $ i.e.%
+\begin{align}
+\nu &  =\nu\left(  \nu_{1},\ldots,\nu_{\frac{N}{2}},\omega_{1},\ldots
+,\omega_{\frac{N}{2}}\right) \nonumber\\
+\omega &  =\omega\left(  \nu_{1},\ldots,\nu_{\frac{N}{2}},\omega_{1}%
+,\ldots,\omega_{\frac{N}{2}}\right)
+\end{align}
+The expansions of the various parts of the effective kinetic energy operator
+eq. $\left(  \ref{KE2}\right)  $ are shown in Appendix \ref{KinEn}. The
+expectation value of the one particle potential
+\begin{equation}
+\mathcal{V}_{1}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}\left\langle \varphi_{1}\cdots\varphi_{N}\left\vert
+V_{1}\right.  \varphi_{1}\cdots\varphi_{N}\right\rangle
+\end{equation}
+is given in terms of the effective operators%
+\begin{align}
+&  V_{1}=%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int\left\{  V_{1}\left(  \mathsf{z}_{j}\right)  T_{1}\left(  \mathsf{z}%
+_{\sigma\left(  1\right)  },\mathsf{z}_{\sigma\left(  2\right)  }\right)
+^{\ast}\cdots T_{\frac{N}{2}}\left(  \mathsf{z}_{\sigma\left(  N-1\right)
+,}\mathsf{z}_{\sigma\left(  N\right)  }\right)  ^{\ast}\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad\left.  T_{1}\left(  \mathsf{z}_{\sigma^{\prime
+}\left(  1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2\right)  }\right)
+\cdots T_{\frac{N}{2}}\left(  \mathsf{z}_{\sigma^{\prime}\left(  N-1\right)
+,}\mathsf{z}_{\sigma^{\prime}\left(  N\right)  }\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert \right\}
+d\mathsf{z}^{N}%
+\end{align}
+and can be evaluated to give
+\begin{align}
+\mathcal{V}_{1}\left(  \nu,\omega\right)   &  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}\times\nonumber\\
+&
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int\left\{  \varphi_{_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}\cdots
+\varphi_{N}\left(  \mathsf{z}_{N}\right)  ^{\ast}\left(  -1\right)
+^{\pi\left(  \sigma^{\prime\prime}\right)  }\varphi_{1}\left(  \mathsf{z}%
+_{\sigma^{\prime\prime}\left(  1\right)  }\right)  \cdots\varphi_{N}\left(
+\mathsf{z}_{\sigma^{\prime\prime}\left(  N\right)  }\right)  \right.
+\nonumber\\
+&  \qquad\times V_{1}\left(  \mathsf{z}_{j}\right)
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right) \nonumber\\
+&  \qquad\left.  e^{i\left\{  \omega_{1}\left(  \mathsf{z}_{\sigma^{\prime
+}\left(  1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2\right)  }\right)
+-\omega_{1}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\mathsf{z}%
+_{\sigma\left(  2\right)  }\right)  +\cdots+\omega_{\frac{N}{2}}\left(
+\mathsf{z}_{\sigma^{\prime}\left(  N-1\right)  ,}\mathsf{z}_{\sigma^{\prime
+}\left(  N\right)  }\right)  -\omega_{\frac{N}{2}}\left(  \mathsf{z}%
+_{\sigma\left(  N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)  }\right)
+\right\}  }\right\}  d\mathsf{z}^{N}%
+\end{align}
+
+
+The expectation value $\mathcal{V}_{2}\left(  \nu\right)  $ of the coulomb
+potential term is given by
+\begin{equation}
+\mathcal{V}_{2}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}\left\langle \varphi_{1}\cdots\varphi_{N}\left\vert
+V_{2}\right.  \varphi_{1}\cdots\varphi_{N}\right\rangle
+\end{equation}
+which can be evaluated in terms of the effective coulomb operator
+\begin{align}
+&
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j<k\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j<k\leq N}}
+%EndExpansion
+\int\left\{  V_{2}\left(  \mathsf{z}_{j,}\mathsf{z}_{k}\right)  T_{1}\left(
+\mathsf{z}_{\sigma\left(  1\right)  },\mathsf{z}_{\sigma\left(  2\right)
+}\right)  ^{\ast}\cdots T_{\frac{N}{2}}\left(  \mathsf{z}_{\sigma\left(
+N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)  }\right)  ^{\ast}\right.
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\left.  T_{1}\left(  \mathsf{z}_{\sigma^{\prime
+}\left(  1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2\right)  }\right)
+\cdots T_{\frac{N}{2}}\left(  \mathsf{z}_{\sigma^{\prime}\left(  N-1\right)
+,}\mathsf{z}_{\sigma^{\prime}\left(  N\right)  }\right)  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert \right\}
+d\mathsf{z}^{N}%
+\end{align}
+to give%
+\begin{align}
+&  \mathcal{V}_{2}\left(  \nu,\omega\right)  =\mathcal{S}\left(  \nu
+,\omega\right)  ^{-1}\times\nonumber\\
+&
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j<k\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j<k\leq N}}
+%EndExpansion
+\int\left\{  \varphi_{_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}\cdots
+\varphi_{N}\left(  \mathsf{z}_{N}\right)  ^{\ast}\left(  -1\right)
+^{\pi\left(  \sigma^{\prime\prime}\right)  }\varphi_{1}\left(  \mathsf{z}%
+_{\sigma^{\prime\prime}\left(  1\right)  }\right)  \cdots\varphi_{N}\left(
+\mathsf{z}_{\sigma^{\prime\prime}\left(  N\right)  }\right)  \right.
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad\times V_{2}\left(  \mathsf{z}_{j}%
+,\mathsf{z}_{k}\right)
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right) \nonumber\\
+&  \qquad\qquad\qquad\left.  e^{i\left\{  \omega_{1}\left(  \mathsf{z}%
+_{\sigma^{\prime}\left(  1\right)  },\mathsf{z}_{\sigma^{\prime}\left(
+2\right)  }\right)  -\omega_{1}\left(  \mathsf{z}_{\sigma\left(  1\right)
+},\mathsf{z}_{\sigma\left(  2\right)  }\right)  +\cdots+\omega_{\frac{N}{2}%
+}\left(  \mathsf{z}_{\sigma^{\prime}\left(  N-1\right)  ,}\mathsf{z}%
+_{\sigma^{\prime}\left(  N\right)  }\right)  -\omega_{\frac{N}{2}}\left(
+\mathsf{z}_{\sigma\left(  N-1\right)  ,}\mathsf{z}_{\sigma\left(  N\right)
+}\right)  \right\}  }\right\}  d\mathsf{z}^{N}%
+\end{align}
+where%
+\begin{equation}
+V_{2}\left(  \mathsf{z}_{j},\mathsf{z}_{k}\right)  =\frac{1}{\left\Vert
+\mathbf{r}_{j}-\mathbf{r}_{k}\right\Vert }\delta\left(  \xi_{j}-\xi
+_{k}\right)
+\end{equation}
+for $\mathsf{z}_{j}\equiv\left(  \mathbf{r}_{j},\xi_{j}\right)  $ and
+$\mathsf{z}_{k}\equiv\left(  \mathbf{r}_{k},\xi_{k}\right)  .$
+
+The value of the energy functional $E\left(  \nu,\omega\right)  $ is then the
+sum
+\begin{equation}
+E\left(  \mathcal{\Psi}\left(  \nu_{1},\ldots,\nu_{\frac{N}{2}},\omega
+_{1},\ldots,\omega_{\frac{N}{2}}\right)  \right)  =H_{0}+\mathcal{K}\left(
+\nu,\omega\right)  +\mathcal{V}_{1}\left(  \nu,\omega\right)  +\mathcal{V}%
+_{2}\left(  \nu,\omega\right)
+\end{equation}
+and the optimal IPS\ is given by minimizing $E\left(  \mathcal{\Psi}\left(
+\nu,\omega\right)  \right)  $ over $\nu=\left(  \nu_{1},\cdots,\nu\frac{_{N}%
+}{2}\right)  $ and $\omega=\left(  \omega_{1},\cdots,\omega\frac{_{N}}%
+{2}\right)  \mathsf{.}$ In an analogous fashion to the $\left\{
+1,\ldots,1\right\}  $ case the functions $\left\{  \nu_{1},\cdots,\nu
+\frac{_{N}}{2},\omega_{1},\cdots,\omega\frac{_{N}}{2}\right\}  $ can be
+expanded in terms of a fixed set of $s$ functions $\left\{  f_{1},\ldots
+,f_{s}\right\}  ,$ where now these functions are two particle functions.
+
+\section{Summary\label{Sum}}
+
+In this article we have shown that
+
+\begin{description}
+\item[$\bullet$] one can generate all pure states from a cyclic reference
+state (a pure state that has a wavefunction that is non zero almost
+everywhere) by transformations that are diagonal in the space-spin coordinate representation,
+
+\item[$\bullet$] these transformations, which form an abelian semigroup
+$C_{c}$, also maintain the local form of the defining space-spin coordinate
+representation of the Hamiltonian, leading to effective Hamiltonians that have
+direct physical interpretability in terms of momentum and potential operators
+and thus have a certain classical flavor,
+
+\item[$\bullet$] one can form an approximation theory by restricting attention
+to sub semigroups of $C_{c}$, that lead to approximations which have a
+\emph{direct} physical interpretation.
+\end{description}
+
+These properties should be contrasted to the effect of the transformation of
+state in truncated configurational interaction, Multi Configurational Self
+Consistent Field and couple cluster methods that do not lead to or matrix
+elements that could identified with such effective Hamiltonians.
+
+To illuminate these points we presented some examples that showed the form of
+terms that need to be calculated in order to produce an energy functional that
+can be optimized. Many strategies are obviously possible for the
+simplification of the expressions we obtained which were, by intention, in a
+very raw form that need to be simplified in order to produce practical
+computational formulae.
+
+The approximations that are suggested in this article present a new approach
+to obtaining approximate solutions to the Schr\"{o}dinger equation, and offer
+possibilities for development in many directions.
+
+\section{Acknowledgements}
+
+The author would like to thank Dr Sam Trickey for useful discussions
+pertaining to the ideas presented in this article.
+
+\appendix
+
+\section{Subspaces of Operators\label{spaces}}
+
+The set of trace class operators is defined as
+\begin{equation}
+\mathcal{B}_{1}\left(  \mathcal{H}\right)  =\left\{  X|X\in\mathcal{B}\left(
+\mathcal{H}\right)  ;Tr\left\{  \left(  X^{\dagger}X\right)  ^{\frac{1}{2}%
+}\right\}  <\infty\right\}
+\end{equation}
+where $\mathcal{B}\left(  \mathcal{H}\right)  $ is the space of bounded
+operators acting in the Hilbert space $\mathcal{H}$. $\mathcal{B}_{1}\left(
+\mathcal{H}\right)  $ is a Banach space equipped with the norm
+\begin{equation}
+\left\Vert X\right\Vert _{1}=Tr\left\{  \left(  X^{\dagger}X\right)
+^{\frac{1}{2}}\right\}
+\end{equation}
+The space $\mathcal{B}\left(  \mathcal{H}\right)  $ is also a Banach space
+with a norm defined as
+\begin{equation}
+\left\Vert X\right\Vert =\sup_{\left\vert \Psi\right\rangle \in\mathcal{H}%
+}\left\{  \frac{\left\langle \Psi|X\Psi\right\rangle }{\left\langle \Psi
+|\Psi\right\rangle }\right\}
+\end{equation}
+The closure of $\mathcal{B}_{1}\left(  \mathcal{H}\right)  $ wrt $\left\Vert
+{}\right\Vert $ produces $\mathcal{B}\left(  \mathcal{H}\right)  $. The
+relationship between these spaces is
+\begin{equation}
+\mathcal{B}\left(  \mathcal{H}\right)  \supseteq\mathcal{B}_{1}\left(
+\mathcal{H}\right)
+\end{equation}
+and their norms is
+\begin{equation}
+\left\Vert X\right\Vert \leq\left\Vert X\right\Vert _{1}%
+\end{equation}
+
+
+\section{States\label{states}}
+
+The states of an $N$-particle quantum mechanical system correspond to
+positive, normalized trace class operators and form a convex subset,
+$\mathcal{S}_{N}$, of the Banach space, $\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  $, of $N$-particle trace class operators, defined as%
+\begin{equation}
+\mathcal{S}_{N}=\left\{  D^{N}|D^{N}\in\mathcal{B}_{1}\left(  \mathcal{H}%
+^{N}\right)  ,D^{N}\geq0,TrD^{N}=1\right\}
+\end{equation}
+Pure states are idempotent operators i.e.
+\begin{equation}
+\left(  D^{N}\right)  ^{2}=D^{N}%
+\end{equation}
+and \emph{normalized }pure states\emph{ }can be associated with, in a 1-1
+fashion, with a ray $\left\{  \alpha\left\vert \Psi\right\rangle |\alpha
+\in\mathbb{C}\right\}  $ generated by a vector $\left\vert \Psi\right\rangle $
+in the N-particle Hilbert space $\mathcal{H}^{N}$ by the relationship
+\begin{equation}
+D^{N}=\frac{\left\vert \Psi\right\rangle \left\langle \Psi\right\vert
+}{\left\langle \Psi|\Psi\right\rangle }%
+\end{equation}
+The set of \textit{unnormalized }states form the set of positive trace class
+operators, $\mathcal{B}_{1+}\left(  \mathcal{H}^{1}\right)  $. States that are
+not idempotent are called mixed or ensemble states and correspond to
+statistical mixtures of pure states.
+
+\section{Discrete versus Continuous \label{Difference}}
+
+The discrete semigroup $C_{d}$ is given by operators of the form
+\begin{equation}
+Q=%
+%TCIMACRO{\dsum \limits_{1\leq j\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq\infty}}
+%EndExpansion
+q_{j}\left\vert e_{j}\right\rangle \left\langle e_{j}\right\vert
+\end{equation}
+and the continuous $C_{c}$ by
+\begin{equation}
+T=%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+T\left(  x\right)  \left\vert x\right\rangle \left\langle x\right\vert dx
+\end{equation}
+In the discrete case an invariant one dimensional subspace exists if there is
+a vector $\left\vert v\right\rangle $ such that%
+\begin{equation}
+Q\left\vert v\right\rangle =\alpha_{Q}\left\vert v\right\rangle \qquad\forall
+Q\in C_{d}%
+\end{equation}
+This condition can be expressed as
+\begin{equation}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq\infty}}
+%EndExpansion
+Q_{j}\left\vert e_{j}\right\rangle \left\langle e_{j}\right\vert \left.
+v\right\rangle =\alpha_{Q}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq\infty}}
+%EndExpansion
+\left\vert e_{j}\right\rangle \left\langle e_{j}\right\vert \left.
+v\right\rangle \qquad\forall Q\in C_{d}%
+\end{equation}
+as the basis $\left\{  e_{j}\right\}  $ is linearly independent we can treat
+each component separately to obtain%
+\begin{equation}
+Q_{j}\left\vert e_{j}\right\rangle \left\langle e_{j}\right\vert \left.
+v\right\rangle =\alpha_{Q}\left\vert e_{j}\right\rangle \left\langle
+e_{j}\right\vert \left.  v\right\rangle \qquad\forall Q_{j}\quad\forall j
+\end{equation}
+this implies that
+\begin{equation}
+Q_{j}=\alpha_{Q}\qquad\forall v_{j}\neq0\quad\forall Q_{j} \label{q}%
+\end{equation}
+let
+\begin{equation}
+v_{1}\neq0\quad\&\quad v_{2}\neq0
+\end{equation}
+and all other expansion coefficients of $\left\vert v\right\rangle $ equal to
+zero then eq. $\left(  \ref{q}\right)  $
+\begin{equation}
+Q_{1}=Q_{2}=\alpha_{Q}\quad\forall Q_{1},Q_{2} \label{multi}%
+\end{equation}
+which clearly is not possible. Hence only one coefficient can be nonzero and
+we obtain%
+\begin{equation}
+\left\vert v\right\rangle =\beta\left\vert e_{k}\right\rangle
+\end{equation}
+giving
+\begin{equation}%
+%TCIMACRO{\dsum \limits_{1\leq j\leq\infty}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq\infty}}
+%EndExpansion
+Q_{j}\left\vert e_{j}\right\rangle \left\langle e_{j}\right\vert \beta\left.
+e_{k}\right\rangle =Q_{k}\beta\left\vert e_{k}\right\rangle \quad\forall Q\in
+C_{d}%
+\end{equation}
+which shows that $\alpha_{Q}=Q_{k}$. At the opposite extreme if all the
+expansion coefficients $\left\{  v_{j}\right\}  $ are non zero then
+$\left\vert v\right\rangle $ would be a cyclic vector for $C_{d}$ i.e. the
+Hilbert space is generated by the action of $C_{d}$ on $\left\vert
+v\right\rangle $.
+
+In the continuous case an invariant one dimensional subspace exists if
+\begin{equation}
+T\left\vert v\right\rangle =\alpha_{T}\left\vert v\right\rangle \qquad\forall
+T\in C_{c}%
+\end{equation}
+which can be expressed as
+\begin{align}%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+T\left(  x\right)  \left\vert x\right\rangle \left\langle x\right\vert \left.
+v\right\rangle dx  &  =\alpha_{T}%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\vert x\right\rangle \left\langle x\right\vert \left.  v\right\rangle
+dx\qquad\forall T\in C_{c}\\
+&  \Rightarrow t\left(  x\right)  =\alpha_{T}\quad v\left(  x\right)
+\neq0\quad\forall t,\quad x\in\Delta
+\end{align}
+so that for sets of non zero measure $\Delta$
+\begin{equation}
+T\left(  x\right)  \left\langle x\right\vert \left.  v\right\rangle
+=\alpha_{T}\left\langle x\right\vert \left.  v\right\rangle \quad\forall
+T,\quad x\in\Delta
+\end{equation}
+and
+\begin{equation}
+T\left(  x\right)  =\alpha_{T}\quad\text{when }v\left(  x\right)  \neq
+0\quad,x\in\Delta\quad\forall T
+\end{equation}
+However now there no single components $\left\{  \left\vert x\right\rangle
+\right\}  $ as these vectors do not belong to the Hilbert space and there is
+no such square integrable function $v\left(  x\right)  $ that makes this true
+for all $T$ (the analogous condition to eq. $\left(  \ref{multi}\right)  $ in
+the continuous case cannot be satisfied), so no invariant one dimensional
+Hilbert subspaces for the semigroup $\left\{  T\right\}  $ exist. If the
+square integrable function $v\left(  x\right)  $ is non zero almost everywhere
+then it is a cyclic vector for the semigroup $C_{c}.$
+
+\section{Transformation of the Kinetic Energy Operator\label{KinEnTrans}}
+
+\subsection{Transition Amplitudes}
+
+We consider the commutation relationships between the operators $\mathbf{P,}%
+e^{i\breve{\omega}_{N}}$ and $\breve{\nu}_{N}$ and observe that
+
+\begin{enumerate}
+\item
+\begin{align}
+&  \mathbf{P}e^{i\breve{\omega}_{N}}\left\vert \Psi\right\rangle =\left(
+-i\nabla\right)  e^{i\breve{\omega}_{N}}\left\vert \Psi\right\rangle
+=e^{i\breve{\omega}_{N}}\left(  -i\nabla\right)  \left\vert \Psi\right\rangle
++e^{i\breve{\omega}_{N}}\left(  \nabla\breve{\omega}_{N}\right)  \left\vert
+\Psi\right\rangle \nonumber\\
+&  \qquad\qquad\qquad\left.  =\right.  e^{i\breve{\omega}_{N}}\left(
+-i\nabla+\nabla\breve{\omega}_{N}\right)  \left\vert \Psi\right\rangle
+=e^{i\breve{\omega}_{N}}\left\{  \mathbf{P}+\nabla\breve{\omega}_{N}\right\}
+\left\vert \Psi\right\rangle
+\end{align}
+
+
+\item
+\begin{align}
+&  \mathbf{P}\breve{\nu}_{N}\left\vert \Psi\right\rangle =\left(
+-i\nabla\right)  \breve{\nu}_{N}\left\vert \Psi\right\rangle \nonumber\\
+&  =\breve{\nu}_{N}\left(  -i\nabla\right)  \left\vert \Psi\right\rangle
++\left(  -i\nabla\breve{\nu}_{N}\right)  \left\vert \Psi\right\rangle
+=\left\{  \breve{\nu}_{N}\mathbf{P}-i\nabla\breve{\nu}_{N}\right\}  \left\vert
+\Psi\right\rangle
+\end{align}
+
+
+\item
+\begin{equation}
+\breve{\nu}_{N}e^{i\breve{\omega}_{N}}\left\vert \Psi\right\rangle
+=e^{i\breve{\omega}_{N}}\breve{\nu}_{N}\left\vert \Psi\right\rangle
+\end{equation}
+
+\end{enumerate}
+
+Which can be summarized in the commutation relationship
+\begin{align}
+\left[  \mathbf{P,}e^{i\breve{\omega}_{N}}\right]   &  =e^{i\breve{\omega}%
+_{N}}\nabla\breve{\omega}_{N}\nonumber\\
+\left[  \mathbf{P,}\breve{\nu}_{N}\right]   &  =i\nabla\breve{\nu}%
+_{N}\nonumber\\
+\left[  \breve{\nu}_{N},e^{i\breve{\omega}_{N}}\right]   &  =0
+\end{align}
+that produce
+\begin{align}
+\mathbf{P}\breve{\nu}_{N}e^{i\breve{\omega}_{N}}\left\vert \Psi\right\rangle
+&  =\left\{  \breve{\nu}_{N}\mathbf{P}-i\nabla\breve{\nu}_{N}\right\}
+e^{i\breve{\omega}_{N}}\left\vert \Psi\right\rangle =\left\{  \breve{\nu}%
+_{N}e^{i\breve{\omega}_{N}}\left\{  \mathbf{P}+\nabla\breve{\omega}%
+_{N}\right\}  -ie^{i\breve{\omega}_{N}}\nabla\breve{\nu}_{N}\right\}
+\left\vert \Psi\right\rangle \nonumber\\
+&  =e^{i\breve{\omega}_{N}}\left\{  \breve{\nu}_{N}\mathbf{P+}\breve{\nu}%
+_{N}\nabla\breve{\omega}_{N}-i\nabla\breve{\nu}_{N}\right\}  \left\vert
+\Psi\right\rangle
+\end{align}
+This allows us to express the transition amplitude%
+\begin{equation}
+\left\langle T\left(  \breve{\nu}_{Na},\breve{\omega}_{Na}\right)
+\Psi|\left(  \mathbf{P\bullet P}\right)  T\left(  \breve{\nu}_{Nb}%
+,\breve{\omega}_{Nb}\right)  \Psi\right\rangle
+\end{equation}
+as
+\begin{equation}
+\left\langle e^{i\breve{\omega}_{Na}}\left\{  \breve{\nu}_{Na}\mathbf{P+}%
+\breve{\nu}_{Na}\nabla\breve{\omega}_{Na}-i\nabla\breve{\nu}_{Na}\right\}
+\Psi|e^{i\breve{\omega}_{Nb}}\left\{  \breve{\nu}_{Nb}\mathbf{P+}\breve{\nu
+}_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right\}
+\Psi\right\rangle
+\end{equation}
+which gives
+
+\begin{description}
+\item[A]
+\begin{equation}
+\left\langle \breve{\nu}_{Na}e^{i\breve{\omega}_{Na}}\mathbf{P}\Psi|\breve
+{\nu}_{Nb}e^{i\breve{\omega}_{Nb}}\mathbf{P}\Psi\right\rangle =-\left\langle
+\Psi|\left\{  \nabla\bullet\left(  \breve{\nu}_{Na}\breve{\nu}_{Nb}e^{i\left(
+\breve{\omega}_{Nb}-\breve{\omega}_{Na}\right)  }\right)  \mathbb{I}%
+\bullet\nabla\right\}  \Psi\right\rangle \label{exA}%
+\end{equation}
+where
+\begin{align}
+&  \nabla\bullet\left(  \breve{\nu}_{Na}\breve{\nu}_{Nb}e^{i\left(
+\breve{\omega}_{Nb}-\breve{\omega}_{Na}\right)  }\right)  \mathbb{I}%
+\bullet\nabla\nonumber\\
+&  =\left(
+\begin{array}
+[c]{ccc}%
+\nabla_{1} & \cdots & \nabla_{m}%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{ccc}%
+\breve{\nu}_{Na}\breve{\nu}_{Nb}e^{i\left(  \breve{\omega}_{Nb}-\breve{\omega
+}_{Na}\right)  } & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \breve{\nu}_{Na}\breve{\nu}_{Nb}e^{i\left(  \breve{\omega}%
+_{Nb}-\breve{\omega}_{Na}\right)  }%
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{c}%
+\nabla_{1}\\
+\vdots\\
+\nabla_{m}%
+\end{array}
+\right)
+\end{align}
+The transition amplitude eq. $\left(  \ref{exA}\right)  $ is given explicitly
+by
+\begin{align}
+&  -%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \breve{\nu}_{Na}\left(  \mathsf{z}\right)  e^{-i\breve{\omega}%
+_{Na}\left(  \mathsf{z}\right)  }\nabla\Psi\left(  \mathsf{z}\right)  ^{\ast
+}\breve{\nu}_{Nb}\left(  \mathsf{z}\right)  e^{i\breve{\omega}_{Nb}\left(
+\mathsf{z}\right)  }\nabla\Psi\left(  \mathsf{z}\right)  \right\}
+d\mathsf{z}\nonumber\\
+&  \left.  =\right.  -%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \nabla\Psi\left(  \mathsf{z}\right)  ^{\dagger}\bullet\nabla
+\Psi\left(  \mathsf{z}\right)  e^{i\left(  \breve{\omega}_{Nb}\left(
+\mathsf{z}\right)  -\breve{\omega}_{Na}\left(  \mathsf{z}\right)  \right)
+}\breve{\nu}_{Na}\left(  \mathsf{z}\right)  \breve{\nu}_{Nb}\left(
+\mathsf{z}\right)  \right\}  d\mathsf{z}%
+\end{align}
+
+
+\item[B]
+\begin{align}
+&  \left\langle \breve{\nu}_{Na}e^{i\breve{\omega}_{Na}}\mathbf{P}%
+\Psi|\left\{  \breve{\nu}_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu
+}_{Nb}\right\}  e^{-i\breve{\omega}_{Nb}}\Psi\right\rangle \nonumber\\
+&  =-i\left\langle \Psi|\left\{  \nabla\bullet\breve{\nu}_{Na}e^{i\left(
+\breve{\omega}_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\left(
+\breve{\nu}_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right)
+\right\}  \Psi\right\rangle
+\end{align}
+
+
+\item[C]
+\begin{align}
+&  \left\langle \left(  \breve{\nu}_{Na}\nabla\breve{\omega}_{Na}%
+-i\nabla\breve{\nu}_{Na}\right)  \Psi|v_{b}e^{i\breve{\omega}_{Nb}}%
+\mathbf{P}\Psi\right\rangle \nonumber\\
+&  =-i\left\langle \Psi|\left\{  \left(  \breve{\nu}_{Na}\nabla\breve{\omega
+}_{Na}-i\nabla\breve{\nu}_{Na}\right)  \bullet v_{b}e^{i\left(  \breve{\omega
+}_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\nabla\right\}
+\Psi\right\rangle
+\end{align}
+
+
+\item[D]
+\begin{align}
+&  \left\langle \left(  \breve{\nu}_{Na}\nabla\breve{\omega}_{Na}%
+-i\nabla\breve{\nu}_{Na}\right)  \Psi|\left(  \breve{\nu}_{Nb}\nabla
+\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right)  \Psi\right\rangle
+\nonumber\\
+&  \left.  =\right.  \left\langle \Psi|\left\{  \left(  \breve{\nu}_{Na}%
+\nabla\breve{\omega}_{Na}-i\nabla\breve{\nu}_{Na}\right)  \bullet e^{i\left(
+\breve{\omega}_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\left(
+\breve{\nu}_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right)
+\right\}  \Psi\right\rangle
+\end{align}
+collecting together the terms A,B,C and D we obtain%
+\begin{align}
+&  \left\langle T\left(  \breve{\nu}_{Na},\breve{\omega}_{Na}\right)
+\Psi|\left(  \mathbf{P\bullet P}\right)  T\left(  \breve{\nu}_{Nb}%
+,\breve{\omega}_{Nb}\right)  \Psi\right\rangle =\nonumber\\
+&  \qquad\qquad\qquad\left\langle \Psi\right.  |\left\{  -\nabla\bullet\left(
+\breve{\nu}_{Na}\breve{\nu}_{Nb}e^{i\left(  \breve{\omega}_{Nb}-\breve{\omega
+}_{Na}\right)  }\right)  \mathbb{I}\bullet\nabla\right. \nonumber\\
+&  \qquad\qquad\qquad\qquad-\nabla\bullet\breve{\nu}_{Na}e^{i\left(
+\breve{\omega}_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\left(
+\breve{\nu}_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right)
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad-\left(  \breve{\nu}_{Na}\nabla\breve{\omega
+}_{Na}-i\nabla\breve{\nu}_{Na}\right)  \bullet v_{b}e^{i\left(  \breve{\omega
+}_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\nabla\nonumber\\
+&  \quad\left.  +\left(  \breve{\nu}_{Na}\nabla\breve{\omega}_{Na}%
+-i\nabla\breve{\nu}_{Na}\right)  \bullet e^{i\left(  \breve{\omega}%
+_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\left(  \breve{\nu}%
+_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right)  \right\}
+\left.  \Psi\right\rangle
+\end{align}
+We can also consider this as the expectation value wrt the pure state
+$\left\vert \Psi\right\rangle $ of the effective operator $K\left(  \breve
+{\nu}_{Na},\breve{\omega}_{Na},\breve{\nu}_{Nb},\breve{\omega}_{Nb}\right)  $
+where
+\begin{align}
+&  K\left(  \breve{\nu}_{Na},\breve{\omega}_{Na},\breve{\nu}_{Nb}%
+,\breve{\omega}_{Nb}\right)  =\nonumber\\
+&  -\nabla\bullet\left(  \breve{\nu}_{Na}\breve{\nu}_{Nb}e^{i\left(
+\breve{\omega}_{Nb}-\breve{\omega}_{Na}\right)  }\right)  \mathbb{I}%
+\bullet\nabla-\nabla\bullet\breve{\nu}_{Na}e^{i\left(  \breve{\omega}%
+_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\left(  \breve{\nu}%
+_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right) \nonumber\\
+&  \qquad\qquad\qquad-\left(  \breve{\nu}_{Na}\nabla\breve{\omega}%
+_{Na}-i\nabla\breve{\nu}_{Na}\right)  \bullet v_{b}e^{i\left(  \breve{\omega
+}_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\nabla\nonumber\\
+&  \qquad\qquad\qquad\qquad+\left(  \breve{\nu}_{Na}\nabla\breve{\omega}%
+_{Na}-i\nabla\breve{\nu}_{Na}\right)  \bullet e^{i\left(  \breve{\omega}%
+_{Nb}-\breve{\omega}_{Na}\right)  }\mathbb{I}\bullet\left(  \breve{\nu}%
+_{Nb}\nabla\breve{\omega}_{Nb}-i\nabla\breve{\nu}_{Nb}\right)
+\end{align}
+
+\end{description}
+
+\subsection{Expectation Values}
+
+If we set $\breve{\nu}_{Na}=\breve{\nu}_{Nb}=\breve{\nu}_{N}$ and
+$\breve{\omega}_{Na}=\breve{\omega}_{Nb}=\breve{\omega}_{N}$ we obtain the
+expectation value of the Kinetic Energy operator
+\begin{equation}
+\left\langle T\left(  \breve{\nu}_{N},\breve{\omega}_{N}\right)  \Psi|\left(
+\mathbf{P\bullet P}\right)  T\left(  \breve{\nu}_{N},\breve{\omega}%
+_{N}\right)  \Psi\right\rangle
+\end{equation}
+which can be developed to produce
+\begin{align}
+&  \left\langle T\left(  \breve{\nu}_{N},\breve{\omega}_{N}\right)
+\Psi|\left(  \mathbf{P\bullet P}\right)  T\left(  \breve{\nu}_{N}%
+,\breve{\omega}_{N}\right)  \Psi\right\rangle =\nonumber\\
+&  \qquad\qquad\qquad\qquad\left\langle \Psi\right.  |\left\{  -\nabla
+\bullet\left(  \breve{\nu}_{N}^{2}\right)  \mathbb{I}\bullet\nabla\right.
+\nonumber\\
+&  \qquad\qquad\qquad\qquad-\nabla\bullet\left(  \breve{\nu}_{N}^{2}%
+\nabla\breve{\omega}_{N}-i\breve{\nu}_{N}\nabla\breve{\nu}_{N}\right)
+\nonumber\\
+&  \qquad\qquad\qquad\qquad\qquad-\left(  \breve{\nu}_{N}^{2}\nabla
+\breve{\omega}_{N}-i\breve{\nu}_{N}\nabla\breve{\nu}_{N}\right)  \bullet
+\nabla\nonumber\\
+&  \quad\left.  +\left(  \breve{\nu}_{N}\nabla\breve{\omega}_{N}-i\nabla
+\breve{\nu}_{N}\right)  \bullet\mathbb{I}\bullet\left(  \breve{\nu}_{N}%
+\nabla\breve{\omega}_{N}-i\nabla\breve{\nu}_{N}\right)  \right\}  \left.
+\Psi\right\rangle
+\end{align}
+leading to the definition of an effective Kinetic Energy operator
+\begin{align}
+&  K\left(  \breve{\nu}_{N},\breve{\omega}_{N}\right)  =-\nabla\bullet\left(
+\breve{\nu}_{N}^{2}\right)  \mathbb{I}\bullet\nabla-\nabla\bullet\left(
+\breve{\nu}_{N}^{2}\nabla\breve{\omega}_{N}-i\breve{\nu}_{N}\nabla\breve{\nu
+}_{N}\right) \nonumber\\
+&  -\left(  \breve{\nu}_{N}^{2}\nabla\breve{\omega}_{N}-i\breve{\nu}_{N}%
+\nabla\breve{\nu}_{N}\right)  \bullet\nabla+\left(  \breve{\nu}_{N}%
+\nabla\breve{\omega}_{N}-i\nabla\breve{\nu}_{N}\right)  \bullet\mathbb{I}%
+\bullet\left(  \breve{\nu}_{N}\nabla\breve{\omega}_{N}-i\nabla\breve{\nu}%
+_{N}\right)
+\end{align}
+
+
+\section{Symmetric Kernels\label{symker}}
+
+The integral kernels of the operators $\breve{T}\left(  \nu,\omega\right)  $
+and in general $\left\{  \breve{T}_{n_{p}}\left(  \nu_{n_{p}},\omega_{n_{p}%
+}\right)  \right\}  $ are symmetric functions. Which is shown by considering
+the wavefunction
+\begin{equation}
+\left\langle \mathsf{z}^{n_{p}}\left\vert \tilde{\Psi}_{n_{p}}\right.
+\right\rangle =\tilde{\Psi}_{n_{p}}\left(  \mathsf{z}^{n_{p}}\right)
+=\nu_{n_{p}}\left(  \mathsf{z}^{n_{p}}\right)  e^{i\omega\left(
+\mathsf{z}^{n_{p}}\right)  }\Psi_{n_{p}}\left(  \mathsf{z}^{n_{p}}\right)
+\end{equation}
+resulting from the transformation
+\begin{equation}
+\left\vert \tilde{\Psi}_{n_{p}}\right\rangle =\breve{T}_{n_{p}}\left(
+\nu_{n_{p}},\omega_{n_{p}}\right)  \left\vert \Psi_{n_{p}}\right\rangle =\int
+T_{n_{p}}\left(  \mathsf{z}^{n_{p}}\right)  \left\vert \mathsf{z}^{n_{p}%
+}\right\rangle \left\langle \mathsf{z}^{n_{p}}|\Psi\right\rangle
+d\mathsf{z}^{n_{p}}.
+\end{equation}
+$\tilde{\Psi}_{n_{p}}\left(  \mathsf{z}^{n_{p}}\right)  $ is antisymmetric wrt
+coordinate permutation $\sigma$ i.e.
+\begin{equation}
+\tilde{\Psi}_{n_{p}}\left(  \mathsf{z}_{\sigma\left(  1\right)  }%
+,\cdots,\mathsf{z}_{\sigma\left(  n_{p}\right)  }\right)  =\left(  -1\right)
+^{\pi\left(  \sigma\right)  }\tilde{\Psi}_{n_{p}}\left(  \mathsf{z}^{n_{p}%
+}\right)  =\left(  -1\right)  ^{\pi\left(  \sigma\right)  }\tilde{\Psi}%
+_{n_{p}}\left(  \mathsf{z}_{1},\cdots,\mathsf{z}_{n_{p}}\right)  \text{ for
+}\sigma\in S_{n_{p}}%
+\end{equation}
+where $S_{n_{p}}$ is the $\left(  n_{p}\right)  ^{th}$ order symmetric group
+and $\pi\left(  \sigma\right)  $ is the parity of $\sigma$. Hence%
+\begin{align}
+&  \tilde{\Psi}_{n_{p}}\left(  \mathsf{z}_{\sigma\left(  1\right)  }%
+,\cdots,\mathsf{z}_{\sigma\left(  n_{p}\right)  }\right)  =\left(  -1\right)
+^{\pi\left(  \sigma\right)  }\tilde{\Psi}_{n_{p}}\left(  \mathsf{z}_{1}%
+,\cdots,\mathsf{z}_{n_{p}}\right) \nonumber\\
+&  =T_{n_{p}}\left(  \mathsf{z}_{\sigma\left(  1\right)  },\cdots
+,\mathsf{z}_{\sigma\left(  n_{p}\right)  }\right)  \left(  -1\right)
+^{\pi\left(  \sigma\right)  }\Psi_{n_{p}}\left(  \mathsf{z}_{1},\cdots
+,\mathsf{z}_{n_{p}}\right) \nonumber\\
+&  \Rightarrow T_{n_{p}}\left(  \mathsf{z}_{\sigma\left(  1\right)  }%
+,\cdots,\mathsf{z}_{\sigma\left(  n_{p}\right)  }\right)  =T_{n_{p}}\left(
+\mathsf{z}_{1},\cdots,\mathsf{z}_{n_{p}}\right)  \forall\sigma\in S_{n_{p}}%
+\end{align}
+Hence a \emph{sufficient} requirement on the magnitude $\nu_{n_{p}}\left(
+\mathsf{z}_{q_{p}+1},\cdots,\mathsf{z}_{q_{p}+n_{p}}\right)  $ and phase
+$\omega_{n_{p}}\left(  \mathsf{z}_{q_{p}+1},\cdots,\mathsf{z}_{q_{p}+n_{p}%
+}\right)  $ to produce a symmetric $T_{n_{p}}\left(  \mathsf{z}_{q_{p}%
++1},\cdots,\mathsf{z}_{q_{p}+n_{p}}\right)  $ is that they are also symmetric
+and all symmetric $T_{n_{p}}\left(  \mathsf{z}_{q_{p}+1},\cdots,\mathsf{z}%
+_{q_{p}+n_{p}}\right)  $ can be generated from symmetric $\nu_{n_{p}}\left(
+\mathsf{z}_{q_{p}+1},\cdots,\mathsf{z}_{q_{p}+n_{p}}\right)  $ and
+$\omega_{n_{p}}\left(  \mathsf{z}_{q_{p}+1},\cdots,\mathsf{z}_{q_{p}+n_{p}%
+}\right)  $, but we note that this is \emph{not a} necessary requirement.
+
+\section{Transition Amplitudes and Expectation Values wrt IPS\label{Transamp}}
+
+We will need to calculate expectation values and transition amplitudes between
+IPS\ composed of non orthogonal $1$-particle states, to do this we will follow
+the presentation \cite{Verbeek1990}. Consider two IPSs $\left\vert
+\Psi\right\rangle $ and $\left\vert \Phi\right\rangle $ composed of
+nonorthogonal general spin orbitals $\left\{  \psi_{j}|1\leq j\leq N\right\}
+$ and $\left\{  \varphi_{j}|1\leq j\leq N\right\}  $ and the transition
+amplitude
+\begin{equation}
+\left\langle \Psi|H\Phi\right\rangle
+\end{equation}
+where the Hamiltonian is a sum of one and two particle operators
+\begin{equation}
+H=%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+h\left(  j\right)  +\frac{1}{2}%
+%TCIMACRO{\dsum \limits_{1\leq j\neq k\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\neq k\leq N}}
+%EndExpansion
+g\left(  j,k\right)
+\end{equation}
+
+
+The transition amplitude of the $1$-particle part is given by
+\begin{equation}
+\left\langle \Psi\left\vert
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+h\left(  j\right)  \right.  \Phi\right\rangle =Tr\left\{  \mathbf{h}%
+\operatorname{adj}\left(  \mathbf{S}\right)  \right\}
+\end{equation}
+where the matrix $\mathbf{h}$ has matrix elements $\left\{  h_{jk}|1\leq
+j,k\leq N\right\}  $ given by
+\begin{equation}
+h_{jk}=\left\langle \psi_{j}|h\left(  1\right)  \varphi_{k}\right\rangle =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\psi_{j}\left(  \mathsf{z}\right)  ^{\ast}h\left(  \mathsf{z,z}^{\prime
+}\right)  \varphi_{k}\left(  \mathsf{z}^{\prime}\right)  d\mathsf{z}%
+d\mathsf{z}^{\prime}%
+\end{equation}
+and the classical $N\times N$ adjugate matrix $\operatorname{adj}\left(
+\mathbf{S}\right)  $ of the overlap matrix $\mathbf{S\equiv}\left\{
+\left\langle \psi_{j}|\varphi_{k}\right\rangle |1\leq j,k\leq N\right\}  $ is
+defined by
+\begin{equation}
+\left(  \operatorname{adj}\left(  \mathbf{S}\right)  \right)  _{jk}=\left(
+-1\right)  ^{j+k}\det\left(  \mathbf{S}\left[  k|j\right]  \right)
+\end{equation}
+where $\mathbf{S}\left[  k|j\right]  $ is the $\left(  N-1\right)  \times$
+$\left(  N-1\right)  $ matrix obtained from $\mathbf{S}$ by deleting the row
+$k$ and the column $j$.
+
+The transition amplitude of the $2$-particle part is given by
+\begin{equation}
+\left\langle \Psi\left\vert \frac{1}{2}%
+%TCIMACRO{\dsum \limits_{1\leq j\neq k\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\neq k\leq N}}
+%EndExpansion
+g\left(  j,k\right)  \right.  \Phi\right\rangle =\frac{1}{2}Tr\left\{
+\mathbf{G}\operatorname{adj}^{\left(  2\right)  }\left(  \mathbf{S}\right)
+\right\}
+\end{equation}
+where the matrix $\mathbf{G}$ has matrix elements $\left\{  g_{jklm}|1\leq
+j<k\leq N;1\leq l<m\leq N\right\}  $ given by
+\begin{align}
+g_{jklm}  &  =\left\langle \psi_{j}\psi_{k}|g\left(  1,2\right)  \varphi
+_{l}\varphi_{m}\right\rangle \nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \psi_{j}\left(  \mathsf{z}_{1}\right)  ^{\ast}\psi_{k}\left(
+\mathsf{z}_{2}\right)  ^{\ast}g\left(  \mathsf{z}_{1}\mathsf{,\mathsf{z}%
+_{2},\mathsf{z}_{1}^{\prime},z}_{2}^{\prime}\right)  \varphi_{l}\left(
+\mathsf{z}_{1}^{\prime}\right)  \varphi_{m}\left(  \mathsf{z}_{2}^{\prime
+}\right)  \right. \nonumber\\
+&  \qquad\qquad\left.  -\psi_{j}\left(  \mathsf{z}_{1}\right)  ^{\ast}\psi
+_{k}\left(  \mathsf{z}_{2}\right)  ^{\ast}g\left(  \mathsf{z}_{1}%
+\mathsf{,\mathsf{z}_{2},\mathsf{z}_{1}^{\prime},z}_{2}^{\prime}\right)
+\varphi_{m}\left(  \mathsf{z}_{1}^{\prime}\right)  \varphi_{l}\left(
+\mathsf{z}_{2}^{\prime}\right)  \right\}  d\mathsf{z}^{2}d\mathsf{z}^{\prime2}%
+\end{align}
+and the second order $\binom{N}{2}\times\binom{N}{2}$ adjugate matrix
+$\operatorname{adj}^{\left(  2\right)  }\left(  \mathbf{S}\right)  $ is
+defined by
+\begin{equation}
+\left(  \operatorname{adj}^{\left(  2\right)  }\left(  \mathbf{S}\right)
+\right)  _{jklm}=\left(  -1\right)  ^{j+k}\det\left(  \mathbf{S}\left[
+lm|jk\right]  \right)
+\end{equation}
+where $\mathbf{S}\left[  lm|jk\right]  $ is the $\left(  N-2\right)
+\times\left(  N-2\right)  $ matrix obtained from $\mathbf{S}$ by deleting the
+rows $l,m$ and the columns $j,k$.
+
+In general the transition amplitude of the $p$-particle part is given by%
+\begin{equation}
+\left\langle \Psi\left\vert \frac{1}{p!}%
+%TCIMACRO{\dsum \limits_{1\leq j_{1}\neq\cdots\neq j_{p}\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j_{1}\neq\cdots\neq j_{p}\leq N}}
+%EndExpansion
+O_{p}\left(  j_{1},\cdots,j_{p}\right)  \right.  \Phi\right\rangle =\frac
+{1}{p!}Tr\left\{  \mathbf{O}_{p}\operatorname{adj}^{\left(  p\right)  }\left(
+\mathbf{S}\right)  \right\}
+\end{equation}
+where the matrix $\mathbf{O}_{p}$ has matrix elements
+\begin{equation}
+\left\{  \left[  \mathbf{O}_{p}\right]  _{j_{1},\cdots,j_{p};k_{1}%
+,\cdots,k_{p}}|1\leq j_{1}<\cdots<j_{p}\leq N;1\leq k_{1}<\cdots<k_{p}\leq
+N\right\}
+\end{equation}
+given by
+\begin{align}
+&  \left[  \mathbf{O}_{p}\right]  _{j_{1},\cdots,j_{p};k_{1},\cdots,k_{p}%
+}=\left\langle \psi_{j_{1}}\cdots\psi_{j_{p}}|g\left(  j,k\right)
+\varphi_{k_{1}}\cdots\varphi_{k_{p}}\right\rangle \nonumber\\
+&  =%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \psi_{j_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}\cdots\psi_{j_{p}%
+}\left(  \mathsf{z}_{p}\right)  ^{\ast}O_{p}\left(  \mathsf{z}_{1\cdots
+}\mathsf{z}_{p}\mathsf{,z}_{1\cdots}^{\prime}\mathsf{z}_{p}^{\prime}\right)
+%TCIMACRO{\dsum \limits_{\sigma\in S_{p}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma\in S_{p}}}
+%EndExpansion
+\left(  -1\right)  ^{\pi\left(  \sigma\right)  }\varphi_{k_{\sigma_{\left(
+1\right)  }}}\left(  \mathsf{z}_{1}^{\prime}\right)  \cdots\varphi
+_{k_{\sigma\left(  p\right)  }}\left(  \mathsf{z}_{p}^{\prime}\right)
+\right\}  d\mathsf{z}^{p}d\mathsf{z}^{\prime p}%
+\end{align}
+and the $p^{th}$ order $\binom{N}{p}\times$ $\binom{N}{p}$ adjugate matrix
+$\operatorname{adj}^{\left(  p\right)  }\left(  \mathbf{S}\right)  $ is
+defined by
+\begin{equation}
+\left(  \operatorname{adj}^{\left(  p\right)  }\left(  \mathbf{S}\right)
+\right)  _{j_{1},\cdots,j_{p};k_{1},\cdots,k_{p}}=\left(  -1\right)  \,^{%
+%TCIMACRO{\tsum \limits_{1\leq l\leq p}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq l\leq p}}
+%EndExpansion
+\left\{  j_{l}+k_{l}\right\}  }\det\left(  \mathbf{S}\left[  j_{1}%
+,\cdots,j_{p}|k_{1},\cdots,k_{p}\right]  \right)
+\end{equation}
+where $\mathbf{S}\left[  j_{1},\cdots,j_{p}|k_{1},\cdots,k_{p}\right]  $ is
+the $\left(  N-p\right)  \times\left(  N-p\right)  $ matrix obtained from
+$\mathbf{S}$ by deleting the rows $j_{1},\cdots,j_{p}$ and the columns
+$k_{1},\cdots,k_{p}$.
+
+\section{ Kinetic Energy Expansion in the $\left\{  2,\ldots,2\right\}  $
+Approximation\label{KinEn}}
+
+The effective kinetic energy operator $K\left(  \nu,\omega\right)  $ is given
+by%
+\begin{align}
+K\left(  \nu,\omega\right)   &  =\,\underset{I}{\underbrace{-\nabla
+\bullet\left(  \nu^{2}\right)  \mathbb{I}\bullet\nabla}}-\underset
+{II}{\underbrace{\nabla\bullet\left(  \nu^{2}\nabla\omega-i\nu\nabla
+\nu\right)  }}\nonumber\\
+&  -\underset{III}{\underbrace{\left(  \nu^{2}\nabla\omega-i\nu\nabla
+\nu\right)  \bullet\nabla}}+\underset{IV}{\underbrace{\left(  \nu\nabla
+\omega-i\nabla\nu\right)  \bullet\mathbb{I}\bullet\left(  \nu\nabla
+\omega-i\nabla\nu\right)  }}%
+\end{align}
+
+
+\begin{description}
+\item[I]
+\begin{align}
+&  -\nabla\bullet\left(  \nu^{2}\right)  \mathbb{I}\bullet\nabla\left.
+=\right. \nonumber\\
+&  -%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\nabla_{j}\bullet\int\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right)  \right. \nonumber\\
+&  \left.  \exp\left\{  i%
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  -\omega_{k}\left(
+\mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}_{\sigma\left(  2k\right)
+}\right)  \right\}  \right\}  \right\}  \left\vert \mathsf{z}^{N}\right\rangle
+\left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}\mathbb{I}\bullet
+\nabla_{j}%
+\end{align}
+
+
+\item[II]
+\begin{align}
+&  -\nabla\bullet\left(  \nu^{2}\nabla\omega-i\nu\nabla\nu\right)  \left.
+=\right. \nonumber\\
+&  -%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\nabla_{j}\bullet\int\left\{  \nabla_{j}\left\{
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+\right.  \times\nonumber\\
+&  \qquad\qquad\qquad\qquad%
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right) \nonumber\\
+&  \left.  -i\nabla_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \right\}  \left\vert \mathsf{z}%
+^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert d\mathsf{z}^{N}%
+\end{align}
+
+
+\item[III]
+\begin{align}
+&  -\left(  \nu^{2}\nabla\omega-i\nu\nabla\nu\right)  \bullet\nabla\left.
+=\right. \nonumber\\
+&  -%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{j}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right)  \right.  \times\nonumber\\
+&  \qquad\qquad\qquad\qquad\nabla_{j}\left\{
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+\nonumber\\
+&  \left.  -i%
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nabla_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{\prime
+N}\right\vert d\mathsf{z}^{N}\bullet\nabla_{j}%
+\end{align}
+
+
+\item[IV]
+\begin{align}
+&  \left(  \nu\nabla\omega-i\nabla\nu\right)  \bullet\mathbb{I}\bullet\left(
+\nu\nabla\omega-i\nabla\nu\right)  \left.  =\right. \nonumber\\
+&
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int%
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \times\nonumber\\
+&  \left\{  \nabla_{j}\left\{
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma\left(  2k\right)  }\right)  \right\}  \right\}
+-i\nabla_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \right\}  \right\}  \left\vert
+\mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}\nonumber\\
+&  \bullet\mathbb{I}\bullet%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime}\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right.  \times\\
+&  \nabla_{j}\left\{
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+\left.  -i\nabla_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+\left\vert \mathsf{z}^{N}\right\rangle \left\langle \mathsf{z}^{N}\right\vert
+d\mathsf{z}^{N}%
+\end{align}
+
+\end{description}
+
+leading to the expectation values
+
+\begin{description}
+\item[I]
+\begin{align}
+&  \mathcal{K}\left(  \nu,\omega\right)  =\left\langle \varphi_{1}%
+\cdots\varphi_{N}|K\left(  \nu,\omega\right)  \varphi_{1}\cdots\varphi
+_{N}\right\rangle =\nonumber\\
+&
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dint }%
+%BeginExpansion
+{\displaystyle\int}
+%EndExpansion
+\left\{  \left\{  \varphi_{_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}%
+\cdots\nabla_{j}\varphi_{j}\left(  \mathsf{z}_{j}\right)  ^{\ast}\cdots
+\varphi_{N}\left(  \mathsf{z}_{N}\right)  ^{\ast}\right\}  \bullet\nabla
+_{j}\left\{  \left(  -1\right)  ^{\pi\left(  \sigma^{\prime\prime}\right)
+}\varphi_{1}\left(  \mathsf{z}_{\sigma^{\prime\prime}\left(  1\right)
+}\right)  \cdots\varphi_{N}\left(  \mathsf{z}_{\sigma^{\prime\prime}\left(
+N\right)  }\right)  \right\}  \right. \nonumber\\
+&  \left.
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right)  e^{i%
+%TCIMACRO{\tsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  -\omega_{k}\left(
+\mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}_{\sigma\left(  2k\right)
+}\right)  \right\}  }\right\}  d\mathsf{z}^{N}%
+\end{align}
+
+
+\item[II]
+\begin{align}
+&  -%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int\left\{  \left\{  \left(  -1\right)  ^{\pi\left(  \sigma^{\prime\prime
+}\right)  }\varphi_{1}\left(  \mathsf{z}_{\sigma^{\prime\prime}\left(
+1\right)  }\right)  \cdots\varphi_{N}\left(  \mathsf{z}_{\sigma^{\prime\prime
+}\left(  N\right)  }\right)  \right\}  \right. \nonumber\\
+&  \varphi_{_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}\cdots\nabla_{j}%
+\varphi_{j}\left(  \mathsf{z}_{j}\right)  ^{\ast}\cdots\varphi_{N}\left(
+\mathsf{z}_{N}\right)  ^{\ast}\bullet\left\{  \nabla_{j}\left\{
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+\right. \nonumber\\
+&  \qquad\qquad\left.  \qquad\right.  \qquad%
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right) \nonumber\\
+&  \qquad\qquad\left.  -\,i\nabla_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \right\}  d\mathsf{z}^{N}%
+\end{align}
+
+
+\item[III]
+\begin{align}
+&  -%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int\varphi_{_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}\cdots\varphi
+_{N}\left(  \mathsf{z}_{N}\right)  ^{\ast}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nu_{k}\left(  \mathsf{z}_{\sigma
+^{\prime}\left(  2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)
+}\right)  \right. \nonumber\\
+&  \qquad\qquad\qquad\times%
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nabla_{j}\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(
+2k-1\right)  },\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)
+\right\}  -i%
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \times\nonumber\\
+&  \nabla_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \left.
+\bullet\nabla_{j}\left\{  \left(  -1\right)  ^{\pi\left(  \sigma^{\prime
+\prime}\right)  }\varphi_{1}\left(  \mathsf{z}_{\sigma^{\prime\prime}\left(
+1\right)  }\right)  \cdots\varphi_{N}\left(  \mathsf{z}_{\sigma^{\prime\prime
+}\left(  N\right)  }\right)  \right\}  \right\}  d\mathsf{z}^{N}%
+\end{align}
+
+
+\item[IV]
+\begin{align}
+&  +%
+%TCIMACRO{\dsum \limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+%\in\mathcal{S}_{N}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{\sigma,\sigma^{\prime},\sigma^{\prime\prime}%
+\in\mathcal{S}_{N}}}
+%EndExpansion%
+%TCIMACRO{\dsum \limits_{1\leq j\leq N}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq j\leq N}}
+%EndExpansion
+\int\varphi_{_{1}}\left(  \mathsf{z}_{1}\right)  ^{\ast}\cdots\varphi
+_{N}\left(  \mathsf{z}_{N}\right)  ^{\ast}\left(  -1\right)  ^{\pi\left(
+\sigma^{\prime\prime}\right)  }\varphi_{1}\left(  \mathsf{z}_{\sigma
+^{\prime\prime}\left(  1\right)  }\right)  \cdots\varphi_{N}\left(
+\mathsf{z}_{\sigma^{\prime\prime}\left(  N\right)  }\right)  \times\nonumber\\
+&  \left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \nabla_{j}\left\{
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma\left(  2k\right)  }\right)  \right\}  \right\}  \right.
+\nonumber\\
+&  -i\nabla_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma\left(  2k-1\right)  },\mathsf{z}%
+_{\sigma\left(  2k\right)  }\right)  \right\}  \bullet\left\{  \nabla
+_{j}\left\{
+%TCIMACRO{\dsum \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\left\{  \omega_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)
+},\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+\right.  \times\nonumber\\
+&  \qquad\qquad%
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \left.  -i\nabla
+_{j}\left\{
+%TCIMACRO{\dprod \limits_{1\leq k\leq\frac{N}{2}}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq k\leq\frac{N}{2}}}
+%EndExpansion
+\nu_{k}\left(  \mathsf{z}_{\sigma^{\prime}\left(  2k-1\right)  }%
+,\mathsf{z}_{\sigma^{\prime}\left(  2k\right)  }\right)  \right\}  \right\}
+d\mathsf{z}^{N}%
+\end{align}
+
+\end{description}
+
+\bibliographystyle{apsrev}
+\bibliography{novel}
+
+\end{document}

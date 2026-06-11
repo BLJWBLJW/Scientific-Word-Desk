@@ -1,0 +1,186 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, January 29, 2016 14:12:03}
+%TCIDATA{LastRevised=Wednesday, March 21, 2018 10:58:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{REV\TeX4}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+
+
+\section{Wick Product}
+
+\subsection{Definition of Wick Product}%
+
+\begin{gather}
+X_{1}\cdots X_{m}=\,:X_{1}\cdots X_{m}:+\\
+\left(  -1\right)  ^{\pi\left(  12\right)  }:\underleftrightarrow{X_{1}X_{2}%
+}X_{3}\cdots X_{m}:+\,\left(  -1\right)  ^{\pi\left(  13\right)
+}:\underleftrightarrow{X_{1}X_{2}X_{3}}X_{4}\cdots X_{m}:+\cdots+\,\left(
+-1\right)  ^{\pi\left(  1m\right)  }:\underleftrightarrow{X_{1}X_{2}\cdots
+X_{m}}:+\\
+:X_{1}\underleftrightarrow{X_{2}X_{3}}X_{4}\cdots X_{m}:+\cdots+\,:X_{1}%
+\underleftrightarrow{X_{2}\cdots X_{m}}\,+\\
+:X_{1}X_{2}\underleftrightarrow{X_{3}X_{4}}X_{5}\cdots X_{m}:+\cdots
++\,:X_{1}X_{2}\underleftrightarrow{X_{3}\cdots X_{m}}+\cdots+\,:X_{1}%
+X_{2}X_{3}\cdots\underleftrightarrow{X_{m-1}X_{m}}:+\\
+:\underleftrightarrow{X_{1}X_{2}}\underleftrightarrow{X_{3}X_{4}}X_{5}\cdots
+X_{m}:+\cdots+\,:X_{1}X_{2}X_{3}\cdots\underleftrightarrow{X_{m-3}X_{m-2}%
+}\underleftrightarrow{X_{m-1}X_{m}}:\\
+\vdots\\
+:\underleftrightarrow{X_{1}X_{2}}\underleftrightarrow{X_{3}X_{4}}%
+\cdots\underleftrightarrow{X_{m-3}X_{m-2}}\underleftrightarrow{X_{m-1}X_{m}%
+}:\\
+:\underleftrightarrow{X_{j}X_{k}}:\,=\operatorname*{tr}\left\{  X_{j}%
+X_{k}D\right\}
+\end{gather}
+The operators $\left\{  X_{1},\cdots,X_{m}\right\}  $ are all "vectors" i.e.
+$\in\mathcal{F}_{1}$ but need not be a basis nor orthonormal i.e. they can be
+any general vectors.
+
+\subsection{Vacuum State}%
+
+\begin{align}
+&  D\geq0\\
+&  \operatorname*{tr}\left\{  D\right\}  =1\\
+&  \operatorname*{tr}\left\{  X_{j}D\right\}  =0;1\leq j\leq2r
+\end{align}
+
+
+\subsubsection{Example of Vacuum States}%
+
+\begin{equation}
+D=b_{1}^{\dagger}\cdots b_{k}^{\dagger}\exp\left\{
+%TCIMACRO{\tsum \limits_{1\leq i<j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq i<j\leq r}}
+%EndExpansion
+g_{ij}b_{i}^{\dagger}b_{j}^{\dagger}\right\}  \exp\left\{
+%TCIMACRO{\tsum \limits_{1\leq i<j\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq i<j\leq r}}
+%EndExpansion
+-\overline{g}_{ij}b_{i}b_{j}\right\}  b_{k}\cdots b_{1}%
+\end{equation}
+
+
+\subsection{Example}
+
+1.%
+
+\begin{align}
+X_{1}X_{2} &  =\,:X_{1}X_{2}:+:\underleftrightarrow{X_{1}X_{2}}:\\
+&  =\left(  -1\right)  ^{\pi\left(  12\right)  }:X_{1}X_{2}%
+:+\,\operatorname*{tr}\left\{  X_{1}X_{2}D\right\}
+\end{align}
+This implies
+\begin{equation}
+\,:X_{1}X_{2}:\,=X_{1}X_{2}-\operatorname*{tr}\left\{  X_{1}X_{2}D\right\}  .
+\end{equation}
+$\lceil$%
+\begin{equation}
+:b_{1}^{\dagger}b_{2}^{\dagger}:\,=b_{1}^{\dagger}b_{2}^{\dagger
+}-\operatorname*{tr}\left\{  b_{1}^{\dagger}b_{2}^{\dagger}D\right\}
+=b_{1}^{\dagger}b_{2}^{\dagger}%
+\end{equation}%
+\begin{equation}
+:b_{1}b_{2}:\,=b_{1}b_{2}-\operatorname*{tr}\left\{  b_{1}b_{2}D\right\}
+=b_{1}b_{2}%
+\end{equation}%
+\begin{equation}
+:b_{1}^{\dagger}b_{2}:\,=b_{1}^{\dagger}b_{2}-\operatorname*{tr}\left\{
+b_{1}^{\dagger}b_{2}D\right\}  =b_{1}^{\dagger}b_{2}%
+\end{equation}%
+\begin{equation}
+:b_{1}b_{2}^{\dagger}:\,=-b_{2}^{\dagger}\,b_{1}=\left(  -1\right)
+^{\pi\left(  12\right)  }b_{1}b_{2}^{\dagger}-\operatorname*{tr}\left\{
+b_{1}b_{2}^{\dagger}D\right\}  =b_{1}b_{2}^{\dagger}%
+\end{equation}
+$\rfloor$
+
+2.%
+\begin{align}
+X_{1}X_{2}X_{3}  &  =\,:X_{1}X_{2}X_{3}:+\pi\left(  12\right)
+:\underleftrightarrow{X_{1}X_{2}}X_{3}:+\,\pi\left(  23\right)  :X_{1}%
+\underleftrightarrow{X_{2}X_{3}}:+\,\pi\left(  13\right)
+:\underleftrightarrow{X_{1}X_{2}X_{3}}:\\
+&  =:X_{1}X_{2}X_{3}:+\,\operatorname*{tr}\left\{  X_{1}X_{2}D\right\}
+X_{3}+\operatorname*{tr}\left\{  X_{1}X_{3}D\right\}  X_{2}-\operatorname*{tr}%
+\left\{  X_{2}X_{3}D\right\}  X_{1}%
+\end{align}
+
+
+This implies
+\begin{equation}
+\,:X_{1}X_{2}X_{3}:\,=X_{1}X_{2}X_{3}-\operatorname*{tr}\left\{  X_{1}%
+X_{2}D\right\}  X_{3}-\operatorname*{tr}\left\{  X_{1}X_{3}D\right\}
+X_{2}+\operatorname*{tr}\left\{  X_{2}X_{3}D\right\}  X_{1}.
+\end{equation}
+
+
+
+\end{document}

@@ -1,0 +1,456 @@
+
+\documentclass[aps,preprint]{revtex4}
+\usepackage{amsfonts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Sunday, March 17, 2002 11:51:31}
+%TCIDATA{LastRevised=Thursday, March 28, 2002 14:38:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=revtex4.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\preprint{Details of the calculation of the gradient matrix elements}
+\title[gradient matrix elements]{Details of the calculation of the gradient
+matrix elements}
+\author{Brian Weiner}
+\affiliation{}
+\date{03/26/02}
+\startpage{1}
+\endpage{}
+\maketitle
+\tableofcontents
+
+\section{Integral Matrix Elements}
+
+These matrices have the following symmetries and are defined in the
+following manner: 
+\begin{eqnarray}
+&&h_{jk}^{a}=h_{j+sk+s}^{a}=-\int \chi _{j}^{\ast }\left( \mathbf{r}\right)
+\left\{ \sum_{_{1\leq j\leq N_{nuc}}}\frac{Z_{j}}{\left\| \mathbf{R}_{j}-%
+\mathbf{r}\right\| }+\frac{1}{2m_{e}}\nabla _{\mathbf{r}}^{2}\right\} \chi
+_{k}\left( \mathbf{r}\right) d\mathbf{r};\quad 1\leq j,k\leq s  \notag \\
+&&h_{jk+s}^{a}=h_{j+sk}^{a};\quad 1\leq j,k\leq s \\
+&&  \notag \\
+&&\left\langle jk||lm\right\rangle ^{a}=\int \left\{ \chi _{j}^{\ast }\left( 
+\mathbf{r}_{1}\right) \chi _{k}^{\ast }\left( \mathbf{r}_{2}\right) \frac{1}{%
+\left\| \mathbf{r}_{1}-\mathbf{r}_{2}\right\| }\chi _{l}\left( \mathbf{r}%
+_{1}\right) \chi _{m}\left( \mathbf{r}_{2}\right) \right.   \notag \\
+&&\qquad -\left. \chi _{j}^{\ast }\left( \mathbf{r}_{1}\right) \chi
+_{k}^{\ast }\left( \mathbf{r}_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-%
+\mathbf{r}_{2}\right\| }\chi _{l}\left( \mathbf{r}_{2}\right) \chi
+_{m}\left( \mathbf{r}_{1}\right) \right\} d\mathbf{r}_{1}d\mathbf{r}%
+_{2};\quad 1\leq j,k\leq s;1\leq l,m\leq s \\
+&&  \notag \\
+&&\left\langle j+sk||lm\right\rangle ^{a}=\left\langle jk+s||lm\right\rangle
+^{a}=\left\langle jk||l+sm\right\rangle ^{a}=\left\langle
+jk||lm+s\right\rangle ^{a}=\left\langle j+sk+s||l+sm\right\rangle ^{a}= 
+\notag \\
+&&\left\langle j+sk+s||lm+s\right\rangle ^{a}=\left\langle
+j+sk||l+sm+s\right\rangle ^{a}=\left\langle jk+s||l+sm+s\right\rangle ^{a}=0
+\notag \\
+&&\left. {}\right. \quad \qquad \qquad \quad \qquad \qquad \quad \qquad
+\qquad \quad \qquad \qquad \quad 1\leq j,k\leq s;1\leq l,m\leq s \\
+&&  \notag \\
+&&\left\langle jk+s||l+sm\right\rangle ^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=  \notag \\
+&&\int \chi _{j}^{\ast }\left( \mathbf{r}_{1}\right) \chi _{k}^{\ast }\left( 
+\mathbf{r}_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-\mathbf{r}_{2}\right\| 
+}\chi _{l}\left( \mathbf{r}_{1}\right) \chi _{m}\left( \mathbf{r}_{2}\right)
+d\mathbf{r}_{1}d\mathbf{r}_{2};\quad 1\leq j,k\leq s;1\leq l,m\leq s \\
+&&  \notag \\
+&&\left\langle jk+s||lm+s\right\rangle ^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=-\left\langle jk+s||l+sm\right\rangle
+^{a}=-\left\langle j+sk||lm+s\right\rangle ^{a}  \notag \\
+&&\left. {}\right. \quad \qquad \qquad \quad \qquad \qquad \quad \quad
+\qquad \quad \qquad \qquad \qquad \quad 1\leq j,k\leq s;1\leq l,m\leq s \\
+&&\left\langle jk|||jk\right\rangle ^{a}=\left\langle jk||jk\right\rangle
+^{a}+\left\langle j\,k+s||j\,k+s\right\rangle ^{a}+\left\langle
+j+s\,k||j+s\,k\right\rangle ^{a}+\left\langle
+j+s\,k+s||j+s\,k+s\right\rangle ^{a}  \notag \\
+&&\left. {}\right. \quad \qquad \qquad \quad \qquad \qquad =0;\quad \qquad
+\qquad \quad \qquad \qquad 1\leq j,k\leq s;1\leq l,m\leq s
+\end{eqnarray}%
+We concentrate on $\left\langle jk||lm\right\rangle ^{a}$ 
+\begin{eqnarray}
+&&\left\langle jk||lm\right\rangle ^{a}=\int \left\{ \chi _{j}^{\ast }\left( 
+\mathbf{r}_{1}\right) \chi _{k}^{\ast }\left( \mathbf{r}_{2}\right) \frac{1}{%
+\left\| \mathbf{r}_{1}-\mathbf{r}_{2}\right\| }\chi _{l}\left( \mathbf{r}%
+_{1}\right) \chi _{m}\left( \mathbf{r}_{2}\right) \right.   \notag \\
+&&\qquad -\left. \chi _{j}^{\ast }\left( \mathbf{r}_{1}\right) \chi
+_{k}^{\ast }\left( \mathbf{r}_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-%
+\mathbf{r}_{2}\right\| }\chi _{l}\left( \mathbf{r}_{2}\right) \chi
+_{m}\left( \mathbf{r}_{1}\right) \right\} d\mathbf{r}_{1}d\mathbf{r}%
+_{2};\quad 1\leq j,k\leq s;1\leq l,m\leq s
+\end{eqnarray}%
+We can define 
+\begin{equation}
+J_{jklm}=\int \chi _{j}^{\ast }\left( \mathbf{r}_{1}\right) \chi _{k}^{\ast
+}\left( \mathbf{r}_{2}\right) \frac{1}{\left\| \mathbf{r}_{1}-\mathbf{r}%
+_{2}\right\| }\chi _{l}\left( \mathbf{r}_{1}\right) \chi _{m}\left( \mathbf{r%
+}_{2}\right) d\mathbf{r}_{1}d\mathbf{r}_{2}
+\end{equation}%
+then 
+\begin{equation}
+\langle jk||lm\rangle ^{a}=J_{jklm}-J_{jkml}
+\end{equation}%
+We also have the symmetry 
+\begin{equation}
+J_{jklm}=J_{kjml}
+\end{equation}%
+The matrix $\mathbb{J}$ is positive definite as 
+\begin{eqnarray}
+\mathbf{v}^{\dagger }\mathbb{J}\mathbf{v} &\mathbf{=}&\sum_{1\leq
+j,k,l,m\leq s}v_{jk}^{\ast }\int \chi _{j}^{\ast }\left( \mathbf{r}%
+_{1}\right) \chi _{k}^{\ast }\left( \mathbf{r}_{2}\right) \frac{1}{\left\| 
+\mathbf{r}_{1}-\mathbf{r}_{2}\right\| }\chi _{l}\left( \mathbf{r}_{1}\right)
+\chi _{m}\left( \mathbf{r}_{2}\right) d\mathbf{r}_{1}d\mathbf{r}_{2}v_{lm} 
+\notag \\
+&=&\int \Phi \left( \mathbf{r}_{1},\mathbf{r}_{2}\right) ^{\ast }\frac{1}{%
+\left\| \mathbf{r}_{1}-\mathbf{r}_{2}\right\| }\Phi \left( \mathbf{r}_{1},%
+\mathbf{r}_{2}\right) d\mathbf{r}_{1}d\mathbf{r}_{2}\geq 0
+\end{eqnarray}%
+Thus it is hermitian (and if the atomic orbital basis is real it real
+symmetric). Hence 
+\begin{equation}
+\mathbb{J=Q}^{\dagger }\mathbb{Q=U}^{\dagger }\mathbf{\eta }\mathbb{U}
+\end{equation}%
+where $\mathbf{\eta }$ are the eigenvalues of $\mathbb{J}$. Thus 
+\begin{equation}
+\left\langle jk||lm\right\rangle ^{a}=\left( \mathbb{Q}^{\dagger }\mathbb{Q}%
+\right) _{jklm}-\left( \mathbb{Q}^{\dagger }\mathbb{Q}\right)
+_{jkml}=\sum_{1\leq a,b\leq s}Q_{jkab}^{\dagger }\left\{
+Q_{ablm}-Q_{abml}\right\} =\sum_{1\leq a,b\leq s}Q_{jkab}^{\dagger }P_{ablm}
+\end{equation}%
+and 
+\begin{equation}
+\left\langle jk||lm\right\rangle ^{a}=\left( \mathbb{U}^{\dagger }\mathbf{%
+\eta }\mathbb{U}\right) _{jklm}-\left( \mathbb{U}^{\dagger }\mathbf{\eta }%
+\mathbb{U}\right) _{jkml}=\sum_{1\leq a,b\leq s}U_{jkab}^{\dagger }\eta
+_{ab}\left\{ U_{ablm}-U_{abml}\right\} =\sum_{1\leq a,b\leq s}\mathcal{R}%
+_{jkab}^{\dagger }\mathcal{S}_{ablm}
+\end{equation}%
+where 
+\begin{equation}
+P_{ablm}=Q_{ablm}-Q_{abml}
+\end{equation}%
+and 
+\begin{eqnarray}
+\mathcal{S}_{ablm} &=&U_{ablm}-U_{abml}  \notag \\
+R_{ablm}^{\dagger } &=&U_{jkab}^{\dagger }\eta _{ab}
+\end{eqnarray}%
+Approximation schemes can be based on ignoring $\eta _{ab}\leq cutoff$. 
+
+\section{Computation of Partial Derivatives}
+
+The partial derivatives of the energy wrt geminal coefficients are given by 
+\begin{equation}
+\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle
+=\sum_{p,q=1}^{r}V_{f\,i_{1}p}V_{f\,i_{2}q}\left\langle G^{\dagger N}\phi
+|Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger N-1}\phi \right\rangle 
+\end{equation}%
+a sum that goes over the two types of matrix elements, paired terms where $%
+p=\left| q\right| $ and unpaired terms $p\neq \left| q\right| $. The paired
+terms $TP_{0},TP_{1}$ and $TP_{2}$ are of the form 
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times  \\
+&&\left\{ h_{0}S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}+\sum_{j_{1,}j_{2}=1}^{r}\left\{ 
+\begin{array}{c}
+\end{array}%
+S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast }\left\{ V_{f\,j_{1}p}^{\ast
+}V_{f\,j_{2}p}+V_{f\,j_{1}p+s}^{\ast }V_{f\,j_{2}p+s}\right\}
+h_{j_{1}j_{2}}^{a}\right. \right.  \\
+&&\qquad \qquad \qquad \qquad \left. +\right. \left. \sum_{j\neq
+p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \zeta _{p}^{\ast
+}n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}j+s}\right\} h_{j_{1}j_{2}}^{a}\right\} 
+\end{eqnarray*}%
+\begin{eqnarray*}
+&&\left. +\right. \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \underset{}{%
+\overset{}{}}S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right.  \\
+&&\qquad +\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \left\{
+\zeta _{p}^{\ast }n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j}\right. \right.  \\
+&&\qquad \qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j}+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j} \\
+&&\qquad \qquad \qquad \qquad +\left. V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}p}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}j+s}+V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p+s}V_{f\,j_{4}j+s}\right\}  \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\left. +\,\zeta _{j}^{\ast }V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right\} 
+\end{eqnarray*}%
+\begin{eqnarray}
+&&\left. {}\right. \qquad +\sum_{j\neq k\neq p}S_{N-2}\left( \hat{p}\hat{%
+\jmath}\hat{k}\right) \zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta
+_{k}V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}k+s}\qquad \qquad \qquad   \notag \\
+&&  \notag \\
+&&\qquad \qquad +\frac{1}{2}\zeta _{p}^{\ast }\sum_{j,k\neq p}S_{N-3}\left( 
+\hat{p}\hat{\jmath}\hat{k}\right) n_{j}n_{k}\left\{ V_{f\,j_{1}j}^{\ast
+}V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}pj}\right.   \notag \\
+&&\qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}pj+s}  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \left. \left. \left.
++V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj+s}\right\} \underset{}{\overset{}{}}\right\}
+\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}%
+\begin{array}{c}
+\end{array}%
+\right\} 
+\end{eqnarray}%
+which can be rewritten as 
+\begin{eqnarray*}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle = \\
+&&N!\left( N-1\right) !\left\{
+TP_{0p}h_{0}+\sum_{j_{1,}j_{2}=1}TP_{1pj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TP_{2pj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} 
+\end{eqnarray*}%
+where%
+\begin{equation}
+TP_{0p}=S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast }
+\end{equation}%
+and 
+\begin{eqnarray}
+&&TP_{1pj_{1}j_{2}}=S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast }\left\{
+V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p}+V_{f\,j_{1}p+s}^{\ast
+}V_{f\,j_{2}p+s}\right\}   \notag \\
+&&\qquad \qquad \qquad \qquad \left. +\right. \sum_{j\neq
+p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \zeta _{p}^{\ast
+}n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast
+}V_{f\,j_{2}j+s}\right\} 
+\end{eqnarray}%
+(the computation of this term scales as $s)$, and 
+\begin{eqnarray*}
+TP_{2pj_{1}j_{2}j_{3}j_{4}} &=&S_{N-1}\left( \hat{p}\right) \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}p+s} \\
+&& \\
+&&+\sum_{j\neq p}^{s}S_{N-2}\left( \hat{p}\hat{\jmath}\right) \left\{ \zeta
+_{p}^{\ast }n_{j}\left\{ V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j}\right. \right.  \\
+&&\qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j}+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j} \\
+&&\qquad \qquad +\left. V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}j+s}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p+s}V_{f\,j_{4}j+s}\right\}  \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. +\,\zeta
+_{j}^{\ast }V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right\} 
+\end{eqnarray*}%
+\begin{eqnarray}
+&&\qquad \qquad \quad +\sum_{j\neq k\neq p}^{s}S_{N-2}\left( \hat{p}\hat{%
+\jmath}\hat{k}\right) \zeta _{p}^{\ast }\zeta _{j}^{\ast }\zeta
+_{k}V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}k+s}\qquad \qquad \qquad \qquad \qquad   \notag \\
+&&\qquad \qquad \qquad +\frac{1}{2}\zeta _{p}^{\ast }\sum_{j,k\neq
+p}^{s}S_{N-3}\left( \hat{p}\hat{\jmath}\hat{k}\right) n_{j}n_{k}\left\{
+V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k}^{\ast }V_{f\,j_{3}k}V_{f\,j_{4}pj}\right. 
+\notag \\
+&&\qquad \qquad \qquad \qquad +V_{f\,j_{1}j}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k}^{\ast
+}V_{f\,j_{3}k}V_{f\,j_{4}pj+s}  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\left. +V_{f\,j_{1}j+s}^{\ast }V_{f\,j_{2}k+s}^{\ast
+}V_{f\,j_{3}k+s}V_{f\,j_{4}pj+s}\right\} 
+\end{eqnarray}%
+(the computation of this term scales as $s^{2}$). The unpaired terms $%
+TU_{0},TU_{1}$ and $TU_{2}$ are of the form 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\times   \notag \\
+&&\left\{ S_{N-1}\left( \hat{p}\hat{q}\right)
+\sum_{j_{1},j_{2}=1}^{r}\left\{ V_{f\,j_{1}\bar{q}}^{\ast
+}V_{f\,j_{2}p}\zeta _{q}^{\ast }+V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}q}\zeta _{p}^{\ast }\right\} h_{j_{1}j_{2}}^{a}\right.   \notag
+\\
+&&+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{ \sum_{\kappa \neq \left|
+p\right| \neq \left| q\right| }^{s}S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}%
+\right) \left\{ V_{f\,j_{1}\kappa }^{\ast }V_{f\,j_{2}\kappa +s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta _{\kappa }^{\ast }\right. \right.   \notag
+\\
+&&\quad \qquad \quad +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\bar{q}}^{\ast
+}V_{f\,j_{3}\kappa }V_{f\,j_{4}\kappa +s}\zeta _{p}^{\ast }\zeta _{q}^{\ast
+}\zeta _{\kappa }+V_{f\,j_{1}\bar{q}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{q}^{\ast }  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\left. +V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}q}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{p}^{\ast }\right\}  
+\notag \\
+&&\left. +S_{N-1}\left( \hat{p}\hat{q}\right) \left\{ \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}+\zeta _{q}^{\ast }V_{f\,j_{1}q}^{\ast
+}V_{f\,j_{2}q+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\right\} \right\}   \notag
+\\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad \qquad \left. \left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}%
+\begin{array}{c}
+\end{array}%
+\right\} 
+\end{eqnarray}%
+which can be rewritten as 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle   \notag \\
+&&\left. {}\right. =N!\left( N-1\right) !\left\{
+\sum_{j_{1},j_{2}=1}^{r}TU_{1pqj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TU_{2pqj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} 
+\end{eqnarray}%
+where 
+\begin{equation}
+TU_{1pqj_{1}j_{2}}=S_{N-1}\left( \hat{p}\hat{q}\right) \left\{ V_{f\,j_{1}%
+\bar{q}}^{\ast }V_{f\,j_{2}p}\zeta _{q}^{\ast }+V_{f\,j_{1}\bar{p}}^{\ast
+}V_{f\,j_{2}q}\zeta _{p}^{\ast }\right\} 
+\end{equation}%
+and 
+\begin{eqnarray}
+TU_{2pqj_{1}j_{2}j_{3}j_{4}} &=&\sum_{\kappa \neq \left| p\right| \neq
+\left| q\right| }^{s}S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) \left\{
+V_{f\,j_{1}\kappa }^{\ast }V_{f\,j_{2}\kappa +s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta _{\kappa }^{\ast }\right.   \notag \\
+&&+V_{f\,j_{1}\bar{p}}^{\ast }V_{f\,j_{2}\bar{q}}^{\ast }V_{f\,j_{3}\kappa
+}V_{f\,j_{4}\kappa +s}\zeta _{p}^{\ast }\zeta _{q}^{\ast }\zeta _{\kappa
+}+V_{f\,j_{1}\bar{q}}^{\ast }V_{f\,j_{2}\kappa }^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}\kappa }n_{\kappa }\zeta _{q}^{\ast }  \notag \\
+&&\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \left. +V_{f\,j_{1}%
+\bar{p}}^{\ast }V_{f\,j_{2}\kappa }^{\ast }V_{f\,j_{3}q}V_{f\,j_{4}\kappa
+}n_{\kappa }\zeta _{p}^{\ast }\right\}   \notag \\
+&&  \notag \\
+&&+S_{N-1}\left( \hat{p}\hat{q}\right) \left\{ \zeta _{p}^{\ast
+}V_{f\,j_{1}p}^{\ast }V_{f\,j_{2}p+s}^{\ast
+}V_{f\,j_{3}p}V_{f\,j_{4}q}+\zeta _{q}^{\ast }V_{f\,j_{1}q}^{\ast
+}V_{f\,j_{2}q+s}^{\ast }V_{f\,j_{3}p}V_{f\,j_{4}q}\right\} 
+\end{eqnarray}%
+the computation of this term scales as $s$. 
+
+The partial derivative $\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger
+}a_{i_{2}}^{\dagger }G^{\dagger N-1}\phi \right\rangle $ is the sum of the
+paired and unpaired terms 
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\sum_{\substack{ p<q=1 \\ q\neq p+s}}%
+^{r}\left\{ V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\}
+\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{q}^{\dagger }G^{\dagger
+N-1}\phi \right\rangle   \notag \\
+&&\qquad \qquad \qquad \qquad +\sum_{p=1}^{r}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\}
+\left\langle G^{\dagger N}\phi |Hb_{p}^{\dagger }b_{p+s}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle 
+\end{eqnarray}%
+giving%
+\begin{eqnarray}
+&&\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =N!\left( N-1\right) !\left\{
+\sum_{p=1}^{r}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\} \times
+\right.   \notag \\
+&&\qquad \qquad \qquad \qquad \left\{
+\sum_{j_{1,}j_{2}=1}^{r}TP_{1pj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TP_{2pj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} +  \notag \\
+&&\sum_{\substack{ p<q=1 \\ q\neq p+s}}^{r}\left\{
+V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\} \left\{
+\sum_{j_{1},j_{2}=1}^{r}TU_{1pqj_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}TU_{2pqj_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} 
+\end{eqnarray}%
+which can be written as 
+\begin{equation}
+\left\langle G^{\dagger N}\phi |Ha_{i_{1}}^{\dagger }a_{i_{2}}^{\dagger
+}G^{\dagger N-1}\phi \right\rangle =\mathcal{D}_{0i_{1}i_{2}}h_{0}+%
+\sum_{j_{1,}j_{2}=1}^{r}\mathcal{D}%
+_{1i_{1}i_{2}j_{1}j_{2}}h_{j_{1}j_{2}}^{a}+%
+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\mathcal{D}%
+_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}  \label{matel}
+\end{equation}%
+where%
+\begin{equation}
+\mathcal{D}_{0i_{1}i_{2}}=N!\left( N-1\right) !\sum_{p=1}^{s}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\} TP_{0p}
+\end{equation}%
+(the computation of this term scales as $s$), and 
+\begin{eqnarray}
+\mathcal{D}_{1i_{1}i_{2}j_{1}j_{2}} &=&N!\left( N-1\right) !\left\{
+\sum_{p=1}^{s}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\}
+TP_{1pj_{1}j_{2}}\right.   \notag \\
+&&\qquad \qquad \qquad \qquad \left. +\sum_{\substack{ p<q=1 \\ q\neq p+s}}%
+^{s}\left\{ V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\}
+TU_{1pqj_{1}j_{2}}\right\} 
+\end{eqnarray}%
+(the computation of this term scales as $s^{3}$), 
+\begin{eqnarray}
+\mathcal{D}_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}} &=&N!\left( N-1\right)
+!\left\{ \sum_{p=1}^{s}\left\{
+V_{f\,i_{1}p}V_{f\,i_{2}p+s}-V_{f\,i_{1}p+s}V_{f\,i_{2}p}\right\}
+TP_{2pj_{1}j_{2}j_{3}j_{4}}\right.   \notag \\
+&&\qquad \qquad \qquad +\left. \sum_{\substack{ p<q=1 \\ q\neq p+s}}%
+^{s}\left\{ V_{f\,i_{1}p}V_{f\,j_{2}q}-V_{f\,i_{1}q}V_{f\,i_{2}p}\right\}
+TU_{2pqj_{1}j_{2}j_{3}j_{4}}\right\} 
+\end{eqnarray}%
+(the computation of this term scales as $s^{4}$).
+
+The number of steps in the computation of eq. $\left( \ref{matel}\right) $
+is $r^{4}$, given that $\left\{ \mathcal{D}%
+_{2i_{1}i_{2}j_{1}j_{2}j_{3}j_{4}}\right\} $ and $\left\{ \left\langle
+j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\} $ have been calculated.
+
+\section{Calculation of Symmetric Functions}
+
+The elementary symmetric functions 
+\begin{equation}
+S_{N-1}\left( \hat{p}\right) ,S_{N-1}\left( \hat{p}\hat{q}\right)
+,S_{N-1}\left( \hat{\kappa}\hat{p}\hat{q}\right) ,S_{N-2}\left( \hat{p}\hat{%
+\jmath}\right) ,S_{N-2}\left( \hat{p}\hat{\jmath}\hat{k}\right)
+,S_{N-3}\left( \hat{p}\hat{\jmath}\hat{k}\right) 
+\end{equation}%
+all need to be evaluated in the computation of the derivatives of the energy
+with respect to the geminal coefficients, but are independent of the other
+terms in the calculation thus can be computed separately. A very efficient,
+robust procedure that scales as $s^{4}$ has been developed by \cite{Jensen80}%
+\cite{Jensen81}, which is based on a graphical approach to a recursion
+relationship between the symmetric functions $S_{N},S_{N-1}\left( \hat{p}%
+\right) $ and $S_{N}\left( \hat{p}\right) $.
+
+\end{document}

@@ -1,0 +1,986 @@
+\documentclass[aps,preprint]{revtex4}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=4.00.0.2321}
+%TCIDATA{CSTFile=revtex4.cst}
+%TCIDATA{Created=Friday, September 09, 2005 11:24:08}
+%TCIDATA{LastRevised=Monday, December 26, 2005 11:08:57}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\begin{document}
+\preprint{HEP/123-qed}
+\title[Short title for running header]{Long title that appears on the title page}
+\author{First Author}
+\affiliation{My Institution}
+\author{Second Author}
+\affiliation{My Institution}
+\author{Third Author}
+\affiliation{Other Institution}
+\keywords{one two three}
+\pacs{PACS number}
+
+\begin{abstract}
+Shell document for REV\TeX{} 4.
+
+\end{abstract}
+\volumeyear{year}
+\volumenumber{number}
+\issuenumber{number}
+\eid{identifier}
+\date[Date text]{date}
+\received[Received text]{date}
+
+\revised[Revised text]{date}
+
+\accepted[Accepted text]{date}
+
+\published[Published text]{date}
+
+\startpage{101}
+\endpage{102}
+\maketitle
+\tableofcontents
+%
+
+\[
+\left\vert \psi_{j}\right\rangle =\sum_{1\leq j\leq r}\left\{  a_{j}\left\vert
+\varsigma_{j}\right\rangle \left\vert \alpha\right\rangle +b_{j}\left\vert
+\varsigma_{j}\right\rangle \left\vert \beta\right\rangle \right\}
+\]%
+\[
+\left\Vert \psi_{j}\right\Vert ^{2}=\mathcal{N}_{j};\,0\leq\mathcal{N}_{j}%
+\leq1
+\]%
+\[
+\sum_{1\leq j\leq r}\mathcal{N}_{j}=N
+\]%
+\begin{align*}
+\mathcal{F}_{K}\left(  \gamma\right)   &  =\operatorname{Tr}\left\{  KD_{\ast
+}\left(  \gamma\right)  \right\}  ,\\
+\mathcal{F}_{C}\left(  \gamma\right)   &  =\int\frac{\gamma\left(
+\mathbf{r,\xi}\right)  \gamma\left(  \mathbf{r}^{\prime}\mathbf{,\xi}\right)
+}{\left\Vert \mathbf{r-r}^{\prime}\right\Vert }d\mathbf{r}d\mathbf{r}^{\prime
+}d\mathbf{\xi},\\
+\mathcal{F}_{XC}\left(  \gamma\right)   &  =\operatorname{Tr}\left\{
+V_{2}D_{\ast}\left(  \gamma\right)  \right\}  -\mathcal{F}_{C}\left(
+\gamma\right)
+\end{align*}%
+\begin{align*}
+\mathcal{F}_{HK}\left(  \gamma\right)   &  =\operatorname{Tr}\left\{
+\overset{}{\left\{  K+V_{2}\right\}  D_{\ast}\left(  \gamma\right)  }\right\}
+\\
+&  =\min_{D\in\left[  \mathbf{\gamma}\right]  _{N}}\operatorname{Tr}\left\{
+\overset{}{\left\{  K+V_{2}\right\}  D}\right\}
+\end{align*}%
+\begin{align*}
+&  \left[  \gamma\right]  _{N}=\left\{  \left.  \overset{}{D}\right\vert
+\Xi\left(  D\right)  =\gamma,\operatorname{Tr}D=1,D\geq0\right\}  ,\\
+& \\
+& \\
+&  \qquad\left[  \Xi\left(  D\right)  \right]  \left(  \mathbf{x}\right)
+=\operatorname{Tr}\left\{  \Phi^{\dagger}\left(  \mathbf{x}\right)
+\Phi\left(  \mathbf{x}\right)  D\right\}
+\end{align*}%
+\[
+K+V_{2}%
+\]
+a%
+\begin{align*}
+\Xi\left(  D\right)   &  =\gamma,\\
+\operatorname{Tr}D  &  =1,\\
+D  &  \geq0
+\end{align*}%
+\[
+\operatorname{Tr}D=1
+\]%
+\[
+\gamma
+\]
+b1%
+\[
+\mathcal{L}\left(  D,\lambda,\gamma\right)  =\operatorname{Tr}\left\{
+\overset{}{\left\{  K+V_{2}\right\}  D}\right\}  -\left\langle \lambda
+\left\vert \left\{  \overset{}{\Xi\left(  D\right)  -\gamma}\right\}  \right.
+\right\rangle
+\]
+b2%
+\[
+\mathcal{L}\left(  D_{\ast}\left(  \gamma\right)  ,\lambda_{\ast}\left(
+\gamma\right)  ,\gamma\right)  =\max_{\lambda}\min_{D>0}\mathcal{L}\left(
+D,\lambda,\gamma\right)
+\]%
+\[
+\mathcal{L}\left(  D_{\ast}\left(  \gamma\right)  ,\lambda_{\ast}\left(
+\gamma\right)  ,\gamma\right)  =\min_{D>0}\max_{\lambda}\mathcal{L}\left(
+D,\lambda,\gamma\right)
+\]
+c%
+\[
+\left\langle \cdot|\cdot\right\rangle :L_{\infty}\left(  \mathbb{X}\right)
+\times L_{1}\left(  \mathbb{X}\right)  \rightarrow\mathbb{R}%
+\]
+d%
+\[
+\left\langle \lambda\left\vert \overset{}{\left\{  \Xi\left(  D\right)
+-\gamma\right\}  }\right.  \right\rangle =\operatorname{Tr}\left\{  \overset
+{}{\Omega\left(  \lambda\right)  D}\right\}  -\left\langle \lambda\left\vert
+\gamma\right.  \right\rangle
+\]
+e%
+\[
+\Omega\left(  \lambda\right)  =\int\lambda\left(  \mathbf{x}\right)
+\mathbf{\Phi}\left(  \mathbf{x}\right)  ^{\dagger}\mathbf{\Phi}\left(
+\mathbf{x}\right)  d\mathbf{x}%
+\]
+
+
+f%
+\[
+\operatorname{Tr}\left\{  \overset{}{\Omega\left(  \lambda\right)  D}\right\}
+=\int\lambda\left(  \mathbf{x}\right)  \left[  \Xi\left(  D\right)  \right]
+\left(  \mathbf{x}\right)  d\mathbf{x.}%
+\]
+
+
+g%
+\[
+D=QQ^{\dagger}%
+\]
+
+
+h%
+\[
+\mathcal{L}\left(  D,\lambda,\gamma\right)  =\operatorname{Tr}\left\{
+\overset{}{\left\{  K+V_{2}-\Omega\left(  \lambda\right)  \right\}
+D}\right\}  +\left\langle \lambda\left\vert \gamma\right.  \right\rangle
+\]%
+\[
+\left\langle H\left(  \lambda\left(  \gamma\right)  \right)  \right\rangle
+_{D}=\operatorname{Tr}\left\{  \overset{}{\left\{  K+V_{2}-\Omega\left(
+\lambda\right)  \right\}  D}\right\}
+\]
+
+
+i%
+\[
+\mathcal{F}_{HK}\left(  \gamma\right)  =\operatorname{Tr}\left\{  \overset
+{}{\left\{  K+V_{2}\right\}  D_{\ast}\left(  \gamma\right)  }\right\}
+\]%
+\[
+\left\langle H\left(  \lambda_{\ast}\left(  \gamma\right)  \right)
+\right\rangle _{D_{\ast}\left(  \gamma\right)  }=\min_{D>0}\left\langle
+H\left(  \lambda_{\ast}\left(  \gamma\right)  \right)  \right\rangle _{D}%
+\]%
+\[
+H\left(  \lambda_{\ast}\left(  \gamma\right)  \right)
+\]%
+\[
+D_{\ast}\left(  \gamma\right)
+\]
+%
+
+\[
+\lambda_{\ast}\left(  \gamma\right)
+\]
+
+
+j%
+\[
+\min_{\gamma\in\mathcal{D}}\mathcal{E}\left(  \gamma\mathbf{,}\mathrm{v}%
+\right)
+\]%
+\[
+\mathcal{D}=\left\{  \gamma\left\vert \int\gamma\left(  \mathbf{x}\right)
+d\mathbf{x}=N,\quad\gamma\left(  \mathbf{x}\right)  \geq0,\,\,\gamma\in
+L_{1}\left(  \mathbb{X}\right)  \right.  \right\}
+\]%
+\[
+\frac{\delta\mathcal{F}_{HK}\left(  \gamma\right)  }{\delta\gamma}%
+=\lambda\left(  \gamma\right)  .
+\]
+
+
+k%
+\[
+\gamma\left(  \mathbf{x}\right)  =\sum_{1\leq j\leq r}N_{j}\left\vert
+\tilde{\varphi}_{j}\left(  \mathbf{x}\right)  \right\vert ^{2}=\sum_{1\leq
+j\leq r}\left\vert \varphi_{j}\left(  \mathbf{x}\right)  \right\vert ^{2}%
+\]%
+\[
+\gamma=\Gamma\left(  \mathbf{\varphi}\right)  =\Gamma\left(  \mathbf{\tilde
+{\varphi},N}\right)
+\]%
+\[
+\mathcal{F}_{O}\left(  \mathbf{\varphi}\right)  =\mathcal{F}_{HK}\left(
+\Gamma\left(  \mathbf{\varphi}\right)  \right)
+\]
+l%
+\[
+\mathcal{F}_{O}\left(  \mathbf{\varphi}\right)  =\mathcal{F}_{T}\left(
+\mathbf{\varphi}\right)  +\mathcal{F}_{C}\left(  \mathbf{\varphi}\right)
++\mathcal{F}_{OXC}\left(  \mathbf{\varphi}\right)
+\]%
+\[
+\mathcal{F}_{OXC}\left(  \mathbf{\varphi}\right)  =\mathcal{F}_{XC}\left(
+\Gamma\left(  \mathbf{\varphi}\right)  \right)  +\mathcal{F}_{K}\left(
+\Gamma\left(  \mathbf{\varphi}\right)  \right)  -\mathcal{F}_{T}\left(
+\mathbf{\varphi}\right)
+\]%
+\[
+\mathcal{F}_{T}\left(  \mathbf{\varphi}\right)  =\sum_{1\leq j\leq
+r}\left\langle \varphi_{j}\left\vert K\varphi_{j}\right.  \right\rangle
+\]%
+\[
+\mathcal{E}\left(  \gamma\mathbf{,}\mathrm{v}\right)  =\mathcal{F}_{HK}\left(
+\gamma\right)  +f_{\mathrm{v}}\left(  \gamma\right)
+\]
+l1%
+\[
+E_{0}=\min_{\mathbf{\varphi\in}\mathfrak{S}}\mathcal{E}_{O}\left(
+\mathbf{\varphi,}\mathrm{v}\right)
+\]%
+\[
+\mathcal{E}_{O}\left(  \mathbf{\varphi,}\mathrm{v}\right)  =\mathcal{F}%
+_{O}\left(  \mathbf{\varphi}\right)  +f_{\mathrm{v}}\left(  \Gamma\left(
+\mathbf{\varphi}\right)  \right)
+\]%
+\[
+\mathfrak{S}=\left\{  \mathbf{\varphi}\left\vert \left\langle \left.
+\varphi_{j}\right\vert \varphi_{k}\right\rangle =N_{j}\delta_{jk};\,0\leq
+N_{j}\leq1,1\leq j,k\leq r;\sum_{1\leq j\leq r}N_{j}=N\right.  \right\}
+\]%
+\[
+\mathfrak{S}\left(  \mathbf{N}\right)  =\left\{  \mathbf{\varphi}\left\vert
+\overset{}{\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}%
+\right\rangle =N_{j}\delta_{jk},\,1\leq j,k\leq r}\right.  \right\}
+\]
+m%
+\[
+E_{0}=\min_{\mathbf{N\in}\mathfrak{N}}\min_{\mathbf{\varphi\in}\mathfrak{S}%
+\left(  \mathbf{N}\right)  }\mathcal{E}_{O}\left(  \mathbf{\varphi,}%
+\mathrm{v}\right)
+\]
+1%
+\[
+\mathfrak{N=}\left\{  \mathbf{N}\left\vert 0\leq N_{j}\leq1,1\leq j\leq
+r;\sum_{1\leq j\leq r}N_{j}=N\right.  \right\}
+\]
+2%
+\[
+\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi},\mathbf{\varepsilon
+,N,}\mathrm{v}\right)  =\mathcal{E}_{O}\left(  \mathbf{\varphi,}%
+\mathrm{v}\right)  -\sum_{1\leq j,k\leq r}\varepsilon_{jk}\left\{  \overset
+{}{\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+-N_{j}\delta_{jk}}\right\}
+\]
+3%
+\[
+\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi}\left(  \mathbf{N}%
+\right)  ,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)
+=\max_{\mathbf{\varepsilon}}\min_{\mathbf{\varphi}}\mathcal{L}%
+_{\mathbf{\varphi}}\left(  \mathbf{\varphi},\mathbf{\varepsilon,N,}%
+\mathrm{v}\right)
+\]
+a%
+\begin{subequations}
+\begin{align*}
+\frac{\delta\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi
+},\mathbf{\varepsilon,N,}\mathrm{v}\right)  }{\delta\varphi_{j}^{\ast}}  &
+=0;\,1\leq j\leq r\\
+\frac{\partial\mathcal{L}_{\mathbf{\varphi}}\left(  \mathbf{\varphi
+},\mathbf{\varepsilon,N,}\mathrm{v}\right)  }{\partial\varepsilon_{jk}}  &
+=0;\,1\leq j,k\leq r
+\end{align*}
+b%
+\end{subequations}
+\[
+\frac{\partial\mathcal{E}_{O}\left(  \varphi\mathbf{\left(  \mathbf{N}\right)
+},\mathrm{v}\right)  }{\partial N_{j}}=\varepsilon_{jj}\left(  \mathbf{N}%
+\right)
+\]%
+\[
+\frac{\partial\mathcal{E}_{O}\left(  \gamma\mathbf{\left(  \mathbf{N}\right)
+},\mathrm{v}\right)  }{\partial N_{j}}=\left\langle \tilde{\varphi}_{j}\left(
+\mathbf{N}\right)  \left\vert \frac{\delta\mathcal{E}_{O}\left(  \left[
+\gamma\left(  \mathbf{\varphi}\right)  \right]  \mathbf{\left(  \mathbf{N}%
+\right)  ,}\mathrm{v}\right)  }{\delta\gamma}\right.  \tilde{\varphi}%
+_{j}\left(  \mathbf{N}\right)  \right\rangle =\varepsilon_{jj}\left(
+\mathbf{N}\right)
+\]%
+\[
+\left\vert \tilde{\varphi}_{j}\left(  \mathbf{N}\right)  \right\rangle
+=N_{j}^{\frac{1}{2}}\left\vert \varphi_{j}\left(  \mathbf{N}\right)
+\right\rangle
+\]
+c%
+\[
+\varepsilon\left(  \mathbf{N}\right)  _{jk}=\varepsilon\left(  \mathbf{N}%
+\right)  _{kj}^{\ast};\quad1\leq j,k\leq r
+\]
+d%
+\[
+\frac{\delta\mathcal{E}_{O}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)  }%
+{\delta\varphi_{j}^{\ast}}-\sum_{1\leq k\leq r}\varepsilon_{jk}\left(
+\mathbf{N}\right)  \left\vert \varphi_{k}\left(  \mathbf{N}\right)
+\right\rangle =0;\,1\leq j\leq r
+\]%
+\[
+\frac{\delta\mathcal{E}_{O}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)  }%
+{\delta\varphi_{j}^{\ast}}=\left(  \frac{\delta\mathcal{E}_{O}\left(
+\mathbf{\varphi}\left(  \mathbf{N}\right)  ,\mathbf{\varepsilon}\left(
+\mathbf{N}\right)  ,\mathrm{v}\right)  }{\delta\varphi_{j}}\right)  ^{\ast}%
+\]
+e%
+\[
+\frac{\delta\mathcal{E}_{O}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  ,\mathrm{v}\right)  }%
+{\delta\varphi_{j}^{\ast}}=\frac{\delta\mathcal{E}_{O}\left(  \gamma\left(
+\mathbf{N}\right)  \mathbf{,}\mathrm{v}\right)  }{\delta\gamma}\varphi
+_{j}\left(  \mathbf{N}\right)
+\]
+f%
+\begin{align*}
+\frac{\delta\mathcal{E}_{O}\left(  \gamma\left(  \mathbf{\varphi}\right)
+\mathbf{,}\mathrm{v}\right)  }{\delta\varphi_{j}^{\ast}\left(  \mathbf{x}%
+\right)  }  &  =\int\frac{\delta\mathcal{E}_{O}\left(  \gamma\left(
+\mathbf{\varphi}\right)  \mathbf{,}\mathrm{v}\right)  }{\delta\gamma\left(
+\mathbf{x}^{\prime}\right)  }\frac{\delta\gamma\left(  \mathbf{x}^{\prime
+}\right)  }{\delta\varphi_{j}^{\ast}\left(  \mathbf{x}\right)  }%
+d\mathbf{x}^{\prime}\\
+&  =\frac{\delta\mathcal{E}_{O}\left(  \gamma\left(  \mathbf{\varphi}\right)
+\mathbf{,}\mathrm{v}\right)  }{\delta\gamma\left(  \mathbf{x}\right)  }%
+\varphi_{j}\left(  \mathbf{x}\right)
+\end{align*}%
+\[
+\left[  \frac{\delta\mathcal{E}_{O}\left(  \gamma\left(  \mathbf{N}\right)
+\mathbf{,}\mathrm{v}\right)  }{\delta\gamma}\right]  \left\vert \varphi
+_{j}\left(  \mathbf{N}\right)  \right\rangle -\sum_{1\leq k\leq r}%
+\varepsilon_{jk}\left(  \mathbf{N}\right)  \left\vert \varphi_{k}\left(
+\mathbf{N}\right)  \right\rangle =0;\,1\leq j\leq r
+\]%
+\[
+\left[  \frac{\delta\mathcal{E}_{O}\left(  \gamma\left(  \mathbf{N}\right)
+\mathbf{,}\mathrm{v}\right)  }{\delta\gamma}\right]
+\]
+4%
+\[
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi}\left(  \mathbf{\theta
+}\right)  ,\eta,N,\mathrm{v}\right)  =\mathcal{E}_{O}\left(  \mathbf{\varphi
+}\left(  \mathbf{\theta}\right)  \mathbf{,}\mathrm{v}\right)  -\eta\left\{
+\sum_{\,1\leq j\leq r}N_{j}\left(  \mathbf{\theta}\right)  -N\right\}
+\]
+5%
+\[
+0\leq N_{j}\leq1,1\leq j\leq r
+\]
+6%
+\[
+N_{j}\left(  \mathbf{\theta}\right)  =\sin^{2}\theta_{j}%
+\]
+7%
+\[
+\sum_{1\leq j\leq r}N_{j}\left(  \mathbf{\theta}\right)  =N
+\]
+8%
+\[
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi}\left(  \mathbf{\theta
+}\left(  N\right)  \right)  ,\eta,N,\mathrm{v}\right)  =\max_{\eta}%
+\min_{\mathbf{\theta}}\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi
+}\left(  \mathbf{\theta}\right)  ,\eta,N,\mathrm{v}\right)  .
+\]
+
+
+n%
+\begin{align*}
+&  \frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi}\left(
+\mathbf{\theta}\left(  N\right)  \right)  ,\eta\mathbf{,}N\mathbf{,}%
+\mathrm{v}\right)  }{\partial\theta_{j}}=0\text{ }\\
+&  \qquad\qquad\qquad\left.  \Downarrow\right.
+\end{align*}%
+\[
+\frac{\partial\mathcal{E}_{O}\left(  \varphi\left(  \mathbf{N}\left(
+\mathbf{\theta}\left(  N\right)  \right)  \right)  ,\mathrm{v}\right)
+}{\partial N_{j}}=\eta=\varepsilon_{jj}\left(  \mathbf{\mathbf{N}}\left(
+\mathbf{\theta}\left(  N\right)  \right)  \right)
+\]%
+\[
+\sin\left\{  2\theta_{j}\left(  N\right)  \right\}  =0
+\]%
+\[
+\sin\left\{  2\theta_{j}\left(  N\right)  \right\}  =0\Rightarrow\theta
+_{j}\left(  N\right)  =0\text{ or }\frac{\pi}{2}\Rightarrow N_{j}\left(
+\mathbf{\theta}\left(  N\right)  \right)  =0\text{ or }1
+\]
+o1%
+\[
+K_{U}\left(  \gamma\right)  =\min_{D\in\left[  \gamma\right]  }%
+\operatorname{Tr}\left\{  KD\right\}  \equiv\min_{D\in\left[  \gamma\right]
+}K_{U}\left(  D\right)
+\]
+2%
+\[
+\mathcal{L}_{K}\left(  D_{0}\left(  \gamma\right)  ,\lambda_{0}\left(
+\gamma\right)  \right)  =\min_{D>0}\max_{\lambda}\left\{  \operatorname{Tr}%
+\left\{  \overset{}{\left\{  K-\Omega\left(  \lambda\right)  \right\}
+D}\right\}  +\left\langle \lambda\left\vert \gamma\right.  \right\rangle
+\right\}
+\]
+3%
+\[
+\mathcal{L}_{K}\left(  D,\lambda,\gamma\right)  =\operatorname{Tr}\left\{
+\overset{}{\left\{  K-\Omega\left(  \lambda\right)  \right\}  D}\right\}
++\left\langle \left.  \lambda\right\vert \gamma\right\rangle
+\]
+4
+
+$D_{0}\left(  \gamma\right)  $ is a normalized ground state
+
+5%
+\[
+\left[  H\left(  \lambda_{0}\left(  \gamma\right)  \right)  ,D_{0}\left(
+\gamma\right)  \right]  =0
+\]
+
+
+6%
+\[
+H\left(  \lambda_{0}\left(  \gamma\right)  \right)  =K-\Omega\left(
+\lambda_{0}\right)
+\]
+7%
+\[
+D_{0}^{1}\left(  \gamma\right)  =\sum_{1\leq j\leq r}N_{0j}\left(
+\gamma\right)  \left\vert \tilde{\varphi}_{0j}\left(  \gamma\right)
+\right\rangle \left\langle \tilde{\varphi}_{0j}\left(  \gamma\right)
+\right\vert
+\]
+8%
+\[
+=\sum_{1\leq j\leq r}\left\vert \varphi_{0j}\left(  \gamma\right)
+\right\rangle \left\langle \varphi_{0j}\left(  \gamma\right)  \right\vert
+\]
+9%
+\[
+\mathcal{F}_{KS}\left(  \mathbf{\varphi}_{0}\right)  =\mathcal{F}_{T}\left(
+\mathbf{\varphi}_{0}\right)  +\mathcal{F}_{C}\left(  \mathbf{\varphi}%
+_{0}\right)  +\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}_{0}\right)
+\]
+10%
+\[
+E_{0}=\min_{\mathbf{N\in}\mathfrak{N}}\min_{\mathbf{\varphi\in}\mathfrak{S}%
+_{K}\left(  \mathbf{N}\right)  }\mathcal{E}_{O}\left(  \mathbf{\varphi
+,}\mathrm{v}\right)
+\]
+11%
+\[
+\mathbf{\varphi}_{0}=\Gamma_{0}^{-1}\left(  \gamma\right)
+\]
+12%
+\[
+E_{0}=\min_{\mathbf{N\in}\mathfrak{N}}\min_{\mathbf{\varphi\in}\mathfrak{S}%
+\left(  \mathbf{N}\right)  }\mathcal{E}_{O}\left(  \mathbf{\varphi,}%
+\mathrm{v}\right)  =\min_{\mathbf{N\in}\mathfrak{N}}\min_{\mathbf{\varphi\in
+}\mathfrak{S}_{K}\left(  \mathbf{N}\right)  }\mathcal{E}_{KS}\left(
+\mathbf{\varphi,}\mathrm{v}\right)
+\]
+13%
+\[
+\mathfrak{S}_{K}\left(  \mathbf{N}\right)  =\left\{  \mathbf{\varphi
+}\left\vert \overset{}{\left\langle \left.  \varphi_{j}\right\vert \varphi
+_{k}\right\rangle =N_{j}\delta_{jk},\,1\leq j,k\leq r}\right.  ;K\left(
+\mathbf{\varphi}\right)  =\min_{\mathbf{\varphi\in}\mathfrak{S}\left(
+\mathbf{N}\right)  }\left\{  \sum_{1\leq j\leq r}\left\langle \left.
+\varphi_{j}\right\vert K\varphi_{j}\right\rangle \right\}  \right\}
+\]
+14%
+\[
+\mathcal{E}_{KS}\left(  \mathbf{\varphi,}\mathrm{v}\right)  =\mathcal{F}%
+_{KS}\left(  \mathbf{\varphi}\right)  +f_{\mathrm{v}}\left(  \Gamma\left(
+\mathbf{\varphi}\right)  \right)
+\]
+15%
+\[
+\mathcal{F}_{KS}\left(  \mathbf{\varphi}\right)  =\mathcal{K}\left(
+\mathbf{\varphi}\right)  +\mathcal{F}_{C}\left(  \mathbf{\varphi}\right)
++\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}\right)
+\]
+16%
+\[
+\mathcal{F}_{KSXC}\left(  \mathbf{\varphi}\right)  =\mathcal{F}_{XC}\left(
+\Gamma\left(  \mathbf{\varphi}\right)  \right)  +\mathcal{F}_{K}\left(
+\Gamma\left(  \mathbf{\varphi}\right)  \right)  -\mathcal{K}\left(
+\mathbf{\varphi}\right)
+\]
+
+
+p1%
+\[
+\mathfrak{M}%
+\]
+2%
+\[
+K\left(  \mathbf{\varphi}_{0}\right)  =\min_{\mathbf{\varphi\in}\mathfrak{M}%
+}\left\{  \sum_{1\leq j\leq r}\left\langle \left.  \varphi_{j}\right\vert
+K\varphi_{j}\right\rangle \right\}
+\]
+q1%
+\[
+\mathcal{F}\left(  D^{1}\right)  =\operatorname{Tr}\left\{  \overset
+{}{\left\{  K+V_{2}\right\}  D_{\ast}}\right\}  =\min_{D\in\left[
+D^{1}\right]  _{N}}\operatorname{Tr}\left\{  \overset{}{\left\{
+K+V_{2}\right\}  D}\right\}
+\]
+2%
+\[
+\mathcal{F}\left(  \mathbf{\varphi}\right)  =\operatorname{Tr}\left\{
+\overset{}{\left\{  K+V_{2}\right\}  D_{\ast}}\right\}  =\min_{D\in\left[
+\mathbf{\varphi}\right]  _{N}}\operatorname{Tr}\left\{  \overset{}{\left\{
+K+V_{2}\right\}  D}\right\}
+\]
+3%
+\[
+\left[  \mathbf{\varphi}\right]  _{N}=\left[  D^{1}\right]  _{N}%
+\]%
+\[
+\mathbf{\varphi\in\,}\mathfrak{S}%
+\]%
+\[
+\mathcal{E}\left(  D^{1}\mathbf{,}\mathrm{v}\right)  =\mathcal{F}\left(
+D^{1}\right)  +f_{\mathrm{v}}\left(  \gamma\left(  D^{1}\right)  \right)
+\]%
+\[
+\mathcal{E}_{D}\left(  \mathbf{\varphi}_{\ast}\mathbf{,}\mathrm{v}\right)
+=\min_{\mathbf{\varphi\in}\mathfrak{S}}\left\{  \mathcal{F}\left(
+\mathbf{\varphi}\right)  +f_{\mathrm{v}}\left(  \gamma\left(  \mathbf{\varphi
+}\right)  \right)  \right\}
+\]
+4%
+\[
+\mathfrak{S}=\left\{  \mathbf{\varphi}\left\vert \left\langle \left.
+\varphi_{j}\right\vert \varphi_{k}\right\rangle =N_{j}\delta_{jk};\,0\leq
+N_{j}\leq1,1\leq j,k\leq r;\sum_{1\leq j\leq r}N_{j}=N\right.  \right\}
+\]
+5%
+\[
+\mathfrak{S}\left(  \mathbf{N}\right)  =\left\{  \mathbf{\varphi}\left\vert
+\overset{}{\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}%
+\right\rangle =N_{j}\delta_{jk},\,1\leq j,k\leq r}\right.  \right\}
+\]
+6%
+\[
+D^{1}=\sum_{1\leq j\leq r}N_{j}\left\vert \tilde{\varphi}_{j}\right\rangle
+\left\langle \tilde{\varphi}_{j}\right\vert =\sum_{1\leq j\leq r}\left\vert
+\varphi_{j}\right\rangle \left\langle \varphi_{j}\right\vert
+\]%
+\[
+\frac{\partial\mathcal{E}_{D}\left(  \varphi\mathbf{\left(  \mathbf{N}\right)
+},\mathrm{v}\right)  }{\partial N_{j}}=\varepsilon_{jj}\left(  \mathbf{N}%
+\right)
+\]%
+\[
+\mathfrak{N}_{1}=\left\{  \mathbf{n}\left\vert 0\leq n_{j}\leq1,1\leq j\leq
+s;\sum_{1\leq j\leq s}n_{j}=1\right.  \right\}
+\]%
+\begin{align*}
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\mathcal{E}_{G}\left(
+\mathbf{n,\psi}\right) \\
+&  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\left.  \shortparallel
+\right. \\
+&  \left(  S_{\frac{N}{2}}\left(  \mathbf{n}\right)  \right)  ^{-1}\left\{
+\sum_{1\leq j\leq s}n_{j}S_{_{\frac{N}{2}-1}}\left(  \jmath\right)  \left\{
+\left\langle \psi_{j}\left\vert h_{1}\psi_{j}\right.  \right\rangle
++\left\langle \psi_{j+s}\left\vert h_{1}\psi_{j+s}\right.  \right\rangle
++\left\langle \psi_{j}\psi_{j+s}||\psi_{j}\psi_{j+s}\right\rangle \right\}
+\right. \\
+&  +\sum_{1\leq j,k\leq s}n_{j}^{\frac{1}{2}}n_{k}^{\frac{1}{2}}S_{_{\frac
+{N}{2}-1}}\left(  \jmath k\right)  \left\langle \psi_{j}\psi_{j+s}||\psi
+_{k}\psi_{k+s}\right\rangle \left.  +\sum_{1\leq j<k\leq s}n_{i}%
+n_{j}S_{_{\frac{N}{2}-2}}\left(  \jmath k\right)  \left\langle \psi_{j}%
+\psi_{k}|||\psi_{j}\psi_{k}\right\rangle \right\}
+\end{align*}%
+\[
+\left\langle jk||lm\right\rangle =\left(  \left.  jk\right\vert lm\right)
+-\left(  \left.  jk\right\vert ml\right)
+\]%
+\[
+\left(  \left.  jk\right\vert lm\right)  =\int\psi_{j}^{\ast}\left(
+\mathbf{x}_{1}\right)  \psi_{k}^{\ast}\left(  \mathbf{x}_{2}\right)  \frac
+{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\psi_{l}\left(
+\mathbf{x}_{1}\right)  \psi_{m}\left(  \mathbf{x}_{2}\right)  d\mathbf{x}%
+_{1}d\mathbf{x}_{2}%
+\]%
+\[
+h_{1}=K_{1}+\mathrm{v}%
+\]%
+\[
+\mathcal{E}_{G}\left(  \mathbf{\chi,}\mathrm{v}\right)  =\mathcal{E}%
+_{G}\left(  \mathbf{n,\psi,}\mathrm{v}\right)
+\]%
+\[
+\left\langle \left.  \chi_{j}\right\vert \chi_{k}\right\rangle =n_{j}%
+\delta_{jk}%
+\]
+
+
+r1%
+\[
+\mathcal{L}_{G}\left(  \mathbf{\chi}\left(  \mathbf{n}\right)
+,\mathbf{\varepsilon}\left(  \mathbf{n}\right)  ,\mathrm{v}\right)
+=\min_{\mathbf{\chi}}\max_{\mathbf{\varepsilon}}\mathcal{L}_{G}\left(
+\mathbf{\chi},\mathbf{\varepsilon,n,}\mathrm{v}\right)
+\]
+2%
+\[
+E_{AGP}=\min_{\mathbf{n\in}\mathfrak{N}_{1}}\min_{\mathbf{\chi\in}%
+\mathfrak{S}\left(  \mathbf{n}\right)  }\mathcal{E}_{G}\left(  \mathbf{\chi
+,}\mathrm{v}\right)
+\]%
+\[
+\mathfrak{S}\left(  \mathbf{n}\right)  =\left\{  \mathbf{\chi}\left\vert
+\overset{}{\left\langle \left.  \chi_{j}\right\vert \chi_{k}\right\rangle
+=n_{j}\delta_{jk},\,1\leq j,k\leq r}\right.  \right\}
+\]
+3%
+\[
+\mathcal{L}_{G}\left(  \mathbf{\chi},\mathbf{\varepsilon,n,}\mathrm{v}\right)
+=\mathcal{E}_{G}\left(  \mathbf{\chi,}\mathrm{v}\right)  -\sum_{1\leq j,k\leq
+r}\varepsilon_{jk}\left\{  \overset{}{\left\langle \left.  \chi_{j}\right\vert
+\chi_{k}\right\rangle -n_{j}\delta_{jk}}\right\}
+\]
+4%
+\[
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(  \mathbf{\theta
+}\right)  ,\eta,\mathrm{v}\right)  =\mathcal{E}_{G}\left(  \mathbf{\chi
+}\left(  \mathbf{\theta}\right)  \mathbf{,}\mathrm{v}\right)  -\eta\left\{
+\sum_{\,1\leq j\leq s}n_{j}\left(  \mathbf{\theta}\right)  -1\right\}
+\]
+5%
+\[
+0\leq n_{j}\leq1,1\leq j\leq s
+\]
+6%
+\[
+n_{j}\left(  \mathbf{\theta}\right)  =\sin^{2}\theta_{j}%
+\]
+7%
+\[
+\sum_{1\leq j\leq r}n_{j}\left(  \mathbf{\theta}\right)  =1
+\]
+8%
+\[
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(  \mathbf{\theta
+}\right)  ,\eta,\mathrm{v}\right)  =\max_{\eta}\min_{\mathbf{\theta}%
+}\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(  \mathbf{\theta
+}\right)  ,\eta,\mathrm{v}\right)  .
+\]
+
+
+9%
+\begin{align*}
+&  \frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(
+\mathbf{\theta}\right)  ,\eta\mathbf{,}\mathrm{v}\right)  }{\partial\theta
+_{j}}=0\text{ }\\
+&  \qquad\qquad\qquad\left.  \Downarrow\right.
+\end{align*}
+10%
+\[
+\frac{\partial\mathcal{E}_{O}\left(  \chi\left(  \mathbf{n}\left(
+\mathbf{\theta}\right)  \right)  ,\mathrm{v}\right)  }{\partial n_{j}}%
+=\eta=\varepsilon_{jj}\left(  \mathbf{\mathbf{n}}\left(  \mathbf{\theta
+}\right)  \right)
+\]
+11%
+\[
+\sin\left\{  2\theta_{j}\right\}  =0
+\]
+12%
+\[
+\sin\left\{  2\theta_{j}\right\}  =0\Rightarrow\theta_{j}=0\text{ or }%
+\frac{\pi}{2}\Rightarrow n_{j}\left(  \mathbf{\theta}\right)  =0\text{ or }1
+\]
+13%
+\begin{subequations}
+\begin{align*}
+\frac{\delta\mathcal{L}_{G}\left(  \mathbf{\chi},\mathbf{\varepsilon
+,n,}\mathrm{v}\right)  }{\delta\chi_{j}^{\ast}}  &  =0;\,1\leq j\leq r\\
+\frac{\partial\mathcal{L}_{G}\left(  \mathbf{\chi},\mathbf{\varepsilon
+,n,}\mathrm{v}\right)  }{\partial\varepsilon_{jk}}  &  =0;\,1\leq j,k\leq r
+\end{align*}%
+\end{subequations}
+\[
+\mathcal{E}\left(  \bm{\varphi}\right)  =\operatorname{Tr}\left\{
+\mathbb{H}_{1}\left(  \bm{\varphi}\right)  \mathbb{D}^{1}\right\}  +\frac
+{1}{4}\operatorname{Tr}\left\{  \mathbb{V}_{2}\left(  \bm{\varphi}\right)
+\mathbb{D}^{2}\right\}
+\]%
+\[
+\mathcal{E}\left(  \bm{\varphi}\right)  =\sum_{1\leq i,k\leq r}\left\langle
+\left.  \varphi_{i}\right\vert h_{1}\varphi_{k}\right\rangle D_{kj}^{1}%
++\frac{1}{4}\sum_{1\leq i,j,k,l\leq r}\left\langle \left.  \varphi_{i}%
+\varphi_{j}\right\vert V_{2}\varphi_{k}\varphi_{l}\right\rangle D_{klij}^{2}%
+\]
+
+
+s1%
+\[
+\mathbb{D}^{1}%
+\]%
+\[
+\mathbb{D}^{2}%
+\]%
+\[
+\left\{  \left.  \left\vert \varphi_{j}\right\rangle \right\vert 1\leq j\leq
+r\right\}
+\]
+%
+
+\begin{align*}
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)   &  =\frac{1}%
+{2}\sum_{1\leq p\leq r}N\left(  \varphi_{p}\right)  \left\{  I\left(
+\varphi_{p}\right)  +\left\langle \left.  \varphi_{p}\right\vert h_{1}%
+\varphi_{p}\right\rangle \right\} \\
+&  =\frac{1}{2}%
+%TCIMACRO{\tsum \limits_{1\leq p\leq r}}%
+%BeginExpansion
+{\textstyle\sum\limits_{1\leq p\leq r}}
+%EndExpansion
+N\left(  \varphi_{p}\right)  \kappa\left(  \varphi_{p}\right)
+\end{align*}
+%
+
+\[
+F\left(  \mathbf{\chi}\left(  \mathbf{n}\right)  \right)  \left\vert \chi
+_{j}\left(  \mathbf{n}\right)  \right\rangle =\sum_{1\leq j,k\leq r}\left\vert
+\chi_{k}\left(  \mathbf{n}\right)  \right\rangle \varepsilon_{kj}\left(
+\mathbf{n}\right)
+\]
+%
+
+\[
+\bullet\quad\varepsilon_{jk}\left(  \mathbf{n}\right)  =\varepsilon_{kj}%
+^{\ast}\left(  \mathbf{n}\right)
+\]%
+\[
+\bullet\quad\left\langle \left.  \chi_{j}\left(  \mathbf{n}\right)
+\right\vert \chi_{k}\left(  \mathbf{n}\right)  \right\rangle =n_{j}\delta_{jk}%
+\]
+%
+
+\[
+\frac{\partial\mathcal{E}_{G}\left(  \chi\mathbf{\left(  \mathbf{n}\right)
+},\mathrm{v}\right)  }{\partial n_{j}}=\varepsilon_{jj}\left(  \mathbf{n}%
+\right)
+\]
+%
+
+\begin{align*}
+\frac{\partial\mathcal{E}_{G}\left(  \chi\mathbf{\left(  \mathbf{n}\right)
+},\mathrm{v}\right)  }{\partial N_{j}}  &  =\sum_{1\leq k\leq2s}\frac
+{\partial\mathcal{E}_{G}\left(  \chi\mathbf{\left(  \mathbf{n}\right)
+},\mathrm{v}\right)  }{\partial n_{k}}\frac{\partial n_{k}}{\partial N_{j}}\\
+&  =\sum_{1\leq k\leq2s}\varepsilon_{kk}\left(  \mathbf{n}\right)  \left(
+\left[  \frac{\partial\mathbf{N}\left(  \mathbf{n}\right)  }{\partial
+\mathbf{n}}\right]  ^{-1}\right)  _{kj}%
+\end{align*}
+%
+
+\[
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(  \mathbf{\theta
+}\right)  ,\eta,\mathrm{v}\right)  =\mathcal{E}_{G}\left(  \mathbf{\chi
+}\left(  \mathbf{\theta}\right)  \mathbf{,}\mathrm{v}\right)  -\eta\left\{
+\sum_{\,1\leq j\leq r}n_{j}\left(  \mathbf{\theta}\right)  -1\right\}
+\]%
+\[
+n_{j}\left(  \mathbf{\theta}\right)  =\sin^{2}\theta_{j}%
+\]%
+\[
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(  \mathbf{\theta
+}\right)  ,\eta,\mathrm{v}\right)  =\max_{\eta}\min_{\mathbf{\theta}%
+}\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(  \mathbf{\theta
+}\right)  ,\eta,\mathrm{v}\right)
+\]
+%
+
+\begin{align*}
+&  \frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(
+\mathbf{\theta}\right)  ,\eta\mathbf{,}\mathrm{v}\right)  }{\partial\theta
+_{j}}=0\text{ }\\
+&  \qquad\qquad\left.  \Downarrow\right.
+\end{align*}
+%
+
+\[
+\frac{\partial\mathcal{E}_{G}\left(  \varphi\left(  \mathbf{n}\left(
+\mathbf{\theta}\right)  \right)  ,\mathrm{v}\right)  }{\partial n_{j}}%
+=\eta=\varepsilon_{jj}\left(  \mathbf{\mathbf{n}}\left(  \mathbf{\theta
+}\right)  \right)
+\]
+%
+
+\[
+\sin\left\{  2\theta_{j}\right\}  =0\Rightarrow\theta_{j}=0\text{ or }%
+\frac{\pi}{2}\Rightarrow n_{j}\left(  \mathbf{\theta}\right)  =0\text{ or }1
+\]
+%
+
+\[
+\left\vert \tilde{\varphi}_{j}\right\rangle
+\]
+%
+
+\[
+e^{i\frac{\theta_{j}}{2}}\left\vert \tilde{\varphi}_{j}\right\rangle
+\]
+%
+
+\[
+K\left(  \mathbf{\varphi}\right)  =\min_{\mathbf{\varphi\in}\mathfrak{S}%
+\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq r}\left\langle \left.
+\varphi_{j}\right\vert K\varphi_{j}\right\rangle \right\}
+\]
+%
+
+\[
+\left\vert \tilde{\varphi}_{j}\left(  \mathbf{N}\right)  \right\rangle
+=N_{j}^{-\frac{1}{2}}\left\vert \varphi_{j}\left(  \mathbf{N}\right)
+\right\rangle
+\]%
+\[
+x\geq0
+\]%
+\begin{align*}
+&  \frac{\partial\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\varphi}\left(
+\mathbf{\theta}\right)  ,\eta\mathbf{,}N\mathbf{,}\mathrm{v}\right)
+}{\partial\theta_{j}}=0\text{ }\\
+&  \qquad\qquad\left.  \Downarrow\right.
+\end{align*}
+%
+
+\[
+\mathcal{E}\left(  \mathbb{D}^{2},\mathbf{\varphi}\right)  =\frac{1}{2}%
+\sum_{1\leq p\leq r}\left\{  \varepsilon\left(  \varphi_{p}\right)
++h_{1}\left(  \varphi_{p}\right)  N\left(  \varphi_{p}\right)  \right\}
+\]%
+\[
+\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(  \mathbf{\theta
+}_{\ast}\right)  ,\eta_{\ast},\mathrm{v}\right)  =\max_{\eta}\min
+_{\mathbf{\theta}}\mathcal{L}_{\mathbf{\theta}}\left(  \mathbf{\chi}\left(
+\mathbf{\theta}\right)  ,\eta,\mathrm{v}\right)
+\]
+%
+
+\[
+\mathcal{F}_{T}\left(  \mathbf{\varphi}_{0}\right)  =\min_{\mathbf{\varphi\in
+}\mathfrak{M}}\left\{  \sum_{1\leq j\leq r}\left\langle \left.  \varphi
+_{j}\right\vert K\varphi_{j}\right\rangle \right\}
+\]%
+\[
+\mathcal{F}_{T}\left(  \mathbf{\varphi}\right)  =\min_{\mathbf{\varphi\in
+}\mathfrak{S}\left(  \mathbf{n}\right)  }\left\{  \sum_{1\leq j\leq
+r}\left\langle \left.  \varphi_{j}\right\vert K\varphi_{j}\right\rangle
+\right\}
+\]
+%
+
+\[
+\mathcal{E}_{D}\left(  \mathbf{\varphi}_{\ast}\mathbf{,}\mathrm{v}\right)
+=\min_{\mathbf{N\in}\mathfrak{N}}\min_{\mathbf{\varphi\in}\mathfrak{S}\left(
+\mathbf{N}\right)  }\left\{  \mathcal{F}\left(  \mathbf{\varphi}\right)
++f_{\mathrm{v}}\left(  \gamma\left(  \mathbf{\varphi}\right)  \right)
+\right\}
+\]
+%
+
+\[
+\mathcal{F}\left(  \mathbf{\varphi}\right)  =\operatorname{Tr}\left\{
+\overset{}{\left\{  K+V_{2}\right\}  D_{\ast}}\right\}  =\min_{D\in\left[
+\mathbf{\varphi}\right]  _{N}}\operatorname{Tr}\left\{  \overset{}{\left\{
+K+V_{2}\right\}  D}\right\}
+\]%
+\[
+\mathcal{E}_{D}\left(  \mathbf{\varphi}_{\ast}\mathbf{,}\mathrm{v}\right)
+=\min_{\mathbf{\varphi\in}\mathfrak{S}}\left\{  \mathcal{F}\left(
+\mathbf{\varphi}\right)  +f_{\mathrm{v}}\left(  \gamma\left(  \mathbf{\varphi
+}\right)  \right)  \right\}
+\]%
+\[
+\mathcal{L}\left(  \mathbf{x}\left(  \mathbf{p}\right)  \mathbf{,\mu\left(
+\mathbf{p}\right)  }\right)  =\min_{\mathbf{x}}\max_{\mathbf{\mu}}%
+\mathcal{L}\left(  \mathbf{x,\mu,p}\right)
+\]%
+\[
+\mathcal{L}\left(  \mathbf{x}\left(  \mathbf{p}\right)  \mathbf{,\mu\left(
+\mathbf{p}\right)  }\right)  \equiv\mathcal{L}\left(  \mathbf{x}\left(
+\mathbf{p}\right)  \mathbf{,\mu\left(  \mathbf{p}\right)  ,p}\right)
+\]
+
+
+%
+
+\begin{align*}
+\nabla_{\mathbf{x}}\mathcal{L}\left(  \mathbf{x}\left(  \mathbf{p}\right)
+\mathbf{,\mu\left(  \mathbf{p}\right)  ,p}\right)   &  =0\\
+\nabla_{\mathbf{\mu}}\mathcal{L}\left(  \mathbf{x\left(  \mathbf{p}\right)
+,\mu\left(  \mathbf{p}\right)  ,p}\right)   &  =0
+\end{align*}%
+\[
+\mathfrak{M}\left(  \mathbf{N}\right)  =\min
+\]%
+\[
+\mathcal{L}_{K}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon}\left(  \mathbf{N}\right)  \right)  =\max
+_{\mathbf{\varepsilon}}\min_{\mathbf{\varphi}}\mathcal{L}_{K}\left(
+\mathbf{\varphi},\mathbf{\varepsilon,N}\right)
+\]%
+\[
+\mathcal{L}_{K}\left(  \mathbf{\varphi},\mathbf{\varepsilon,N}\right)
+=\sum_{1\leq j\leq r}\left\langle \left.  \varphi_{j}\right\vert K\varphi
+_{j}\right\rangle -\sum_{1\leq j,k\leq r}\varepsilon_{jk}\left\{  \overset
+{}{\left\langle \left.  \varphi_{j}\right\vert \varphi_{k}\right\rangle
+-N_{j}\delta_{jk}}\right\}
+\]%
+\[
+\mathbf{\varphi}%
+\]%
+\[
+\mathbf{\varepsilon}%
+\]
+%
+
+\[
+\mathcal{L}_{K}\left(  \mathbf{\varphi}\left(  \mathbf{N}\right)
+,\mathbf{\varepsilon}^{\prime}\left(  \mathbf{N}\right)  \right)
+=\max_{\mathbf{\varepsilon}}\min_{\mathbf{\varphi}}\mathcal{L}_{K}\left(
+\mathbf{\varphi},\mathbf{\varepsilon,N}\right)
+\]
+
+
+
+\end{document}
