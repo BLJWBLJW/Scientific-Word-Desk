@@ -1,0 +1,53 @@
+# -------------------------------
+# Scientific Word 5.5 / LaTeX
+# Clean .gitignore for sw55/doc
+# -------------------------------
+
+# Scientific Word autosave and backup files
+*.bak
+*.sav
+*.tmp
+*.old
+*.~*
+
+# Scientific Word auxiliary project files
+*.log
+*.aux
+*.toc
+*.lof
+*.lot
+*.out
+*.blg
+*.bbl
+*.ilg
+*.ind
+*.idx
+*.glo
+*.gls
+*.glg
+*.fdb_latexmk
+*.fls
+
+# SW55 compiled outputs
+*.dvi
+*.ps
+*.pdf
+
+# SW55 workspace metadata
+*.lb
+*.mb
+*.sb
+*.stp
+
+# MiKTeX cache and temp files
+*.synctex.gz
+*.synctex
+*.nav
+*.snm
+
+# Windows junk
+Thumbs.db
+Desktop.ini
+
+# macOS junk (in case files ever move)
+.DS_Store
