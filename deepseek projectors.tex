@@ -12,7 +12,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Friday, April 06, 2012 11:15:25}
-%TCIDATA{LastRevised=Saturday, June 13, 2026 10:54:26}
+%TCIDATA{LastRevised=Thursday, July 23, 2026 08:17:37}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
 %TCIDATA{Language=American English}
@@ -103,35 +103,32 @@ c_{ijkl}\gamma_i\gamma_j\gamma_k\gamma_l
 \end{equation}
 with $a \in \mathbb{R}$, $b_{ij} \in \mathbb{R}$, $c_{ijkl} \in \mathbb{R}$.
 
-\begin{theorem}[Projector Constraints]
-The element $P$ in (4) is a projector ($P^2 = P$) with no components beyond
+\begin{theorem}[Reduced Projector Constraints]
+The element $P$ in (4) is a projector ($P^{2}=P$) with no components beyond
 grade 4 if and only if the following constraints hold: 
 \begin{align}
-\mathbf{C1 (grade 0):}&\quad a^2 - a = -\sum_{i<j} b_{ij}^2 + \sum_{i<j<k<l}
-c_{ijkl}^2  \label{eq:C1} \\
-\mathbf{C2 (grade 2):}&\quad (2a-1)b_{ij} + 4\sum_{k<l}\sum_m b_{km}c_{mlij}
-= 0 \quad \forall i<j  \label{eq:C2} \\
-\mathbf{C3 (grade 4):}&\quad (2a-1)c_{ijkl} - (b_{ij}b_{kl} - b_{ik}b_{jl} +
-b_{il}b_{jk})  \notag \\
-&\qquad + \langle p_4^2 \rangle_4|_{ijkl} + 2\langle p_2p_4
-\rangle_4|_{ijkl} = 0 \quad \forall i<j<k<l  \label{eq:C3} \\
-\mathbf{C4 (grade 6):}&\quad \sum_{\text{pairings}} (\pm) b_{pq}c_{rstu} = 0
-\quad \forall \text{ 6-index sets}  \label{eq:C4} \\
-\mathbf{C5 (grade 8):}&\quad \sum_{\text{4-4 partitions}} (\pm) c_I c_J = 0
-\quad \forall \text{ 8-index sets}  \label{eq:C5} \\
-\mathbf{Rank:}&\quad 2^{2r}a \in \{0,1,2,\ldots,2^{2r}\}  \label{eq:rank}
+\mathbf{C1(grade0):}& \quad
+a^{2}-a=-\sum_{i<j}b_{ij}^{2}+\sum_{i<j<k<l}c_{ijkl}^{2}  \label{eq:C1} \\
+\mathbf{C2(grade2):}& \quad
+(2a-1)b_{ij}+4\sum_{k<l}\sum_{m}b_{km}c_{mlij}=0\quad \forall i<j
+\label{eq:C2} \\
+\mathbf{C3(grade4):}& \quad
+(2a-1)c_{ijkl}-(b_{ij}b_{kl}-b_{ik}b_{jl}+b_{il}b_{jk})  \notag \\
+& \qquad +\langle p_{4}^{2}\rangle _{4}|_{ijkl}+2\langle p_{2}p_{4}\rangle
+_{4}|_{ijkl}=0\quad \forall i<j<k<l  \label{eq:C3} \\
+\mathbf{C4(grade6):}& \quad \sum_{\text{pairings}}(\pm
+)b_{pq}c_{rstu}=0\quad \forall \text{ 6-index sets}  \label{eq:C4} \\
+\mathbf{C5(grade8):}& \quad \sum_{\text{4-4 partitions}}(\pm
+)c_{I}c_{J}=0\quad \forall \text{ 8-index sets}  \label{eq:C5} \\
+\mathbf{Rank:}& \quad 2^{2r}a\in \{0,1,2,\ldots ,2^{2r}\}  \label{eq:rank}
 \end{align}
 \end{theorem}
 
 \begin{remark}
-Condition \eqref{eq:C5} is precisely the quadratic Pl\~{A}%
-%TCIMACRO{\U{bc}}%
-%BeginExpansion
-$\frac14$%
-%EndExpansion
-cker relations characterizing that $p_4 = \sum
-c_{ijkl}\gamma_i\gamma_j\gamma_k\gamma_l$ corresponds to a point on the
-Grassmannian $\mathrm{Gr}(4, 2r)$ of 4-planes in $\mathbb{C}^{2r}$.
+Condition \eqref{eq:C5} is precisely the quadratic Pl\`{u}cker relations
+characterizing that $p_{4}=\sum c_{ijkl}\gamma _{i}\gamma _{j}\gamma
+_{k}\gamma _{l}$ corresponds to a point on the Grassmannian $\mathrm{Gr}%
+(4,2r)$ of 4-planes in $\mathbb{C}^{2r}$.
 \end{remark}
 
 \section{Partial States on $\mathcal{A}_4$}
