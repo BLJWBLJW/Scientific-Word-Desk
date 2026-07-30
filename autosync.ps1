@@ -1,15 +1,25 @@
-while ($true) {
-    $repo = "C:\Users\bqw\OneDrive\GitHub\Scientific-Word-Desk"
-    Set-Location $repo
+# --- Git Autosync Script (Safe + Low CPU) ---
 
+# Change this to your repo path if needed
+$repo = "C:\Users\bqw\OneDrive\GitHub\Scientific-Word-Desk"
+
+# Move into the repo
+Set-Location $repo
+
+while ($true) {
+
+    # Stage all changes
     git add -A
 
+    # Check if anything actually changed
     $changes = git status --porcelain
+
     if ($changes) {
-        $timestamp = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
-        git commit -m "Auto-sync at $timestamp"
+        # Commit only when needed
+        git commit -m "Auto-sync"
         git push
     }
 
-    Start-Sleep -Seconds 10
+    # Sleep to prevent CPU + shell lag
+    Start-Sleep -Seconds 60
 }
