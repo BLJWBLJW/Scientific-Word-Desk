@@ -11,7 +11,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{CSTFile=revtex4.cst}
 %TCIDATA{Created=Saturday, December 29, 2001 12:06:49}
-%TCIDATA{LastRevised=Saturday, August 01, 2026 14:09:23}
+%TCIDATA{LastRevised=Monday, August 03, 2026 07:50:19}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=BibTeX}
@@ -1021,23 +1021,23 @@ This case can only be obtained by evaluating matrix elements between IPS's
 (See Appendix $\ref{CompFiDer}$ for details).
 \begin{align}
 &  \left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
-N-1}\phi\right\rangle =\nonumber\\
-&  N!\left(  N-1\right)  !\left\{  \sum_{\kappa\neq\left|  p\right|
-\neq\left|  q\right|  }^{s}\left\{  S_{N-1}\left(  \hat{\kappa}\hat{p}\hat
-{q}\right)  \zeta_{\kappa}^{\ast}\left\langle \kappa\kappa+s||pq\right\rangle
+N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\nonumber\\
+&  \left\{  \sum_{\kappa\neq\left\vert p\right\vert \neq\left\vert
+q\right\vert }^{s}\left\{  S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
+\zeta_{\kappa}^{\ast}\left\langle \kappa\kappa+s||pq\right\rangle
 +S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  \left\langle \bar{p}\bar
 {q}||\kappa\kappa+s\right\rangle \zeta_{p}^{\ast}\zeta_{q}^{\ast}\zeta
-_{\kappa}\right.  \right. \nonumber\\
-&  \quad\quad\quad\quad\quad\quad\quad\quad\left.  +\left\langle \bar{q}%
-\kappa||p\kappa\right\rangle n_{\kappa}\zeta_{q}^{\ast}+\left\langle \bar
-{p}\kappa||q\kappa\right\rangle n_{\kappa}\zeta_{p}^{\ast}\right\}  +\zeta
-_{p}^{\ast}\left\langle p\bar{p}||pq\right\rangle S_{N-1}\left(  \hat{p}%
-\hat{q}\right) \nonumber\\
-&  \quad\quad\quad\quad\quad\quad\quad\quad\quad\qquad\,\left.  +\zeta
-_{q}^{\ast}\left\langle q\bar{q}||pq\right\rangle S_{N-1}\left(  \hat{p}%
-\hat{q}\right)  +\left\{  \zeta_{q}^{\ast}h_{\bar{q}p}+\zeta_{p}^{\ast}%
-h_{\bar{p}q}\right\}  S_{N-1}\left(  \hat{p}\hat{q}\right)
-\overset{\underset{}{}}{\underset{}{}}\right\}  \label{pq}%
+_{\kappa}\right.  \right.  \nonumber\\
+&  \quad\quad\quad\quad\quad\quad\left.  +\left\langle \bar{q}\kappa
+||p\kappa\right\rangle n_{\kappa}\zeta_{q}^{\ast}S_{N-2}\left(  \hat{\kappa
+}\hat{p}\hat{q}\right)  +\left\langle \bar{p}\kappa||q\kappa\right\rangle
+n_{\kappa}\zeta_{p}^{\ast}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
+\right\}  +\zeta_{p}^{\ast}\left\langle pp+s||pq\right\rangle S_{N-1}\left(
+\hat{p}\hat{q}\right)  \nonumber\\
+&  \quad\quad\quad\quad\quad\quad\quad\left.  +\zeta_{q}^{\ast}\left\langle
+qq+s||pq\right\rangle S_{N-1}\left(  \hat{p}\hat{q}\right)  +\left\{
+\zeta_{q}^{\ast}h_{\bar{q}p}+\zeta_{p}^{\ast}h_{\bar{p}q}\right\}
+S_{N-1}\left(  \hat{p}\hat{q}\right)  \overset{}{\underset{}{}}\right\}
 \end{align}
 
 
@@ -1875,7 +1875,7 @@ we obtain
 }S_{N-1}\left(  \hat{p}\right)  \left\langle pp+s||pp+s\right\rangle }%
 }+\underset{ii}{\sum_{i\neq j\neq p}^{s}\zeta_{p}^{\ast}\zeta_{i}^{\ast}%
 \zeta_{j}S_{N-2}\left(  \hat{p}\hat{\imath}\hat{\jmath}\right)  \left\langle
-ii+s||jj+s\right\rangle }\right.  \nonumber\\
+ii+s||jj+s\right\rangle }\right. \nonumber\\
 &  \left.  {}\right.  \qquad\qquad\left.  \underset{iii}{\sum_{i\neq p}%
 ^{s}\zeta_{p}^{\ast}n_{i}S_{N-2}\left(  \hat{p}\hat{\imath}\right)
 \left\langle ii+s||ii+s\right\rangle }+\underset{iv}{\sum_{i\neq p}^{s}%
@@ -1969,11 +1969,11 @@ driven by the symmetric functions as
 N-1}\phi\right\rangle =\nonumber\\
 &  N!\left(  N-1\right)  !\left\{  \zeta_{p}^{\ast}S_{N-1}\left(  \hat
 {p}\right)  \left\{  h_{0}+h_{pp}+h_{p+sp+s}+\left\langle
-pp+s||pp+s\right\rangle \right\}  \right.  \nonumber\\
+pp+s||pp+s\right\rangle \right\}  \right. \nonumber\\
 &  \left.  {}\right.  \quad+\sum_{i\neq p}^{s}S_{N-2}\left(  \hat{p}%
 \hat{\imath}\right)  \left\{  \zeta_{p}^{\ast}n_{i}\left\{  h_{ii}%
 +h_{i+si+s}+\left\langle ii+s||ii+s\right\rangle +\left\langle
-ip|||ip\right\rangle \right\}  \right.  \nonumber\\
+ip|||ip\right\rangle \right\}  \right. \nonumber\\
 &  \qquad\qquad\qquad\left.  +\zeta_{i}^{\ast}\left\langle
 ii+s||pp+s\right\rangle \right\}  +\sum_{i\neq j\neq p}^{s}\zeta_{i}^{\ast
 }\zeta_{j}S_{N-2}\left(  \hat{p}\hat{\imath}\hat{\jmath}\right)  \left\langle
@@ -1996,9 +1996,9 @@ from the ket to obtain
 &  \sum\zeta_{j_{1}}^{\ast}\cdots\zeta_{j_{N}}^{\ast}\zeta_{k_{2}}\cdots
 \zeta_{k_{N}}\times\nonumber\\
 &  \qquad\left\langle \eta_{j_{1}}\eta_{j_{1}+s}\cdots\eta_{j_{N}\,}%
-\eta_{j_{N}+s}\left|  \sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger}b_{j}\eta_{p}%
-\eta_{q}\eta_{k_{2}}\eta_{k_{2}+s}\cdots\eta_{k_{N}\,}\eta_{k_{N}+s}\right.
-\right\rangle \nonumber\\
+\eta_{j_{N}+s}\left\vert \sum_{i,j=1}^{r}h_{ij}b_{i}^{\dagger}b_{j}\eta
+_{p}\eta_{q}\eta_{k_{2}}\eta_{k_{2}+s}\cdots\eta_{k_{N}\,}\eta_{k_{N}%
++s}\right.  \right\rangle \nonumber\\
 &  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad_{1\leq j_{1},\cdots
 ,j_{N}\leq s;\,1\leq k_{2},\cdots,k_{N}\leq s;\,\,\,k_{m}\neq p;\quad2\leq
 m\leq N}\nonumber\\
@@ -2011,7 +2011,7 @@ The two electron term has the form
 &  \sum\zeta_{j_{1}}^{\ast}\cdots\zeta_{j_{N}}^{\ast}\zeta_{k_{2}}\cdots
 \zeta_{k_{N}}\times\nonumber\\
 &  \qquad\left\langle \eta_{j_{1}}\eta_{j_{1}+s}\cdots\eta_{j_{N}\,}%
-\eta_{j_{N}+s}\left|  \frac{1}{4}\sum_{i,j,k,l=1}^{r}\left\langle
+\eta_{j_{N}+s}\left\vert \frac{1}{4}\sum_{i,j,k,l=1}^{r}\left\langle
 ij||kl\right\rangle b_{i}^{\dagger}b_{j}^{\dagger}b_{l}b_{k}\eta_{p}\eta
 _{q}\eta_{k_{2}\,}\eta_{k_{2}+s}\cdots\eta_{k_{N}\,}\eta_{k_{N}+s}\right.
 \right\rangle \nonumber\\
@@ -2026,7 +2026,7 @@ which can be expanded as
 \zeta_{j_{2}}\cdots\zeta_{j_{N}}\left\langle \kappa\kappa+s||pq\right\rangle
 \times\qquad\qquad\qquad\qquad\qquad\\
 &  \left\langle \eta_{\kappa}\eta_{\kappa+s}\eta_{j_{2}}\eta_{j_{2}+s}%
-\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left|  b_{\kappa}^{\dagger}b_{\kappa
+\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left\vert b_{\kappa}^{\dagger}b_{\kappa
 +s}^{\dagger}b_{q}b_{p}\eta_{p}\eta_{q}\eta_{j_{2}\,}\eta_{j_{2}+s}\cdots
 \eta_{j_{N}\,}\eta_{j_{N}+s}\right.  \right\rangle
 \end{align*}%
@@ -2036,10 +2036,10 @@ which can be expanded as
 }\zeta_{\kappa}\zeta_{j_{3}}\cdots\zeta_{j_{N}}\left\langle \bar{p}\bar
 {q}||\kappa\kappa+s\right\rangle \times\\
 &  \left\langle \eta_{p}\eta_{p+s}\eta_{q}\eta_{q+s}\eta_{j_{3}}\eta_{j_{3}%
-+s}\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left|  b_{\bar{p}}^{\dagger}b_{\bar{q}%
-}^{\dagger}b_{\lambda+s}b_{\lambda}\eta_{p}\eta_{q}\eta_{\lambda\,}%
-\eta_{\lambda+s}\eta_{j_{3}\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta_{j_{N}%
-+s}\right.  \right\rangle
++s}\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left\vert b_{\bar{p}}^{\dagger}%
+b_{\bar{q}}^{\dagger}b_{\lambda+s}b_{\lambda}\eta_{p}\eta_{q}\eta_{\lambda
+\,}\eta_{\lambda+s}\eta_{j_{3}\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta
+_{j_{N}+s}\right.  \right\rangle
 \end{align*}%
 \begin{align*}
 &  +\,\frac{1}{4}\sum_{\kappa,j_{3},\cdots,j_{N}\,}\sum_{i,j,k,l=1}^{r}%
@@ -2047,7 +2047,7 @@ which can be expanded as
 }^{\ast}\zeta_{j_{3}}\cdots\zeta_{j_{N}}\left\langle \bar{q}\kappa
 ||p\kappa\right\rangle \times\\
 &  \left\langle \eta_{\kappa}\eta_{\kappa+s}\eta_{q}\eta_{q+s}\eta_{j_{3}%
-\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left|  b_{\bar{q}%
+\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left\vert b_{\bar{q}%
 }^{\dagger}b_{\kappa}^{\dagger}b_{\kappa}b_{p}\eta_{p}\eta_{q}\eta_{\kappa
 \,}\eta_{\kappa+s}\eta_{j_{3}\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta
 _{j_{N}+s}\right.  \right\rangle
@@ -2058,46 +2058,47 @@ _{j_{N}+s}\right.  \right\rangle
 }^{\ast}\zeta_{j_{3}}\cdots\zeta_{j_{N}}\left\langle \bar{q}\kappa
 ||p\kappa\right\rangle \times\nonumber\\
 &  \left\langle \eta_{\kappa}\eta_{\kappa+s}\eta_{q}\eta_{q+s}\eta_{j_{3}%
-\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left|  b_{\bar{q}%
+\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta_{j_{N}+s}\left\vert b_{\bar{q}%
 }^{\dagger}b_{\kappa}^{\dagger}b_{\kappa}b_{p}\eta_{p}\eta_{q}\eta_{\kappa
 \,}\eta_{\kappa+s}\eta_{j_{3}\,}\eta_{j_{3}+s}\cdots\eta_{j_{N}\,}\eta
 _{j_{N}+s}\right.  \right\rangle
 \end{align}
 which gives
 \begin{align}
-&  \sum_{\kappa\neq\left|  p\right|  \neq\left|  q\right|  }^{s}\left\{
-\zeta_{\kappa}^{\ast}\left\langle \kappa\kappa+s||pq\right\rangle
-S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  +\right. \nonumber\\
+&  \sum_{\kappa\neq\left\vert p\right\vert \neq\left\vert q\right\vert }%
+^{s}\left\{  \zeta_{\kappa}^{\ast}\left\langle \kappa\kappa+s||pq\right\rangle
+S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  +\right.  \nonumber\\
 &  \qquad\qquad\left.  +\zeta_{p}^{\ast}\left\langle pp+s||pq\right\rangle
 S_{N-1}\left(  \hat{p}\hat{q}\right)  +\zeta_{q}^{\ast}\left\langle
 qq+s||pq\right\rangle S_{N-1}\left(  \hat{p}\hat{q}\right)  \right\}
 \nonumber\\
-&  \qquad\qquad+\sum_{\kappa\neq\left|  p\right|  \neq\left|  q\right|  }%
-^{s}\left\langle \bar{p}\bar{q}||\kappa\kappa+s\right\rangle \zeta_{p}^{\ast
-}\zeta_{q}^{\ast}\zeta_{\kappa}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat
-{q}\right) \nonumber\\
-&  \qquad\qquad+\sum_{\kappa\neq\left|  p\right|  \neq\left|  q\right|  }%
-^{s}\left\langle \bar{q}\kappa||p\kappa\right\rangle n_{\kappa}\zeta_{q}%
-^{\ast}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right) \nonumber\\
-&  \qquad\qquad+\sum_{\kappa\neq\left|  p\right|  \neq\left|  q\right|  }%
-^{s}\left\langle \bar{p}\kappa||q\kappa\right\rangle n_{\kappa}\zeta_{p}%
-^{\ast}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
+&  \qquad\qquad+\sum_{\kappa\neq\left\vert p\right\vert \neq\left\vert
+q\right\vert }^{s}\left\langle \bar{p}\bar{q}||\kappa\kappa+s\right\rangle
+\zeta_{p}^{\ast}\zeta_{q}^{\ast}\zeta_{\kappa}S_{N-2}\left(  \hat{\kappa}%
+\hat{p}\hat{q}\right)  \nonumber\\
+&  \qquad\qquad+\sum_{\kappa\neq\left\vert p\right\vert \neq\left\vert
+q\right\vert }^{s}\left\langle \bar{q}\kappa||p\kappa\right\rangle n_{\kappa
+}\zeta_{q}^{\ast}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  \nonumber\\
+&  \qquad\qquad+\sum_{\kappa\neq\left\vert p\right\vert \neq\left\vert
+q\right\vert }^{s}\left\langle \bar{p}\kappa||q\kappa\right\rangle n_{\kappa
+}\zeta_{p}^{\ast}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
 \end{align}
 which can be collected together with the one electron terms to give
 \begin{align}
 &  \left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
 N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\nonumber\\
-&  \left\{  \sum_{\kappa\neq\left|  p\right|  \neq\left|  q\right|  }%
-^{s}\left\{  S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  \zeta_{\kappa
-}^{\ast}\left\langle \kappa\kappa+s||pq\right\rangle +S_{N-2}\left(
-\hat{\kappa}\hat{p}\hat{q}\right)  \left\langle \bar{p}\bar{q}||\kappa
-\kappa+s\right\rangle \zeta_{p}^{\ast}\zeta_{q}^{\ast}\zeta_{\kappa}\right.
-\right. \nonumber\\
+&  \left\{  \sum_{\kappa\neq\left\vert p\right\vert \neq\left\vert
+q\right\vert }^{s}\left\{  S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
+\zeta_{\kappa}^{\ast}\left\langle \kappa\kappa+s||pq\right\rangle
++S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  \left\langle \bar{p}\bar
+{q}||\kappa\kappa+s\right\rangle \zeta_{p}^{\ast}\zeta_{q}^{\ast}\zeta
+_{\kappa}\right.  \right.  \nonumber\\
 &  \quad\quad\quad\quad\quad\quad\left.  +\left\langle \bar{q}\kappa
-||p\kappa\right\rangle n_{\kappa}\zeta_{q}^{\ast}+\left\langle \bar{p}%
-\kappa||q\kappa\right\rangle n_{\kappa}\zeta_{p}^{\ast}\right\}  +\zeta
-_{p}^{\ast}\left\langle pp+s||pq\right\rangle S_{N-1}\left(  \hat{p}\hat
-{q}\right) \nonumber\\
+||p\kappa\right\rangle n_{\kappa}\zeta_{q}^{\ast}S_{N-2}\left(  \hat{\kappa
+}\hat{p}\hat{q}\right)  +\left\langle \bar{p}\kappa||q\kappa\right\rangle
+n_{\kappa}\zeta_{p}^{\ast}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
+\right\}  +\zeta_{p}^{\ast}\left\langle pp+s||pq\right\rangle S_{N-1}\left(
+\hat{p}\hat{q}\right)  \nonumber\\
 &  \quad\quad\quad\quad\quad\quad\quad\left.  +\zeta_{q}^{\ast}\left\langle
 qq+s||pq\right\rangle S_{N-1}\left(  \hat{p}\hat{q}\right)  +\left\{
 \zeta_{q}^{\ast}h_{\bar{q}p}+\zeta_{p}^{\ast}h_{\bar{p}q}\right\}
