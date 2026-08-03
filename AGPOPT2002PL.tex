@@ -11,7 +11,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{CSTFile=revtex4.cst}
 %TCIDATA{Created=Saturday, December 29, 2001 12:06:49}
-%TCIDATA{LastRevised=Monday, August 03, 2026 10:55:16}
+%TCIDATA{LastRevised=Monday, August 03, 2026 11:02:27}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=BibTeX}
@@ -2191,22 +2191,6 @@ Spin Integration of the Hamiltonian Matrix Elements \label{SpinInteg}%
 1 &  \leq j,k\leq s;1\leq l,m\leq s
 \end{align}%
 \begin{align}
-&  \left\langle jk||lm\right\rangle _{\beta\beta\beta\beta}^{a}=\int\left\{
-\chi_{j}^{\ast}\left(  \mathbf{r}_{1}\right)  \beta\left(  \zeta_{1}\right)
-\chi_{k}^{\ast}\left(  \mathbf{r}_{2}\right)  \beta\left(  \zeta_{2}\right)
-\frac{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\chi_{l}\left(
-\mathbf{r}_{1}\right)  \beta\left(  \zeta_{1}\right)  \chi_{m}\left(
-\mathbf{r}_{2}\right)  \beta\left(  \zeta_{2}\right)  \right.  \nonumber\\
-&  -\left.  \chi_{j}^{\ast}\left(  \mathbf{r}_{1}\right)  \beta\left(
-\zeta_{1}\right)  \chi_{k}^{\ast}\left(  \mathbf{r}_{2}\right)  \beta\left(
-\zeta_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert
-}\chi_{m}\left(  \mathbf{r}_{1}\right)  \beta\left(  \zeta_{1}\right)
-\chi_{l}\left(  \mathbf{r}_{2}\right)  \beta\left(  \zeta_{2}\right)
-\right\}  d\mathbf{r}_{1}d\mathbf{r}_{2}d\zeta_{1}d\zeta_{2}\\
-&  =\left\langle jk||lm\right\rangle -\left\langle jk||ml\right\rangle
-;\quad1\leq j,k\leq s;1\leq l,m\leq s
-\end{align}%
-\begin{align}
 &  \left\langle jk||lm\right\rangle _{\alpha\alpha\beta\beta}^{a}=\int\left\{
 \chi_{j}^{\ast}\left(  \mathbf{r}_{1}\right)  \alpha\left(  \zeta_{1}\right)
 \chi_{k}^{\ast}\left(  \mathbf{r}_{2}\right)  \alpha\left(  \zeta_{2}\right)
@@ -2237,13 +2221,30 @@ Spin Integration of the Hamiltonian Matrix Elements \label{SpinInteg}%
 1 &  \leq j,k\leq s;1\leq l,m\leq s
 \end{align}%
 \begin{align}
+&  \left\langle jk||lm\right\rangle _{\beta\beta\beta\beta}^{a}=\int\left\{
+\chi_{j}^{\ast}\left(  \mathbf{r}_{1}\right)  \beta\left(  \zeta_{1}\right)
+\chi_{k}^{\ast}\left(  \mathbf{r}_{2}\right)  \beta\left(  \zeta_{2}\right)
+\frac{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert }\chi_{l}\left(
+\mathbf{r}_{1}\right)  \beta\left(  \zeta_{1}\right)  \chi_{m}\left(
+\mathbf{r}_{2}\right)  \beta\left(  \zeta_{2}\right)  \right.  \nonumber\\
+&  -\left.  \chi_{j}^{\ast}\left(  \mathbf{r}_{1}\right)  \beta\left(
+\zeta_{1}\right)  \chi_{k}^{\ast}\left(  \mathbf{r}_{2}\right)  \beta\left(
+\zeta_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert
+}\chi_{m}\left(  \mathbf{r}_{1}\right)  \beta\left(  \zeta_{1}\right)
+\chi_{l}\left(  \mathbf{r}_{2}\right)  \beta\left(  \zeta_{2}\right)
+\right\}  d\mathbf{r}_{1}d\mathbf{r}_{2}d\zeta_{1}d\zeta_{2}\\
+&  =\left\langle jk||lm\right\rangle -\left\langle jk||ml\right\rangle
+;\quad1\leq j,k\leq s;1\leq l,m\leq s
+\end{align}%
+\begin{align}
 &  \left\langle j+sk||lm\right\rangle ^{a}=\left\langle jk+s||lm\right\rangle
 ^{a}=\left\langle jk||l+sm\right\rangle ^{a}=\left\langle
 jk||lm+s\right\rangle ^{a}=\left\langle j+sk+s||l+sm\right\rangle
 ^{a}=\nonumber\\
 &  \left\langle j+sk+s||lm+s\right\rangle ^{a}=\left\langle
 j+sk||l+sm+s\right\rangle ^{a}=\left\langle jk+s||l+sm+s\right\rangle
-^{a}=0\nonumber\\
+^{a}=\left\langle jk+s||l+sm\right\rangle ^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=0\nonumber\\
 &  \left.  {}\right.  \quad\qquad\qquad\quad\qquad\qquad\quad\qquad\qquad
 \quad\qquad\qquad\quad1\leq j,k\leq s;1\leq l,m\leq s
 \end{align}%
@@ -2269,8 +2270,9 @@ _{2};\quad1\leq j,k\leq s;1\leq l,m\leq s\\
 ^{a}=\left\langle jk||l+sm\right\rangle ^{a}=\left\langle
 jk||lm+s\right\rangle ^{a}=\left\langle j+sk+s||l+sm\right\rangle
 ^{a}=\nonumber\\
-&  \left\langle j+sk+s||lm+s\right\rangle ^{a}=\left\langle
-j+sk||l+sm+s\right\rangle ^{a}=\left\langle jk+s||l+sm+s\right\rangle
+&  \left\langle j+sk+s||lm+s\right\rangle ^{a}=\left\langle j+s\left\langle
+jk+s||l+sm\right\rangle ^{a}=\left\langle j+sk||l+sm\right\rangle
+^{a}=k||l+sm+s\right\rangle ^{a}=\left\langle jk+s||l+sm+s\right\rangle
 ^{a}=0\nonumber\\
 &  \left.  {}\right.  \quad\qquad\qquad\quad\qquad\qquad\quad\qquad\qquad
 \quad\qquad\qquad\quad1\leq j,k\leq s;1\leq l,m\leq s\\
@@ -2703,5 +2705,7 @@ cost of the derivatives scale as $r^{5}$.
 
 \bibliographystyle{apsrev}
 \bibliography{AGPOPT,BW}
+
+
 
 \end{document}
