@@ -11,7 +11,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{CSTFile=revtex4.cst}
 %TCIDATA{Created=Saturday, December 29, 2001 12:06:49}
-%TCIDATA{LastRevised=Monday, August 03, 2026 10:53:34}
+%TCIDATA{LastRevised=Monday, August 03, 2026 10:55:16}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=BibTeX}
@@ -2237,6 +2237,17 @@ Spin Integration of the Hamiltonian Matrix Elements \label{SpinInteg}%
 1 &  \leq j,k\leq s;1\leq l,m\leq s
 \end{align}%
 \begin{align}
+&  \left\langle j+sk||lm\right\rangle ^{a}=\left\langle jk+s||lm\right\rangle
+^{a}=\left\langle jk||l+sm\right\rangle ^{a}=\left\langle
+jk||lm+s\right\rangle ^{a}=\left\langle j+sk+s||l+sm\right\rangle
+^{a}=\nonumber\\
+&  \left\langle j+sk+s||lm+s\right\rangle ^{a}=\left\langle
+j+sk||l+sm+s\right\rangle ^{a}=\left\langle jk+s||l+sm+s\right\rangle
+^{a}=0\nonumber\\
+&  \left.  {}\right.  \quad\qquad\qquad\quad\qquad\qquad\quad\qquad\qquad
+\quad\qquad\qquad\quad1\leq j,k\leq s;1\leq l,m\leq s
+\end{align}%
+\begin{align}
 &  h_{jk}^{a}=h_{j+sk+s}^{a}=-\int\chi_{j}^{\ast}\left(  \mathbf{r}\right)
 \left\{  \sum_{_{1\leq j\leq N_{nuc}}}\frac{Z_{j}}{\left\Vert \mathbf{R}%
 _{j}-\mathbf{r}\right\Vert }+\frac{1}{2m_{e}}\nabla_{\mathbf{r}}^{2}\right\}
@@ -2692,7 +2703,5 @@ cost of the derivatives scale as $r^{5}$.
 
 \bibliographystyle{apsrev}
 \bibliography{AGPOPT,BW}
-
-
 
 \end{document}
