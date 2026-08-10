@@ -11,7 +11,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{CSTFile=revtex4.cst}
 %TCIDATA{Created=Saturday, December 29, 2001 12:06:49}
-%TCIDATA{LastRevised=Monday, August 10, 2026 06:31:58}
+%TCIDATA{LastRevised=Monday, August 10, 2026 10:14:53}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=BibTeX}
@@ -775,7 +775,7 @@ N\right)  !^{2}S_{N}%
 where $S_{N}$ is the $N^{th}$ order elementary symmetric function, which is
 defined in terms of the eigenvalues $\left\{  n_{j};1\leq j\leq s\right\}  $
 of the one particle reduced density operator associated with the geminal
-$\left|  g\right\rangle $ as
+$\left\vert g\right\rangle $ as
 \begin{equation}
 S_{N}=\sum_{1\leq j_{1}<j_{2}<\cdots<j_{N}\leq s}n_{j_{1}}\cdots n_{_{j_{N}}}.
 \end{equation}
@@ -795,23 +795,24 @@ h_{jj}+h_{j+sj+s}+\left\langle jj+s||jj+s\right\rangle \right\}  \right.
 where
 \begin{align}
 &  S_{N-1}\left(  \hat{\jmath}\right)  =\sum_{\substack{1\leq j_{1}%
-<j_{2}<\cdots<j_{N-1}\leq s \\j_{1},j_{2},\cdots,j_{N-1}\neq j}}n_{j_{1}%
-}\cdots n_{_{j_{N-1}}}\\
+<j_{2}<\cdots<j_{N-1}\leq s\\j_{1},j_{2},\cdots,j_{N-1}\neq j}}n_{j_{1}}\cdots
+n_{_{j_{N-1}}}\\
 &  \left.  {}\right.  \quad h_{jk}=-\int\eta_{j}^{\ast}\left(  \mathbf{r,\xi
-}\right)  \left\{  \sum_{_{1\leq j\leq N_{nuc}}}\frac{Z_{j}}{\left\|
-\mathbf{R}_{j}-\mathbf{r}\right\|  }+\frac{1}{2m_{e}}\nabla_{\mathbf{r}}%
+}\right)  \left\{  \sum_{_{1\leq j\leq N_{nuc}}}\frac{Z_{j}}{\left\Vert
+\mathbf{R}_{j}-\mathbf{r}\right\Vert }+\frac{1}{2m_{e}}\nabla_{\mathbf{r}}%
 ^{2}\right\}  \eta_{k}\left(  \mathbf{r,\xi}\right)  d\mathbf{r}d\xi;1\leq
 j,k\leq2s\\
 &  \left\langle jk||lm\right\rangle =\int\left\{  \eta_{j}^{\ast}\left(
 \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \eta_{k}^{\ast}\left(  \mathbf{r}%
-_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\|  \mathbf{r}_{1}-\mathbf{r}%
-_{2}\right\|  }\eta_{l}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)
-\eta_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \right. \nonumber\\
+_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}%
+-\mathbf{r}_{2}\right\Vert }\eta_{l}\left(  \mathbf{r}_{1}\mathbf{,\xi}%
+_{1}\right)  \eta_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \right.
+\nonumber\\
 &  \qquad\qquad\qquad-\left.  \eta_{j}^{\ast}\left(  \mathbf{r}_{1}%
 \mathbf{,\xi}_{1}\right)  \eta_{k}^{\ast}\left(  \mathbf{r}_{2}\mathbf{,\xi
-}_{2}\right)  \frac{1}{\left\|  \mathbf{r}_{1}-\mathbf{r}_{2}\right\|  }%
-\eta_{l}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{1}\right)  \eta_{m}\left(
-\mathbf{r}_{1}\mathbf{,\xi}_{2}\right)  \right\}  d\mathbf{r}_{1}%
+}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}-\mathbf{r}_{2}\right\Vert
+}\eta_{m}\left(  \mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \eta_{l}\left(
+\mathbf{r}_{2}\mathbf{,\xi}_{2}\right)  \right\}  d\mathbf{r}_{1}%
 d\mathbf{r}_{2}d\xi_{1}d\xi_{2}\nonumber\\
 &  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 \qquad\qquad\quad\qquad1\leq j,k\leq2s;1\leq l,m\leq2s\\
@@ -821,7 +822,38 @@ j+s\,k||j+s\,k\right\rangle +\left\langle j+s\,k+s||j+s\,k+s\right\rangle
 \nonumber\\
 &  \left.  {}\right.  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 \qquad\qquad\qquad\qquad\qquad\qquad\qquad1\leq j,k\leq s
+\end{align}%
+\begin{gather}
+\left\langle \left.  jk\right\vert lm\right\rangle =\int\eta_{j}^{\ast}\left(
+\mathbf{r}_{1}\mathbf{,\xi}_{1}\right)  \eta_{k}^{\ast}\left(  \mathbf{r}%
+_{2}\mathbf{,\xi}_{2}\right)  \frac{1}{\left\Vert \mathbf{r}_{1}%
+-\mathbf{r}_{2}\right\Vert }\eta_{l}\left(  \mathbf{r}_{1}\mathbf{,\xi}%
+_{1}\right)  \eta_{m}\left(  \mathbf{r}_{2}\mathbf{,\xi}_{2}\right)
+d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi_{1}d\xi_{2}\\
+\left\langle jk||lm\right\rangle =\left\langle \left.  jk\right\vert
+lm\right\rangle -\left\langle \left.  jk\right\vert ml\right\rangle \\
+1\leq j,k\leq s
+\end{gather}
+In terms of the integrals $\left\langle \left.  jk\right\vert lm\right\rangle
+$
+\begin{align}
+\left\langle jk|||jk\right\rangle  & =\left\langle jk||jk\right\rangle
++\left\langle j\,k+s||j\,k+s\right\rangle +\left\langle
+j+s\,k||j+s\,k\right\rangle +\left\langle j+s\,k+s||j+s\,k+s\right\rangle \\
+& =\left\langle \left.  j,k\right\vert j,k\right\rangle -\left\langle \left.
+j,k\right\vert k,j\right\rangle +\left\langle \left.  j,k+s\right\vert
+j,k+s\right\rangle -\left\langle \left.  j,k+s\right\vert k+s,j\right\rangle
+\\
+& +\left\langle \left.  j+s,k\right\vert j+s,k\right\rangle -\left\langle
+\left.  j+s,k\right\vert k,j+s\right\rangle +\left\langle \left.
+j+s,k+s\right\vert j+s,k+s\right\rangle -\left\langle \left.
+j+s,k+s\right\vert k+s,j+s\right\rangle .
 \end{align}
+If the canonical mo's are spin conjugates one obtains
+\begin{equation}
+\left\langle jk|||jk\right\rangle =4\left\langle \left.  jk\right\vert
+jk\right\rangle -2\left\langle \left.  jk\right\vert kj\right\rangle .
+\end{equation}
 The total energy, $\mathcal{E}\left(  g^{N}\right)  $, is then given in the
 canonical coordinates as
 \begin{equation}
@@ -1577,7 +1609,7 @@ b_{j}^{\dagger}b_{l}b_{k}=\nonumber\\
 &  \left.  {}\right.  \sum_{i=1}^{s}\left\langle ii+s||ii+s\right\rangle
 \left\{  b_{i}^{\dagger}b_{i+s}^{\dagger}b_{i+s}b_{i}-b_{i}^{\dagger}%
 b_{i+s}^{\dagger}b_{i}b_{i+s}-b_{i+s}^{\dagger}b_{i}^{\dagger}b_{i+s}%
-b_{i}+b_{i+s}^{\dagger}b_{i}^{\dagger}b_{i}b_{i+s}\right\} \nonumber\\
+b_{i}+b_{i+s}^{\dagger}b_{i}^{\dagger}b_{i}b_{i+s}\right\}  \nonumber\\
 &  +\sum_{i\neq l=1}^{s}\left\langle ii+s||ll+s\right\rangle \left\{
 b_{i}^{\dagger}b_{i+s}^{\dagger}b_{l+s}b_{l}-b_{i}^{\dagger}b_{i+s}^{\dagger
 }b_{l}b_{l+s}-b_{i+s}^{\dagger}b_{i}^{\dagger}b_{l+s}b_{l}+b_{i+s}^{\dagger
@@ -1588,22 +1620,22 @@ and
 &  +\sum_{i,,j=1}^{s}\left\langle ij||ij\right\rangle \left\{  b_{i}^{\dagger
 }b_{j}^{\dagger}b_{j}b_{i}-b_{i}^{\dagger}b_{j}^{\dagger}b_{i}b_{j}%
 -b_{j}^{\dagger}b_{i}^{\dagger}b_{j}b_{i}+b_{j}^{\dagger}b_{i}^{\dagger}%
-b_{i}b_{j}\right\} \nonumber\\
+b_{i}b_{j}\right\}  \nonumber\\
 &  +\sum_{i,j=1}^{s}\left\langle i+sj||i+sj\right\rangle \left\{
 b_{i+s}^{\dagger}b_{j}^{\dagger}b_{j}b_{i+s}-b_{i+s}^{\dagger}b_{j}^{\dagger
 }b_{i+s}b_{j}-b_{j}^{\dagger}b_{i+s}^{\dagger}b_{j}b_{i+s}+b_{j}^{\dagger
-}b_{i+s}^{\dagger}b_{i+s}b_{j}\right\} \nonumber\\
-&  +\sum_{i,j}^{s}\left\langle ij+s||ij+s\right\rangle \left\{  b_{i}%
-^{\dagger}b_{j+s}^{\dagger}b_{j+s}b_{i}-b_{i}^{\dagger}b_{j+s}^{\dagger}%
-b_{i}b_{j+s}-b_{j+s}^{\dagger}b_{i}^{\dagger}b_{j+s}b_{i}+b_{j+s}^{\dagger
-}b_{i}^{\dagger}b_{i}b_{j+s}\right\} \nonumber\\
+}b_{i+s}^{\dagger}b_{i+s}b_{j}\right\}  \nonumber\\
+&  +\sum_{i,j=1}^{s}\left\langle ij+s||ij+s\right\rangle \left\{
+b_{i}^{\dagger}b_{j+s}^{\dagger}b_{j+s}b_{i}-b_{i}^{\dagger}b_{j+s}^{\dagger
+}b_{i}b_{j+s}-b_{j+s}^{\dagger}b_{i}^{\dagger}b_{j+s}b_{i}+b_{j+s}^{\dagger
+}b_{i}^{\dagger}b_{i}b_{j+s}\right\}  \nonumber\\
 &  +\sum_{i,j=1}^{s}\left\langle i+sj+s||i+sj+s\right\rangle \left\{
 b_{i+s}^{\dagger}b_{j+s}^{\dagger}b_{j+s}b_{i+s}-b_{i+s}^{\dagger}%
-b_{j+s}^{\dagger}b_{i+s}b_{j+s}\right. \nonumber\\
+b_{j+s}^{\dagger}b_{i+s}b_{j+s}\right.  \nonumber\\
 &  \qquad\qquad\qquad\qquad\qquad\qquad\left.  -b_{j+s}^{\dagger}%
 b_{i+s}^{\dagger}b_{j+s}b_{i+s}+b_{j+s}^{\dagger}b_{i+s}^{\dagger}%
 b_{i+s}b_{j+s}\right\}  ;\quad i\neq j\pm s\nonumber\\
-&  +\text{ other terms} \label{twoel2}%
+&  +\text{ other terms}\label{twoel2}%
 \end{align}
 The portion eq. $\left(  \ref{twoel1}\right)  $ produces
 \begin{equation}
@@ -2216,11 +2248,13 @@ _{2}\right\Vert }\chi_{l}\left(  \mathbf{r}_{1}\right)  \chi_{m}\left(
 \begin{gather}
 \left\langle j+s,k||l,m\right\rangle ^{a}=\left\langle j,k+s||l,m\right\rangle
 ^{a}=\left\langle j,k||l+s,m\right\rangle ^{a}=\left\langle
-j,k||l,m+s\right\rangle ^{a}=\left\langle j+s,k+s||l+s,m\right\rangle
-^{a}=\nonumber\\
+j,k||l,m+s\right\rangle ^{a}=\nonumber\\
+\left\langle j,k||l+s,m+s\right\rangle ^{a}=\left\langle
+j+s,k+s||l,m\right\rangle ^{a}=\left\langle j+s,k+s||l+s,m\right\rangle
+^{a}=\\
 \left\langle j+s,k+s||l,m+s\right\rangle ^{a}=\left\langle
-j+s,k+s||l+s,m\right\rangle ^{a}=\left\langle j,k||l+s,m+s\right\rangle
-^{a}=\left\langle j,k+s||l+s,m+s\right\rangle ^{a}=0\quad\nonumber\\
+j+s,k+s||l+s,m\right\rangle ^{a}=\left\langle j,k+s||l+s,m+s\right\rangle
+^{a}=0\quad\nonumber\\
 1\leq j,k\leq s;1\leq l,m\leq s
 \end{gather}
 
@@ -2638,26 +2672,36 @@ cost of the derivatives scale as $r^{5}$.
 \section{Extra}
 
 \begin{enumerate}
-\item
+\item 
+
+\begin{enumerate}
+\item All spin combinations
 \begin{equation}
 \alpha\alpha\alpha\alpha,\alpha\alpha\alpha\beta,\alpha\alpha\beta
 \alpha,\alpha\beta\alpha\alpha,\beta\alpha\alpha\alpha,\alpha\alpha\beta
 \beta,\alpha\beta\alpha\beta,\beta\alpha\alpha\beta,\beta\alpha\beta
 \alpha,\beta\beta\alpha\alpha,\alpha\beta\beta\alpha,\alpha\beta\beta
 \beta,\beta\alpha\beta\beta,\beta\beta\alpha\beta,\beta\beta\beta\alpha
-,\beta\beta\beta\beta
-\end{equation}%
-\begin{equation}
-\alpha\alpha\alpha\alpha,\alpha\alpha\beta\beta,\alpha\beta\alpha\beta
-,\beta\alpha\alpha\beta,\beta\alpha\beta\alpha,\beta\beta\alpha\alpha
-,\alpha\beta\beta\alpha,\beta\beta\beta\beta
-\end{equation}%
-\begin{equation}
-\alpha\alpha\alpha\beta,\alpha\alpha\beta\alpha,\alpha\beta\alpha\alpha
-,\beta\alpha\alpha\alpha,\alpha\beta\beta\beta,\beta\alpha\beta\beta
-,\beta\beta\alpha\beta,\beta\beta\beta\alpha
+,\beta\beta\beta\beta.
 \end{equation}
 
+
+\item $6$ Non zero combinitions
+\begin{equation}
+\alpha\alpha\alpha\alpha,\alpha\beta\alpha\beta,\beta\alpha\alpha\beta
+,\beta\alpha\beta\alpha,\alpha\beta\beta\alpha,\beta\beta\beta\beta.
+\end{equation}
+
+
+\item $10$ Zero combinitions%
+\begin{equation}
+\alpha\alpha\beta\beta,\beta\beta\alpha\alpha,\alpha\alpha\alpha\beta
+,\alpha\alpha\beta\alpha,\alpha\beta\alpha\alpha,\beta\alpha\alpha
+\alpha,\alpha\beta\beta\beta,\beta\alpha\beta\beta,\beta\beta\alpha\beta
+,\beta\beta\beta\alpha.
+\end{equation}
+
+\end{enumerate}
 
 \item The inner product in $\mathcal{H}^{2\otimes}$ is defined by
 \begin{equation}
@@ -2677,7 +2721,7 @@ a\wedge b=\frac{1}{2}\left(  a\otimes b-b\otimes a\right)  .
 \mathcal{H}^{2\otimes}\right)  $ in $\mathcal{H}^{2\otimes}$ is defined by
 \begin{align}
 \mathcal{T}_{2}\left(  a\otimes b\right)   &  =b\otimes a\\
-\mathcal{T}_{2}^{2}  &  =I_{\mathcal{H}^{2\otimes}}.
+\mathcal{T}_{2}^{2} &  =I_{\mathcal{H}^{2\otimes}}.
 \end{align}
 
 
@@ -2785,6 +2829,8 @@ dc\right.  \right\rangle \right)  .
 \end{equation}
 
 
+\item Non zero terms $\left(  6\right)  $
+
 \begin{enumerate}
 \item $\alpha\alpha\alpha\alpha$%
 \begin{gather}
@@ -2796,17 +2842,17 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
 \chi_{l}\alpha\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\alpha\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right)  \\
 =\frac{1}{4}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle -\left\langle \chi_{j}%
 \otimes\chi_{k}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
 -\left\langle \chi_{k}\otimes\chi_{j}\left\vert V_{2}\chi_{l}\otimes\chi
 _{m}\right.  \right\rangle +\left\langle \chi_{k}\otimes\chi_{j}\left\vert
-V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle \right)  \\
 =\frac{1}{2}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle -\left\langle \chi_{j}%
 \otimes\chi_{k}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
-\right) \\
+\right)  \\
 =\frac{1}{2}\left(  \left\langle jk\left\vert lm\right.  \right\rangle
 ^{a}-\left\langle jk\left\vert ml\right.  \right\rangle ^{a}\right)
 \end{gather}
@@ -2823,39 +2869,23 @@ V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 _{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\beta\otimes\chi
 _{j}\beta\left\vert V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\beta\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
 =\frac{1}{2}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle -\left\langle \chi_{j}%
 \otimes\chi_{k}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
-\right) \\
+\right)  \\
 =\frac{1}{2}\left(  \left\langle jk\left\vert lm\right.  \right\rangle
 ^{a}-\left\langle jk\left\vert ml\right.  \right\rangle ^{a}\right)
 \end{gather}
 
 
-\item $\alpha\beta\alpha\beta$%
-\begin{gather}
-\left\langle jk||lm\right\rangle _{\alpha\beta\alpha\beta}^{a}\\
-\parallel\\
-\frac{1}{4}\left(  \left\langle \chi_{j}\alpha\otimes\chi_{k}\beta\left\vert
-V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
-\chi_{j}\alpha\otimes\chi_{k}\beta\left\vert V_{2}\chi_{m}\beta\otimes\chi
-_{l}\alpha\right.  \right\rangle -\left\langle \chi_{k}\beta\otimes\chi
-_{j}\alpha\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.
-\right\rangle +\left\langle \chi_{k}\beta\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\beta\otimes\chi_{l}\alpha\right.  \right\rangle \right) \\
-=\frac{1}{4}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
-\chi_{l}\otimes\chi_{m}\right.  \right\rangle +\left\langle \chi_{k}%
-\otimes\chi_{j}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
-\right) \\
-=\frac{1}{2}\left\langle jk\left\vert lm\right.  \right\rangle ^{a}%
-\end{gather}
 
 
-\item $\beta\alpha\beta\alpha$%
+\item $\beta\alpha\beta\alpha=\alpha\beta\alpha\beta$%
 \begin{gather}
 \left\langle jk||lm\right\rangle _{\beta\alpha\beta\alpha}^{a}=\left\langle
-j+sk||l+sm\right\rangle ^{a}\\
+jk||lm\right\rangle _{\alpha\beta\alpha\beta}^{a}=\left\langle
+j+sk||l+sm\right\rangle ^{a}=\left\langle jk+s||lm+s\right\rangle ^{a}\\
 \parallel\\
 \frac{1}{4}\left(  \left\langle \chi_{j}\beta\otimes\chi_{k}\alpha\left\vert
 V_{2}\chi_{l}\beta\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
@@ -2863,19 +2893,20 @@ V_{2}\chi_{l}\beta\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
 \chi_{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\beta\left\vert V_{2}\chi_{l}\beta\otimes\chi_{m}\alpha\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
 =\frac{1}{4}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle +\left\langle \chi_{k}%
 \otimes\chi_{j}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
-\right) \\
+\right)  \\
 =\frac{1}{2}\left\langle jk\left\vert lm\right.  \right\rangle ^{a}%
 \end{gather}
 
 
-\item $\beta\alpha\alpha\beta$%
+\item $\beta\alpha\alpha\beta=\alpha\beta\beta\alpha$%
 \begin{gather}
 \left\langle jk||lm\right\rangle _{\beta\alpha\alpha\beta}^{a}=\left\langle
-j+sk||lm+s\right\rangle ^{a}\\
+jk||lm\right\rangle _{\alpha\beta\beta\alpha}^{a}=\left\langle
+j+sk||lm+s\right\rangle ^{a}=\left\langle jk|+s|l+sm\right\rangle ^{a}\\
 \parallel\\
 \frac{1}{4}\left(  \left\langle \chi_{j}\beta\otimes\chi_{k}\alpha\left\vert
 V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
@@ -2883,35 +2914,19 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 _{l}\alpha\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes\chi
 _{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\beta\otimes\chi_{l}\alpha\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\beta\otimes\chi_{l}\alpha\right.  \right\rangle \right)  \\
 =-\frac{1}{4}\left(  \left\langle \chi_{j}\beta\otimes\chi_{k}\alpha\left\vert
 V_{2}\chi_{m}\beta\otimes\chi_{l}\alpha\right.  \right\rangle +\left\langle
 \chi_{k}\alpha\otimes\chi_{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes
-\chi_{m}\beta\right.  \right\rangle \right) \\
+\chi_{m}\beta\right.  \right\rangle \right)  \\
 =-\frac{1}{2}\left\langle jk\left\vert lm\right.  \right\rangle ^{a}%
 \end{gather}
 
+\end{enumerate}
 
-\item $\alpha\beta\beta\alpha$%
-\begin{gather}
-\left\langle jk||lm\right\rangle _{\alpha\beta\alpha\beta}^{a}=\left\langle
-jk+s||lm+s\right\rangle ^{a}\\
-\parallel\\
-\frac{1}{4}\left(  \left\langle \chi_{j}\alpha\otimes\chi_{k}\beta\left\vert
-V_{2}\chi_{l}\beta\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
-\chi_{j}\alpha\otimes\chi_{k}\beta\left\vert V_{2}\chi_{m}\alpha\otimes
-\chi_{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\beta\otimes\chi
-_{j}\alpha\left\vert V_{2}\chi_{l}\beta\otimes\chi_{m}\alpha\right.
-\right\rangle +\left\langle \chi_{k}\beta\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
-=-\frac{1}{4}\left(  \left\langle \chi_{j}\alpha\otimes\chi_{k}\beta\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle +\left\langle
-\chi_{k}\beta\otimes\chi_{j}\alpha\left\vert V_{2}\chi_{l}\beta\otimes\chi
-_{m}\alpha\right.  \right\rangle \right) \\
-=-\frac{1}{2}\left\langle jk\left\vert lm\right.  \right\rangle ^{a}%
-\end{gather}
+\item Zero terms $\left(  10\right)  $
 
-
+\begin{enumerate}
 \item $\alpha\alpha\beta\beta$%
 \begin{gather}
 \left\langle jk||lm\right\rangle _{\alpha\alpha\beta\beta}^{a}=\left\langle
@@ -2923,11 +2938,11 @@ V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 \chi_{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\alpha\left\vert V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
 =-\frac{1}{4}\left(  \left\langle \chi_{j}\alpha\otimes\chi_{k}\alpha
 \left\vert V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle
 +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert V_{2}\chi_{l}%
-\beta\otimes\chi_{m}\beta\right.  \right\rangle \right) \\
+\beta\otimes\chi_{m}\beta\right.  \right\rangle \right)  \\
 =0
 \end{gather}
 
@@ -2943,11 +2958,11 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
 _{l}\alpha\right.  \right\rangle -\left\langle \chi_{k}\beta\otimes\chi
 _{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.
 \right\rangle +\left\langle \chi_{k}\beta\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right)  \\
 =-\frac{1}{4}\left(  \left\langle \chi_{j}\beta\otimes\chi_{k}\beta\left\vert
 V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle +\left\langle
 \chi_{k}\beta\otimes\chi_{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes\chi
-_{m}\alpha\right.  \right\rangle \right) \\
+_{m}\alpha\right.  \right\rangle \right)  \\
 =0
 \end{gather}
 
@@ -2963,7 +2978,7 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 \chi_{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\alpha\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
 =0
 \end{gather}
 
