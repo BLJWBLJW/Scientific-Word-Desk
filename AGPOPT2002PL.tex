@@ -11,7 +11,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{CSTFile=revtex4.cst}
 %TCIDATA{Created=Saturday, December 29, 2001 12:06:49}
-%TCIDATA{LastRevised=Monday, August 10, 2026 10:14:53}
+%TCIDATA{LastRevised=Tuesday, August 11, 2026 10:29:46}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=BibTeX}
@@ -166,7 +166,7 @@ Multi-electronic states are invariably constructed in terms of one particle
 functions $\left\{  \varphi_{j}:1\leq j\leq r\right\}  $ of space and spin
 coordinates $\left(  \mathbf{r},\xi\right)  $ that are products of real
 localized atomic orbitals $\left\{  \chi_{j}:1\leq j\leq s\right\}  $ and spin
-functions $\left\{  \alpha,\beta\right\}  $ i.e.%
+functions $\left\{  \alpha,\beta\right\}  $ i.e. \label{correction 1}%
 \begin{align}
 \varphi_{j}\left(  \mathbf{r},\xi\right)   &  =\chi_{j}\left(  \mathbf{r}%
 \right)  \alpha\left(  \xi\right)  ;\quad1\leq j\leq s\nonumber\\
@@ -204,7 +204,7 @@ j\leq s\right\}  $ can be defined in terms of the atomic orbitals as
 where we have used the array of basis functions notation
 \begin{align}
 \left(  \underline{\omega}\right)   &  =\left(  \omega_{1},\ldots,\omega
-_{s}\right) \nonumber\\
+_{s}\right)  \nonumber\\
 \left(  \underline{\chi}\right)   &  =\left(  \chi_{1},\ldots,\chi_{s}\right)
 \end{align}
 The linear transformation $\mathbb{W}$ has the properties
@@ -490,7 +490,7 @@ optimization procedures.
 The energy of an 2N-electron AGP state is given by
 \begin{equation}
 \mathcal{E}\left(  g^{N}\right)  =\frac{\mathcal{H}\left(  g^{N}\right)
-}{\mathcal{N}\left(  g^{N}\right)  } \label{Energy}%
+}{\mathcal{N}\left(  g^{N}\right)  }\label{Energy}%
 \end{equation}
 where%
 \begin{equation}
@@ -503,7 +503,8 @@ H=h_{0}+h_{1}+h_{2}\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 \[
 h_{0}=\sum_{1\leq j<k\leq N_{nuc}}\frac{Z_{j}Z_{k}}{\left\Vert \mathbf{R}%
 _{j}-\mathbf{R}_{k}\right\Vert }\qquad\qquad\qquad\qquad\qquad\quad
-\]%
+\]
+\label{problem 3}%
 \[
 h_{1}=-\left(  \sum_{_{1\leq j\leq N_{nuc};1\leq k\leq2N}}\frac{Z_{j}%
 }{\left\Vert \mathbf{R}_{j}-\mathbf{r}_{k}\right\Vert }+\frac{1}{2m_{e}}%
@@ -523,10 +524,10 @@ fixed configuration $\left(  \mathbf{R}_{1},\ldots,\mathbf{R}_{N_{nuc}%
 \begin{align}
 \mathcal{E}\left(  g^{N}\right)   &  =\mathcal{E}\left(  \mathbf{c}^{\ast
 },\mathbf{c}\right)  =\mathcal{E}\left(  \mathbf{\gamma}^{\ast},\mathbf{\gamma
-}\right) \nonumber\\
+}\right)  \nonumber\\
 \mathcal{H}\left(  g^{N}\right)   &  =\mathcal{H}\left(  \mathbf{c}^{\ast
 },\mathbf{c}\right)  =\mathcal{H}\left(  \mathbf{\gamma}^{\ast},\mathbf{\gamma
-}\right) \nonumber\\
+}\right)  \nonumber\\
 \mathcal{N}\left(  g^{N}\right)   &  =\mathcal{N}\left(  \mathbf{c}^{\ast
 },\mathbf{c}\right)  =\mathcal{N}\left(  \mathbf{\gamma}^{\ast},\mathbf{\gamma
 }\right)  \label{EnFunc}%
@@ -792,7 +793,7 @@ h_{jj}+h_{j+sj+s}+\left\langle jj+s||jj+s\right\rangle \right\}  \right.
 +\sum_{1\leq j,k\leq s}n_{j}n_{k}S_{N-2}\left(  \hat{\jmath}\hat{k}\right)
 \left\langle jk|||jk\right\rangle \right\}  \label{canen}%
 \end{align}
-where
+where \label{problem 5}%
 \begin{align}
 &  S_{N-1}\left(  \hat{\jmath}\right)  =\sum_{\substack{1\leq j_{1}%
 <j_{2}<\cdots<j_{N-1}\leq s\\j_{1},j_{2},\cdots,j_{N-1}\neq j}}n_{j_{1}}\cdots
@@ -834,22 +835,23 @@ d\mathbf{r}_{1}d\mathbf{r}_{2}d\xi_{1}d\xi_{2}\\
 lm\right\rangle -\left\langle \left.  jk\right\vert ml\right\rangle \\
 1\leq j,k\leq s
 \end{gather}
-In terms of the integrals $\left\langle \left.  jk\right\vert lm\right\rangle
-$
+\label{problem 8} In terms of the integrals $\left\langle \left.
+jk\right\vert lm\right\rangle $
 \begin{align}
-\left\langle jk|||jk\right\rangle  & =\left\langle jk||jk\right\rangle
+\left\langle jk|||jk\right\rangle  &  =\left\langle jk||jk\right\rangle
 +\left\langle j\,k+s||j\,k+s\right\rangle +\left\langle
 j+s\,k||j+s\,k\right\rangle +\left\langle j+s\,k+s||j+s\,k+s\right\rangle \\
-& =\left\langle \left.  j,k\right\vert j,k\right\rangle -\left\langle \left.
+&  =\left\langle \left.  j,k\right\vert j,k\right\rangle -\left\langle \left.
 j,k\right\vert k,j\right\rangle +\left\langle \left.  j,k+s\right\vert
 j,k+s\right\rangle -\left\langle \left.  j,k+s\right\vert k+s,j\right\rangle
 \\
-& +\left\langle \left.  j+s,k\right\vert j+s,k\right\rangle -\left\langle
+&  +\left\langle \left.  j+s,k\right\vert j+s,k\right\rangle -\left\langle
 \left.  j+s,k\right\vert k,j+s\right\rangle +\left\langle \left.
 j+s,k+s\right\vert j+s,k+s\right\rangle -\left\langle \left.
 j+s,k+s\right\vert k+s,j+s\right\rangle .
 \end{align}
-If the canonical mo's are spin conjugates one obtains
+If the canonical orbitals are spin conjugates i.e. $1\leq j\leq s$ correspond
+to alpha spin and  $s+1\leq j\leq2s$ correspond to beta spin one obtains
 \begin{equation}
 \left\langle jk|||jk\right\rangle =4\left\langle \left.  jk\right\vert
 jk\right\rangle -2\left\langle \left.  jk\right\vert kj\right\rangle .
@@ -1050,7 +1052,7 @@ $\ref{CompFiDer}$ for details)
 \end{enumerate}
 
 This case can only be obtained by evaluating matrix elements between IPS's
-(See Appendix $\ref{CompFiDer}$ for details).
+(See Appendix $\ref{CompFiDer}$ for details). \label{problem 6}%
 \begin{align}
 &  \left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
 N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\nonumber\\
@@ -1059,17 +1061,18 @@ q\right\vert }^{s}\left\{  S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
 \zeta_{\kappa}^{\ast}\left\langle \kappa\kappa+s||pq\right\rangle
 +S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  \left\langle \bar{p}\bar
 {q}||\kappa\kappa+s\right\rangle \zeta_{p}^{\ast}\zeta_{q}^{\ast}\zeta
-_{\kappa}\right.  \right. \nonumber\\
+_{\kappa}\right.  \right.  \nonumber\\
 &  \quad\quad\quad\quad\quad\quad\left.  +\left\langle \bar{q}\kappa
 ||p\kappa\right\rangle n_{\kappa}\zeta_{q}^{\ast}S_{N-2}\left(  \hat{\kappa
 }\hat{p}\hat{q}\right)  +\left\langle \bar{p}\kappa||q\kappa\right\rangle
 n_{\kappa}\zeta_{p}^{\ast}S_{N-2}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
 \right\}  +\zeta_{p}^{\ast}\left\langle pp+s||pq\right\rangle S_{N-1}\left(
-\hat{p}\hat{q}\right) \nonumber\\
-&  \quad\quad\quad\quad\quad\quad\quad\left.  +\zeta_{q}^{\ast}\left\langle
-qq+s||pq\right\rangle S_{N-1}\left(  \hat{p}\hat{q}\right)  +\left\{
-\zeta_{q}^{\ast}h_{\bar{q}p}+\zeta_{p}^{\ast}h_{\bar{p}q}\right\}
-S_{N-1}\left(  \hat{p}\hat{q}\right)  \overset{}{\underset{}{}}\right\}
+\hat{p}\hat{q}\right)  \nonumber\\
+&  \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\left.
++\zeta_{q}^{\ast}\left\langle qq+s||pq\right\rangle S_{N-1}\left(  \hat{p}%
+\hat{q}\right)  +\left\{  \zeta_{q}^{\ast}h_{\bar{q}p}+\zeta_{p}^{\ast}%
+h_{\bar{p}q}\right\}  S_{N-1}\left(  \hat{p}\hat{q}\right)
+\overset{}{\underset{}{}}\right\}
 \end{align}
 
 
@@ -1079,7 +1082,7 @@ For details see Appendix \ref{Trans2AObasis}. In the atomic orbital case we
 only have derivatives of the form%
 \begin{equation}
 \left\langle G^{\dagger N}\phi|Ha_{j_{1}}^{\dagger}a_{j_{2}}^{\dagger
-}G^{\dagger N-1}\phi\right\rangle ;1\leq j_{1}<j_{2}\leq r \label{deriv}%
+}G^{\dagger N-1}\phi\right\rangle ;1\leq j_{1}<j_{2}\leq r\label{deriv}%
 \end{equation}
 which are given in terms of the derivatives expressed in the canonical basis
 as%
@@ -1100,7 +1103,7 @@ N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\\
 _{j_{1,}j_{2}=1}^{r}\left\{  \underset{}{\overset{}{}}S_{N-1}\left(  \hat
 {p}\right)  \zeta_{p}^{\ast}\left\{  V_{f\,j_{1}p}^{\ast}V_{f\,j_{2}%
 p}+V_{f\,j_{1}p+s}^{\ast}V_{f\,j_{2}p+s}\right\}  h_{j_{1}j_{2}}^{a}\right.
-\right. \\
+\right.  \\
 &  \qquad\qquad\qquad\qquad\qquad\quad\left.  +\right.  \left.  \sum_{j\neq
 p}^{s}S_{N-2}\left(  \hat{p}\hat{\jmath}\right)  \zeta_{p}^{\ast}n_{j}\left\{
 V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}%
@@ -1110,11 +1113,11 @@ j+s}\right\}  h_{j_{1}j_{2}}^{a}\right\}
 &  \left.  +\right.  \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{
 \underset{}{\overset{}{\left.  {}\right.  }}S_{N-1}\left(  \hat{p}\right)
 \zeta_{p}^{\ast}V_{f\,j_{1}p}^{\ast}V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}%
-p}V_{f\,j_{4}p+s}\right. \\
+p}V_{f\,j_{4}p+s}\right.  \\
 &  \qquad+\sum_{j\neq p}^{s}S_{N-2}\left(  \hat{p}\hat{\jmath}\right)
 \left\{  \zeta_{p}^{\ast}n_{j}\left\{  V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}%
 j+s}^{\ast}V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}%
-p}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}j}\right.  \right. \\
+p}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}j}\right.  \right.  \\
 &  \qquad\qquad\qquad+V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}p+s}^{\ast}%
 V_{f\,j_{3}p+s}V_{f\,j_{4}j}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}p}^{\ast
 }V_{f\,j_{3}p}V_{f\,j_{4}j+s}\\
@@ -1129,7 +1132,7 @@ p+s}\underset{}{\overset{}{}}\right\}
 j+s}^{\ast}V_{f\,j_{3}k}V_{f\,j_{4}k+s}\qquad\qquad\qquad\nonumber\\
 &  \qquad\quad+\frac{1}{2}\zeta_{p}^{\ast}\sum_{j,k\neq p}^{s}S_{N-3}\left(
 \hat{p}\hat{\jmath}\hat{k}\right)  n_{j}n_{k}\left\{  V_{f\,j_{1}j}^{\ast
-}V_{f\,j_{2}k}^{\ast}V_{f\,j_{3}k}V_{f\,j_{4}pj}\right. \nonumber\\
+}V_{f\,j_{2}k}^{\ast}V_{f\,j_{3}k}V_{f\,j_{4}pj}\right.  \nonumber\\
 &  \qquad\qquad\qquad+V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}k+s}^{\ast}%
 V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}k}^{\ast
 }V_{f\,j_{3}k}V_{f\,j_{4}pj+s}\nonumber\\
@@ -1146,7 +1149,7 @@ N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\nonumber\\
 &  \left\{  S_{N-1}\left(  \hat{p}\hat{q}\right)  \sum_{j_{1},j_{2}=1}%
 ^{r}\left\{  V_{f\,j_{1}\bar{q}}^{\ast}V_{f\,j_{2}p}\zeta_{q}^{\ast
 }+V_{f\,j_{1}\bar{p}}^{\ast}V_{f\,j_{2}q}\zeta_{p}^{\ast}\right\}
-h_{j_{1}j_{2}}^{a}\right. \nonumber\\
+h_{j_{1}j_{2}}^{a}\right.  \nonumber\\
 &  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \sum_{\kappa\neq\left\vert
 p\right\vert \neq\left\vert q\right\vert }^{s}S_{N-1}\left(  \hat{\kappa}%
 \hat{p}\hat{q}\right)  \left\{  V_{f\,j_{1}\kappa}^{\ast}V_{f\,j_{2}\kappa
@@ -1158,7 +1161,7 @@ p\right\vert \neq\left\vert q\right\vert }^{s}S_{N-1}\left(  \hat{\kappa}%
 V_{f\,j_{3}p}V_{f\,j_{4}\kappa}n_{\kappa}\zeta_{q}^{\ast}\nonumber\\
 &  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 \qquad\left.  +V_{f\,j_{1}\bar{p}}^{\ast}V_{f\,j_{2}\kappa}^{\ast}%
-V_{f\,j_{3}q}V_{f\,j_{4}\kappa}n_{\kappa}\zeta_{p}^{\ast}\right\} \nonumber\\
+V_{f\,j_{3}q}V_{f\,j_{4}\kappa}n_{\kappa}\zeta_{p}^{\ast}\right\}  \nonumber\\
 &  +S_{N-1}\left(  \hat{p}\hat{q}\right)  \left\{  \zeta_{p}^{\ast}%
 V_{f\,j_{1}p}^{\ast}V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}q}+\zeta
 _{q}^{\ast}V_{f\,j_{1}q}^{\ast}V_{f\,j_{2}q+s}^{\ast}V_{f\,j_{3}p}%
@@ -1452,8 +1455,8 @@ real and imaginary parts of the \emph{antisymmetric unitary matrix}
 $\mathbb{B}_{\kappa}=\eta_{\kappa}^{-\frac{1}{2}}\mathbb{C}_{\kappa}$ and
 denote them by%
 \begin{align}
-\mathbb{B}_{R}  &  =\operatorname{Re}\mathbb{B}_{\kappa}\nonumber\\
-\mathbb{B}_{I}  &  =\operatorname{Im}\mathbb{B}_{\kappa}%
+\mathbb{B}_{R} &  =\operatorname{Re}\mathbb{B}_{\kappa}\nonumber\\
+\mathbb{B}_{I} &  =\operatorname{Im}\mathbb{B}_{\kappa}%
 \end{align}
 where we drop the subscript $\kappa$, which plays no role in the
 considerations of this section. We know that
@@ -1522,14 +1525,15 @@ leading to the eigenvalues of $\mathbb{B}$ being
 -i\cos\varphi_{j}+\sin\varphi_{j}=-i\left(  \cos\varphi_{j}+i\sin\varphi
 _{j}\right)  =e^{i\left(  \varphi_{j}-\frac{\pi}{2}\right)  }=e^{i\theta_{j}}%
 \end{equation}
-i.e. $\theta_{j}=\varphi_{j}-\frac{\pi}{2}$.%
+\label{problem 7} i.e. $\theta_{j}=\varphi_{j}-\frac{\pi}{2}$, which can be
+seen by noting
 \begin{align}
-e^{i\pi}  &  =-1\\
-e^{i2\pi}  &  =1=e^{-i2\pi}\\
-e^{i\frac{\pi}{2}}  &  =i\\
+e^{i\pi} &  =-1\\
+e^{i2\pi} &  =1=e^{-i2\pi}\\
+e^{i\frac{\pi}{2}} &  =i\\
 -i\left(  \cos\varphi_{j}+i\sin\varphi_{j}\right)   &  =e^{i\pi}e^{i\frac{\pi
 }{2}}e^{i\varphi_{j}}=e^{i\left(  \frac{3\pi}{2}+\varphi_{j}\right)
-}=e^{i\left(  \varphi_{j}-\frac{\pi}{2}\right)  }%
+}=e^{i\left(  \varphi_{j}-\frac{\pi}{2}\right)  }.
 \end{align}
 
 
@@ -1609,7 +1613,7 @@ b_{j}^{\dagger}b_{l}b_{k}=\nonumber\\
 &  \left.  {}\right.  \sum_{i=1}^{s}\left\langle ii+s||ii+s\right\rangle
 \left\{  b_{i}^{\dagger}b_{i+s}^{\dagger}b_{i+s}b_{i}-b_{i}^{\dagger}%
 b_{i+s}^{\dagger}b_{i}b_{i+s}-b_{i+s}^{\dagger}b_{i}^{\dagger}b_{i+s}%
-b_{i}+b_{i+s}^{\dagger}b_{i}^{\dagger}b_{i}b_{i+s}\right\}  \nonumber\\
+b_{i}+b_{i+s}^{\dagger}b_{i}^{\dagger}b_{i}b_{i+s}\right\} \nonumber\\
 &  +\sum_{i\neq l=1}^{s}\left\langle ii+s||ll+s\right\rangle \left\{
 b_{i}^{\dagger}b_{i+s}^{\dagger}b_{l+s}b_{l}-b_{i}^{\dagger}b_{i+s}^{\dagger
 }b_{l}b_{l+s}-b_{i+s}^{\dagger}b_{i}^{\dagger}b_{l+s}b_{l}+b_{i+s}^{\dagger
@@ -1620,22 +1624,22 @@ and
 &  +\sum_{i,,j=1}^{s}\left\langle ij||ij\right\rangle \left\{  b_{i}^{\dagger
 }b_{j}^{\dagger}b_{j}b_{i}-b_{i}^{\dagger}b_{j}^{\dagger}b_{i}b_{j}%
 -b_{j}^{\dagger}b_{i}^{\dagger}b_{j}b_{i}+b_{j}^{\dagger}b_{i}^{\dagger}%
-b_{i}b_{j}\right\}  \nonumber\\
+b_{i}b_{j}\right\} \nonumber\\
 &  +\sum_{i,j=1}^{s}\left\langle i+sj||i+sj\right\rangle \left\{
 b_{i+s}^{\dagger}b_{j}^{\dagger}b_{j}b_{i+s}-b_{i+s}^{\dagger}b_{j}^{\dagger
 }b_{i+s}b_{j}-b_{j}^{\dagger}b_{i+s}^{\dagger}b_{j}b_{i+s}+b_{j}^{\dagger
-}b_{i+s}^{\dagger}b_{i+s}b_{j}\right\}  \nonumber\\
+}b_{i+s}^{\dagger}b_{i+s}b_{j}\right\} \nonumber\\
 &  +\sum_{i,j=1}^{s}\left\langle ij+s||ij+s\right\rangle \left\{
 b_{i}^{\dagger}b_{j+s}^{\dagger}b_{j+s}b_{i}-b_{i}^{\dagger}b_{j+s}^{\dagger
 }b_{i}b_{j+s}-b_{j+s}^{\dagger}b_{i}^{\dagger}b_{j+s}b_{i}+b_{j+s}^{\dagger
-}b_{i}^{\dagger}b_{i}b_{j+s}\right\}  \nonumber\\
+}b_{i}^{\dagger}b_{i}b_{j+s}\right\} \nonumber\\
 &  +\sum_{i,j=1}^{s}\left\langle i+sj+s||i+sj+s\right\rangle \left\{
 b_{i+s}^{\dagger}b_{j+s}^{\dagger}b_{j+s}b_{i+s}-b_{i+s}^{\dagger}%
-b_{j+s}^{\dagger}b_{i+s}b_{j+s}\right.  \nonumber\\
+b_{j+s}^{\dagger}b_{i+s}b_{j+s}\right. \nonumber\\
 &  \qquad\qquad\qquad\qquad\qquad\qquad\left.  -b_{j+s}^{\dagger}%
 b_{i+s}^{\dagger}b_{j+s}b_{i+s}+b_{j+s}^{\dagger}b_{i+s}^{\dagger}%
 b_{i+s}b_{j+s}\right\}  ;\quad i\neq j\pm s\nonumber\\
-&  +\text{ other terms}\label{twoel2}%
+&  +\text{ other terms} \label{twoel2}%
 \end{align}
 The portion eq. $\left(  \ref{twoel1}\right)  $ produces
 \begin{equation}
@@ -2140,9 +2144,9 @@ S_{N-1}\left(  \hat{p}\hat{q}\right)  \overset{}{\underset{}{}}\right\}
 \section{Transformation of the Energy of the 2N-Electron Unnormalized AGP
 State to the Atomic Orbital Basis\label{Trans2AObasis}}
 
-Expressing the canonical basis $\left\{  \eta_{j}\right\}  $ in terms of the
-atomic basis $\left\{  \varphi_{j}\right\}  $ the energy expression eq.
-$\left(  \ref{canen}\right)  $ becomes%
+\label{problem 9} Expressing the canonical basis $\left\{  \eta_{j}\right\}  $
+in terms of the atomic basis $\left\{  \varphi_{j}\right\}  $ the energy
+expression eq. $\left(  \ref{canen}\right)  $ becomes%
 
 \begin{align}
 &  \mathcal{H}\left(  \mathbf{\zeta}^{\ast},\mathbf{\zeta}\right)
@@ -2151,10 +2155,10 @@ $\left(  \ref{canen}\right)  $ becomes%
 &  \left\{  \sum_{j_{1,}j_{2}=1}^{r}\sum_{1\leq j\leq s}n_{j}S_{N-1}\left(
 \hat{\jmath}\right)  \left\{  \underset{}{\overset{}{}}\left\{  V_{f\,j_{1}%
 j}^{\ast}V_{f\,j_{2}j}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}j+s}\right\}
-h_{j_{1}j_{2}}^{a}\right.  \right. \nonumber\\
-&  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}%
-j+s}^{\ast}V_{f\,j_{3}j}V_{f\,j_{4}j+s}\left\langle j_{1}j_{2}||j_{3}%
-j_{4}\right\rangle ^{a}\left.  \underset{}{\overset{}{}}\right\} \nonumber\\
+h_{j_{1}j_{2}}^{a}\right.  \right.  \nonumber\\
+&  +\sum_{j_{3,}j_{4}=1}^{r}V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}j+s}^{\ast
+}V_{f\,j_{3}j}V_{f\,j_{4}j+s}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle
+^{a}\left.  \underset{}{\overset{}{}}\right\}  \nonumber\\
 &  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\sum_{1\leq j\neq k\leq s}\zeta
 _{j}^{\ast}\zeta_{k}S_{N-1}\left(  \hat{\jmath}\hat{k}\right)  V_{f\,j_{1}%
 j}^{\ast}V_{f\,j_{2}j+s}^{\ast}V_{f\,j_{3}k}V_{f\,j_{4}k+s}\left\langle
@@ -2171,10 +2175,11 @@ which can be rearranged to give
 \nonumber\\
 &  \left\{  \sum_{j_{1,}j_{2}=1}^{r}\sum_{1\leq j\leq s}n_{j}S_{N-1}\left(
 \hat{\jmath}\right)  \left\{  V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}j}+V_{f\,j_{1}%
-j+s}^{\ast}V_{f\,j_{2}j+s}\right\}  h_{j_{1}j_{2}}^{a}\right. \nonumber\\
+j+s}^{\ast}V_{f\,j_{2}j+s}\right\}  h_{j_{1}j_{2}}^{a}\right.  \nonumber\\
 &  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \overset{}{\underset{}{}}%
 \sum_{1\leq j\leq s}n_{j}S_{N-1}\left(  \hat{\jmath}\right)  V_{f\,j_{1}%
-j}^{\ast}V_{f\,j_{2}j+s}^{\ast}V_{f\,j_{3}j}V_{f\,j_{4}j+s}\right. \nonumber\\
+j}^{\ast}V_{f\,j_{2}j+s}^{\ast}V_{f\,j_{3}j}V_{f\,j_{4}j+s}\right.
+\nonumber\\
 &  +\sum_{1\leq j\neq k\leq s}\zeta_{j}^{\ast}\zeta_{k}S_{N-1}\left(
 \hat{\jmath}\hat{k}\right)  V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}j+s}^{\ast
 }V_{f\,j_{3}k}V_{f\,j_{4}k+s}\nonumber\\
@@ -2201,7 +2206,8 @@ h_{jk+s}^{a}=h_{j+sk}^{a}=0;\quad\\
 \end{gather}
 
 
-\item Two electron part of the Hamiltonian
+\item Two electron part of the Hamiltonian when one has integrated over spin
+the non zero parts are given by 
 
 \begin{enumerate}
 \item
@@ -2244,7 +2250,7 @@ _{2}\right\Vert }\chi_{l}\left(  \mathbf{r}_{1}\right)  \chi_{m}\left(
 \end{gather}
 
 
-\item
+\item After spin integration the following integrals are zero%
 \begin{gather}
 \left\langle j+s,k||l,m\right\rangle ^{a}=\left\langle j,k+s||l,m\right\rangle
 ^{a}=\left\langle j,k||l+s,m\right\rangle ^{a}=\left\langle
@@ -2277,10 +2283,10 @@ as%
 q}\left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
 N-1}\phi\right\rangle
 \end{equation}
-a sum that goes over the two types of matrix elements computed in eq. $\left(
-\ref{pps}\right)  $ and eq. $\left(  \ref{pq}\right)  $ and each of these
-matrix elements can also be expanded in the atomic basis. The paired terms
-$p=\left|  q\right|  $ as%
+\label{problem 10} a sum that goes over the two types of matrix elements
+computed in eq. $\left(  \ref{pps}\right)  $ and eq. $\left(  \ref{pq}\right)
+$ and each of these matrix elements can also be expanded in the atomic basis.
+The paired terms $p=\left\vert q\right\vert $ as%
 \begin{align*}
 &  \left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{p+s}^{\dagger}G^{\dagger
 N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\qquad\qquad\qquad
@@ -2288,7 +2294,7 @@ N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\qquad\qquad\qquad
 &  \left\{  S_{N-1}\left(  \hat{p}\right)  \zeta_{p}^{\ast}\left\{  h_{0}%
 +\sum_{j_{1,}j_{2}=1}^{r}\left\{  V_{f\,j_{1}p}^{\ast}V_{f\,j_{2}%
 p}+V_{f\,j_{1}p+s}^{\ast}V_{f\,j_{2}p+s}\right\}  h_{j_{1}j_{2}}^{a}\right.
-\right. \\
+\right.  \\
 &  +\left.  {}\right.  \qquad\qquad\quad\left.  \sum_{j_{1,}j_{2,}j_{3,}%
 j_{4}=1}^{r}V_{f\,j_{1}p}^{\ast}V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p}%
 V_{f\,j_{4}p+s}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
@@ -2306,7 +2312,7 @@ j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right\}
 \begin{align*}
 &  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  V_{f\,j_{1}j}^{\ast
 }V_{f\,j_{2}p}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}j}+V_{f\,j_{1}j}^{\ast
-}V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p+s}V_{f\,j_{4}j}\right. \\
+}V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p+s}V_{f\,j_{4}j}\right.  \\
 &  \qquad\qquad\qquad\qquad+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}p}^{\ast
 }V_{f\,j_{3}p}V_{f\,j_{4}j+s}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}p+s}^{\ast
 }V_{f\,j_{3}p+s}V_{f\,j_{4}j+s}\\
@@ -2323,7 +2329,7 @@ k+s}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\nonumber\\
 &  +\frac{1}{2}\zeta_{p}^{\ast}\sum_{j,k\neq p}S_{N-3}\left(  \hat{p}%
 \hat{\jmath}\hat{k}\right)  n_{j}n_{k}\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}%
 ^{r}\left\{  V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}k}^{\ast}V_{f\,j_{3}k}%
-V_{f\,j_{4}pj}\right. \nonumber\\
+V_{f\,j_{4}pj}\right.  \nonumber\\
 &  \qquad\qquad\qquad+V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}k+s}^{\ast}%
 V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}k}^{\ast
 }V_{f\,j_{3}k}V_{f\,j_{4}pj+s}+\nonumber\\
@@ -2339,7 +2345,7 @@ N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\\
 _{j_{1,}j_{2}=1}^{r}\left\{  \overset{}{\underset{}{}}S_{N-1}\left(  \hat
 {p}\right)  \zeta_{p}^{\ast}\left\{  V_{f\,j_{1}p}^{\ast}V_{f\,j_{2}%
 p}+V_{f\,j_{1}p+s}^{\ast}V_{f\,j_{2}p+s}\right\}  h_{j_{1}j_{2}}^{a}\right.
-\right. \\
+\right.  \\
 &  +\left.  \sum_{j\neq p}^{s}S_{N-2}\left(  \hat{p}\hat{\jmath}\right)
 \zeta_{p}^{\ast}n_{j}\left\{  V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}j}+V_{f\,j_{1}%
 j+s}^{\ast}V_{f\,j_{2}j+s}\right\}  h_{j_{1}j_{2}}^{a}\right\}  \qquad
@@ -2348,11 +2354,11 @@ j+s}^{\ast}V_{f\,j_{2}j+s}\right\}  h_{j_{1}j_{2}}^{a}\right\}  \qquad
 \begin{align*}
 &  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \overset{}{\underset{}{}%
 }S_{N-1}\left(  \hat{p}\right)  \zeta_{p}^{\ast}V_{f\,j_{1}p}^{\ast
-}V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right. \\
+}V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}p+s}\right.  \\
 &  +\sum_{j\neq p}^{s}S_{N-2}\left(  \hat{p}\hat{\jmath}\right)  \left\{
 \zeta_{p}^{\ast}n_{j}\left\{  V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}j+s}^{\ast
 }V_{f\,j_{3}j}V_{f\,j_{4}j+s}+V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}p}^{\ast
-}V_{f\,j_{3}p}V_{f\,j_{4}j}\right.  \right. \\
+}V_{f\,j_{3}p}V_{f\,j_{4}j}\right.  \right.  \\
 &  \qquad\qquad\qquad\qquad+V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}p+s}^{\ast
 }V_{f\,j_{3}p+s}V_{f\,j_{4}j}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}p}^{\ast
 }V_{f\,j_{3}p}V_{f\,j_{4}j+s}\\
@@ -2367,7 +2373,7 @@ p}V_{f\,j_{4}p+s}\right\}
 j+s}^{\ast}V_{f\,j_{3}k}V_{f\,j_{4}k+s}\qquad\qquad\qquad\nonumber\\
 &  +\frac{1}{2}\zeta_{p}^{\ast}\sum_{j,k\neq p}S_{N-3}\left(  \hat{p}%
 \hat{\jmath}\hat{k}\right)  n_{j}n_{k}\left\{  V_{f\,j_{1}j}^{\ast}%
-V_{f\,j_{2}k}^{\ast}V_{f\,j_{3}k}V_{f\,j_{4}pj}\right. \nonumber\\
+V_{f\,j_{2}k}^{\ast}V_{f\,j_{3}k}V_{f\,j_{4}pj}\right.  \nonumber\\
 &  \qquad\qquad\qquad+V_{f\,j_{1}j}^{\ast}V_{f\,j_{2}k+s}^{\ast}%
 V_{f\,j_{3}k+s}V_{f\,j_{4}pj}+V_{f\,j_{1}j+s}^{\ast}V_{f\,j_{2}k}^{\ast
 }V_{f\,j_{3}k}V_{f\,j_{4}pj+s}\nonumber\\
@@ -2376,19 +2382,20 @@ j+s}^{\ast}V_{f\,j_{2}k+s}^{\ast}V_{f\,j_{3}k+s}V_{f\,j_{4}pj+s}\right\}
 \underset{}{\overset{}{}}\right\}  \left\langle j_{1}j_{2}||j_{3}%
 j_{4}\right\rangle ^{a}\right\}
 \end{align}
-The other term $\left|  p\right|  \neq\left|  q\right|  $%
+The other term $\left\vert p\right\vert \neq\left\vert q\right\vert $%
 \begin{align}
 &  \left\langle G^{\dagger N}\phi|Hb_{p}^{\dagger}b_{q}^{\dagger}G^{\dagger
 N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\nonumber\\
-&  \left\{  \sum_{\kappa\neq\left|  p\right|  \neq\left|  q\right|  }%
-^{s}\left\{  S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)  \left\{
-\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}\kappa}^{\ast}V_{f\,j_{2}%
-\kappa+s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta_{\kappa}^{\ast}\left\langle
-j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right.  \right.  \right. \nonumber\\
+&  \left\{  \sum_{\kappa\neq\left\vert p\right\vert \neq\left\vert
+q\right\vert }^{s}\left\{  S_{N-1}\left(  \hat{\kappa}\hat{p}\hat{q}\right)
+\left\{  \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}\kappa}^{\ast
+}V_{f\,j_{2}\kappa+s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta_{\kappa}^{\ast
+}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle ^{a}\right.  \right.
+\right.  \nonumber\\
 &  \quad\qquad\quad\quad\quad\qquad+\left.  \sum_{j_{1,}j_{2,}j_{3,}j_{4}%
 =1}^{r}V_{f\,j_{1}\bar{p}}^{\ast}V_{f\,j_{2}\bar{q}}^{\ast}V_{f\,j_{3}\kappa
 }V_{f\,j_{4}\kappa+s}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle
-^{a}\zeta_{p}^{\ast}\zeta_{q}^{\ast}\zeta_{\kappa}\right\} \nonumber\\
+^{a}\zeta_{p}^{\ast}\zeta_{q}^{\ast}\zeta_{\kappa}\right\}  \nonumber\\
 &  \qquad\qquad\quad\quad\qquad+\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}%
 ^{r}V_{f\,j_{1}\bar{q}}^{\ast}V_{f\,j_{2}\kappa}^{\ast}V_{f\,j_{3}%
 p}V_{f\,j_{4}\kappa}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle
@@ -2396,7 +2403,7 @@ p}V_{f\,j_{4}\kappa}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle
 &  \qquad\qquad\quad\quad\qquad\left.  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}%
 ^{r}V_{f\,j_{1}\bar{p}}^{\ast}V_{f\,j_{2}\kappa}^{\ast}V_{f\,j_{3}%
 q}V_{f\,j_{4}\kappa}\left\langle j_{1}j_{2}||j_{3}j_{4}\right\rangle
-^{a}n_{\kappa}\zeta_{p}^{\ast}\right\} \nonumber\\
+^{a}n_{\kappa}\zeta_{p}^{\ast}\right\}  \nonumber\\
 &  \qquad\qquad\quad\quad\quad+\zeta_{p}^{\ast}S_{N-1}\left(  \hat{p}\hat
 {q}\right)  \sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}V_{f\,j_{1}p}^{\ast
 }V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}q}\left\langle j_{1}%
@@ -2417,18 +2424,19 @@ N-1}\phi\right\rangle =N!\left(  N-1\right)  !\times\nonumber\\
 &  \left\{  S_{N-1}\left(  \hat{p}\hat{q}\right)  \sum_{j_{1},j_{2}=1}%
 ^{r}\left\{  V_{f\,j_{1}\bar{q}}^{\ast}V_{f\,j_{2}p}\zeta_{q}^{\ast
 }+V_{f\,j_{1}\bar{p}}^{\ast}V_{f\,j_{2}q}\zeta_{p}^{\ast}\right\}
-h_{j_{1}j_{2}}\right. \nonumber\\
-&  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \sum_{\kappa\neq\left|
-p\right|  \neq\left|  q\right|  }^{s}S_{N-1}\left(  \hat{\kappa}\hat{p}\hat
-{q}\right)  \left\{  V_{f\,j_{1}\kappa}^{\ast}V_{f\,j_{2}\kappa+s}^{\ast
-}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta_{\kappa}^{\ast}\right.  \right. \nonumber\\
+h_{j_{1}j_{2}}\right.  \nonumber\\
+&  +\sum_{j_{1,}j_{2,}j_{3,}j_{4}=1}^{r}\left\{  \sum_{\kappa\neq\left\vert
+p\right\vert \neq\left\vert q\right\vert }^{s}S_{N-1}\left(  \hat{\kappa}%
+\hat{p}\hat{q}\right)  \left\{  V_{f\,j_{1}\kappa}^{\ast}V_{f\,j_{2}\kappa
++s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}q}\zeta_{\kappa}^{\ast}\right.  \right.
+\nonumber\\
 &  \quad\qquad\quad+V_{f\,j_{1}\bar{p}}^{\ast}V_{f\,j_{2}\bar{q}}^{\ast
 }V_{f\,j_{3}\kappa}V_{f\,j_{4}\kappa+s}\zeta_{p}^{\ast}\zeta_{q}^{\ast}%
 \zeta_{\kappa}+V_{f\,j_{1}\bar{q}}^{\ast}V_{f\,j_{2}\kappa}^{\ast}%
 V_{f\,j_{3}p}V_{f\,j_{4}\kappa}n_{\kappa}\zeta_{q}^{\ast}\nonumber\\
 &  \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\left.
 +V_{f\,j_{1}\bar{p}}^{\ast}V_{f\,j_{2}\kappa}^{\ast}V_{f\,j_{3}q}%
-V_{f\,j_{4}\kappa}n_{\kappa}\zeta_{p}^{\ast}\right\} \nonumber\\
+V_{f\,j_{4}\kappa}n_{\kappa}\zeta_{p}^{\ast}\right\}  \nonumber\\
 &  +\zeta_{p}^{\ast}S_{N-1}\left(  \hat{p}\hat{q}\right)  V_{f\,j_{1}p}^{\ast
 }V_{f\,j_{2}p+s}^{\ast}V_{f\,j_{3}p}V_{f\,j_{4}q}\nonumber\\
 &  \qquad\qquad\qquad\left.  \left.  +\zeta_{q}^{\ast}S_{N-1}\left(  \hat
@@ -2672,8 +2680,7 @@ cost of the derivatives scale as $r^{5}$.
 \section{Extra}
 
 \begin{enumerate}
-\item 
-
+\item
 \begin{enumerate}
 \item All spin combinations
 \begin{equation}
@@ -2721,7 +2728,7 @@ a\wedge b=\frac{1}{2}\left(  a\otimes b-b\otimes a\right)  .
 \mathcal{H}^{2\otimes}\right)  $ in $\mathcal{H}^{2\otimes}$ is defined by
 \begin{align}
 \mathcal{T}_{2}\left(  a\otimes b\right)   &  =b\otimes a\\
-\mathcal{T}_{2}^{2} &  =I_{\mathcal{H}^{2\otimes}}.
+\mathcal{T}_{2}^{2}  &  =I_{\mathcal{H}^{2\otimes}}.
 \end{align}
 
 
@@ -2842,17 +2849,17 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
 \chi_{l}\alpha\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\alpha\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right) \\
 =\frac{1}{4}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle -\left\langle \chi_{j}%
 \otimes\chi_{k}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
 -\left\langle \chi_{k}\otimes\chi_{j}\left\vert V_{2}\chi_{l}\otimes\chi
 _{m}\right.  \right\rangle +\left\langle \chi_{k}\otimes\chi_{j}\left\vert
-V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle \right) \\
 =\frac{1}{2}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle -\left\langle \chi_{j}%
 \otimes\chi_{k}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
-\right)  \\
+\right) \\
 =\frac{1}{2}\left(  \left\langle jk\left\vert lm\right.  \right\rangle
 ^{a}-\left\langle jk\left\vert ml\right.  \right\rangle ^{a}\right)
 \end{gather}
@@ -2869,16 +2876,14 @@ V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 _{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\beta\otimes\chi
 _{j}\beta\left\vert V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\beta\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
 =\frac{1}{2}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle -\left\langle \chi_{j}%
 \otimes\chi_{k}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
-\right)  \\
+\right) \\
 =\frac{1}{2}\left(  \left\langle jk\left\vert lm\right.  \right\rangle
 ^{a}-\left\langle jk\left\vert ml\right.  \right\rangle ^{a}\right)
 \end{gather}
-
-
 
 
 \item $\beta\alpha\beta\alpha=\alpha\beta\alpha\beta$%
@@ -2893,11 +2898,11 @@ V_{2}\chi_{l}\beta\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
 \chi_{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\beta\left\vert V_{2}\chi_{l}\beta\otimes\chi_{m}\alpha\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
 =\frac{1}{4}\left(  \left\langle \chi_{j}\otimes\chi_{k}\left\vert V_{2}%
 \chi_{l}\otimes\chi_{m}\right.  \right\rangle +\left\langle \chi_{k}%
 \otimes\chi_{j}\left\vert V_{2}\chi_{m}\otimes\chi_{l}\right.  \right\rangle
-\right)  \\
+\right) \\
 =\frac{1}{2}\left\langle jk\left\vert lm\right.  \right\rangle ^{a}%
 \end{gather}
 
@@ -2914,11 +2919,11 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 _{l}\alpha\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes\chi
 _{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\beta\otimes\chi_{l}\alpha\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\beta\otimes\chi_{l}\alpha\right.  \right\rangle \right) \\
 =-\frac{1}{4}\left(  \left\langle \chi_{j}\beta\otimes\chi_{k}\alpha\left\vert
 V_{2}\chi_{m}\beta\otimes\chi_{l}\alpha\right.  \right\rangle +\left\langle
 \chi_{k}\alpha\otimes\chi_{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes
-\chi_{m}\beta\right.  \right\rangle \right)  \\
+\chi_{m}\beta\right.  \right\rangle \right) \\
 =-\frac{1}{2}\left\langle jk\left\vert lm\right.  \right\rangle ^{a}%
 \end{gather}
 
@@ -2938,11 +2943,11 @@ V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 \chi_{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\alpha\left\vert V_{2}\chi_{l}\beta\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
 =-\frac{1}{4}\left(  \left\langle \chi_{j}\alpha\otimes\chi_{k}\alpha
 \left\vert V_{2}\chi_{m}\beta\otimes\chi_{l}\beta\right.  \right\rangle
 +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert V_{2}\chi_{l}%
-\beta\otimes\chi_{m}\beta\right.  \right\rangle \right)  \\
+\beta\otimes\chi_{m}\beta\right.  \right\rangle \right) \\
 =0
 \end{gather}
 
@@ -2958,11 +2963,11 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.  \right\rangle -\left\langle
 _{l}\alpha\right.  \right\rangle -\left\langle \chi_{k}\beta\otimes\chi
 _{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\alpha\right.
 \right\rangle +\left\langle \chi_{k}\beta\otimes\chi_{j}\beta\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle \right) \\
 =-\frac{1}{4}\left(  \left\langle \chi_{j}\beta\otimes\chi_{k}\beta\left\vert
 V_{2}\chi_{m}\alpha\otimes\chi_{l}\alpha\right.  \right\rangle +\left\langle
 \chi_{k}\beta\otimes\chi_{j}\beta\left\vert V_{2}\chi_{l}\alpha\otimes\chi
-_{m}\alpha\right.  \right\rangle \right)  \\
+_{m}\alpha\right.  \right\rangle \right) \\
 =0
 \end{gather}
 
@@ -2978,7 +2983,7 @@ V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.  \right\rangle -\left\langle
 \chi_{l}\beta\right.  \right\rangle -\left\langle \chi_{k}\alpha\otimes
 \chi_{j}\alpha\left\vert V_{2}\chi_{l}\alpha\otimes\chi_{m}\beta\right.
 \right\rangle +\left\langle \chi_{k}\alpha\otimes\chi_{j}\alpha\left\vert
-V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right)  \\
+V_{2}\chi_{m}\alpha\otimes\chi_{l}\beta\right.  \right\rangle \right) \\
 =0
 \end{gather}
 
