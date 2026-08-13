@@ -12,7 +12,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Friday, April 06, 2012 11:15:25}
-%TCIDATA{LastRevised=Thursday, July 23, 2026 08:17:37}
+%TCIDATA{LastRevised=Thursday, August 13, 2026 10:42:13}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
 %TCIDATA{Language=American English}
@@ -64,8 +64,6 @@ including the canonical grand canonical ensemble $D_\beta = e^{-\beta N}/%
 \tableofcontents
 
 \section{Introduction}
-
-saturday
 
 \section{Preliminaries}
 
@@ -131,16 +129,42 @@ _{k}\gamma _{l}$ corresponds to a point on the Grassmannian $\mathrm{Gr}%
 (4,2r)$ of 4-planes in $\mathbb{C}^{2r}$.
 \end{remark}
 
+\begin{remark}
+A self-adjoint projector $P\in \mathcal{A}_{even}$ has the form: 
+\begin{gather}
+P=c_{0}I_{\mathcal{A}}+i\sum_{1\leq j_{1}<j_{2}\leq 2r}c_{j_{1}j_{2}}\gamma
+_{j_{1}}\gamma _{j_{2}}+\cdots +\sum_{1\leq j_{1}<\cdots <j_{2r}\leq
+2r}c_{j_{1}\cdots j_{2r}}\gamma _{j_{1}}\cdots \gamma _{j_{2r}} \\
+=P_{0}+\cdots +P_{2r}
+\end{gather}%
+with $c_{0}\in \mathbb{R}$,$c_{j_{1}\cdots }c_{j_{2p}}\in \mathbb{R}$.
+\end{remark}
+
+\begin{remark}
+\begin{eqnarray}
+P &=&P^{2} \\
+P_{0}+\cdots +P_{2p} &=&\left( P_{0}+\cdots +P_{2r}\right) ^{2}
+\end{eqnarray}%
+\begin{equation}
+c_{0}=\sum_{0\leq p\leq r}\sum_{1\leq j_{1}<\cdots <j_{2p}\leq
+2p}c_{j_{1}\cdots j_{2p}}^{2}\gamma _{j_{1}}\cdots \gamma _{j_{2r}}
+\end{equation}
+\end{remark}
+
+\begin{theorem}
+The element $P$ in $\mathcal{A}_{even}$ is a projector ($P^{2}=P$) 
+\end{theorem}
+
 \section{Partial States on $\mathcal{A}_4$}
 
-A partial normal state $\omega$ on $\mathcal{A}_4$ is given by a density
+A partial normal state $\omega $ on $\mathcal{A}_{4}$ is given by a density
 matrix: 
 \begin{equation}
-d = \frac{1}{2^{2r}} I + i\sum_{i<j} \beta_{ij}\gamma_i\gamma_j +
-\sum_{i<j<k<l} \delta_{ijkl}\gamma_i\gamma_j\gamma_k\gamma_l
-\end{equation}
-with $\beta_{ij} \in \mathbb{R}$, $\delta_{ijkl} \in \mathbb{R}$, and $%
-\mathrm{Tr}(d) = 1$ (automatically satisfied by the normalization).
+d=\frac{1}{2^{2r}}I+i\sum_{i<j}\beta _{ij}\gamma _{i}\gamma
+_{j}+\sum_{i<j<k<l}\delta _{ijkl}\gamma _{i}\gamma _{j}\gamma _{k}\gamma _{l}
+\end{equation}%
+with $\beta _{ij}\in \mathbb{R}$, $\delta _{ijkl}\in \mathbb{R}$, and $%
+\mathrm{Tr}(d)=1$ (automatically satisfied by the normalization).
 
 \section{The Extension Problem}
 
