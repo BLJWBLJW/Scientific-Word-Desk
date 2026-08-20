@@ -8,7 +8,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{CSTFile=revtex4.cst}
 %TCIDATA{Created=Thursday, June 27, 2013 17:39:45}
-%TCIDATA{LastRevised=Friday, June 20, 2025 09:52:39}
+%TCIDATA{LastRevised=Wednesday, August 19, 2026 06:23:59}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
@@ -9669,8 +9669,8 @@ a_{k_{1}}^{\dagger}a_{k_{2}}^{\dagger}a_{j_{2}}a_{j_{1}}D^{n}\right\}  ,
 i.e.%
 \begin{equation}
 \frame{$L_n^2\left(  D^n\right)  _j_1j_2k_1k_2\,{}{}=\,\binom{n}%
-{2}^-1\operatorname{Tr}\left\{  a_k{}_1^\dagger a_k{}_2^\dagger a_j{}%
-_2a_j{}_1D^n\right\}  $}%
+{2}^-1\operatorname{Tr}\left\{  a_k{}_1^\dagger a_k{}__2^\dagger a_j{}%
+__2a_j{}__1D^n\right\}  $}%
 \end{equation}
 for $1\leq j_{1}<j_{2}\leq r;1\leq k_{1}<k_{2}\leq r.$
 \end{remark}
@@ -24764,7 +24764,7 @@ xdP_{Q}\left(  x\right)  .
 
 
 \begin{lemma}
-$\mathcal{F}_{+}$ and $\mathcal{S}_{+}$ are convex sets.
+$\mathcal{F}_{+}$ and $\mathcal{S}_{+}?$ are convex sets.
 \end{lemma}
 
 \begin{lemma}
@@ -24782,7 +24782,7 @@ the positive \underline{operators} $QQ^{\dagger}.$
 \end{lemma}
 
 \begin{lemma}
-The extreme points of $\mathcal{F}_{+}$ and $S_{+}$ are projectors.
+The extreme points of $\mathcal{F}_{+}$ and $S_{+}$ are projectors?.
 \end{lemma}
 \end{remark}
 \end{definition}
@@ -24820,8 +24820,8 @@ $\widetilde{f}(I_{\mathcal{F}})=1.$
 If $\mathcal{S}_{+}$ is a compact convex set in a locally convex topological
 vector space, and $f$ is a continuous linear functional, then the supremum of
 $f$ over $\mathcal{S}_{+}$ is achieved at extreme points of $\mathcal{S}_{+}$
-if and only if the set of points where $f$ attains its supremum is a face of
-$\mathcal{S}_{+}$ that contains an extreme point.
+\emph{if and only} if the set of points where $f$ attains its supremum is a
+face of $\mathcal{S}_{+}$ that contains an extreme point.
 \end{remark}
 
 \subsubsection{Generating Set}
@@ -37162,9 +37162,9 @@ S_{2}=\left\{  \sigma_{1},\sigma_{2}\right\}
 \end{equation}
 $\rfloor$
 
-\subsubsection{Decomposable Ket-Bra projectors
-(\protect\underline{decomposable \emph{primitive idempotents}}) in terms of
-one particle and one hole projectors (\protect\underline{simple idempotents})}
+\section{Decomposable Ket-Bra projectors (\protect\underline{decomposable
+\emph{primitive idempotents}}) in terms of one particle and one hole
+projectors (\protect\underline{simple idempotents})}
 
 Recall the expressions for one particle and one hole projections
 \begin{align}
@@ -37475,7 +37475,7 @@ P_{2}  &  =n_{1}n_{2}=\left(  \frac{1}{2}I_{\mathcal{F}}+ix_{1}x_{3}\right)
 and we have also expanded in term of the self adjoint basis.
 
 \emph{In general decomposable ket-bra projectors can be expressed as the
-products }
+products \label{general decomposable ket-bra projectors} }
 \begin{align}
 \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{p}}\right\rangle \left\langle
 \varphi_{j_{1}}\cdots\varphi_{j_{p}}\right\vert  &  =%
@@ -39020,30 +39020,58 @@ h_{l}\right\}  .
 \end{equation}
 and not a product of projectors.
 
-\subsection{In general}%
+\subsection{General Decomposable ket-bra Transition Operators}
+
+\label{general decomposable ket-bra transition operators}
+
+\begin{remark}
+This was corrected by Deepseek
+\end{remark}
+
+%
 
 \begin{align}
 &  \left\vert \varphi_{j_{1}}\cdots\varphi_{j_{p}}\right\rangle \left\langle
-\varphi_{k_{1}}\cdots\varphi_{k_{q}}\right\vert =\left(
-%TCIMACRO{\dprod \limits_{1\leq j\neq j_{1},\cdots,,j_{q,},k_{1},\cdots
-%,k_{p}\leq r}}%
+\varphi_{k_{1}}\cdots\varphi_{k_{q}}\right\vert =a_{j_{1}}^{\dagger}\cdots
+a_{j_{q}}^{\dagger}\left(
+%TCIMACRO{\dprod \limits_{1\leq j\leq r}}%
 %BeginExpansion
-{\displaystyle\prod\limits_{1\leq j\neq j_{1},\cdots,,j_{q,},k_{1}%
-,\cdots,k_{p}\leq r}}
+{\displaystyle\prod\limits_{1\leq j\leq r}}
 %EndExpansion
-h_{j}\right)  a_{j_{1}}^{\dagger}\cdots a_{j_{q}}^{\dagger}a_{k_{p}}\cdots
-a_{k_{1}}=\\
+h_{j}\right)  a_{k_{p}}\cdots a_{k_{1}}=%
+%TCIMACRO{\dprod \limits_{1\leq\kappa\leq q}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq\kappa\leq q}}
+%EndExpansion
+a_{j_{\kappa}}^{\dagger}%
+%TCIMACRO{\dprod \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq j\leq r}}
+%EndExpansion
+h_{j}%
+%TCIMACRO{\dprod \limits_{p\leq\kappa\leq1}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{p\leq\kappa\leq1}}
+%EndExpansion
+a_{k_{\kappa}}\\
 &
-%TCIMACRO{\dprod \limits_{1\leq j\neq j_{1},\cdots,,j_{q,},k_{1},\cdots
-%,k_{p}\leq r}}%
+%TCIMACRO{\dprod \limits_{1\leq\kappa\leq q}}%
 %BeginExpansion
-{\displaystyle\prod\limits_{1\leq j\neq j_{1},\cdots,,j_{q,},k_{1}%
-,\cdots,k_{p}\leq r}}
+{\displaystyle\prod\limits_{1\leq\kappa\leq q}}
 %EndExpansion
-\left\{  \frac{1}{2}I_{\mathcal{F}}-ix_{j}x_{j+r}\right\}  \frac{1}{\sqrt{2}%
-}\left(  x_{j_{1}}-ix_{j_{1}+r}\right)  \cdots\frac{1}{\sqrt{2}}\left(
-x_{j_{q}}-ix_{j_{q}+r}\right)  \frac{1}{\sqrt{2}}x_{k_{p}}+ix_{k_{p}+r}%
-\cdots\frac{1}{\sqrt{2}}\left(  x_{k_{1}}+ix_{k_{1}+r}\right)  ,
+\left(  \frac{1}{\sqrt{2}}\left(  x_{\kappa_{q}}-ix_{\kappa_{q}+r}\right)
+\right)
+%TCIMACRO{\dprod \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq j\leq r}}
+%EndExpansion
+\left(  \frac{1}{2}I_{\mathcal{F}}-ix_{j}x_{j+r}\right)
+%TCIMACRO{\dprod \limits_{p\leq\kappa\leq1}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{p\leq\kappa\leq1}}
+%EndExpansion
+\left(  \frac{1}{\sqrt{2}}\left(  x_{k_{\kappa}}+ix_{k_{\kappa}+r}\right)
+\right)  ,
 \end{align}
 thus \emph{the most general primitive projector }is
 \begin{align}
@@ -39056,17 +39084,23 @@ p,q\leq r}\sum_{\substack{1\leq j_{1}<\cdots<j_{q}\leq r\\1\leq k_{1}%
 r\\1\leq k_{1}<\cdots<k_{p}\leq r}}\bar{c}_{k_{1}\cdots k_{p}}c_{j_{1}\cdots
 j_{q}}\\
 &  \qquad\times%
-%TCIMACRO{\dprod \limits_{1\leq j\neq j_{1},\cdots,,j_{q,},k_{1},\cdots
-%,k_{p}\leq r}}%
+%TCIMACRO{\dprod \limits_{1\leq\kappa\leq q}}%
 %BeginExpansion
-{\displaystyle\prod\limits_{1\leq j\neq j_{1},\cdots,,j_{q,},k_{1}%
-,\cdots,k_{p}\leq r}}
+{\displaystyle\prod\limits_{1\leq\kappa\leq q}}
 %EndExpansion
-\left\{  \frac{1}{2}I_{\mathcal{F}}-ix_{j}x_{j+r}\right\}  \frac{1}{\sqrt{2}%
-}\left(  x_{j_{1}}-ix_{j_{1}+r}\right)  \cdots\frac{1}{\sqrt{2}}\left(
-x_{j_{q}}-ix_{j_{q}+r}\right)  \times\frac{1}{\sqrt{2}}\left(  x_{k_{p}%
-}+ix_{k_{p}+r}\right)  \cdots\frac{1}{\sqrt{2}}\left(  x_{k_{1}}+ix_{k_{1}%
-+r}\right)  .
+\left(  \frac{1}{\sqrt{2}}\left(  x_{\kappa_{q}}-ix_{\kappa_{q}+r}\right)
+\right)
+%TCIMACRO{\dprod \limits_{1\leq j\leq r}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{1\leq j\leq r}}
+%EndExpansion
+\left(  \frac{1}{2}I_{\mathcal{F}}-ix_{j}x_{j+r}\right)
+%TCIMACRO{\dprod \limits_{p\leq\kappa\leq1}}%
+%BeginExpansion
+{\displaystyle\prod\limits_{p\leq\kappa\leq1}}
+%EndExpansion
+\left(  \frac{1}{\sqrt{2}}\left(  x_{k_{\kappa}}+ix_{k_{\kappa}+r}\right)
+\right)  .
 \end{align}
 
 
@@ -42129,7 +42163,9 @@ k_{3}k_{4}}y_{j_{1}}y_{j_{2}}y_{j_{3}}y_{j_{4}}y_{k_{1}}y_{k_{2}}y_{k_{3}%
 \end{align}
 The difference between $\gamma$ and $\gamma^{2}$ gives
 \end{enumerate}
-\end{enumerate}%
+\end{enumerate}
+
+%
 
 \begin{align}
 \left\langle \gamma^{2}\right\rangle _{0}-\left\langle \gamma\right\rangle
