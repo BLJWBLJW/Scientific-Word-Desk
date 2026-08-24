@@ -1,16 +1,19 @@
+%}
 
-\documentclass[aps,preprint,showpacs,showkeys]{revtex4}%
+
+\documentclass[aps,preprint,showpacs,showkeys]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage[dvips]{graphicx}
-\usepackage{amssymb}%}
+\usepackage{amssymb}
 
 \setcounter{MaxMatrixCols}{10}
 %TCIDATA{OutputFilter=LATEX.DLL}
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
-%TCIDATA{LastRevised=Friday, August 21, 2026 16:30:34}
+%TCIDATA{LastRevised=Sunday, August 23, 2026 07:39:01}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 
 \newtheorem{axiom}{Axiom}
@@ -19,17 +22,12 @@
 \newtheorem{corollary}{Corollary}
 \newtheorem{example}{Example}
 \newtheorem{lemma}{Lemma}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue,
-}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \input{tcilatex}
 \begin{document}
 
 \title{The Principle of Reality: A Causal-Ontological Foundation for Physics}
-\author{The Originator}
+\author{Brian Weiner, Deepseek}
 \date{August 2026}
 
 \begin{abstract}
@@ -65,7 +63,6 @@ measurement).
 \end{abstract}
 
 \maketitle
-
 \affiliation{Independent Scholar}
 
 \section{Introduction}
@@ -213,40 +210,28 @@ L_0 \approx \sqrt{\frac{G\hbar}{c^3}} \approx 1.62 \times 10^{-35}\ \text{m}
 T_0 \approx \sqrt{\frac{G\hbar}{c^5}} \approx 5.39 \times 10^{-44}\ \text{s}
 \end{equation}
 These are the \emph{practical} bounds; the absolute bounds (using all energy in the universe) are far smaller but still nonzero.
-\end{proof}\TEXTsymbol{\backslash}begin\{proof\}
+\end{proof}
 
-To measure a length \$L\$, one must use a probe with wavelength \$%
-\TEXTsymbol{\backslash}lambda \TEXTsymbol{\backslash}le L\$, requiring
-energy \$E \TEXTsymbol{\backslash}ge \TEXTsymbol{\backslash}hbar c/L\$. To
-measure a time \$T\$, one requires energy \$E \TEXTsymbol{\backslash}ge 
-\TEXTsymbol{\backslash}hbar/T\$. If \$L\$ or \$T\$ is too small, the
+To measure a length $L$, one must use a probe with wavelength $\lambda <L$,
+requiring energy $E\geq \frac{\hslash c}{L}$. To measure a time $T$, one
+requires energy $E\geq \frac{\hslash }{T}$. If $L$ or $T$ is too small, the
 required energy exceeds either the total energy of the observable universe
 or the threshold for black hole formation. Therefore, no valid measurement
-procedure exists for \$L \TEXTsymbol{<} L\_0\$ or \$T \TEXTsymbol{<} T\_0\$.
-The bounds are:
+procedure exists for $L<L_{0}$  or $T<T_{0}$ The bounds are:%
+\begin{equation}
+L_{0}\backslash approx\backslash sqrt\{\backslash frac\{G\backslash hbar\}\{c%
+\symbol{94}3\}\}\backslash approx1.62\backslash times10\symbol{94}%
+\{-35\}\backslash \backslash text\{m\}
+\end{equation}%
+\begin{equation}
+T_{0}\backslash approx\backslash sqrt\{\backslash frac\{G\backslash hbar\}\{c%
+\symbol{94}5\}\}\backslash approx5.39\backslash times10\symbol{94}%
+\{-44\}\backslash \backslash text\{s\}
+\end{equation}
 
-\TEXTsymbol{\backslash}begin\{equation\}
-
-L\_0 \TEXTsymbol{\backslash}approx \TEXTsymbol{\backslash}sqrt\{\TEXTsymbol{%
-\backslash}frac\{G\TEXTsymbol{\backslash}hbar\}\{c\symbol{94}3\}\} 
-\TEXTsymbol{\backslash}approx 1.62 \TEXTsymbol{\backslash}times 10\symbol{94}%
-\{-35\}\TEXTsymbol{\backslash} \TEXTsymbol{\backslash}text\{m\}
-
-\TEXTsymbol{\backslash}end\{equation\}
-
-\TEXTsymbol{\backslash}begin\{equation\}
-
-T\_0 \TEXTsymbol{\backslash}approx \TEXTsymbol{\backslash}sqrt\{\TEXTsymbol{%
-\backslash}frac\{G\TEXTsymbol{\backslash}hbar\}\{c\symbol{94}5\}\} 
-\TEXTsymbol{\backslash}approx 5.39 \TEXTsymbol{\backslash}times 10\symbol{94}%
-\{-44\}\TEXTsymbol{\backslash} \TEXTsymbol{\backslash}text\{s\}
-
-\TEXTsymbol{\backslash}end\{equation\}
-
-These are the \TEXTsymbol{\backslash}emph\{practical\} bounds; the absolute
-bounds (using all energy in the universe) are far smaller but still nonzero.
-
-\TEXTsymbol{\backslash}end\{proof\}
+These are the \TEXTsymbol{\backslash}emph\emph{practical} bounds; the
+absolute bounds (using all energy in the universe) are far smaller but still
+nonzero.
 
 \subsection{Existence Criterion}
 
@@ -776,7 +761,7 @@ provides a clear criterion for what counts as physical reality, and it
 accommodates the dynamic nature of scientific discovery.
 
 \begin{acknowledgments}
-The author wishes to thank the originator of the Principle of Reality for their deep insights and for provoking this formalization. This work is dedicated to the pursuit of clarity in physics and philosophy.
+This work is dedicated to the pursuit of clarity in physics and philosophy.
 \end{acknowledgments}
 
 \begin{thebibliography}{9}
