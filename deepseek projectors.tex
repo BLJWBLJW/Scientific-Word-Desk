@@ -12,7 +12,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Friday, April 06, 2012 11:15:25}
-%TCIDATA{LastRevised=Tuesday, August 25, 2026 15:55:36}
+%TCIDATA{LastRevised=Friday, August 28, 2026 16:13:39}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
 %TCIDATA{Language=American English}
@@ -99,7 +99,7 @@ It is isomorphic to
 \item These bases generate the direct sum decompositions
 
 \begin{enumerate}
-\item 
+\item \textbf{Graded Clifford algebra} 
 \begin{equation}
 \mathcal{F}=\bigoplus\limits_{0\leq n\leq 2r}\mathcal{F}_{n},
 \end{equation}%
@@ -109,7 +109,7 @@ where
 ,x_{n}\right\} .
 \end{equation}
 
-\item 
+\item \textbf{Graded CAR algebra}%
 \begin{equation}
 \mathcal{F}=\bigoplus\limits_{0\leq m,n\leq r}\mathcal{A}_{mn}=\bigoplus%
 \limits_{0\leq p\leq r}\mathcal{A}_{p},
@@ -126,10 +126,10 @@ and
 \mathcal{A}_{p}=\mathbb{C}\text{-}\func{linspan}\left\{ \left.
 a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{j_{1}}\cdots
 a_{j_{n}}\right\vert 1\leq j_{1}<\cdots <j_{m}\leq r,1\leq k_{1}<\cdots
-<k_{n}\leq r,0\leq m,n\leq r,m+n=p\right\} 
+<k_{n}\leq r,0\leq m,n\leq r,m+n=p\right\} .
 \end{equation}
 
-\item 
+\item \textbf{Graded Bra-Ket algebra}%
 \begin{equation}
 \mathcal{F}=\bigoplus\limits_{0\leq m,n\leq r}\mathcal{B}\left( \mathcal{H}%
 ^{m},\mathcal{H}^{n}\right) ,
@@ -150,12 +150,12 @@ k_{1}<\cdots <k_{n}\leq r\right\} .
 \item Relationships between the different decompositions:
 
 \begin{enumerate}
-\item 
+\item Equality of some subspaces in the CAR algebra and Clifford algebra 
 \begin{equation}
 \mathcal{F}_{n}=\mathcal{A}_{n},\quad 0\leq n\leq 2r
 \end{equation}
 
-\item 
+\item Bra-Kets in terms of second quantized operators 
 \begin{eqnarray}
 \left\vert \varphi _{j_{1}}\right\rangle \left\langle \phi \right\vert
 \bullet \cdots \bullet \left\vert \varphi _{j_{m}}\right\rangle \left\langle
@@ -172,14 +172,11 @@ a_{j_{m}}^{\dagger }a_{j_{1}}\cdots a_{j_{n}}P_{\mathcal{H}^{n}}
 i.e. 
 \begin{equation}
 \mathcal{B}\left( \mathcal{H}^{m},\mathcal{H}^{n}\right) =P_{\mathcal{H}^{m}}%
-\mathcal{A}_{mn}P_{\mathcal{H}^{n}};\quad 0\leq m,n\leq r
+\mathcal{A}_{mn}P_{\mathcal{H}^{n}};\quad 0\leq m,n\leq r.
 \end{equation}
 \end{enumerate}
 
-\item 
-
 \begin{example}
-
 \begin{enumerate}
 \item 
 \begin{equation}
@@ -191,10 +188,8 @@ _{j_{m}}\right\rangle \left\langle \left. \varphi _{j_{1}}\cdots \varphi
 _{j_{m}}\right\vert a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
 }a_{j_{1}}\cdots a_{j_{n}}\varphi _{k_{1}}\cdots \varphi
 _{k_{n}}\right\rangle \left\langle \varphi _{k_{1}}\cdots \varphi
-_{k_{n}}\right\vert 
+_{k_{n}}\right\vert
 \end{equation}
-
-\item 
 
 \item 
 \begin{equation}
@@ -208,9 +203,271 @@ a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{j_{1}}\cdots
 a_{j_{n}}\varphi _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\rangle
 \left\langle \varphi _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert \ 
 \end{equation}
+
+\item Using a general expansion of the projector 
+\begin{equation}
+P_{\mathcal{H}^{m}}=\sum_{1\leq j\leq \binom{r}{m}}\left\vert \Psi
+_{mj}\right\rangle \left\langle \Psi _{mj}\right\vert 
+\end{equation}%
+giving 
+\begin{eqnarray}
+P_{\mathcal{H}^{m}}a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
+}a_{k_{1}}\cdots a_{k_{n}}P_{\mathcal{H}^{n}} &=&\sum_{1\leq j\leq \binom{r}{%
+m}}\left\vert \Psi _{mj}\right\rangle \left\langle \Psi _{mj}\right\vert
+a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots
+a_{k_{n}}\sum_{1\leq k\leq \binom{r}{n}}\left\vert \Psi _{mk}\right\rangle
+\left\langle \Psi _{mk}\right\vert  \\
+&=&\sum_{\substack{ 1\leq j\leq \binom{r}{m} \\ 1\leq k\leq \binom{r}{n}}}%
+\left\vert \Psi _{mj}\right\rangle \left\langle \Psi _{nk}\right\vert
+\left\langle \left. \Psi _{mj}\right\vert a_{j_{1}}^{\dagger }\cdots
+a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\Psi _{nk}\right\rangle 
+\end{eqnarray}%
+and 
+\begin{eqnarray}
+P_{\mathcal{H}^{m^{\prime }}}a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
+}a_{k_{1}}\cdots a_{k_{n}}P_{\mathcal{H}^{n^{\prime }}} &=&\sum_{\substack{ %
+1\leq j\leq \binom{r}{m} \\ 1\leq k\leq \binom{r}{m}}}\left\vert \Psi
+_{m^{\prime }j}\right\rangle \left\langle \Psi _{n^{\prime }k}\right\vert
+\left\langle \left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\Psi _{n^{\prime
+}k}\right\rangle  \\
+&=&\sum_{\substack{ 1\leq j\leq \binom{r}{m} \\ 1\leq k\leq \binom{r}{m}}}%
+\left\vert \Psi _{m^{\prime }j}\right\rangle \left\langle \Psi _{n^{\prime
+}k}\right\vert L_{m^{\prime }n^{\prime }}^{mn}\left( \left\vert \Psi
+_{m^{\prime }j}\right\rangle \left\langle \Psi _{n^{\prime }k}\right\vert
+\right) _{j_{1}\cdots j_{m}k_{1}\cdots k_{m}}.
+\end{eqnarray}%
+where the Reduced Transition matrix elements are given by 
+\begin{equation}
+L_{m^{\prime }n^{\prime }}^{mn}\left( \left\vert \Psi _{m^{\prime
+}j}\right\rangle \left\langle \Psi _{n^{\prime }k}\right\vert \right)
+_{j_{1}\cdots j_{m}k_{1}\cdots k_{m}}=\left\langle \left. \Psi _{m^{\prime
+}j}\right\vert a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
+}a_{k_{1}}\cdots a_{k_{n}}\Psi _{n^{\prime }k}\right\rangle .
+\end{equation}
+
+\item Let $m=n$
+
+\begin{enumerate}
+\item 
+\begin{equation}
+\left\langle \left. \Psi _{mj}\right\vert a_{j_{1}}^{\dagger }\cdots
+a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{m}}\Psi _{mk}\right\rangle
+=L_{m}^{m}\left( \left\vert \Psi _{mj}\right\rangle \left\langle \Psi
+_{mk}\right\vert \right) _{j_{1}\cdots j_{m}jk_{1}\cdots k_{m}}
+\end{equation}
+
+\item Let $m=n$ $\neq m^{\prime }=n^{\prime }$ 
+\begin{eqnarray}
+\left\langle \left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{m}}\Psi _{m^{\prime
+}k}\right\rangle  &=&L_{m^{\prime }}^{m}\left( \left\vert \Psi _{m^{\prime
+}j}\right\rangle \left\langle \Psi _{m^{\prime }k}\right\vert \right)
+_{j_{1}\cdots j_{m}jk_{1}\cdots k_{m}},\quad 0\leq m^{\prime }\leq m \\
+\left\langle \left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{m}}\Psi _{m^{\prime
+}k}\right\rangle  &=&L_{m^{\prime }}^{m}\left( \left\vert \Psi _{m^{\prime
+}j}\right\rangle \left\langle \Psi _{m^{\prime }k}\right\vert \right)
+_{j_{1}\cdots j_{m}jk_{1}\cdots k_{m}}=0,\quad m^{\prime }+1\leq m\leq r
+\end{eqnarray}
+
+\item In general 
+\begin{eqnarray}
+\left\langle \left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\Psi _{n^{\prime
+}k}\right\rangle  &=&L_{m^{\prime }n^{\prime }}^{mn}\left( \left\vert \Psi
+_{m^{\prime }j}\right\rangle \left\langle \Psi _{m^{\prime }k}\right\vert
+\right) _{j_{1}\cdots j_{m}jk_{1}\cdots k_{m}},\quad 0\leq m^{\prime }\leq
+m;0\leq n^{\prime }\leq n \\
+\left\langle \left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{m}}\Psi _{m^{\prime
+}k}\right\rangle  &=&L_{m^{\prime }n^{\prime }}^{mn}\left( \left\vert \Psi
+_{m^{\prime }j}\right\rangle \left\langle \Psi _{m^{\prime }k}\right\vert
+\right) _{j_{1}\cdots j_{m}jk_{1}\cdots k_{m}}=0,\quad m^{\prime }+1\leq
+m\leq r,0\leq n^{\prime }\leq n
+\end{eqnarray}
+
+\item The reduced transition density $D_{m^{\prime }n\prime }^{mn}\left(
+jk\right) $ is defined as   
+\begin{equation*}
+D_{m^{\prime }n\prime }^{mn}\left( jk\right) =L_{m^{\prime }n^{\prime
+}}^{mn}\left( \left\vert \Psi _{m^{\prime }j}\right\rangle \left\langle \Psi
+_{n^{\prime }k}\right\vert \right) 
+\end{equation*}
+\end{enumerate}
 \end{enumerate}
 \end{example}
+
+\item 
+
+\begin{example}
+\begin{enumerate}
+\item The Partial Isometry Transition operator $\left\vert \varphi
+_{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle \left\langle \varphi
+_{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert $ as projections of
+Second Quantized operators and of the generalized expansion map  
+\begin{eqnarray}
+\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert 
+&=&P_{\mathcal{H}^{m^{\prime }}}a_{j_{1}}^{\dagger }\cdots
+a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}P_{\mathcal{H}^{n^{\prime }}} \\
+\Gamma \left( \left\vert \varphi _{j_{1}}\cdots \varphi
+_{j_{m}}\right\rangle \left\langle \varphi _{k_{1}}\cdots \varphi
+_{k_{n}}\right\vert \right)  &=&a_{j_{1}}^{\dagger }\cdots
+a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}} \\
+0 &\leq &m^{\prime }\leq m;0\leq n^{\prime }\leq n
+\end{eqnarray}%
+hence 
+\begin{equation}
+\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert
+=P_{\mathcal{H}^{m^{\prime }}}\Gamma \left( \left\vert \varphi
+_{j_{1}}\cdots \varphi _{j_{m}}\right\rangle \left\langle \varphi
+_{k_{1}}\cdots \varphi _{k_{n}}\right\vert \right) P_{\mathcal{H}^{n^{\prime
+}}}.
+\end{equation}
+
+\item The generalized expansion map is invertibable
+
+\begin{enumerate}
+\item  
+\begin{equation}
+\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{m}}\right\rangle \left\langle
+\varphi _{k_{1}}\cdots \varphi _{k_{n}}\right\vert =\Gamma ^{-1}\left(
+a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots
+a_{k_{n}}\right) .
+\end{equation}
+
+\item 
+\begin{equation}
+\left\langle \left. \Psi _{m^{\prime }j}\right\vert \Gamma ^{-1}\left(
+\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert
+\right) \Psi _{n^{\prime }k}\right\rangle =L_{m^{\prime }n^{\prime
+}}^{mn}\left( \left\vert \Psi _{m^{\prime }j}\right\rangle \left\langle \Psi
+_{n^{\prime }k}\right\vert \right) _{j_{1}\cdots j_{m}jk_{1}\cdots k_{m}}
+\end{equation}
 \end{enumerate}
+\end{enumerate}
+\end{example}
+
+\item \textbf{Relationship between matrix elements of reduced transition
+operators and matrix elements of second quantized operators} 
+\begin{gather}
+\left\langle \left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\Psi _{n^{\prime
+}k}\right\rangle =L_{m^{\prime }n^{\prime }}^{mn}\left( \left\vert \Psi
+_{m^{\prime }j}\right\rangle \left\langle \Psi _{n^{\prime }k}\right\vert
+\right) _{j_{1}\cdots j_{m}jk_{1}\cdots k_{m}} \\
+0\leq m^{\prime }\leq m;0\leq n^{\prime }\leq n.
+\end{gather}
+
+\item \textbf{Ket-Bra operators in terms of SQ and Majorano operators} 
+\begin{align}
+& \left\vert \varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{q}}\right\vert
+=a_{j_{1}}^{\dagger }\cdots a_{j_{q}}^{\dagger }\left( \dprod\limits_{1\leq
+j\leq r}h_{j}\right) a_{k_{p}}\cdots a_{k_{1}}=\dprod\limits_{1\leq \kappa
+\leq q}a_{j_{\kappa }}^{\dagger }\dprod\limits_{1\leq j\leq
+r}h_{j}\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }} \\
+& \dprod\limits_{1\leq \kappa \leq q}\left( \frac{1}{\sqrt{2}}\left(
+x_{\kappa _{q}}-ix_{\kappa _{q}+r}\right) \right) \dprod\limits_{1\leq j\leq
+r}\left( \frac{1}{2}I_{\mathcal{F}}-ix_{j}x_{j+r}\right)
+\dprod\limits_{p\leq \kappa \leq 1}\left( \frac{1}{\sqrt{2}}\left(
+x_{k_{\kappa }}+ix_{k_{\kappa }+r}\right) \right) ,
+\end{align}%
+thus \emph{the most general primitive projector }is given by 
+\begin{align}
+& \left\vert \Psi \right\rangle \left\langle \Psi \right\vert =\sum_{0\leq
+p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r \\ 1\leq
+k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots k_{p}}c_{j_{1}\cdots
+j_{q}}\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{q}}\right\vert  \\
+& \sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r \\ %
+1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots k_{p}}c_{j_{1}\cdots
+j_{q}}\dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa }}^{\dagger
+}\dprod\limits_{1\leq j\leq r}h_{j}\dprod\limits_{p\leq \kappa \leq
+1}a_{k_{\kappa }} \\
+& =\sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r \\ %
+1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots k_{p}}c_{j_{1}\cdots
+j_{q}} \\
+& \qquad \times \dprod\limits_{1\leq \kappa \leq q}\left( \frac{1}{\sqrt{2}}%
+\left( x_{\kappa _{q}}-ix_{\kappa _{q}+r}\right) \right)
+\dprod\limits_{1\leq j\leq r}\left( \frac{1}{2}I_{\mathcal{F}%
+}-ix_{j}x_{j+r}\right) \dprod\limits_{p\leq \kappa \leq 1}\left( \frac{1}{%
+\sqrt{2}}\left( x_{k_{\kappa }}+ix_{k_{\kappa }+r}\right) \right) .
+\end{align}
+
+\item 
+
+\begin{enumerate}
+\item 
+\begin{equation}
+\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle \left\langle
+\varphi _{k_{1}}\cdots \varphi _{k_{q}}\right\vert =\dprod\limits_{1\leq
+\kappa \leq q}a_{j_{\kappa }}^{\dagger }\dprod\limits_{1\leq j\leq
+r}h_{j}\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }}=P_{\mathcal{H}%
+^{p}}\dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa }}^{\dagger
+}\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }}P_{\mathcal{H}^{q}}
+\end{equation}
+
+\item 
+\begin{equation}
+\dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa }}^{\dagger
+}\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }}=\Gamma \left( \left\vert
+\varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle \left\langle \varphi
+_{k_{1}}\cdots \varphi _{k_{q}}\right\vert \right) 
+\end{equation}
+
+\item 
+\begin{equation}
+\Gamma ^{-1}\left( \dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa
+}}^{\dagger }\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }}\right)
+=\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{q}}\right\vert =P_{\mathcal{%
+H}^{p}}\dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa }}^{\dagger
+}\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }}P_{\mathcal{H}^{q}}.
+\end{equation}
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Energy Expectation Values }
+
+\begin{equation}
+E_{H}\left( D\right) =\limfunc{Tr}\nolimits_{\mathcal{H}_{\mathcal{F}%
+}}\left( HD\right) =\left\langle \left. H\right\vert D\right\rangle _{%
+\mathcal{H}_{\mathcal{F}}},\quad D\in S\left( \mathcal{B}\left( \mathcal{H}_{%
+\mathcal{F}}\right) \right) ,\quad H=H^{\dagger }\in \mathcal{L}\left( 
+\mathcal{H}_{\mathcal{F}}\right) 
+\end{equation}%
+Let 
+\begin{equation}
+H=\Gamma \left( h\right) 
+\end{equation}%
+then 
+\begin{equation}
+E_{H}\left( D\right) =\left\langle \left. \Gamma \left( h\right) \right\vert
+D\right\rangle _{\mathcal{H}_{\mathcal{F}}}=\left\langle \left. h\right\vert
+L\left( D\right) \right\rangle _{\mathcal{H}_{\mathcal{F}}}.
+\end{equation}%
+In particular let the Hamiltonian $H^{2}$ contain up to two particle
+interactions then  
+\begin{equation}
+h=h_{2}=P_{\mathcal{H}^{2}}hP_{\mathcal{H}^{2}}
+\end{equation}%
+and the state be a $N$ -particle state $D^{N}$ then 
+\begin{eqnarray}
+E_{H}\left( D^{N}\right)  &=&\left\langle \left. \Gamma \left( h_{2}\right)
+\right\vert D^{N}\right\rangle _{\mathcal{H}_{\mathcal{F}}}=\left\langle
+\left. h_{2}\right\vert L\left( D^{N}\right) \right\rangle _{\mathcal{H}_{%
+\mathcal{F}}}=\left\langle \left. h_{2}\right\vert P_{\mathcal{H}%
+^{2}}L\left( D^{N}\right) P_{\mathcal{H}^{2}}\right\rangle _{\mathcal{H}_{%
+\mathcal{F}}} \\
+&=&\left\langle \left. h_{2}\right\vert P_{\mathcal{H}^{2}}L\left(
+D^{N}\right) P_{\mathcal{H}^{2}}\right\rangle _{\mathcal{H}_{\mathcal{F}}}=%
+\binom{N}{2}\left\langle \left. h_{2}\right\vert L_{N}^{2}\left(
+D^{N}\right) \right\rangle _{\mathcal{H}_{\mathcal{F}}}
+\end{eqnarray}
 
 \subsection{Even Subalgebra}
 
@@ -218,7 +475,7 @@ The even subalgebra $\mathcal{F}_{\text{even}}=C\ell _{2r}^{+}(\mathbb{C})$
 consists of elements of even grade. For $r\geq 2$, it is isomorphic to: 
 \begin{equation}
 \mathcal{F}_{\text{even}}\cong \mathrm{Mat}(2^{r-1},\mathbb{C})\oplus 
-\mathrm{Mat}(2^{r-1},\mathbb{C})
+\mathrm{Mat}(2^{r-1},\mathbb{C}).
 \end{equation}
 
 \subsection{Grade-4 Subspace}
@@ -318,7 +575,7 @@ b\right) db,
 where%
 \begin{eqnarray}
 a &>&b \\
-\left[ P\left( a\right) ,P_{B}\left( b\right) \right]  &=&0\quad  \\
+\left[ P\left( a\right) ,P_{B}\left( b\right) \right] &=&0\quad \\
 \forall a,b &\in &\mathbb{R}
 \end{eqnarray}%
 so that 

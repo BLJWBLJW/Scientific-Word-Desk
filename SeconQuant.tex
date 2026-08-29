@@ -8,7 +8,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{CSTFile=revtex4.cst}
 %TCIDATA{Created=Sunday, May 29, 2011 09:25:41}
-%TCIDATA{LastRevised=Monday, August 17, 2026 07:02:12}
+%TCIDATA{LastRevised=Thursday, August 27, 2026 11:17:06}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
@@ -10055,11 +10055,13 @@ N-P=M-Q
 then $P_{\mathcal{H}^{N-P},\mathcal{H}^{M-Q}}$ is an orthogonal projector.
 \end{remark}
 
+\section{Generalized Expansion Map $\Gamma$}
+
 \subsection{The Operator Matrix Form of the Generalized Expansion Map $\Gamma
 $}
 
 \begin{definition}
-The {\Large Generalized Expansion Map} $\Gamma\in\mathcal{L}\left(
+{\Large The} {\Large Generalized Expansion Map} $\Gamma\in\mathcal{L}\left(
 \mathcal{B}\left(  \overset{}{\mathcal{H}_{\mathcal{F}}}\right)  \right)  $%
 \begin{equation}
 \Gamma:\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \rightarrow
@@ -10077,7 +10079,11 @@ X_{PQ}\right)  =\sum_{0\leq P,Q\leq\infty}\sum_{0\leq N\leq\infty}\sqrt
 
 \begin{definition}
 The even subalgebra $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
-_{e}$ is defined by
+_{e}$ of
+\end{definition}
+
+\begin{definition}
+$\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ is defined by
 \begin{equation}
 \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}=%
 %TCIMACRO{\tbigoplus \limits_{0\leq P\leq\infty}}%
@@ -12245,8 +12251,8 @@ The Hilbert space forming the exterior algebra $\mathcal{H}_{\mathcal{F}}=%
 %EndExpansion
 \mathcal{H}^{N},
 \end{equation}
-which can be represented by contravariant vector sequences $\left(
-v_{0},v_{1},\cdots,v_{r}\right)  ,$ represented by column vectors i.e.
+which can be represented by contravariant vector sequences $\left\{
+v_{0},v_{1},\cdots,v_{r}\right\}  ,$ represented by column vectors i.e.
 \begin{equation}
 v=\left(
 \begin{array}
@@ -12286,9 +12292,10 @@ of operators i.e.
 {\textstyle\bigoplus\limits_{0\leq N\leq r}}
 %EndExpansion
 \mathcal{H}^{N}\right)  \overset{\mathfrak{R}_{P_{\mathcal{H}}P_{\mathcal{H}}%
-}}{\,{\LARGE \longrightarrow}}\mathcal{M}\left(  \left(  r+1\right)  ,\left(
-r+1\right)  ,\left\{  \left.  \mathcal{B}\left(  \mathcal{H}^{M}%
-,\mathcal{H}^{N}\right)  \right\vert 0\leq M,N\leq r\right\}  \right)  .
+}}{\,{\LARGE \longrightarrow}}\mathcal{M}\left(  \overset{}{\left(
+r+1\right)  ,\left(  r+1\right)  ,\left\{  \left.  \mathcal{B}\left(
+\mathcal{H}^{M},\mathcal{H}^{N}\right)  \right\vert 0\leq M,N\leq r\right\}
+}\right)  .
 \end{equation}
 The matrix elements of the operator matrix $\mathfrak{R}_{\left\vert
 \varphi\right\rangle \left\langle \varphi\right\vert }\left(  X\right)  $ are
@@ -12410,7 +12417,7 @@ Operators $X\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ are
 \emph{polynomials} in $\left\{  \left.  \left\vert \phi\right\rangle
 \left\langle \varphi_{j}\right\vert ,\left\vert \varphi_{j}\right\rangle
 \left\langle \phi\right\vert \right\vert 1\leq j\leq r\right\}  $ wrt the
-product "$\cdot"$ i.e.$\circ$
+Greub product "$\cdot"$ i.e.
 \begin{gather}
 \left\vert \varphi_{j_{1}}\wedge\cdots\wedge\varphi_{j_{M}}\right\rangle
 \left\langle \varphi_{k_{1}}\wedge\cdots\wedge\varphi_{k_{N}}\right\vert \\
@@ -12439,7 +12446,7 @@ with the product "$\circ$" i.e.
 }\right\rangle \left\langle \phi\right\vert \bullet\left\vert \phi
 \right\rangle \left\langle \varphi_{k_{1}}\right\vert \bullet\cdots
 \bullet\left\vert \phi\right\rangle \left\langle \varphi_{k_{N}}\right\vert
-\right)  \\
+\right) \\
 \parallel\\
 a_{j_{1}}^{\dagger}\cdots a_{j_{M}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}\\
 \parallel\\
@@ -12521,9 +12528,9 @@ r\\1\leq k_{1}<\cdots<k_{N}\leq r}}\sum_{0\leq n\leq r}\binom{n+M}{M}%
 \cdots\varphi_{j_{M}}\right\rangle \left\langle \varphi_{k_{1}}\cdots
 \varphi_{k_{N}}\right\vert \left(  \sqrt{M!N!}\right)  ^{-1}\mathcal{R}%
 _{\left\vert \mathbf{\varphi}\right\rangle \left\langle \mathbf{\varphi
-}\right\vert }\left(  X\right)  _{j_{1}\cdots j_{M}k_{1}\cdots k_{N}}%
-\bullet\sum_{1\leq l_{1}<\cdots<l_{n}\leq r}\left\vert \varphi_{l_{1}}%
-\cdots\varphi_{l_{n}}\right\rangle \left\langle \varphi_{l_{1}}\cdots
+}\right\vert }\left(  X\right)  _{j_{1}\cdots j_{M}k_{1}\cdots k_{N}}\\
+&  \bullet\sum_{1\leq l_{1}<\cdots<l_{n}\leq r}\left\vert \varphi_{l_{1}%
+}\cdots\varphi_{l_{n}}\right\rangle \left\langle \varphi_{l_{1}}\cdots
 \varphi_{l_{n}}\right\vert \\
 &  =\sum_{0\leq M,N\leq r}\sum_{\substack{1\leq j_{1}<\cdots<j_{M}\leq
 r\\1\leq k_{1}<\cdots<k_{N}\leq r}}\sum_{0\leq n\leq r}\binom{n+M}{M}%
@@ -12830,7 +12837,8 @@ B\right)  \equiv\Gamma\left(  A\right)  \Gamma\left(  B\right)
 
 \end{theorem}
 
-i.e. $\Gamma$ is algebriac wrt "$\bullet"$ and "$\circ".$
+i.e. $\Gamma$ is algebriac wrt pair "$\bullet"$ and "$\circ"$ not
+inividualy$.$
 
 Consider operators $X$ and $Y$ that have strongly convergent expansions
 \begin{align}
@@ -12961,12 +12969,13 @@ j_{1}<\cdots<j_{M_{1}}\leq r\\1\leq k_{1}<\cdots<k_{N_{1}}\leq r\\1\leq
 l_{1}<\cdots<l_{M_{2}}\leq r}}\\1\leq m_{1}<\cdots<m_{N_{2}}\leq r}}a_{j_{1}%
 }^{\dagger}\cdots a_{j_{M_{1}}}^{\dagger}a_{l_{1}}^{\dagger}\cdots
 a_{l_{M_{2}}}^{\dagger}a_{k_{1}}\cdots a_{k_{N_{1}}}a_{m_{1}}\cdots
-a_{m_{N_{2}}}\left(  \sqrt{M_{1}!M_{2}!}\right)  ^{-1}\mathcal{R}_{\left\vert
-\mathbf{\varphi}\right\rangle \left\langle \mathbf{\varphi}\right\vert
-}\left(  X\right)  _{j_{1}\cdots j_{M_{1}}k_{1}\cdots k_{N_{1}}}\left(
-\sqrt{N_{1}!N_{2}!}\right)  ^{-1}\mathcal{R}_{\left\vert \mathbf{\varphi
-}\right\rangle \left\langle \mathbf{\varphi}\right\vert }\left(  Y\right)
-_{l_{1}<\cdots<l_{M_{2}}m_{1}\cdots m_{N_{2}}}\\
+a_{m_{N_{2}}}\left(  \sqrt{M_{1}!M_{2}!}\right)  ^{-1}\times\\
+\times\mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
+\mathbf{\varphi}\right\vert }\left(  X\right)  _{j_{1}\cdots j_{M_{1}}%
+k_{1}\cdots k_{N_{1}}}\left(  \sqrt{N_{1}!N_{2}!}\right)  ^{-1}\mathcal{R}%
+_{\left\vert \mathbf{\varphi}\right\rangle \left\langle \mathbf{\varphi
+}\right\vert }\left(  Y\right)  _{l_{1}<\cdots<l_{M_{2}}m_{1}\cdots m_{N_{2}}%
+}\\
 \parallel\\
 \sum_{\substack{_{\substack{0\leq M_{1},N_{1},M_{2},N_{2}\leq r\\1\leq
 j_{1}<\cdots<j_{M_{1}}\leq r\\1\leq k_{1}<\cdots<k_{N_{1}}\leq r\\1\leq
@@ -13091,15 +13100,29 @@ The operators $X$ and $Y$ are in general different.
 \mathcal{F}  &  =\sum_{0\leq n\leq r}\mathcal{F}_{n}\\
 \mathcal{F}_{\left(  n\right)  }  &  =\sum_{0\leq m\leq n}\mathcal{F}_{m}\\
 \mathcal{F}_{n}  &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{  \left.
-x_{j_{1}}\cdots x_{j_{n}}\right\vert 1\leq j_{1}<\cdots<j_{n}\leq r\right\}
-=\mathbb{C}\text{-}\operatorname*{linspan}\left\{  \left.  a_{j_{1}}^{\dagger
-}\cdots a_{j_{P}}^{\dagger}a_{k_{Q}}\cdots a_{k_{1}}\right\vert 1\leq
-j_{1}<\cdots<j_{P}\leq r,1\leq k_{1}<\cdots<k_{Q}\leq r,P+Q=n\right\} \\
+x_{j_{1}}\cdots x_{j_{n}}\right\vert 1\leq j_{1}<\cdots<j_{n}\leq r\right\} \\
+&  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{  \left.  a_{j_{1}%
+}^{\dagger}\cdots a_{j_{P}}^{\dagger}a_{k_{Q}}\cdots a_{k_{1}}\right\vert
+1\leq j_{1}<\cdots<j_{P}\leq r,1\leq k_{1}<\cdots<k_{Q}\leq r,0\leq P,Q\leq
+n,P+Q=n\right\} \\
 \mathcal{F}_{0}  &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
 I_{\mathcal{H}_{\mathcal{F}}}\right\}
 \end{align}
 
 \end{remark}
+
+\begin{definition}%
+\begin{equation}
+\Phi:\mathcal{H}_{\mathcal{F}}\rightarrow\mathcal{B}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)
+\end{equation}
+by
+\begin{equation}
+\Phi\left(  \left\vert \Psi\right\rangle \right)  =\Gamma\left(  \left\vert
+\Psi\right\rangle \left\langle \phi\right\vert \right)  .
+\end{equation}
+
+\end{definition}
 
 \begin{remark}
 Let $X\in\mathcal{B}_{0+}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ then
@@ -13127,18 +13150,19 @@ j\leq2^{r}}\Phi\left(  \left\vert \Psi_{j}\right\rangle \right)  \Phi\left(
 
 \item
 \begin{align}
-\Phi\left(  \left\vert \Psi_{j}\right\rangle \right)  \Phi\left(  \left\langle
-\Psi_{j}\right\vert \right)   &  =\Phi\left(  \sum_{0\leq M,\leq r}\sum_{1\leq
-j_{1}<\cdots<j_{M}\leq r}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{M}%
-}\right\rangle \left(  \sqrt{M!}\right)  ^{-1}\mathcal{R}_{\left\vert
+&  \Phi\left(  \left\vert \Psi_{j}\right\rangle \right)  \Phi\left(
+\left\langle \Psi_{j}\right\vert \right) \\
+&  =\Phi\left(  \sum_{0\leq M,\leq r}\sum_{1\leq j_{1}<\cdots<j_{M}\leq
+r}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle \left(
+\sqrt{M!}\right)  ^{-1}\mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle
+}\left(  \left\vert \Psi_{j}\right\rangle \right)  _{j_{1}\cdots j_{M}%
+}\right)  \Phi\left(  \left\langle \sum_{0\leq N,\leq r}\sum_{1\leq
+k_{1}<\cdots<k_{N}\leq r}\left\vert \varphi_{k_{1}}\cdots\varphi_{k_{N}%
+}\right\rangle \left(  \sqrt{N!}\right)  ^{-1}\mathcal{R}_{\left\vert
 \mathbf{\varphi}\right\rangle }\left(  \left\vert \Psi_{j}\right\rangle
-\right)  _{j_{1}\cdots j_{M}}\right)  \Phi\left(  \left\langle \sum_{0\leq
-N,\leq r}\sum_{1\leq k_{1}<\cdots<k_{N}\leq r}\left\vert \varphi_{k_{1}}%
-\cdots\varphi_{k_{N}}\right\rangle \left(  \sqrt{N!}\right)  ^{-1}%
-\mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle }\left(  \left\vert
-\Psi_{j}\right\rangle \right)  _{k_{1}\cdots k_{N}}\right\vert \right) \\
+\right)  _{k_{1}\cdots k_{N}}\right\vert \right) \\
 &  =\sum_{0\leq M,\leq r}\sum_{1\leq j_{1}<\cdots<j_{M}\leq r}\sum_{0\leq
-N,\leq r}\sum_{1\leq k_{1}<\cdots<k_{N}\leq r}\Phi\left(  \left\vert
+N,\leq r}\sum_{1\leq k_{1}<\cdots<k_{N}\leq r}\Gamma\left(  \left\vert
 \varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle \right)  \Phi\left(
 \left\langle \varphi_{k_{1}}\cdots\varphi_{k_{N}}\right\vert \right)  \left(
 \sqrt{M!}\right)  ^{-1}\left(  \sqrt{N!}\right)  ^{-1}\mathcal{R}_{\left\vert
@@ -13263,7 +13287,7 @@ r,1\leq k_{1}<k_{2}\leq r\right\} \\
 \end{align}
 
 
-\item
+\item \label{Def if F_n}%
 \begin{equation}
 \mathcal{F}_{n}=\mathcal{A}_{00}\oplus\bigoplus\limits_{p+q=n}\mathcal{A}_{pq}%
 \end{equation}
@@ -13303,9 +13327,9 @@ x_{j_{1}}x_{j_{2}}\right\vert 1\leq j_{1}<j_{2}\leq2r\right\} \\
 \left(  a_{j_{2}}^{\dagger}+a_{j_{2}}\right) \\
 \frac{i}{2}\left(  a_{j_{2}}^{\dagger}-a_{j_{2}}\right)
 \end{array}
-\right.  \right\vert 1\leq j_{1},j_{2}\leq r\right\}  +\mathbb{C}%
-\text{-}\operatorname*{linspan}\left\{  \left.  \frac{i}{2}\left(  a_{j_{1}%
-}^{\dagger}-a_{j_{1}}\right)  \left\{
+\right.  \right\vert 1\leq j_{1},j_{2}\leq r\right\} \\
+&  +\mathbb{C}\text{-}\operatorname*{linspan}\left\{  \left.  \frac{i}%
+{2}\left(  a_{j_{1}}^{\dagger}-a_{j_{1}}\right)  \left\{
 \begin{array}
 [c]{c}%
 \left(  a_{j_{2}}^{\dagger}+a_{j_{2}}\right) \\
@@ -13642,9 +13666,9 @@ giving%
 \begin{gather}
 \Phi\left(  \left\vert \Psi_{j}\right\rangle \right)  \Phi\left(  \left\vert
 \Psi_{j}\right\rangle \right)  ^{\dagger}=\Gamma\left(  \left\vert \Psi
-_{j}\right\rangle \left\langle \Psi_{j}\right\vert \right)  =\sum
-_{\substack{0\leq M,\leq1\\0\leq N,\leq1}}\sum_{\substack{1\leq j_{1}%
-<\cdots<j_{M}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq r}}\left\{  \left(
+_{j}\right\rangle \left\langle \Psi_{j}\right\vert \right) \\
+=\sum_{\substack{0\leq M,\leq1\\0\leq N,\leq1}}\sum_{\substack{1\leq
+j_{1}<\cdots<j_{M}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq r}}\left\{  \left(
 a_{j_{1}}^{\dagger}\cdots a_{j_{M}}^{\dagger}a_{k_{N}}\cdots a_{k_{1}}\right)
 \left(  \sqrt{M!}\right)  ^{-1}\left(  \sqrt{N!}\right)  ^{-1}\left(
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle }\left(  \left\vert
@@ -13829,9 +13853,9 @@ $\left\vert \Psi_{j}\right\rangle \left\langle \Psi_{j}\right\vert
 \begin{align}
 \Phi\left(  \left\vert \Psi_{j}\right\rangle \right)  \Phi\left(  \left\vert
 \Psi_{j}\right\rangle \right)  ^{\dagger}  &  =\Gamma\left(  \left\vert
-\Psi_{j}\right\rangle \left\langle \Psi_{j}\right\vert \right)  =\sum
-_{\substack{0\leq M+N\leq2\\0\leq M,\leq2\\0\leq N,\leq2}}\sum
-_{\substack{1\leq j_{1}<\cdots<j_{M}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq
+\Psi_{j}\right\rangle \left\langle \Psi_{j}\right\vert \right) \\
+&  =\sum_{\substack{0\leq M+N\leq2\\0\leq M,\leq2\\0\leq N,\leq2}%
+}\sum_{\substack{1\leq j_{1}<\cdots<j_{M}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq
 r}}\left\{  \left(  a_{j_{1}}^{\dagger}\cdots a_{j_{M}}^{\dagger}a_{k_{N}%
 }\cdots a_{k_{1}}\right)  \left(  \sqrt{M!}\right)  ^{-1}\left(  \sqrt
 {N!}\right)  ^{-1}\left(  \mathcal{R}_{\left\vert \mathbf{\varphi
@@ -13871,9 +13895,9 @@ $\left\vert \Psi_{j}\right\rangle \left\langle \Psi_{j}\right\vert
 \begin{align}
 \Phi\left(  \left\vert \Psi_{j}\right\rangle \right)  \Phi\left(  \left\vert
 \Psi_{j}\right\rangle \right)  ^{\dagger}  &  =\Gamma\left(  \left\vert
-\Psi_{j}\right\rangle \left\langle \Psi_{j}\right\vert \right)  =\sum
-_{\substack{0\leq M+N\leq4\\0\leq M,\leq2\\0\leq N,\leq2}}\sum
-_{\substack{1\leq j_{1}<\cdots<j_{M}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq
+\Psi_{j}\right\rangle \left\langle \Psi_{j}\right\vert \right) \\
+&  =\sum_{\substack{0\leq M+N\leq4\\0\leq M,\leq2\\0\leq N,\leq2}%
+}\sum_{\substack{1\leq j_{1}<\cdots<j_{M}\leq r\\1\leq k_{1}<\cdots<k_{N}\leq
 r}}\left\{  \left(  a_{j_{1}}^{\dagger}\cdots a_{j_{M}}^{\dagger}a_{k_{N}%
 }\cdots a_{k_{1}}\right)  \left(  \sqrt{M!}\right)  ^{-1}\left(  \sqrt
 {N!}\right)  ^{-1}\left(  \mathcal{R}_{\left\vert \mathbf{\varphi
@@ -14097,6 +14121,7 @@ j_{2}<\cdots<j_{n}\leq r.
 \end{corollary}
 
 \begin{theorem}
+Mapping of \emph{Non Positive }Operators to Positive Operators
 \emph{\label{Kummar Theorem}: Let the non positive operator }$X\left(
 \alpha,\mathbf{\lambda}\right)  \in\mathcal{B}_{0}\left(  \mathcal{H}%
 _{\mathcal{F}}\right)  $ with negative eigenvalues $\left\{  \left.
@@ -14438,7 +14463,7 @@ _{j}\right)  .
 \end{enumerate}
 \end{example}
 
-\paragraph{Properties of the generalized expansion map $\Gamma$}
+\subsubsection{Properties of the generalized expansion map $\Gamma$}
 
 \begin{definition}
 The quantization map $\Phi\in\mathcal{L}\left(  \mathcal{H}^{1}\oplus
@@ -14811,29 +14836,30 @@ Y\right)  .
 &  \Gamma\left(  \sum_{1\leq k_{1},j_{1}\leq R}\overline{Y_{j_{1}k_{1}}%
 }\left\vert \Psi_{k_{1}}\right\rangle \left\langle \Psi_{j_{1}}\right\vert
 \circ\sum_{1\leq k_{2},j_{2}\leq R}Y_{j_{2}k_{2}}\left\vert \Psi_{j_{2}%
-}\right\rangle \left\langle \Psi_{k_{2}}\right\vert \right)  =\sum_{1\leq
-k_{1},j_{1}\leq R}\sum_{1\leq k_{2},j_{2}\leq R}\overline{Y_{j_{1}k_{1}}%
-}\left\langle \left.  \Psi_{j_{1}}\right\vert \Psi_{j_{2}}\right\rangle
-Y_{j_{2}k_{2}}\Gamma\left(  \left\vert \Psi_{k_{1}}\right\rangle \left\langle
-\Psi_{k_{2}}\right\vert \right) \\
+}\right\rangle \left\langle \Psi_{k_{2}}\right\vert \right) \\
+&  =\sum_{1\leq k_{1},j_{1}\leq R}\sum_{1\leq k_{2},j_{2}\leq R}%
+\overline{Y_{j_{1}k_{1}}}\left\langle \left.  \Psi_{j_{1}}\right\vert
+\Psi_{j_{2}}\right\rangle Y_{j_{2}k_{2}}\Gamma\left(  \left\vert \Psi_{k_{1}%
+}\right\rangle \left\langle \Psi_{k_{2}}\right\vert \right) \\
 &  =\sum_{1\leq k_{1},j_{1}\leq R}\sum_{1\leq k_{2},j_{2}\leq R}%
 \overline{Y_{j_{1}k_{1}}}\left\langle \left.  \Psi_{j_{1}}\right\vert
 \Psi_{j_{2}}\right\rangle Y_{j_{2}k_{2}}\Phi\left(  \left\vert \Psi_{k_{1}%
 }\right\rangle \right)  ^{\dagger}\circ\Phi\left(  \left\langle \Psi_{k_{2}%
-}\right\vert \right)  =\sum_{1\leq k_{1},j_{1}\leq R}\sum_{1\leq k_{2}%
-,j_{2}\leq R}\overline{Y_{j_{1}k_{1}}}\left\langle \left.  \Psi_{j_{1}%
-}\right\vert \Psi_{j_{2}}\right\rangle Y_{j_{2}k_{2}}\Gamma\left(  \left\vert
-\Psi_{k_{1}}\right\rangle \left\langle \phi\right\vert \right)  \circ
-\Gamma\left(  \left\vert \phi\right\rangle \left\langle \Psi_{k_{2}%
 }\right\vert \right) \\
+&  =\sum_{1\leq k_{1},j_{1}\leq R}\sum_{1\leq k_{2},j_{2}\leq R}%
+\overline{Y_{j_{1}k_{1}}}\left\langle \left.  \Psi_{j_{1}}\right\vert
+\Psi_{j_{2}}\right\rangle Y_{j_{2}k_{2}}\Gamma\left(  \left\vert \Psi_{k_{1}%
+}\right\rangle \left\langle \phi\right\vert \right)  \circ\Gamma\left(
+\left\vert \phi\right\rangle \left\langle \Psi_{k_{2}}\right\vert \right) \\
 &  =\sum_{1\leq k_{1},j_{1}\leq R}\sum_{1\leq k_{2},j_{2}\leq R}%
 \overline{Y_{j_{1}k_{1}}}\left\langle \left.  \Psi_{j_{1}}\right\vert
 \Psi_{j_{2}}\right\rangle Y_{j_{2}k_{2}}\Gamma\left(  \left\vert
 \overset{}{\Psi_{k_{1}}}\right\rangle \left\langle \overset{}{\phi}\right\vert
 \bullet\left\vert \overset{}{\phi}\right\rangle \left\langle \overset{}{\Psi
-_{k_{2}}}\right\vert \right)  =\sum_{1\leq k_{1},j_{1}\leq R}\sum_{1\leq
-k_{2},j_{2}\leq R}\overline{Y_{j_{1}k_{1}}}\left\langle \left.  \Psi_{j_{1}%
-}\right\vert \Psi_{j_{2}}\right\rangle Y_{j_{2}k_{2}}\Gamma\left(  \left\vert
+_{k_{2}}}\right\vert \right) \\
+&  =\sum_{1\leq k_{1},j_{1}\leq R}\sum_{1\leq k_{2},j_{2}\leq R}%
+\overline{Y_{j_{1}k_{1}}}\left\langle \left.  \Psi_{j_{1}}\right\vert
+\Psi_{j_{2}}\right\rangle Y_{j_{2}k_{2}}\Gamma\left(  \left\vert
 \overset{}{\Psi_{k_{1}}}\right\rangle \left\langle \overset{}{\phi}\right\vert
 \right)  \circ\Gamma\left(  \left\vert \overset{}{\phi}\right\rangle
 \left\langle \overset{}{\Psi_{k_{2}}}\right\vert \right)
@@ -15115,8 +15141,9 @@ _{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}%
 \begin{equation}
 \left\langle \left.  X\right\vert Y\right\rangle _{\left\langle \mathcal{B}%
 \left(  \mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(
-\mathcal{H}_{\mathcal{F}}\right)  \right\rangle }=X^{\dagger}\left(  Y\right)
-=\operatorname*{Tr}\nolimits_{\mathcal{H}}\left\{  X^{\dagger}Y\right\}
+\mathcal{H}_{\mathcal{F}}\right)  \right\rangle }=\left\langle X^{\dagger
+}\right\vert \left(  Y\right)  =\operatorname*{Tr}\nolimits_{\mathcal{H}%
+}\left\{  X^{\dagger}Y\right\}
 \end{equation}
 is the generalized contraction operator $L$
 \begin{equation}
@@ -15174,13 +15201,13 @@ L\left(  \overset{}{\left\vert \Psi_{5}\right\rangle \left\langle \Psi
 _{6}\right\vert \bullet\left\vert \Psi_{7}\right\rangle \left\langle \Psi
 _{8}\right\vert }\right)  \right\rangle _{\left\langle \mathcal{B}\left(
 \mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}%
-_{\mathcal{F}}\right)  \right\rangle }=\left\langle \left.
-\overset{}{\left\vert \Psi_{1}\wedge\Psi_{3}\right\rangle \left\langle
-\Psi_{2}\wedge\Psi_{4}\right\vert }\right\vert L\left(  \overset{}{\left\vert
-\Psi_{5}\wedge\Psi_{7}\right\rangle \left\langle \Psi_{6}\wedge\Psi
-_{8}\right\vert }\right)  \right\rangle _{\left\langle \mathcal{B}\left(
-\mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}%
 _{\mathcal{F}}\right)  \right\rangle }\\
+&  =\left\langle \left.  \overset{}{\left\vert \Psi_{1}\wedge\Psi
+_{3}\right\rangle \left\langle \Psi_{2}\wedge\Psi_{4}\right\vert }\right\vert
+L\left(  \overset{}{\left\vert \Psi_{5}\wedge\Psi_{7}\right\rangle
+\left\langle \Psi_{6}\wedge\Psi_{8}\right\vert }\right)  \right\rangle
+_{\left\langle \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
+,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right\rangle }\\
 &  =\left\langle \left.  \overset{}{\left(  \left\vert \Psi_{1}\right\rangle
 \left\langle \Psi_{2}\right\vert \bullet\left\vert \Psi_{3}\right\rangle
 \left\langle \Psi_{4}\right\vert \right)  }\right\vert L\left(
@@ -15188,21 +15215,22 @@ _{\mathcal{F}}\right)  \right\rangle }\\
 \bullet\left\vert \Psi_{7}\right\rangle \left\langle \Psi_{8}\right\vert
 }\right)  \right\rangle _{\left\langle \mathcal{B}\left(  \mathcal{H}%
 _{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}%
-}\right)  \right\rangle }=\left\langle \left.  \Gamma\left(  \left(
-\overset{}{\left\vert \Psi_{1}\right\rangle \left\langle \Psi_{2}\right\vert
-\bullet\left\vert \Psi_{3}\right\rangle \left\langle \Psi_{4}\right\vert
-}\right)  \right)  \right\vert \left(  \overset{}{\left\vert \Psi
-_{5}\right\rangle \left\langle \Psi_{6}\right\vert \bullet\left\vert \Psi
-_{7}\right\rangle \left\langle \Psi_{8}\right\vert }\right)  \right\rangle
-_{\left\langle \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
-,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right\rangle }\\
+}\right)  \right\rangle }\\
+&  =\left\langle \left.  \Gamma\left(  \left(  \overset{}{\left\vert \Psi
+_{1}\right\rangle \left\langle \Psi_{2}\right\vert \bullet\left\vert \Psi
+_{3}\right\rangle \left\langle \Psi_{4}\right\vert }\right)  \right)
+\right\vert \left(  \overset{}{\left\vert \Psi_{5}\right\rangle \left\langle
+\Psi_{6}\right\vert \bullet\left\vert \Psi_{7}\right\rangle \left\langle
+\Psi_{8}\right\vert }\right)  \right\rangle _{\left\langle \mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  \right\rangle }\\
 &  =\left\langle \left.  \Gamma\left(  \overset{}{\left\vert \Psi_{1}%
 \wedge\Psi_{3}\right\rangle \left\langle \Psi_{2}\wedge\Psi_{4}\right\vert
 }\right)  \right\vert \overset{}{\left\vert \Psi_{5}\wedge\Psi_{7}%
 \right\rangle \left\langle \Psi_{6}\wedge\Psi_{8}\right\vert }\right\rangle
 _{\left\langle \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
-,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right\rangle
-}=\left\langle \left.  \overset{}{\mathbf{\Phi}\left(  \left\vert \Psi
+,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right\rangle }\\
+&  =\left\langle \left.  \overset{}{\mathbf{\Phi}\left(  \left\vert \Psi
 _{1}\wedge\Psi_{3}\right\rangle \right)  \mathbf{\Phi}\left(  \left\langle
 \Psi_{2}\wedge\Psi_{4}\right\vert \right)  }\right\vert L\left(
 \overset{}{\left\vert \Psi_{5}\wedge\Psi_{7}\right\rangle \left\langle
@@ -15213,8 +15241,8 @@ _{1}\wedge\Psi_{3}\right\rangle \right)  \mathbf{\Phi}\left(  \left\langle
 \overset{}{\mathbf{\Phi}\left(  \left\langle \Psi_{2}\wedge\Psi_{4}\right\vert
 \right)  \mathbf{\Phi}\left(  \left\vert \Psi_{1}\wedge\Psi_{3}\right\rangle
 \right)  }\left\vert \overset{}{\Psi_{5}\wedge\Psi_{7}}\right\rangle
-\left\langle \overset{}{\Psi_{6}\wedge\Psi_{8}}\right\vert \right\}
-=\left\langle \left.  \overset{}{\Psi_{6}\wedge\Psi_{8}}\right\vert \left(
+\left\langle \overset{}{\Psi_{6}\wedge\Psi_{8}}\right\vert \right\} \\
+&  =\left\langle \left.  \overset{}{\Psi_{6}\wedge\Psi_{8}}\right\vert \left(
 \overset{}{\mathbf{\Phi}\left(  \left\langle \Psi_{2}\wedge\Psi_{4}\right\vert
 \right)  \mathbf{\Phi}\left(  \left\vert \Psi_{1}\wedge\Psi_{3}\right\rangle
 \right)  }\right)  \overset{}{\Psi_{5}\wedge\Psi_{7}}\right\rangle
@@ -15238,14 +15266,15 @@ _{\left\langle \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
 \bullet\left\vert \Psi_{3}\right\rangle \left\langle \Psi_{4}\right\vert
 }\right)  \right\rangle _{\left\langle \mathcal{B}\left(  \mathcal{H}%
 _{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}%
-}\right)  \right\rangle }=\left\langle \left.  \Gamma\left(  \left(
-\overset{}{\left\vert \Psi_{1}\right\rangle \left\langle \Psi_{2}\right\vert
-\bullet\left\vert \Psi_{3}\right\rangle \left\langle \Psi_{4}\right\vert
-}\right)  \right)  \right\vert \left(  \overset{}{\left\vert \Psi
+}\right)  \right\rangle }\\
+&  =\left\langle \left.  \Gamma\left(  \left(  \overset{}{\left\vert \Psi
 _{1}\right\rangle \left\langle \Psi_{2}\right\vert \bullet\left\vert \Psi
-_{3}\right\rangle \left\langle \Psi_{4}\right\vert }\right)  \right\rangle
-_{\left\langle \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
-,\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right\rangle }\\
+_{3}\right\rangle \left\langle \Psi_{4}\right\vert }\right)  \right)
+\right\vert \left(  \overset{}{\left\vert \Psi_{1}\right\rangle \left\langle
+\Psi_{2}\right\vert \bullet\left\vert \Psi_{3}\right\rangle \left\langle
+\Psi_{4}\right\vert }\right)  \right\rangle _{\left\langle \mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}%
+_{\mathcal{F}}\right)  \right\rangle }\\
 &  =\left\langle \left.  \Gamma\left(  \left(  \overset{}{\left\vert \Psi
 _{1}\right\rangle \left\langle \Psi_{2}\right\vert }\right)  \right)
 \circ\Gamma\left(  \left(  \overset{}{\left\vert \Psi_{3}\right\rangle
@@ -15273,8 +15302,9 @@ pair $\left\langle \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
 \begin{equation}
 \left\langle \left.  X\right\vert Y\right\rangle _{\left\langle \mathcal{B}%
 \left(  \mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(
-\mathcal{H}_{\mathcal{F}}\right)  \right\rangle }=X^{\dagger}\left(  Y\right)
-=\operatorname*{Tr}\nolimits_{\mathcal{H}}\left\{  X^{\dagger}Y\right\}  .
+\mathcal{H}_{\mathcal{F}}\right)  \right\rangle }=\left\langle X^{\dagger
+}\right\vert \left(  Y\right)  =\operatorname*{Tr}\nolimits_{\mathcal{H}%
+}\left\{  X^{\dagger}Y\right\}  .
 \end{equation}
 
 
@@ -15282,8 +15312,8 @@ pair $\left\langle \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
 \begin{equation}
 \left(  \left.  X\right\vert Y\right)  _{\left\langle \mathcal{B}\left(
 \mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(  \mathcal{H}%
-_{\mathcal{F}}\right)  \right\rangle }=X^{t}\left(  Y\right)
-=\operatorname*{Tr}\nolimits_{\mathcal{H}}\left\{  X^{t}Y\right\}  .
+_{\mathcal{F}}\right)  \right\rangle }=\left\langle X^{t}\right\vert \left(
+Y\right)  =\operatorname*{Tr}\nolimits_{\mathcal{H}}\left\{  X^{t}Y\right\}  .
 \end{equation}
 
 
@@ -15291,14 +15321,16 @@ _{\mathcal{F}}\right)  \right\rangle }=X^{t}\left(  Y\right)
 \begin{equation}
 \left\lceil \left.  X\right\vert Y\right\rfloor _{\left\langle \mathcal{B}%
 \left(  \mathcal{H}_{\mathcal{F}}\right)  ,\mathcal{B}_{1}\left(
-\mathcal{H}_{\mathcal{F}}\right)  \right\rangle }=X\left(  Y\right)
-=\operatorname*{Tr}\nolimits_{\mathcal{H}}\left\{  XY\right\}  .
+\mathcal{H}_{\mathcal{F}}\right)  \right\rangle }=\left\langle X\right\vert
+\left(  Y\right)  =\operatorname*{Tr}\nolimits_{\mathcal{H}}\left\{
+XY\right\}  .
 \end{equation}
 
 \end{enumerate}
 
 \begin{remark}
-Let $X\in V\subseteq V^{dd}$ and $A,f_{A}\in V^{d},\widehat{f_{X}}\in V^{dd}$%
+Let $X\in V\subseteq V^{dd}$ and $A,\,f_{A}\in V^{d},\,\widehat{f_{X}}\in
+V^{dd}$%
 \begin{equation}
 f_{A}\left(  X\right)  =\left\langle \left.  A\right\vert X\right\rangle
 \quad\forall X\quad\text{for each }A
@@ -15310,9 +15342,8 @@ X\right\rangle \quad\forall A\quad\text{for each }X.
 
 \end{remark}
 
-\subsubsection{Sub Algebra of Particle Conserving Operators $\mathcal{B}%
-\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}$ i.e. Gauge Invariant
-Operators}
+\subsection{Sub Algebra of Particle Conserving Operators $\mathcal{B}\left(
+\mathcal{H}_{\mathcal{F}}\right)  _{e}$ i.e. Gauge Invariant Operators}
 
 \begin{remark}
 In this section $\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $ will
@@ -15512,15 +15543,7 @@ Y_{r}%
 \end{array}
 \right)  ,
 \end{equation}
-where
 
-\begin{notation}%
-\begin{equation}
-\mathfrak{G}_{M}^{N}=\mathcal{R}\left(  \mathfrak{\Gamma}\left(  X\right)
-\right)  _{MN}.
-\end{equation}
-
-\end{notation}
 
 \begin{example}
 $r=4$%
@@ -15739,7 +15762,8 @@ _{\boldsymbol{\Phi}}\left(  A\right)  \left\langle \boldsymbol{\Phi
 One should pay careful attention to the norms of the bases elements in
 $\left(  \left\vert \boldsymbol{\Phi}\right\rangle \left\langle
 \boldsymbol{\Phi}\right\vert \right)  $ and $\left(  \boldsymbol{a}^{\dagger
-}\boldsymbol{a}\right)  $ in particular operator and trace class norms$.$
+}\boldsymbol{a}\right)  $ in particular \emph{operator} and \emph{trace} class
+norms$.$
 \end{remark}
 
 \begin{remark}
@@ -15749,20 +15773,24 @@ terms of matrix elements that are matrices
 \begin{align}
 \Gamma\left(  A\right)   &  =\left(  \boldsymbol{a}^{\dagger}\right)
 \mathcal{R}_{\Phi\Phi}\left(  A\right)  \left(  \boldsymbol{a}\right)  ^{t}\\
-&  =\left(  I_{\mathcal{H}_{\mathcal{F}}},\cdots,\boldsymbol{a}_{n}^{\dagger
-},\cdots,\boldsymbol{a}_{r}^{\dagger}\right)  \left(
+&  =\left(  I_{\mathcal{H}_{\mathcal{F}}},\boldsymbol{a}_{1}^{\dagger}%
+\cdots,\boldsymbol{a}_{n}^{\dagger},\cdots,\boldsymbol{a}_{r}^{\dagger
+}\right)  \left(
 \begin{array}
 [c]{ccc}%
-\mathcal{R}_{\Phi\Phi}\left(  A\right)  _{11} & \cdots & \mathcal{R}_{\Phi
-\Phi}\left(  A\right)  _{12^{r}}\\
+\mathcal{R}_{\Phi\Phi}\left(  A\right)  _{00} & \cdots & \mathcal{R}_{\Phi
+\Phi}\left(  A\right)  _{0\left(  2^{r}-1\right)  }\\
 \vdots & \ddots & \vdots\\
-\mathcal{R}_{\Phi\Phi}\left(  A\right)  _{2^{r}1} & \cdots & \mathcal{R}%
-_{\Phi\Phi}\left(  A\right)  _{2^{r}2^{r}}%
+\mathcal{R}_{\Phi\Phi}\left(  A\right)  _{\left(  2^{r}-1\right)  0} & \cdots
+& \mathcal{R}_{\Phi\Phi}\left(  A\right)  _{\left(  2^{r}-1\right)  \left(
+2^{r}-1\right)  }%
 \end{array}
 \right)  \left(
 \begin{array}
 [c]{c}%
 I_{\mathcal{H}_{\mathcal{F}}}\\
+\vdots\\
+\boldsymbol{a}_{1}^{\dagger}\\
 \vdots\\
 \boldsymbol{a}_{n}^{\dagger}\\
 \vdots\\
@@ -15779,8 +15807,8 @@ _{j_{1}\cdots j_{m}k_{1}\cdots k_{n}}.
 \item Expansion of the first quantized operator $A$ in terms of matrix
 elements that are matrices%
 \begin{align}
-A  &  =\left(  \boldsymbol{\Phi}\right)  \mathcal{R}_{\Phi\Phi}\left(
-A\right)  \left(  \boldsymbol{\Phi}\right)  ^{t}\\
+A  &  =\left(  \boldsymbol{\varphi}\right)  \mathcal{R}_{\Phi\Phi}\left(
+A\right)  \left(  \boldsymbol{\varphi}\right)  ^{t}\\
 &  =\left(  \left\vert \phi\right\rangle ,\cdots,\left\vert
 \boldsymbol{\varphi}_{M}\right\rangle ,\cdots,\left\vert \boldsymbol{\varphi
 }_{r}\right\rangle \right)  \left(
@@ -15819,35 +15847,35 @@ creator/annihilator basis.
 \end{remark}
 
 \begin{definition}
-Injection $\Upsilon\in\mathcal{B}\left(  \mathcal{H}^{1},\mathcal{B}%
-_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right)  $ of the one particle
-Hilbert space $\mathcal{H}^{1}$ into the Hilbert Schmidt operator space
+Injection $\Phi\in\mathcal{B}\left(  \mathcal{H}^{1},\mathcal{B}_{2}\left(
+\mathcal{H}_{\mathcal{F}}\right)  \right)  $ of the one particle Hilbert space
+$\mathcal{H}^{1}$ into the Hilbert Schmidt operator space
 \begin{equation}
-\Upsilon:\mathcal{H}^{1}\rightarrow\mathcal{B}_{2}\left(  \mathcal{H}%
+\Phi:\mathcal{H}^{1}\rightarrow\mathcal{B}_{2}\left(  \mathcal{H}%
 ^{1},\mathcal{H}^{0}\right)  \subset\mathcal{B}_{2}\left(  \mathcal{H}%
 _{\mathcal{F}}\right)  \subset\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
 }\right)
 \end{equation}
 given by%
 \begin{equation}
-\Upsilon\left(  \left\vert \varphi_{j}\right\rangle \right)  =\left\vert
+\Phi\left(  \left\vert \varphi_{j}\right\rangle \right)  =\left\vert
 \varphi_{j}\right\rangle \left\langle \phi\right\vert ,\quad1\leq j\leq r.
 \end{equation}
 
 \end{definition}
 
 \begin{definition}
-The dual map $\Upsilon^{d}\in\mathcal{B}\left(  \mathcal{H}^{0},\mathcal{H}%
-^{1}\right)  $ of $\Upsilon$
+The dual map $\Phi^{d}\in\mathcal{B}\left(  \mathcal{H}^{0},\mathcal{H}%
+^{1}\right)  $ of $\Phi$
 \begin{equation}
-\Upsilon^{d}:\mathcal{H}^{1d}\rightarrow\mathcal{B}\left(  \mathcal{H}%
+\Phi^{d}:\mathcal{H}^{1d}\rightarrow\mathcal{B}\left(  \mathcal{H}%
 ^{0},\mathcal{H}^{1}\right)  \subset\mathcal{B}_{2}\left(  \mathcal{H}%
 _{\mathcal{F}}\right)  \subset\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
 }\right)
 \end{equation}
 given by
 \begin{equation}
-\Upsilon^{d}\left(  \left\langle \varphi_{j}\right\vert \right)  =\left\vert
+\Phi^{d}\left(  \left\langle \varphi_{j}\right\vert \right)  =\left\vert
 \phi\right\rangle \left\langle \varphi_{j}\right\vert ,\quad1\leq j\leq r.
 \end{equation}
 
@@ -15856,18 +15884,17 @@ given by
 \begin{lemma}%
 \begin{equation}
 \left\langle \left.  v_{1}\right\vert v_{2}\right\rangle _{\mathcal{H}%
-_{\mathcal{F}}}=\left\langle \left.  \Upsilon\left(  \left\vert v_{1}%
-\right\rangle \right)  \right\vert \Upsilon\left(  \left\vert v_{2}%
-\right\rangle \right)  \right\rangle _{\mathcal{B}_{2}\left(  \mathcal{H}%
-_{\mathcal{F}}\right)  }=\operatorname*{Tr}\left\{  \left(  \Upsilon\left(
-\left\vert v_{1}\right\rangle \right)  ^{\dagger}\Upsilon\left(  \left\vert
-v_{2}\right\rangle \right)  \right)  \right\}  =\operatorname*{Tr}\left\{
-\left(  \left\vert \phi\right\rangle \left\langle v_{1}\right\vert \left\vert
-v_{2}\right\rangle \left\langle \phi\right\vert \right)  =\left\langle \left.
-v_{1}\right\vert v_{2}\right\rangle _{\mathcal{H}_{\mathcal{F}}}\left\langle
-\left.  \phi\right\vert \phi\right\rangle _{\mathcal{H}_{\mathcal{F}}%
-}\right\}  =\left\langle \left.  v_{1}\right\vert v_{2}\right\rangle
-_{\mathcal{H}_{\mathcal{F}}}%
+_{\mathcal{F}}}=\left\langle \left.  \Phi\left(  \left\vert v_{1}\right\rangle
+\right)  \right\vert \Phi\left(  \left\vert v_{2}\right\rangle \right)
+\right\rangle _{\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)
+}=\operatorname*{Tr}\left\{  \left(  \Phi\left(  \left\vert v_{1}\right\rangle
+\right)  ^{\dagger}\Phi\left(  \left\vert v_{2}\right\rangle \right)  \right)
+\right\}  =\operatorname*{Tr}\left\{  \left(  \left\vert \phi\right\rangle
+\left\langle v_{1}\right\vert \left\vert v_{2}\right\rangle \left\langle
+\phi\right\vert \right)  =\left\langle \left.  v_{1}\right\vert v_{2}%
+\right\rangle _{\mathcal{H}_{\mathcal{F}}}\left\langle \left.  \phi\right\vert
+\phi\right\rangle _{\mathcal{H}_{\mathcal{F}}}\right\}  =\left\langle \left.
+v_{1}\right\vert v_{2}\right\rangle _{\mathcal{H}_{\mathcal{F}}}%
 \end{equation}
 thus $\Upsilon$ is a Hilbert space isometric isomorphism.
 \end{lemma}
@@ -15880,8 +15907,8 @@ The creation and annihilation operators $\left\{  \left.  a_{j}^{\dagger
 \item
 \begin{equation}
 a_{j}^{\dagger}=\Gamma\left(  \left\vert \varphi_{j}\right\rangle \left\langle
-\phi\right\vert \right)  =\Gamma\left(  \Upsilon\left(  \left\vert \varphi
-_{j}\right\rangle \right)  \right)  \equiv\left[  \Gamma\circ\Upsilon\right]
+\phi\right\vert \right)  =\Gamma\left(  \Phi\left(  \left\vert \varphi
+_{j}\right\rangle \right)  \right)  \equiv\left[  \Gamma\circ\Phi\right]
 \left(  \left\vert \varphi_{j}\right\rangle \right)  =\Phi\left(  \left\vert
 \varphi_{j}\right\rangle \right)  ,\quad1\leq j\leq r
 \end{equation}
@@ -15890,11 +15917,11 @@ _{j}\right\rangle \right)  \right)  \equiv\left[  \Gamma\circ\Upsilon\right]
 \item
 \begin{equation}
 a_{j}=\Gamma\left(  \left\vert \phi\right\rangle \left\langle \varphi
-_{j}\right\vert \right)  =\left[  \Gamma\circ\Upsilon^{d}\right]  \left(
-\varphi_{j}^{d}\right)  =\left[  \Gamma\circ\Upsilon^{d}\right]  \left(
-\varphi_{j}^{d}\right)  =\left[  \Gamma\circ\Upsilon^{d}\right]  \left(
+_{j}\right\vert \right)  =\left[  \Gamma\circ\Phi^{d}\right]  \left(
+\varphi_{j}^{d}\right)  =\left[  \Gamma\circ\Phi^{d}\right]  \left(
+\varphi_{j}^{d}\right)  =\left[  \Gamma\circ\Phi^{d}\right]  \left(
 \digamma_{\left\vert {}\right\rangle }\left(  \varphi_{j}\right)  \right)
-=\left[  \Gamma\circ\Upsilon^{d}\circ\digamma_{\left\vert {}\right\rangle
+=\left[  \Gamma\circ\Phi^{d}\circ\digamma_{\left\vert {}\right\rangle
 }\right]  \left(  \varphi_{j}\right)  =\Phi\left(  \left\langle \varphi
 _{j}\right\vert \right)  ,\quad1\leq j\leq r,
 \end{equation}
@@ -16065,7 +16092,7 @@ _{\mathcal{F}}\right)  }=\left\Vert a_{j}^{\dagger}\right\Vert _{\mathcal{B}%
 \end{equation}
 
 
-\item This is true for any idempotent $A$
+\item This is also true for any idempotent $A$
 \begin{equation}
 \left\Vert A^{2}\right\Vert _{\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
 }\right)  }=\left\Vert A\right\Vert _{\mathcal{B}\left(  \mathcal{H}%
@@ -16116,8 +16143,9 @@ h_{j}\right\}  =\frac{1}{2}.
 
 \item Trace of the identity
 \begin{equation}
-\operatorname*{Tr}\left\{  I_{\mathcal{H}_{\mathcal{F}}}\right\}  =2^{r}%
-=2^{r}\operatorname*{tr}\left\{  I_{\mathcal{H}_{\mathcal{F}}}\right\}  .
+\operatorname*{Tr}\left\{  I_{\mathcal{H}_{\mathcal{F}}}\right\}
+=2^{r}\operatorname*{tr}\left\{  I_{\mathcal{H}_{\mathcal{F}}}\right\}
+=2^{r}.
 \end{equation}
 
 
@@ -16150,6 +16178,7 @@ _{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  }.
 
 
 \item The relationship between the norms and corresponding spaces are
+\label{The relationship between the norms and corresponding spaces are}
 \begin{gather}
 \left\Vert X\right\Vert _{\mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}%
 }\right)  }\geq\left\Vert X\right\Vert _{\mathcal{B}_{2}\left(  \mathcal{H}%
@@ -16182,13 +16211,12 @@ _{\mathcal{F}}\right)  }\geq\left\Vert X\right\Vert _{\mathcal{B}\left(
 \begin{notation}
 Bases of $\mathcal{H}_{\mathcal{F}}$
 \begin{align}
-\left(  \boldsymbol{\Phi}\right)   &  =\left(  \boldsymbol{\Phi}_{0}%
-,\cdots,\boldsymbol{\Phi}_{r}\right) \\
-\boldsymbol{\Phi}_{n}  &  \equiv\boldsymbol{\varphi}_{n}=\left(  \left\vert
-\varphi_{1}\cdots\varphi_{n}\right\rangle ,\cdots,\left\vert \varphi
-_{r-n+1}\cdots\varphi_{r}\right\rangle \right) \\
-\boldsymbol{\Phi}_{1}  &  \equiv\boldsymbol{\varphi}_{1}=\left(  \varphi
-_{1},\cdots,\varphi_{r}\right)  .
+\left(  \boldsymbol{\varphi}\right)   &  =\left(  \boldsymbol{\varphi}%
+_{0},\cdots,\boldsymbol{\varphi}_{r}\right) \\
+\boldsymbol{\varphi}_{n}  &  =\left(  \left\vert \varphi_{1}\cdots\varphi
+_{n}\right\rangle ,\cdots,\left\vert \varphi_{r-n+1}\cdots\varphi
+_{r}\right\rangle \right) \\
+\boldsymbol{\varphi}_{1}  &  =\left(  \varphi_{1},\cdots,\varphi_{r}\right)  .
 \end{align}
 
 \end{notation}
@@ -16320,19 +16348,19 @@ P_{\mathcal{H}^{n_{1}}}\left(  a_{p_{1}}^{\dagger}\cdots a_{p_{m_{1}}%
 }^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)  =\left(
 \begin{array}
 [c]{ccc}%
-\left\langle \left.  \boldsymbol{\Phi}_{0}\right\vert \left(  a_{p_{1}%
+\left\langle \left.  \boldsymbol{\varphi}_{0}\right\vert \left(  a_{p_{1}%
 }^{\dagger}\cdots a_{p_{m_{1}}}^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)
-\boldsymbol{\Phi}_{0}\right\rangle  & \cdots & \left\langle \left.
-\boldsymbol{\Phi}_{0}\right\vert \left(  a_{p_{1}}^{\dagger}\cdots
-a_{p_{m_{1}}}^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)  \boldsymbol{\Phi
-}_{2^{r}}\right\rangle \\
+\boldsymbol{\varphi}_{0}\right\rangle  & \cdots & \left\langle \left.
+\boldsymbol{\varphi}_{0}\right\vert \left(  a_{p_{1}}^{\dagger}\cdots
+a_{p_{m_{1}}}^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)
+\boldsymbol{\varphi}_{2^{r}}\right\rangle \\
 \vdots & \ddots & \vdots\\
-\left\langle \left.  \boldsymbol{\Phi}_{2^{r}}\right\vert \left(  a_{p_{1}%
+\left\langle \left.  \boldsymbol{\varphi}_{2^{r}}\right\vert \left(  a_{p_{1}%
 }^{\dagger}\cdots a_{p_{m_{1}}}^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)
-\boldsymbol{\Phi}_{0}\right\rangle  & \cdots & \left\langle \left.
-\boldsymbol{\Phi}_{2^{r}}\right\vert \left(  a_{p_{1}}^{\dagger}\cdots
-a_{p_{m_{1}}}^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)  \boldsymbol{\Phi
-}_{2^{r}}\right\rangle
+\boldsymbol{\varphi}_{0}\right\rangle  & \cdots & \left\langle \left.
+\boldsymbol{\varphi}_{2^{r}}\right\vert \left(  a_{p_{1}}^{\dagger}\cdots
+a_{p_{m_{1}}}^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)
+\boldsymbol{\varphi}_{2^{r}}\right\rangle
 \end{array}
 \right) \\
 {\Large \not \parallel }\\
@@ -16341,21 +16369,21 @@ a_{p_{m_{1}}}^{\dagger}a_{q_{m_{2}}}\cdots a_{q_{1}}\right)  \boldsymbol{\Phi
 \varphi_{q_{m_{2}}}\right\vert \right)  =\left(
 \begin{array}
 [c]{ccc}%
-\left\langle \left.  \boldsymbol{\Phi}_{0}\right\vert \left\vert
+\left\langle \left.  \boldsymbol{\varphi}_{0}\right\vert \left\vert
 \varphi_{p_{1}}\cdots\varphi_{p_{m_{1}}}\right\rangle \left\langle
-\varphi_{q_{1}}\cdots\varphi_{q_{m_{2}}}\right\vert \boldsymbol{\Phi}%
-_{0}\right\rangle  & \cdots & \left\langle \left.  \boldsymbol{\Phi}%
+\varphi_{q_{1}}\cdots\varphi_{q_{m_{2}}}\right\vert \boldsymbol{\varphi}%
+_{0}\right\rangle  & \cdots & \left\langle \left.  \boldsymbol{\varphi}%
 _{0}\right\vert \left\vert \varphi_{p_{1}}\cdots\varphi_{p_{m_{1}}%
 }\right\rangle \left\langle \varphi_{q_{1}}\cdots\varphi_{q_{m_{2}}%
-}\right\vert \boldsymbol{\Phi}_{2^{r}}\right\rangle \\
+}\right\vert \boldsymbol{\varphi}_{2^{r}}\right\rangle \\
 \vdots & \ddots & \vdots\\
-\left\langle \left.  \boldsymbol{\Phi}_{2^{r}}\right\vert \left\vert
+\left\langle \left.  \boldsymbol{\varphi}_{2^{r}}\right\vert \left\vert
 \varphi_{p_{1}}\cdots\varphi_{p_{m_{1}}}\right\rangle \left\langle
-\varphi_{q_{1}}\cdots\varphi_{q_{m_{2}}}\right\vert \boldsymbol{\Phi}%
-_{0}\right\rangle  & \cdots & \left\langle \left.  \boldsymbol{\Phi}_{2^{r}%
-}\right\vert \left\vert \varphi_{p_{1}}\cdots\varphi_{p_{m_{1}}}\right\rangle
-\left\langle \varphi_{q_{1}}\cdots\varphi_{q_{m_{2}}}\right\vert
-\boldsymbol{\Phi}_{2^{r}}\right\rangle
+\varphi_{q_{1}}\cdots\varphi_{q_{m_{2}}}\right\vert \boldsymbol{\varphi}%
+_{0}\right\rangle  & \cdots & \left\langle \left.  \boldsymbol{\varphi}%
+_{2^{r}}\right\vert \left\vert \varphi_{p_{1}}\cdots\varphi_{p_{m_{1}}%
+}\right\rangle \left\langle \varphi_{q_{1}}\cdots\varphi_{q_{m_{2}}%
+}\right\vert \boldsymbol{\varphi}_{2^{r}}\right\rangle
 \end{array}
 \right)  .
 \end{gather}
@@ -17202,27 +17230,28 @@ When $r=\infty$%
 
 \end{remark}
 
-\begin{remark}%
+\begin{remark}
+\label{08/26/2026}%
 \begin{equation}
-\Gamma\left(  A\right)  =\Gamma\left(  \left\vert \boldsymbol{\Phi
-}\right\rangle \left\langle \boldsymbol{\Phi}\right\vert \right)
-\mathcal{R}_{\left\vert \boldsymbol{\Phi}\right\rangle \left\langle
-\boldsymbol{\Phi}\right\vert }\left(  A\right)  =\left(  \boldsymbol{a}%
+\Gamma\left(  A\right)  =\Gamma\left(  \left\vert \boldsymbol{\varphi
+}\right\rangle \left\langle \boldsymbol{\varphi}\right\vert \right)
+\mathcal{R}_{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
+\boldsymbol{\varphi}\right\vert }\left(  A\right)  =\left(  \boldsymbol{a}%
 ^{\dagger}\boldsymbol{a}\right)  \mathcal{R}_{\boldsymbol{a}^{\dagger
 }\boldsymbol{a}}\left(  A\right)  =\left(  \boldsymbol{a}^{\dagger
-}\boldsymbol{a}\right)  \mathcal{R}_{\left\vert \boldsymbol{\Phi}\right\rangle
-\left\langle \boldsymbol{\Phi}\right\vert }\left(  A\right)
+}\boldsymbol{a}\right)  \mathcal{R}_{\left\vert \boldsymbol{\varphi
+}\right\rangle \left\langle \boldsymbol{\varphi}\right\vert }\left(  A\right)
 \end{equation}
 as
 \begin{equation}
-\mathcal{R}_{\left\vert \boldsymbol{\Phi}\right\rangle \left\langle
-\boldsymbol{\Phi}\right\vert }\left(  A\right)  =\left(
+\mathcal{R}_{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
+\boldsymbol{\varphi}\right\vert }\left(  A\right)  =\left(
 \begin{array}
 [c]{c}%
 \left(
 \begin{array}
 [c]{c}%
-\mathcal{R}_{\Phi\Phi}\left(  A\right)  _{11}\\
+\mathcal{R}_{\varphi\varphi}\left(  A\right)  _{11}\\
 \vdots\\
 \mathcal{R}_{\Phi\Phi}\left(  A\right)  _{r1}%
 \end{array}
@@ -17231,9 +17260,9 @@ as
 \left(
 \begin{array}
 [c]{c}%
-\mathcal{R}_{\Phi\Phi}\left(  A\right)  _{1r}\\
+\mathcal{R}_{\varphi\varphi}\left(  A\right)  _{1r}\\
 \vdots\\
-\mathcal{R}_{\Phi\Phi}\left(  A\right)  _{rr}%
+\mathcal{R}_{\varphi\varphi}\left(  A\right)  _{rr}%
 \end{array}
 \right)
 \end{array}
@@ -17243,18 +17272,18 @@ as
 \left(
 \begin{array}
 [c]{c}%
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{11}\\
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{11}\\
 \vdots\\
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{r1}%
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{r1}%
 \end{array}
 \right) \\
 \vdots\\
 \left(
 \begin{array}
 [c]{c}%
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{1r}\\
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{1r}\\
 \vdots\\
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{rr}%
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{rr}%
 \end{array}
 \right)
 \end{array}
@@ -17264,10 +17293,10 @@ as
 \left(
 \begin{array}
 [c]{c}%
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{11}\\
 \vdots\\
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{r1}%
 \end{array}
 \right) \\
@@ -17275,10 +17304,10 @@ as
 \left(
 \begin{array}
 [c]{c}%
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{1r}\\
 \vdots\\
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{rr}%
 \end{array}
 \right)
@@ -17315,18 +17344,18 @@ and
 \left(
 \begin{array}
 [c]{c}%
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{11}\\
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{11}\\
 \vdots\\
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{r1}%
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{r1}%
 \end{array}
 \right) \\
 \vdots\\
 \left(
 \begin{array}
 [c]{c}%
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{1r}\\
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{1r}\\
 \vdots\\
-\mathcal{M}_{\Phi\Phi}\left(  A\right)  _{rr}%
+\mathcal{M}_{\varphi\varphi}\left(  A\right)  _{rr}%
 \end{array}
 \right)
 \end{array}
@@ -17336,10 +17365,10 @@ and
 \left(
 \begin{array}
 [c]{c}%
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{11}\\
 \vdots\\
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{r1}%
 \end{array}
 \right) \\
@@ -17347,10 +17376,10 @@ and
 \left(
 \begin{array}
 [c]{c}%
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{1r}\\
 \vdots\\
-\left\langle \boldsymbol{\Phi}\right\vert A\left\vert \boldsymbol{\Phi
+\left\langle \boldsymbol{\varphi}\right\vert A\left\vert \boldsymbol{\varphi
 }\right\rangle _{rr}%
 \end{array}
 \right)
@@ -17386,10 +17415,8 @@ normalized basis for $V$ i.e.
 \end{equation}
 
 
-\item Let $A$ be invertible i.e. $A^{-1}$ exists
-
-\item Let $\left\{  \left.  Ae_{j}\right\vert 1\leq j\leq r\right\}  $ be a
-normalized basis i.e
+\item Let $A$ be invertible i.e. $A^{-1}$ exists and Let $\left\{  \left.
+Ae_{j}\right\vert 1\leq j\leq r\right\}  $ be a normalized basis i.e
 \begin{equation}
 \left\Vert Ae_{j}\right\Vert _{V}=1,\,1\leq j\leq r.
 \end{equation}
@@ -17586,7 +17613,7 @@ As $\left(  \left\vert \mathbf{\varphi}\right\rangle \left\langle
 \mathbf{\varphi}\right\vert \right\vert \left\vert \mathbf{\varphi
 }\right\rangle \left\langle \mathbf{\varphi}\right\vert \right\rangle
 _{\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  }=\mathbb{I}%
-_{\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  }%
+_{\mathcal{M}\left(  r,r,\mathbb{C}\right)  }%
 \end{equation}
 and
 \begin{equation}
@@ -17675,7 +17702,9 @@ m_{N}\right)  }=\left\langle \left.  \overset{}{\varphi_{j_{1}}\cdots
 
 \end{remark}
 
-\begin{lemma}%
+\begin{lemma}
+Matrix of Genralized Expansion Operator
+\label{Matrix of Genralized Expansion Operator}
 \begin{gather}
 \mathcal{M}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
 \mathbf{\varphi}\right\vert }\left(  \Gamma\right)  _{\left(  j_{1}\cdots
@@ -17782,11 +17811,18 @@ $\mathcal{M}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
 _{\left\vert \mathbf{\varphi}\right\rangle \left\langle \mathbf{\varphi
 }\right\vert }\left(  L\right)  $ are triangular matrices and hence \emph{not}
 hermitian, however they are real and thus can and do define positive linear
-maps on the real spaces $\mathcal{R}_{\left\vert \Phi\right\rangle
-\left\langle \Phi\right\vert }\left(  \mathcal{B}_{sa}\left(  \mathcal{H}%
-_{\mathcal{F}}\right)  \right)  $ and $\mathcal{R}_{\left\vert \Phi
-\right\rangle \left\langle \Phi\right\vert }\left(  \mathcal{B}_{1sa}\left(
-\mathcal{H}_{\mathcal{F}}\right)  \right)  .$
+maps $\mathcal{M}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
+\mathbf{\varphi}\right\vert }\left(  \Gamma\right)  \mathcal{M}_{\left\vert
+\mathbf{\varphi}\right\rangle \left\langle \mathbf{\varphi}\right\vert
+}\left(  L\right)  $ and $\mathcal{M}_{\left\vert \mathbf{\varphi
+}\right\rangle \left\langle \mathbf{\varphi}\right\vert }\left(  L\right)
+\mathcal{M}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
+\mathbf{\varphi}\right\vert }\left(  \Gamma\right)  $ on the real spaces
+$\mathcal{R}_{\left\vert \Phi\right\rangle \left\langle \Phi\right\vert
+}\left(  \mathcal{B}_{sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right)  $
+and $\mathcal{R}_{\left\vert \Phi\right\rangle \left\langle \Phi\right\vert
+}\left(  \mathcal{B}_{1sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right)
+.$
 \end{remark}
 
 \begin{example}
@@ -18770,10 +18806,11 @@ l_{M},m_{1}\cdots m_{N}\right)  }  &  =\left(  \left\vert \varphi_{j_{1}%
 \varphi_{j_{P}}\right\rangle \left\langle \varphi_{k_{Q}}\cdots\varphi_{k_{1}%
 }\right\vert \right)  ^{\dagger}\Gamma\left(  \left\vert \varphi_{l_{1}}%
 \cdots\varphi_{l_{M}}\right\rangle \left\langle \varphi_{m_{1}}\cdots
-\varphi_{m_{N}}\right\vert \right)  \right\}  =\left\langle \left.
-\varphi_{j_{1}}\cdots\varphi_{j_{P}}\right\vert \left(  a_{l_{1}}^{\dagger
-}\cdots a_{l_{M}}^{\dagger}a_{m_{N}}\cdots a_{m_{1}}\right)  \varphi_{k_{1}%
-}\cdots\varphi_{k_{Q}}\right\rangle _{\mathcal{H}_{\mathcal{F}}}.
+\varphi_{m_{N}}\right\vert \right)  \right\} \\
+&  =\left\langle \left.  \varphi_{j_{1}}\cdots\varphi_{j_{P}}\right\vert
+\left(  a_{l_{1}}^{\dagger}\cdots a_{l_{M}}^{\dagger}a_{m_{N}}\cdots a_{m_{1}%
+}\right)  \varphi_{k_{1}}\cdots\varphi_{k_{Q}}\right\rangle _{\mathcal{H}%
+_{\mathcal{F}}}.
 \end{align}
 hence%
 \begin{align}
@@ -19251,22 +19288,6 @@ which corresponds to the definition of the expansion map $\Gamma.$
 \begin{example}
 \begin{enumerate}
 \item
-\begin{equation}
-P_{\mathcal{H}^{1}}a_{l_{1}}^{\dagger}a_{m_{1}}P_{\mathcal{H}^{1}}=\sum_{1\leq
-j\leq r}\left\vert \varphi_{j}\right\rangle \left\langle \varphi
-_{j}\right\vert a_{l_{1}}^{\dagger}a_{m_{1}}\sum_{1\leq k\leq r}\left\vert
-\varphi_{k}\right\rangle \left\langle \varphi_{k}\right\vert ,
-\end{equation}
-
-
-\item
-\begin{equation}
-\left\langle \left.  \varphi_{j}\right\vert a_{l_{1}}^{\dagger}a_{m_{1}%
-}\varphi_{k}\right\rangle =\delta_{jl_{1}}\delta_{km_{1}}.
-\end{equation}
-
-
-\item
 \begin{align}
 P_{\mathcal{H}^{1}}a_{l_{1}}^{\dagger}a_{m_{1}}P_{\mathcal{H}^{1}}  &
 =\sum_{\substack{1\leq j\leq r\\1\leq k\leq r}}\left\vert \varphi
@@ -19276,8 +19297,15 @@ _{k}\right\vert \\
 &  =\sum_{\substack{1\leq j\leq r\\1\leq k\leq r}}\left\vert \varphi
 _{j}\right\rangle \delta_{jl_{1}}\delta_{km_{1}}\left\langle \varphi
 _{k}\right\vert =\left\vert \varphi_{l_{1}}\right\rangle \left\langle
-\varphi_{m_{1}}\right\vert .
+\varphi_{m_{1}}\right\vert
 \end{align}
+as
+
+\item
+\begin{equation}
+\left\langle \left.  \varphi_{j}\right\vert a_{l_{1}}^{\dagger}a_{m_{1}%
+}\varphi_{k}\right\rangle =\delta_{jl_{1}}\delta_{km_{1}}.
+\end{equation}
 
 
 \item
@@ -19289,11 +19317,8 @@ _{k}\right\vert =\left\vert \varphi_{l_{1}}\right\rangle \left\langle
 \left(  a_{l_{1}}^{\dagger}a_{m_{1}}\right)  =a_{l_{1}}^{\dagger}a_{m_{1}}.
 \end{equation}
 
-\end{enumerate}
-\end{example}
 
-%
-
+\item In general%
 \begin{align}
 \left\langle \left.  \overset{}{\varphi_{j_{1}}}\right\vert \sum_{1\leq k\leq
 r}X_{kl}\left\vert \varphi_{k}\right\rangle \left\langle \varphi
@@ -19303,6 +19328,8 @@ _{l}\right\vert \varphi_{k_{1}}\right\rangle  &  =X_{j_{1}k_{1}}\\
 \varphi_{k_{1}}\right\rangle  &  =X_{j_{1}k_{1}}.
 \end{align}
 
+\end{enumerate}
+\end{example}
 
 \paragraph{Restriction of SQ operators and the Definition of the Second
 Quantization Component Map $\Gamma_{N}$}
@@ -19416,46 +19443,45 @@ Thus one can observe \emph{the important relationships}
 
 \begin{enumerate}
 \item
-\begin{align}
+\begin{gather}
 \Gamma_{1}^{2}\left(  \left\vert \varphi_{1}\right\rangle \left\langle
-\varphi_{1}\right\vert \right)   &  =\left\vert \varphi_{1}\right\rangle
+\varphi_{1}\right\vert \right)  =\left\vert \varphi_{1}\right\rangle
 \left\langle \varphi_{1}\right\vert \mathcal{\boxtimes}P_{\mathcal{H}^{1}%
 }=\frac{1}{2}\sum_{1\leq j_{1}\leq\infty}\left\vert \varphi_{1}\varphi_{j_{1}%
 }\right\rangle \left\langle \varphi_{1}\varphi_{j_{1}}\right\vert \nonumber\\
 \text{i.e. }\sum_{1\leq j_{1}\leq\infty}\left\vert \varphi_{1}\varphi_{j_{1}%
-}\right\rangle \left\langle \varphi_{1}\varphi_{j_{1}}\right\vert  &
-=2\Gamma_{1}^{2}\left(  \left\vert \varphi_{1}\right\rangle \left\langle
-\varphi_{1}\right\vert \right)
-\end{align}
+}\right\rangle \left\langle \varphi_{1}\varphi_{j_{1}}\right\vert =2\Gamma
+_{1}^{2}\left(  \left\vert \varphi_{1}\right\rangle \left\langle \varphi
+_{1}\right\vert \right)
+\end{gather}
 and
 
 \item
-\begin{align}
+\begin{gather}
 \Gamma_{1}^{3}\left(  \left\vert \varphi_{1}\right\rangle \left\langle
-\varphi_{1}\right\vert \right)   &  =\left\vert \varphi_{1}\right\rangle
+\varphi_{1}\right\vert \right)  =\left\vert \varphi_{1}\right\rangle
 \left\langle \varphi_{1}\right\vert \mathcal{\boxtimes}P_{\mathcal{H}^{2}%
 }=\sum_{1\leq j_{2}<j_{3}\leq\infty}\left\vert \varphi_{1}\right\rangle
 \left\langle \varphi_{1}\right\vert \mathcal{\boxtimes}\left\vert
 \varphi_{j_{2}}\varphi_{j_{3}}\right\rangle \left\langle \varphi_{j_{2}%
 }\varphi_{j_{3}}\right\vert \nonumber\\
-&  =2\sum_{1\leq j_{2},j_{3}\leq\infty}\left\vert \varphi_{1}\right\rangle
+=2\sum_{1\leq j_{2},j_{3}\leq\infty}\left\vert \varphi_{1}\right\rangle
 \left\langle \varphi_{1}\right\vert \mathcal{\boxtimes}\left\vert
 \varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{2}}\right\vert
 \mathcal{\boxtimes}\left\vert \varphi_{j_{3}}\right\rangle \left\langle
 \varphi_{j_{3}}\right\vert
-\end{align}
+\end{gather}
 giving%
-\begin{align}
+\begin{gather}
 \Gamma_{1}^{3}\left(  \left\vert \varphi_{1}\right\rangle \left\langle
-\varphi_{1}\right\vert \right)   &  =\frac{1}{3}\sum_{1\leq j_{2}<j_{3}%
-\leq\infty}\left\vert \varphi_{1}\varphi_{j_{2}}\varphi_{j_{3}}\right\rangle
+\varphi_{1}\right\vert \right)  =\frac{1}{3}\sum_{1\leq j_{2}<j_{3}\leq\infty
+}\left\vert \varphi_{1}\varphi_{j_{2}}\varphi_{j_{3}}\right\rangle
 \left\langle \varphi_{1}\varphi_{j_{2}}\varphi_{j_{3}}\right\vert \nonumber\\
 \text{i.e. }\sum_{1\leq j_{2}<j_{3}\leq\infty}\left\vert \varphi_{1}%
 \varphi_{j_{2}}\varphi_{j_{3}}\right\rangle \left\langle \varphi_{1}%
-\varphi_{j_{2}}\varphi_{j_{3}}\right\vert  &  =3\Gamma_{1}^{3}\left(
-\left\vert \varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert
-\right)  .
-\end{align}
+\varphi_{j_{2}}\varphi_{j_{3}}\right\vert =3\Gamma_{1}^{3}\left(  \left\vert
+\varphi_{1}\right\rangle \left\langle \varphi_{1}\right\vert \right)  .
+\end{gather}
 
 \end{enumerate}
 
@@ -19541,12 +19567,12 @@ P_{\mathcal{H}^{3}}  &  =\sum_{1\leq j_{1}<j_{2}<j_{3}\leq r}\left\vert
 }\varphi_{j_{3}}\right\vert \nonumber\\
 &  =\sum_{1\leq j_{1},j_{2},j_{3}\leq r}\left\vert \varphi_{j_{1}}%
 \wedge\varphi_{j_{2}}\wedge\varphi_{j_{3}}\right\rangle \left\langle
-\varphi_{j_{1}}\wedge\varphi_{j_{2}}\wedge\varphi_{j_{3}}\right\vert =\\
-&  \sum_{1\leq j_{1},j_{2},j_{3}\leq r}\left\vert \varphi_{j_{1}}\right\rangle
-\left\langle \varphi_{j_{1}}\right\vert \mathcal{\boxtimes}\left\vert
-\varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{2}}\right\vert
-\mathcal{\boxtimes}\left\vert \varphi_{j_{3}}\right\rangle \left\langle
-\varphi_{j_{3}}\right\vert =P_{\mathcal{H}^{1}}\mathcal{\boxtimes
+\varphi_{j_{1}}\wedge\varphi_{j_{2}}\wedge\varphi_{j_{3}}\right\vert \\
+=  &  \sum_{1\leq j_{1},j_{2},j_{3}\leq r}\left\vert \varphi_{j_{1}%
+}\right\rangle \left\langle \varphi_{j_{1}}\right\vert \mathcal{\boxtimes
+}\left\vert \varphi_{j_{2}}\right\rangle \left\langle \varphi_{j_{2}%
+}\right\vert \mathcal{\boxtimes}\left\vert \varphi_{j_{3}}\right\rangle
+\left\langle \varphi_{j_{3}}\right\vert =P_{\mathcal{H}^{1}}\mathcal{\boxtimes
 }P_{\mathcal{H}^{1}}\mathcal{\boxtimes}P_{\mathcal{H}^{1}}.
 \end{align}
 Thus
@@ -19620,7 +19646,7 @@ r+1\right)  ,\left\{  \left.  \mathcal{B}\left(  \mathcal{H}^{m}%
 \end{enumerate}
 \end{remark}
 
-\subsubsection{Ket-Bra form of Second Quantization}
+\subsection{Ket-Bra form of Second Quantization}
 
 \begin{remark}
 Recall
@@ -19840,7 +19866,9 @@ _{P}^{N}\left(  X_{P}\right)  .
 
 \end{enumerate}
 
-\begin{theorem}%
+\begin{theorem}
+Action of the expansion operator on transition operators $\equiv$ partial
+isometries%
 \begin{align}
 \Gamma_{p}^{N}\left(  \left\vert \gamma_{1}\cdots\gamma_{p}\right\rangle
 \left\langle \eta_{1}\cdots\eta_{p}\right\vert \right)   &  =\left\vert
@@ -20158,46 +20186,6 @@ l_{1}<\cdots<l_{M}\leq r\\1\leq m_{1}<\cdots<m_{N}\leq r}}\left\vert
 &  =\sum_{\substack{1\leq j_{1}<\cdots<,j_{M}\leq r\\1\leq m_{1}<\cdots
 <m_{M}\leq r}}\left\vert \varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle
 \left\langle \varphi_{m_{1}}\cdots\varphi_{m_{M}}\right\vert .
-\end{align}
-
-\end{remark}
-
-\begin{remark}
-One can generalize the expansion map even further to obtain a map
-$\mathfrak{G}\in\mathcal{L}\left(  \mathcal{B}\left(  \mathcal{H}%
-_{\mathcal{F}}\right)  \right)  $ that is \underline{\emph{not}} a second
-quantization map by using partial isometries and defining
-\begin{align}
-&  \mathfrak{G}_{P,Q}^{M+P,N+Q}\left(  \left\vert \psi_{1}\cdots\psi
-_{P}\right\rangle \left\langle \gamma_{1}\cdots\gamma_{Q}\right\vert \right)
-=\left\vert \psi_{1}\cdots\psi_{P}\right\rangle \left\langle \gamma_{1}%
-\cdots\gamma_{Q}\right\vert \bullet\left(  \sum_{\substack{1\leq j_{1}%
-<\cdots<,j_{M}\leq r\\1\leq k_{1}<\cdots<,k_{N}\leq r}}\left\vert
-\varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle \left\langle \eta_{k_{1}%
-}\cdots\eta_{j_{kN}}\right\vert \right) \\
-&  =\left(  M!\right)  ^{\frac{1}{2}}\left(  N!\right)  ^{\frac{1}{2}%
-}\left\vert \psi_{1}\cdots\psi_{P}\right\rangle \left\langle \gamma_{1}%
-\cdots\gamma_{Q}\right\vert \bullet\left(  \sum_{\substack{1\leq j_{1}%
-<\cdots<,j_{M}\leq r\\1\leq k_{1}<\cdots<,k_{N}\leq r}}\left\vert
-\varphi_{j_{1}}\cdots\varphi_{j_{M}}\right\rangle \left\langle \eta_{k_{1}%
-}\cdots\eta_{j_{kN}}\right\vert \right) \\
-&  =\left(  P!\right)  ^{\frac{1}{2}}\left(  Q!\right)  ^{\frac{1}{2}}\left(
-N!\right)  \left\vert \psi_{1}\wedge\cdots\wedge\psi_{P}\right\rangle
-\left\langle \gamma_{1}\wedge\cdots\wedge\gamma_{Q}\right\vert \bullet\left(
-\sum_{1\leq j_{1}<\cdots<,j_{N}\leq r}\left\vert \varphi_{j_{1}}\wedge
-\cdots\wedge\varphi_{j_{N}}\right\rangle \left\langle \varphi_{j_{1}}%
-\wedge\cdots\wedge\varphi_{j_{N}}\right\vert \right)  \,\\
-&  =\left(  P!\right)  ^{\frac{1}{2}}\left(  Q!\right)  ^{\frac{1}{2}}\left(
-N!\right)  \sum_{1\leq j_{1}<\cdots<j_{N}\leq r}\left\vert \psi_{1}%
-\wedge\cdots\wedge\psi_{P}\wedge\varphi_{j_{1}}\wedge\cdots\wedge
-\varphi_{j_{N}}\right\rangle \left\langle \gamma_{1}\wedge\cdots\wedge
-\gamma_{Q}\wedge\varphi_{j_{1}}\wedge\cdots\wedge\varphi_{j_{N}}\right\vert \\
-&  =\left(  P!\right)  ^{\frac{1}{2}}\left(  Q!\right)  ^{\frac{1}{2}}\left(
-N!\right)  \left(  \left(  N+P\right)  !\right)  ^{-\frac{1}{2}}\left(
-\left(  N+Q\right)  !\right)  ^{-\frac{1}{2}}\sum_{1\leq j_{1}<\cdots
-<j_{N}\leq r}\left\vert \psi_{1}\cdots\psi_{P}\varphi_{j_{1}}\cdots
-\varphi_{j_{N}}\right\rangle \left\langle \gamma_{1}\cdots\gamma_{Q}%
-\varphi_{j_{1}}\cdots\varphi_{j_{N}}\right\vert .
 \end{align}
 
 \end{remark}
@@ -21098,7 +21086,7 @@ The components other than $\Gamma_{4,2}\left(  \left\vert \varphi_{l_{1}%
 _{m_{2}}\right\vert \right)  $ are zero.
 \end{remark}
 
-\subsubsection{Components of the Generalized Expansion Map $\equiv$ Second
+\subsection{Components of the Generalized Expansion Map $\equiv$ Second
 Quantization Map.}
 
 In general
@@ -22018,7 +22006,7 @@ projections and partial isometries associated with the subspaces }$\left\{
 individual bases. }
 \end{remark}
 
-\subsubsection{Generalized Contraction and Expansion Maps $L$ and $\Gamma$}
+\subsection{Generalized Contraction and Expansion Maps $L$ and $\Gamma$}
 
 The generalized expansion and contraction maps that belong to $\mathcal{L}%
 \left(  \mathcal{F}\right)  $ are adjoints to each other wrt the dual Banach
@@ -22108,7 +22096,7 @@ _{8}\right\vert \right\}  .
 \end{align}
 
 
-\subparagraph{Expectation Values of a $N$-particle State and the Generalized
+\paragraph{Expectation Values of a $N$-particle State and the Generalized
 Contraction Map}
 
 The action of the generalized contraction map on \emph{guage invariant
@@ -22283,15 +22271,6 @@ _{N}\right\vert \right) \\
 \end{remark}
 
 \begin{lemma}
-The operators
-\begin{equation}
-\boldsymbol{\lambda}_{M}=P_{M},\,P_{M}\in\mathcal{B}\left(  \mathcal{H}%
-^{M}\right)  ,\,0\leq M\leq r,
-\end{equation}
-are eigen value operators of $L.$
-\end{lemma}
-
-\begin{lemma}
 The operator matrix $L$ cannot be diagonalized it can only be brought to
 \emph{Operator Jordan Canonical Form.}
 \end{lemma}
@@ -22310,6 +22289,15 @@ q\in\mathbb{Z}_{+},
 \end{equation}
 where $\boldsymbol{\lambda}_{M}$ are diagonal elemements of the Jordan blocks,
 i.e. \emph{eigen value operators}.
+\end{lemma}
+
+\begin{lemma}
+The operators
+\begin{equation}
+\boldsymbol{\lambda}_{M}=P_{M},\,P_{M}\in\mathcal{B}\left(  \mathcal{H}%
+^{M}\right)  ,\,0\leq M\leq r,
+\end{equation}
+are eigen value operators of $L.$
 \end{lemma}
 
 \begin{definition}
@@ -22541,11 +22529,11 @@ Thus
 L\left(  P_{N}\right)  =\left(
 \begin{array}
 [c]{c}%
-\binom{N}{0}L_{N}^{0}\left(  P_{N}\right) \\
-\binom{N}{1}L_{N}^{1}\left(  P_{N}\right) \\
-\binom{N}{2}L_{N}^{2}\left(  P_{N}\right) \\
+\binom{N}{0}L_{N}^{0}\left(  P_{N}\right)  \\
+\binom{N}{1}L_{N}^{1}\left(  P_{N}\right)  \\
+\binom{N}{2}L_{N}^{2}\left(  P_{N}\right)  \\
 \vdots\\
-\binom{N}{N}L_{N}^{N}\left(  P_{N}\right) \\
+\binom{N}{N}L_{N}^{N}\left(  P_{N}\right)  \\
 0\\
 \vdots\\
 0
@@ -22577,6 +22565,8 @@ P_{0}\\
 \right)  ,
 \end{equation}
 showing that $L\left(  P_{N}\right)  $ is not a projector but is still positive.
+
+\paragraph{Cones of Positive Operators \label{Cones of Positive Operators}}
 
 \begin{definition}
 The positive cone $\mathcal{C}_{+}\left(  \mathcal{B}\left(  \mathcal{H}%
@@ -22750,31 +22740,32 @@ _{+}\left(  \mathcal{B}_{1}\left(  \mathcal{H}_{\mathcal{F}}\right)  \right)
 \end{remark}
 
 \begin{definition}
-A cone $\operatorname{Cone}\left(  \mathcal{S}\right)  $ is a \emph{subset
-}$S$ of a vector space $\mathcal{V}$ such that for any two non-negative real
-numbers $a,b$ and vectors $v_{1},v_{2}\in\operatorname{Cone}\left(
-\mathcal{S}\right)  $, we have $av_{1}+bv_{2}\in$ $\operatorname{Cone}\left(
-\mathcal{S}\right)  $. The cone of a finite vector set $S$,
+\textbf{A cone} $\operatorname{Cone}\left(  \mathcal{S}\right)  $ is a
+\emph{subset }$S$ of a vector space $\mathcal{V}$ such that for any two
+non-negative real numbers $a,b$ and vectors $v_{1},v_{2}\in\operatorname{Cone}%
+\left(  \mathcal{S}\right)  $, we have $av_{1}+bv_{2}\in$ $\operatorname{Cone}%
+\left(  \mathcal{S}\right)  $. The cone of a finite vector set $S$,
 $\operatorname{Cone}\left(  \mathcal{S}\right)  $--called a\emph{ polyhedral
 }cone-- is defined by all the linear combinations with non-negative
 coefficients of vectors in $V.$
 \end{definition}
 
 \begin{definition}
-The Projection Cone at any $x\in\partial\mathcal{C}\left(  \mathcal{S}\right)
-$ ( $x$ is a point on the boundary of the convex set $\mathcal{C}\left(
-\mathcal{S}\right)  )$ is $\operatorname{Cone}\left(  \mathcal{S}_{x}\right)
-$, where $S_{x}$ is the set of all the rays emerging from $x$ and containing
-another point of $\mathcal{C}\left(  \mathcal{S}\right)  $.
+\textbf{The Projection Cone} at any $x\in\partial\mathcal{C}\left(
+\mathcal{S}\right)  $ ( $x$ is a point on the boundary of the convex set
+$\mathcal{C}\left(  \mathcal{S}\right)  )$ is $\operatorname{Cone}\left(
+\mathcal{S}_{x}\right)  $, where $S_{x}$ is the set of all the rays emerging
+from $x$ and containing another point of $\mathcal{C}\left(  \mathcal{S}%
+\right)  $.
 \end{definition}
 
 \begin{definition}
-The Polar Cone of the Projection Cone at $x$, which is also called Normal Cone
-at $x$, is defined by $\operatorname{Cone}(S_{Nx})$ where $S_{Nx}$ is the set
-of normal vectors to all the supporting hyperplanes at $x$. The dimensionality
-of the $\operatorname{Cone}(S_{Nx})$ at $x\in\partial\mathcal{C}\left(
-\mathcal{S}\right)  $ determines the type of $x$. Specifically, if $C$ is a
-$d$-dimensional closed convex set, then $x$ is
+\textbf{The Polar Cone} of the Projection Cone at $x$, which is also called
+Normal Cone at $x$, is defined by $\operatorname{Cone}(S_{Nx})$ where $S_{Nx}$
+is the set of normal vectors to all the supporting hyperplanes at $x$. The
+dimensionality of the $\operatorname{Cone}(S_{Nx})$ at $x\in\partial
+\mathcal{C}\left(  \mathcal{S}\right)  $ determines the type of $x$.
+Specifically, if $C$ is a $d$-dimensional closed convex set, then $x$ is
 \end{definition}
 
 \begin{enumerate}
@@ -22792,7 +22783,7 @@ A linear map $M\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  $
 M:\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)  \rightarrow
 \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
 \end{equation}
-is positive $\operatorname*{Iff}$
+is \textbf{positive} $\operatorname*{Iff}$
 \begin{equation}
 M:\operatorname{Cone}_{+}\left(  \mathcal{B}\left(  \mathcal{H}_{\mathcal{F}%
 }\right)  \right)  \rightarrow\operatorname{Cone}_{+}\left(  \mathcal{B}%
@@ -22956,7 +22947,7 @@ L_{n}^{p}\left\{  \mathcal{B}_{1}\left(  \mathcal{H}^{n}\right)  \right\}
 \begin{remark}
 $\operatorname{Cone}_{+}\left(  \mathcal{B}\left(  \mathcal{H}^{p}\right)
 \right)  \subset\mathcal{B}_{sa}\left(  \mathcal{H}^{p}\right)  $ and
-$\mathcal{B}_{sa}\left(  \mathcal{H}^{p}\right)  $ is respectively a Jordan
+$\mathcal{B}_{sa}\left(  \mathcal{H}^{p}\right)  $ are respectively a Jordan
 algebra and a real vector space.
 \end{remark}
 \end{proof}
@@ -23011,7 +23002,7 @@ _{Xpj}\right\vert \otimes P_{\mathcal{H}^{n-p}},1\leq j\leq\binom{r}%
 \end{proof}
 
 \begin{remark}
-$\Gamma_{p}^{n}$ is not linearly surjective i.e.
+$\Gamma_{p}^{n}$ is \textbf{not linear}ly surjective i.e.
 \begin{equation}
 \Gamma_{p}^{n}\left\{  \mathcal{B}\left(  \mathcal{H}^{p}\right)  \right\}
 \subset\mathcal{B}\left(  \mathcal{H}^{n}\right)  .
@@ -23020,7 +23011,7 @@ but it is injective.
 \end{remark}
 
 \begin{remark}
-$\Gamma_{p}^{n}$ is not positively surjective i.e.
+$\Gamma_{p}^{n}$ is \textbf{not positively} surjective i.e.
 \begin{equation}
 Y\in\mathcal{B}_{1+}\left(  \mathcal{H}^{n}\right)  \nRightarrow Y=\Gamma
 _{p}^{n}\left(  X\right)  \text{ for some }X\in\mathcal{B}_{1+}\left(
@@ -24594,7 +24585,7 @@ X_{e2}\\
 \right)  =L\left(  X_{e2}\right)  .$
 \end{lemma}
 
-\subparagraph{Expectation Value of the Hamiltonian}
+\subparagraph{Expectation Value of the Hamiltonian \label{8/27/2026}}
 
 The expectation value
 \begin{equation}
@@ -25058,7 +25049,7 @@ D_{5}\\
 
 \end{example}
 
-\subparagraph{Positivity}
+\subsubsection{Positivity}
 
 The vector operator $X\in\mathcal{B}\left(  \mathcal{H}_{\mathcal{F}}\right)
 $ is positive i.e. $X\geq0$ if
@@ -25103,6 +25094,8 @@ XQQ^{\dagger}\right\}  =f_{QQ^{\dagger}}\left(  X\right)  \geq0\quad\forall Q,
 \end{equation}
 where $Q$ are partial isometries.
 \end{lemma}
+
+\paragraph{Convex Sets \label{Convex Sets}}
 
 \begin{theorem}
 If $S$ is a convex set in the topological vector space $X=\mathbb{R}^{n}$, and
@@ -25353,7 +25346,7 @@ X\geq0\Longleftrightarrow X=QQ^{\dagger};\quad X\in\mathcal{B}_{1}\left(
 
 \begin{remark}
 We can restrict $Q\in\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)
-$ to $Q\in\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}$
+$ to $Q\in\mathcal{B}_{2}\left(  \mathcal{H}_{\mathcal{F}}\right)  _{e}$ NOT\ TRUE
 \end{remark}
 
 \begin{lemma}
@@ -27253,13 +27246,13 @@ ${\LARGE \lceil}$%
 \left(  \left(  \left\vert e_{1}\right\rangle \left\langle e_{2}\right\vert
 +\left\vert e_{2}\right\rangle \left\langle e_{1}\right\vert \right)  \right)
 &  =\left(  \left\vert e_{1}\right\rangle \left\langle e_{1}\right\vert
-+\left\vert e_{2}\right\rangle \left\langle e_{2}\right\vert \right) \\
++\left\vert e_{2}\right\rangle \left\langle e_{2}\right\vert \right)  \\
 \left(  \left\vert e_{1}\right\rangle \left\langle e_{1}\right\vert
 +\left\vert e_{2}\right\rangle \left\langle e_{2}\right\vert \right)  \left(
 \left\vert e_{1}\right\rangle \left\langle e_{1}\right\vert +\left\vert
 e_{2}\right\rangle \left\langle e_{2}\right\vert \right)   &  =\left(
 \left\vert e_{1}\right\rangle \left\langle e_{1}\right\vert +\left\vert
-e_{2}\right\rangle \left\langle e_{2}\right\vert \right) \\
+e_{2}\right\rangle \left\langle e_{2}\right\vert \right)  \\
 -\left(  \left(  \left\vert e_{1}\right\rangle \left\langle e_{2}\right\vert
 -\left\vert e_{2}\right\rangle \left\langle e_{1}\right\vert \right)  \right)
 \left(  \left(  \left\vert e_{1}\right\rangle \left\langle e_{2}\right\vert
@@ -27273,8 +27266,9 @@ hence $\left\{  \left(  \left(  \left\vert e_{1}\right\rangle \left\langle
 e_{2}\right\vert +\left\vert e_{2}\right\rangle \left\langle e_{1}\right\vert
 \right)  \right)  ,\left(  \left\vert e_{1}\right\rangle \left\langle
 e_{2}\right\vert -\left\vert e_{2}\right\rangle \left\langle e_{1}\right\vert
-\right)  \right\}  $ are partial isomettries${\LARGE \rfloor}$ of the complex
-direct sum
+\right)  \right\}  $ are partial isomettries${\LARGE \rfloor}$ 
+
+of the complex direct sum
 \begin{equation}
 \mathcal{B}\left(  V\right)  =\mathcal{B}\left(  V\right)  _{sa}%
 \oplus_{\mathbb{C}}\mathcal{B}\left(  V\right)  _{asa}%
@@ -27380,7 +27374,7 @@ _{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 0 & 1 & -1 & 0\\
 0 & 0 & 0 & 1
 \end{array}
-\right) \\
+\right)  \\
 &  =\left(
 \begin{array}
 [c]{cccc}%
@@ -27412,7 +27406,7 @@ _{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 0 & 1 & -1 & 0\\
 0 & 0 & 0 & 1
 \end{array}
-\right) \\
+\right)  \\
 &  =\left(
 \begin{array}
 [c]{cccc}%
@@ -27448,7 +27442,7 @@ _{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 +\left\vert e_{2}\right\rangle \left\langle e_{1}\right\vert \right)  ,\left(
 \left\vert e_{1}\right\rangle \left\langle e_{2}\right\vert -\left\vert
 e_{2}\right\rangle \left\langle e_{1}\right\vert \right)  ,\left\vert
-e_{2}\right\rangle \left\langle e_{2}\right\vert \right) \\
+e_{2}\right\rangle \left\langle e_{2}\right\vert \right)  \\
 &  =\left(  \left\vert e_{1}\right\rangle \left\langle e_{1}\right\vert
 ,\left(  \left\vert e_{1}\right\rangle \left\langle e_{2}\right\vert
 +\left\vert e_{2}\right\rangle \left\langle e_{1}\right\vert \right)  ,\left(
@@ -27456,7 +27450,7 @@ e_{2}\right\rangle \left\langle e_{2}\right\vert \right) \\
 e_{2}\right\rangle \left\langle e_{1}\right\vert \right)  ,\left\vert
 e_{2}\right\rangle \left\langle e_{2}\right\vert \right)  \mathcal{R}%
 _{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
-\boldsymbol{\varphi}\right\vert _{r}}\left(  X\right) \\
+\boldsymbol{\varphi}\right\vert _{r}}\left(  X\right)  \\
 &  =\left(  \left\vert e_{1}\right\rangle \left\langle e_{1}\right\vert
 ,\left(  \left\vert e_{1}\right\rangle \left\langle e_{2}\right\vert
 +\left\vert e_{2}\right\rangle \left\langle e_{1}\right\vert \right)  ,\left(
@@ -27497,7 +27491,7 @@ d & e & f & 1
 0 & 1 & -1 & 0\\
 0 & 0 & 0 & 1
 \end{array}
-\right) \\
+\right)  \\
 &  =\left(
 \begin{array}
 [c]{cccc}%
@@ -27752,9 +27746,9 @@ _{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 \begin{array}
 [c]{ccccc}%
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{0}+X_{0}^{\dagger}\right)  & \cdots &
+\mathbf{\varphi}\right\vert }\left(  X_{0}+X_{0}^{\dagger}\right)   & \cdots &
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{eN}+X_{eN}^{\dagger}\right)  & \cdots
+\mathbf{\varphi}\right\vert }\left(  X_{eN}+X_{eN}^{\dagger}\right)   & \cdots
 & \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
 \mathbf{\varphi}\right\vert }\left(  X_{er}+X_{er}^{\dagger}\right)
 \end{array}
@@ -27763,17 +27757,17 @@ _{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 \begin{array}
 [c]{ccccc}%
 \binom{0}{0}\Gamma_{0}^{0}\left(  \left\vert \phi\right\rangle \left\langle
-\phi\right\vert \right)  & 0 & \cdots & \cdots & 0\\
+\phi\right\vert \right)   & 0 & \cdots & \cdots & 0\\
 \vdots & \ddots & 0 & \cdots & \vdots\\
 \binom{n}{0}\Gamma_{0}^{n}\left(  \left\vert \phi\right\rangle \left\langle
-\phi\right\vert \right)  & \cdots & \binom{n}{n}\Gamma_{n}^{n}\left(
+\phi\right\vert \right)   & \cdots & \binom{n}{n}\Gamma_{n}^{n}\left(
 \left\vert \mathbf{\varphi}_{N}\right\rangle \left\langle \mathbf{\varphi}%
-_{N}\right\vert \right)  & \cdots & \vdots\\
+_{N}\right\vert \right)   & \cdots & \vdots\\
 \vdots & \cdots & \vdots & \ddots & 0\\
 \binom{r}{0}\Gamma_{0}^{r}\left(  \left\vert \phi\right\rangle \left\langle
-\phi\right\vert \right)  & \cdots & \binom{r}{n}\Gamma_{n}^{r}\left(
+\phi\right\vert \right)   & \cdots & \binom{r}{n}\Gamma_{n}^{r}\left(
 \left\vert \mathbf{\varphi}_{N}\right\rangle \left\langle \mathbf{\varphi}%
-_{N}\right\vert \right)  & \cdots & \binom{r}{r}\Gamma_{r}^{r}\left(
+_{N}\right\vert \right)   & \cdots & \binom{r}{r}\Gamma_{r}^{r}\left(
 \left\vert \mathbf{\varphi}_{r}\right\rangle \left\langle \mathbf{\varphi}%
 _{r}\right\vert \right)
 \end{array}
@@ -27781,10 +27775,10 @@ _{r}\right\vert \right)
 \begin{array}
 [c]{c}%
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{0}+X_{0}^{\dagger}\right) \\
+\mathbf{\varphi}\right\vert }\left(  X_{0}+X_{0}^{\dagger}\right)  \\
 \vdots\\
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{eN}+X_{eN}^{\dagger}\right) \\
+\mathbf{\varphi}\right\vert }\left(  X_{eN}+X_{eN}^{\dagger}\right)  \\
 \vdots\\
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
 \mathbf{\varphi}\right\vert }\left(  X_{er}+X_{er}^{\dagger}\right)
@@ -27796,9 +27790,9 @@ _{r}\right\vert \right)
 \begin{array}
 [c]{ccccc}%
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{0}-X_{0}^{\dagger}\right)  & \cdots &
+\mathbf{\varphi}\right\vert }\left(  X_{0}-X_{0}^{\dagger}\right)   & \cdots &
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{eN}-X_{eN}^{\dagger}\right)  & \cdots
+\mathbf{\varphi}\right\vert }\left(  X_{eN}-X_{eN}^{\dagger}\right)   & \cdots
 & \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
 \mathbf{\varphi}\right\vert }\left(  X_{er}-X_{er}^{\dagger}\right)
 \end{array}
@@ -27807,17 +27801,17 @@ _{r}\right\vert \right)
 \begin{array}
 [c]{ccccc}%
 \binom{0}{0}\Gamma_{0}^{0}\left(  \left\vert \phi\right\rangle \left\langle
-\phi\right\vert \right)  & 0 & \cdots & \cdots & 0\\
+\phi\right\vert \right)   & 0 & \cdots & \cdots & 0\\
 \vdots & \ddots & 0 & \cdots & \vdots\\
 \binom{n}{0}\Gamma_{0}^{n}\left(  \left\vert \phi\right\rangle \left\langle
-\phi\right\vert \right)  & \cdots & \binom{n}{n}\Gamma_{n}^{n}\left(
+\phi\right\vert \right)   & \cdots & \binom{n}{n}\Gamma_{n}^{n}\left(
 \left\vert \mathbf{\varphi}_{N}\right\rangle \left\langle \mathbf{\varphi}%
-_{N}\right\vert \right)  & \cdots & \vdots\\
+_{N}\right\vert \right)   & \cdots & \vdots\\
 \vdots & \cdots & \vdots & \ddots & 0\\
 \binom{r}{0}\Gamma_{0}^{r}\left(  \left\vert \phi\right\rangle \left\langle
-\phi\right\vert \right)  & \cdots & \binom{r}{n}\Gamma_{n}^{r}\left(
+\phi\right\vert \right)   & \cdots & \binom{r}{n}\Gamma_{n}^{r}\left(
 \left\vert \mathbf{\varphi}_{N}\right\rangle \left\langle \mathbf{\varphi}%
-_{N}\right\vert \right)  & \cdots & \binom{r}{r}\Gamma_{r}^{r}\left(
+_{N}\right\vert \right)   & \cdots & \binom{r}{r}\Gamma_{r}^{r}\left(
 \left\vert \mathbf{\varphi}_{r}\right\rangle \left\langle \mathbf{\varphi}%
 _{r}\right\vert \right)
 \end{array}
@@ -27825,10 +27819,10 @@ _{r}\right\vert \right)
 \begin{array}
 [c]{c}%
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{0}-X_{0}^{\dagger}\right) \\
+\mathbf{\varphi}\right\vert }\left(  X_{0}-X_{0}^{\dagger}\right)  \\
 \vdots\\
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
-\mathbf{\varphi}\right\vert }\left(  X_{eN}-X_{eN}^{\dagger}\right) \\
+\mathbf{\varphi}\right\vert }\left(  X_{eN}-X_{eN}^{\dagger}\right)  \\
 \vdots\\
 \mathcal{R}_{\left\vert \mathbf{\varphi}\right\rangle \left\langle
 \mathbf{\varphi}\right\vert }\left(  X_{er}-X_{er}^{\dagger}\right)
@@ -27843,7 +27837,7 @@ _{N}\right\vert \mathfrak{R}_{\left\vert \boldsymbol{\varphi}\right\rangle
 ,\,X_{MN}\in\mathcal{B}\left(  \mathcal{H}^{M},\mathcal{H}^{N}\right)
 \end{equation}%
 \begin{align}
-X  &  =\left(
+X &  =\left(
 \begin{array}
 [c]{ccccc}%
 \left\vert \boldsymbol{\varphi}_{0}\right\rangle \left\langle
@@ -27864,7 +27858,7 @@ X  &  =\left(
 \mathfrak{R}_{\left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 \boldsymbol{\varphi}\right\vert }\left(  X\right)  _{rr}%
 \end{array}
-\right) \\
+\right)  \\
 &  =\left(
 \begin{array}
 [c]{ccccc}%
@@ -27890,7 +27884,7 @@ k_{1}\cdots k_{N}}\\
 \boldsymbol{\varphi}\right\vert }\left(  X\right)  _{j_{1}\cdots j_{r}%
 k_{1}\cdots k_{r}}%
 \end{array}
-\right) \\
+\right)  \\
 &  =\left(  \left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 \boldsymbol{\varphi}\right\vert \right)  \mathcal{R}_{\left\vert
 \boldsymbol{\varphi}\right\rangle \left\langle \boldsymbol{\varphi}\right\vert
@@ -27929,7 +27923,7 @@ k_{1}\cdots k_{r}}%
 =\left(  \left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 \boldsymbol{\varphi}\right\vert \right)  \mathfrak{R}_{\left\vert
 \boldsymbol{\varphi}\right\rangle \left\langle \boldsymbol{\varphi}\right\vert
-}\left(  \Gamma\left(  X\right)  \right) \\
+}\left(  \Gamma\left(  X\right)  \right)  \\
 &  =\left(  \left\vert \boldsymbol{\varphi}\right\rangle \left\langle
 \boldsymbol{\varphi}\right\vert \right)  \mathcal{R}_{\left\vert
 \boldsymbol{\varphi}\right\rangle \left\langle \boldsymbol{\varphi}\right\vert
@@ -28631,7 +28625,7 @@ _{n}w\right\rangle \left\langle \mathcal{A}_{n}w\right\vert \right)
 
 \end{proof}
 
-\subsubsection{\emph{Jordan Canonical Form}}
+\section{\emph{Jordan Canonical Form}}
 
 \begin{remark}
 If $r=\infty$ then in the following $A\in\mathcal{B}_{0}\left(  \mathcal{H}%
@@ -28747,7 +28741,7 @@ eigenvectors of $A$.
 \end{enumerate}
 \end{remark}
 
-\subsubsection{Singular Valued Decomposition}
+\section{Singular Valued Decomposition}
 
 For rectangular matrices $\mathcal{R}\left(  A\right)  $ the notions of
 eigenvalue/vector cannot be defined. However, the products $\mathcal{R}\left(
@@ -28857,15 +28851,14 @@ A\right\}  ^{\bot c}\\
 
 \end{remark}
 
-\begin{proof}
 \begin{enumerate}
 \item $\ker\left\{  A\right\}  \subseteq$ $\mathcal{H}_{\nu}$ is defined by
 \begin{equation}
 \ker\left\{  A\right\}  =\left\{  x\in\mathcal{H}_{\nu}\left\vert
 \overset{}{\left\langle \left.  y\right\vert Ax\right\rangle _{\nu}=0\,\forall
-y\in\mathcal{H}_{\mu}^{d}}\right.  \right\}  \subseteq\mathcal{H}_{\nu},
+y\in\mathcal{H}_{\mu}^{d}}\right.  \right\}  \subseteq\mathcal{H}_{\nu}%
 \end{equation}
-
+$,$
 
 \item $\ker\left\{  A\right\}  ^{\bot}\subseteq$ $\mathcal{H}_{\nu}^{d}$ is
 defined by
@@ -28888,9 +28881,8 @@ y\right\vert Ax\right\rangle _{\mu}\,\forall x\in\mathcal{H}_{\nu}}\right.
 \end{equation}
 
 \end{enumerate}
-\end{proof}
 
-\begin{proof}
+\begin{remark}
 If $y\in\operatorname{Ran}\left\{  A^{\dagger}\right\}  $ then $y=A^{\dagger
 }w\in\mathcal{H}_{\nu}^{d},$ where $w\in$ $\mathcal{H}_{\mu}^{d}$ and
 \begin{equation}
@@ -28913,7 +28905,7 @@ w\,\in\,\ker\left\{  A\right\}  ^{\bot}\Rightarrow\operatorname{Ran}\left\{
 A^{\dagger}\right\}  \subseteq\,\ker\left\{  A\right\}  ^{\bot}.
 \end{equation}
 
-\end{proof}
+\end{remark}
 
 \begin{lemma}
 Let $A\in\mathcal{B}\left(  \mathcal{H}_{\mu},\mathcal{H}_{\nu}\right)  $
@@ -29668,23 +29660,25 @@ In abstract bra-ket notation this becomes
 \item
 \begin{equation}
 A=\sum_{\substack{1\leq j\leq\mu\\1\leq k\leq\nu}}\left\vert \Phi_{j}^{\mu
-}\right\rangle \left\langle {\large \Phi}_{k}^{\nu}\right\vert A_{jk}.
+}\right\rangle \left\langle {\large \Phi}_{k}^{\nu}\right\vert A_{jk}%
+=\sum_{\substack{1\leq j\leq\mu\\1\leq k\leq\nu}}\left\vert \Phi_{j}^{\mu
+}\right\rangle A_{jk}\left\langle {\large \Phi}_{k}^{\nu}\right\vert .
 \end{equation}
 
 
 \item
 \begin{align}
-X  &  :\mathcal{V}^{\nu}\rightarrow\mathcal{V}^{\mu}\\
-X^{\dagger}  &  :\mathcal{V}^{\mu}\rightarrow\mathcal{V}^{\nu}.
+X &  :\mathcal{V}^{\nu}\rightarrow\mathcal{V}^{\mu}\\
+X^{\dagger} &  :\mathcal{V}^{\mu}\rightarrow\mathcal{V}^{\nu}.
 \end{align}
 
 
 \item
 \begin{align}
-\mathcal{V}^{\mu}  &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
+\mathcal{V}^{\mu} &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
 \left.  \left\vert \Phi_{j}^{\mu}\right\rangle \right\vert 1\leq j\leq
-\mu\right\} \\
-\mathcal{V}^{\nu}  &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
+\mu\right\}  \\
+\mathcal{V}^{\nu} &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
 \left.  \left\vert \Phi_{j}^{\nu}\right\rangle \right\vert 1\leq j\leq
 \nu\right\}  .
 \end{align}
@@ -29692,10 +29686,10 @@ X^{\dagger}  &  :\mathcal{V}^{\mu}\rightarrow\mathcal{V}^{\nu}.
 
 \item
 \begin{align}
-\mathcal{V}^{\mu d}  &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
+\mathcal{V}^{\mu d} &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
 \left.  \left\langle \Phi_{j}^{\mu}\right\vert \right\vert 1\leq j\leq
-\mu\right\} \\
-\mathcal{V}^{\nu d}  &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
+\mu\right\}  \\
+\mathcal{V}^{\nu d} &  =\mathbb{C}\text{-}\operatorname*{linspan}\left\{
 \left.  \left\langle \Phi_{j}^{\nu}\right\vert \right\vert 1\leq j\leq
 \nu\right\}  .
 \end{align}
@@ -29703,7 +29697,7 @@ X^{\dagger}  &  :\mathcal{V}^{\mu}\rightarrow\mathcal{V}^{\nu}.
 
 \item
 \begin{align}
-AA^{\dagger}  &  =\left(  \sum_{\substack{1\leq j_{1}\leq\mu\\1\leq k_{1}%
+AA^{\dagger} &  =\left(  \sum_{\substack{1\leq j_{1}\leq\mu\\1\leq k_{1}%
 \leq\nu}}A_{j_{1}k_{1}}\left\vert \Phi_{j_{1}}^{\mu}\right\rangle \left\langle
 \Phi_{k_{1}}^{\nu}\right\vert \right)  \left(  \sum_{\substack{1\leq j_{2}%
 \leq\mu\\1\leq k_{2}\leq\nu}}\overline{A_{j_{2}k_{2}}}\left\vert \Phi_{k_{2}%
@@ -29717,7 +29711,7 @@ AA^{\dagger}  &  =\left(  \sum_{\substack{1\leq j_{1}\leq\mu\\1\leq k_{1}%
 }\right\rangle \left\langle \Phi_{j_{2}}^{\mu}\right\vert =\sum_{1\leq
 j_{1},j_{2}\leq\mu}\left(  AA^{\dagger}\right)  _{j_{1}j_{2}}\left\vert
 \Phi_{j_{1}}^{\mu}\right\rangle \left\langle \Phi_{j_{2}}^{\mu}\right\vert \\
-A^{\dagger}A  &  =\left(  \sum_{\substack{1\leq j_{2}\leq\mu\\1\leq k_{2}%
+A^{\dagger}A &  =\left(  \sum_{\substack{1\leq j_{2}\leq\mu\\1\leq k_{2}%
 \leq\nu}}\overline{A_{j_{2}k_{2}}}\left\vert \Phi_{k_{2}}^{\nu}\right\rangle
 \left\langle \Phi_{j_{2}}^{\mu}\right\vert \right)  \left(  \sum
 _{\substack{1\leq j_{1}\leq\mu\\1\leq k_{1},k_{2}\leq\nu}}A_{j_{1}k_{1}%
@@ -29736,11 +29730,11 @@ k_{1},k_{2}\leq\nu}\left(  A^{\dagger}A\right)  _{k_{2}k_{1}}\left\vert
 
 \item
 \begin{align}
-A  &  =U\Sigma V^{\dagger}=\sum_{1\leq j\leq\mu}\left\vert U\Phi_{j}^{\mu
+A &  =U\Sigma V^{\dagger}=\sum_{1\leq j\leq\mu}\left\vert U\Phi_{j}^{\mu
 }\right\rangle \sigma_{j}\left\langle V\Phi_{j}^{\nu}\right\vert =\sum_{1\leq
 j\leq\mu}\left\vert \Psi_{j}^{\mu}\right\rangle \sigma_{j}\left\langle
 \Psi_{j}^{\nu}\right\vert \\
-A^{\dagger}  &  =V\Sigma U^{\dagger}=\sum_{1\leq j\leq\mu}\left\vert V\Phi
+A^{\dagger} &  =V\Sigma U^{\dagger}=\sum_{1\leq j\leq\mu}\left\vert V\Phi
 _{j}^{\nu}\right\rangle \sigma_{j}\left\langle U\Phi_{j}^{\mu}\right\vert
 =\sum_{1\leq j\leq\mu}\left\vert \Psi_{j}^{\nu}\right\rangle \sigma
 _{j}\left\langle \Psi_{j}^{\mu}\right\vert ,
@@ -31909,16 +31903,15 @@ V=\boldsymbol{\lambda.}%
 \end{remark}
 
 \begin{remark}
-$\Gamma$ and $L$ are positive real linear maps from the \emph{real spaces} of
-self adjoint operators $\mathcal{L}_{sa}\left(  \mathcal{H}_{\mathcal{F}%
-}\right)  $ and $\mathcal{L}_{1sa}\left(  \mathcal{H}_{\mathcal{F}}\right)  $
-to themselves. As the spaces are \emph{real} it is possible that positive
-transformations \emph{do not have to be self adjoint} and even triangular
-transformation can be positive.
+$\Gamma$\emph{ and }$L$\emph{ are positive real linear maps from the real
+spaces of self adjoint operators }$L_{sa}\left(  \mathcal{H}_{\mathcal{F}%
+}\right)  $\emph{ and }$L_{1sa}\left(  \mathcal{H}_{\mathcal{F}}\right)
+$\emph{ to themselves. As the spaces are real it is possible that positive
+transformations do not have to be self adjoint and even triangular
+transformation can be positive.}
 \end{remark}
 
-\subparagraph{Second Quantization of Projectors in Terms of First
-Quantization}
+\section{Second Quantization of Projectors in Terms of First Quantization}
 
 \begin{enumerate}
 \item \bigskip The projection $\widehat{P_{\mathcal{H}^{1}}}$ of the number
@@ -31970,11 +31963,11 @@ _{1}^{2}P}\right\}  \right\}  =\infty.
 
 \item
 \begin{equation}
-\sum_{1\leq j\leq r}a_{j}^{\dagger}a_{j}\sum_{1\leq j\leq r}a_{k}^{\dagger
-}a_{k}=2\sum_{1\leq j<k\leq r}a_{j}^{\dagger}a_{j}a_{k}^{\dagger}a_{k}%
-+\sum_{1\leq j\leq r}a_{j}^{\dagger}a_{j}=2\sum_{1\leq j<k\leq r}%
-a_{j}^{\dagger}a_{k}^{\dagger}a_{k}a_{j}+\sum_{1\leq j\leq r}a_{j}^{\dagger
-}a_{j}=2\mathcal{N}_{2}+\mathcal{N}_{1}%
+\mathcal{N}_{1}^{2}=\sum_{1\leq j\leq r}a_{j}^{\dagger}a_{j}\sum_{1\leq j\leq
+r}a_{k}^{\dagger}a_{k}=2\sum_{1\leq j<k\leq r}a_{j}^{\dagger}a_{j}%
+a_{k}^{\dagger}a_{k}+\sum_{1\leq j\leq r}a_{j}^{\dagger}a_{j}=2\sum_{1\leq
+j<k\leq r}a_{j}^{\dagger}a_{k}^{\dagger}a_{k}a_{j}+\sum_{1\leq j\leq r}%
+a_{j}^{\dagger}a_{j}=2\mathcal{N}_{2}+\mathcal{N}_{1}%
 \end{equation}
 
 
@@ -33760,10 +33753,10 @@ v_{4}%
 _{j}\right\rangle \in\mathcal{H}_{\mathbb{R}_{i\varphi}}^{1}%
 \end{align}%
 \begin{align}
-\mathcal{H}_{\mathbb{R}_{\varphi}}^{1}  &  =\mathbb{R}\text{-}%
+\mathcal{H}_{\mathbb{R}_{\varphi}}^{1} &  =\mathbb{R}\text{-}%
 \operatorname*{linspan}\left\{  \left.  \left\vert \varphi_{j}\right\rangle
-\right\vert 1\leq j\leq r\right\} \\
-\mathcal{H}_{\mathbb{R}_{i\varphi}}^{1}  &  =\mathbb{R}\text{-}%
+\right\vert 1\leq j\leq r\right\}  \\
+\mathcal{H}_{\mathbb{R}_{i\varphi}}^{1} &  =\mathbb{R}\text{-}%
 \operatorname*{linspan}\left\{  \left.  \left\vert i\varphi_{j}\right\rangle
 \right\vert 1\leq j\leq r\right\}
 \end{align}%
@@ -33774,12 +33767,12 @@ _{j}\right\rangle \in\mathcal{H}_{\mathbb{R}_{i\varphi}}^{1}%
 j\leq r}\left\vert \varphi_{j}\right\rangle \operatorname{Re}\left(
 \mathcal{R}_{\varphi}\left(  v\right)  _{j}\right)  +i\left\vert \varphi
 _{j}\right\rangle \operatorname{Im}\left(  \mathcal{R}_{\varphi}\left(
-v\right)  _{j}\right)  \right) \\
+v\right)  _{j}\right)  \right)  \\
 &  =\sum_{1\leq j\leq r}\mathfrak{R}_{\varphi}\left(  \left\vert \varphi
 _{j}\right\rangle \right)  \operatorname{Re}\left(  \mathcal{R}_{\varphi
 }\left(  v\right)  _{j}\right)  +\sum_{1\leq j\leq r}\mathfrak{R}_{\varphi
 }\left(  i\left\vert \varphi_{j}\right\rangle \right)  \operatorname{Im}%
-\left(  \mathcal{R}_{\varphi}\left(  v\right)  _{j}\right) \\
+\left(  \mathcal{R}_{\varphi}\left(  v\right)  _{j}\right)  \\
 &  =\sum_{1\leq j\leq r}\left\vert \varphi_{j}\right\rangle \operatorname{Re}%
 \left(  \mathcal{R}_{\varphi}\left(  v\right)  _{j}\right)  +\sum_{1\leq j\leq
 r}\left\vert i\varphi_{j}\right\rangle \operatorname{Im}\left(  \mathcal{R}%
@@ -33803,10 +33796,10 @@ _{\varphi}}^{2}\oplus_{\mathbb{R}}\mathcal{H}_{\mathbb{R}_{\varphi}}^{2}%
 \in\mathcal{H}_{\mathbb{R}_{i\varphi}}^{2}%
 \end{align}%
 \begin{align}
-\mathcal{H}_{\mathbb{R}_{\varphi}}^{2}  &  =\mathbb{R}\text{-}%
+\mathcal{H}_{\mathbb{R}_{\varphi}}^{2} &  =\mathbb{R}\text{-}%
 \operatorname*{linspan}\left\{  \left.  \left\vert \varphi_{j_{1}}%
-\varphi_{j_{2}}\right\rangle \right\vert 1\leq j_{1}<j_{2}\leq r\right\} \\
-\mathcal{H}_{\mathbb{R}_{i\varphi}}^{2}  &  =\mathbb{R}\text{-}%
+\varphi_{j_{2}}\right\rangle \right\vert 1\leq j_{1}<j_{2}\leq r\right\}  \\
+\mathcal{H}_{\mathbb{R}_{i\varphi}}^{2} &  =\mathbb{R}\text{-}%
 \operatorname*{linspan}\left\{  \left.  \left\vert i\varphi_{j_{1}}%
 \varphi_{j_{2}}\right\rangle \right\vert 1\leq j_{1}<j_{2}\leq r\right\}
 \end{align}%
@@ -33818,23 +33811,23 @@ _{\varphi}}^{2}\oplus_{\mathbb{R}}\mathcal{H}_{\mathbb{R}_{\varphi}}^{2}%
 \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \operatorname{Re}\left(
 \mathcal{R}_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)  +i\left\vert
 \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \operatorname{Im}\left(
-\mathcal{R}_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)  \right) \\
+\mathcal{R}_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)  \right)  \\
 &  =\sum_{1\leq j_{1}<j_{2}\leq r}\mathfrak{R}_{\varphi}\left(  \left\vert
 \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \right)  \operatorname{Re}\left(
 \mathcal{R}_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)  +\sum_{1\leq
 j_{1}<j_{2}\leq r}\mathfrak{R}_{\varphi}\left(  i\left\vert \varphi_{j_{1}%
 }\varphi_{j_{2}}\right\rangle \right)  \operatorname{Im}\left(  \mathcal{R}%
-_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right) \\
+_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)  \\
 &  =\sum_{1\leq j_{1}<j_{2}\leq r}\left\vert \varphi_{j_{1}}\varphi_{j_{2}%
 }\right\rangle \operatorname{Re}\left(  \mathcal{R}_{\varphi}\left(  g\right)
 _{j_{1}j_{2}}\right)  +\sum_{1\leq j_{1}<j_{2}\leq r}\left\vert i\varphi
 _{j_{1}}\varphi_{j_{2}}\right\rangle \operatorname{Im}\left(  \mathcal{R}%
-_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)  =\sum_{1\leq j_{1}<j_{2}\leq
-r}\left\vert \varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \operatorname{Re}%
+_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)  \\
+&  =\sum_{1\leq j_{1}<j_{2}\leq r}\left\vert \varphi_{j_{1}}\varphi_{j_{2}%
+}\right\rangle \operatorname{Re}\left(  \mathcal{R}_{\varphi}\left(  g\right)
+_{j_{1}j_{2}}\right)  \oplus_{\mathbb{R}}\sum_{1\leq j_{1}<j_{2}\leq
+r}\left\vert i\varphi_{j_{1}}\varphi_{j_{2}}\right\rangle \operatorname{Im}%
 \left(  \mathcal{R}_{\varphi}\left(  g\right)  _{j_{1}j_{2}}\right)
-\oplus_{\mathbb{R}}\sum_{1\leq j_{1}<j_{2}\leq r}\left\vert i\varphi_{j_{1}%
-}\varphi_{j_{2}}\right\rangle \operatorname{Im}\left(  \mathcal{R}_{\varphi
-}\left(  g\right)  _{j_{1}j_{2}}\right)
 \end{align}
 
 
