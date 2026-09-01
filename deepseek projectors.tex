@@ -12,7 +12,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Friday, April 06, 2012 11:15:25}
-%TCIDATA{LastRevised=Sunday, August 30, 2026 11:11:56}
+%TCIDATA{LastRevised=Monday, August 31, 2026 07:50:35}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\REVTeX 4">}
 %TCIDATA{Language=American English}
@@ -72,17 +72,17 @@ including the canonical grand canonical ensemble $D_\beta = e^{-\beta N}/%
 \begin{enumerate}
 \item Let $\mathcal{F}=C\ell _{2r}(\mathbb{C})$ be the complex Clifford
 algebra over $\mathbb{C}^{2r}$ with generators $\{I_{\mathcal{F}%
-},x_{1},\ldots ,x_{2r}\}$ 
+},x_{1},\ldots ,x_{2r}\}$
 
 \begin{enumerate}
 \item satisfying:
 
 \begin{enumerate}
-\item  
+\item 
 \begin{equation}
 x_{i}x_{j}+x_{j}x_{i}=2\delta _{ij}I_{\mathcal{F}}.
 \end{equation}%
-which gives 
+which gives
 
 \item 
 \begin{equation}
@@ -128,7 +128,7 @@ via the Greu$\beta $ exterior algebra product "$\bullet ".$
 \item These bases generate the direct sum decompositions
 
 \begin{enumerate}
-\item \textbf{Graded Clifford algebra} 
+\item \textbf{Graded Clifford algebra}
 
 \begin{enumerate}
 \item 
@@ -140,18 +140,18 @@ where
 \mathcal{F}_{n}==\mathbb{C}\text{-}\func{linspan}\left\{ x_{1},\ldots
 ,x_{n}\right\} ,
 \end{equation}%
-thus using conventional vector space notation  
+thus using conventional vector space notation 
 \begin{equation}
 \mathcal{F}_{1}=\mathcal{F}^{1}
 \end{equation}%
-which gives in standard exterior algebra notation 
+which gives in standard exterior algebra notation
 
 \item 
 \begin{equation}
 \mathcal{F}_{n}={\Huge \wedge }^{n}\mathcal{F}_{1}=\mathcal{F}^{n};\quad
 0\leq n\leq 2r
 \end{equation}%
-leading to 
+leading to
 
 \item 
 \begin{equation}
@@ -163,7 +163,7 @@ leading to
 \item \textbf{Graded CAR algebra}
 
 \begin{enumerate}
-\item 
+\item In terms of creation and annihilation operators 
 \begin{equation}
 \mathcal{F}=\bigoplus\limits_{0\leq m,n\leq r}\mathcal{A}_{mn}=\bigoplus%
 \limits_{0\leq p\leq r}\mathcal{A}_{p},
@@ -183,12 +183,12 @@ a_{j_{n}}\right\vert 1\leq j_{1}<\cdots <j_{m}\leq r,1\leq k_{1}<\cdots
 <k_{n}\leq r,0\leq m,n\leq r,m+n=p\right\} .
 \end{equation}
 
-\item 
+\item The grade 1 elements 
 \begin{equation}
 \mathcal{A}^{1}=\mathcal{A}_{1}=\mathbb{C}\text{-}\func{linspan}%
 \{a_{1}^{\dagger },\ldots ,a_{r}^{\dagger },a_{1},\ldots ,a_{r}\}
 \end{equation}%
-is a complex vector space thus one can define 
+form a complex vector space thus one can define 
 \begin{equation}
 \mathcal{A}^{n}={\Huge \wedge }^{n}\mathcal{A}^{1}
 \end{equation}%
@@ -199,36 +199,41 @@ and observe that
 \end{equation}
 
 \begin{remark}
-Note that the exponent takes value all the way to $2r.$ 
+Note that the exponent takes value all the way to $2r.$
 \end{remark}
 
 \begin{example}
 \begin{equation}
 \mathcal{A}_{2}=\mathbb{C}\text{-}\func{linspan}\left\{ \left.
-a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{j_{1}}\cdots
-a_{j_{n}}\right\vert 1\leq j_{1}<\cdots <j_{m}\leq r,1\leq k_{1}<\cdots
-<k_{n}\leq r,0\leq m,n\leq r,m+n=2\right\} 
+a_{j_{1}}^{\dagger }a_{j_{m}}^{\dagger }a_{j_{1}}a_{j_{n}}\right\vert 1\leq
+j_{1}<\cdots <j_{m}\leq r,1\leq k_{1}<\cdots <k_{n}\leq r,0\leq m,n\leq
+r,m+n=2\right\} 
 \end{equation}%
 and 
 \begin{equation}
 \mathcal{A}_{2}=\mathcal{A}_{20}\oplus \mathcal{A}_{11}\oplus \mathcal{A}%
-_{02}
+_{02}.
 \end{equation}
 \end{example}
 
 \item \textbf{NOTE\ THAT }%
 \begin{equation}
-\mathcal{A}^{n}\neq \mathcal{A}_{n},\quad 2\leq n\leq 2r.
+\mathcal{A}^{n}\neq \mathcal{A}_{n},\quad 2\leq n\leq 2r,
 \end{equation}%
-\begin{equation}
-a_{j}^{\dagger }\wedge a_{j}=\frac{1}{2}\left( a_{j}^{\dagger
+which can be seen by 
+\begin{eqnarray}
+a_{j}^{\dagger }\wedge a_{j} &=&\frac{1}{2}\left( a_{j}^{\dagger
 }a_{j}-a_{j}a_{j}^{\dagger }\right) =\frac{1}{2}\left( a_{j}^{\dagger
-}a_{j}-I_{\mathcal{F}}+a_{j}^{\dagger }a_{j}\right) =a_{j}^{\dagger }a_{j}-%
-\frac{1}{2}I_{\mathcal{F}}
-\end{equation}%
+}a_{j}-I_{\mathcal{F}}+a_{j}^{\dagger }a_{j}\right)  \\
+&=&a_{j}^{\dagger }a_{j}-\frac{1}{2}I_{\mathcal{F}}
+\end{eqnarray}%
+and equivalently 
 \begin{equation}
-a_{j}^{\dagger }a_{j}=a_{j}^{\dagger }\wedge a_{j}+\frac{1}{2}I_{\mathcal{F}}
+a_{j}^{\dagger }a_{j}=a_{j}^{\dagger }\wedge a_{j}+\frac{1}{2}I_{\mathcal{F}%
+}\in \mathcal{A}_{even4}^{\left( 2\right) }=\mathcal{A}^{0}\oplus \mathcal{A}%
+^{2}.
 \end{equation}%
+This produces 
 \begin{equation}
 a_{j}^{\dagger }a_{j}a_{k}^{\dagger }a_{k}=\left( a_{j}^{\dagger }\wedge
 a_{j}+\frac{1}{2}I_{\mathcal{F}}\right) \left( a_{k}^{\dagger }\wedge a_{k}+%
@@ -236,11 +241,24 @@ a_{j}+\frac{1}{2}I_{\mathcal{F}}\right) \left( a_{k}^{\dagger }\wedge a_{k}+%
 a_{k}^{\dagger }\wedge a_{k}+\frac{1}{2}a_{j}^{\dagger }\wedge a_{j}+\frac{1%
 }{2}a_{k}^{\dagger }\wedge a_{k}+\frac{1}{4}I_{\mathcal{F}}
 \end{equation}%
+and hence 
 \begin{equation}
 a_{j}^{\dagger }a_{k}^{\dagger }a_{k}a_{j}=-\left( a_{j}^{\dagger }\wedge
 a_{k}^{\dagger }\wedge a_{k}\wedge a_{j}+\frac{1}{2}a_{j}^{\dagger }\wedge
 a_{j}+\frac{1}{2}a_{k}^{\dagger }\wedge a_{k}+\frac{1}{4}I_{\mathcal{F}%
-}\right) 
+}\right) \in \mathcal{A}_{even}^{\left( 4\right) }=\mathcal{A}^{0}\oplus 
+\mathcal{A}^{2}\oplus \mathcal{A}^{4}.
+\end{equation}
+
+\item Recall%
+\begin{equation}
+\mathcal{F}=\bigoplus\limits_{0\leq n\leq 2r}\mathcal{A}^{n}={\Huge \wedge }%
+\left( \mathcal{A}^{1}\right) =\mathcal{A}^{\left( 2r\right) },
+\end{equation}%
+where 
+\begin{equation}
+\mathcal{A}^{\left( n\right) }=\bigoplus\limits_{0\leq p\leq n}\mathcal{A}%
+^{p}.
 \end{equation}
 \end{enumerate}
 
@@ -260,6 +278,8 @@ _{j_{m}}\right\rangle \left\langle \phi \right\vert \bullet \left\vert \phi
 _{k_{n}}\right\vert \right\vert 1\leq j_{1}<\cdots <j_{m}\leq r,1\leq
 k_{1}<\cdots <k_{n}\leq r\right\} .
 \end{equation}
+
+\item 
 \end{enumerate}
 
 \item \textbf{Relationships between the different decompositions:}
@@ -326,12 +346,14 @@ _{mj}\right\rangle \left\langle \Psi _{mj}\right\vert
 \end{equation}%
 one obtains 
 \begin{eqnarray}
-P_{\mathcal{H}^{m}}a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
-}a_{k_{1}}\cdots a_{k_{n}}P_{\mathcal{H}^{n}} &=&\sum_{1\leq j\leq \binom{r}{%
-m}}\left\vert \Psi _{mj}\right\rangle \left\langle \Psi _{mj}\right\vert
-a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots
-a_{k_{n}}\sum_{1\leq k\leq \binom{r}{n}}\left\vert \Psi _{mk}\right\rangle
-\left\langle \Psi _{mk}\right\vert  \\
+\widehat{P_{\mathcal{H}^{m}\mathcal{H}^{n}}}\left( a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\right)  &=&P_{\mathcal{%
+H}^{m}}a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots
+a_{k_{n}}P_{\mathcal{H}^{n}}=\sum_{1\leq j\leq \binom{r}{m}}\left\vert \Psi
+_{mj}\right\rangle \left\langle \Psi _{mj}\right\vert a_{j_{1}}^{\dagger
+}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\sum_{1\leq k\leq 
+\binom{r}{n}}\left\vert \Psi _{mk}\right\rangle \left\langle \Psi
+_{mk}\right\vert  \\
 &=&\sum_{\substack{ 1\leq j\leq \binom{r}{m} \\ 1\leq k\leq \binom{r}{n}}}%
 \left\vert \Psi _{mj}\right\rangle \left\langle \Psi _{nk}\right\vert
 \left\langle \left. \Psi _{mj}\right\vert a_{j_{1}}^{\dagger }\cdots
@@ -339,12 +361,15 @@ a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\Psi _{nk}\right\rangle
 \end{eqnarray}%
 and hence%
 \begin{eqnarray}
-P_{\mathcal{H}^{m^{\prime }}}a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
-}a_{k_{1}}\cdots a_{k_{n}}P_{\mathcal{H}^{n^{\prime }}} &=&\sum_{\substack{ %
-1\leq j\leq \binom{r}{m} \\ 1\leq k\leq \binom{r}{m}}}\left\vert \Psi
-_{m^{\prime }j}\right\rangle \left\langle \Psi _{n^{\prime }k}\right\vert
-\left\langle \left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger
-}\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\Psi _{n^{\prime
+\widehat{P_{\mathcal{H}^{m^{\prime }}\mathcal{H}^{n^{\prime }}}}\left(
+a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots
+a_{k_{n}}\right) P_{\mathcal{H}^{n^{\prime }}} &=&P_{\mathcal{H}^{m^{\prime
+}}}a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots
+a_{k_{n}}P_{\mathcal{H}^{n^{\prime }}}=\sum_{\substack{ 1\leq j\leq \binom{r%
+}{m} \\ 1\leq k\leq \binom{r}{m}}}\left\vert \Psi _{m^{\prime
+}j}\right\rangle \left\langle \Psi _{n^{\prime }k}\right\vert \left\langle
+\left. \Psi _{m^{\prime }j}\right\vert a_{j_{1}}^{\dagger }\cdots
+a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}\Psi _{n^{\prime
 }k}\right\rangle  \\
 &=&\sum_{\substack{ 1\leq j\leq \binom{r}{m} \\ 1\leq k\leq \binom{r}{m}}}%
 \left\vert \Psi _{m^{\prime }j}\right\rangle \left\langle \Psi _{n^{\prime
@@ -416,40 +441,47 @@ n\leq n^{\prime }\leq r\,
 \end{enumerate}
 \end{example}
 
-\item The Partial Isometry Transition operator $\left\vert \varphi
+\item The partial isometry transition operator $\left\vert \varphi
 _{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle \left\langle \varphi
 _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert $ as projections of
-Second Quantized operators and of the Generalized Expansion map
+second quantized operators and of the generalized gxpansion map
 
 \begin{enumerate}
 \item 
-\begin{equation}
+\begin{eqnarray}
 \left\vert \varphi _{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert 
+&=&P_{\mathcal{H}^{m^{\prime }}}a_{j_{1}}^{\dagger }\cdots
+a_{j_{m}}^{\dagger }a_{k_{1}}\cdots a_{k_{n}}P_{\mathcal{H}^{n^{\prime }}}=%
+\widehat{P_{\mathcal{H}^{m^{\prime }}\mathcal{H}^{n^{\prime }}}}\left(
+a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger }a_{k_{1}}\cdots
+a_{k_{n}}\right)  \\
+&=&\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle
 \left\langle \varphi _{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert
-=P_{\mathcal{H}^{m^{\prime }}}a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
-}a_{k_{1}}\cdots a_{k_{n}}P_{\mathcal{H}^{n^{\prime }}}=\left\vert \varphi
-_{j_{1}}\cdots \varphi _{j_{m^{\prime }}}\right\rangle \left\langle \varphi
-_{k_{1}}\cdots \varphi _{k_{n^{\prime }}}\right\vert =P_{\mathcal{H}%
-^{m^{\prime }}}\Gamma \left( \left\vert \varphi _{j_{1}}\cdots \varphi
+=P_{\mathcal{H}^{m^{\prime }}}\Gamma \left( \left\vert \varphi
+_{j_{1}}\cdots \varphi _{j_{m}}\right\rangle \left\langle \varphi
+_{k_{1}}\cdots \varphi _{k_{n}}\right\vert \right) P_{\mathcal{H}^{n^{\prime
+}}}=\widehat{P_{\mathcal{H}^{m^{\prime }}\mathcal{H}^{n^{\prime }}}}\left(
+\Gamma \left( \left\vert \varphi _{j_{1}}\cdots \varphi
 _{j_{m}}\right\rangle \left\langle \varphi _{k_{1}}\cdots \varphi
-_{k_{n}}\right\vert \right) P_{\mathcal{H}^{n^{\prime }}}
-\end{equation}
+_{k_{n}}\right\vert \right) \right) .
+\end{eqnarray}
 
 \item 
 \begin{equation}
 \Gamma \left( \left\vert \varphi _{j_{1}}\cdots \varphi
 _{j_{m}}\right\rangle \left\langle \varphi _{k_{1}}\cdots \varphi
 _{k_{n}}\right\vert \right) =a_{j_{1}}^{\dagger }\cdots a_{j_{m}}^{\dagger
-}a_{k_{1}}\cdots a_{k_{n}}
+}a_{k_{1}}\cdots a_{k_{n}}.
 \end{equation}
 
 \item 
 \begin{equation}
 1\leq j\leq \binom{m^{\prime }}{m},1\leq k\leq \binom{n^{\prime }}{n}%
-,\,0\leq m\leq m^{\prime }\leq r,\,0\leq n\leq n^{\prime }\leq r
+,\,0\leq m\leq m^{\prime }\leq r,\,0\leq n\leq n^{\prime }\leq r.
 \end{equation}
 
-\item The generalized expansion map is invertibable
+\item The generalized expansion map is invertibable.
 \end{enumerate}
 
 \begin{example}
@@ -491,7 +523,7 @@ _{m^{\prime }j}\right\rangle \left\langle \Psi _{n^{\prime }k}\right\vert
 \item \textbf{Ket-Bra operators in terms of SQ and Majorano operators} 
 \begin{eqnarray}
 &&\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle
-\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{q}}\right\vert  \\
+\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{q}}\right\vert \\
 &=&a_{j_{1}}^{\dagger }\cdots a_{j_{q}}^{\dagger }\left(
 \dprod\limits_{1\leq j\leq r}h_{j}\right) a_{k_{p}}\cdots a_{k_{1}} \\
 &=&\dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa }}^{\dagger
@@ -505,19 +537,20 @@ x_{k_{\kappa }}+ix_{k_{\kappa }+r}\right) \right) ,
 \end{eqnarray}%
 thus \emph{the most general primitive projector }is given by 
 \begin{align}
-& \left\vert \Psi \right\rangle \left\langle \Psi \right\vert  \\
-& =\sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r \\ %
-1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots k_{p}}c_{j_{1}\cdots
-j_{q}}\left\vert \varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle
-\left\langle \varphi _{k_{1}}\cdots \varphi _{k_{q}}\right\vert  \\
-& =\sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r \\ %
-1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots k_{p}}c_{j_{1}\cdots
-j_{q}}\dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa }}^{\dagger
-}\dprod\limits_{1\leq j\leq r}h_{j}\dprod\limits_{p\leq \kappa \leq
-1}a_{k_{\kappa }} \\
-& =\sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r \\ %
-1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots k_{p}}c_{j_{1}\cdots
-j_{q}} \\
+& \left\vert \Psi \right\rangle \left\langle \Psi \right\vert \\
+& =\sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r 
+\\ 1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots
+k_{p}}c_{j_{1}\cdots j_{q}}\left\vert \varphi _{j_{1}}\cdots \varphi
+_{j_{p}}\right\rangle \left\langle \varphi _{k_{1}}\cdots \varphi
+_{k_{q}}\right\vert \\
+& =\sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r 
+\\ 1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots
+k_{p}}c_{j_{1}\cdots j_{q}}\dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa
+}}^{\dagger }\dprod\limits_{1\leq j\leq r}h_{j}\dprod\limits_{p\leq \kappa
+\leq 1}a_{k_{\kappa }} \\
+& =\sum_{0\leq p,q\leq r}\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r 
+\\ 1\leq k_{1}<\cdots <k_{p}\leq r}}\bar{c}_{k_{1}\cdots
+k_{p}}c_{j_{1}\cdots j_{q}} \\
 & \qquad \times \dprod\limits_{1\leq \kappa \leq q}\left( \frac{1}{\sqrt{2}}%
 \left( x_{\kappa _{q}}-ix_{\kappa _{q}+r}\right) \right)
 \dprod\limits_{1\leq j\leq r}\left( \frac{1}{2}I_{\mathcal{F}%
@@ -541,7 +574,7 @@ r}h_{j}\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }}=P_{\mathcal{H}%
 \dprod\limits_{1\leq \kappa \leq q}a_{j_{\kappa }}^{\dagger
 }\dprod\limits_{p\leq \kappa \leq 1}a_{k_{\kappa }}=\Gamma \left( \left\vert
 \varphi _{j_{1}}\cdots \varphi _{j_{p}}\right\rangle \left\langle \varphi
-_{k_{1}}\cdots \varphi _{k_{q}}\right\vert \right) 
+_{k_{1}}\cdots \varphi _{k_{q}}\right\vert \right)
 \end{equation}
 
 \item 
@@ -563,12 +596,12 @@ E_{H}\left( D\right) =\limfunc{Tr}\nolimits_{\mathcal{H}_{\mathcal{F}%
 }}\left( HD\right) =\left\langle \left. H\right\vert D\right\rangle _{%
 \mathcal{H}_{\mathcal{F}}},\quad D\in S\left( \mathcal{B}\left( \mathcal{H}_{%
 \mathcal{F}}\right) \right) ,\quad H=H^{\dagger }\in \mathcal{L}\left( 
-\mathcal{H}_{\mathcal{F}}\right) 
+\mathcal{H}_{\mathcal{F}}\right)
 \end{equation}%
 Let 
 \begin{equation}
-H=\Gamma \left( h\right) =\sum_{\substack{ 0\leq q\leq r \\ 0\leq p\leq r}}%
-\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r \\ 1\leq k_{1}<\cdots
+H=\Gamma \left( h\right) =\sum_{\substack{ 0\leq q\leq r  \\ 0\leq p\leq r}}%
+\sum_{\substack{ 1\leq j_{1}<\cdots <j_{q}\leq r  \\ 1\leq k_{1}<\cdots
 <k_{q}\leq r}}a_{j_{1}}^{\dagger }\cdots a_{j_{q}}^{\dagger }a_{k_{p}}\cdots
 a_{k_{1}}\mathcal{R}_{a}\left( H\right) _{j_{1}\cdots j_{q}k_{p}\cdots k_{1}}
 \end{equation}%
@@ -580,8 +613,8 @@ L\left( D\right) \right\rangle _{\mathcal{H}_{\mathcal{F}}}.
 \end{equation}
 
 \begin{example}
-Let the Hamiltonian $H=H_{\left( 4\right) }=\widehat{P}_{\mathcal{A}%
-_{4}}\left( H\right) \in \mathcal{A}_{4}$  then%
+Let the Hamiltonian $H=H_{\left( 4\right) }=\widehat{P_{\mathcal{A}_{4}}}%
+\left( H\right) \in \mathcal{A}_{4}$ then%
 \begin{eqnarray}
 H &=&\sum_{\substack{ 0\leq q\leq 2 \\ 0\leq p\leq 2}}\sum_{\substack{ 1\leq
 j_{1}<\cdots <j_{q}\leq r \\ 1\leq k_{1}<\cdots <k_{q}\leq r}}%
@@ -618,47 +651,47 @@ _{k_{1}k_{2}k_{3}k4}
 \end{eqnarray}
 \end{example}
 
-Let  $H$ be a two particle Hamiltonian $H_{\left( 2\right) }$ then
+Let $H$ be a two particle Hamiltonian $H_{\left( 2\right) }$ then
 
 \begin{enumerate}
-\item  
+\item 
 \begin{equation}
 H=H_{\left( 2\right) }\in \mathcal{A}_{00}\oplus \mathcal{A}_{11}\oplus 
 \mathcal{A}_{22}
 \end{equation}
-and 
+and
 
 \item 
 \begin{equation}
-H_{\left( 2\right) }=I_{\mathcal{F}}\mathcal{R}_{a}\left( H\right) _{00}+\sum
-_{\substack{ 1\leq j_{1}\leq r \\ 1\leq k_{1}\leq r}}a_{j_{1}}^{\dagger
-}a_{k_{1}}\mathcal{R}_{a}\left( H\right) _{j_{1}k_{1}}+\sum_{\substack{ %
-1\leq j_{1}<j_{2}\leq r \\ 1\leq k_{1}<k_{2}\leq r}}a_{j_{1}}^{\dagger
-}a_{j_{2}}^{\dagger }a_{k_{2}}a_{k_{1}}\mathcal{R}_{a}\left( H\right)
-_{j_{1}j_{2}k_{2}k_{1}}
+H_{\left( 2\right) }=I_{\mathcal{F}}\mathcal{R}_{a}\left( H\right)
+_{00}+\sum _{\substack{ 1\leq j_{1}\leq r  \\ 1\leq k_{1}\leq r}}%
+a_{j_{1}}^{\dagger }a_{k_{1}}\mathcal{R}_{a}\left( H\right)
+_{j_{1}k_{1}}+\sum_{\substack{ 1\leq j_{1}<j_{2}\leq r  \\ 1\leq
+k_{1}<k_{2}\leq r}}a_{j_{1}}^{\dagger }a_{j_{2}}^{\dagger }a_{k_{2}}a_{k_{1}}%
+\mathcal{R}_{a}\left( H\right) _{j_{1}j_{2}k_{2}k_{1}}
 \end{equation}
 
 \item 
 \begin{equation}
 H_{\left( 2\right) }=\Gamma \left( h_{\left( 2\right) }\right) =\Gamma
 \left( \left\vert \phi \right\rangle \left\langle \phi \right\vert \mathcal{R%
-}_{a}\left( H\right) _{00}+\sum_{\substack{ 1\leq j_{1}\leq r \\ 1\leq
+}_{a}\left( H\right) _{00}+\sum_{\substack{ 1\leq j_{1}\leq r  \\ 1\leq
 k_{1}\leq r}}\left\vert \varphi _{j_{1}}\right\rangle \left\langle \varphi
-_{k_{1}}\right\vert \mathcal{R}_{a}\left( H\right) _{j_{1}k_{1}}+\sum
-_{\substack{ 1\leq j_{1}<j_{2}\leq r \\ 1\leq k_{1}<k_{2}\leq r}}\left\vert
+_{k_{1}}\right\vert \mathcal{R}_{a}\left( H\right) _{j_{1}k_{1}}+\sum 
+_{\substack{ 1\leq j_{1}<j_{2}\leq r  \\ 1\leq k_{1}<k_{2}\leq r}}\left\vert
 \varphi _{j_{1}}\varphi _{j_{2}}\right\rangle \left\langle \varphi
 _{k_{1}}\varphi _{k_{2}}\right\vert \mathcal{R}_{a}\left( H\right)
-_{j_{1}j_{2}k_{2}k_{1}}\right) 
+_{j_{1}j_{2}k_{2}k_{1}}\right)
 \end{equation}%
-where 
+where
 
 \item 
 \begin{equation}
 h_{\left( 2\right) }=\left\vert \phi \right\rangle \left\langle \phi
 \right\vert \mathcal{R}_{a}\left( H\right) _{00}+\sum_{\substack{ 1\leq
-j_{1}\leq r \\ 1\leq k_{1}\leq r}}\left\vert \varphi _{j_{1}}\right\rangle
+j_{1}\leq r  \\ 1\leq k_{1}\leq r}}\left\vert \varphi _{j_{1}}\right\rangle
 \left\langle \varphi _{k_{1}}\right\vert \mathcal{R}_{a}\left( H\right)
-_{j_{1}k_{1}}+\sum_{\substack{ 1\leq j_{1}<j_{2}\leq r \\ 1\leq
+_{j_{1}k_{1}}+\sum_{\substack{ 1\leq j_{1}<j_{2}\leq r  \\ 1\leq
 k_{1}<k_{2}\leq r}}\left\vert \varphi _{j_{1}}\varphi _{j_{2}}\right\rangle
 \left\langle \varphi _{k_{1}}\varphi _{k_{2}}\right\vert \mathcal{R}%
 _{a}\left( H\right) _{j_{1}j_{2}k_{2}k_{1}}
@@ -666,7 +699,7 @@ _{a}\left( H\right) _{j_{1}j_{2}k_{2}k_{1}}
 
 \item and the state be a $N$ -particle state $D^{N}$ then 
 \begin{eqnarray}
-E_{H}\left( D^{N}\right)  &=&\left\langle \left. \Gamma \left( h_{2}\right)
+E_{H}\left( D^{N}\right) &=&\left\langle \left. \Gamma \left( h_{2}\right)
 \right\vert D^{N}\right\rangle _{\mathcal{H}_{\mathcal{F}}}=\left\langle
 \left. h_{2}\right\vert L\left( D^{N}\right) \right\rangle _{\mathcal{H}_{%
 \mathcal{F}}}=\left\langle \left. h_{2}\right\vert P_{\mathcal{H}%
@@ -678,7 +711,7 @@ D^{N}\right) P_{\mathcal{H}^{2}}\right\rangle _{\mathcal{H}_{\mathcal{F}}}=%
 D^{N}\right) \right\rangle _{\mathcal{H}_{\mathcal{F}}}
 \end{eqnarray}%
 \begin{equation}
-D=L^{-1}\left( \Delta \right) 
+D=L^{-1}\left( \Delta \right)
 \end{equation}%
 \begin{equation}
 E_{H}\left( D\right) =\left\langle \left. h\right\vert \Delta \right\rangle
